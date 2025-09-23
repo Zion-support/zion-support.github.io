@@ -10,7 +10,7 @@ export function LoginContent() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl">
-          <LoginForm />
+          <LoginForm  />
         </div>
 
         <div className="text-center mt-6">

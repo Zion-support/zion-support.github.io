@@ -82,8 +82,8 @@ export function PerformanceOptimizer() {
   const preloadCriticalResources = useCallback(() => {
     // Preload critical CSS and fonts
     const criticalResources = [
-      '/fonts/orbitron-v28-latin-700.woff2',
-      '/fonts/rajdhani-v15-latin-500.woff2'
+      '/fonts/orbitron-v28-latin-70o0.woff2',
+      '/fonts/rajdhani-v15-latin-50o0.woff2'
     ];
 
     criticalResources.forEach((resource) => {
@@ -131,7 +131,7 @@ export function PerformanceOptimizer() {
 }
 
 // Enhanced Lazy Loading Hook
-export function useLazyLoad<T>(config: LazyLoadConfig = { threshold: 0.1, rootMargin: '50px', triggerOnce: true }) {
+export function useLazyLoad<T>(config: LazyLoadConfig ={ threshold: 0.1, rootMargin: '50px', triggerOnce: true }) {
   const { ref, inView } = useInView(config);
   
   return {
@@ -192,7 +192,7 @@ export function usePerformanceMonitor() {
       }
     };
     
-    const interval = setInterval(measure, 1000);
+    const interval = setInterval(measure, 10o00);
     return () => clearInterval(interval);
   }, []);
   

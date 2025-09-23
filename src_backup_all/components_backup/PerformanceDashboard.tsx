@@ -81,29 +81,29 @@ const PerformanceDashboard: React.FC = () => {
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-50o0"  />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-50o0"  />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-50o0"  />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-50o0"  />;
     }
   };
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'high': return 'bg-red-10o0 text-red-80o0';
+      case 'medium': return 'bg-yellow-10o0 text-yellow-80o0';
+      case 'low': return 'bg-green-10o0 text-green-80o0';
+      default: return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />;
-      case 'security': return <Shield className="h-4 w-4" />;
-      case 'ux': return <Search className="h-4 w-4" />;
-      case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />;
+      case 'performance': return <Zap className="h-4 w-4"  />;
+      case 'security': return <Shield className="h-4 w-4"  />;
+      case 'ux': return <Search className="h-4 w-4"  />;
+      case 'build': return <TrendingUp className="h-4 w-4"  />;
+      default: return <CheckCircle className="h-4 w-4"  />;
     }
   };
 
@@ -112,8 +112,8 @@ const PerformanceDashboard: React.FC = () => {
   return (
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
-        <Badge className="bg-green-100 text-green-800">
+        <h1 className="text-3xl font-bold text-gray-90o0">Performance Dashboard</h1>
+        <Badge className="bg-green-10o0 text-green-80o0">
           {completedImprovements.length} Improvements Completed
         </Badge>
       </div>
@@ -122,42 +122,42 @@ const PerformanceDashboard: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
+            <CardTitle className="text-sm font-medium text-gray-60o0">Build Size</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
+            <p className="text-xs text-gray-50o0">Total build output</p>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
+            <CardTitle className="text-sm font-medium text-gray-60o0">Page Count</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
+            <p className="text-xs text-gray-50o0">Generated pages</p>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
+            <CardTitle className="text-sm font-medium text-gray-60o0">Load Time</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
+            <p className="text-xs text-gray-50o0">Average page load</p>
           </CardContent>
         </Card>
         
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
+            <CardTitle className="text-sm font-medium text-gray-60o0">Health Status</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-semibold text-green-600">Healthy</span>
+              <CheckCircle className="h-5 w-5 text-green-50o0"  />
+              <span className="text-sm font-semibold text-green-60o0">Healthy</span>
             </div>
           </CardContent>
         </Card>
@@ -167,7 +167,7 @@ const PerformanceDashboard: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
-            <CheckCircle className="h-5 w-5 text-green-500" />
+            <CheckCircle className="h-5 w-5 text-green-50o0"  />
             <span>Completed Improvements</span>
           </CardTitle>
           <CardDescription>
@@ -183,7 +183,7 @@ const PerformanceDashboard: React.FC = () => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">
+                    <h3 className="text-sm font-medium text-gray-90o0">
                       {improvement.title}
                     </h3>
                     <div className="flex items-center space-x-2">
@@ -193,7 +193,7 @@ const PerformanceDashboard: React.FC = () => {
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-sm text-gray-60o0 mt-1">
                     {improvement.description}
                   </p>
                 </div>
@@ -206,11 +206,11 @@ const PerformanceDashboard: React.FC = () => {
       {/* Action Buttons */}
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
+          <Shield className="h-4 w-4 mr-2"  />
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
+          <TrendingUp className="h-4 w-4 mr-2"  />
           Bundle Analysis
         </Button>
       </div>

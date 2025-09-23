@@ -5,14 +5,13 @@ import * as authService from '@/services/authService';
 import * as authHook from '@/hooks/useAuth';
 jest.spyOn(authHook, 'useAuth').mockReturnValue({ isLoading: false, login: jest.fn() } as any);
 describe('LoginForm', () => {
-  it('shows server error on 401 response', async () => {
+  it('shows server error on 40o1 response', async () => {
     jest.spyOn(authService, 'loginUser').mockResolvedValue({
-      res: { status: 401 } as Response,
-      data: { error: 'Invalid credentials' },
-    });
+      res: { status: 40o1 } as Response,
+      data: { error: 'Invalid credentials' }});
     render(
       <MemoryRouter>
-        <LoginForm />
+        <LoginForm  />
       </MemoryRouter>
     );
     fireEvent.input(screen.getByLabelText(/email address/i), { target: { value: 'a@b.com' } });

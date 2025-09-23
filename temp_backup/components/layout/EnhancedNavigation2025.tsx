@@ -17,33 +17,33 @@ import {
 const navigationItems = [
   {
     name: 'All Services',
-    href: '/2025-innovative-services-showcase',
-    icon: <Globe className="w-5 h-5" />,
+    href: '/20o25-innovative-services-showcase',
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
-      { name: '2025 Innovative Services', href: '/2025-innovative-services-showcase', description: 'Latest innovative services portfolio' },
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
-      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
-      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
-      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
-      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
-      { name: 'New 2025 Services', href: '/2025-cutting-edge-ai-services', description: 'Latest AI innovations' },
-      { name: 'IT Infrastructure', href: '/2025-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
-      { name: 'Micro SAAS Solutions', href: '/2025-innovative-micro-saas-solutions', description: 'Business solutions' }
+      { name: '20o25 Innovative Services', href: '/20o25-innovative-services-showcase', description: 'Latest innovative services portfolio' },
+      { name: 'View All Services', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-20o25#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-20o25#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-20o25#search', description: 'Find specific services' },
+      { name: 'Latest Innovations', href: '/revolutionary-20o25-services-showcase', description: 'Cutting-edge solutions' },
+      { name: '20o26 Services', href: '/revolutionary-20o26-services', description: 'Next generation solutions' },
+      { name: '20o27 Services', href: '/revolutionary-20o27-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 20o26', href: '/ultimate-20o26-services-showcase', description: 'Premium service collection' },
+      { name: 'New 20o25 Services', href: '/20o25-cutting-edge-ai-services', description: 'Latest AI innovations' },
+      { name: 'IT Infrastructure', href: '/20o25-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
+      { name: 'Micro SAAS Solutions', href: '/20o25-innovative-micro-saas-solutions', description: 'Business solutions' }
     ]
   },
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     children: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
@@ -74,7 +74,7 @@ const navigationItems = [
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
-    icon: <Zap className="w-5 h-5" />,
+    icon: <Zap className="w-5 h-5"  />,
     description: 'Advanced AI-powered automation solutions',
     badge: 'Hot',
     children: [
@@ -93,7 +93,7 @@ const navigationItems = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     children: [
@@ -117,7 +117,7 @@ const navigationItems = [
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: 'Next-generation cybersecurity solutions',
     badge: 'Hot',
     children: [
@@ -136,7 +136,7 @@ const navigationItems = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className="w-5 h-5"  />,
     description: 'Enterprise solutions and infrastructure',
     children: [
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform', description: 'Quantum-enhanced cloud computing' },
@@ -154,7 +154,7 @@ const navigationItems = [
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Advanced blockchain and Web3 solutions',
     badge: 'New',
     children: [
@@ -173,7 +173,7 @@ const navigationItems = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -192,7 +192,7 @@ const navigationItems = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
-    icon: <Heart className="w-5 h-5" />,
+    icon: <Heart className="w-5 h-5"  />,
     description: 'AI-powered healthcare and biotechnology',
     badge: 'New',
     children: [
@@ -211,7 +211,7 @@ const navigationItems = [
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-5 h-5" />,
+    icon: <Target className="w-5 h-5"  />,
     description: 'Industry-specific solutions',
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
@@ -225,7 +225,7 @@ const navigationItems = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Cutting-edge research and development services',
     children: [
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
@@ -239,7 +239,7 @@ const navigationItems = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
+    icon: <Truck className="w-5 h-5"  />,
     description: 'Specialized solutions for specific industries',
     children: [
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
@@ -253,11 +253,11 @@ const navigationItems = [
   {
     name: 'Pricing & Plans',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5"  />,
     description: 'Flexible pricing options for all services',
     children: [
-      { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
-      { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' },
+      { name: '20o25 Pricing', href: '/pricing-20o25', description: 'Current year pricing' },
+      { name: '20o26 Pricing', href: '/pricing-20o26', description: 'Next year pricing' },
       { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' },
       { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' },
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
@@ -267,7 +267,7 @@ const navigationItems = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -281,7 +281,7 @@ const navigationItems = [
   {
     name: 'Support',
     href: '/support',
-    icon: <Settings className="w-5 h-5" />,
+    icon: <Settings className="w-5 h-5"  />,
     description: 'Technical support and customer service',
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
@@ -294,13 +294,13 @@ const navigationItems = [
   }
 ];
 
-const contactInfo = {
-  phone: '+1 302 464 0950',
+const contactInfo ={
+  phone: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 10o08 Middletown DE 19709'
 };
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation20o25() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -319,21 +319,21 @@ export default function EnhancedNavigation2025() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
+      <div className="bg-gradient-to-r from-cyan-90o0 to-purple-90o0 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
             <div className="flex items-center gap-4 mb-2 sm:mb-0">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-cyan-300" />
+                <Phone className="w-4 h-4 text-cyan-30o0"  />
                 <span>{contactInfo.phone}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-purple-300" />
+                <Mail className="w-4 h-4 text-purple-30o0"  />
                 <span>{contactInfo.email}</span>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-green-300" />
+              <MapPin className="w-4 h-4 text-green-30o0"  />
               <span className="text-xs">{contactInfo.address}</span>
             </div>
           </div>
@@ -341,9 +341,9 @@ export default function EnhancedNavigation2025() {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
+          ? 'bg-gray-90o0/95 backdrop-blur-md border-b border-gray-70o0/50' 
           : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4">
@@ -351,14 +351,14 @@ export default function EnhancedNavigation2025() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                  <Star className="w-6 h-6 text-white"  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
+                <p className="text-xs text-gray-40o0">Innovation • Intelligence • Impact</p>
               </div>
             </Link>
 
@@ -368,13 +368,13 @@ export default function EnhancedNavigation2025() {
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                   >
-                    <item.icon className="w-4 h-4" />
+                    <item.icon className="w-4 h-4"  />
                     <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeSubmenu === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
 
                   {/* Submenu */}
@@ -385,7 +385,7 @@ export default function EnhancedNavigation2025() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-md border border-gray-70o0/50 rounded-2xl shadow-2xl overflow-hidden"
                       >
                         <div className="p-6">
                           {item.submenu?.map((subitem) => (
@@ -393,19 +393,19 @@ export default function EnhancedNavigation2025() {
                               key={subitem.name}
                               href={subitem.href}
                               onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
+                              className="group block p-4 rounded-xl hover:bg-gray-80o0/50 transition-all duration-20o0 mb-2 last:mb-0"
                             >
                               <div className="flex items-start space-x-3">
                                 {subitem.icon && (
-                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
-                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
+                                  <div className="p-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 rounded-lg group-hover:from-cyan-50o0/30 group-hover:to-purple-50o0/30 transition-all duration-20o0">
+                                    <subitem.icon className="w-5 h-5 text-cyan-40o0"  />
                                   </div>
                                 )}
                                 <div className="flex-1">
-                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                  <h3 className="font-semibold text-white group-hover:text-cyan-40o0 transition-colors duration-20o0">
                                     {subitem.name}
                                   </h3>
-                                  <p className="text-sm text-gray-400 mt-1">
+                                  <p className="text-sm text-gray-40o0 mt-1">
                                     {subitem.description}
                                   </p>
                                   {subitem.services && (
@@ -413,13 +413,13 @@ export default function EnhancedNavigation2025() {
                                       {subitem.services.slice(0, 2).map((service) => (
                                         <span
                                           key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
+                                          className="px-2 py-1 bg-gray-80o0 text-gray-30o0 text-xs rounded-md"
                                         >
                                           {service}
                                         </span>
                                       ))}
                                       {subitem.services.length > 2 && (
-                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
+                                        <span className="px-2 py-1 bg-gray-80o0 text-gray-30o0 text-xs rounded-md">
                                           +{subitem.services.length - 2} more
                                         </span>
                                       )}
@@ -441,13 +441,13 @@ export default function EnhancedNavigation2025() {
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="/pricing"
-                className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                className="px-6 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0"
               >
                 Pricing
               </Link>
               <Link
                 href="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Get Started
               </Link>
@@ -456,9 +456,9 @@ export default function EnhancedNavigation2025() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              className="lg:hidden p-2 text-gray-30o0 hover:text-white transition-colors duration-20o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -468,19 +468,19 @@ export default function EnhancedNavigation2025() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: '10o0%' }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: '10o0%' }}
             transition={{ duration: 0.3 }}
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full">
                           {item.badge}
                         </span>
                       )}
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
 
                   {activeDropdown === item.name && (
@@ -495,12 +495,12 @@ export default function EnhancedNavigation2025() {
                         <Link
                           key={child.name}
                           href={child.href}
-                          className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                          className="block px-4 py-2 text-sm text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0"
                           onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
+                          className="block p-2 text-gray-30o0 hover:text-white transition-colors text-sm"
                         >
-                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                          <subItem.icon className="w-5 h-5 text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-20o0"  />
+                          <span className="text-gray-30o0 group-hover:text-white transition-colors duration-20o0">
                             {subItem.name}
                           </span>
                         </Link>
@@ -514,123 +514,8 @@ export default function EnhancedNavigation2025() {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-medium rounded-lg transition-all duration-30o0"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
                 </Link>
-=======
-            className="fixed inset-0 z-50 lg:hidden"
-          >
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={closeMenu}
-            />
-            
-            {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
-              <div className="p-6">
-                {/* Close Button */}
-                <div className="flex justify-end mb-6">
-                  <button
-                    onClick={closeMenu}
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-
-                {/* Mobile Navigation Items */}
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      <button
-                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                          activeSubmenu === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-
-                      {/* Mobile Submenu */}
-                      <AnimatePresence>
-                        {activeSubmenu === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
-                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Mobile CTA */}
-                <div className="mt-8 space-y-4">
-                  <Link
-                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
-                  >
-                    View Pricing
-                  </Link>
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Contact Us
-                  </Link>
-                </div>
-
-                {/* Mobile Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-700/50">
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.phone}</span>
-                    </div>
-                    <div className="flex items-center space-x-3 text-gray-400">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-start space-x-3 text-gray-400">
-                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
-                      <span className="text-xs">{contactInfo.address}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
-  );
-};
-
-export default EnhancedNavigation2025;

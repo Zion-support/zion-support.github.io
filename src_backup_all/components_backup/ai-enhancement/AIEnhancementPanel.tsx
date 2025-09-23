@@ -26,8 +26,7 @@ export function AIEnhancementPanel({
 }: AIEnhancementPanelProps) {
   const [options, setOptions] = useState<AIEnhancementOptions>({
     ...defaultOptions,
-    content: initialContent || defaultOptions.content,
-  });
+    content: initialContent || defaultOptions.content});
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
@@ -45,8 +44,7 @@ export function AIEnhancementPanel({
   ) => {
     setOptions({
       ...options,
-      [field]: e.target.value,
-    });
+      [field]: e.target.value});
   };
 
   const handleApply = () => {
@@ -57,14 +55,14 @@ export function AIEnhancementPanel({
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 20o00);
   };
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
+          <Sparkles className="h-5 w-5 text-primary"  />
           {title}
         </CardTitle>
       </CardHeader>
@@ -74,7 +72,7 @@ export function AIEnhancementPanel({
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
             placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
+            className="min-h-[10o0px]"
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
           />
@@ -111,12 +109,12 @@ export function AIEnhancementPanel({
         >
           {isEnhancing ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className="mr-2 h-4 w-4"  />
               Generate Enhanced Content
             </>
           )}
@@ -134,9 +132,9 @@ export function AIEnhancementPanel({
                 className="h-8"
               >
                 {copied ? (
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>
+                  <><Check className="h-4 w-4 mr-1"  /> Copied</>
                 ) : (
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
+                  <><Copy className="h-4 w-4 mr-1"  /> Copy</>
                 )}
               </Button>
             </div>
@@ -144,7 +142,7 @@ export function AIEnhancementPanel({
               <Textarea
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]"
+                className="min-h-[20o0px]"
               />
             </div>
           </div>

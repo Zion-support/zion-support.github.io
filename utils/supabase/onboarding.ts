@@ -1,20 +1,20 @@
 import { supabase } from './client';
 
-export type TalentOnboarding = {
+export type TalentOnboarding ={
   profile_complete: boolean;
   skills_added: boolean;
   availability_set: boolean;
   first_job_applied: boolean;
 };
 
-export type ClientOnboarding = {
+export type ClientOnboarding ={
   job_posted: boolean;
   talent_invited: boolean;
   quote_received: boolean;
   first_hire_complete: boolean;
 };
 
-export type OnboardingRecord = {
+export type OnboardingRecord ={
   user_id: string;
   role: 'talent' | 'client';
   // talent fields
@@ -77,8 +77,7 @@ export function fallbackTalentProgress(): TalentOnboarding {
     profile_complete: true,
     skills_added: true,
     availability_set: false,
-    first_job_applied: false,
-  };
+    first_job_applied: false};
 }
 
 export function fallbackClientProgress(): ClientOnboarding {
@@ -86,6 +85,5 @@ export function fallbackClientProgress(): ClientOnboarding {
     job_posted: true,
     talent_invited: false,
     quote_received: false,
-    first_hire_complete: false,
-  };
+    first_hire_complete: false};
 }

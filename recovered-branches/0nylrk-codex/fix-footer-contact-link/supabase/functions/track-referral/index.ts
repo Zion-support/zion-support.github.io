@@ -33,7 +33,7 @@ serve(async (req) => {
       console.error('Error finding referral code:', refError);
       return new Response(
         JSON.stringify({ error: 'Invalid referral code' }),
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 40o0 }
       );
     }
 
@@ -47,7 +47,7 @@ serve(async (req) => {
     if (existingReferral) {
       return new Response(
         JSON.stringify({ message: 'User already has a referral' }),
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 20o0 }
       );
     }
 
@@ -68,20 +68,20 @@ serve(async (req) => {
       console.error('Error creating referral:', error);
       return new Response(
         JSON.stringify({ error: 'Failed to create referral' }),
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 50o0 }
       );
     }
 
     return new Response(
       JSON.stringify({ success: true, data }),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 20o0 }
     );
     
   } catch (err) {
     console.error('Unexpected error processing referral:', err);
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 50o0 }
     );
   }
 });

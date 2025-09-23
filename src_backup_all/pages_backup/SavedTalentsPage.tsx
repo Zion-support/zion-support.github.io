@@ -42,8 +42,7 @@ if ( {) {
         toast ({
           title: 'Error',
           description: 'Failed to load saved talents. Please try again later.',
-          variant: 'destructive',
-        });
+          variant: 'destructive'});
 
       } finally {
         setIsLoading (false);
@@ -59,7 +58,6 @@ if ( {) {
 
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
-
 
           .eq("user_id", user.id),
 
@@ -178,8 +176,7 @@ export default function SavedTalentsPage() {;
   const handleRequestHire = (talent: TalentProfile) => {;
     logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent',
-      description: `A hire request has been sent to ${talent.full_name}.`,
-    })
+      description: `A hire request has been sent to ${talent.full_name}.`})
   }
   const handleToggleSave = async (
     talentId: string,
@@ -190,14 +187,12 @@ export default function SavedTalentsPage() {;
         return;
       }
 
-
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         )
         toast({
           title: 'Talent Removed',
-          description: 'Talent removed from saved list.',
-        })
+          description: 'Talent removed from saved list.'})
 ;
       if (isCurrentlySaved) {;
 
@@ -216,18 +211,12 @@ if ( {) {
           throw error;
         }
 
-  
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         ),
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
-
-
-
-
-
 
       } else {
         // Add to saved talents
@@ -241,8 +230,6 @@ if ( {) {
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
           .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-
 
         if (error) {
           throw error
@@ -325,34 +312,26 @@ if ( {) {
     }
   },
 
-
   return (
     <>
       <SEO
         title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
-      />
+       />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
-        
-
-
-
 
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
-              icon={<Heart className="h-8 w-8" />}
+              icon={<Heart className="h-8 w-8"  />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
-
-
-
 
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
@@ -428,8 +407,7 @@ if ( {) {
             title: 'Error',
             description:;
               'Failed to update saved talents. Please try again later.',
-            variant: 'destructive',
-          });
+            variant: 'destructive'});
           return;
         }
         // Check condition
@@ -442,8 +420,7 @@ if ( {) {
           ]);
           toast ({
             title: 'Talent Saved',
-            description: 'Talent saved to your list.',
-          });
+            description: 'Talent saved to your list.'});
         }
       }
     } catch (error) {
@@ -455,8 +432,7 @@ if ( {) {
       toast ({
         title: 'Error',
         description: 'Failed to update saved talents. Please try again later.',
-        variant: 'destructive',
-      });
+        variant: 'destructive'});
     }
   };
   return (;
@@ -474,7 +450,7 @@ if ( {) {
           <div className='py-8'>;
 
             <EmptyState
-              icon={<Heart className='h-8 w-8' />}
+              icon={<Heart className='h-8 w-8'  />}
               title='No Saved Talents'              description="You haven't saved any talents yet.";
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center";
@@ -489,9 +465,7 @@ if ( {) {
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
-              />;
-
-
+               />;
 
             ))}
           </div>
@@ -583,9 +557,8 @@ return;
 });
 toast ({;
 
-
 };'";
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key= {
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"  /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key={
   talent && talent.id 
   user id: user.id, talent id: talent_id;
 }]);
@@ -603,31 +576,30 @@ return;
 });
 toast ({
 }'";
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx - auto px - 4 py - 8" > <h1 className="text - 3xl font - bold mb - 4" >Saved Talents</h1> <p className="text - muted - foreground" > Here are the talents you've saved for future reference. </p>) : saved_talents.length === 0 ? (<div className="py - 8" > <EmptyState <TalentCard key= {
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"  /> <div className="container mx - auto px - 4 py - 8" > <h1 className="text - 3xl font - bold mb - 4" >Saved Talents</h1> <p className="text - muted - foreground" > Here are the talents you've saved for future reference. </p>) : saved_talents.length === 0 ? (<div className="py - 8" > <EmptyState <TalentCard key={
   talent.id;
 
-}talent= {
+}talent={
   talent;
-}onViewProfile= {
+}onViewProfile={
   handleViewProfile;
-}onRequestHire= {
+}onRequestHire={
 
   handleRequestHire 
-}isAuthenticated= {
+}isAuthenticated={
   !!user 
-}/>) ) ;
+} />) ) ;
 }</div>) ;
 }</div> </>) ;
 }'"}
 
   handleRequestHire;
-}is_authenticated= {
+}is_authenticated={
   !!user;
 }/>) );
 }</div>);
 }</div> </>);
 }'"}
-
 
       </div>;
     </>;

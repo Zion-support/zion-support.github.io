@@ -16,7 +16,7 @@ export function securityMiddleware(request) {
   if (request.nextUrl.protocol === 'https:') {
     response.headers.set(
       'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
+      'max-age=315360o00; includeSubDomains; preload'
     );
   }
   

@@ -29,7 +29,7 @@ const PostJob: NextPage = () => {
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">Budget (USD)</label>
-            <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="5000" className="w-full" />
+            <input type="number" value={budget} onChange={(e) => setBudget(e.target.value)} placeholder="50o00" className="w-full" />
           </div>
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>

@@ -17,13 +17,12 @@ function fixMergeConflicts(filePath) {
       fs && fs.writeFileSync(filePath, content, 'utf8');
       console && console.log(`✅ Fixed merge conflicts in: ${path && path.relative(process && process.cwd(), filePath)}`);
 
-
 const fs = require ('fs'); const path = require ('path');  /**
  * fixMergeConflicts - Function description
  */
 function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'); const original_content = content; # Resolved merge conflict - kept HEAD version if ( { fs.writeFileSync (file_path, content, 'utf8')) {
   $2
-} , file_path)}`); return true} return false} catch (error) {  return false} } /**
+}, file_path)}`); return true} return false} catch (error) {  return false} } /**
  * getAllFiles - Function description
  */
 function getAllFiles() { let files = []; try { const items = fs.readdir_sync (dir); for (const item of items) { const full_path = path.join (dir, item); const stat = fs.stat_sync (full_path); if (&& !item.starts_with ('.') && item !== 'node_modules') { files = files.concat (getAllFiles (full_path, extensions))} else if (extensions.some (ext => item.ends_with (ext))) { files.push (full_path)} } } catch (error) { } return files} async /**
@@ -37,7 +36,7 @@ const fs = require ('fs'); const path = require ('path');  /**
  */
 function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'); const original_content = content; # Resolved merge conflict - kept HEAD version if ( { fs.writeFileSync (file_path, content, 'utf8')) {
   $2
-} , file_path)}`); return true} return false} catch (error) {  return false} } /**
+}, file_path)}`); return true} return false} catch (error) {  return false} } /**
  * getAllFiles - Function description
  */
 function getAllFiles() { let files = []; try { const items = fs.readdir_sync (dir); for (const item of items) { const full_path = path.join (dir, item); const stat = fs.stat_sync (full_path); if (&& !item.starts_with ('.') && item !== 'node_modules') { files = files.concat (getAllFiles (full_path, extensions))} else if (extensions.some (ext => item.ends_with (ext))) { files.push (full_path)} } } catch (error) { } return files} async /**
@@ -69,15 +68,10 @@ if ( {) {
       fs.writeFileSync (file_path, content, 'utf8');
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`);
 
-
-
-
       return true;
     }
     return false;
   } catch (error) {
-
-
 
     return false}
 }
@@ -94,8 +88,6 @@ return true;
 }`);
 return false;
 }//Function to get all files recursively function getAllFiles (dir, extensions) {
-
-
 
   let files = [];
 try {
@@ -127,7 +119,6 @@ for (const file of files) {
       if (stat && stat.isDirectory() && !item && item.startsWith('.') && item !== 'node_modules') {
         files = files && files.concat(getAllFiles(fullPath, extensions))} else if (extensions && extensions.some(ext => item && item.endsWith(ext))) {
         files && files.push(fullPath)}
-
 
     console.log (`❌ Error fixing ${file_path}: ${error.message}`);
     return false;
@@ -178,15 +169,11 @@ for (const file of files) {
 }
         files.push (full_path)}
 
-
-
-
     }
   } catch (error) {
     // Skip directories that can't be read;
   }
   return files}
-
 
   for (const file of files) {
     try {
@@ -204,9 +191,6 @@ for (const file of files) {
 }
           fixed_count++;
 
-
-
-
         }
       }
     } catch (error) {
@@ -214,7 +198,6 @@ for (const file of files) {
     }
   }
 
-  
   console && console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
   console && console.log('🎉 Merge conflict resolution completed!');}
 
@@ -222,21 +205,10 @@ for (const file of files) {
 }catch (error) {
   // Skip files that can't be read
 
-
-
-
-
-
-
-
-
-
 }
 }
 }
 }
 }
 }
-
-
 

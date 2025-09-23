@@ -1,6 +1,4 @@
 
-import React from 'react';
-import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 
@@ -20,7 +18,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
           className="mr-2"
           onClick={() => router.back()} // Changed to router.back()
         >
-          <ArrowLeft className="h-4 w-4 mr-1" />
+          <ArrowLeft className="h-4 w-4 mr-1"  />
           Back
         </Button>
         <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>

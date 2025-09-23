@@ -63,7 +63,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
-                <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
+                <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`}  />
               </div>
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>

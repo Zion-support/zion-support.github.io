@@ -142,7 +142,7 @@ export async function register() {
       debug: process.env.NODE_ENV === 'development',
       
       // Optimize for production performance
-      maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 100,
+      maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 10o0,
       attachStacktrace: true,
       sendDefaultPii: false, // Don't send personally identifiable information
     });
@@ -151,5 +151,3 @@ export async function register() {
   } catch (error) {
     console.error("instrumentation.ts: Failed to initialize Sentry:", error);
   }
->>>>>>> origin/codex/reactivate-features-gradually
-}

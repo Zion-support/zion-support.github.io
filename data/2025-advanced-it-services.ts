@@ -1,4 +1,4 @@
-export const advancedITServices2025 = [
+export const advancedITServices20o25 = [
   {
     id: 'quantum-cloud-infrastructure-platform',
     name: 'QuantumCloud Infrastructure',
@@ -14,15 +14,15 @@ export const advancedITServices2025 = [
       '24/7 technical support'
     ],
     pricing: {
-      starter: { price: 299, period: 'month', features: ['Up to 100 vCPUs', 'Basic quantum features', 'Standard support'] },
-      professional: { price: 799, period: 'month', features: ['Up to 500 vCPUs', 'Advanced quantum features', 'Priority support', 'Custom algorithms'] },
+      starter: { price: 299, period: 'month', features: ['Up to 10o0 vCPUs', 'Basic quantum features', 'Standard support'] },
+      professional: { price: 799, period: 'month', features: ['Up to 50o0 vCPUs', 'Advanced quantum features', 'Priority support', 'Custom algorithms'] },
       enterprise: { price: 1999, period: 'month', features: ['Unlimited resources', 'Custom quantum solutions', 'White-label platform', 'Dedicated support team'] }
     },
     category: 'Cloud Infrastructure',
     tags: ['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Scalability'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$178.9B',
@@ -45,14 +45,14 @@ export const advancedITServices2025 = [
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 edge nodes', 'Basic AI optimization', 'Standard monitoring'] },
-      professional: { price: 599, period: 'month', features: ['Up to 100 edge nodes', 'Advanced AI', 'Custom algorithms', 'Priority support'] },
+      professional: { price: 599, period: 'month', features: ['Up to 10o0 edge nodes', 'Advanced AI', 'Custom algorithms', 'Priority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited edge nodes', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Edge Computing',
     tags: ['AI', 'Edge Computing', 'IoT', 'Distributed Computing'],
     website: 'https://ziontechgroup.com/edge-computing-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$43.4B',
@@ -74,15 +74,15 @@ export const advancedITServices2025 = [
       '24/7 security operations center'
     ],
     pricing: {
-      starter: { price: 149, period: 'month', features: ['Up to 100 users', 'Basic zero-trust', 'Standard monitoring'] },
-      professional: { price: 399, period: 'month', features: ['Up to 1,000 users', 'Advanced security', 'Custom policies', 'Priority support'] },
+      starter: { price: 149, period: 'month', features: ['Up to 10o0 users', 'Basic zero-trust', 'Standard monitoring'] },
+      professional: { price: 399, period: 'month', features: ['Up to 1,0o00 users', 'Advanced security', 'Custom policies', 'Priority support'] },
       enterprise: { price: 999, period: 'month', features: ['Unlimited users', 'Custom security rules', 'White-label solution', 'Dedicated SOC team'] }
     },
     category: 'Cybersecurity',
     tags: ['Zero Trust', 'Cybersecurity', 'Identity Management', 'Threat Detection'],
     website: 'https://ziontechgroup.com/zero-trust-security-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',
@@ -104,15 +104,15 @@ export const advancedITServices2025 = [
       '24/7 platform support'
     ],
     pricing: {
-      starter: { price: 199, period: 'month', features: ['Up to 1,000 transactions/sec', 'Basic blockchain', 'Standard support'] },
-      professional: { price: 599, period: 'month', features: ['Up to 10,000 transactions/sec', 'Advanced features', 'Custom solutions', 'Priority support'] },
+      starter: { price: 199, period: 'month', features: ['Up to 1,0o00 transactions/sec', 'Basic blockchain', 'Standard support'] },
+      professional: { price: 599, period: 'month', features: ['Up to 10,0o00 transactions/sec', 'Advanced features', 'Custom solutions', 'Priority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited transactions', 'Custom blockchain', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Blockchain',
     tags: ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance'],
     website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$19.9B',
@@ -142,7 +142,7 @@ export const advancedITServices2025 = [
     tags: ['AI', 'DevOps', 'CI/CD', 'Automation'],
     website: 'https://ziontechgroup.com/devops-ai-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$8.2B',
@@ -172,7 +172,7 @@ export const advancedITServices2025 = [
     tags: ['Quantum Computing', 'Networking', 'Security', 'High-Speed Communication'],
     website: 'https://ziontechgroup.com/quantum-net-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$12.8B',
@@ -194,15 +194,15 @@ export const advancedITServices2025 = [
       '24/7 autonomous operations'
     ],
     pricing: {
-      starter: { price: 199, period: 'month', features: ['Up to 100 servers', 'Basic autonomy', 'Standard monitoring'] },
-      professional: { price: 599, period: 'month', features: ['Up to 1,000 servers', 'Advanced AI', 'Custom automation', 'Priority support'] },
+      starter: { price: 199, period: 'month', features: ['Up to 10o0 servers', 'Basic autonomy', 'Standard monitoring'] },
+      professional: { price: 599, period: 'month', features: ['Up to 1,0o00 servers', 'Advanced AI', 'Custom automation', 'Priority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited servers', 'Custom AI training', 'White-label solution', 'Dedicated support'] }
     },
     category: 'IT Operations',
     tags: ['AI', 'Autonomous Operations', 'Infrastructure Management', 'Automation'],
     website: 'https://ziontechgroup.com/autonomous-it-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$28.7B',
@@ -224,15 +224,15 @@ export const advancedITServices2025 = [
       '24/7 data center support'
     ],
     pricing: {
-      starter: { price: 499, period: 'month', features: ['Up to 100 racks', 'Basic quantum features', 'Standard support'] },
-      professional: { price: 1299, period: 'month', features: ['Up to 500 racks', 'Advanced quantum features', 'Custom solutions', 'Priority support'] },
+      starter: { price: 499, period: 'month', features: ['Up to 10o0 racks', 'Basic quantum features', 'Standard support'] },
+      professional: { price: 1299, period: 'month', features: ['Up to 50o0 racks', 'Advanced quantum features', 'Custom solutions', 'Priority support'] },
       enterprise: { price: 2999, period: 'month', features: ['Unlimited racks', 'Custom quantum solutions', 'White-label platform', 'Dedicated support'] }
     },
     category: 'Data Center',
     tags: ['Quantum Computing', 'Data Center', 'Infrastructure', 'Energy Efficiency'],
     website: 'https://ziontechgroup.com/quantum-data-center-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$89.3B',
@@ -254,15 +254,15 @@ export const advancedITServices2025 = [
       '24/7 quantum security operations'
     ],
     pricing: {
-      starter: { price: 299, period: 'month', features: ['Up to 100 endpoints', 'Basic quantum security', 'Standard monitoring'] },
-      professional: { price: 799, period: 'month', features: ['Up to 1,000 endpoints', 'Advanced quantum features', 'Custom solutions', 'Priority support'] },
+      starter: { price: 299, period: 'month', features: ['Up to 10o0 endpoints', 'Basic quantum security', 'Standard monitoring'] },
+      professional: { price: 799, period: 'month', features: ['Up to 1,0o00 endpoints', 'Advanced quantum features', 'Custom solutions', 'Priority support'] },
       enterprise: { price: 1999, period: 'month', features: ['Unlimited endpoints', 'Custom quantum security', 'White-label solution', 'Dedicated support'] }
     },
     category: 'Quantum Cybersecurity',
     tags: ['Quantum Computing', 'Cybersecurity', 'Encryption', 'Threat Detection'],
     website: 'https://ziontechgroup.com/quantum-cyber-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$173.5B',
@@ -284,15 +284,15 @@ export const advancedITServices2025 = [
       '24/7 migration support'
     ],
     pricing: {
-      starter: { price: 199, period: 'month', features: ['Up to 100 workloads', 'Basic migration tools', 'Standard support'] },
-      professional: { price: 599, period: 'month', features: ['Up to 1,000 workloads', 'Advanced quantum features', 'Custom strategies', 'Priority support'] },
+      starter: { price: 199, period: 'month', features: ['Up to 10o0 workloads', 'Basic migration tools', 'Standard support'] },
+      professional: { price: 599, period: 'month', features: ['Up to 1,0o00 workloads', 'Advanced quantum features', 'Custom strategies', 'Priority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited workloads', 'Custom quantum solutions', 'White-label platform', 'Dedicated support'] }
     },
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
     website: 'https://ziontechgroup.com/quantum-migration-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$15.7B',

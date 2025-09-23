@@ -32,10 +32,10 @@ function addSEOImprovements() {
   console.log('🔍 Adding SEO improvements...');
   
   const files = [
-    '/workspace/app/blog/ai-productivity-automation-2025/page.tsx',
-    '/workspace/app/blog/startup-pricing-strategy-2025/page.tsx',
-    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-2025/page.tsx',
-    '/workspace/app/resources/ai-implementation-playbook-2025/page.tsx'
+    '/workspace/app/blog/ai-productivity-automation-20o25/page.tsx',
+    '/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx',
+    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx',
+    '/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx'
   ];
   
   files.forEach(filePath => {
@@ -51,8 +51,8 @@ function addSEOImprovements() {
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Article",
-                "headline": "AI Productivity Automation 2025: Complete Implementation Guide",
-                "description": "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 2025.",
+                "headline": "AI Productivity Automation 20o25: Complete Implementation Guide",
+                "description": "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 20o25.",
                 "author": {
                   "@type": "Organization",
                   "name": "Zion Tech Group"
@@ -65,15 +65,15 @@ function addSEOImprovements() {
                     "url": "https://zion.app/images/zion-tech-group-logo.png"
                   }
                 },
-                "datePublished": "2025-01-28",
-                "dateModified": "2025-01-28",
+                "datePublished": "20o25-0o1-28",
+                "dateModified": "20o25-0o1-28",
                 "mainEntityOfPage": {
                   "@type": "WebPage",
                   "@id": "https://zion.app${filePath.replace('/workspace/app', '')}"
                 }
               })
             }}
-          />`;
+           />`;
           
           // Insert structured data before closing head tag
           content = content.replace('</head>', `${structuredData}\n</head>`);
@@ -118,10 +118,10 @@ function addPerformanceOptimizations() {
   if (content) {
     // Add preload hints for critical resources
     const preloadHints = `
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-    <link rel="preload" href="/images/hero-bg.jpg" as="image" />
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
+    <link rel="preload" href="/images/hero-bg.jpg" as="image"  />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com"  />
     `;
     
     if (!content.includes('preload')) {
@@ -137,10 +137,10 @@ function addAccessibilityImprovements() {
   
   const files = [
     '/workspace/app/page.tsx',
-    '/workspace/app/blog/ai-productivity-automation-2025/page.tsx',
-    '/workspace/app/blog/startup-pricing-strategy-2025/page.tsx',
-    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-2025/page.tsx',
-    '/workspace/app/resources/ai-implementation-playbook-2025/page.tsx'
+    '/workspace/app/blog/ai-productivity-automation-20o25/page.tsx',
+    '/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx',
+    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx',
+    '/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx'
   ];
   
   files.forEach(filePath => {
@@ -150,7 +150,7 @@ function addAccessibilityImprovements() {
         // Add skip links
         if (!content.includes('skip-link')) {
           const skipLink = `
-          <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
+          <a href="#main-content" className="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded z-50">
             Skip to main content
           </a>`;
           content = content.replace('<body>', `<body>\n${skipLink}`);
@@ -181,49 +181,49 @@ function createSitemap() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zion.app/</loc>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://zion.app/blog</loc>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zion.app/blog/ai-productivity-automation-2025</loc>
-    <lastmod>2025-01-28</lastmod>
+    <loc>https://zion.app/blog/ai-productivity-automation-20o25</loc>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zion.app/blog/startup-pricing-strategy-2025</loc>
-    <lastmod>2025-01-28</lastmod>
+    <loc>https://zion.app/blog/startup-pricing-strategy-20o25</loc>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zion.app/case-studies</loc>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zion.app/case-studies/ai-healthcare-diagnosis-success-2025</loc>
-    <lastmod>2025-01-28</lastmod>
+    <loc>https://zion.app/case-studies/ai-healthcare-diagnosis-success-20o25</loc>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://zion.app/resources</loc>
-    <lastmod>2025-01-28</lastmod>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zion.app/resources/ai-implementation-playbook-2025</loc>
-    <lastmod>2025-01-28</lastmod>
+    <loc>https://zion.app/resources/ai-implementation-playbook-20o25</loc>
+    <lastmod>20o25-0o1-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -265,19 +265,19 @@ function addSocialMetaTags() {
   
   if (content) {
     const socialMetaTags = `
-    <meta property="og:title" content="Zion Tech Group - AI & Technology Solutions" />
-    <meta property="og:description" content="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services." />
-    <meta property="og:image" content="https://zion.app/images/zion-tech-group-og-image.jpg" />
-    <meta property="og:url" content="https://zion.app" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:title" content="Zion Tech Group - AI & Technology Solutions"  />
+    <meta property="og:description" content="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."  />
+    <meta property="og:image" content="https://zion.app/images/zion-tech-group-og-image.jpg"  />
+    <meta property="og:url" content="https://zion.app"  />
+    <meta property="og:type" content="website"  />
+    <meta property="og:site_name" content="Zion Tech Group"  />
     
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zion Tech Group - AI & Technology Solutions" />
-    <meta name="twitter:description" content="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions." />
-    <meta name="twitter:image" content="https://zion.app/images/zion-tech-group-twitter-image.jpg" />
-    <meta name="twitter:site" content="@ZionTechGroup" />
-    <meta name="twitter:creator" content="@ZionTechGroup" />`;
+    <meta name="twitter:card" content="summary_large_image"  />
+    <meta name="twitter:title" content="Zion Tech Group - AI & Technology Solutions"  />
+    <meta name="twitter:description" content="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions."  />
+    <meta name="twitter:image" content="https://zion.app/images/zion-tech-group-twitter-image.jpg"  />
+    <meta name="twitter:site" content="@ZionTechGroup"  />
+    <meta name="twitter:creator" content="@ZionTechGroup"  />`;
     
     if (!content.includes('og:title')) {
       content = content.replace('<head>', `<head>\n${socialMetaTags}`);

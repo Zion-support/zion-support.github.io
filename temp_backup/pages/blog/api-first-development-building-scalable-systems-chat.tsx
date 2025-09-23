@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {
@@ -6,7 +5,7 @@ export default function ApiFirstDevelopmentBuildingScalableSystemsChatPage() {
     <>
       <Head>
         <title>Api First Development Building Scalable Systems Chat - Zion Tech Group</title>
-        <meta name="description" content="api first development building scalable systems chat page" />
+        <meta name="description" content="api first development building scalable systems chat page"  />
       </Head>
       
       <main>

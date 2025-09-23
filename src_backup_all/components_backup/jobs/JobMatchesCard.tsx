@@ -20,7 +20,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null;
   
   return (
-    <Card className="overflow-hidden border-l-4 border-l-blue-500">
+    <Card className="overflow-hidden border-l-4 border-l-blue-50o0">
       <CardHeader className="p-4 pb-2">
         <div className="flex justify-between items-start">
           <div>
@@ -64,24 +64,24 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
-            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
+            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground"  />
             ${job.budget.min} - ${job.budget.max}
           </div>
           <div className="flex items-center text-sm">
-            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
+            <Calendar className="h-4 w-4 mr-1 text-muted-foreground"  />
             Due: {format(new Date(job.deadline), "MMM d, yyyy")}
           </div>
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
-          <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
-            <CheckCircle className="h-4 w-4 mr-2" />
+          <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-70o0 rounded-md">
+            <CheckCircle className="h-4 w-4 mr-2"  />
             Applied
           </div>
         ) : match.status === 'declined' ? (
-          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
-            <XCircle className="h-4 w-4 mr-2" />
+          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-70o0 rounded-md">
+            <XCircle className="h-4 w-4 mr-2"  />
             Declined
           </div>
         ) : (

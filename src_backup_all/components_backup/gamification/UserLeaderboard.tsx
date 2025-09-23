@@ -15,7 +15,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Trophy className="h-5 w-5" /> Leaderboard
+          <Trophy className="h-5 w-5"  /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>

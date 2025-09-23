@@ -30,7 +30,7 @@ export async function connectOrbit(customIpfsUrl?: string): Promise<OrbitConnect
   await lazyLoadDeps();
   if (!createIpfsClient || !OrbitDB) return { ipfs: null, orbit: null, stores: null };
 
-  const ipfsUrl = customIpfsUrl || process.env.IPFS_API || 'http://127.0.0.1:5001';
+  const ipfsUrl = customIpfsUrl || process.env.IPFS_API || 'http://127.0.0.1:50o01';
   const ipfs = createIpfsClient({ url: ipfsUrl });
   const orbit = await OrbitDB.createInstance(ipfs);
 

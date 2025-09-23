@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,14 +17,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
-  rateType,
-}) => {
+  rateType}) => {
   if (isLoading) {
     return (
       <Card className="border border-dashed border-muted">
         <CardContent className="flex items-center justify-center p-6">
           <div className="text-center">
-            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />
+            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4"  />
             <p className="text-sm text-muted-foreground">
               Generating optimal pricing suggestion...
             </p>
@@ -39,11 +37,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null;
   }
 
-  const confidenceColor = {
-    High: "bg-green-100 text-green-800",
-    Medium: "bg-yellow-100 text-yellow-800",
-    Low: "bg-red-100 text-red-800",
-  }[suggestion.confidence];
+  const confidenceColor ={
+    High: "bg-green-10o0 text-green-80o0",
+    Medium: "bg-yellow-10o0 text-yellow-80o0",
+    Low: "bg-red-10o0 text-red-80o0"}[suggestion.confidence];
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
@@ -65,7 +62,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </div>
 
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
-          <Info className="h-4 w-4 flex-shrink-0 mt-1" />
+          <Info className="h-4 w-4 flex-shrink-0 mt-1"  />
           <p>{suggestion.explanation}</p>
         </div>
 
@@ -78,7 +75,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
                   onClick={onApplySuggestion}
                   className="w-full"
                 >
-                  <ThumbsUp className="h-4 w-4 mr-2" /> Apply Suggestion
+                  <ThumbsUp className="h-4 w-4 mr-2"  /> Apply Suggestion
                 </Button>
               </TooltipTrigger>
               <TooltipContent>

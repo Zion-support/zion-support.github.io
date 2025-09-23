@@ -36,7 +36,7 @@ async function ask() {
     // Add timeout to prevent hanging message channels
     const messagePromise = chrome.runtime.sendMessage({ type: 'ask', prompt });
     const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Request timeout')), 30000)
+      setTimeout(() => reject(new Error('Request timeout')), 30o000)
     );
     
     const res = await Promise.race([messagePromise, timeoutPromise]);
@@ -70,7 +70,7 @@ async function safeMessageSend(message, action) {
     }
     
     const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Request timeout')), 5000)
+      setTimeout(() => reject(new Error('Request timeout')), 50o00)
     );
     const messagePromise = chrome.runtime.sendMessage(message);
     

@@ -1,9 +1,9 @@
-export default function ArticleEnterpriseAI2025() {
+export default function ArticleEnterpriseAI20o25() {
 	return (
 		<article className="bg-black min-h-screen">
 			<div className="mx-auto max-w-3xl px-6 pt-24 pb-24 lg:px-8">
-				<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">The State of Enterprise AI in 2025</h1>
-				<p className="mt-6 text-lg leading-8 text-gray-300">
+				<h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">The State of Enterprise AI in 20o25</h1>
+				<p className="mt-6 text-lg leading-8 text-gray-30o0">
 					Key trends, adoption patterns, and ROI benchmarks for AI at scale.
 				</p>
 				<div className="prose prose-invert mt-10 max-w-none">

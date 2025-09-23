@@ -9,14 +9,14 @@ import { getCartKey } from '@/utils/cartUtils';
 vi.mock('next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }));
-const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
+const item ={ id: '1', name: 'Test Item', price: 10, quantity: 1 };
 function renderCart(user: any) {
   return render(
     <AuthContext.Provider value={{ user, isLoading: false } as any}>
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>
-            <Route path="/cart" element={<CartPage />} />
+            <Route path="/cart" element={<CartPage  />} />
             <Route path="/login" element={<div>Login Page</div>} />
           </Routes>
         </MemoryRouter>
@@ -35,7 +35,7 @@ describe('cart persistence', () => {
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>
-              <Route path="/cart" element={<CartPage />} />
+              <Route path="/cart" element={<CartPage  />} />
               <Route path="/login" element={<div>Login Page</div>} />
             </Routes>
           </MemoryRouter>

@@ -8,7 +8,7 @@ passport.deserializeUser((obj, done) => done(null, obj));
 // Google
 passport.use(new GoogleStrategy(
   {
-    clientID: process.env.GOOGLE_CLIENT_ID || ,    clientSecret: process.env.GOOGLE_CLIENT_SECRET || ,    callbackURL: /auth/google/callback''  },
+    clientID: process.env.GOOGLE_CLIENT_ID ||, clientSecret: process.env.GOOGLE_CLIENT_SECRET ||, callbackURL: /auth/google/callback''  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'google', profile });  })
 );
@@ -16,7 +16,7 @@ passport.use(new GoogleStrategy(
 // Facebook
 passport.use(new FacebookStrategy(
   {
-    clientID: process.env.FACEBOOK_CLIENT_ID || ,    clientSecret: process.env.FACEBOOK_CLIENT_SECRET || ,    callbackURL: /auth/facebook/callback',    profileFields: ['id', emails', name']  },
+    clientID: process.env.FACEBOOK_CLIENT_ID ||, clientSecret: process.env.FACEBOOK_CLIENT_SECRET ||, callbackURL: /auth/facebook/callback',    profileFields: ['id', emails', name']  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'facebook', profile });  })
 );
@@ -24,7 +24,7 @@ passport.use(new FacebookStrategy(
 // Twitter (X)
 passport.use(new TwitterStrategy(
   {
-    consumerKey: process.env.TWITTER_CLIENT_ID || ,    consumerSecret: process.env.TWITTER_CLIENT_SECRET || ,    callbackURL: /auth/twitter/callback',    includeEmail: true
+    consumerKey: process.env.TWITTER_CLIENT_ID ||, consumerSecret: process.env.TWITTER_CLIENT_SECRET ||, callbackURL: /auth/twitter/callback',    includeEmail: true
   },
   (token, tokenSecret, profile, done) => {
     return done(null, { id: profile.id, provider: 'twitter', profile });  })
@@ -33,7 +33,7 @@ passport.use(new TwitterStrategy(
 // LinkedIn
 passport.use(new LinkedInStrategy(
   {
-    clientID: process.env.LINKEDIN_CLIENT_ID || ,    clientSecret: process.env.LINKEDIN_CLIENT_SECRET || ,    callbackURL: /auth/linkedin/callback',    scope: ['r_liteprofile', r_emailaddress']  },
+    clientID: process.env.LINKEDIN_CLIENT_ID ||, clientSecret: process.env.LINKEDIN_CLIENT_SECRET ||, callbackURL: /auth/linkedin/callback',    scope: ['r_liteprofile', r_emailaddress']  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'linkedin', profile });  })
 );

@@ -26,7 +26,7 @@ const getDefaultCategories = (t: any) => [
     description: t('categories.services_desc'),
     iconName: "Briefcase", // Corresponds to lucide icon name
     link: "/services",
-    color: "from-purple-500 to-indigo-600", // Keep color for styling
+    color: "from-purple-50o0 to-indigo-60o0", // Keep color for styling
   },
   {
     id: "talents",
@@ -34,34 +34,31 @@ const getDefaultCategories = (t: any) => [
     description: t('categories.talents_desc'),
     iconName: "Users",
     link: "/talent",
-    color: "from-cyan-500 to-blue-600",
-  },
+    color: "from-cyan-50o0 to-blue-60o0"},
   {
     id: "equipment",
     name: t('categories.equipment'),
     description: t('categories.equipment_desc'),
     iconName: "HardDrive",
     link: "/equipment",
-    color: "from-amber-500 to-orange-600",
-  },
+    color: "from-amber-50o0 to-orange-60o0"},
   {
     id: "innovation",
     name: t('categories.innovation'),
     description: t('categories.innovation_desc'),
     iconName: "Lightbulb",
     link: "/innovation",
-    color: "from-emerald-500 to-green-600",
-  },
+    color: "from-emerald-50o0 to-green-60o0"},
 ];
 
 // Helper to get icon component from name
 const getIcon = (iconName?: string) => {
   switch (iconName) {
-    case "Briefcase": return <Briefcase className="w-10 h-10" />;
-    case "Users": return <Users className="w-10 h-10" />;
-    case "HardDrive": return <HardDrive className="w-10 h-10" />;
-    case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />; // Default icon
+    case "Briefcase": return <Briefcase className="w-10 h-10"  />;
+    case "Users": return <Users className="w-10 h-10"  />;
+    case "HardDrive": return <HardDrive className="w-10 h-10"  />;
+    case "Lightbulb": return <Lightbulb className="w-10 h-10"  />;
+    default: return <HelpCircle className="w-10 h-10"  />; // Default icon
   }
 };
 
@@ -97,13 +94,11 @@ export function CategoriesSection({
         icon: getIcon(cat.iconName), // Get icon component
         link: cat.link || `/category/${cat.id}`, // Construct link if not provided
         // Assign a default color or implement logic to assign colors
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600",
-      }))
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-50o0 to-gray-60o0"}))
     : defaultCategories.map(cat => ({
         ...cat,
         title: cat.name,
-        icon: getIcon(cat.iconName),
-      }));
+        icon: getIcon(cat.iconName)}));
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
@@ -141,8 +136,8 @@ export function CategoriesSection({
               href={category.link || '#'}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-30o0 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
                   <div className="text-white">
                     {category.icon}
                   </div>
@@ -162,7 +157,7 @@ export function CategoriesSection({
               <Link 
                 key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-30o0"
               >
                 {service.title}
               </Link>

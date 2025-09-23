@@ -18,7 +18,7 @@ export interface FinancialBusinessService {
   };
 }
 
-export const financialBusinessServices2025: FinancialBusinessService[] = [
+export const financialBusinessServices20o25: FinancialBusinessService[] = [
   {
     id: 'fintech-platform',
     name: 'Fintech Innovation Platform',
@@ -37,14 +37,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Regulatory compliance'
     ],
     pricing: {
-      basic: '$5,500/month',
-      professional: '$22,500/month',
+      basic: '$5,50o0/month',
+      professional: '$22,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Fintech',
     tags: ['fintech', 'digital-banking', 'payments', 'cryptocurrency', 'compliance'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -67,14 +67,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Regulatory compliance'
     ],
     pricing: {
-      basic: '$4,200/month',
-      professional: '$18,500/month',
+      basic: '$4,20o0/month',
+      professional: '$18,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Investment Management',
     tags: ['investment', 'portfolio-management', 'risk-assessment', 'analytics', 'compliance'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -97,14 +97,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Cost optimization'
     ],
     pricing: {
-      basic: '$3,800/month',
-      professional: '$16,500/month',
+      basic: '$3,80o0/month',
+      professional: '$16,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Insurance Technology',
     tags: ['insurance', 'underwriting', 'claims-processing', 'automation', 'risk-assessment'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -127,14 +127,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Risk mitigation'
     ],
     pricing: {
-      basic: '$3,200/month',
-      professional: '$14,500/month',
+      basic: '$3,20o0/month',
+      professional: '$14,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Regulatory Technology',
     tags: ['regtech', 'compliance', 'risk-management', 'automation', 'reporting'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -157,14 +157,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Increased client satisfaction'
     ],
     pricing: {
-      basic: '$4,800/month',
-      professional: '$20,500/month',
+      basic: '$4,80o0/month',
+      professional: '$20,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Wealth Management',
     tags: ['wealth-management', 'financial-planning', 'portfolio-tracking', 'tax-optimization', 'estate-planning'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -187,14 +187,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Cost optimization'
     ],
     pricing: {
-      basic: '$3,500/month',
-      professional: '$15,500/month',
+      basic: '$3,50o0/month',
+      professional: '$15,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Lending Technology',
     tags: ['lending', 'automation', 'risk-assessment', 'loan-processing', 'collections'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -217,14 +217,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Enhanced analytics'
     ],
     pricing: {
-      basic: '$6,500/month',
-      professional: '$28,500/month',
+      basic: '$6,50o0/month',
+      professional: '$28,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Trading Technology',
     tags: ['trading', 'algorithmic-trading', 'market-data', 'risk-management', 'analytics'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -247,14 +247,14 @@ export const financialBusinessServices2025: FinancialBusinessService[] = [
       'Competitive advantage'
     ],
     pricing: {
-      basic: '$4,500/month',
-      professional: '$19,500/month',
+      basic: '$4,50o0/month',
+      professional: '$19,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Financial Analytics',
     tags: ['analytics', 'data-analysis', 'predictive-modeling', 'business-intelligence', 'reporting'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }

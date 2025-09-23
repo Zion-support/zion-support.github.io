@@ -63,9 +63,9 @@ export function TalentCardSaveButton({;
       <Heart ;
         className={cn(;
           "h-4 w-4 transition-colors", ;
-          localIsSaved ? "fill-red-500 text-red-500" :"text-zion-slate";
+          localIsSaved ? "fill-red-50o0 text-red-50o0" :"text-zion-slate";
         )} ;
-      />;
+       />;
     </button>;
   ),;}
  interface TalentCardSaveButtonProps {;
@@ -87,11 +87,9 @@ isAuthenticated ;
 const router = useRouter ();
 //Handle save toggle return;
 
-
 }variant: "default" ;
 }) ;
 };
 }/> </button>) ;
 }"
-
 

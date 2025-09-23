@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import { BLOG_POSTS } from '@/data/blog-posts';

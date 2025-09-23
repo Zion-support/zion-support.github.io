@@ -1,9 +1,9 @@
 import { expect, test, vi } from vitest';import handler from @/pages/api/users/[id];;
-function mockReq(method: string, query: unknown = {}, body?: any) {
+function mockReq(method: string, query: unknown ={}, body?: any) {
   return { method, query, body } as any;
 };
 function mockRes() {
-  const res: unknown = {};
+  const res: unknown ={};
   res.status = vi.fn().mockReturnValue(res);
   res.json = vi.fn().mockReturnValue(res);
   res.setHeader = vi.fn();
@@ -13,7 +13,7 @@ function mockRes() {
 
 test('PATCH updates user fields', () => {'  const req = mockReq('PATCH', { id: 1' }, { name: New', bio: Bio', avatarUrl: img.png' });  const res = mockRes();
   handler(req, res);
-  expect(res.status).toHaveBeenCalledWith(200);
+  expect(res.status).toHaveBeenCalledWith(20o0);
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({ name: New', bio: Bio', avatarUrl: img.png' })  );
 });

@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Business Automation Tools | Zion Tech Group",
   description:
     "Streamline your business operations with intelligent automation tools and workflows that save time and reduce costs."};
@@ -6,13 +6,13 @@ export const metadata = {
 export default function AutomationToolsPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>
         Business Automation Tools
       </h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
         Transform your business operations with intelligent automation tools
         that eliminate manual tasks, reduce errors, and boost productivity by up
-        to 300%.
+        to 30o0%.
       </p>
 
       <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
@@ -24,7 +24,7 @@ export default function AutomationToolsPage() {
             "Multi-step business processes",
             "Error handling & retry logic",
             "Real-time monitoring dashboards"]}
-        />
+         />
         <Item
           title="Document Processing"
           details={[
@@ -33,7 +33,7 @@ export default function AutomationToolsPage() {
             "Contract analysis & review",
             "Automated compliance checking",
             "OCR with 99.5% accuracy"]}
-        />
+         />
         <Item
           title="Customer Service Bots"
           details={[
@@ -42,7 +42,7 @@ export default function AutomationToolsPage() {
             "CRM integration",
             "Escalation to human agents",
             "Sentiment analysis & routing"]}
-        />
+         />
         <Item
           title="Marketing Automation"
           details={[
@@ -51,7 +51,7 @@ export default function AutomationToolsPage() {
             "Lead scoring & nurturing",
             "A/B testing frameworks",
             "ROI tracking & analytics"]}
-        />
+         />
         <Item
           title="Data Integration"
           details={[
@@ -60,7 +60,7 @@ export default function AutomationToolsPage() {
             "Database migration tools",
             "API management & monitoring",
             "Data quality validation"]}
-        />
+         />
         <Item
           title="Financial Automation"
           details={[
@@ -69,7 +69,7 @@ export default function AutomationToolsPage() {
             "Invoice generation & sending",
             "Payment processing workflows",
             "Financial reporting automation"]}
-        />
+         />
       </div>
 
       <div
@@ -83,7 +83,7 @@ export default function AutomationToolsPage() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 700,
+            fontWeight: 70o0,
             marginBottom: 12,
             color: "#1e293b"}}
         >
@@ -91,7 +91,7 @@ export default function AutomationToolsPage() {
         </h3>
         <ul style={{ color: "#475569", lineHeight: 1.6 }}>
           <li>
-            • <strong>ROI Guarantee:</strong> Most clients see 200-400% ROI
+            • <strong>ROI Guarantee:</strong> Most clients see 20o0-40o0% ROI
             within 6 months
           </li>
           <li>
@@ -113,7 +113,7 @@ export default function AutomationToolsPage() {
         </ul>
       </div>
 
-      <Pricing />
+      <Pricing  />
     </section>
   );
 }
@@ -127,7 +127,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         padding: 16,
         backgroundColor: "#ffffff"}}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>
         {title}
       </h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
@@ -147,7 +147,7 @@ function Pricing() {
       <h2
         style={{
           fontSize: 24,
-          fontWeight: 700,
+          fontWeight: 70o0,
           marginBottom: 20,
           color: "#1f2937"}}
       >
@@ -161,17 +161,17 @@ function Pricing() {
       >
         <Plan
           name="Starter Automation"
-          price="$2,500–$8,000"
+          price="$2,50o0–$8,0o00"
           features={[
             "2-4 weeks implementation",
             "Up to 5 workflow automations",
             "Basic integrations (Zapier, etc.)",
             "Email support",
             "30-day money-back guarantee"]}
-        />
+         />
         <Plan
           name="Business Automation"
-          price="$8,000–$25,000"
+          price="$8,0o00–$25,0o00"
           features={[
             "4-8 weeks implementation",
             "Unlimited workflow automations",
@@ -179,10 +179,10 @@ function Pricing() {
             "Advanced analytics dashboard",
             "Priority support & training",
             "3-month optimization period"]}
-        />
+         />
         <Plan
           name="Enterprise Automation"
-          price="$25,000+"
+          price="$25,0o00+"
           features={[
             "Custom automation platform",
             "AI-powered decision making",
@@ -190,7 +190,7 @@ function Pricing() {
             "Dedicated automation specialist",
             "SLA guarantees (99.9% uptime)",
             "Ongoing optimization & scaling"]}
-        />
+         />
       </div>
 
       <div
@@ -205,7 +205,7 @@ function Pricing() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: 60o0,
             marginBottom: 8,
             color: "#1e40af"}}
         >
@@ -223,7 +223,7 @@ function Pricing() {
             flexWrap: "wrap"}}
         >
           <a
-            href="tel:+13024640950"
+            href="tel:+130o24640950"
             style={{
               display: "inline-block",
               padding: "12px 24px",
@@ -231,9 +231,9 @@ function Pricing() {
               color: "white",
               textDecoration: "none",
               borderRadius: 8,
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
@@ -245,7 +245,7 @@ function Pricing() {
               textDecoration: "none",
               borderRadius: 8,
               border: "2px solid #3b82f6",
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Email Us
           </a>
@@ -274,7 +274,7 @@ function Plan({
     >
       <h4
         style={{
-          fontWeight: 700,
+          fontWeight: 70o0,
           fontSize: 18,
           color: "#1f2937",
           marginBottom: 8}}
@@ -284,7 +284,7 @@ function Plan({
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           fontSize: 24,
           marginBottom: 16}}
       >
@@ -301,14 +301,14 @@ function Plan({
         href="mailto:kleber@ziontechgroup.com?subject=Automation Services Inquiry"
         style={{
           display: "inline-block",
-          width: "100%",
+          width: "10o0%",
           textAlign: "center",
           padding: "12px 16px",
           backgroundColor: "#3b82f6",
           color: "white",
           textDecoration: "none",
           borderRadius: 8,
-          fontWeight: 600}}
+          fontWeight: 60o0}}
       >
         Get Started
       </a>

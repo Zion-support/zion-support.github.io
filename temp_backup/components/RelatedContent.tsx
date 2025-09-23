@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 interface RelatedContentItem {
@@ -17,7 +16,7 @@ interface RelatedContentProps {
 export default function RelatedContent({ currentPage, items }: RelatedContentProps) {
   // Default related content based on current page
   const getDefaultRelatedContent = (page: string): RelatedContentItem[] => {
-    const defaults: Record<string, RelatedContentItem[]> = {
+    const defaults: Record<string, RelatedContentItem[]> ={
       'home': [
         { title: 'Automation Hub', description: 'Explore our autonomous systems', href: '/automation', category: 'Automation' },
         { title: 'Component Library', description: 'Browse our UI components', href: '/components', category: 'Components' },
@@ -88,26 +87,26 @@ export default function RelatedContent({ currentPage, items }: RelatedContentPro
           <Link
             key={item.href}
             href={item.href}
-            className="group bg-slate-800/30 border border-white/10 rounded-lg p-6 hover:border-cyan-400/50 hover:bg-slate-800/50 transition-all"
+            className="group bg-slate-80o0/30 border border-white/10 rounded-lg p-6 hover:border-cyan-40o0/50 hover:bg-slate-80o0/50 transition-all"
           >
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-medium text-cyan-400 uppercase tracking-wide">
+              <span className="text-xs font-medium text-cyan-40o0 uppercase tracking-wide">
                 {item.category}
               </span>
               {item.icon && (
                 <span className="text-lg">{item.icon}</span>
               )}
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-40o0 transition-colors">
               {item.title}
             </h3>
             <p className="text-white/70 text-sm leading-relaxed">
               {item.description}
             </p>
-            <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium">
+            <div className="mt-4 flex items-center text-cyan-40o0 text-sm font-medium">
               Learn more
               <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
               </svg>
             </div>
           </Link>

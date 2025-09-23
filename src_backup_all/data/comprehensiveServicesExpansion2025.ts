@@ -1,7 +1,7 @@
 import { ProductListing } from "@/types/listings";
 
-// Comprehensive 2025 Services Expansion - Real, Market-Competitive Micro SAAS, IT & AI Services
-export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
+// Comprehensive 20o25 Services Expansion - Real, Market-Competitive Micro SAAS, IT & AI Services
+export const COMPREHENSIVE_SERVICES_EXPANSION_20o25: ProductListing[] = [
   // Advanced AI & Machine Learning Services
   {
     id: "ai-autonomous-research-assistant",
@@ -16,10 +16,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-01-30T09:00:00.000Z",
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o1-30T09:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 187,
     featured: true,
@@ -48,10 +47,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-05T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o2-0o5T14:30:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 234,
     location: "Global",
@@ -79,10 +77,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-10T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o2-10T11:15:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 156,
     featured: true,
@@ -113,10 +110,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-15T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -145,10 +141,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-20T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o2-20T14:30:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 134,
     location: "Global",
@@ -178,10 +173,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-25T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o2-25T11:15:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 178,
     featured: true,
@@ -210,10 +204,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-01T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-0o1T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 67,
     featured: true,
@@ -244,10 +237,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-05T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-0o5T14:30:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 45,
     featured: true,
@@ -276,10 +268,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-10T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-10T11:15:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 123,
     location: "Global",
@@ -309,10 +300,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-15T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     location: "Global",
@@ -340,10 +330,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-20T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-20T14:30:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -374,10 +363,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-25T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-25T11:15:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 34,
     featured: true,
@@ -406,10 +394,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-03-30T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o3-30T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 78,
     location: "Global",
@@ -439,10 +426,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-01T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-0o1T14:30:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 145,
     featured: true,
@@ -471,10 +457,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-05T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-0o5T11:15:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 234,
     location: "Global",
@@ -504,10 +489,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-10T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-10T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 189,
     location: "Global",
@@ -535,10 +519,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-15T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-15T14:30:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 123,
     featured: true,
@@ -569,10 +552,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-20T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-1550o751827-4bd374c3f58b?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-20T11:15:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 67,
     featured: true,
@@ -601,10 +583,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-25T10:00:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-25T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 145,
     location: "Global",
@@ -634,10 +615,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-04-30T14:30:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o4-30T14:30:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -666,10 +646,9 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      email: "kleber@ziontechgroup.com",
-    },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-05-01T11:15:00.000Z",
+      email: "kleber@ziontechgroup.com"},
+    images: ["https://images.unsplash.com/photo-15810929180o56-0c4c3acd3789?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o25-0o5-0o1T11:15:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 178,
     location: "Global",
@@ -688,25 +667,25 @@ export const COMPREHENSIVE_SERVICES_EXPANSION_2025: ProductListing[] = [
 ];
 
 // Export additional service categories for easy access
-export const SERVICE_CATEGORIES = {
-  "AI & ML": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "AI & ML"),
-  "Cloud & Infrastructure": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Cloud & Infrastructure"),
-  "Cybersecurity": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Cybersecurity"),
-  "IoT & Smart Cities": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "IoT & Smart Cities"),
-  "Blockchain & Web3": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Blockchain & Web3"),
-  "Healthcare & Biotechnology": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Healthcare & Biotechnology"),
-  "Financial Technology": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Financial Technology"),
-  "Education & Learning": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Education & Learning"),
-  "Manufacturing & Industry 4.0": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Manufacturing & Industry 4.0"),
-  "Energy & Sustainability": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.category === "Energy & Sustainability")
+export const SERVICE_CATEGORIES ={
+  "AI & ML": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "AI & ML"),
+  "Cloud & Infrastructure": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Cloud & Infrastructure"),
+  "Cybersecurity": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Cybersecurity"),
+  "IoT & Smart Cities": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "IoT & Smart Cities"),
+  "Blockchain & Web3": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Blockchain & Web3"),
+  "Healthcare & Biotechnology": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Healthcare & Biotechnology"),
+  "Financial Technology": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Financial Technology"),
+  "Education & Learning": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Education & Learning"),
+  "Manufacturing & Industry 4.0": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Manufacturing & Industry 4.0"),
+  "Energy & Sustainability": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.category === "Energy & Sustainability")
 };
 
 // Export featured services
-export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.featured);
+export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.featured);
 
 // Export services by price range
-export const SERVICES_BY_PRICE = {
-  "Budget": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price < 2000),
-  "Mid-range": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 2000 && service.price < 5000),
-  "Enterprise": COMPREHENSIVE_SERVICES_EXPANSION_2025.filter(service => service.price >= 5000)
+export const SERVICES_BY_PRICE ={
+  "Budget": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.price < 20o00),
+  "Mid-range": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.price >= 20o00 && service.price < 50o00),
+  "Enterprise": COMPREHENSIVE_SERVICES_EXPANSION_20o25.filter(service => service.price >= 50o00)
 };

@@ -37,7 +37,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               onClick={() => onEdit(education)}
               aria-label="Edit education"
             >
-              <Edit className="h-4 w-4" />
+              <Edit className="h-4 w-4"  />
             </Button>
             <Button
               variant="ghost"
@@ -45,7 +45,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               onClick={() => onDelete(education.id!)}
               aria-label="Delete education"
             >
-              <Trash2 className="h-4 w-4" />
+              <Trash2 className="h-4 w-4"  />
             </Button>
           </div>
         </div>

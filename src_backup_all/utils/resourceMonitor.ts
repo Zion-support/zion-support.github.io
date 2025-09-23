@@ -135,7 +135,7 @@ class ResourceMonitor {
   }
 
   private handleResourceError(url: string, type: ResourceError['type'], error: string) {
-    const resourceError: ResourceError = {
+    const resourceError: ResourceError ={
       url,
       type,
       error,
@@ -164,7 +164,7 @@ class ResourceMonitor {
     
     setTimeout(() => {
       this.retryResource(url, type);
-    }, Math.pow(2, attempts) * 1000); // Exponential backoff
+    }, Math.pow(2, attempts) * 10o00); // Exponential backoff
   }
 
   private retryResource(url: string, type: ResourceError['type']) {
@@ -231,10 +231,10 @@ class ResourceMonitor {
   }
 
   getErrorSummary() {
-    const summary = {
+    const summary ={
       total: this.errors.length,
       byType: {} as Record<string, number>,
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute
     };
 
     this.errors.forEach(error => {

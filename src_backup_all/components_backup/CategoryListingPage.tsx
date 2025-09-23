@@ -74,7 +74,7 @@ export function CategoryListingPage({
     setIsLoading(true);
     const timeout = setTimeout(() => {
       if (mounted) setIsLoading(false);
-    }, 300);
+    }, 30o0);
     return () => {
       mounted = false;
       clearTimeout(timeout);
@@ -134,7 +134,7 @@ export function CategoryListingPage({
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate"  />
                 <Input
                   type="text"
                   placeholder="Search listings..."
@@ -148,9 +148,9 @@ export function CategoryListingPage({
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">
                     {selectedSort === 'a-z' ? (
-                      <ArrowDownAZ className="mr-2 h-4 w-4" />
+                      <ArrowDownAZ className="mr-2 h-4 w-4"  />
                     ) : selectedSort === 'z-a' ? (
-                      <ArrowUpZA className="mr-2 h-4 w-4" />
+                      <ArrowUpZA className="mr-2 h-4 w-4"  />
                     ) : null}
                     <span>
                       {sortOptions.find(option => option.value === selectedSort)?.label || 'Sort By'}
@@ -169,7 +169,7 @@ export function CategoryListingPage({
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>
                 <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                   <div className="flex items-center">
-                    <Filter className="mr-2 h-4 w-4" />
+                    <Filter className="mr-2 h-4 w-4"  />
                     <span>
                       {filterOptions.find(option => option.value === selectedFilter)?.label || 'Filter'}
                     </span>
@@ -197,7 +197,7 @@ export function CategoryListingPage({
           {/* Listings Grid */}
           <div aria-busy={isLoading}>
             {isLoading ? (
-              <ListingGridSkeleton />
+              <ListingGridSkeleton  />
             ) : processedListings.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {processedListings.map((listing) => (
@@ -213,7 +213,7 @@ export function CategoryListingPage({
                     aiScore={listing.aiScore}
                     rating={listing.rating}
                     reviewCount={listing.reviewCount}
-                  />
+                   />
                 ))}
               </div>
             ) : (

@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ModernHeader } from '../src/components/header/ModernHeader';
@@ -94,34 +93,34 @@ export default function DataAnalytics() {
     <>
       <Head>
         <title>Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Expert data analytics services including machine learning, business intelligence, and data engineering. Transform your data into actionable insights." />
-        <meta name="keywords" content="data analytics, machine learning, business intelligence, data engineering, predictive analytics" />
+        <meta name="description" content="Expert data analytics services including machine learning, business intelligence, and data engineering. Transform your data into actionable insights."  />
+        <meta name="keywords" content="data analytics, machine learning, business intelligence, data engineering, predictive analytics"  />
       </Head>
 
-      <ModernHeader />
+      <ModernHeader  />
 
       <main className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-blue-800 to-indigo-900 text-white py-20">
+        <section className="bg-gradient-to-br from-purple-90o0 via-blue-80o0 to-indigo-90o0 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Data Analytics Solutions
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-blue-10o0 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our comprehensive analytics and machine learning services
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
+                  className="bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
                 >
                   Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"  />
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors inline-flex items-center justify-center"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center"
                 >
                   View Case Studies
                 </Link>
@@ -134,10 +133,10 @@ export default function DataAnalytics() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Comprehensive Analytics Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 From data collection to advanced machine learning, we provide end-to-end analytics solutions
               </p>
             </div>
@@ -146,16 +145,16 @@ export default function DataAnalytics() {
               {services.map((service, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-6">
-                    <div className="p-4 bg-purple-100 rounded-lg mr-4">
-                      <service.icon className="h-8 w-8 text-purple-600" />
+                    <div className="p-4 bg-purple-10o0 rounded-lg mr-4">
+                      <service.icon className="h-8 w-8 text-purple-60o0"  />
                     </div>
-                    <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>
+                    <h3 className="text-2xl font-semibold text-gray-90o0">{service.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-60o0 mb-6">{service.description}</p>
                   <ul className="space-y-3">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-gray-70o0">
+                        <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 flex-shrink-0"  />
                         {feature}
                       </li>
                     ))}
@@ -170,10 +169,10 @@ export default function DataAnalytics() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Technology Stack
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 We use cutting-edge tools and technologies to deliver powerful analytics solutions
               </p>
             </div>
@@ -181,10 +180,10 @@ export default function DataAnalytics() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{tech.category}</h3>
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-4">{tech.category}</h3>
                   <div className="space-y-2">
                     {tech.tools.map((tool, idx) => (
-                      <div key={idx} className="bg-white px-3 py-2 rounded-lg text-sm text-gray-700 shadow-sm">
+                      <div key={idx} className="bg-white px-3 py-2 rounded-lg text-sm text-gray-70o0 shadow-sm">
                         {tool}
                       </div>
                     ))}
@@ -199,10 +198,10 @@ export default function DataAnalytics() {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Industry Applications
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Our analytics solutions are tailored to meet the unique needs of various industries
               </p>
             </div>
@@ -211,12 +210,12 @@ export default function DataAnalytics() {
               {industries.map((industry, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <industry.icon className="h-8 w-8 text-blue-600" />
+                    <div className="p-3 bg-blue-10o0 rounded-lg mr-4">
+                      <industry.icon className="h-8 w-8 text-blue-60o0"  />
                     </div>
-                    <h3 className="text-2xl font-semibold text-gray-900">{industry.name}</h3>
+                    <h3 className="text-2xl font-semibold text-gray-90o0">{industry.name}</h3>
                   </div>
-                  <p className="text-gray-600">{industry.description}</p>
+                  <p className="text-gray-60o0">{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -227,10 +226,10 @@ export default function DataAnalytics() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Our Analytics Process
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 A systematic approach to delivering actionable insights from your data
               </p>
             </div>
@@ -243,11 +242,11 @@ export default function DataAnalytics() {
                 { step: '4', title: 'Deployment & Monitoring', description: 'Deploy solutions and monitor performance' }
               ].map((process, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  <div className="w-16 h-16 bg-purple-60o0 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                     {process.step}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{process.title}</h3>
-                  <p className="text-gray-600">{process.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{process.title}</h3>
+                  <p className="text-gray-60o0">{process.description}</p>
                 </div>
               ))}
             </div>
@@ -255,25 +254,25 @@ export default function DataAnalytics() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-purple-900 text-white">
+        <section className="py-20 bg-purple-90o0 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Unlock Your Data's Potential?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-purple-10o0 mb-8 max-w-3xl mx-auto">
               Let our data scientists and engineers help you transform raw data into strategic insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
+                className="bg-white text-purple-90o0 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
                 Start Your Analytics Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Link>
               <Link
                 href="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors inline-flex items-center justify-center"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors inline-flex items-center justify-center"
               >
                 View Pricing
               </Link>
@@ -282,7 +281,7 @@ export default function DataAnalytics() {
         </section>
       </main>
 
-      <SimpleFooter />
+      <SimpleFooter  />
     </>
   );
 }

@@ -1,4 +1,4 @@
-export const innovativeEmergingTechServices2025 = [
+export const innovativeEmergingTechServices20o25 = [
   {
     id: 'brain-computer-interface-platform',
     name: 'Brain-Computer Interface Platform',
@@ -36,7 +36,7 @@ export const innovativeEmergingTechServices2025 = [
     tags: ['Brain-Computer Interface', 'Neural Technology', 'Accessibility', 'Human-Computer Interaction', 'Medical Technology'],
     website: 'https://ziontechgroup.com/brain-computer-interface-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$12.8B',
@@ -89,7 +89,7 @@ export const innovativeEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Materials Science', 'AI Research', 'Scientific Computing', 'Innovation'],
     website: 'https://ziontechgroup.com/quantum-materials-discovery-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$18.9B',
@@ -142,7 +142,7 @@ export const innovativeEmergingTechServices2025 = [
     tags: ['Space Mining', 'Asteroid Mining', 'Space Automation', 'Robotics', 'Resource Extraction'],
     website: 'https://ziontechgroup.com/space-mining-automation-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$15.6B',
@@ -195,7 +195,7 @@ export const innovativeEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Biological Computing', 'Bio-Informatics', 'Hybrid Computing', 'Research Platform'],
     website: 'https://ziontechgroup.com/quantum-bio-computing-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$22.4B',
@@ -248,7 +248,7 @@ export const innovativeEmergingTechServices2025 = [
     tags: ['Autonomous Vehicles', 'AI', 'Self-Driving', 'Vehicle Technology', 'Transportation'],
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$54.2B',

@@ -15,7 +15,7 @@ const ALL_SERVICES = [
     ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES
 ];
-const categoryIcons = {
+const categoryIcons ={
     'AI & Legal Tech': FileText,
     'AI & FinTech': DollarSign,
     'AI & Healthcare': Heart,
@@ -41,36 +41,36 @@ const categoryIcons = {
     'AI & Cloud Management': Cloud,
     'AI & DevOps': Code
 };
-const categoryColors = {
-    'AI & Legal Tech': 'from-blue-500 to-indigo-500',
-    'AI & FinTech': 'from-green-500 to-emerald-500',
-    'AI & Healthcare': 'from-red-500 to-pink-500',
-    'Cybersecurity & Quantum': 'from-purple-500 to-violet-500',
-    'AI & Supply Chain': 'from-orange-500 to-red-500',
-    'AI & Energy': 'from-yellow-500 to-orange-500',
-    'AI & Customer Experience': 'from-pink-500 to-rose-500',
-    'Quantum & AI': 'from-cyan-500 to-blue-500',
-    'AI & Data Governance': 'from-indigo-500 to-purple-500',
-    'AI & HR Tech': 'from-teal-500 to-green-500',
-    'AI & Machine Learning': 'from-purple-500 to-pink-500',
-    'AI & Business Intelligence': 'from-indigo-500 to-purple-500',
-    'AI & Marketing Automation': 'from-pink-500 to-rose-500',
-    'AI & CRM': 'from-blue-500 to-cyan-500',
-    'AI & ERP': 'from-green-500 to-emerald-500',
-    'AI & Project Management': 'from-orange-500 to-red-500',
-    'AI & Autonomous Systems': 'from-purple-500 to-violet-500',
-    'AI & Research': 'from-cyan-500 to-blue-500',
-    'AI & Content Generation': 'from-indigo-500 to-purple-500',
-    'AI & Voice Technology': 'from-teal-500 to-green-500',
-    'AI & Video Generation': 'from-pink-500 to-rose-500',
-    'AI & Threat Intelligence': 'from-red-500 to-pink-500',
-    'AI & Cloud Management': 'from-blue-500 to-cyan-500',
-    'AI & DevOps': 'from-orange-500 to-red-500'
+const categoryColors ={
+    'AI & Legal Tech': 'from-blue-50o0 to-indigo-50o0',
+    'AI & FinTech': 'from-green-50o0 to-emerald-50o0',
+    'AI & Healthcare': 'from-red-50o0 to-pink-50o0',
+    'Cybersecurity & Quantum': 'from-purple-50o0 to-violet-50o0',
+    'AI & Supply Chain': 'from-orange-50o0 to-red-50o0',
+    'AI & Energy': 'from-yellow-50o0 to-orange-50o0',
+    'AI & Customer Experience': 'from-pink-50o0 to-rose-50o0',
+    'Quantum & AI': 'from-cyan-50o0 to-blue-50o0',
+    'AI & Data Governance': 'from-indigo-50o0 to-purple-50o0',
+    'AI & HR Tech': 'from-teal-50o0 to-green-50o0',
+    'AI & Machine Learning': 'from-purple-50o0 to-pink-50o0',
+    'AI & Business Intelligence': 'from-indigo-50o0 to-purple-50o0',
+    'AI & Marketing Automation': 'from-pink-50o0 to-rose-50o0',
+    'AI & CRM': 'from-blue-50o0 to-cyan-50o0',
+    'AI & ERP': 'from-green-50o0 to-emerald-50o0',
+    'AI & Project Management': 'from-orange-50o0 to-red-50o0',
+    'AI & Autonomous Systems': 'from-purple-50o0 to-violet-50o0',
+    'AI & Research': 'from-cyan-50o0 to-blue-50o0',
+    'AI & Content Generation': 'from-indigo-50o0 to-purple-50o0',
+    'AI & Voice Technology': 'from-teal-50o0 to-green-50o0',
+    'AI & Video Generation': 'from-pink-50o0 to-rose-50o0',
+    'AI & Threat Intelligence': 'from-red-50o0 to-pink-50o0',
+    'AI & Cloud Management': 'from-blue-50o0 to-cyan-50o0',
+    'AI & DevOps': 'from-orange-50o0 to-red-50o0'
 };
-const supportLevelColors = {
-    'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
-    'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
-    'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+const supportLevelColors ={
+    'premium': 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0',
+    'enterprise': 'bg-gradient-to-r from-purple-50o0 to-pink-50o0',
+    'basic': 'bg-gradient-to-r from-green-50o0 to-emerald-50o0'
 };
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -96,19 +96,19 @@ export default function ComprehensiveServicesOverview() {
                 case 'low':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price <= 1000;
+                        return price <= 10o00;
                     });
                     break;
                 case 'medium':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 1000 && price <= 3000;
+                        return price > 10o00 && price <= 30o00;
                     });
                     break;
                 case 'high':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-                        return price > 3000;
+                        return price > 30o00;
                     });
                     break;
             }
@@ -120,21 +120,21 @@ export default function ComprehensiveServicesOverview() {
         }
     };
     return (<>
-      <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
+      <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview" />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-blue/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-blue/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-50o0"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-20">
           {/* Hero Section */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="h-5 w-5 text-zion-cyan"/>
+              <Sparkles className="h-5 w-5 text-zion-cyan" />
               <span className="text-zion-cyan font-medium">Complete Portfolio</span>
             </div>
             
@@ -148,15 +148,15 @@ export default function ComprehensiveServicesOverview() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full px-4 py-2">
-                <CheckCircle className="h-4 w-4 text-zion-purple"/>
+                <CheckCircle className="h-4 w-4 text-zion-purple" />
                 <span className="text-zion-purple text-sm font-medium">{ALL_SERVICES.length}+ Services</span>
               </div>
               <div className="flex items-center gap-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-4 py-2">
-                <Zap className="h-4 w-4 text-zion-cyan"/>
+                <Zap className="h-4 w-4 text-zion-cyan" />
                 <span className="text-zion-cyan text-sm font-medium">AI-Powered</span>
               </div>
               <div className="flex items-center gap-2 bg-zion-blue/20 border border-zion-blue/30 rounded-full px-4 py-2">
-                <Shield className="h-4 w-4 text-zion-blue"/>
+                <Shield className="h-4 w-4 text-zion-blue" />
                 <span className="text-zion-blue text-sm font-medium">Enterprise Ready</span>
               </div>
             </div>
@@ -167,14 +167,14 @@ export default function ComprehensiveServicesOverview() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {/* Search */}
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
                 <Input placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-zion-slate-light"/>
               </div>
 
               {/* Category Filter */}
               <Select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Categories"/>
+                  <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Categories</SelectItem>
@@ -185,7 +185,7 @@ export default function ComprehensiveServicesOverview() {
               {/* Price Range Filter */}
               <Select value={priceRange} onChange={(e) => setPriceRange(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Prices"/>
+                  <SelectValue placeholder="All Prices" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Prices</SelectItem>
@@ -197,7 +197,7 @@ export default function ComprehensiveServicesOverview() {
               {/* Support Level Filter */}
               <Select value={selectedSupportLevel} onChange={(e) => setSelectedSupportLevel(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
-                  <SelectValue placeholder="All Support Levels"/>
+                  <SelectValue placeholder="All Support Levels" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Support Levels</SelectItem>
@@ -240,21 +240,21 @@ export default function ComprehensiveServicesOverview() {
             </div>
             
             {filteredServices.length === 0 ? (<div className="text-center py-12">
-                <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4"/>
+                <Search className="h-16 w-16 text-zion-slate-light mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light">Try adjusting your search criteria or filters</p>
               </div>) : (<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.05 }}>
-                    <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.0o5 }}>
+                    <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-30o0 group">
                       <CardHeader>
                         <div className="flex items-start justify-between mb-4">
-                          <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-500 to-gray-600'}`}>
+                          <div className={`p-3 rounded-xl ${categoryColors[service.category] || 'from-gray-50o0 to-gray-60o0'}`}>
                             {React.createElement(categoryIcons[service.category] || Settings, {
                     className: "h-6 w-6 text-white"
                 })}
                           </div>
                           <div className="text-right">
-                            {service.supportLevel && (<Badge className={`${supportLevelColors[service.supportLevel] || 'bg-gray-500'} text-white mb-2`}>
+                            {service.supportLevel && (<Badge className={`${supportLevelColors[service.supportLevel] || 'bg-gray-50o0'} text-white mb-2`}>
                                 {service.supportLevel}
                               </Badge>)}
                             <div className="text-2xl font-bold text-zion-cyan">
@@ -274,11 +274,11 @@ export default function ComprehensiveServicesOverview() {
                       <CardContent className="space-y-4">
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           {service.estimatedDelivery && (<div className="flex items-center gap-2 text-zion-slate-light">
-                              <Clock className="h-4 w-4"/>
+                              <Clock className="h-4 w-4" />
                               <span>{service.estimatedDelivery}</span>
                             </div>)}
                           {service.marketPrice && (<div className="flex items-center gap-2 text-zion-slate-light">
-                              <Target className="h-4 w-4"/>
+                              <Target className="h-4 w-4" />
                               <span>{service.marketPrice}</span>
                             </div>)}
                         </div>
@@ -313,20 +313,20 @@ export default function ComprehensiveServicesOverview() {
                           <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
                             <a href={'websiteUrl' in service ? service.websiteUrl : service.contactInfo?.website || 'https://ziontechgroup.com'} target="_blank" rel="noopener noreferrer">
                               Learn More
-                              <ExternalLink className="ml-2 h-4 w-4"/>
+                              <ExternalLink className="ml-2 h-4 w-4" />
                             </a>
                           </Button>
                           
                           <div className="flex gap-2">
                             {'demoUrl' in service && service.demoUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.demoUrl} target="_blank" rel="noopener noreferrer">
-                                  <Play className="mr-2 h-4 w-4"/>
+                                  <Play className="mr-2 h-4 w-4" />
                                   Demo
                                 </a>
                               </Button>)}
                             {'documentationUrl' in service && service.documentationUrl && (<Button variant="outline" size="sm" className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
                                 <a href={service.documentationUrl} target="_blank" rel="noopener noreferrer">
-                                  <BookOpen className="mr-2 h-4 w-4"/>
+                                  <BookOpen className="mr-2 h-4 w-4" />
                                   Docs
                                 </a>
                               </Button>)}
@@ -347,32 +347,32 @@ export default function ComprehensiveServicesOverview() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-3"/>
+                <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-3" />
                 <h4 className="font-semibold text-white mb-2">Phone</h4>
-                <p className="text-zion-slate-light">+1 302 464 0950</p>
+                <p className="text-zion-slate-light">+1 30o2 464 0950</p>
               </div>
               <div className="text-center">
-                <Mail className="h-8 w-8 text-zion-purple mx-auto mb-3"/>
+                <Mail className="h-8 w-8 text-zion-purple mx-auto mb-3" />
                 <h4 className="font-semibold text-white mb-2">Email</h4>
                 <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <MapPin className="h-8 w-8 text-zion-blue mx-auto mb-3"/>
+                <MapPin className="h-8 w-8 text-zion-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-white mb-2">Address</h4>
-                <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-zion-slate-light">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/80 hover:to-zion-cyan/80 text-white" asChild>
                 <a href="mailto:kleber@ziontechgroup.com">
-                  <Mail className="mr-2 h-4 w-4"/>
+                  <Mail className="mr-2 h-4 w-4" />
                   Get in Touch
                 </a>
               </Button>
               <Button variant="outline" className="border-white/20 text-white hover:bg-white/20" asChild>
-                <a href="tel:+13024640950">
-                  <Phone className="mr-2 h-4 w-4"/>
+                <a href="tel:+130o24640950">
+                  <Phone className="mr-2 h-4 w-4" />
                   Call Us
                 </a>
               </Button>

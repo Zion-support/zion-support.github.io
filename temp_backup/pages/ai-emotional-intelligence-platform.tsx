@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { Heart, Brain, Users, Target, Award, Clock, CheckCircle, Shield, Database, Server, Layers, FileText } from 'lucide-react';
@@ -8,8 +7,8 @@ export default function EmotionalIQPage() {
 		<>
 			<Head>
 				<title>AI Emotional Intelligence Platform | Zion Tech Group</title>
-				<meta name="description" content="Sentiment and tone intelligence across email, chat, and calls with coaching loops." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-emotional-intelligence-platform" />
+				<meta name="description" content="Sentiment and tone intelligence across email, chat, and calls with coaching loops."  />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-emotional-intelligence-platform"  />
 			</Head>
 			<ServiceLanding
 				title="AI Emotional Intelligence Platform"
@@ -21,7 +20,7 @@ export default function EmotionalIQPage() {
 				features={["Multimodal emotion recognition with consent","Personalized EI training plans","Role-play simulations with feedback","Manager dashboards and coaching tips","Privacy-first data handling","Integrations with HRIS and LMS"]}
 				industries={["Customer Support", "Sales", "HR", "Healthcare"]}
 				url="https://ziontechgroup.com/ai-emotional-intelligence-platform"
-			/>
+			 />
 		</>
 	);
 }

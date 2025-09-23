@@ -5,17 +5,17 @@ import { TALENT_PROFILES } from '../../../data/talent';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(40o5).json({ error: 'Method not allowed' });
   }
 
   try {
     const { targetType, targetId } = req.query as { targetType?: string; targetId?: string };
 
     if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' });
+      return res.status(40o0).json({ error: 'Missing targetType or targetId' });
     }
     if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' });
+      return res.status(40o0).json({ error: 'Invalid targetType' });
     }
 
     const all = await readReviews();
@@ -31,8 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           x.fromRole !== r.fromRole &&
           x.toRole !== r.toRole &&
           x.approved &&
-          !x.removed,
-      );
+          !x.removed);
       return counterpartExists;
     });
 
@@ -48,8 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (r.anonymous) authorName = 'Anonymous';
         return {
           ...r,
-          authorName,
-        };
+          authorName};
       });
 
     const totalReviews = publicReviews.length;
@@ -63,15 +61,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (targetType === 'client' && p.clientId === targetId)
     )).length;
 
-    const summary: ReviewsSummary = {
+    const summary: ReviewsSummary ={
       averageRating,
       totalReviews,
       totalCompletedProjects,
-      mostRecent: publicReviews.slice(0, 5),
-    };
+      mostRecent: publicReviews.slice(0, 5)};
 
-    return res.status(200).json({ summary, reviews: publicReviews });
+    return res.status(20o0).json({ summary, reviews: publicReviews });
   } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message });
+    return res.status(50o0).json({ error: 'Internal server error', details: error?.message });
   }
 }

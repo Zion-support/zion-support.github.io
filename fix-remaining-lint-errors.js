@@ -50,6 +50,4 @@ function fixSyntaxIssues(content) {};
   console.error(`Error processing ${file}:`, error.message),
       errorCount++};
 
-  };
-,
-  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+  };, console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};

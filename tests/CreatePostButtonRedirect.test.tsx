@@ -12,7 +12,7 @@ test('redirects to login when user is not authenticated', () => {
 
   render(
     <MemoryRouter>
-      <CreatePostButton />
+      <CreatePostButton  />
     </MemoryRouter>
   );
 

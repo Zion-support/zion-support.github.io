@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,17 +6,17 @@ export default function SustainableAutomationFuture() {
     <>
       <Head>
         <title>Sustainable Automation: Building a Greener Future with AI | Zion Tech Group</title>
-        <meta name="description" content="Discover how autonomous systems and AI automation are driving sustainability initiatives and creating a more environmentally conscious future." />
-        <meta property="og:title" content="Sustainable Automation: Building a Greener Future with AI" />
-        <meta property="og:description" content="Discover how autonomous systems and AI automation are driving sustainability initiatives and creating a more environmentally conscious future." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Discover how autonomous systems and AI automation are driving sustainability initiatives and creating a more environmentally conscious future."  />
+        <meta property="og:title" content="Sustainable Automation: Building a Greener Future with AI"  />
+        <meta property="og:description" content="Discover how autonomous systems and AI automation are driving sustainability initiatives and creating a more environmentally conscious future."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/blog" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Blog
               </Link>
             </nav>
@@ -25,14 +24,14 @@ export default function SustainableAutomationFuture() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+                  <span className="px-3 py-1 bg-green-40o0/20 text-green-40o0 text-sm rounded-full border border-green-40o0/30">
                     Sustainability
                   </span>
-                  <span className="text-white/60 text-sm">January 25, 2025</span>
+                  <span className="text-white/60 text-sm">January 25, 20o25</span>
                   <span className="text-white/60 text-sm">•</span>
                   <span className="text-white/60 text-sm">10 min read</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-40o0 to-emerald-40o0 bg-clip-text text-transparent">
                   Sustainable Automation: Building a Greener Future with AI
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -42,7 +41,7 @@ export default function SustainableAutomationFuture() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">The Environmental Imperative</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">The Environmental Imperative</h2>
                 <p className="text-white/90 mb-4">
                   The urgency of addressing climate change has never been greater. With global temperatures rising and 
                   extreme weather events becoming more frequent, organizations worldwide are recognizing that sustainability 
@@ -62,9 +61,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-emerald-400">Energy Optimization and Smart Grids</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-emerald-40o0">Energy Optimization and Smart Grids</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-emerald-300">Intelligent Energy Management</h3>
+                <h3 className="text-xl font-semibold mb-4 text-emerald-30o0">Intelligent Energy Management</h3>
                 <p className="text-white/90 mb-4">
                   AI-powered autonomous systems are revolutionizing how we generate, distribute, and consume energy:
                 </p>
@@ -76,7 +75,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Energy storage optimization for peak shaving</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-emerald-300">Renewable Energy Integration</h3>
+                <h3 className="text-xl font-semibold mb-4 text-emerald-30o0">Renewable Energy Integration</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous systems are making renewable energy more reliable and cost-effective:
                 </p>
@@ -89,9 +88,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-teal-400">Sustainable Manufacturing and Industry 4.0</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-teal-40o0">Sustainable Manufacturing and Industry 4.0</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-teal-300">Smart Factory Optimization</h3>
+                <h3 className="text-xl font-semibold mb-4 text-teal-30o0">Smart Factory Optimization</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous manufacturing systems are reducing waste and improving efficiency:
                 </p>
@@ -103,7 +102,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Supply chain optimization for reduced carbon footprint</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-teal-300">Circular Economy Implementation</h3>
+                <h3 className="text-xl font-semibold mb-4 text-teal-30o0">Circular Economy Implementation</h3>
                 <p className="text-white/90 mb-4">
                   AI automation is enabling circular economy practices:
                 </p>
@@ -116,9 +115,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Precision Agriculture and Food Security</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Precision Agriculture and Food Security</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">Smart Farming Technologies</h3>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-30o0">Smart Farming Technologies</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous agricultural systems are revolutionizing food production:
                 </p>
@@ -130,7 +129,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Crop disease detection and treatment</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">Resource Conservation</h3>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-30o0">Resource Conservation</h3>
                 <p className="text-white/90 mb-4">
                   AI automation is helping conserve precious resources:
                 </p>
@@ -143,9 +142,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Transportation and Mobility</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Transportation and Mobility</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-300">Autonomous Electric Vehicles</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-30o0">Autonomous Electric Vehicles</h3>
                 <p className="text-white/90 mb-4">
                   Self-driving electric vehicles are reducing emissions and improving efficiency:
                 </p>
@@ -156,7 +155,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Fleet optimization for reduced empty miles</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-blue-300">Public Transportation Enhancement</h3>
+                <h3 className="text-xl font-semibold mb-4 text-blue-30o0">Public Transportation Enhancement</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous systems are improving public transportation efficiency:
                 </p>
@@ -169,9 +168,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Environmental Monitoring and Protection</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Environmental Monitoring and Protection</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">Ecosystem Monitoring</h3>
+                <h3 className="text-xl font-semibold mb-4 text-purple-30o0">Ecosystem Monitoring</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous systems are protecting natural environments:
                 </p>
@@ -183,7 +182,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Climate data collection and analysis</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">Disaster Prevention and Response</h3>
+                <h3 className="text-xl font-semibold mb-4 text-purple-30o0">Disaster Prevention and Response</h3>
                 <p className="text-white/90 mb-4">
                   AI automation is improving disaster preparedness:
                 </p>
@@ -196,9 +195,9 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Measuring and Reporting Sustainability</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Measuring and Reporting Sustainability</h2>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">Environmental Impact Tracking</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">Environmental Impact Tracking</h3>
                 <p className="text-white/90 mb-4">
                   Autonomous systems provide comprehensive sustainability metrics:
                 </p>
@@ -210,7 +209,7 @@ export default function SustainableAutomationFuture() {
                   <li>• Supply chain sustainability scoring</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">Compliance and Reporting</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">Compliance and Reporting</h3>
                 <p className="text-white/90 mb-4">
                   Automated compliance and reporting systems ensure transparency:
                 </p>
@@ -223,7 +222,7 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-orange-400">Challenges and Considerations</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-orange-40o0">Challenges and Considerations</h2>
                 <p className="text-white/90 mb-4">
                   While sustainable automation offers tremendous potential, several challenges must be addressed:
                 </p>
@@ -241,7 +240,7 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Getting Started with Sustainable Automation</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Getting Started with Sustainable Automation</h2>
                 <p className="text-white/90 mb-4">
                   Organizations can begin their sustainable automation journey by:
                 </p>
@@ -255,7 +254,7 @@ export default function SustainableAutomationFuture() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   Sustainable automation represents a powerful convergence of environmental responsibility and technological innovation. 
                   By leveraging autonomous systems and AI, organizations can create a more sustainable future while improving 
@@ -267,15 +266,15 @@ export default function SustainableAutomationFuture() {
                 </p>
               </section>
               
-              <div className="mt-12 p-6 bg-gradient-to-r from-green-400/10 to-emerald-400/10 rounded-xl border border-green-400/20">
-                <h3 className="text-xl font-semibold mb-4 text-green-300">Start Your Sustainable Automation Journey</h3>
+              <div className="mt-12 p-6 bg-gradient-to-r from-green-40o0/10 to-emerald-40o0/10 rounded-xl border border-green-40o0/20">
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">Start Your Sustainable Automation Journey</h3>
                 <p className="text-white/80 mb-4">
                   Ready to make your operations more sustainable? Contact our experts to learn how autonomous systems 
                   can drive environmental progress in your organization.
                 </p>
                 <Link 
                   href="/contact" 
-                  className="inline-block px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-400 text-white font-semibold rounded-lg hover:from-green-500 hover:to-emerald-500 transition-all duration-300"
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-green-40o0 to-emerald-40o0 text-white font-semibold rounded-lg hover:from-green-50o0 hover:to-emerald-50o0 transition-all duration-30o0"
                 >
                   Explore Sustainable Solutions
                 </Link>

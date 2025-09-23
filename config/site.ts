@@ -1,4 +1,4 @@
-export const siteConfig = {
+export const siteConfig ={
   name: 'Zion Tech Group',
   description: 'World\'s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform',
   url: 'https://ziontechgroup.com',

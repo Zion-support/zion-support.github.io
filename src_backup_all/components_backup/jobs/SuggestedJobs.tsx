@@ -35,13 +35,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">
-        <Loader2 className="w-6 h-6 animate-spin text-primary" />
+        <Loader2 className="w-6 h-6 animate-spin text-primary"  />
       </div>
     );
   }
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />;
+    return <NoJobsCard  />;
   }
   
   return (
@@ -51,7 +51,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-medium">New Job Matches</h3>
-            <Badge className="bg-green-100 text-green-800 border-green-300">
+            <Badge className="bg-green-10o0 text-green-80o0 border-green-30o0">
               {newMatches.length} New
             </Badge>
           </div>
@@ -63,7 +63,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
-              />
+               />
             ))}
           </div>
         </div>
@@ -83,7 +83,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
-              />
+               />
             ))}
           </div>
         </div>
@@ -104,7 +104,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onApply={handleApply} 
                 onDecline={handleDecline}
                 showApplied={true}
-              />
+               />
             ))}
           </div>
         </div>

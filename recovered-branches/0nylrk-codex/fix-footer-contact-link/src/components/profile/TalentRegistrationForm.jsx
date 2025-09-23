@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form";
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Check, Briefcase, MapPin, UserRound } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
@@ -19,15 +19,13 @@ import { useAuth } from "@/hooks/useAuth";
 const talentProfileSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters long"),
     title: z.string().min(5, "Professional title is required"),
-    bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+    bio: z.string().min(50, "Bio must be at least 50 characters long").max(10o00, "Bio cannot exceed 10o00 characters"),
     location: z.string().min(2, "Location is required"),
     skills: z.string().min(2, "Enter at least one skill"),
     hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-        message: "Hourly rate must be a number",
-    }),
+        message: "Hourly rate must be a number"}),
     availability: z.enum(["available", "limited", "unavailable"]),
-    enhancedProfile: z.boolean().default(true),
-});
+    enhancedProfile: z.boolean().default(true)});
 export function TalentRegistrationForm() {
     // Remove the useToast() hook since we're importing the toast function directly
     const { user } = useAuth();
@@ -47,9 +45,7 @@ export function TalentRegistrationForm() {
             skills: "",
             hourlyRate: "",
             availability: "available",
-            enhancedProfile: true,
-        },
-    });
+            enhancedProfile: true}});
     // Handle adding skill tags
     const handleAddSkill = () => {
         const skillInput = form.getValues("skills");
@@ -86,8 +82,7 @@ export function TalentRegistrationForm() {
         if (!formData.bio || formData.bio.length < 20) {
             toast({
                 title: "More information needed",
-                description: "Please provide at least a detailed bio before generating enhanced content.",
-            });
+                description: "Please provide at least a detailed bio before generating enhanced content."});
             return;
         }
         try {
@@ -110,16 +105,14 @@ export function TalentRegistrationForm() {
             setGeneratedContent(data);
             toast({
                 title: "Enhanced Profile Generated",
-                description: "AI has created a professional bio and suggested additional skills for your profile.",
-            });
+                description: "AI has created a professional bio and suggested additional skills for your profile."});
         }
         catch (error) {
             console.error("Error generating enhanced profile:", error);
             toast({
                 title: "Generation failed",
                 description: error.message || "There was an error generating your enhanced profile. Please try again.",
-                variant: "destructive",
-            });
+                variant: "destructive"});
         }
         finally {
             setIsGenerating(false);
@@ -150,11 +143,11 @@ export function TalentRegistrationForm() {
     // Get category color
     const getCategoryColor = (category) => {
         switch (category) {
-            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
-            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
-            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
-            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
+            case 'programming': return 'bg-blue-50o0/20 hover:bg-blue-50o0/30 text-blue-50o0';
+            case 'devops': return 'bg-green-50o0/20 hover:bg-green-50o0/30 text-green-50o0';
+            case 'platforms': return 'bg-amber-50o0/20 hover:bg-amber-50o0/30 text-amber-50o0';
+            case 'softSkills': return 'bg-purple-50o0/20 hover:bg-purple-50o0/30 text-purple-50o0';
+            case 'other': return 'bg-gray-50o0/20 hover:bg-gray-50o0/30 text-gray-50o0';
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
         }
     };
@@ -166,7 +159,7 @@ export function TalentRegistrationForm() {
                     to: email,
                     subject: "Your Zion Talent Profile Has Been Enhanced",
                     html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: Arial, sans-serif; max-width: 60o0px; margin: 0 auto;">
             <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
             <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
@@ -189,8 +182,7 @@ export function TalentRegistrationForm() {
             toast({
                 title: "Skills required",
                 description: "Please add at least one skill to your profile.",
-                variant: "destructive",
-            });
+                variant: "destructive"});
             return;
         }
         setIsSubmitting(true);
@@ -251,14 +243,13 @@ export function TalentRegistrationForm() {
             setTimeout(() => {
                 toast({
                     title: "Profile Created Successfully",
-                    description: "Your talent profile has been published and is now visible in the directory.",
-                });
+                    description: "Your talent profile has been published and is now visible in the directory."});
                 // Send notification email if we have user email
                 if (userEmail && values.enhancedProfile && user?.id) {
                     sendEnhancementNotification(user.id, userEmail);
                 }
                 setIsSubmitting(false);
-            }, 1500);
+            }, 150o0);
             // Here would be the actual code to save the profile to Supabase
             /*
             const { error } = await supabase
@@ -284,8 +275,7 @@ export function TalentRegistrationForm() {
             toast({
                 title: "Error Creating Profile",
                 description: error.message || "There was an error creating your profile. Please try again.",
-                variant: "destructive",
-            });
+                variant: "destructive"});
             setIsSubmitting(false);
         }
     };
@@ -310,11 +300,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="Your full name" {...field}/>
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="Your full name" {...field} />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-40o0" />
                         </FormItem>)}/>
                   </div>
 
@@ -323,11 +313,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., Senior Software Developer" {...field}/>
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., Senior Software Developer" {...field} />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-40o0" />
                         </FormItem>)}/>
                   </div>
 
@@ -336,11 +326,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="City, State/Province, Country" {...field}/>
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="City, State/Province, Country" {...field} />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-40o0" />
                         </FormItem>)}/>
                   </div>
 
@@ -350,10 +340,10 @@ export function TalentRegistrationForm() {
                           <FormControl>
                             <div className="relative">
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
-                              <Input className="pl-8 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., 85" {...field}/>
+                              <Input className="pl-8 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., 85" {...field} />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-40o0" />
                         </FormItem>)}/>
                   </div>
                 </div>
@@ -364,25 +354,25 @@ export function TalentRegistrationForm() {
                   <div className="flex items-center gap-6">
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">
                       {uploadedAvatar ? (<AspectRatio ratio={1 / 1}>
-                          <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"/>
+                          <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover" />
                         </AspectRatio>) : (<div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"/>
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
                         </div>)}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4"/>
+                      <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
-                      <input type="file" accept="image/*" className="hidden" onChange={handleAvatarUpload}/>
+                      <input type="file" accept="image/*" className="hidden" onChange={handleAvatarUpload} />
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+                    For best results, use an image at least 40o0x40o0 pixels in JPG, PNG, or GIF format.
                   </p>
                 </div>
               </div>
 
-              <Separator className="bg-zion-blue-light/50"/>
+              <Separator className="bg-zion-blue-light/50" />
 
               {/* Bio Section */}
               <div className="space-y-4">
@@ -390,11 +380,11 @@ export function TalentRegistrationForm() {
                 <FormField control={form.control} name="bio" render={({ field }) => (<FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
                       <FormControl>
-                        <Textarea className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white" placeholder="Describe your professional background, expertise, and the value you bring to clients..." {...field}/>
+                        <Textarea className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white" placeholder="Describe your professional background, expertise, and the value you bring to clients..." {...field} />
                       </FormControl>
-                      <FormMessage className="text-red-400"/>
+                      <FormMessage className="text-red-40o0" />
                       <FormDescription className="text-zion-slate">
-                        {field.value?.length || 0}/1000 characters
+                        {field.value?.length || 0}/10o00 characters
                       </FormDescription>
                     </FormItem>)}/>
                 
@@ -402,7 +392,7 @@ export function TalentRegistrationForm() {
                 <FormField control={form.control} name="enhancedProfile" render={({ field }) => (<FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple"/>
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
@@ -410,13 +400,13 @@ export function TalentRegistrationForm() {
                         </FormDescription>
                       </div>
                       <FormControl>
-                        <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
+                        <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple" />
                       </FormControl>
                     </FormItem>)}/>
                 
                 {form.watch("enhancedProfile") && (<div className="flex justify-end">
                     <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile} disabled={isGenerating}>
-                      <Sparkles className="mr-2 h-4 w-4"/>
+                      <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>)}
@@ -425,11 +415,11 @@ export function TalentRegistrationForm() {
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple"/>
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                         AI-Generated Content
                       </h4>
                       <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={applyGeneratedContent}>
-                        <Check className="mr-1 h-3 w-3"/> Apply
+                        <Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
                     
@@ -458,7 +448,7 @@ export function TalentRegistrationForm() {
                   </div>)}
               </div>
 
-              <Separator className="bg-zion-blue-light/50"/>
+              <Separator className="bg-zion-blue-light/50" />
 
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -469,7 +459,7 @@ export function TalentRegistrationForm() {
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
                           <FormControl>
-                            <Input className="flex-1 bg-zion-blue border-zion-blue-light text-white" placeholder="Add a skill..." {...field} onKeyDown={handleSkillKeyPress}/>
+                            <Input className="flex-1 bg-zion-blue border-zion-blue-light text-white" placeholder="Add a skill..." {...field} onKeyDown={handleSkillKeyPress} />
                           </FormControl>
                           <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={handleAddSkill}>
                             Add
@@ -478,14 +468,14 @@ export function TalentRegistrationForm() {
                         <FormDescription className="text-zion-slate">
                           Press Enter or click Add to include a skill
                         </FormDescription>
-                        <FormMessage className="text-red-400"/>
+                        <FormMessage className="text-red-40o0" />
                       </FormItem>)}/>
 
                   <div className="flex flex-wrap gap-2 mt-2">
                     {skillTags.map(skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
                         {skill}
                         <button type="button" onClick={() => handleRemoveSkill(skill)} className="rounded-full hover:bg-zion-purple-dark/20 p-0.5">
-                          <X className="h-3 w-3"/>
+                          <X className="h-3 w-3" />
                         </button>
                       </Badge>))}
                     {skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>)}
@@ -502,7 +492,7 @@ export function TalentRegistrationForm() {
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="available" value="available" checked={field.value === "available"} onChange={() => field.onChange("available")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="available" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-green-50o0"></div>
                                 Available Now
                               </label>
                             </div>
@@ -510,7 +500,7 @@ export function TalentRegistrationForm() {
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="limited" value="limited" checked={field.value === "limited"} onChange={() => field.onChange("limited")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-yellow-50o0"></div>
                                 Limited Availability
                               </label>
                             </div>
@@ -518,13 +508,13 @@ export function TalentRegistrationForm() {
                             <div className="flex items-center space-x-2">
                               <input type="radio" id="unavailable" value="unavailable" checked={field.value === "unavailable"} onChange={() => field.onChange("unavailable")} className="text-zion-purple focus:ring-zion-purple"/>
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-red-50o0"></div>
                                 Currently Unavailable
                               </label>
                             </div>
                           </div>
                         </FormControl>
-                        <FormMessage className="text-red-400"/>
+                        <FormMessage className="text-red-40o0" />
                       </FormItem>)}/>
                 </div>
               </div>

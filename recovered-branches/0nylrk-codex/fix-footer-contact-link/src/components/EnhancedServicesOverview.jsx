@@ -1,4 +1,3 @@
-import React from 'react';
 import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,35 +9,33 @@ const ServiceCategory = ({ category, services }) => {
     if (categoryServices.length === 0)
         return null;
     const getCategoryIcon = (categoryName) => {
-        const iconMap = {
-            'AI & Machine Learning': <Brain className="w-6 h-6"/>,
-            'Cybersecurity & Compliance': <Shield className="w-6 h-6"/>,
-            'Data & Analytics': <Database className="w-6 h-6"/>,
-            'Business Process': <Briefcase className="w-6 h-6"/>,
-            'Marketing & Sales': <TrendingUp className="w-6 h-6"/>,
-            'Financial Services': <DollarSign className="w-6 h-6"/>,
-            'Healthcare & Life Sciences': <Heart className="w-6 h-6"/>,
-            'Education & Training': <GraduationCap className="w-6 h-6"/>,
-            'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
-            'Real Estate & Property': <Home className="w-6 h-6"/>,
-            'Legal & Compliance': <Lock className="w-6 h-6"/>,
-        };
-        return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>;
+        const iconMap ={
+            'AI & Machine Learning': <Brain className="w-6 h-6" />,
+            'Cybersecurity & Compliance': <Shield className="w-6 h-6" />,
+            'Data & Analytics': <Database className="w-6 h-6" />,
+            'Business Process': <Briefcase className="w-6 h-6" />,
+            'Marketing & Sales': <TrendingUp className="w-6 h-6" />,
+            'Financial Services': <DollarSign className="w-6 h-6" />,
+            'Healthcare & Life Sciences': <Heart className="w-6 h-6" />,
+            'Education & Training': <GraduationCap className="w-6 h-6" />,
+            'Supply Chain & Logistics': <Truck className="w-6 h-6" />,
+            'Real Estate & Property': <Home className="w-6 h-6" />,
+            'Legal & Compliance': <Lock className="w-6 h-6" />};
+        return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;
     };
     const getCategoryColor = (categoryName) => {
-        const colorMap = {
-            'AI & Machine Learning': 'from-purple-500 to-indigo-600',
-            'Cybersecurity & Compliance': 'from-red-500 to-pink-600',
-            'Data & Analytics': 'from-blue-500 to-cyan-600',
-            'Business Process': 'from-green-500 to-emerald-600',
-            'Marketing & Sales': 'from-orange-500 to-red-600',
-            'Financial Services': 'from-yellow-500 to-orange-600',
-            'Healthcare & Life Sciences': 'from-pink-500 to-rose-600',
-            'Education & Training': 'from-indigo-500 to-purple-600',
-            'Supply Chain & Logistics': 'from-teal-500 to-green-600',
-            'Real Estate & Property': 'from-amber-500 to-yellow-600',
-            'Legal & Compliance': 'from-slate-500 to-gray-600',
-        };
+        const colorMap ={
+            'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0',
+            'Cybersecurity & Compliance': 'from-red-50o0 to-pink-60o0',
+            'Data & Analytics': 'from-blue-50o0 to-cyan-60o0',
+            'Business Process': 'from-green-50o0 to-emerald-60o0',
+            'Marketing & Sales': 'from-orange-50o0 to-red-60o0',
+            'Financial Services': 'from-yellow-50o0 to-orange-60o0',
+            'Healthcare & Life Sciences': 'from-pink-50o0 to-rose-60o0',
+            'Education & Training': 'from-indigo-50o0 to-purple-60o0',
+            'Supply Chain & Logistics': 'from-teal-50o0 to-green-60o0',
+            'Real Estate & Property': 'from-amber-50o0 to-yellow-60o0',
+            'Legal & Compliance': 'from-slate-50o0 to-gray-60o0'};
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
     };
     return (<div className="space-y-6">
@@ -53,7 +50,7 @@ const ServiceCategory = ({ category, services }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300">
+        {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-30o0">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between mb-2">
                 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
@@ -82,17 +79,17 @@ const ServiceCategory = ({ category, services }) => {
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                      <Star className="w-4 h-4 text-yellow-40o0 fill-current" />
                       <span>{service.rating}</span>
                       <span className="text-zion-slate">({service.reviewCount})</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Brain className="w-4 h-4 text-zion-cyan"/>
+                      <Brain className="w-4 h-4 text-zion-cyan" />
                       <span>{service.aiScore}%</span>
                     </div>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Clock className="w-4 h-4"/>
+                    <Clock className="w-4 h-4" />
                     <span>{service.availability}</span>
                   </div>
                 </div>
@@ -115,7 +112,7 @@ const ServiceCategory = ({ category, services }) => {
 
                 {/* Location */}
                 <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
-                  <Globe className="w-4 h-4"/>
+                  <Globe className="w-4 h-4" />
                   <span>{service.location}</span>
                 </div>
               </div>
@@ -137,7 +134,7 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
-            <Brain className="w-8 h-8 text-white"/>
+            <Brain className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
           <p className="text-zion-slate-light">
@@ -147,8 +144,8 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
         </div>
 
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Shield className="w-8 h-8 text-white"/>
+          <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Shield className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
           <p className="text-zion-slate-light">
@@ -158,8 +155,8 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
         </div>
 
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Zap className="w-8 h-8 text-white"/>
+          <div className="w-16 h-16 bg-gradient-to-br from-green-50o0 to-emerald-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Zap className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
           <p className="text-zion-slate-light">
@@ -169,8 +166,8 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
         </div>
 
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Users className="w-8 h-8 text-white"/>
+          <div className="w-16 h-16 bg-gradient-to-br from-orange-50o0 to-red-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Users className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Expert Support</h3>
           <p className="text-zion-slate-light">
@@ -180,8 +177,8 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
         </div>
 
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <BarChart3 className="w-8 h-8 text-white"/>
+          <div className="w-16 h-16 bg-gradient-to-br from-purple-50o0 to-indigo-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+            <BarChart3 className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
           <p className="text-zion-slate-light">
@@ -191,8 +188,8 @@ const BenefitsSection = () => (<section className="py-16 bg-zion-blue-dark borde
         </div>
 
         <div className="text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle className="w-8 h-8 text-white"/>
+          <div className="w-16 h-16 bg-gradient-to-br from-teal-50o0 to-cyan-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
           <p className="text-zion-slate-light">
@@ -212,7 +209,7 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
-          <Mail className="w-6 h-6 text-zion-cyan"/>
+          <Mail className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Email</p>
             <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline text-sm">
@@ -222,21 +219,21 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
         </div>
         
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
-          <Phone className="w-6 h-6 text-zion-cyan"/>
+          <Phone className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Phone</p>
-            <a href="tel:+13024640950" className="text-zion-cyan hover:underline text-sm">
-              +1 302 464 0950
+            <a href="tel:+130o24640950" className="text-zion-cyan hover:underline text-sm">
+              +1 30o2 464 0950
             </a>
           </div>
         </div>
         
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
-          <MapPin className="w-6 h-6 text-zion-cyan"/>
+          <MapPin className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Address</p>
             <p className="text-zion-slate-light text-sm">
-              364 E Main St STE 1008<br />
+              364 E Main St STE 10o08<br  />
               Middletown DE 19709
             </p>
           </div>
@@ -283,13 +280,13 @@ export default function EnhancedServicesOverview() {
 
       {/* Service Categories */}
       <div className="space-y-16">
-        {ENHANCED_SERVICE_CATEGORIES.map((category) => (<ServiceCategory key={category.value} category={category.label} services={ENHANCED_SERVICES}/>))}
+        {ENHANCED_SERVICE_CATEGORIES.map((category) => (<ServiceCategory key={category.value} category={category.label} services={ENHANCED_SERVICES} />))}
       </div>
 
       {/* Benefits Section */}
-      <BenefitsSection />
+      <BenefitsSection  />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection  />
     </div>);
 }

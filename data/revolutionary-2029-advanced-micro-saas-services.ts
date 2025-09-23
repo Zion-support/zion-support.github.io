@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-export interface RevolutionaryService2029 {
+export interface RevolutionaryService20o29 {
   id: string;
   name: string;
   tagline: string;
@@ -40,12 +40,12 @@ export interface RevolutionaryService2029 {
   popular?: boolean;
 }
 
-export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryService2029[] = [
+export const REVOLUTIONARY_20o29_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryService20o29[] = [
   {
     id: 'ai-autonomous-business-operations',
     name: 'AI Autonomous Business Operations',
     tagline: 'Next-generation autonomous business operations platform',
-    price: '$2,500',
+    price: '$2,50o0',
     period: '/month',
     description: 'Advanced AI platform that autonomously manages complex business processes, makes intelligent decisions in real-time, and optimizes operations 24/7.',
     features: [
@@ -68,8 +68,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Automation',
     icon: '🤖',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-200',
+    color: 'from-purple-60o0 to-indigo-70o0',
+    textColor: 'text-purple-20o0',
     link: 'https://ziontechgroup.com/services/ai-autonomous-business-operations',
     marketPosition: 'First truly autonomous business operations platform with advanced AI decision-making.',
     targetAudience: ['Operations', 'IT', 'Management'],
@@ -84,10 +84,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$15B RPA market',
     growthRate: '23% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Custom AI models, process mapping, integration setup, training.',
-    launchDate: '2029-01-15',
+    launchDate: '20o29-0o1-15',
     customers: 45,
     rating: 4.9,
     reviews: 127,
@@ -97,7 +97,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'quantum-ai-hybrid-platform',
     name: 'Quantum AI Hybrid Platform',
     tagline: 'Quantum computing meets artificial intelligence',
-    price: '$5,000',
+    price: '$5,0o00',
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms for solving complex problems that are impossible for classical computers.',
     features: [
@@ -111,7 +111,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
       'Advanced Visualization Tools'
     ],
     benefits: [
-      'Solve problems 1000x faster than classical computers',
+      'Solve problems 10o00x faster than classical computers',
       'Breakthrough in AI model training',
       'Quantum advantage in optimization',
       'Future-proof technology investment',
@@ -119,8 +119,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'Quantum Computing & AI',
     icon: '⚛️',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-200',
+    color: 'from-cyan-60o0 to-blue-70o0',
+    textColor: 'text-cyan-20o0',
     link: 'https://ziontechgroup.com/services/quantum-ai-hybrid-platform',
     marketPosition: 'First commercial quantum-AI hybrid platform accessible to businesses.',
     targetAudience: ['Research', 'Finance', 'Pharmaceuticals', 'Logistics'],
@@ -135,10 +135,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$65B quantum computing market',
     growthRate: '30% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Quantum hardware access, algorithm development, integration setup.',
-    launchDate: '2029-02-01',
+    launchDate: '20o29-0o2-0o1',
     customers: 12,
     rating: 4.8,
     reviews: 34,
@@ -148,7 +148,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Intelligent threat detection and response',
-    price: '$1,800',
+    price: '$1,80o0',
     period: '/month',
     description: 'Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time with unprecedented accuracy.',
     features: [
@@ -170,8 +170,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Security',
     icon: '🛡️',
-    color: 'from-red-600 to-orange-700',
-    textColor: 'text-red-200',
+    color: 'from-red-60o0 to-orange-70o0',
+    textColor: 'text-red-20o0',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-platform',
     marketPosition: 'AI-first cybersecurity with highest detection rates in the market.',
     targetAudience: ['Security', 'IT', 'Compliance'],
@@ -183,13 +183,13 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     useCases: ['Enterprise Security', 'Cloud Protection', 'Compliance Management', 'Incident Response'],
     roi: 'ROI achieved in 4-6 months',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
-    marketSize: '$200B cybersecurity market',
+    marketSize: '$20o0B cybersecurity market',
     growthRate: '13% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Security assessment, AI model training, integration setup.',
-    launchDate: '2029-01-20',
+    launchDate: '20o29-0o1-20',
     customers: 89,
     rating: 4.9,
     reviews: 156,
@@ -199,7 +199,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'ai-content-marketing-suite',
     name: 'AI Content Marketing Suite',
     tagline: 'End-to-end AI-powered content creation and marketing',
-    price: '$800',
+    price: '$80o0',
     period: '/month',
     description: 'Comprehensive AI-powered content creation and marketing automation platform that generates engaging content across all channels with brand consistency.',
     features: [
@@ -221,8 +221,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Marketing',
     icon: '✍️',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-200',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-20o0',
     link: 'https://ziontechgroup.com/services/ai-content-marketing-suite',
     marketPosition: 'Most comprehensive AI content marketing platform with highest engagement rates.',
     targetAudience: ['Marketing', 'Content Creators', 'Agencies'],
@@ -234,13 +234,13 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     useCases: ['Content Marketing', 'Social Media Management', 'Email Marketing', 'SEO'],
     roi: 'ROI achieved in 2-3 months',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
-    marketSize: '$400B content marketing market',
+    marketSize: '$40o0B content marketing market',
     growthRate: '16% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Brand voice training, content strategy, integration setup.',
-    launchDate: '2029-01-10',
+    launchDate: '20o29-0o1-10',
     customers: 234,
     rating: 4.8,
     reviews: 89,
@@ -250,7 +250,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'ai-sales-copilot',
     name: 'AI Sales Copilot',
     tagline: 'Intelligent sales optimization and automation',
-    price: '$1,200',
+    price: '$1,20o0',
     period: '/month',
     description: 'Advanced AI-powered sales assistant that automates lead qualification, follow-ups, and sales process optimization for maximum conversion rates.',
     features: [
@@ -272,8 +272,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Sales',
     icon: '👥',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-200',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-20o0',
     link: 'https://ziontechgroup.com/services/ai-sales-copilot',
     marketPosition: 'Most intelligent sales automation platform with highest conversion rates.',
     targetAudience: ['Sales', 'Growth', 'Marketing'],
@@ -288,20 +288,20 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$7B sales tech market',
     growthRate: '12% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'OAuth connectors, sending pools, policy engine.',
-    launchDate: '2029-01-15',
+    launchDate: '20o29-0o1-15',
     customers: 156,
     rating: 4.7,
-    reviews: 203,
+    reviews: 20o3,
     popular: true
   },
   {
     id: 'ai-customer-support-platform',
     name: 'AI Customer Support Platform',
     tagline: 'Intelligent customer support automation',
-    price: '$600',
+    price: '$60o0',
     period: '/month',
     description: 'Advanced AI-powered customer support solution that provides instant responses, intelligent ticket routing, and customer satisfaction optimization.',
     features: [
@@ -323,8 +323,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Support',
     icon: '💬',
-    color: 'from-teal-600 to-cyan-700',
-    textColor: 'text-teal-200',
+    color: 'from-teal-60o0 to-cyan-70o0',
+    textColor: 'text-teal-20o0',
     link: 'https://ziontechgroup.com/services/ai-customer-support-platform',
     marketPosition: 'Most intelligent customer support platform with highest satisfaction rates.',
     targetAudience: ['Customer Support', 'Operations', 'Marketing'],
@@ -339,10 +339,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$15B customer support market',
     growthRate: '18% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Knowledge base setup, chatbot training, integration setup.',
-    launchDate: '2029-01-12',
+    launchDate: '20o29-0o1-12',
     customers: 189,
     rating: 4.8,
     reviews: 167,
@@ -352,7 +352,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'ai-data-analytics-bi',
     name: 'AI Data Analytics & BI Platform',
     tagline: 'Advanced business intelligence with AI insights',
-    price: '$1,500',
+    price: '$1,50o0',
     period: '/month',
     description: 'Comprehensive business intelligence platform that uses AI to transform raw data into actionable insights, predictive analytics, and automated reporting.',
     features: [
@@ -374,8 +374,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Analytics',
     icon: '📊',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-200',
+    color: 'from-indigo-60o0 to-purple-70o0',
+    textColor: 'text-indigo-20o0',
     link: 'https://ziontechgroup.com/services/ai-data-analytics-bi',
     marketPosition: 'Most advanced AI-powered BI platform with highest accuracy predictions.',
     targetAudience: ['Data Analysts', 'Business Intelligence', 'Management'],
@@ -390,10 +390,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$30B BI market',
     growthRate: '14% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Data integration, model training, dashboard creation.',
-    launchDate: '2029-01-18',
+    launchDate: '20o29-0o1-18',
     customers: 134,
     rating: 4.9,
     reviews: 134,
@@ -403,7 +403,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'cloud-devops-platform',
     name: 'Cloud Infrastructure & DevOps Platform',
     tagline: 'Enterprise-grade cloud infrastructure with automated DevOps',
-    price: '$3,000',
+    price: '$3,0o00',
     period: '/month',
     description: 'Comprehensive cloud infrastructure platform with automated DevOps pipelines for scalable, reliable, and secure applications with enterprise-grade features.',
     features: [
@@ -425,8 +425,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'IT & Infrastructure',
     icon: '☁️',
-    color: 'from-sky-600 to-blue-700',
-    textColor: 'text-sky-200',
+    color: 'from-sky-60o0 to-blue-70o0',
+    textColor: 'text-sky-20o0',
     link: 'https://ziontechgroup.com/services/cloud-devops-platform',
     marketPosition: 'Most comprehensive DevOps platform with highest automation levels.',
     targetAudience: ['DevOps', 'IT', 'Engineering'],
@@ -441,10 +441,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$25B DevOps market',
     growthRate: '20% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Infrastructure setup, pipeline configuration, monitoring setup.',
-    launchDate: '2029-01-22',
+    launchDate: '20o29-0o1-22',
     customers: 145,
     rating: 4.8,
     reviews: 145,
@@ -454,7 +454,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'quantum-financial-trading',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum computing for financial markets',
-    price: '$8,000',
+    price: '$8,0o00',
     period: '/month',
     description: 'Revolutionary financial trading platform that leverages quantum computing for portfolio optimization, risk assessment, and algorithmic trading with quantum advantage.',
     features: [
@@ -476,8 +476,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'Quantum Computing & Finance',
     icon: '💰',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-200',
+    color: 'from-yellow-60o0 to-orange-70o0',
+    textColor: 'text-yellow-20o0',
     link: 'https://ziontechgroup.com/services/quantum-financial-trading',
     marketPosition: 'First quantum-powered financial trading platform for institutional investors.',
     targetAudience: ['Financial Institutions', 'Investment Firms', 'Hedge Funds'],
@@ -492,10 +492,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$45B financial trading market',
     growthRate: '15% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Quantum hardware access, algorithm development, compliance setup.',
-    launchDate: '2029-02-15',
+    launchDate: '20o29-0o2-15',
     customers: 8,
     rating: 4.9,
     reviews: 23,
@@ -505,7 +505,7 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     id: 'ai-healthcare-analytics',
     name: 'AI Healthcare Analytics Platform',
     tagline: 'Intelligent healthcare data analysis and insights',
-    price: '$2,200',
+    price: '$2,20o0',
     period: '/month',
     description: 'Advanced AI-powered healthcare analytics platform that provides insights into patient care, operational efficiency, and predictive healthcare outcomes.',
     features: [
@@ -527,8 +527,8 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     ],
     category: 'AI & Healthcare',
     icon: '🏥',
-    color: 'from-emerald-600 to-green-700',
-    textColor: 'text-emerald-200',
+    color: 'from-emerald-60o0 to-green-70o0',
+    textColor: 'text-emerald-20o0',
     link: 'https://ziontechgroup.com/services/ai-healthcare-analytics',
     marketPosition: 'Most advanced AI healthcare analytics platform with highest accuracy rates.',
     targetAudience: ['Healthcare Providers', 'Hospitals', 'Clinics'],
@@ -543,10 +543,10 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
     marketSize: '$50B healthcare analytics market',
     growthRate: '22% CAGR',
     variant: 'saas-real',
-    contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },
+    contactInfo: { mobile: '+1 30o2 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 10o08 Middletown DE 19709' },
     realImplementation: true,
     implementationDetails: 'Data integration, model training, compliance setup.',
-    launchDate: '2029-01-25',
+    launchDate: '20o29-0o1-25',
     customers: 67,
     rating: 4.8,
     reviews: 89,
@@ -555,19 +555,19 @@ export const REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES: RevolutionaryServi
 ];
 
 export const getServicesByCategory = (category: string) => {
-  return revolutionaryServices2029.filter(service => service.category === category);
+  return revolutionaryServices20o29.filter(service => service.category === category);
 };
 
 export const getPopularServices = () => {
-  return revolutionaryServices2029.filter(service => service.isPopular);
+  return revolutionaryServices20o29.filter(service => service.isPopular);
 };
 
 export const getNewServices = () => {
-  return revolutionaryServices2029.filter(service => service.isNew);
+  return revolutionaryServices20o29.filter(service => service.isNew);
 };
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return revolutionaryServices2029.filter(service => {
+  return revolutionaryServices20o29.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
     return price >= minPrice && price <= maxPrice;
   });

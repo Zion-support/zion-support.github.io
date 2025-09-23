@@ -2,11 +2,11 @@ export default function Page() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-28 pb-24 lg:px-8">
-        <p className="text-sm font-semibold leading-6 text-blue-400">Case Study</p>
+        <p className="text-sm font-semibold leading-6 text-blue-40o0">Case Study</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Case Study: MTTR Reduction with Real-Time RAG
         </h1>
-        <p className="mt-2 text-gray-400">2025-09-15</p>
+        <p className="mt-2 text-gray-40o0">20o25-09-15</p>
         <div className="prose prose-invert mt-8">
           <p>
             A large enterprise integrated real-time retrieval telemetry and live evaluation hooks
@@ -26,7 +26,7 @@ export default function Page() {
             checks to keep agents reliable under load.
           </p>
           <p className="mt-8">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-70o0">
               Explore this pattern
             </a>
           </p>

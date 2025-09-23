@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Rocket } from 'lucide-react';
 
-export default function UltraAdvancedNavigation2026V4() {
+export default function UltraAdvancedNavigation20o26V4() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -26,7 +26,7 @@ export default function UltraAdvancedNavigation2026V4() {
         { name: 'Quantum Technology', href: '/quantum-services', icon: Zap, description: 'Next-generation quantum computing services' },
         { name: 'Enterprise IT', href: '/enterprise-it', icon: Rocket, description: 'Comprehensive enterprise solutions' },
         { name: 'Micro SAAS', href: '/micro-saas', description: 'Innovative micro software solutions' },
-        { name: 'All Services', href: '/enhanced-2026-services-showcase-v4', description: 'Complete service catalog' }
+        { name: 'All Services', href: '/enhanced-20o26-services-showcase-v4', description: 'Complete service catalog' }
       ]
     },
     {
@@ -61,14 +61,14 @@ export default function UltraAdvancedNavigation2026V4() {
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo ={
+    phone: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
         ? 'bg-black/80 backdrop-blur-md border-b border-white/10' 
         : 'bg-transparent'
@@ -82,14 +82,14 @@ export default function UltraAdvancedNavigation2026V4() {
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-lg flex items-center justify-center">
+              <Rocket className="w-6 h-6 text-white"  />
             </div>
             <div>
-              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                 Zion Tech
               </Link>
-              <div className="text-xs text-gray-400 -mt-1">2026 Technology</div>
+              <div className="text-xs text-gray-40o0 -mt-1">20o26 Technology</div>
             </div>
           </motion.div>
 
@@ -99,10 +99,10 @@ export default function UltraAdvancedNavigation2026V4() {
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  className="flex items-center space-x-1 text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                 >
                   <span>{item.name}</span>
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  <ChevronDown className="w-4 h-4 transition-transform duration-20o0 group-hover:rotate-180"  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -120,18 +120,18 @@ export default function UltraAdvancedNavigation2026V4() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-20o0 group"
                           >
                             {dropdownItem.icon && (
-                              <div className="w-8 h-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <dropdownItem.icon className="w-4 h-4 text-purple-400" />
+                              <div className="w-8 h-8 bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <dropdownItem.icon className="w-4 h-4 text-purple-40o0"  />
                               </div>
                             )}
                             <div className="flex-1">
-                              <div className="font-medium text-white group-hover:text-purple-400 transition-colors">
+                              <div className="font-medium text-white group-hover:text-purple-40o0 transition-colors">
                                 {dropdownItem.name}
                               </div>
-                              <div className="text-sm text-gray-400 mt-1">
+                              <div className="text-sm text-gray-40o0 mt-1">
                                 {dropdownItem.description}
                               </div>
                             </div>
@@ -148,13 +148,13 @@ export default function UltraAdvancedNavigation2026V4() {
           {/* Contact and CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Contact Info */}
-            <div className="flex items-center space-x-4 text-sm text-gray-300">
+            <div className="flex items-center space-x-4 text-sm text-gray-30o0">
               <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-1 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4"  />
                 <span className="hidden xl:inline">{contactInfo.phone}</span>
               </a>
               <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-1 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4"  />
                 <span className="hidden xl:inline">{contactInfo.email}</span>
               </a>
             </div>
@@ -162,7 +162,7 @@ export default function UltraAdvancedNavigation2026V4() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
+              className="px-6 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg shadow-purple-50o0/25"
             >
               Get Started
             </Link>
@@ -171,9 +171,9 @@ export default function UltraAdvancedNavigation2026V4() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            className="lg:hidden p-2 text-gray-30o0 hover:text-white transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -199,7 +199,7 @@ export default function UltraAdvancedNavigation2026V4() {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="block text-gray-300 hover:text-white transition-colors py-2"
+                          className="block text-gray-30o0 hover:text-white transition-colors py-2"
                           onClick={() => setIsOpen(false)}
                         >
                           {dropdownItem.name}
@@ -211,17 +211,17 @@ export default function UltraAdvancedNavigation2026V4() {
 
                 {/* Mobile Contact Info */}
                 <div className="pt-6 border-t border-white/10">
-                  <div className="space-y-3 text-gray-300">
+                  <div className="space-y-3 text-gray-30o0">
                     <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-3 hover:text-white transition-colors">
-                      <Phone className="w-5 h-5" />
+                      <Phone className="w-5 h-5"  />
                       <span>{contactInfo.phone}</span>
                     </a>
                     <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-white transition-colors">
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-5 h-5"  />
                       <span>{contactInfo.email}</span>
                     </a>
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 mt-0.5" />
+                      <MapPin className="w-5 h-5 mt-0.5"  />
                       <span className="text-sm">{contactInfo.address}</span>
                     </div>
                   </div>
@@ -229,7 +229,7 @@ export default function UltraAdvancedNavigation2026V4() {
                   {/* Mobile CTA */}
                   <Link
                     href="/contact"
-                    className="block w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg text-center transition-all duration-300"
+                    className="block w-full mt-6 px-6 py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover:from-purple-70o0 hover:to-pink-70o0 text-white font-semibold rounded-lg text-center transition-all duration-30o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started

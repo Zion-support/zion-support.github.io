@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_20o29: ProductListing[] = [
   {
     id: "ai-powered-customer-churn-prediction",
     title: "AI-Powered Customer Churn Prediction Platform",
@@ -12,7 +12,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["AI Churn Prediction", "Customer Retention", "Predictive Analytics", "Behavioral Analysis", "Automated Campaigns"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-churn-prediction.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 234,
     featured: true,
@@ -20,14 +20,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-churn-prediction",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$2,000-4,000",
+    marketPrice: "$2,0o00-4,0o00",
     competitors: ["ChurnZero", "Gainsight", "Totango"],
-    roi: "400% within 3 months",
+    roi: "40o0% within 3 months",
     setupTime: "2-3 weeks",
     integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Stripe", "Shopify"]
   },
@@ -42,7 +42,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Inventory Optimization", "Demand Forecasting", "Supply Chain AI", "Automated Reordering", "Cost Reduction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/inventory-optimization.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
+    createdAt: "20o24-0o1-20T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -50,14 +50,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/inventory-optimization",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,500-3,500",
+    marketPrice: "$1,50o0-3,50o0",
     competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl"],
-    roi: "300% within 4 months",
+    roi: "30o0% within 4 months",
     setupTime: "3-4 weeks",
     integrations: ["QuickBooks", "Xero", "Shopify", "WooCommerce", "Amazon", "eBay"]
   },
@@ -72,7 +72,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Social Media Automation", "Content Generation", "AI Scheduling", "Multi-Platform", "Engagement Analytics"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/social-media-scheduler.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
+    createdAt: "20o24-0o1-25T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 89,
     featured: true,
@@ -80,12 +80,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "1-2 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/social-media-scheduler",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$500-1,500",
+    marketPrice: "$50o0-1,50o0",
     competitors: ["Buffer", "Hootsuite", "Later"],
     roi: "250% within 2 months",
     setupTime: "1-2 weeks",
@@ -102,7 +102,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Expense Tracking", "Receipt OCR", "Fraud Detection", "Spending Analytics", "Cost Optimization"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/expense-management.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
+    createdAt: "20o24-0o1-30T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 123,
     featured: true,
@@ -110,12 +110,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/expense-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,000-2,500",
+    marketPrice: "$1,0o00-2,50o0",
     competitors: ["Expensify", "Concur", "Receipt Bank"],
     roi: "350% within 3 months",
     setupTime: "2-3 weeks",
@@ -132,7 +132,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["AI Recruitment", "Candidate Screening", "Performance Management", "HR Automation", "Talent Analytics"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/hr-recruitment.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
+    createdAt: "20o24-0o2-0o5T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 178,
     featured: true,
@@ -140,14 +140,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "4-5 Weeks",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hr-recruitment",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$2,000-5,000",
+    marketPrice: "$2,0o00-5,0o00",
     competitors: ["BambooHR", "Workday", "BambooHR"],
-    roi: "400% within 6 months",
+    roi: "40o0% within 6 months",
     setupTime: "4-5 weeks",
     integrations: ["LinkedIn", "Indeed", "Glassdoor", "Slack", "Microsoft Teams", "Google Workspace"]
   },
@@ -162,7 +162,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Sentiment Analysis", "Feedback Processing", "NLP", "Customer Insights", "Automated Responses"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/feedback-analyzer.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
+    createdAt: "20o24-0o2-10T10:0o0:0o0.0o00Z",
     rating: 4.6,
     reviewCount: 67,
     featured: false,
@@ -170,14 +170,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/feedback-analyzer",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$800-2,000",
+    marketPrice: "$80o0-2,0o00",
     competitors: ["Qualtrics", "SurveyMonkey", "Typeform"],
-    roi: "200% within 3 months",
+    roi: "20o0% within 3 months",
     setupTime: "2-3 weeks",
     integrations: ["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Google Analytics", "Hotjar"]
   },
@@ -192,7 +192,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Project Estimation", "AI Planning", "Resource Allocation", "Risk Assessment", "Success Prediction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/project-estimation.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
+    createdAt: "20o24-0o2-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 94,
     featured: true,
@@ -200,14 +200,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/project-estimation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,200-3,000",
+    marketPrice: "$1,20o0-3,0o00",
     competitors: ["Microsoft Project", "Asana", "Monday.com"],
-    roi: "300% within 4 months",
+    roi: "30o0% within 4 months",
     setupTime: "3-4 weeks",
     integrations: ["Jira", "Trello", "Slack", "Microsoft Teams", "Google Workspace", "Notion"]
   },
@@ -222,7 +222,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Email Automation", "AI Segmentation", "Personalization", "Campaign Optimization", "A/B Testing"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/email-marketing.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
+    createdAt: "20o24-0o2-20T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 112,
     featured: false,
@@ -230,12 +230,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/email-marketing",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$700-2,000",
+    marketPrice: "$70o0-2,0o00",
     competitors: ["Mailchimp", "ConvertKit", "ActiveCampaign"],
     roi: "250% within 3 months",
     setupTime: "2-3 weeks",
@@ -252,7 +252,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Support Automation", "AI Chatbots", "Ticket Routing", "Self-Service", "Knowledge Base"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/support-automation.jpg"],
-    createdAt: "2024-02-25T10:00:00.000Z",
+    createdAt: "20o24-0o2-25T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 145,
     featured: true,
@@ -260,12 +260,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/support-automation",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,500-3,500",
+    marketPrice: "$1,50o0-3,50o0",
     competitors: ["Zendesk", "Intercom", "Freshdesk"],
     roi: "350% within 4 months",
     setupTime: "3-4 weeks",
@@ -282,7 +282,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     tags: ["Data Backup", "Disaster Recovery", "AI Optimization", "Zero Downtime", "Cloud Storage"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/data-backup.jpg"],
-    createdAt: "2024-03-01T10:00:00.000Z",
+    createdAt: "20o24-0o3-0o1T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 89,
     featured: false,
@@ -290,17 +290,17 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2029: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/data-backup",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$1,000-2,500",
+    marketPrice: "$1,0o00-2,50o0",
     competitors: ["Veeam", "Acronis", "Carbonite"],
-    roi: "400% within 6 months",
+    roi: "40o0% within 6 months",
     setupTime: "2-3 weeks",
     integrations: ["AWS S3", "Azure Blob", "Google Cloud Storage", "Dropbox", "OneDrive", "Google Drive"]
   }
 ];
 
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2029;
+export default INNOVATIVE_MICRO_SAAS_SERVICES_20o29;

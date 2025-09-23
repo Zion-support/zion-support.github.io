@@ -5,13 +5,13 @@ export default function ServicePage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Professional web development services to accelerate your business growth and digital transformation." />
-        <meta name="keywords" content="web development, services, technology, business, digital transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-1755575046671-llrpuy" />
+        <meta name="description" content="Professional web development services to accelerate your business growth and digital transformation."  />
+        <meta name="keywords" content="web development, services, technology, business, digital transformation"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-17555750o46671-llrpuy"  />
       
-        <meta property="og:title" content="Web Development" />
-        <meta property="og:description" content="Web Development — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Web Development"  />
+        <meta property="og:description" content="Web Development — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Web Development</h1>
         
@@ -50,7 +50,7 @@ export default function ServicePage() {
           </p>
           <a 
             href="https://ziontechgroup.com/contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started Today
           </a>

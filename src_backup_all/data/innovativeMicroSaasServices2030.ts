@@ -1,6 +1,6 @@
 import { ProductListing } from "@/types/listings";
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_20o30: ProductListing[] = [
   // AI-Powered Micro SAAS Solutions
   {
     id: "ai-content-creation-studio-pro",
@@ -13,7 +13,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Content Creation", "AI Writing", "SEO Optimization", "Multi-language", "Brand Voice"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-content-studio.jpg"],
-    createdAt: "2024-01-01T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o1T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 156,
     featured: true,
@@ -21,14 +21,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-content-studio",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-500/month",
+    marketPrice: "$20o0-50o0/month",
     competitors: ["Jasper", "Copy.ai", "Writesonic"],
-    roi: "300% within 3 months",
+    roi: "30o0% within 3 months",
     setupTime: "5 minutes",
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media Platforms"]
   },
@@ -44,7 +44,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Customer Support", "Chatbot", "24/7 Support", "Multilingual", "AI Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-support-suite.jpg"],
-    createdAt: "2024-01-02T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o2T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 89,
     featured: true,
@@ -52,14 +52,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-support-suite",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-400/month",
+    marketPrice: "$150-40o0/month",
     competitors: ["Intercom", "Zendesk", "Freshdesk"],
-    roi: "400% within 4 months",
+    roi: "40o0% within 4 months",
     setupTime: "1 hour",
     integrations: ["Slack", "Discord", "WhatsApp", "Facebook Messenger", "Website Chat"]
   },
@@ -75,7 +75,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Marketing Automation", "AI Segmentation", "Personalization", "Predictive Analytics", "Campaign Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-marketing-platform.jpg"],
-    createdAt: "2024-01-03T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o3T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 234,
     featured: true,
@@ -83,14 +83,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1-2 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-marketing-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$300-800/month",
+    marketPrice: "$30o0-80o0/month",
     competitors: ["HubSpot", "Marketo", "Pardot"],
-    roi: "500% within 6 months",
+    roi: "50o0% within 6 months",
     setupTime: "2-3 days",
     integrations: ["Salesforce", "Shopify", "WooCommerce", "Google Analytics", "Facebook Ads", "Google Ads"]
   },
@@ -107,7 +107,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["DeFi", "Yield Farming", "Risk Management", "Portfolio Optimization", "Cross-chain"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/defi-yield-platform.jpg"],
-    createdAt: "2024-01-04T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o4T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 67,
     featured: true,
@@ -115,14 +115,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "Instant",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/defi-yield-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$50-200/month",
+    marketPrice: "$50-20o0/month",
     competitors: ["Yearn Finance", "Harvest Finance", "Pickle Finance"],
-    roi: "200% within 2 months",
+    roi: "20o0% within 2 months",
     setupTime: "10 minutes",
     integrations: ["MetaMask", "WalletConnect", "Ethereum", "Polygon", "BSC", "Avalanche"]
   },
@@ -138,7 +138,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["NFT", "Marketplace", "White-label", "Multi-chain", "Royalty Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/nft-marketplace.jpg"],
-    createdAt: "2024-01-05T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o5T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 45,
     featured: true,
@@ -146,14 +146,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "24 Hours",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/nft-marketplace",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$500-2000/month",
+    marketPrice: "$50o0-20o00/month",
     competitors: ["OpenSea", "Rarible", "Foundation"],
-    roi: "600% within 8 months",
+    roi: "60o0% within 8 months",
     setupTime: "24 hours",
     integrations: ["Ethereum", "Polygon", "Solana", "Cardano", "MetaMask", "WalletConnect"]
   },
@@ -170,7 +170,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Quantum Computing", "Optimization", "Logistics", "Finance", "Research"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/quantum-optimization.jpg"],
-    createdAt: "2024-01-06T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o6T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 78,
     featured: true,
@@ -178,14 +178,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 99,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-optimization",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-1000/month",
+    marketPrice: "$20o0-10o00/month",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
-    roi: "800% within 12 months",
+    roi: "80o0% within 12 months",
     setupTime: "1 week",
     integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure", "AWS Braket", "Python", "Jupyter"]
   },
@@ -202,7 +202,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["IoT", "Device Management", "Real-time Monitoring", "Predictive Maintenance", "Security"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/iot-device-hub.jpg"],
-    createdAt: "2024-01-07T10:00:00.000Z",
+    createdAt: "20o24-0o1-0o7T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 123,
     featured: true,
@@ -210,12 +210,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "2-3 Days",
     aiScore: 93,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-device-hub",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$100-400/month",
+    marketPrice: "$10o0-40o0/month",
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
     roi: "350% within 5 months",
     setupTime: "2-3 days",
@@ -234,7 +234,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Healthcare AI", "Diagnostics", "Symptom Analysis", "Risk Assessment", "Medical AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-health-diagnostic.jpg"],
-    createdAt: "2024-01-08T10:00:00.000Z",
+    createdAt: "20o24-0o1-08T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 89,
     featured: true,
@@ -242,14 +242,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-health-diagnostic",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-500/month",
+    marketPrice: "$150-50o0/month",
     competitors: ["Ada Health", "Buoy Health", "Symptomate"],
-    roi: "400% within 6 months",
+    roi: "40o0% within 6 months",
     setupTime: "1 week",
     integrations: ["Epic", "Cerner", "Practice Fusion", "HL7", "FHIR", "EMR Systems"]
   },
@@ -266,7 +266,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["FinTech", "Financial Advisory", "Portfolio Optimization", "Risk Assessment", "Investment AI"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-financial-advisory.jpg"],
-    createdAt: "2024-01-09T10:00:00.000Z",
+    createdAt: "20o24-0o1-09T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 156,
     featured: true,
@@ -274,12 +274,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "3-5 Days",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-financial-advisory",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-600/month",
+    marketPrice: "$20o0-60o0/month",
     competitors: ["Betterment", "Wealthfront", "Personal Capital"],
     roi: "450% within 7 months",
     setupTime: "3-5 days",
@@ -298,7 +298,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Legal Tech", "Document Analysis", "Contract Review", "Risk Assessment", "Compliance"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-legal-analyzer.jpg"],
-    createdAt: "2024-01-10T10:00:00.000Z",
+    createdAt: "20o24-0o1-10T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 78,
     featured: true,
@@ -306,12 +306,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 95,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-legal-analyzer",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-400/month",
+    marketPrice: "$150-40o0/month",
     competitors: ["LawGeex", "ContractPodAi", "Evisort"],
     roi: "350% within 5 months",
     setupTime: "1 week",
@@ -330,7 +330,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Education AI", "Personalized Learning", "Adaptive Learning", "Learning Analytics", "Student Engagement"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-learning-platform.jpg"],
-    createdAt: "2024-01-11T10:00:00.000Z",
+    createdAt: "20o24-0o1-11T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 234,
     featured: true,
@@ -338,14 +338,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "2-3 Days",
     aiScore: 97,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-learning-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$100-300/month",
+    marketPrice: "$10o0-30o0/month",
     competitors: ["Coursera", "Udemy", "Khan Academy"],
-    roi: "300% within 4 months",
+    roi: "30o0% within 4 months",
     setupTime: "2-3 days",
     integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams", "Zoom"]
   },
@@ -362,7 +362,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Space Tech", "Satellite Data", "Agriculture", "Environmental Monitoring", "Urban Planning"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/satellite-data-platform.jpg"],
-    createdAt: "2024-01-12T10:00:00.000Z",
+    createdAt: "20o24-0o1-12T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 45,
     featured: true,
@@ -370,14 +370,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "2 Weeks",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/satellite-data-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$300-1000/month",
+    marketPrice: "$30o0-10o00/month",
     competitors: ["Planet Labs", "Maxar", "Airbus Defence"],
-    roi: "600% within 10 months",
+    roi: "60o0% within 10 months",
     setupTime: "2 weeks",
     integrations: ["NASA APIs", "ESA APIs", "Google Earth Engine", "ArcGIS", "QGIS", "Agricultural Software"]
   },
@@ -394,7 +394,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Green Tech", "Carbon Tracking", "Sustainability", "Environmental Impact", "Carbon Reduction"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/carbon-tracking-system.jpg"],
-    createdAt: "2024-01-13T10:00:00.000Z",
+    createdAt: "20o24-0o1-13T10:0o0:0o0.0o00Z",
     rating: 4.7,
     reviewCount: 89,
     featured: true,
@@ -402,12 +402,12 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 94,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/carbon-tracking",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$50-200/month",
+    marketPrice: "$50-20o0/month",
     competitors: ["Carbon Trust", "Carbonfund", "TerraPass"],
     roi: "250% within 4 months",
     setupTime: "1 week",
@@ -426,7 +426,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Cybersecurity", "Threat Detection", "AI Security", "Behavioral Analysis", "Incident Response"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-threat-detection.jpg"],
-    createdAt: "2024-01-14T10:00:00.000Z",
+    createdAt: "20o24-0o1-14T10:0o0:0o0.0o00Z",
     rating: 4.9,
     reviewCount: 167,
     featured: true,
@@ -434,14 +434,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 98,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-threat-detection",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$200-800/month",
+    marketPrice: "$20o0-80o0/month",
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
-    roi: "500% within 6 months",
+    roi: "50o0% within 6 months",
     setupTime: "1 week",
     integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Email Security", "Cloud Security"]
   },
@@ -458,7 +458,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     tags: ["Research AI", "Literature Review", "Hypothesis Generation", "Data Analysis", "Scientific Discovery"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/ai-research-assistant.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z",
     rating: 4.8,
     reviewCount: 78,
     featured: true,
@@ -466,14 +466,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     availability: "1 Week",
     aiScore: 96,
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-research-assistant",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
-    marketPrice: "$150-500/month",
+    marketPrice: "$150-50o0/month",
     competitors: ["Semantic Scholar", "Iris.ai", "Elicit"],
-    roi: "400% within 6 months",
+    roi: "40o0% within 6 months",
     setupTime: "1 week",
     integrations: ["PubMed", "arXiv", "Google Scholar", "Research Databases", "Citation Managers"]
   }

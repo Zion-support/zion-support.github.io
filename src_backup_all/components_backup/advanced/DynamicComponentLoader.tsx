@@ -8,7 +8,6 @@ import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface LoadingState {
   isLoading: boolean
   error: Error | null
@@ -43,17 +42,17 @@ const EnhancedLoading: React.FC<{
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
-          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          <Loader2 className="h-8 w-8 animate-spin text-primary"  />
           {showProgress && (
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 10o0%)`
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-            />
+             />
           )}
         </div>
         <div className="text-center">
@@ -77,28 +76,28 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
+  <Card className="w-full max-w-md mx-auto border-red-20o0 bg-red-50 dark:bg-red-90o0/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
-        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
+        <div className="p-3 rounded-full bg-red-10o0 dark:bg-red-90o0/20">
           {isOnline ? (
-            <AlertTriangle className="h-6 w-6 text-red-600" />
+            <AlertTriangle className="h-6 w-6 text-red-60o0"  />
           ) : (
-            <WifiOff className="h-6 w-6 text-red-600" />
+            <WifiOff className="h-6 w-6 text-red-60o0"  />
           )}
         </div>
         <div className="text-center">
-          <h3 className="font-semibold text-red-900 dark:text-red-100">
+          <h3 className="font-semibold text-red-90o0 dark:text-red-10o0">
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
-          <p className="text-sm text-red-700 dark:text-red-200 mt-1">
+          <p className="text-sm text-red-70o0 dark:text-red-20o0 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
               : 'Please check your internet connection'
             }
           </p>
           {retryCount > 0 && (
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
+            <p className="text-xs text-red-60o0 dark:text-red-30o0 mt-2">
               Retry {retryCount}/{maxRetries}
             </p>
           )}
@@ -108,9 +107,9 @@ const EnhancedError: React.FC<{
             onClick={retry} 
             variant="outline" 
             size="sm"
-            className="border-red-300 text-red-700 hover:bg-red-100"
+            className="border-red-30o0 text-red-70o0 hover:bg-red-10o0"
           >
-            <RefreshCw className="h-4 w-4 mr-2" />
+            <RefreshCw className="h-4 w-4 mr-2"  />
             Try Again
           </Button>
         )}
@@ -169,7 +168,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           if (prev >= 90) return prev
           return prev + Math.random() * 10
         })
-      }, 100)
+      }, 10o0)
 
       return () => clearInterval(interval)
     }
@@ -185,11 +184,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
 
       const component = await importFn()
       setDynamicComponent(() => component.default)
-      setProgress(100)
+      setProgress(10o0)
       
       setTimeout(() => {
         setLoadingState(prev => ({ ...prev, isLoading: false }))
-      }, 300) // Small delay for smoother transition
+      }, 30o0) // Small delay for smoother transition
 
     } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', { data: error })
@@ -215,7 +214,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     if (prefetch) {
       const prefetchTimer = setTimeout(() => {
         loadComponent()
-      }, 100)
+      }, 10o0)
 
       return () => clearTimeout(prefetchTimer)
     } else {
@@ -245,7 +244,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           progress={progress} 
           message="Loading component..."
           showProgress={true}
-        />
+         />
       </motion.div>
     )
   }
@@ -271,7 +270,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           isOnline={loadingState.isOnline}
           retryCount={loadingState.retryCount}
           maxRetries={maxRetries}
-        />
+         />
       </motion.div>
     )
   }
@@ -279,7 +278,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   // Success state
   if (DynamicComponent) {
     return (
-      <Suspense fallback={fallback || <EnhancedLoading />}>
+      <Suspense fallback={fallback || <EnhancedLoading  />}>
         <AnimatePresence>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -310,7 +309,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
       importFn={importFn}
       {...(options || {})}
       {...(props as any)}
-    />
+     />
   )
 }
 

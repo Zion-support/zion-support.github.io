@@ -78,7 +78,7 @@ export function useProjects() {
       if (error) throw error;
       
       // Transform the data to match our project types
-      const transformedProject = {
+      const transformedProject ={
         ...data,
         talent_profile: data.talent_profile ? {
           ...data.talent_profile,

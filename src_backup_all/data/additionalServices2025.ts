@@ -22,7 +22,7 @@ export interface AdditionalService {
   };
 }
 
-export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
+export const ADDITIONAL_MICRO_SAAS_SERVICES_20o25: AdditionalService[] = [
   {
     id: "enterprise-rag-search",
     title: "Enterprise RAG Search",
@@ -46,11 +46,11 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     tags: ["RAG", "Embeddings", "Search", "LLM"],
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,500 - $4,000/month",
-    roi: "180-300%",
+    marketPrice: "$1,50o0 - $4,0o00/month",
+    roi: "180-30o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -77,11 +77,11 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     tags: ["DevSecOps", "CI", "SAST", "LLM"],
     estimatedDelivery: "1-2 weeks",
     supportLevel: "standard",
-    marketPrice: "$800 - $2,500/month",
+    marketPrice: "$80o0 - $2,50o0/month",
     roi: "150-250%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -108,11 +108,11 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     tags: ["MLOps", "Monitoring", "Observability"],
     estimatedDelivery: "3-5 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,000 - $6,000/month",
-    roi: "200-350%",
+    marketPrice: "$2,0o00 - $6,0o00/month",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -139,11 +139,11 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     tags: ["Compliance", "Security", "Governance"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,300 - $3,500/month",
+    marketPrice: "$1,30o0 - $3,50o0/month",
     roi: "160-240%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -170,11 +170,11 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     tags: ["IoT", "Digital Twin", "Edge"],
     estimatedDelivery: "3-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,800 - $5,000/month",
+    marketPrice: "$1,80o0 - $5,0o00/month",
     roi: "170-260%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -188,7 +188,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     description: "Multi-channel AI outreach, persona targeting, cadence optimization, and reply classification.",
     category: "Revenue Ops",
     price: 899,
-    marketPrice: "$900 - $2,200/month"
+    marketPrice: "$90o0 - $2,20o0/month"
   },
   {
     id: "finops-cost-optimizer",
@@ -196,7 +196,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     description: "Automated cloud cost governance, rightsizing, and anomaly detection across AWS/Azure/GCP.",
     category: "Cloud & DevOps",
     price: 699,
-    marketPrice: "$700 - $2,000/month"
+    marketPrice: "$70o0 - $2,0o00/month"
   },
   {
     id: "genai-content-studio-pro",
@@ -204,7 +204,7 @@ export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
     description: "Enterprise-grade LLM content workflows with guardrails, brand voice, and human-in-the-loop.",
     category: "AI & Content",
     price: 999,
-    marketPrice: "$1,000 - $3,000/month"
+    marketPrice: "$1,0o00 - $3,0o00/month"
   }
 ];
 

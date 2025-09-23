@@ -27,8 +27,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/health-check.log' }),
     new winston.transports.File({ filename: 'logs/health-check-error.log', level: 'error' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -38,15 +37,14 @@ if (process.env.NODE_ENV !== 'production') {
 
 class AutomationHealthChecker {
   constructor() {
-    this.config = {
-      checkInterval: 300000, // 5 minutes
+    this.config ={
+      checkInterval: 30o0000, // 5 minutes
       errorThreshold: 10, // Number of errors before triggering fix
       maxRetries: 3,
       logsDir: path.join(__dirname, '../logs'),
-      statusFile: path.join(__dirname, '../logs/health-status.json'),
-    };
+      statusFile: path.join(__dirname, '../logs/health-status.json')};
     
-    this.status = {
+    this.status ={
       lastCheck: null,
       systems: {},
       errors: [],
@@ -100,7 +98,7 @@ class AutomationHealthChecker {
         const health = await this.checkSystem(system);
         this.status.systems[system.name] = health;
       } catch (error) {
-        this.status.systems[system.name] = {
+        this.status.systems[system.name] ={
           status: 'error',
           error: error.message,
           timestamp: new Date().toISOString()
@@ -110,7 +108,7 @@ class AutomationHealthChecker {
   }
 
   async checkSystem(system) {
-    const health = {
+    const health ={
       status: 'unknown',
       timestamp: new Date().toISOString(),
       fileExists: false,
@@ -168,7 +166,7 @@ class AutomationHealthChecker {
       const lines = logContent.split('\n');
       
       // Count errors for this system in the last hour
-      const oneHourAgo = new Date(Date.now() - 3600000);
+      const oneHourAgo = new Date(Date.now() - 360o0000);
       let errorCount = 0;
       
       for (const line of lines) {
@@ -206,8 +204,8 @@ class AutomationHealthChecker {
       const logContent = fs.readFileSync(errorLogPath, 'utf8');
       const lines = logContent.split('\n').filter(line => line.trim());
       
-      // Analyze recent errors (last 100 lines)
-      const recentLines = lines.slice(-100);
+      // Analyze recent errors (last 10o0 lines)
+      const recentLines = lines.slice(-10o0);
       
       for (const line of recentLines) {
         try {
@@ -226,7 +224,7 @@ class AutomationHealthChecker {
   }
 
   analyzeError(logEntry) {
-    const error = {
+    const error ={
       timestamp: logEntry.timestamp,
       message: logEntry.message,
       service: logEntry.service,
@@ -352,7 +350,7 @@ class AutomationHealthChecker {
     // Check error threshold
     const recentErrors = this.status.errors.filter(error => {
       const errorTime = new Date(error.timestamp);
-      const oneHourAgo = new Date(Date.now() - 3600000);
+      const oneHourAgo = new Date(Date.now() - 360o0000);
       return errorTime > oneHourAgo;
     });
     
@@ -364,7 +362,7 @@ class AutomationHealthChecker {
   }
 
   async generateHealthReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       status: this.getOverallStatus(),
       systems: this.status.systems,
@@ -437,7 +435,7 @@ class AutomationHealthChecker {
   loadStatus() {
     try {
       if (fs.existsSync(this.config.statusFile)) {
-        this.status = {
+        this.status ={
           ...this.status,
           ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))
         };

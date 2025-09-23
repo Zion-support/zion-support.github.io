@@ -1,4 +1,4 @@
-export interface EnhancedService2025 {
+export interface EnhancedService20o25 {
   id: string;
   name: string;
   tagline: string;
@@ -38,14 +38,14 @@ export interface EnhancedService2025 {
   reviews: number;
 }
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export const enhancedServices2025: EnhancedService2025[] = [
+export const enhancedServices20o25: EnhancedService20o25[] = [
   {
     id: 'ai-cybersecurity-sentinel',
     name: 'AI Cybersecurity Sentinel',
@@ -62,8 +62,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '🛡️',
-    color: 'from-red-600 to-orange-700',
-    textColor: 'text-red-300',
+    color: 'from-red-60o0 to-orange-70o0',
+    textColor: 'text-red-30o0',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel',
     marketPosition: 'Next-generation AI-powered cybersecurity with zero false positives.',
     targetAudience: ['Enterprise security', 'SOC teams', 'Compliance officers'],
@@ -81,7 +81,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'ML models, API integrations, real-time monitoring.',
-    launchDate: '2025-07-15',
+    launchDate: '20o25-0o7-15',
     customers: 45,
     rating: 4.7,
     reviews: 32
@@ -102,8 +102,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: false,
     icon: '🤖',
-    color: 'from-green-600 to-teal-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-teal-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/autonomous-devops-orchestrator',
     marketPosition: 'First autonomous DevOps platform with AI-driven decision making.',
     targetAudience: ['DevOps engineers', 'Platform teams', 'SREs'],
@@ -121,7 +121,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI models, infrastructure as code, monitoring integration.',
-    launchDate: '2025-06-20',
+    launchDate: '20o25-0o6-20',
     customers: 28,
     rating: 4.6,
     reviews: 19
@@ -142,8 +142,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '🔗',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform',
     marketPosition: 'Enterprise blockchain platform with built-in compliance and scalability.',
     targetAudience: ['Financial services', 'Supply chain', 'Healthcare'],
@@ -161,7 +161,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Multi-chain architecture, smart contracts, enterprise APIs.',
-    launchDate: '2025-05-10',
+    launchDate: '20o25-0o5-10',
     customers: 22,
     rating: 4.5,
     reviews: 15
@@ -182,8 +182,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: false,
     icon: '✍️',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-pink-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/ai-content-intelligence-suite',
     marketPosition: 'AI content platform with built-in SEO and brand consistency.',
     targetAudience: ['Marketing teams', 'Content creators', 'SEO specialists'],
@@ -201,7 +201,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'AI models, content templates, analytics dashboard.',
-    launchDate: '2025-04-25',
+    launchDate: '20o25-0o4-25',
     customers: 67,
     rating: 4.4,
     reviews: 41
@@ -222,8 +222,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '🌐',
-    color: 'from-teal-600 to-green-700',
-    textColor: 'text-teal-300',
+    color: 'from-teal-60o0 to-green-70o0',
+    textColor: 'text-teal-30o0',
     link: 'https://ziontechgroup.com/services/iot-enterprise-platform',
     marketPosition: 'Enterprise IoT platform with built-in security and scalability.',
     targetAudience: ['Manufacturing', 'Smart cities', 'Energy companies'],
@@ -241,7 +241,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Device SDKs, cloud infrastructure, analytics engine.',
-    launchDate: '2025-03-15',
+    launchDate: '20o25-0o3-15',
     customers: 38,
     rating: 4.6,
     reviews: 25
@@ -262,8 +262,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '🎯',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
+    color: 'from-emerald-60o0 to-teal-70o0',
+    textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/services/ai-customer-success-platform',
     marketPosition: 'AI-driven customer success with predictive analytics and automation.',
     targetAudience: ['Customer success teams', 'Account managers', 'Growth teams'],
@@ -281,7 +281,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'ML models, automation engine, integration APIs.',
-    launchDate: '2025-02-20',
+    launchDate: '20o25-0o2-20',
     customers: 52,
     rating: 4.7,
     reviews: 38
@@ -302,8 +302,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: false,
     icon: '🔐',
-    color: 'from-indigo-600 to-blue-700',
-    textColor: 'text-indigo-300',
+    color: 'from-indigo-60o0 to-blue-70o0',
+    textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/services/quantum-cryptography-suite',
     marketPosition: 'First post-quantum cryptography platform for enterprise security.',
     targetAudience: ['Financial services', 'Government', 'Healthcare'],
@@ -321,7 +321,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Cryptographic libraries, key management, performance optimization.',
-    launchDate: '2025-01-15',
+    launchDate: '20o25-0o1-15',
     customers: 18,
     rating: 4.8,
     reviews: 12
@@ -342,8 +342,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '📦',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-300',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-30o0',
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimizer',
     marketPosition: 'AI-first supply chain optimization with real-time insights.',
     targetAudience: ['Supply chain managers', 'Operations', 'Procurement teams'],
@@ -361,7 +361,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'ML models, IoT integration, real-time analytics.',
-    launchDate: '2025-01-10',
+    launchDate: '20o25-0o1-10',
     customers: 35,
     rating: 4.6,
     reviews: 28
@@ -382,8 +382,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: false,
     icon: '💰',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/autonomous-financial-advisor',
     marketPosition: 'AI-first financial advisory with institutional-grade algorithms.',
     targetAudience: ['Financial advisors', 'Wealth managers', 'Individual investors'],
@@ -401,7 +401,7 @@ export const enhancedServices2025: EnhancedService2025[] = [
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'ML models, portfolio optimization engine, risk analytics.',
-    launchDate: '2025-02-01',
+    launchDate: '20o25-0o2-0o1',
     customers: 42,
     rating: 4.7,
     reviews: 31
@@ -422,8 +422,8 @@ export const enhancedServices2025: EnhancedService2025[] = [
     ],
     popular: true,
     icon: '⚛️',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-indigo-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',
     marketPosition: 'First quantum-enhanced ML platform for enterprise applications.',
     targetAudience: ['Data scientists', 'Research teams', 'Enterprise AI'],
@@ -434,14 +434,14 @@ export const enhancedServices2025: EnhancedService2025[] = [
     technology: ['Quantum algorithms', 'Machine Learning', 'Cloud computing'],
     integrations: ['AWS Braket', 'Azure Quantum', 'Google Quantum'],
     useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization'],
-    roi: '10-100x faster than classical ML for specific problems',
+    roi: '10-10o0x faster than classical ML for specific problems',
     competitors: ['D-Wave', 'IBM Quantum', 'Rigetti'],
     marketSize: '$8.5B quantum computing',
     growthRate: '25% CAGR',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Quantum simulators, hybrid algorithms, cloud deployment.',
-    launchDate: '2025-03-01',
+    launchDate: '20o25-0o3-0o1',
     customers: 15,
     rating: 4.8,
     reviews: 8

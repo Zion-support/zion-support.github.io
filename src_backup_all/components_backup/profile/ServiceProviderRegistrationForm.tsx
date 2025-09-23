@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useRouter } from "next/router";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,8 +16,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
@@ -30,16 +28,14 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const serviceProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long"),
   title: z.string().min(5, "Business name/title is required"),
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(10o00, "Bio cannot exceed 10o00 characters"),
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number",
-  }),
+    message: "Rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional(),
-});
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()});
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
@@ -64,9 +60,7 @@ export function ServiceProviderRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: false,
-      website: "",
-    },
-  });
+      website: ""}});
 
   // Handle adding service tags
   const handleAddService = () => {
@@ -108,8 +102,7 @@ export function ServiceProviderRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed",
-        description: "Please provide at least a detailed bio before generating enhanced content.",
-      });
+        description: "Please provide at least a detailed bio before generating enhanced content."});
       return;
     }
 
@@ -139,8 +132,7 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile.",
-        });
+          description: "AI has created a professional bio and suggested additional services for your profile."});
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content');
@@ -151,8 +143,7 @@ export function ServiceProviderRegistrationForm() {
         
         toast({
           title: "Enhanced Profile Generated",
-          description: "AI has created a professional bio and suggested additional services for your profile.",
-        });
+          description: "AI has created a professional bio and suggested additional services for your profile."});
       }
       
     } catch (error: any) {
@@ -160,8 +151,7 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Generation failed",
         description: error.message || "There was an error generating your enhanced profile. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsGenerating(false);
     }
@@ -190,8 +180,7 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Services required",
         description: "Please add at least one service to your profile.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -269,8 +258,7 @@ export function ServiceProviderRegistrationForm() {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
-          website: values.website || null,
-        });
+          website: values.website || null});
 
       if (serviceError) throw serviceError;
       */
@@ -283,7 +271,7 @@ export function ServiceProviderRegistrationForm() {
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
               html: `
-              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <div style="font-family: Arial, sans-serif; max-width: 60o0px; margin: 0 auto;">
                 <h2 style="color: #6D28D9;">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
@@ -303,21 +291,19 @@ export function ServiceProviderRegistrationForm() {
       
       toast({
         title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory.",
-      });
+        description: "Your service provider profile has been published and is now visible in the directory."});
 
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
         router.push('/service-dashboard');
-      }, 1500);
+      }, 150o0);
       
     } catch (error: any) {
       logErrorToProduction('Error creating profile:', { data: error });
       toast({
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }
@@ -349,15 +335,15 @@ export function ServiceProviderRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
                                 {...field}
-                              />
+                               />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-40o0"  />
                         </FormItem>
                       )}
                     />
@@ -372,15 +358,15 @@ export function ServiceProviderRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e.g., Creative Design Studio"
                                 {...field}
-                              />
+                               />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-40o0"  />
                         </FormItem>
                       )}
                     />
@@ -395,15 +381,15 @@ export function ServiceProviderRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
                                 {...field}
-                              />
+                               />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-40o0"  />
                         </FormItem>
                       )}
                     />
@@ -418,15 +404,15 @@ export function ServiceProviderRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"  />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="https://yourwebsite.com"
                                 {...field}
-                              />
+                               />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-40o0"  />
                         </FormItem>
                       )}
                     />
@@ -445,33 +431,33 @@ export function ServiceProviderRegistrationForm() {
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
                             loading="lazy"
-                          />
+                           />
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"  />
                         </div>
                       )}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4" />
+                      <Upload className="mr-2 h-4 w-4"  />
                       <span>Upload Photo</span>
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
                         onChange={handleAvatarUpload}
-                      />
+                       />
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.
+                    For best results, use an image at least 40o0x40o0 pixels in JPG, PNG, or GIF format.
                   </p>
                 </div>
               </div>
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className="bg-zion-blue-light/50"  />
 
               {/* Bio Section */}
               <div className="space-y-4">
@@ -487,11 +473,11 @@ export function ServiceProviderRegistrationForm() {
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
                           placeholder="Describe your services, expertise, and what sets you apart from others..."
                           {...field}
-                        />
+                         />
                       </FormControl>
-                      <FormMessage className="text-red-400" />
+                      <FormMessage className="text-red-40o0"  />
                       <FormDescription className="text-zion-slate">
-                        {field.value?.length || 0}/1000 characters
+                        {field.value?.length || 0}/10o00 characters
                       </FormDescription>
                     </FormItem>
                   )}
@@ -505,7 +491,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple"  />
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
@@ -518,7 +504,7 @@ export function ServiceProviderRegistrationForm() {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
-                        />
+                         />
                       </FormControl>
                     </FormItem>
                   )}
@@ -533,7 +519,7 @@ export function ServiceProviderRegistrationForm() {
                       onClick={generateEnhancedProfile}
                       disabled={isGenerating}
                     >
-                      <Sparkles className="mr-2 h-4 w-4" />
+                      <Sparkles className="mr-2 h-4 w-4"  />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>
@@ -544,7 +530,7 @@ export function ServiceProviderRegistrationForm() {
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple"  />
                         AI-Generated Content
                       </h4>
                       <Button
@@ -553,7 +539,7 @@ export function ServiceProviderRegistrationForm() {
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={applyGeneratedContent}
                       >
-                        <Check className="mr-1 h-3 w-3" /> Apply
+                        <Check className="mr-1 h-3 w-3"  /> Apply
                       </Button>
                     </div>
                     
@@ -583,7 +569,7 @@ export function ServiceProviderRegistrationForm() {
                 )}
               </div>
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className="bg-zion-blue-light/50"  />
 
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -603,7 +589,7 @@ export function ServiceProviderRegistrationForm() {
                               placeholder="Add a service..."
                               {...field}
                               onKeyDown={handleServiceKeyPress}
-                            />
+                             />
                           </FormControl>
                           <Button
                             type="button"
@@ -617,7 +603,7 @@ export function ServiceProviderRegistrationForm() {
                         <FormDescription className="text-zion-slate">
                           Press Enter or click Add to include a service
                         </FormDescription>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-40o0"  />
                       </FormItem>
                     )}
                   />
@@ -634,7 +620,7 @@ export function ServiceProviderRegistrationForm() {
                           onClick={() => handleRemoveService(service)}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
-                          <X className="h-3 w-3" />
+                          <X className="h-3 w-3"  />
                         </button>
                       </Badge>
                     ))}
@@ -660,13 +646,13 @@ export function ServiceProviderRegistrationForm() {
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="e.g., 85"
                               {...field}
-                            />
+                             />
                           </div>
                         </FormControl>
                         <FormDescription className="text-zion-slate">
                           Your base hourly or project rate
                         </FormDescription>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-40o0"  />
                       </FormItem>
                     )}
                   />
@@ -689,7 +675,7 @@ export function ServiceProviderRegistrationForm() {
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="available" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-green-50o0"></div>
                                 Available for Work
                               </label>
                             </div>
@@ -704,7 +690,7 @@ export function ServiceProviderRegistrationForm() {
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="limited" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-yellow-50o0"></div>
                                 Limited Availability
                               </label>
                             </div>
@@ -719,13 +705,13 @@ export function ServiceProviderRegistrationForm() {
                                 className="text-zion-purple focus:ring-zion-purple"
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
-                                <div className="h-2 w-2 rounded-full bg-red-500"></div>
+                                <div className="h-2 w-2 rounded-full bg-red-50o0"></div>
                                 Currently Unavailable
                               </label>
                             </div>
                           </div>
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-40o0"  />
                       </FormItem>
                     )}
                   />

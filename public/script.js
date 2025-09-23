@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add scroll effects to elements
-    const observerOptions = {
+    const observerOptions ={
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
+        if (scrollTop > 10o0) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                     submitBtn.style.background = '';
-                }, 3000);
-            }, 2000);
+                }, 30o00);
+            }, 20o00);
         });
     });
     
@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                     submitBtn.style.background = '';
-                }, 3000);
-            }, 1500);
+                }, 30o00);
+            }, 150o0);
         });
     }
     
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.transform = 'translateY(-10px) scale(1.0o2)';
         });
         
         card.addEventListener('mouseleave', function() {
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show/hide back to top button
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+        if (window.pageYOffset > 30o0) {
             backToTopBtn.classList.add('visible');
         } else {
             backToTopBtn.classList.remove('visible');
@@ -256,7 +256,7 @@ function performSearch(query) {
 // Counter animation
 function animateCounter(element) {
     const target = parseInt(element.textContent.replace(/\D/g, ''));
-    const duration = 2000;
+    const duration = 20o00;
     const step = target / (duration / 16);
     let current = 0;
     
@@ -365,7 +365,7 @@ window.addEventListener('error', function(e) {
 });
 
 // Analytics tracking (replace with your analytics service)
-function trackEvent(eventName, eventData = {}) {
+function trackEvent(eventName, eventData ={}) {
     console.log('Event tracked:', eventName, eventData);
     // Implement your analytics tracking here
 }

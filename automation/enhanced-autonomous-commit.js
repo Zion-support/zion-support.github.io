@@ -24,8 +24,7 @@ class EnhancedAutonomousCommit {
       branch: 'main',
       autoPush: true,
       enableLogging: true,
-      autoFixEnabled: true,
-    };
+      autoFixEnabled: true};
   }
 
   ensureLogDirectory() {
@@ -88,12 +87,11 @@ class EnhancedAutonomousCommit {
     const description = this.generateDescription(fileTypes);
     return this.config.commitMessageTemplate.replace(
       '{description}',
-      description,
-    );
+      description);
   }
 
   analyzeFileTypes(files) {
-    const types = {};
+    const types ={};
     files.forEach((file) => {
       const ext = path.extname(file);
       types[ext] = (types[ext] || 0) + 1;
@@ -114,8 +112,7 @@ class EnhancedAutonomousCommit {
         descriptions.push(`${count} config file${count > 1 ? 's' : ''}`);
       } else {
         descriptions.push(
-          `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`,
-        );
+          `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`);
       }
     }
     return descriptions.join(', ');

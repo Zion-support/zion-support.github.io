@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Automation Solutions | Zion Tech Group",
   description:
     "Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations."};
@@ -7,10 +7,10 @@ export default function AutomationSolutionsPage() {
   return (
     <div className="animate-fade-in">
       <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
           Automation Solutions
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-12">
           Intelligent automation solutions including RPA, workflow automation,
           AI-powered automation, and business process optimization. Streamline
           your operations and boost productivity.
@@ -18,7 +18,7 @@ export default function AutomationSolutionsPage() {
       </section>
 
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">
           Our Automation Solutions
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -33,7 +33,7 @@ export default function AutomationSolutionsPage() {
               "Scalable automation"]}
             price="$15k–$50k"
             icon="🤖"
-          />
+           />
           <AutomationServiceCard
             title="Workflow Automation"
             description="End-to-end workflow automation with intelligent decision making"
@@ -45,7 +45,7 @@ export default function AutomationSolutionsPage() {
               "Performance analytics"]}
             price="$10k–$35k"
             icon="⚡"
-          />
+           />
           <AutomationServiceCard
             title="AI-Powered Automation"
             description="Intelligent automation using AI and machine learning for complex tasks"
@@ -57,7 +57,7 @@ export default function AutomationSolutionsPage() {
               "Cognitive automation"]}
             price="$25k–$80k"
             icon="🧠"
-          />
+           />
           <AutomationServiceCard
             title="Document Processing Automation"
             description="Automated document handling, extraction, and processing"
@@ -69,7 +69,7 @@ export default function AutomationSolutionsPage() {
               "Compliance checking"]}
             price="$12k–$40k"
             icon="📄"
-          />
+           />
           <AutomationServiceCard
             title="Customer Service Automation"
             description="Automated customer support with chatbots and intelligent routing"
@@ -81,7 +81,7 @@ export default function AutomationSolutionsPage() {
               "Escalation management"]}
             price="$18k–$60k"
             icon="💬"
-          />
+           />
           <AutomationServiceCard
             title="Financial Process Automation"
             description="Automated financial processes including invoicing, payments, and reporting"
@@ -93,7 +93,7 @@ export default function AutomationSolutionsPage() {
               "Compliance automation"]}
             price="$20k–$70k"
             icon="💰"
-          />
+           />
 <AutomationServiceCard
             title="HR & Payroll Automation"
             description="Complete HR process automation including recruitment, onboarding, and payroll"
@@ -106,7 +106,7 @@ export default function AutomationSolutionsPage() {
               "Performance tracking"]}
             price="$18k–$60k"
             icon="👥"
-          />
+           />
           <AutomationServiceCard
             title="Marketing Automation"
             description="Intelligent marketing campaign automation and lead nurturing"
@@ -119,7 +119,7 @@ export default function AutomationSolutionsPage() {
               "Analytics tracking"]}
             price="$15k–$50k"
             icon="📢"
-          />
+           />
           <AutomationServiceCard
             title="Inventory Management Automation"
             description="Automated inventory tracking, ordering, and supply chain management"
@@ -132,7 +132,7 @@ export default function AutomationSolutionsPage() {
               "Cost optimization"]}
             price="$20k–$65k"
             icon="📦"
-          />
+           />
           <AutomationServiceCard
             title="Email & Communication Automation"
             description="Intelligent email management and communication workflows"
@@ -145,7 +145,7 @@ export default function AutomationSolutionsPage() {
               "Analytics tracking"]}
             price="$12k–$40k"
             icon="📧"
-          />
+           />
           <AutomationServiceCard
             title="Data Entry & Migration Automation"
             description="Automated data entry, validation, and system migration"
@@ -158,7 +158,7 @@ export default function AutomationSolutionsPage() {
               "Data quality checks"]}
             price="$15k–$45k"
             icon="📊"
-          />
+           />
           <AutomationServiceCard
             title="Compliance & Audit Automation"
             description="Automated compliance monitoring and audit preparation"
@@ -171,7 +171,7 @@ export default function AutomationSolutionsPage() {
               "Documentation management"]}
             price="$18k–$55k"
             icon="📋"
-          />
+           />
           <AutomationServiceCard
             title="Customer Onboarding Automation"
             description="Streamlined customer onboarding with automated workflows"
@@ -184,7 +184,7 @@ export default function AutomationSolutionsPage() {
               "Compliance checks"]}
             price="$16k–$50k"
             icon="🚀"
-          />
+           />
           <AutomationServiceCard
             title="Sales Process Automation"
             description="End-to-end sales automation from lead to close"
@@ -197,7 +197,7 @@ export default function AutomationSolutionsPage() {
               "Revenue forecasting"]}
             price="$20k–$70k"
             icon="💼"
-          />
+           />
           <AutomationServiceCard
             title="IT Operations Automation"
             description="Automated IT operations and infrastructure management"
@@ -210,7 +210,7 @@ export default function AutomationSolutionsPage() {
               "Security scanning"]}
             price="$25k–$80k"
             icon="⚙️"
-          />
+           />
           <AutomationServiceCard
             title="Quality Assurance Automation"
             description="Automated testing and quality control processes"
@@ -223,7 +223,7 @@ export default function AutomationSolutionsPage() {
               "Quality reporting"]}
             price="$18k–$60k"
             icon="🔍"
-          />
+           />
           <AutomationServiceCard
             title="Expense Management Automation"
             description="Automated expense tracking, approval, and reimbursement"
@@ -236,7 +236,7 @@ export default function AutomationSolutionsPage() {
               "Analytics reporting"]}
             price="$12k–$40k"
             icon="💳"
-          />
+           />
           <AutomationServiceCard
             title="Project Management Automation"
             description="Automated project tracking and resource management"
@@ -249,7 +249,7 @@ export default function AutomationSolutionsPage() {
               "Reporting automation"]}
             price="$15k–$50k"
             icon="📅"
-          />
+           />
           <AutomationServiceCard
             title="Customer Feedback Automation"
             description="Automated feedback collection and analysis"
@@ -262,7 +262,7 @@ export default function AutomationSolutionsPage() {
               "Trend analysis"]}
             price="$10k–$35k"
             icon="💬"
-          />
+           />
           <AutomationServiceCard
             title="Supply Chain Automation"
             description="End-to-end supply chain process automation"
@@ -275,7 +275,7 @@ export default function AutomationSolutionsPage() {
               "Cost optimization"]}
             price="$25k–$75k"
             icon="🚚"
-          />
+           />
           <AutomationServiceCard
             title="Legal Document Automation"
             description="Automated legal document processing and management"
@@ -288,7 +288,7 @@ export default function AutomationSolutionsPage() {
               "Archive management"]}
             price="$20k–$65k"
             icon="⚖️"
-          />
+           />
           <AutomationServiceCard
             title="Real Estate Process Automation"
             description="Automated real estate workflows and property management"
@@ -301,7 +301,7 @@ export default function AutomationSolutionsPage() {
               "Commission tracking"]}
             price="$18k–$55k"
             icon="🏠"
-          />
+           />
           <AutomationServiceCard
             title="Healthcare Process Automation"
             description="Medical process automation and patient management"
@@ -314,7 +314,7 @@ export default function AutomationSolutionsPage() {
               "Report generation"]}
             price="$25k–$80k"
             icon="🏥"
-          />
+           />
           <AutomationServiceCard
             title="Manufacturing Automation"
             description="Production line and manufacturing process automation"
@@ -325,9 +325,9 @@ export default function AutomationSolutionsPage() {
               "Equipment monitoring",
               "Maintenance scheduling",
               "Performance tracking"]}
-            price="$30k–$100k"
+            price="$30k–$10o0k"
             icon="🏭"
-          />
+           />
           <AutomationServiceCard
             title="Insurance Process Automation"
             description="Automated insurance workflows and claims processing"
@@ -340,7 +340,7 @@ export default function AutomationSolutionsPage() {
               "Compliance monitoring"]}
             price="$22k–$70k"
             icon="🛡️"
-          />
+           />
           <AutomationServiceCard
             title="Event Management Automation"
             description="Automated event planning and management workflows"
@@ -353,12 +353,12 @@ export default function AutomationSolutionsPage() {
               "Analytics reporting"]}
             price="$15k–$45k"
             icon="🎉"
-          />
+           />
         </div>
       </section>
 
       <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">
           Automation Technology Stack
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -371,7 +371,7 @@ export default function AutomationSolutionsPage() {
               "API integration and orchestration",
               "Exception handling and error recovery",
               "Performance monitoring and analytics"]}
-          />
+           />
           <Item
             title="AI & Machine Learning"
             details={[
@@ -381,7 +381,7 @@ export default function AutomationSolutionsPage() {
               "Decision trees and rule engines",
               "Machine learning model integration",
               "Cognitive automation platforms"]}
-          />
+           />
           <Item
             title="Integration & Orchestration"
             details={[
@@ -391,12 +391,12 @@ export default function AutomationSolutionsPage() {
               "Microservices architecture",
               "Cloud-native automation",
               "Real-time monitoring and alerting"]}
-          />
+           />
         </div>
       </section>
 
-      <Pricing />
-      <ContactSection />
+      <Pricing  />
+      <ContactSection  />
     </div>
   );
 }
@@ -414,15 +414,15 @@ function AutomationServiceCard({
   icon: string;
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white border border-gray-20o0 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <h3 className="text-xl font-bold text-gray-90o0 mb-3">{title}</h3>
+      <p className="text-gray-60o0 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-60o0 mb-4">{price}</div>
       <ul className="space-y-2">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-green-500 mr-2">✓</span>
+          <li key={index} className="flex items-center text-sm text-gray-60o0">
+            <span className="text-green-50o0 mr-2">✓</span>
             {feature}
           </li>
         ))}
@@ -433,12 +433,12 @@ function AutomationServiceCard({
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+    <div className="bg-white border border-gray-20o0 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
       <ul className="space-y-2">
         {details.map((detail, index) => (
-          <li key={index} className="flex items-start text-gray-600">
-            <span className="text-blue-500 mr-2 mt-1">•</span>
+          <li key={index} className="flex items-start text-gray-60o0">
+            <span className="text-blue-50o0 mr-2 mt-1">•</span>
             {detail}
           </li>
         ))}
@@ -450,7 +450,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-90o0 text-center mb-12">
         Automation Packages
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -465,7 +465,7 @@ function Pricing() {
             "Technology recommendations",
             "Implementation roadmap",
             "Pilot process selection"]}
-        />
+         />
         <Plan
           name="Automation Implementation"
           price="$20k–$80k"
@@ -477,7 +477,7 @@ function Pricing() {
             "User training and documentation",
             "Deployment and go-live support",
             "Performance monitoring setup"]}
-        />
+         />
         <Plan
           name="Managed Automation"
           price="$3k+/mo"
@@ -489,7 +489,7 @@ function Pricing() {
             "Performance reporting",
             "Process improvements",
             "Scalability management"]}
-        />
+         />
       </div>
     </section>
   );
@@ -506,21 +506,21 @@ function Plan({
   features: string[];
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
+    <div className="bg-white border border-gray-20o0 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-60o0 mb-2">{price}</div>
+      <div className="text-gray-60o0 mb-6">{duration}</div>
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
+          <li key={index} className="flex items-center text-gray-60o0">
+            <span className="text-green-50o0 mr-3">✓</span>
             {feature}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
-        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+        href="tel:+130o24640950"
+        className="w-full bg-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors text-center block"
       >
         Get Started
       </a>
@@ -532,30 +532,30 @@ function ContactSection() {
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
       <div className="text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+        <h3 className="text-3xl font-bold text-gray-90o0 mb-4">
           Ready to Automate Your Business?
         </h3>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-60o0 mb-8 max-w-2xl mx-auto">
           Let's identify automation opportunities and implement solutions that
           save time and reduce costs. Our automation experts have delivered 150+
           successful automation projects.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
         </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        <div className="mt-8 text-sm text-gray-50o0">
+          <p>Address: 364 E Main St STE 10o08, Middletown DE 19709</p>
         </div>
       </div>
     </section>

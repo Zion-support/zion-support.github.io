@@ -1,10 +1,10 @@
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const fs = require('fs'); const path = require('path');  const performanceChecks ={ bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 
-const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
+const fs = require('fs'); const path = require('path');  const performanceChecks ={ bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object && Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 const fs = require('fs');
 const path = require('path');
 console && console.log('📊 Enhanced Performance Monitor Starting...');
-const performanceChecks = {
+const performanceChecks ={
   "bundleSize": () => {
     console.log('📦 Checking bundle size...'),
 

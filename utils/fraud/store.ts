@@ -1,5 +1,4 @@
 import fs from 'fs-extra';
-import path from 'path';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -9,8 +8,7 @@ import {
   MonthlyReport,
   MonitoredSource,
   PrivacySettings,
-  StoredFraudRecord,
-} from './types';
+  StoredFraudRecord} from './types';
 
 const dataDir = path.resolve(process.cwd(), 'data/fraud');
 const eventsPath = path.join(dataDir, 'events.jsonl');
@@ -36,7 +34,7 @@ function getSupabaseAdmin() {
 
 export class FraudStore {
   async saveEvent(record: Omit<StoredFraudRecord, 'id'> & { id?: string }): Promise<StoredFraudRecord> {
-    const withId: StoredFraudRecord = { ...record, id: record.id ?? uuidv4() } as StoredFraudRecord;
+    const withId: StoredFraudRecord ={ ...record, id: record.id ?? uuidv4() } as StoredFraudRecord;
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -67,14 +65,13 @@ export class FraudStore {
   }
 
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string; createdAt?: string }): Promise<AdminActionRecord> {
-    const withId: AdminActionRecord = {
+    const withId: AdminActionRecord ={
       id: action.id ?? uuidv4(),
       fraudId: action.fraudId,
       action: action.action,
       adminId: action.adminId ?? null,
       reason: action.reason ?? null,
-      createdAt: action.createdAt ?? new Date().toISOString(),
-    };
+      createdAt: action.createdAt ?? new Date().toISOString()};
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -88,7 +85,7 @@ export class FraudStore {
     return withId;
   }
 
-  async listFlagged(limit = 50, offset = 0, filters: ListFilters = {}): Promise<StoredFraudRecord[]> {
+  async listFlagged(limit = 50, offset = 0, filters: ListFilters ={}): Promise<StoredFraudRecord[]> {
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
       let query = supabase.from('fraud_events').select('*').order('createdAt', { ascending: false }).range(offset, offset + limit - 1);
@@ -113,7 +110,7 @@ export class FraudStore {
   }
 
   async countEventsByIp(ip: string, source: MonitoredSource, withinMinutes: number): Promise<number> {
-    const since = Date.now() - withinMinutes * 60_000;
+    const since = Date.now() - withinMinutes * 60_0o00;
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -159,7 +156,7 @@ export class FraudStore {
   }
 
   async setPrivacySettings(userId: string, monitoringContentAnalysisOptOut: boolean): Promise<PrivacySettings> {
-    const updated: PrivacySettings = { userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() };
+    const updated: PrivacySettings ={ userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() };
 
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin();
@@ -199,26 +196,24 @@ export class FraudStore {
       });
     }
 
-    const totals = {
+    const totals ={
       all: events.length,
       safe: events.filter((e) => e.gpt?.label === 'SAFE').length,
       suspicious: events.filter((e) => e.gpt?.label === 'SUSPICIOUS').length,
-      dangerous: events.filter((e) => e.gpt?.label === 'DANGEROUS').length,
-    };
+      dangerous: events.filter((e) => e.gpt?.label === 'DANGEROUS').length};
 
-    const bySource: MonthlyReport['bySource'] = {
+    const bySource: MonthlyReport['bySource'] ={
       signup: 0,
       job_post: 0,
       message: 0,
       quote: 0,
-      review: 0,
-    };
+      review: 0};
     for (const e of events) bySource[e.source as MonitoredSource]++;
 
     const actions = await this._readAllActions();
     const falsePositives = actions.filter((a) => a.action === 'IGNORE').length;
 
-    const reasonCounts: Record<string, number> = {};
+    const reasonCounts: Record<string, number> ={};
     for (const e of events) {
       for (const r of e.heuristic.reasons) reasonCounts[r] = (reasonCounts[r] || 0) + 1;
       if (e.gpt?.reason) reasonCounts[e.gpt.reason] = (reasonCounts[e.gpt.reason] || 0) + 1;
@@ -283,6 +278,5 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source
     content: partial.content ?? null,
     metadata: partial.metadata ?? null,
     ipAddress: partial.ipAddress ?? null,
-    createdAt: partial.createdAt ?? new Date().toISOString(),
-  };
+    createdAt: partial.createdAt ?? new Date().toISOString()};
 }

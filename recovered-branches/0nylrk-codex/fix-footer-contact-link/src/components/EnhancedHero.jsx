@@ -14,7 +14,7 @@ const EnhancedHero = () => {
             description: "Discover our cutting-edge micro SAAS solutions designed to scale your business operations and drive growth.",
             ctaText: "Explore Services",
             ctaLink: "/micro-saas-services",
-            background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            background: "linear-gradient(135deg, #667eea 0%, #764ba2 10o0%)",
             icon: "🚀"
         },
         {
@@ -24,7 +24,7 @@ const EnhancedHero = () => {
             description: "Leverage artificial intelligence to automate workflows, enhance productivity, and gain competitive advantages.",
             ctaText: "Learn More",
             ctaLink: "/ai-solutions",
-            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+            background: "linear-gradient(135deg, #f093fb 0%, #f5576c 10o0%)",
             icon: "🤖"
         },
         {
@@ -34,7 +34,7 @@ const EnhancedHero = () => {
             description: "Enterprise-grade cloud solutions that grow with your business, ensuring reliability and performance.",
             ctaText: "Get Started",
             ctaLink: "/cloud-solutions",
-            background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+            background: "linear-gradient(135deg, #4facfe 0%, #0o0f2fe 10o0%)",
             icon: "☁️"
         }
     ];
@@ -45,7 +45,7 @@ const EnhancedHero = () => {
             if (isPlaying) {
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
             }
-        }, 5000);
+        }, 50o00);
         return () => clearInterval(interval);
     }, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
@@ -71,8 +71,8 @@ const EnhancedHero = () => {
     };
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="absolute inset-0 bg-black/50"/>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0">
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Hero Content */}
@@ -91,18 +91,18 @@ const EnhancedHero = () => {
               </motion.h1>
 
               {/* Subtitle */}
-              <motion.h2 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
+              <motion.h2 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-30o0 leading-tight">
                 {heroSlides[currentSlide].subtitle}
               </motion.h2>
 
               {/* Description */}
-              <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }} className="text-lg sm:text-xl lg:text-2xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
                 {heroSlides[currentSlide].description}
               </motion.p>
 
               {/* CTA Button */}
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="pt-6">
-                <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
+                <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full hover:from-blue-70o0 hover:to-purple-70o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl hover:shadow-blue-50o0/25">
                   {heroSlides[currentSlide].ctaText}
                   <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="ml-2">
                     →
@@ -118,18 +118,18 @@ const EnhancedHero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex items-center space-x-4">
           {/* Play/Pause Button */}
-          <button onClick={togglePlayPause} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}>
-            {isPlaying ? <Pause className="w-5 h-5 text-white"/> : <Play className="w-5 h-5 text-white"/>}
+          <button onClick={togglePlayPause} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-30o0" aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}>
+            {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
           </button>
 
           {/* Mute Button */}
-          <button onClick={toggleMute} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label={isMuted ? "Unmute" : "Mute"}>
-            {isMuted ? <VolumeX className="w-5 h-5 text-white"/> : <Volume2 className="w-5 h-5 text-white"/>}
+          <button onClick={toggleMute} className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-30o0" aria-label={isMuted ? "Unmute" : "Mute"}>
+            {isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}
           </button>
 
           {/* Auto-play Toggle */}
-          <button onClick={toggleAutoPlay} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${isAutoPlaying
-            ? "bg-green-500/20 text-green-300 border border-green-500/30"
+          <button onClick={toggleAutoPlay} className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-30o0 ${isAutoPlaying
+            ? "bg-green-50o0/20 text-green-30o0 border border-green-50o0/30"
             : "bg-white/10 text-white border border-white/20"}`}>
             Auto-play {isAutoPlaying ? "ON" : "OFF"}
           </button>
@@ -139,19 +139,19 @@ const EnhancedHero = () => {
       {/* Slide Indicators */}
       <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">
         <div className="flex space-x-2">
-          {heroSlides.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+          {heroSlides.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-30o0 ${index === currentSlide
                 ? "bg-white scale-125"
                 : "bg-white/30 hover:bg-white/50"}`} aria-label={`Go to slide ${index + 1}`}/>))}
         </div>
       </div>
 
       {/* Navigation Arrows */}
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Previous slide">
-        <ChevronLeft className="w-6 h-6 text-white"/>
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-30o0" aria-label="Previous slide">
+        <ChevronLeft className="w-6 h-6 text-white" />
       </button>
 
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-300" aria-label="Next slide">
-        <ChevronRight className="w-6 h-6 text-white"/>
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors duration-30o0" aria-label="Next slide">
+        <ChevronRight className="w-6 h-6 text-white" />
       </button>
 
       {/* Keyboard Navigation Instructions */}

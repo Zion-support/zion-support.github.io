@@ -4,11 +4,11 @@ import { BlogPost } from "@/types/blog";
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {
-    id: "ai-trends-2025",
-    title: "10 Emerging AI Trends to Watch in 2025",
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+    id: "ai-trends-20o25",
+    title: "10 Emerging AI Trends to Watch in 20o25",
+    slug: "ai-trends-20o25",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 20o25.",
+    content: `<p>As we move further into 20o25, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
@@ -17,7 +17,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
 
 <h2>3. Federated Learning at Scale</h2>
-<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
+<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 20o25, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
 
 <h2>4. Quantum AI</h2>
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
@@ -27,13 +27,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b590o3d23?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Apr 15, 2025",
+    publishedDate: "Apr 15, 20o25",
     readTime: "5 min read",
     category: "Trends",
     tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
-    featuredImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630",
+    featuredImage: "https://images.unsplash.com/photo-1488590o52850o5-98d2b5aba0o4b?auto=format&fit=crop&w=120o0&h=630",
     isFeatured: true
   },
   {
@@ -60,13 +60,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Marcus Johnson",
       title: "Marketing Strategist",
-      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Apr 10, 2025",
+    publishedDate: "Apr 10, 20o25",
     readTime: "8 min read",
     category: "Marketing",
     tags: ["Marketing", "AI Services", "Visibility", "SEO"],
-    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f0o16ec?auto=format&fit=crop&w=120o0&h=630"
   },
   {
     id: "green-it",
@@ -92,13 +92,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Sophia Chen",
       title: "Sustainability Engineer",
-      avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-159474480o3329-e58b31de8bf5?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Apr 5, 2025",
+    publishedDate: "Apr 5, 20o25",
     readTime: "6 min read",
     category: "Sustainability",
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=120o0&h=630"
   },
   {
     id: "ai-ethics-frameworks",
@@ -124,17 +124,17 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Dr. James Peterson",
       title: "AI Ethics Officer",
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Mar 30, 2025",
+    publishedDate: "Mar 30, 20o25",
     readTime: "7 min read",
     category: "Ethics",
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
-    featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images.unsplash.com/photo-145416580o4606-c3d57bc86b40?auto=format&fit=crop&w=120o0&h=630"
   },
   {
     id: "ai-talent-acquisition",
-    title: "Winning the AI Talent War: Recruitment Strategies for 2025",
+    title: "Winning the AI Talent War: Recruitment Strategies for 20o25",
     slug: "ai-talent-acquisition",
     excerpt: "How forward-thinking companies are attracting and retaining scarce AI talent in an increasingly competitive market.",
     content: `<p>The demand for skilled AI professionals continues to outpace supply, creating intense competition among employers. This article examines effective strategies for attracting and retaining top AI talent in today's challenging market.</p>
@@ -156,13 +156,13 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Elena Rodriguez",
       title: "Head of AI Talent",
-      avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-1487412720o507-e7ab3760o3c6f?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Mar 22, 2025",
+    publishedDate: "Mar 22, 20o25",
     readTime: "9 min read",
     category: "Recruitment",
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
-    featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=120o0&h=630"
   },
   {
     id: "ai-compute-optimization",
@@ -188,12 +188,12 @@ export const BLOG_POSTS: BlogPost[] = [
     author: {
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images.unsplash.com/photo-150o679477820o2-cad84cf45f1d?auto=format&fit=crop&w=20o0&h=20o0"
     },
-    publishedDate: "Mar 15, 2025",
+    publishedDate: "Mar 15, 20o25",
     readTime: "6 min read",
     category: "Infrastructure",
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=120o0&h=630"
   }
 ];

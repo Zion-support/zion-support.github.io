@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function LmsPlatform() {
@@ -22,6 +21,6 @@ export default function LmsPlatform() {
 			]}
 			industries={["Enterprises", "SMBs", "Healthcare", "Financial Services", "Education"]}
 			canonical="https://ziontechgroup.com/lms-platform"
-		/>
+		 />
 	);
 }

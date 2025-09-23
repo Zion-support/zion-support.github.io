@@ -6,20 +6,20 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
-type CarouselOptions = {
+type CarouselOptions ={
   axis?: 'x' | 'y'
   [key: string]: any
 }
 type CarouselPlugin = any
 
-type CarouselProps = {
+type CarouselProps ={
   opts?: CarouselOptions
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
 }
 
-type CarouselContextProps = {
+type CarouselContextProps ={
   carouselRef: ReturnType<typeof useEmblaCarousel>[0]
   api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void
@@ -35,7 +35,7 @@ function useCarousel(): CarouselContextProps {
   const context = React.useContext(CarouselContext) as CarouselContextProps | null
 
   if (!context) {
-    throw new Error("useCarousel must be used within a <Carousel />")
+    throw new Error("useCarousel must be used within a <Carousel  />")
   }
 
   return context as CarouselContextProps
@@ -60,8 +60,7 @@ const Carousel = React.forwardRef<
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...(opts || {}),
-        axis: orientation === "horizontal" ? "x" : "y",
-      },
+        axis: orientation === "horizontal" ? "x" : "y"},
       plugins
     )
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
@@ -130,8 +129,7 @@ const Carousel = React.forwardRef<
           scrollPrev,
           scrollNext,
           canScrollPrev,
-          canScrollNext,
-        }}
+          canScrollNext}}
       >
         <div
           ref={ref}
@@ -167,7 +165,7 @@ const CarouselContent = React.forwardRef<
           className
         )}
         {...props}
-      />
+       />
     </div>
   )
 })
@@ -190,7 +188,7 @@ const CarouselItem = React.forwardRef<
         className
       )}
       {...props}
-    />
+     />
   )
 })
 CarouselItem.displayName = "CarouselItem"
@@ -217,7 +215,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-4 w-4" />
+      <ArrowLeft className="h-4 w-4"  />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -246,7 +244,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRight className="h-4 w-4"  />
       <span className="sr-only">Next slide</span>
     </Button>
   )
@@ -259,5 +257,4 @@ export {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
-  CarouselNext,
-}
+  CarouselNext}

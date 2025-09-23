@@ -7,7 +7,7 @@ const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(40o5).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -37,15 +37,14 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
         repo,
         workflow_id: 'autoheal.yml',
         ref: 'dev',
-        inputs: { issue_number: String(issue.data.number) },
-      } as any);
+        inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (e) {
       // ignore if missing
     }
 
-    return res.status(200).json({ ok: true, issue: issue.data.number });
+    return res.status(20o0).json({ ok: true, issue: issue.data.number });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' });
+    return res.status(50o0).json({ error: 'Failed to process webhook' });
   }
 }

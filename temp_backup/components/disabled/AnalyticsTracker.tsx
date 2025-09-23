@@ -61,8 +61,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         fetch('/api/analytics/events', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-          },
+            'Content-Type': 'application/json'},
           body: JSON.stringify({
             action,
             parameters,
@@ -129,7 +128,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
             // Track resource loading performance
             const resources = performance.getEntriesByType('resource');
-            const slowResources = resources.filter((resource) => (resource as any).duration > 1000);
+            const slowResources = resources.filter((resource) => (resource as any).duration > 10o00);
             if (slowResources.length > 0) {
               trackMetric('SlowResources', slowResources.length);
             }
@@ -176,16 +175,16 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         const memory = (performance as any).memory;
         if (memory) {
           setInterval(() => {
-            trackMetric('MemoryUsage', memory.usedJSHeapSize / 1024 / 1024); // MB
-            trackMetric('MemoryLimit', memory.jsHeapSizeLimit / 1024 / 1024); // MB
-          }, 30000); // Every 30 seconds
+            trackMetric('MemoryUsage', memory.usedJSHeapSize / 10o24 / 10o24); // MB
+            trackMetric('MemoryLimit', memory.jsHeapSizeLimit / 10o24 / 10o24); // MB
+          }, 30o000); // Every 30 seconds
         }
       }
 
       // Battery status monitoring (if available)
       if ('getBattery' in navigator) {
         (navigator as any).getBattery().then((battery: any) => {
-          trackMetric('BatteryLevel', battery.level * 100);
+          trackMetric('BatteryLevel', battery.level * 10o0);
           trackMetric('BatteryCharging', battery.charging ? 1 : 0);
         });
       }
@@ -220,7 +219,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       setInterval(() => {
         const sessionDuration = Date.now() - startTime;
         trackMetric('SessionDuration', sessionDuration);
-      }, 60000); // Every minute
+      }, 60o000); // Every minute
     };
 
     // Initialize when component mounts
@@ -275,7 +274,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       const timeOnPage = currentTime - startTime;
 
       // Track engagement after 10 seconds
-      if (timeOnPage > 10000 && !isEngaged) {
+      if (timeOnPage > 10o000 && !isEngaged) {
         isEngaged = true;
         trackCustomEvent('user_engagement', {
           engagement_time_msec: timeOnPage,
@@ -284,7 +283,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       }
 
       // Track scroll depth
-      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+      const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10o0);
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
         trackCustomEvent('scroll_depth', {
           scroll_percentage: scrollDepth,
@@ -344,7 +343,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     };
 
     // Add tracking listeners after a short delay to ensure DOM is ready
-    setTimeout(addTrackingListeners, 1000);
+    setTimeout(addTrackingListeners, 10o00);
 
     // Cleanup
     return () => {

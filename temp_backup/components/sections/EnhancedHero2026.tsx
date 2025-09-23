@@ -1,19 +1,18 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react';
-import { cuttingEdgeInnovationServices } from '../../data/2026-cutting-edge-innovations';
-import { enterpriseSolutions2026 } from '../../data/2026-enterprise-solutions';
-import { specializedSolutions2026 } from '../../data/2026-specialized-solutions';
+import { cuttingEdgeInnovationServices } from '../../data/20o26-cutting-edge-innovations';
+import { enterpriseSolutions20o26 } from '../../data/20o26-enterprise-solutions';
+import { specializedSolutions20o26 } from '../../data/20o26-specialized-solutions';
 
-const EnhancedHero2026: React.FC = () => {
+const EnhancedHero20o26: React.FC = () => {
   // Get the most popular services for hero showcase
   const heroServices = [
     ...cuttingEdgeInnovationServices,
-    ...enterpriseSolutions2026,
-    ...specializedSolutions2026
+    ...enterpriseSolutions20o26,
+    ...specializedSolutions20o26
   ].filter(service => service.popular).slice(0, 4);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -23,7 +22,7 @@ const EnhancedHero2026: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -37,7 +36,7 @@ const EnhancedHero2026: React.FC = () => {
   };
 
   const getIconComponent = (icon: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+    const iconMap: { [key: string]: React.ComponentType<any> } ={
       '🧠⚛️': Brain,
       '🧠☁️': Cpu,
       '🧬💻': Cpu,
@@ -61,7 +60,7 @@ const EnhancedHero2026: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/30 to-cyan-900/30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-90o0 via-purple-90o0/30 to-cyan-90o0/30"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(56,189,248,0.1),transparent_50%)]"></div>
       
@@ -70,21 +69,18 @@ const EnhancedHero2026: React.FC = () => {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-30"
+            className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-30"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               y: [0, -20, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
+              opacity: [0.3, 0.6, 0.3]}}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
+              delay: Math.random() * 2}}
+           />
         ))}
       </div>
 
@@ -99,13 +95,13 @@ const EnhancedHero2026: React.FC = () => {
           >
             {/* Badge */}
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 rounded-full text-cyan-40o0 text-sm font-medium mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Star className="w-4 h-4" />
-              Revolutionary 2026 Technology
+              <Star className="w-4 h-4"  />
+              Revolutionary 20o26 Technology
             </motion.div>
 
             {/* Main Heading */}
@@ -115,20 +111,20 @@ const EnhancedHero2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                 Future of
               </span>
-              <br />
+              <br  />
               <span className="text-white">Technology</span>
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <br  />
+              <span className="bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 is Here
               </span>
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
-              className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-2xl lg:max-w-none"
+              className="text-xl md:text-2xl text-gray-30o0 mb-8 leading-relaxed max-w-2xl lg:max-w-none"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -146,17 +142,17 @@ const EnhancedHero2026: React.FC = () => {
             >
               <a
                 href="/services/"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200 text-lg group"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-xl shadow-lg shadow-cyan-50o0/25 hover:shadow-xl hover:shadow-cyan-50o0/40 transition-all duration-20o0 text-lg group"
               >
-                <Rocket className="w-6 h-6 mr-3 group-hover:animate-bounce" />
+                <Rocket className="w-6 h-6 mr-3 group-hover:animate-bounce"  />
                 Explore Services
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-20o0"  />
               </a>
               <a
                 href="/contact/"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-xl hover:bg-cyan-50o0/10 transition-all duration-20o0 text-lg"
               >
-                <Shield className="w-6 h-6 mr-3" />
+                <Shield className="w-6 h-6 mr-3"  />
                 Get Started
               </a>
             </motion.div>
@@ -168,17 +164,17 @@ const EnhancedHero2026: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+1 302 464 0950</span>
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Phone className="w-5 h-5 text-cyan-40o0"  />
+                <span>+1 30o2 464 0950</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Mail className="w-5 h-5 text-purple-40o0"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-pink-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <MapPin className="w-5 h-5 text-pink-40o0"  />
+                <span>364 E Main St STE 10o08 Middletown DE 19709</span>
               </div>
             </motion.div>
           </motion.div>
@@ -209,33 +205,33 @@ const EnhancedHero2026: React.FC = () => {
                     }}
                   >
                     {/* Enhanced Glow Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-50o0`}></div>
                     
-                    <div className="relative bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 h-full">
+                    <div className="relative bg-black/40 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-6 hover:border-cyan-50o0/40 transition-all duration-30o0 h-full">
                       {/* Service Icon */}
-                      <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                        <IconComponent className="w-8 h-8 text-white" />
+                      <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0`}>
+                        <IconComponent className="w-8 h-8 text-white"  />
                       </div>
 
                       {/* Service Content */}
                       <div className="text-center">
-                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors duration-30o0">
                           {service.name}
                         </h3>
-                        <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                        <p className="text-gray-40o0 text-sm mb-4 leading-relaxed">
                           {service.tagline}
                         </p>
                         
                         {/* Price */}
                         <div className="mb-4">
-                          <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                          <span className="text-gray-400 text-sm">{service.period}</span>
+                          <span className="text-2xl font-bold text-cyan-40o0">{service.price}</span>
+                          <span className="text-gray-40o0 text-sm">{service.period}</span>
                         </div>
 
                         {/* Popular Badge */}
                         {service.popular && (
-                          <div className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-semibold rounded-full">
-                            <Star className="w-3 h-3" />
+                          <div className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-semibold rounded-full">
+                            <Star className="w-3 h-3"  />
                             Popular
                           </div>
                         )}
@@ -248,26 +244,26 @@ const EnhancedHero2026: React.FC = () => {
 
             {/* Floating Stats */}
             <motion.div
-              className="absolute -top-8 -right-8 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6"
+              className="absolute -top-8 -right-8 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 backdrop-blur-sm border border-purple-50o0/30 rounded-2xl p-6"
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">1000+</div>
-                <div className="text-sm text-purple-300">Services</div>
+                <div className="text-3xl font-bold text-purple-40o0 mb-2">10o00+</div>
+                <div className="text-sm text-purple-30o0">Services</div>
               </div>
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-8 -left-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6"
+              className="absolute -bottom-8 -left-8 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 backdrop-blur-sm border border-cyan-50o0/30 rounded-2xl p-6"
               initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">1000%</div>
-                <div className="text-sm text-cyan-300">ROI</div>
+                <div className="text-3xl font-bold text-cyan-40o0 mb-2">10o00%</div>
+                <div className="text-sm text-cyan-30o0">ROI</div>
               </div>
             </motion.div>
           </motion.div>
@@ -277,4 +273,4 @@ const EnhancedHero2026: React.FC = () => {
   );
 };
 
-export default EnhancedHero2026;
+export default EnhancedHero20o26;

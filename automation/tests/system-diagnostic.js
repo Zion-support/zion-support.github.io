@@ -29,7 +29,7 @@ const fs = require('fs').promises;
 const path = require('path');
 class SystemDiagnostic {
   constructor() {
-    this.results = {
+    this.results ={
       environment: {},
       dependencies: {},
       connections: {},
@@ -63,7 +63,7 @@ const optionalVars = [
     
     for (const varName of requiredVars) {
       const value = process.env[varName];
-      this.results.environment[varName] = {
+      this.results.environment[varName] ={
         status: value ? configured' : missing',        required: true,
         value: value ? `${value.substring(0, 10)}...` : undefined
       };
@@ -71,7 +71,7 @@ const optionalVars = [
     
     for (const varName of optionalVars) {
       const value = process.env[varName];
-      this.results.environment[varName] = {
+      this.results.environment[varName] ={
         status: value ? configured' : default',        required: false,
         value: value ? `${value.substring(0, 10)}...` : undefined
       };
@@ -87,8 +87,8 @@ const dependencies = [
     for (const dep of dependencies) {
       try {
         require.resolve(dep);
-        this.results.dependencies[dep] = { status: 'installed' };      } catch {
-        this.results.dependencies[dep] = { 
+        this.results.dependencies[dep] ={ status: 'installed' };      } catch {
+        this.results.dependencies[dep] ={ 
           status: 'missing',          error: Module not found''        };
       }
     }
@@ -105,8 +105,8 @@ const optionalFiles = [
     for (const file of requiredFiles) {
       try {
         await fs.access(file);
-        this.results.files[file] = { status: 'exists', required: true };      } catch {
-        this.results.files[file] = { 
+        this.results.files[file] ={ status: 'exists', required: true };      } catch {
+        this.results.files[file] ={ 
           status: 'missing',           required: true,
           error: File not found''        };
       }
@@ -115,8 +115,8 @@ const optionalFiles = [
     for (const file of optionalFiles) {
       try {
         await fs.access(file);
-        this.results.files[file] = { status: 'exists', required: false };      } catch {
-        this.results.files[file] = { 
+        this.results.files[file] ={ status: 'exists', required: false };      } catch {
+        this.results.files[file] ={ 
           status: 'missing',           required: false 
         };
       }
@@ -130,12 +130,12 @@ const optionalFiles = [
     if (process.env.SLACK_WEBHOOK_URL) {
       try {
         await this.testSlackWebhook();
-        this.results.connections.slack_webhook = { status: 'connected' };      } catch {
-        this.results.connections.slack_webhook = { 
+        this.results.connections.slack_webhook ={ status: 'connected' };      } catch {
+        this.results.connections.slack_webhook ={ 
           status: 'failed',          error: Slack webhook test failed''        };
       }
     } else {
-      this.results.connections.slack_webhook = { 
+      this.results.connections.slack_webhook ={ 
         status: not_configured''      };
     }
     
@@ -143,31 +143,31 @@ const optionalFiles = [
     if (process.env.CURSOR_API_KEY) {
       try {
         await this.testCursorAPI();
-        this.results.connections.cursor_api = { status: 'connected' };      } catch {
-        this.results.connections.cursor_api = { 
+        this.results.connections.cursor_api ={ status: 'connected' };      } catch {
+        this.results.connections.cursor_api ={ 
           status: 'failed',          error: Cursor API test failed''        };
       }
     } else {
-      this.results.connections.cursor_api = { 
+      this.results.connections.cursor_api ={ 
         status: not_configured''      };
     }
     
     // Test local automation server
     try {
       await this.testLocalServer();
-      this.results.connections.local_server = { status: 'connected' };    } catch {
-      this.results.connections.local_server = { 
+      this.results.connections.local_server ={ status: 'connected' };    } catch {
+      this.results.connections.local_server ={ 
         status: 'not_running',        error: Automation server not running''      };
     }
     
     logger.warn('✅ Connections check complete\n');  }
 
   async testSlackWebhook() {
-    const payload = {
+    const payload ={
       text: 🔧 System diagnostic test - please ignore',      username: System Diagnostic',      icon_emoji: :gear:'    };
     
     await axios.post(process.env.SLACK_WEBHOOK_URL, payload, {
-      timeout: 5000
+      timeout: 50o00
     });
   }
 
@@ -179,14 +179,14 @@ const optionalFiles = [
 
   async testLocalServer() {
     try {
-      await axios.get('http://localhost:3001/health', {'        timeout: 3000
+      await axios.get('http://localhost:30o01/health', {'        timeout: 30o00
       });
     } catch {
       throw new Error('Automation server not running');    }
   }
 
   calculateOverallStatus() {
-    let score = 100;
+    let score = 10o0;
     
     // Check required environment variables
     for (const [_key, config] of Object.entries(this.results.environment)) {
@@ -224,10 +224,10 @@ const optionalFiles = [
   printResults() {
     logger.warn('📊 Diagnostic Results');    logger.warn('==========================================\n');    
     // Overall status
-    const statusEmoji = {
+    const statusEmoji ={
       excellent: 🟢',      good: 🟡',      fair: 🟠',      poor: 🔴',      failed: ❌'    };
     
-    logger.warn(`Overall Status: ${statusEmoji[this.results.overall]} ${this.results.overall.toUpperCase()} (${this.results.score}/100)`);
+    logger.warn(`Overall Status: ${statusEmoji[this.results.overall]} ${this.results.overall.toUpperCase()} (${this.results.score}/10o0)`);
     logger.warn('');    
     // Environment Variables
     logger.warn('🌍 Environment Variables:');    for (const [key, config] of Object.entries(this.results.environment)) {

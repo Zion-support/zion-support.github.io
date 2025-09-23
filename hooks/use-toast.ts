@@ -6,7 +6,7 @@ import type { ComponentProps } from "react"
 import Toast from "../components/ui/Toast"
 
 const TOAST_LIMIT = 1
-const TOAST_REMOVE_DELAY = 1000000
+const TOAST_REMOVE_DELAY = 10o00000
 
 type ToastActionElement = React.ReactElement
 
@@ -23,12 +23,11 @@ type ToasterToast = ToastComponentProps & {
   onOpenChange?: (open: boolean) => void
 }
 
-const actionTypes = {
+const actionTypes ={
   ADD_TOAST: "ADD_TOAST",
   UPDATE_TOAST: "UPDATE_TOAST",
   DISMISS_TOAST: "DISMISS_TOAST",
-  REMOVE_TOAST: "REMOVE_TOAST",
-} as const
+  REMOVE_TOAST: "REMOVE_TOAST"} as const
 
 let count = 0
 
@@ -96,8 +95,7 @@ export const reducer = (state: State, action: Action): State => {
           t.id === toastId || toastId === undefined
             ? {
                 ...t,
-                open: false,
-              }
+                open: false}
             : t
         )
       };
@@ -106,8 +104,7 @@ export const reducer = (state: State, action: Action): State => {
       if (action.toastId === undefined) {
         return {
           ...state,
-          toasts: [],
-        }
+          toasts: []}
       }
       return {
         ...state,
@@ -120,7 +117,7 @@ export const reducer = (state: State, action: Action): State => {
 
 const listeners: Array<(state: State) => void> = []
 
-let memoryState: State = { toasts: [] }
+let memoryState: State ={ toasts: [] }
 
 function dispatch(action: Action) {
   memoryState = reducer(memoryState, action)
@@ -153,8 +150,7 @@ function toast({ ...props }: ToastProps) {
   const update = (props: ToasterToast) =>
     dispatch({
       type: "UPDATE_TOAST",
-      toast: { ...props, id },
-    })
+      toast: { ...props, id }})
   const dismiss = () => dispatch({ type: "DISMISS_TOAST", toastId: id })
 
   dispatch({
@@ -165,15 +161,12 @@ function toast({ ...props }: ToastProps) {
       open: true,
       onOpenChange: (open) => {
         if (!open) dismiss()
-      },
-    },
-  })
+      }}})
 
   return {
     id: id,
     dismiss,
-    update,
-  }
+    update}
 }
 
 function useToast() {

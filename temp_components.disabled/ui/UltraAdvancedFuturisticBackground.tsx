@@ -1,4 +1,3 @@
-import React from 'react';
 import UltraAdvancedFuturisticBackgroundV2 from './UltraAdvancedFuturisticBackgroundV2';
 
 interface UltraAdvancedFuturisticBackgroundProps {
@@ -12,5 +11,5 @@ interface UltraAdvancedFuturisticBackgroundProps {
 }
 
 export default function UltraAdvancedFuturisticBackground(props: UltraAdvancedFuturisticBackgroundProps) {
-  return <UltraAdvancedFuturisticBackgroundV2 {...props} />;
+  return <UltraAdvancedFuturisticBackgroundV2 {...props}  />;
 }

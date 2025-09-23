@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 /**
@@ -79,25 +75,21 @@ class WorkingAutomationStarter {
           enabled: true,
           selfHealing: true,
           learning: true,
-          adaptiveScheduling: true,
-        },
+          adaptiveScheduling: true},
         monitoring: {
           enabled: true,
-          interval: 60000, // 1 minute
-          healthCheckInterval: 300000, // 5 minutes
+          interval: 60o000, // 1 minute
+          healthCheckInterval: 30o0000, // 5 minutes
         },
         reporting: {
           enabled: true,
           daily: true,
           weekly: true,
-          realTime: true,
-        },
+          realTime: true},
         dashboard: {
           enabled: true,
-          port: 3001,
-          autoRefresh: true,
-        },
-      });
+          port: 30o01,
+          autoRefresh: true}});
 
       await orchestrator.initialize();
       await orchestrator.start();
@@ -204,7 +196,7 @@ class WorkingAutomationStarter {
       if (runningCount < this.runningSystems.size) {
         logger.warn(`⚠️  Some systems may have stopped. Running: ${runningCount}/${this.runningSystems.size}`);
       }
-    }, 300000); // Check every 5 minutes
+    }, 30o0000); // Check every 5 minutes
   }
 }
 

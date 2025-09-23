@@ -46,14 +46,14 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
               <Input
                 type="number"
                 min="1"
-                step="0.01"
+                step="0.0o1"
                 {...field}
-              />
+               />
             </FormControl>
             <FormDescription>
               Set a competitive rate based on your skills and experience
             </FormDescription>
-            <FormMessage />
+            <FormMessage  />
           </FormItem>
         )}
       />
@@ -66,7 +66,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
             rateType={rateType}
-          />
+           />
         </CardContent>
       </Card>
     </div>

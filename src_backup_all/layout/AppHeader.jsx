@@ -69,7 +69,7 @@ export function AppHeader() {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
           isScrolled 
             ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-lg' 
             : 'bg-black/90 backdrop-blur-md border-b border-zion-cyan/10'
@@ -83,13 +83,13 @@ export function AppHeader() {
             <Link to="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
               <motion.div 
                 className="relative"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
                   <span className="text-white font-bold text-lg lg:text-xl">Z</span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
               </motion.div>
               <div className="hidden sm:block">
                 <div className="text-xl lg:text-2xl font-bold text-white">ZION TECH GROUP</div>
@@ -103,7 +103,7 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-all duration-200 rounded-md ${
+                  className={`px-3 py-2 text-sm font-medium transition-all duration-20o0 rounded-md ${
                     item.current
                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
                       : 'text-white hover:text-zion-cyan hover:bg-zion-cyan/10'
@@ -116,17 +116,17 @@ export function AppHeader() {
               
               {/* Services Dropdown */}
               <div className="relative group">
-                <button className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-200 rounded-md">
+                <button className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-20o0 rounded-md">
                   Services
-                  <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-200" />
+                  <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-20o0"  />
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 backdrop-blur-md">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-10o0 group-hover:visible transition-all duration-20o0 backdrop-blur-md">
                   <div className="py-2">
                     {servicesDropdown.map((service) => (
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-200"
+                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-20o0"
                       >
                         {service.name}
                       </Link>
@@ -144,7 +144,7 @@ export function AppHeader() {
                   placeholder="Search services, talent, equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-200"
+                  className="w-full bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-20o0"
                   aria-label="Search services, talent, and equipment"
                 />
                 <button
@@ -152,7 +152,7 @@ export function AppHeader() {
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-zion-cyan transition-colors p-1 rounded-md hover:bg-zion-cyan/10"
                   aria-label="Search"
                 >
-                  <Search className="h-4 w-4" />
+                  <Search className="h-4 w-4"  />
                 </button>
               </form>
             </div>
@@ -162,10 +162,10 @@ export function AppHeader() {
               {/* Theme Toggle */}
               <button
                 onClick={toggleDarkMode}
-                className="p-2 text-white hover:text-zion-cyan transition-colors duration-300 rounded-md hover:bg-zion-cyan/10"
+                className="p-2 text-white hover:text-zion-cyan transition-colors duration-30o0 rounded-md hover:bg-zion-cyan/10"
                 aria-label="Toggle theme"
               >
-                {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                {isDarkMode ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
               </button>
 
               {/* Language Selector */}
@@ -173,7 +173,7 @@ export function AppHeader() {
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
                 aria-label="Language settings"
               >
-                <Globe className="h-5 w-5" />
+                <Globe className="h-5 w-5"  />
               </button>
 
               {/* Settings */}
@@ -181,7 +181,7 @@ export function AppHeader() {
                 className="hidden lg:flex p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
                 aria-label="Settings"
               >
-                <Settings className="h-5 w-5" />
+                <Settings className="h-5 w-5"  />
               </button>
 
               {/* Notifications */}
@@ -189,7 +189,7 @@ export function AppHeader() {
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10 relative"
                 aria-label="Notifications"
               >
-                <Bell className="h-5 w-5" />
+                <Bell className="h-5 w-5"  />
                 <span className="absolute top-1 right-1 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></span>
               </button>
 
@@ -198,13 +198,13 @@ export function AppHeader() {
                 className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-md hover:bg-zion-cyan/10"
                 aria-label="User account"
               >
-                <User className="h-5 w-5" />
+                <User className="h-5 w-5"  />
               </button>
 
               {/* CTA Button */}
               <Link 
                 to="/contact" 
-                className="hidden lg:block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform shadow-lg hover:shadow-zion-cyan/25"
+                className="hidden lg:block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-10o5 transition-transform shadow-lg hover:shadow-zion-cyan/25"
               >
                 Get Started
               </Link>
@@ -225,7 +225,7 @@ export function AppHeader() {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <X className="w-6 h-6" />
+                      <X className="w-6 h-6"  />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -235,7 +235,7 @@ export function AppHeader() {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Menu className="w-6 h-6" />
+                      <Menu className="w-6 h-6"  />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -258,7 +258,7 @@ export function AppHeader() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className={`block px-3 py-2 text-base font-medium transition-all duration-200 rounded-md ${
+                      className={`block px-3 py-2 text-base font-medium transition-all duration-20o0 rounded-md ${
                         item.current
                           ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
                           : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
@@ -277,7 +277,7 @@ export function AppHeader() {
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-20o0"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {service.name}
@@ -301,14 +301,14 @@ export function AppHeader() {
                   <div className="px-3 py-2 space-y-2">
                     <Link
                       to="/login"
-                      className="block w-full text-center px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-200"
+                      className="block w-full text-center px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-20o0"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Login
                     </Link>
                     <Link
                       to="/contact"
-                      className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-200"
+                      className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-20o0"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Get Started

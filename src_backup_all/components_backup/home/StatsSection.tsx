@@ -42,7 +42,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             }));
           }, 50);
         });
-      }, 500);
+      }, 50o0);
 
       return () => clearTimeout(timer);
     }
@@ -70,7 +70,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
+              className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-50o0 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -81,18 +81,18 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               }}
             >
               {/* Animated background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0"  />
 
               {/* Icon container */}
-              <div className={`relative w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>
+              <div className={`relative w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>
                 {React.createElement(stat.icon, { className: "w-8 h-8 text-white", "aria-hidden": "true" })}
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-30o0"  />
               </div>
 
               {/* Animated number */}
               <motion.div
-                className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300"
+                className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-30o0"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
@@ -102,16 +102,16 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}
               </motion.div>
 
-              <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover:text-zion-blue transition-colors duration-300">
+              <h3 className="relative text-lg font-semibold text-zion-cyan mb-2 group-hover:text-zion-blue transition-colors duration-30o0">
                 {stat.label}
               </h3>
 
-              <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-300">
+              <p className="relative text-zion-slate-light text-sm leading-relaxed group-hover:text-zion-slate-light/90 transition-colors duration-30o0">
                 {stat.description}
               </p>
 
               {/* Hover indicator */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-50o0"  />
             </motion.div>
           ))}
         </div>

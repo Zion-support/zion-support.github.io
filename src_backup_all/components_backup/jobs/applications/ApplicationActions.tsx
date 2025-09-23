@@ -31,7 +31,7 @@ export function ApplicationActions({
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >
-        <Eye className="h-4 w-4" />
+        <Eye className="h-4 w-4"  />
       </Button>
       
       <DropdownMenu>
@@ -42,9 +42,9 @@ export function ApplicationActions({
             disabled={processingId === application.id}
           >
             {processingId === application.id ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
+              <Loader2 className="h-4 w-4 animate-spin"  />
             ) : (
-              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
+              <>Status <ChevronDown className="h-4 w-4 ml-1"  /></>
             )}
           </Button>
         </DropdownMenuTrigger>
@@ -66,7 +66,7 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
-            className="text-red-600"
+            className="text-red-60o0"
           >
             Reject
           </DropdownMenuItem>

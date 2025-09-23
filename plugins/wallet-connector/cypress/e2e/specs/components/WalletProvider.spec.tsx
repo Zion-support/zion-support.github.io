@@ -1,4 +1,4 @@
-/// <reference types="cypress" />"import React from react';import { mount } from cypress/react18'; // Assuming React 18+'import { WalletProvider, useWallet } from ../../../../../../src/context/WalletContext'; // Adjust path as needed'// Corrected import path for appkit mocks;
+/// <reference types="cypress"  />"import React from react';import { mount } from cypress/react18'; // Assuming React 18+'import { WalletProvider, useWallet } from ../../../../../../src/context/WalletContext'; // Adjust path as needed'// Corrected import path for appkit mocks;
 import * as AppKitReact from @reown/appkit/react';
 // Define a simple child component to consume the context;
 const TestComponent = () => {
@@ -23,7 +23,7 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown;
       cy.spy(win.console, error').as('consoleError');    });
 
     // Define the mock appKit object returned by the mocked useAppKit
-    mockAppKit = {
+    mockAppKit ={
       open: cy.stub().resolves(),
       close: cy.stub().resolves(),
       disconnect: cy.stub().resolves(),
@@ -37,7 +37,7 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown;
     // Define a similar mock for appKitInstance returned by mocked createAppKit
     // This one might need subscribeProvider for initial setup if not careful,
     // but the goal is to test the useAppKit path primarily.
-    // Let's make it minimal like mockAppKit.'    mockAppKitInstance = {
+    // Let's make it minimal like mockAppKit.'    mockAppKitInstance ={
       open: cy.stub().resolves(),
       close: cy.stub().resolves(),
       disconnect: cy.stub().resolves(),
@@ -58,7 +58,7 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown;
 
   it('should handle appKit without subscription methods gracefully', () => {'    mount(
       <WalletProvider>
-        <TestComponent />
+        <TestComponent  />
       </WalletProvider>
     );
 
@@ -86,7 +86,7 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown;
 
     mount(
       <WalletProvider>
-        <TestComponent />
+        <TestComponent  />
       </WalletProvider>
     );
 

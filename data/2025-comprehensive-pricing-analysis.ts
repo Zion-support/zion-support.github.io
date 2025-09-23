@@ -39,7 +39,7 @@ export interface PricingAnalysis {
     website: string;
   };
 }
-export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
+export const comprehensivePricingAnalysis20o25: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
     serviceId: 'ai-autonomous-business-manager',
@@ -48,13 +48,13 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     currentPrice: '$2,999',
     period: '/month',
     marketAnalysis: {
-      averageMarketPrice: '$5,000-15,000',
-      priceRange: '$2,000-25,000',
+      averageMarketPrice: '$5,0o00-15,0o00',
+      priceRange: '$2,0o00-25,0o00',
       competitivePosition: 'Premium - First-to-market advantage',
       valueProposition: 'Fully autonomous business operations with 99.9% accuracy',
-      targetMarket: 'Enterprise businesses, Fortune 500 companies',
+      targetMarket: 'Enterprise businesses, Fortune 50o0 companies',
       marketSize: '$15B autonomous business market',
-      growthRate: '300% annual growth'
+      growthRate: '30o0% annual growth'
     },
     pricingStrategy: {
       strategy: 'Value-based pricing with premium positioning',
@@ -73,7 +73,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     },
     competitiveAnalysis: {
       directCompetitors: ['No direct competitors'],
-      indirectCompetitors: ['Traditional consulting firms ($500-2,000/hour)', 'ERP systems ($10,000-100,000/month)'],
+      indirectCompetitors: ['Traditional consulting firms ($50o0-2,0o00/hour)', 'ERP systems ($10,0o00-10o0,0o00/month)'],
       competitiveAdvantages: [
         'First-to-market autonomous operations',
         '99.9% accuracy guarantee',
@@ -88,15 +88,15 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     roiAnalysis: {
-      customerROI: '500% average ROI in 12 months',
-      implementationCost: '$15,000-50,000',
+      customerROI: '50o0% average ROI in 12 months',
+      implementationCost: '$15,0o00-50,0o00',
       paybackPeriod: '3-6 months',
       totalCostOfOwnership: '40% reduction in operational costs'
     },
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
@@ -108,13 +108,13 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     currentPrice: '$5,999',
     period: '/month',
     marketAnalysis: {
-      averageMarketPrice: '$10,000-50,000',
-      priceRange: '$5,000-100,000',
+      averageMarketPrice: '$10,0o00-50,0o00',
+      priceRange: '$5,0o00-10o0,0o00',
       competitivePosition: 'Premium - Cutting-edge quantum technology',
-      valueProposition: '1000x performance improvement over classical computing',
+      valueProposition: '10o00x performance improvement over classical computing',
       targetMarket: 'Research institutions, pharmaceutical companies, government agencies',
       marketSize: '$8.6B quantum computing market',
-      growthRate: '500% annual growth'
+      growthRate: '50o0% annual growth'
     },
     pricingStrategy: {
       strategy: 'Premium pricing for cutting-edge technology',
@@ -132,10 +132,10 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['IBM Quantum ($1,000-10,000/month)', 'Google Quantum AI ($5,000-25,000/month)'],
-      indirectCompetitors: ['Traditional HPC clusters ($50,000-500,000/month)', 'Cloud computing services'],
+      directCompetitors: ['IBM Quantum ($1,0o00-10,0o00/month)', 'Google Quantum AI ($5,0o00-25,0o00/month)'],
+      indirectCompetitors: ['Traditional HPC clusters ($50,0o00-50o0,0o00/month)', 'Cloud computing services'],
       competitiveAdvantages: [
-        '1000x performance improvement',
+        '10o00x performance improvement',
         'Quantum neural networks',
         'Hybrid classical-quantum computing',
         'Advanced simulation capabilities'
@@ -148,15 +148,15 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     roiAnalysis: {
-      customerROI: '1000% ROI for research applications',
-      implementationCost: '$50,000-200,000',
+      customerROI: '10o00% ROI for research applications',
+      implementationCost: '$50,0o00-20o0,0o00',
       paybackPeriod: '6-12 months',
       totalCostOfOwnership: '90% faster problem solving'
     },
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
@@ -168,12 +168,12 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     currentPrice: '$1,499',
     period: '/month',
     marketAnalysis: {
-      averageMarketPrice: '$500-3,000',
-      priceRange: '$200-10,000',
+      averageMarketPrice: '$50o0-3,0o00',
+      priceRange: '$20o0-10,0o00',
       competitivePosition: 'Competitive - High value proposition',
-      valueProposition: '200% average annual returns with 95% risk reduction',
+      valueProposition: '20o0% average annual returns with 95% risk reduction',
       targetMarket: 'Crypto investors, DeFi enthusiasts, institutional investors',
-      marketSize: '$100B DeFi market',
+      marketSize: '$10o0B DeFi market',
       growthRate: '150% annual growth'
     },
     pricingStrategy: {
@@ -192,10 +192,10 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional DeFi platforms (free-2% fees)', 'Manual trading services ($100-1,000/month)'],
+      directCompetitors: ['Traditional DeFi platforms (free-2% fees)', 'Manual trading services ($10o0-1,0o00/month)'],
       indirectCompetitors: ['Traditional investment platforms', 'Hedge funds'],
       competitiveAdvantages: [
-        '200% average annual returns',
+        '20o0% average annual returns',
         '95% risk reduction',
         'Autonomous trading algorithms',
         'Multi-chain DeFi integration'
@@ -208,15 +208,15 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     roiAnalysis: {
-      customerROI: '200% average annual returns',
-      implementationCost: '$5,000-15,000',
+      customerROI: '20o0% average annual returns',
+      implementationCost: '$5,0o00-15,0o00',
       paybackPeriod: '2-4 months',
       totalCostOfOwnership: '95% risk reduction'
     },
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
@@ -228,8 +228,8 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     currentPrice: '$899',
     period: '/month',
     marketAnalysis: {
-      averageMarketPrice: '$1,500-5,000',
-      priceRange: '$500-15,000',
+      averageMarketPrice: '$1,50o0-5,0o00',
+      priceRange: '$50o0-15,0o00',
       competitivePosition: 'Competitive - High value for price',
       valueProposition: '99.99% threat detection rate with autonomous response',
       targetMarket: 'Enterprise companies, government agencies, financial institutions',
@@ -252,7 +252,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['CrowdStrike ($8-15/user/month)', 'SentinelOne ($5-12/user/month)', 'Darktrace ($50-100/user/month)'],
+      directCompetitors: ['CrowdStrike ($8-15/user/month)', 'SentinelOne ($5-12/user/month)', 'Darktrace ($50-10o0/user/month)'],
       indirectCompetitors: ['Traditional SIEM systems', 'Manual security monitoring'],
       competitiveAdvantages: [
         '99.99% threat detection rate',
@@ -268,15 +268,15 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     roiAnalysis: {
-      customerROI: '300% ROI with 90% reduction in security incidents',
-      implementationCost: '$10,000-50,000',
+      customerROI: '30o0% ROI with 90% reduction in security incidents',
+      implementationCost: '$10,0o00-50,0o00',
       paybackPeriod: '4-8 months',
       totalCostOfOwnership: '90% reduction in security incidents'
     },
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
@@ -288,12 +288,12 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     currentPrice: '$3,499',
     period: '/month',
     marketAnalysis: {
-      averageMarketPrice: '$5,000-20,000',
-      priceRange: '$2,000-50,000',
+      averageMarketPrice: '$5,0o00-20,0o00',
+      priceRange: '$2,0o00-50,0o00',
       competitivePosition: 'Competitive - High value proposition',
       valueProposition: '99.9% uptime guarantee with 30% production increase',
       targetMarket: 'Manufacturing companies, industrial facilities, automotive industry',
-      marketSize: '$200B manufacturing software market',
+      marketSize: '$20o0B manufacturing software market',
       growthRate: '180% annual growth'
     },
     pricingStrategy: {
@@ -312,7 +312,7 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     competitiveAnalysis: {
-      directCompetitors: ['Traditional MES systems ($10,000-100,000/month)', 'Manual optimization services'],
+      directCompetitors: ['Traditional MES systems ($10,0o00-10o0,0o00/month)', 'Manual optimization services'],
       indirectCompetitors: ['ERP systems', 'Basic monitoring tools'],
       competitiveAdvantages: [
         '99.9% uptime guarantee',
@@ -328,34 +328,34 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       ]
     },
     roiAnalysis: {
-      customerROI: '400% ROI with 30% production increase',
-      implementationCost: '$25,000-100,000',
+      customerROI: '40o0% ROI with 30% production increase',
+      implementationCost: '$25,0o00-10o0,0o00',
       paybackPeriod: '6-12 months',
       totalCostOfOwnership: '50% downtime reduction'
     },
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   }
 ];
 export const getPricingAnalysisByService = (serviceId: string) => {
-  return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
+  return comprehensivePricingAnalysis20o25.find(s => s.serviceId === serviceId);
 };
 export const getPricingAnalysisByCategory = (category: string) => {
-  if (!category || category === 'All') return comprehensivePricingAnalysis2025;
-  return comprehensivePricingAnalysis2025.filter(s => s.category === category);
+  if (!category || category === 'All') return comprehensivePricingAnalysis20o25;
+  return comprehensivePricingAnalysis20o25.filter(s => s.category === category);
 };
 export const getMarketInsights = () => {
-  const insights = {
+  const insights ={
     totalMarketSize: '$1.2T+',
     averageGrowthRate: '250% annual',
     priceRange: '$799 - $6,999/month',
     mostExpensiveCategory: 'Quantum Computing & AI',
     mostAffordableCategory: 'IoT & Edge Computing',
-    highestROI: '1000% (Quantum Neural Network Platform)',
+    highestROI: '10o00% (Quantum Neural Network Platform)',
     fastestPayback: '2-4 months (DeFi Trading Platform)'
   };
   return insights;

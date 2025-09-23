@@ -1,7 +1,5 @@
 
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
 function fixDoubleCommas(filePath) {
   try {
     const content = fs.readFileSync(filePath, "utf8");
@@ -116,9 +114,7 @@ if (
     }
   }
 
-
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
-
 
 for (const file of files) {
   if (fixDoubleCommas(file)) {
@@ -126,7 +122,6 @@ for (const file of files) {
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
-
 
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 

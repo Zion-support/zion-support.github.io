@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AnalyticsSuite() {
@@ -22,6 +21,6 @@ export default function AnalyticsSuite() {
 			]}
 			industries={["Startups", "SMBs", "Agencies", "Publishers"]}
 			canonical="https://ziontechgroup.com/analytics-suite"
-		/>
+		 />
 	);
 }

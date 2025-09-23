@@ -1,4 +1,3 @@
-import React from 'react';
 interface SEOHeadProps {
   // Add props here as needed
 }

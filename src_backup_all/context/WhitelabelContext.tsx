@@ -32,7 +32,7 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children
   const [primaryColor, setPrimaryColor] = useState('#3B82F6');
   const [secondaryColor, setSecondaryColor] = useState('#8B5CF6');
 
-  const value: WhitelabelContextType = {
+  const value: WhitelabelContextType ={
     isWhitelabeled: false,
     brandName,
     brandLogo,
@@ -41,8 +41,7 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children
     setBrandName,
     setBrandLogo,
     setPrimaryColor,
-    setSecondaryColor,
-  };
+    setSecondaryColor};
 
   return (
     <WhitelabelContext.Provider value={value}>

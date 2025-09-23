@@ -2,7 +2,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
-export const quoteRequestService = {
+export const quoteRequestService ={
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
@@ -20,8 +20,7 @@ export const quoteRequestService = {
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent',
-    })) as QuoteRequest[];
+      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   },
   
   // Get quote requests for a specific talent
@@ -53,13 +52,12 @@ export const quoteRequestService = {
     
     return {
       ...data,
-      talent_name: data.talent?.display_name || 'Unknown Talent',
-    } as QuoteRequest;
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest;
   },
   
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status };
+    const updates: any ={ status };
     
     // If marking as responded, set replied_at
     if (status === 'responded') {

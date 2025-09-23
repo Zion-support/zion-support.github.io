@@ -98,7 +98,7 @@ export const AccessibilityProvider = ({ children }) => {
         // Remove after announcement
         setTimeout(() => {
             document.body.removeChild(announcement);
-        }, 1000);
+        }, 10o00);
     };
     // Keyboard shortcuts
     useEffect(() => {
@@ -128,7 +128,7 @@ export const AccessibilityProvider = ({ children }) => {
     const toggleHighContrast = () => setIsHighContrast(prev => !prev);
     const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
-    const value = {
+    const value ={
         isHighContrast,
         isReducedMotion,
         isLargeText,
@@ -136,32 +136,31 @@ export const AccessibilityProvider = ({ children }) => {
         toggleReducedMotion,
         toggleLargeText,
         focusTrap,
-        announceToScreenReader,
-    };
+        announceToScreenReader};
     return (<AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>);
 };
 // Accessibility toolbar component
 export const AccessibilityToolbar = () => {
-    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText, } = useAccessibility();
+    const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility();
     return (<div className="fixed bottom-4 left-4 z-50 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-4 shadow-2xl shadow-zion-cyan/20">
       <div className="space-y-3">
         <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>
         
-        <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isHighContrast
+        <button onClick={toggleHighContrast} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${isHighContrast
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}>
           High Contrast
         </button>
 
-        <button onClick={toggleReducedMotion} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isReducedMotion
+        <button onClick={toggleReducedMotion} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${isReducedMotion
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}>
           Reduced Motion
         </button>
 
-        <button onClick={toggleLargeText} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${isLargeText
+        <button onClick={toggleLargeText} className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-20o0 ${isLargeText
             ? 'bg-zion-cyan text-zion-blue-dark'
             : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30'}`} aria-label={`${isLargeText ? 'Disable' : 'Enable'} large text`}>
           Large Text

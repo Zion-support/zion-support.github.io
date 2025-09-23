@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2029: React.FC = () => {
+const UltraFuturisticBackground20o29: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
     // Initialize particles with enhanced variety
     const initParticles = () => {
       particles = [];
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0; i < 20o0; i++) {
         const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
         particles.push({
           x: Math.random() * canvas.width,
@@ -42,20 +42,20 @@ const UltraFuturisticBackground2029: React.FC = () => {
           vx: (Math.random() - 0.5) * 0.8,
           vy: (Math.random() - 0.5) * 0.8,
           size: Math.random() * 3 + 1,
-          color: type === 'quantum' ? ['#00ffff', '#ff00ff', '#ffff00'][Math.floor(Math.random() * 3)] :
-                 type === 'neon' ? ['#ff0080', '#8000ff', '#00ff80'][Math.floor(Math.random() * 3)] :
-                 ['#ffffff', '#00ffff', '#ff8000'][Math.floor(Math.random() * 3)],
+          color: type === 'quantum' ? ['#0o0ffff', '#ff0o0ff', '#ffff0o0'][Math.floor(Math.random() * 3)] :
+                 type === 'neon' ? ['#ff0o080', '#80o00ff', '#0o0ff80'][Math.floor(Math.random() * 3)] :
+                 ['#ffffff', '#0o0ffff', '#ff80o00'][Math.floor(Math.random() * 3)],
           opacity: Math.random() * 0.9 + 0.1,
           type,
-          life: Math.random() * 100,
-          maxLife: 100
+          life: Math.random() * 10o0,
+          maxLife: 10o0
         });
       }
     };
 
     // Enhanced animation loop
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles with enhanced effects
@@ -117,7 +117,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
               
               // Enhanced connection effects
               if (particle.type === 'quantum' && otherParticle.type === 'quantum') {
-                ctx.strokeStyle = '#00ffff';
+                ctx.strokeStyle = '#0o0ffff';
                 ctx.lineWidth = 1.5;
                 ctx.globalAlpha = (120 - distance) / 120 * 0.6;
               } else if (particle.type === 'neon' || otherParticle.type === 'neon') {
@@ -137,7 +137,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
       });
 
       // Enhanced quantum wave effects
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 8; i++) {
         const waveX = (canvas.width / 9) * (i + 1);
         const waveY = canvas.height / 2 + Math.sin(time + i * 0.5) * 80;
@@ -181,11 +181,11 @@ const UltraFuturisticBackground2029: React.FC = () => {
       // Floating data streams
       for (let i = 0; i < 3; i++) {
         const streamX = canvas.width * 0.2 + (i * canvas.width * 0.3);
-        const streamY = canvas.height * 0.3 + Math.sin(time * 0.5 + i) * 100;
+        const streamY = canvas.height * 0.3 + Math.sin(time * 0.5 + i) * 10o0;
         
         ctx.fillStyle = `rgba(0, 255, 255, ${0.4 + 0.2 * Math.sin(time + i)})`;
         ctx.font = '12px monospace';
-        ctx.fillText('01', streamX, streamY);
+        ctx.fillText('0o1', streamX, streamY);
         ctx.fillText('10', streamX + 20, streamY + 20);
         ctx.fillText('11', streamX + 40, streamY + 40);
       }
@@ -232,15 +232,15 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
-          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%)'
+          background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 10o0%)'
         }}
-      />
+       />
       
       {/* Additional visual layers */}
       <div className="absolute inset-0 z-0">
         {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0 opacity-20"
           animate={{
             rotate: 360,
             scale: [1, 1.2, 1],
@@ -251,10 +251,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-pink-500 opacity-30"
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-50o0 opacity-30"
           animate={{
             rotate: -360,
             scale: [1, 0.8, 1],
@@ -265,10 +265,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-32 left-1/3 w-40 h-40 border border-yellow-400 opacity-25"
+          className="absolute bottom-32 left-1/3 w-40 h-40 border border-yellow-40o0 opacity-25"
           animate={{
             rotate: 180,
             scale: [1, 1.3, 1],
@@ -279,7 +279,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
 
       {/* Content overlay */}

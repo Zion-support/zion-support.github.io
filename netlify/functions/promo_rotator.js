@@ -15,7 +15,7 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     const candidates = [
-      { title: 'Cybersecurity Trends', href: '/blog/cybersecurity-trends-for-2024-and-beyond-chat' },
+      { title: 'Cybersecurity Trends', href: '/blog/cybersecurity-trends-for-20o24-and-beyond-chat' },
       { title: 'Cloud‑Native Architecture', href: '/blog/cloud-native-architecture-best-practices-chat' },
       { title: 'ML in Enterprise', href: '/blog/machine-learning-applications-in-enterprise-software-chat' },
       { title: 'DevOps Automation', href: '/blog/devops-automation-strategies-for-modern-teams-chat' },
@@ -23,10 +23,10 @@ exports.handler = async function(event, context) {
     ];
 
     const promos = pickRandom(candidates, 3);
-    const payload = { generatedAt: new Date().toISOString(), promos };
+    const payload ={ generatedAt: new Date().toISOString(), promos };
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, promos, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, promos, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     const path = 'data/homepage-promos.json';
@@ -65,8 +65,8 @@ exports.handler = async function(event, context) {
       return { statusCode: res.status, body: JSON.stringify({ error: json }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, promos, commit: json.commit && json.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, promos, commit: json.commit && json.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

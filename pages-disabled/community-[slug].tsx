@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -24,7 +23,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ posts, hasSession, category
         {posts && posts.length > 0 ? (
           <div className="space-y-4">
             {posts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <PostCard key={post.id} post={post}  />
             ))}
           </div>
         ) : (
@@ -34,7 +33,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ posts, hasSession, category
             cta="Create Post"
             href={`/community/create?category=${category}`}
             hasSession={hasSession}
-          />
+           />
         )}
       </main>
     </>

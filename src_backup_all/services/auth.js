@@ -13,7 +13,7 @@ class AuthService {
   async login(credentials) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       // Mock validation
       if (!credentials.email || !credentials.password) {
@@ -21,7 +21,7 @@ class AuthService {
       }
 
       // Mock successful login
-      const mockUser = {
+      const mockUser ={
         id: 1,
         email: credentials.email,
         name: 'John Doe',
@@ -51,7 +51,7 @@ class AuthService {
   async register(userData) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
@@ -59,7 +59,7 @@ class AuthService {
       }
 
       // Mock successful registration
-      const mockUser = {
+      const mockUser ={
         id: Date.now(),
         email: userData.email,
         name: userData.name,
@@ -89,7 +89,7 @@ class AuthService {
   async logout() {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 50o0));
 
       // Clear localStorage
       this.token = null;
@@ -127,7 +127,7 @@ class AuthService {
   async refreshToken() {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 50o0));
 
       if (!this.token) {
         throw new Error('No token to refresh');
@@ -148,7 +148,7 @@ class AuthService {
   async forgotPassword(email) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       if (!email) {
         throw new Error('Email is required');
@@ -168,7 +168,7 @@ class AuthService {
   async resetPassword(token, newPassword) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       if (!token || !newPassword) {
         throw new Error('Token and new password are required');
@@ -187,14 +187,14 @@ class AuthService {
   async updateProfile(profileData) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
       }
 
       // Mock profile update
-      const updatedUser = {
+      const updatedUser ={
         ...this.user,
         ...profileData,
         updatedAt: new Date().toISOString()
@@ -213,7 +213,7 @@ class AuthService {
   async changePassword(currentPassword, newPassword) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
@@ -236,7 +236,7 @@ class AuthService {
   async verifyEmail(token) {
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
 
       if (!token) {
         throw new Error('Verification token is required');
@@ -262,7 +262,7 @@ class AuthService {
     if (!this.user) return [];
 
     // Mock permissions based on user role
-    const permissions = {
+    const permissions ={
       user: ['read:own', 'write:own'],
       admin: ['read:all', 'write:all', 'delete:all', 'manage:users'],
       moderator: ['read:all', 'write:all', 'moderate:content']

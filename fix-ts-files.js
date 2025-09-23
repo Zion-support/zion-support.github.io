@@ -6,8 +6,7 @@ function fixTsTestFile(filePath) {
     const fileName = path.basename(filePath, '.test.tsx').replace('.test', '');
     const componentName = fileName.replace('.dynamic', '');
     
-    const content = `import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+    const content = `import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
 
@@ -58,16 +57,16 @@ import App from './App';
 
 describe('App', () => {
   it('renders without crashing', () => {
-    render(<App />);
+    render(<App  />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
   
   it('displays correct content', () => {
-    render(<App />);
+    render(<App  />);
   });
   
   it('handles user interactions', () => {
-    render(<App />);
+    render(<App  />);
   });
 });
 `;

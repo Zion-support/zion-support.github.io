@@ -8,7 +8,7 @@ import StructuredData, { organizationSchema, websiteSchema, serviceSchema } from
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata: Metadata ={
   title: 'Zion Tech Group - Advanced AI and Technology Solutions',
   description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
   keywords: ['AI', 'artificial intelligence', 'cloud services', 'cybersecurity', 'technology solutions', 'enterprise software', 'digital transformation'],
@@ -22,38 +22,33 @@ export const metadata: Metadata = {
     url: 'https://zion.app',
     title: 'Zion Tech Group - Advanced AI and Technology Solutions',
     description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
-    siteName: 'Zion Tech Group',
-  },
+    siteName: 'Zion Tech Group'},
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Advanced AI and Technology Solutions',
-    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.',
-  },
-}
+    description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.'}}
 
-export const viewport: Viewport = {
+export const viewport: Viewport ={
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#3b82f6',
-}
+  themeColor: '#3b82f6'}
 
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <head>
-        <StructuredData data={organizationSchema} />
-        <StructuredData data={websiteSchema} />
-        <StructuredData data={serviceSchema} />
+        <StructuredData data={organizationSchema}  />
+        <StructuredData data={websiteSchema}  />
+        <StructuredData data={serviceSchema}  />
       </head>
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
-          <PerformanceMonitor />
+          <PerformanceMonitor  />
           {children}
-          <ScrollToTop />
+          <ScrollToTop  />
         </ThemeProvider>
       </body>
     </html>

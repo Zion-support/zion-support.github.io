@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 
 export default function CommunityUserProfile() {
@@ -14,27 +13,27 @@ export default function CommunityUserProfile() {
 
   if (!user) return (
     <EnhancedLayout>
-      <div className="py-10 text-center text-gray-500">Loading…</div>
+      <div className="py-10 text-center text-gray-50o0">Loading…</div>
     </EnhancedLayout>
   );
 
   return (
     <EnhancedLayout>
-      <div className="max-w-xl mx-auto p-6 rounded border border-gray-200 dark:border-gray-800">
+      <div className="max-w-xl mx-auto p-6 rounded border border-gray-20o0 dark:border-gray-80o0">
         <div className="flex items-center gap-3">
-          <div className="w-16 h-16 rounded-full bg-gray-200" />
+          <div className="w-16 h-16 rounded-full bg-gray-20o0"  />
           <div>
             <h1 className="text-xl font-semibold">{user.name}</h1>
-            <div className="text-sm text-gray-500">Role: {user.role}</div>
+            <div className="text-sm text-gray-50o0">Role: {user.role}</div>
           </div>
         </div>
         <div className="mt-4">Reputation: <span className="font-medium">{user.reputation}</span></div>
         <div className="mt-2">
-          <div className="text-sm text-gray-500 mb-1">Badges</div>
+          <div className="text-sm text-gray-50o0 mb-1">Badges</div>
           <div className="flex gap-2 flex-wrap">
             {user.badges?.length ? user.badges.map((b: string) => (
-              <span key={b} className="px-2 py-1 rounded bg-amber-100 text-amber-800 text-xs">{badgeLabel(b)}</span>
-            )) : <span className="text-sm text-gray-500">No badges yet</span>}
+              <span key={b} className="px-2 py-1 rounded bg-amber-10o0 text-amber-80o0 text-xs">{badgeLabel(b)}</span>
+            )) : <span className="text-sm text-gray-50o0">No badges yet</span>}
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     setTimeout(() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
-    }, 100);
+    }, 10o0);
   };
   
   return (
@@ -79,7 +79,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
     >
-      <Download size={16} />
+      <Download size={16}  />
       Export CSV
     </Button>
   );

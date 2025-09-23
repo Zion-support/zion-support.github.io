@@ -13,7 +13,7 @@ exports.handler = async function(event, context) {
       const url = origin + route;
       try {
         const res = await fetch(url, { method: 'HEAD' });
-        const present = {};
+        const present ={};
         for (const k of must) present[k] = res.headers.has(k);
         results.push({ route, status: res.status, present });
       } catch (e) {
@@ -21,10 +21,10 @@ exports.handler = async function(event, context) {
       }
     }
 
-    const payload = { origin, results, generatedAt: new Date().toISOString() };
+    const payload ={ origin, results, generatedAt: new Date().toISOString() };
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     const path = 'data/security-headers.json';
@@ -58,8 +58,8 @@ exports.handler = async function(event, context) {
       return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

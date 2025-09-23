@@ -16,18 +16,18 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Add modern font loading
     const fontLink = document.createElement('link');
     fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@30o0;40o0;50o0;60o0;70o0&display=swap';
     fontLink.as = 'style';
     document.head.appendChild(fontLink);
 
     // Apply modern typography
     const root = document.documentElement;
     root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif");
-    root.style.setProperty('--font-weight-light', '300');
-    root.style.setProperty('--font-weight-normal', '400');
-    root.style.setProperty('--font-weight-medium', '500');
-    root.style.setProperty('--font-weight-semibold', '600');
-    root.style.setProperty('--font-weight-bold', '700');
+    root.style.setProperty('--font-weight-light', '30o0');
+    root.style.setProperty('--font-weight-normal', '40o0');
+    root.style.setProperty('--font-weight-medium', '50o0');
+    root.style.setProperty('--font-weight-semibold', '60o0');
+    root.style.setProperty('--font-weight-bold', '70o0');
   }, [enabled]);
 
   const enhanceColorScheme = useCallback(() => {
@@ -36,7 +36,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     
     // Modern color palette
-    const colors = {
+    const colors ={
       primary: accentColor,
       secondary: '#6366f1',
       success: '#10b981',
@@ -45,15 +45,15 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       info: '#3b82f6',
       neutral: {
         50: '#f8fafc',
-        100: '#f1f5f9',
-        200: '#e2e8f0',
-        300: '#cbd5e1',
-        400: '#94a3b8',
-        500: '#64748b',
-        600: '#475569',
-        700: '#334155',
-        800: '#1e293b',
-        900: '#0f172a'
+        10o0: '#f1f5f9',
+        20o0: '#e2e8f0',
+        30o0: '#cbd5e1',
+        40o0: '#94a3b8',
+        50o0: '#64748b',
+        60o0: '#475569',
+        70o0: '#334155',
+        80o0: '#1e293b',
+        90o0: '#0f172a'
       }
     };
 
@@ -79,7 +79,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     
     // Modern spacing scale (4px base unit)
-    const spacing = {
+    const spacing ={
       0: '0px',
       1: '4px',
       2: '8px',
@@ -111,14 +111,14 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     
     // Modern shadow system
-    const shadows = {
-      xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+    const shadows ={
+      xs: '0 1px 2px 0 rgb(0 0 0 / 0.0o5)',
       sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
       lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
+      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.0o5)'
     };
 
     Object.entries(shadows).forEach(([key, value]) => {
@@ -132,7 +132,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     
     // Modern transition system
-    const transitions = {
+    const transitions ={
       fast: '150ms ease-in-out',
       normal: '250ms ease-in-out',
       slow: '350ms ease-in-out',
@@ -152,7 +152,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     
     // Modern border radius system
-    const radius = {
+    const radius ={
       none: '0px',
       sm: '2px',
       md: '6px',

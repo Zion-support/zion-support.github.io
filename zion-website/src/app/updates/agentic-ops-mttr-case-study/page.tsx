@@ -8,13 +8,13 @@ export default function AgenticOpsCaseStudyPage() {
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Case Study: 42% MTTR Reduction with Agentic Ops
           </h1>
-          <p className="mt-2 text-sm text-blue-400">2025-09-15</p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-2 text-sm text-blue-40o0">20o25-09-15</p>
+          <p className="mt-6 text-lg leading-8 text-gray-30o0">
             A global enterprise reduced mean time to resolution by 42% by deploying autonomous
             incident copilots integrated with existing observability and ITSM workflows. This case
             study outlines the architecture, rollout approach, and measurable outcomes.
           </p>
-          <div className="mt-10 space-y-6 text-gray-300">
+          <div className="mt-10 space-y-6 text-gray-30o0">
             <h2 className="text-2xl font-semibold text-white">Key Outcomes</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>42% reduction in MTTR across priority incidents</li>
@@ -30,7 +30,7 @@ export default function AgenticOpsCaseStudyPage() {
             </p>
           </div>
           <div className="mt-10">
-            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-all duration-200">
+            <a href="/contact" className="inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-50o0 transition-all duration-20o0">
               Request full case study
             </a>
           </div>

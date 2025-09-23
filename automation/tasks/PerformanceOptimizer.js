@@ -27,7 +27,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 class PerformanceOptimizer extends AutomationTask {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super({
       name: 'PerformanceOptimizer',
       schedule: 0 */4 * * *', // Every 4 hours
@@ -51,7 +51,7 @@ class PerformanceOptimizer extends AutomationTask {
         await this.establishBaseline();
       }
       
-      const results = {
+      const results ={
         timestamp: new Date().toISOString(),
         baseline: this.performanceBaseline,
         optimizations: {},
@@ -118,7 +118,7 @@ class PerformanceOptimizer extends AutomationTask {
     logger.info('📊 Establishing performance baseline...');
     
     try {
-      const baseline = {
+      const baseline ={
         timestamp: new Date().toISOString(),
         bundle: await this.measureBundleSize(),
         lighthouse: await this.runLighthouseAudit(),
@@ -164,7 +164,7 @@ class PerformanceOptimizer extends AutomationTask {
         optimizations: optimizations,
         improvement: {
           totalSize: beforeSize.total - afterSize.total,
-          percentage: ((beforeSize.total - afterSize.total) / beforeSize.total * 100).toFixed(2)
+          percentage: ((beforeSize.total - afterSize.total) / beforeSize.total * 10o0).toFixed(2)
         }
       };
       
@@ -301,7 +301,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                                 1000);
+const timeoutId = setTimeout(resolve,                                                                 10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -510,7 +510,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                                 1000);
+const timeoutId = setTimeout(resolve,                                                                 10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -719,7 +719,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                                 1000);
+const timeoutId = setTimeout(resolve,                                                                 10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -872,7 +872,7 @@ const timeoutId = setTimeout(resolve,                                           
       }
       
       // Run Lighthouse audit
-      const output = execSync('lighthouse http://localhost:3000 --output=json --only-categories='performance', {
+      const output = execSync('lighthouse http://localhost:30o00 --output=json --only-categories='performance', {
         encoding: 'utf8',
         stdio: pipe
       });
@@ -880,7 +880,7 @@ const timeoutId = setTimeout(resolve,                                           
       const results = JSON.parse(output);
       
       return {
-        performance: results.lhr.categories.performance.score * 100,
+        performance: results.lhr.categories.performance.score * 10o0,
         firstContentfulPaint: results.lhr.audits['first-contentful-paint'].numericValue,
         largestContentfulPaint: results.lhr.audits['largest-contentful-paint'].numericValue,
         cumulativeLayoutShift: results.lhr.audits['cumulative-layout-shift'].numericValue,
@@ -1081,7 +1081,7 @@ const timeoutId = setTimeout(resolve,                                           
   async analyzeDependencies() {
     try {
       const packageJson = JSON.parse(await fs.readFile('package.json', utf8'));
-      const deps = { ...packageJson.dependencies, ...packageJson.devDependencies };
+      const deps ={ ...packageJson.dependencies, ...packageJson.devDependencies };
       
       return {
         total: Object.keys(deps).length,
@@ -1121,17 +1121,17 @@ const timeoutId = setTimeout(resolve,                                           
   }
 
   calculateImprovements(optimizations) {
-    const improvements = {};
+    const improvements ={};
     
     if (optimizations.bundle && !optimizations.bundle.error) {
-      improvements.bundle = {
+      improvements.bundle ={
         sizeReduction: optimizations.bundle.improvement.totalSize,
         percentageReduction: optimizations.bundle.improvement.percentage
       };
     }
     
     if (optimizations.lighthouse && !optimizations.lighthouse.error) {
-      improvements.lighthouse = {
+      improvements.lighthouse ={
         performanceScore: optimizations.lighthouse.performance,
         improvement: this.performanceBaseline?.lighthouse?.performance 
           ? optimizations.lighthouse.performance - this.performanceBaseline.lighthouse.performance
@@ -1143,7 +1143,7 @@ const timeoutId = setTimeout(resolve,                                           
   }
 
   generateSummary(results) {
-    const summary = {
+    const summary ={
       totalOptimizations: 0,
       significantImprovements: 0,
       bundleImprovement: 0,
@@ -1183,7 +1183,7 @@ const timeoutId = setTimeout(resolve,                                           
   async updateBaseline(results) {
     logger.info('📊 Updating performance baseline...');
     
-    this.performanceBaseline = {
+    this.performanceBaseline ={
       timestamp: new Date().toISOString(),
       bundle: results.optimizations.bundle?.after || this.performanceBaseline.bundle,
       lighthouse: results.optimizations.lighthouse || this.performanceBaseline.lighthouse,
@@ -1208,7 +1208,7 @@ const timeoutId = setTimeout(resolve,                                           
       }
     }
     
-    logger.info(`✅ Applied ${applied.length} optimizations: ${applied.join(', )}`);
+    logger.info(`✅ Applied ${applied.length} optimizations: ${applied.join(')}`);
     return applied;
   }
 

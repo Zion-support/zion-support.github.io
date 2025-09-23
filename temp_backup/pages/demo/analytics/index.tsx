@@ -1,4 +1,3 @@
-import React from 'react';
 import SmartSidebar from '../../../components/SmartSidebar';
 import { useServiceNavigation } from '../../../hooks/useNavigation';
 
@@ -7,9 +6,9 @@ export default function AnalyticsDemoPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      <div className="min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0">
         <div className="flex">
-          <SmartSidebar pageType="service" currentService="ai-analytics" className="w-64" />
+          <SmartSidebar pageType="service" currentService="ai-analytics" className="w-64"  />
           <div className="flex-1 p-8">
             <div className="animate-pulse space-y-4">
               <div className="h-8 bg-white/20 rounded w-1/3"></div>
@@ -23,7 +22,7 @@ export default function AnalyticsDemoPage() {
 
   if (error || !serviceNavigation) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Error Loading Service</h1>
           <p className="text-white/70">{error || 'Service not found'}</p>
@@ -35,9 +34,9 @@ export default function AnalyticsDemoPage() {
   const { service } = serviceNavigation;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0">
       <div className="flex">
-        <SmartSidebar pageType="service" currentService="ai-analytics" className="w-64" />
+        <SmartSidebar pageType="service" currentService="ai-analytics" className="w-64"  />
         
         <div className="flex-1 p-8">
           {/* Service Header */}
@@ -52,9 +51,9 @@ export default function AnalyticsDemoPage() {
             
             <div className="flex items-center gap-4 mb-6">
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                'bg-blue-500/20 text-blue-300'
+                service.status === 'active' ? 'bg-green-50o0/20 text-green-30o0' :
+                service.status === 'beta' ? 'bg-yellow-50o0/20 text-yellow-30o0' :
+                'bg-blue-50o0/20 text-blue-30o0'
               }`}>
                 {service.status}
               </span>
@@ -111,7 +110,7 @@ export default function AnalyticsDemoPage() {
                   Experience the power of AI-driven analytics with real-time data visualization
                 </p>
                 <div className="flex justify-center gap-4">
-                  <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
+                  <button className="px-6 py-3 bg-blue-60o0 hover:bg-blue-70o0 text-white rounded-lg font-medium transition-colors">
                     🚀 Launch Demo
                   </button>
                   <button className="px-6 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-medium transition-colors">
@@ -159,13 +158,13 @@ export default function AnalyticsDemoPage() {
 
           {/* Call to Action */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8">
+            <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-white/80 mb-6">
                 Join thousands of businesses using AI-powered analytics to drive growth
               </p>
               <div className="flex justify-center gap-4">
-                <button className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button className="px-8 py-3 bg-white text-blue-60o0 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
                   Start Free Trial
                 </button>
                 <button className="px-8 py-3 bg-white/20 text-white rounded-lg font-semibold hover:bg-white/30 transition-colors">

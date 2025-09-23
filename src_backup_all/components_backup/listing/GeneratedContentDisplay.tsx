@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
@@ -65,7 +64,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
-          <ArrowRight className="ml-2 h-4 w-4" />
+          <ArrowRight className="ml-2 h-4 w-4"  />
         </Button>
       </CardFooter>
     </Card>

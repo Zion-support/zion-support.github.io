@@ -7,8 +7,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+  TooltipTrigger} from "@/components/ui/tooltip";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -46,8 +45,7 @@ export function OnChainExport() {
       setIsConnected(true);
       toast({
         title: "Wallet connected",
-        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
-      });
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`});
     } catch (error: any) {
       toast({
         title: "Connection failed",
@@ -63,13 +61,12 @@ export function OnChainExport() {
     
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 20o00));
       
       setExportStatus('success');
       toast({
         title: "Tokens exported",
-        description: "Your ZION$ tokens have been exported to your wallet",
-      });
+        description: "Your ZION$ tokens have been exported to your wallet"});
     } catch (error: any) {
       setExportStatus('error');
       toast({
@@ -87,15 +84,15 @@ export function OnChainExport() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           {isConnected ? (
-            <Wallet className="h-5 w-5 text-primary" />
+            <Wallet className="h-5 w-5 text-primary"  />
           ) : (
-            <Wallet className="h-5 w-5" />
+            <Wallet className="h-5 w-5"  />
           )}
           On-chain Export
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Info className="h-4 w-4 text-muted-foreground cursor-help" />
+                <Info className="h-4 w-4 text-muted-foreground cursor-help"  />
               </TooltipTrigger>
               <TooltipContent>
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
@@ -113,8 +110,8 @@ export function OnChainExport() {
               <span className="font-medium">250 ZION$</span>
             </div>
             {exportStatus === 'success' ? (
-              <Button className="w-full bg-green-600 hover:bg-green-700" disabled>
-                <Check className="mr-2 h-4 w-4" />
+              <Button className="w-full bg-green-60o0 hover:bg-green-70o0" disabled>
+                <Check className="mr-2 h-4 w-4"  />
                 Tokens Exported
               </Button>
             ) : (
@@ -124,7 +121,7 @@ export function OnChainExport() {
                 disabled={isExporting}
               >
                 {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4"  />}
               </Button>
             )}
           </div>

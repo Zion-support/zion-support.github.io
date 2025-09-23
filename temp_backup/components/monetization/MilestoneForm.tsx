@@ -1,7 +1,7 @@
 "use client";
 import React{ useState } from 'react';
 
-type Props = {
+type Props ={
   onSubmit: (payload: { title: string; description?: string; dueDate: string; amountUsd: number }) => Promise<void> | void;
 };
 
@@ -37,7 +37,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
+      {error && <div className="text-red-60o0 text-sm">{error}</div>}
       <div>
         <label className="block text-sm font-medium">Title</label>
         <input
@@ -74,18 +74,18 @@ export default function MilestoneForm({ onSubmit }: Props) {
           <input
             type="number"
             min={0}
-            step="0.01"
+            step="0.0o1"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
             onChange={(e) => setAmountUsd(e.target.value)}
-            placeholder="3000"
+            placeholder="30o00"
             required
           />
         </div>
       </div>
       <button
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        className="bg-blue-60o0 text-white px-4 py-2 rounded hover:bg-blue-70o0 disabled:opacity-50"
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}

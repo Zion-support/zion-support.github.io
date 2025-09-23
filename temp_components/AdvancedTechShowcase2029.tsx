@@ -31,16 +31,16 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const AdvancedTechShowcase2029 = () => {
+const AdvancedTechShowcase20o29 = () => {
   const [activeTabsetActiveTab] = useState('ai-conscience');
   const [currentDemosetCurrentDemo] = useState(0);
 
-  const techCategories = {
+  const techCategories ={
     'ai-conscience': {
       title: 'AI Consciousness & Ethics',
       subtitle: 'The next evolution of artificial intelligence with moral reasoning',
       icon: Brain,
-      color: 'from-purple-600 to-indigo-600',
+      color: 'from-purple-60o0 to-indigo-60o0',
       description: 'Advanced AI systems that demonstrate consciousness-like behaviorsethical reasoningand emotional intelligence.',
       technologies: [
         {
@@ -73,7 +73,7 @@ const AdvancedTechShowcase2029 = () => {
       title: 'Quantum Neural Networks',
       subtitle: 'Merging quantum computing with neural architectures',
       icon: Network,
-      color: 'from-cyan-600 to-blue-600',
+      color: 'from-cyan-60o0 to-blue-60o0',
       description: 'Revolutionary computing architectures that combine quantum mechanics with neural network processing.',
       technologies: [
         {
@@ -106,7 +106,7 @@ const AdvancedTechShowcase2029 = () => {
       title: 'Omniversal Computing',
       subtitle: 'Computing across multiple dimensions and realities',
       icon: Globe,
-      color: 'from-orange-600 to-red-600',
+      color: 'from-orange-60o0 to-red-60o0',
       description: 'Next-generation computing that operates across multiple dimensionsrealitiesand parallel universes.',
       technologies: [
         {
@@ -165,21 +165,21 @@ const AdvancedTechShowcase2029 = () => {
     { label: 'Conscious AI Systems'value: '50+'icon: Brain },
     { label: 'Quantum Qubits'value: '1M+'icon: Cpu },
     { label: 'Realities Simulated'value: '∞'icon: Globe },
-    { label: 'Ethical Guidelines'value: '500+'icon: Shield }
+    { label: 'Ethical Guidelines'value: '50o0+'icon: Shield }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }4000);
+    }40o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 to-purple-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -191,37 +191,37 @@ const AdvancedTechShowcase2029 = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 3repeat: Infinityease: "linear" }}
-                className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center"
+                className="w-12 h-12 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full flex items-center justify-center"
               >
-                <Sparkles className="w-6 h-6 text-white" />
+                <Sparkles className="w-6 h-6 text-white"  />
               </motion.div>
-              <span className="text-lg font-semibold text-indigo-300 uppercase tracking-wider">
-                Advanced Technology Showcase 2029
+              <span className="text-lg font-semibold text-indigo-30o0 uppercase tracking-wider">
+                Advanced Technology Showcase 20o29
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">
               The Future of Intelligence
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Explore the most advanced AI consciousnessquantum neural networks
               and omniversal computing technologies that are reshaping reality itself.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
               >
-                <Play className="inline-block mr-2" />
+                <Play className="inline-block mr-2"  />
                 Experience the Future
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-indigo-400 rounded-full text-indigo-400 font-semibold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-indigo-40o0 rounded-full text-indigo-40o0 font-semibold text-lg hover:bg-indigo-40o0 hover:text-white transition-all duration-30o0"
               >
-                <BookOpen className="inline-block mr-2" />
+                <BookOpen className="inline-block mr-2"  />
                 Learn More
               </motion.button>
             </div>
@@ -241,11 +241,11 @@ const AdvancedTechShowcase2029 = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-gray-40o0">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -257,7 +257,7 @@ const AdvancedTechShowcase2029 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Revolutionary Technologies</h2>
-            <p className="text-xl text-gray-300">Choose a category to explore breakthrough innovations</p>
+            <p className="text-xl text-gray-30o0">Choose a category to explore breakthrough innovations</p>
           </div>
 
           {/* Tab Navigation */}
@@ -265,16 +265,16 @@ const AdvancedTechShowcase2029 = () => {
             {Object.entries(techCategories).map(([keycategory]) => (
               <motion.button
                 key={key}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveTab(key)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 ${
                   activeTab === key
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    ? 'bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white'
+                    : 'bg-gray-80o0 text-gray-30o0 hover:bg-gray-70o0'
                 }`}
               >
-                <category.icon className="inline-block mr-2" />
+                <category.icon className="inline-block mr-2"  />
                 {category.title}
               </motion.button>
             ))}
@@ -294,10 +294,10 @@ const AdvancedTechShowcase2029 = () => {
                 <h3 className="text-3xl md:text-4xl font-bold mb-4">
                   {techCategories[activeTab].title}
                 </h3>
-                <p className="text-xl text-gray-300 mb-4">
+                <p className="text-xl text-gray-30o0 mb-4">
                   {techCategories[activeTab].subtitle}
                 </p>
-                <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+                <p className="text-lg text-gray-40o0 max-w-3xl mx-auto">
                   {techCategories[activeTab].description}
                 </p>
               </div>
@@ -309,32 +309,32 @@ const AdvancedTechShowcase2029 = () => {
                     initial={{ opacity: 0y: 20 }}
                     animate={{ opacity: 1y: 0 }}
                     transition={{ duration: 0.6delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300"
+                    className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-80o0/70 transition-all duration-30o0"
                   >
                     <div className="flex items-center justify-between mb-6">
                       <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${techCategories[activeTab].color} rounded-2xl`}>
-                        <tech.icon className="w-8 h-8 text-white" />
+                        <tech.icon className="w-8 h-8 text-white"  />
                       </div>
                       <div className="text-right">
                         <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                          tech.status === 'Production Ready' ? 'bg-green-500/20 text-green-400' :
-                          tech.status === 'Beta Testing' ? 'bg-yellow-500/20 text-yellow-400' :
-                          tech.status === 'In Development' ? 'bg-blue-500/20 text-blue-400' :
-                          'bg-gray-500/20 text-gray-400'
+                          tech.status === 'Production Ready' ? 'bg-green-50o0/20 text-green-40o0' :
+                          tech.status === 'Beta Testing' ? 'bg-yellow-50o0/20 text-yellow-40o0' :
+                          tech.status === 'In Development' ? 'bg-blue-50o0/20 text-blue-40o0' :
+                          'bg-gray-50o0/20 text-gray-40o0'
                         }`}>
                           {tech.status}
                         </span>
-                        <div className="text-sm text-gray-400 mt-1">{tech.impact} Impact</div>
+                        <div className="text-sm text-gray-40o0 mt-1">{tech.impact} Impact</div>
                       </div>
                     </div>
                     
                     <h4 className="text-2xl font-bold mb-4">{tech.name}</h4>
-                    <p className="text-gray-300 mb-6">{tech.description}</p>
+                    <p className="text-gray-30o0 mb-6">{tech.description}</p>
                     
                     <ul className="space-y-2 mb-6">
                       {tech.features.map((featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <ChevronRight className="w-4 h-4 text-indigo-400 mr-2" />
+                        <li key={featureIndex} className="flex items-center text-gray-30o0">
+                          <ChevronRight className="w-4 h-4 text-indigo-40o0 mr-2"  />
                           {feature}
                         </li>
                       ))}
@@ -352,7 +352,7 @@ const AdvancedTechShowcase2029 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Interactive Demonstrations</h2>
-            <p className="text-xl text-gray-300">Experience these technologies in action</p>
+            <p className="text-xl text-gray-30o0">Experience these technologies in action</p>
           </div>
 
           <div className="relative">
@@ -363,37 +363,37 @@ const AdvancedTechShowcase2029 = () => {
                 animate={{ opacity: 1x: 0 }}
                 exit={{ opacity: 0x: -50 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto"
+                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center">
-                      <Play className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-full flex items-center justify-center">
+                      <Play className="w-8 h-8 text-white"  />
                     </div>
                     <div>
                       <h4 className="text-2xl font-bold">{demos[currentDemo].title}</h4>
-                      <p className="text-gray-400">{demos[currentDemo].category}</p>
+                      <p className="text-gray-40o0">{demos[currentDemo].category}</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm text-gray-400">Duration</div>
+                    <div className="text-sm text-gray-40o0">Duration</div>
                     <div className="text-lg font-semibold">{demos[currentDemo].duration}</div>
                   </div>
                 </div>
                 
-                <p className="text-lg text-gray-300 mb-6">{demos[currentDemo].description}</p>
+                <p className="text-lg text-gray-30o0 mb-6">{demos[currentDemo].description}</p>
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                      <Eye className="w-4 h-4 text-gray-400" />
-                      <span className="text-gray-400">{demos[currentDemo].views} views</span>
+                      <Eye className="w-4 h-4 text-gray-40o0"  />
+                      <span className="text-gray-40o0">{demos[currentDemo].views} views</span>
                     </div>
                   </div>
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-300"
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-30o0"
                   >
                     Watch Demo
                   </motion.button>
@@ -407,8 +407,8 @@ const AdvancedTechShowcase2029 = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentDemo(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentDemo ? 'bg-indigo-400' : 'bg-gray-600'
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
+                    index === currentDemo ? 'bg-indigo-40o0' : 'bg-gray-60o0'
                   }`}
                 />
               ))}
@@ -423,22 +423,22 @@ const AdvancedTechShowcase2029 = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Shape the Future?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-30o0 mb-8">
             Join us in developing the next generation of intelligent technologies 
             that will transform humanity and reality itself.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
             >
               Join the Revolution
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-indigo-400 rounded-full text-indigo-400 font-semibold text-lg hover:bg-indigo-400 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-indigo-40o0 rounded-full text-indigo-40o0 font-semibold text-lg hover:bg-indigo-40o0 hover:text-white transition-all duration-30o0"
             >
               Explore Research
             </motion.button>
@@ -449,4 +449,4 @@ const AdvancedTechShowcase2029 = () => {
   );
 };
 
-export default AdvancedTechShowcase2029;
+export default AdvancedTechShowcase20o29;

@@ -5,19 +5,18 @@ import fs from 'fs',
 import DocsLayout from '../../../components/docs/DocsLayout',
 import CodeBlock from '../../../components/docs/CodeBlock',
 
-export type Section = {
+export type Section ={
   id: string,
   title: string,
   html?: string,
-  code?: { language?: string, content: string }[],
-},
+  code?: { language?: string, content: string }[]},
 
-type DocsContent = {
+type DocsContent ={
   title: string,
   sections: Section[]
 },
 
-type PageProps = {
+type PageProps ={
   docs: DocsContent
 },
 
@@ -25,8 +24,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const contentPath = path.join(process.cwd(), 'datadocs', 'content.json'),
   const raw = fs.readFileSync(contentPath, 'utf8'),
   const docs = JSON.parse(raw) as DocsContent,
-  return { props: { docs } },
-},
+  return { props: { docs } }},
 
 export default function ApiDocsPage({ docs }: PageProps) {
   return (
@@ -35,7 +33,7 @@ export default function ApiDocsPage({ docs }: PageProps) {
         <section key={section.id} id={section.id} className="scroll-mt-24">
           <h2 className="text-2xl font-semibold">{section.title}</h2>
           {section.html && (
-            <div dangerouslySetInnerHTML={{ __html: section.html }} />
+            <div dangerouslySetInnerHTML={{ __html: section.html }}  />
           )}
           {section.code && section.code.length > 0 && (
             <div className="space-y-4 mt-4">
@@ -47,5 +45,4 @@ export default function ApiDocsPage({ docs }: PageProps) {
         </section>
       ))}
     </DocsLayout>
-  ),
-}
+  )}

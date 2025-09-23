@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
 
@@ -19,12 +18,12 @@ export function EnterpriseCTA() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="gap-2">
-                    <Calendar className="h-5 w-5" />
+                    <Calendar className="h-5 w-5"  />
                     Schedule a Demo
                   </Button>
                   <Button size="lg" variant="outline" className="gap-2">
                     Contact Sales
-                    <ArrowRight className="h-5 w-5" />
+                    <ArrowRight className="h-5 w-5"  />
                   </Button>
                 </div>
               </div>

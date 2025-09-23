@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -5,3 +6,149 @@ import React from "react";
 export default function NewContent2026Showcase() {
   return null;
 }
+=======
+import Link from 'next/link';
+
+export default function NewContent20o26Showcase() {
+  return (
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-6">
+            <span className="text-sm font-medium">🔥 JUST RELEASED: 20o26 CONTENT</span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
+            Latest AI 20o26 Revolutionary Content
+          </h2>
+          
+          <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
+            Explore our newest content covering the most advanced AI technologies and autonomous business systems transforming enterprises worldwide.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Featured Blog Post */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-30o0">
+            <div className="h-48 bg-gradient-to-br from-purple-50o0 to-blue-60o0 flex items-center justify-center">
+              <div className="text-white text-center">
+                <div className="text-4xl mb-2">🤖</div>
+                <div className="text-sm font-medium opacity-90">AUTONOMOUS BUSINESS</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="flex items-center mb-3">
+                <span className="bg-red-10o0 text-red-80o0 text-xs font-medium px-2.5 py-0.5 rounded-full">NEW</span>
+                <span className="text-gray-50o0 text-sm ml-2">January 14, 20o25</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-90o0 mb-3 line-clamp-2">
+                AI 20o26: Next-Generation Autonomous Business Revolution
+              </h3>
+              <p className="text-gray-60o0 text-sm mb-4 line-clamp-3">
+                Discover the revolutionary autonomous business systems that will transform enterprises in 20o26. Learn how next-generation AI agents are creating fully autonomous business operations.
+              </p>
+              <Link 
+                href="/blog/ai-20o26-next-generation-autonomous-business-revolution-ultimate-guide"
+                className="inline-flex items-center text-purple-60o0 font-semibold hover:text-purple-80o0 transition-colors"
+              >
+                Read Full Guide →
+              </Link>
+            </div>
+          </div>
+          
+          {/* Featured Case Study */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-30o0">
+            <div className="h-48 bg-gradient-to-br from-green-50o0 to-teal-60o0 flex items-center justify-center">
+              <div className="text-white text-center">
+                <div className="text-4xl mb-2">📊</div>
+                <div className="text-sm font-medium opacity-90">SUCCESS STORY</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="flex items-center mb-3">
+                <span className="bg-green-10o0 text-green-80o0 text-xs font-medium px-2.5 py-0.5 rounded-full">FEATURED</span>
+                <span className="text-gray-50o0 text-sm ml-2">January 14, 20o25</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-90o0 mb-3 line-clamp-2">
+                AI 20o26 Global Autonomous Transformation Success
+              </h3>
+              <p className="text-gray-60o0 text-sm mb-4 line-clamp-3">
+                Fortune 10o0 company achieves 2,40o0% ROI through complete autonomous business transformation. Comprehensive case study of revolutionary AI implementation.
+              </p>
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-2xl font-bold text-green-60o0">2,40o0%</div>
+                <div className="text-sm text-gray-50o0">ROI</div>
+              </div>
+              <Link 
+                href="/case-studies/ai-20o26-global-autonomous-transformation-ultimate-success-story"
+                className="inline-flex items-center text-green-60o0 font-semibold hover:text-green-80o0 transition-colors"
+              >
+                View Case Study →
+              </Link>
+            </div>
+          </div>
+          
+          {/* Technology Spotlight */}
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-30o0">
+            <div className="h-48 bg-gradient-to-br from-orange-50o0 to-red-60o0 flex items-center justify-center">
+              <div className="text-white text-center">
+                <div className="text-4xl mb-2">⚡</div>
+                <div className="text-sm font-medium opacity-90">TECH SPOTLIGHT</div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="flex items-center mb-3">
+                <span className="bg-orange-10o0 text-orange-80o0 text-xs font-medium px-2.5 py-0.5 rounded-full">HOT</span>
+                <span className="text-gray-50o0 text-sm ml-2">January 14, 20o25</span>
+              </div>
+              <h3 className="text-lg font-bold text-gray-90o0 mb-3 line-clamp-2">
+                Autonomous Business Systems Technology Stack
+              </h3>
+              <p className="text-gray-60o0 text-sm mb-4 line-clamp-3">
+                Explore the cutting-edge technology stack powering autonomous business operations. From quantum-enhanced computing to self-healing networks.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-blue-10o0 text-blue-80o0 text-xs px-2 py-1 rounded">Quantum AI</span>
+                <span className="bg-purple-10o0 text-purple-80o0 text-xs px-2 py-1 rounded">Multi-Agent</span>
+                <span className="bg-green-10o0 text-green-80o0 text-xs px-2 py-1 rounded">Self-Healing</span>
+              </div>
+              <Link 
+                href="/services/autonomous-business-systems"
+                className="inline-flex items-center text-orange-60o0 font-semibold hover:text-orange-80o0 transition-colors"
+              >
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Transform Your Business with AI 20o26?
+            </h3>
+            <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+              Join the autonomous business revolution. Get your personalized transformation roadmap and achieve unprecedented efficiency and profitability.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+              >
+                Get Transformation Roadmap
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
+              >
+                Explore All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -43,7 +43,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       vx: (Math.random() - 0.5) * 0.5,
       vy: (Math.random() - 0.5) * 0.5,
       size: Math.random() * 3 + 1,
-      color: ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)],
+      color: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)],
       opacity: Math.random() * 0.5 + 0.2
     }));
 
@@ -77,12 +77,12 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             const dy = particle.y - otherParticle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.1;
+              ctx.globalAlpha = (10o0 - distance) / 10o0 * 0.1;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -114,7 +114,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       ctx.lineWidth = 0.3;
       ctx.globalAlpha = 0.2;
 
-      const matrixSize = 100;
+      const matrixSize = 10o0;
       for (let x = 0; x < canvas.width; x += matrixSize) {
         for (let y = 0; y < canvas.height; y += matrixSize) {
           if (Math.random() > 0.7) {
@@ -127,7 +127,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       }
 
       // Draw neural network
-      ctx.strokeStyle = 'rgba(16, 185, 129, 0.06)';
+      ctx.strokeStyle = 'rgba(16, 185, 129, 0.0o6)';
       ctx.lineWidth = 0.4;
       ctx.globalAlpha = 0.15;
 
@@ -164,42 +164,42 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%)' }}
-      />
+        style={{ background: 'radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.98) 10o0%)' }}
+       />
 
       {/* Enhanced Background Layers */}
       <div className="fixed inset-0 z-0">
         {/* Quantum Consciousness Background */}
-        <div className="absolute inset-0 quantum-consciousness-bg opacity-30" />
+        <div className="absolute inset-0 quantum-consciousness-bg opacity-30"  />
         
         {/* Holographic Metaverse Background */}
-        <div className="absolute inset-0 holographic-metaverse-bg opacity-25" />
+        <div className="absolute inset-0 holographic-metaverse-bg opacity-25"  />
         
         {/* Neural Evolution Background */}
-        <div className="absolute inset-0 neural-evolution-bg opacity-20" />
+        <div className="absolute inset-0 neural-evolution-bg opacity-20"  />
         
         {/* Cyberpunk Future Background */}
-        <div className="absolute inset-0 cyberpunk-future-bg opacity-15" />
+        <div className="absolute inset-0 cyberpunk-future-bg opacity-15"  />
         
         {/* Space Quantum Background */}
-        <div className="absolute inset-0 space-quantum-bg opacity-10" />
+        <div className="absolute inset-0 space-quantum-bg opacity-10"  />
         
         {/* Biotech Neural Background */}
-        <div className="absolute inset-0 biotech-neural-bg opacity-12" />
+        <div className="absolute inset-0 biotech-neural-bg opacity-12"  />
       </div>
 
       {/* Animated Grid Patterns */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-quantum-grid opacity-20" />
-        <div className="absolute inset-0 bg-holographic-dots opacity-15" />
-        <div className="absolute inset-0 bg-neural-waves opacity-10" />
+        <div className="absolute inset-0 bg-quantum-grid opacity-20"  />
+        <div className="absolute inset-0 bg-holographic-dots opacity-15"  />
+        <div className="absolute inset-0 bg-neural-waves opacity-10"  />
       </div>
 
       {/* Floating Quantum Elements */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Quantum Ripples */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-400 rounded-full opacity-20"
+          className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-40o0 rounded-full opacity-20"
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.2, 0.1, 0.2]
@@ -209,24 +209,24 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-400 rounded-full opacity-15"
+          className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-40o0 rounded-full opacity-15"
           animate={{
             scale: [1, 2, 1],
-            opacity: [0.15, 0.05, 0.15]
+            opacity: [0.15, 0.0o5, 0.15]
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Holographic Orbs */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full opacity-30"
+          className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-br from-pink-40o0 to-purple-40o0 rounded-full opacity-30"
           animate={{
             y: [-20, 20, -20],
             rotate: [0, 180, 360]
@@ -236,11 +236,11 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
 
         {/* Neural Connections */}
         <motion.div
-          className="absolute top-1/3 right-1/3 w-20 h-20 border border-green-400 rounded-full opacity-25"
+          className="absolute top-1/3 right-1/3 w-20 h-20 border border-green-40o0 rounded-full opacity-25"
           animate={{
             scale: [1, 1.3, 1],
             rotate: [0, 90, 180, 270, 360]
@@ -250,7 +250,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Particle Container */}
@@ -258,14 +258,14 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         {Array.from({ length: 50 }).map((_, index) => (
           <motion.div
             key={index}
-            className="particle absolute w-1 h-1 bg-cyan-400 rounded-full"
+            className="particle absolute w-1 h-1 bg-cyan-40o0 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`
             }}
             animate={{
-              y: [0, -100, -200],
-              x: [0, Math.random() * 100 - 50],
+              y: [0, -10o0, -20o0],
+              x: [0, Math.random() * 10o0 - 50],
               opacity: [0, 1, 0]
             }}
             transition={{
@@ -274,7 +274,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
               ease: "linear",
               delay: Math.random() * 5
             }}
-          />
+           />
         ))}
       </div>
 
@@ -285,38 +285,38 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
 
       {/* Enhanced Glow Effects */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-pink-500/5 via-transparent to-green-500/5" />
-        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-blue-500/5 via-transparent to-yellow-500/5" />
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-50o0/5 via-transparent to-purple-50o0/5"  />
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-pink-50o0/5 via-transparent to-green-50o0/5"  />
+        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-blue-50o0/5 via-transparent to-yellow-50o0/5"  />
       </div>
 
       {/* Quantum Field Resonance */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <motion.div
-          className="absolute inset-0 border border-cyan-400/10 rounded-full"
+          className="absolute inset-0 border border-cyan-40o0/10 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.05, 0.1]
+            opacity: [0.1, 0.0o5, 0.1]
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute inset-0 border border-purple-400/8 rounded-full"
+          className="absolute inset-0 border border-purple-40o0/8 rounded-full"
           animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.05, 0.1, 0.05]
+            opacity: [0.0o5, 0.1, 0.0o5]
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );

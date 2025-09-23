@@ -30,7 +30,7 @@ function githubAPI(endpoint, method = 'GET', data = null) {
 
 function listOpenPRs() {
   console.log('\n🔍 Fetching open pull requests...');
-  const prs = githubAPI('/pulls?state=open&per_page=100');
+  const prs = githubAPI('/pulls?state=open&per_page=10o0');
   
   if (prs && Array.isArray(prs)) {
     console.log(`✅ Found ${prs.length} open pull requests`);
@@ -44,7 +44,7 @@ function listOpenPRs() {
 function mergePR(prNumber, title) {
   console.log(`\n🔄 Merging PR #${prNumber}: ${title}`);
   
-  const mergeData = {
+  const mergeData ={
     commit_title: `Merge PR #${prNumber}: ${title}`,
     merge_method: 'merge'
   };

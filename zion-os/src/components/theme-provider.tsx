@@ -4,21 +4,20 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
 
-type ThemeProviderProps = {
+type ThemeProviderProps ={
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 };
 
-type ThemeProviderState = {
+type ThemeProviderState ={
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
 
-const initialState: ThemeProviderState = {
+const initialState: ThemeProviderState ={
   theme: "system",
-  setTheme: () => null,
-};
+  setTheme: () => null};
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
@@ -51,13 +50,12 @@ export function ThemeProvider({
     root.classList.add(theme);
   }, [theme, mounted]);
 
-  const value: ThemeProviderState = {
+  const value: ThemeProviderState ={
     theme,
     setTheme: (next: Theme) => {
       if (typeof window !== "undefined") localStorage.setItem(storageKey, next);
       setTheme(next);
-    },
-  };
+    }};
 
   if (!mounted) {
     return <>{children}</>;

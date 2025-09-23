@@ -16,14 +16,14 @@ jest.mock('next/router', () => ({'  useRouter: () => ({
     isFallback: false,
     isLocaleDomain: false,
     isReady: true,
-    basePath: ,    isPreview: false
+    basePath:, isPreview: false
   })
 }));
 
 // Mock SWR
 jest.mock('swr');
 // Mock CategoryCard to check for icon prop
-jest.mock('@/components/ui/CategoryCard', () => {'  const ActualCategoryCard = jest.requireActual('@/components/ui/CategoryCard').default;  return jest.fn((props) => <ActualCategoryCard {...props} data-testid={`category-card-${props.category.id}`} data-icon-name={props.category.icon} />);
+jest.mock('@/components/ui/CategoryCard', () => {'  const ActualCategoryCard = jest.requireActual('@/components/ui/CategoryCard').default;  return jest.fn((props) => <ActualCategoryCard {...props} data-testid={`category-card-${props.category.id}`} data-icon-name={props.category.icon}  />);
 });
 
 describe('Categories Page Component', () => {'  const mockUseSWR = useSWR as jest.Mock;
@@ -36,25 +36,25 @@ describe('Categories Page Component', () => {'  const mockUseSWR = useSWR as jes
       { id: cat1', name: Initial Cat', slug: initial-cat', icon: Star' },      { id: cat2', name: Second Cat', slug: second-cat', icon: Heart' },    ];
     mockUseSWR.mockReturnValue({ data: mockInitialCategories, error: null, isLoading: false });
 
-    render(<Categories categories={mockInitialCategories} />);
+    render(<Categories categories={mockInitialCategories}  />);
 
     expect(screen.getByText('Initial Cat')).toBeInTheDocument();    expect(screen.getByText('Second Cat')).toBeInTheDocument();    expect(screen.queryByText('No categories yet.')).not.toBeInTheDocument();
     // Check for icon presence via data attribute on the mocked CategoryCard
     const categoryCard1 = screen.getByTestId('category-card-cat1');    expect(categoryCard1).toHaveAttribute('data-icon-name', Star');    const categoryCard2 = screen.getByTestId('category-card-cat2');    expect(categoryCard2).toHaveAttribute('data-icon-name', Heart');  });
 
   test('displays "No categories yet." when initialCategories is empty and SWR returns empty', () => {'    mockUseSWR.mockReturnValue({ data: [], error: null, isLoading: false });
-    render(<Categories categories={[]} />);
+    render(<Categories categories={[]}  />);
     expect(screen.getByText('No categories yet.')).toBeInTheDocument();  });
 
   test('SWR returns categories (simulating client-side fetch) and checks icon', async () => {'    const swrCategories: Category[] = [
       { id: swr1', name: SWR Cat', slug: swr-cat', icon: Anchor' },    ];
     // Initial render with empty, SWR will update
     mockUseSWR.mockReturnValueOnce({ data: [], error: null, isLoading: true });
-    const { _rerender } = render(<Categories categories={[]} />);
+    const { _rerender } = render(<Categories categories={[]}  />);
 
     // Simulate SWR update
     mockUseSWR.mockReturnValueOnce({ data: swrCategories, error: null, isLoading: false });
-    rerender(<Categories categories={[]} />); // Rerender with SWR now having data
+    rerender(<Categories categories={[]}  />); // Rerender with SWR now having data
 
     await waitFor(() => {
       expect(screen.getByText('SWR Cat')).toBeInTheDocument();    });
@@ -68,7 +68,7 @@ describe('Categories Page Component', () => {'  const mockUseSWR = useSWR as jes
       return { data: [], error: null, isLoading: false };
     });
 
-    render(<Categories categories={[]} />); // Start with empty initial, SWR provides CATEGORIES
+    render(<Categories categories={[]}  />); // Start with empty initial, SWR provides CATEGORIES
 
     await waitFor(() => {
       expect(screen.getByText('Services')).toBeInTheDocument(); // A category from CATEGORIES'    });

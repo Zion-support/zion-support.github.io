@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-60o0 mb-8">
               Have a project in mind? We'd love to hear from you. Send us a message 
               and we'll respond as soon as possible.
             </p>
@@ -35,15 +35,15 @@ const Contact: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-600">info@ziontech.com</p>
+                <p className="text-gray-60o0">info@ziontech.com</p>
               </div>
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-600">(555) 123-4567</p>
+                <p className="text-gray-60o0">(555) 123-4567</p>
               </div>
               <div>
                 <h3 className="font-semibold">Address</h3>
-                <p className="text-gray-600">123 Tech Street<br />San Francisco, CA 94105</p>
+                <p className="text-gray-60o0">123 Tech Street<br  />San Francisco, CA 9410o5</p>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-70o0 mb-2">
                   Name
                 </label>
                 <input
@@ -60,13 +60,13 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                   required
-                />
+                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-70o0 mb-2">
                   Email
                 </label>
                 <input
@@ -75,13 +75,13 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                   required
-                />
+                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-70o0 mb-2">
                   Message
                 </label>
                 <textarea
@@ -90,14 +90,14 @@ const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                   required
-                />
+                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-60o0 text-white py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
               >
                 Send Message
               </button>

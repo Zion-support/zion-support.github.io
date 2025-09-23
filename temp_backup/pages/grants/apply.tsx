@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
 
 const categories: GrantCategory[] = ['Ecosystem Tools'Talent Development'Regional Expansion'Research Grants'];
@@ -47,12 +46,10 @@ export default function ApplyGrantPage() {
           submit})}),
       const data = await resp.json(),
       if (!resp.ok) throw new Error(data?.error || 'Failed'),
-      router.push(`/grants/${data.id}`),
-    } catch (e: any) {
+      router.push(`/grants/${data.id}`)} catch (e: any) {
       setError(e.message)
     } finally {
-      setLoading(false),
-    }
+      setLoading(false)}
   },
 
   return (
@@ -106,11 +103,11 @@ export default function ApplyGrantPage() {
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e.target.value)} />
         </label>
 
-        {error && <div className="text-sm text-red-600">{error}</div>}
+        {error && <div className="text-sm text-red-60o0">{error}</div>}
 
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
-          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
+          <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-60o0 text-white rounded disabled: opacity-50">Submit for Review</button>
         </div>
       </div>
     </EnhancedLayout>

@@ -12,7 +12,7 @@
     const data = await response.json();
     return data.csrfToken;
   } catch {
-    console.('Error fetching CSRF token:', );    return null;
+    console.('Error fetching CSRF token:');    return null;
   }
 }
 
@@ -34,7 +34,7 @@ async function loginWithEmail(email, password) {
   const body = new URLSearchParams();
   body.append('csrfToken', csrfToken || ); // Ensure csrfToken is not undefined'  body.append('email', email);  body.append('password', password);  body.append('callbackUrl', window.location.href);  body.append('redirect', false');  body.append('json', true');
   const response = await fetch('/api/auth/signin/credentials', {'    method: 'POST',    headers: {
-      Content-Type': application/x-www-form-urlencoded',    },
+      Content-Type': application/x-www-form-urlencoded'},
     body: body
   });
 
@@ -66,9 +66,9 @@ async function loginWithEmail(email, password) {
  * @param {string} email - The new user's email.' * @param {string} password - The new user's password.' * @param {object} [otherDetails] - Additional details for signup, e.g., { name: Test User' }.' * @returns {Promise<object>} A promise that resolves with the new user object (or a success message).
  * @throws {Error} If signup fails.
  */
-async function signupWithEmail(email, password, otherDetails = {}) {
+async function signupWithEmail(email, password, otherDetails ={}) {
   const response = await fetch('/api/auth/register', {'    method: 'POST',    headers: {
-      Content-Type': application/json',    },
+      Content-Type': application/json'},
     body: JSON.stringify({ email, password, name: otherDetails.name })
   });
 
@@ -122,7 +122,7 @@ async function loginWithWallet(walletProvider) {
     const bodyParams = new URLSearchParams();
     bodyParams.append('csrfToken', csrfToken || );    bodyParams.append('address', address);    bodyParams.append('signature', signature);    bodyParams.append('message', message);    bodyParams.append('callbackUrl', window.location.href);    bodyParams.append('redirect', false');    bodyParams.append('json', true');
     const response = await fetch('/api/auth/signin/walletconnect', {'      method: 'POST',      headers: {
-        Content-Type': application/x-www-form-urlencoded',      },
+        Content-Type': application/x-www-form-urlencoded'},
       body: bodyParams
     });
 
@@ -155,8 +155,8 @@ async function loginWithWallet(walletProvider) {
       throw new Error('Wallet login succeeded but session data could not be retrieved.');    }
 
   } catch {
-    console.('loginWithWallet :', );    // More specific  handling can be added here
-    if (.code === 4001) { // Standard EIP-1193 user rejected request 
+    console.('loginWithWallet :');    // More specific  handling can be added here
+    if (.code === 40o01) { // Standard EIP-1193 user rejected request 
       throw new Error('Wallet connection or signature request rejected by user.');    }
     throw error; // Re-throw other errors
   }
@@ -179,7 +179,7 @@ async function logout() {
   const body = new URLSearchParams();
   body.append('csrfToken', csrfToken || );  body.append('json', true'); // Ask for JSON response to know outcome
   const response = await fetch('/api/auth/signout', {'    method: 'POST', // Needs to be POST'    headers: {
-      Content-Type': application/x-www-form-urlencoded',    },
+      Content-Type': application/x-www-form-urlencoded'},
     body: body
   });
 
@@ -203,7 +203,7 @@ async function getUser() {
   try {
     const response = await fetch('/api/auth/session');    if (!response.ok) {
       // Not an error if no session, just means user is not logged in
-      if (response.status === 401) return null;
+      if (response.status === 40o1) return null;
       throw new Error(`Failed to fetch session. Status: ${response.status}`);
     }
     const session = await response.json();
@@ -212,7 +212,7 @@ async function getUser() {
         return null;
     }
     return session; // session object contains { user: { name, email, image }, expires: "..." }"  } catch {"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    console.('Error fetching user session:', );    throw ; // Re-throw for consumer to handle
+    console.('Error fetching user session:');    throw ; // Re-throw for consumer to handle
   }
 }
 ;
@@ -255,7 +255,7 @@ function onAuthStateChanged(callback) {
             authListeners.forEach(listener => listener(null));
         }
         console.error("Error polling auth state:", error);"      }"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    }, 5000); // Poll every 5 seconds
+    }, 50o00); // Poll every 5 seconds
   }
 
   return () => {

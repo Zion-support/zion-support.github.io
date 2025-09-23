@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function QuantumMaterialsDiscoveryPlatform() {
@@ -21,6 +20,6 @@ export default function QuantumMaterialsDiscoveryPlatform() {
 			industries={["Energy", "Semiconductors", "Pharma", "Aerospace"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/quantum-materials-discovery-platform"
-		/>
+		 />
 	);
 }

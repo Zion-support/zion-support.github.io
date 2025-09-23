@@ -2,11 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useWallet } from '../../hooks/useWallet';
 
-type Proposal = {
+type Proposal ={
   id: string; title: string; summary: string; type: string; quorumPercent: number; votingPeriodDays: number; fundingAsk?: number; referenceLinks?: string[]; createdAt: number; startTime: number; endTime: number; status: string; queued?: boolean; executedTxHash?: string;
 };
 
-type Vote = { id: string; proposalId: string; voter: string; option: 'approve' | 'reject' | 'abstain'; power: number; createdAt: number };
+type Vote ={ id: string; proposalId: string; voter: string; option: 'approve' | 'reject' | 'abstain'; power: number; createdAt: number };
 
 export default function GovernanceHome() {
   const { address, connect, disconnect } = useWallet();
@@ -40,7 +40,7 @@ export default function GovernanceHome() {
         <div className="flex items-center gap-3">
           {address ? (
             <>
-              <span className="text-sm text-gray-600">{address.slice(0, 6)}...{address.slice(-4)}</span>
+              <span className="text-sm text-gray-60o0">{address.slice(0, 6)}...{address.slice(-4)}</span>
               <button onClick={disconnect} className="px-3 py-1.5 rounded border">Disconnect</button>
             </>
           ) : (
@@ -51,15 +51,15 @@ export default function GovernanceHome() {
       </div>
 
       <div className="flex gap-2 text-sm">
-        <button className={`px-3 py-1.5 rounded ${activeTab==='board'?'bg-gray-900 text-white':'border'}`} onClick={() => setActiveTab('board')}>Proposal Board</button>
-        <button className={`px-3 py-1.5 rounded ${activeTab==='my'?'bg-gray-900 text-white':'border'}`} onClick={() => setActiveTab('my')}>My Votes</button>
-        <button className={`px-3 py-1.5 rounded ${activeTab==='dashboard'?'bg-gray-900 text-white':'border'}`} onClick={() => setActiveTab('dashboard')}>Dashboard</button>
+        <button className={`px-3 py-1.5 rounded ${activeTab==='board'?'bg-gray-90o0 text-white':'border'}`} onClick={() => setActiveTab('board')}>Proposal Board</button>
+        <button className={`px-3 py-1.5 rounded ${activeTab==='my'?'bg-gray-90o0 text-white':'border'}`} onClick={() => setActiveTab('my')}>My Votes</button>
+        <button className={`px-3 py-1.5 rounded ${activeTab==='dashboard'?'bg-gray-90o0 text-white':'border'}`} onClick={() => setActiveTab('dashboard')}>Dashboard</button>
       </div>
 
       {activeTab === 'board' && (
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-gray-500">Sort:</span>
+            <span className="text-gray-50o0">Sort:</span>
             <select value={sort} onChange={e => setSort(e.target.value as any)} className="border rounded px-2 py-1">
               <option value="newest">Newest</option>
               <option value="expiring">Expiring soon</option>
@@ -70,23 +70,23 @@ export default function GovernanceHome() {
             {sorted.map(p => (
               <li key={p.id} className="border rounded p-4 space-y-2">
                 <div className="flex items-center justify-between">
-                  <div className="text-xs uppercase tracking-wide text-gray-500">{p.type}</div>
+                  <div className="text-xs uppercase tracking-wide text-gray-50o0">{p.type}</div>
                   <div className="text-xs px-2 py-0.5 rounded-full border">{p.status}</div>
                 </div>
                 <Link href={`/governance/${p.id}`}><a className="text-lg font-medium hover:underline">{p.title}</a></Link>
-                <p className="text-sm text-gray-600 line-clamp-3">{p.summary}</p>
+                <p className="text-sm text-gray-60o0 line-clamp-3">{p.summary}</p>
                 {p.fundingAsk ? <div className="text-sm">Funding ask: <span className="font-medium">{p.fundingAsk}</span></div> : null}
-                <div className="text-xs text-gray-500">Ends {new Date(p.endTime).toLocaleString()}</div>
+                <div className="text-xs text-gray-50o0">Ends {new Date(p.endTime).toLocaleString()}</div>
               </li>
             ))}
-            {sorted.length === 0 && <div className="text-gray-500">No proposals yet.</div>}
+            {sorted.length === 0 && <div className="text-gray-50o0">No proposals yet.</div>}
           </ul>
         </div>
       )}
 
       {activeTab === 'my' && (
         <div className="space-y-3">
-          {!address && <div className="text-sm text-gray-600">Connect your wallet to see your votes.</div>}
+          {!address && <div className="text-sm text-gray-60o0">Connect your wallet to see your votes.</div>}
           {address && (
             <ul className="space-y-3">
               {myVotes.map(v => (
@@ -95,14 +95,14 @@ export default function GovernanceHome() {
                   <span className="uppercase text-xs">{v.option}</span>
                 </li>
               ))}
-              {myVotes.length === 0 && <div className="text-gray-500">You have not voted yet.</div>}
+              {myVotes.length === 0 && <div className="text-gray-50o0">You have not voted yet.</div>}
             </ul>
           )}
         </div>
       )}
 
       {activeTab === 'dashboard' && (
-        <Dashboard proposals={proposals} votes={votes} />
+        <Dashboard proposals={proposals} votes={votes}  />
       )}
     </div>
   );
@@ -119,9 +119,9 @@ function Dashboard({ proposals, votes }: { proposals: Proposal[]; votes: Vote[] 
 
   return (
     <div className="grid md:grid-cols-3 gap-4">
-      <div className="border rounded p-4"><div className="text-sm text-gray-500">Voters</div><div className="text-2xl font-semibold">{numVoters}</div></div>
-      <div className="border rounded p-4"><div className="text-sm text-gray-500">ZION$ used</div><div className="text-2xl font-semibold">{totalPower}</div></div>
-      <div className="border rounded p-4"><div className="text-sm text-gray-500">Historical outcomes</div><div className="text-sm">{Object.entries(outcomes).map(([k,v]) => (<div key={k}>{k}: {v}</div>))}</div></div>
+      <div className="border rounded p-4"><div className="text-sm text-gray-50o0">Voters</div><div className="text-2xl font-semibold">{numVoters}</div></div>
+      <div className="border rounded p-4"><div className="text-sm text-gray-50o0">ZION$ used</div><div className="text-2xl font-semibold">{totalPower}</div></div>
+      <div className="border rounded p-4"><div className="text-sm text-gray-50o0">Historical outcomes</div><div className="text-sm">{Object.entries(outcomes).map(([k,v]) => (<div key={k}>{k}: {v}</div>))}</div></div>
     </div>
   );
 }

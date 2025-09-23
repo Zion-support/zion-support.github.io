@@ -14,8 +14,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
 import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
@@ -45,8 +44,7 @@ export function TenantsList() {
       toast({
         variant: 'destructive',
         title: 'Failed to load tenants',
-        description: error.message,
-      });
+        description: error.message});
     } finally {
       setIsLoading(false);
     }
@@ -68,15 +66,13 @@ export function TenantsList() {
       
       toast({
         title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,
-        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`,
-      });
+        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`});
     } catch (error: any) {
       logErrorToProduction('Error toggling tenant status:', { data: error });
       toast({
         variant: 'destructive',
         title: 'Failed to update tenant',
-        description: error.message,
-      });
+        description: error.message});
     }
   };
 
@@ -98,15 +94,13 @@ export function TenantsList() {
       
       toast({
         title: 'DNS verified',
-        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`,
-      });
+        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`});
     } catch (error: any) {
       logErrorToProduction('Error verifying DNS:', { data: error });
       toast({
         variant: 'destructive',
         title: 'Failed to verify DNS',
-        description: error.message,
-      });
+        description: error.message});
     }
   };
 
@@ -115,7 +109,7 @@ export function TenantsList() {
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-semibold">White-Label Tenants</h2>
         <Button onClick={loadTenants} variant="outline" size="sm">
-          <RefreshCcw className="mr-2 h-4 w-4" />
+          <RefreshCcw className="mr-2 h-4 w-4"  />
           Refresh
         </Button>
       </div>
@@ -156,7 +150,7 @@ export function TenantsList() {
                         className="flex items-center hover:underline"
                       >
                         {tenant.subdomain}
-                        <ExternalLink className="ml-1 h-3 w-3" />
+                        <ExternalLink className="ml-1 h-3 w-3"  />
                       </a>
                     </TableCell>
                     <TableCell>
@@ -169,7 +163,7 @@ export function TenantsList() {
                             className="hover:underline flex items-center"
                           >
                             {tenant.custom_domain}
-                            <ExternalLink className="ml-1 h-3 w-3" />
+                            <ExternalLink className="ml-1 h-3 w-3"  />
                           </a>
                           <Badge 
                             variant={tenant.dns_verified ? "default" : "outline"} 
@@ -183,7 +177,7 @@ export function TenantsList() {
                               onClick={() => verifyDns(tenant)}
                               className="ml-1 h-6 w-6 p-0"
                             >
-                              <RefreshCcw className="h-3 w-3" />
+                              <RefreshCcw className="h-3 w-3"  />
                               <span className="sr-only">Verify DNS</span>
                             </Button>
                           )}
@@ -202,28 +196,28 @@ export function TenantsList() {
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <Button variant="ghost" size="sm">
-                            <MoreHorizontal className="h-4 w-4" />
+                            <MoreHorizontal className="h-4 w-4"  />
                             <span className="sr-only">Actions</span>
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
                           <DropdownMenuItem>
-                            <Edit className="mr-2 h-4 w-4" />
+                            <Edit className="mr-2 h-4 w-4"  />
                             Edit Tenant
                           </DropdownMenuItem>
                           <DropdownMenuItem>
-                            <Users className="mr-2 h-4 w-4" />
+                            <Users className="mr-2 h-4 w-4"  />
                             Manage Admins
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => toggleTenantStatus(tenant)}>
                             {tenant.is_active ? (
                               <>
-                                <PowerOff className="mr-2 h-4 w-4" />
+                                <PowerOff className="mr-2 h-4 w-4"  />
                                 Disable Tenant
                               </>
                             ) : (
                               <>
-                                <Power className="mr-2 h-4 w-4" />
+                                <Power className="mr-2 h-4 w-4"  />
                                 Enable Tenant
                               </>
                             )}

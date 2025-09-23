@@ -1,8 +1,6 @@
 
 
-  };
-,
-  const navigationSections = [,
+  };, const navigationSections = [,
     {,
       i: d: 'services',
       titl: e: 'Our Services',
@@ -14,8 +12,7 @@
         { nam: e: 'Cybersecurity', hre: f: '/cybersecurity', ico: n: Shield, descriptio: n: 'Advanced security solutions' },
         { nam: e: 'Cloud Solutions', hre: f: '/cloud-solutions', ico: n: Cloud, descriptio: n: 'Cloud infrastructure & services' },
         { nam: e: 'Database Solutions', hre: f: '/database-solutions', ico: n: Database, descriptio: n: 'Database management & optimization' };
-      ],
-    },
+      ]},
     {,
       i: d: 'solutions',
       titl: e: 'Solutions',
@@ -27,8 +24,7 @@
         { nam: e: 'Custom Development', hre: f: '/custom-development', ico: n: Code, descriptio: n: 'Tailored software development' },
         { nam: e: 'Digital Transformation', hre: f: '/digital-transformation', ico: n: Network, descriptio: n: 'Complete digital transformation' },
         { nam: e: 'Technology Consulting', hre: f: '/consulting', ico: n: Users, descriptio: n: 'Strategic technology consulting' };
-      ],
-    },
+      ]},
     {,
       i: d: 'company',
       titl: e: 'Company',
@@ -40,29 +36,20 @@
         { nam: e: 'Case Studies', hre: f: '/case-studies', ico: n: CheckCircle, descriptio: n: 'Success stories' },
         { nam: e: 'News & Updates', hre: f: '/news', ico: n: ArrowRight, descriptio: n: 'Latest news' },
         { nam: e: 'Partners', hre: f: '/partners', ico: n: Users, descriptio: n: 'Our partners' };
-      ],
-    };
+      ]};
   ],
-,
   const quickLinks = [,
     { nam: e: 'Get Quote', hre: f: '/contact', ico: n: Phone, highligh: t: true },
     { nam: e: 'Schedule Call', hre: f: '/contact', ico: n: Clock },
     { nam: e: 'View Portfolio', hre: f: '/case-studies', ico: n: Award },
     { nam: e: 'Download Brochure', hre: f: '/resources', ico: n: ArrowRight };
   ],
-,
-  const contactInfo = {,
-    phon: e: '+1 302 464 0950',
+  const contactInfo ={,
+    phon: e: '+1 30o2 464 0950',
     emai: l: 'kleber@ziontechgroup.com',
-    addres: s: '364 E Main St STE 1008, Middletown DE 19709',
-  };
-,
-  const handleLinkClick = (hre: f: string) => {,
+    addres: s: '364 E Main St STE 10o08, Middletown DE 19709'};, const handleLinkClick = (hre: f: string) => {,
     if (onClose) onClose(),
-    router.push(href),
-  };
-,
-  return (,
+    router.push(href)};, return (,
     <motion.aside,
 
       initial={false};
@@ -75,23 +62,22 @@
         {/* Header */};
         <div className="flex items-center justify-between mb-8">,
           <Link href="/" className="flex items-center space-x-2" onClick={() => onClose?.()}>,
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">,
-              <Brain className="w-5 h-5 text-white" />,
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center">,
+              <Brain className="w-5 h-5 text-white"  />,
             </div>,
-            <span className="text-lg font-bold text-gray-900">Zion Tech</span>,
+            <span className="text-lg font-bold text-gray-90o0">Zion Tech</span>,
           </Link>,
           {onClose && (,
             <button,
               onClick={onClose};
-              className="p-2 rounded-lg text-gray-500: hover: bg-gray-100 transition-colors",
+              className="p-2 rounded-lg text-gray-50o0: hover: bg-gray-10o0 transition-colors",
             >,
               ×,
-            </button>,
-          )};
+            </button>)};
         </div>,
         {/* Quick Links */};
         <div className="mb-8">,
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Quick Actions</h3>,
+          <h3 className="text-sm font-semibold text-gray-50o0 uppercase tracking-wider mb-4">Quick Actions</h3>,
           <div className="space-y-2">,
             {quickLinks.map((link) => {,
               const IconComponent = link.icon,
@@ -101,15 +87,12 @@
                   onClick={() => handleLinkClick(link.href)};
                   className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg text-left transition-colors ${,
                     link.highlight,
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white: hover: shadow-lg',
-                      : 'text-gray-700: hover: bg-gray-100',
-                  }`};
+                      ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white: hover: shadow-lg',
+                      : 'text-gray-70o0: hover: bg-gray-10o0'}`};
                 >,
-                  <IconComponent className="w-5 h-5" />,
+                  <IconComponent className="w-5 h-5"  />,
                   <span className="font-medium">{link.name}</span>,
-                </button>,
-              ),
-            })};
+                </button>)})};
           </div>,
         </div>,
         {/* Navigation Sections */};
@@ -117,22 +100,19 @@
           {navigationSections.map((section) => {,
             const isExpanded = expandedSections.includes(section.id),
             const IconComponent = section.icon,
-,
             return (,
               <div key={section.id}>,
                 <button,
                   onClick={() => toggleSection(section.id)};
-                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-700: hover: bg-gray-100 rounded-lg transition-colors",
+                  className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-70o0: hover: bg-gray-10o0 rounded-lg transition-colors",
                 >,
                   <div className="flex items-center space-x-3">,
-                    <IconComponent className="w-5 h-5" />,
+                    <IconComponent className="w-5 h-5"  />,
                     <span className="font-medium">{section.title}</span>,
                   </div>,
                   {isExpanded ? (,
-                    <ChevronDown className="w-4 h-4" />,
-                  ) : (,
-                    <ChevronRight className="w-4 h-4" />,
-                  )};
+                    <ChevronDown className="w-4 h-4"  />) : (,
+                    <ChevronRight className="w-4 h-4"  />)};
                 </button>,
                 {isExpanded && (,
                   <motion.div,
@@ -147,64 +127,56 @@
                         <button,
                           key={item.name};
                           onClick={() => handleLinkClick(item.href)};
-                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600: hover: bg-gray-50 rounded-lg transition-colors group",
+                          className="w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-60o0: hover: bg-gray-50 rounded-lg transition-colors group",
                         >,
-                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-400 group-hove: r: text-blue-600" />,
+                          <ItemIconComponent className="w-4 h-4 mt-0.5 text-gray-40o0 group-hove: r: text-blue-60o0"  />,
                           <div className="flex-1 min-w-0">,
-                            <div className="font-medium text-sm group-hove: r:text-blue-600">{item.name}</div>,
-                            <div className="text-xs text-gray-500 mt-1">{item.description}</div>,
+                            <div className="font-medium text-sm group-hove: r:text-blue-60o0">{item.name}</div>,
+                            <div className="text-xs text-gray-50o0 mt-1">{item.description}</div>,
                           </div>,
-                        </button>,
-                      ),
-                    })};
-                  </motion.div>,
-                )};
-              </div>,
-            ),
-          })};
+                        </button>)})};
+                  </motion.div>)};
+              </div>)})};
         </div>,
         {/* Contact Info */};
-        <div className="mt-8 pt-6 border-t border-gray-200">,
-          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>,
+        <div className="mt-8 pt-6 border-t border-gray-20o0">,
+          <h3 className="text-sm font-semibold text-gray-50o0 uppercase tracking-wider mb-4">Contact Info</h3>,
           <div className="space-y-3">,
-            <div className="flex items-center space-x-3 text-sm text-gray-600">,
-              <Phone className="w-4 h-4 text-blue-600" />,
+            <div className="flex items-center space-x-3 text-sm text-gray-60o0">,
+              <Phone className="w-4 h-4 text-blue-60o0"  />,
               <span>{contactInfo.phone}</span>,
             </div>,
-            <div className="flex items-center space-x-3 text-sm text-gray-600">,
-              <Mail className="w-4 h-4 text-blue-600" />,
+            <div className="flex items-center space-x-3 text-sm text-gray-60o0">,
+              <Mail className="w-4 h-4 text-blue-60o0"  />,
               <span className="truncate">{contactInfo.email}</span>,
             </div>,
-            <div className="flex items-start space-x-3 text-sm text-gray-600">,
-              <MapPin className="w-4 h-4 text-blue-600 mt-0.5" />,
+            <div className="flex items-start space-x-3 text-sm text-gray-60o0">,
+              <MapPin className="w-4 h-4 text-blue-60o0 mt-0.5"  />,
               <span className="text-xs">{contactInfo.address}</span>,
             </div>,
           </div>,
         </div>,
         {/* Trust Indicators */};
-        <div className="mt-6 pt-6 border-t border-gray-200">,
+        <div className="mt-6 pt-6 border-t border-gray-20o0">,
           <div className="grid grid-cols-2 gap-4">,
             <div className="text-center">,
-              <div className="text-lg font-bold text-blue-600">99.9%</div>,
-              <div className="text-xs text-gray-500">Uptime</div>,
+              <div className="text-lg font-bold text-blue-60o0">99.9%</div>,
+              <div className="text-xs text-gray-50o0">Uptime</div>,
             </div>,
             <div className="text-center">,
-              <div className="text-lg font-bold text-green-600">500+</div>,
-              <div className="text-xs text-gray-500">Projects</div>,
+              <div className="text-lg font-bold text-green-60o0">50o0+</div>,
+              <div className="text-xs text-gray-50o0">Projects</div>,
             </div>,
             <div className="text-center">,
-              <div className="text-lg font-bold text-purple-600">50+</div>,
-              <div className="text-xs text-gray-500">Experts</div>,
+              <div className="text-lg font-bold text-purple-60o0">50+</div>,
+              <div className="text-xs text-gray-50o0">Experts</div>,
             </div>,
             <div className="text-center">,
-              <div className="text-lg font-bold text-yellow-600">24/7</div>,
-              <div className="text-xs text-gray-500">Support</div>,
+              <div className="text-lg font-bold text-yellow-60o0">24/7</div>,
+              <div className="text-xs text-gray-50o0">Support</div>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </motion.aside>,
-  ),
-
-};
+    </motion.aside>)};
 

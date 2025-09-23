@@ -4,17 +4,17 @@ import { motion } from 'framer-motion';
 import { 
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin, ShoppingCart, UserCheck, Video, LockIcon, GlobeIcon, CpuIcon
 } from 'lucide-react';
-import { realMarketServices } from '../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../data/2024-ai-emerging-tech-services';
+import { realMarketServices } from '../data/20o24-real-market-services';
+import { aiEmergingTechServices } from '../data/20o24-ai-emerging-tech-services';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export default function Pricing2034Page() {
+export default function Pricing20o34Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
@@ -27,7 +27,7 @@ export default function Pricing2034Page() {
       avgPrice: '$1,399/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
-      color: 'from-violet-500 to-purple-500'
+      color: 'from-violet-50o0 to-purple-50o0'
     },
     {
       name: 'Quantum & Emerging Tech',
@@ -36,7 +36,7 @@ export default function Pricing2034Page() {
       avgPrice: '$1,199/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
-      color: 'from-indigo-500 to-blue-500'
+      color: 'from-indigo-50o0 to-blue-50o0'
     },
     {
       name: 'Enterprise IT Solutions',
@@ -45,7 +45,7 @@ export default function Pricing2034Page() {
       avgPrice: '$299/month',
       savings: 'Save 50-70% vs. competitors',
       icon: Cpu,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       name: 'Business Automation',
@@ -54,7 +54,7 @@ export default function Pricing2034Page() {
       avgPrice: '$319/month',
       savings: 'Save 40-60% vs. competitors',
       icon: ShoppingCart,
-      color: 'from-teal-500 to-emerald-500'
+      color: 'from-teal-50o0 to-emerald-50o0'
     },
     {
       name: 'Robotics & Automation',
@@ -63,7 +63,7 @@ export default function Pricing2034Page() {
       avgPrice: '$699/month',
       savings: 'Save 55-75% vs. competitors',
       icon: Rocket,
-      color: 'from-green-500 to-yellow-500'
+      color: 'from-green-50o0 to-yellow-50o0'
     },
     {
       name: 'Research & Development',
@@ -72,7 +72,7 @@ export default function Pricing2034Page() {
       avgPrice: '$21,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: Microscope,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
@@ -85,7 +85,7 @@ export default function Pricing2034Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core Services',
+        'Access to 10o0+ Core Services',
         'Basic AI Integration',
         'Standard Support (24/7)',
         '30-Day Free Trial',
@@ -93,11 +93,11 @@ export default function Pricing2034Page() {
         'Email Support',
         '99.5% Uptime Guarantee',
         'Basic Security Features',
-        'API Access (1000 calls/month)',
+        'API Access (10o00 calls/month)',
         'Community Support'
       ],
       popular: false,
-      color: 'from-gray-500 to-gray-600'
+      color: 'from-gray-50o0 to-gray-60o0'
     },
     {
       name: 'Professional',
@@ -106,7 +106,7 @@ export default function Pricing2034Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Services',
+        'Access to 20o0+ Services',
         'Advanced AI Features',
         'Priority Support (4-hour response)',
         '60-Day Free Trial',
@@ -114,13 +114,13 @@ export default function Pricing2034Page() {
         'Phone & Email Support',
         '99.9% Uptime Guarantee',
         'Advanced Security Features',
-        'API Access (10,000 calls/month)',
+        'API Access (10,0o00 calls/month)',
         'Dedicated Account Manager',
         'Custom Integrations',
         'White-label Solutions'
       ],
       popular: true,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-cyan-50o0 to-blue-50o0'
     },
     {
       name: 'Enterprise',
@@ -144,7 +144,7 @@ export default function Pricing2034Page() {
         'Training & Certification'
       ],
       popular: false,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     }
   ];
 
@@ -154,28 +154,28 @@ export default function Pricing2034Page() {
   return (
     <>
       <Head>
-        <title>Pricing 2034 - Zion Tech Group | Revolutionary Technology Solutions</title>
-        <meta name="description" content="Discover our competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions. Start your free trial today." />
-        <meta name="keywords" content="AI pricing, quantum computing pricing, technology solutions pricing, business automation pricing, enterprise IT pricing" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Pricing 2034 - Zion Tech Group Revolutionary Technology Solutions" />
-        <meta property="og:description" content="Competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing-2034" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Pricing 2034 - Zion Tech Group Revolutionary Technology Solutions" />
-        <meta name="twitter:description" content="Competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/pricing-2034" />
+        <title>Pricing 20o34 - Zion Tech Group | Revolutionary Technology Solutions</title>
+        <meta name="description" content="Discover our competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions. Start your free trial today."  />
+        <meta name="keywords" content="AI pricing, quantum computing pricing, technology solutions pricing, business automation pricing, enterprise IT pricing"  />
+        <meta name="author" content="Zion Tech Group"  />
+        <meta name="robots" content="index, follow"  />
+        <meta property="og:title" content="Pricing 20o34 - Zion Tech Group Revolutionary Technology Solutions"  />
+        <meta property="og:description" content="Competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions."  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content="https://ziontechgroup.com/pricing-20o34"  />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg"  />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="twitter:title" content="Pricing 20o34 - Zion Tech Group Revolutionary Technology Solutions"  />
+        <meta name="twitter:description" content="Competitive pricing for cutting-edge AI, quantum computing, and emerging technology solutions."  />
+        <link rel="canonical" href="https://ziontechgroup.com/pricing-20o34"  />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black text-white relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-50o0/10 to-teal-50o0/10 rounded-full blur-3xl animate-pulse delay-50o0"></div>
         </div>
 
         <div className="relative z-10">
@@ -187,31 +187,31 @@ export default function Pricing2034Page() {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent mb-6">
                 Revolutionary Pricing
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our competitive pricing. 
                 Start your free trial and transform your business today.
               </p>
               
               {/* Billing Toggle */}
               <div className="flex items-center justify-center space-x-4 mb-8">
-                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+                <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-40o0'}`}>
                   Monthly
                 </span>
                 <button
                   onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                  className={`relative w-16 h-8 rounded-full transition-colors duration-200 ${
-                    billingCycle === 'yearly' ? 'bg-cyan-500' : 'bg-gray-600'
+                  className={`relative w-16 h-8 rounded-full transition-colors duration-20o0 ${
+                    billingCycle === 'yearly' ? 'bg-cyan-50o0' : 'bg-gray-60o0'
                   }`}
                 >
-                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-200 ${
+                  <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-20o0 ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}></div>
                 </button>
-                <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                  Yearly <span className="text-cyan-400 font-semibold">(Save 20%)</span>
+                <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-40o0'}`}>
+                  Yearly <span className="text-cyan-40o0 font-semibold">(Save 20%)</span>
                 </span>
               </div>
 
@@ -230,9 +230,9 @@ export default function Pricing2034Page() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
                   >
-                    <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                    <stat.icon className="w-8 h-8 text-cyan-40o0 mx-auto mb-2"  />
                     <div className="text-2xl font-bold text-white">{stat.value}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-sm text-gray-40o0">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -252,45 +252,45 @@ export default function Pricing2034Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                    className={`relative p-8 rounded-2xl border transition-all duration-30o0 hover:scale-10o5 ${
                       tier.popular 
-                        ? 'border-cyan-500 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
-                        : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
+                        ? 'border-cyan-50o0 bg-gradient-to-br from-cyan-50o0/10 to-blue-50o0/10' 
+                        : 'border-white/20 bg-white/5 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5'
                     }`}
                   >
                     {tier.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
                     )}
 
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-400 mb-6">{tier.description}</p>
+                      <p className="text-gray-40o0 mb-6">{tier.description}</p>
                       <div className="mb-4">
                         <span className="text-4xl font-bold text-white">${tier.price}</span>
-                        <span className="text-gray-400">{tier.period}</span>
+                        <span className="text-gray-40o0">{tier.period}</span>
                       </div>
                       {tier.savings && (
-                        <div className="text-cyan-400 font-semibold">{tier.savings}</div>
+                        <div className="text-cyan-40o0 font-semibold">{tier.savings}</div>
                       )}
                     </div>
 
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center space-x-3">
-                          <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
+                          <Check className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                          <span className="text-gray-30o0">{feature}</span>
                         </li>
                       ))}
                     </ul>
 
                     <button
                       onClick={() => setSelectedPlan(tier.name)}
-                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-20o0 ${
                         tier.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
-                          : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
+                          ? 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white hover:from-cyan-60o0 hover:to-blue-60o0'
+                          : 'border border-cyan-50o0 text-cyan-40o0 hover:bg-cyan-50o0 hover:text-white'
                       }`}
                     >
                       Get Started
@@ -317,26 +317,26 @@ export default function Pricing2034Page() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300"
+                    className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-50o0/50 hover:bg-cyan-50o0/5 transition-all duration-30o0"
                   >
                     <div className="flex items-center space-x-3 mb-4">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                        <category.icon className="w-6 h-6 text-white" />
+                        <category.icon className="w-6 h-6 text-white"  />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white">{category.name}</h3>
-                        <p className="text-sm text-gray-400">{category.description}</p>
+                        <p className="text-sm text-gray-40o0">{category.description}</p>
                       </div>
                     </div>
                     
                     <div className="mb-4">
                       <div className="text-2xl font-bold text-white">{category.avgPrice}</div>
-                      <div className="text-sm text-green-400 font-semibold">{category.savings}</div>
+                      <div className="text-sm text-green-40o0 font-semibold">{category.savings}</div>
                     </div>
 
                     <div className="space-y-2 mb-4">
                       {category.services.map((service, idx) => (
-                        <div key={idx} className="text-sm text-gray-300">
+                        <div key={idx} className="text-sm text-gray-30o0">
                           • {service}
                         </div>
                       ))}
@@ -344,9 +344,9 @@ export default function Pricing2034Page() {
 
                     <a
                       href="/services"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                      className="inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 transition-colors font-medium"
                     >
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                      Learn More <ArrowRight className="w-4 h-4 ml-1"  />
                     </a>
                   </motion.div>
                 ))}
@@ -360,30 +360,30 @@ export default function Pricing2034Page() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-center"
             >
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm">
+              <div className="bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20 rounded-2xl p-12 backdrop-blur-sm">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Ready to Get Started?
                 </h3>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
                   Join thousands of businesses already leveraging our cutting-edge technology solutions. 
                   Start your free trial today and experience the future of business automation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <a
                     href="/contact"
-                    className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
+                    className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg font-semibold hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 text-lg"
                   >
                     Start Your Free Trial
                   </a>
                   <a
                     href="/services"
-                    className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg"
+                    className="px-8 py-4 border border-cyan-50o0 text-cyan-40o0 rounded-lg font-semibold hover:bg-cyan-50o0 hover:text-white transition-all duration-20o0 text-lg"
                   >
                     View All Services
                   </a>
                 </div>
-                <div className="mt-6 text-sm text-gray-400">
-                  <Phone className="w-4 h-4 inline mr-2" />
+                <div className="mt-6 text-sm text-gray-40o0">
+                  <Phone className="w-4 h-4 inline mr-2"  />
                   Need help? Call us at {contactInfo.mobile}
                 </div>
               </div>

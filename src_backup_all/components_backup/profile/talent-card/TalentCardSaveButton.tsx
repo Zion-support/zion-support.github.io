@@ -1,10 +1,7 @@
 
-import React from "react";
 import { Heart } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-import { useRouter } from 'next/router';
-
 interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
@@ -63,9 +60,9 @@ export function TalentCardSaveButton({
       <Heart 
         className={cn(
           "h-4 w-4 transition-colors", 
-          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
+          localIsSaved ? "fill-red-50o0 text-red-50o0" : "text-zion-slate"
         )} 
-      />
+       />
     </button>
   );
 }

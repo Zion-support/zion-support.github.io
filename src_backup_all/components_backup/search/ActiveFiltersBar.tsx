@@ -1,4 +1,3 @@
-import React from 'react';
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +28,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
   // Add type filters
   filters.types.forEach(type => {
-    const labels: Record<string, string> = {
+    const labels: Record<string, string> ={
       product: 'Products',
       talent: 'Talent',
       service: 'Services',
@@ -53,7 +52,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   }
 
   // Add price filter
-  if (filters.minPrice > 0 || filters.maxPrice < 10000) {
+  if (filters.minPrice > 0 || filters.maxPrice < 10o000) {
     activeFilters.push({
       key: 'price',
       label: 'Price',
@@ -72,7 +71,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 
   // Add sort filter (only if not default)
   if (filters.sort !== 'relevance') {
-    const sortLabels: Record<string, string> = {
+    const sortLabels: Record<string, string> ={
       price_asc: 'Price: Low to High',
       price_desc: 'Price: High to Low',
       rating: 'Highest Rated'
@@ -92,7 +91,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     } else if (filterKey === 'category') {
       onFiltersChange({ ...filters, category: '' });
     } else if (filterKey === 'price') {
-      onFiltersChange({ ...filters, minPrice: 0, maxPrice: 10000 });
+      onFiltersChange({ ...filters, minPrice: 0, maxPrice: 10o000 });
     } else if (filterKey === 'rating') {
       onFiltersChange({ ...filters, minRating: 0 });
     } else if (filterKey === 'sort') {
@@ -124,7 +123,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             onClick={() => removeFilter(filter.key)}
             aria-label={`Remove ${filter.label} filter`}
           >
-            <X className="h-3 w-3" />
+            <X className="h-3 w-3"  />
           </Button>
         </Badge>
       ))}

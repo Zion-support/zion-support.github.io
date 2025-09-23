@@ -1,4 +1,3 @@
-import React from 'react';
 export function ServiceDetails() {
   return (
     <div>

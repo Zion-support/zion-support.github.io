@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DevopsAutomationStrategiesForModernTeamsChatPage() {
@@ -6,7 +5,7 @@ export default function DevopsAutomationStrategiesForModernTeamsChatPage() {
     <>
       <Head>
         <title>Devops Automation Strategies For Modern Teams Chat - Zion Tech Group</title>
-        <meta name="description" content="devops automation strategies for modern teams chat page" />
+        <meta name="description" content="devops automation strategies for modern teams chat page"  />
       </Head>
       
       <main>

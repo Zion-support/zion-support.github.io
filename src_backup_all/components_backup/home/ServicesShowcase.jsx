@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -46,13 +45,13 @@ export function ServicesShowcase() {
     ];
     return (<section className="py-20 relative">
       {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold tracking-tight mb-4">
-            <NeonText color="#00ffff" glowIntensity="high">
+            <NeonText color="#0o0ffff" glowIntensity="high">
               Micro SAAS Services
             </NeonText>
           </h2>
@@ -63,7 +62,7 @@ export function ServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">
+          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-10o5 transition-transform duration-30o0">
               <CardHeader className="pb-4">
                 <div className="flex justify-between items-start mb-4">
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
@@ -101,9 +100,9 @@ export function ServicesShowcase() {
                 {/* Rating */}
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-500 fill-current"/>
+                    <Star className="w-4 h-4 text-yellow-50o0 fill-current" />
                     <span className="text-sm font-medium">{service.rating}</span>
-                    <span className="text-sm text-gray-500">({service.reviewCount} reviews)</span>
+                    <span className="text-sm text-gray-50o0">({service.reviewCount} reviews)</span>
                   </div>
                 </div>
 
@@ -115,7 +114,7 @@ export function ServicesShowcase() {
                   <Link to={`/micro-saas-services#${service.id}`}>
                     <Button variant="outline" size="sm" className="w-full">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1"/>
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </Button>
                   </Link>
                 </div>
@@ -127,7 +126,7 @@ export function ServicesShowcase() {
         {/* Emerging Technologies */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold mb-4">
-            <NeonText color="#ff00ff" glowIntensity="medium">
+            <NeonText color="#ff0o0ff" glowIntensity="medium">
               Emerging Technologies
             </NeonText>
           </h3>
@@ -137,7 +136,7 @@ export function ServicesShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+          {emergingServices.map((service, index) => (<Card key={index} className="group hover:shadow-lg hover:border-primary/50 transition-all duration-30o0">
               <CardHeader className="pb-3">
                 <div className="flex justify-center mb-3">
                   <div className="p-2 rounded-lg bg-black/20">

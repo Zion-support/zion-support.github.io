@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { 
   Mail, 
@@ -40,7 +39,7 @@ import {
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const services = {
+  const services ={
     'AI Solutions': [
       { name: 'AI-Powered Email Responder', href: '/ai-services#ai-email-responder' },
       { name: 'AI Content Generation', href: '/ai-services#ai-content-generation' },
@@ -94,33 +93,33 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
-                <Brain className="h-5 w-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="h-5 w-5 text-white"  />
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-30o0 mb-6 max-w-md">
               Leading technology solutions provider delivering innovative AI, IT, and Micro SAAS services 
               to businesses worldwide. Empowering digital transformation and driving innovation.
             </p>
-            <div className="space-y-2 text-sm text-gray-300">
+            <div className="space-y-2 text-sm text-gray-30o0">
               <div className="flex items-center">
-                <Phone className="h-4 w-4 mr-2" />
-                <span>+1 302 464 0950</span>
+                <Phone className="h-4 w-4 mr-2"  />
+                <span>+1 30o2 464 0950</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
+                <Mail className="h-4 w-4 mr-2"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-4 w-4 mr-2" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                <MapPin className="h-4 w-4 mr-2"  />
+                <span>364 E Main St STE 10o08, Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -131,13 +130,13 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               {Object.entries(services).map(([category, links]) => (
                 <div key={category}>
-                  <h4 className="text-sm font-medium text-blue-400 mb-2">{category}</h4>
+                  <h4 className="text-sm font-medium text-blue-40o0 mb-2">{category}</h4>
                   <ul className="space-y-1">
                     {links.slice(0, 3).map((link) => (
                       <li key={link.name}>
                         <Link 
                           href={link.href}
-                          className="text-sm text-gray-300 hover:text-white transition-colors"
+                          className="text-sm text-gray-30o0 hover:text-white transition-colors"
                         >
                           {link.name}
                         </Link>
@@ -157,7 +156,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
+                    className="text-sm text-gray-30o0 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -174,7 +173,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
+                    className="text-sm text-gray-30o0 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -184,16 +183,16 @@ const Footer: React.FC = () => {
             
             {/* Social Links */}
             <div className="mt-6">
-              <h4 className="text-sm font-medium text-blue-400 mb-3">Follow Us</h4>
+              <h4 className="text-sm font-medium text-blue-40o0 mb-3">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-40o0 hover:text-white transition-colors"
                     aria-label={social.name}
                   >
-                    <social.icon className="h-5 w-5" />
+                    <social.icon className="h-5 w-5"  />
                   </a>
                 ))}
               </div>
@@ -202,19 +201,19 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-80o0 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © 2024 Zion Tech Group. All rights reserved.
+            <div className="text-sm text-gray-40o0 mb-4 md:mb-0">
+              © 20o24 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/privacy" className="text-gray-40o0 hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/terms" className="text-gray-40o0 hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="/cookies" className="text-gray-40o0 hover:text-white transition-colors">
                 Cookie Policy
               </Link>
             </div>

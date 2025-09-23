@@ -6,7 +6,7 @@ const noopReturn = () => null;
 const noopPromise = () => Promise.resolve();
 
 // Mock Sentry instance with all common methods
-const mockSentry = {
+const mockSentry ={
   // Core Sentry methods
   init: noop,
   captureException: noop,
@@ -41,8 +41,7 @@ const mockSentry = {
   Handlers: {
     requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
     errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
-    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
-  },
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()},
   
   // Next.js specific
   withSentryConfig: (config: any) => config,
@@ -55,8 +54,7 @@ const mockSentry = {
   Tracing: {
     BrowserTracing: class BrowserTracing {
       constructor() {}
-    },
-  },
+    }},
   
   // Integrations
   Integrations: {
@@ -71,8 +69,7 @@ const mockSentry = {
     },
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
-    },
-  },
+    }},
   
   // Transport
   makeBrowserOfflineTransport: noopReturn,
@@ -88,12 +85,10 @@ const mockSentry = {
     Error: 'error',
     Warning: 'warning',
     Info: 'info',
-    Debug: 'debug',
-  },
-};
+    Debug: 'debug'}};
 
 // Mock scope
-const mockScope = {
+const mockScope ={
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -103,11 +98,10 @@ const mockScope = {
   setLevel: noop,
   setFingerprint: noop,
   clear: noop,
-  addEventProcessor: noop,
-};
+  addEventProcessor: noop};
 
 // Mock transaction
-const mockTransaction = {
+const mockTransaction ={
   setName: noop,
   setTag: noop,
   setData: noop,
@@ -116,11 +110,10 @@ const mockTransaction = {
   setStatus: noop,
   setHttpStatus: noop,
   toContext: () => ({}),
-  updateWithContext: noop,
-};
+  updateWithContext: noop};
 
 // Mock hub
-const mockHub = {
+const mockHub ={
   getClient: noopReturn,
   getScope: () => mockScope,
   captureException: noop,
@@ -135,8 +128,7 @@ const mockHub = {
   setContext: noop,
   configureScope: noop,
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
-  startTransaction: () => mockTransaction,
-};
+  startTransaction: () => mockTransaction};
 
 // Export default mock that covers all Sentry packages
 export default mockSentry;

@@ -1,5 +1,4 @@
 
-import React from "react";
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
@@ -21,7 +20,7 @@ export function TalentCardHeader({
 }: TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">
-      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
+      <TalentCardAvatar profilePicture={profilePicture} fullName={fullName}  />
       
       <div className="flex-1">
         <div className="flex items-center justify-between">
@@ -29,11 +28,11 @@ export function TalentCardHeader({
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
-              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
+              <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert"  />
             )}
           </h3>
           
-          <TalentCardAvailability availabilityType={availabilityType} />
+          <TalentCardAvailability availabilityType={availabilityType}  />
         </div>
         
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>

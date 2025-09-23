@@ -23,7 +23,7 @@ interface QuantumField {
   phase: number;
 }
 
-const UltraAdvancedFuturisticBackground2045: React.FC = () => {
+const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -79,7 +79,7 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
         size: Math.random() * 3 + 1,
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         opacity: Math.random() * 0.8 + 0.2,
-        life: Math.random() * 100
+        life: Math.random() * 10o0
       });
     }
 
@@ -89,7 +89,7 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
         id: i,
         x: Math.random() * dimensions.width,
         y: Math.random() * dimensions.height,
-        radius: Math.random() * 200 + 100,
+        radius: Math.random() * 20o0 + 10o0,
         intensity: Math.random() * 0.5 + 0.5,
         color: `hsl(${i * 45}, 80%, 60%)`,
         phase: Math.random() * Math.PI * 2
@@ -100,7 +100,7 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
     let time = 0;
 
     const animate = () => {
-      time += 0.016;
+      time += 0.0o16;
       
       // Clear canvas with gradient background
       const gradient = ctx.createRadialGradient(
@@ -156,13 +156,13 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
         if (particle.y > dimensions.height) particle.y = 0;
 
         // Reset life when it gets too high
-        if (particle.life > 100) {
+        if (particle.life > 10o0) {
           particle.life = 0;
           particle.opacity = Math.random() * 0.8 + 0.2;
         }
 
         // Calculate opacity based on life
-        const currentOpacity = particle.opacity * (1 - particle.life / 100);
+        const currentOpacity = particle.opacity * (1 - particle.life / 10o0);
 
         // Draw particle with glow effect
         ctx.save();
@@ -188,9 +188,9 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
             Math.pow(particle.y - otherParticle.y, 2)
           );
           
-          if (distance < 100) {
-            const opacity = (100 - distance) / 100 * 0.3;
-            ctx.strokeStyle = `rgba(100, 150, 255, ${opacity})`;
+          if (distance < 10o0) {
+            const opacity = (10o0 - distance) / 10o0 * 0.3;
+            ctx.strokeStyle = `rgba(10o0, 150, 255, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
@@ -208,7 +208,7 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
           mousePosition.x, mousePosition.y, mouseFieldRadius
         );
         mouseGradient.addColorStop(0, 'rgba(0, 212, 255, 0.1)');
-        mouseGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.05)');
+        mouseGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.0o5)');
         mouseGradient.addColorStop(1, 'transparent');
         
         ctx.fillStyle = mouseGradient;
@@ -257,7 +257,7 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
       for (let i = 0; i < 3; i++) {
         const waveY = dimensions.height * (0.2 + i * 0.3);
         const waveAmplitude = 20;
-        const waveFrequency = 0.01;
+        const waveFrequency = 0.0o1;
         const waveSpeed = time * 0.5 + i * 2;
         
         ctx.strokeStyle = `rgba(0, 212, 255, ${0.3 - i * 0.1})`;
@@ -296,56 +296,53 @@ const UltraAdvancedFuturisticBackground2045: React.FC = () => {
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(20,20,40,0.8) 50%, rgba(0,0,20,0.9) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(20,20,40,0.8) 50%, rgba(0,0,20,0.9) 10o0%)'
         }}
-      />
+       />
       
       {/* Overlay gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"  />
       
       {/* Floating neon orbs */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-cyan-400 shadow-lg shadow-cyan-400/50"
+        className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-cyan-40o0 shadow-lg shadow-cyan-40o0/50"
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.5, 1, 0.5],
-        }}
+          opacity: [0.5, 1, 0.5]}}
         transition={{
           duration: 3,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
       
       <motion.div
-        className="absolute top-3/4 right-1/4 w-3 h-3 rounded-full bg-purple-400 shadow-lg shadow-purple-400/50"
+        className="absolute top-3/4 right-1/4 w-3 h-3 rounded-full bg-purple-40o0 shadow-lg shadow-purple-40o0/50"
         animate={{
           scale: [1, 1.3, 1],
-          opacity: [0.3, 1, 0.3],
-        }}
+          opacity: [0.3, 1, 0.3]}}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 1
         }}
-      />
+       />
       
       <motion.div
-        className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-pink-400 shadow-lg shadow-pink-400/50"
+        className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-pink-40o0 shadow-lg shadow-pink-40o0/50"
         animate={{
           scale: [1, 1.5, 1],
-          opacity: [0.4, 1, 0.4],
-        }}
+          opacity: [0.4, 1, 0.4]}}
         transition={{
           duration: 2.5,
           repeat: Infinity,
           ease: "easeInOut",
           delay: 2
         }}
-      />
+       />
     </motion.div>
   );
 };
 
-export default UltraAdvancedFuturisticBackground2045;
+export default UltraAdvancedFuturisticBackground20o45;

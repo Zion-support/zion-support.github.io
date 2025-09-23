@@ -25,7 +25,7 @@ export function ProjectActions({;
       {isUnderDispute && disputeId ? (;
         <Button variant="outline" asChild>;
           <Link href={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
+            <ShieldAlert className="h-4 w-4 mr-2"  />;
             View Active Dispute;
           </Link>;
         </Button>;
@@ -33,7 +33,7 @@ export function ProjectActions({;
         <RaiseDisputeButton ;
           projectId={projectId}
           variant="outline";
-        />;
+         />;
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
@@ -43,12 +43,11 @@ export function ProjectActions({;
     </div>;
   ),;}
  {;
-  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href= {;
+  isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link href={;
   `/dashboard/disputes/$ {;
-  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) ;
+  disputeId ;"}` ";"}> <ShieldAlert className="h-4 w-4 mr-2"  /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton  />) ;
 }{;
   isTalent && !isUnderDispute && (<Button onClick={;
   onAddMilestone ;
 }> Add Milestone </Button>) ;
-
 

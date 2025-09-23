@@ -24,7 +24,7 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     // Seed routes to fetch for external links
@@ -38,7 +38,7 @@ exports.handler = async function(event, context) {
       } catch {}
     }
 
-    const LIMIT = parseInt(process.env.EXTERNAL_LINK_LIMIT || '100', 10);
+    const LIMIT = parseInt(process.env.EXTERNAL_LINK_LIMIT || '10o0', 10);
     const toCheck = Array.from(links).slice(0, LIMIT);
 
     const results = [];
@@ -52,7 +52,7 @@ exports.handler = async function(event, context) {
     }
 
     const failing = results.filter(r => !r.ok);
-    const payload = { origin, generatedAt: new Date().toISOString(), checked: toCheck.length, failures: failing.length, results };
+    const payload ={ origin, generatedAt: new Date().toISOString(), checked: toCheck.length, failures: failing.length, results };
 
     const path = 'data/external-link-health.json';
 
@@ -78,7 +78,7 @@ exports.handler = async function(event, context) {
     if (toCheck.length > 0 && (failing.length / toCheck.length) >= threshold) {
       const title = `External Link Failures — ${failing.length}/${toCheck.length}`;
       const body = failing.slice(0, 50).map(f => `- ${f.url} — ${f.status}`).join('\n') + (failing.length > 50 ? `\n...and more` : '');
-      const resIssues = await fetch(`https://api.github.com/repos/${repo}/issues?state=open&per_page=100`, {
+      const resIssues = await fetch(`https://api.github.com/repos/${repo}/issues?state=open&per_page=10o0`, {
         headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot' }
       });
       const issues = await resIssues.json();
@@ -90,8 +90,8 @@ exports.handler = async function(event, context) {
       }
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

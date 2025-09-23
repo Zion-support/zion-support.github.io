@@ -10,14 +10,14 @@ import {
 } from 'lucide-react';
 
 // Import all innovative services
-import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
-import { innovativeITSolutions } from '../data/2034-innovative-it-solutions';
-import { innovativeAISolutions } from '../data/2034-innovative-ai-solutions';
+import { innovativeMicroSaasSolutions } from '../data/20o34-innovative-micro-saas-solutions';
+import { innovativeITSolutions } from '../data/20o34-innovative-it-solutions';
+import { innovativeAISolutions } from '../data/20o34-innovative-ai-solutions';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -27,13 +27,13 @@ const pricingTiers = [
     description: 'Perfect for small businesses and startups',
     price: 'From $79/month',
     features: [
-      'Up to 1,000 users/items',
+      'Up to 1,0o00 users/items',
       'Basic support',
       'Core features',
       'Standard integrations',
       'Email support'
     ],
-    color: 'from-cyan-500 to-blue-500',
+    color: 'from-cyan-50o0 to-blue-50o0',
     popular: false
   },
   {
@@ -41,7 +41,7 @@ const pricingTiers = [
     description: 'Ideal for growing businesses',
     price: 'From $299/month',
     features: [
-      'Up to 10,000 users/items',
+      'Up to 10,0o00 users/items',
       'Priority support',
       'Advanced features',
       'Premium integrations',
@@ -49,7 +49,7 @@ const pricingTiers = [
       'Custom reporting',
       'API access'
     ],
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     popular: true
   },
   {
@@ -66,7 +66,7 @@ const pricingTiers = [
       'On-premise options',
       'SLA guarantees'
     ],
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     popular: false
   }
 ];
@@ -78,7 +78,7 @@ const serviceCategories = [
     description: 'Ready-to-use business solutions that drive growth and efficiency',
     icon: Target,
     services: innovativeMicroSaasSolutions,
-    color: 'from-yellow-500 to-orange-500'
+    color: 'from-yellow-50o0 to-orange-50o0'
   },
   {
     id: 'it-solutions',
@@ -86,7 +86,7 @@ const serviceCategories = [
     description: 'Advanced IT infrastructure and enterprise solutions',
     icon: Shield,
     services: innovativeITSolutions,
-    color: 'from-green-500 to-emerald-500'
+    color: 'from-green-50o0 to-emerald-50o0'
   },
   {
     id: 'ai-solutions',
@@ -94,11 +94,11 @@ const serviceCategories = [
     description: 'Cutting-edge AI solutions for business transformation',
     icon: Brain,
     services: innovativeAISolutions,
-    color: 'from-pink-500 to-rose-500'
+    color: 'from-pink-50o0 to-rose-50o0'
   }
 ];
 
-export default function InnovativePricing2034() {
+export default function InnovativePricing20o34() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTier, setSelectedTier] = useState('professional');
 
@@ -121,33 +121,33 @@ export default function InnovativePricing2034() {
   return (
     <>
       <Head>
-        <title>Innovative Services Pricing 2034 - Zion Tech Group | Transparent Pricing for Revolutionary Solutions</title>
-        <meta name="description" content="Discover transparent pricing for our innovative micro SaaS, enterprise IT, and AI solutions. Choose from Starter, Professional, or Enterprise plans with guaranteed ROI." />
-        <meta name="keywords" content="pricing, micro SaaS pricing, enterprise IT pricing, AI solutions pricing, business automation pricing, Zion Tech Group" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
+        <title>Innovative Services Pricing 20o34 - Zion Tech Group | Transparent Pricing for Revolutionary Solutions</title>
+        <meta name="description" content="Discover transparent pricing for our innovative micro SaaS, enterprise IT, and AI solutions. Choose from Starter, Professional, or Enterprise plans with guaranteed ROI."  />
+        <meta name="keywords" content="pricing, micro SaaS pricing, enterprise IT pricing, AI solutions pricing, business automation pricing, Zion Tech Group"  />
+        <meta name="author" content="Zion Tech Group"  />
+        <meta name="robots" content="index, follow"  />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Innovative Services Pricing 2034 - Zion Tech Group" />
-        <meta property="og:description" content="Transparent pricing for revolutionary micro SaaS, enterprise IT, and AI solutions with guaranteed ROI." />
-        <meta property="og:url" content="https://ziontechgroup.com/innovative-pricing-2034" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:title" content="Innovative Services Pricing 20o34 - Zion Tech Group"  />
+        <meta property="og:description" content="Transparent pricing for revolutionary micro SaaS, enterprise IT, and AI solutions with guaranteed ROI."  />
+        <meta property="og:url" content="https://ziontechgroup.com/innovative-pricing-20o34"  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:site_name" content="Zion Tech Group"  />
         
         {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Innovative Services Pricing 2034 - Zion Tech Group" />
-        <meta name="twitter:description" content="Transparent pricing for revolutionary micro SaaS, enterprise IT, and AI solutions with guaranteed ROI." />
+        <meta name="twitter:card" content="summary_large_image"  />
+        <meta name="twitter:title" content="Innovative Services Pricing 20o34 - Zion Tech Group"  />
+        <meta name="twitter:description" content="Transparent pricing for revolutionary micro SaaS, enterprise IT, and AI solutions with guaranteed ROI."  />
         
         {/* Contact Information */}
-        <meta name="contact:phone" content="+1 302 464 0950" />
-        <meta name="contact:email" content="kleber@ziontechgroup.com" />
-        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:phone" content="+1 30o2 464 0950"  />
+        <meta name="contact:email" content="kleber@ziontechgroup.com"  />
+        <meta name="contact:address" content="364 E Main St STE 10o08 Middletown DE 19709"  />
         
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-pricing-2034" />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-pricing-20o34"  />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -155,10 +155,10 @@ export default function InnovativePricing2034() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full text-cyan-300 text-lg font-medium mb-8"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-full text-cyan-30o0 text-lg font-medium mb-8"
             >
-              <Star className="w-5 h-5 mr-2 text-cyan-400" />
-              2034 Innovative Services Pricing
+              <Star className="w-5 h-5 mr-2 text-cyan-40o0"  />
+              20o34 Innovative Services Pricing
             </motion.div>
 
             <motion.h1
@@ -167,10 +167,10 @@ export default function InnovativePricing2034() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent">
                 Transparent
               </span>
-              <br />
+              <br  />
               <span className="text-white">Pricing Plans</span>
             </motion.h1>
 
@@ -178,7 +178,7 @@ export default function InnovativePricing2034() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+              className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed"
             >
               Choose the perfect plan for your business needs. All our innovative solutions come with 
               transparent pricing, guaranteed ROI, and world-class support.
@@ -192,20 +192,20 @@ export default function InnovativePricing2034() {
               className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-16"
             >
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">{totalServices}+</div>
-                <div className="text-gray-300">Innovative Services</div>
+                <div className="text-4xl md:text-5xl font-bold text-cyan-40o0 mb-2">{totalServices}+</div>
+                <div className="text-gray-30o0">Innovative Services</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">${totalValue.toLocaleString()}+</div>
-                <div className="text-gray-300">Total Value</div>
+                <div className="text-4xl md:text-5xl font-bold text-purple-40o0 mb-2">${totalValue.toLocaleString()}+</div>
+                <div className="text-gray-30o0">Total Value</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">3</div>
-                <div className="text-gray-300">Pricing Tiers</div>
+                <div className="text-4xl md:text-5xl font-bold text-pink-40o0 mb-2">3</div>
+                <div className="text-gray-30o0">Pricing Tiers</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300">Expert Support</div>
+                <div className="text-4xl md:text-5xl font-bold text-green-40o0 mb-2">24/7</div>
+                <div className="text-gray-30o0">Expert Support</div>
               </div>
             </motion.div>
           </div>
@@ -220,7 +220,7 @@ export default function InnovativePricing2034() {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-5xl font-bold text-center mb-16"
             >
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                 Choose Your Plan
               </span>
             </motion.h2>
@@ -232,28 +232,28 @@ export default function InnovativePricing2034() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative ${tier.popular ? 'scale-105' : ''}`}
+                  className={`relative ${tier.popular ? 'scale-10o5' : ''}`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-full text-sm font-bold">
+                      <div className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-6 py-2 rounded-full text-sm font-bold">
                         Most Popular
                       </div>
                     </div>
                   )}
                   
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${tier.color} border border-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl`}>
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${tier.color} border border-white/10 backdrop-blur-sm transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl`}>
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                      <p className="text-gray-200 mb-4">{tier.description}</p>
+                      <p className="text-gray-20o0 mb-4">{tier.description}</p>
                       <div className="text-4xl font-bold text-white mb-2">{tier.price}</div>
-                      <p className="text-gray-300 text-sm">Per service, per month</p>
+                      <p className="text-gray-30o0 text-sm">Per service, per month</p>
                     </div>
                     
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-200">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <li key={idx} className="flex items-center text-gray-20o0">
+                          <CheckCircle className="w-5 h-5 text-green-40o0 mr-3 flex-shrink-0"  />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -261,7 +261,7 @@ export default function InnovativePricing2034() {
                     
                     <button
                       onClick={() => setSelectedTier(tier.name.toLowerCase())}
-                      className="w-full py-3 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-200 hover:scale-105"
+                      className="w-full py-3 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-20o0 hover:scale-10o5"
                     >
                       Get Started
                     </button>
@@ -281,7 +281,7 @@ export default function InnovativePricing2034() {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-5xl font-bold text-center mb-16"
             >
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                 Service Categories
               </span>
             </motion.h2>
@@ -295,20 +295,20 @@ export default function InnovativePricing2034() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="relative group"
                 >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} border border-white/10 backdrop-blur-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl`}>
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} border border-white/10 backdrop-blur-sm transition-all duration-30o0 group-hover:scale-10o5 group-hover:shadow-2xl`}>
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
-                        <category.icon className="w-8 h-8 text-white" />
+                        <category.icon className="w-8 h-8 text-white"  />
                       </div>
                       <div className="text-2xl font-bold text-white">{category.services.length}</div>
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                    <p className="text-gray-200 mb-6 leading-relaxed">{category.description}</p>
+                    <p className="text-gray-20o0 mb-6 leading-relaxed">{category.description}</p>
                     
                     <button
                       onClick={() => setSelectedCategory(category.id)}
-                      className="w-full py-3 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-200 hover:scale-105"
+                      className="w-full py-3 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-medium transition-all duration-20o0 hover:scale-10o5"
                     >
                       Explore Services
                     </button>
@@ -322,10 +322,10 @@ export default function InnovativePricing2034() {
               <div className="bg-black/30 border border-white/10 rounded-xl p-2">
                 <button
                   onClick={() => setSelectedCategory('all')}
-                  className={`px-6 py-3 rounded-lg transition-all duration-200 ${
+                  className={`px-6 py-3 rounded-lg transition-all duration-20o0 ${
                     selectedCategory === 'all'
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'text-gray-300 hover:text-white'
+                      ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white'
+                      : 'text-gray-30o0 hover:text-white'
                   }`}
                 >
                   All Categories
@@ -334,10 +334,10 @@ export default function InnovativePricing2034() {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg transition-all duration-200 ${
+                    className={`px-6 py-3 rounded-lg transition-all duration-20o0 ${
                       selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white'
+                        ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white'
+                        : 'text-gray-30o0 hover:text-white'
                     }`}
                   >
                     {category.title.split(' ')[1]}
@@ -360,24 +360,24 @@ export default function InnovativePricing2034() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group relative"
                 >
-                  <div className="bg-black/40 border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:border-cyan-500/50">
+                  <div className="bg-black/40 border border-white/10 rounded-2xl p-6 backdrop-blur-sm transition-all duration-30o0 group-hover:scale-10o5 group-hover:shadow-2xl group-hover:border-cyan-50o0/50">
                     {/* Service Header */}
                     <div className="mb-6">
                       <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-xl flex items-center justify-center">
-                          <Target className="w-6 h-6 text-cyan-400" />
+                        <div className="w-12 h-12 bg-gradient-to-br from-cyan-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center">
+                          <Target className="w-6 h-6 text-cyan-40o0"  />
                         </div>
                         <div className="text-right">
-                          <div className="text-sm text-cyan-400 font-medium">{service.category}</div>
-                          <div className="text-xs text-gray-400">{service.launchDate}</div>
+                          <div className="text-sm text-cyan-40o0 font-medium">{service.category}</div>
+                          <div className="text-xs text-gray-40o0">{service.launchDate}</div>
                         </div>
                       </div>
                       
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-40o0 transition-colors">
                         {service.name}
                       </h3>
                       
-                      <p className="text-gray-300 text-sm leading-relaxed">
+                      <p className="text-gray-30o0 text-sm leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -385,10 +385,10 @@ export default function InnovativePricing2034() {
                     {/* Pricing */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white mb-3">Starting From</h4>
-                      <div className="text-2xl font-bold text-cyan-400">
+                      <div className="text-2xl font-bold text-cyan-40o0">
                         {service.pricing.starter}
                       </div>
-                      <div className="text-sm text-gray-400 mt-1">
+                      <div className="text-sm text-gray-40o0 mt-1">
                         {service.pricing.professional} for Professional
                       </div>
                     </div>
@@ -398,8 +398,8 @@ export default function InnovativePricing2034() {
                       <h4 className="text-sm font-semibold text-white mb-3">Key Benefits</h4>
                       <div className="space-y-2">
                         {service.benefits.slice(0, 2).map((benefit, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-300">
-                            <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <div key={idx} className="flex items-center text-sm text-gray-30o0">
+                            <TrendingUp className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
                             <span>{benefit}</span>
                           </div>
                         ))}
@@ -412,7 +412,7 @@ export default function InnovativePricing2034() {
                         href={service.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 py-2 px-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 text-center"
+                        className="flex-1 py-2 px-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white text-sm font-medium rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 text-center"
                       >
                         View Demo
                       </a>
@@ -420,7 +420,7 @@ export default function InnovativePricing2034() {
                         href={service.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="py-2 px-4 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/10 transition-all duration-200"
+                        className="py-2 px-4 border border-white/20 text-white text-sm font-medium rounded-lg hover:bg-white/10 transition-all duration-20o0"
                       >
                         Learn More
                       </a>
@@ -429,13 +429,13 @@ export default function InnovativePricing2034() {
                     {/* Contact Info */}
                     <div className="mt-6 pt-6 border-t border-white/10">
                       <div className="flex items-center justify-between text-sm">
-                        <div className="flex items-center text-gray-400">
-                          <Mail className="w-4 h-4 mr-2" />
+                        <div className="flex items-center text-gray-40o0">
+                          <Mail className="w-4 h-4 mr-2"  />
                           <span>{service.contact}</span>
                         </div>
                         <a
                           href={`mailto:${service.contact}`}
-                          className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                          className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors"
                         >
                           Contact
                         </a>
@@ -455,7 +455,7 @@ export default function InnovativePricing2034() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm text-center"
+              className="bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-2xl p-12 backdrop-blur-sm text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
                 Why Choose Our Innovative Solutions?
@@ -463,27 +463,27 @@ export default function InnovativePricing2034() {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-cyan-400" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-cyan-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Guaranteed ROI</h3>
-                  <p className="text-gray-300">All our solutions deliver measurable business value with proven results</p>
+                  <p className="text-gray-30o0">All our solutions deliver measurable business value with proven results</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-cyan-400" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-cyan-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Fast Implementation</h3>
-                  <p className="text-gray-300">Get up and running in days, not months with our streamlined onboarding</p>
+                  <p className="text-gray-30o0">Get up and running in days, not months with our streamlined onboarding</p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-cyan-400" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-50o0/20 to-purple-60o0/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-cyan-40o0"  />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
-                  <p className="text-gray-300">Bank-grade security and compliance for peace of mind</p>
+                  <p className="text-gray-30o0">Bank-grade security and compliance for peace of mind</p>
                 </div>
               </div>
             </motion.div>
@@ -497,26 +497,26 @@ export default function InnovativePricing2034() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm"
+              className="bg-gradient-to-r from-cyan-50o0/20 to-purple-60o0/20 border border-cyan-50o0/30 rounded-2xl p-12 backdrop-blur-sm"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
                 Contact our team to discuss your needs and find the perfect solution for your business.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
-                  <Phone className="w-5 h-5 text-cyan-400" />
+                <div className="flex items-center justify-center space-x-3 text-gray-30o0">
+                  <Phone className="w-5 h-5 text-cyan-40o0"  />
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
-                  <Mail className="w-5 h-5 text-cyan-400" />
+                <div className="flex items-center justify-center space-x-3 text-gray-30o0">
+                  <Mail className="w-5 h-5 text-cyan-40o0"  />
                   <span>{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3 text-gray-300">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
+                <div className="flex items-center justify-center space-x-3 text-gray-30o0">
+                  <MapPin className="w-5 h-5 text-cyan-40o0"  />
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
@@ -524,18 +524,18 @@ export default function InnovativePricing2034() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-2xl shadow-cyan-500/25"
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-bold text-lg rounded-xl hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 shadow-2xl shadow-cyan-50o0/25"
                 >
                   <span>Get Started Today</span>
-                  <ArrowRight className="w-6 h-6" />
+                  <ArrowRight className="w-6 h-6"  />
                 </a>
                 
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-500/50 text-cyan-300 font-bold text-lg rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-200"
+                  className="inline-flex items-center space-x-3 px-8 py-4 bg-black/50 border-2 border-cyan-50o0/50 text-cyan-30o0 font-bold text-lg rounded-xl hover:bg-cyan-50o0/10 hover:border-cyan-40o0 transition-all duration-20o0"
                 >
                   <span>Contact Sales</span>
-                  <Mail className="w-6 h-6" />
+                  <Mail className="w-6 h-6"  />
                 </a>
               </div>
             </motion.div>

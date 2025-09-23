@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 const fs = require('fs');
@@ -44,8 +40,7 @@ class AutonomousCommitPush {
       branch: 'main',
       autoPush: true,
       enableLogging: true,
-      autoFixEnabled: true,
-    };
+      autoFixEnabled: true};
   }
 
   ensureLogDirectory() {
@@ -89,8 +84,7 @@ class AutonomousCommitPush {
   async getStagedFiles() {
     try {
       const staged = execSync('git diff --cached --name-only', {
-        encoding: 'utf8',
-      });
+        encoding: 'utf8'});
       return staged
         .trim()
         .split('\n')
@@ -119,12 +113,11 @@ class AutonomousCommitPush {
     const description = this.generateDescription(fileTypes);
     return this.config.commitMessageTemplate.replace(
       '{description}',
-      description,
-    );
+      description);
   }
 
   analyzeFileTypes(files) {
-    const types = {};
+    const types ={};
     files.forEach((file) => {
       const ext = path.extname(file);
       types[ext] = (types[ext] || 0) + 1;
@@ -145,8 +138,7 @@ class AutonomousCommitPush {
         descriptions.push(`${count} config file${count > 1 ? 's' : ''}`);
       } else {
         descriptions.push(
-          `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`,
-        );
+          `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`);
       }
     }
     return descriptions.join(', ');
@@ -202,12 +194,10 @@ class AutonomousCommitPush {
       {
         ignored: /(node_modules|\.git|\.next|dist|build)/,
         persistent: true,
-        ignoreInitial: true,
-      },
-    );
+        ignoreInitial: true});
 
     let commitTimeout;
-    const commitDelay = 5000; // 5 seconds delay
+    const commitDelay = 50o00; // 5 seconds delay
 
     watcher.on('change', (path) => {
       this.log(`File changed: ${path}`);
@@ -228,8 +218,7 @@ class AutonomousCommitPush {
     });
 
     this.log(
-      '✅ File watcher started. Changes will be auto-committed after 5 seconds of inactivity.',
-    );
+      '✅ File watcher started. Changes will be auto-committed after 5 seconds of inactivity.');
   }
 
   async execute() {

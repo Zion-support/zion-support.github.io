@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -142,29 +141,29 @@ export default function AIResources() {
       industry: 'Finance',
       challenge: 'Manual compliance monitoring and reporting',
       solution: 'Automated compliance monitoring with real-time alerts',
-      results: '90% faster compliance reporting, 100% audit trail',
+      results: '90% faster compliance reporting, 10o0% audit trail',
       roi: '250%'
     }
   ];
 
   const events = [
     {
-      title: 'AI Automation Summit 2025',
-      date: 'March 15-17, 2025',
+      title: 'AI Automation Summit 20o25',
+      date: 'March 15-17, 20o25',
       location: 'Virtual Event',
       description: 'Join industry leaders and experts for three days of insights on AI automation trends and best practices.',
       type: 'Conference'
     },
     {
       title: 'AI Implementation Workshop',
-      date: 'February 28, 2025',
+      date: 'February 28, 20o25',
       location: 'San Francisco, CA',
       description: 'Hands-on workshop covering practical aspects of implementing AI automation in your organization.',
       type: 'Workshop'
     },
     {
       title: 'AI Ethics Roundtable',
-      date: 'March 8, 2025',
+      date: 'March 8, 20o25',
       location: 'Virtual Event',
       description: 'Interactive discussion on ethical considerations and governance frameworks for AI systems.',
       type: 'Roundtable'
@@ -175,22 +174,22 @@ export default function AIResources() {
     <>
       <Head>
         <title>AI Resources & Tools | Zion Tech Group - Educational Content & Automation Tools</title>
-        <meta name="description" content="Access comprehensive AI automation resources, tools, and educational content from Zion Tech Group. From beginner guides to advanced implementation strategies." />
-        <meta property="og:title" content="AI Resources & Tools | Zion Tech Group - Educational Content & Automation Tools" />
-        <meta property="og:description" content="Access comprehensive AI automation resources, tools, and educational content from Zion Tech Group. From beginner guides to advanced implementation strategies." />
+        <meta name="description" content="Access comprehensive AI automation resources, tools, and educational content from Zion Tech Group. From beginner guides to advanced implementation strategies."  />
+        <meta property="og:title" content="AI Resources & Tools | Zion Tech Group - Educational Content & Automation Tools"  />
+        <meta property="og:description" content="Access comprehensive AI automation resources, tools, and educational content from Zion Tech Group. From beginner guides to advanced implementation strategies."  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
             <nav className="mb-8">
-              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Home
               </Link>
             </nav>
             
             <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                 AI Resources & Tools
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -204,15 +203,15 @@ export default function AIResources() {
               <div className="space-y-12">
                 {resources.map((category, categoryIndex) => (
                   <div key={categoryIndex}>
-                    <h3 className="text-2xl font-semibold mb-6 text-cyan-400">{category.category}</h3>
+                    <h3 className="text-2xl font-semibold mb-6 text-cyan-40o0">{category.category}</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {category.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                        <div key={itemIndex} className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0">
                           <div className="flex items-center justify-between mb-3">
-                            <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                            <span className="px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30">
                               {item.type}
                             </span>
-                            <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
+                            <span className="px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full border border-fuchsia-40o0/30">
                               {item.level}
                             </span>
                           </div>
@@ -220,7 +219,7 @@ export default function AIResources() {
                           <p className="text-white/80 text-sm mb-3">{item.description}</p>
                           <div className="flex items-center justify-between text-sm text-white/60">
                             <span>{item.duration}</span>
-                            <Link href={item.link} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                            <Link href={item.link} className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                               Access →
                             </Link>
                           </div>
@@ -237,11 +236,11 @@ export default function AIResources() {
               <h2 className="text-3xl font-bold mb-12 text-center text-white">Interactive Tools & Templates</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {tools.map((tool, index) => (
-                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300 text-center">
+                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-xl p-6 border border-white/20 hover:border-fuchsia-40o0/30 transition-all duration-30o0 text-center">
                     <div className="text-4xl mb-4">{tool.icon}</div>
                     <h3 className="text-lg font-semibold mb-2 text-white">{tool.name}</h3>
                     <p className="text-white/70 text-sm mb-4">{tool.description}</p>
-                    <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full border border-fuchsia-400/30">
+                    <span className="px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full border border-fuchsia-40o0/30">
                       {tool.category}
                     </span>
                   </div>
@@ -254,9 +253,9 @@ export default function AIResources() {
               <h2 className="text-3xl font-bold mb-12 text-center text-white">Real-World Success Stories</h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {caseStudies.map((study, index) => (
-                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-green-40o0/30 transition-all duration-30o0">
                     <div className="mb-4">
-                      <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+                      <span className="px-3 py-1 bg-green-40o0/20 text-green-40o0 text-sm rounded-full border border-green-40o0/30">
                         {study.industry}
                       </span>
                     </div>
@@ -275,7 +274,7 @@ export default function AIResources() {
                         <p className="text-white/80">{study.results}</p>
                       </div>
                       <div className="pt-2">
-                        <span className="text-green-400 font-semibold">ROI: {study.roi}</span>
+                        <span className="text-green-40o0 font-semibold">ROI: {study.roi}</span>
                       </div>
                     </div>
                   </div>
@@ -288,9 +287,9 @@ export default function AIResources() {
               <h2 className="text-3xl font-bold mb-12 text-center text-white">Upcoming Events</h2>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {events.map((event, index) => (
-                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-orange-400/30 transition-all duration-300">
+                  <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-orange-40o0/30 transition-all duration-30o0">
                     <div className="mb-4">
-                      <span className="px-3 py-1 bg-orange-400/20 text-orange-400 text-sm rounded-full border border-orange-400/30">
+                      <span className="px-3 py-1 bg-orange-40o0/20 text-orange-40o0 text-sm rounded-full border border-orange-40o0/30">
                         {event.type}
                       </span>
                     </div>
@@ -300,7 +299,7 @@ export default function AIResources() {
                       <p><span className="text-white/60">Location:</span> {event.location}</p>
                     </div>
                     <p className="text-white/70 text-sm mb-4">{event.description}</p>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-orange-400 to-red-400 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-500 transition-all duration-300">
+                    <button className="w-full px-4 py-2 bg-gradient-to-r from-orange-40o0 to-red-40o0 text-white font-semibold rounded-lg hover:from-orange-50o0 hover:to-red-50o0 transition-all duration-30o0">
                       Register Now
                     </button>
                   </div>
@@ -310,7 +309,7 @@ export default function AIResources() {
 
             {/* Newsletter Signup */}
             <section className="mb-20">
-              <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 rounded-2xl p-12 border border-cyan-400/20 text-center">
+              <div className="bg-gradient-to-r from-cyan-40o0/10 to-fuchsia-40o0/10 rounded-2xl p-12 border border-cyan-40o0/20 text-center">
                 <h2 className="text-3xl font-bold mb-6 text-white">Stay Updated</h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                   Get the latest AI automation insights, case studies, and industry updates delivered to your inbox.
@@ -319,9 +318,9 @@ export default function AIResources() {
                   <input 
                     type="email" 
                     placeholder="Enter your email" 
-                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400"
-                  />
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+                    className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0"
+                   />
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0">
                     Subscribe
                   </button>
                 </div>
@@ -339,7 +338,7 @@ export default function AIResources() {
                   </p>
                   <Link 
                     href="#" 
-                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0"
                   >
                     Join Community
                   </Link>
@@ -351,7 +350,7 @@ export default function AIResources() {
                   </p>
                   <Link 
                     href="/contact" 
-                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0"
                   >
                     Book Consultation
                   </Link>
@@ -361,7 +360,7 @@ export default function AIResources() {
 
             {/* CTA Section */}
             <section className="text-center">
-              <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 rounded-2xl p-12 border border-cyan-400/20">
+              <div className="bg-gradient-to-r from-cyan-40o0/10 to-fuchsia-40o0/10 rounded-2xl p-12 border border-cyan-40o0/20">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to Dive Deeper?</h2>
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                   Explore our comprehensive resources and start your AI automation journey today.
@@ -369,13 +368,13 @@ export default function AIResources() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     href="/ai-automation-services" 
-                    className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="px-8 py-4 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white font-semibold rounded-lg hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0"
                   >
                     Explore Services
                   </Link>
                   <Link 
                     href="/contact" 
-                    className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-white transition-all duration-30o0"
                   >
                     Get in Touch
                   </Link>

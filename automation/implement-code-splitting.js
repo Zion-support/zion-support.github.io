@@ -1,7 +1,6 @@
 #!/usr / bin / env node;
 // Code Splitting Implementation Script;
 
-
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🚀 Implementing Code Splitting...'),

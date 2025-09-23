@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Milestone } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CreditCard } from 'lucide-react'
@@ -26,7 +25,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
         <CardTitle className="text-lg flex items-center">
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary
+          <CreditCard className="h-5 w-5 mr-2 text-primary"  /> Payment Summary
         </CardTitle>
       </CardHeader>
       <CardContent>

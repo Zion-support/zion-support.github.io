@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "AI Copilots & Assistants | Zion Tech Group",
   description:
     "Deploy intelligent AI copilots that enhance productivity, automate complex tasks, and provide 24/7 intelligent assistance to your team and customers."};
@@ -6,13 +6,13 @@ export const metadata = {
 export default function AICopilotsPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>
         AI Copilots & Intelligent Assistants
       </h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
         Deploy cutting-edge AI copilots that understand your business context,
         automate complex workflows, and provide intelligent assistance to boost
-        productivity by 400% while reducing operational costs.
+        productivity by 40o0% while reducing operational costs.
       </p>
 
       <div style={{ display: "grid", gap: 12, marginTop: 16 }}>
@@ -24,7 +24,7 @@ export default function AICopilotsPage() {
             "Automated testing and debugging",
             "Documentation generation",
             "Multi-language support (Python, JS, Go, Rust)"]}
-        />
+         />
         <Item
           title="Customer Support AI"
           details={[
@@ -33,7 +33,7 @@ export default function AICopilotsPage() {
             "Escalation to human agents",
             "Sentiment analysis and routing",
             "Knowledge base integration"]}
-        />
+         />
         <Item
           title="Sales & Marketing AI"
           details={[
@@ -42,7 +42,7 @@ export default function AICopilotsPage() {
             "Email campaign optimization",
             "Social media management",
             "ROI prediction and analysis"]}
-        />
+         />
         <Item
           title="Data Analysis Copilots"
           details={[
@@ -51,7 +51,7 @@ export default function AICopilotsPage() {
             "Data visualization creation",
             "Anomaly detection and alerts",
             "Natural language data queries"]}
-        />
+         />
         <Item
           title="HR & Operations AI"
           details={[
@@ -60,7 +60,7 @@ export default function AICopilotsPage() {
             "Performance review assistance",
             "Compliance monitoring",
             "Workflow optimization suggestions"]}
-        />
+         />
         <Item
           title="Financial AI Assistants"
           details={[
@@ -69,7 +69,7 @@ export default function AICopilotsPage() {
             "Budget forecasting and planning",
             "Fraud detection and prevention",
             "Tax optimization recommendations"]}
-        />
+         />
       </div>
 
       <div
@@ -83,13 +83,13 @@ export default function AICopilotsPage() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 700,
+            fontWeight: 70o0,
             marginBottom: 12,
             color: "#0c4a6e"}}
         >
           Why Our AI Copilots Stand Out
         </h3>
-        <ul style={{ color: "#075985", lineHeight: 1.6 }}>
+        <ul style={{ color: "#0o75985", lineHeight: 1.6 }}>
           <li>
             • <strong>Custom Training:</strong> Trained on your specific
             business data and processes
@@ -107,13 +107,13 @@ export default function AICopilotsPage() {
             processing capabilities
           </li>
           <li>
-            • <strong>Integration Ready:</strong> Seamlessly connects with 500+
+            • <strong>Integration Ready:</strong> Seamlessly connects with 50o0+
             business tools
           </li>
         </ul>
       </div>
 
-      <Pricing />
+      <Pricing  />
     </section>
   );
 }
@@ -127,7 +127,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
         padding: 16,
         backgroundColor: "#ffffff"}}
     >
-      <h3 style={{ fontWeight: 700, color: "#1f2937", marginBottom: 8 }}>
+      <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>
         {title}
       </h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563", margin: 0 }}>
@@ -147,7 +147,7 @@ function Pricing() {
       <h2
         style={{
           fontSize: 24,
-          fontWeight: 700,
+          fontWeight: 70o0,
           marginBottom: 20,
           color: "#1f2937"}}
       >
@@ -161,17 +161,17 @@ function Pricing() {
       >
         <Plan
           name="AI Assistant MVP"
-          price="$5,000–$15,000"
+          price="$5,0o00–$15,0o00"
           features={[
             "3-6 weeks development",
             "Single domain AI assistant",
             "Basic natural language processing",
             "API integration with 5 tools",
             "Email support & documentation"]}
-        />
+         />
         <Plan
           name="Intelligent Copilot"
-          price="$15,000–$45,000"
+          price="$15,0o00–$45,0o00"
           features={[
             "6-12 weeks development",
             "Multi-domain AI capabilities",
@@ -179,10 +179,10 @@ function Pricing() {
             "Integration with 20+ business tools",
             "Custom training on your data",
             "Priority support & training"]}
-        />
+         />
         <Plan
           name="Enterprise AI Suite"
-          price="$45,000+"
+          price="$45,0o00+"
           features={[
             "Custom AI platform development",
             "Multi-modal AI capabilities",
@@ -190,7 +190,7 @@ function Pricing() {
             "Unlimited integrations",
             "Dedicated AI specialist",
             "SLA guarantees & monitoring"]}
-        />
+         />
       </div>
 
       <div
@@ -205,13 +205,13 @@ function Pricing() {
         <h3
           style={{
             fontSize: 18,
-            fontWeight: 600,
+            fontWeight: 60o0,
             marginBottom: 8,
-            color: "#92400e"}}
+            color: "#9240o0e"}}
         >
           Limited Time: Free AI Readiness Assessment
         </h3>
-        <p style={{ color: "#a16207", marginBottom: 16 }}>
+        <p style={{ color: "#a1620o7", marginBottom: 16 }}>
           Get a comprehensive analysis of how AI can transform your business
           operations. Includes ROI projections and implementation roadmap.
         </p>
@@ -223,7 +223,7 @@ function Pricing() {
             flexWrap: "wrap"}}
         >
           <a
-            href="tel:+13024640950"
+            href="tel:+130o24640950"
             style={{
               display: "inline-block",
               padding: "12px 24px",
@@ -231,7 +231,7 @@ function Pricing() {
               color: "white",
               textDecoration: "none",
               borderRadius: 8,
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Schedule Free Assessment
           </a>
@@ -245,7 +245,7 @@ function Pricing() {
               textDecoration: "none",
               borderRadius: 8,
               border: "2px solid #f59e0b",
-              fontWeight: 600}}
+              fontWeight: 60o0}}
           >
             Email Us
           </a>
@@ -274,7 +274,7 @@ function Plan({
     >
       <h4
         style={{
-          fontWeight: 700,
+          fontWeight: 70o0,
           fontSize: 18,
           color: "#1f2937",
           marginBottom: 8}}
@@ -284,7 +284,7 @@ function Plan({
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           fontSize: 24,
           marginBottom: 16}}
       >
@@ -301,14 +301,14 @@ function Plan({
         href="mailto:kleber@ziontechgroup.com?subject=AI Copilot Services Inquiry"
         style={{
           display: "inline-block",
-          width: "100%",
+          width: "10o0%",
           textAlign: "center",
           padding: "12px 16px",
           backgroundColor: "#3b82f6",
           color: "white",
           textDecoration: "none",
           borderRadius: 8,
-          fontWeight: 600}}
+          fontWeight: 60o0}}
       >
         Get Started
       </a>

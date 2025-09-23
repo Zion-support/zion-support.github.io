@@ -10,13 +10,13 @@ const successStories = [
         challenge: "Legacy system modernization and digital transformation for a growing fintech startup",
         solution: "Implemented cloud-native architecture with microservices, real-time data processing, and AI-powered fraud detection",
         results: {
-            performance: "300%",
+            performance: "30o0%",
             efficiency: "85%",
             cost: "40%",
             time: "60%"
         },
         metrics: [
-            { label: "Transaction Processing", before: "1,000/sec", after: "10,000/sec", improvement: "900%" },
+            { label: "Transaction Processing", before: "1,0o00/sec", after: "10,0o00/sec", improvement: "90o0%" },
             { label: "System Uptime", before: "95%", after: "99.9%", improvement: "5.2%" },
             { label: "Customer Satisfaction", before: "3.2/5", after: "4.8/5", improvement: "50%" },
             { label: "Development Speed", before: "6 months", after: "2 months", improvement: "67%" }
@@ -68,14 +68,14 @@ const successStories = [
         challenge: "Creating an omnichannel retail experience with AI-powered inventory management and personalized recommendations",
         solution: "Built comprehensive omnichannel platform with AI inventory optimization, personalized shopping, and seamless integration",
         results: {
-            performance: "400%",
+            performance: "40o0%",
             efficiency: "80%",
             cost: "30%",
             time: "65%"
         },
         metrics: [
             { label: "Sales Conversion", before: "2.1%", after: "6.8%", improvement: "224%" },
-            { label: "Inventory Turnover", before: "4x/year", after: "12x/year", improvement: "200%" },
+            { label: "Inventory Turnover", before: "4x/year", after: "12x/year", improvement: "20o0%" },
             { label: "Customer Retention", before: "45%", after: "78%", improvement: "73%" },
             { label: "Operational Costs", before: "$2.1M", after: "$1.4M", improvement: "33%" }
         ],
@@ -135,7 +135,7 @@ const successStories = [
             { label: "Student Engagement", before: "45%", after: "87%", improvement: "93%" },
             { label: "Learning Outcomes", before: "72%", after: "91%", improvement: "26%" },
             { label: "Content Delivery", before: "Manual", after: "AI-powered", improvement: "N/A" },
-            { label: "Platform Scalability", before: "1,000 users", after: "50,000 users", improvement: "4,900%" }
+            { label: "Platform Scalability", before: "1,0o00 users", after: "50,0o00 users", improvement: "4,90o0%" }
         ],
         technologies: ["React", "Node.js", "Python", "AI/ML", "AWS", "MongoDB"],
         team: "16 developers",
@@ -186,17 +186,17 @@ const industryStats = [
     { industry: "Energy", projects: 33, successRate: "97%", avgROI: "380%" }
 ];
 const overallStats = [
-    { icon: <Trophy className="w-6 h-6"/>, value: "238+", label: "Successful Projects" },
-    { icon: <Users className="w-6 h-6"/>, value: "180+", label: "Happy Clients" },
-    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Client Rating" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "95%", label: "Success Rate" },
-    { icon: <DollarSign className="w-6 h-6"/>, value: "320%", label: "Average ROI" },
-    { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg. Delivery Time" }
+    { icon: <Trophy className="w-6 h-6" />, value: "238+", label: "Successful Projects" },
+    { icon: <Users className="w-6 h-6" />, value: "180+", label: "Happy Clients" },
+    { icon: <Star className="w-6 h-6" />, value: "4.9/5", label: "Client Rating" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "95%", label: "Success Rate" },
+    { icon: <DollarSign className="w-6 h-6" />, value: "320%", label: "Average ROI" },
+    { icon: <Clock className="w-6 h-6" />, value: "12 months", label: "Avg. Delivery Time" }
 ];
 export function ClientSuccessStoriesSection() {
     const [selectedStory, setSelectedStory] = useState(null);
     const [hoveredIndustry, setHoveredIndustry] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -206,7 +206,7 @@ export function ClientSuccessStoriesSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -255,7 +255,7 @@ export function ClientSuccessStoriesSection() {
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industryStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+            {industryStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
                 
                 <div className="grid grid-cols-3 gap-4 text-center mb-4">
@@ -284,12 +284,12 @@ export function ClientSuccessStoriesSection() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {successStories.map((story, index) => (<motion.div key={story.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Building className="w-6 h-6 text-white"/>
+                        <Building className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -298,7 +298,7 @@ export function ClientSuccessStoriesSection() {
                         <div className="text-zion-cyan text-sm">{story.industry}</div>
                       </div>
                     </div>
-                    {story.featured && (<div className="px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold rounded-full">
+                    {story.featured && (<div className="px-3 py-1 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold rounded-full">
                         FEATURED
                       </div>)}
                   </div>
@@ -339,7 +339,7 @@ export function ClientSuccessStoriesSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Full Case Study
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -353,7 +353,7 @@ export function ClientSuccessStoriesSection() {
                                 <span className="text-zion-slate-light/80">{metric.label}:</span>
                                 <div className="flex items-center gap-2">
                                   <span className="text-zion-slate-light/60 line-through">{metric.before}</span>
-                                  <ArrowRight className="w-3 h-3 text-zion-cyan"/>
+                                  <ArrowRight className="w-3 h-3 text-zion-cyan" />
                                   <span className="text-zion-cyan font-semibold">{metric.after}</span>
                                   <span className="text-zion-purple font-bold">({metric.improvement})</span>
                                 </div>
@@ -380,7 +380,7 @@ export function ClientSuccessStoriesSection() {
                               <div className="text-zion-slate-light/70 text-xs">{story.role}</div>
                             </div>
                             <div className="flex items-center gap-1">
-                              {[...Array(story.rating)].map((_, idx) => (<Star key={idx} className="w-4 h-4 text-yellow-400 fill-current"/>))}
+                              {[...Array(story.rating)].map((_, idx) => (<Star key={idx} className="w-4 h-4 text-yellow-40o0 fill-current" />))}
                             </div>
                           </div>
                         </div>
@@ -403,10 +403,10 @@ export function ClientSuccessStoriesSection() {
                 Let's discuss how we can help you achieve similar results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View All Case Studies
                 </button>
               </div>

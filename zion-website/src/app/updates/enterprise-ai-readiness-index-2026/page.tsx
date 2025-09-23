@@ -4,8 +4,8 @@ export default function Page() {
     <div className="min-h-screen bg-black">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-white">Report: Enterprise AI Readiness Index (2026 Preview)</h1>
-          <p className="mt-2 text-gray-300">A composite index to score data, governance, and platform maturity across enterprises.</p>
+          <h1 className="text-4xl font-bold text-white">Report: Enterprise AI Readiness Index (20o26 Preview)</h1>
+          <p className="mt-2 text-gray-30o0">A composite index to score data, governance, and platform maturity across enterprises.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>Methodology</h2>

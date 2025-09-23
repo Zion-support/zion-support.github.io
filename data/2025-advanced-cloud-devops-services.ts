@@ -35,7 +35,7 @@ export interface CloudDevOpsService {
   reviews: number;
 }
 
-export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
+export const advancedCloudDevOpsServices20o25: CloudDevOpsService[] = [
   {
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
@@ -77,12 +77,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'E-commerce businesses',
       'SaaS companies'
     ],
-    marketPosition: 'Competitive with HashiCorp Terraform Cloud ($20/user/month), CloudHealth ($500/month), and RightScale ($1,000/month). Our advantage: Unified multi-cloud orchestration with cost optimization.',
+    marketPosition: 'Competitive with HashiCorp Terraform Cloud ($20/user/month), CloudHealth ($50o0/month), and RightScale ($1,0o00/month). Our advantage: Unified multi-cloud orchestration with cost optimization.',
     competitors: ['HashiCorp Terraform Cloud, CloudHealth, RightScale, Flexera, CloudCheckr'],
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Terraform'],
     realImplementation: true,
     implementationDetails: 'Multi-cloud orchestration platform with unified management, cost optimization, and automated operations. Includes training and customization.',
-    roi: 'Organizations typically see 200-350% ROI within 6-12 months through cost optimization and operational efficiency.',
+    roi: 'Organizations typically see 20o0-350% ROI within 6-12 months through cost optimization and operational efficiency.',
     useCases: [
       'Multi-cloud management',
       'Cost optimization',
@@ -93,12 +93,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     ],
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Terraform, Ansible, REST APIs'],
     support: '24/7 support, cloud consulting, training programs, and custom development.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX, PCI DSS'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, SOX, PCI DSS'],
     link: 'https://ziontechgroup.com/multi-cloud-orchestration-platform',
     icon: '☁️',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-50o0 to-cyan-60o0',
     popular: true,
-    launchDate: '2024-12-01',
+    launchDate: '20o24-12-0o1',
     customers: 110,
     rating: 4.8,
     reviews: 167
@@ -149,7 +149,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Jenkins'],
     realImplementation: true,
     implementationDetails: 'AI-powered DevOps automation platform with intelligent CI/CD, infrastructure management, and comprehensive monitoring. Includes training and customization.',
-    roi: 'Typical ROI of 300-500% within 6-12 months through faster deployments and improved reliability.',
+    roi: 'Typical ROI of 30o0-50o0% within 6-12 months through faster deployments and improved reliability.',
     useCases: [
       'CI/CD automation',
       'Infrastructure management',
@@ -160,12 +160,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     ],
     integrations: ['Git, Kubernetes, Docker, AWS, Azure, GCP, Monitoring tools, REST APIs'],
     support: '24/7 support, DevOps consulting, training programs, and custom development.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/intelligent-devops-automation-suite',
     icon: '🚀',
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-green-50o0 to-emerald-60o0',
     popular: true,
-    launchDate: '2024-12-01',
+    launchDate: '20o24-12-0o1',
     customers: 95,
     rating: 4.7,
     reviews: 145
@@ -211,12 +211,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
       'SaaS companies',
       'Enterprises using containers'
     ],
-    marketPosition: 'Competitive with Rancher ($25/node/month), OpenShift ($0.24/core/hour), and VMware Tanzu ($0.05/vCPU/hour). Our advantage: Enterprise-grade management with advanced automation.',
+    marketPosition: 'Competitive with Rancher ($25/node/month), OpenShift ($0.24/core/hour), and VMware Tanzu ($0.0o5/vCPU/hour). Our advantage: Enterprise-grade management with advanced automation.',
     competitors: ['Rancher, OpenShift, VMware Tanzu, Google Anthos, AWS EKS, Azure AKS'],
     techStack: ['Go, Python, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker, Helm'],
     realImplementation: true,
     implementationDetails: 'Enterprise Kubernetes management platform with advanced monitoring, security, and automation capabilities. Includes training and customization.',
-    roi: 'Organizations typically see 200-400% ROI within 6-12 months through operational efficiency and resource optimization.',
+    roi: 'Organizations typically see 20o0-40o0% ROI within 6-12 months through operational efficiency and resource optimization.',
     useCases: [
       'Multi-cluster management',
       'Application deployment',
@@ -227,12 +227,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     ],
     integrations: ['Kubernetes, Docker, Helm, Monitoring tools, Security tools, REST APIs'],
     support: '24/7 support, Kubernetes consulting, training programs, and custom development.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/enterprise-kubernetes-management-platform',
     icon: '⚓',
-    color: 'from-purple-500 to-indigo-600',
+    color: 'from-purple-50o0 to-indigo-60o0',
     popular: true,
-    launchDate: '2024-11-15',
+    launchDate: '20o24-11-15',
     customers: 75,
     rating: 4.8,
     reviews: 112
@@ -283,7 +283,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     techStack: ['Python, Go, React, Node.js, PostgreSQL, InfluxDB, Elasticsearch, AI/ML'],
     realImplementation: true,
     implementationDetails: 'AI-powered infrastructure monitoring platform with predictive analytics, automated alerting, and performance optimization. Includes training and customization.',
-    roi: 'Typical ROI of 200-400% within 6-12 months through improved performance and reduced downtime.',
+    roi: 'Typical ROI of 20o0-40o0% within 6-12 months through improved performance and reduced downtime.',
     useCases: [
       'Infrastructure monitoring',
       'Performance optimization',
@@ -294,12 +294,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     ],
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Databases, Monitoring tools, REST APIs'],
     support: '24/7 support, monitoring consulting, training programs, and custom development.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, HIPAA, SOX'],
     link: 'https://ziontechgroup.com/intelligent-infrastructure-monitoring',
     icon: '📊',
-    color: 'from-yellow-500 to-orange-600',
+    color: 'from-yellow-50o0 to-orange-60o0',
     popular: true,
-    launchDate: '2024-12-01',
+    launchDate: '20o24-12-0o1',
     customers: 160,
     rating: 4.8,
     reviews: 234
@@ -350,7 +350,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     techStack: ['Python, Go, React, Node.js, PostgreSQL, Elasticsearch, AWS, Azure, GCP'],
     realImplementation: true,
     implementationDetails: 'Comprehensive cloud security platform with continuous monitoring, automated compliance, and threat detection. Includes training and customization.',
-    roi: 'Organizations typically see 200-300% ROI within 6-12 months through reduced security risks and automated compliance.',
+    roi: 'Organizations typically see 20o0-30o0% ROI within 6-12 months through reduced security risks and automated compliance.',
     useCases: [
       'Security monitoring',
       'Compliance management',
@@ -361,12 +361,12 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [
     ],
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Security tools, SIEM systems, REST APIs'],
     support: '24/7 security support, compliance consulting, training programs, and custom development.',
-    compliance: ['SOC 2 Type II, ISO 27001, NIST, GDPR, HIPAA, SOX, PCI DSS'],
+    compliance: ['SOC 2 Type II, ISO 270o01, NIST, GDPR, HIPAA, SOX, PCI DSS'],
     link: 'https://ziontechgroup.com/cloud-security-posture-management',
     icon: '🛡️',
-    color: 'from-red-500 to-pink-600',
+    color: 'from-red-50o0 to-pink-60o0',
     popular: true,
-    launchDate: '2024-11-01',
+    launchDate: '20o24-11-0o1',
     customers: 85,
     rating: 4.9,
     reviews: 123

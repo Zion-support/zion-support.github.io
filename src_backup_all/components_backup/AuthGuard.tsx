@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { Loader2, Shield } from 'lucide-react'
@@ -21,8 +20,7 @@ export function AuthGuard({
   redirectTo = '/auth/login',
   fallback,
   showToast = true,
-  allowGuest = false,
-}: AuthGuardProps) {
+  allowGuest = false}: AuthGuardProps) {
   const { user, isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
 
@@ -36,8 +34,7 @@ export function AuthGuard({
         toast({
           title: "Authentication Required",
           description: "Please log in to access this feature.",
-          variant: "destructive",
-        });
+          variant: "destructive"});
       }
 
       const returnTo = encodeURIComponent(router.asPath);
@@ -55,8 +52,7 @@ export function AuthGuard({
           toast({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
-            variant: "destructive",
-          });
+            variant: "destructive"});
         }
         router.push('/dashboard'); // Redirect to dashboard instead of login
         return;
@@ -69,7 +65,7 @@ export function AuthGuard({
     return fallback || (
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex items-center gap-2 text-muted-foreground">
-          <Loader2 className="h-6 w-6 animate-spin" />
+          <Loader2 className="h-6 w-6 animate-spin"  />
           <span>Loading...</span>
         </div>
       </div>
@@ -80,7 +76,7 @@ export function AuthGuard({
   if (requireAuth && !isAuthenticated && !allowGuest) {
     return fallback || (
       <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-        <Shield className="h-12 w-12 text-muted-foreground" />
+        <Shield className="h-12 w-12 text-muted-foreground"  />
         <div className="text-center">
           <h2 className="text-xl font-semibold mb-2">Authentication Required</h2>
           <p className="text-muted-foreground">
@@ -99,7 +95,7 @@ export function AuthGuard({
     if (!hasRequiredRole) {
       return fallback || (
         <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-          <Shield className="h-12 w-12 text-muted-foreground" />
+          <Shield className="h-12 w-12 text-muted-foreground"  />
           <div className="text-center">
             <h2 className="text-xl font-semibold mb-2">Access Denied</h2>
             <p className="text-muted-foreground">
@@ -123,7 +119,7 @@ export function withAuthGuard<P extends object>(
   return function AuthGuardedComponent(props: P) {
     return (
       <AuthGuard {...guardOptions}>
-        <Component {...props} />
+        <Component {...props}  />
       </AuthGuard>
     );
   };
@@ -149,8 +145,7 @@ export function useAuthGuard() {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
-          variant: "destructive",
-        });
+          variant: "destructive"});
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
@@ -174,8 +169,7 @@ export function useAuthGuard() {
         toast({
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
-          variant: "destructive",
-        });
+          variant: "destructive"});
       }
 
       router.push(options?.redirectTo || '/dashboard');
@@ -200,6 +194,5 @@ export function useAuthGuard() {
     checkPermission,
     isAuthenticated,
     user,
-    isLoading,
-  };
+    isLoading};
 }

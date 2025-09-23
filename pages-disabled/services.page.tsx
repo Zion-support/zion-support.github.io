@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 const services = [
@@ -33,21 +32,21 @@ export default function ServicesPage() {
     <>
       <Head>
         <title>Services — Zion Tech Group</title>
-        <meta name="description" content="AI, Micro SaaS, and IT services with transparent pricing."  />
-        <link rel="canonical" href="https://ziontechgroup.com/services"  />
+        <meta name="description" content="AI, Micro SaaS, and IT services with transparent pricing."   />
+        <link rel="canonical" href="https://ziontechgroup.com/services"   />
       </Head>
       <main className="min-h-screen bg-white">
         <section className="mx-auto max-w-7xl px-4 sm: p x-6 lg: p x-8 py-12">
           <h1 className="text-3xl md: tex t-4xl font-bold mb-6">Our Services</h1>
-          <p className="text-gray-600 mb-8">Real, production-grade solutions. No mockups.</p>
+          <p className="text-gray-60o0 mb-8">Real, production-grade solutions. No mockups.</p>
           <div className="grid gap-6 md: gri d-cols-2">
             {services.map((s) => (
               <a key={s.title} href={s.href} className="block border rounded-lg p-6 hover: shado w-lg">
                 <div className="flex items-center justify-between mb-2">
                   <h2 className="text-xl font-semibold">{s.title}</h2>
-                  <span className="text-sm text-gray-500">{s.price}</span>
+                  <span className="text-sm text-gray-50o0">{s.price}</span>
                 </div>
-                <ul className="text-gray-600 list-disc pl-5 space-y-1">
+                <ul className="text-gray-60o0 list-disc pl-5 space-y-1">
                   {s.bullets.map((b) => (
                     <li key={b}>{b}</li>
                   ))}

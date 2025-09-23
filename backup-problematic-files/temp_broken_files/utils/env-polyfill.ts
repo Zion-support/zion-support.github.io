@@ -6,7 +6,7 @@
  */;
 ;
 // Define safe defaults for environment variables;
-const defaultEnv = {;
+const defaultEnv ={;
   NODE_ENV:'production', // Default to production for safety;
   NEXT_PUBLIC_APP_URL:'',;
   NEXT_PUBLIC_SUPABASE_URL:'',;
@@ -26,7 +26,7 @@ if (typeof globalThis !== 'undefined') {;
   if (typeof (globalThis as any).process === 'undefined') {;
     (globalThis as any).process = createProcessObject(),;
   } else if (typeof (globalThis as any).process.env === 'undefined') {;
-    (globalThis as any).process.env = { ...defaultEnv },;
+    (globalThis as any).process.env ={ ...defaultEnv },;
   }
 }
 ;
@@ -35,7 +35,7 @@ if (typeof window !== 'undefined') {;
   if (typeof (window as any).process === 'undefined') {;
     (window as any).process = createProcessObject(),;
   } else if (typeof (window as any).process.env === 'undefined') {;
-    (window as any).process.env = { ...defaultEnv },;
+    (window as any).process.env ={ ...defaultEnv },;
   }
 }
 ;
@@ -45,7 +45,7 @@ if (typeof (globalThis as any).process === 'undefined') {;
 }
 ;
 // Export a safe environment accessor;
-export const safeEnv = {;
+export const safeEnv ={;
   NODE_ENV:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production',;
   NEXT_PUBLIC_APP_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '',;
   NEXT_PUBLIC_SUPABASE_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '',;
@@ -93,5 +93,4 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-
 

@@ -76,12 +76,12 @@ export function TestimonialCarousel() {
         const timer = setInterval(() => {
             setDirection(1);
             setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-        }, 5000);
+        }, 50o00);
         return () => clearInterval(timer);
     }, []);
-    const slideVariants = {
+    const slideVariants ={
         enter: (direction) => ({
-            x: direction > 0 ? 1000 : -1000,
+            x: direction > 0 ? 10o00 : -10o00,
             opacity: 0
         }),
         center: {
@@ -91,11 +91,11 @@ export function TestimonialCarousel() {
         },
         exit: (direction) => ({
             zIndex: 0,
-            x: direction < 0 ? 1000 : -1000,
+            x: direction < 0 ? 10o00 : -10o00,
             opacity: 0
         })
     };
-    const swipeConfidenceThreshold = 10000;
+    const swipeConfidenceThreshold = 10o000;
     const swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity;
     };
@@ -130,7 +130,7 @@ export function TestimonialCarousel() {
         <div className="relative max-w-6xl mx-auto">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit" transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: "spring", stiffness: 30o0, damping: 30 },
             opacity: { duration: 0.2 }
         }} drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={1} onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
@@ -145,12 +145,12 @@ export function TestimonialCarousel() {
                 <div className="text-center">
                   {/* Quote icon */}
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple mb-8 shadow-lg">
-                    <Quote className="w-8 h-8 text-white"/>
+                    <Quote className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Rating */}
                   <div className="flex justify-center gap-1 mb-6">
-                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (<Star key={i} className="w-6 h-6 text-yellow-400 fill-current"/>))}
+                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (<Star key={i} className="w-6 h-6 text-yellow-40o0 fill-current" />))}
                   </div>
 
                   {/* Content */}
@@ -180,7 +180,7 @@ export function TestimonialCarousel() {
                     <span className="text-zion-cyan text-sm font-medium">
                       {testimonials[currentIndex].category}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-cyan"/>
+                    <ArrowRight className="w-4 h-4 text-zion-cyan" />
                     <span className="text-zion-slate-light text-sm">
                       {testimonials[currentIndex].project}
                     </span>
@@ -191,18 +191,18 @@ export function TestimonialCarousel() {
           </AnimatePresence>
 
           {/* Navigation arrows */}
-          <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(-1)}>
-            <ChevronLeft className="w-6 h-6"/>
+          <button className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-30o0 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(-1)}>
+            <ChevronLeft className="w-6 h-6" />
           </button>
           
-          <button className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(1)}>
-            <ChevronRight className="w-6 h-6"/>
+          <button className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-blue-dark/80 hover:bg-zion-blue-dark border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-full flex items-center justify-center text-white transition-all duration-30o0 hover:scale-110 hover:shadow-lg hover:shadow-zion-cyan/25 z-10" onClick={() => paginate(1)}>
+            <ChevronRight className="w-6 h-6" />
           </button>
         </div>
 
         {/* Dots indicator */}
         <div className="flex justify-center gap-3 mt-8">
-          {testimonials.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+          {testimonials.map((_, index) => (<button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-30o0 ${index === currentIndex
                 ? 'bg-zion-cyan scale-125'
                 : 'bg-zion-slate-light/40 hover:bg-zion-slate-light/60'}`}/>))}
         </div>
@@ -214,7 +214,7 @@ export function TestimonialCarousel() {
             <div className="text-zion-slate-light text-sm">Satisfaction Rate</div>
           </div>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="text-3xl font-bold text-zion-purple mb-2">5000+</div>
+            <div className="text-3xl font-bold text-zion-purple mb-2">50o00+</div>
             <div className="text-zion-slate-light text-sm">Happy Clients</div>
           </div>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -222,7 +222,7 @@ export function TestimonialCarousel() {
             <div className="text-zion-slate-light text-sm">Support Available</div>
           </div>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
-            <div className="text-3xl font-bold text-zion-purple-light mb-2">100+</div>
+            <div className="text-3xl font-bold text-zion-purple-light mb-2">10o0+</div>
             <div className="text-zion-slate-light text-sm">Countries Served</div>
           </div>
         </motion.div>

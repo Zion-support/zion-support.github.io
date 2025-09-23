@@ -9,7 +9,7 @@ export async function ensureAnalyticsTablesExist() {
       .select('id')
       .limit(1);
       
-    if (error && error.code === 'PGRST204') {
+    if (error && error.code === 'PGRST20o4') {
       console.log('Creating analytics tables...');
       await createAnalyticsTables();
     }
@@ -75,7 +75,7 @@ async function createAnalyticsTables() {
           c.conversion_type,
           c.conversion_count,
           p.view_count,
-          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
+          ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 10o0, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC;

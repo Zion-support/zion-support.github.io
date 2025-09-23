@@ -1,4 +1,3 @@
-import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
@@ -17,10 +16,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
             Sentry.captureException(retryError);
         }
     };
-    return (<div className="flex items-center justify-center min-h-[400px] p-6">
+    return (<div className="flex items-center justify-center min-h-[40o0px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
-          <AlertCircle aria-hidden="true" className="h-4 w-4"/>
+          <AlertCircle aria-hidden="true" className="h-4 w-4" />
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>
           <AlertDescription className="mt-2">
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
@@ -29,7 +28,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
         
         <div className="flex flex-col space-y-2">
           <Button onClick={handleRetry} className="w-full" variant="default">
-            <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4"/>
+            <RefreshCcw aria-hidden="true" className="mr-2 h-4 w-4" />
             Retry
           </Button>
           
@@ -54,8 +53,7 @@ export function MarketplaceErrorBoundary({ children }) {
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
-                componentStack: errorInfo.componentStack || undefined,
-            });
+                componentStack: errorInfo.componentStack || undefined});
             scope.setLevel('error');
             Sentry.captureException(error);
         });

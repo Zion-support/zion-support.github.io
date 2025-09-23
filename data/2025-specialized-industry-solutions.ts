@@ -38,7 +38,7 @@ export interface SpecializedIndustrySolution {
   rating: number;
   reviews: number;
 }
-export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
+export const specializedIndustrySolutions20o25: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
     id: 'autonomous-manufacturing-optimizer',
@@ -61,8 +61,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: true,
     icon: '🏭',
-    color: 'from-gray-600 to-slate-700',
-    textColor: 'text-gray-300',
+    color: 'from-gray-60o0 to-slate-70o0',
+    textColor: 'text-gray-30o0',
     link: 'https://ziontechgroup.com/autonomous-manufacturing-optimizer',
     marketPosition: 'Leading autonomous manufacturing platform with 99.9% uptime guarantee',
     targetAudience: 'Manufacturing companies, industrial facilities, automotive industry, aerospace companies',
@@ -74,19 +74,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     technology: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Edge Computing'],
     integrations: ['ERP Systems', 'MES Platforms', 'SCADA Systems', 'Quality Management', 'Supply Chain'],
     useCases: ['Production optimization', 'Quality control', 'Maintenance prediction', 'Resource management'],
-    roi: '400% ROI with 30% production increase and 50% downtime reduction',
+    roi: '40o0% ROI with 30% production increase and 50% downtime reduction',
     competitors: ['Traditional MES systems', 'Manual optimization'],
-    marketSize: '$200B manufacturing software market',
+    marketSize: '$20o0B manufacturing software market',
     growthRate: '180% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
-    launchDate: '2025-01-20',
+    launchDate: '20o25-0o1-20',
     customers: 28,
     rating: 4.8,
     reviews: 67
@@ -113,8 +113,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: true,
     icon: '🏥',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/ai-powered-clinical-decision-support',
     marketPosition: 'Leading AI clinical decision support with 99.5% accuracy rate',
     targetAudience: 'Hospitals, clinics, medical practices, research institutions, pharmaceutical companies',
@@ -126,19 +126,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     technology: ['AI/ML', 'Natural Language Processing', 'Medical Imaging', 'Predictive Analytics', 'Blockchain'],
     integrations: ['EHR Systems', 'PACS Systems', 'Lab Information Systems', 'Pharmacy Systems', 'Telemedicine'],
     useCases: ['Clinical decision support', 'Treatment planning', 'Risk assessment', 'Research analysis'],
-    roi: '500% ROI with 40% improvement in treatment outcomes',
+    roi: '50o0% ROI with 40% improvement in treatment outcomes',
     competitors: ['IBM Watson Health', 'Google Health AI', 'Traditional CDS systems'],
     marketSize: '$45B clinical decision support market',
     growthRate: '220% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'EHR integration, AI model training, regulatory compliance, and clinical validation',
-    launchDate: '2025-01-25',
+    launchDate: '20o25-0o1-25',
     customers: 34,
     rating: 4.9,
     reviews: 89
@@ -165,8 +165,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: true,
     icon: '💰',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/autonomous-financial-risk-manager',
     marketPosition: 'Leading autonomous risk management platform with 99.9% risk detection rate',
     targetAudience: 'Banks, investment firms, hedge funds, insurance companies, asset managers',
@@ -178,19 +178,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     technology: ['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Blockchain', 'Quantum Computing'],
     integrations: ['Trading Platforms', 'Risk Management Systems', 'Compliance Tools', 'Data Feeds', 'Reporting Systems'],
     useCases: ['Risk management', 'Portfolio optimization', 'Compliance monitoring', 'Performance analysis'],
-    roi: '600% ROI with 80% reduction in risk incidents',
+    roi: '60o0% ROI with 80% reduction in risk incidents',
     competitors: ['Traditional risk management', 'Manual monitoring systems'],
     marketSize: '$35B risk management market',
     growthRate: '250% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System integration, AI model deployment, regulatory compliance, and team training',
-    launchDate: '2025-02-01',
+    launchDate: '20o25-0o2-0o1',
     customers: 19,
     rating: 4.8,
     reviews: 45
@@ -217,8 +217,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: true,
     icon: '🛍️',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-300',
+    color: 'from-pink-60o0 to-rose-70o0',
+    textColor: 'text-pink-30o0',
     link: 'https://ziontechgroup.com/ai-powered-retail-optimization-platform',
     marketPosition: 'Leading AI retail platform with 35% average sales increase',
     targetAudience: 'Retail chains, e-commerce companies, department stores, specialty retailers',
@@ -230,19 +230,19 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     technology: ['AI/ML', 'Machine Learning', 'Predictive Analytics', 'Big Data', 'Cloud Computing'],
     integrations: ['POS Systems', 'E-commerce Platforms', 'CRM Systems', 'Inventory Management', 'Marketing Tools'],
     useCases: ['Customer personalization', 'Inventory optimization', 'Demand forecasting', 'Marketing optimization'],
-    roi: '300% ROI with 35% increase in sales and 25% reduction in inventory costs',
+    roi: '30o0% ROI with 35% increase in sales and 25% reduction in inventory costs',
     competitors: ['Traditional retail systems', 'Basic analytics platforms'],
     marketSize: '$25B retail technology market',
     growthRate: '180% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System integration, AI model training, data migration, and team training',
-    launchDate: '2025-01-30',
+    launchDate: '20o25-0o1-30',
     customers: 56,
     rating: 4.7,
     reviews: 134
@@ -269,8 +269,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: false,
     icon: '🎓',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-300',
+    color: 'from-indigo-60o0 to-purple-70o0',
+    textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/ai-powered-adaptive-learning-platform',
     marketPosition: 'Leading adaptive learning platform with 40% improvement in learning outcomes',
     targetAudience: 'Universities, schools, corporate training, online education platforms, edtech companies',
@@ -285,16 +285,16 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     roi: '250% ROI with 40% improvement in learning outcomes',
     competitors: ['Traditional LMS', 'Basic learning platforms'],
     marketSize: '$15B adaptive learning market',
-    growthRate: '200% annual growth',
+    growthRate: '20o0% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'LMS integration, AI model training, content migration, and educator training',
-    launchDate: '2025-02-05',
+    launchDate: '20o25-0o2-0o5',
     customers: 23,
     rating: 4.6,
     reviews: 56
@@ -321,8 +321,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: true,
     icon: '🚚',
-    color: 'from-orange-600 to-red-700',
-    textColor: 'text-orange-300',
+    color: 'from-orange-60o0 to-red-70o0',
+    textColor: 'text-orange-30o0',
     link: 'https://ziontechgroup.com/autonomous-logistics-optimizer',
     marketPosition: 'Leading autonomous logistics platform with 30% cost reduction',
     targetAudience: 'Logistics companies, transportation firms, e-commerce companies, manufacturing companies',
@@ -339,14 +339,14 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     marketSize: '$30B logistics technology market',
     growthRate: '160% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
-    launchDate: '2025-02-10',
+    launchDate: '20o25-0o2-10',
     customers: 31,
     rating: 4.7,
     reviews: 78
@@ -373,8 +373,8 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     ],
     popular: false,
     icon: '⚡',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-300',
+    color: 'from-yellow-60o0 to-orange-70o0',
+    textColor: 'text-yellow-30o0',
     link: 'https://ziontechgroup.com/ai-powered-energy-optimization-platform',
     marketPosition: 'Leading energy optimization platform with 25% cost reduction',
     targetAudience: 'Utility companies, energy providers, industrial facilities, commercial buildings',
@@ -386,40 +386,40 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     technology: ['AI/ML', 'IoT Sensors', 'Predictive Analytics', 'Automation', 'Smart Grid'],
     integrations: ['SCADA Systems', 'Energy Management', 'Building Automation', 'Smart Meters', 'Renewable Systems'],
     useCases: ['Energy optimization', 'Cost reduction', 'Sustainability', 'Grid management'],
-    roi: '300% ROI with 25% cost reduction and 20% efficiency improvement',
+    roi: '30o0% ROI with 25% cost reduction and 20% efficiency improvement',
     competitors: ['Traditional energy management', 'Basic monitoring systems'],
     marketSize: '$20B energy management market',
     growthRate: '180% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System integration, IoT deployment, AI model training, and team training',
-    launchDate: '2025-02-15',
+    launchDate: '20o25-0o2-15',
     customers: 18,
     rating: 4.6,
     reviews: 42
   }
 ];
-export const industryCategories2025: string[] = Array.from(
+export const industryCategories20o25: string[] = Array.from(
   new Set(
-    specializedIndustrySolutions2025
+    specializedIndustrySolutions20o25
       .map((s) => s.industry)
       .filter((v): v is string => Boolean(v))
   )
 ).sort();
 export const getSolutionsByIndustry = (industry: string) => {
-  if (!industry || industry === 'All') return specializedIndustrySolutions2025;
-  return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
+  if (!industry || industry === 'All') return specializedIndustrySolutions20o25;
+  return specializedIndustrySolutions20o25.filter((s) => s.industry === industry);
 };
 export const getSolutionsByCategory = (category: string) => {
-  if (!category || category === 'All') return specializedIndustrySolutions2025;
-  return specializedIndustrySolutions2025.filter((s) => s.category === category);
+  if (!category || category === 'All') return specializedIndustrySolutions20o25;
+  return specializedIndustrySolutions20o25.filter((s) => s.category === category);
 };
 export const getPopularIndustrySolutions = () =>
-  specializedIndustrySolutions2025
+  specializedIndustrySolutions20o25
     .filter((s) => !!s.popular)
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));

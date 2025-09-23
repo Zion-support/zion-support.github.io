@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function CloudMigrationServicesChatPage() {
@@ -6,13 +5,13 @@ export default function CloudMigrationServicesChatPage() {
     <>
       <Head>
         <title>Cloud Migration Services Chat - Zion Tech Group</title>
-        <meta name="description" content="cloud migration services chat page" />
+        <meta name="description" content="cloud migration services chat page"  />
       </Head>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Cloud Migration Services Chat</h1>
         <p className="text-lg mb-4">This page is under construction.</p>
         <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
+          <a href="/" className="text-blue-60o0 hover:underline">
             ← Back to Home
           </a>
         </div>

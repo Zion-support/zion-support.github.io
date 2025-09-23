@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 const Sitemap = () => {
-    const sitemapData = {
+    const sitemapData ={
         main: [
             { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
             { path: '/about', label: 'About Us', description: 'Learn about our company and mission' },
@@ -31,13 +30,13 @@ const Sitemap = () => {
             { path: '/ai-autonomous-integration', label: 'AI Integration', description: 'AI system integration services' }
         ],
         pricing: [
-            { path: '/comprehensive-pricing-2025', label: 'Pricing 2025', description: 'Current year pricing plans' },
+            { path: '/comprehensive-pricing-20o25', label: 'Pricing 20o25', description: 'Current year pricing plans' },
             { path: '/comprehensive-pricing', label: 'Comprehensive Pricing', description: 'Detailed pricing information' }
         ],
         showcase: [
             { path: '/services-showcase', label: 'Services Showcase', description: 'Showcase of our services' },
             { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },
-            { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
+            { path: '/innovative-services-20o25', label: 'Innovative Services 20o25', description: 'Latest innovative services' }
         ],
         legal: [
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },
@@ -47,8 +46,8 @@ const Sitemap = () => {
     return (<div className="bg-slate-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Site Map</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-slate-90o0 mb-4">Site Map</h2>
+          <p className="text-lg text-slate-60o0 max-w-2xl mx-auto">
             Navigate through all our pages and services to find exactly what you need
           </p>
         </div>
@@ -56,12 +55,12 @@ const Sitemap = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {/* Main Pages */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Main Pages</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">Main Pages</h3>
             <ul className="space-y-3">
               {sitemapData.main.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
             </ul>
@@ -69,12 +68,12 @@ const Sitemap = () => {
 
           {/* Core Services */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Core Services</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">Core Services</h3>
             <ul className="space-y-3">
               {sitemapData.services.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
             </ul>
@@ -82,12 +81,12 @@ const Sitemap = () => {
 
           {/* AI Autonomous Services */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">AI Autonomous Services</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">AI Autonomous Services</h3>
             <ul className="space-y-3">
               {sitemapData.aiAutonomous.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
             </ul>
@@ -95,18 +94,18 @@ const Sitemap = () => {
 
           {/* Pricing & Showcase */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Pricing & Showcase</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">Pricing & Showcase</h3>
             <ul className="space-y-3">
               {sitemapData.pricing.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
               {sitemapData.showcase.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
             </ul>
@@ -114,24 +113,24 @@ const Sitemap = () => {
 
           {/* Legal & Resources */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Legal & Resources</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">Legal & Resources</h3>
             <ul className="space-y-3">
               {sitemapData.legal.map((item) => (<li key={item.path}>
-                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                    <div className="font-medium text-slate-900">{item.label}</div>
-                    <div className="text-sm text-slate-600">{item.description}</div>
+                  <Link to={item.path} className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                    <div className="font-medium text-slate-90o0">{item.label}</div>
+                    <div className="text-sm text-slate-60o0">{item.description}</div>
                   </Link>
                 </li>))}
               <li>
-                <Link to="/ai-consumer-willingness-to-try" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                  <div className="font-medium text-slate-900">AI Consumer Research</div>
-                  <div className="text-sm text-slate-600">Research on AI consumer adoption</div>
+                <Link to="/ai-consumer-willingness-to-try" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                  <div className="font-medium text-slate-90o0">AI Consumer Research</div>
+                  <div className="text-sm text-slate-60o0">Research on AI consumer adoption</div>
                 </Link>
               </li>
               <li>
-                <Link to="/ai-consumer-willingness-to-use" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-                  <div className="font-medium text-slate-900">AI Consumer Insights</div>
-                  <div className="text-sm text-slate-600">Consumer insights for AI products</div>
+                <Link to="/ai-consumer-willingness-to-use" className="block p-3 rounded-lg hover:bg-slate-50 transition-colors duration-20o0">
+                  <div className="font-medium text-slate-90o0">AI Consumer Insights</div>
+                  <div className="text-sm text-slate-60o0">Consumer insights for AI products</div>
                 </Link>
               </li>
             </ul>
@@ -139,15 +138,15 @@ const Sitemap = () => {
 
           {/* Quick Links */}
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">
-            <h3 className="text-xl font-semibold text-slate-900 mb-4">Quick Links</h3>
+            <h3 className="text-xl font-semibold text-slate-90o0 mb-4">Quick Links</h3>
             <div className="space-y-3">
-              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <Link to="/contact" className="block w-full text-center bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0">
                 Get Started
               </Link>
-              <Link to="/comprehensive-pricing-2025" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200">
+              <Link to="/comprehensive-pricing-20o25" className="block w-full text-center bg-white text-slate-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-30o0 border border-slate-20o0">
                 View Pricing
               </Link>
-              <Link to="/services" className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-300 border border-slate-200">
+              <Link to="/services" className="block w-full text-center bg-white text-slate-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-all duration-30o0 border border-slate-20o0">
                 Explore Services
               </Link>
             </div>
@@ -156,7 +155,7 @@ const Sitemap = () => {
 
         {/* Additional AI Services Grid */}
         <div className="mt-12">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">All AI Autonomous Services</h3>
+          <h3 className="text-2xl font-bold text-slate-90o0 mb-6 text-center">All AI Autonomous Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {[
             'AI Autonomous Audit', 'AI Autonomous Compliance', 'AI Autonomous Creativity',
@@ -183,8 +182,8 @@ const Sitemap = () => {
             'AI Autonomous Zero Trust Security'
         ].map((service) => {
             const path = '/' + service.toLowerCase().replace(/\s+/g, '-').replace(/ai-autonomous-/, 'ai-autonomous-');
-            return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center">
-                  <div className="font-medium text-slate-900 text-sm">{service}</div>
+            return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-20o0 text-center">
+                  <div className="font-medium text-slate-90o0 text-sm">{service}</div>
                 </Link>);
         })}
           </div>

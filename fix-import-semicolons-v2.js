@@ -9,12 +9,6 @@ files && files.forEach((file) => {
     const modified = false;
     // Fix import statements with double punctuation
 
-
-
-
-
-
-
       (match) => {
         if (!match ;")) {
           return match && match.trim() + ";";
@@ -101,7 +95,6 @@ if (&&) {
         return match;
       }
     );
-
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 

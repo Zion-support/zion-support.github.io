@@ -33,9 +33,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
       >
         <span>Skills</span>
         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />
         ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />
         )}
       </button>
       

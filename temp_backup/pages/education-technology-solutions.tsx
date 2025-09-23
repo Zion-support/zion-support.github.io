@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function EducationTechnologySolutions() {
@@ -21,6 +20,6 @@ export default function EducationTechnologySolutions() {
 			industries={["K-12", "Higher Ed", "Workforce"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/education-technology-solutions"
-		/>
+		 />
 	);
 }

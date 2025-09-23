@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -10,10 +9,10 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -37,25 +36,25 @@ const benefits = [
     title: 'Increase Data-Driven Decisions',
     description: 'Improve decision making by 40-60% with AI-powered insights',
     icon: Brain,
-    color: 'text-cyan-400'
+    color: 'text-cyan-40o0'
   },
   {
     title: 'Natural Language Queries',
     description: 'Ask questions in plain English and get instant answers',
     icon: BarChart3,
-    color: 'text-blue-400'
+    color: 'text-blue-40o0'
   },
   {
     title: 'Predictive Analytics',
     description: 'Forecast trends and outcomes with machine learning',
     icon: TrendingUp,
-    color: 'text-green-400'
+    color: 'text-green-40o0'
   },
   {
     title: 'Real-Time Monitoring',
     description: 'Get instant alerts and updates on critical metrics',
     icon: Eye,
-    color: 'text-purple-400'
+    color: 'text-purple-40o0'
   }
 ];
 
@@ -149,14 +148,14 @@ export default function AIBusinessIntelligenceSuitePro() {
     <Layout>
       <Head>
         <title>AI Business Intelligence Suite Pro - Zion Tech Group</title>
-        <meta name="description" content="Transform raw data into actionable insights with AI-powered analytics. Enterprise-grade BI platform with natural language querying and predictive modeling." />
-        <meta name="keywords" content="AI business intelligence, data analytics, predictive analytics, natural language queries, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite-pro" />
+        <meta name="description" content="Transform raw data into actionable insights with AI-powered analytics. Enterprise-grade BI platform with natural language querying and predictive modeling."  />
+        <meta name="keywords" content="AI business intelligence, data analytics, predictive analytics, natural language queries, Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite-pro"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-90o0/20 via-cyan-90o0/20 to-indigo-90o0/20"  />
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -167,11 +166,11 @@ export default function AIBusinessIntelligenceSuitePro() {
               <div className="text-6xl mb-6">📊</div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 AI Business Intelligence
-                <span className="block bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                   Suite Pro
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-30o0 mb-8">
                 Transform raw data into actionable insights with AI-powered analytics. 
                 Enterprise-grade BI platform that combines traditional analytics with AI capabilities, 
                 predictive modeling, and natural language querying.
@@ -179,13 +178,13 @@ export default function AIBusinessIntelligenceSuitePro() {
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 bg-black/30 rounded-xl border border-gray-700">
-                  <div className="text-2xl font-bold text-cyan-400 mb-1">40-60%</div>
-                  <div className="text-sm text-gray-400">Decision Improvement</div>
+                <div className="text-center p-4 bg-black/30 rounded-xl border border-gray-70o0">
+                  <div className="text-2xl font-bold text-cyan-40o0 mb-1">40-60%</div>
+                  <div className="text-sm text-gray-40o0">Decision Improvement</div>
                 </div>
-                <div className="text-center p-4 bg-black/30 rounded-xl border border-gray-700">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">24/7</div>
-                  <div className="text-sm text-gray-400">Real-time Monitoring</div>
+                <div className="text-center p-4 bg-black/30 rounded-xl border border-gray-70o0">
+                  <div className="text-2xl font-bold text-blue-40o0 mb-1">24/7</div>
+                  <div className="text-sm text-gray-40o0">Real-time Monitoring</div>
                 </div>
               </div>
 
@@ -193,16 +192,16 @@ export default function AIBusinessIntelligenceSuitePro() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-30o0 hover:transform hover:scale-10o5 flex items-center justify-center gap-2"
                 >
                   Get Started
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5"  />
                 </Link>
                 <a
                   href={`tel:${contactInfo.mobile}`}
-                  className="border border-gray-600 hover:border-cyan-500 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors hover:bg-black/20 flex items-center justify-center gap-2"
+                  className="border border-gray-60o0 hover:border-cyan-50o0 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors hover:bg-black/20 flex items-center justify-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   Call Now
                 </a>
               </div>
@@ -214,34 +213,34 @@ export default function AIBusinessIntelligenceSuitePro() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/30">
+              <div className="bg-gradient-to-br from-blue-60o0/20 to-cyan-60o0/20 rounded-3xl p-8 border border-blue-50o0/30">
                 <div className="text-center mb-6">
                   <div className="text-4xl font-bold text-white mb-2">$599</div>
-                  <div className="text-gray-400">per month</div>
+                  <div className="text-gray-40o0">per month</div>
                 </div>
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     <span>21-day free trial</span>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     <span>Setup in 3-5 days</span>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     <span>Up to 25 users</span>
                   </div>
                   <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     <span>Priority support</span>
                   </div>
                 </div>
 
                 <Link
                   href="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 block"
+                  className="w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-30o0 hover:transform hover:scale-10o5 block"
                 >
                   Start Free Trial
                 </Link>
@@ -262,11 +261,11 @@ export default function AIBusinessIntelligenceSuitePro() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powerful Features for
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                 Modern Analytics
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Our AI-powered BI platform combines cutting-edge technology with intuitive design 
               to deliver insights that drive business growth.
             </p>
@@ -279,11 +278,11 @@ export default function AIBusinessIntelligenceSuitePro() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-gradient-to-br from-gray-90o0/50 to-black/50 backdrop-blur-lg rounded-2xl p-6 border border-gray-70o0 hover:border-cyan-50o0/50 transition-all duration-30o0"
               >
                 <div className="text-3xl mb-4">✨</div>
                 <h3 className="text-lg font-semibold text-white mb-3">{feature}</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-40o0 text-sm">
                   Advanced capabilities that transform your data into actionable business intelligence.
                 </p>
               </motion.div>
@@ -303,7 +302,7 @@ export default function AIBusinessIntelligenceSuitePro() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                 AI BI Platform?
               </span>
             </h2>
@@ -316,14 +315,14 @@ export default function AIBusinessIntelligenceSuitePro() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg rounded-2xl border border-gray-700"
+                className="flex gap-6 p-6 bg-gradient-to-br from-gray-90o0/50 to-black/50 backdrop-blur-lg rounded-2xl border border-gray-70o0"
               >
                 <div className={`text-4xl ${benefit.color}`}>
-                  <benefit.icon />
+                  <benefit.icon  />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <p className="text-gray-30o0">{benefit.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -342,7 +341,7 @@ export default function AIBusinessIntelligenceSuitePro() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Perfect For
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                 These Use Cases
               </span>
             </h2>
@@ -355,7 +354,7 @@ export default function AIBusinessIntelligenceSuitePro() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-gradient-to-br from-gray-90o0/50 to-black/50 backdrop-blur-lg rounded-xl p-6 border border-gray-70o0 text-center hover:border-cyan-50o0/50 transition-all duration-30o0"
               >
                 <div className="text-2xl mb-3">🎯</div>
                 <h3 className="text-white font-semibold">{useCase}</h3>
@@ -378,9 +377,9 @@ export default function AIBusinessIntelligenceSuitePro() {
               <h2 className="text-3xl font-bold text-white mb-8">Technology Stack</h2>
               <div className="grid grid-cols-2 gap-4">
                 {technology.map((tech, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-black/30 rounded-lg border border-gray-700">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                    <span className="text-gray-300">{tech}</span>
+                  <div key={index} className="flex items-center gap-3 p-3 bg-black/30 rounded-lg border border-gray-70o0">
+                    <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>
+                    <span className="text-gray-30o0">{tech}</span>
                   </div>
                 ))}
               </div>
@@ -395,9 +394,9 @@ export default function AIBusinessIntelligenceSuitePro() {
               <h2 className="text-3xl font-bold text-white mb-8">Integrations</h2>
               <div className="grid grid-cols-2 gap-4">
                 {integrations.map((integration, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-black/30 rounded-lg border border-gray-700">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    <span className="text-gray-300">{integration}</span>
+                  <div key={index} className="flex items-center gap-3 p-3 bg-black/30 rounded-lg border border-gray-70o0">
+                    <div className="w-2 h-2 bg-blue-40o0 rounded-full"></div>
+                    <span className="text-gray-30o0">{integration}</span>
                   </div>
                 ))}
               </div>
@@ -417,11 +416,11 @@ export default function AIBusinessIntelligenceSuitePro() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                 Perfect Plan
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your business needs. 
               All plans include our core AI-powered analytics features.
             </p>
@@ -434,12 +433,12 @@ export default function AIBusinessIntelligenceSuitePro() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border ${
-                  plan.popular ? 'border-cyan-500/50' : 'border-gray-700'
-                } hover:border-cyan-500/50 transition-all duration-300`}
+                className={`relative bg-gradient-to-br from-gray-90o0/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border ${
+                  plan.popular ? 'border-cyan-50o0/50' : 'border-gray-70o0'
+                } hover:border-cyan-50o0/50 transition-all duration-30o0`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-black text-sm font-bold px-4 py-2 rounded-full">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-black text-sm font-bold px-4 py-2 rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -447,25 +446,25 @@ export default function AIBusinessIntelligenceSuitePro() {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-white mb-1">{plan.price}</div>
-                  <div className="text-gray-400 mb-4">{plan.period}</div>
-                  <p className="text-gray-300 text-sm">{plan.description}</p>
+                  <div className="text-gray-40o0 mb-4">{plan.period}</div>
+                  <p className="text-gray-30o0 text-sm">{plan.description}</p>
                 </div>
 
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                      <span className="text-gray-30o0 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <Link
                   href="/contact"
-                  className={`w-full py-3 px-6 rounded-xl text-center font-semibold transition-all duration-300 hover:transform hover:scale-105 block ${
+                  className={`w-full py-3 px-6 rounded-xl text-center font-semibold transition-all duration-30o0 hover:transform hover:scale-10o5 block ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white'
-                      : 'border border-gray-600 hover:border-cyan-500 text-white hover:bg-black/20'
+                      ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white'
+                      : 'border border-gray-60o0 hover:border-cyan-50o0 text-white hover:bg-black/20'
                   }`}
                 >
                   Get Started
@@ -477,7 +476,7 @@ export default function AIBusinessIntelligenceSuitePro() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-900/20 via-cyan-900/20 to-indigo-900/20">
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-90o0/20 via-cyan-90o0/20 to-indigo-90o0/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -491,7 +490,7 @@ export default function AIBusinessIntelligenceSuitePro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8"
+            className="text-xl text-gray-30o0 mb-8"
           >
             Join hundreds of businesses that have already transformed their data analytics 
             with our AI-powered BI platform. Start your free trial today.
@@ -505,16 +504,16 @@ export default function AIBusinessIntelligenceSuitePro() {
           >
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center gap-2"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-30o0 hover:transform hover:scale-10o5 flex items-center justify-center gap-2"
             >
               Start Free Trial
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </Link>
             <a
               href={`tel:${contactInfo.mobile}`}
-              className="border border-gray-600 hover:border-cyan-500 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors hover:bg-black/20 flex items-center justify-center gap-2"
+              className="border border-gray-60o0 hover:border-cyan-50o0 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-colors hover:bg-black/20 flex items-center justify-center gap-2"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               Call {contactInfo.mobile}
             </a>
           </motion.div>
@@ -524,19 +523,19 @@ export default function AIBusinessIntelligenceSuitePro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 bg-black/30 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-gray-700"
+            className="mt-12 bg-black/30 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-gray-70o0"
           >
-            <div className="grid md:grid-cols-3 gap-6 text-gray-300">
+            <div className="grid md:grid-cols-3 gap-6 text-gray-30o0">
               <div className="flex items-center gap-2 justify-center">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <Mail className="w-5 h-5 text-blue-400" />
+                <Mail className="w-5 h-5 text-blue-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
               <div className="flex items-center gap-2 justify-center">
-                <MapPin className="w-5 h-5 text-purple-400" />
+                <MapPin className="w-5 h-5 text-purple-40o0"  />
                 <span>{contactInfo.address}</span>
               </div>
             </div>

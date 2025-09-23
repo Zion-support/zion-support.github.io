@@ -4,20 +4,20 @@ import Link from 'next/link';
 export default function BlogPage() {
   const blogPosts = [
     {
-      title: 'The Future of AI in Business: 2025 and Beyond',
+      title: 'The Future of AI in Business: 20o25 and Beyond',
       excerpt: 'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.',
       category: 'AI & Machine Learning',
-      date: 'August 262025',
+      date: 'August 2620o25',
       readTime: '5 min read',
       author: 'Zion Tech Group Team',
-      slug: 'future-of-ai-business-2025',
+      slug: 'future-of-ai-business-20o25',
       featured: true
     },
     {
       title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
       excerpt: 'Understanding what quantum computing can actually deliver today and what\'s still in the realm of science fiction.',
       category: 'Quantum Computing',
-      date: 'August 242025',
+      date: 'August 2420o25',
       readTime: '7 min read',
       author: 'Quantum Team',
       slug: 'quantum-computing-hype-reality',
@@ -27,27 +27,27 @@ export default function BlogPage() {
       title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt: 'How AI is both creating new security challenges and providing innovative solutions to protect businesses.',
       category: 'Cybersecurity',
-      date: 'August 22025',
+      date: 'August 220o25',
       readTime: '6 min read',
       author: 'Security Team',
       slug: 'cybersecurity-ai-threats-solutions',
       featured: false
     },
     {
-      title: 'Cloud-Native Architecture: Best Practices for 2025',
+      title: 'Cloud-Native Architecture: Best Practices for 20o25',
       excerpt: 'Essential strategies for building scalablesecureand efficient cloud-native applications.',
       category: 'Cloud & Infrastructure',
-      date: 'August 2025',
+      date: 'August 20o25',
       readTime: '8 min read',
       author: 'Cloud Team',
-      slug: 'cloud-native-architecture-best-practices-2025',
+      slug: 'cloud-native-architecture-best-practices-20o25',
       featured: false
     },
     {
       title: 'The Rise of Edge Computing: Bringing AI Closer to Users',
       excerpt: 'How edge computing is revolutionizing AI deployment and improving user experiences.',
       category: 'Edge Computing',
-      date: 'August 182025',
+      date: 'August 1820o25',
       readTime: '4 min read',
       author: 'Infrastructure Team',
       slug: 'rise-edge-computing-ai-users',
@@ -57,7 +57,7 @@ export default function BlogPage() {
       title: 'Sustainable Technology: Building Green AI Solutions',
       excerpt: 'Strategies for developing environmentally conscious AI and technology solutions.',
       category: 'Sustainability',
-      date: 'August 162025',
+      date: 'August 1620o25',
       readTime: '6 min read',
       author: 'Innovation Team',
       slug: 'sustainable-technology-green-ai-solutions',
@@ -82,19 +82,19 @@ export default function BlogPage() {
     <>
       <Head>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AIquantum computingcybersecurityand emerging technologies from Zion Tech Group." />
-        <meta name="viewport" content="width=device-widthinitial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Stay updated with the latest insights on AIquantum computingcybersecurityand emerging technologies from Zion Tech Group."  />
+        <meta name="viewport" content="width=device-widthinitial-scale=1"  />
+        <link rel="icon" href="/favicon.ico"  />
       </Head>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+      <main className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
               Insights & Thought Leadership
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl mb-8 text-gray-30o0 max-w-4xl mx-auto">
               Stay ahead of the curve with expert insights on AIquantum computingcybersecurityand the future of technology.
             </p>
           </div>
@@ -106,14 +106,14 @@ export default function BlogPage() {
             <div className="max-w-4xl mx-auto">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 border border-white border-opacity-10">
                 <div className="mb-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-blue-60o0 text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </span>
                 </div>
                 <h2 className="text-3xl font-bold mb-4">{featuredPost.title}</h2>
-                <p className="text-lg text-gray-300 mb-6">{featuredPost.excerpt}</p>
+                <p className="text-lg text-gray-30o0 mb-6">{featuredPost.excerpt}</p>
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-400">
+                  <div className="flex items-center space-x-4 text-sm text-gray-40o0">
                     <span>{featuredPost.author}</span>
                     <span>•</span>
                     <span>{featuredPost.date}</span>
@@ -126,11 +126,11 @@ export default function BlogPage() {
                 </div>
                 <Link 
                   href={`/blog/${featuredPost.slug}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  className="inline-flex items-center text-blue-40o0 hover:text-blue-30o0 font-medium"
                 >
                   Read Full Article
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
                   </svg>
                 </Link>
               </div>
@@ -147,8 +147,8 @@ export default function BlogPage() {
                   key={index}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     category === 'All'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white bg-opacity-10 text-gray-300 hover:bg-opacity-20'
+                      ? 'bg-blue-60o0 text-white'
+                      : 'bg-white bg-opacity-10 text-gray-30o0 hover:bg-opacity-20'
                   }`}
                 >
                   {category}
@@ -165,29 +165,29 @@ export default function BlogPage() {
               {blogPosts.filter(post => !post.featured).map((postindex) => (
                 <article key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10 hover:bg-opacity-20 transition-all">
                   <div className="mb-4">
-                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-300">
+                    <span className="bg-white bg-opacity-20 px-2 py-1 rounded text-xs text-gray-30o0">
                       {post.category}
                     </span>
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-blue-400 transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="hover:text-blue-40o0 transition-colors">
                       {post.title}
                     </Link>
                   </h3>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-gray-30o0 mb-4 line-clamp-3">{post.excerpt}</p>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">
                     <span>{post.author}</span>
                     <span>{post.readTime}</span>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">{post.date}</span>
+                    <span className="text-sm text-gray-40o0">{post.date}</span>
                     <Link 
                       href={`/blog/${post.slug}`}
-                      className="text-blue-400 hover:text-blue-300 font-medium text-sm"
+                      className="text-blue-40o0 hover:text-blue-30o0 font-medium text-sm"
                     >
                       Read More →
                     </Link>
@@ -199,12 +199,12 @@ export default function BlogPage() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-60o0">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Stay Updated
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-10o0">
               Get the latest insights delivered to your inbox. No spamjust valuable content.
             </p>
             <div className="max-w-md mx-auto">
@@ -212,9 +212,9 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-90o0 focus:outline-none focus:ring-2 focus:ring-white"
+                 />
+                <button className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-6 py-3 rounded-lg font-semibold transition-colors">
                   Subscribe
                 </button>
               </div>
@@ -228,19 +228,19 @@ export default function BlogPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 text-gray-300">
+            <p className="text-xl mb-8 text-gray-30o0">
               Let's discuss how our cutting-edge solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started
               </Link>
               <Link 
                 href="/services" 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border border-blue-40o0 text-blue-40o0 hover:bg-blue-40o0 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Explore Services
               </Link>

@@ -6,18 +6,18 @@ export default function ApiReference() {
     <>
       <Head>
         <title>API Reference - Zion Tech Group Documentation</title>
-        <meta name="description" content="Complete API reference for Zion Tech Group services. Find all endpoints, parameters, and response formats." />
-        <link rel="canonical" href="https://ziontechgroup.com/docs/api-reference" />
+        <meta name="description" content="Complete API reference for Zion Tech Group services. Find all endpoints, parameters, and response formats."  />
+        <link rel="canonical" href="https://ziontechgroup.com/docs/api-reference"  />
       </Head>
       
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+      <div style={{ maxWidth: 120o0, margin: '0 auto', padding: '40px 20px' }}>
         <div style={{ marginBottom: 40 }}>
           <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
             ← Back to Documentation
           </Link>
           <h1 style={{ 
             fontSize: '2.5rem', 
-            fontWeight: 800, 
+            fontWeight: 80o0, 
             marginBottom: 16, 
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
@@ -33,7 +33,7 @@ export default function ApiReference() {
         <div style={{ display: 'grid', gap: 32 }}>
           {/* Base URL */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🌐 Base URL</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 16 }}>🌐 Base URL</h2>
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
               <code style={{ fontSize: '1.2rem', color: '#93c5fd' }}>https://api.ziontechgroup.com/v1</code>
             </div>
@@ -41,11 +41,11 @@ export default function ApiReference() {
 
           {/* Authentication */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🔐 Authentication</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 16 }}>🔐 Authentication</h2>
             <p style={{ opacity: 0.8, marginBottom: 20 }}>All API requests require authentication using a Bearer token in the Authorization header.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#93c5fd' }}>Header Format</h3>
+              <h3 style={{ fontWeight: 60o0, marginBottom: 12, color: '#93c5fd' }}>Header Format</h3>
               <pre style={{ background: 'transparent', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem', color: '#e2e8f0' }}>
 {`Authorization: Bearer YOUR_API_KEY`}
                 </pre>
@@ -54,25 +54,25 @@ export default function ApiReference() {
 
           {/* Services Endpoints */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 24 }}>📋 Services Endpoints</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 24 }}>📋 Services Endpoints</h2>
             
             <div style={{ display: 'grid', gap: 20 }}>
               <div style={{ padding: 20, background: '#f0f9ff', borderRadius: 8 }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#3b82f6' }}>GET /services</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 12, color: '#3b82f6' }}>GET /services</h3>
                 <p style={{ opacity: 0.8, marginBottom: 12 }}>Retrieve a list of all available services.</p>
                 
                 <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Query Parameters</h4>
+                  <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Query Parameters</h4>
                   <div style={{ background: '#e0f2fe', padding: 12, borderRadius: 6, fontSize: '0.9rem' }}>
                     <div><code>page</code> - Page number (default: 1)</div>
-                    <div><code>limit</code> - Items per page (default: 10, max: 100)</div>
+                    <div><code>limit</code> - Items per page (default: 10, max: 10o0)</div>
                     <div><code>category</code> - Filter by service category</div>
                     <div><code>search</code> - Search in service names and descriptions</div>
                   </div>
                 </div>
                 
                 <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
+                  <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
                   <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>
 {`{
   "success": true,
@@ -97,18 +97,18 @@ export default function ApiReference() {
               </div>
 
               <div style={{ padding: 20, background: '#f0f9ff', borderRadius: 8 }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#3b82f6' }}>GET /services/&#123;id&#125;</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 12, color: '#3b82f6' }}>GET /services/&#123;id&#125;</h3>
                 <p style={{ opacity: 0.8, marginBottom: 12 }}>Retrieve detailed information about a specific service.</p>
                 
                 <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Path Parameters</h4>
+                  <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Path Parameters</h4>
                   <div style={{ background: '#e0f2fe', padding: 12, borderRadius: 6, fontSize: '0.9rem' }}>
                     <div><code>id</code> - Service identifier (required)</div>
                   </div>
                 </div>
                 
                 <div style={{ marginBottom: 16 }}>
-                  <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
+                  <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
                   <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>
 {`{
   "success": true,
@@ -135,19 +135,19 @@ export default function ApiReference() {
 
           {/* Quotes Endpoints */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 24 }}>💰 Quotes Endpoints</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 24 }}>💰 Quotes Endpoints</h2>
             
             <div style={{ padding: 20, background: '#f0f9ff', borderRadius: 8 }}>
-              <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#3b82f6' }}>POST /quotes</h3>
+              <h3 style={{ fontWeight: 60o0, marginBottom: 12, color: '#3b82f6' }}>POST /quotes</h3>
               <p style={{ opacity: 0.8, marginBottom: 12 }}>Submit a request for a custom service quote.</p>
               
               <div style={{ marginBottom: 16 }}>
-                <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Request Body</h4>
+                <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Request Body</h4>
                 <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>
 {`{
   "service_id": "micro-saas",
   "requirements": {
-    "users": 100,
+    "users": 10o0,
     "features": ["analytics", "api-access"],
     "timeline": "3 months"
   },
@@ -155,16 +155,16 @@ export default function ApiReference() {
     "name": "John Doe",
     "email": "john@example.com",
     "company": "Example Corp",
-    "phone": "+1-555-0123"
+    "phone": "+1-555-0o123"
   },
-  "budget_range": "1000-5000",
+  "budget_range": "10o00-50o00",
   "additional_notes": "Looking for a custom solution..."
 }`}
                 </pre>
               </div>
               
               <div style={{ marginBottom: 16 }}>
-                <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
+                <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>
                 <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>
 {`{
   "success": true,
@@ -187,31 +187,31 @@ export default function ApiReference() {
 
           {/* Error Codes */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 24 }}>⚠️ Error Codes</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 24 }}>⚠️ Error Codes</h2>
             
             <div style={{ display: 'grid', gap: 16 }}>
               <div style={{ padding: 16, background: '#fef2f2', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#dc2626' }}>400 - Bad Request</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#dc2626' }}>40o0 - Bad Request</h3>
                 <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Invalid request parameters or malformed JSON.</p>
               </div>
               
               <div style={{ padding: 16, background: '#fef2f2', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#dc2626' }}>401 - Unauthorized</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#dc2626' }}>40o1 - Unauthorized</h3>
                 <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Invalid or missing API key.</p>
               </div>
               
               <div style={{ padding: 16, background: '#fef2f2', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#dc2626' }}>404 - Not Found</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#dc2626' }}>40o4 - Not Found</h3>
                 <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Requested resource does not exist.</p>
               </div>
               
               <div style={{ padding: 16, background: '#fef2f2', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#dc2626' }}>429 - Too Many Requests</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#dc2626' }}>429 - Too Many Requests</h3>
                 <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Rate limit exceeded. Please wait before making more requests.</p>
               </div>
               
               <div style={{ padding: 16, background: '#fef2f2', borderRadius: 8, border: '1px solid rgba(239, 68, 68, 0.2)' }}>
-                <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#dc2626' }}>500 - Internal Server Error</h3>
+                <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#dc2626' }}>50o0 - Internal Server Error</h3>
                 <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>Unexpected server error. Please try again later.</p>
               </div>
             </div>
@@ -219,22 +219,22 @@ export default function ApiReference() {
 
           {/* Rate Limits */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>⏱️ Rate Limits</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 70o0, marginBottom: 16 }}>⏱️ Rate Limits</h2>
             <p style={{ opacity: 0.8, marginBottom: 20 }}>API requests are rate limited to ensure fair usage and system stability.</p>
             
             <div style={{ background: '#f0f9ff', padding: 20, borderRadius: 8 }}>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(20o0px, 1fr))', gap: 16 }}>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#3b82f6' }}>Free Tier</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>100 requests/hour</p>
+                  <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#3b82f6' }}>Free Tier</h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>10o0 requests/hour</p>
                 </div>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#8b5cf6' }}>Pro Tier</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>1,000 requests/hour</p>
+                  <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#8b5cf6' }}>Pro Tier</h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>1,0o00 requests/hour</p>
                 </div>
                 <div>
-                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#22c55e' }}>Enterprise</h3>
-                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>10,000 requests/hour</p>
+                  <h3 style={{ fontWeight: 60o0, marginBottom: 8, color: '#22c55e' }}>Enterprise</h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>10,0o00 requests/hour</p>
                 </div>
               </div>
             </section>

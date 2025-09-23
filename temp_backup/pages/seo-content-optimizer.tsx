@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function SeoContentOptimizer() {
@@ -22,6 +21,6 @@ export default function SeoContentOptimizer() {
 			]}
 			industries={["B2B SaaS", "Content Publishers", "E-commerce", "Agencies"]}
 			canonical="https://ziontechgroup.com/seo-content-optimizer"
-		/>
+		 />
 	);
 }

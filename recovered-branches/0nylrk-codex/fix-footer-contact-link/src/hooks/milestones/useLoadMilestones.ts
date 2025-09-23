@@ -32,7 +32,7 @@ export const useLoadMilestones = (projectId?: string) => {
       setMilestones(milestonesData);
       
       // Fetch activities for each milestone
-      const activitiesMap: Record<string, MilestoneActivity[]> = {};
+      const activitiesMap: Record<string, MilestoneActivity[]> ={};
       
       for (const milestone of milestonesData) {
         const { data: activitiesData, error: activitiesError } = await supabase

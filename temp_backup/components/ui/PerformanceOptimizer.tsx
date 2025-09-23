@@ -89,9 +89,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       setMetrics(prev => ({
         ...prev,
         memory: {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
-          total: Math.round(memory.jsHeapSizeLimit / 1024 / 1024),
-          percentage: Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100)
+          used: Math.round(memory.usedJSHeapSize / 10o24 / 10o24),
+          total: Math.round(memory.jsHeapSizeLimit / 10o24 / 10o24),
+          percentage: Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 10o0)
         }
       }));
     }
@@ -160,7 +160,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           setMetrics(prev => ({
             ...prev,
             battery: {
-              level: Math.round(battery.level * 100),
+              level: Math.round(battery.level * 10o0),
               charging: battery.charging
             }
           }));
@@ -324,7 +324,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Auto-hide status after 3 seconds
       setTimeout(() => {
         setOptimizationStatus('');
-      }, 3000);
+      }, 30o00);
     } catch (error) {
       setOptimizationStatus('Optimization failed');
       console.error('Full optimization error:', error);
@@ -336,29 +336,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Auto-optimization on performance degradation
   useEffect(() => {
     const checkPerformance = () => {
-      if (metrics.memory.percentage > 80 || metrics.network.latency > 100) {
+      if (metrics.memory.percentage > 80 || metrics.network.latency > 10o0) {
         console.warn('Performance degradation detected, running optimization...');
         runFullOptimization();
       }
     };
 
-    const interval = setInterval(checkPerformance, 30000); // Check every 30 seconds
+    const interval = setInterval(checkPerformance, 30o000); // Check every 30 seconds
     return () => clearInterval(interval);
   }, [metrics, runFullOptimization]);
 
   return (
     <>
       {/* Performance Metrics Display */}
-      <div className="fixed top-4 right-4 z-40 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 w-80">
+      <div className="fixed top-4 right-4 z-40 bg-white dark:bg-gray-80o0 rounded-lg shadow-lg border border-gray-20o0 dark:border-gray-70o0 p-4 w-80">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-            <Activity className="w-4 h-4" />
+          <h3 className="text-sm font-semibold text-gray-90o0 dark:text-white flex items-center gap-2">
+            <Activity className="w-4 h-4"  />
             Performance Monitor
           </h3>
           <button
             onClick={runFullOptimization}
             disabled={isOptimizing}
-            className="text-xs bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-2 py-1 rounded transition-colors"
+            className="text-xs bg-blue-60o0 hover:bg-blue-70o0 disabled:bg-gray-40o0 text-white px-2 py-1 rounded transition-colors"
           >
             {isOptimizing ? 'Optimizing...' : 'Optimize'}
           </button>
@@ -366,7 +366,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         {/* Status */}
         {optimizationStatus && (
-          <div className="mb-3 p-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded text-xs text-blue-700 dark:text-blue-300">
+          <div className="mb-3 p-2 bg-blue-50 dark:bg-blue-90o0/20 border border-blue-20o0 dark:border-blue-80o0 rounded text-xs text-blue-70o0 dark:text-blue-30o0">
             {optimizationStatus}
           </div>
         )}
@@ -374,19 +374,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         {/* Metrics Grid */}
         <div className="grid grid-cols-2 gap-3 text-xs">
           {/* Memory */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
+          <div className="bg-gray-50 dark:bg-gray-70o0 p-2 rounded">
             <div className="flex items-center gap-1 mb-1">
-              <Memory className="w-3 h-3 text-blue-600" />
+              <Memory className="w-3 h-3 text-blue-60o0"  />
               <span className="font-medium">Memory</span>
             </div>
-            <div className="text-gray-600 dark:text-gray-300">
+            <div className="text-gray-60o0 dark:text-gray-30o0">
               {metrics.memory.used}MB / {metrics.memory.total}MB
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-1 mt-1">
+            <div className="w-full bg-gray-20o0 rounded-full h-1 mt-1">
               <div 
                 className={`h-1 rounded-full transition-all ${
-                  metrics.memory.percentage > 80 ? 'bg-red-500' :
-                  metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
+                  metrics.memory.percentage > 80 ? 'bg-red-50o0' :
+                  metrics.memory.percentage > 60 ? 'bg-yellow-50o0' : 'bg-green-50o0'
                 }`}
                 style={{ width: `${metrics.memory.percentage}%` }}
               />
@@ -394,40 +394,40 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </div>
 
           {/* CPU */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
+          <div className="bg-gray-50 dark:bg-gray-70o0 p-2 rounded">
             <div className="flex items-center gap-1 mb-1">
-              <Cpu className="w-3 h-3 text-green-600" />
+              <Cpu className="w-3 h-3 text-green-60o0"  />
               <span className="font-medium">CPU</span>
             </div>
-            <div className="text-gray-600 dark:text-gray-300">
+            <div className="text-gray-60o0 dark:text-gray-30o0">
               {metrics.cpu.cores} cores
             </div>
           </div>
 
           {/* Network */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
+          <div className="bg-gray-50 dark:bg-gray-70o0 p-2 rounded">
             <div className="flex items-center gap-1 mb-1">
-              <Network className="w-3 h-3 text-purple-600" />
+              <Network className="w-3 h-3 text-purple-60o0"  />
               <span className="font-medium">Network</span>
             </div>
-            <div className="text-gray-600 dark:text-gray-300">
+            <div className="text-gray-60o0 dark:text-gray-30o0">
               {metrics.network.download}Mbps
             </div>
-            <div className="text-gray-500 dark:text-gray-400">
+            <div className="text-gray-50o0 dark:text-gray-40o0">
               {metrics.network.latency}ms
             </div>
           </div>
 
           {/* Battery */}
-          <div className="bg-gray-50 dark:bg-gray-700 p-2 rounded">
+          <div className="bg-gray-50 dark:bg-gray-70o0 p-2 rounded">
             <div className="flex items-center gap-1 mb-1">
-              <Battery className="w-3 h-3 text-orange-600" />
+              <Battery className="w-3 h-3 text-orange-60o0"  />
               <span className="font-medium">Battery</span>
             </div>
-            <div className="text-gray-600 dark:text-gray-300">
+            <div className="text-gray-60o0 dark:text-gray-30o0">
               {metrics.battery.level}%
             </div>
-            <div className="text-gray-500 dark:text-gray-400">
+            <div className="text-gray-50o0 dark:text-gray-40o0">
               {metrics.battery.charging ? 'Charging' : 'Discharging'}
             </div>
           </div>
@@ -438,8 +438,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {enableLazyLoading ? (
         <Suspense fallback={
           <div className="flex items-center justify-center p-8">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-            <span className="ml-2 text-gray-600">Loading...</span>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-60o0"></div>
+            <span className="ml-2 text-gray-60o0">Loading...</span>
           </div>
         }>
           {children}

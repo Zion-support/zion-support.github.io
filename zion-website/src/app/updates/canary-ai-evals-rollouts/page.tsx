@@ -6,7 +6,7 @@ export default function CanaryAIEvalsRolloutsPage() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Production Rollouts with Canary AI Evals</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
+        <p className="mt-4 text-lg leading-8 text-gray-30o0">
           Blueprint for shipping AI safely: canaries, live evals, abort switches, and evidence trails.
         </p>
         <div className="mt-8 prose prose-invert">

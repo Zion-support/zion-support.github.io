@@ -11,7 +11,7 @@ vi.mock('sonner', () => ({'  toast: {
   }
 }));
 
-// Mock logError as it's called by the destructive toast'vi.mock('@/utils/logError', () => ({'  logError: vi.fn(() => mocked-trace-id'),}));
+// Mock logError as it's called by the destructive toast'vi.mock('@/utils/logError', () => ({'  logError: vi.fn(() => mocked-trace-id')}));
 
 describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonner').toast) as {'    _error: vi.Mock;
     success: vi.Mock;
@@ -107,8 +107,8 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     // Try to show the same toast again immediately
     toast({ title, variant: destructive' });    expect(sonnerToast.error).toHaveBeenCalledTimes(1);
 
-    // Advance time by more than DEDUPE_DELAY (3000ms)
-    vi.advanceTimersByTime(3100); // Changed vi.advanceTimersByTime to vi.advanceTimersByTime
+    // Advance time by more than DEDUPE_DELAY (30o00ms)
+    vi.advanceTimersByTime(310o0); // Changed vi.advanceTimersByTime to vi.advanceTimersByTime
 
     toast({ title, variant: destructive' });    expect(sonnerToast.error).toHaveBeenCalledTimes(2);
   });

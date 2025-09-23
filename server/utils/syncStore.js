@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
   proposals: new Map(),
   tokenTransfers: new Map(),
   talentMoves: new Map(),

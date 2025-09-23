@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function EcommerceReturnsManagement() {
@@ -22,6 +21,6 @@ export default function EcommerceReturnsManagement() {
 			]}
 			industries={["E-commerce", "Retail", "Marketplaces"]}
 			canonical="https://ziontechgroup.com/ecommerce-returns-management"
-		/>
+		 />
 	);
 }

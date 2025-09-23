@@ -27,25 +27,25 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       case "shortlisted":
         return (
           <Button variant="default" size="sm">
-            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
+            <Calendar className="h-4 w-4 mr-1"  /> Prepare for Interview
           </Button>
         );
       case "interview":
         return (
           <Button variant="default" size="sm">
-            <Calendar className="h-4 w-4 mr-1" /> View Interview Details
+            <Calendar className="h-4 w-4 mr-1"  /> View Interview Details
           </Button>
         );
       case "hired":
         return (
-          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900">
-            <FileText className="h-4 w-4 mr-1" /> View Offer
+          <Button variant="secondary" size="sm" className="bg-green-10o0 text-green-80o0 hover:bg-green-20o0 hover:text-green-90o0">
+            <FileText className="h-4 w-4 mr-1"  /> View Offer
           </Button>
         );
       case "rejected":
         return (
           <Button variant="outline" size="sm">
-            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
+            <HelpCircle className="h-4 w-4 mr-1"  /> View Feedback
           </Button>
         );
       default:
@@ -63,12 +63,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
           </div>
-          <StatusBadge status={application.status} />
+          <StatusBadge status={application.status}  />
         </div>
       </CardHeader>
       
       <CardContent className="pb-3">
-        <ApplicationProgress status={application.status} className="my-4" />
+        <ApplicationProgress status={application.status} className="my-4"  />
         
         {expanded && (
           <div className="mt-4 space-y-3">
@@ -83,11 +83,11 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               <div className="border rounded-md p-3 bg-muted/20">
                 <div className="flex justify-between items-center">
                   <div className="flex items-center">
-                    <FileText className="h-4 w-4 mr-2 text-blue-500" />
+                    <FileText className="h-4 w-4 mr-2 text-blue-50o0"  />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
-                    <Download className="h-3 w-3 mr-1" /> Download
+                    <Download className="h-3 w-3 mr-1"  /> Download
                   </Button>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
-                  <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
+                  <div className="h-6 w-6 rounded-full bg-blue-10o0 text-blue-80o0 flex items-center justify-center text-xs font-medium">
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
@@ -121,7 +121,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               asChild
             >
               <Link href={`/jobs/${application.job_id}`}>
-                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+                <ExternalLink className="h-4 w-4 mr-1"  /> View Job
               </Link>
             </Button>
           </div>
@@ -134,7 +134,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           asChild
         >
           <Link href={`/messages?jobId=${application.job_id}`}>
-            <MessageSquare className="h-4 w-4 mr-1" /> Message Client
+            <MessageSquare className="h-4 w-4 mr-1"  /> Message Client
           </Link>
         </Button>
       </CardFooter>

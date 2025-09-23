@@ -1,5 +1,4 @@
 
-import React from "react";
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
@@ -24,17 +23,17 @@ export function SeverityIndicator({
         return <AlertCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
           "text-destructive"
-        )} />;
+        )}  />;
       case 'suspicious':
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-          "text-amber-500"
-        )} />;
+          "text-amber-50o0"
+        )}  />;
       default:
         return <CheckCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
-          "text-green-500"
-        )} />;
+          "text-green-50o0"
+        )}  />;
     }
   };
 

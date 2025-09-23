@@ -21,7 +21,7 @@ interface NavigationItem {
   reviews?: number;
 }
 
-interface UltraAdvancedFuturisticNavigation2041Props {
+interface UltraAdvancedFuturisticNavigation20o41Props {
   onMenuToggle?: () => void;
   isMenuOpen?: boolean;
 }
@@ -39,27 +39,27 @@ function normalizeHref(href: string): string {
 
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Revolutionary Services 2041',
+    name: 'Revolutionary Services 20o41',
     href: '/services',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Future-defining technology solutions',
-    badge: 'New 2041',
+    badge: 'New 20o41',
     category: 'services',
-    color: 'from-emerald-500 to-cyan-500',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       { 
         name: 'All Services', 
         href: '/services', 
         description: 'Complete revolutionary services overview',
-        icon: <Grid className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4"  />,
         featured: true
       },
       { 
         name: 'Quantum AI Consciousness', 
         href: '/quantum-ai-consciousness-platform', 
         description: 'Next-generation AI consciousness with quantum computing',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-cyan-600',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-cyan-60o0',
         featured: true,
         price: '$2,999/month',
         rating: 4.9,
@@ -69,8 +69,8 @@ const navigationItems: NavigationItem[] = [
         name: 'Space Resource Intelligence', 
         href: '/space-resource-intelligence-platform', 
         description: 'AI-powered space resource discovery and mining',
-        icon: <Satellite className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-600',
+        icon: <Satellite className="w-4 h-4"  />,
+        color: 'from-indigo-50o0 to-purple-60o0',
         featured: true,
         price: '$1,999/month',
         rating: 4.8,
@@ -78,10 +78,10 @@ const navigationItems: NavigationItem[] = [
       },
       { 
         name: 'Autonomous Business Intelligence', 
-        href: '/autonomous-business-intelligence-2040', 
+        href: '/autonomous-business-intelligence-20o40', 
         description: 'Fully autonomous business intelligence platform',
-        icon: <BarChart3 className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-600',
+        icon: <BarChart3 className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-60o0',
         featured: true,
         price: '$1,499/month',
         rating: 4.9,
@@ -89,10 +89,10 @@ const navigationItems: NavigationItem[] = [
       },
       { 
         name: 'Quantum Cybersecurity Future', 
-        href: '/quantum-cybersecurity-future-2040', 
+        href: '/quantum-cybersecurity-future-20o40', 
         description: 'Future-proof cybersecurity with quantum resistance',
-        icon: <ShieldCheck className="w-4 h-4" />,
-        color: 'from-red-500 to-orange-600',
+        icon: <ShieldCheck className="w-4 h-4"  />,
+        color: 'from-red-50o0 to-orange-60o0',
         featured: true,
         price: '$899/month',
         rating: 4.8,
@@ -100,10 +100,10 @@ const navigationItems: NavigationItem[] = [
       },
       { 
         name: 'Brain-Computer Interface', 
-        href: '/brain-computer-interface-2040', 
+        href: '/brain-computer-interface-20o40', 
         description: 'Next-generation neural interface technology',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-pink-500 to-purple-600',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-pink-50o0 to-purple-60o0',
         featured: true,
         price: '$3,999/month',
         rating: 4.9,
@@ -111,50 +111,50 @@ const navigationItems: NavigationItem[] = [
       },
       { 
         name: 'AI Autonomous Research', 
-        href: '/ai-autonomous-research-2041', 
+        href: '/ai-autonomous-research-20o41', 
         description: 'Fully autonomous research platform',
-        icon: <Microscope className="w-4 h-4" />,
-        color: 'from-blue-500 to-indigo-600',
+        icon: <Microscope className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-indigo-60o0',
         price: '$2,499/month',
         rating: 4.9,
         reviews: 123
       },
       { 
         name: 'Quantum Internet Security', 
-        href: '/quantum-internet-security-2041', 
+        href: '/quantum-internet-security-20o41', 
         description: 'Quantum-secured internet infrastructure',
-        icon: <Globe2 className="w-4 h-4" />,
-        color: 'from-cyan-500 to-blue-600',
+        icon: <Globe2 className="w-4 h-4"  />,
+        color: 'from-cyan-50o0 to-blue-60o0',
         price: '$1,799/month',
         rating: 4.8,
         reviews: 89
       },
       { 
         name: 'AI Customer Success', 
-        href: '/ai-customer-success-2041', 
+        href: '/ai-customer-success-20o41', 
         description: 'Autonomous customer success platform',
-        icon: <TargetIcon className="w-4 h-4" />,
-        color: 'from-green-500 to-emerald-600',
+        icon: <TargetIcon className="w-4 h-4"  />,
+        color: 'from-green-50o0 to-emerald-60o0',
         price: '$599/month',
         rating: 4.9,
         reviews: 156
       },
       { 
         name: 'AI Sales Intelligence', 
-        href: '/ai-sales-intelligence-2041', 
+        href: '/ai-sales-intelligence-20o41', 
         description: 'Autonomous sales intelligence platform',
-        icon: <DollarSign className="w-4 h-4" />,
-        color: 'from-yellow-500 to-orange-600',
+        icon: <DollarSign className="w-4 h-4"  />,
+        color: 'from-yellow-50o0 to-orange-60o0',
         price: '$799/month',
         rating: 4.8,
         reviews: 234
       },
       { 
         name: 'Quantum Cloud Infrastructure', 
-        href: '/quantum-cloud-infrastructure-2041', 
+        href: '/quantum-cloud-infrastructure-20o41', 
         description: 'Quantum-powered cloud infrastructure',
-        icon: <Cloud className="w-4 h-4" />,
-        color: 'from-blue-500 to-indigo-600',
+        icon: <Cloud className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-indigo-60o0',
         price: '$1,299/month',
         rating: 4.9,
         reviews: 98
@@ -164,17 +164,17 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness platforms',
     badge: 'Featured',
     category: 'ai',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
         name: 'Quantum AI Consciousness Platform',
         href: '/quantum-ai-consciousness-platform',
         description: 'Next-generation AI consciousness with quantum computing',
-        icon: <Brain className="w-4 h-4" />,
+        icon: <Brain className="w-4 h-4"  />,
         featured: true,
         price: '$2,999/month',
         rating: 4.9,
@@ -184,7 +184,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Autonomous Ecosystem Manager',
         href: '/ai-autonomous-ecosystem-manager',
         description: 'Fully autonomous AI ecosystem management',
-        icon: <CpuIcon className="w-4 h-4" />,
+        icon: <CpuIcon className="w-4 h-4"  />,
         featured: true,
         price: '$399/month',
         rating: 4.8,
@@ -194,7 +194,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Predictive Maintenance Platform',
         href: '/ai-predictive-maintenance-platform',
         description: 'Predict and prevent equipment failures',
-        icon: <Settings className="w-4 h-4" />,
+        icon: <Settings className="w-4 h-4"  />,
         featured: true,
         price: '$299/month',
         rating: 4.7,
@@ -204,7 +204,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Content Personalization Engine',
         href: '/ai-content-personalization-engine',
         description: 'Hyper-personalized content experiences',
-        icon: <Palette className="w-4 h-4" />,
+        icon: <Palette className="w-4 h-4"  />,
         featured: true,
         price: '$199/month',
         rating: 4.8,
@@ -214,7 +214,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Ethics & Governance Framework',
         href: '/ai-ethics-governance-framework',
         description: 'Comprehensive AI ethics and governance',
-        icon: <Shield className="w-4 h-4" />,
+        icon: <Shield className="w-4 h-4"  />,
         price: '$599/month',
         rating: 4.9,
         reviews: 67
@@ -223,7 +223,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Autonomous Research Assistant',
         href: '/ai-autonomous-research-assistant',
         description: 'Fully autonomous research platform',
-        icon: <BookOpen className="w-4 h-4" />,
+        icon: <BookOpen className="w-4 h-4"  />,
         price: '$799/month',
         rating: 4.8,
         reviews: 123
@@ -232,7 +232,7 @@ const navigationItems: NavigationItem[] = [
         name: 'AI Creativity Studio',
         href: '/ai-creativity-studio',
         description: 'AI-powered creative tools',
-        icon: <PaletteIcon className="w-4 h-4" />,
+        icon: <PaletteIcon className="w-4 h-4"  />,
         price: '$149/month',
         rating: 4.7,
         reviews: 189
@@ -242,17 +242,17 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Space Tech',
     href: '/quantum-space-tech',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Breakthrough quantum and space technologies',
     badge: 'Cutting Edge',
     category: 'quantum',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'Quantum Neural Ecosystem 2040',
-        href: '/quantum-neural-ecosystem-2040',
+        name: 'Quantum Neural Ecosystem 20o40',
+        href: '/quantum-neural-ecosystem-20o40',
         description: 'Quantum-powered AI systems',
-        icon: <Atom className="w-4 h-4" />,
+        icon: <Atom className="w-4 h-4"  />,
         featured: true,
         price: '$1,999/month',
         rating: 4.9,
@@ -262,46 +262,46 @@ const navigationItems: NavigationItem[] = [
         name: 'Space Resource Intelligence Platform',
         href: '/space-resource-intelligence-platform',
         description: 'AI-powered space resource discovery',
-        icon: <Satellite className="w-4 h-4" />,
+        icon: <Satellite className="w-4 h-4"  />,
         featured: true,
         price: '$1,999/month',
         rating: 4.8,
         reviews: 56
       },
       {
-        name: 'Quantum Cybersecurity Future 2040',
-        href: '/quantum-cybersecurity-future-2040',
+        name: 'Quantum Cybersecurity Future 20o40',
+        href: '/quantum-cybersecurity-future-20o40',
         description: 'Future-proof security',
-        icon: <ShieldCheck className="w-4 h-4" />,
+        icon: <ShieldCheck className="w-4 h-4"  />,
         featured: true,
         price: '$899/month',
         rating: 4.8,
         reviews: 187
       },
       {
-        name: 'Brain-Computer Interface 2040',
-        href: '/brain-computer-interface-2040',
+        name: 'Brain-Computer Interface 20o40',
+        href: '/brain-computer-interface-20o40',
         description: 'Neural interface technology',
-        icon: <Brain className="w-4 h-4" />,
+        icon: <Brain className="w-4 h-4"  />,
         featured: true,
         price: '$3,999/month',
         rating: 4.9,
         reviews: 67
       },
       {
-        name: 'Quantum Internet Security 2041',
-        href: '/quantum-internet-security-2041',
+        name: 'Quantum Internet Security 20o41',
+        href: '/quantum-internet-security-20o41',
         description: 'Quantum-secured internet infrastructure',
-        icon: <Globe2 className="w-4 h-4" />,
+        icon: <Globe2 className="w-4 h-4"  />,
         price: '$1,799/month',
         rating: 4.8,
         reviews: 89
       },
       {
-        name: 'Quantum Cloud Infrastructure 2041',
-        href: '/quantum-cloud-infrastructure-2041',
+        name: 'Quantum Cloud Infrastructure 20o41',
+        href: '/quantum-cloud-infrastructure-20o41',
         description: 'Quantum-powered cloud infrastructure',
-        icon: <Cloud className="w-4 h-4" />,
+        icon: <Cloud className="w-4 h-4"  />,
         price: '$1,299/month',
         rating: 4.9,
         reviews: 98
@@ -310,7 +310,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Space Mining Operations',
         href: '/space-mining-operations',
         description: 'Advanced space resource extraction',
-        icon: <Rocket className="w-4 h-4" />,
+        icon: <Rocket className="w-4 h-4"  />,
         price: '$2,499/month',
         rating: 4.7,
         reviews: 45
@@ -320,37 +320,37 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Business Solutions',
     href: '/business-solutions',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className="w-5 h-5"  />,
     description: 'Enterprise-grade business solutions',
     badge: 'Enterprise',
     category: 'business',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       {
-        name: 'Autonomous Business Intelligence 2040',
-        href: '/autonomous-business-intelligence-2040',
+        name: 'Autonomous Business Intelligence 20o40',
+        href: '/autonomous-business-intelligence-20o40',
         description: 'Consciousness-driven insights',
-        icon: <BarChart3 className="w-4 h-4" />,
+        icon: <BarChart3 className="w-4 h-4"  />,
         featured: true,
         price: '$1,499/month',
         rating: 4.9,
         reviews: 234
       },
       {
-        name: 'AI Customer Success 2041',
-        href: '/ai-customer-success-2041',
+        name: 'AI Customer Success 20o41',
+        href: '/ai-customer-success-20o41',
         description: 'Autonomous customer success platform',
-        icon: <TargetIcon className="w-4 h-4" />,
+        icon: <TargetIcon className="w-4 h-4"  />,
         featured: true,
         price: '$599/month',
         rating: 4.9,
         reviews: 156
       },
       {
-        name: 'AI Sales Intelligence 2041',
-        href: '/ai-sales-intelligence-2041',
+        name: 'AI Sales Intelligence 20o41',
+        href: '/ai-sales-intelligence-20o41',
         description: 'Autonomous sales intelligence platform',
-        icon: <DollarSign className="w-4 h-4" />,
+        icon: <DollarSign className="w-4 h-4"  />,
         featured: true,
         price: '$799/month',
         rating: 4.8,
@@ -360,7 +360,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Enterprise Process Automation',
         href: '/enterprise-process-automation',
         description: 'Intelligent business process automation',
-        icon: <Zap className="w-4 h-4" />,
+        icon: <Zap className="w-4 h-4"  />,
         price: '$899/month',
         rating: 4.7,
         reviews: 167
@@ -369,7 +369,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Digital Transformation Consulting',
         href: '/digital-transformation-consulting',
         description: 'Strategic digital transformation guidance',
-        icon: <TrendingUp className="w-4 h-4" />,
+        icon: <TrendingUp className="w-4 h-4"  />,
         price: '$1,299/month',
         rating: 4.8,
         reviews: 89
@@ -379,17 +379,17 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <FlaskConical className="w-5 h-5" />,
+    icon: <FlaskConical className="w-5 h-5"  />,
     description: 'Cutting-edge research and development',
     badge: 'Innovation',
     category: 'research',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-orange-50o0 to-red-50o0',
     children: [
       {
-        name: 'AI Autonomous Research 2041',
-        href: '/ai-autonomous-research-2041',
+        name: 'AI Autonomous Research 20o41',
+        href: '/ai-autonomous-research-20o41',
         description: 'Fully autonomous research platform',
-        icon: <Microscope className="w-4 h-4" />,
+        icon: <Microscope className="w-4 h-4"  />,
         featured: true,
         price: '$2,499/month',
         rating: 4.9,
@@ -399,7 +399,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Quantum Materials Discovery',
         href: '/quantum-materials-discovery',
         description: 'AI-powered materials research',
-        icon: <Atom className="w-4 h-4" />,
+        icon: <Atom className="w-4 h-4"  />,
         price: '$1,799/month',
         rating: 4.8,
         reviews: 67
@@ -408,7 +408,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Space Technology Research',
         href: '/space-technology-research',
         description: 'Advanced space technology development',
-        icon: <Telescope className="w-4 h-4" />,
+        icon: <Telescope className="w-4 h-4"  />,
         price: '$2,199/month',
         rating: 4.7,
         reviews: 45
@@ -417,7 +417,7 @@ const navigationItems: NavigationItem[] = [
         name: 'Biotechnology Innovation',
         href: '/biotechnology-innovation',
         description: 'Next-generation biotech solutions',
-        icon: <FlaskConical className="w-4 h-4" />,
+        icon: <FlaskConical className="w-4 h-4"  />,
         price: '$1,599/month',
         rating: 4.8,
         reviews: 78
@@ -427,50 +427,50 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Company',
     href: '/about',
-    icon: <Building className="w-5 h-5" />,
+    icon: <Building className="w-5 h-5"  />,
     description: 'About Zion Tech Group',
     category: 'company',
-    color: 'from-gray-500 to-slate-500',
+    color: 'from-gray-50o0 to-slate-50o0',
     children: [
-      { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-      { name: 'Our Team', href: '/team', icon: <Users className="w-4 h-4" /> },
-      { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4" /> },
-      { name: 'News & Updates', href: '/news', icon: <Newspaper className="w-4 h-4" /> },
-      { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
-      { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4" /> },
-      { name: 'Investors', href: '/investors', icon: <DollarSign className="w-4 h-4" /> }
+      { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> },
+      { name: 'Our Team', href: '/team', icon: <Users className="w-4 h-4"  /> },
+      { name: 'Careers', href: '/careers', icon: <Briefcase className="w-4 h-4"  /> },
+      { name: 'News & Updates', href: '/news', icon: <Newspaper className="w-4 h-4"  /> },
+      { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4"  /> },
+      { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4"  /> },
+      { name: 'Investors', href: '/investors', icon: <DollarSign className="w-4 h-4"  /> }
     ]
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Educational resources and tools',
     category: 'resources',
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
-      { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-      { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
-      { name: 'Tutorials', href: '/tutorials', icon: <GraduationCap className="w-4 h-4" /> },
-      { name: 'Webinars', href: '/webinars', icon: <Monitor className="w-4 h-4" /> },
-      { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4" /> },
-      { name: 'Blog', href: '/blog', icon: <Newspaper className="w-4 h-4" /> },
-      { name: 'Support Center', href: '/support', icon: <MessageCircle className="w-4 h-4" /> }
+      { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> },
+      { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4"  /> },
+      { name: 'Tutorials', href: '/tutorials', icon: <GraduationCap className="w-4 h-4"  /> },
+      { name: 'Webinars', href: '/webinars', icon: <Monitor className="w-4 h-4"  /> },
+      { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> },
+      { name: 'Blog', href: '/blog', icon: <Newspaper className="w-4 h-4"  /> },
+      { name: 'Support Center', href: '/support', icon: <MessageCircle className="w-4 h-4"  /> }
     ]
   }
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export default function UltraAdvancedFuturisticNavigation2041({ 
+export default function UltraAdvancedFuturisticNavigation20o41({ 
   onMenuToggle, 
   isMenuOpen 
-}: UltraAdvancedFuturisticNavigation2041Props) {
+}: UltraAdvancedFuturisticNavigation20o41Props) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -521,33 +521,33 @@ export default function UltraAdvancedFuturisticNavigation2041({
   };
 
   return (
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/30">
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/30">
       {/* Top Contact Bar */}
-      <div className="bg-gradient-to-r from-gray-900/90 via-black/90 to-gray-900/90 border-b border-cyan-500/20">
+      <div className="bg-gradient-to-r from-gray-90o0/90 via-black/90 to-gray-90o0/90 border-b border-cyan-50o0/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs">
             {/* Contact Information */}
-            <div className="hidden md:flex items-center space-x-6 text-gray-300">
-              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
-                <Phone className="w-3 h-3" />
+            <div className="hidden md:flex items-center space-x-6 text-gray-30o0">
+              <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-2 hover:text-cyan-40o0 transition-colors">
+                <Phone className="w-3 h-3"  />
                 <span>{contactInfo.mobile}</span>
               </a>
-              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors">
-                <Mail className="w-3 h-3" />
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-40o0 transition-colors">
+                <Mail className="w-3 h-3"  />
                 <span>{contactInfo.email}</span>
               </a>
               <span className="flex items-center space-x-2">
-                <Globe className="w-3 h-3" />
+                <Globe className="w-3 h-3"  />
                 <span>{contactInfo.website.replace('https://', '')}</span>
               </span>
             </div>
             
             {/* Quick Actions */}
             <div className="hidden md:flex items-center space-x-4">
-              <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <a href="/contact" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 Get Quote
               </a>
-              <a href="/demo" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <a href="/demo" className="text-purple-40o0 hover:text-purple-30o0 transition-colors">
                 Book Demo
               </a>
             </div>
@@ -562,24 +562,24 @@ export default function UltraAdvancedFuturisticNavigation2041({
           <div className="flex items-center space-x-4">
             <button
               onClick={onMenuToggle}
-              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              className="lg:hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle mobile menu"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6"  />
             </button>
             
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-50o0 to-purple-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+                  <Sparkles className="w-6 h-6 text-white"  />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0 to-purple-60o0 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h1>
-                <p className="text-xs text-gray-400">Future Technology Solutions</p>
+                <p className="text-xs text-gray-40o0">Future Technology Solutions</p>
               </div>
             </Link>
           </div>
@@ -590,7 +590,7 @@ export default function UltraAdvancedFuturisticNavigation2041({
               <div key={item.name} className="relative dropdown-container">
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 group ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-all duration-20o0 group ${
                     activeDropdown === item.name ? 'text-white bg-white/10' : ''
                   }`}
                   aria-expanded={activeDropdown === item.name}
@@ -599,13 +599,13 @@ export default function UltraAdvancedFuturisticNavigation2041({
                   {item.icon}
                   <span className="font-medium">{item.name}</span>
                   {item.badge && (
-                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-500 to-cyan-500 text-white rounded-full">
+                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-emerald-50o0 to-cyan-50o0 text-white rounded-full">
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                     activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -616,12 +616,12 @@ export default function UltraAdvancedFuturisticNavigation2041({
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden z-50"
+                      className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-50o0/30 rounded-xl shadow-2xl shadow-cyan-50o0/20 overflow-hidden z-50"
                     >
                       <div className="p-4">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         
                         <div className="space-y-2">
@@ -632,48 +632,48 @@ export default function UltraAdvancedFuturisticNavigation2041({
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors group"
                             >
                               <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                                child.color ? `bg-gradient-to-br ${child.color}` : 'bg-gray-700'
+                                child.color ? `bg-gradient-to-br ${child.color}` : 'bg-gray-70o0'
                               }`}>
                                 {child.icon}
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="flex items-center space-x-2">
-                                  <h4 className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  <h4 className="text-sm font-medium text-white group-hover:text-cyan-40o0 transition-colors">
                                     {child.name}
                                   </h4>
                                   {child.featured && (
-                                    <Star className="w-3 h-3 text-yellow-400 fill-current" />
+                                    <Star className="w-3 h-3 text-yellow-40o0 fill-current"  />
                                   )}
                                 </div>
-                                <p className="text-xs text-gray-400 mt-1 line-clamp-2">
+                                <p className="text-xs text-gray-40o0 mt-1 line-clamp-2">
                                   {child.description}
                                 </p>
                                 {child.price && (
                                   <div className="flex items-center space-x-2 mt-2">
-                                    <span className="text-xs font-medium text-green-400">{child.price}</span>
+                                    <span className="text-xs font-medium text-green-40o0">{child.price}</span>
                                     {child.rating && (
                                       <div className="flex items-center space-x-1">
-                                        <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                                        <span className="text-xs text-gray-400">{child.rating}</span>
-                                        <span className="text-xs text-gray-500">({child.reviews})</span>
+                                        <Star className="w-3 h-3 text-yellow-40o0 fill-current"  />
+                                        <span className="text-xs text-gray-40o0">{child.rating}</span>
+                                        <span className="text-xs text-gray-50o0">({child.reviews})</span>
                                       </div>
                                     )}
                                   </div>
                                 )}
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                              <ArrowRight className="w-4 h-4 text-gray-40o0 group-hover:text-cyan-40o0 transition-colors"  />
                             </Link>
                           ))}
                         </div>
                         
                         {item.href !== '#' && (
-                          <div className="mt-4 pt-4 border-t border-gray-700">
+                          <div className="mt-4 pt-4 border-t border-gray-70o0">
                             <Link
                               href={normalizeHref(item.href)}
-                              className="flex items-center justify-center space-x-2 w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+                              className="flex items-center justify-center space-x-2 w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 transform hover:scale-10o5"
                             >
                               <span>View All {item.name}</span>
-                              <ArrowRight className="w-4 h-4" />
+                              <ArrowRight className="w-4 h-4"  />
                             </Link>
                           </div>
                         )}
@@ -691,10 +691,10 @@ export default function UltraAdvancedFuturisticNavigation2041({
             <div className="relative">
               <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                className="p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Toggle search"
               >
-                <Search className="w-5 h-5" />
+                <Search className="w-5 h-5"  />
               </button>
               
               <AnimatePresence>
@@ -703,23 +703,23 @@ export default function UltraAdvancedFuturisticNavigation2041({
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
-                    className="absolute top-full right-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-xl shadow-2xl shadow-cyan-500/20 p-4"
+                    className="absolute top-full right-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-50o0/30 rounded-xl shadow-2xl shadow-cyan-50o0/20 p-4"
                   >
                     <form onSubmit={handleSearch} className="space-y-4">
                       <div className="relative">
-                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                         <input
                           ref={searchRef}
                           type="text"
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           placeholder="Search services, solutions..."
-                          className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                          className="w-full pl-10 pr-4 py-2 bg-gray-80o0/50 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50"
                         />
                       </div>
                       <button
                         type="submit"
-                        className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
+                        className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0"
                       >
                         Search
                       </button>
@@ -731,23 +731,23 @@ export default function UltraAdvancedFuturisticNavigation2041({
 
             {/* User Menu */}
             <div className="hidden md:flex items-center space-x-2">
-              <button className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
-                <Bell className="w-5 h-5" />
+              <button className="p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors">
+                <Bell className="w-5 h-5"  />
               </button>
-              <button className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
-                <Settings className="w-5 h-5" />
+              <button className="p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors">
+                <Settings className="w-5 h-5"  />
               </button>
-              <button className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors">
-                <User className="w-5 h-5" />
+              <button className="flex items-center space-x-2 px-3 py-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors">
+                <User className="w-5 h-5"  />
                 <span className="text-sm font-medium">Sign In</span>
               </button>
             </div>
 
             {/* CTA Button */}
             <Link href="/contact">
-              <button className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+              <button className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-20o0 transform hover:scale-10o5 shadow-lg shadow-cyan-50o0/25">
                 <span className="font-medium">Get Started</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </button>
             </Link>
           </div>

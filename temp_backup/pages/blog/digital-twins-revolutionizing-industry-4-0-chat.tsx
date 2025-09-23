@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DigitalTwinsRevolutionizingIndustry40ChatPage() {
@@ -6,7 +5,7 @@ export default function DigitalTwinsRevolutionizingIndustry40ChatPage() {
     <>
       <Head>
         <title>Digital Twins Revolutionizing Industry 4 0 Chat - Zion Tech Group</title>
-        <meta name="description" content="digital twins revolutionizing industry 4 0 chat page" />
+        <meta name="description" content="digital twins revolutionizing industry 4 0 chat page"  />
       </Head>
       
       <main>

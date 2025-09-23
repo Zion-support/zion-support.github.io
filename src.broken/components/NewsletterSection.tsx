@@ -1,4 +1,3 @@
-import React from 'react';
 export function NewsletterSection() {
   return (
     <div>

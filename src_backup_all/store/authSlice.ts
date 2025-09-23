@@ -14,12 +14,11 @@ interface AuthState {
   error: string | null;
 }
 
-const initialState: AuthState = {
+const initialState: AuthState ={
   user: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,
-};
+  error: null};
 
 const authSlice = createSlice({
   name: 'auth',
@@ -43,9 +42,7 @@ const authSlice = createSlice({
     },
     clearError: (state) => {
       state.error = null;
-    },
-  },
-});
+    }}});
 
 export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
 export default authSlice.reducer;

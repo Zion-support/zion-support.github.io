@@ -45,7 +45,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   onClick={() => onEdit(cert)}
                   aria-label="Edit certification"
                 >
-                  <Edit className="h-4 w-4" />
+                  <Edit className="h-4 w-4"  />
                 </Button>
                 <Button
                   variant="ghost"
@@ -53,7 +53,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   onClick={() => onDelete(cert.id!)}
                   aria-label="Delete certification"
                 >
-                  <Trash2 className="h-4 w-4" />
+                  <Trash2 className="h-4 w-4"  />
                 </Button>
               </div>
             </div>

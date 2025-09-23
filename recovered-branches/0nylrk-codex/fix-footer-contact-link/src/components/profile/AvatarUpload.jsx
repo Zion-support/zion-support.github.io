@@ -10,11 +10,11 @@ export function AvatarUpload({ value, onChange }) {
         }
     };
     return (<div className="space-y-2">
-      {url && (<img loading="lazy" src={url} alt="Avatar preview" className="h-20 w-20 rounded-full"/>)}
+      {url && (<img loading="lazy" src={url} alt="Avatar preview" className="h-20 w-20 rounded-full" />)}
       {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&
             process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== 'YOUR_CLOUDINARY_CLOUD_NAME_HERE' &&
             process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== '' ? (<CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
           Upload Avatar
-        </CldUploadButton>) : (<p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>)}
+        </CldUploadButton>) : (<p className="text-sm text-gray-50o0">Image upload feature is currently unavailable.</p>)}
     </div>);
 }

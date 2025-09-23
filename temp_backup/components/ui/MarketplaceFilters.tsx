@@ -1,6 +1,4 @@
-import React from 'react';
-
-export type Filters = {
+export type Filters ={
   categories: string[];
   priceMin?: number;
   priceMax?: number;
@@ -8,7 +6,7 @@ export type Filters = {
   deliveryDays?: number; // max days
 };
 
-type Props = {
+type Props ={
   availableCategories: string[];
   value: Filters;
   onChange: (next: Filters) => void;
@@ -38,7 +36,7 @@ export default function MarketplaceFilters({ availableCategories, value, onChang
                     className={
                       'px-2 py-1 rounded-full border text-xs ' +
                       (active
-                        ? 'border-cyan-300/50 text-cyan-200 bg-cyan-500/10'
+                        ? 'border-cyan-30o0/50 text-cyan-20o0 bg-cyan-50o0/10'
                         : 'border-white/15 text-white/70 hover:bg-white/10')
                     }
                   >

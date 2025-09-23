@@ -16,9 +16,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       >
         <span>Years of Experience</span>
         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />
         ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />
         )}
       </button>
       
@@ -36,7 +36,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             step={1}
             onValueChange={handleChange}
             className="mt-6"
-          />
+           />
         </div>
       )}
     </div>

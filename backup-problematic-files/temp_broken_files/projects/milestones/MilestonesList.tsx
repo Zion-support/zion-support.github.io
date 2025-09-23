@@ -83,7 +83,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
           <Button onClick={() => setShowAddForm(true)}>;
-            <Plus className="h-4 w-4 mr-2" />;
+            <Plus className="h-4 w-4 mr-2"  />;
             Add Milestone;
           </Button>;
         </div>;
@@ -114,46 +114,45 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
             dueDate={milestone.duedate}
             onApprove={onApprove}
             onReject={onReject}
-          />;
+           />;
         ))}
       </div>;
     </div>;
   ),;
-},; <Card key= {;
+},; <Card key={;
   i ;
 }> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div> </CardContent> </Card>) ) ;
 }</div>) ;
 }
 }/>) ;
-}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone </Button> </div>) ;
-}<AddMilestoneForm onSubmit= {;
+}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2"  /> Add Milestone </Button> </div>) ;
+}<AddMilestoneForm onSubmit={;
   handleSubmit ;
-}isSubmitting= {;
+}isSubmitting={;
   isSubmitting ;
-}onCancel= {;
+}onCancel={;
   () => setShowAddForm (false) ;
 }/> </CardContent> </Card>) ;
-}<MilestoneCard key= {;
+}<MilestoneCard key={;
   milestone.id ;
-}id= {;
+}id={;
   milestone.id ;
-}projectId= {;
+}projectId={;
   milestone.project id ;
-}title= {;
+}title={;
   milestone.title ;
-}description= {;
+}description={;
   milestone.description ;
-}amount= {;
+}amount={;
   parseFloat (milestone.amount.toString () ) ;
-}status= {;
+}status={;
   milestone.status ;
-}dueDate= {;
+}dueDate={;
   milestone.due date ;
-}onApprove= {;
+}onApprove={;
   onApprove ;
-}onReject= {;
+}onReject={;
   onReject ;
-}/>) ) ;
+} />) ) ;
 }</div> </div>) ;
-
 

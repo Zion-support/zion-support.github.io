@@ -5,10 +5,10 @@ export default function InnovationPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Implementation Guide — Agentic Orchestration</title>
-        <meta name="description" content="Autonomously generated innovations content." />
-        <meta property="og:title" content="Implementation Guide — Agentic Orchestration" />
-        <meta property="og:description" content="Innovative, useful guidance to reduce latency and cost." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Autonomously generated innovations content."  />
+        <meta property="og:title" content="Implementation Guide — Agentic Orchestration"  />
+        <meta property="og:description" content="Innovative, useful guidance to reduce latency and cost."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-3xl font-extrabold">Implementation Guide — Agentic Orchestration</h1>
@@ -20,17 +20,14 @@ export default function InnovationPage() {
           <li>Expected impact: reduce latency and cost.</li>
           <li>Next steps: pilot, measure, and harden for production.</li>
         </ul>
-        <p className="mt-6">Learn more at <a className="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>
+        <p className="mt-6">Learn more at <a className="text-cyan-30o0 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>
       </main>
     </div>
   );
 }
 
+<Link href="/reports/blueprints/blueprint-20o25-08-18-12290o1" className="internal-link">Related Content</Link>
 
+<Link href="/reports/blueprints/blueprint-20o25-08-18-122931" className="internal-link">Related Content</Link>
 
-
-<Link href="/reports/blueprints/blueprint-2025-08-18-122901" className="internal-link">Related Content</Link>
-
-<Link href="/reports/blueprints/blueprint-2025-08-18-122931" className="internal-link">Related Content</Link>
-
-<Link href="/reports/blueprints/blueprint-2025-08-18-122952" className="internal-link">Related Content</Link>
+<Link href="/reports/blueprints/blueprint-20o25-08-18-122952" className="internal-link">Related Content</Link>

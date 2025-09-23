@@ -7,9 +7,9 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
-import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-2025';
+import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services-20o25';
 
-export default function Comprehensive2025ServicesShowcase() {
+export default function Comprehensive20o25ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -67,17 +67,17 @@ export default function Comprehensive2025ServicesShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>Comprehensive 2025 Services Showcase — Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Discover the future of technology." />
-        <meta property="og:title" content="Comprehensive 2025 Services Showcase — Zion Tech Group" />
-        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
-        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group, comprehensive services" />
-        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
+        <title>Comprehensive 20o25 Services Showcase — Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Discover the future of technology."  />
+        <meta property="og:title" content="Comprehensive 20o25 Services Showcase — Zion Tech Group"  />
+        <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services."  />
+        <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group, comprehensive services"  />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-20o25-services-showcase"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative py-20 px-6">
@@ -87,8 +87,8 @@ export default function Comprehensive2025ServicesShowcase() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              Comprehensive 2025 Services
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent">
+              Comprehensive 20o25 Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
               Discover our complete portfolio of revolutionary micro SAAS services, AI solutions, 
@@ -98,19 +98,19 @@ export default function Comprehensive2025ServicesShowcase() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{enhancedMicroSaasServices.length}+</div>
+                <div className="text-3xl font-bold text-cyan-40o0 mb-2">{enhancedMicroSaasServices.length}+</div>
                 <div className="text-white/70">Innovative Services</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">{categories.length - 1}</div>
+                <div className="text-3xl font-bold text-purple-40o0 mb-2">{categories.length - 1}</div>
                 <div className="text-white/70">Technology Categories</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-3xl font-bold text-green-40o0 mb-2">99.9%</div>
                 <div className="text-white/70">Uptime Guarantee</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+                <div className="text-3xl font-bold text-orange-40o0 mb-2">24/7</div>
                 <div className="text-white/70">Expert Support</div>
               </div>
             </div>
@@ -125,20 +125,20 @@ export default function Comprehensive2025ServicesShowcase() {
             <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Search */}
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0 focus:bg-white/15 transition-all duration-30o0"
                 />
               </div>
 
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'popularity' | 'price' | 'rating' | 'newest')}
-                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0"
               >
                 <option value="popularity">Most Popular</option>
                 <option value="price">Price: Low to High</option>
@@ -165,8 +165,8 @@ export default function Comprehensive2025ServicesShowcase() {
                 variants={itemVariants}
                 className={`group relative ${
                   viewMode === 'grid' 
-                    ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+                    ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl'
+                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0'
                 }`}
               >
                 <span>{category.icon}</span>
@@ -190,13 +190,13 @@ export default function Comprehensive2025ServicesShowcase() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl"
                 >
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="absolute top-4 right-4 z-10">
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                        <Star className="w-3 h-3" />
+                      <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <Star className="w-3 h-3"  />
                         Popular
                       </div>
                     </div>
@@ -226,10 +226,10 @@ export default function Comprehensive2025ServicesShowcase() {
                             key={i}
                             className={`w-4 h-4 ${
                               i < Math.floor(service.rating)
-                                ? 'text-yellow-400 fill-current'
+                                ? 'text-yellow-40o0 fill-current'
                                 : 'text-white/30'
                             }`}
-                          />
+                           />
                         ))}
                       </div>
                       <span className="text-white/60 text-sm">{service.rating}</span>
@@ -240,7 +240,7 @@ export default function Comprehensive2025ServicesShowcase() {
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
                           {feature}
                         </div>
                       ))}
@@ -263,14 +263,14 @@ export default function Comprehensive2025ServicesShowcase() {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 px-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                        className="flex-1 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white text-center py-3 px-4 rounded-xl font-medium transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center gap-2"
                       >
                         Learn More
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-4 h-4"  />
                       </a>
                       <a
                         href="mailto:kleber@ziontechgroup.com"
-                        className="bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-xl font-medium transition-all duration-300 border border-white/20 hover:border-white/40"
+                        className="bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-xl font-medium transition-all duration-30o0 border border-white/20 hover:border-white/40"
                       >
                         Contact
                       </a>
@@ -278,7 +278,7 @@ export default function Comprehensive2025ServicesShowcase() {
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 pointer-events-none"  />
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -295,7 +295,7 @@ export default function Comprehensive2025ServicesShowcase() {
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white px-6 py-3 rounded-xl font-medium transition-all duration-30o0"
               >
                 Clear Filters
               </button>
@@ -312,7 +312,7 @@ export default function Comprehensive2025ServicesShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl p-12 border border-blue-500/30"
+            className="bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 backdrop-blur-xl rounded-3xl p-12 border border-blue-50o0/30"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -324,23 +324,23 @@ export default function Comprehensive2025ServicesShowcase() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Schedule Consultation
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
-                href="tel:+13024640950"
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
+                href="tel:+130o24640950"
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-30o0 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
               >
-                Call Now: +1 302 464 0950
+                Call Now: +1 30o2 464 0950
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

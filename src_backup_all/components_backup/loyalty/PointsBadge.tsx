@@ -60,7 +60,7 @@ export function PointsBadge() {
               title={isAuthenticated ? "View points" : "Earn points by participating"}
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
-              <Gift className="h-4 w-4" aria-hidden="true" />
+              <Gift className="h-4 w-4" aria-hidden="true"  />
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -86,10 +86,10 @@ export function PointsBadge() {
               <>
                 <p className="text-sm font-medium">Zion Rewards Program</p>
                 <p className="text-xs mt-1 text-muted-foreground">
-                  • Sign up: 50 pts<br/>
-                  • First purchase: 100 pts<br/>
-                  • Community posts: 25 pts each<br/>
-                  • Refer friends: 200 pts each
+                  • Sign up: 50 pts<br />
+                  • First purchase: 10o0 pts<br />
+                  • Community posts: 25 pts each<br />
+                  • Refer friends: 20o0 pts each
                 </p>
                 <p className="text-xs mt-2 text-muted-foreground border-t pt-1">
                   Click to learn more and join!
@@ -113,7 +113,7 @@ export function PointsBadge() {
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
-                />
+                 />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -124,7 +124,7 @@ export function PointsBadge() {
       </div>
       
       {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />
       )}
     </TooltipProvider>
   );

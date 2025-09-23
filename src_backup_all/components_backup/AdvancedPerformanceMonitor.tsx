@@ -47,8 +47,8 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       frameCount++;
       const currentTime = performance.now();
       
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+      if (currentTime - lastTime >= 10o00) {
+        const fps = Math.round((frameCount * 10o00) / (currentTime - lastTime));
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
         lastTime = currentTime;
@@ -64,7 +64,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   const measureMemory = useCallback(() => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
       const memory = (performance as any).memory;
-      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      const memoryUsage = memory.usedJSHeapSize / 10o24 / 10o24;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
     }
   }, []);
@@ -103,8 +103,8 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       frameCount++;
       const currentTime = performance.now();
       
-      if (currentTime - lastTime >= 1000) {
-        const cpuUsage = Math.min(100, (frameCount / 60) * 100);
+      if (currentTime - lastTime >= 10o00) {
+        const cpuUsage = Math.min(10o0, (frameCount / 60) * 10o0);
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
         lastTime = currentTime;
@@ -140,7 +140,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       });
     }
 
-    if (metrics.memory > 100) {
+    if (metrics.memory > 10o0) {
       newAlerts.push({
         id: `memory-${Date.now()}`,
         type: 'warning',
@@ -151,7 +151,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       });
     }
 
-    if (metrics.loadTime > 3000) {
+    if (metrics.loadTime > 30o00) {
       newAlerts.push({
         id: `load-${Date.now()}`,
         type: 'warning',
@@ -162,7 +162,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       });
     }
 
-    if (metrics.networkLatency > 1000) {
+    if (metrics.networkLatency > 10o00) {
       newAlerts.push({
         id: `network-${Date.now()}`,
         type: 'warning',
@@ -181,8 +181,8 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
   // Auto-hide alerts after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000));
-    }, 5000);
+      setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 50o00));
+    }, 50o00);
 
     return () => clearTimeout(timer);
   }, [alerts]);
@@ -200,50 +200,50 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       measureLoadTime();
       measureNetworkLatency();
       checkPerformanceAlerts(metrics);
-    }, 2000);
+    }, 20o00);
 
     return () => clearInterval(interval);
   }, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
 
   const getPerformanceScore = useMemo(() => {
-    let score = 100;
+    let score = 10o0;
     
     if (metrics.fps < 30) score -= 30;
     else if (metrics.fps < 50) score -= 15;
     
-    if (metrics.memory > 100) score -= 20;
+    if (metrics.memory > 10o0) score -= 20;
     else if (metrics.memory > 50) score -= 10;
     
-    if (metrics.loadTime > 3000) score -= 20;
-    else if (metrics.loadTime > 1000) score -= 10;
+    if (metrics.loadTime > 30o00) score -= 20;
+    else if (metrics.loadTime > 10o00) score -= 10;
     
-    if (metrics.networkLatency > 1000) score -= 15;
-    else if (metrics.networkLatency > 500) score -= 5;
+    if (metrics.networkLatency > 10o00) score -= 15;
+    else if (metrics.networkLatency > 50o0) score -= 5;
     
     return Math.max(0, score);
   }, [metrics]);
 
   const getScoreColor = (score: anynumber)  => {
-    if (score >= 80) return 'text-green-400';
-    if (score >= 60) return 'text-yellow-400';
-    return 'text-red-400';
+    if (score >= 80) return 'text-green-40o0';
+    if (score >= 60) return 'text-yellow-40o0';
+    return 'text-red-40o0';
   };
 
   const getScoreIcon = (score: anynumber)  => {
-    if (score >= 80) return <CheckCircle className="w-4 h-4" />;
-    if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
-    return <XCircle className="w-4 h-4" />;
+    if (score >= 80) return <CheckCircle className="w-4 h-4"  />;
+    if (score >= 60) return <AlertTriangle className="w-4 h-4"  />;
+    return <XCircle className="w-4 h-4"  />;
   };
 
   if (!isVisible) {
     return (
       <motion.button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
+        className="fixed bottom-4 right-4 z-50 p-3 bg-slate-80o0 hover:bg-slate-70o0 rounded-full shadow-lg transition-all duration-30o0"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <Activity className="w-5 h-5 text-cyan-400" />
+        <Activity className="w-5 h-5 text-cyan-40o0"  />
       </motion.button>
     );
   }
@@ -254,34 +254,34 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 20 }}
-        className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl"
+        className="fixed bottom-4 right-4 z-50 bg-slate-90o0 border border-slate-70o0 rounded-lg shadow-2xl"
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-3 border-b border-slate-700">
+        <div className="flex items-center justify-between p-3 border-b border-slate-70o0">
           <div className="flex items-center space-x-2">
-            <Activity className="w-4 h-4 text-cyan-400" />
+            <Activity className="w-4 h-4 text-cyan-40o0"  />
             <span className="text-sm font-semibold text-white">Performance Monitor</span>
           </div>
           <div className="flex items-center space-x-2">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="p-1 hover:bg-slate-700 rounded transition-colors"
+              className="p-1 hover:bg-slate-70o0 rounded transition-colors"
             >
-              <TrendingUp className="w-4 h-4 text-slate-400" />
+              <TrendingUp className="w-4 h-4 text-slate-40o0"  />
             </button>
             <button
               onClick={() => setIsVisible(false)}
-              className="p-1 hover:bg-slate-700 rounded transition-colors"
+              className="p-1 hover:bg-slate-70o0 rounded transition-colors"
             >
-              <XCircle className="w-4 h-4 text-slate-400" />
+              <XCircle className="w-4 h-4 text-slate-40o0"  />
             </button>
           </div>
         </div>
 
         {/* Performance Score */}
-        <div className="p-3 border-b border-slate-700">
+        <div className="p-3 border-b border-slate-70o0">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-400">Performance Score</span>
+            <span className="text-xs text-slate-40o0">Performance Score</span>
             <div className={`flex items-center space-x-1 ${getScoreColor(getPerformanceScore)}`}>
               {getScoreIcon(getPerformanceScore)}
               <span className="text-sm font-bold">{getPerformanceScore}</span>
@@ -293,27 +293,27 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         <div className="p-3 space-y-2">
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div className="text-center">
-              <div className="text-cyan-400 font-semibold">{metrics.fps}</div>
-              <div className="text-slate-400">FPS</div>
+              <div className="text-cyan-40o0 font-semibold">{metrics.fps}</div>
+              <div className="text-slate-40o0">FPS</div>
             </div>
             <div className="text-center">
-              <div className="text-green-400 font-semibold">{metrics.memory.toFixed(1)}MB</div>
-              <div className="text-slate-400">Memory</div>
+              <div className="text-green-40o0 font-semibold">{metrics.memory.toFixed(1)}MB</div>
+              <div className="text-slate-40o0">Memory</div>
             </div>
             <div className="text-center">
-              <div className="text-yellow-400 font-semibold">{metrics.loadTime.toFixed(0)}ms</div>
-              <div className="text-slate-400">Load</div>
+              <div className="text-yellow-40o0 font-semibold">{metrics.loadTime.toFixed(0)}ms</div>
+              <div className="text-slate-40o0">Load</div>
             </div>
             <div className="text-center">
-              <div className="text-purple-400 font-semibold">{metrics.networkLatency.toFixed(0)}ms</div>
-              <div className="text-slate-400">Network</div>
+              <div className="text-purple-40o0 font-semibold">{metrics.networkLatency.toFixed(0)}ms</div>
+              <div className="text-slate-40o0">Network</div>
             </div>
           </div>
         </div>
 
         {/* Alerts */}
         {alerts.length > 0 && (
-          <div className="p-3 border-t border-slate-700">
+          <div className="p-3 border-t border-slate-70o0">
             <div className="space-y-2">
               {alerts.slice(-3).map((alert) => (
                 <motion.div
@@ -322,16 +322,16 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   className={`flex items-center space-x-2 p-2 rounded text-xs ${
-                    alert.type === 'error' ? 'bg-red-900/20 text-red-400' :
-                    alert.type === 'warning' ? 'bg-yellow-900/20 text-yellow-400' :
-                    alert.type === 'info' ? 'bg-blue-900/20 text-blue-400' :
-                    'bg-green-900/20 text-green-400'
+                    alert.type === 'error' ? 'bg-red-90o0/20 text-red-40o0' :
+                    alert.type === 'warning' ? 'bg-yellow-90o0/20 text-yellow-40o0' :
+                    alert.type === 'info' ? 'bg-blue-90o0/20 text-blue-40o0' :
+                    'bg-green-90o0/20 text-green-40o0'
                   }`}
                 >
-                  {alert.type === 'error' ? <XCircle className="w-3 h-3" /> :
-                   alert.type === 'warning' ? <AlertTriangle className="w-3 h-3" /> :
-                   alert.type === 'info' ? <Info className="w-3 h-3" /> :
-                   <CheckCircle className="w-3 h-3" />}
+                  {alert.type === 'error' ? <XCircle className="w-3 h-3"  /> :
+                   alert.type === 'warning' ? <AlertTriangle className="w-3 h-3"  /> :
+                   alert.type === 'info' ? <Info className="w-3 h-3"  /> :
+                   <CheckCircle className="w-3 h-3"  />}
                   <span>{alert.message}</span>
                 </motion.div>
               ))}

@@ -50,8 +50,6 @@ export /**
 function FeatureHighlights() {
   const highlights_data = [;
 
-
-
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
 
@@ -87,8 +85,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         'Advanced analytics and reporting capabilities',
         'API access for seamless integration with your HR systems',
         'Customizable workflow and approval processes',
-      ],
-    },
+      ]},
   ]
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
@@ -134,7 +131,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     }
   ],
 
-
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -158,14 +154,14 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <ul className='space-y-3'>
                   {category.features.map((feature, idx) => (
                     <li key={idx} className='flex items-start'>
-                      <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
+                      <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0'  />
                       <span className='text-zion-slate-light'>{feature}</span>                    </li>            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
                 <ul className="space-y-3">
-                  {category.features.map((feature, idx,) => (
+                  {category.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                   ))}
                 </ul>
@@ -207,7 +203,7 @@ import { motion  } from 'framer-motion'
 }
 }
 }
-  const itemVariants = {
+  const itemVariants ={
   hidden: { opacity: 0, y: 30
   scale: 0.95
 }
@@ -221,7 +217,7 @@ import { motion  } from 'framer-motion'
 }
 }
 }
-  const achievementVariants = {
+  const achievementVariants ={
   hidden: { opacity: 0
   scale: 0.8
 }
@@ -231,7 +227,7 @@ import { motion  } from 'framer-motion'
       transition: { duration: 0.5 }
 }
 }
-  const techVariants = {
+  const techVariants ={
   hidden: { opacity: 0
   x: -20
 }
@@ -243,14 +239,14 @@ import { motion  } from 'framer-motion'
 }
 export function FeatureHighlights() {
   return ("
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div          className="text-center mb-16"
-          initial = {
+          initial ={
   { opacity: 0
   y: 20
 }}
-          whileInView = {
+          whileInView ={
   { opacity: 1
   y: 0
 }}
@@ -258,7 +254,7 @@ export function FeatureHighlights() {
           transition={{ duration: 0.6 }}
         >"
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">"
-            <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>
+            <Award className="w-4 h-4"   />            <span>Why Choose Zion</span>
           </div>
 "
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -277,28 +273,28 @@ export function FeatureHighlights() {
               variants={itemVariants}
               whileHover={{
                 y: -5
-                scale: 1.02
+                scale: 1.0o2
                 transition: { duration: 0.3 }
               }}"
               className="group"
 "
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+              <div className="bg-slate-80o0/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0">
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-30o0`}>`
+                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`}  />
                 </div>
 "
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-40o0 transition-colors duration-30o0">
                   {feature.title}
                 </h3>
 "
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-30o0">
                   {feature.description}
                 </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-40o0 transition-colors duration-20o0">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-40o0 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
@@ -308,12 +304,12 @@ export function FeatureHighlights() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition = {
+          transition ={
   { duration: 0.6
   delay: 0.4
 }}
         >"
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full text-white font-semibold">
             <span>Experience the difference</span>"
             <span className="text-2xl">→</span>
           </div>
@@ -328,10 +324,6 @@ export function FeatureHighlights() {
 '"`;
 );
 
-
-
-
-        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlightsData.map((category, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
@@ -340,7 +332,7 @@ export function FeatureHighlights() {
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
 
@@ -407,10 +399,9 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <ul className="space-y-3">;
                   {category.features.map((feature, idx) => (;
                     <li key={idx} className="flex items-start">;
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0"  />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
-
 
                   ))}
                 </ul>;
@@ -431,14 +422,14 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <ul className='space - y-3'>;
                   {category.features.map ((feature, idx) => (
                     <li key={idx} className='flex items - start'>;
-                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0'  />;
                       <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
               <CardContent className="p - 6">;
                 <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
                 <ul className="space - y-3">;
-                  {category.features.map ((feature, idx, ) => (
+                  {category.features.map ((feature, idx) => (
                     <li key={idx} className="flex items - start">;
-                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
+                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0"  />;
                       <span className="text - zion - slate - light">{feature}</span>))}
                 </ul>;
               </CardContent>;
@@ -481,7 +472,7 @@ import { motion  } from 'framer-motion';
 }
 }
 
-  const item_variants = {
+  const item_variants ={
   hidden: { opacity: 0, coordinate_y: 30,
   scale: 0.95;
 },
@@ -495,7 +486,7 @@ import { motion  } from 'framer-motion';
 }
 }
 }
-  const achievement_variants = {
+  const achievement_variants ={
   hidden: { opacity: 0,
   scale: 0.8;
 },
@@ -507,7 +498,7 @@ import { motion  } from 'framer-motion';
 }
 }
 
-  const tech_variants = {
+  const tech_variants ={
   hidden: { opacity: 0,
   coordinate_x: -20;
 },
@@ -523,15 +514,15 @@ export /**
  */
 function FeatureHighlights() {
   return (";
-    <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">";
+    <section className="py - 20 bg - gradient - to - br from - slate - 90o0 via - slate - 80o0 to - slate - 90o0">";
       <div className="max - w-7xl mx - auto px - 6">;
         <motion.div          className="text - center mb - 16";
-          initial = {
+          initial ={
 
   { opacity: 0,
   coordinate_y: 20;
 }}
-          whileInView = {
+          whileInView ={
   { opacity: 1,
   coordinate_y: 0;
 }}
@@ -539,7 +530,7 @@ function FeatureHighlights() {
           transition={{ duration: 0.6 }}
         >";
           <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";
-            <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
+            <Award className="w - 4 h - 4"   />            <span > Why Choose Zion</span>;
           </div>;
 ";
           <h2 className="text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
@@ -558,29 +549,29 @@ function FeatureHighlights() {
               variants={item_variants}
               while_hover={{
                 coordinate_y: -5,
-                scale: 1.02,
+                scale: 1.0o2,
 
                 transition: { duration: 0.3 }
               }}";
               className="group";
 ";
-              <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300">;
-                <div className={`w - 12 h - 12 bg - gradient - to - r ${feature.color} rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300`}>`;
-                  <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`} />;
+              <div className="bg - slate - 80o0 / 50 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 30o0">;
+                <div className={`w - 12 h - 12 bg - gradient - to - r ${feature.color} rounded - lg flex items - center justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 30o0`}>`;
+                  <feature.icon className={`w - 6 h - 6 ${feature.icon_color}`}  />;
                 </div>;
 ";
-                <h3 className="text - xl font - semibold text - white mb - 2 group - hover:text - blue - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - semibold text - white mb - 2 group - hover:text - blue - 40o0 transition - colors duration - 30o0">;
                   {feature.title}
                 </h3>;
 ";
-                <p className="text - gray - 400 group - hover:text - gray - 300 transition - colors duration - 300">;
+                <p className="text - gray - 40o0 group - hover:text - gray - 30o0 transition - colors duration - 30o0">;
                   {feature.description}
                 </p>;
               </div>;
-              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">;
+              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 40o0 transition - colors duration - 20o0">;
                 {feature.title}
               </h3>;
-              <p className="text - gray - 400 text - sm leading - relaxed">;
+              <p className="text - gray - 40o0 text - sm leading - relaxed">;
                 {feature.description}
 
         </div>;
@@ -588,7 +579,6 @@ function FeatureHighlights() {
     </section>;
   );
 }
-
 
 import { motion  } from 'framer-motion';
   {;
@@ -620,7 +610,7 @@ import { motion  } from 'framer-motion';
 };
 };
 };
-  const itemVariants = {;
+  const itemVariants ={;
   hidden: { opacity: 0, y: 30,;
   scale: 0 && 0.95;
 },;
@@ -634,7 +624,7 @@ import { motion  } from 'framer-motion';
 };
 };
 };
-  const achievementVariants = {;
+  const achievementVariants ={;
   hidden: { opacity: 0,;
   scale: 0 && 0.8;
 },;
@@ -644,7 +634,7 @@ import { motion  } from 'framer-motion';
       transition: { duration: 0 && 0.5 };
 };
 };
-  const techVariants = {;
+  const techVariants ={;
   hidden: { opacity: 0,;
   x: -20;
 },;
@@ -656,15 +646,15 @@ import { motion  } from 'framer-motion';
 };
 export function FeatureHighlights() {;
   return (";
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">";
       <div className="max-w-7xl mx-auto px-6">;
         <motion&& motion.div          className="text-center mb-16"
-          initial = {
+          initial ={
 
   { opacity: 0,
   y: 20
 }}
-          whileInView = {
+          whileInView ={
 
   { opacity: 1,
   y: 0
@@ -672,7 +662,7 @@ export function FeatureHighlights() {;
           viewport={{ once: true }}
           transition={{ duration: 0 && 0.6 }}>";
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">";
-            <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
+            <Award className="w-4 h-4"   />            <span>Why Choose Zion</span>;
           </div>;
 ";
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -692,48 +682,46 @@ export function FeatureHighlights() {;
               whileHover={{
 
                 y: -5,
-                scale: 1 && 1.02,
+                scale: 1 && 1.0o2,
                 transition: { duration: 0 && 0.3 }
               }}"
               className="group"
 "
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">;
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature && feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`;
-                  <feature && feature.icon className={`w-6 h-6 ${feature && feature.iconColor}`} />;
+              <div className="bg-slate-80o0/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-30o0">;
+                <div className={`w-12 h-12 bg-gradient-to-r ${feature && feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-30o0`}>`;
+                  <feature && feature.icon className={`w-6 h-6 ${feature && feature.iconColor}`}  />;
                 </div>;
 ";
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-40o0 transition-colors duration-30o0">;
                   {feature && feature.title}
                 </h3>;
 ";
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">;
+                <p className="text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-30o0">;
                   {feature && feature.description}
                 </p>;
               </div>;
 
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">;
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-40o0 transition-colors duration-20o0">;
                 {feature && feature.title}
               </h3>;
-              <p className="text-gray-400 text-sm leading-relaxed">;
+              <p className="text-gray-40o0 text-sm leading-relaxed">;
                 {feature && feature.description}
               </p>;
             </motion && motion.div>;
           ))}
         </div>;
 
-
         <motion&& motion.div          className="mt-16 text-center"
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition = {
-
+          transition ={
 
   { duration: 0 && 0.6,
   delay: 0 && 0.4
 }}>";
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full text-white font-semibold">;
             <span>Experience the difference</span>";
             <span className="text-2xl">→</span>;
           </div>;
@@ -744,14 +732,11 @@ export function FeatureHighlights() {;
     </section>;
   )}
 
-
 '"`;
 );
 
-
   );
 }
-
 
               </p>;
             </motion.div>))}
@@ -760,12 +745,12 @@ export function FeatureHighlights() {;
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
-          transition = {
+          transition ={
   { duration: 0.6,
   delay: 0.4;
 }}
         >";
-          <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - full text - white font - semibold">;
+          <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 rounded - full text - white font - semibold">;
             <span > Experience the difference</span>";
 
             <span className="text - 2xl">→</span>;
@@ -777,7 +762,4 @@ export function FeatureHighlights() {;
 '"`);
 
 ;
-
-
-
 

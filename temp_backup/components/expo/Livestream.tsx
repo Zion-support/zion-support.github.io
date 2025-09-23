@@ -15,9 +15,9 @@ export default function Livestream({ agenda }: { agenda: AgendaItem[] }) {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              />
+               />
             ) : (
-              <video className="w-full h-full" controls src={`https://ipfs.io/ipfs/${live.replay.idOrCid}`} />
+              <video className="w-full h-full" controls src={`https://ipfs.io/ipfs/${live.replay.idOrCid}`}  />
             )
           ) : (
             <div className="w-full h-full grid place-items-center text-sm opacity-70">The livestream will appear here</div>

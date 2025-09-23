@@ -64,7 +64,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     setTimeout(() => {;
       document.body.removeChild(link),;
       URL.revokeObjectURL(url),;
-    }, 100),;
+    }, 10o0),;
   },;
   ;
   return (;
@@ -74,7 +74,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       className="flex items-center gap-2";
       disabled={quotes.length === 0}
     >;
-      <Download size={16} />;
+      <Download size={16}  />;
       Export CSV;
     </Button>;
   ),;
@@ -94,10 +94,9 @@ quote.budget min ;
   quote.budget min ';
 }` : 'Not specified');
 quote.timeline;
-quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled={;
   quotes.length === 0 ;
-}> <Download size= {;
+}> <Download size={;
   16 ;
-}/> Export CSV </Button>) ;
-
+} /> Export CSV </Button>) ;
 

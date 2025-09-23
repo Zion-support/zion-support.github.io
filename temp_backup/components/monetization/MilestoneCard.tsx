@@ -2,7 +2,7 @@
 import React{ useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 
-type Props = {
+type Props ={
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
@@ -26,9 +26,9 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
       <div className="flex items-start justify-between">
         <div>
           <h3 className="text-lg font-semibold">{milestone.title}</h3>
-          <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
+          <p className="text-sm text-gray-60o0">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
         </div>
-        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>
+        <button className="text-sm text-blue-60o0" onClick={() => setExpanded((v) => !v)}>
           {expanded ? 'Hide' : 'Details'}
         </button>
       </div>
@@ -39,21 +39,21 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
             <div key={step} className="flex items-center">
               <div
                 className={
-                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
+                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0')
                 }
                 title={step}
-              />
+               />
               {idx < statusSteps.length - 1 && (
-                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
+                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-60o0' : 'bg-gray-30o0')}  />
               )}
             </div>
           ))}
         </div>
-        <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
+        <div className="mt-2 text-xs text-gray-70o0">Status: {milestone.status}</div>
       </div>
 
       {expanded && (
-        <div className="mt-4 space-y-2 text-sm text-gray-800">
+        <div className="mt-4 space-y-2 text-sm text-gray-80o0">
           {milestone.description && <p>{milestone.description}</p>}
           <div>Amount: ${milestone.amountUsd.toFixed(2)}</div>
           {milestone.attachments && milestone.attachments.length > 0 && (
@@ -62,7 +62,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
-                    <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+                    <a className="text-blue-60o0 underline" href={a.url} target="_blank" rel="noreferrer">
                       {a.label || a.url}
                     </a>
                   </li>
@@ -76,7 +76,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
       <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
-            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className="px-3 py-1 text-sm rounded bg-indigo-60o0 text-white hover:bg-indigo-70o0"
             onClick={() => onAction('in_progress'milestone.id)}
           >
             Mark In Progress
@@ -84,7 +84,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         )}
         {canTalentSubmit && (
           <button
-            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
+            className="px-3 py-1 text-sm rounded bg-amber-60o0 text-white hover:bg-amber-70o0"
             onClick={() => onAction('submitted'milestone.id)}
           >
             Submit Work
@@ -92,7 +92,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         )}
         {canClientApprove && (
           <button
-            className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
+            className="px-3 py-1 text-sm rounded bg-green-60o0 text-white hover:bg-green-70o0"
             onClick={() => onAction('approved'milestone.id)}
           >
             Approve
@@ -100,7 +100,7 @@ export default function MilestoneCard({ milestoneprojectIdroleonAction }: Props)
         )}
         {canClientMarkPaid && (
           <button
-            className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
+            className="px-3 py-1 text-sm rounded bg-slate-70o0 text-white hover:bg-slate-80o0"
             onClick={() => onAction('paid'milestone.id)}
           >
             Mark as Paid

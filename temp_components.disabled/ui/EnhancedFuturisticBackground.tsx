@@ -38,20 +38,20 @@ export default function EnhancedFuturisticBackground({
       type: 'quantum' | 'holographic' | 'neural' | 'field';
     }> = [];
 
-    const colors = {
-      quantum: ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
-      holographic: ['#ff00ff', '#00ffff', '#ffff00', '#ff8000'],
-      neural: ['#00ff80', '#8000ff', '#ff0080', '#00ffff'],
-      field: ['#80ff00', '#ff8000', '#0080ff', '#ff0080']
+    const colors ={
+      quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'],
+      holographic: ['#ff0o0ff', '#0o0ffff', '#ffff0o0', '#ff80o00'],
+      neural: ['#0o0ff80', '#80o00ff', '#ff0o080', '#0o0ffff'],
+      field: ['#80ff0o0', '#ff80o00', '#0o080ff', '#ff0o080']
     };
 
-    const intensityMultiplier = {
+    const intensityMultiplier ={
       low: 0.5,
       medium: 1,
       high: 1.5
     };
 
-    const particleCount = Math.floor(100 * intensityMultiplier[intensity]);
+    const particleCount = Math.floor(10o0 * intensityMultiplier[intensity]);
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -76,9 +76,9 @@ export default function EnhancedFuturisticBackground({
             const dy = particles[i].y - particles[i + 1].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
+              ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 10o0)})`;
               ctx.lineWidth = 1;
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[i + 1].x, particles[i + 1].y);
@@ -116,8 +116,8 @@ export default function EnhancedFuturisticBackground({
     const createHolographicPatterns = () => {
       if (variant === 'holographic-advanced') {
         for (let i = 0; i < particles.length; i++) {
-          const time = Date.now() * 0.001;
-          const wave = Math.sin(time + particles[i].x * 0.01) * Math.cos(time + particles[i].y * 0.01);
+          const time = Date.now() * 0.0o01;
+          const wave = Math.sin(time + particles[i].x * 0.0o1) * Math.cos(time + particles[i].y * 0.0o1);
           
           ctx.beginPath();
           ctx.arc(particles[i].x, particles[i].y, particles[i].size + wave * 2, 0, Math.PI * 2);
@@ -130,10 +130,10 @@ export default function EnhancedFuturisticBackground({
     // Quantum field fluctuations
     const createQuantumField = () => {
       if (variant === 'quantum-field') {
-        const time = Date.now() * 0.0005;
+        const time = Date.now() * 0.0o005;
         for (let x = 0; x < canvas.width; x += 20) {
           for (let y = 0; y < canvas.height; y += 20) {
-            const fluctuation = Math.sin(time + x * 0.02) * Math.cos(time + y * 0.02);
+            const fluctuation = Math.sin(time + x * 0.0o2) * Math.cos(time + y * 0.0o2);
             const intensity = Math.abs(fluctuation) * 0.3;
             
             if (intensity > 0.1) {
@@ -181,10 +181,10 @@ export default function EnhancedFuturisticBackground({
 
       // Add floating geometric shapes for quantum variant
       if (variant === 'quantum-advanced' || variant === 'quantum-field') {
-        const time = Date.now() * 0.001;
+        const time = Date.now() * 0.0o01;
         for (let i = 0; i < 5; i++) {
-          const x = canvas.width * 0.5 + Math.cos(time + i) * 200;
-          const y = canvas.height * 0.5 + Math.sin(time + i) * 200;
+          const x = canvas.width * 0.5 + Math.cos(time + i) * 20o0;
+          const y = canvas.height * 0.5 + Math.sin(time + i) * 20o0;
           const size = 20 + Math.sin(time * 2 + i) * 10;
           
           ctx.beginPath();
@@ -226,21 +226,21 @@ export default function EnhancedFuturisticBackground({
     
     switch (variant) {
       case 'quantum-holographic-advanced':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0', className);
       case 'neural-network':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-emerald-90o0 to-teal-90o0', className);
       case 'cyberpunk-matrix':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-red-900 to-pink-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-red-90o0 to-pink-90o0', className);
       case 'quantum-advanced':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-cyan-900 to-blue-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-cyan-90o0 to-blue-90o0', className);
       case 'holographic-advanced':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-purple-900 to-violet-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-violet-90o0', className);
       case 'neural-advanced':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-green-900 to-emerald-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-green-90o0 to-emerald-90o0', className);
       case 'cyberpunk-advanced':
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-orange-900 to-red-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-orange-90o0 to-red-90o0', className);
       default:
-        return cn(baseClasses, 'bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900', className);
+        return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0', className);
     }
   };
 
@@ -250,13 +250,13 @@ export default function EnhancedFuturisticBackground({
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ filter: 'blur(0.5px)' }}
-      />
+       />
       
       {/* Additional layered effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-80" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-500/5 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-500/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black opacity-80"  />
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-50o0/5 to-transparent"  />
+        <div className="absolute inset-0 bg-gradient-to-bl from-transparent via-purple-50o0/5 to-transparent"  />
       </div>
 
       {/* Content */}
@@ -267,17 +267,17 @@ export default function EnhancedFuturisticBackground({
       {/* Floating geometric elements */}
       {variant === 'quantum-advanced' && (
         <div className="fixed inset-0 pointer-events-none z-5">
-          <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg transform rotate-45 animate-pulse" />
-          <div className="absolute top-40 right-40 w-24 h-24 border border-purple-400/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute bottom-40 left-40 w-28 h-28 border border-blue-400/30 transform rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rounded-lg transform rotate-45 animate-pulse"  />
+          <div className="absolute top-40 right-40 w-24 h-24 border border-purple-40o0/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}  />
+          <div className="absolute bottom-40 left-40 w-28 h-28 border border-blue-40o0/30 transform rotate-12 animate-pulse" style={{ animationDelay: '2s' }}  />
         </div>
       )}
 
       {/* Holographic grid */}
       {variant === 'holographic-advanced' && (
         <div className="fixed inset-0 pointer-events-none z-5">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-500/10 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-pink-50o0/10 to-transparent"  />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50o0/10 to-transparent"  />
         </div>
       )}
     </div>

@@ -5,9 +5,9 @@ export default function AgentCostOptimizationPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-16">
         <header>
-          <p className="text-sm text-gray-500">September 15, 2025</p>
-          <h1 className="mt-2 text-3xl font-bold text-gray-900">AI 2026: Agent Cost Optimization Guide</h1>
-          <p className="mt-3 text-gray-600">Cut spend with routing, caching, batching, and benchmark-driven model selection without sacrificing quality.</p>
+          <p className="text-sm text-gray-50o0">September 15, 20o25</p>
+          <h1 className="mt-2 text-3xl font-bold text-gray-90o0">AI 20o26: Agent Cost Optimization Guide</h1>
+          <p className="mt-3 text-gray-60o0">Cut spend with routing, caching, batching, and benchmark-driven model selection without sacrificing quality.</p>
         </header>
 
         <div className="prose mt-8">

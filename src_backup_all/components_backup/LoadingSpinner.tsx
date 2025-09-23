@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -9,10 +8,10 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  color = 'text-blue-500',
+  color = 'text-blue-50o0',
   className = '' 
 }) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
@@ -28,7 +27,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className="w-full h-full"
         viewBox="0 0 24 24"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/20o00/svg"
       >
         <circle
           cx="12"
@@ -39,7 +38,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           strokeLinecap="round"
           strokeDasharray="60 40"
           strokeDashoffset="0"
-        />
+         />
       </svg>
     </motion.div>
   );

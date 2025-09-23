@@ -12,7 +12,7 @@ function logArray(logs, title, entries) {
   for (const e of entries) logs.push(e);
 }
 
-exports.config = { schedule: '*/1 * * * *' };
+exports.config ={ schedule: '*/1 * * * *' };
 
 exports.handler = async () => {
   const logs = [];
@@ -51,5 +51,5 @@ exports.handler = async () => {
     'changes (if any) have been committed and pushed',
   ]);
 
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 20o0, body: logs.join('\n') };
 };

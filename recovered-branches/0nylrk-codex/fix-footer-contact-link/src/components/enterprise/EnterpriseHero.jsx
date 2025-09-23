@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 
@@ -26,9 +25,9 @@ export function EnterpriseHero() {
             <div className="mt-10 flex items-center gap-4">
               <p className="text-sm text-muted-foreground">Trusted by leading enterprises:</p>
               <div className="flex gap-6 opacity-70">
-                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />
-                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />
-                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8"  />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8"  />
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8"  />
               </div>
             </div>
           </div>
@@ -39,7 +38,7 @@ export function EnterpriseHero() {
                   src="/placeholder.svg" 
                   alt="Enterprise Dashboard" 
                   className="rounded max-w-full max-h-full object-cover"
-                />
+                 />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">

@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 const AutomationTask = require('../core/AutomationTask');
@@ -28,7 +24,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 class DependencyUpdater extends AutomationTask {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super({
       name: 'DependencyUpdater',
       schedule: '0 2 * * *', // Daily at 2 AM
@@ -36,8 +32,7 @@ class DependencyUpdater extends AutomationTask {
       autoCreatePR: true,
       testUpdates: true,
       maxConcurrentUpdates: 5,
-      ...config,
-    });
+      ...config});
 
     this.lastCheck = null;
     this.updateHistory = [];
@@ -87,8 +82,7 @@ class DependencyUpdater extends AutomationTask {
       this.updateHistory.push({
         timestamp: new Date().toISOString(),
         packages: updateResults,
-        status: 'success',
-      });
+        status: 'success'});
 
       this.lastStatus = 'success';
       this.lastRun = new Date();
@@ -96,8 +90,7 @@ class DependencyUpdater extends AutomationTask {
       return {
         status: 'updates_applied',
         packages: updateResults,
-        count: updateResults.length,
-      };
+        count: updateResults.length};
     } catch (error) {
       logger.error('❌ Dependency update failed:', error);
       this.lastStatus = 'failed';
@@ -108,21 +101,17 @@ class DependencyUpdater extends AutomationTask {
       this.updateHistory.push({
         timestamp: new Date().toISOString(),
         error: error.message,
-        status: 'failed',
-      });
+        status: 'failed'});
 
       throw error;
     }
   }
 
-  
-  
   async checkOutdatedPackages() {
     try {
       const output = execSync('npm outdated --json', {
         encoding: 'utf8',
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
 
       const outdated = JSON.parse(output || '{}');
       return Object.keys(outdated).map((packageName) => ({
@@ -130,8 +119,7 @@ class DependencyUpdater extends AutomationTask {
         current: outdated[packageName].current,
         wanted: outdated[packageName].wanted,
         latest: outdated[packageName].latest,
-        location: outdated[packageName].location,
-      }));
+        location: outdated[packageName].location}));
     } catch (error) {
       // npm outdated returns non-zero exit code when packages are outdated (expected behavior)
       if (error.status === 1 && error.stdout) {
@@ -142,8 +130,7 @@ class DependencyUpdater extends AutomationTask {
             current: outdated[packageName].current,
             wanted: outdated[packageName].wanted,
             latest: outdated[packageName].latest,
-            location: outdated[packageName].location,
-          }));
+            location: outdated[packageName].location}));
         } catch (parseError) {
           logger.error('Error parsing npm outdated output:', parseError);
           return [];
@@ -165,8 +152,7 @@ class DependencyUpdater extends AutomationTask {
         this.isMajorUpdate(pkg.current, pkg.latest)
       ) {
         logger.info(
-          `⚠️ Skipping major update for critical package: ${pkg.name}`,
-        );
+          `⚠️ Skipping major update for critical package: ${pkg.name}`);
         continue;
       }
 
@@ -179,8 +165,7 @@ class DependencyUpdater extends AutomationTask {
       // Check if version is too recent
       if (await this.isTooRecent(pkg.name, pkg.latest)) {
         logger.info(
-          `⚠️ Skipping too recent version: ${pkg.name}@${pkg.latest}`,
-        );
+          `⚠️ Skipping too recent version: ${pkg.name}@${pkg.latest}`);
         continue;
       }
 
@@ -205,8 +190,7 @@ class DependencyUpdater extends AutomationTask {
 
     return criticalPackages.some(
       (critical) =>
-        packageName === critical || packageName.startsWith(`${critical}-`),
-    );
+        packageName === critical || packageName.startsWith(`${critical}-`));
   }
 
   isMajorUpdate(current, latest) {
@@ -219,10 +203,9 @@ class DependencyUpdater extends AutomationTask {
     try {
       // Check if there's a breaking changes note in the package
       const packageJson = JSON.parse(await fs.readFile('package.json', 'utf8'));
-      const deps = {
+      const deps ={
         ...packageJson.dependencies,
-        ...packageJson.devDependencies,
-      };
+        ...packageJson.devDependencies};
 
       // This is a simplified check - in a real implementation, you'd check the package's changelog
       return false;
@@ -238,14 +221,12 @@ class DependencyUpdater extends AutomationTask {
         `npm view ${packageName}@${version} time --json`,
         {
           encoding: 'utf8',
-          stdio: 'pipe',
-        },
-      );
+          stdio: 'pipe'});
 
       const timeData = JSON.parse(output);
       const publishTime = new Date(timeData[version]);
       const hoursSincePublish =
-        (Date.now() - publishTime.getTime()) / (1000 * 60 * 60);
+        (Date.now() - publishTime.getTime()) / (10o00 * 60 * 60);
 
       return hoursSincePublish < 24;
     } catch (error) {
@@ -259,8 +240,7 @@ class DependencyUpdater extends AutomationTask {
     for (const pkg of packages) {
       try {
         logger.info(
-          `📦 Updating ${pkg.name} from ${pkg.current} to ${pkg.latest}`,
-        );
+          `📦 Updating ${pkg.name} from ${pkg.current} to ${pkg.latest}`);
 
         // Update the package
         const updateCommand =
@@ -274,8 +254,7 @@ class DependencyUpdater extends AutomationTask {
           name: pkg.name,
           from: pkg.current,
           to: pkg.latest,
-          status: 'updated',
-        });
+          status: 'updated'});
 
         logger.info(`✅ Successfully updated ${pkg.name}`);
       } catch (error) {
@@ -286,8 +265,7 @@ class DependencyUpdater extends AutomationTask {
           from: pkg.current,
           to: pkg.latest,
           status: 'failed',
-          error: error.message,
-        });
+          error: error.message});
       }
     }
 
@@ -364,9 +342,7 @@ This is an automated update by the dependency updater.`;
       execSync(
         `gh pr create --title "${title}" --body "${body}" --base main --head ${branchName}`,
         {
-          stdio: 'pipe',
-        },
-      );
+          stdio: 'pipe'});
     } catch (error) {
       logger.warn('GitHub CLI not available, skipping PR creation');
     }
@@ -404,8 +380,7 @@ This update was automatically generated by the dependency updater.`;
     } catch (error) {
       logger.info('⚠️ Git configuration missing, setting up...');
       execSync('git config user.name "Dependency Updater Bot"', {
-        stdio: 'pipe',
-      });
+        stdio: 'pipe'});
       execSync('git config user.email "bot@zion.app"', { stdio: 'pipe' });
     }
   }

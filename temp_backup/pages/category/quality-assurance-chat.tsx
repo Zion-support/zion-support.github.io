@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function QualityAssuranceChatPage() {
@@ -6,7 +5,7 @@ export default function QualityAssuranceChatPage() {
     <>
       <Head>
         <title>Quality Assurance Chat - Zion Tech Group</title>
-        <meta name="description" content="quality assurance chat page" />
+        <meta name="description" content="quality assurance chat page"  />
       </Head>
       
       <main>

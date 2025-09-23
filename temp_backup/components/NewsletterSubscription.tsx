@@ -31,7 +31,7 @@ const NewsletterSubscription: React.FC = () => {
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      await new Promise(resolve => setTimeout(resolve, 150o0));
       
       // In a real app, you would send this to your backend
       // console.log('Subscribing email:', email);
@@ -68,18 +68,18 @@ const NewsletterSubscription: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl p-8 border border-green-400/20 text-center"
+        className="bg-gradient-to-r from-green-50o0/10 to-emerald-50o0/10 rounded-2xl p-8 border border-green-40o0/20 text-center"
       >
-        <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Check className="w-8 h-8 text-white" />
+        <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+          <Check className="w-8 h-8 text-white"  />
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Welcome to the Future!</h3>
-        <p className="text-gray-300 mb-6">
+        <p className="text-gray-30o0 mb-6">
           You're now subscribed to our newsletter. Get ready for exclusive insights into the world of AI, quantum computing, and cutting-edge technology.
         </p>
         <button
           onClick={() => setIsSubscribed(false)}
-          className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300"
+          className="px-6 py-3 bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white font-semibold rounded-xl hover:from-green-60o0 hover:to-emerald-70o0 transition-all duration-30o0"
         >
           Subscribe Another Email
         </button>
@@ -88,7 +88,7 @@ const NewsletterSubscription: React.FC = () => {
   }
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
+    <section className="py-20 px-4 bg-gradient-to-r from-gray-90o0/50 to-gray-80o0/50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -100,7 +100,7 @@ const NewsletterSubscription: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stay Ahead of the Curve
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
             Subscribe to our newsletter for exclusive insights into AI, quantum computing, and the future of technology
           </p>
         </motion.div>
@@ -120,14 +120,14 @@ const NewsletterSubscription: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <benefit.icon className="w-6 h-6 text-cyan-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <benefit.icon className="w-6 h-6 text-cyan-40o0"  />
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2">
                     {benefit.title}
                   </h4>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-gray-40o0 leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -144,20 +144,20 @@ const NewsletterSubscription: React.FC = () => {
             viewport={{ once: true }}
           >
             <div className="text-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">
                 Join Our Newsletter
               </h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Get weekly updates on the latest in technology and innovation
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-30o0 mb-2">
                   Email Address
                 </label>
                 <div className="relative">
@@ -167,18 +167,18 @@ const NewsletterSubscription: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0"
                     disabled={isLoading}
                   />
                   {error && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                      <AlertCircle className="w-5 h-5 text-red-400" />
+                      <AlertCircle className="w-5 h-5 text-red-40o0"  />
                     </div>
                   )}
                 </div>
                 {error && (
-                  <p className="mt-2 text-sm text-red-400 flex items-center">
-                    <AlertCircle className="w-4 h-4 mr-1" />
+                  <p className="mt-2 text-sm text-red-40o0 flex items-center">
+                    <AlertCircle className="w-4 h-4 mr-1"  />
                     {error}
                   </p>
                 )}
@@ -187,7 +187,7 @@ const NewsletterSubscription: React.FC = () => {
               <button
                 type="submit"
                 disabled={isLoading || !email.trim()}
-                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 disabled:from-gray-60o0 disabled:to-gray-70o0 disabled:cursor-not-allowed transition-all duration-30o0 flex items-center justify-center space-x-2"
               >
                 {isLoading ? (
                   <>
@@ -197,20 +197,20 @@ const NewsletterSubscription: React.FC = () => {
                 ) : (
                   <>
                     <span>Subscribe Now</span>
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5"  />
                   </>
                 )}
               </button>
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-50o0">
                 By subscribing, you agree to our{' '}
-                <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="/privacy" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                   Privacy Policy
                 </a>
                 {' '}and{' '}
-                <a href="/terms" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                <a href="/terms" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                   Terms of Service
                 </a>
               </p>

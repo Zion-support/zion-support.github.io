@@ -47,7 +47,7 @@ export function MobileMenu({ className }) {
         className="p-2 text-white hover:bg-zion-purple/20" 
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >
-        {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
+        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </Button>
 
       {/* Mobile menu overlay */}
@@ -62,7 +62,7 @@ export function MobileMenu({ className }) {
                 onClick={toggleMenu} 
                 className="p-2 text-white hover:bg-zion-purple/20"
               >
-                <X className="h-5 w-5"/>
+                <X className="h-5 w-5" />
               </Button>
             </div>
 
@@ -83,7 +83,7 @@ export function MobileMenu({ className }) {
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan"
                     )}
                   >
-                    <Icon className="w-5 h-5"/>
+                    <Icon className="w-5 h-5" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
                 );
@@ -95,7 +95,7 @@ export function MobileMenu({ className }) {
               {isAuthenticated ? (
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 px-4 py-2">
-                    <User className="h-5 w-5 text-zion-cyan"/>
+                    <User className="h-5 w-5 text-zion-cyan" />
                     <span className="text-white font-medium">
                       {user?.email || 'User'}
                     </span>
@@ -105,7 +105,7 @@ export function MobileMenu({ className }) {
                     onClick={toggleMenu} 
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >
-                    <MessageSquare className="h-5 w-5"/>
+                    <MessageSquare className="h-5 w-5" />
                     <span>Messages</span>
                   </Link>
                   <Link 
@@ -113,7 +113,7 @@ export function MobileMenu({ className }) {
                     onClick={toggleMenu} 
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >
-                    <Settings className="h-5 w-5"/>
+                    <Settings className="h-5 w-5" />
                     <span>Profile</span>
                   </Link>
                 </div>

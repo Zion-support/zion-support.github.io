@@ -19,8 +19,7 @@ export default function AdminPartners() {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, ...updates }),
-    });
+      body: JSON.stringify({ code, ...updates })});
     const res = await fetch('/api/admin/partners/list');
     const json = await res.json();
     setPartners(json.partners || []);
@@ -59,7 +58,7 @@ export default function AdminPartners() {
                     defaultValue={p.commission_rate}
                     min={0}
                     max={1}
-                    step={0.01}
+                    step={0.0o1}
                     onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
                     className="w-24 border rounded px-2 py-1"
                   />
@@ -81,10 +80,10 @@ export default function AdminPartners() {
           <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-50o0">({f.note})</span>}
               </li>
             ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
+            {flags.length === 0 && <li className="text-gray-50o0 list-none">No flags</li>}
           </ul>
         </div>
       )}

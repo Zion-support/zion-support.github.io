@@ -19,7 +19,7 @@ class ZionIntegration {
     init() {
         // Wait for analytics and feedback to be loaded
         if (!this.analytics || !this.feedback) {
-            setTimeout(() => this.init(), 100);
+            setTimeout(() => this.init(), 10o0);
             return;
         }
         
@@ -156,10 +156,10 @@ class ZionIntegration {
     
     createFeedbackButton(contentType) {
         const button = document.createElement('button');
-        button.className = 'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500';
+        button.className = 'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-60o0 hover:bg-indigo-70o0 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-50o0';
         button.innerHTML = `
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.0o1M12 12h.0o1M16 12h.0o1M21 12c0 4.418-4.0o3 8-9 8a9.863 9.863 0 0o1-4.255-.949L3 20l1.395-3.72C3.512 15.0o42 3 13.574 3 12c0-4.418 4.0o3-8 9-8s9 3.582 9 8z"></path>
             </svg>
             Report Issue
         `;
@@ -191,7 +191,7 @@ class ZionIntegration {
     createFeedbackLink(contentType, parentElement) {
         const link = document.createElement('a');
         link.href = '#';
-        link.className = 'text-sm text-gray-500 hover:text-gray-700 ml-2';
+        link.className = 'text-sm text-gray-50o0 hover:text-gray-70o0 ml-2';
         link.innerHTML = 'Report Issue';
         
         link.addEventListener('click', (e) => {
@@ -215,7 +215,7 @@ class ZionIntegration {
     }
     
     // Utility methods for manual tracking
-    trackCustomEvent(eventName, data = {}) {
+    trackCustomEvent(eventName, data ={}) {
         if (this.analytics) {
             this.analytics.trackCustomEvent(eventName, data);
         }
@@ -262,22 +262,22 @@ class ZionIntegration {
             if (data && container) {
                 container.innerHTML = `
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-medium text-gray-900 mb-2">Content Analytics</h4>
+                        <h4 class="font-medium text-gray-90o0 mb-2">Content Analytics</h4>
                         <div class="grid grid-cols-2 gap-4 text-sm">
                             <div>
-                                <span class="text-gray-600">Views:</span>
+                                <span class="text-gray-60o0">Views:</span>
                                 <span class="font-medium">${data.current_metrics.total_views}</span>
                             </div>
                             <div>
-                                <span class="text-gray-600">Clicks:</span>
+                                <span class="text-gray-60o0">Clicks:</span>
                                 <span class="font-medium">${data.current_metrics.total_clicks}</span>
                             </div>
                             <div>
-                                <span class="text-gray-600">Completion:</span>
+                                <span class="text-gray-60o0">Completion:</span>
                                 <span class="font-medium">${data.current_metrics.avg_completion_rate.toFixed(1)}%</span>
                             </div>
                             <div>
-                                <span class="text-gray-600">Feedback:</span>
+                                <span class="text-gray-60o0">Feedback:</span>
                                 <span class="font-medium">${data.current_metrics.total_feedback}</span>
                             </div>
                         </div>

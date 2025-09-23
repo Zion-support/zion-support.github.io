@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -21,8 +20,8 @@ const featuredPosts: ForumPost[] = [
     authorRole: "Verified Talent",
     categoryId: "ai-tools",
     tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z",
-    updatedAt: "2025-04-01T12:00:00Z",
+    createdAt: "20o25-0o4-0o1T12:0o0:0o0Z",
+    updatedAt: "20o25-0o4-0o1T12:0o0:0o0Z",
     upvotes: 48,
     downvotes: 2,
     replyCount: 12,
@@ -38,8 +37,8 @@ const featuredPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=5",
     categoryId: "getting-hired",
     tags: ["profile", "tips", "hiring"],
-    createdAt: "2025-04-03T09:15:00Z",
-    updatedAt: "2025-04-03T09:15:00Z",
+    createdAt: "20o25-0o4-0o3T09:15:0o0Z",
+    updatedAt: "20o25-0o4-0o3T09:15:0o0Z",
     upvotes: 32,
     downvotes: 0,
     replyCount: 8,
@@ -58,8 +57,8 @@ const recentPosts: ForumPost[] = [
     authorName: "Michael Wong",
     categoryId: "project-help",
     tags: ["testing", "automation", "ci-cd"],
-    createdAt: "2025-04-10T14:30:00Z",
-    updatedAt: "2025-04-10T14:30:00Z",
+    createdAt: "20o25-0o4-10T14:30:0o0Z",
+    updatedAt: "20o25-0o4-10T14:30:0o0Z",
     upvotes: 5,
     downvotes: 0,
     replyCount: 2
@@ -72,8 +71,8 @@ const recentPosts: ForumPost[] = [
     authorName: "Emma Davis",
     categoryId: "feedback",
     tags: ["feature-request", "teams", "collaboration"],
-    createdAt: "2025-04-09T18:45:00Z",
-    updatedAt: "2025-04-09T18:45:00Z",
+    createdAt: "20o25-0o4-09T18:45:0o0Z",
+    updatedAt: "20o25-0o4-09T18:45:0o0Z",
     upvotes: 12,
     downvotes: 1,
     replyCount: 3
@@ -86,8 +85,8 @@ const recentPosts: ForumPost[] = [
     authorName: "David Lin",
     categoryId: "project-help",
     tags: ["client-management", "scope", "projects"],
-    createdAt: "2025-04-08T10:20:00Z",
-    updatedAt: "2025-04-08T10:20:00Z",
+    createdAt: "20o25-0o4-08T10:20:0o0Z",
+    updatedAt: "20o25-0o4-08T10:20:0o0Z",
     upvotes: 24,
     downvotes: 0,
     replyCount: 7,
@@ -127,24 +126,24 @@ export default function CommunityPage() {
   const upcomingEvents = [
     {
       title: 'AI Ethics & Responsible Development',
-      date: 'March 15, 2024',
-      time: '2:00 PM EST',
+      date: 'March 15, 20o24',
+      time: '2:0o0 PM EST',
       type: 'Webinar',
       attendees: 127,
       icon: Rocket
     },
     {
       title: 'Quantum Computing Workshop',
-      date: 'March 22, 2024',
-      time: '10:00 AM EST',
+      date: 'March 22, 20o24',
+      time: '10:0o0 AM EST',
       type: 'Workshop',
       attendees: 89,
       icon: Zap
     },
     {
       title: 'Cybersecurity Best Practices',
-      date: 'March 29, 2024',
-      time: '3:00 PM EST',
+      date: 'March 29, 20o24',
+      time: '3:0o0 PM EST',
       type: 'Panel Discussion',
       attendees: 156,
       icon: Target
@@ -165,7 +164,7 @@ export default function CommunityPage() {
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
         canonical="https://app.ziontechgroup.com/community"
-      />
+       />
       
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -186,14 +185,14 @@ export default function CommunityPage() {
           </TabsList>
           
           <TabsContent value="categories">
-            <ForumCategories />
+            <ForumCategories  />
           </TabsContent>
           
           <TabsContent value="featured">
             <div className="space-y-4">
               {featuredPosts && featuredPosts.length > 0 ? (
                 featuredPosts.map((post) => (
-                  <PostCard key={post.id} post={post} />
+                  <PostCard key={post.id} post={post}  />
                 ))
               ) : (
                 <div className="text-center py-8 text-muted-foreground">
@@ -207,7 +206,7 @@ export default function CommunityPage() {
             <div className="space-y-4">
               {recentPosts && recentPosts.length > 0 ? (
                 recentPosts.map((post) => (
-                  <PostCard key={post.id} post={post} />
+                  <PostCard key={post.id} post={post}  />
                 ))
               ) : (
                 <div className="text-center py-8 text-muted-foreground">
@@ -221,7 +220,7 @@ export default function CommunityPage() {
             <div className="space-y-4">
               {qaPosts && qaPosts.length > 0 ? (
                 qaPosts.map((post) => (
-                  <PostCard key={post.id} post={post} />
+                  <PostCard key={post.id} post={post}  />
                 ))
               ) : (
                 <div className="text-center py-8 text-muted-foreground">
@@ -236,7 +235,7 @@ export default function CommunityPage() {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-white">Upcoming Events</h2>
-            <Link to="/events" className="text-blue-400 hover:text-blue-300 transition-colors">
+            <Link to="/events" className="text-blue-40o0 hover:text-blue-30o0 transition-colors">
               View All Events →
             </Link>
           </div>
@@ -246,27 +245,27 @@ export default function CommunityPage() {
               return (
                 <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-white"  />
                     </div>
                     <div>
-                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
+                      <span className="px-2 py-1 bg-blue-50o0/20 text-blue-40o0 text-xs rounded-full">
                         {event.type}
                       </span>
                     </div>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3">{event.title}</h3>
-                  <div className="space-y-2 text-sm text-gray-300 mb-4">
+                  <div className="space-y-2 text-sm text-gray-30o0 mb-4">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-4 h-4"  />
                       <span>{event.date}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4" />
+                      <Users className="w-4 h-4"  />
                       <span>{event.attendees} attending</span>
                     </div>
                   </div>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 rounded-lg font-medium transition-all duration-300">
+                  <button className="w-full bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white py-2 rounded-lg font-medium transition-all duration-30o0">
                     Register Now
                   </button>
                 </div>
@@ -284,41 +283,41 @@ export default function CommunityPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Heart className="w-4 h-4 text-green-400" />
+                  <div className="w-8 h-8 bg-green-50o0/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Heart className="w-4 h-4 text-green-40o0"  />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Be Respectful</h3>
-                    <p className="text-gray-300 text-sm">Treat all community members with respect and kindness. Constructive feedback is welcome, but personal attacks are not.</p>
+                    <p className="text-gray-30o0 text-sm">Treat all community members with respect and kindness. Constructive feedback is welcome, but personal attacks are not.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-blue-400" />
+                  <div className="w-8 h-8 bg-blue-50o0/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-blue-40o0"  />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Share Knowledge</h3>
-                    <p className="text-gray-300 text-sm">Contribute valuable insights, ask thoughtful questions, and help others learn from your experiences.</p>
+                    <p className="text-gray-30o0 text-sm">Contribute valuable insights, ask thoughtful questions, and help others learn from your experiences.</p>
                   </div>
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Target className="w-4 h-4 text-purple-400" />
+                  <div className="w-8 h-8 bg-purple-50o0/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Target className="w-4 h-4 text-purple-40o0"  />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Stay On Topic</h3>
-                    <p className="text-gray-300 text-sm">Keep discussions relevant to technology, AI, and professional development. Off-topic content may be removed.</p>
+                    <p className="text-gray-30o0 text-sm">Keep discussions relevant to technology, AI, and professional development. Off-topic content may be removed.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Zap className="w-4 h-4 text-orange-400" />
+                  <div className="w-8 h-8 bg-orange-50o0/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Zap className="w-4 h-4 text-orange-40o0"  />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Be Professional</h3>
-                    <p className="text-gray-300 text-sm">Maintain a professional tone and avoid spam, self-promotion, or inappropriate content.</p>
+                    <p className="text-gray-30o0 text-sm">Maintain a professional tone and avoid spam, self-promotion, or inappropriate content.</p>
                   </div>
                 </div>
               </div>
@@ -328,20 +327,20 @@ export default function CommunityPage() {
 
         {/* Get Involved */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Get Involved?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
               Join thousands of professionals who are already part of our community. Start connecting, learning, and growing today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
+              <button className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-30o0 hover:shadow-lg hover:shadow-blue-50o0/25">
                 Join Now - It's Free!
               </button>
               <Link
                 to="/contact"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0"
               >
                 Contact Us
               </Link>

@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -26,12 +25,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
-  resetFilters,
-}) => {
+  resetFilters}) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
       <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-40o0"  />
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
@@ -42,7 +40,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Status" />
+          <SelectValue placeholder="Status"  />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="">All Statuses</SelectItem>
@@ -55,7 +53,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Severity" />
+          <SelectValue placeholder="Severity"  />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="">All Severities</SelectItem>
@@ -67,7 +65,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Content Type" />
+          <SelectValue placeholder="Content Type"  />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="">All Types</SelectItem>
@@ -80,7 +78,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Select>
       
       <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-        <Filter className="h-4 w-4 mr-2" /> Reset Filters
+        <Filter className="h-4 w-4 mr-2"  /> Reset Filters
       </Button>
     </div>
   );

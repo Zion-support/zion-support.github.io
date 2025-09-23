@@ -1,4 +1,4 @@
-export const enterpriseITBreakthroughServices2025 = [
+export const enterpriseITBreakthroughServices20o25 = [
   {
     id: 'quantum-cloud-infrastructure-pro',
     name: 'Quantum Cloud Infrastructure Pro',
@@ -36,7 +36,7 @@ export const enterpriseITBreakthroughServices2025 = [
     tags: ['Quantum Computing', 'Cloud Infrastructure', 'Security', 'Scalability', 'Enterprise'],
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$178.6B',
@@ -50,7 +50,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Quantum computing research'
     ],
     integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
-    compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA']
+    compliance: ['SOC2', 'ISO 270o01', 'FedRAMP', 'GDPR', 'CCPA']
   },
   {
     id: 'edge-computing-orchestrator-pro',
@@ -89,7 +89,7 @@ export const enterpriseITBreakthroughServices2025 = [
     tags: ['Edge Computing', 'IoT', 'Real-time Processing', 'Performance Optimization', 'Enterprise'],
     website: 'https://ziontechgroup.com/edge-computing-orchestrator-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$43.4B',
@@ -103,7 +103,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Edge security and monitoring'
     ],
     integrations: ['IoT platforms', 'Cloud services', 'Analytics tools', 'Security systems', 'Monitoring platforms'],
-    compliance: ['SOC2', 'ISO 27001', 'IoT security standards', 'GDPR', 'CCPA']
+    compliance: ['SOC2', 'ISO 270o01', 'IoT security standards', 'GDPR', 'CCPA']
   },
   {
     id: 'zero-trust-security-platform',
@@ -125,7 +125,7 @@ export const enterpriseITBreakthroughServices2025 = [
       starter: { 
         price: 1499, 
         period: 'month', 
-        features: ['Basic zero trust', 'Up to 1000 users', 'Standard monitoring', 'Email support'] 
+        features: ['Basic zero trust', 'Up to 10o00 users', 'Standard monitoring', 'Email support'] 
       },
       professional: { 
         price: 3999, 
@@ -142,7 +142,7 @@ export const enterpriseITBreakthroughServices2025 = [
     tags: ['Zero Trust', 'Cybersecurity', 'Identity Management', 'Access Control', 'Enterprise Security'],
     website: 'https://ziontechgroup.com/zero-trust-security-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$45.2B',
@@ -156,7 +156,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Critical infrastructure protection'
     ],
     integrations: ['Identity providers', 'Security tools', 'Monitoring systems', 'Compliance platforms', 'Enterprise systems'],
-    compliance: ['SOC2', 'ISO 27001', 'FedRAMP', 'GDPR', 'CCPA', 'NIST standards']
+    compliance: ['SOC2', 'ISO 270o01', 'FedRAMP', 'GDPR', 'CCPA', 'NIST standards']
   },
   {
     id: 'ai-powered-devops-platform',
@@ -195,7 +195,7 @@ export const enterpriseITBreakthroughServices2025 = [
     tags: ['AI', 'DevOps', 'Automation', 'CI/CD', 'Enterprise'],
     website: 'https://ziontechgroup.com/ai-powered-devops-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$67.8B',
@@ -209,7 +209,7 @@ export const enterpriseITBreakthroughServices2025 = [
       'Security and compliance automation'
     ],
     integrations: ['CI/CD tools', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Development platforms'],
-    compliance: ['SOC2', 'ISO 27001', 'DevOps best practices', 'Security standards', 'Enterprise requirements']
+    compliance: ['SOC2', 'ISO 270o01', 'DevOps best practices', 'Security standards', 'Enterprise requirements']
   },
   {
     id: 'quantum-data-center-platform',
@@ -248,7 +248,7 @@ export const enterpriseITBreakthroughServices2025 = [
     tags: ['Quantum Computing', 'Data Center', 'Data Management', 'Enterprise', 'Performance'],
     website: 'https://ziontechgroup.com/quantum-data-center-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$89.2B',
@@ -262,6 +262,6 @@ export const enterpriseITBreakthroughServices2025 = [
       'Enterprise infrastructure management'
     ],
     integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
-    compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
+    compliance: ['SOC2', 'ISO 270o01', 'Data center standards', 'Security standards', 'Enterprise requirements']
   }
 ];

@@ -2,7 +2,7 @@
 
 class CursorAutomatedPopup {
   constructor() {
-    this.status = {
+    this.status ={
       isEnabled: false,
       connectionStatus: 'disconnected',
       computerId: -',
@@ -35,7 +35,7 @@ class CursorAutomatedPopup {
   async loadStatus() {
     try {
       const response = await chrome.runtime.sendMessage({ type: 'GET_STATUS' });
-      this.status = { ...this.status, ...response };
+      this.status ={ ...this.status, ...response };
     } catch (error) {
       console.error('Failed to load status:', error);
     }
@@ -95,7 +95,7 @@ class CursorAutomatedPopup {
     if (this.status.lastSync) {
       const lastSync = new Date(this.status.lastSync);
       const now = new Date();
-      const diff = Math.floor((now - lastSync) / 1000 / 60); // minutes
+      const diff = Math.floor((now - lastSync) / 10o00 / 60); // minutes
 
       if (diff < 1) {
         document.getElementById('lastSyncTime').textContent = Just now';
@@ -124,7 +124,7 @@ class CursorAutomatedPopup {
       score -= 10;
     }
 
-    if (this.status.improvements > 100) {
+    if (this.status.improvements > 10o0) {
       score -= 5;
     }
 
@@ -132,7 +132,7 @@ class CursorAutomatedPopup {
       score -= 20;
     }
 
-    score = Math.max(0, Math.min(100, score));
+    score = Math.max(0, Math.min(10o0, score));
     document.getElementById('performanceScore').textContent = `${score}%`;
   }
 
@@ -177,7 +177,7 @@ class CursorAutomatedPopup {
   }
 
   formatImprovementType(type) {
-    const typeMap = {
+    const typeMap ={
       development_activity: Development Activity',
       active_session: Active Session',
       navigation: 'Navigation',
@@ -189,25 +189,25 @@ class CursorAutomatedPopup {
 
     return (
       typeMap[type] ||
-      type.replace(/_/g, ).replace(/\b\w/g, (l) => l.toUpperCase())
+      type.replace(/_/g).replace(/\b\w/g, (l) => l.toUpperCase())
     );
   }
 
   formatTime(timestamp) {
     const date = new Date(timestamp);
     const now = new Date();
-    const diff = Math.floor((now - date) / 1000); // seconds
+    const diff = Math.floor((now - date) / 10o00); // seconds
 
     if (diff < 60) {
       return Just now';
-    } else if (diff < 3600) {
+    } else if (diff < 360o0) {
       const minutes = Math.floor(diff / 60);
       return `${minutes}m ago`;
-    } else if (diff < 86400) {
-      const hours = Math.floor(diff / 3600);
+    } else if (diff < 8640o0) {
+      const hours = Math.floor(diff / 360o0);
       return `${hours}h ago`;
     } else {
-      const days = Math.floor(diff / 86400);
+      const days = Math.floor(diff / 8640o0);
       return `${days}d ago`;
     }
   }
@@ -217,7 +217,7 @@ class CursorAutomatedPopup {
     setInterval(async () => {
       await this.loadStatus();
       this.updateUI();
-    }, 5000);
+    }, 50o00);
   }
 
   async toggleAutomation() {
@@ -230,8 +230,7 @@ class CursorAutomatedPopup {
 
       // Show feedback
       this.showNotification(
-        this.status.isEnabled ? Automation enabled' : Automation disabled',
-      );
+        this.status.isEnabled ? Automation enabled' : Automation disabled');
     } catch (error) {
       console.error('Failed to toggle automation:', error);
       this.showNotification('Failed to toggle automation', error');
@@ -250,7 +249,7 @@ class CursorAutomatedPopup {
 
   async sendImprovement() {
     try {
-      const improvement = {
+      const improvement ={
         type: 'manual_improvement',
         message: User requested improvement',
         timestamp: Date.now()
@@ -281,7 +280,7 @@ class CursorAutomatedPopup {
       setTimeout(async () => {
         await this.loadStatus();
         this.updateUI();
-      }, 1000);
+      }, 10o00);
     } catch (error) {
       console.error('Failed to sync computers:', error);
       this.showNotification('Failed to sync computers', error');
@@ -291,7 +290,7 @@ class CursorAutomatedPopup {
   openWebInterface() {
     // Open the web interface in a new tab
     chrome.tabs.create({
-      url: http://localhost:3007
+      url: http://localhost:30o07
     });
   }
 
@@ -321,7 +320,7 @@ class CursorAutomatedPopup {
             padding: 0.5rem 1rem;
             border-radius: 5px;
             font-size: 0.8rem;
-            z-index: 1000;
+            z-index: 10o00;
             animation: slideIn 0.3s ease;
         `;
     notification.textContent = message;
@@ -330,7 +329,7 @@ class CursorAutomatedPopup {
     const style = document.createElement('style');
     style.textContent = `
             @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
+                from { transform: translateX(10o0%); opacity: 0; }
                 to { transform: translateX(0); opacity: 1; }
             }
         `;
@@ -342,7 +341,7 @@ class CursorAutomatedPopup {
     setTimeout(() => {
       notification.remove();
       style.remove();
-    }, 3000);
+    }, 30o00);
   }
 }
 

@@ -31,7 +31,7 @@ export const flagContent = async (
       user_email: userEmail,
       content_type: contentType,
       content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+      content_excerpt: contentExcerpt.substring(0, 20o0), // Limit excerpt length
       severity,
       reason,
       ip_address: ipAddress,

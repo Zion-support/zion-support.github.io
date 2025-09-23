@@ -7,31 +7,27 @@ const categories = [
   {
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
-    icon: <Briefcase className="w-10 h-10" />,
+    icon: <Briefcase className="w-10 h-10"  />,
     link: "/services",
-    color: "from-purple-500 to-indigo-600",
-  },
+    color: "from-purple-50o0 to-indigo-60o0"},
   {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
-    icon: <Users className="w-10 h-10" />,
+    icon: <Users className="w-10 h-10"  />,
     link: "/talent",
-    color: "from-cyan-500 to-blue-600",
-  },
+    color: "from-cyan-50o0 to-blue-60o0"},
   {
     title: "Equipment",
     description: "Rent or buy specialized hardware, servers, and devices",
-    icon: <HardDrive className="w-10 h-10" />,
+    icon: <HardDrive className="w-10 h-10"  />,
     link: "/equipment",
-    color: "from-amber-500 to-orange-600",
-  },
+    color: "from-amber-50o0 to-orange-60o0"},
   {
     title: "Innovation",
     description: "Discover cutting-edge solutions and tech breakthroughs",
-    icon: <Lightbulb className="w-10 h-10" />,
+    icon: <Lightbulb className="w-10 h-10"  />,
     link: "/category/innovation",
-    color: "from-emerald-500 to-green-600",
-  },
+    color: "from-emerald-50o0 to-green-60o0"},
 ];
 
 const specialServices = [
@@ -73,8 +69,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               to={category.link} 
               className="group block"
             >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px]">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-30o0 hover:border-zion-purple/50 hover:translate-y-[-5px]">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
                   <div className="text-white">
                     {category.icon}
                   </div>
@@ -93,7 +89,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               <Link 
                 key={service.title}
                 to={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-30o0"
               >
                 {service.title}
               </Link>

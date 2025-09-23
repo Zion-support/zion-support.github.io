@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 interface SimpleLayoutProps {
@@ -12,7 +11,7 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
     <>
       <Head>
         <title>{title}</title>
-        {description && <meta name="description" content={description} />}
+        {description && <meta name="description" content={description}  />}
       </Head>
       {children}
     </>

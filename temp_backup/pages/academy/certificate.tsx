@@ -10,8 +10,7 @@ export default function CertificatePage() {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY),
-      if (raw) setCompleted(JSON.parse(raw)),
-    } catch {}
+      if (raw) setCompleted(JSON.parse(raw))} catch {}
   }, []),
 
   const totalCount = founderCourseModules.length,
@@ -23,7 +22,6 @@ export default function CertificatePage() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl sm:text-3xl font-semibold">Certificate</h1>
-      <CertificateView completedCount={completedCount} totalCount={totalCount} />
+      <CertificateView completedCount={completedCount} totalCount={totalCount}  />
     </div>
-  ),
-}
+  )}

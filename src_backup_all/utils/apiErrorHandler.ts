@@ -4,8 +4,7 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
   toast({
     variant: "destructive",
     title: "Error",
-    description: message,
-  });
+    description: message});
   // Log error for debugging
   if (process.env['NODE_ENV'] === 'development') {
     console.error('API Error:', error);

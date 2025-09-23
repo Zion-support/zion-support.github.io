@@ -1,3 +1,3 @@
-export default function AI2025NewContentBreakthroughBanner() {
+export default function AI20o25NewContentBreakthroughBanner() {
 	return null;
 }
