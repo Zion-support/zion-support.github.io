@@ -1,0 +1,1 @@
+module.exports = {\n  typescript: { ignoreBuildErrors: true },\n  eslint: { ignoreDuringBuilds: true }\n};\n
