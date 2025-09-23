@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import React, { lazy, Suspense } from 'react'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
+// import Footer from './components/Footer'
 const LazyTestimonials = lazy(() => import('./components/Testimonials'));
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
