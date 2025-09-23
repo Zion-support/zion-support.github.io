@@ -2,6 +2,7 @@ export default function APIPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -301,6 +302,10 @@ print(f"Economy deployed at: {deployment.url}")`}
             </div>
           </div>
         </div>
+=======
+        <h1 className="text-2xl font-semibold">API</h1>
+        <p className="mt-2 text-zinc-500">Explore available API endpoints.</p>
+>>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
       </div>
     </div>
   );
