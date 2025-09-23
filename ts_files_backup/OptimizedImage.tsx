@@ -17,7 +17,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className,
   priority = false,
-  quality = 75}) => {
+  quality = 75,
+}) => {
   return (
     <Image
       src={src}
@@ -27,7 +28,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       priority={priority}
       quality={quality}
-     />
+    />
   );
 };
 

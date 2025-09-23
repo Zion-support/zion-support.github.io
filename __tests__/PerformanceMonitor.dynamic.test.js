@@ -4,19 +4,19 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 
 describe('PerformanceMonitor', () => {
   test('renders without crashing', () => {
-    render(<PerformanceMonitor  />);
+    render(<PerformanceMonitor />);
     expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<PerformanceMonitor  />);
+    render(<PerformanceMonitor />);
   });
-  
+
   test('handles user interactions', () => {
-    render(<PerformanceMonitor  />);
+    render(<PerformanceMonitor />);
   });
-  
+
   test('applies correct styling', () => {
-    render(<PerformanceMonitor  />);
+    render(<PerformanceMonitor />);
   });
 });

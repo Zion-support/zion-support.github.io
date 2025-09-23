@@ -1,12 +1,9 @@
 =======
 " " " " " export: function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()"";"";"""
-<<<<<<< HEAD:backup-merge-conflicts/UpcomingInterviewsCard.jsx.backup
+' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
 ' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
 =======
 ' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
-=======
-' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}
->>>>>>> pr-11935
 =======
 =======
 ' ' ' ' ' "export": function UpcomingInterviewsCard() { const { fetchInterviews } = useInterviews() const [upcomingInterviews,setUpcomingInterviews] = useState([]) const [isLoading,setIsLoading] = useState(true) useEffect(() => { const loadInterviews = async () => { setIsLoading(true) try { const interviews = await fetchInterviews()'';"";""}

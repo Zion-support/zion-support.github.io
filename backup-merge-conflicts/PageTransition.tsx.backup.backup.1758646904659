@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 ;
 interface PageTransitionProps {;
   "children": "React.ReactNode;
@@ -9,7 +8,6 @@ interface PageTransitionProps {;
 const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-white">
-=======
 =======
 "}
 =======
@@ -46,7 +44,6 @@ const "PageTransition": Reac t.FC<PageTransitionProps> = ({ children }) => {
 =======
 "export default PageTransition;
 </PageTransitionProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 "export default PageTransition;';
 </PageTransitionProps>;';';

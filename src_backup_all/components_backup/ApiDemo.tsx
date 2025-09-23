@@ -33,7 +33,7 @@ const ApiDemo: React.FC = () => {
   const fetchUsers = async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
       const response = await api.getUsers();
       if (response.success && response.data) {
@@ -48,7 +48,7 @@ const ApiDemo: React.FC = () => {
 
   const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!newUser.name.trim() || !newUser.email.trim()) {
       setError('Name and email are required');
       return;
@@ -71,44 +71,52 @@ const ApiDemo: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
+    <div className='max-w-4xl mx-auto p-6 space-y-6'>
+      <div className='bg-white rounded-lg shadow-md p-6'>
+        <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>
           🚀 Vite + Node.js Hybrid App Demo
         </h2>
-        
+
         {/* API Health Status */}
-        <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-          <h3 className="text-lg font-semibold text-gray-70o0 mb-2">API Status</h3>
-          <p className="text-sm text-gray-60o0">{healthStatus}</p>
+        <div className='mb-6 p-4 bg-gray-50 rounded-lg'>
+          <h3 className='text-lg font-semibold text-gray-70o0 mb-2'>
+            API Status
+          </h3>
+          <p className='text-sm text-gray-60o0'>{healthStatus}</p>
         </div>
 
         {/* Create User Form */}
-        <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-          <h3 className="text-lg font-semibold text-blue-70o0 mb-4">Create New User</h3>
-          <form onSubmit={handleCreateUser} className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className='mb-6 p-4 bg-blue-50 rounded-lg'>
+          <h3 className='text-lg font-semibold text-blue-70o0 mb-4'>
+            Create New User
+          </h3>
+          <form onSubmit={handleCreateUser} className='space-y-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <input
-                type="text"
-                placeholder="Name"
+                type='text'
+                placeholder='Name'
                 value={newUser.name}
-                onChange={(e) => setNewUser(prev => ({ ...prev, name: e.target.value }))}
-                className="px-3 py-2 border border-gray-30o0 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-50o0"
+                onChange={e =>
+                  setNewUser(prev => ({ ...prev, name: e.target.value }))
+                }
+                className='px-3 py-2 border border-gray-30o0 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-50o0'
                 required
               />
               <input
-                type="email"
-                placeholder="Email"
+                type='email'
+                placeholder='Email'
                 value={newUser.email}
-                onChange={(e) => setNewUser(prev => ({ ...prev, email: e.target.value }))}
-                className="px-3 py-2 border border-gray-30o0 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-50o0"
+                onChange={e =>
+                  setNewUser(prev => ({ ...prev, email: e.target.value }))
+                }
+                className='px-3 py-2 border border-gray-30o0 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-50o0'
                 required
               />
             </div>
             <button
-              type="submit"
+              type='submit'
               disabled={loading}
-              className="px-4 py-2 bg-blue-60o0 text-white rounded-md hover:bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed"
+              className='px-4 py-2 bg-blue-60o0 text-white rounded-md hover:bg-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed'
             >
               {loading ? 'Creating...' : 'Create User'}
             </button>
@@ -117,45 +125,52 @@ const ApiDemo: React.FC = () => {
 
         {/* Error Display */}
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-20o0 rounded-lg">
-            <p className="text-red-70o0">{error}</p>
+          <div className='mb-6 p-4 bg-red-50 border border-red-20o0 rounded-lg'>
+            <p className='text-red-70o0'>{error}</p>
           </div>
         )}
 
         {/* Users List */}
-        <div className="p-4 bg-gray-50 rounded-lg">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-70o0">Users ({users.length})</h3>
+        <div className='p-4 bg-gray-50 rounded-lg'>
+          <div className='flex justify-between items-center mb-4'>
+            <h3 className='text-lg font-semibold text-gray-70o0'>
+              Users ({users.length})
+            </h3>
             <button
               onClick={fetchUsers}
               disabled={loading}
-              className="px-3 py-1 text-sm bg-gray-60o0 text-white rounded-md hover:bg-gray-70o0 disabled:opacity-50"
+              className='px-3 py-1 text-sm bg-gray-60o0 text-white rounded-md hover:bg-gray-70o0 disabled:opacity-50'
             >
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
-          
+
           {loading ? (
-            <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-60o0 mx-auto"></div>
-              <p className="mt-2 text-gray-60o0">Loading users...</p>
+            <div className='text-center py-8'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-60o0 mx-auto'></div>
+              <p className='mt-2 text-gray-60o0'>Loading users...</p>
             </div>
           ) : users.length === 0 ? (
-            <p className="text-gray-50o0 text-center py-8">No users found. Create one above!</p>
+            <p className='text-gray-50o0 text-center py-8'>
+              No users found. Create one above!
+            </p>
           ) : (
-            <div className="space-y-3">
-              {users.map((user) => (
-                <div key={user.id} className="flex justify-between items-center p-3 bg-white rounded-md border">
+            <div className='space-y-3'>
+              {users.map(user => (
+                <div
+                  key={user.id}
+                  className='flex justify-between items-center p-3 bg-white rounded-md border'
+                >
                   <div>
-                    <p className="font-medium text-gray-90o0">{user.name}</p>
-                    <p className="text-sm text-gray-60o0">{user.email}</p>
+                    <p className='font-medium text-gray-90o0'>{user.name}</p>
+                    <p className='text-sm text-gray-60o0'>{user.email}</p>
                     {user.createdAt && (
-                      <p className="text-xs text-gray-40o0">
+                      <p className='text-xs text-gray-40o0'>
                         Created: {new Date(user.createdAt).toLocaleDateString()}
                       </p>
                     )}
                   </div>
-                  <span className="text-xs bg-gray-10o0 text-gray-60o0 px-2 py-1 rounded-full">
+                  <span className='text-xs bg-gray-10o0 text-gray-60o0 px-2 py-1 rounded-full'>
                     ID: {user.id}
                   </span>
                 </div>
@@ -165,13 +180,26 @@ const ApiDemo: React.FC = () => {
         </div>
 
         {/* Architecture Info */}
-        <div className="mt-8 p-4 bg-green-50 rounded-lg">
-          <h3 className="text-lg font-semibold text-green-70o0 mb-2">🏗️ Architecture</h3>
-          <div className="text-sm text-green-70o0 space-y-1">
-            <p>• <strong>Frontend:</strong> Vite + React (Port 30o00) - Fast HMR & optimized builds</p>
-            <p>• <strong>Backend:</strong> Node.js + Express (Port 50o00) - API endpoints & business logic</p>
-            <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
-            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
+        <div className='mt-8 p-4 bg-green-50 rounded-lg'>
+          <h3 className='text-lg font-semibold text-green-70o0 mb-2'>
+            🏗️ Architecture
+          </h3>
+          <div className='text-sm text-green-70o0 space-y-1'>
+            <p>
+              • <strong>Frontend:</strong> Vite + React (Port 30o00) - Fast HMR
+              & optimized builds
+            </p>
+            <p>
+              • <strong>Backend:</strong> Node.js + Express (Port 50o00) - API
+              endpoints & business logic
+            </p>
+            <p>
+              • <strong>Development:</strong> Vite proxy forwards /api calls to
+              Node.js
+            </p>
+            <p>
+              • <strong>Production:</strong> Node.js serves built frontend + API
+            </p>
           </div>
         </div>
       </div>

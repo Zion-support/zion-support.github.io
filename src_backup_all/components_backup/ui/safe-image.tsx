@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ImageIcon } from 'lucide-react'
+import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {
   src: string;
@@ -25,7 +25,8 @@ export function SafeImage({
   fallbackSrc,
   priority = false,
   sizes,
-  quality = 75}: SafeImageProps) {
+  quality = 75,
+}: SafeImageProps) {
   const [hasError, setHasError] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(src);
 
@@ -46,13 +47,13 @@ export function SafeImage({
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
     return (
-      <div 
+      <div
         className={`flex items-center justify-center bg-gray-10o0 text-gray-40o0 ${className}`}
         style={{ width, height }}
-        role="img"
+        role='img'
         aria-label={alt}
       >
-        <ImageIcon className="w-6 h-6"  />
+        <ImageIcon className='w-6 h-6' />
       </div>
     );
   }
@@ -68,6 +69,6 @@ export function SafeImage({
       priority={priority}
       // Add unoptimized as fallback for problematic images
       unoptimized={hasError}
-     />
+    />
   );
-} 
+}

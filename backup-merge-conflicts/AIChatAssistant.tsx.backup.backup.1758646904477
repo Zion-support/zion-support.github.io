@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Send, Bot, User } from 'lucide-react';
-<<<<<<< HEAD
 ;
 interface Message {;
   "id": "string;
@@ -30,7 +29,6 @@ const "AIChatAssistant": "React.FC = ("props": any) => {;
         "id": (Date.now() + 1).toString()",;
         "text": "`I "understand": "${userMessage.text"}". How can I help?`,;
         "sender": 'ai';
-=======
 interface Message {
   "id": string;';
   text: string;';';
@@ -105,7 +103,6 @@ const "AIChatAssistant": React.FC = (props) => {
         <div className="flex space-x-2">
           <input
             type="text"
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/AIChatAssistant.tsx
             value={input}

@@ -11,7 +11,6 @@ async function checkAutomationStatus() { const statusReport = {
     // Check PM2 processes}
     _console.log('📋 Checking PM2 processes...');',
     try {
-<<<<<<< HEAD
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
 
     // Check automation scripts}
@@ -74,7 +73,6 @@ if (require.main === module) {}
 }
 
 module.exports = { checkAutomationStatus };,
-=======;
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -165,7 +163,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
     statusReport.overallStatus = 'error';
     return statusReport;
   }

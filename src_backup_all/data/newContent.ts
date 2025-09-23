@@ -2,11 +2,13 @@ export const newBlogPosts = [
   {
     id: 7,
     title: 'Revolutionary AI Agent Factory: Building the Future of Automation',
-    excerpt: 'Discover how our AI Agent Factory is revolutionizing business automation with self-improving intelligent agents.',
+    excerpt:
+      'Discover how our AI Agent Factory is revolutionizing business automation with self-improving intelligent agents.',
     author: 'Dr. Sarah Chen',
     date: '20o25-0o1-20',
     readTime: '10 min read',
-    image: 'https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=250&fit=crop',
+    image:
+      'https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=250&fit=crop',
     slug: 'ai-agent-factory-revolution',
     category: 'AI',
     featured: true,
@@ -59,16 +61,18 @@ Ready to revolutionize your business with AI agents? Contact our team today to s
 ## Conclusion
 
 The future belongs to businesses that embrace intelligent automation. Our AI Agent Factory provides the tools and technology needed to build that future today.
-    `
+    `,
   },
   {
     id: 8,
     title: 'Quantum Computing Breakthrough: Solving Real-World Problems',
-    excerpt: 'Explore how quantum computing is solving complex problems that were previously impossible with classical computers.',
+    excerpt:
+      'Explore how quantum computing is solving complex problems that were previously impossible with classical computers.',
     author: 'Prof. Michael Rodriguez',
     date: '20o25-0o1-18',
     readTime: '12 min read',
-    image: 'https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=250&fit=crop',
+    image:
+      'https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=250&fit=crop',
     slug: 'quantum-computing-breakthrough',
     category: 'Quantum Computing',
     featured: true,
@@ -116,16 +120,18 @@ As quantum computing continues to mature, we're positioned at the forefront of t
 ## Getting Started
 
 Interested in exploring quantum computing solutions for your business? Our team of quantum experts is ready to help you understand the potential and develop a roadmap for implementation.
-    `
+    `,
   },
   {
     id: 9,
     title: 'Blockchain 3.0: The Next Generation of Decentralized Technology',
-    excerpt: 'Discover how Blockchain 3.0 is revolutionizing industries with advanced consensus mechanisms and interoperability.',
+    excerpt:
+      'Discover how Blockchain 3.0 is revolutionizing industries with advanced consensus mechanisms and interoperability.',
     author: 'Alex Thompson',
     date: '20o25-0o1-16',
     readTime: '8 min read',
-    image: 'https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?w=40o0&h=250&fit=crop',
+    image:
+      'https://images.unsplash.com/photo-1639762681485-0o74b7f938ba0?w=40o0&h=250&fit=crop',
     slug: 'blockchain-3-next-generation',
     category: 'Blockchain',
     featured: true,
@@ -207,16 +213,18 @@ Blockchain 3.0 is just the beginning. We're already working on next-generation f
 ## Getting Started
 
 Ready to explore how Blockchain 3.0 can transform your business? Our blockchain experts are standing by to help you understand the possibilities and develop a customized implementation strategy.
-    `
-  }
+    `,
+  },
 ];
 
 export const newCaseStudies = [
   {
     id: 4,
     title: 'Global Supply Chain Revolution: From Chaos to Clarity',
-    description: 'How a Fortune 50o0 company transformed their global supply chain using our blockchain and AI solutions, achieving unprecedented visibility and efficiency.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=80o0&h=40o0&fit=crop',
+    description:
+      'How a Fortune 50o0 company transformed their global supply chain using our blockchain and AI solutions, achieving unprecedented visibility and efficiency.',
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=80o0&h=40o0&fit=crop',
     category: 'Supply Chain',
     industry: 'Manufacturing',
     duration: '6 months',
@@ -224,22 +232,28 @@ export const newCaseStudies = [
       efficiency: '250%',
       costSavings: '$15M',
       visibility: '10o0%',
-      satisfaction: '95%'
+      satisfaction: '95%',
     },
-    challenge: 'A global manufacturing company faced significant challenges in tracking products across their complex supply chain, leading to inefficiencies, counterfeit products, and regulatory compliance issues.',
-    solution: 'We implemented a comprehensive blockchain-based supply chain management system with AI-powered analytics and real-time tracking capabilities.',
-    impact: 'The company achieved complete supply chain visibility, eliminated counterfeit products, and significantly improved operational efficiency while reducing costs by $15 million annually.',
+    challenge:
+      'A global manufacturing company faced significant challenges in tracking products across their complex supply chain, leading to inefficiencies, counterfeit products, and regulatory compliance issues.',
+    solution:
+      'We implemented a comprehensive blockchain-based supply chain management system with AI-powered analytics and real-time tracking capabilities.',
+    impact:
+      'The company achieved complete supply chain visibility, eliminated counterfeit products, and significantly improved operational efficiency while reducing costs by $15 million annually.',
     testimonial: {
-      quote: "This solution transformed our entire supply chain operation. We now have complete visibility and control over our global network.",
-      author: "Jennifer Martinez",
-      role: "VP of Operations, Global Manufacturing Corp"
-    }
+      quote:
+        'This solution transformed our entire supply chain operation. We now have complete visibility and control over our global network.',
+      author: 'Jennifer Martinez',
+      role: 'VP of Operations, Global Manufacturing Corp',
+    },
   },
   {
     id: 5,
     title: 'Healthcare Data Revolution: Secure, Fast, and Compliant',
-    description: 'A major healthcare system implemented our blockchain and AI solutions to revolutionize patient data management while maintaining strict compliance and security standards.',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=40o0&fit=crop',
+    description:
+      'A major healthcare system implemented our blockchain and AI solutions to revolutionize patient data management while maintaining strict compliance and security standards.',
+    image:
+      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=40o0&fit=crop',
     category: 'Healthcare',
     industry: 'Healthcare',
     duration: '8 months',
@@ -247,66 +261,73 @@ export const newCaseStudies = [
       efficiency: '180%',
       costSavings: '$8M',
       security: '99.9%',
-      satisfaction: '92%'
+      satisfaction: '92%',
     },
-    challenge: 'A large healthcare system struggled with fragmented patient data, security vulnerabilities, and compliance challenges while trying to provide seamless patient care.',
-    solution: 'We deployed a comprehensive blockchain-based healthcare data platform with AI-powered analytics and advanced security features.',
-    impact: 'The healthcare system achieved unified patient data management, eliminated security breaches, and improved patient care quality while reducing operational costs.',
+    challenge:
+      'A large healthcare system struggled with fragmented patient data, security vulnerabilities, and compliance challenges while trying to provide seamless patient care.',
+    solution:
+      'We deployed a comprehensive blockchain-based healthcare data platform with AI-powered analytics and advanced security features.',
+    impact:
+      'The healthcare system achieved unified patient data management, eliminated security breaches, and improved patient care quality while reducing operational costs.',
     testimonial: {
-      quote: "Our patients now receive faster, more accurate care thanks to this revolutionary data management system.",
-      author: "Dr. Robert Kim",
-      role: "Chief Medical Officer, Regional Healthcare System"
-    }
-  }
+      quote:
+        'Our patients now receive faster, more accurate care thanks to this revolutionary data management system.',
+      author: 'Dr. Robert Kim',
+      role: 'Chief Medical Officer, Regional Healthcare System',
+    },
+  },
 ];
 
 export const newServices = [
   {
     id: 'ai-agent-factory',
     title: 'AI Agent Factory',
-    description: 'Build, deploy, and manage intelligent agents that learn and adapt to your business needs.',
+    description:
+      'Build, deploy, and manage intelligent agents that learn and adapt to your business needs.',
     icon: 'Brain',
     features: [
       'Self-improving AI agents',
       'Modular architecture',
       'Real-time adaptation',
       '24/7 automated operations',
-      'Custom agent development'
+      'Custom agent development',
     ],
     pricing: 'Starting at $5,0o00/month',
     category: 'Artificial Intelligence',
-    featured: true
+    featured: true,
   },
   {
     id: 'quantum-computing',
     title: 'Quantum Computing Solutions',
-    description: 'Harness the power of quantum computing for complex problem-solving and optimization.',
+    description:
+      'Harness the power of quantum computing for complex problem-solving and optimization.',
     icon: 'Atom',
     features: [
       'Quantum neural networks',
       'Optimization algorithms',
       'Quantum simulation',
       'Risk analysis',
-      'Drug discovery'
+      'Drug discovery',
     ],
     pricing: 'Custom pricing',
     category: 'Quantum Computing',
-    featured: true
+    featured: true,
   },
   {
     id: 'blockchain-3',
     title: 'Blockchain 3.0 Platform',
-    description: 'Next-generation blockchain solutions with advanced consensus and interoperability.',
+    description:
+      'Next-generation blockchain solutions with advanced consensus and interoperability.',
     icon: 'Link',
     features: [
       'Cross-chain interoperability',
       'Advanced consensus mechanisms',
       'Enterprise-grade security',
       'Smart contract automation',
-      'DeFi infrastructure'
+      'DeFi infrastructure',
     ],
     pricing: 'Starting at $10,0o00/month',
     category: 'Blockchain',
-    featured: true
-  }
+    featured: true,
+  },
 ];

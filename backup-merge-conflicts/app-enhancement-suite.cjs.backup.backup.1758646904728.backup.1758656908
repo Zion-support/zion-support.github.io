@@ -24,7 +24,6 @@ class AppEnhancementSuite {}
   };
   createSecurityEnhancements() {}
     this.log('🔒 Creating Security Enhancements');
-<<<<<<< HEAD
 
     // Create security headers configuration
     const securityConfig = {
@@ -124,7 +123,6 @@ class AppMonitor {
 const monitor = new AppMonitor();
 monitor.monitorAppHealth().catch(console.error);
 `;
-=======
 
     const monitoringLines = ['#!/usr/bin/env node',
       '',
@@ -249,5 +247,4 @@ monitor.monitorAppHealth().catch(console.error);
   };
 };
 module.exports = AppEnhancementSuite;
->>>>>>> main
 >>>>>>> main

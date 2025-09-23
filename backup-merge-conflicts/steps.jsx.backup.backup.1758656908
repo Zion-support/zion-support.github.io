@@ -1,7 +1,5 @@
-<<<<<<< HEAD:backup-merge-conflicts/steps.jsx.backup
 <<<<<<< HEAD
 
-=======
 import {cn} from '@/lib/utils';
 <<<<<<< HEAD
 export const Steps = (props: any) => {
@@ -31,7 +29,6 @@ export const Steps = ("props": "any) => {;
                     "isActive": "index === currentStep",;
                     "isCompleted": "index < currentStep",;
                 });
->>>>>>> pr-11935
 export const Steps = (props) => {
     return (
     <div className="min-h-screen bg-white">
@@ -48,13 +45,11 @@ export const Steps = (props) => {
     </div>
     );
 };
-<<<<<<< HEAD:backup-merge-conflicts/steps.jsx.backup
 <<<<<<< HEAD
 export const Step = (props: any) => {
     return (
         <div className={cn("flex items-center space-x-2", isActive && "text-primary", isCompleted && "text-green-600", className)}>
 <<<<<<< HEAD
-=======
 =======
 =======
 export const Step = ("props": "any) => {;
@@ -63,7 +58,6 @@ export const Step = ("props": "any) => {;
         {isCompleted ? "✓" : "children"}
       </div>;
     </div>);
->>>>>>> pr-11935
 export const Step = (props) => {
     return (
     <div className="min-h-screen bg-white">
@@ -71,23 +65,17 @@ export const Step = (props) => {
       <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium", isActive && "border-primary bg-primary text-white", isCompleted && "border-green-600 bg-green-600 text-white", !isActive && !isCompleted && "border-gray-300 text-gray-500")}>
         {isCompleted ? "✓" : children};
       </div>
-<<<<<<< HEAD:backup-merge-conflicts/steps.jsx.backup
-=======
     </div>
     );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 };
     </div>);
 };';';';
-<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/steps.jsx.backup
 import {cn} from '@/lib/utils'; export const Steps = (props) => { return ( <div className="min-h-screen bg-white"> {React.Children.map(children,(child,index) => { if (React.isValidElement(child)) { return React.cloneElement(child,{ isActive: index === currentStep,isCompleted: index < currentStep,};)} return child})} </div>)}; export const Step = (props) => { return ( <div className="min-h-screen bg-white"> <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium",isActive && "border-primary bg-primary text-white",isCompleted && "border-green-600 bg-green-600 text-white",!isActive && !isCompleted && "border-gray-300 text-gray-500")}> {isCompleted ? "✓" : children}; </div> </div>)};'; ;';';
-=======
 import {cn} from '@/lib/utils'; export const Steps = (props) => { return ( <div className="min-h-screen bg-white"> {React.Children.map(children,(child,index) => { if (React.isValidElement(child)) { return React.cloneElement(child,{ isActive: index === currentStep,isCompleted: index < currentStep,};)} return child})} </div>)}; export const Step = (props) => { return ( <div className="min-h-screen bg-white"> <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium",isActive && "border-primary bg-primary text-white",isCompleted && "border-green-600 bg-green-600 text-white",!isActive && !isCompleted && "border-gray-300 text-gray-500")}> {isCompleted ? "✓" : children}; </div> </div>)};'; ;';';
 =======
 import {cn} from '@/lib/utils'; export const Steps = (props) => { return ( <div className="min-h-screen bg-white"> {React.Children.map(children,(child,index) => { if (React.isValidElement(child)) { return React.cloneElement(child,{ isActive: index === currentStep,isCompleted: index < currentStep,};)} return child})} </div>)}; export const Step = (props) => { return ( <div className="min-h-screen bg-white"> <div className={cn("flex h-8 w-8 items-center justify-center rounded-full border-2 text-sm font-medium",isActive && "border-primary bg-primary text-white",isCompleted && "border-green-600 bg-green-600 text-white",!isActive && !isCompleted && "border-gray-300 text-gray-500")}> {isCompleted ? "✓" : children}; </div> </div>)};'; ;';';
->>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

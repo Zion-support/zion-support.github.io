@@ -150,13 +150,11 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const startTime = Date.now();
       // Run linting;
       const lintOutput = execSync('npm run lint', { 
-<<<<<<< HEAD
         "cwd": this.projectRoot;
         encoding: 'utf8'
         timeout: 60000;
       };);
       
-=======
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000
@@ -301,7 +299,6 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
             }
           }));
         }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       }
     } catch (error) {
       // Ignore errors;

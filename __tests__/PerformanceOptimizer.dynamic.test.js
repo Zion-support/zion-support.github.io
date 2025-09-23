@@ -4,19 +4,19 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 
 describe('PerformanceOptimizer', () => {
   test('renders without crashing', () => {
-    render(<PerformanceOptimizer  />);
+    render(<PerformanceOptimizer />);
     expect(screen.getByTestId('performanceoptimizer')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<PerformanceOptimizer  />);
+    render(<PerformanceOptimizer />);
   });
-  
+
   test('handles user interactions', () => {
-    render(<PerformanceOptimizer  />);
+    render(<PerformanceOptimizer />);
   });
-  
+
   test('applies correct styling', () => {
-    render(<PerformanceOptimizer  />);
+    render(<PerformanceOptimizer />);
   });
 });

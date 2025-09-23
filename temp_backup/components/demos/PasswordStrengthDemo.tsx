@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
-import { Lock, CheckCircle, XCircle, AlertCircle, Info, Copy, ExternalLink, Eye, EyeOff } from 'lucide-react';
+import {
+  Lock,
+  CheckCircle,
+  XCircle,
+  AlertCircle,
+  Info,
+  Copy,
+  ExternalLink,
+  Eye,
+  EyeOff,
+} from 'lucide-react';
 
 interface PasswordStrengthResult {
   password: string;
@@ -41,8 +51,10 @@ export default function PasswordStrengthDemo() {
       const response = await fetch('/api/password-strength', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ password: password.trim() })});
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ password: password.trim() }),
+      });
 
       if (!response.ok) {
         throw new Error('Password check failed');
@@ -63,23 +75,35 @@ export default function PasswordStrengthDemo() {
 
   const getStrengthColor = (strength: string) => {
     switch (strength) {
-      case 'very-strong': return 'text-green-40o0';
-      case 'strong': return 'text-green-50o0';
-      case 'medium': return 'text-yellow-40o0';
-      case 'weak': return 'text-orange-40o0';
-      case 'very-weak': return 'text-red-40o0';
-      default: return 'text-gray-40o0';
+      case 'very-strong':
+        return 'text-green-40o0';
+      case 'strong':
+        return 'text-green-50o0';
+      case 'medium':
+        return 'text-yellow-40o0';
+      case 'weak':
+        return 'text-orange-40o0';
+      case 'very-weak':
+        return 'text-red-40o0';
+      default:
+        return 'text-gray-40o0';
     }
   };
 
   const getStrengthBgColor = (strength: string) => {
     switch (strength) {
-      case 'very-strong': return 'bg-green-50o0/20 border-green-50o0/30';
-      case 'strong': return 'bg-green-50o0/20 border-green-50o0/30';
-      case 'medium': return 'bg-yellow-50o0/20 border-yellow-50o0/30';
-      case 'weak': return 'bg-orange-50o0/20 border-orange-50o0/30';
-      case 'very-weak': return 'bg-red-50o0/20 border-red-50o0/30';
-      default: return 'bg-gray-50o0/20 border-gray-50o0/30';
+      case 'very-strong':
+        return 'bg-green-50o0/20 border-green-50o0/30';
+      case 'strong':
+        return 'bg-green-50o0/20 border-green-50o0/30';
+      case 'medium':
+        return 'bg-yellow-50o0/20 border-yellow-50o0/30';
+      case 'weak':
+        return 'bg-orange-50o0/20 border-orange-50o0/30';
+      case 'very-weak':
+        return 'bg-red-50o0/20 border-red-50o0/30';
+      default:
+        return 'bg-gray-50o0/20 border-gray-50o0/30';
     }
   };
 
@@ -91,46 +115,54 @@ export default function PasswordStrengthDemo() {
   };
 
   return (
-    <Card className="max-w-4xl mx-auto">
-      <div className="text-center mb-8">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-50o0 to-emerald-60o0 flex items-center justify-center">
-          <Lock className="w-8 h-8 text-white"  />
+    <Card className='max-w-4xl mx-auto'>
+      <div className='text-center mb-8'>
+        <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-green-50o0 to-emerald-60o0 flex items-center justify-center'>
+          <Lock className='w-8 h-8 text-white' />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Password Strength Analyzer</h3>
-        <p className="text-gray-40o0">Test your password security with our advanced analyzer</p>
+        <h3 className='text-2xl font-bold text-white mb-2'>
+          Password Strength Analyzer
+        </h3>
+        <p className='text-gray-40o0'>
+          Test your password security with our advanced analyzer
+        </p>
       </div>
 
       {/* Input Section */}
-      <div className="mb-8">
-        <div className="flex gap-3">
-          <div className="relative flex-1">
+      <div className='mb-8'>
+        <div className='flex gap-3'>
+          <div className='relative flex-1'>
             <input
               type={showPassword ? 'text' : 'password'}
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter password to analyze..."
-              className="w-full px-4 py-3 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-green-50o0 focus:border-transparent pr-12"
-              onKeyPress={(e) => e.key === 'Enter' && checkPassword()}
+              onChange={e => setPassword(e.target.value)}
+              placeholder='Enter password to analyze...'
+              className='w-full px-4 py-3 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-green-50o0 focus:border-transparent pr-12'
+              onKeyPress={e => e.key === 'Enter' && checkPassword()}
             />
             <button
-              type="button"
+              type='button'
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 hover:text-white"
+              className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 hover:text-white'
             >
-              {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+              {showPassword ? (
+                <EyeOff className='w-5 h-5' />
+              ) : (
+                <Eye className='w-5 h-5' />
+              )}
             </button>
           </div>
           <Button
             onClick={checkPassword}
             disabled={loading}
-            className="px-6 py-3 bg-green-60o0 hover:bg-green-70o0"
+            className='px-6 py-3 bg-green-60o0 hover:bg-green-70o0'
           >
             {loading ? 'Analyzing...' : 'Analyze'}
           </Button>
         </div>
         {error && (
-          <div className="mt-3 flex items-center text-red-40o0 text-sm">
-            <AlertCircle className="w-4 h-4 mr-2"  />
+          <div className='mt-3 flex items-center text-red-40o0 text-sm'>
+            <AlertCircle className='w-4 h-4 mr-2' />
             {error}
           </div>
         )}
@@ -138,42 +170,52 @@ export default function PasswordStrengthDemo() {
 
       {/* Results Section */}
       {result && (
-        <div className="space-y-6">
+        <div className='space-y-6'>
           {/* Summary */}
-          <div className="bg-gray-80o0/50 rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h4 className="text-lg font-semibold text-white">Strength Analysis</h4>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-40o0">Score:</span>
-                <span className={`text-2xl font-bold ${getStrengthColor(result.strength)}`}>
+          <div className='bg-gray-80o0/50 rounded-lg p-6'>
+            <div className='flex items-center justify-between mb-4'>
+              <h4 className='text-lg font-semibold text-white'>
+                Strength Analysis
+              </h4>
+              <div className='flex items-center gap-2'>
+                <span className='text-sm text-gray-40o0'>Score:</span>
+                <span
+                  className={`text-2xl font-bold ${getStrengthColor(result.strength)}`}
+                >
                   {result.score}/10o0
                 </span>
-                <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getStrengthBgColor(result.strength)} ${getStrengthColor(result.strength)}`}>
+                <span
+                  className={`px-3 py-1 rounded-full text-sm font-medium border ${getStrengthBgColor(result.strength)} ${getStrengthColor(result.strength)}`}
+                >
                   {result.strength.replace('-', ' ').toUpperCase()}
                 </span>
               </div>
             </div>
-            
+
             {/* Progress Bar */}
-            <div className="mb-4">
-              <div className="w-full bg-gray-70o0 rounded-full h-3">
-                <div 
+            <div className='mb-4'>
+              <div className='w-full bg-gray-70o0 rounded-full h-3'>
+                <div
                   className={`h-3 rounded-full transition-all duration-50o0 ${getProgressColor(result.score)}`}
                   style={{ width: `${result.score}%` }}
-                 />
+                />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-gray-40o0">Length:</span>
-                <span className={`font-medium ${result.details.length >= 8 ? 'text-green-40o0' : 'text-red-40o0'}`}>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='flex items-center gap-3'>
+                <span className='text-gray-40o0'>Length:</span>
+                <span
+                  className={`font-medium ${result.details.length >= 8 ? 'text-green-40o0' : 'text-red-40o0'}`}
+                >
                   {result.details.length} characters
                 </span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="text-gray-40o0">Entropy:</span>
-                <span className={`font-medium ${result.details.entropy >= 50 ? 'text-green-40o0' : 'text-yellow-40o0'}`}>
+              <div className='flex items-center gap-3'>
+                <span className='text-gray-40o0'>Entropy:</span>
+                <span
+                  className={`font-medium ${result.details.entropy >= 50 ? 'text-green-40o0' : 'text-yellow-40o0'}`}
+                >
                   {result.details.entropy.toFixed(1)} bits
                 </span>
               </div>
@@ -181,74 +223,124 @@ export default function PasswordStrengthDemo() {
           </div>
 
           {/* Detailed Analysis */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-80o0/50 rounded-lg p-6">
-              <h5 className="text-lg font-semibold text-white mb-4">Password Criteria</h5>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Uppercase Letters</span>
-                  <span className={result.details.hasUppercase ? 'text-green-40o0' : 'text-red-40o0'}>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div className='bg-gray-80o0/50 rounded-lg p-6'>
+              <h5 className='text-lg font-semibold text-white mb-4'>
+                Password Criteria
+              </h5>
+              <div className='space-y-3'>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Uppercase Letters</span>
+                  <span
+                    className={
+                      result.details.hasUppercase
+                        ? 'text-green-40o0'
+                        : 'text-red-40o0'
+                    }
+                  >
                     {result.details.hasUppercase ? '✓' : '✗'}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Lowercase Letters</span>
-                  <span className={result.details.hasLowercase ? 'text-green-40o0' : 'text-red-40o0'}>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Lowercase Letters</span>
+                  <span
+                    className={
+                      result.details.hasLowercase
+                        ? 'text-green-40o0'
+                        : 'text-red-40o0'
+                    }
+                  >
                     {result.details.hasLowercase ? '✓' : '✗'}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Numbers</span>
-                  <span className={result.details.hasNumbers ? 'text-green-40o0' : 'text-red-40o0'}>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Numbers</span>
+                  <span
+                    className={
+                      result.details.hasNumbers
+                        ? 'text-green-40o0'
+                        : 'text-red-40o0'
+                    }
+                  >
                     {result.details.hasNumbers ? '✓' : '✗'}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Special Characters</span>
-                  <span className={result.details.hasSymbols ? 'text-green-40o0' : 'text-red-40o0'}>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Special Characters</span>
+                  <span
+                    className={
+                      result.details.hasSymbols
+                        ? 'text-green-40o0'
+                        : 'text-red-40o0'
+                    }
+                  >
                     {result.details.hasSymbols ? '✓' : '✗'}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Common Patterns</span>
-                  <span className={result.details.hasCommonPatterns ? 'text-red-40o0' : 'text-green-40o0'}>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Common Patterns</span>
+                  <span
+                    className={
+                      result.details.hasCommonPatterns
+                        ? 'text-red-40o0'
+                        : 'text-green-40o0'
+                    }
+                  >
                     {result.details.hasCommonPatterns ? 'Found' : 'None'}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-40o0">Minimum Length (8)</span>
-                  <span className={result.details.length >= 8 ? 'text-green-40o0' : 'text-red-40o0'}>
+                <div className='flex items-center justify-between'>
+                  <span className='text-gray-40o0'>Minimum Length (8)</span>
+                  <span
+                    className={
+                      result.details.length >= 8
+                        ? 'text-green-40o0'
+                        : 'text-red-40o0'
+                    }
+                  >
                     {result.details.length >= 8 ? '✓' : '✗'}
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-80o0/50 rounded-lg p-6">
-              <h5 className="text-lg font-semibold text-white mb-4">Suggestions</h5>
+            <div className='bg-gray-80o0/50 rounded-lg p-6'>
+              <h5 className='text-lg font-semibold text-white mb-4'>
+                Suggestions
+              </h5>
               {result.suggestions.length > 0 ? (
-                <ul className="space-y-2">
+                <ul className='space-y-2'>
                   {result.suggestions.map((suggestion, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm text-gray-30o0">
-                      <Info className="w-4 h-4 text-blue-40o0 mt-0.5 flex-shrink-0"  />
+                    <li
+                      key={index}
+                      className='flex items-start gap-2 text-sm text-gray-30o0'
+                    >
+                      <Info className='w-4 h-4 text-blue-40o0 mt-0.5 flex-shrink-0' />
                       {suggestion}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-40o0 text-sm">Excellent password! No suggestions needed.</p>
+                <p className='text-gray-40o0 text-sm'>
+                  Excellent password! No suggestions needed.
+                </p>
               )}
             </div>
           </div>
 
           {/* Feedback */}
           {result.feedback.length > 0 && (
-            <div className="bg-gray-80o0/50 rounded-lg p-6">
-              <h5 className="text-lg font-semibold text-white mb-4">Feedback</h5>
-              <ul className="space-y-2">
+            <div className='bg-gray-80o0/50 rounded-lg p-6'>
+              <h5 className='text-lg font-semibold text-white mb-4'>
+                Feedback
+              </h5>
+              <ul className='space-y-2'>
                 {result.feedback.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2 text-sm text-gray-30o0">
-                    <AlertCircle className="w-4 h-4 text-yellow-40o0 mt-0.5 flex-shrink-0"  />
+                  <li
+                    key={index}
+                    className='flex items-start gap-2 text-sm text-gray-30o0'
+                  >
+                    <AlertCircle className='w-4 h-4 text-yellow-40o0 mt-0.5 flex-shrink-0' />
                     {item}
                   </li>
                 ))}
@@ -257,60 +349,76 @@ export default function PasswordStrengthDemo() {
           )}
 
           {/* API Information */}
-          <div className="bg-gray-80o0/50 rounded-lg p-6">
-            <h5 className="text-lg font-semibold text-white mb-4">API Integration</h5>
-            <div className="space-y-4">
+          <div className='bg-gray-80o0/50 rounded-lg p-6'>
+            <h5 className='text-lg font-semibold text-white mb-4'>
+              API Integration
+            </h5>
+            <div className='space-y-4'>
               <div>
-                <p className="text-sm text-gray-40o0 mb-2">Endpoint:</p>
-                <div className="flex items-center gap-2">
-                  <code className="flex-1 px-3 py-2 bg-gray-90o0 text-green-40o0 rounded text-sm font-mono">
+                <p className='text-sm text-gray-40o0 mb-2'>Endpoint:</p>
+                <div className='flex items-center gap-2'>
+                  <code className='flex-1 px-3 py-2 bg-gray-90o0 text-green-40o0 rounded text-sm font-mono'>
                     POST /api/password-strength
                   </code>
                   <Button
-                    onClick={() => copyToClipboard('POST /api/password-strength')}
-                    variant="ghost"
-                    size="sm"
-                    className="px-3 py-2"
+                    onClick={() =>
+                      copyToClipboard('POST /api/password-strength')
+                    }
+                    variant='ghost'
+                    size='sm'
+                    className='px-3 py-2'
                   >
-                    <Copy className="w-4 h-4"  />
-                  </Button>
-                </div>
-              </div>
-              
-              <div>
-                <p className="text-sm text-gray-40o0 mb-2">Request Body:</p>
-                <div className="flex items-center gap-2">
-                  <code className="flex-1 px-3 py-2 bg-gray-90o0 text-green-40o0 rounded text-sm font-mono">
-                    {JSON.stringify({ password: 'your_password_here' }, null, 2)}
-                  </code>
-                  <Button
-                    onClick={() => copyToClipboard(JSON.stringify({ password: 'your_password_here' }, null, 2))}
-                    variant="ghost"
-                    size="sm"
-                    className="px-3 py-2"
-                  >
-                    <Copy className="w-4 h-4"  />
+                    <Copy className='w-4 h-4' />
                   </Button>
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <div>
+                <p className='text-sm text-gray-40o0 mb-2'>Request Body:</p>
+                <div className='flex items-center gap-2'>
+                  <code className='flex-1 px-3 py-2 bg-gray-90o0 text-green-40o0 rounded text-sm font-mono'>
+                    {JSON.stringify(
+                      { password: 'your_password_here' },
+                      null,
+                      2
+                    )}
+                  </code>
+                  <Button
+                    onClick={() =>
+                      copyToClipboard(
+                        JSON.stringify(
+                          { password: 'your_password_here' },
+                          null,
+                          2
+                        )
+                      )
+                    }
+                    variant='ghost'
+                    size='sm'
+                    className='px-3 py-2'
+                  >
+                    <Copy className='w-4 h-4' />
+                  </Button>
+                </div>
+              </div>
+
+              <div className='flex gap-3'>
                 <Button
-                  href="/docs/password-strength"
-                  variant="outline"
-                  size="sm"
-                  className="border-green-50o0/30 text-green-40o0 hover:bg-green-50o0/10"
+                  href='/docs/password-strength'
+                  variant='outline'
+                  size='sm'
+                  className='border-green-50o0/30 text-green-40o0 hover:bg-green-50o0/10'
                 >
-                  <ExternalLink className="w-4 h-4 mr-2"  />
+                  <ExternalLink className='w-4 h-4 mr-2' />
                   View Documentation
                 </Button>
                 <Button
-                  href="https://github.com/Zion-Holdings/zion.app"
-                  variant="ghost"
-                  size="sm"
-                  className="text-gray-40o0 hover:text-white"
+                  href='https://github.com/Zion-Holdings/zion.app'
+                  variant='ghost'
+                  size='sm'
+                  className='text-gray-40o0 hover:text-white'
                 >
-                  <ExternalLink className="w-4 h-4 mr-2"  />
+                  <ExternalLink className='w-4 h-4 mr-2' />
                   GitHub Repository
                 </Button>
               </div>
@@ -320,31 +428,31 @@ export default function PasswordStrengthDemo() {
       )}
 
       {/* Features */}
-      <div className="mt-8 pt-8 border-t border-gray-70o0">
-        <h4 className="text-lg font-semibold text-white mb-4">Key Features</h4>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+      <div className='mt-8 pt-8 border-t border-gray-70o0'>
+        <h4 className='text-lg font-semibold text-white mb-4'>Key Features</h4>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Multi-factor scoring
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Entropy calculation
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Pattern detection
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Real-time feedback
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Security recommendations
           </div>
-          <div className="flex items-center gap-3 text-sm text-gray-30o0">
-            <CheckCircle className="w-4 h-4 text-green-40o0"  />
+          <div className='flex items-center gap-3 text-sm text-gray-30o0'>
+            <CheckCircle className='w-4 h-4 text-green-40o0' />
             Compliance checking
           </div>
         </div>

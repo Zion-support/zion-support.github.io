@@ -114,7 +114,6 @@ export function AnalyticsManager("props": "any) {;
 
       saveSessionData(currentSession)}
   }, [currentSession]) };
-<<<<<<< HEAD
 ;
     // Scroll tracking';
     document.addEventListener('scroll', handleScroll, { "passive": "tru e "});
@@ -126,8 +125,6 @@ export function AnalyticsManager("props": "any) {;
     );
 
     // Page unload tracking'
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
 ;
     // Track button clicks';
@@ -170,7 +167,6 @@ export function AnalyticsManager("props": "any) {;
         if(fcp) {;
 
           trackPerformance('fcp', fcp.startTime)}
-<<<<<<< HEAD
       });
       fcpObserver.observe({ "entryTypes": "['paint'] "});
 ;
@@ -179,13 +175,10 @@ export function AnalyticsManager("props": "any) {;
     );
       fcpObserver.observe({ entryTypes: ['paint'] }
     );
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(lcp) {;
 
           trackPerformance('lcp', lcp.startTime)}
-<<<<<<< HEAD
       });
       lcpObserver.observe({ "entryTypes": "['largest-contentful-paint'] "});
 ;
@@ -194,13 +187,10 @@ export function AnalyticsManager("props": "any) {;
     );
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
     );
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         if(fid) {;
 
           trackPerformance('fid', fid.processingStart - fid.startTime)}
-<<<<<<< HEAD
       });
       fidObserver.observe({ "entryTypes": "['first-input'] "});
 ;
@@ -210,8 +200,6 @@ export function AnalyticsManager("props": "any) {;
     );
       fidObserver.observe({ entryTypes: ['first-input'] }
     );
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
 
         let clsValue = 0;        for (const entry of list.getEntries()) {;
 
@@ -220,7 +208,6 @@ export function AnalyticsManager("props": "any) {;
             clsValue += (entry as any).value}
         }
 =======
-<<<<<<< HEAD
         trackPerformance('cls', clsValue)});
       clsObserver.observe({ "entryTypes": "['layout-shift'] "})}
         trackPerformance('cls', clsValue)}
@@ -249,8 +236,6 @@ export function AnalyticsManager("props": "any) {;
         sendAnalyticsData('page_view', { path, timestamp: Dat e.now() })}
     },
     [currentSession]
-=======
->>>>>>> pr-11913:src_backup_temp/components/AnalyticsManager.tsx
   );
 ;
         setCurrentSession(prev =>;

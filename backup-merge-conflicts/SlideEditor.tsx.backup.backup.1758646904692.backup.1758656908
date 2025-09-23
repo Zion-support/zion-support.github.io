@@ -1,8 +1,6 @@
 import React from 'react';
 interface Slide {;
-<<<<<<< HEAD:backup-merge-conflicts/SlideEditor.tsx.backup
 <<<<<<< HEAD
-=======
   "id": "string;
   "title": string;
   "content": string;
@@ -13,7 +11,6 @@ interface Slide {;
   content: string;';
   type: string;';';
 =======
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/SlideEditor.tsx
   chartType?: 'bar' | 'funnel' | 'timeline';
 "}
 ;

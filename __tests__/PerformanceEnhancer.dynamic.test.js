@@ -4,19 +4,19 @@ import PerformanceEnhancer from '../components/PerformanceEnhancer';
 
 describe('PerformanceEnhancer', () => {
   test('renders without crashing', () => {
-    render(<PerformanceEnhancer  />);
+    render(<PerformanceEnhancer />);
     expect(screen.getByTestId('performanceenhancer')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<PerformanceEnhancer  />);
+    render(<PerformanceEnhancer />);
   });
-  
+
   test('handles user interactions', () => {
-    render(<PerformanceEnhancer  />);
+    render(<PerformanceEnhancer />);
   });
-  
+
   test('applies correct styling', () => {
-    render(<PerformanceEnhancer  />);
+    render(<PerformanceEnhancer />);
   });
 });

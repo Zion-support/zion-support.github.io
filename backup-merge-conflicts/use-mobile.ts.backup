@@ -1,11 +1,8 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/use-mobile.ts.backup
 import { useState, useEffect } from 'react'  export function useMobile() { const [isMobile, setIsMobile] = useState(false)  useEffect(() => {;""';
 }};';;';
 =======
-=======
 import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"" }}
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
 import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
 =======
 =======

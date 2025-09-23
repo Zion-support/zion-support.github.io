@@ -4,20 +4,38 @@ import { MemoryRouter } from 'react-router-dom';
 import TalentDirectory from '@/pages/TalentDirectory';
 
 // Mock child components and hooks
-jest.mock('@/components/talent/FilterSidebar', () => ({ FilterSidebar: (props: any) => <div data-testid="filter-sidebar">Filter Sidebar</div> }));
+jest.mock('@/components/talent/FilterSidebar', () => ({
+  FilterSidebar: (props: any) => (
+    <div data-testid='filter-sidebar'>Filter Sidebar</div>
+  ),
+}));
 jest.mock('@/components/talent/TalentResults', () => ({
   TalentResults: (props: any) => (
-    <div data-testid="talent-results">
+    <div data-testid='talent-results'>
       {props.talents.map((talent: any) => (
-        <div key={talent.id} data-testid="talent-profile-card">{talent.name}</div>
+        <div key={talent.id} data-testid='talent-profile-card'>
+          {talent.name}
+        </div>
       ))}
-      {props.totalCount === 0 && !props.isLoading && <div>No results based on filters</div>}
+      {props.totalCount === 0 && !props.isLoading && (
+        <div>No results based on filters</div>
+      )}
     </div>
-  )
+  ),
 }));
-jest.mock('@/components/talent/TalentSkeleton', () => ({ TalentSkeleton: () => <div data-testid="talent-skeleton">Loading...</div> }));
-jest.mock('@/components/talent/ErrorBanner', () => ({ ErrorBanner: (props: any) => <div data-testid="error-banner">{props.msg}</div> }));
-jest.mock('@/components/GlobalErrorBoundary', () => ({ children }: { children: React.ReactNode }) => <>{children}</>);
+jest.mock('@/components/talent/TalentSkeleton', () => ({
+  TalentSkeleton: () => <div data-testid='talent-skeleton'>Loading...</div>,
+}));
+jest.mock('@/components/talent/ErrorBanner', () => ({
+  ErrorBanner: (props: any) => (
+    <div data-testid='error-banner'>{props.msg}</div>
+  ),
+}));
+jest.mock(
+  '@/components/GlobalErrorBoundary',
+  () =>
+    ({ children }: { children: React.ReactNode }) => <>{children}</>
+);
 jest.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({ user: { id: 'test-user' }, isAuthenticated: true }),
 }));
@@ -29,7 +47,6 @@ global.fetch = jest.fn(() =>
     json: () => Promise.resolve({ talents: [], total: 0 }),
   })
 ) as jest.Mock;
-
 
 describe('TalentDirectory Page', () => {
   beforeEach(() => {
@@ -50,9 +67,14 @@ describe('TalentDirectory Page', () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      expect(screen.getByText(/AI & Tech Talent Directory/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/AI & Tech Talent Directory/i)
+      ).toBeInTheDocument();
     });
-    expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining('/api/talent'), expect.any(Object));
+    expect(global.fetch).toHaveBeenCalledWith(
+      expect.stringContaining('/api/talent'),
+      expect.any(Object)
+    );
   });
 
   it('displays talent profiles when API returns data', async () => {
@@ -94,14 +116,16 @@ describe('TalentDirectory Page', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText(/Talent Directory Currently Empty/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/Talent Directory Currently Empty/i)
+      ).toBeInTheDocument();
     });
   });
 
   it('displays skeleton loader during initial fetch and then empty state if no data', async () => {
     // 1. Create a promise that we can control
     let resolveFetchPromise: (value: any) => void;
-    const mockFetchPromise = new Promise((resolve) => {
+    const mockFetchPromise = new Promise(resolve => {
       resolveFetchPromise = resolve;
     });
 
@@ -115,11 +139,14 @@ describe('TalentDirectory Page', () => {
 
     // 2. Assert skeleton is visible and empty message is not (while promise is pending)
     expect(screen.getByTestId('talent-skeleton')).toBeInTheDocument();
-    expect(screen.queryByText(/Talent Directory Currently Empty/i)).not.toBeInTheDocument();
+    expect(
+      screen.queryByText(/Talent Directory Currently Empty/i)
+    ).not.toBeInTheDocument();
     expect(screen.queryByTestId('error-banner')).not.toBeInTheDocument();
 
     // 3. Resolve the fetch promise (simulating API response)
-    resolveFetchPromise!({ // Use non-null assertion as it's guaranteed to be set
+    resolveFetchPromise!({
+      // Use non-null assertion as it's guaranteed to be set
       ok: true,
       json: () => Promise.resolve({ talents: [], total: 0 }),
     });
@@ -129,7 +156,9 @@ describe('TalentDirectory Page', () => {
       expect(screen.queryByTestId('talent-skeleton')).not.toBeInTheDocument();
     });
     await waitFor(() => {
-      expect(screen.getByText(/Talent Directory Currently Empty/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/Talent Directory Currently Empty/i)
+      ).toBeInTheDocument();
     });
     expect(screen.queryByTestId('error-banner')).not.toBeInTheDocument();
   });
@@ -150,7 +179,9 @@ describe('TalentDirectory Page', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByTestId('error-banner')).toHaveTextContent('Unable to load talent profiles.');
+      expect(screen.getByTestId('error-banner')).toHaveTextContent(
+        'Unable to load talent profiles.'
+      );
     });
   });
 });

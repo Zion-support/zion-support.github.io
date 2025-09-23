@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -14,7 +12,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Button } from '../../../components/ui/button';
 import { Badge } from '../../../components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 >>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/tools/ai-2025-readiness-assessment-ultimate/page.tsx.backup.1757880714
 
 interface AssessmentQuestion {

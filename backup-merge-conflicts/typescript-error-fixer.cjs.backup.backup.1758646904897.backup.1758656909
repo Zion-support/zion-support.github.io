@@ -32,7 +32,6 @@ class TypeScriptErrorFixer {}
       service: 'typescript-error-fixer'
     };
 
-<<<<<<< HEAD
     if (level === 'error') {
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
       } else if (level === 'info') {
@@ -42,7 +41,6 @@ class TypeScriptErrorFixer {}
     this.writeToLog(logEntry)}
 
   writeToLog(logEntry) {
-=======
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -388,4 +386,3 @@ fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
 });
->>>>>>> main

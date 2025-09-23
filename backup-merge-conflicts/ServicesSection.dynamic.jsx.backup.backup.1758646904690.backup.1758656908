@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const ServicesSection = dynamic(() => import("./ServicesSection"),{"; loading: () => <p>Loading.</p,>,}) export: "default ServicesSection" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const ServicesSection = dynamic(() => import("./ServicesSection"),{'; loading: () => <p>Loading...</p,>,}) export: 'default ServicesSection' ,'
 >>>>>>> main
 >>>>>>> main

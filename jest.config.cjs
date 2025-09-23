@@ -1,10 +1,10 @@
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/__safe_tests__'],
+  roots: ['<rootDir>/src', '<rootDir>/__safe_tests__'],
   testMatch: ['**/*.(test|spec).(ts|tsx|js|jsx)'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   transform: {
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
@@ -15,11 +15,12 @@ module.exports = {
     }]
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1'
+    '^@/(.*)$': '<rootDir>/src/$1'
   },
   testPathIgnorePatterns: [
     '/node_modules/',
     '/.next/',
     '<rootDir>/__tests__/'
-  ]
+  ],
+  modulePathIgnorePatterns: []
 };

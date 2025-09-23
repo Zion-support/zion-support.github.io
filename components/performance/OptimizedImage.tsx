@@ -30,6 +30,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={className}
       sizes={sizes}
       {...props}
-     />
+    />
   );
 };

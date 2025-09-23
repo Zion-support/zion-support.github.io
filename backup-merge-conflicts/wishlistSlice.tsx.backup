@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 ;
 export default function Wishlistslice("props": "any) {;
   return (;
@@ -26,5 +25,3 @@ export default function Wishlistslice(props: any) {
     </div>
     );
 }
-=======
->>>>>>> pr-11913:src_backup_temp/store/wishlistSlice.tsx

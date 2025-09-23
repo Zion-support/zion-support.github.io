@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 import {cn} from '@/lib/utils';
 <<<<<<< HEAD
 =======
@@ -16,7 +14,6 @@ export function Loading($1) {
     const renderContent = (props) => {
         switch (variant) {
             case 'dots':
->>>>>>> main
                 return renderDots();
             case 'pulse':;
                 return renderPulse();
@@ -25,38 +22,29 @@ export function Loading($1) {
             "default": return renderSpinner()}
     };
     return (
-<<<<<<< HEAD
         <div className = {cn('flex flex-col items-center justify-center gap-3',
   className)}>
 <<<<<<< HEAD
-=======
 =======
             "default": return renderSpinner()}
     };
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
         </div>
   );
 }
 // Skeleton loading for content
-<<<<<<< HEAD
-=======
 export function Skeleton($1) {
     return (<div className = {
->>>>>>> main
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
 } {...props} />);
 }
 // Page loading component
-<<<<<<< HEAD
-=======
 export function PageLoading($1) {return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       <div className="text-center space-y-4">
         <Loading size="xl" variant="spinner" className="text-zion-cyan" />
         <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>
@@ -66,11 +54,8 @@ export function PageLoading($1) {return (
   );
 }
 // Content skeleton loading
-<<<<<<< HEAD
-=======
 export function CardSkeleton($1) {return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>
       <div className="space-y-2">
         <div className="h-4 bg-zion-slate-light/20 rounded"></div>

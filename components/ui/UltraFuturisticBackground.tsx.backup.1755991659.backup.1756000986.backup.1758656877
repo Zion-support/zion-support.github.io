@@ -54,7 +54,6 @@ export default function UltraFuturisticBackground({
       vy: number;
       size: number;
       color: string;
-<<<<<<< HEAD
       type: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'space';
     }> = [];
 
@@ -687,7 +686,6 @@ export default function UltraFuturisticBackground({
           100% { transform: translateY(100%); opacity: 0; }
         }
       `}</style>
-=======
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rotate-45 animate-pulse"></div>
@@ -747,4 +745,3 @@ const getOverlayGradient = (variant: string) => {
 };
 
 export default UltraFuturisticBackground;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6

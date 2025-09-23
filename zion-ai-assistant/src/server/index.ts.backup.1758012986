@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -28,7 +26,6 @@ app.post("/api/ai/milestones", async (req, res) => {
     res.json(response);
   } catch (error) {
     if (error instanceof z.ZodError) {
->>>>>>> origin/auto/autonomy-17186719616
       return res.status(400).json({ error: "Invalid input", details: error.issues });
     }
     console.error(error);

@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/alert.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 interface AlertProps {;
 
@@ -42,7 +40,6 @@ interface AlertDescriptionProps {
 }
 export function Alert($1) {
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/alert.tsx
   const baseClasses = 'relative w-full rounded-lg border p-4';
   const variantClasses = variant === 'destructive';
     ? 'border-red-200 bg-red-50 text-red-800';

@@ -1,4 +1,3 @@
-
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {
@@ -11,8 +10,10 @@ export interface ThemeColors {
 }
 
 // Define theme presets
-export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-
+export function getThemeColors(
+  preset: ThemePreset,
+  primaryColor: string
+): ThemeColors {
   switch (preset) {
     case 'dark':
       return {
@@ -21,7 +22,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#e2e8f0',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#1e293b'};
+        cardBackground: '#1e293b',
+      };
     case 'neon':
       return {
         primaryColor,
@@ -29,7 +31,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#f8fafc',
         accentColor: '#00ffbb',
         buttonColor: primaryColor,
-        cardBackground: '#0f172a'};
+        cardBackground: '#0f172a',
+      };
     case 'corporate':
       return {
         primaryColor,
@@ -37,7 +40,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#334155',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#ffffff'};
+        cardBackground: '#ffffff',
+      };
     case 'startup':
       return {
         primaryColor,
@@ -45,7 +49,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#fafafa',
         accentColor: '#ff7f50',
         buttonColor: primaryColor,
-        cardBackground: '#1e2127'};
+        cardBackground: '#1e2127',
+      };
     case 'light':
     default:
       return {
@@ -54,7 +59,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         textColor: '#0f172a',
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#f8fafc'};
+        cardBackground: '#f8fafc',
+      };
   }
 }
 
@@ -67,7 +73,7 @@ export function applyThemeColors(colors: ThemeColors) {
   root.style.setProperty('--accent-color', colors.accentColor);
   root.style.setProperty('--button-color', colors.buttonColor);
   root.style.setProperty('--card-background', colors.cardBackground);
-  
+
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;

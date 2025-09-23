@@ -28,10 +28,8 @@ class SEOAccessibility {}
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );
-=======
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -447,4 +445,3 @@ if (require.main === module) {}
   seoAccessibility.start().catch(console.error);
 };
 module.exports = SEOAccessibility;
->>>>>>> main

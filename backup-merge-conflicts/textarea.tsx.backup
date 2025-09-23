@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src/components/ui/textarea.tsx
 ;
 interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {;
@@ -28,7 +26,6 @@ export function Textarea({ className, ...props }: TextareaProps) {
 </HTMLTextAreaElement>;';;';
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/ui/textarea.tsx
 }
 </textarea>
 </HTMLTextAreaElement>;';';

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedHeaderNew.tsx.backup
 <<<<<<< HEAD
-=======
 import { ;
   Menu, ;
   X, ;
@@ -123,7 +121,6 @@ const "EnhancedHeaderNew": React.FC = (props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
   const [searchQuery, setSearchQuery] = useState<any>(");
 =======
->>>>>>> pr-11913:src_backup_temp/components/EnhancedHeaderNew.tsx
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
   const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState<any>(false);
   const [scrolled, setScrolled] = useState<any>(false);

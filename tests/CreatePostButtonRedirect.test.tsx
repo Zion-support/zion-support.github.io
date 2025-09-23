@@ -12,10 +12,12 @@ test('redirects to login when user is not authenticated', () => {
 
   render(
     <MemoryRouter>
-      <CreatePostButton  />
+      <CreatePostButton />
     </MemoryRouter>
   );
 
   fireEvent.click(screen.getByRole('button', { name: /create new post/i }));
-  expect(navigateMock).toHaveBeenCalledWith('/login?next=%2Fcommunity%2Fcreate');
+  expect(navigateMock).toHaveBeenCalledWith(
+    '/login?next=%2Fcommunity%2Fcreate'
+  );
 });

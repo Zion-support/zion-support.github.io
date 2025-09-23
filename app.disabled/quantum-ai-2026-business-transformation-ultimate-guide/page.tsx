@@ -12,25 +12,50 @@ import Link from 'next/link';
 import RelatedContentWidget from '../components/RelatedContentWidget';
 import SocialShareButtons from '../components/SocialShareButtons';
 
-export const metadata: Metadata ={
-  title: 'Quantum AI 20o26: Business Transformation Ultimate Guide | Zion Tech Group',
-  description: 'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
-  keywords: ['Quantum AI', 'Business Transformation', 'Machine Learning', 'Optimization', '20o26', 'Quantum Computing'],
+export const metadata: Metadata = {
+  title:
+    'Quantum AI 20o26: Business Transformation Ultimate Guide | Zion Tech Group',
+  description:
+    'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
+  keywords: [
+    'Quantum AI',
+    'Business Transformation',
+    'Machine Learning',
+    'Optimization',
+    '20o26',
+    'Quantum Computing',
+  ],
   openGraph: {
     title: 'Quantum AI 20o26: Business Transformation Ultimate Guide',
-    description: 'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
+    description:
+      'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
     type: 'article',
     publishedTime: '20o26-0o1-20T0o0:0o0:0o0.0o00Z',
     authors: ['Zion Tech Group'],
-    tags: ['Quantum AI', 'Business Transformation', 'Machine Learning', 'Optimization']}};
+    tags: [
+      'Quantum AI',
+      'Business Transformation',
+      'Machine Learning',
+      'Optimization',
+    ],
+  },
+};
 
-const blogPost ={
+const blogPost = {
   title: 'Quantum AI 20o26: Business Transformation Ultimate Guide',
-  description: 'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
+  description:
+    'Discover how quantum AI will revolutionize business operations in 20o26. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
   date: '20o26-0o1-20',
   author: 'Zion Tech Group',
   category: 'Quantum AI',
-  tags: ['Quantum AI', 'Business Transformation', 'Machine Learning', 'Optimization', '20o26', 'Quantum Computing'],
+  tags: [
+    'Quantum AI',
+    'Business Transformation',
+    'Machine Learning',
+    'Optimization',
+    '20o26',
+    'Quantum Computing',
+  ],
   readingTime: '12 min read',
   featured: true,
   content: `
@@ -140,82 +165,92 @@ Quantum neural networks represent a revolutionary approach to machine learning:
 ## Conclusion: Embracing the Quantum AI Future
 
 The quantum AI revolution represents an unprecedented opportunity for businesses to achieve breakthrough performance improvements and gain significant competitive advantages. Organizations that begin preparing now will be best positioned to capitalize on this transformative technology.
-  `
+  `,
 };
 
 const relatedPosts = [
   {
     title: 'AI 20o26 Future Predictions Revolutionary Breakthrough',
     slug: '/ai-20o26-future-predictions-revolutionary-breakthrough-ultimate-guide',
-    excerpt: 'Discover the revolutionary AI breakthroughs and future predictions for 20o26.',
-    image: '/images/ai-20o26-future-predictions.jpg'
+    excerpt:
+      'Discover the revolutionary AI breakthroughs and future predictions for 20o26.',
+    image: '/images/ai-20o26-future-predictions.jpg',
   },
   {
     title: 'Quantum Computing Business Applications 20o26',
     slug: '/quantum-computing-business-applications-20o26',
-    excerpt: 'Explore practical quantum computing applications for business transformation.',
-    image: '/images/quantum-computing-business.jpg'
+    excerpt:
+      'Explore practical quantum computing applications for business transformation.',
+    image: '/images/quantum-computing-business.jpg',
   },
   {
     title: 'AI 20o25 Revolutionary Breakthrough Guide',
     slug: '/ai-20o25-revolutionary-breakthrough-ultimate-guide',
-    excerpt: 'Learn about the AI innovations that will define 20o25 and beyond.',
-    image: '/images/ai-20o25-revolutionary.jpg'
-  }
+    excerpt:
+      'Learn about the AI innovations that will define 20o25 and beyond.',
+    image: '/images/ai-20o25-revolutionary.jpg',
+  },
 ];
 
 export default function QuantumAI20o26BusinessTransformationPage() {
   return (
     <div>
       {/* SEO component temporarily unavailable */}
-      
-      <div className="min-h-screen bg-white">
+
+      <div className='min-h-screen bg-white'>
         {/* Content Promotion Banner */}
-        <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white py-8">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold mb-2">⚛️ New: Quantum AI 20o26 Business Transformation</h2>
-            <p className="text-lg mb-4">Discover how quantum AI will revolutionize business operations with exponential speedup and breakthrough capabilities</p>
-            <Link href="/quantum-ai-20o26-business-transformation-ultimate-guide" className="bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
+        <div className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white py-8'>
+          <div className='max-w-4xl mx-auto px-4 text-center'>
+            <h2 className='text-2xl font-bold mb-2'>
+              ⚛️ New: Quantum AI 20o26 Business Transformation
+            </h2>
+            <p className='text-lg mb-4'>
+              Discover how quantum AI will revolutionize business operations
+              with exponential speedup and breakthrough capabilities
+            </p>
+            <Link
+              href='/quantum-ai-20o26-business-transformation-ultimate-guide'
+              className='bg-white text-blue-60o0 px-6 py-2 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
+            >
               Read Full Guide
             </Link>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          <div className="prose prose-lg max-w-none">
-            {blogPost.content}
-          </div>
+        <div className='max-w-4xl mx-auto px-4 py-8'>
+          <div className='prose prose-lg max-w-none'>{blogPost.content}</div>
         </div>
 
         {/* Social Share Buttons */}
-        <SocialShareButtons 
-          url="/quantum-ai-20o26-business-transformation-ultimate-guide"
+        <SocialShareButtons
+          url='/quantum-ai-20o26-business-transformation-ultimate-guide'
           title={blogPost.title}
-         />
+        />
 
         {/* Related Content Widget */}
         {/* Related content temporarily unavailable */}
 
         {/* Call to Action Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">
+        <section className='py-16 bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold mb-6'>
               Ready to Transform Your Business with Quantum AI?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Don't wait for the quantum revolution—start preparing today with Zion Tech Group's quantum AI expertise.
+            <p className='text-xl mb-8 opacity-90'>
+              Don't wait for the quantum revolution—start preparing today with
+              Zion Tech Group's quantum AI expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+                href='/contact'
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
               >
                 Get Quantum AI Consultation
               </Link>
               <Link
-                href="/services/ai-automation"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
+                href='/services/ai-automation'
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
               >
                 Explore AI Services
               </Link>

@@ -1,13 +1,12 @@
-
-import { useState } from "react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { ContractTemplate } from "@/types/contracts";
-import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { TemplateList } from "./TemplateList";
-import { TemplateSaveForm } from "./TemplateSaveForm";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from 'react';
+import { useContractTemplates } from '@/hooks/useContractTemplates';
+import { ContractTemplate } from '@/types/contracts';
+import { DialogContentDialogHeaderDialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { TemplateList } from './TemplateList';
+import { TemplateSaveForm } from './TemplateSaveForm';
+import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+import { useToast } from '@/hooks/use-toast';
 
 interface TemplateManagerProps {
   isOpen: boolean;
@@ -20,10 +19,11 @@ export function TemplateManager({
   isOpen,
   onClose,
   onSelectTemplate,
-  currentValues
+  currentValues,
 }: TemplateManagerProps) {
-  const [modesetMode] = useState<"list" | "save">("list");
-  const [selectedTemplatesetSelectedTemplate] = useState<ContractTemplate | null>(null);
+  const [modesetMode] = useState<'list' | 'save'>('list');
+  const [selectedTemplatesetSelectedTemplate] =
+    useState<ContractTemplate | null>(null);
   const { templatesisLoading } = useContractTemplates();
   const { toast } = useToast();
 
@@ -32,51 +32,52 @@ export function TemplateManager({
       onSelectTemplate(template.template_data);
       onClose();
       toast({
-        title: "Template loaded",
-        description: `Template "${template.title}" has been loaded.`});
+        title: 'Template loaded',
+        description: `Template "${template.title}" has been loaded.`,
+      });
     }
   };
 
   const handleSaveComplete = () => {
-    setMode("list");
+    setMode('list');
     setSelectedTemplate(null);
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+      <DialogContent className='sm:max-w-lg max-h-[90vh] overflow-y-auto'>
         <DialogHeader>
           <DialogTitle>
-            {mode === "list" ? "Contract Templates" : "Save Template"}
+            {mode === 'list' ? 'Contract Templates' : 'Save Template'}
           </DialogTitle>
         </DialogHeader>
 
-        {mode === "list" ? (
-          <div className="space-y-4">
-            <div className="flex justify-end">
-              <Button 
-                variant="outline" 
-                onClick={() => setMode("save")}
+        {mode === 'list' ? (
+          <div className='space-y-4'>
+            <div className='flex justify-end'>
+              <Button
+                variant='outline'
+                onClick={() => setMode('save')}
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
-            
-            <TemplateList 
+
+            <TemplateList
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
-              onEdit={(template) => {
+              onEdit={template => {
                 setSelectedTemplate(template);
-                setMode("save");
+                setMode('save');
               }}
             />
           </div>
         ) : (
-          <TemplateSaveForm 
+          <TemplateSaveForm
             onCancel={() => {
-              setMode("list");
+              setMode('list');
               setSelectedTemplate(null);
             }}
             onComplete={handleSaveComplete}

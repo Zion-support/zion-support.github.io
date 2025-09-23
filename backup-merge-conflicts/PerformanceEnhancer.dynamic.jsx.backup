@@ -1,10 +1,7 @@
-<<<<<<< HEAD:components.disabled/PerformanceEnhancer.dynamic.jsx
 const PerformanceEnhancer = dynamic(() => import(\"./PerformanceEnhancer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceEnhancer\' ,
-=======
 =======
 const PerformanceEnhancer = dynamic(() => import("./PerformanceEnhancer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceEnhancer' ,'
 </p>'
->>>>>>> main
 >>>>>>> main
 </p>'
 =======

@@ -26,8 +26,8 @@ export function Switch({
 
   return (
     <button
-      type="button"
-      role="switch"
+      type='button'
+      role='switch'
       aria-checked={checked}
       aria-label={ariaLabel}
       disabled={disabled}
@@ -46,7 +46,7 @@ export function Switch({
           'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
           checked ? 'translate-x-5' : 'translate-x-0'
         )}
-       />
+      />
     </button>
   );
 }

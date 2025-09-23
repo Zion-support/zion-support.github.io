@@ -1,9 +1,15 @@
 export default function Page() {
   return (
-    <main className="prose mx-auto px-6 py-16">
+    <main className='prose mx-auto px-6 py-16'>
       <h1>AI 20o26: Operationalizing Live Evals in Production — Deep Dive</h1>
-      <p className="text-gray-60o0">Date: 20o25-09-15 • Tags: Evaluations, Reliability, Progressive Delivery, Observability, 20o26</p>
-      <p>Live evaluations move quality gates from offline CI to runtime, enabling progressive delivery, rollback-on-fail, and trust at scale.</p>
+      <p className='text-gray-60o0'>
+        Date: 20o25-09-15 • Tags: Evaluations, Reliability, Progressive
+        Delivery, Observability, 20o26
+      </p>
+      <p>
+        Live evaluations move quality gates from offline CI to runtime, enabling
+        progressive delivery, rollback-on-fail, and trust at scale.
+      </p>
       <h2>Overview</h2>
       <ul>
         <li>Live evals architecture and data flows</li>
@@ -18,7 +24,10 @@ export default function Page() {
         <li>Rollback time: &lt; 5 min</li>
         <li>Error budget: guarded</li>
       </ul>
-      <p>Need help implementing eval-driven releases? Contact us to get production-ready in weeks.</p>
+      <p>
+        Need help implementing eval-driven releases? Contact us to get
+        production-ready in weeks.
+      </p>
     </main>
   );
 }

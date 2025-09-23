@@ -1,16 +1,17 @@
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Posture Management',
   description:
-    'Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.'};
+    'Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.',
+};
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <article className="prose prose-lg">
+    <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <article className='prose prose-lg'>
         <h1>AI 20o26: Agent Posture Management</h1>
         <p>
-          Agent Posture Management applies continuous assessment and remediation to
-          autonomous agents: evaluating capabilities, permissions, risks, and
+          Agent Posture Management applies continuous assessment and remediation
+          to autonomous agents: evaluating capabilities, permissions, risks, and
           operational health against organizational guardrails.
         </p>
         <h2>What this includes</h2>
@@ -31,4 +32,3 @@ export default function Page() {
     </main>
   );
 }
-

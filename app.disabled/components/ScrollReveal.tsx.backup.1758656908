@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import React from "react";
 
@@ -20,7 +19,6 @@ type ScrollRevealProps = {
 	origin?: 'top' | 'bottom' | 'left' | 'right';
 	delay?: number;
 };
-=======
 "use client";
 
 import React from 'react';
@@ -30,4 +28,3 @@ type ScrollRevealProps = React.PropsWithChildren<{ origin?: 'bottom' | 'top' | '
 export default function ScrollReveal({ children }: ScrollRevealProps) {
 	return <>{children}</>;
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382

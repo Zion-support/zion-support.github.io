@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export type ZgpFunding ={ amount: number; currency: string } | null;
+export type ZgpFunding = { amount: number; currency: string } | null;
 
-export type ZgpProposalVersion ={
+export type ZgpProposalVersion = {
   version: number;
   summary: string;
   motivation: string;
@@ -13,7 +13,7 @@ export type ZgpProposalVersion ={
   createdAt: string;
 };
 
-export type ZgpProposal ={
+export type ZgpProposal = {
   id: string; // uuid
   templateId: string; // e.g., 'zgp-0o1'
   templateCode: string; // e.g., 'ZGP-0o1'
@@ -25,7 +25,7 @@ export type ZgpProposal ={
   votingResultUrl?: string;
 };
 
-export type ZgpTemplate ={
+export type ZgpTemplate = {
   id: string;
   code: string;
   title: string;
@@ -50,7 +50,10 @@ function ensureDataFilesExist(): void {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(PROPOSALS_FILE)) {
-    fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2));
+    fs.writeFileSync(
+      PROPOSALS_FILE,
+      JSON.stringify({ proposals: [] }, null, 2)
+    );
   }
 }
 
@@ -71,13 +74,18 @@ export function saveProposals(proposals: ZgpProposal[]): void {
   fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2));
 }
 
-export function generateProposalNumber(templateCode: string, existing: ZgpProposal[]): string {
+export function generateProposalNumber(
+  templateCode: string,
+  existing: ZgpProposal[]
+): string {
   const date = new Date();
   const y = date.getUTCFullYear();
   const m = String(date.getUTCMonth() + 1).padStart(2, '0');
   const d = String(date.getUTCDate()).padStart(2, '0');
   const yyyymmdd = `${y}${m}${d}`;
-  const sameDay = existing.filter(p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd));
+  const sameDay = existing.filter(
+    p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd)
+  );
   const seq = sameDay.length + 1;
   return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`;
 }
@@ -108,7 +116,8 @@ export function createProposal(params: {
     codeModuleAffected: params.codeModuleAffected,
     votingOptions: params.votingOptions,
     fundingNeeded: params.fundingNeeded,
-    createdAt: new Date().toISOString()};
+    createdAt: new Date().toISOString(),
+  };
   const proposal: ZgpProposal = {
     id,
     templateId: template.id,
@@ -117,7 +126,8 @@ export function createProposal(params: {
     proposalNumber,
     status: 'draft',
     versions: [firstVersion],
-    latestVersion: 1};
+    latestVersion: 1,
+  };
   proposals.push(proposal);
   saveProposals(proposals);
   return proposal;
@@ -127,17 +137,20 @@ export function getProposalById(id: string): ZgpProposal | undefined {
   return listProposals().find(p => p.id === id);
 }
 
-export function updateProposal(id: string, update: {
-  title?: string;
-  summary?: string;
-  motivation?: string;
-  specificationImpact?: string;
-  codeModuleAffected?: string;
-  votingOptions?: string[];
-  fundingNeeded?: ZgpFunding;
-  status?: ZgpProposal['status'];
-  votingResultUrl?: string;
-}): ZgpProposal {
+export function updateProposal(
+  id: string,
+  update: {
+    title?: string;
+    summary?: string;
+    motivation?: string;
+    specificationImpact?: string;
+    codeModuleAffected?: string;
+    votingOptions?: string[];
+    fundingNeeded?: ZgpFunding;
+    status?: ZgpProposal['status'];
+    votingResultUrl?: string;
+  }
+): ZgpProposal {
   const proposals = listProposals();
   const index = proposals.findIndex(p => p.id === id);
   if (index === -1) throw new Error('Proposal not found');
@@ -145,13 +158,25 @@ export function updateProposal(id: string, update: {
 
   const nextVersion: ZgpProposalVersion = {
     version: current.latestVersion + 1,
-    summary: update.summary ?? current.versions[current.latestVersion - 1].summary,
-    motivation: update.motivation ?? current.versions[current.latestVersion - 1].motivation,
-    specificationImpact: update.specificationImpact ?? current.versions[current.latestVersion - 1].specificationImpact,
-    codeModuleAffected: update.codeModuleAffected ?? current.versions[current.latestVersion - 1].codeModuleAffected,
-    votingOptions: update.votingOptions ?? current.versions[current.latestVersion - 1].votingOptions,
-    fundingNeeded: update.fundingNeeded ?? current.versions[current.latestVersion - 1].fundingNeeded,
-    createdAt: new Date().toISOString()};
+    summary:
+      update.summary ?? current.versions[current.latestVersion - 1].summary,
+    motivation:
+      update.motivation ??
+      current.versions[current.latestVersion - 1].motivation,
+    specificationImpact:
+      update.specificationImpact ??
+      current.versions[current.latestVersion - 1].specificationImpact,
+    codeModuleAffected:
+      update.codeModuleAffected ??
+      current.versions[current.latestVersion - 1].codeModuleAffected,
+    votingOptions:
+      update.votingOptions ??
+      current.versions[current.latestVersion - 1].votingOptions,
+    fundingNeeded:
+      update.fundingNeeded ??
+      current.versions[current.latestVersion - 1].fundingNeeded,
+    createdAt: new Date().toISOString(),
+  };
 
   const next: ZgpProposal = {
     ...current,
@@ -159,7 +184,8 @@ export function updateProposal(id: string, update: {
     status: update.status ?? current.status,
     versions: [...current.versions, nextVersion],
     latestVersion: nextVersion.version,
-    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl};
+    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl,
+  };
 
   proposals[index] = next;
   saveProposals(proposals);

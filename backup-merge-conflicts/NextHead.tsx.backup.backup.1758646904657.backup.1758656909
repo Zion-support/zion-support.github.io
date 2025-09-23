@@ -9,9 +9,7 @@ interface NextHeadProps {;
   canonical?: string;
   noIndex?: boolean;
   children?: React.ReactNode;
-<<<<<<< HEAD:backup-merge-conflicts/NextHead.tsx.backup
 <<<<<<< HEAD
-=======
 ;
 }
 ';
@@ -30,7 +28,6 @@ const NextHead: Reac t.FC<NextHeadProps> = ({';';
 =======
 "}
 =======
->>>>>>> pr-11913:src_backup_temp/components/NextHead.tsx
 ;
 const "NextHead": "React.FC<NextHeadProps> = ({;
   title = 'Zion Tech Group - Leading Technology Solutions'",;

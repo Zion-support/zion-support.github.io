@@ -1,4 +1,3 @@
-
 import { z } from 'zod';
 
 // Common validation schemas
@@ -30,7 +29,7 @@ export const validateRequest = (schema: z.ZodSchema) => {
       if (error instanceof z.ZodError) {
         return res.status(400).json({
           error: 'Validation failed',
-          details: error.errors
+          details: error.errors,
         });
       }
       return res.status(500).json({ error: 'Internal server error' });
@@ -47,10 +46,10 @@ export const validateApiRequest = (schema: z.ZodSchema) => {
       return { success: true, data: validatedData };
     } catch (error) {
       if (error instanceof z.ZodError) {
-        return { 
-          success: false, 
-          error: 'Validation failed', 
-          details: error.errors 
+        return {
+          success: false,
+          error: 'Validation failed',
+          details: error.errors,
         };
       }
       return { success: false, error: 'Invalid request' };

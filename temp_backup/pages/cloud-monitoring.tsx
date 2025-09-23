@@ -1,69 +1,127 @@
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
+import {
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+  Settings,
+  Code,
+} from 'lucide-react';
 
 export default function CloudMonitoringPage() {
   const features = [
     {
-      icon: <Activity className="w-8 h-8 text-white"  />,
+      icon: <Activity className='w-8 h-8 text-white' />,
       title: 'Real-time Monitoring',
-      description: 'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
+      description:
+        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
       color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
-      gradient: 'from-green-40o0 to-emerald-50o0'},
+      gradient: 'from-green-40o0 to-emerald-50o0',
+    },
     {
-      icon: <BarChart3 className="w-8 h-8 text-white"  />,
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
       title: 'Advanced Analytics',
-      description: 'Deep insights into performance metrics, resource utilization, and business intelligence.',
+      description:
+        'Deep insights into performance metrics, resource utilization, and business intelligence.',
       color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
-      gradient: 'from-blue-40o0 to-cyan-50o0'},
+      gradient: 'from-blue-40o0 to-cyan-50o0',
+    },
     {
-      icon: <AlertTriangle className="w-8 h-8 text-white"  />,
+      icon: <AlertTriangle className='w-8 h-8 text-white' />,
       title: 'Smart Alerting',
-      description: 'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
+      description:
+        'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
       color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0',
-      gradient: 'from-red-40o0 to-pink-50o0'},
+      gradient: 'from-red-40o0 to-pink-50o0',
+    },
     {
-      icon: <Database className="w-8 h-8 text-white"  />,
+      icon: <Database className='w-8 h-8 text-white' />,
       title: 'Multi-Cloud Support',
-      description: 'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+      description:
+        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
       color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',
-      gradient: 'from-purple-40o0 to-indigo-50o0'},
+      gradient: 'from-purple-40o0 to-indigo-50o0',
+    },
     {
-      icon: <Shield className="w-8 h-8 text-white"  />,
+      icon: <Shield className='w-8 h-8 text-white' />,
       title: 'Security Monitoring',
-      description: 'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+      description:
+        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
       color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0',
-      gradient: 'from-yellow-40o0 to-orange-50o0'},
+      gradient: 'from-yellow-40o0 to-orange-50o0',
+    },
     {
-      icon: <Zap className="w-8 h-8 text-white"  />,
+      icon: <Zap className='w-8 h-8 text-white' />,
       title: 'Auto-scaling',
-      description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      description:
+        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
       color: 'bg-gradient-to-br from-teal-50o0 to-blue-60o0',
-      gradient: 'from-teal-40o0 to-blue-50o0'},
+      gradient: 'from-teal-40o0 to-blue-50o0',
+    },
   ];
 
   const monitoringCapabilities = [
     {
       category: 'Infrastructure',
-      icon: <Server className="w-6 h-6 text-blue-40o0"  />,
-      metrics: ['CPU Usage', 'Memory Utilization', 'Disk I/O', 'Network Performance', 'Container Metrics']
+      icon: <Server className='w-6 h-6 text-blue-40o0' />,
+      metrics: [
+        'CPU Usage',
+        'Memory Utilization',
+        'Disk I/O',
+        'Network Performance',
+        'Container Metrics',
+      ],
     },
     {
       category: 'Applications',
-      icon: <Code className="w-6 h-6 text-green-40o0"  />,
-      metrics: ['Response Time', 'Error Rates', 'Throughput', 'User Experience', 'API Performance']
+      icon: <Code className='w-6 h-6 text-green-40o0' />,
+      metrics: [
+        'Response Time',
+        'Error Rates',
+        'Throughput',
+        'User Experience',
+        'API Performance',
+      ],
     },
     {
       category: 'Databases',
-      icon: <Database className="w-6 h-6 text-purple-40o0"  />,
-      metrics: ['Query Performance', 'Connection Pool', 'Index Usage', 'Replication Lag', 'Storage Growth']
+      icon: <Database className='w-6 h-6 text-purple-40o0' />,
+      metrics: [
+        'Query Performance',
+        'Connection Pool',
+        'Index Usage',
+        'Replication Lag',
+        'Storage Growth',
+      ],
     },
     {
       category: 'Security',
-      icon: <Shield className="w-6 h-6 text-red-40o0"  />,
-      metrics: ['Threat Detection', 'Access Logs', 'Vulnerability Scans', 'Compliance Status', 'Audit Trails']
-    }
+      icon: <Shield className='w-6 h-6 text-red-40o0' />,
+      metrics: [
+        'Threat Detection',
+        'Access Logs',
+        'Vulnerability Scans',
+        'Compliance Status',
+        'Audit Trails',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -78,11 +136,11 @@ export default function CloudMonitoringPage() {
         'Email alerts',
         '7-day data retention',
         'Community support',
-        'Mobile app access'
+        'Mobile app access',
       ],
       popular: false,
       color: 'border-gray-60o0',
-      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0'
+      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0',
     },
     {
       name: 'Professional',
@@ -97,11 +155,11 @@ export default function CloudMonitoringPage() {
         'Priority support',
         'Custom dashboards',
         'API access',
-        'Team collaboration'
+        'Team collaboration',
       ],
       popular: true,
       color: 'border-blue-50o0',
-      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0'
+      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0',
     },
     {
       name: 'Enterprise',
@@ -116,12 +174,12 @@ export default function CloudMonitoringPage() {
         'Dedicated support',
         'White-label solution',
         'SLA guarantee',
-        'On-premise option'
+        'On-premise option',
       ],
       popular: false,
       color: 'border-purple-60o0',
-      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0'
-    }
+      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0',
+    },
   ];
 
   const integrations = [
@@ -132,138 +190,185 @@ export default function CloudMonitoringPage() {
     { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
     { name: 'Slack', icon: '💬', description: 'Team notifications' },
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
+    { name: 'Jira', icon: '📋', description: 'Issue tracking' },
   ];
 
   const useCases = [
     {
       title: 'DevOps Teams',
-      description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
+      description:
+        'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
       icon: '🔄',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Better collaboration', 'Automated scaling']
+      benefits: [
+        'Faster deployments',
+        'Reduced downtime',
+        'Better collaboration',
+        'Automated scaling',
+      ],
     },
     {
       title: 'SaaS Companies',
-      description: 'Track user experience, application performance, and business metrics.',
+      description:
+        'Track user experience, application performance, and business metrics.',
       icon: '💼',
-      benefits: ['User satisfaction', 'Revenue optimization', 'Competitive advantage', 'Customer retention']
+      benefits: [
+        'User satisfaction',
+        'Revenue optimization',
+        'Competitive advantage',
+        'Customer retention',
+      ],
     },
     {
       title: 'E-commerce',
-      description: 'Monitor website performance, payment processing, and inventory systems.',
+      description:
+        'Monitor website performance, payment processing, and inventory systems.',
       icon: '🛒',
-      benefits: ['Higher conversion', 'Faster checkout', 'Inventory optimization', 'Revenue growth']
+      benefits: [
+        'Higher conversion',
+        'Faster checkout',
+        'Inventory optimization',
+        'Revenue growth',
+      ],
     },
     {
       title: 'Financial Services',
-      description: 'Ensure compliance, security, and 24/7 availability of critical systems.',
+      description:
+        'Ensure compliance, security, and 24/7 availability of critical systems.',
       icon: '💰',
-      benefits: ['Regulatory compliance', 'Fraud detection', 'Risk management', 'Customer trust']
-    }
+      benefits: [
+        'Regulatory compliance',
+        'Fraud detection',
+        'Risk management',
+        'Customer trust',
+      ],
+    },
   ];
 
   return (
     <>
       <Head>
-        <title>Cloud Monitoring & Analytics | Zion Tech Group - Real-time Infrastructure Monitoring</title>
-        <meta name="description" content="Comprehensive cloud monitoring and analytics platform with real-time insights, AI-powered alerting, and multi-cloud support. Monitor your entire infrastructure from a single dashboard."  />
-        <meta property="og:title" content="Cloud Monitoring & Analytics | Zion Tech Group"  />
-        <meta property="og:description" content="Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support."  />
-        <meta name="twitter:card" content="summary_large_image"  />
+        <title>
+          Cloud Monitoring & Analytics | Zion Tech Group - Real-time
+          Infrastructure Monitoring
+        </title>
+        <meta
+          name='description'
+          content='Comprehensive cloud monitoring and analytics platform with real-time insights, AI-powered alerting, and multi-cloud support. Monitor your entire infrastructure from a single dashboard.'
+        />
+        <meta
+          property='og:title'
+          content='Cloud Monitoring & Analytics | Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Real-time infrastructure monitoring with advanced analytics, smart alerting, and multi-cloud support.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]"  />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]"  />
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
+        <div className='absolute inset-0'>
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]' />
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]' />
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50o0/10 border border-green-50o0/20 text-green-40o0 text-sm font-medium mb-6">
-              <Eye className="w-4 h-4 mr-2"  />
+
+        <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='mb-8'>
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-50o0/10 border border-green-50o0/20 text-green-40o0 text-sm font-medium mb-6'>
+              <Eye className='w-4 h-4 mr-2' />
               Real-time Infrastructure Monitoring
             </div>
           </div>
-          
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight">
+
+          <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>
             Cloud Monitoring & Analytics
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-30o0 max-w-4xl mx-auto mb-16 leading-relaxed">
-            Monitor your entire infrastructure in real-time with AI-powered insights and intelligent alerting
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-30o0 max-w-4xl mx-auto mb-16 leading-relaxed'>
+            Monitor your entire infrastructure in real-time with AI-powered
+            insights and intelligent alerting
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+          <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
             <Button
-              href="#pricing"
-              size="lg"
-              className="bg-green-60o0 hover:bg-green-70o0 shadow-2xl shadow-green-50o0/25"
+              href='#pricing'
+              size='lg'
+              className='bg-green-60o0 hover:bg-green-70o0 shadow-2xl shadow-green-50o0/25'
             >
               Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2"  />
+              <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
             <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
-              className="border-white/20 hover:border-white/40 hover:bg-white/5"
+              href='#demo'
+              variant='outline'
+              size='lg'
+              className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
-              <Play className="w-5 h-5 mr-2"  />
+              <Play className='w-5 h-5 mr-2' />
               Watch Demo
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-40o0">99.99%</div>
-              <div className="text-gray-40o0">Uptime</div>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-40o0'>
+                99.99%
+              </div>
+              <div className='text-gray-40o0'>Uptime</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-40o0">1M+</div>
-              <div className="text-gray-40o0">Metrics Tracked</div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-40o0'>
+                1M+
+              </div>
+              <div className='text-gray-40o0'>Metrics Tracked</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-40o0">50+</div>
-              <div className="text-gray-40o0">Integrations</div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-40o0'>
+                50+
+              </div>
+              <div className='text-gray-40o0'>Integrations</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-40o0">&lt;10o0ms</div>
-              <div className="text-gray-40o0">Latency</div>
+            <div className='text-center'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-40o0'>
+                &lt;10o0ms
+              </div>
+              <div className='text-gray-40o0'>Latency</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gray-90o0 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section className='py-24 bg-gray-90o0 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Powerful Monitoring Features
             </h2>
-            <p className="text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
+            <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed'>
               Everything you need to monitor and optimize your infrastructure
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="text-center group bg-gray-80o0/50 border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+                className='text-center group bg-gray-80o0/50 border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0 hover:-translate-y-1'
+                style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
               >
-                <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-30o0 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                <div className='relative'>
+                  <div
+                    className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-30o0 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
+                  >
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-40o0 transition-colors duration-30o0">
+                <h3 className='text-xl font-bold mb-4 text-white group-hover:text-green-40o0 transition-colors duration-30o0'>
                   {feature.title}
                 </h3>
-                <p className="text-gray-40o0 leading-relaxed">
+                <p className='text-gray-40o0 leading-relaxed'>
                   {feature.description}
                 </p>
               </Card>
@@ -273,33 +378,37 @@ export default function CloudMonitoringPage() {
       </section>
 
       {/* Monitoring Capabilities */}
-      <section className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Comprehensive Monitoring
             </h2>
-            <p className="text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
-              Monitor every aspect of your infrastructure with detailed metrics and insights
+            <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed'>
+              Monitor every aspect of your infrastructure with detailed metrics
+              and insights
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {monitoringCapabilities.map((capability, index) => (
               <Card
                 key={index}
-                className="group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0"
+                className='group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-90o0/80 transition-all duration-30o0'
               >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">{capability.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-40o0 transition-colors duration-30o0">
+                <div className='flex items-start space-x-4'>
+                  <div className='flex-shrink-0'>{capability.icon}</div>
+                  <div className='flex-1'>
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-40o0 transition-colors duration-30o0'>
                       {capability.category}
                     </h3>
-                    <div className="grid grid-cols-1 gap-2">
+                    <div className='grid grid-cols-1 gap-2'>
                       {capability.metrics.map((metric, metricIndex) => (
-                        <div key={metricIndex} className="flex items-center text-sm text-gray-30o0">
-                          <CheckCircle className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
+                        <div
+                          key={metricIndex}
+                          className='flex items-center text-sm text-gray-30o0'
+                        >
+                          <CheckCircle className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />
                           {metric}
                         </div>
                       ))}
@@ -313,36 +422,40 @@ export default function CloudMonitoringPage() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-24 bg-gray-90o0 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section className='py-24 bg-gray-90o0 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
             </h2>
-            <p className="text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
-              Trusted by teams across industries for reliable infrastructure monitoring
+            <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed'>
+              Trusted by teams across industries for reliable infrastructure
+              monitoring
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
                 key={index}
-                className="group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0"
+                className='group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0'
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-40o0 transition-colors duration-30o0">
+                <div className='flex items-start space-x-4'>
+                  <div className='text-4xl'>{useCase.icon}</div>
+                  <div className='flex-1'>
+                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-green-40o0 transition-colors duration-30o0'>
                       {useCase.title}
                     </h3>
-                    <p className="text-gray-40o0 mb-4 leading-relaxed">
+                    <p className='text-gray-40o0 mb-4 leading-relaxed'>
                       {useCase.description}
                     </p>
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className='grid grid-cols-2 gap-2'>
                       {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-30o0">
-                          <TrendingUp className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
+                        <div
+                          key={benefitIndex}
+                          className='flex items-center text-sm text-gray-30o0'
+                        >
+                          <TrendingUp className='w-4 h-4 text-green-40o0 mr-2 flex-shrink-0' />
                           {benefit}
                         </div>
                       ))}
@@ -356,55 +469,63 @@ export default function CloudMonitoringPage() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-black relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
+            <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed'>
               Choose the plan that fits your monitoring needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
               <Card
                 key={index}
                 className={`relative group ${plan.popular ? 'ring-2 ring-green-50o0 scale-10o5' : ''} border ${plan.color} hover:border-green-50o0/50 transition-all duration-30o0`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-50o0 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                    <span className='bg-green-50o0 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       Most Popular
                     </span>
                   </div>
                 )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}<span className="text-lg text-gray-40o0">{plan.period}</span>
+
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-2'>
+                    {plan.name}
+                  </h3>
+                  <div className='text-4xl font-bold text-white mb-2'>
+                    {plan.price}
+                    <span className='text-lg text-gray-40o0'>
+                      {plan.period}
+                    </span>
                   </div>
-                  <p className="text-gray-40o0">{plan.description}</p>
+                  <p className='text-gray-40o0'>{plan.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
+                <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-30o0">
-                      <CheckCircle className="w-5 h-5 text-green-40o0 mr-3 flex-shrink-0"  />
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-30o0'
+                    >
+                      <CheckCircle className='w-5 h-5 text-green-40o0 mr-3 flex-shrink-0' />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  href="/contact"
+                  href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
-                  size="lg"
+                  size='lg'
                 >
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2"  />
+                  <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
               </Card>
             ))}
@@ -413,28 +534,32 @@ export default function CloudMonitoringPage() {
       </section>
 
       {/* Integrations Section */}
-      <section className="py-24 bg-gray-90o0 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+      <section className='py-24 bg-gray-90o0 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Seamless Integrations
             </h2>
-            <p className="text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
+            <p className='text-xl text-gray-40o0 max-w-4xl mx-auto leading-relaxed'>
               Connect with your favorite tools and platforms
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
                 key={index}
-                className="text-center group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0"
+                className='text-center group border border-gray-70o0 hover:border-green-50o0/30 hover:bg-gray-80o0/80 transition-all duration-30o0'
               >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0">
+                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>
                   {integration.icon}
                 </div>
-                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
-                <p className="text-sm text-gray-40o0">{integration.description}</p>
+                <h3 className='font-semibold text-white mb-2'>
+                  {integration.name}
+                </h3>
+                <p className='text-sm text-gray-40o0'>
+                  {integration.description}
+                </p>
               </Card>
             ))}
           </div>
@@ -442,32 +567,33 @@ export default function CloudMonitoringPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-green-60o0 to-blue-60o0 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10"  />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+      <section className='py-24 bg-gradient-to-r from-green-60o0 to-blue-60o0 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
             Ready to Monitor Your Infrastructure?
           </h2>
-          <p className="text-xl text-green-10o0 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join thousands of DevOps teams who trust us to monitor their critical infrastructure.
+          <p className='text-xl text-green-10o0 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            Join thousands of DevOps teams who trust us to monitor their
+            critical infrastructure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
             <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-green-60o0 hover:bg-gray-10o0 shadow-2xl"
+              href='/contact'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-green-60o0 hover:bg-gray-10o0 shadow-2xl'
             >
               Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2"  />
+              <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
             <Button
-              href="#demo"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-60o0 shadow-2xl"
+              href='#demo'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-green-60o0 shadow-2xl'
             >
-              <Play className="w-5 h-5 mr-2"  />
+              <Play className='w-5 h-5 mr-2' />
               Watch Demo
             </Button>
           </div>

@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const SEO = dynamic(() => import("./SEO"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEO" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const SEO = dynamic(() => import("./SEO"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEO' ,'
 >>>>>>> main
 >>>>>>> main

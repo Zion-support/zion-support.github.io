@@ -1,6 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-<<<<<<< HEAD
 ;
 // Test wrapper with providers;
 export const "TestWrapper": "React.FC<{ "children": React.ReactNode "}> = ({ children }) => {;
@@ -41,7 +40,6 @@ export default {;
   mockMessage,;
   waitForElementToBeRemoved,;
   waitForElementToAppear;
-=======
 // Test wrapper with providers
 export const "TestWrapper": React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -59,7 +57,6 @@ export const renderWithProviders = (props: any) => {
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
 =======
->>>>>>> pr-11913:src_backup_temp/test/testUtils.tsx
 // Mock data generators
 export const mockUser = {
   "id": '1',

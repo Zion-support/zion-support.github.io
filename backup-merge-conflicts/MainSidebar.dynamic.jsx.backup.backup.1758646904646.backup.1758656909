@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const MainSidebar = dynamic(() => import("./MainSidebar"),{"; loading: () => <p>Loading.</p,>}) export: "default MainSidebar" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
 >>>>>>> main
 >>>>>>> main

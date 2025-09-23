@@ -1,4 +1,10 @@
-export function Select({ children, className = '', value, onValueChange, disabled = false }) {
+export function Select({
+  children,
+  className = '',
+  value,
+  onValueChange,
+  disabled = false,
+}) {
   const baseClasses = `
     flex h-10 w-full items-center justify-between rounded-md border 
     border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
@@ -8,10 +14,10 @@ export function Select({ children, className = '', value, onValueChange, disable
   `;
 
   return (
-    <select 
-      className={`${baseClasses} ${className}`} 
-      value={value} 
-      onChange={onValueChange} 
+    <select
+      className={`${baseClasses} ${className}`}
+      value={value}
+      onChange={onValueChange}
       disabled={disabled}
     >
       {children}
@@ -21,15 +27,15 @@ export function Select({ children, className = '', value, onValueChange, disable
 
 export function SelectItem({ children, value, className = '', ...props }) {
   return (
-    <div 
+    <div
       className={`
         relative flex w-full cursor-pointer select-none items-center 
         rounded-sm px-3 py-2 text-sm text-white outline-none 
         hover:bg-zion-blue/20 focus:bg-zion-blue/20 
         focus:text-white transition-colors
         ${className}
-      `} 
-      data-value={value} 
+      `}
+      data-value={value}
       {...props}
     >
       {children}
@@ -39,7 +45,7 @@ export function SelectItem({ children, value, className = '', ...props }) {
 
 export function SelectValue({ placeholder }) {
   return (
-    <span className="text-sm text-zion-slate-light">
+    <span className='text-sm text-zion-slate-light'>
       {placeholder || 'Select an option'}
     </span>
   );
@@ -47,7 +53,7 @@ export function SelectValue({ placeholder }) {
 
 export function SelectTrigger({ children, className = '', ...props }) {
   return (
-    <button 
+    <button
       className={`
         flex h-10 w-full items-center justify-between rounded-md border 
         border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
@@ -55,7 +61,7 @@ export function SelectTrigger({ children, className = '', ...props }) {
         focus:outline-none focus:ring-2 focus:ring-zion-cyan 
         focus:border-transparent transition-colors cursor-pointer
         ${className}
-      `} 
+      `}
       {...props}
     >
       {children}
@@ -65,7 +71,7 @@ export function SelectTrigger({ children, className = '', ...props }) {
 
 export function SelectContent({ children, className = '' }) {
   return (
-    <div 
+    <div
       className={`
         absolute top-full left-0 right-0 z-50 mt-1 rounded-md border 
         border-zion-blue-light/30 bg-zion-blue-dark/90 backdrop-blur-sm 

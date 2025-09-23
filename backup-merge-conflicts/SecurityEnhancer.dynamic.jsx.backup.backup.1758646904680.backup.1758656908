@@ -1,10 +1,7 @@
 =======
-<<<<<<< HEAD
 const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{"; loading: () => <p>Loading.</p,>,}) export: "default SecurityEnhancer" ,"""
 <<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 const SecurityEnhancer = dynamic(() => import("./SecurityEnhancer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SecurityEnhancer' ,'
 >>>>>>> main
 >>>>>>> main

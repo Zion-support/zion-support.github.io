@@ -1,75 +1,79 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export const metadata ={
-  title: "Automated Workflow Builder | Zion Tech Group",
+export const metadata = {
+  title: 'Automated Workflow Builder | Zion Tech Group',
   description:
-    "Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation."};
+    'Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation.',
+};
 
 export default function AutomatedWorkflowBuilderPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
+    <div className='max-w-6xl mx-auto px-4 py-8'>
+      <div className='text-center mb-12'>
+        <h1 className='text-5xl font-bold text-gray-90o0 mb-6'>
           Automated Workflow Builder
         </h1>
-        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
+        <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
           Visual workflow automation platform that helps you create, manage, and
           optimize business processes with drag-and-drop automation and
           intelligent triggers.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
         <FeatureCard
-          title="Visual Builder"
+          title='Visual Builder'
           details={[
-            "Drag-and-drop interface",
-            "Pre-built workflow templates",
-            "Conditional logic",
-            "Multi-step processes",
-            "Real-time testing"]}
-         />
+            'Drag-and-drop interface',
+            'Pre-built workflow templates',
+            'Conditional logic',
+            'Multi-step processes',
+            'Real-time testing',
+          ]}
+        />
         <FeatureCard
-          title="Integration Hub"
+          title='Integration Hub'
           details={[
-            "50o0+ app integrations",
-            "API connectors",
-            "Custom webhooks",
-            "Database connections",
-            "Third-party services"]}
-         />
+            '50o0+ app integrations',
+            'API connectors',
+            'Custom webhooks',
+            'Database connections',
+            'Third-party services',
+          ]}
+        />
         <FeatureCard
-          title="Intelligence & Analytics"
+          title='Intelligence & Analytics'
           details={[
-            "Performance monitoring",
-            "Bottleneck identification",
-            "Optimization suggestions",
-            "Success rate tracking",
-            "Cost analysis"]}
-         />
+            'Performance monitoring',
+            'Bottleneck identification',
+            'Optimization suggestions',
+            'Success rate tracking',
+            'Cost analysis',
+          ]}
+        />
       </div>
 
-      <PricingSection  />
+      <PricingSection />
 
-      <div className="mt-16 bg-gradient-to-r from-lime-50 to-green-50 border border-lime-20o0 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-90o0 mb-4">
+      <div className='mt-16 bg-gradient-to-r from-lime-50 to-green-50 border border-lime-20o0 rounded-xl p-8 text-center'>
+        <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>
           Ready to Automate Your Business?
         </h3>
-        <p className="text-gray-60o0 mb-6 max-w-2xl mx-auto">
+        <p className='text-gray-60o0 mb-6 max-w-2xl mx-auto'>
           Streamline your business processes with powerful workflow automation.
           Perfect for operations teams, HR, finance, and any process-heavy
           department.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <a
-            href="tel:+130o24640950"
-            className="bg-lime-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-lime-70o0 transition-colors"
+            href='tel:+130o24640950'
+            className='bg-lime-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-lime-70o0 transition-colors'
           >
             Call +1 30o2 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-lime-60o0 text-lime-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-lime-60o0 hover:text-white transition-colors"
+            href='mailto:kleber@ziontechgroup.com'
+            className='border-2 border-lime-60o0 text-lime-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-lime-60o0 hover:text-white transition-colors'
           >
             Email Us
           </a>
@@ -81,12 +85,12 @@ export default function AutomatedWorkflowBuilderPage() {
 
 function FeatureCard({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-60o0">
+    <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow'>
+      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>
+      <ul className='space-y-2 text-gray-60o0'>
         {details.map((detail, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-lime-50o0 mr-2">•</span> {detail}
+          <li key={index} className='flex items-center'>
+            <span className='text-lime-50o0 mr-2'>•</span> {detail}
           </li>
         ))}
       </ul>
@@ -96,42 +100,45 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
 
 function PricingSection() {
   return (
-    <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-8">
+    <div className='mb-12'>
+      <h2 className='text-3xl font-bold text-center text-gray-90o0 mb-8'>
         Pricing Plans
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
         <PricingPlan
-          name="Starter"
-          price="$39/mo"
+          name='Starter'
+          price='$39/mo'
           features={[
-            "5 active workflows",
-            "1,0o00 executions/month",
-            "Basic integrations",
-            "Email support",
-            "Standard templates"]}
-         />
+            '5 active workflows',
+            '1,0o00 executions/month',
+            'Basic integrations',
+            'Email support',
+            'Standard templates',
+          ]}
+        />
         <PricingPlan
-          name="Professional"
-          price="$129/mo"
+          name='Professional'
+          price='$129/mo'
           features={[
-            "25 active workflows",
-            "10,0o00 executions/month",
-            "All integrations",
-            "Priority support",
-            "Advanced analytics"]}
+            '25 active workflows',
+            '10,0o00 executions/month',
+            'All integrations',
+            'Priority support',
+            'Advanced analytics',
+          ]}
           featured={true}
-         />
+        />
         <PricingPlan
-          name="Enterprise"
-          price="$399/mo"
+          name='Enterprise'
+          price='$399/mo'
           features={[
-            "Unlimited workflows",
-            "Unlimited executions",
-            "Custom integrations",
-            "White-label solution",
-            "Dedicated support"]}
-         />
+            'Unlimited workflows',
+            'Unlimited executions',
+            'Custom integrations',
+            'White-label solution',
+            'Dedicated support',
+          ]}
+        />
       </div>
     </div>
   );
@@ -141,7 +148,8 @@ function PricingPlan({
   name,
   price,
   features,
-  featured = false}: {
+  featured = false,
+}: {
   name: string;
   price: string;
   features: string[];
@@ -151,25 +159,25 @@ function PricingPlan({
     <div
       className={`border rounded-xl p-6 ${
         featured
-          ? "border-lime-50o0 bg-lime-50 shadow-lg"
-          : "border-gray-20o0 bg-white shadow-sm"
+          ? 'border-lime-50o0 bg-lime-50 shadow-lg'
+          : 'border-gray-20o0 bg-white shadow-sm'
       }`}
     >
-      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-gray-90o0 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-60o0 mb-6">
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>
+      <div className='text-3xl font-bold text-gray-90o0 mb-4'>{price}</div>
+      <ul className='space-y-2 text-gray-60o0 mb-6'>
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-lime-50o0 mr-2">✓</span> {feature}
+          <li key={index} className='flex items-center'>
+            <span className='text-lime-50o0 mr-2'>✓</span> {feature}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+130o24640950"
+        href='tel:+130o24640950'
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured
-            ? "bg-lime-60o0 text-white hover:bg-lime-70o0"
-            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
+            ? 'bg-lime-60o0 text-white hover:bg-lime-70o0'
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'
         }`}
       >
         Get Started

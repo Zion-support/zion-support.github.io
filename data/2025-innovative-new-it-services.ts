@@ -49,7 +49,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Future-proof cloud security with quantum-resistant encryption',
     price: '$599',
     period: '/month',
-    description: 'Advanced cloud infrastructure platform that provides quantum-resistant encryption, post-quantum cryptography, and future-proof security for enterprise applications.',
+    description:
+      'Advanced cloud infrastructure platform that provides quantum-resistant encryption, post-quantum cryptography, and future-proof security for enterprise applications.',
     features: [
       'Quantum-resistant encryption algorithms',
       'Post-quantum cryptography implementation',
@@ -60,22 +61,28 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Advanced monitoring and analytics',
       'Compliance and audit tools',
       'Integration with security tools',
-      '24/7 quantum security monitoring'
+      '24/7 quantum security monitoring',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-purple-60o0 to-indigo-60o0',
     textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/quantum-secure-cloud-infrastructure',
-    marketPosition: 'Competes with AWS ($0.0o23/hour), Azure ($0.0o18/hour). Our advantage: Quantum-resistant security with 99.99% uptime and 50% better performance.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
+    marketPosition:
+      'Competes with AWS ($0.0o23/hour), Azure ($0.0o18/hour). Our advantage: Quantum-resistant security with 99.99% uptime and 50% better performance.',
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Quantum Computing & Cloud Security',
     realService: true,
-    technology: ['React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS, Azure'],
+    technology: [
+      'React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS, Azure',
+    ],
     integrations: ['AWS, Azure, Google Cloud, IBM Cloud, Oracle Cloud, VMware'],
-    useCases: ['Secure cloud deployment, Quantum-resistant applications, Government compliance, Financial security, Healthcare data protection'],
+    useCases: [
+      'Secure cloud deployment, Quantum-resistant applications, Government compliance, Financial security, Healthcare data protection',
+    ],
     roi: 'Enterprises report 60o0% ROI through future-proof security and reduced compliance costs.',
     competitors: ['AWS, Azure, Google Cloud, IBM Cloud'],
     marketSize: '$371.4B cloud computing market',
@@ -85,14 +92,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade quantum-secure cloud platform with advanced cryptography, comprehensive security, and seamless cloud integrations.',
+    implementationDetails:
+      'Enterprise-grade quantum-secure cloud platform with advanced cryptography, comprehensive security, and seamless cloud integrations.',
     launchDate: '20o24-12-0o1',
     customers: 34,
     rating: 4.9,
-    reviews: 18
+    reviews: 18,
   },
 
   // Autonomous IT Operations Center
@@ -102,7 +110,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Self-healing IT infrastructure that never goes down',
     price: '$399',
     period: '/month',
-    description: 'Revolutionary IT operations platform that autonomously monitors, maintains, and optimizes infrastructure with zero downtime and intelligent automation.',
+    description:
+      'Revolutionary IT operations platform that autonomously monitors, maintains, and optimizes infrastructure with zero downtime and intelligent automation.',
     features: [
       'Autonomous infrastructure monitoring',
       'Self-healing system recovery',
@@ -113,22 +122,30 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Integration with IT tools',
       'Advanced analytics and reporting',
       'Multi-environment support',
-      '24/7 autonomous operations'
+      '24/7 autonomous operations',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-blue-60o0 to-cyan-60o0',
     textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/autonomous-it-operations-center',
-    marketPosition: 'Competes with New Relic ($99/month), Datadog ($15/month). Our advantage: 10o0% autonomous operation and 99.999% uptime guarantee.',
-    targetAudience: 'IT departments, DevOps teams, Managed service providers, Enterprises, Data centers',
+    marketPosition:
+      'Competes with New Relic ($99/month), Datadog ($15/month). Our advantage: 10o0% autonomous operation and 99.999% uptime guarantee.',
+    targetAudience:
+      'IT departments, DevOps teams, Managed service providers, Enterprises, Data centers',
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'IT Operations & DevOps',
     realService: true,
-    technology: ['React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['New Relic, Datadog, Splunk, ELK Stack, Prometheus, Grafana'],
-    useCases: ['Infrastructure monitoring, Automated maintenance, Performance optimization, Incident response, Resource management'],
+    technology: [
+      'React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'New Relic, Datadog, Splunk, ELK Stack, Prometheus, Grafana',
+    ],
+    useCases: [
+      'Infrastructure monitoring, Automated maintenance, Performance optimization, Incident response, Resource management',
+    ],
     roi: 'IT teams report 50o0% ROI through reduced downtime and improved operational efficiency.',
     competitors: ['New Relic, Datadog, Splunk, ELK Stack'],
     marketSize: '$35.2B IT operations management market',
@@ -138,14 +155,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Professional autonomous IT operations platform with advanced AI capabilities, comprehensive monitoring, and seamless tool integrations.',
+    implementationDetails:
+      'Professional autonomous IT operations platform with advanced AI capabilities, comprehensive monitoring, and seamless tool integrations.',
     launchDate: '20o24-11-15',
     customers: 78,
     rating: 4.8,
-    reviews: 45
+    reviews: 45,
   },
 
   // Edge Computing Orchestration Platform
@@ -155,7 +173,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Intelligent edge computing management and optimization',
     price: '$299',
     period: '/month',
-    description: 'Advanced platform that orchestrates edge computing resources, optimizes performance, and provides intelligent distribution of computing workloads.',
+    description:
+      'Advanced platform that orchestrates edge computing resources, optimizes performance, and provides intelligent distribution of computing workloads.',
     features: [
       'Intelligent edge resource management',
       'Dynamic workload distribution',
@@ -166,24 +185,34 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Security and compliance tools',
       'Multi-location support',
       'Automated scaling and optimization',
-      '24/7 edge orchestration'
+      '24/7 edge orchestration',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-green-60o0 to-emerald-60o0',
     textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
-    marketPosition: 'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour). Our advantage: Intelligent orchestration with 40% better performance.',
-    targetAudience: 'IoT companies, Edge computing providers, Manufacturing companies, Retail businesses, Smart city projects',
+    marketPosition:
+      'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour). Our advantage: Intelligent orchestration with 40% better performance.',
+    targetAudience:
+      'IoT companies, Edge computing providers, Manufacturing companies, Retail businesses, Smart city projects',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT, Cisco IoT'],
-    useCases: ['IoT device management, Edge computing optimization, Real-time data processing, Smart city infrastructure, Industrial automation'],
+    technology: [
+      'React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT, Cisco IoT',
+    ],
+    useCases: [
+      'IoT device management, Edge computing optimization, Real-time data processing, Smart city infrastructure, Industrial automation',
+    ],
     roi: 'Companies report 40o0% ROI through improved edge performance and reduced latency.',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT'],
+    competitors: [
+      'AWS Greengrass, Azure IoT Edge, Google Cloud IoT, IBM Watson IoT',
+    ],
     marketSize: '$15.7B edge computing market',
     growthRate: '37% annual growth',
     variant: 'edge-computing-enterprise',
@@ -191,14 +220,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Professional edge computing platform with intelligent orchestration, comprehensive monitoring, and seamless IoT integrations.',
+    implementationDetails:
+      'Professional edge computing platform with intelligent orchestration, comprehensive monitoring, and seamless IoT integrations.',
     launchDate: '20o24-10-0o1',
     customers: 56,
     rating: 4.7,
-    reviews: 32
+    reviews: 32,
   },
 
   // Blockchain Infrastructure Platform
@@ -208,7 +238,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Enterprise-grade blockchain infrastructure and development tools',
     price: '$499',
     period: '/month',
-    description: 'Advanced blockchain platform that provides enterprise-grade infrastructure, smart contract development, and decentralized application deployment.',
+    description:
+      'Advanced blockchain platform that provides enterprise-grade infrastructure, smart contract development, and decentralized application deployment.',
     features: [
       'Multi-blockchain support',
       'Smart contract development tools',
@@ -219,24 +250,34 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Scalability solutions',
       'Developer tools and APIs',
       'Multi-cloud deployment',
-      '24/7 blockchain operations'
+      '24/7 blockchain operations',
     ],
     popular: true,
     icon: '⛓️',
     color: 'from-orange-60o0 to-red-60o0',
     textColor: 'text-orange-40o0',
     link: 'https://ziontechgroup.com/blockchain-infrastructure-platform',
-    marketPosition: 'Competes with AWS Managed Blockchain ($0.30/hour), Azure Blockchain Service ($0.50/hour). Our advantage: Multi-blockchain support with 60% better performance.',
-    targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Tech startups',
+    marketPosition:
+      'Competes with AWS Managed Blockchain ($0.30/hour), Azure Blockchain Service ($0.50/hour). Our advantage: Multi-blockchain support with 60% better performance.',
+    targetAudience:
+      'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Tech startups',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['React, Python, Solidity, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['Ethereum, Polygon, Solana, AWS Managed Blockchain, Azure Blockchain, IBM Blockchain'],
-    useCases: ['DeFi applications, Supply chain tracking, Digital identity, Smart contracts, Decentralized applications'],
+    technology: [
+      'React, Python, Solidity, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'Ethereum, Polygon, Solana, AWS Managed Blockchain, Azure Blockchain, IBM Blockchain',
+    ],
+    useCases: [
+      'DeFi applications, Supply chain tracking, Digital identity, Smart contracts, Decentralized applications',
+    ],
     roi: 'Enterprises report 70o0% ROI through improved transparency and reduced operational costs.',
-    competitors: ['AWS Managed Blockchain, Azure Blockchain Service, IBM Blockchain, ConsenSys'],
+    competitors: [
+      'AWS Managed Blockchain, Azure Blockchain Service, IBM Blockchain, ConsenSys',
+    ],
     marketSize: '$19.9B blockchain market',
     growthRate: '87% annual growth',
     variant: 'blockchain-enterprise',
@@ -244,14 +285,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade blockchain platform with multi-chain support, advanced development tools, and comprehensive enterprise integrations.',
+    implementationDetails:
+      'Enterprise-grade blockchain platform with multi-chain support, advanced development tools, and comprehensive enterprise integrations.',
     launchDate: '20o24-09-0o1',
     customers: 45,
     rating: 4.8,
-    reviews: 28
+    reviews: 28,
   },
 
   // AI-Powered DevOps Platform
@@ -261,7 +303,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Intelligent DevOps automation and optimization',
     price: '$349',
     period: '/month',
-    description: 'Advanced DevOps platform that uses AI to automate development workflows, optimize deployments, and provide intelligent insights for continuous improvement.',
+    description:
+      'Advanced DevOps platform that uses AI to automate development workflows, optimize deployments, and provide intelligent insights for continuous improvement.',
     features: [
       'AI-powered CI/CD automation',
       'Intelligent deployment optimization',
@@ -272,22 +315,30 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Multi-environment management',
       'Real-time collaboration tools',
       'Workflow automation',
-      '24/7 AI DevOps operations'
+      '24/7 AI DevOps operations',
     ],
     popular: true,
     icon: '🚀',
     color: 'from-indigo-60o0 to-purple-60o0',
     textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/ai-powered-devops-platform',
-    marketPosition: 'Competes with GitLab ($19/month), Jenkins (Free). Our advantage: AI-powered optimization with 50% faster deployments.',
-    targetAudience: 'Development teams, DevOps engineers, IT departments, Startups, Enterprises',
+    marketPosition:
+      'Competes with GitLab ($19/month), Jenkins (Free). Our advantage: AI-powered optimization with 50% faster deployments.',
+    targetAudience:
+      'Development teams, DevOps engineers, IT departments, Startups, Enterprises',
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'DevOps & CI/CD',
     realService: true,
-    technology: ['React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['GitHub, GitLab, Jenkins, CircleCI, Travis CI, AWS CodePipeline'],
-    useCases: ['CI/CD automation, Deployment optimization, Testing automation, Performance monitoring, Security scanning'],
+    technology: [
+      'React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'GitHub, GitLab, Jenkins, CircleCI, Travis CI, AWS CodePipeline',
+    ],
+    useCases: [
+      'CI/CD automation, Deployment optimization, Testing automation, Performance monitoring, Security scanning',
+    ],
     roi: 'Development teams report 40o0% ROI through faster deployments and improved code quality.',
     competitors: ['GitLab, Jenkins, CircleCI, Travis CI, AWS CodePipeline'],
     marketSize: '$8.2B DevOps market',
@@ -297,14 +348,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Professional AI-powered DevOps platform with comprehensive automation, advanced monitoring, and seamless tool integrations.',
+    implementationDetails:
+      'Professional AI-powered DevOps platform with comprehensive automation, advanced monitoring, and seamless tool integrations.',
     launchDate: '20o24-08-15',
     customers: 89,
     rating: 4.7,
-    reviews: 52
+    reviews: 52,
   },
 
   // Zero Trust Security Platform
@@ -314,7 +366,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Never trust, always verify with AI-powered security',
     price: '$449',
     period: '/month',
-    description: 'Advanced zero trust security platform that provides continuous verification, intelligent threat detection, and comprehensive access control for enterprise networks.',
+    description:
+      'Advanced zero trust security platform that provides continuous verification, intelligent threat detection, and comprehensive access control for enterprise networks.',
     features: [
       'Continuous identity verification',
       'Intelligent threat detection',
@@ -325,22 +378,30 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Compliance and audit tools',
       'Multi-cloud security support',
       'Automated incident response',
-      '24/7 zero trust security'
+      '24/7 zero trust security',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-60o0 to-pink-60o0',
     textColor: 'text-red-40o0',
     link: 'https://ziontechgroup.com/zero-trust-security-platform',
-    marketPosition: 'Competes with Palo Alto Networks ($50/month), Cisco ($40/month). Our advantage: AI-powered security with 99.9% threat detection rate.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
+    marketPosition:
+      'Competes with Palo Alto Networks ($50/month), Cisco ($40/month). Our advantage: AI-powered security with 99.9% threat detection rate.',
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
     trialDays: 21,
     setupTime: '2-4 weeks',
     category: 'Cybersecurity & Zero Trust',
     realService: true,
-    technology: ['React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['Palo Alto Networks, Cisco, Fortinet, Check Point, CrowdStrike, SentinelOne'],
-    useCases: ['Network security, Access control, Threat detection, Compliance management, Incident response'],
+    technology: [
+      'React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'Palo Alto Networks, Cisco, Fortinet, Check Point, CrowdStrike, SentinelOne',
+    ],
+    useCases: [
+      'Network security, Access control, Threat detection, Compliance management, Incident response',
+    ],
     roi: 'Enterprises report 80o0% ROI through prevented security breaches and reduced compliance costs.',
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point'],
     marketSize: '$38.2B cybersecurity market',
@@ -350,14 +411,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade zero trust security platform with advanced AI capabilities, comprehensive monitoring, and seamless security tool integrations.',
+    implementationDetails:
+      'Enterprise-grade zero trust security platform with advanced AI capabilities, comprehensive monitoring, and seamless security tool integrations.',
     launchDate: '20o24-0o7-0o1',
     customers: 67,
     rating: 4.9,
-    reviews: 41
+    reviews: 41,
   },
 
   // Quantum Networking Platform
@@ -367,7 +429,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Next-generation networking with quantum communication',
     price: '$799',
     period: '/month',
-    description: 'Revolutionary networking platform that provides quantum-secured communication, ultra-fast data transfer, and future-proof network infrastructure.',
+    description:
+      'Revolutionary networking platform that provides quantum-secured communication, ultra-fast data transfer, and future-proof network infrastructure.',
     features: [
       'Quantum-secured communication',
       'Ultra-fast data transfer',
@@ -378,22 +441,30 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Security and compliance tools',
       'Multi-location support',
       'Real-time network analytics',
-      '24/7 quantum networking'
+      '24/7 quantum networking',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-violet-60o0 to-purple-60o0',
     textColor: 'text-violet-40o0',
     link: 'https://ziontechgroup.com/quantum-networking-platform',
-    marketPosition: 'Competes with Cisco ($10o0/month), Juniper ($80/month). Our advantage: Quantum-secured communication with 10o00x faster data transfer.',
-    targetAudience: 'Research institutions, Government agencies, Financial institutions, Defense contractors, Tech companies',
+    marketPosition:
+      'Competes with Cisco ($10o0/month), Juniper ($80/month). Our advantage: Quantum-secured communication with 10o00x faster data transfer.',
+    targetAudience:
+      'Research institutions, Government agencies, Financial institutions, Defense contractors, Tech companies',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Quantum Computing & Networking',
     realService: true,
-    technology: ['React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
-    integrations: ['Cisco, Juniper, Arista, IBM Quantum, Google Quantum AI, Rigetti'],
-    useCases: ['Secure communication, High-speed data transfer, Research collaboration, Government networks, Financial trading'],
+    technology: [
+      'React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
+    integrations: [
+      'Cisco, Juniper, Arista, IBM Quantum, Google Quantum AI, Rigetti',
+    ],
+    useCases: [
+      'Secure communication, High-speed data transfer, Research collaboration, Government networks, Financial trading',
+    ],
     roi: 'Research institutions report 120o0% ROI through quantum speedup and new communication capabilities.',
     competitors: ['Cisco, Juniper, Arista, IBM Quantum'],
     marketSize: '$2.1B quantum networking market',
@@ -403,14 +474,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Cutting-edge quantum networking platform with advanced quantum communication, comprehensive security, and seamless network integrations.',
+    implementationDetails:
+      'Cutting-edge quantum networking platform with advanced quantum communication, comprehensive security, and seamless network integrations.',
     launchDate: '20o24-0o6-15',
     customers: 23,
     rating: 4.9,
-    reviews: 15
+    reviews: 15,
   },
 
   // Autonomous Data Center Platform
@@ -420,7 +492,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Self-managing data centers with AI-powered optimization',
     price: '$699',
     period: '/month',
-    description: 'Advanced data center platform that autonomously manages infrastructure, optimizes performance, and provides intelligent resource allocation for enterprise workloads.',
+    description:
+      'Advanced data center platform that autonomously manages infrastructure, optimizes performance, and provides intelligent resource allocation for enterprise workloads.',
     features: [
       'Autonomous infrastructure management',
       'Intelligent resource allocation',
@@ -431,22 +504,28 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Advanced monitoring and analytics',
       'Multi-location support',
       'Compliance and audit tools',
-      '24/7 autonomous operations'
+      '24/7 autonomous operations',
     ],
     popular: true,
     icon: '🏢',
     color: 'from-teal-60o0 to-cyan-60o0',
     textColor: 'text-teal-40o0',
     link: 'https://ziontechgroup.com/autonomous-data-center-platform',
-    marketPosition: 'Competes with VMware ($8.62/month), Nutanix ($50/month). Our advantage: 10o0% autonomous operation and 40% better energy efficiency.',
-    targetAudience: 'Data center operators, Cloud providers, Enterprises, Managed service providers, IT departments',
+    marketPosition:
+      'Competes with VMware ($8.62/month), Nutanix ($50/month). Our advantage: 10o0% autonomous operation and 40% better energy efficiency.',
+    targetAudience:
+      'Data center operators, Cloud providers, Enterprises, Managed service providers, IT departments',
     trialDays: 21,
     setupTime: '2-4 weeks',
     category: 'Data Center & Infrastructure',
     realService: true,
-    technology: ['React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
+    technology: [
+      'React, Python, TensorFlow, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
     integrations: ['VMware, Nutanix, Cisco UCS, Dell EMC, HPE, IBM'],
-    useCases: ['Infrastructure management, Resource optimization, Energy efficiency, Performance monitoring, Compliance management'],
+    useCases: [
+      'Infrastructure management, Resource optimization, Energy efficiency, Performance monitoring, Compliance management',
+    ],
     roi: 'Data center operators report 60o0% ROI through improved efficiency and reduced operational costs.',
     competitors: ['VMware, Nutanix, Cisco UCS, Dell EMC'],
     marketSize: '$59.7B data center market',
@@ -456,14 +535,15 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Professional autonomous data center platform with advanced AI capabilities, comprehensive monitoring, and seamless infrastructure integrations.',
+    implementationDetails:
+      'Professional autonomous data center platform with advanced AI capabilities, comprehensive monitoring, and seamless infrastructure integrations.',
     launchDate: '20o24-0o5-0o1',
     customers: 45,
     rating: 4.8,
-    reviews: 29
+    reviews: 29,
   },
 
   // Quantum Cloud Migration Platform
@@ -473,7 +553,8 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
     tagline: 'Seamless cloud migration with quantum-enhanced security',
     price: '$549',
     period: '/month',
-    description: 'Advanced cloud migration platform that provides quantum-enhanced security, intelligent workload optimization, and seamless transition to cloud infrastructure.',
+    description:
+      'Advanced cloud migration platform that provides quantum-enhanced security, intelligent workload optimization, and seamless transition to cloud infrastructure.',
     features: [
       'Quantum-enhanced migration security',
       'Intelligent workload optimization',
@@ -484,24 +565,32 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       'Advanced analytics and reporting',
       'Multi-cloud support',
       'Compliance and audit tools',
-      '24/7 migration support'
+      '24/7 migration support',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-blue-60o0 to-indigo-60o0',
     textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/quantum-cloud-migration-platform',
-    marketPosition: 'Competes with AWS Migration Hub ($0.30/hour), Azure Migrate ($0.25/hour). Our advantage: Quantum-enhanced security with 50% faster migration.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
+    marketPosition:
+      'Competes with AWS Migration Hub ($0.30/hour), Azure Migrate ($0.25/hour). Our advantage: Quantum-enhanced security with 50% faster migration.',
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Cloud Migration & Security',
     realService: true,
-    technology: ['React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS'],
+    technology: [
+      'React, Python, Qiskit, Docker, Kubernetes, PostgreSQL, Redis, AWS',
+    ],
     integrations: ['AWS, Azure, Google Cloud, IBM Cloud, Oracle Cloud, VMware'],
-    useCases: ['Cloud migration, Workload optimization, Security enhancement, Performance improvement, Compliance management'],
+    useCases: [
+      'Cloud migration, Workload optimization, Security enhancement, Performance improvement, Compliance management',
+    ],
     roi: 'Enterprises report 50o0% ROI through faster migration and improved security.',
-    competitors: ['AWS Migration Hub, Azure Migrate, Google Cloud Migrate, IBM Cloud Migration'],
+    competitors: [
+      'AWS Migration Hub, Azure Migrate, Google Cloud Migrate, IBM Cloud Migration',
+    ],
     marketSize: '$119.4B cloud migration market',
     growthRate: '28% annual growth',
     variant: 'cloud-migration-enterprise',
@@ -509,13 +598,14 @@ export const innovativeNewITServices20o25: InnovativeNewITService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Professional quantum-enhanced cloud migration platform with advanced security, comprehensive monitoring, and seamless cloud integrations.',
+    implementationDetails:
+      'Professional quantum-enhanced cloud migration platform with advanced security, comprehensive monitoring, and seamless cloud integrations.',
     launchDate: '20o24-0o4-15',
     customers: 78,
     rating: 4.7,
-    reviews: 45
-  }
+    reviews: 45,
+  },
 ];

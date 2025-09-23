@@ -6,8 +6,6 @@ export function Skeleton(props: any) {
 }
 export function CardSkeleton(props: any) {return (
         <div className="rounded-lg border border-zion-slate/20 p-6 space-y-4">
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export function Skeleton($1) {
@@ -27,7 +25,6 @@ export function CardSkeleton($1) {return (
 export function ProfileSkeleton($1) {
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       <div className="flex items-center space-x-4">
         <Skeleton className="h-16 w-16 rounded-full" />
         <div className="space-y-2">

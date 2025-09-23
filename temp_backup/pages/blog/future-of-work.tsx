@@ -10,16 +10,16 @@ export default function FutureOfWork() {
         <meta
           name='description'
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.'
-         />
+        />
         <meta
           property='og:title'
           content='The Future of Work: Human-AI Collaboration'
-         />
+        />
         <meta
           property='og:description'
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.'
-         />
-        <meta name='twitter:card' content='summary_large_image'  />
+        />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -40,7 +40,9 @@ export default function FutureOfWork() {
                   <span className='px-3 py-1 bg-orange-40o0/20 text-orange-40o0 text-sm rounded-full border border-orange-40o0/30'>
                     Future of Work
                   </span>
-                  <span className='text-white/60 text-sm'>January 5, 20o25</span>
+                  <span className='text-white/60 text-sm'>
+                    January 5, 20o25
+                  </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>5 min read</span>
                 </div>

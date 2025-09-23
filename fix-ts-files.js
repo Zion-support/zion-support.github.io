@@ -5,7 +5,7 @@ function fixTsTestFile(filePath) {
   try {
     const fileName = path.basename(filePath, '.test.tsx').replace('.test', '');
     const componentName = fileName.replace('.dynamic', '');
-    
+
     const content = `import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
@@ -29,7 +29,7 @@ describe('${componentName}', () => {
   });
 });
 `;
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
@@ -39,7 +39,9 @@ describe('${componentName}', () => {
 
 // Get all TypeScript test files
 const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.ts') || file.endsWith('.test.tsx'));
+const files = fs
+  .readdirSync(testDir)
+  .filter(file => file.endsWith('.test.ts') || file.endsWith('.test.tsx'));
 
 console.log(`Found ${files.length} TypeScript test files to fix`);
 

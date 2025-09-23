@@ -26,5 +26,11 @@ console.log('Log dir path:', logDir);
 // Test if directory exists
 const fs = require('fs');
 console.log('Log dir exists:', fs.existsSync(logDir));
-console.log('Automation dir exists:', fs.existsSync(path.join(__dirname, 'automation')));
-console.log('Redundancy dir exists:', fs.existsSync(path.join(__dirname, 'automation', 'redundancy')));
+console.log(
+  'Automation dir exists:',
+  fs.existsSync(path.join(__dirname, 'automation'))
+);
+console.log(
+  'Redundancy dir exists:',
+  fs.existsSync(path.join(__dirname, 'automation', 'redundancy'))
+);

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src/data/aiServicesData.ts
 <<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
 =======
->>>>>>> pr-11913:src_backup_temp/data/aiServicesData.ts
 export interface AIService {;
   "id": "string;
   "title": string;
@@ -2721,12 +2718,3 @@ export const AI_SERVICES: AIService[] = [
   }
 ];
 =======
-<<<<<<< HEAD
-    competitors: [&quot;CrowdStrike&quot;, &quot;Palo Alto Networks&quot;, &quot;IBM Security&quot;, &quot;Microsoft Sentinel&quot;],
-    marketSize: &quot;$22.1 billion by 2025&quot;
-  }
-];
-<<<<<<< HEAD:backup-merge-conflicts/aiServicesData.ts.backup
->>>>>>> main
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935

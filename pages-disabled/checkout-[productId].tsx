@@ -5,7 +5,7 @@ const CheckoutPage = lazy(() => import('../../src/pages/Checkout'));
 export default function Checkout() {
   return (
     <Suspense fallback={<div>Loading checkout...</div>}>
-      <CheckoutPage  />
+      <CheckoutPage />
     </Suspense>
   );
 }

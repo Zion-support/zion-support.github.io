@@ -1,6 +1,5 @@
 import React from 'react';
 interface Proposal {;
-<<<<<<< HEAD
   "id": "string;
   "title": string;
   "description": string;
@@ -28,7 +27,6 @@ const "ProposalCard": "React.FC<ProposalCardProps> = ({;
   const getStatusColor = ("props": "any) => {;
     switch (status) {;
       case 'active':;
-=======
   "id": string;
   title: string;';
   description: string;';';
@@ -90,7 +88,6 @@ const "ProposalCard": Reac t.FC<ProposalCardProps> = ({
   canVote = false
 };) => {
   const getStatusColor = (props) => {
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/governance/ProposalCard.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/governance/ProposalCard.tsx

@@ -32,7 +32,6 @@ function fixRemainingSyntax(filePath) {}
     content = content.replace(/useState\('\)/g, "useState('')");
     content = content.replace(/parsed\.didHandle \|\| "\)/g, 'parsed.didHandle || "")');
     content = content.replace(/parsed\.didHandle \|\| '\)/g, "parsed.didHandle || '')");
-<<<<<<< HEAD
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
@@ -171,7 +170,6 @@ function fixFilesInDirectory(dirPath) {}
   };
   return fixedCount;
 // Main execution
-=======
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
@@ -197,7 +195,6 @@ let totalFixes = 0;
 filesToFix.forEach(file => {
     totalFixes += fixFile(file);
 });
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const fixedCount = fixFilesInDirectory('./src');
 =======

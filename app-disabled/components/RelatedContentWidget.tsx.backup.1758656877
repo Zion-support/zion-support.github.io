@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD
 import React from 'react';
 
 export default function RelatedContentWidget() {
@@ -23,7 +22,6 @@ const RelatedContentWidget: React.FC<{ items?: { title: string; href: string }[]
         {items.map((it) => (
           <li key={it.href}>
             <Link href={it.href} className="text-purple-600 hover:underline">{it.title}</Link>
-=======
 'use client';
 
 import Link from 'next/link';
@@ -58,6 +56,5 @@ export default function RelatedContentWidget({ title = 'Related Content', posts 
 };
 
 export default RelatedContentWidget;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 
 }

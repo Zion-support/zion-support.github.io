@@ -1,10 +1,7 @@
 =======
 =======
 =======
-<<<<<<< HEAD:src.disabled/data/comprehensive-services-2025-enhanced.ts
 =======
-=======
->>>>>>> pr-11935
 "export": interface EnhancedServiceItem {
 >>>>>>> main
    id: string;

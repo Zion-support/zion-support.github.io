@@ -1,4 +1,3 @@
-
 import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 
@@ -12,9 +11,9 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 export const handleResumeError = (e: any, errorMessage: string) => {
   console.error(`Error: ${errorMessage}`, e);
   toast({
-    title: "Error",
+    title: 'Error',
     description: `${errorMessage}: ${e.message}`,
-    variant: "destructive"
+    variant: 'destructive',
   });
   return false;
 };
@@ -23,7 +22,7 @@ export const handleResumeError = (e: any, errorMessage: string) => {
 export const showSuccessToast = (title: string, description: string) => {
   toast({
     title,
-    description
+    description,
   });
   return true;
 };

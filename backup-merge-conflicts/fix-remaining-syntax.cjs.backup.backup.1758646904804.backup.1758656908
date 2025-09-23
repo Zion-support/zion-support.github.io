@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Final targeted fixes for remaining syntax errors
 const fixes = [
   // Fix missing semicolons in import statements
@@ -93,7 +92,6 @@ function fixFile(filePath) {
         return;
     }
 
-=======
 // Function to fix remaining syntax errors in a file;
 function fixRemainingSyntax(filePath) {}
   try {}
@@ -246,5 +244,4 @@ const fixedCount = fixFilesInDirectory('./src');
 console.log('Starting remaining syntax error fixing...');
 const fixedCount = fixFilesInDirectory('./src');
 console.log(`Fixed ${fixedCount} files with remaining syntax errors.`);
->>>>>>> main
 >>>>>>> main

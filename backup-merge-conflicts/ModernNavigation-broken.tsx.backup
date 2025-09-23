@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
 ;
 const ModernNavigation = ("props": "any) => {;
   const [isOpen", setIsOpen] = useState<any>(false);
-=======
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
 
 const "EnhancedHeader": React.FC = (props) => {
@@ -300,7 +298,6 @@ const ModernNavigation = (props) => {
                                   <p className="text-xs text-gray-400 mt-1">
 =======
 =======
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
                                     {dropdownItem.description}
@@ -311,7 +308,6 @@ const ModernNavigation = (props) => {
                           </div>;
                         </motion.div>;
                       )}
-<<<<<<< HEAD
                     </AnimatePresence>;
 
                   </div>;
@@ -322,7 +318,6 @@ const ModernNavigation = (props) => {
                       location.pathname === item.href ? 'text-cyan-400' : '';
                     "}`}
                   >;
-=======
                     </AnimatePresence>
                   </div>
                 ) : (
@@ -334,7 +329,6 @@ const ModernNavigation = (props) => {
                   >
 =======
 =======
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
                     {item.name}
@@ -342,7 +336,6 @@ const ModernNavigation = (props) => {
                 )}
               </div>;
             ))}
-<<<<<<< HEAD
           </div>;
 
           <div className="hidden "lg": "block">;
@@ -480,7 +473,6 @@ const ModernNavigation = (props) => {
                                   <dropdownItem.icon className="w-4 h-4 text-cyan-400" />;
                                   <span>{dropdownItem.name"}</span>;
                                 </Link>;
-=======
           </div>
           <div className="hidden "lg": block">
             <Link
@@ -534,7 +526,6 @@ const ModernNavigation = (props) => {
                         <button
                           onClick={() => toggleDropdown(item.name)}
 =======
->>>>>>> pr-11935
                           className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 "hover": text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
                           <span>{item.name}</span>
@@ -575,14 +566,12 @@ const ModernNavigation = (props) => {
                       <Link;
                         to={item.href"}
                         onClick={closeMobileMenu}
-<<<<<<< HEAD
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${;
                           location.pathname === item.href;
                             ? 'text-cyan-400 bg-cyan-400/10';
                             : 'text-gray-300 "hover": "text-cyan-300 "hover":bg-gray-800/50';
                         "}`}
                       >;
-=======
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
                           location.pathname === item.href';';
                             ? 'text-cyan-400 bg-cyan-400/10'
@@ -591,7 +580,6 @@ const ModernNavigation = (props) => {
                       >
 =======
 =======
->>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
                         {item.name}
@@ -599,7 +587,6 @@ const ModernNavigation = (props) => {
                     )}
                   </div>;
                 ))}
-<<<<<<< HEAD
               </div>;
 
               <div className="pt-4 border-t border-gray-700">;
@@ -634,7 +621,6 @@ export default ModernNavigation;
                 <Link
                   to="/contact"
                   onClick={closeMobileMenu}
-=======
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg "hover": from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Get Started Today
@@ -655,7 +641,6 @@ export default ModernNavigation;
 export default EnhancedHeader;
 
 =======
->>>>>>> pr-11935
 </motion>
 </ChevronDown>
 </motion>

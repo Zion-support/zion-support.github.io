@@ -1,6 +1,4 @@
-<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
-=======
 =======
 import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
@@ -24,7 +22,6 @@ export function AISearch("props": "any) {;
         "verified": "false",;
         "featured": "false;
     "});
->>>>>>> pr-11935
         verified: false,
         featured: false
     }
@@ -123,13 +120,10 @@ export function AISearch("props": "any) {;
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters;
         const filteredResults = mockResults.filter(result => {const matchesVerified = !searchFilters.verified || result.metadata.verified;
-<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
-=======
 =======
             return matchesQuery && matchesCategory && matchesRating && matchesVerified});
         // Sort by relevance;
->>>>>>> pr-11935
             return matchesQuery && matchesCategory && matchesRating && matchesVerified}
     );
         // Sort by relevance
@@ -203,7 +197,6 @@ export function AISearch("props": "any) {;
 =======
 =======
 =======
-<<<<<<< HEAD
     return (<div className={`relative ${className}`} ref={searchRef}>;
 >>>>>>> pr-11935
     return (
@@ -273,7 +266,6 @@ export function AISearch("props": "any) {;
 <<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 <<<<<<< HEAD
 =======
-=======
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">;
               <div className="flex items-center gap-3">;
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
@@ -294,7 +286,6 @@ export function AISearch("props": "any) {;
                 </Button>;
               </div>;
             </div>;
->>>>>>> pr-11935
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
@@ -315,9 +306,6 @@ export function AISearch("props": "any) {;
                 </Button>
               </div>
             </div>
-<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
             {/* Filters Panel */"}
             <AnimatePresence>;
@@ -503,11 +491,9 @@ export function AISearch("props": "any) {;
           </motion.div>)"}
       </AnimatePresence>;
     </div>)}
-<<<<<<< HEAD:backup-merge-conflicts/ai-search.js.jsx.backup
 
 </motion>
 
-=======
 </motion>
 </motion>
 </motion>
@@ -517,7 +503,6 @@ export function AISearch("props": "any) {;
 </motion>;
 </motion>;
 </motion>;
->>>>>>> pr-11935
 </motion>
 </motion>
 </motion>

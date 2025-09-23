@@ -63,13 +63,11 @@ module.exports = {
     "pages.__backup/",
     "pages-disabled/",
     "pages.disabled_auto/"
-<<<<<<< HEAD:backup-merge-conflicts/.eslintrc.cjs.backup
 <<<<<<< HEAD:.eslintrc.cjs
   ],
   env: {
   ]
 };
-=======
   "extends": ['next/core-web-vitals',
     '"eslint": recommended',
     '@typescript-eslint/recommended',
@@ -126,6 +124,5 @@ module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@type
   }
 };
 =======
->>>>>>> pr-11914:backup-merge-conflicts/.eslintrc.cjs.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

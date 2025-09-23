@@ -2,7 +2,7 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const jestGlobals = require('@jest/globals');
 
-module.exports ={
+module.exports = {
   vi: {
     fn: jest.fn,
     spyOn: jest.spyOn,
@@ -15,4 +15,5 @@ module.exports ={
   test: jestGlobals.test,
   describe: jestGlobals.describe,
   beforeEach: jestGlobals.beforeEach,
-  afterEach: jestGlobals.afterEach}; 
+  afterEach: jestGlobals.afterEach,
+};

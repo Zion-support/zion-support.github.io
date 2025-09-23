@@ -1,7 +1,5 @@
 const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from "react-router-dom"; return null} ,; {}; export {};''"
-<<<<<<< HEAD:backup-merge-conflicts/ContactSection.jsx.backup
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/ContactSection.jsx
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
@@ -10,7 +8,6 @@ import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,Arrow
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
 =======
 <<<<<<< HEAD
->>>>>>> pr-11935
 =======
 =======
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};

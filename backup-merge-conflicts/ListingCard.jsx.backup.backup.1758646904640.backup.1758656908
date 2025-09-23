@@ -1,12 +1,9 @@
 =======
-<<<<<<< HEAD
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
 <<<<<<< HEAD:backup-merge-conflicts/ListingCard.jsx.backup
-=======
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
 =======
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/ListingCard.jsx
 =======
 '"export": function ListingCard ({' id,title,description,images,category,tags,author,className,profileType = 'service'}) {''''";";""}
 >>>>>>> pr-11935

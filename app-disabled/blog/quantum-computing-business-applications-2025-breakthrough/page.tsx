@@ -2,44 +2,58 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata: Metadata ={
-  title: 'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide',
-  description: 'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.',
-  keywords: ['quantum computing', 'business applications', 'AI', 'innovation', 'technology', '20o25']};
+export const metadata: Metadata = {
+  title:
+    'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide',
+  description:
+    'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.',
+  keywords: [
+    'quantum computing',
+    'business applications',
+    'AI',
+    'innovation',
+    'technology',
+    '20o25',
+  ],
+};
 
 export default function QuantumComputingBusinessApplicationsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className='min-h-screen bg-white'>
       <SEO
-        title="Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide"
-        description="Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success."
-        keywords="quantum computing, business applications, AI, innovation, technology, 20o25"
-        url="/blog/quantum-computing-business-applications-20o25-breakthrough"
-       />
-      
+        title='Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide'
+        description='Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.'
+        keywords='quantum computing, business applications, AI, innovation, technology, 20o25'
+        url='/blog/quantum-computing-business-applications-20o25-breakthrough'
+      />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-60o0 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium">⚛️ QUANTUM BREAKTHROUGH</span>
+      <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-blue-60o0 text-white py-20'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center'>
+            <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium'>
+                ⚛️ QUANTUM BREAKTHROUGH
+              </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>
               Quantum Computing Business Applications 20o25
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Discover how quantum computing is revolutionizing business
+              operations in 20o25. Real-world applications, case studies, and
+              implementation strategies for enterprise success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+                href='/contact'
+                className='bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
               >
                 Get Quantum Assessment
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors"
+                href='/services'
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-colors'
               >
                 Explore Quantum Services
               </Link>
@@ -49,31 +63,52 @@ export default function QuantumComputingBusinessApplicationsPage() {
       </section>
 
       {/* Content Preview */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <h2>The Quantum Revolution is Here: Transform Your Business Today</h2>
+      <section className='py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='prose prose-lg max-w-none'>
+            <h2>
+              The Quantum Revolution is Here: Transform Your Business Today
+            </h2>
             <p>
-              The year 20o25 marks a pivotal moment in business history. Quantum computing has moved from experimental labs to real-world business applications, delivering unprecedented computational power that's revolutionizing industries across the globe.
+              The year 20o25 marks a pivotal moment in business history. Quantum
+              computing has moved from experimental labs to real-world business
+              applications, delivering unprecedented computational power that's
+              revolutionizing industries across the globe.
             </p>
-            
+
             <p>
-              Companies leveraging quantum computing are seeing <strong>10o00x performance improvements</strong>, <strong>90% reduction in complex problem-solving time</strong>, and <strong>$50o0M+ in new revenue opportunities</strong>. This isn't the future – it's happening now.
+              Companies leveraging quantum computing are seeing{' '}
+              <strong>10o00x performance improvements</strong>,{' '}
+              <strong>90% reduction in complex problem-solving time</strong>,
+              and <strong>$50o0M+ in new revenue opportunities</strong>. This
+              isn't the future – it's happening now.
             </p>
 
             <h3>🌟 What is Quantum Computing?</h3>
             <p>
-              Quantum computing harnesses the principles of quantum mechanics to process information in ways that classical computers cannot. Unlike traditional bits that exist in either 0 or 1 states, quantum bits (qubits) can exist in multiple states simultaneously, enabling exponential computational power.
+              Quantum computing harnesses the principles of quantum mechanics to
+              process information in ways that classical computers cannot.
+              Unlike traditional bits that exist in either 0 or 1 states,
+              quantum bits (qubits) can exist in multiple states simultaneously,
+              enabling exponential computational power.
             </p>
 
             <h3>🏢 Real-World Business Applications</h3>
-            
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8">
+
+            <div className='bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl mb-8'>
               <h4>1. Financial Services Revolution</h4>
               <h5>Portfolio Optimization</h5>
-              <p><strong>Traditional Approach:</strong> Hours of complex calculations for optimal asset allocation</p>
-              <p><strong>Quantum Solution:</strong> Real-time portfolio optimization across thousands of assets</p>
-              <p><strong>Results:</strong></p>
+              <p>
+                <strong>Traditional Approach:</strong> Hours of complex
+                calculations for optimal asset allocation
+              </p>
+              <p>
+                <strong>Quantum Solution:</strong> Real-time portfolio
+                optimization across thousands of assets
+              </p>
+              <p>
+                <strong>Results:</strong>
+              </p>
               <ul>
                 <li>40% better risk-adjusted returns</li>
                 <li>95% reduction in calculation time</li>
@@ -82,12 +117,20 @@ export default function QuantumComputingBusinessApplicationsPage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl mb-8">
+            <div className='bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-xl mb-8'>
               <h4>2. Supply Chain Optimization</h4>
               <h5>Logistics & Transportation</h5>
-              <p><strong>Problem:</strong> Optimizing routes across global supply networks</p>
-              <p><strong>Quantum Solution:</strong> Simultaneous optimization of all variables</p>
-              <p><strong>Results:</strong></p>
+              <p>
+                <strong>Problem:</strong> Optimizing routes across global supply
+                networks
+              </p>
+              <p>
+                <strong>Quantum Solution:</strong> Simultaneous optimization of
+                all variables
+              </p>
+              <p>
+                <strong>Results:</strong>
+              </p>
               <ul>
                 <li>60% reduction in transportation costs</li>
                 <li>45% improvement in delivery times</li>
@@ -96,12 +139,20 @@ export default function QuantumComputingBusinessApplicationsPage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-xl mb-8">
+            <div className='bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-xl mb-8'>
               <h4>3. Drug Discovery & Healthcare</h4>
               <h5>Molecular Simulation</h5>
-              <p><strong>Traditional Method:</strong> Years of trial-and-error experimentation</p>
-              <p><strong>Quantum Computing:</strong> Accurate molecular behavior simulation</p>
-              <p><strong>Breakthrough Results:</strong></p>
+              <p>
+                <strong>Traditional Method:</strong> Years of trial-and-error
+                experimentation
+              </p>
+              <p>
+                <strong>Quantum Computing:</strong> Accurate molecular behavior
+                simulation
+              </p>
+              <p>
+                <strong>Breakthrough Results:</strong>
+              </p>
               <ul>
                 <li>10x faster drug discovery</li>
                 <li>80% reduction in development costs</li>
@@ -111,27 +162,42 @@ export default function QuantumComputingBusinessApplicationsPage() {
             </div>
 
             <h3>📊 Industry Impact Analysis</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="bg-blue-50 p-6 rounded-xl">
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-8'>
+              <div className='bg-blue-50 p-6 rounded-xl'>
                 <h4>Healthcare & Life Sciences</h4>
                 <ul>
-                  <li><strong>Market Size:</strong> $2.8 trillion by 20o30</li>
-                  <li><strong>Quantum Applications:</strong> Drug discovery, personalized medicine, genomics</li>
-                  <li><strong>Expected ROI:</strong> 50o0-10o00% over 5 years</li>
+                  <li>
+                    <strong>Market Size:</strong> $2.8 trillion by 20o30
+                  </li>
+                  <li>
+                    <strong>Quantum Applications:</strong> Drug discovery,
+                    personalized medicine, genomics
+                  </li>
+                  <li>
+                    <strong>Expected ROI:</strong> 50o0-10o00% over 5 years
+                  </li>
                 </ul>
               </div>
-              <div className="bg-purple-50 p-6 rounded-xl">
+              <div className='bg-purple-50 p-6 rounded-xl'>
                 <h4>Financial Services</h4>
                 <ul>
-                  <li><strong>Market Size:</strong> $1.5 trillion quantum finance market</li>
-                  <li><strong>Applications:</strong> Trading algorithms, risk management, fraud detection</li>
-                  <li><strong>Expected ROI:</strong> 30o0-80o0% over 3 years</li>
+                  <li>
+                    <strong>Market Size:</strong> $1.5 trillion quantum finance
+                    market
+                  </li>
+                  <li>
+                    <strong>Applications:</strong> Trading algorithms, risk
+                    management, fraud detection
+                  </li>
+                  <li>
+                    <strong>Expected ROI:</strong> 30o0-80o0% over 3 years
+                  </li>
                 </ul>
               </div>
             </div>
 
             <h3>🚀 Implementation Roadmap</h3>
-            <div className="bg-yellow-50 p-8 rounded-xl mb-8">
+            <div className='bg-yellow-50 p-8 rounded-xl mb-8'>
               <h4>Phase 1: Foundation (Months 1-3)</h4>
               <ul>
                 <li>Quantum Readiness Assessment</li>
@@ -141,7 +207,7 @@ export default function QuantumComputingBusinessApplicationsPage() {
               </ul>
             </div>
 
-            <div className="bg-green-50 p-8 rounded-xl mb-8">
+            <div className='bg-green-50 p-8 rounded-xl mb-8'>
               <h4>Phase 2: Pilot Projects (Months 4-6)</h4>
               <ul>
                 <li>Start with High-Impact, Low-Risk Applications</li>
@@ -152,32 +218,46 @@ export default function QuantumComputingBusinessApplicationsPage() {
             </div>
 
             <h3>🔮 Future Predictions (20o25-20o30)</h3>
-            <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl">
+            <div className='bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-xl'>
               <h4>Technology Evolution</h4>
               <ul>
-                <li><strong>20o25:</strong> 10o00+ qubit systems become standard</li>
-                <li><strong>20o26:</strong> Quantum advantage in business applications</li>
-                <li><strong>20o27:</strong> Fault-tolerant quantum computers</li>
-                <li><strong>20o28:</strong> Quantum internet deployment</li>
-                <li><strong>20o30:</strong> Quantum supremacy in all major applications</li>
+                <li>
+                  <strong>20o25:</strong> 10o00+ qubit systems become standard
+                </li>
+                <li>
+                  <strong>20o26:</strong> Quantum advantage in business
+                  applications
+                </li>
+                <li>
+                  <strong>20o27:</strong> Fault-tolerant quantum computers
+                </li>
+                <li>
+                  <strong>20o28:</strong> Quantum internet deployment
+                </li>
+                <li>
+                  <strong>20o30:</strong> Quantum supremacy in all major
+                  applications
+                </li>
               </ul>
             </div>
 
-            <div className="text-center mt-12">
+            <div className='text-center mt-12'>
               <h3>Ready for the Quantum Revolution?</h3>
-              <p className="text-lg text-gray-60o0 mb-8">
-                The quantum computing revolution is happening now. Companies that act today will dominate tomorrow. Don't let your competitors get ahead.
+              <p className='text-lg text-gray-60o0 mb-8'>
+                The quantum computing revolution is happening now. Companies
+                that act today will dominate tomorrow. Don't let your
+                competitors get ahead.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0"
+                  href='/contact'
+                  className='bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-lg font-bold hover:from-indigo-60o0 hover:to-purple-60o0 transition-all duration-30o0'
                 >
                   Get Quantum Assessment
                 </Link>
                 <Link
-                  href="/services"
-                  className="border-2 border-indigo-50o0 text-indigo-50o0 px-8 py-4 rounded-lg font-bold hover:bg-indigo-50o0 hover:text-white transition-all duration-30o0"
+                  href='/services'
+                  className='border-2 border-indigo-50o0 text-indigo-50o0 px-8 py-4 rounded-lg font-bold hover:bg-indigo-50o0 hover:text-white transition-all duration-30o0'
                 >
                   Explore Quantum Services
                 </Link>

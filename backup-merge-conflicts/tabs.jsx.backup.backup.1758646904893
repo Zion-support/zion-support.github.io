@@ -62,9 +62,7 @@ export function TabsContent({ className, value, children, ...props }) {;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
 =======
 =======
 import React, {useState} from 'react';
@@ -88,7 +86,6 @@ export function Tabs($1) {
 export function TabsList($1) {
     return (
     <div className="min-h-screen bg-white">
->>>>>>> main
       {children}
     </div>
     );

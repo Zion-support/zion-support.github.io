@@ -1,6 +1,5 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 "use client";
 import React from 'react';
 
@@ -26,7 +25,6 @@ export default function PerformanceMetrics() {
   );
 }
 =======
-=======
 "use client";
 
 export default function PerformanceMetrics() {
@@ -38,7 +36,6 @@ export default function PerformanceMetrics() {
 	);
 }
 <<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 =======

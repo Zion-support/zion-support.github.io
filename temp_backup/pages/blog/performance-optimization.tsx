@@ -10,16 +10,16 @@ export default function PerformanceOptimization() {
         <meta
           name='description'
           content='Best practices for optimizing performance in large-scale autonomous technology deployments.'
-         />
+        />
         <meta
           property='og:title'
           content='Performance Optimization in Autonomous Systems'
-         />
+        />
         <meta
           property='og:description'
           content='Best practices for optimizing performance in large-scale autonomous technology deployments.'
-         />
-        <meta name='twitter:card' content='summary_large_image'  />
+        />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -40,7 +40,9 @@ export default function PerformanceOptimization() {
                   <span className='px-3 py-1 bg-blue-40o0/20 text-blue-40o0 text-sm rounded-full border border-blue-40o0/30'>
                     Performance
                   </span>
-                  <span className='text-white/60 text-sm'>January 8, 20o25</span>
+                  <span className='text-white/60 text-sm'>
+                    January 8, 20o25
+                  </span>
                   <span className='text-white/60 text-sm'>•</span>
                   <span className='text-white/60 text-sm'>9 min read</span>
                 </div>

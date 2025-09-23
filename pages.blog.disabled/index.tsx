@@ -2,7 +2,7 @@ interface IndexProps {
   // Add props here as needed
 }
 
-export default function Index({ }: IndexProps) {
+export default function Index({}: IndexProps) {
   return (
     <div>
       <h1>Index</h1>

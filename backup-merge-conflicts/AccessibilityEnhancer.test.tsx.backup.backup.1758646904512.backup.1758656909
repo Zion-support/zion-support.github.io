@@ -67,8 +67,5 @@ describe('AccessibilityEnhancer', () => {
   });
 });
 });
-<<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
-=======
->>>>>>> pr-11914:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 =======
 >>>>>>> pr-11913:__tests__/AccessibilityEnhancer.test.tsx

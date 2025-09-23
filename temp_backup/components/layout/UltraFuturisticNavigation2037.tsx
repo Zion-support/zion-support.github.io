@@ -1,7 +1,19 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Rocket, Shield, Atom, Globe, BookOpen, Building, ChevronDown, Menu, X, Star } from 'lucide-react';
+import {
+  Brain,
+  Rocket,
+  Shield,
+  Atom,
+  Globe,
+  BookOpen,
+  Building,
+  ChevronDown,
+  Menu,
+  X,
+  Star,
+} from 'lucide-react';
 
 interface NavigationItem {
   name: string;
@@ -16,71 +28,186 @@ interface NavigationItem {
 
 // Custom icon components
 const Building = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M19 21V5a2 2 0 0o0-2-2H7a2 2 0 0o0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0o11-1h2a1 1 0 0o11 1v5m-4 0h4'
+    />
   </svg>
 );
 
 const Heart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M4.318 6.318a4.5 4.5 0 0o00 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0o0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0o0-6.364 0z'
+    />
   </svg>
 );
 
 const DollarSign = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1'
+    />
   </svg>
 );
 
 const Settings = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0o02.573 1.0o66c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0o01.0o65 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0o0-1.0o66 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0o0-2.572 1.0o65c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0o0-2.573-1.0o66c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0o0-1.0o65-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0o01.0o66-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.0o7 2.572-1.0o65z"  />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 0o16 0z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0o02.573 1.0o66c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0o01.0o65 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0o0-1.0o66 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0o0-2.572 1.0o65c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0o0-2.573-1.0o66c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0o0-1.0o65-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0o01.0o66-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.0o7 2.572-1.0o65z'
+    />
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M15 12a3 3 0 11-6 0 3 3 0 0o16 0z'
+    />
   </svg>
 );
 
 const GraduationCap = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path d="M12 14l9-5-9-5-9 5 9 5z"  />
-    <path d="M12 14l6.16-3.422a12.083 12.083 0 0o1.665 6.479A11.952 11.952 0 0o012 20.0o55a11.952 11.952 0 0o0-6.824-2.998 12.0o78 12.0o78 0 0o1.665-6.479L12 14z"  />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 0o1.665 6.479A11.952 11.952 0 0o012 20.0o55a11.952 11.952 0 0o0-6.824-2.998 12.0o78 12.0o78 0 0o1.665-6.479L12 14z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path d='M12 14l9-5-9-5-9 5 9 5z' />
+    <path d='M12 14l6.16-3.422a12.083 12.083 0 0o1.665 6.479A11.952 11.952 0 0o012 20.0o55a11.952 11.952 0 0o0-6.824-2.998 12.0o78 12.0o78 0 0o1.665-6.479L12 14z' />
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 0o1.665 6.479A11.952 11.952 0 0o012 20.0o55a11.952 11.952 0 0o0-6.824-2.998 12.0o78 12.0o78 0 0o1.665-6.479L12 14z'
+    />
   </svg>
 );
 
 const Users = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0o112 0v1zm0 0h6v-1a6 6 0 0o0-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 0o15 0z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0o112 0v1zm0 0h6v-1a6 6 0 0o0-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 0o15 0z'
+    />
   </svg>
 );
 
 const User = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 0o18 0zM12 14a7 7 0 0o0-7 7h14a7 7 0 0o0-7-7z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M16 7a4 4 0 11-8 0 4 4 0 0o18 0zM12 14a7 7 0 0o0-7 7h14a7 7 0 0o0-7-7z'
+    />
   </svg>
 );
 
 const Briefcase = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0o112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 0o0-2-2h-4a2 2 0 0o0-2 2v2m4 6h.0o1M5 20h14a2 2 0 0o02-2V8a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M21 13.255A23.931 23.931 0 0o112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 0o0-2-2h-4a2 2 0 0o0-2 2v2m4 6h.0o1M5 20h14a2 2 0 0o02-2V8a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z'
+    />
   </svg>
 );
 
 const Newspaper = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 0o1-2-2V6a2 2 0 0o12-2h10a2 2 0 0o12 2v1m2 13a2 2 0 0o1-2-2V7m2 13a2 2 0 0o02-2V9a2 2 0 0o0-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M19 20H5a2 2 0 0o1-2-2V6a2 2 0 0o12-2h10a2 2 0 0o12 2v1m2 13a2 2 0 0o1-2-2V7m2 13a2 2 0 0o02-2V9a2 2 0 0o0-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z'
+    />
   </svg>
 );
 
 const Mail = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 0o02.22 0L21 8M5 19h14a2 2 0 0o02-2V7a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M3 8l7.89 4.26a2 2 0 0o02.22 0L21 8M5 19h14a2 2 0 0o02-2V7a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v10a2 2 0 0o02 2z'
+    />
   </svg>
 );
 
 const FileText = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 0o1-2-2V5a2 2 0 0o12-2h5.586a1 1 0 0o1.70o7.293l5.414 5.414a1 1 0 0o1.293.70o7V19a2 2 0 0o1-2 2z"  />
+  <svg
+    className={className}
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M9 12h6m-6 4h6m2 5H7a2 2 0 0o1-2-2V5a2 2 0 0o12-2h5.586a1 1 0 0o1.70o7.293l5.414 5.414a1 1 0 0o1.293.70o7V19a2 2 0 0o1-2 2z'
+    />
   </svg>
 );
 
@@ -88,7 +215,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5"  />,
+    icon: <Brain className='w-5 h-5' />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     featured: true,
@@ -97,37 +224,37 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'AI Consciousness Evolution 20o29',
         href: '/ai-consciousness-evolution-20o29',
-        icon: <Brain className="w-4 h-4"  />,
+        icon: <Brain className='w-4 h-4' />,
         description: 'Breakthrough AI consciousness platform',
-        category: 'AI'
+        category: 'AI',
       },
       {
         name: 'AI Emotional Intelligence Training',
         href: '/ai-emotional-intelligence-training',
-        icon: <Brain className="w-4 h-4"  />,
+        icon: <Brain className='w-4 h-4' />,
         description: 'Train AI systems to understand emotions',
-        category: 'AI'
+        category: 'AI',
       },
       {
         name: 'AI Autonomous Research Assistant',
         href: '/ai-autonomous-research-assistant',
-        icon: <Brain className="w-4 h-4"  />,
+        icon: <Brain className='w-4 h-4' />,
         description: 'Fully autonomous AI research agent',
-        category: 'AI'
+        category: 'AI',
       },
       {
         name: 'AI Predictive Maintenance',
         href: '/ai-predictive-maintenance-platform',
-        icon: <Brain className="w-4 h-4"  />,
+        icon: <Brain className='w-4 h-4' />,
         description: 'Predict equipment failures with AI',
-        category: 'AI'
-      }
-    ]
+        category: 'AI',
+      },
+    ],
   },
   {
     name: 'Enterprise IT Solutions',
     href: '/it-services',
-    icon: <Shield className="w-5 h-5"  />,
+    icon: <Shield className='w-5 h-5' />,
     description: 'Advanced enterprise infrastructure solutions',
     badge: 'Enterprise',
     category: 'IT',
@@ -135,37 +262,37 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Enterprise Cybersecurity Suite 20o29',
         href: '/enterprise-cybersecurity-suite-20o29',
-        icon: <Shield className="w-4 h-4"  />,
+        icon: <Shield className='w-4 h-4' />,
         description: 'Next-generation enterprise cybersecurity',
-        category: 'IT'
+        category: 'IT',
       },
       {
         name: 'Cloud Infrastructure Automation',
         href: '/cloud-infrastructure-automation',
-        icon: <Shield className="w-4 h-4"  />,
+        icon: <Shield className='w-4 h-4' />,
         description: 'Automate cloud infrastructure management',
-        category: 'IT'
+        category: 'IT',
       },
       {
         name: 'Data Center Optimization',
         href: '/data-center-optimization-suite',
-        icon: <Shield className="w-4 h-4"  />,
+        icon: <Shield className='w-4 h-4' />,
         description: 'Optimize data center performance with AI',
-        category: 'IT'
+        category: 'IT',
       },
       {
         name: 'Network Performance Monitoring',
         href: '/network-performance-monitoring',
-        icon: <Shield className="w-4 h-4"  />,
+        icon: <Shield className='w-4 h-4' />,
         description: 'Monitor and optimize network performance',
-        category: 'IT'
-      }
-    ]
+        category: 'IT',
+      },
+    ],
   },
   {
     name: 'Micro SAAS Solutions',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5"  />,
+    icon: <Rocket className='w-5 h-5' />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Business',
     category: 'SAAS',
@@ -173,37 +300,37 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'AI-Powered CRM Automation',
         href: '/ai-powered-crm-automation',
-        icon: <Rocket className="w-4 h-4"  />,
+        icon: <Rocket className='w-4 h-4' />,
         description: 'Automate your CRM with intelligent AI workflows',
-        category: 'SAAS'
+        category: 'SAAS',
       },
       {
         name: 'Smart Inventory Management',
         href: '/smart-inventory-management',
-        icon: <Rocket className="w-4 h-4"  />,
+        icon: <Rocket className='w-4 h-4' />,
         description: 'Optimize inventory with AI-powered forecasting',
-        category: 'SAAS'
+        category: 'SAAS',
       },
       {
         name: 'Automated Accounting Platform',
         href: '/automated-accounting-platform',
-        icon: <Rocket className="w-4 h-4"  />,
+        icon: <Rocket className='w-4 h-4' />,
         description: 'Streamline accounting with intelligent automation',
-        category: 'SAAS'
+        category: 'SAAS',
       },
       {
         name: 'Intelligent Project Management',
         href: '/intelligent-project-management',
-        icon: <Rocket className="w-4 h-4"  />,
+        icon: <Rocket className='w-4 h-4' />,
         description: 'Manage projects with AI-powered insights',
-        category: 'SAAS'
-      }
-    ]
+        category: 'SAAS',
+      },
+    ],
   },
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5"  />,
+    icon: <Atom className='w-5 h-5' />,
     description: 'Cutting-edge quantum and emerging technologies',
     badge: 'Future',
     category: 'Quantum',
@@ -211,166 +338,166 @@ const navigationItems: NavigationItem[] = [
       {
         name: 'Quantum Cybersecurity',
         href: '/quantum-cybersecurity-services',
-        icon: <Atom className="w-4 h-4"  />,
+        icon: <Atom className='w-4 h-4' />,
         description: 'Quantum-resistant security solutions',
-        category: 'Quantum'
+        category: 'Quantum',
       },
       {
         name: 'Quantum AI Fusion',
         href: '/quantum-ai-fusion',
-        icon: <Atom className="w-4 h-4"  />,
+        icon: <Atom className='w-4 h-4' />,
         description: 'Quantum AI hybrid computing platform',
-        category: 'Quantum'
+        category: 'Quantum',
       },
       {
         name: 'Space Technology',
         href: '/space-technology',
-        icon: <Atom className="w-4 h-4"  />,
+        icon: <Atom className='w-4 h-4' />,
         description: 'Advanced space technology solutions',
-        category: 'Quantum'
-      }
-    ]
+        category: 'Quantum',
+      },
+    ],
   },
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5"  />,
+    icon: <BookOpen className='w-5 h-5' />,
     description: 'Knowledge base and learning resources',
     category: 'Resources',
     children: [
       {
         name: 'Blog',
         href: '/blog',
-        icon: <BookOpen className="w-4 h-4"  />,
+        icon: <BookOpen className='w-4 h-4' />,
         description: 'Latest insights and industry trends',
-        category: 'Resources'
+        category: 'Resources',
       },
       {
         name: 'Case Studies',
         href: '/case-studies',
-        icon: <BookOpen className="w-4 h-4"  />,
+        icon: <BookOpen className='w-4 h-4' />,
         description: 'Real-world implementation success stories',
-        category: 'Resources'
+        category: 'Resources',
       },
       {
         name: 'Documentation',
         href: '/docs',
-        icon: <BookOpen className="w-4 h-4"  />,
+        icon: <BookOpen className='w-4 h-4' />,
         description: 'Technical documentation and guides',
-        category: 'Resources'
-      }
-    ]
+        category: 'Resources',
+      },
+    ],
   },
   {
     name: 'Company',
     href: '/about',
-    icon: <Building className="w-5 h-5"  />,
+    icon: <Building className='w-5 h-5' />,
     description: 'Learn about Zion Tech Group',
     category: 'Company',
     children: [
       {
         name: 'About Us',
         href: '/about',
-        icon: <Building className="w-4 h-4"  />,
+        icon: <Building className='w-4 h-4' />,
         description: 'Our mission and vision',
-        category: 'Company'
+        category: 'Company',
       },
       {
         name: 'Careers',
         href: '/careers',
-        icon: <Building className="w-4 h-4"  />,
+        icon: <Building className='w-4 h-4' />,
         description: 'Join our team',
-        category: 'Company'
+        category: 'Company',
       },
       {
         name: 'Contact',
         href: '/contact',
-        icon: <Building className="w-4 h-4"  />,
+        icon: <Building className='w-4 h-4' />,
         description: 'Get in touch with us',
-        category: 'Company'
-      }
-    ]
+        category: 'Company',
+      },
+    ],
   },
   {
     name: 'Research & Innovation',
     href: '/research',
-    icon: <Brain className="w-5 h-5"  />,
+    icon: <Brain className='w-5 h-5' />,
     description: 'Cutting-edge research and innovation',
     badge: 'Innovation',
     category: 'research',
     children: [
-      { 
-        name: 'AI Research', 
-        href: '/research#ai', 
+      {
+        name: 'AI Research',
+        href: '/research#ai',
         description: 'Artificial intelligence research',
-        icon: <Brain className="w-4 h-4"  />
+        icon: <Brain className='w-4 h-4' />,
       },
-      { 
-        name: 'Quantum Research', 
-        href: '/research#quantum', 
+      {
+        name: 'Quantum Research',
+        href: '/research#quantum',
         description: 'Quantum computing research',
-        icon: <Cpu className="w-4 h-4"  />
+        icon: <Cpu className='w-4 h-4' />,
       },
-      { 
-        name: 'Space Research', 
-        href: '/research#space', 
+      {
+        name: 'Space Research',
+        href: '/research#space',
         description: 'Space technology research',
-        icon: <Rocket className="w-4 h-4"  />
+        icon: <Rocket className='w-4 h-4' />,
       },
-      { 
-        name: 'Biotech Research', 
-        href: '/research#biotech', 
+      {
+        name: 'Biotech Research',
+        href: '/research#biotech',
         description: 'Biotechnology research',
-        icon: <Target className="w-4 h-4"  />
+        icon: <Target className='w-4 h-4' />,
       },
-      { 
-        name: 'Publications', 
-        href: '/research#publications', 
+      {
+        name: 'Publications',
+        href: '/research#publications',
         description: 'Research papers and publications',
-        icon: <FileText className="w-4 h-4"  />
-      }
-    ]
+        icon: <FileText className='w-4 h-4' />,
+      },
+    ],
   },
   {
     name: 'Company',
     href: '/about',
-    icon: <Building className="w-5 h-5"  />,
+    icon: <Building className='w-5 h-5' />,
     description: 'About Zion Tech Group',
     badge: 'Company',
     category: 'company',
     children: [
-      { 
-        name: 'About Us', 
-        href: '/about', 
+      {
+        name: 'About Us',
+        href: '/about',
         description: 'Learn about our company',
-        icon: <Users className="w-4 h-4"  />
+        icon: <Users className='w-4 h-4' />,
       },
-      { 
-        name: 'Leadership Team', 
-        href: '/about#leadership', 
+      {
+        name: 'Leadership Team',
+        href: '/about#leadership',
         description: 'Meet our leadership',
-        icon: <User className="w-4 h-4"  />
+        icon: <User className='w-4 h-4' />,
       },
-      { 
-        name: 'Careers', 
-        href: '/careers', 
+      {
+        name: 'Careers',
+        href: '/careers',
         description: 'Join our team',
-        icon: <Briefcase className="w-4 h-4"  />
+        icon: <Briefcase className='w-4 h-4' />,
       },
-      { 
-        name: 'News & Updates', 
-        href: '/news', 
+      {
+        name: 'News & Updates',
+        href: '/news',
         description: 'Latest company news',
-        icon: <Newspaper className="w-4 h-4"  />
+        icon: <Newspaper className='w-4 h-4' />,
       },
-      { 
-        name: 'Contact Us', 
-        href: '/contact', 
+      {
+        name: 'Contact Us',
+        href: '/contact',
         description: 'Get in touch',
-        icon: <Mail className="w-4 h-4"  />
-      }
-    ]
-  }
+        icon: <Mail className='w-4 h-4' />,
+      },
+    ],
+  },
 ];
 
 // Normalize href to ensure proper routing
@@ -384,9 +511,9 @@ interface UltraFuturisticNavigation20o37Props {
   'aria-expanded'?: boolean;
 }
 
-export default function UltraFuturisticNavigation20o37({ 
-  onMenuToggle, 
-  'aria-expanded': ariaExpanded 
+export default function UltraFuturisticNavigation20o37({
+  onMenuToggle,
+  'aria-expanded': ariaExpanded,
 }: UltraFuturisticNavigation20o37Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -417,56 +544,60 @@ export default function UltraFuturisticNavigation20o37({
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-md border-b border-cyan-50o0/20' 
+        isScrolled
+          ? 'bg-black/90 backdrop-blur-md border-b border-cyan-50o0/20'
           : 'bg-transparent'
       }`}
-      role="navigation"
-      aria-label="Main navigation"
+      role='navigation'
+      aria-label='Main navigation'
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between items-center h-20'>
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link 
-              href="/" 
-              className="flex items-center space-x-2 group"
+          <div className='flex-shrink-0'>
+            <Link
+              href='/'
+              className='flex items-center space-x-2 group'
               onClick={closeAllDropdowns}
             >
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
-                <Globe className="w-6 h-6 text-white"  />
+              <div className='w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0'>
+                <Globe className='w-6 h-6 text-white' />
               </div>
-              <div className="hidden sm:block">
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
+              <div className='hidden sm:block'>
+                <span className='text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </span>
-                <p className="text-xs text-gray-40o0">Future Technology Solutions</p>
+                <p className='text-xs text-gray-40o0'>
+                  Future Technology Solutions
+                </p>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
+          <div className='hidden lg:flex items-center space-x-8'>
+            {navigationItems.map(item => (
+              <div key={item.name} className='relative group'>
                 <button
                   onClick={() => handleDropdownToggle(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
+                  className='flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0'
                   aria-expanded={activeDropdown === item.name}
-                  aria-haspopup="true"
+                  aria-haspopup='true'
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   {item.badge && (
-                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full">
+                    <span className='px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full'>
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
-                    activeDropdown === item.name ? 'rotate-180' : ''
-                  }`}  />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-20o0 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`}
+                  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -477,35 +608,39 @@ export default function UltraFuturisticNavigation20o37({
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-cyan-50o0/20 rounded-lg shadow-2xl z-50"
-                      role="menu"
-                      aria-orientation="vertical"
+                      className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-cyan-50o0/20 rounded-lg shadow-2xl z-50'
+                      role='menu'
+                      aria-orientation='vertical'
                       aria-labelledby={`${item.name}-button`}
                     >
-                      <div className="p-4">
-                        <div className="mb-3">
-                          <h3 className="text-lg font-semibold text-white mb-1">{item.name}</h3>
-                          <p className="text-sm text-gray-40o0">{item.description}</p>
+                      <div className='p-4'>
+                        <div className='mb-3'>
+                          <h3 className='text-lg font-semibold text-white mb-1'>
+                            {item.name}
+                          </h3>
+                          <p className='text-sm text-gray-40o0'>
+                            {item.description}
+                          </p>
                         </div>
-                        
+
                         {item.children && (
-                          <div className="space-y-2">
-                            {item.children.map((child) => (
+                          <div className='space-y-2'>
+                            {item.children.map(child => (
                               <Link
                                 key={child.name}
                                 href={normalizeHref(child.href)}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-50o0/10 transition-colors duration-20o0 group"
+                                className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-50o0/10 transition-colors duration-20o0 group'
                                 onClick={closeAllDropdowns}
-                                role="menuitem"
+                                role='menuitem'
                               >
-                                <div className="text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">
+                                <div className='text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0'>
                                   {child.icon}
                                 </div>
                                 <div>
-                                  <div className="text-sm font-medium text-white group-hover:text-cyan-30o0 transition-colors duration-20o0">
+                                  <div className='text-sm font-medium text-white group-hover:text-cyan-30o0 transition-colors duration-20o0'>
                                     {child.name}
                                   </div>
-                                  <div className="text-xs text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-20o0">
+                                  <div className='text-xs text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-20o0'>
                                     {child.description}
                                   </div>
                                 </div>
@@ -513,15 +648,15 @@ export default function UltraFuturisticNavigation20o37({
                             ))}
                           </div>
                         )}
-                        
+
                         {item.featured && (
-                          <div className="mt-4 pt-4 border-t border-cyan-50o0/20">
+                          <div className='mt-4 pt-4 border-t border-cyan-50o0/20'>
                             <Link
                               href={normalizeHref(item.href)}
-                              className="flex items-center justify-center space-x-2 w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5"
+                              className='flex items-center justify-center space-x-2 w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5'
                               onClick={closeAllDropdowns}
                             >
-                              <Star className="w-4 h-4"  />
+                              <Star className='w-4 h-4' />
                               <span>Explore {item.name}</span>
                             </Link>
                           </div>
@@ -535,33 +670,33 @@ export default function UltraFuturisticNavigation20o37({
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className='hidden lg:flex items-center space-x-4'>
             <Link
-              href="/contact"
-              className="px-4 py-2 text-cyan-40o0 hover:text-white transition-colors duration-20o0"
+              href='/contact'
+              className='px-4 py-2 text-cyan-40o0 hover:text-white transition-colors duration-20o0'
             >
               Contact
             </Link>
             <Link
-              href="/get-started"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5"
+              href='/get-started'
+              className='px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 transform hover:scale-10o5'
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className='lg:hidden'>
             <button
               onClick={toggleMenu}
-              className="p-2 text-gray-30o0 hover:text-white transition-colors duration-20o0"
+              className='p-2 text-gray-30o0 hover:text-white transition-colors duration-20o0'
               aria-expanded={ariaExpanded}
-              aria-label="Toggle navigation menu"
+              aria-label='Toggle navigation menu'
             >
               {isOpen ? (
-                <X className="w-6 h-6"  />
+                <X className='w-6 h-6' />
               ) : (
-                <Menu className="w-6 h-6"  />
+                <Menu className='w-6 h-6' />
               )}
             </button>
           </div>
@@ -576,29 +711,31 @@ export default function UltraFuturisticNavigation20o37({
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-50o0/20"
+            className='lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-50o0/20'
           >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="space-y-2">
+            <div className='px-4 py-6 space-y-4'>
+              {navigationItems.map(item => (
+                <div key={item.name} className='space-y-2'>
                   <button
                     onClick={() => handleDropdownToggle(item.name)}
-                    className="flex items-center justify-between w-full text-left px-4 py-3 text-gray-30o0 hover:text-white transition-colors duration-20o0"
+                    className='flex items-center justify-between w-full text-left px-4 py-3 text-gray-30o0 hover:text-white transition-colors duration-20o0'
                     aria-expanded={activeDropdown === item.name}
-                    aria-haspopup="true"
+                    aria-haspopup='true'
                   >
-                    <div className="flex items-center space-x-3">
+                    <div className='flex items-center space-x-3'>
                       {item.icon}
                       <span>{item.name}</span>
                       {item.badge && (
-                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full">
+                        <span className='px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full'>
                           {item.badge}
                         </span>
                       )}
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`}  />
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform duration-20o0 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`}
+                    />
                   </button>
 
                   {/* Mobile Dropdown */}
@@ -609,17 +746,17 @@ export default function UltraFuturisticNavigation20o37({
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="ml-8 space-y-2"
+                        className='ml-8 space-y-2'
                       >
-                        {item.children.map((child) => (
+                        {item.children.map(child => (
                           <Link
                             key={child.name}
                             href={normalizeHref(child.href)}
-                            className="flex items-center space-x-3 px-4 py-2 text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0"
+                            className='flex items-center space-x-3 px-4 py-2 text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0'
                             onClick={closeAllDropdowns}
                           >
                             {child.icon}
-                            <span className="text-sm">{child.name}</span>
+                            <span className='text-sm'>{child.name}</span>
                           </Link>
                         ))}
                       </motion.div>
@@ -629,17 +766,17 @@ export default function UltraFuturisticNavigation20o37({
               ))}
 
               {/* Mobile CTA */}
-              <div className="pt-4 border-t border-cyan-50o0/20 space-y-3">
+              <div className='pt-4 border-t border-cyan-50o0/20 space-y-3'>
                 <Link
-                  href="/contact"
-                  className="block w-full px-4 py-3 text-center text-cyan-40o0 hover:text-white transition-colors duration-20o0"
+                  href='/contact'
+                  className='block w-full px-4 py-3 text-center text-cyan-40o0 hover:text-white transition-colors duration-20o0'
                   onClick={closeAllDropdowns}
                 >
                   Contact Us
                 </Link>
                 <Link
-                  href="/get-started"
-                  className="block w-full px-4 py-3 text-center bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0"
+                  href='/get-started'
+                  className='block w-full px-4 py-3 text-center bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0'
                   onClick={closeAllDropdowns}
                 >
                   Get Started
@@ -652,11 +789,11 @@ export default function UltraFuturisticNavigation20o37({
 
       {/* Backdrop for mobile menu */}
       {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        <div
+          className='fixed inset-0 bg-black/50 z-40 lg:hidden'
           onClick={closeAllDropdowns}
-          aria-hidden="true"
-         />
+          aria-hidden='true'
+        />
       )}
     </nav>
   );

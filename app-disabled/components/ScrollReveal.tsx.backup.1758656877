@@ -1,4 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/ScrollReveal.tsx
 <<<<<<< HEAD
 'use client';
 
@@ -22,7 +21,6 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
 import React from 'react';
 
 const ScrollReveal: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-=======
   origin?: 'top' | 'bottom' | 'left' | 'right';
   delay?: number;
 }
@@ -33,7 +31,6 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({ children }) => {
 
 export default ScrollReveal;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 'use client';
 
 import React, { useEffect, useRef } from 'react';

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { ;
   Menu, ;
   X, ;
@@ -61,7 +60,6 @@ import { ;
 const "EnhancedHeaderNew": "React.FC = ("props": any) => {;
   const [mobileMenuOpen", setMobileMenuOpen] = useState<any>(false);
   const [searchQuery, setSearchQuery] = useState<any>('');
-=======
 import {
   Menu,
   X,
@@ -146,7 +144,6 @@ const "EnhancedHeaderNew": React.FC = (props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const handleSearch = async ("e": React.FormEvent) => {
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/EnhancedHeaderNew.tsx
     e.preventDefault();

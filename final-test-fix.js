@@ -6,7 +6,7 @@ function fixTestFile(filePath) {
     // Create a proper test file structure
     const fileName = path.basename(filePath, '.test.js');
     const componentName = fileName.replace('.test', '').replace('.dynamic', '');
-    
+
     const content = `import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ${componentName} from '../components/${componentName}';
@@ -30,7 +30,7 @@ describe('${componentName}', () => {
   });
 });
 `;
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {

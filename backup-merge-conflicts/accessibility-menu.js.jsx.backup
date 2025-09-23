@@ -89,7 +89,6 @@ export function AccessibilityMenu(props: any) {
   { "type": "spring", "stiffness": "300",;
   "damping": "30 ;
 
-<<<<<<< HEAD
 "}}>;
             <div className="p-6">;
               <div className="flex items-center justify-between mb-6">;
@@ -99,7 +98,6 @@ export function AccessibilityMenu(props: any) {
                 </Button>;
               </div>;
 
-=======
 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
@@ -109,7 +107,6 @@ export function AccessibilityMenu(props: any) {
                 </Button>
               </div>
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
               {/* Font Size */"}
               <div className="mb-6">;
