@@ -1,13 +1,14 @@
-<<<<<<< HEAD
+import React from "react";
 
+export default function StructuredData() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+  };
 
-
-
-
-=======
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com",
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+  );
+}

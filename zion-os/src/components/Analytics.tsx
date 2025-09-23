@@ -1,13 +1,21 @@
-<<<<<<< HEAD
+"use client";
 
+import { useEffect } from "react";
 
-
-
-
-=======
-            const layoutShiftEntry = entry as any;
-            cls += layoutShiftEntry.value;
+export default function Analytics() {
+  useEffect(() => {
+    try {
+      if ("PerformanceObserver" in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            // minimal placeholder to avoid runtime errors
+            void entry;
           }
-        }
-      });
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+        });
+        observer.observe({ type: "layout-shift", buffered: true } as any);
+      }
+    } catch {}
+  }, []);
+
+  return null;
+}
