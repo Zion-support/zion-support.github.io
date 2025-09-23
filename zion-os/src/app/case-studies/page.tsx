@@ -1,16 +1,4 @@
 export default function CaseStudiesPage() {
-<<<<<<< HEAD
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-3xl font-bold mb-4">Case Studies</h1>
-				<p className="text-zinc-500">Explore success stories and real-world implementations.</p>
-			</div>
-		</div>
-	);
-}
-
-=======
   return (
     <div className="min-h-screen py-20">
       {/* Hero Section */}
@@ -206,11 +194,11 @@ export default function CaseStudiesPage() {
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <div className="text-white font-semibold">25%</div>
-                  <div className="text-white/60">Fuel Cost Reduction</div>
+                  <div className="text-white/60">Delivery Time</div>
                 </div>
                 <div>
                   <div className="text-white font-semibold">20%</div>
-                  <div className="text-white/60">Delivery Time</div>
+                  <div className="text-white/60">Fuel Cost Reduction</div>
                 </div>
               </div>
               <a href="/case-studies/autonomous-fleet" className="text-red-400 hover:text-red-300 font-medium text-sm">
@@ -360,4 +348,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
