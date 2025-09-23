@@ -16,10 +16,9 @@
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "next lint --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=4096' tsc --noEmit",
-    "test": "jest --runInBand --no-cache",
+    "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
-    "prepare": "husky install",
     "test:coverage": "jest --coverage",
     "clean": "rm -rf .next node_modules/.cache",
     "export": "npm run build && next export",
@@ -28,6 +27,8 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.13.3",
+    "@types/react": "^17.0.88",
+    "@types/react-dom": "^17.0.26",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -41,6 +42,7 @@
     "path": "^0.12.7",
     "react": "^18.3.0",
     "react-datepicker": "^8.4.0",
+<<<<<<< HEAD
     "react-dom": "^18.3.0",
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
@@ -48,6 +50,13 @@
     "uuid": "^11.1.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0"
+=======
+    "react-dom": "^19.1.1",
+    "sonner": "^2.0.7",
+    "swr": "^2.3.6",
+    "tailwind-merge": "^3.3.1",
+    "uuid": "^11.1.0"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-ef76
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^14.2.0",

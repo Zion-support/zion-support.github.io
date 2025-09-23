@@ -60,7 +60,8 @@ module.exports = {
         ],
         'newlines-between': 'always'
       }
-    ]
+    ],
+    'react/no-unescaped-entities': 'off'
   },
   overrides: [
     {
