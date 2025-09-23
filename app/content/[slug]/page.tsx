@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 import { blogPosts } from '../../../src/data/blog-posts.js';
 
-export default function ContentPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find(p => p.slug === params.slug);
+export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = blogPosts.find(p => p.slug === slug);
   if (!post) {
     notFound();
   }
