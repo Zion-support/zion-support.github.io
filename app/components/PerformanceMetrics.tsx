@@ -1,13 +1,10 @@
-'use client';
+<<<<<<< HEAD
+=======
+"use client";
 
 import React from 'react';
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 export default function PerformanceMetrics() {
-  return (
-    <div className="bg-white/10 p-6 rounded-xl border border-white/20 text-white">
-      <h3 className="text-lg font-semibold mb-2">Performance Metrics</h3>
-      <p className="text-sm opacity-80">Component coming soon.</p>
-    </div>
-  );
+	return null;
 }
-

@@ -46,6 +46,7 @@
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "**/node_modules/**",
     ".next/cache",
     "dist",
@@ -59,10 +60,20 @@
     "lib",
     "types",
     "utils",
+=======
+    "data_backup",
+    "backup",
+    "backups",
+    "pages_backup_conflict",
+    "apps.backup",
+    "corrupted-files-backup",
+    "lib_backup",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
     "zion-os",
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+<<<<<<< HEAD
     "zion-os/**",
     "server",
     "server/**",
@@ -99,5 +110,8 @@
     "zion-ai-assistant/**",
     "zion-os.disabled",
     "zion-os.disabled/**"
+=======
+    "zion-os/**"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
   ]
 }

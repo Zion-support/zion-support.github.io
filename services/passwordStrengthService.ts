@@ -73,7 +73,7 @@ class PasswordStrengthService {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+        hasSymbols: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password),
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),

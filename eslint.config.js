@@ -1,4 +1,65 @@
+// Flat ESLint config for ESLint v9+
+import eslintJs from '@eslint/js';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'coverage/**',
+      'automation/**',
+      'backups/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-problematic-files/**',
+      'api/**',
+      'app_backup/**',
+      'app-disabled/**',
+      'app-minimal/**',
+      'apps.backup/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'pages-disabled/**',
+      'pages.bak/**',
+      'pages_backup_before_cleanup/**',
+      'pages.broken/**',
+      'pages.corrupted*',
+      'recovered-branches/**',
+      'server/**',
+      'temp_backup/**',
+      'temp_exclude/**',
+      'tests.disabled/**',
+      'ts_files_backup/**',
+      'zion-os/**',
+      'zion-os.*',
+    ],
+  },
+  eslintJs.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    plugins: {
+      react: reactPlugin,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+    },
+    settings: { react: { version: 'detect' } },
+  },
+];
+
 import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -8,7 +69,9 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
+<<<<<<< HEAD
     files: [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -33,11 +96,16 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
+=======
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+        ecmaFeatures: { jsx: true }
+      },
+      globals: { ...globals.browser, ...globals.node }
     },
     plugins: {
       react,
@@ -84,6 +152,7 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
       '*.config.js',
       '*.config.ts',
       'scripts/**',
@@ -105,6 +174,25 @@ export default [
       'zion-website/.next/**',
       'zion-os/.next/**',
       // Exclude non-root apps and alt projects
+=======
+      'coverage/**',
+      'public/**',
+      'netlify/**',
+      '**/*.config.*',
+      'scripts/**',
+      'automation/**',
+      'apps/**',
+      'apps.backup/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
+      'backup-problematic-files/**',
+      'corrupted*/**',
+      'recovered-branches/**',
+      'ts_files_backup/**',
+      'zion-os/**',
+      'zion-website/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
       'zion.app/**',
       'zion_academy/**',
       // Project folders to ignore from lint scope
@@ -184,6 +272,7 @@ export default [
       'test-*.js',
       '**/static/**',
       '**/*.min.js',
+<<<<<<< HEAD
       // Additional problematic files
       'fix-*.js',
       'merge-*.js',
@@ -229,6 +318,40 @@ export default [
       'debug-*.js',
       'deployment/**',
       'deployments/**'
+=======
+      // Additional ignores to avoid linting non-root projects and backup/corrupted files
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'utils/**',
+      'utils.disabled/**',
+      // Exclude legacy src trees and backups
+      'src/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'src.broken/**',
+      'src-corrupted/**',
+      'src.corrupted/**',
+      'src/pages_backup/**',
+      'src.disabled/**',
+      'ts_files_backup/**',
+      'types/**',
+      'types.disabled/**',
+      'temp-*',
+      'temp_*',
+      'temp/**',
+      'temp-backup/**',
+      'temp_backup/**',
+      'temp_backup_build/**',
+      'temp_backup_runtime_fix/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_components.disabled/**',
+      'temp-disabled-pages/**',
+      'temp_exclude/**',
+      'temp-problematic-pages/**'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c
     ]
   }
 ];

@@ -10,13 +10,32 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint src pages app lib components hooks --fix",
     "type-check": "tsc --noEmit",
+=======
+    "lint": "eslint app",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "lint:fix": "eslint app --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
     "test": "jest --runInBand --passWithNoTests --no-cache",
+=======
+    "lint": "eslint src app components",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "lint:fix": "eslint . --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc -p tsconfig.app.json --noEmit",
+    "test": "jest -c jest.config.smoke.cjs --runInBand --passWithNoTests --no-cache",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-10d8
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
@@ -29,7 +48,10 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
+<<<<<<< HEAD
     "@types/react-dom": "^18.3.7",
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "0.7.0",
@@ -60,13 +82,25 @@
     "@eslint/js": "^9.36.0",
     "@headlessui/react": "^2.2.8",
     "@next/bundle-analyzer": "^14.2.0",
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
     "@types/node": "^16.18.126",
+<<<<<<< HEAD
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
+=======
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^9.36.0",
@@ -81,7 +115,12 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
+<<<<<<< HEAD
     "typescript": "^5.9.2"
+=======
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.44.1"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
@@ -92,6 +131,7 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
+<<<<<<< HEAD
       "<rootDir>/automation/",
       "<rootDir>/.temp_backup_components/",
       "<rootDir>/recovered-branches/",
@@ -99,6 +139,17 @@
       "<rootDir>/components/apps/",
       "<rootDir>/backup-problematic-files/",
       "<rootDir>/server/"
+=======
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/backup/.*",
+      "<rootDir>/backups/.*",
+      "<rootDir>/backup-merge-conflicts/.*",
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -108,7 +159,8 @@
       "<rootDir>/backup/.*",
       "<rootDir>/backups/.*",
       "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
@@ -164,5 +216,9 @@
       "<rootDir>/e2e/"
     ]
   },
+<<<<<<< HEAD
   "type": "module"
+=======
+  "packageManager": "npm@11.6.0"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 }

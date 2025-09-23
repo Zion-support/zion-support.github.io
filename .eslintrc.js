@@ -33,6 +33,8 @@ module.exports = {
 		'build/',
 		'coverage/',
 		'automation/',
+		'components/',
+		'hooks/',
 		'backups/',
 		'backup/',
 		'backup-merge-conflicts/',

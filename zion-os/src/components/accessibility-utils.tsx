@@ -40,11 +40,25 @@ export function useFocusTrap(enabled: boolean = true) {
     const first = focusable[0] as HTMLElement;
     const last = focusable[focusable.length - 1] as HTMLElement;
     const handleKeyDown = (e: KeyboardEvent) => {
+<<<<<<< HEAD
       if (e.key !== "Tab") return;
       if (e.shiftKey) {
         if (document.activeElement === first) {
           e.preventDefault();
           last.focus();
+=======
+      if (e.key === "Tab") {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
         }
       } else if (document.activeElement === last) {
         e.preventDefault();
@@ -96,10 +110,20 @@ export function Announcement({
 }) {
   const [announcements, setAnnouncements] = useState<string[]>([]);
   useEffect(() => {
+<<<<<<< HEAD
     if (!message) return;
     setAnnouncements(prev => [...prev, message]);
     const timer = setTimeout(() => setAnnouncements(prev => prev.slice(1)), 1000);
     return () => clearTimeout(timer);
+=======
+    if (message) {
+      setAnnouncements(prev => [...prev, message]);
+      const timer = setTimeout(() => {
+        setAnnouncements(prev => prev.slice(1));
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
   }, [message]);
   return (
     <div aria-live={priority} aria-atomic="true" className="sr-only">
@@ -176,4 +200,7 @@ export function CollapsibleSection({
     </div>
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
