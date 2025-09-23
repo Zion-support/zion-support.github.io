@@ -11,7 +11,7 @@ interface MobileResponsiveLayoutProps {
 
 const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
   children,
-  enableMobileOptimization = true,
+  enableMobileOptimization: _enableMobileOptimization = true,
   enableTouchGestures = true,
   enableSwipeNavigation = true
 }) => {
@@ -59,8 +59,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     const isDownSwipe = deltaY < -50;
 
     if (enableSwipeNavigation) {
-      if (isLeftSwipe) console.log('Swipe left - next content');
-      if (isRightSwipe) console.log('Swipe right - previous content');
+      // Hook for navigation can be added here
     }
 
     if (isUpSwipe) window.scrollTo({ top: 0, behavior: 'smooth' });

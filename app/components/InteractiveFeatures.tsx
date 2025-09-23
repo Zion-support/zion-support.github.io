@@ -17,9 +17,24 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
 }) => {
   const [isROICalculatorOpen, setIsROICalculatorOpen] = useState(false);
   const [isLiveChatOpen, setIsLiveChatOpen] = useState(false);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
+  interface RecommendationItem {
+    id: number;
+    title: string;
+    type: string;
+    matchScore: number;
+    reason: string;
+  }
+
+  interface ChatMessageItem {
+    id: number;
+    text: string;
+    sender: 'user' | 'ai';
+    timestamp: Date;
+  }
+
+  const [recommendations, setRecommendations] = useState<RecommendationItem[]>([]);
   const [progress, setProgress] = useState(0);
-  const [chatMessages, setChatMessages] = useState<any[]>([]);
+  const [chatMessages, setChatMessages] = useState<ChatMessageItem[]>([]);
   const [chatInput, setChatInput] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
 
@@ -34,7 +49,6 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
     });
 
     const calculateROI = () => {
-      const currentProfit = formData.currentRevenue - formData.currentCosts;
       const efficiencyGain = (formData.currentRevenue * formData.expectedEfficiency) / 100;
       const costSavings = (formData.currentCosts * formData.expectedSavings) / 100;
       const totalGain = efficiencyGain + costSavings;
