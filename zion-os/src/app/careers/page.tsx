@@ -1,217 +1,66 @@
 export const metadata = {
   title: 'Careers - Zion Tech Group',
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
+  description: 'Join our team of innovators and build the future of technology with Zion Tech Group.',
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
-<<<<<<< HEAD
 export default function CareersPage() {
-	const openPositions = [
-		{
-			title: 'Senior AI Research Engineer',
-			department: 'Research & Development',
-			location: 'Remote / Global',
-			type: 'Full-time',
-			description:
-				'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-			requirements: [
-				'PhD in Computer Science, AI, or related field',
-				'5+ years experience in AI research',
-				'Expertise in machine learning and neural networks',
-				'Familiarity with quantum computing concepts',
-			],
-		},
-	];
-
-	const benefits = [
-		{ title: 'Remote First', description: 'Work from anywhere in the world with our distributed team.', icon: '🌍' },
-		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
-		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
-	];
+  const openPositions = [
+    {
+      title: "Senior AI Engineer",
+      department: "Artificial Intelligence",
+      location: "Remote",
+      type: "Full-time",
+      description: "Lead development of cutting-edge AI solutions and machine learning models."
+    },
+    {
+      title: "Quantum Computing Researcher",
+      department: "Quantum Research",
+      location: "San Francisco, CA",
+      type: "Full-time",
+      description: "Research and develop quantum algorithms and quantum computing systems."
+    },
+    {
+      title: "Frontend Developer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      description: "Build beautiful, responsive user interfaces for our next-generation platforms."
+    }
+  ];
 
   return (
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-        <p className="text-xl md:text-2xl opacity-80 mb-8 max-w-3xl mx-auto">
-          Help us build the future of AI-powered digital economies and autonomous business operations.
-        </p>
-        <p className="text-lg opacity-70 max-w-2xl mx-auto">
-          We're looking for passionate innovators who want to push the boundaries of what's possible 
-          in artificial intelligence, quantum computing, and blockchain technology.
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Build the future of technology with innovative minds at Zion Tech Group
         </p>
       </section>
-=======
-export const metadata = {
-	title: 'Careers - Zion Tech Group',
-	description:
-		'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
-	keywords:
-		'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
-};
-
-export default function CareersPage() {
-	const openPositions = [
-		{
-			title: 'Senior AI Research Engineer',
-			department: 'Research & Development',
-			location: 'Remote / Global',
-			type: 'Full-time',
-			description:
-				'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-			requirements: [
-				'PhD in Computer Science, AI, or related field',
-				'5+ years experience in AI research',
-				'Expertise in machine learning and neural networks',
-				'Familiarity with quantum computing concepts',
-			],
-		},
-	];
-
-	const benefits = [
-		{ title: 'Remote First', description: 'Work from anywhere in the world with our distributed team.', icon: '🌍' },
-		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
-		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
-	];
-
-	return (
-		<div className="space-y-16 p-8">
-			<section className="text-center">
-				<h1 className="text-4xl font-bold mb-4">Join Our Team</h1>
-				<p className="text-lg opacity-80 mb-2">Help us build the future of AI-powered digital economies.</p>
-			</section>
-			<section>
-				<h2 className="text-2xl font-semibold mb-4">Open Positions</h2>
-				<div className="space-y-4">
-					{openPositions.map((position, index) => (
-						<div key={index} className="p-4 rounded-lg border border-white/10">
-							<h3 className="text-xl font-semibold mb-1">{position.title}</h3>
-							<p className="opacity-70 mb-2">{position.department} • {position.location} • {position.type}</p>
-							<p className="opacity-80 mb-2">{position.description}</p>
-							<ul className="list-disc list-inside opacity-80">
-								{position.requirements.map((req, i) => (
-									<li key={i}>{req}</li>
-								))}
-							</ul>
-						</div>
-					))}
-				</div>
-			</section>
-			<section>
-				<h2 className="text-2xl font-semibold mb-4">Why Work With Us</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{benefits.map((b, i) => (
-						<div key={i} className="text-center p-6 border border-white/10 rounded-lg">
-							<div className="text-4xl mb-2">{b.icon}</div>
-							<h3 className="text-lg font-semibold mb-1">{b.title}</h3>
-							<p className="opacity-80 text-sm">{b.description}</p>
-						</div>
-					))}
-				</div>
-			</section>
-		</div>
-	);
-}
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 
       {/* Open Positions */}
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
+      <section className="max-w-4xl mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-8 text-center">Open Positions</h2>
         <div className="space-y-6">
           {openPositions.map((position, index) => (
-            <div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
-              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg border">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
-                  <div className="flex flex-wrap gap-4 text-sm opacity-70">
-                    <span>{position.department}</span>
-                    <span>•</span>
-                    <span>{position.location}</span>
-                    <span>•</span>
-                    <span className="text-blue-400">{position.type}</span>
-                  </div>
+                  <h3 className="text-xl font-bold">{position.title}</h3>
+                  <p className="text-gray-600">{position.department}</p>
                 </div>
-                <button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
-                  Apply Now
-                </button>
+                <div className="flex flex-col md:items-end mt-2 md:mt-0">
+                  <span className="text-sm text-gray-500">{position.location}</span>
+                  <span className="text-sm font-medium text-blue-600">{position.type}</span>
+                </div>
               </div>
-              <p className="opacity-80 mb-4">{position.description}</p>
-              <div>
-                <h4 className="font-semibold mb-2">Requirements:</h4>
-                <ul className="list-disc list-inside space-y-1 text-sm opacity-70">
-                  {position.requirements.map((req, reqIndex) => (
-                    <li key={reqIndex}>{req}</li>
-                  ))}
-                </ul>
-              </div>
+              <p className="text-gray-700 mb-4">{position.description}</p>
+              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Apply Now
+              </button>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6">
-              <div className="text-4xl mb-4">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="opacity-80 text-sm">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Company Culture */}
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Culture</h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Innovation First</h3>
-            <p className="opacity-80 leading-relaxed mb-4">
-              We believe in pushing the boundaries of what's possible. Our team is constantly 
-              exploring new technologies and approaches to solve complex problems.
-            </p>
-            <p className="opacity-80 leading-relaxed">
-              From AI consciousness research to quantum computing breakthroughs, we're not afraid 
-              to tackle the most challenging problems in technology.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Collaboration & Growth</h3>
-            <p className="opacity-80 leading-relaxed mb-4">
-              We foster a culture of continuous learning and collaboration. Every team member 
-              has the opportunity to contribute to our mission and grow their skills.
-            </p>
-            <p className="opacity-80 leading-relaxed">
-              Whether you're a seasoned expert or just starting your career, we provide the 
-              support and resources you need to succeed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="text-center py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
-        <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
-          Join our team and help us build the future of autonomous business operations.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contact"
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
-          >
-            Contact Us
-          </a>
-          <a
-            href="mailto:careers@ziontechgroup.com"
-            className="px-8 py-4 border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200"
-          >
-            Send Resume
-          </a>
         </div>
       </section>
     </div>
