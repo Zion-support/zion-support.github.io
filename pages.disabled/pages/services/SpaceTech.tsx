@@ -1,0 +1,229 @@
+import {}
+  Rocket,
+  Satellite,
+  CheckCircle,
+  Users,
+  Clock,  ArrowRight,
+  Play,
+  Settings,
+  Target,
+  Activity,
+  Sparkles,
+  Search,
+  Zap,
+  Globe,
+  Building,
+  DollarSign,
+  BarChart3,
+  TrendingUp,
+  Key,
+  Fingerprint,
+  Monitor,
+  AlertTriangle,
+  ShieldCheck,
+  Globe2,
+  Server,
+  Database,
+  Smartphone,
+  Code,
+  FileText,
+  AlertCircle,
+  CheckSquare,
+  Calculator,
+  PieChart,
+  LineChart,
+  Target2,
+  Wallet,
+  PiggyBank,
+  CreditCard,
+  Receipt,
+  Cloud,
+  Zap2,
+  Gauge,
+  BarChart4,
+  TrendingUp2,
+  Lightbulb,
+  Briefcase,
+  Strategy,
+  Brain,
+  Compass,
+  Shield,
+  RefreshCw,
+  TrendingUp3,
+  Layers,
+  Workflow,
+  Scale,
+  Award,
+  Lock,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Sensor,
+  Chip,
+  Circuit,
+  Orbit,
+  Planet,
+  Star,
+  Telescope,
+  Antenna,
+  Signal,
+  Navigation,
+  Earth,
+  Moon,
+
+  '}
+                Technology
+              </span>
+:pages.disabled/pages/services/SpaceTech.tsx'
+            </h1>'''            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
+              Pioneer the future with our cutting-edge space technology
+              solutions that enable satellite operations, space communications,
+:pages.disabled/pages/services/SpaceTech.tsx'
+              and Earth observation.'</p>''            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hove,
+    r:to-pink-600 transition-all duration-200 flex items-center justify-center>''
+                <Play className='w-5 h-5 mr-2'  />
+
+                <Settings className='w-5 h-5 mr-2'  />                Schedule Demo</button>            </div>
+          </motion.div>
+        </div>
+      </section>
+:pages.disabled/pages/services/SpaceTech.tsx'
+'{/* Features Section */}      <section className='py-20>''
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div 
+            initial={{ opacit,
+    y: 0, y: 20 }}
+:pages.disabled/pages/services/SpaceTech.tsx 
+            whileInView={{ opacity: 1, y: 0 }}transition={{ duration: 0.8 }}            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+:pages.disabled/pages/services/SpaceTech.tsx'
+              Advanced Space Technology Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
+              Our platform provides cutting-edge space technology capabilities
+              for modern space missions and satellite operations.
+            </p>
+
+                  <feature.icon className='w-6 h-6 text-white' />'
+                </div>'''
+                <h3 className='text-xl font-semibold text-white mb-2>
+                  {feature.title}</h3>''                <p className='text-gray-300'>{feature.description}</p>
+
+
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {services.map(servic,
+    e: unknown, index: unknown() 
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200>'
+                <div className='flex items-start space-x-4>''
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0>''
+                    <service.icon className='w-6 h-6 text-white' />
+:pages.disabled/pages/services/SpaceTech.tsx'
+                  </div>''
+                  <div>'''
+                    <h3 className='text-xl font-semibold text-white mb-2>
+                      {service.title}</h3>''                    <p className='text-gray-300'>{service.description}</p>
+
+
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            <div className='space-y-6'>
+              {benefits.slice(0, 3).map(benefit: unknown, index: unknown() 
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
+                  <CheckCircle className='w-6 h-6 text-purple-400 mt-1 flex-shrink-0'  />                  <span className='text-gray-300 text-lg'>{benefit}</span>
+                </motion.div>'
+:pages.disabled/pages/services/SpaceTech.tsx))}
+            </div>'''
+            <div className='space-y-6'>
+              {benefits.slice(3).map(benefit: unknown, index: unknown() 
+
+                <motion.div 
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}transition={{ duration: 0.5, delay: index * 0.1 }}                  className='flex items-start space-x-3>'
+                  <CheckCircle className='w-6 h-6 text-purple-400 mt-1 flex-shrink-0'  />                  <span className='text-gray-300 text-lg'>{benefit}</span>
+
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200''>''
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
+:pages.disabled/pages/services/SpaceTech.tsx
+
+                </h3>'                <p className='text-gray-300 text-sm'>{useCase.description}</p>
+
+
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+                    <div className='w-2 h-2 bg-purple-400 rounded-full mr-3'></div>
+                    {benefit}
+                  </li>
+                ))}
+:pages.disabled/pages/services/SpaceTech.tsx'
+              </ul>'</div>''            <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30>''
+              <div className='text-center>''
+                <Zap className='w-24 h-24 text-purple-400 mx-auto mb-4'  />''
+                <h3 className='text-2xl font-bold text-white mb-2'>
+
+                </h3>'                <p className='text-gray-300 mb-6'>
+                  Our team has deep expertise in space technology and is'
+                  committed to advancing the frontiers of exploration.'</p>''                <div className='text-sm text-gray-400'>
+
+                  <p>• Space technology experts</p>
+
+                  <p>• Innovation leadership</p>
+                  <p>• Proven methodologies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+              Join organizations worldwide that use our space technology 
+              solutions to explore new frontiers and solve global challenges.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hove,
+    r:to-pink-600 transition-all duration-200 flex items-center justify-center> 
+                Get Started Today'''
+                <ArrowRight className='w-5 h-5 ml-2'  /></button>'              <button className='px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hove,
+    r:bg-purple-500/10 transition-all duration-200'>                Contact Sales
+
+
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+
+

@@ -1,0 +1,1 @@
+export function PointsBadge() { const { user, isLoading: isAuthLoading} = useAuth() const points = user?.points}

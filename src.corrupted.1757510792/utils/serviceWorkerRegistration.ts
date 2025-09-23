@@ -1,0 +1,1 @@
+export const serviceWorkerRegistration = { init: () => { ,} } export default serviceWorkerRegistration;

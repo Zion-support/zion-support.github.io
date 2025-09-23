@@ -1,0 +1,32 @@
+{
+  "default": {
+    "title": "Zion Tech Group - Enterprise AI & IT Solutions",
+    "description": "Leading provider of micro SaaS products, AI services, and IT solutions. Transform your business with cutting-edge technology.",
+    "keywords": "AI services, micro SaaS, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing",
+    "author": "Zion Tech Group",
+    "viewport": "width=device-width, initial-scale=1.0",
+    "robots": "index, follow",
+    "og:type": "website",
+    "og:site_name": "Zion Tech Group",
+    "twitter:card": "summary_large_image",
+    "twitter:site": "@ziontechgroup"
+  },
+  "pages": {
+    "/": {
+      "title": "Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development",
+      "description": "Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
+    },
+    "/about": {
+      "title": "About | Zion Tech Group",
+      "description": "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results."
+    },
+    "/services": {
+      "title": "Services | Zion Tech Group",
+      "description": "Comprehensive technology solutions including AI development, micro SaaS, cloud services, cybersecurity, and digital transformation."
+    },
+    "/contact": {
+      "title": "Contact | Zion Tech Group",
+      "description": "Get in touch with Zion Tech Group for your AI and IT solution needs. Contact us for consultation and project inquiries."
+    }
+  }
+}

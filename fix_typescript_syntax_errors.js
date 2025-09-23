@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
-const fs = require("fs-extra");
-const path = require("path");
-const glob = require("glob");
-
+import fs from "fs-extra");
+import path from "path");
+import glob from "glob");
 async function fixTypeScriptSyntaxErrors() {
   console.log("🔧 Fixing TypeScript syntax errors...");
 
