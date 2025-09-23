@@ -23,7 +23,7 @@
     "recovered-branches/**",
     "apps.backup/**",
     "zion-*/**",
-    "components/**",
+    "app/components/**",
     "pages/**",
     "src/**",
     "utils/**",
