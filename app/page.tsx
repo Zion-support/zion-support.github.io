@@ -1,152 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-
-=======
-import React, { lazy, Suspense } from 'react'
-import Link from 'next/link'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
-import AnimatedCounter from './components/AnimatedCounter'
-import ScrollReveal from './components/ScrollReveal'
-
-// Import new advanced AI components
-import AdvancedAIAssistant from './components/AdvancedAIAssistant';
-import AdvancedAnalyticsEngine from './components/AdvancedAnalyticsEngine';
-import AdvancedContentRecommendationEngine from './components/AdvancedContentRecommendationEngine';
-import AdvancedSecurityMonitor from './components/AdvancedSecurityMonitor';
-import APIManagementSystem from './components/APIManagementSystem';
-import AutomationWorkflowEngine from './components/AutomationWorkflowEngine';
-import BusinessIntelligenceDashboard from './components/BusinessIntelligenceDashboard';
-import EnterpriseDataManagement from './components/EnterpriseDataManagement';
-import IntelligentSearchEngine from './components/IntelligentSearchEngine';
-import RealTimePerformanceDashboard from './components/RealTimePerformanceDashboard';
-
-// Lazy load heavy components
-const ROICalculator = lazy(() => import('./components/ROICalculator'));
-const StructuredData = lazy(() => import('./components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('./components/PerformanceMetrics'));
-const TechnologyStack = lazy(() => import('./components/TechnologyStack'));
-
-// Import key promotional components
-import ComprehensiveContentShowcase2026 from './components/ComprehensiveContentShowcase2026';
-import ComprehensiveSolutionsBanner2025 from './components/ComprehensiveSolutionsBanner2025';
-import EnhancedContentPromotionBanner from './components/EnhancedContentPromotionBanner';
-import EnhancedContentPromotionBanner2026 from './components/EnhancedContentPromotionBanner2026';
-import FeaturedContentShowcase2026 from './components/FeaturedContentShowcase2026';
-import InteractiveContentDiscoveryWidget from './components/InteractiveContentDiscoveryWidget';
-import NewContent2026Showcase from './components/NewContent2026Showcase';
-import NewContentPromotionBanner from './components/NewContentPromotionBanner';
-import NewServicesShowcase2025 from './components/NewServicesShowcase2025';
-import RevolutionaryContent2025Banner from './components/RevolutionaryContent2025Banner';
-import RevolutionaryContent2026Banner from './components/RevolutionaryContent2026Banner';
-import UltimateContentShowcase2025 from './components/UltimateContentShowcase2025';
-
-// Import new promotional components
-import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
-import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
-import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
-import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
-
-// Import additional promotional components
-import AI2025BreakthroughBanner from './components/AI2025BreakthroughBanner';
-import NewContent2025PromotionBanner from './components/NewContent2025PromotionBanner';
-import RevolutionaryAIContentBanner from './components/RevolutionaryAIContentBanner';
-
-// Import new AI 2026 promotional components
-import AI2026AutonomousSystemsBanner from './components/AI2026AutonomousSystemsBanner';
-import AI2026QuantumRevolutionBanner from './components/AI2026QuantumRevolutionBanner';
-import AI2026UltimateShowcaseBanner from './components/AI2026UltimateShowcaseBanner';
-import QuantumAI2026BreakthroughBanner from './components/QuantumAI2026BreakthroughBanner';
-import QuantumAIContentShowcase2026 from './components/QuantumAIContentShowcase2026';
-
-// Import new promotional components
-import NewContent2026UltimateShowcase from './components/NewContent2026UltimateShowcase';
-import WhatsNewStrip from './components/WhatsNewStrip';
-
-// Import new 2026 ultimate promotional components
-import AI2026QuantumRevolutionUltimateBanner from './components/AI2026QuantumRevolutionUltimateBanner';
-import RevolutionaryAIContent2026Banner from './components/RevolutionaryAIContent2026Banner';
-
-// Import new 2025 advanced automation promotional components
-import AdvancedAutomationContentShowcase2025 from './components/AdvancedAutomationContentShowcase2025';
-import NewContent2025AdvancedAutomationBanner from './components/NewContent2025AdvancedAutomationBanner';
-
-// Import new 2025 analytics promotional components
-import AnalyticsContentShowcase2025 from './components/AnalyticsContentShowcase2025';
-import NewAutonomousRevenueAgentsPromo from './components/NewAutonomousRevenueAgentsPromo';
-import NewContent2025AnalyticsRevolutionBanner from './components/NewContent2025AnalyticsRevolutionBanner';
-import NewMultimodalAgents2025Banner from './components/NewMultimodalAgents2025Banner';
-import WhatsNew from './components/WhatsNew';
-
-// Import new 2026 promotional content moved into app/components
-import LatestBlogContent2026 from './components/LatestBlogContent2026';
-import LatestServicesShowcase2026 from './components/LatestServicesShowcase2026';
-import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
-import SuccessStoriesShowcase2026 from './components/SuccessStoriesShowcase2026';
-import UltimateContentPromotion2026 from './components/UltimateContentPromotion2026';
-
-// Import new content showcase components
-import NewContentShowcase2026 from './components/NewContentShowcase2026';
-import RevolutionaryContentBanner2026 from './components/RevolutionaryContentBanner2026';
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
-export const metadata = {
-  title: 'Zion Tech Group - AI & Technology Solutions',
-  description:
-    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-}
-=======
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI 2025 Trends & Predictions: The Future of Artificial Intelligence',
-  description: 'Discover the most important AI trends and predictions for 2025. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',
-  keywords: ['AI 2025', 'AI trends', 'AI predictions', 'artificial intelligence', 'quantum computing', 'neural interfaces', 'machine learning'],
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 
-export default function AI2025TrendsPage() {
+export default function HomePage() {
   return (
-<<<<<<< HEAD
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-          Advanced AI and
-          <span className="ml-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Technology Solutions
-          </span>
-        </h1>
-        <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
-          Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions.
-          We deliver enterprise-grade technology that drives innovation and growth.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/services"
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all transform hover:scale-105 inline-flex items-center justify-center"
-          >
-            Explore Solutions
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-          <Link
-            href="/contact"
-            className="border border-gray-300 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center"
-          >
-            Get Started
-          </Link>
-        </div>
-      </section>
-    </main>
-  )
-}
-
-=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
@@ -237,11 +98,9 @@ export default function AI2025TrendsPage() {
                 <span className="text-4xl mr-4">⚛️</span>
                 <h3 className="text-2xl font-bold text-gray-900">Quantum-AI Fusion</h3>
               </div>
-<<<<<<< HEAD
               <p className="text-gray-600 mb-4">
                 The convergence of quantum computing and artificial intelligence is creating unprecedented computational power. 
                 This fusion enables solving complex problems that were previously impossible with classical computers.
-=======
             </ScrollReveal>
 
             <ScrollReveal origin="bottom" delay={300}>
