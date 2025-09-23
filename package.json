@@ -92,6 +92,7 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
+<<<<<<< HEAD
       "<rootDir>/automation/",
       "<rootDir>/.temp_backup_components/",
       "<rootDir>/recovered-branches/",
@@ -99,6 +100,17 @@
       "<rootDir>/components/apps/",
       "<rootDir>/backup-problematic-files/",
       "<rootDir>/server/"
+=======
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/backup/.*",
+      "<rootDir>/backups/.*",
+      "<rootDir>/backup-merge-conflicts/.*",
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -108,7 +120,8 @@
       "<rootDir>/backup/.*",
       "<rootDir>/backups/.*",
       "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
