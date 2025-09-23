@@ -2,6 +2,9 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import globals from 'globals';
 export default [
   // Global ignores for this workspace
   {
@@ -47,16 +50,20 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: { ecmaFeatures: { jsx: true } }
+      parser: tsParser,
+      parserOptions: { ecmaFeatures: { jsx: true }, project: false },
+      globals: { ...globals.browser }
     },
     plugins: {
       react,
-      'react-hooks': reactHooks
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint
     },
     settings: { react: { version: 'detect' } },
     rules: {
-      'react/react-in-jsx-scope': 'off'
-    },
-    settings: { react: { version: 'detect' } }
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-unused-vars': 'off'
+    }
   }
 ];
