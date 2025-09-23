@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,8 +37,9 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
+          {/* Theme Toggle and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Get Started
             </button>
@@ -72,7 +74,10 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 space-y-3">
+                <div className="flex justify-center">
+                  <ThemeToggle />
+                </div>
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                   Get Started
                 </button>
