@@ -34,6 +34,8 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
+    "app-minimal/**/*.ts",
+    "app-minimal/**/*.tsx",
     "zion-website/src/**/*.ts",
     "zion-website/src/**/*.tsx",
     "src-clean/**/*.ts",
