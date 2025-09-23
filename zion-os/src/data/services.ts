@@ -192,19 +192,6 @@ export const getCategories = () => {
 
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };

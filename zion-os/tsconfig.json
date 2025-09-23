@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "paths": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "@/*": ["src/*"]
 =======
       "@/*": [
@@ -31,6 +32,13 @@
         "name": "next"
       }
     ]
+=======
+      "@/*": ["src/*"]
+    },
+    "plugins": [{
+      "name": "next"
+    }]
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0914
   },
   "include": [
     "next-env.d.ts",
