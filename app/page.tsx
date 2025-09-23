@@ -1,3 +1,4 @@
+import React, { Suspense, lazy } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
@@ -6,6 +7,7 @@ import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 import AnimatedCounter from './components/AnimatedCounter'
 import ScrollReveal from './components/ScrollReveal'
+const LazyTestimonials = dynamic(() => import('./components/Testimonials'))
 
 // Import new advanced AI components
 import AdvancedAIAssistant from './components/AdvancedAIAssistant';
@@ -41,7 +43,7 @@ import UltimateContentShowcase2025 from './components/UltimateContentShowcase202
 
 // Import new promotional components
 import LatestContentShowcase2025 from './components/LatestContentShowcase2025';
-import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
+// import NewContent2025UltimateBanner from './components/NewContent2025UltimateBanner';
 import NewContent2025UltimateShowcaseBanner from './components/NewContent2025UltimateShowcaseBanner';
 import UltimateContentShowcase2026 from './components/UltimateContentShowcase2026';
 import UltimatePromotionBanner2026 from './components/UltimatePromotionBanner2026';
