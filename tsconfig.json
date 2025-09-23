@@ -33,7 +33,10 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "zion-website/src/**/*.ts",
+    "zion-website/src/**/*.tsx",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
@@ -53,6 +56,30 @@
     "zion-os",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "src",
+    "src.*",
+    "src_*",
+    "src-*/**",
+    "src_backup/**",
+    "src_backup_temp/**",
+    "src.broken/**",
+    "src.corrupted/**",
+    "src.disabled/**",
+    "src.pages.disabled/**",
+    "components/**",
+    "lib/**",
+    "zion-os/**",
+    "utils/**",
+    "hooks/**",
+    "types/**",
+    "utils.disabled/**",
+    "ts_files_backup/**",
+    "tests/**",
+    "__tests__/**",
+    "test/**",
+    "test-results/**",
+    "test-reports/**",
+    "types/**"
   ]
 }
