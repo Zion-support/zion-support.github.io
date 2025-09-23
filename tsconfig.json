@@ -34,8 +34,6 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
     "app/**/*.ts",
     "app/**/*.tsx",
     "types/**/*.d.ts"
@@ -53,6 +51,7 @@
     "zion-os/**",
     "zion-ai-assistant/**",
     "zion-website/**",
+    "src/**",
     "apps.backup/**",
     "backups/**",
     "backup/**",
