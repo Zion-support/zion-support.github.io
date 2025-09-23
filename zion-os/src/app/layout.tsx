@@ -1,9 +1,9 @@
-
 import "./globals.css";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 
 export const metadata = {
+
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
   description: "Unified deployment protocol for Zion ecosystems. Deploy AI-powered marketplaces, governance systems, and digital economies with one click.",
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion",
@@ -12,6 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
         <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
           </div>
         </nav>
+
         
         <main className="min-h-screen">{children}</main>
         
@@ -72,6 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
               
               <div>
+
                 <h3 className="text-white font-semibold mb-4">Platform</h3>
                 <ul className="space-y-2 text-white/70">
                   <li><a href="/multiverse/launch" className="hover:text-white transition-colors">Launch Wizard</a></li>
@@ -81,6 +84,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
               
               <div>
+
                 <h3 className="text-white font-semibold mb-4">Resources</h3>
                 <ul className="space-y-2 text-white/70">
                   <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
@@ -90,6 +94,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </div>
             </div>
             
+
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
               <p>&copy; 2024 Zion OS. All rights reserved.</p>
             </div>

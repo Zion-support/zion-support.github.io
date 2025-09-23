@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 
 export default function ServicesPage() {
@@ -170,6 +171,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+
       {/* IT Services Section */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-6">
@@ -309,6 +311,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
 
       {/* Blockchain & Web3 Services Section */}
       <section className="py-20">

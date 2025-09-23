@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -7,6 +8,7 @@ export const metadata = {
 export default function CareersPage() {
   const openPositions = [
     {
+
       title: 'Senior AI Research Engineer',
       department: 'Research & Development',
       location: 'Remote / Global',
@@ -62,6 +64,7 @@ export default function CareersPage() {
 
   const benefits = [
     {
+
       title: 'Remote First',
       description: 'Work from anywhere in the world with our distributed team.',
       icon: '🌍',
@@ -73,7 +76,7 @@ export default function CareersPage() {
     },
     {
       title: 'Flexible Hours',
-      description: "Work when you're most productive with flexible scheduling.",
+      description: 'Work when you\'re most productive with flexible scheduling.',
       icon: '⏰',
     },
     {
@@ -143,6 +146,7 @@ export default function CareersPage() {
       </section>
 
       {/* Benefits */}
+
       <section className="py-16">
         <h2 className="text-3xl font-bold text-center mb-12">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -186,6 +190,7 @@ export default function CareersPage() {
       </section>
 
       {/* CTA Section */}
+
       <section className="text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
         <p className="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
