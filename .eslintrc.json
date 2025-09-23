@@ -33,6 +33,7 @@
     "automation/",
     "scripts/",
     "apps/",
+    "components/**",
     "zion-os/**",
     "recovered-branches/**",
     "**/*backup*/**",
