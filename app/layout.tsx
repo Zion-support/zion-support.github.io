@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import './globals.css'
-=======
-// global styles are optional; keeping layout minimal
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 
 export const metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),

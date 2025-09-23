@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-interface AnimatedCounterProps {
+type AnimatedCounterProps = {
   end: number;
   duration?: number;
   suffix?: string;
   prefix?: string;
-}
+};
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ 
+const AnimatedCounter = ({ 
   end, 
   duration = 2000, 
   suffix = '', 
   prefix = '' 
-}) => {
+}: AnimatedCounterProps) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
