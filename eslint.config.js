@@ -1,30 +1,14 @@
-<<<<<<< HEAD
-// Flat ESLint config for ESLint v9+
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-export default [
-  // Global ignores for this workspace
-=======
 // Minimal ESLint v9 flat config: only ignores to avoid config duplication errors
 export default [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7e4c
   {
     ignores: [
       'node_modules/**',
       '.next/**',
-<<<<<<< HEAD
-      '**/.next/**',
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7e4c
       'out/**',
       'dist/**',
       'build/**',
       'coverage/**',
-<<<<<<< HEAD
       'public/**',
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7e4c
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -37,7 +21,6 @@ export default [
       'zion-website/**',
       'zion-ai-assistant/**',
       'ts_files_backup/**',
-<<<<<<< HEAD
       'types/**',
       'types.disabled/**',
       'utils/**',
@@ -50,28 +33,7 @@ export default [
       'ultimate*.cjs',
       'verify-and-complete-merges.js',
       'ultimate_merge_and_improve.cjs',
-      'ultimate-merge-conflict-resolver.js'
-    ]
-  },
-  js.configs.recommended,
-  {
-    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      parserOptions: { ecmaFeatures: { jsx: true } }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks
-    },
-    settings: { react: { version: 'detect' } },
-    rules: {
-      'react/react-in-jsx-scope': 'off'
-    },
-    settings: { react: { version: 'detect' } }
-  }
-=======
+      'ultimate-merge-conflict-resolver.js',
       'temp_exclude/**',
       'corrupted_backup/**',
       'pages.disabled/**',
@@ -98,5 +60,15 @@ export default [
       'test_build/**'
     ],
   },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7e4c
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parserOptions: { ecmaFeatures: { jsx: true } }
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off'
+    }
+  }
 ];
