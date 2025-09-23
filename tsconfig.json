@@ -42,6 +42,13 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "zion-os/**"
+    ,
+    "zion-ai-assistant/**",
+    "zion-os.disabled/**",
+    "utils/types/**",
+    "utils/wallet.ts",
+    "utils/validation.ts"
   ]
 }
