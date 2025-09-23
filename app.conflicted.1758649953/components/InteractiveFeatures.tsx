@@ -17,9 +17,9 @@ const InteractiveFeatures: React.FC<InteractiveFeaturesProps> = ({
 }) => {
   const [isROICalculatorOpen, setIsROICalculatorOpen] = useState(false);
   const [isLiveChatOpen, setIsLiveChatOpen] = useState(false);
-  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [recommendations, setRecommendations] = useState<unknown[]>([]);
   const [progress, setProgress] = useState(0);
-  const [chatMessages, setChatMessages] = useState<any[]>([]);
+  const [chatMessages, setChatMessages] = useState<unknown[]>([]);
   const [chatInput, setChatInput] = useState('');
   const chatEndRef = useRef<HTMLDivElement>(null);
 
