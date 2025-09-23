@@ -1,49 +1,41 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
-  res.status(200).json({ ok: true });export default function handler() { return null; }
-  res.status(200).json({ ok: true })
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {};
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   clearSessionCookie(res);
 
+
+
+
   res.status(200).json({ ok: true })
-}
 
-pr-12243
 
-import { clearSessionCookie } from '../../../utils / admin_auth';
-export default /**;
- * handler - Function description;
- */
-function handler() {}
-  clearSessionCookie (res);
-  res.status (200).json ({ ok: true });export default /**;
- * handler - Function description;
- */
-function handler() {}
-  clearSessionCookie (res);
-  res.status (200).json ({ ok: true });
-}
-origin/cursor/automate-test-improve-and-merge-code-20a4
-pr-12243
 
-'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+=======
 import { clearSessionCookie } from '../../../utils/adminAuth';
-export default function handler() { return null; }
-  res.status(200).json({ ok: true });export default function handler() { return null; }
-  res.status(200).json({ ok: true })
-}
-}
 
-}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  clearSessionCookie(res);
   res.status(200).json({ ok: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
-pr-12243
-
-import { clearSessionCookie } from '../../../utils/adminAuth';
-
-export default function handler(req: NextApiRequest;, res: NextApiResponse) {
-  clearSessionCookie(res);
-
 }
-
+>>>>>>> origin/auto/autonomy-17186719616

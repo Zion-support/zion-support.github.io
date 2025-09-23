@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
+import { Route, Routes  } from 'react-router-dom.ts';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+>>>>>>> origin/auto/autonomy-17186719616
 import Dashboard from "@/pages/Dashboard";
 import ClientDashboard from "@/pages/ClientDashboard";
 import TalentDashboard from "@/pages/TalentDashboard";
@@ -10,643 +15,258 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
+<<<<<<< HEAD
+// MessagingInbox import removed - page not found
+=======
 import MessagingInbox from "@/pages/MessagingInbox";
+>>>>>>> origin/auto/autonomy-17186719616
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
+<<<<<<< HEAD
+// Referrals import removed - page not found
+import DeveloperPortal from "@/pages/DeveloperPortal";
+// WalletPage import removed - page not found
+import OrdersPage from "@/pages/Orders";
+import OrderDetailPage from "@/pages/OrderDetail";
+import ContractBuilder from "@/pages/ContractBuilder";
+import Projects from "@/pages/Projects";
+=======
 import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-const DashboardRoutes = () => {
-import {Fragment} from "react";
-const DashboardRoutes = () => {import {Fragment} from "react";
-const DashboardRoutes = () => {import {Fragment} from "react";
-const DashboardRoutes = () => {
-const DashboardRoutes = () => {;
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
-import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
-import ContractBuilder from "@/pages/ContractBuilder";
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import Dashboard from "@/pages/Dashboard",
-import ClientDashboard from "@/pages/ClientDashboard",
-import TalentDashboard from "@/pages/TalentDashboard",
-import CreatorDashboard from "@/pages/CreatorDashboard",
-import Analytics from "@/pages/Analytics",
-import ProjectMilestones from "@/pages/ProjectMilestones",
-import ProjectDetails from "@/pages/ProjectDetails",
-import ProjectRoom from "@/pages/ProjectRoom",
-import MessagingInbox from "@/pages/MessagingInbox",
-import Payments from "@/pages/Payments",
-import Interviews from "@/pages/Interviews",
-import Notifications from "@/pages/Notifications",
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",
-import HiringTracker from "@/pages/HiringTracker",
-import PortfolioBuilder from "@/pages/PortfolioBuilder",
-import Referrals from "@/pages/Referrals",
-import DeveloperPortal from "@/pages/DeveloperPortal",
-import WalletPage from "@/pages/Wallet";
-import { Fragment } from "react";"
-import { Route, Routes } from "react-router-dom";"
-import { ProtectedRoute } from "@/components/ProtectedRoute";"
-import Dashboard from "@/pages/Dashboard";"
-import ClientDashboard from "@/pages/ClientDashboard";"
-import TalentDashboard from "@/pages/TalentDashboard";"
-import CreatorDashboard from "@/pages/CreatorDashboard";"
-import Analytics from "@/pages/Analytics";"
-import ProjectMilestones from "@/pages/ProjectMilestones";"
-import ProjectDetails from "@/pages/ProjectDetails";"
-import ProjectRoom from "@/pages/ProjectRoom";"
-import MessagingInbox from "@/pages/MessagingInbox";"
-import Payments from "@/pages/Payments";"
-import Interviews from "@/pages/Interviews";"
-import Notifications from "@/pages/Notifications";"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";"
-import HiringTracker from "@/pages/HiringTracker";"
-import PortfolioBuilder from "@/pages/PortfolioBuilder";"
-import Referrals from "@/pages/Referrals";"
-import DeveloperPortal from "@/pages/DeveloperPortal";"
-import WalletPage from "@/pages/Wallet";"
-import ContractBuilder from "@/pages/ContractBuilder";
-const DashboardRoutes = () => {}
-const DashboardRoutes = () => {;
+>>>>>>> origin/auto/autonomy-17186719616
 
-"
-import {Fragment} from "react";"
-import {Route, Routes} from "react-router-dom";"
-import {ProtectedRoute} from "@/components/ProtectedRoute";"
-import Dashboard from "@/pages/Dashboard";"
-import ClientDashboard from "@/pages/ClientDashboard";"
-import TalentDashboard from "@/pages/TalentDashboard";"
-import CreatorDashboard from "@/pages/CreatorDashboard";"
-import Analytics from "@/pages/Analytics";"
-import ProjectMilestones from "@/pages/ProjectMilestones";"
-import ProjectDetails from "@/pages/ProjectDetails";"
-import ProjectRoom from "@/pages/ProjectRoom";"
-import MessagingInbox from "@/pages/MessagingInbox";"
-import Payments from "@/pages/Payments";"
-import Interviews from "@/pages/Interviews";"
-import Notifications from "@/pages/Notifications";"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";"
-import HiringTracker from "@/pages/HiringTracker";"
-import PortfolioBuilder from "@/pages/PortfolioBuilder";"
-import Referrals from "@/pages/Referrals";"
-import DeveloperPortal from "@/pages/DeveloperPortal";"
-import WalletPage from "@/pages/Wallet";"
-import ContractBuilder from "@/pages/ContractBuilder";
-
-"
-import { Fragment } from "react","
-import { Route, Routes } from "react-router-dom","
-import { ProtectedRoute } from "@/components/ProtectedRoute","
-import Dashboard from "@/pages/Dashboard","
-import ClientDashboard from "@/pages/ClientDashboard","
-import TalentDashboard from "@/pages/TalentDashboard","
-import CreatorDashboard from "@/pages/CreatorDashboard","
-import Analytics from "@/pages/Analytics","
-import ProjectMilestones from "@/pages/ProjectMilestones","
-import ProjectDetails from "@/pages/ProjectDetails","
-import ProjectRoom from "@/pages/ProjectRoom","
-import MessagingInbox from "@/pages/MessagingInbox","
-import Payments from "@/pages/Payments","
-import Interviews from "@/pages/Interviews","
-import Notifications from "@/pages/Notifications","
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker","
-import HiringTracker from "@/pages/HiringTracker","
-import PortfolioBuilder from "@/pages/PortfolioBuilder","
-import Referrals from "@/pages/Referrals","
-import DeveloperPortal from "@/pages/DeveloperPortal",";
-import WalletPage from "@/pages/Wallet";"
-import ContractBuilder from "@/pages/ContractBuilder";
-"
-import WalletPage from "@/pages/Wallet","
-import ContractBuilder from "@/pages/ContractBuilder",
-const DashboardRoutes = () => {}
+const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
-      <Route"
-        path="/dashboard"
-        element={}
+      <Route 
+        path="/dashboard" 
+        element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/client-dashboard"
-        element={}
+      <Route 
+        path="/client-dashboard" 
+        element={
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/talent-dashboard"
-        element={}
+      <Route 
+        path="/talent-dashboard" 
+        element={
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         }
       />
-      <Route"
-        path="/creator-dashboard"
-        element={}
+      <Route 
+        path="/creator-dashboard" 
+        element={
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/analytics"
-        element={}
+      <Route 
+        path="/analytics" 
+        element={
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/project/:id/milestones"
-        element={}
+      <Route 
+        path="/project/:id/milestones" 
+        element={
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
+      <Route
         path="/project/:id"
-        element={}
+        element={
           <ProtectedRoute>
             <ProjectDetails />
           </ProtectedRoute>
         }
       />
-      <Route"
+      <Route
         path="/project/:id/room"
-        element={}
+        element={
           <ProtectedRoute>
             <ProjectRoom />
           </ProtectedRoute>
         }
       />
-      <Route"
+      <Route
         path="/messages"
-        element={}
+        element={
           <ProtectedRoute>
+<<<<<<< HEAD
+            <div>Messages Page</div>
+=======
             <MessagingInbox />
+>>>>>>> origin/auto/autonomy-17186719616
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/inbox"
-        element={}
+      <Route 
+        path="/inbox" 
+        element={
           <ProtectedRoute>
+<<<<<<< HEAD
+            <div>Inbox Page</div>
+=======
             <MessagingInbox />
+>>>>>>> origin/auto/autonomy-17186719616
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/payments"
-        element={}
+      <Route 
+        path="/payments" 
+        element={
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/interviews"
-        element={}
+      <Route 
+        path="/interviews" 
+        element={
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/notifications"
-        element={}
+      <Route 
+        path="/notifications" 
+        element={
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/applications/track"
-        element={}
+      <Route 
+        path="/applications/track" 
+        element={
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
+<<<<<<< HEAD
+      <Route
         path="/hiring-tracker"
-        element={}
+=======
+      <Route 
+        path="/hiring-tracker" 
+>>>>>>> origin/auto/autonomy-17186719616
+        element={
           <ProtectedRoute>
             <HiringTracker />
           </ProtectedRoute>
+<<<<<<< HEAD
         }
       />
-      <Route"
+      <Route
+        path="/projects"
+        element={
+          <ProtectedRoute>
+            <Projects />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/portfolio-builder"
-        element={}
+=======
+        } 
+      />
+      <Route 
+        path="/portfolio-builder" 
+>>>>>>> origin/auto/autonomy-17186719616
+        element={
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
-        path="/referrals"
-        element={}
+      <Route 
+        path="/referrals" 
+        element={
           <ProtectedRoute>
+<<<<<<< HEAD
+            <div>Referrals Page</div>
+=======
             <Referrals />
+>>>>>>> origin/auto/autonomy-17186719616
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
+      <Route
         path="/developers"
-        element={}
+        element={
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
         }
       />
-      <Route"
+      <Route
         path="/wallet"
-        element={}
+        element={
           <ProtectedRoute>
-            <WalletPage />
+<<<<<<< HEAD
+            <div>Wallet Page</div>
           </ProtectedRoute>
         }
       />
-      <Route"
+      <Route
+        path="/orders"
+        element={
+          <ProtectedRoute>
+            <OrdersPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/orders/:orderId"
+        element={
+          <ProtectedRoute>
+            <OrderDetailPage />
+=======
+            <WalletPage />
+>>>>>>> origin/auto/autonomy-17186719616
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/dashboard/api-access"
-        element={}
+        element={
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        }
+        } 
       />
-      <Route"
+      <Route
         path="/contract-builder"
-        element={}
+        element={
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        }
+        } 
       />
     </Routes>
-  )
+  );
 };
+
 export default DashboardRoutes;
-
-},
-
-export default DashboardRoutes,";
-import { Fragment } from "react",;"
-import { Route, Routes } from "react-router-dom",;"
-import { ProtectedRoute } from "@/components/ProtectedRoute",;"
-import Dashboard from "@/pages/Dashboard",;"
-import ClientDashboard from "@/pages/ClientDashboard",;"
-import TalentDashboard from "@/pages/TalentDashboard",;"
-import CreatorDashboard from "@/pages/CreatorDashboard",;"
-import Analytics from "@/pages/Analytics",;"
-import ProjectMilestones from "@/pages/ProjectMilestones",;"
-import ProjectDetails from "@/pages/ProjectDetails",;"
-import ProjectRoom from "@/pages/ProjectRoom",;"
-import MessagingInbox from "@/pages/MessagingInbox",;"
-import Payments from "@/pages/Payments",;"
-import Interviews from "@/pages/Interviews",;"
-import Notifications from "@/pages/Notifications",;"
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",;"
-import HiringTracker from "@/pages/HiringTracker",;"
-import PortfolioBuilder from "@/pages/PortfolioBuilder",;"
-import Referrals from "@/pages/Referrals",;"
-import DeveloperPortal from "@/pages/DeveloperPortal",;"
-import WalletPage from "@/pages/Wallet",;"
-import ContractBuilder from "@/pages/ContractBuilder",;
-const DashboardRoutes = () => {;
-
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        }
-      />
-<Route"
-        path="/client-dashboard"
-        element={}
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        }
-      />
-<Route"
-        path="/talent-dashboard"
-        element={}
-          <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;
-        }
-      />
-<Route"
-        path="/creator-dashboard"
-        element={}
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        }
-      />
-<Route"
-        path="/analytics"
-        element={}
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        }
-      />
-<Route"
-        path="/project/:id/milestones"
-        element={}
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        }
-      />
-<Route"
-        path="/project/:id"
-        element={}
-          <ProtectedRoute>;
-            <ProjectDetails />;
-          </ProtectedRoute>;
-        }
-      />;
-          <ProtectedRoute>;
-            <ProjectRoom />;
-          </ProtectedRoute>;
-        }
-      />;
-<Route
-        path="/messages"
-        element={
-          <ProtectedRoute>
-            <MessagingInbox />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/inbox"
-        element={
-          <ProtectedRoute>
-            <MessagingInbox />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/payments"
-        element={
-          <ProtectedRoute>
-            <Payments />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/interviews"
-        element={
-          <ProtectedRoute>
-            <Interviews />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/notifications"
-        element={
-          <ProtectedRoute>
-            <Notifications />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/applications/track"
-        element={
-          <ProtectedRoute>
-            <ApplicationStatusTracker />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/hiring-tracker"
-        element={
-          <ProtectedRoute>
-            <HiringTracker />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/portfolio-builder"
-        element={
-          <ProtectedRoute>
-            <PortfolioBuilder />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/referrals"
-        element={
-          <ProtectedRoute>
-            <Referrals />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/developers"
-element={          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        }
-          <ProtectedRoute>;
-            <WalletPage />;
-          </ProtectedRoute>;
-        }
-      />;
-<Route
-        path="/dashboard/api-access"
-        element={
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/contract-builder"
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-path="/inbox";
-        element={
-          <ProtectedRoute>;
-            <MessagingInbox />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-path="/payments";
-        element={
-          <ProtectedRoute>;
-            <Payments />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/interviews";
-        element={
-          <ProtectedRoute>;
-            <Interviews />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/notifications";
-        element={
-          <ProtectedRoute>;
-            <Notifications />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/applications / track";
-        element={
-          <ProtectedRoute>;
-            <ApplicationStatusTracker />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/hiring - tracker";
-        element={
-          <ProtectedRoute>;
-            <HiringTracker />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/portfolio - builder";
-        element={
-          <ProtectedRoute>;
-            <PortfolioBuilder />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/referrals";
-        element={
-          <ProtectedRoute>;
-            <Referrals />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/developers";
-        element={
-          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        }
-/>;
-      <Route;
-        path="/wallet";
-        element={
-          <ProtectedRoute>;
-            <WalletPage />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-path="/dashboard / api - access";
-        element={
-          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/contract - builder";
-        element={
-          <ProtectedRoute>;
-            <ContractBuilder />;
-          </ProtectedRoute>;
-
-        } ;
-      />;
-    </Routes>;
-  );
-},;
-export default DashboardRoutes;
-export default DashboardRoutes;
-
-        }
-        path="/contract-builder"        }
-        path="/contract-builder"        }
-        path="/contract-builder"
-
-        }
-      />;
-    </Routes>);
-}
-;
-export default DashboardRoutes;
-;
-      />
-      <Route
-        path="/wallet"
-        element={
-          <ProtectedRoute>
-            <WalletPage />
-          </ProtectedRoute>
-        }
-      />;
-      <Route;
-        path="/dashboard/api-access";
-        element={;
-          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route;
-        path="/contract-builder";
-        element={;
-          <ProtectedRoute>;
-            <ContractBuilder />;
-          </ProtectedRoute>;
-        } ;
-      />;
-    </Routes>;
-  );
-},;
-export default DashboardRoutes;
-
-"
-

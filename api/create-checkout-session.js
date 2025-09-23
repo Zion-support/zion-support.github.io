@@ -26,21 +26,34 @@ export default function handler() {res.status(200).json({ "message": 'Checkout s
     })} catch (err) {,// console.error('Checkout session API error:, err),res.statusCode = 500,res.json({ error: err.message || 'Checkout session creation failed' })}}export default withErrorLogging(handler),}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
 }export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 import Stripe from 'stripe';
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16'
-});
-
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
+import { withErrorLogging } from './withErrorLogging.cjs';
+const PROD_DOMAIN = 'app.ziontechgroup.com';
+function isProdDomain() {
+  const url = process.env.URL || '';
   try {
-    const { amount, currency = 'usd' } = req.body;
-
-    if (!amount) {
-      return res.status(400).json({ message: 'Amount is required' });
+    return new URL(url).hostname === PROD_DOMAIN;
+  } catch {
+    return false;
+  }
+}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+  const { productId, userId } = req.body || {};
+  if (!productId || !userId) {
+    res.statusCode = 400;
+    res.json({ error: 'Missing productId or userId' });
+    return;
+  }
+  try {
+    const liveKey = process.env.STRIPE_SECRET_KEY || '';
+    const testKey = process.env.STRIPE_TEST_SECRET_KEY || liveKey;
+    if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
+      throw new Error('Refusing to use live Stripe key on non-production domain');
     }
 
     const session = stripe.checkout.sessions.create({
@@ -59,7 +72,8 @@ export default function handler(req, res) {
       ],
       mode: 'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/cancel`
+      cancel_url: `${req.headers.origin}/cancel`,
+      metadata: { userId, productId },
     });
 
     res.status(200).json({ sessionId: session.id });

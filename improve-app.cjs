@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /**
  * App Improvement Script
  * Minimal, safe improvements: analyze build output size and generate a report.

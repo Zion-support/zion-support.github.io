@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-    this.projectRoot = process.cwd();
-    this.projectRoot = process.cwd();
-=======
 
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.projectRoot = process.cwd();
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     this.reportsDir = path.join(this.projectRoot, 'security-reports');
     this.ensureDirectories()}
 
@@ -114,15 +109,6 @@
         'express',
         'request'
       ];
-<<<<<<< HEAD
-      const foundVulnerable = Object.keys(dependencies).filter(dep =>
-      const foundVulnerable = Object.keys(dependencies).filter(dep => 
-        vulnerablePackages.some(vuln => dep.includes(vuln))
-      );`;
-      this.log(`📦 Found ${foundVulnerable.length} potentially vulnerable packages`);
-  // TODO: Implement
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
       const foundVulnerable = Object.keys(dependencies).filter(dep => 
         vulnerablePackages.some(vuln => dep.includes(vuln))
@@ -294,29 +280,16 @@
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   auditor.run()
     .then((report) => {
-<<<<<<< HEAD
-=======
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
-<<<<<<< HEAD
-module.exports = SecurityAuditor;
-module.exports = SecurityAuditor;
-
-module.exports = SecurityAuditor;
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
-<<<<<<< HEAD
-=======
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -355,13 +328,7 @@ const { execSync } = require('child_process')
         "message"
         "impact"
 
-<<<<<<< HEAD
-      process.exit(0)})
-    .catch((error) => {"
-
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

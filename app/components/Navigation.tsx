@@ -1,297 +1,101 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
-import { usePathname } from 'next/navigation'
-import { Menu, X, Zap, ChevronDown } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
-
-interface NavigationItem {
-  name: string
-  href: string
-  external?: boolean
-  children?: NavigationItem[]
-}
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const pathname = usePathname()
-  const menuRef = useRef<any>(null)
-  const dropdownTimeoutRef = useRef<any>()
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: any) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as any)) {
-        setIsMenuOpen(false)
-      }
-    }
-
-    if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-      document.body.style.overflow = 'unset'
-    }
-  }, [isMenuOpen])
-
-  // Close menu on escape key
-  useEffect(() => {
-    const handleEscape = (event: any) => {
-      if (event.key === 'Escape') {
-        setIsMenuOpen(false)
-        setActiveDropdown(null)
-      }
-    }
-
-    document.addEventListener('keydown', handleEscape)
-    return () => document.removeEventListener('keydown', handleEscape)
-  }, [])
-
-  const navigationItems: NavigationItem[] = [
+  const navigation = [
     { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      children: [
-        { name: 'AI Solutions', href: '/services/ai' },
-        { name: 'Cloud Services', href: '/services/cloud' },
-        { name: 'Cybersecurity', href: '/services/security' },
-        { name: 'Digital Innovation', href: '/services/innovation' }
-      ]
-    },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Resources', href: '/content' },
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Research', href: '/research' },
     { name: 'Contact', href: '/contact' },
-  ]
-
-  const handleDropdownToggle = (itemName: string) => {
-    if (activeDropdown === itemName) {
-      setActiveDropdown(null)
-    } else {
-      setActiveDropdown(itemName)
-    }
-  }
-
-  const handleDropdownMouseEnter = (itemName: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current)
-    }
-    setActiveDropdown(itemName)
-  }
-
-  const handleDropdownMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null)
-    }, 150)
-  }
-
-  const isActiveRoute = (href: string) => {
-    return pathname === href
-  }
+  ];
 
   return (
-    <nav 
-      ref={menuRef}
-      className={`relative z-50 backdrop-blur-md border-b border-white/10 transition-all duration-300 ${
-        isScrolled ? 'bg-black/40 shadow-lg' : 'bg-black/20'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-800 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link 
-            href="/" 
-            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1"
-            aria-label="Zion Tech Group - Go to homepage"
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
-                {item.children ? (
-                  <div
-                    className="relative"
-                    onMouseEnter={() => handleDropdownMouseEnter(item.name)}
-                    onMouseLeave={handleDropdownMouseLeave}
-                  >
-                    <button
-                      onClick={() => handleDropdownToggle(item.name)}
-                      className={`flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-1 ${
-                        isActiveRoute(item.href) ? 'text-white' : ''
-                      }`}
-                      aria-expanded={activeDropdown === item.name}
-                      aria-haspopup="true"
-                      aria-label={`${item.name} menu`}
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
-                    </button>
-                    
-                    {activeDropdown === item.name && (
-                      <div 
-                        className="absolute top-full left-0 mt-2 w-48 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50"
-                        role="menu"
-                        aria-label={`${item.name} submenu`}
-                      >
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className={`block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
-                              isActiveRoute(child.href) ? 'bg-blue-50 text-blue-600' : ''
-                            }`}
-                            role="menuitem"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className={`text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-1 ${
-                      isActiveRoute(item.href) ? 'text-white' : ''
-                    }`}
-                    aria-current={isActiveRoute(item.href) ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium transition-colors duration-200 ${
+                  pathname === item.href
+                    ? 'text-blue-400'
+                    : 'text-slate-300 hover:text-white'
+                }`}
+              >
+                {item.name}
+              </Link>
             ))}
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                aria-label="Get started - Contact us"
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-slate-300 hover:text-white"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden py-4 border-t border-slate-800">
+            <div className="flex flex-col space-y-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors duration-200 ${
+                    pathname === item.href
+                      ? 'text-blue-400'
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 text-center"
+                onClick={() => setIsOpen(false)}
               >
                 Get Started
               </Link>
             </div>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div 
-            id="mobile-menu"
-            className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4"
-            role="menu"
-            aria-label="Mobile navigation menu"
-          >
-            <div className="flex flex-col space-y-2">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  {item.children ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle(item.name)}
-                        className={`w-full flex items-center justify-between text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-2 ${
-                          isActiveRoute(item.href) ? 'text-white' : ''
-                        }`}
-                        aria-expanded={activeDropdown === item.name}
-                        aria-haspopup="true"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      {activeDropdown === item.name && (
-                        <div className="ml-4 mt-2 space-y-1">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.name}
-                              href={child.href}
-                              className={`block text-gray-400 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-1 ${
-                                isActiveRoute(child.href) ? 'text-white' : ''
-                              }`}
-                              onClick={() => {
-                                setIsMenuOpen(false)
-                                setActiveDropdown(null)
-                              }}
-                              aria-current={isActiveRoute(child.href) ? 'page' : undefined}
-                            >
-                              {child.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className={`block text-gray-300 hover:text-white transition-colors duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg px-2 py-2 ${
-                        isActiveRoute(item.href) ? 'text-white' : ''
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                      aria-current={isActiveRoute(item.href) ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-                <ThemeToggle />
-                <Link 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-200 font-medium w-full text-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
         )}
       </div>
     </nav>
-  )
+  );
 }
