@@ -4,110 +4,6 @@ export const metadata = {
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
-<<<<<<< HEAD
-export default function CareersPage() {
-  const openPositions = [
-    {
-      title: 'Senior AI Research Engineer',
-      department: 'Research & Development',
-      location: 'Remote / Global',
-      type: 'Full-time',
-      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-      requirements: [
-        'PhD in Computer Science, AI, or related field',
-        '5+ years experience in AI research',
-        'Expertise in machine learning and neural networks',
-        'Experience with quantum computing concepts',
-      ],
-    },
-    {
-      title: 'Quantum Computing Engineer',
-      department: 'Quantum Solutions',
-      location: 'Remote / Global',
-      type: 'Full-time',
-      description: 'Develop next-generation quantum algorithms and quantum computing infrastructure.',
-      requirements: [
-        'MS/PhD in Physics, Computer Science, or related field',
-        '3+ years experience in quantum computing',
-        'Knowledge of quantum algorithms and quantum programming',
-        'Experience with Qiskit, Cirq, or similar frameworks',
-      ],
-    },
-    {
-      title: 'Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Global',
-      type: 'Full-time',
-      description: 'Build scalable web applications and APIs for our AI-powered platforms.',
-      requirements: [
-        '3+ years experience in full-stack development',
-        'Proficiency in React, Node.js, and TypeScript',
-        'Experience with cloud platforms (AWS, GCP, Azure)',
-        'Knowledge of database design and optimization',
-      ],
-    },
-    {
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote / Global',
-      type: 'Full-time',
-      description: 'Implement and maintain advanced security protocols for our AI systems.',
-      requirements: [
-        '5+ years experience in cybersecurity',
-        'Expertise in threat detection and prevention',
-        'Knowledge of AI security and adversarial attacks',
-        'Relevant certifications (CISSP, CEH, etc.)',
-      ],
-    },
-  ];
-
-  const benefits = [
-    {
-      title: 'Remote First',
-      description: 'Work from anywhere in the world with our distributed team.',
-      icon: '🌍',
-    },
-    {
-      title: 'Cutting-Edge Technology',
-      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
-      icon: '🚀',
-    },
-    {
-      title: 'Flexible Hours',
-      description: "Work when you're most productive with flexible scheduling.",
-      icon: '⏰',
-    },
-    {
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities and professional development.',
-      icon: '📚',
-    },
-    {
-      title: 'Competitive Compensation',
-      description: 'Attractive salary packages with equity options.',
-      icon: '💰',
-    },
-    {
-      title: 'Health & Wellness',
-      description: 'Comprehensive health coverage and wellness programs.',
-      icon: '🏥',
-    },
-  ];
-
-  return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Join Our Team</h1>
-        <p className="text-xl md:text-2xl opacity-80 mb-8 max-w-3xl mx-auto">
-          Help us build the future of AI-powered digital economies and autonomous business operations.
-        </p>
-        <p className="text-lg opacity-70 max-w-2xl mx-auto">
-          We're looking for passionate innovators who want to push the boundaries of what's possible 
-          in artificial intelligence, quantum computing, and blockchain technology.
-        </p>
-      </section>
-=======
 export const metadata = {
 	title: 'Careers - Zion Tech Group',
 	description:
@@ -178,7 +74,6 @@ export default function CareersPage() {
 		</div>
 	);
 }
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 
       {/* Open Positions */}
       <section className="py-16">
