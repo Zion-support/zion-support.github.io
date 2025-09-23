@@ -1,8 +1,7 @@
-import eslintJs from '@eslint/js';
-import eslintReact from 'eslint-plugin-react';
-import eslintReactHooks from 'eslint-plugin-react-hooks';
-import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
@@ -43,11 +42,10 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
-      parser: tsParser,
       ecmaVersion: 2021,
       sourceType: 'module'
     },
-    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tsEslintPlugin },
+    plugins: { react, 'react-hooks': reactHooks },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
