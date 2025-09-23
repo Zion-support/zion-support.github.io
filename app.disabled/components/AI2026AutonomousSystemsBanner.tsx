@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/AI2026AutonomousSystemsBanner.tsx
 import React from 'react';
 
 const AI2026AutonomousSystemsBanner: React.FC = () => {
@@ -13,3 +14,6 @@ const AI2026AutonomousSystemsBanner: React.FC = () => {
 
 export default AI2026AutonomousSystemsBanner;
 
+=======
+export default function AI2026AutonomousSystemsBanner() { return null; }
+>>>>>>> origin/main:app.disabled/components/AI2026AutonomousSystemsBanner.tsx

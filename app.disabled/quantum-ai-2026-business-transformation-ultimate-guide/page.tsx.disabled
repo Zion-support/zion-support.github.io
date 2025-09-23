@@ -2,8 +2,6 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SEO from '../../components/SEO';
-import RelatedContentWidget from '../../components/RelatedContentWidget';
-import SocialShareButtons from '../../components/SocialShareButtons';
 
 export const metadata: Metadata = {
   title: 'Quantum AI 2026: Business Transformation Ultimate Guide | Zion Tech Group',
@@ -189,17 +187,10 @@ export default function QuantumAI2026BusinessTransformationPage() {
         </div>
 
         {/* Social Share Buttons */}
-        <SocialShareButtons 
-          url="/quantum-ai-2026-business-transformation-ultimate-guide"
-          title={blogPost.title}
-          description={blogPost.description}
-        />
+        {/* Removed temporarily */}
 
         {/* Related Content Widget */}
-        <RelatedContentWidget 
-          title="Related Quantum AI & Technology Content"
-          posts={relatedPosts}
-        />
+        {/* Removed temporarily */}
 
         {/* Call to Action Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

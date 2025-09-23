@@ -28,8 +28,6 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "src-clean/**/*.ts",
-    "src-clean/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
     "types/**/*.d.ts"

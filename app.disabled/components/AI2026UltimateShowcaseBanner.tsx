@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/AI2026UltimateShowcaseBanner.tsx
 import React from 'react';
 
 const AI2026UltimateShowcaseBanner: React.FC = () => {
@@ -13,3 +14,6 @@ const AI2026UltimateShowcaseBanner: React.FC = () => {
 
 export default AI2026UltimateShowcaseBanner;
 
+=======
+export default function AI2026UltimateShowcaseBanner() { return null; }
+>>>>>>> origin/main:app.disabled/components/AI2026UltimateShowcaseBanner.tsx

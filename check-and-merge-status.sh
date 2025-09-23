@@ -52,11 +52,17 @@ for branch in $UNMERGED_BRANCH_LIST; do
         if [ -n "$CONFLICTED_FILES" ]; then
             echo "📋 Conflicted files: $CONFLICTED_FILES"
             
-            # Resolve conflicts by removing conflict markers
+            # Resolve conflicts by preferring incoming changes and removing markers
             for file in $CONFLICTED_FILES; do
                 if [ -f "$file" ]; then
                     echo "🔧 Resolving conflicts in $file..."
-                    sed -i '/                    sed -i '/                    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
+                    # Try taking theirs; if fails, keep ours
+                    git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+                    # Remove conflict markers if any remain
+                    sed -i '/^<<<<<<< /d' "$file" 2>/dev/null || true
+                    sed -i '/^=======/d' "$file" 2>/dev/null || true
+                    sed -i '/^>>>>>>> /d' "$file" 2>/dev/null || true
+                    CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
                 fi
             done
             

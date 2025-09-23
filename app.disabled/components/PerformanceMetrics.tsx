@@ -1,3 +1,4 @@
+<<<<<<< HEAD:app/components/PerformanceMetrics.tsx
 'use client';
 
 import React from 'react';
@@ -12,3 +13,6 @@ const PerformanceMetrics: React.FC = () => {
 
 export default PerformanceMetrics;
 
+=======
+export default function PerformanceMetrics() { return null; }
+>>>>>>> origin/main:app.disabled/components/PerformanceMetrics.tsx
