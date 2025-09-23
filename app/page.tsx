@@ -125,18 +125,17 @@ export default function HomePage() {
             </p>
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 text-green-400">
-                <TrendingUp className="w-5 h-5" />
+                <Icon className="w-5 h-5">📈</Icon>
                 <span className="text-sm font-medium">99.9% Uptime</span>
               </div>
               <div className="flex items-center gap-2 text-blue-400">
-                <Sparkles className="w-5 h-5" />
+                <Icon className="w-5 h-5">✨</Icon>
                 <span className="text-sm font-medium">AI-Powered</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all transform hover:scale-105 inline-flex items-center justify-center">
-                Explore Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Explore Solutions <Icon className="ml-2 w-5 h-5">→</Icon>
               </Link>
               <Link href="/contact" className="border border-gray-300 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center">
                 Get Started
@@ -150,61 +149,45 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ScrollReveal origin="bottom" delay={100}>
               <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white">🧠</Icon></div>
               <h3 className="text-xl font-semibold text-white mb-3">AI Solutions</h3>
               <p className="text-gray-300 text-sm mb-4">
                 Cutting-edge artificial intelligence solutions for enterprise automation and decision-making.
               </p>
-              <Link href="/services/ai" className="text-blue-400 hover:text-blue-300 text-sm font-medium inline-flex items-center">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
+              <Link href="/services/ai" className="text-blue-400 hover:text-blue-300 text-sm font-medium inline-flex items-center">Learn more <Icon className="ml-1 w-4 h-4">→</Icon></Link>
               </div>
             </ScrollReveal>
 
             <ScrollReveal origin="bottom" delay={200}>
               <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <Cloud className="w-6 h-6 text-white" />
-                </div>
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white">☁️</Icon></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Scalable cloud infrastructure, migration services, and DevOps automation.
                 </p>
-                <Link href="/services/cloud" className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                <Link href="/services/cloud" className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center">Learn more <Icon className="ml-1 w-4 h-4">→</Icon></Link>
               </div>
             </ScrollReveal>
 
             <ScrollReveal origin="bottom" delay={300}>
               <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white">🛡️</Icon></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Advanced security solutions and comprehensive threat protection strategies.
                 </p>
-                <Link href="/services/security" className="text-red-400 hover:text-red-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                <Link href="/services/security" className="text-red-400 hover:text-red-300 text-sm font-medium inline-flex items-center">Learn more <Icon className="ml-1 w-4 h-4">→</Icon></Link>
               </div>
             </ScrollReveal>
 
             <ScrollReveal origin="bottom" delay={400}>
               <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4"><Icon className="w-6 h-6 text-white">⚡</Icon></div>
                 <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
                 <p className="text-gray-300 text-sm mb-4">
                   Next-generation technology and digital transformation consulting.
                 </p>
-                <Link href="/services/innovation" className="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
+                <Link href="/services/innovation" className="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center">Learn more <Icon className="ml-1 w-4 h-4">→</Icon></Link>
               </div>
             </ScrollReveal>
           </div>
@@ -217,7 +200,7 @@ export default function HomePage() {
               <ScrollReveal origin="bottom" delay={300}>
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white">👥</Icon>
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-2">
                     <AnimatedCounter end={500} suffix="+" duration={2000} />
@@ -229,7 +212,7 @@ export default function HomePage() {
               <ScrollReveal origin="bottom" delay={400}>
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Globe className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white">🌐</Icon>
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-2">
                     <AnimatedCounter end={50} suffix="+" duration={2000} />
@@ -241,7 +224,7 @@ export default function HomePage() {
               <ScrollReveal origin="bottom" delay={500}>
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white">🎯</Icon>
                   </div>
                   <h3 className="text-3xl font-bold text-white mb-2">
                     <AnimatedCounter end={99.9} suffix="%" duration={2000} />
