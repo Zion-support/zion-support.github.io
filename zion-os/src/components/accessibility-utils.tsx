@@ -80,8 +80,9 @@ export function useKeyboardNavigation(items: any[], onSelect: (item: any) => voi
     }
   };
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
+    const listener = (e: KeyboardEvent) => handleKeyDown(e);
+    document.addEventListener("keydown", listener);
+    return () => document.removeEventListener("keydown", listener);
   }, [items, selectedIndex, onSelect]);
   return { selectedIndex, setSelectedIndex };
 }
