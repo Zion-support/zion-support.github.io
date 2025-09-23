@@ -189,31 +189,3 @@ export default function Header() {
     </header>
   );
 }
-
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group" aria-label="Zion Tech Group Home">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
-          <span className="font-bold text-xl gradient-text">Zion OS</span>
-        </a>
-        <nav className="hidden md:flex items-center space-x-6 text-white/80">
-          <a href="/" className="hover:text-white">Home</a>
-          <a href="/multiverse/launch" className="hover:text-white">Launch</a>
-          <a href="/admin/instances" className="hover:text-white">Instances</a>
-          <a href="/admin/os-deploy" className="hover:text-white">Admin</a>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
-export default Header;

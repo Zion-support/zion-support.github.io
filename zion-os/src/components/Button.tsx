@@ -20,7 +20,7 @@ interface ButtonProps {
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>({
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   children,
   variant = 'primary',
   size = 'md',
