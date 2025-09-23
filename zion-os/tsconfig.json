@@ -18,27 +18,14 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "@/*": ["src/*"]
-=======
-      "@/*": [
-        "src/*"
-      ]
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
-=======
-      "@/*": ["src/*"]
-    },
-    "plugins": [{
-      "name": "next"
-    }]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0914
+    ],
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
