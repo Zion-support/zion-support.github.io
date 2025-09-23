@@ -80,8 +80,6 @@ export default [
       'utils/**',
       'utils.disabled/**',
       'zion-os/**',
-      // Allow linting the Next.js app
-      // 'zion-website/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
