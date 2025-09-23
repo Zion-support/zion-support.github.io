@@ -28,8 +28,18 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
+    "styles/**/*.ts",
+    "styles/**/*.tsx",
+    "middleware.ts",
+    "middleware.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -42,6 +52,18 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "zion-os/**",
+    "zion-website/**",
+    "generated-services/**",
+    "backend/**",
+    "ai_core/**",
+    "automation/**",
+    "api.disabled/**",
+    "app-disabled/**",
+    "apps/**",
+    "utils/**",
+    "types/**",
+    "ts_files_backup/**"
   ]
 }
