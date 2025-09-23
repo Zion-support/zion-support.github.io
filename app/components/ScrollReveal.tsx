@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 "use client";
+import { useEffect } from 'react';
 
-import React from "react";
+export default function ScrollReveal() {
+  useEffect(() => {
+    const onScroll = () => {
+      // no-op placeholder to simulate reveal
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-type ScrollRevealProps = {
-  children: React.ReactNode;
-  origin?: "bottom" | "top" | "left" | "right";
-  delay?: number;
-};
-=======
-'use client';
-import { PropsWithChildren } from 'react';
-
-type ScrollRevealProps = PropsWithChildren<{ origin?: string; delay?: number }>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
-=======
-'use client';
-
-import React from 'react';
-
-type ScrollRevealProps = {
-  origin?: 'top' | 'bottom' | 'left' | 'right';
-  delay?: number;
-  children: React.ReactNode;
-};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
-
-export default function ScrollReveal({ children }: ScrollRevealProps) {
-  return <>{children}</>;
+  return null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf

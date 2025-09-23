@@ -1,74 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
-"use client";
-
-import React from 'react';
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
-export default function PerformanceMetrics() {
-	return null;
-}
-=======
-'use client';
-=======
-"use client";
-import React from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
+type Metric = { label: string; value: string };
 
 export default function PerformanceMetrics() {
-  return null;
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
-=======
-export default function PerformanceMetrics() {
-	return (
-		<div className="p-6 rounded-lg bg-white/10 text-white">
-			<h3 className="text-lg font-semibold">Performance Metrics</h3>
-			<p className="text-sm opacity-80">Coming soon.</p>
-		</div>
-	);
-}
+  const metrics: Metric[] = [
+    { label: 'Latency', value: '< 50ms' },
+    { label: 'Uptime', value: '99.99%' },
+    { label: 'Throughput', value: '1M req/min' },
+  ];
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
-=======
-"use client";
-
-import React from "react";
-
-export default function PerformanceMetrics() {
   return (
-    <div className="p-4 rounded-lg bg-white/10 text-white">
-      <h3 className="font-semibold">Performance Metrics (Coming Soon)</h3>
-    </div>
+    <section aria-label="Performance Metrics">
+      <h3>Performance Metrics</h3>
+      <ul>
+        {metrics.map((m) => (
+          <li key={m.label}>
+            <strong>{m.label}:</strong> {m.value}
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
-=======
-export default function PerformanceMetrics() {
-  return null;
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-b295
-=======
-'use client';
-
-import React from 'react';
-
-export default function PerformanceMetrics() {
-  return null;
-}
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-a4bf
