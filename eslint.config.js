@@ -6,46 +6,54 @@ import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
-    ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'public/**',
-      'automation/**',
-      'apps.backup/**',
-      'backup/**',
-      'backups/**',
-      'backup-merge-conflicts/**',
-      'backup-problematic-files/**',
-      'recovered-branches/**',
-      'server/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion-ai-assistant/**',
-      'ts_files_backup/**',
-      'src_backup/**',
-      'src_backup_temp/**',
-      'components/20o25-advanced-services-showcase.tsx',
-      'components/20o25-comprehensive-services-showcase-v2.tsx',
-      'components/AI20o25AdvancedAutomationShowcase.tsx',
-      'components/AI20o25AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js'
-    ]
+           ignores: [
+             'node_modules/**',
+             '.next/**',
+             'out/**',
+             'dist/**',
+             'build/**',
+             'public/**',
+             'automation/**',
+             'apps.backup/**',
+             'backup/**',
+             'backups/**',
+             'backup-merge-conflicts/**',
+             'backup-problematic-files/**',
+             'recovered-branches/**',
+             'server/**',
+             'zion-os/**',
+             'zion-website/**',
+             'zion-ai-assistant/**',
+             'ts_files_backup/**',
+             'src_backup/**',
+             'src_backup_temp/**',
+             'lib/**',
+             'components/2025-advanced-services-showcase.tsx',
+             'components/2025-comprehensive-services-showcase-v2.tsx',
+             'components/AI2025AdvancedAutomationShowcase.tsx',
+             'components/AI2025AdvancedAnalyticsDashboard.tsx',
+             'components/apps/extension/**',
+             'src/config/seo.js',
+             '**/*.min.js'
+           ]
   },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
-    files: [
-      'app/**/*.{js,jsx,ts,tsx}',
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}'
-    ],
+  eslintJs.configs.recommended,
+         {
+           files: [
+             'app/**/*.{js,jsx,ts,tsx}',
+             'pages/**/*.{js,jsx,ts,tsx}',
+             'src/**/*.{js,jsx,ts,tsx}'
+           ],
     languageOptions: {
       parser: tsParser,
       ecmaVersion: 2021,
-      sourceType: 'module'
+      sourceType: 'module',
+      globals: {
+        URL: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly'
+      }
     },
     plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tsEslintPlugin },
     settings: { react: { version: 'detect' } },
