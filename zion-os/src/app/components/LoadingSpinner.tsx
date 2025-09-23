@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-export default function AppLoadingSpinner() {
-	return (
-		<div role="status" aria-live="polite" aria-busy="true">
-			Loading...
-		</div>
-	);
-}
-=======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -45,4 +36,3 @@ export default function LoadingSpinner({ size = 'md', text, className = '' }: Lo
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

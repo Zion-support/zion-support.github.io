@@ -5,8 +5,4 @@ export default function BlockchainServicesPage() {
       <p className="text-gray-600">Enterprise blockchain solutions and dApp development.</p>
     </main>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
