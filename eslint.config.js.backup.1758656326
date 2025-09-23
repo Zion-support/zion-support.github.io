@@ -1,9 +1,17 @@
+<<<<<<< HEAD
+// Flat ESLint config for ESLint v9+
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import tseslint from 'typescript-eslint';
+=======
 import eslintJs from '@eslint/js';
 import eslintReact from 'eslint-plugin-react';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
 import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6bfd
 export default [
   {
     ignores: [
@@ -43,6 +51,27 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
+<<<<<<< HEAD
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser: tseslint.parser,
+      parserOptions: { ecmaFeatures: { jsx: true } }
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React)$', ignoreRestSiblings: true }
+      ]
+    },
+    settings: { react: { version: 'detect' } }
+=======
       parser: tsParser,
       ecmaVersion: 2021,
       sourceType: 'module'
@@ -54,6 +83,7 @@ export default [
       'no-console': 'warn',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
     }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6bfd
   }
 ];
 
