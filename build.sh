@@ -1,52 +1,37 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
-echo "Starting Netlify build process..."
+echo "Starting build process..."
 
-# Check if we're in a Netlify environment
-if [ "$NETLIFY" = "true" ]; then
-  echo "Detected Netlify environment - using optimized build process..."
-  
-  # For Netlify, use a more conservative approach
-  echo "Installing dependencies with Netlify-optimized settings..."
-  yarn install --frozen-lockfile --network-timeout 60000
-  
-else
-  echo "Local development environment detected - using full cleanup process..."
-  
-  # Clean everything for local development
-  echo "Cleaning previous installations..."
-  rm -rf node_modules
-  rm -rf .yarn-cache
-  rm -rf dist
+is_cmd() { command -v "$1" >/dev/null 2>&1; }
 
-  # Clean yarn cache completely
-  echo "Cleaning yarn cache..."
-  yarn cache clean --all
-
-  # Install dependencies with retry logic for local development
-  echo "Installing dependencies..."
-  for i in {1..3}; do
-    echo "Attempt $i of 3..."
-    if yarn install --network-timeout 100000; then
-      echo "Dependencies installed successfully!"
-      break
+run_build() {
+  if [ -f pnpm-lock.yaml ] && is_cmd pnpm; then
+    echo "Using pnpm"
+    pnpm install --frozen-lockfile || pnpm install
+    pnpm run build
+  elif [ -f yarn.lock ] && is_cmd yarn; then
+    echo "Using yarn"
+    if [ "${NETLIFY:-}" = "true" ]; then
+      yarn install --frozen-lockfile --network-timeout 60000
     else
-      echo "Installation failed, cleaning and retrying..."
-      rm -rf node_modules
-      rm -rf .yarn-cache
-      yarn cache clean --all
-      if [ $i -eq 3 ]; then
-        echo "All installation attempts failed!"
-        exit 1
-      fi
+      yarn install --network-timeout 100000
     fi
-  done
-fi
+    yarn build || yarn run build
+  elif [ -f package-lock.json ] && is_cmd npm; then
+    echo "Using npm (lockfile)"
+    npm ci || npm install
+    npm run build
+  elif [ -f package.json ] && is_cmd npm; then
+    echo "Using npm"
+    npm install
+    npm run build
+  else
+    echo "No recognized package manager or lockfile found." >&2
+    exit 1
+  fi
+}
 
-# Build the project
-echo "Building project..."
-pnpm run build
+run_build
 
 echo "Build completed successfully!"
-fi
