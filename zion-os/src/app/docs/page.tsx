@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function DocsPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function DocsPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function DocsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Documentation</h1>
+			<p>Browse product and API documentation.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

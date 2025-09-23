@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function TermsPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function TermsPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function TermsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Terms and Conditions</h1>
+			<p>Please review our terms of service.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

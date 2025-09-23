@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function DashboardPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function DashboardPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function DashboardPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Dashboard</h1>
+			<p>Welcome to your dashboard.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

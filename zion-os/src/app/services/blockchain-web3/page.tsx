@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Web3ServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,3 +7,16 @@ export default function Web3ServicesPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function BlockchainWeb3Page(): React.ReactElement {
+	return (
+		<main>
+			<h1>Blockchain & Web3</h1>
+			<p>Web3 solutions and decentralized applications.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main

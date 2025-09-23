@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function PricingPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function PricingPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function PricingPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Pricing</h1>
+			<p>Choose the plan that fits your needs.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

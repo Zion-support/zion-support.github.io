@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function EventsPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function EventsPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function EventsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Events</h1>
+			<p>Upcoming events and webinars.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function ResearchPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,6 +7,19 @@ export default function ResearchPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function ResearchPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Research</h1>
+			<p>Our research initiatives and publications.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main
 
 
 

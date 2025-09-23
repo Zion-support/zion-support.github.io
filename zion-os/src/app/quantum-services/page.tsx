@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function QuantumServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -6,3 +7,16 @@ export default function QuantumServicesPage() {
     </main>
   );
 }
+=======
+import React from 'react';
+
+export default function QuantumServicesPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Quantum Services</h1>
+			<p>Advanced quantum computing services and research.</p>
+		</main>
+	);
+}
+
+>>>>>>> origin/main

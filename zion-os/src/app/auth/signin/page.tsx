@@ -1,6 +1,8 @@
 "use client";
 export const dynamic = "force-dynamic";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
@@ -10,7 +12,7 @@ export default function SignInPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { login } = useAuth();
+  const { signIn } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ export default function SignInPage() {
     setError("");
 
     try {
-      await login(email, password);
+      await signIn(email, password);
     } catch (error) {
       setError(error instanceof Error ? error.message : "Login failed");
     } finally {
