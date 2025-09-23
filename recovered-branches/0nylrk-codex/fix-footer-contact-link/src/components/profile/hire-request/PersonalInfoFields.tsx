@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
->>>>>>> origin/auto/autonomy-17186719616
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";

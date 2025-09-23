@@ -244,8 +244,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1786,7 +1784,6 @@
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
 =======
->>>>>>> 0326d2d387e86183b2aa59d7ac94999b40abe001
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======

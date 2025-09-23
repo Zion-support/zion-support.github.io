@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function TalentIndex() { return <div className="p-6">Talent</div>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -13,4 +10,3 @@ const TalentIndexPage: NextPage = () => (
 );
 
 export default TalentIndexPage;
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41

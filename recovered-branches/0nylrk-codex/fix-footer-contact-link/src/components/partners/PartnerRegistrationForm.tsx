@@ -2,56 +2,33 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { FormControlFormDescriptionFormFieldFormItemFormLabelFormMessage } from "@/components/ui/form";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
->>>>>>> origin/auto/autonomy-17186719616
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 
 const partnerFormSchema = z.object({
-<<<<<<< HEAD
-  name: z.string().min(2{ message: "Name must be at least 2 characters." }),
-=======
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
->>>>>>> origin/auto/autonomy-17186719616
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
   twitter: z.string().optional(),
   instagram: z.string().optional(),
   youtube: z.string().optional(),
   linkedin: z.string().optional(),
-<<<<<<< HEAD
-  niche: z.string().min(2{ message: "Please specify your niche." }),
-  audience_size: z.string(),
-  payout_method: z.string(),
-  bio: z.string().min(10{ message: "Bio must be at least 10 characters." }).max(500)});
-=======
   niche: z.string().min(2, { message: "Please specify your niche." }),
   audience_size: z.string(),
   payout_method: z.string(),
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500),
 });
->>>>>>> origin/auto/autonomy-17186719616
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 
 export function PartnerRegistrationForm() {
-<<<<<<< HEAD
-  const [isSubmittingsetIsSubmitting] = useState(false);
-=======
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   const { user } = useAuth();
 
   const form = useForm<PartnerFormValues>({
@@ -66,35 +43,23 @@ export function PartnerRegistrationForm() {
       niche: "",
       audience_size: "",
       payout_method: "paypal",
-<<<<<<< HEAD
-      bio: ""}});
-=======
       bio: "",
     },
   });
->>>>>>> origin/auto/autonomy-17186719616
 
   const checkExistingPartner = async () => {
     const { data: existingPartner } = await supabase
       .from('partner_profiles')
       .select('id')
-<<<<<<< HEAD
-      .eq('user_id'user.id)
-=======
       .eq('user_id', user.id)
->>>>>>> origin/auto/autonomy-17186719616
       .single();
 
     if (existingPartner) {
       toast({
         title: "Already registered",
         description: "You have already registered as a partner.",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
         variant: "destructive",
       });
->>>>>>> origin/auto/autonomy-17186719616
       setIsSubmitting(false);
       return true;
     }
@@ -106,12 +71,8 @@ export function PartnerRegistrationForm() {
       toast({
         title: "Authentication required",
         description: "You must be logged in to register as a partner.",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
         variant: "destructive",
       });
->>>>>>> origin/auto/autonomy-17186719616
       return;
     }
 
@@ -122,11 +83,7 @@ export function PartnerRegistrationForm() {
       if (hasExistingPartner) return;
 
       // Insert new partner profile
-<<<<<<< HEAD
-      const { data: newPartnerror } = await supabase
-=======
       const { data: newPartner, error } = await supabase
->>>>>>> origin/auto/autonomy-17186719616
         .from('partner_profiles')
         .insert([
           {
@@ -137,21 +94,13 @@ export function PartnerRegistrationForm() {
               twitter: data.twitter || null,
               instagram: data.instagram || null,
               youtube: data.youtube || null,
-<<<<<<< HEAD
-              linkedin: data.linkedin || null},
-=======
               linkedin: data.linkedin || null,
             },
->>>>>>> origin/auto/autonomy-17186719616
             niche: data.niche,
             audience_size: data.audience_size,
             payout_method: data.payout_method,
             bio: data.bio,
-<<<<<<< HEAD
-            status: 'pending'// Partners need approval
-=======
             status: 'pending', // Partners need approval
->>>>>>> origin/auto/autonomy-17186719616
           }
         ])
         .select();
@@ -161,32 +110,13 @@ export function PartnerRegistrationForm() {
       toast({
         title: "Application submitted!",
         description: "Your partner application has been submitted for review.",
-<<<<<<< HEAD
-        variant: "default"});
-=======
         variant: "default",
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       // Create a referral code if they don't have one already
       const { data: existingCode } = await supabase
         .from('referral_codes')
         .select('code')
-<<<<<<< HEAD
-        .eq('user_id'user.id)
-        .single();
-
-      if (!existingCode) {
-        await supabase.rpc('generate_referral_code'{ user_id: user.id });
-      }
-
-    } catch (error: any) {
-      console.error('Error submitting partner application:'error);
-      toast({
-        title: "Submission failed",
-        description: error.message || "There was a problem submitting your application.",
-        variant: "destructive"});
-=======
         .eq('user_id', user.id)
         .single();
 
@@ -201,7 +131,6 @@ export function PartnerRegistrationForm() {
         description: error.message || "There was a problem submitting your application.",
         variant: "destructive",
       });
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }
@@ -312,11 +241,7 @@ export function PartnerRegistrationForm() {
                   <FormItem>
                     <FormLabel>Your Niche</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
-                      <Input placeholder="AI developmentmachine learningtech tutorialsetc." {...field} />
-=======
                       <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />
->>>>>>> origin/auto/autonomy-17186719616
                     </FormControl>
                     <FormDescription>
                       What topics do you focus on in your content?
@@ -386,10 +311,6 @@ export function PartnerRegistrationForm() {
                     <FormControl>
                       <Textarea 
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
                         rows={4} 
                         {...field} 
                       />

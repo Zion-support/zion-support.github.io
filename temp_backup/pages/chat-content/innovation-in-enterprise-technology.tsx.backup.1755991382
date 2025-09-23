@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export default function Page(){
-<<<<<<< HEAD
-  return <div style={{padding:20}}>Content</div>
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -24,7 +18,6 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
 };
 
 export default InnovationInEnterpriseTechnology;
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
   return <div className="max-w-3xl mx-auto p-6">Innovation in Enterprise Technology</div>;
 }

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -51,7 +49,6 @@ export const useTheme = (): ThemeProviderState => {
 
   return context
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function ThemeProvider() {
   return (
@@ -60,8 +57,5 @@ export function ThemeProvider() {
       <p>Component placeholder</p>
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

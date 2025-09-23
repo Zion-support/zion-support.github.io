@@ -116,37 +116,6 @@ const navigationItems: NavigationItem[] = [
     featured: true,
     children: [
       { 
-<<<<<<< HEAD
-        name: 'AI Content Orchestrator', 
-        href: '/ai-content-orchestrator', 
-        description: 'Intelligent content creation and management',
-        icon: <BrainIcon className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'AI Legal Assistant', 
-        href: '/ai-legal-assistant', 
-        description: 'Legal research and document automation',
-        icon: <FileText className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Healthcare Diagnostics', 
-        href: '/ai-healthcare-diagnostics', 
-        description: 'Medical imaging and diagnostic platform',
-        icon: <Heart className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Creative Studio', 
-        href: '/ai-creative-studio', 
-        description: 'AI-driven content creation platform',
-        icon: <Palette className="w-4 h-4" />
-      },
-      { 
-        name: 'AI Supply Chain Optimizer', 
-        href: '/ai-supply-chain-optimizer', 
-        description: 'Intelligent supply chain optimization',
-        icon: <Truck className="w-4 h-4" />
-=======
         name: 'AI Consciousness Evolution', 
         href: '/ai-consciousness-evolution-2037', 
         description: 'Next evolution of AI consciousness',
@@ -174,7 +143,6 @@ const navigationItems: NavigationItem[] = [
         description: 'AI-powered EI training',
         icon: <Heart className="w-4 h-4" />,
         color: 'from-pink-500 to-rose-500'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ced2
       }
     ]
   },

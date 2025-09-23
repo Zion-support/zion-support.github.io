@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState, useEffect, useCallback, useRef, FocusEvent } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
 import { 
   Eye, EyeOff, Volume2, VolumeX, Type, 
   Contrast, ZoomIn, ZoomOut, RotateCcw,
@@ -140,8 +135,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         speakText(text.substring(0, 500) + '...'); // Limit text length
       }
     }
-<<<<<<< HEAD
-=======
   }, [applySettings]);
 
   // Focus management
@@ -295,7 +288,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     ];
     
     return Array.from(document.querySelectorAll(focusableSelectors.join(','))) as HTMLElement[];
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   };
 
   // Highlighter mode

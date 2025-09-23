@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface InnovativeBusinessSolution {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface InnovativeBusinessSolution {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [
   // AI-Powered Marketing Automation Platform
   {
@@ -100,10 +94,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.9,
     reviews: 156
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
@@ -156,10 +147,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.8,
     reviews: 112
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered HR Management Platform
   {
     id: 'ai-hr-management-platform',
@@ -212,10 +200,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.7,
     reviews: 89
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',
@@ -268,10 +253,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.9,
     reviews: 98
   },
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',

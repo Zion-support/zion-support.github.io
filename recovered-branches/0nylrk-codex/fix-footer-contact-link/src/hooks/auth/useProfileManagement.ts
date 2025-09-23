@@ -17,24 +17,16 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         data: {
           display_name: data.displayName,
           user_type: data.userType,
-<<<<<<< HEAD
-          headline: data.headline}});
-=======
           headline: data.headline,
         },
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       if (authError) {
         toast({
           title: "Profile update failed",
           description: authError.message,
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
           variant: "destructive",
         });
->>>>>>> origin/auto/autonomy-17186719616
         return { error: authError };
       }
 
@@ -48,35 +40,23 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           headline: data.headline,
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
-<<<<<<< HEAD
-          updated_at: new Date().toISOString()})
-=======
           updated_at: new Date().toISOString(),
         })
->>>>>>> origin/auto/autonomy-17186719616
         .eq("id", data.id);
 
       if (profileError) {
         toast({
           title: "Profile update failed",
           description: profileError.message,
-<<<<<<< HEAD
-          variant: "destructive"});
-=======
           variant: "destructive",
         });
->>>>>>> origin/auto/autonomy-17186719616
         return { error: profileError };
       }
 
       toast({
         title: "Profile updated",
-<<<<<<< HEAD
-        description: "Your profile has been updated successfully."});
-=======
         description: "Your profile has been updated successfully.",
       });
->>>>>>> origin/auto/autonomy-17186719616
 
       return { success: true };
     } catch (error: any) {
@@ -84,12 +64,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       toast({
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
-<<<<<<< HEAD
-        variant: "destructive"});
-=======
         variant: "destructive",
       });
->>>>>>> origin/auto/autonomy-17186719616
       return { error };
     } finally {
       setIsLoading(false);

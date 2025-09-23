@@ -3,16 +3,12 @@ const nextConfig = {
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
-<<<<<<< HEAD
-  // Enhanced performance optimizations
-=======
   // Disable TypeScript checking during build
   typescript: {
     ignoreBuildErrors: true,
   },
   
   // Enable experimental features for better performance
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-cb9f
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],

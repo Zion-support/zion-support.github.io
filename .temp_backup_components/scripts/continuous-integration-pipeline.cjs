@@ -76,8 +76,4 @@ const path = require("path")
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
-<<<<<<< HEAD
     console.error(" CI pipeline "failed": ")
-=======
-    console.error(" CI pipeline "failed": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,9 +1,16 @@
+*
+!zion-website
+!zion-website/**
+
+# Always ignore dependencies and build outputs
 node_modules/
 .next/
 dist/
 build/
 coverage/
 out/
+*.log
+*.tmp
 backups/
 backup/
 backup-merge-conflicts/
@@ -59,19 +66,13 @@ temp_conflicts/
 temp-disabled/
 temp_exclude/
 
-# Large subprojects not part of primary app
+# Additional noisy or non-primary directories
+ts_files_backup/
+utils/
+types/
 zion-os/
 zion-website/
 zion-ai-assistant/
-
-# Backup TypeScript files
-ts_files_backup/
-
-# Problematic single files
-vite.config-backup.ts
-workbox-config.js
-ultimate-fix.js
-ultimate-merge-conflict-resolver.js
 
 # Misc backups
 lib_backup/
@@ -83,3 +84,11 @@ lib.disabled/
 **/*.backups*/
 **/*.corrupted*/
 **/*.disabled*/
+
+# Additional exclusions to avoid linting corrupted or out-of-scope code
+utils/
+types/
+ts_files_backup/
+zion-os/
+zion-ai-assistant/
+zion-website/

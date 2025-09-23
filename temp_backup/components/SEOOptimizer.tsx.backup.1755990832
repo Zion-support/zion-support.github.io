@@ -14,23 +14,12 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-<<<<<<< HEAD
-  noindex?: boolean;
-  nofollow?: boolean;
-}
-
-const SEOOptimizer: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Revolutionary AI & Quantum Technology Solutions",
-  description = "Pioneering the future of technology with innovative AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge 2040-2041 technology.",
-  keywords = "AI, artificial intelligence, quantum computing, autonomous systems, technology solutions, business transformation, Zion Tech Group, 2040 technology, consciousness AI",
-=======
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = "Zion Tech Group - Revolutionary AI, Quantum Computing & Autonomous Solutions",
   description = "Pioneering the future of technology with innovative AI, quantum computing, and autonomous solutions that transform businesses worldwide. Enterprise-grade security, cloud infrastructure, and cutting-edge innovations.",
   keywords = "AI, artificial intelligence, quantum computing, autonomous systems, cybersecurity, cloud infrastructure, enterprise IT, machine learning, automation, space technology, blockchain, emerging tech",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   image = "/og-image.svg",
   url = "https://ziontechgroup.com",
   type = "website",
@@ -38,13 +27,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   publishedTime,
   modifiedTime,
   section = "Technology",
-<<<<<<< HEAD
-  tags = ["AI", "Quantum Computing", "Technology", "Innovation"],
-  noindex = false,
-  nofollow = false,
-=======
   tags = ["AI", "Quantum Computing", "Cybersecurity", "Cloud", "Enterprise IT"]
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 }) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
@@ -56,14 +39,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Revolutionary AI & Quantum Technology Solutions",
-=======
     "logo": "https://ziontechgroup.com/logo.png",
     "description": "Pioneering the future of technology with innovative AI, quantum computing, and autonomous solutions",
     "foundingDate": "2020",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "San Francisco",
@@ -249,11 +227,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-<<<<<<< HEAD
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-=======
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
@@ -269,19 +243,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-=======
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       
       {/* Additional Open Graph Tags */}
       <meta property="og:image:type" content="image/jpeg" />
@@ -330,15 +296,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-<<<<<<< HEAD
-      
-      {/* DNS Prefetch */}
-=======
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       
@@ -346,53 +307,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-          __html: JSON.stringify(organizationSchema)
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteSchema)
-        }}
-      />
-      {type === "article" && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              "headline": fullTitle,
-              "description": description,
-              "image": fullImage,
-              "author": {
-                "@type": "Organization",
-                "name": author
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Zion Tech Group"
-              },
-              "datePublished": publishedTime,
-              "dateModified": modifiedTime,
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": fullUrl
-              }
-            })
-          }}
-        />
-      )}
-      {type === "website" && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceSchema)
-          }}
-        />
-      )}
-=======
           __html: JSON.stringify(structuredData)
         }}
       />
@@ -468,7 +382,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           `
         }}
       />
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
     </Head>
   );
 };

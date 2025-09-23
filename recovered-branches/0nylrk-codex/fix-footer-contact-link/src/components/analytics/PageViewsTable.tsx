@@ -1,34 +1,14 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
->>>>>>> origin/auto/autonomy-17186719616
 import { useState } from "react";
 
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 
 const timeRangeToInterval = {
-<<<<<<< HEAD
-  '1d': { days: 1interval: 'hour' },
-  '7d': { days: 7interval: 'day' },
-  '30d': { days: 30interval: 'day' },
-  '90d': { days: 90interval: 'week' },
-  '365d': { days: 365interval: 'month' }
-};
-
-export function PageViewsTable() {
-  const [timeRangesetTimeRange] = useState<TimeRange>('7d');
-  
-  const { data: pageViewsisLoading } = useQuery({
-    queryKey: ['page-views-data'timeRange],
-=======
   '1d': { days: 1, interval: 'hour' },
   '7d': { days: 7, interval: 'day' },
   '30d': { days: 30, interval: 'day' },
@@ -41,54 +21,32 @@ export function PageViewsTable() {
   
   const { data: pageViews, isLoading } = useQuery({
     queryKey: ['page-views-data', timeRange],
->>>>>>> origin/auto/autonomy-17186719616
     queryFn: async () => {
       const { days } = timeRangeToInterval[timeRange];
       
       // Get top pages by views
-<<<<<<< HEAD
-      const { dataerror } = await supabase
-        .from('analytics_events')
-        .select('pathcount')
-        .eq('event_type'page_view')
-        .gte('created_at'new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
-        .order('count'{ ascending: false })
-=======
       const { data, error } = await supabase
         .from('analytics_events')
         .select('path, count')
         .eq('event_type', 'page_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
         .order('count', { ascending: false })
->>>>>>> origin/auto/autonomy-17186719616
         .limit(10);
         
       if (error) throw error;
       
       return data || [];
-<<<<<<< HEAD
-    }});
-=======
     },
   });
->>>>>>> origin/auto/autonomy-17186719616
   
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page';
-<<<<<<< HEAD
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g' ');
-  };
-  
-  // Calculate total views to determine percentages
-  const totalViews = pageViews?.reduce((sumpage) => sum + page.count0) || 0;
-=======
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ');
   };
   
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0;
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -115,11 +73,7 @@ export function PageViewsTable() {
       <CardContent>
         <div className="space-y-4">
           {isLoading ? (
-<<<<<<< HEAD
-            Array(5).fill(0).map((_i) => (
-=======
             Array(5).fill(0).map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
               <div key={i} className="flex items-center justify-between">
                 <Skeleton className="h-4 w-40 bg-zion-blue-light" />
                 <div className="flex items-center gap-2">
@@ -129,11 +83,7 @@ export function PageViewsTable() {
               </div>
             ))
           ) : pageViews && pageViews.length > 0 ? (
-<<<<<<< HEAD
-            pageViews.map((pageindex) => {
-=======
             pageViews.map((page, index) => {
->>>>>>> origin/auto/autonomy-17186719616
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
               
               return (

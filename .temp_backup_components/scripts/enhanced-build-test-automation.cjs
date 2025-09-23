@@ -48,8 +48,4 @@ const path = require("path")
       this.log("� Enhanced Build & Test Automation completed successfully")
       return { "success": true, "results"}
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
-<<<<<<< HEAD
       return { "success": false, "error"}
-=======
-      return { "success": false, "error"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

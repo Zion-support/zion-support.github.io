@@ -5,11 +5,7 @@ import App from './App.tsx';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
-<<<<<<< HEAD
-import { QueryClientProvider } from '@tanstack/react-query';
-=======
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
->>>>>>> origin/auto/autonomy-17186719616
 import { showApiError } from '@/utils/apiErrorHandler';
 import './utils/globalFetchInterceptor';
 
@@ -35,11 +31,6 @@ import { registerServiceWorker } from './serviceWorkerRegistration';
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-<<<<<<< HEAD
-      onError: (error) => showApiError(error)},
-    mutations: {
-      onError: (error) => showApiError(error)}}});
-=======
       onError: (error) => showApiError(error),
     },
     mutations: {
@@ -47,7 +38,6 @@ const queryClient = new QueryClient({
     },
   },
 });
->>>>>>> origin/auto/autonomy-17186719616
 
 try {
   console.log("main.tsx: Before ReactDOM.createRoot");
@@ -62,11 +52,7 @@ try {
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <CurrencyProvider>
-<<<<<<< HEAD
-                      <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
-=======
                       <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
->>>>>>> origin/auto/autonomy-17186719616
                         <ViewModeProvider>
                           <CartProvider>
                             <AppLayout>
@@ -88,11 +74,7 @@ try {
   );
   console.log("main.tsx: After ReactDOM.createRoot");
 } catch (error) {
-<<<<<<< HEAD
-  console.error("Global error caught in main.tsx:"error);
-=======
   console.error("Global error caught in main.tsx:", error);
->>>>>>> origin/auto/autonomy-17186719616
   console.log("main.tsx: Global error caught");
   const rootElement = document.getElementById('root');
   if (rootElement) {

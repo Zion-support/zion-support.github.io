@@ -937,11 +937,6 @@ export const enhancedRealMicroSaasServices: MicroSaasService[] = [
     reviews: 280
   },
   {
-<<<<<<< HEAD
-    id: 'quantum-ai-cognitive-platform',
-    name: 'Quantum AI Cognitive Platform',
-    tagline: 'Revolutionary quantum-enhanced artificial intelligence',
-=======
     id: 'quantum-cyber-defense',
     name: 'Quantum Cyber Defense Platform',
     tagline: 'Quantum AI-Powered Cybersecurity with Predictive Threat Prevention',
@@ -2967,7 +2962,6 @@ export const serviceCategories = [
     id: 'ai-brain-computer-interface',
     name: 'AI Brain-Computer Interface Platform',
     tagline: 'Next-Generation Neural Interface for Human-AI Collaboration',
->>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd
     price: '$599',
     period: '/month',
     description: 'Breakthrough AI platform combining quantum computing with advanced machine learning for unprecedented cognitive capabilities and problem-solving.',
@@ -3331,32 +3325,6 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number): Enh
   });
 };
 
-<<<<<<< HEAD
-export const serviceCategories = [
-  'All',
-  'Quantum Computing',
-  'AI & Machine Learning',
-  'Cybersecurity',
-  'Biomedical & Healthcare',
-  'Financial Technology',
-  'Content & Marketing',
-  'Data Analytics & BI',
-  'Customer Service & Support',
-  'Supply Chain & Logistics',
-  'Human Resources',
-  'Legal Technology',
-  'Sales & Marketing',
-  'Blockchain & Web3',
-  'IoT & Edge Computing',
-  'Cloud & Infrastructure',
-  'Video & Media',
-  'SEO & Digital Marketing',
-  'Automation & Robotics',
-  'Edge Computing',
-  'Legal Technology',
-  'HR & Talent Management'
-];
-=======
 export const getServicesByROI = (minROI: number): EnhancedRealMicroSaasService[] => {
   return enhancedRealMicroSaasServices.filter(service => {
     const roiMatch = service.roi.match(/(\d+)%/);
@@ -4383,4 +4351,3 @@ const additionalZionServices: EnhancedRealMicroSaasService[] = [
 ];
 
 enhancedRealMicroSaasServices.push(...additionalZionServices);
->>>>>>> 000c1469fd74fcaa7bccb39743650a33da42c0cd

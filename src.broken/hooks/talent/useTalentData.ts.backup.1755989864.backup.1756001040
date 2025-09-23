@@ -5,8 +5,6 @@ import type { TalentListResponse, TalentProfile } from '@/types/talent';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 async function fetchTalentProfiles(page = 1, limit = 12): Promise<TalentListResponse> {
   return fetchWithRetry(
     `/api/talent?page=${page}&limit=${limit}`,
@@ -40,7 +38,6 @@ export function useTalentData(page = 1, limit = 12) {
     isLoading,
     error: error ? error : null, // Ensure error is Error or null
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 async function fetchTalentProfiles(): Promise<TalentProfile[]> {
   // In a real app this would fetch from a GraphQL endpoint
   return TALENT_PROFILES;
@@ -61,9 +58,6 @@ export function useTalentData() {
     talents: data ?? [],
     isLoading,
     error,
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   };
 }

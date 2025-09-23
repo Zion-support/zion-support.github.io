@@ -1614,14 +1614,11 @@
     },
     {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       "file": "pages/reports/guides/guide-2025-08-14-134017.tsx",
       "route": "/reports/guides/guide-2025-08-14-134017"
     },
     {
 =======
->>>>>>> 66da49330e (chore(sync): advanced autonomous sync)
 >>>>>>> origin/automation/git-sync/2025-08-14T13-43-45-692Z
       "file": "pages/reports/guides/guide-2025-08-14-133017.tsx",
       "route": "/reports/guides/guide-2025-08-14-133017"
@@ -3761,8 +3758,6 @@
     {
       "file": "pages/reports/cases/case-2025-08-14-133017.tsx",
       "route": "/reports/cases/case-2025-08-14-133017"
-<<<<<<< HEAD
-=======
     },
     {
       "file": "pages/reports/cases/case-2025-08-14-132017.tsx",
@@ -4279,7 +4274,6 @@
     {
       "file": "pages/reports/cases/case-2025-08-14-040018.tsx",
       "route": "/reports/cases/case-2025-08-14-040018"
->>>>>>> origin/automation/git-sync/2025-08-14T13-43-45-692Z
     },
     {
       "file": "pages/reports/cases/case-2025-08-14-132017.tsx",
@@ -13013,11 +13007,8 @@
     }
   ],
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   "generatedAt": "2025-08-14T13:43:00.626Z"
 =======
->>>>>>> origin/automation/git-sync/2025-08-14T13-43-45-692Z
   "generatedAt": "2025-08-14T13:43:31.857Z",
   "items": [
     {
@@ -13042,8 +13033,5 @@
       "source": "cloud-deep-research-factory"
     }
   ]
-<<<<<<< HEAD
-=======
->>>>>>> 66da49330e (chore(sync): advanced autonomous sync)
 >>>>>>> origin/automation/git-sync/2025-08-14T13-43-45-692Z
 }

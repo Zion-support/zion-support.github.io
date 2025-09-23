@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function DisputeForm() {
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import type { ControllerRenderProps } from "react-hook-form";
@@ -31,7 +27,6 @@ import { Input } from "@/components/ui/input";
 import { disputeReasonLabels } from "@/types/disputes";
 import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
-
 
 const formSchema = z.object({
   reason_code: z
@@ -122,7 +117,6 @@ export function DisputeForm({
 =======
 import React from 'react';
 export function DisputeForm() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

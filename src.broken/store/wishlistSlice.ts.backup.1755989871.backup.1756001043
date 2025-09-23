@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { safeStorage } from '@/utils/safeStorage';
@@ -24,7 +22,6 @@ const initialState: WishlistState = {
 };
 
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 
 export interface WishlistItem {
@@ -55,16 +52,11 @@ export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   }
 );
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const wishlistSlice = createSlice({
   name: 'wishlist',
   initialState,
   reducers: {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     add: (state, action: PayloadAction<string>) => {
       if (!state.items.includes(action.payload)) {
@@ -82,7 +74,6 @@ const wishlistSlice = createSlice({
 
 export const { add, remove, set } = wishlistSlice.actions;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     addToWishlist(state, action: PayloadAction<WishlistItem>) {
       const exists = state.items.some(
         (item) => item.id === action.payload.id && item.type === action.payload.type
@@ -101,8 +92,5 @@ export const { add, remove, set } = wishlistSlice.actions;
 });
 
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
-<<<<<<< HEAD
-=======
->>>>>>> origin/5yaxyc-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export default wishlistSlice.reducer;

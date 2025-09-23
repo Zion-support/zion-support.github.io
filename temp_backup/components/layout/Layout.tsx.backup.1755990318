@@ -7,13 +7,7 @@ import TopContactBar from './TopContactBar';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
-import ThemeToggle from '../ThemeToggle';
-import LoadingSkeleton from '../LoadingSkeleton';
-import ErrorBoundary from '../ErrorBoundary';
-=======
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -121,9 +115,6 @@ export default function Layout({
           </div>
         )}
       </div>
-<<<<<<< HEAD
-    </>
-=======
 
       {/* Accessibility and Performance Tools */}
       <AccessibilityEnhancer />
@@ -135,6 +126,5 @@ export default function Layout({
       {/* Service Worker Registration */}
       <ServiceWorkerRegistration />
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   );
 };

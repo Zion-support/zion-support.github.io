@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-}
-=======
 import { Globe, Users, Zap, Shield, Eye, Cpu, Palette, Rocket } from 'lucide-react';
 
 const MetaverseDigitalRealityPlatformPage: React.FC = () => {
@@ -909,4 +905,3 @@ export default function MetaverseDigitalRealityPlatform() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f29f

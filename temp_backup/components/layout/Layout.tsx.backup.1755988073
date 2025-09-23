@@ -10,12 +10,6 @@ import CookieConsentBanner from '../CookieConsentBanner';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 
 interface LayoutProps {
-<<<<<<< HEAD
-	children: React.ReactNode;
-}
-
-export default function Layout({ children }: LayoutProps) {
-=======
   children: React.ReactNode;
   title?: string;
   description?: string;
@@ -34,12 +28,10 @@ export default function Layout({
   canonicalUrl,
   structuredData
 }: LayoutProps) {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
 
   // Default structured data for Zion Tech Group
   const defaultStructuredData = {
@@ -106,7 +98,6 @@ export default function Layout({
       setTheme(savedTheme);
     }
 
-
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
 
@@ -156,15 +147,6 @@ export default function Layout({
   }
 
   return (
-<<<<<<< HEAD
-    <PerformanceOptimizer>
-      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-        {/* Skip to content link for accessibility */}
-        <a href="#main" className="skip-link">Skip to main content</a>
-        
-        {/* Futuristic Background */}
-        <UltraFuturisticBackground2036 />
-=======
     <>
       <Head>
         <title>{title}</title>
@@ -281,7 +263,6 @@ export default function Layout({
       <div className={`min-h-screen ${isOnline ? '' : 'offline-mode'}`}>
         {/* Background Effects */}
         <UltraFuturisticBackground2045 />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
         
         {/* Navigation */}
         <UltraFuturisticNavigation2045 />
@@ -291,33 +272,6 @@ export default function Layout({
         
         {/* Main Content */}
         <div className="relative z-10">
-<<<<<<< HEAD
-          {/* Navigation */}
-          <UltraFuturisticNavigation2025 />
-          
-          {/* Sidebar and Main Content */}
-          <div className="flex">
-            <EnhancedSidebar2025 
-              isOpen={sidebarOpen} 
-              onClose={() => setSidebarOpen(false)} 
-            />
-            
-            <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
-              {children}
-            </main>
-          </div>
-          
-          {/* Footer */}
-          <UltraFuturisticFooter2025 />
-        </div>
-
-        {/* Accessibility and Performance Tools */}
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        
-        {/* Cookie Consent Banner */}
-        <CookieConsentBanner />
-=======
           {children}
         </div>
         
@@ -372,7 +326,6 @@ export default function Layout({
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-421e
       </div>
     </PerformanceOptimizer>
   );

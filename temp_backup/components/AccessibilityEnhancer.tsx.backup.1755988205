@@ -112,13 +112,6 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [applySettings]);
 
-<<<<<<< HEAD
-  // Toggle setting
-  const toggleSetting = useCallback((key: keyof AccessibilitySettings) => {
-    const newSettings = { ...settings, [key]: !settings[key] };
-    saveSettings(newSettings);
-  }, [settings, saveSettings]);
-=======
   // Focus management
   const handleFocusChange = useCallback((e: FocusEvent) => {
     const target = e.target as HTMLElement;
@@ -127,7 +120,6 @@ const AccessibilityEnhancer: React.FC = () => {
       announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
     }
   }, []);
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-1a7b
 
   // Enhanced keyboard navigation
   useEffect(() => {

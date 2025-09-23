@@ -116,8 +116,4 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 } 
-=======
-} 
->>>>>>> origin/auto/autonomy-17186719616

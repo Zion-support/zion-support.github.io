@@ -726,8 +726,4 @@ npm run system:check
 - [GitHub Actions](https://github.com/features/actions) - CI/CD
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Performance monitoring
 
-<<<<<<< HEAD
 For additional deployment support or questions, please refer to the documentation or contact the development team.
-=======
-For additional deployment support or questions, please refer to the documentation or contact the development team.
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9

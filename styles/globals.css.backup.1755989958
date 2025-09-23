@@ -34,9 +34,6 @@ body {
   background: var(--bg-primary);
 }
 
-<<<<<<< HEAD
-/* Accessibility Enhancements */
-=======
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -345,7 +342,6 @@ body {
 }
 
 /* Enhanced Accessibility */
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 .sr-only {
   position: absolute;
   width: 1px;

@@ -18,13 +18,6 @@ We've expanded our portfolio with **36+ innovative micro SAAS, IT, and AI servic
 - **Market Leadership**: Competing with industry leaders (Tableau, HubSpot, Salesforce)
 - **AI-First Approach**: Cutting-edge technology across all services
 
-<<<<<<< HEAD
-### **Contact Information:**
-- **Mobile**: +1 302 464 0950
-- **Email**: kleber@ziontechgroup.com
-- **Website**: https://ziontechgroup.com
-- **Address**: 364 E Main St STE 1008 Middletown DE 19709
-=======
 ## Environment Configuration
 
 ⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
@@ -258,7 +251,6 @@ The project includes several automations that help it heal itself and stay up to
 - **Scheduled audits** run weekly to check dependencies and performance.
 
 For detailed setup instructions see [docs/SELF_MAINTENANCE_AUTOMATION.md](docs/SELF_MAINTENANCE_AUTOMATION.md).
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
 
 ---
 

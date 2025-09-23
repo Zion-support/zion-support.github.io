@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
-""
-=======
 <<<<<<< HEAD:backup-merge-conflicts/specializedITInfrastructureServices2025.ts.backup
 <<<<<<< HEAD
 =======
@@ -11,7 +7,6 @@ import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/lis
 ""
 =======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 ";";"
 =======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
@@ -30,7 +25,4 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
-<<<<<<< HEAD
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/src/data/cuttingEdgeITInfrastructureServices2030.ts
 >>>>>>> pr-11935

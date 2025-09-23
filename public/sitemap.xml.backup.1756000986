@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-<<<<<<< HEAD
-=======
     <loc>https://zion.app/</loc>
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <loc>https://ziontechgroup.com/500</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-=======
     <loc>https://zion.app/contact</loc>
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -21,7 +16,6 @@
   </url>
   <url>
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <loc>https://zion.app/front</loc>
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -102,8 +96,6 @@
   <url>
     <loc>https://ziontechgroup.com/404</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
-<<<<<<< HEAD
-=======
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-08-22T18:38:08.718Z</lastmod>
     <changefreq>daily</changefreq>
@@ -4632,7 +4624,6 @@
   <url>
     <loc>https://ziontechgroup.com/services/5g-private-network-solutions-2026/</loc>
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -53151,49 +53142,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-<<<<<<< HEAD
-  <url>
-    <loc>https://ziontechgroup.com/ai-financial-forecasting/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-marketing-attribution/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/data-governance-starter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/zero-trust-network-architecture/</loc>
-    <lastmod>2025-08-22T18:38:08.726Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/iot-fleet-telemetry/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/api-security-testing/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/zero-trust-security-platform/</loc>
-    <lastmod>2025-08-22T18:38:08.726Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/cdp-starter/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
 </urlset>

@@ -110,12 +110,7 @@
       "src": "/screenshots/desktop-home.png",
       "sizes": "1280x720",
       "type": "image/png",
-<<<<<<< HEAD
-      "form_factor": "wide",
-      "label": "Homepage - Revolutionary Technology Solutions"
-=======
       "form_factor": "wide"
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     },
     {
       "src": "/screenshots/mobile-home.png",

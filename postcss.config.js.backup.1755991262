@@ -1,9 +1,6 @@
 module.exports = {
   plugins: {
     '@tailwindcss/postcss': {},
-<<<<<<< HEAD
-    autoprefixer: {},
-=======
     'autoprefixer': {},
     'cssnano': process.env.NODE_ENV === 'production' ? {
       preset: ['default', {
@@ -16,7 +13,6 @@ module.exports = {
         minifySelectors: true,
       }]
     } : false,
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
   },
 }
 

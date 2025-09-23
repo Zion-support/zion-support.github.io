@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
-import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
-=======
 import React, { useState, useEffect, Suspense } from 'react';
 import UltraFuturisticNavigation2040 from './UltraFuturisticNavigation2040';
 import UltraFuturisticFooter2040 from './UltraFuturisticFooter2040';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
 import TopContactBar from './TopContactBar';
@@ -14,26 +8,15 @@ import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackgro
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import EnhancedAccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
-import PerformanceOptimizer from '../PerformanceOptimizer';
-=======
 import SEOOptimizer from '../SEOOptimizer';
 import MobileOptimizer from '../MobileOptimizer';
 import Analytics from '../Analytics';
 import { Loader2, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
 
 interface LayoutProps {
 	children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export default function Layout({ children }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isOnline, setIsOnline] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-=======
 // Loading component for better UX
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-black">
@@ -111,24 +94,14 @@ export default function Layout({ children, seo }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isOnline, setIsOnline] = useState(true);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
 
   // Handle online/offline status
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-=======
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
 
     // Simulate initial loading
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -212,12 +185,6 @@ export default function Layout({ children, seo }: LayoutProps) {
   }
 
   return (
-<<<<<<< HEAD
-    <PerformanceOptimizer>
-      <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
-        {/* Skip to content link for accessibility */}
-        <a href="#main" className="skip-link">Skip to main content</a>
-=======
     <EnhancedErrorBoundary>
       <div className="min-h-screen bg-black text-white relative overflow-x-hidden">
         {/* SEO Optimization */}
@@ -240,7 +207,6 @@ export default function Layout({ children, seo }: LayoutProps) {
             <span>You're offline</span>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
         
         {/* Futuristic Background */}
         <UltraFuturisticBackground2046 />
@@ -257,10 +223,6 @@ export default function Layout({ children, seo }: LayoutProps) {
               onClose={() => setSidebarOpen(false)} 
             />
             
-<<<<<<< HEAD
-            <main id="main" role="main" className="flex-1 pt-32 lg:pt-36">
-              {children}
-=======
             <main 
               id="main" 
               role="main" 
@@ -272,7 +234,6 @@ export default function Layout({ children, seo }: LayoutProps) {
                   {children}
                 </MobileOptimizer>
               </Suspense>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
             </main>
           </div>
           
@@ -286,10 +247,6 @@ export default function Layout({ children, seo }: LayoutProps) {
         
         {/* Cookie Consent Banner */}
         <CookieConsentBanner />
-<<<<<<< HEAD
-      </div>
-    </PerformanceOptimizer>
-=======
         
         {/* Analytics Dashboard */}
         <Analytics showUI={true} autoRefresh={true} refreshInterval={60000} />
@@ -318,6 +275,5 @@ export default function Layout({ children, seo }: LayoutProps) {
         </div>
       </div>
     </EnhancedErrorBoundary>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-35fe
   );
 }

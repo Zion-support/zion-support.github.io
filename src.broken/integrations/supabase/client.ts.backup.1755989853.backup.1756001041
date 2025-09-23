@@ -1,17 +1,11 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 import api from '@/lib/api';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Re-export from the SSR client to maintain backward compatibility
 // We also import the actual supabase instance (which might be null) to check its status.
 import { supabase as actualSupabaseClientFromUtils, createClient } from '@/utils/supabase/client';
 import { logWarn, logDebug } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 // Export the createClient function directly for any part of the app that might need to call it.
@@ -21,7 +15,6 @@ export { createClient };
 // Export the actual supabase client instance (which could be SupabaseClient | null)
 // This is what AuthProvider and other parts of the app will use.
 export const supabase = actualSupabaseClientFromUtils;
-
 
 // Get actual environment variables
 const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -70,7 +63,6 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
   }});
 }
 
-
 // Enhanced helper function to check online status
 async function checkOnline(): Promise<boolean> {
   if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
@@ -82,8 +74,6 @@ async function checkOnline(): Promise<boolean> {
 
 // Optimized safeFetch for development mode with better error handling
 export async function safeFetch(url: string, options: RequestInit = {}) {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   if (!(await checkOnline())) {
     throw new Error('Failed to connect to Supabase');
@@ -120,7 +110,6 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
       // Wait before retrying (exponential backoff)
       await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   try {
     // In development, provide faster mock responses for specific endpoints if needed
     if (process.env.NODE_ENV === 'development' && url.includes('/favorites')) {
@@ -131,9 +120,6 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
         json: async () => ([]),
         text: async () => '[]',
       } as Response;
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     }
     

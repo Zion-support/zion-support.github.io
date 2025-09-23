@@ -3,13 +3,7 @@ import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRight, Brain, Atom, Shield, Zap, Search, MessageCircle, Phone, Mail,
-  Star, Award, Users, TrendingUp, Target, Lightbulb, Rocket, Globe, Heart,
-  DollarSign, Truck, Cloud, GraduationCap, Eye, Play, Lock
-=======
   ArrowRight, Brain, Atom, Shield, Zap, Search, MessageCircle, Phone, Mail, Building, Rocket
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -219,13 +213,8 @@ const Homepage2025: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
           >
-<<<<<<< HEAD
-            Zion Tech Group delivers cutting-edge AI, quantum computing, and space technology solutions that transform businesses and drive innovation. 
-            Experience our revolutionary 2037-2038 micro SAAS services featuring quantum AI consciousness, holographic metaverse platforms, and neural interfaces.
-=======
             Zion Tech Group delivers cutting-edge AI, quantum computing, micro SAAS, and space technology solutions that transform businesses and drive innovation. 
             Experience the future with our revolutionary 2038 services.
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
           </motion.p>
 
       {/* Main Content */}
@@ -669,16 +658,6 @@ const Homepage2025: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">AI & Machine Learning</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Advanced AI systems that evolve consciousness through quantum computing, enabling self-aware AI entities with ethical frameworks.
-              </p>
-              <Link
-                href="/quantum-ai-cognitive"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                Learn More <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-=======
                 Revolutionary AI solutions including quantum AI, computer vision, and predictive analytics.
               </p>
               <div className="flex items-center justify-between">
@@ -690,7 +669,6 @@ const Homepage2025: React.FC = () => {
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
             </motion.div>
 
             {/* Quantum Services */}
@@ -706,16 +684,6 @@ const Homepage2025: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Next-generation quantum systems solving complex problems beyond classical computing limits with quantum AI consciousness.
-              </p>
-              <Link
-                href="/quantum-secure-communication"
-                className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                Learn More <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-=======
                 Breakthrough quantum solutions for optimization, cryptography, and scientific computing.
               </p>
               <div className="flex items-center justify-between">
@@ -727,7 +695,6 @@ const Homepage2025: React.FC = () => {
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
             </motion.div>
 
             {/* Micro SAAS */}
@@ -736,24 +703,14 @@ const Homepage2025: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className="group relative bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20 rounded-2xl p-8 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6">
-=======
               className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-2xl p-8 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
                 <Rocket className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SAAS Solutions</h3>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Revolutionary space solutions from satellite networks to interplanetary infrastructure with AI-powered automation.
-=======
                 Innovative micro SAAS platforms for sustainability, legal tech, and business automation.
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-400">Starting from $49/month</span>
@@ -974,9 +931,6 @@ const Homepage2025: React.FC = () => {
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </Link>
               <Link
-<<<<<<< HEAD
-                href="/innovative-2037-2038-showcase"
-=======
                 href="/innovative-2038-services-showcase"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
@@ -984,7 +938,6 @@ const Homepage2025: React.FC = () => {
               </Link>
               <Link
                 href="/demo"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-288a
                 className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
               >
                 Explore Future Services

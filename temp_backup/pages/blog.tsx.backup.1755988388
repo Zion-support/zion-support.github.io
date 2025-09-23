@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/layout/Layout';
-=======
 import { motion } from 'framer-motion';
 import { 
   FileText, Calendar, User, ArrowRight, Search, 
@@ -110,30 +107,9 @@ export default function Blog() {
     { name: 'Financial AI', count: 9, icon: '💰' },
     { name: 'DevOps', count: 11, icon: '⚙️' }
   ];
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5984
 
 const BlogPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white pt-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-white mb-8">Blog</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Latest insights, updates, and thought leadership from Zion Tech Group.
-          </p>
-          <p className="text-lg text-gray-400">
-            Stay informed about the latest developments in AI, quantum computing, 
-            space technology, and cybersecurity.
-          </p>
-        </div>
-      </div>
-    </Layout>
-  );
-};
-
-export default BlogPage;
-=======
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -389,4 +365,3 @@ export default BlogPage;
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5984

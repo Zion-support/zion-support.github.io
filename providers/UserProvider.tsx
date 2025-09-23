@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React{ createContextuseContextuseEffectuseMemouseState } from 'react'
-=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
->>>>>>> origin/auto/autonomy-17186719616
 
 export type UserRole = 'client' | 'talent'
 
@@ -27,18 +23,11 @@ const DEFAULT_USER: User = {
   id: 'u_001',
   name: 'Jordan Lee',
   role: 'client',
-<<<<<<< HEAD
-  onboardingCompleted: false}
-
-export function UserProvider({ children }: { children: React.ReactNode }) {
-  const [usersetUser] = useState<User | null>(null)
-=======
   onboardingCompleted: false,
 }
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     try {
@@ -51,16 +40,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     } catch {
       setUser(DEFAULT_USER)
     }
-<<<<<<< HEAD
-  }[])
-
-  useEffect(() => {
-    try {
-      if (user) localStorage.setItem('zion.user'JSON.stringify(user))
-      else localStorage.removeItem('zion.user')
-    } catch {}
-  }[user])
-=======
   }, [])
 
   useEffect(() => {
@@ -69,18 +48,13 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       else localStorage.removeItem('zion.user')
     } catch {}
   }, [user])
->>>>>>> origin/auto/autonomy-17186719616
 
   const value = useMemo<UserContextValue>(() => ({
     user,
     setUser,
     logout: () => setUser(null),
-<<<<<<< HEAD
-    completeOnboarding: () => setUser(prev => prev ? { ...prevonboardingCompleted: true } : prev)})[user])
-=======
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev),
   }), [user])
->>>>>>> origin/auto/autonomy-17186719616
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

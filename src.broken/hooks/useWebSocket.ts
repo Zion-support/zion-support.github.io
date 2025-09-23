@@ -1,18 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from react';
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
 export function useWebSocket(options: unknown)  {;
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const wsRef: unknown = useRef<WebSocket | null>(null);
   const reconnectAttemptsRef: unknown = useRef(0);
   const reconnectTimeoutRef: unknown = useRef<NodeJS.Timeout | null>(null);
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
   const connect: unknown = useCallback(() => {;
     try {;
       const ws: unknown = new WebSocket(options.url);
@@ -50,10 +44,7 @@ export function useWebSocket(options: unknown)  {;
       setError('Failed to create WebSocket connection');
     };
   }, [options]);
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
   const disconnect: unknown = useCallback(() => {;
     if (reconnectTimeoutRef.current) {;
       clearTimeout(reconnectTimeoutRef.current);
@@ -66,10 +57,7 @@ export function useWebSocket(options: unknown)  {;
     setIsConnected(false);
     reconnectAttemptsRef.current = options.maxReconnectAttempts || 5;
   }, [options.maxReconnectAttempts]);
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
   const sendMessage: unknown = useCallback(;
     (data: unknown) => {;
       if (wsRef.current && isConnected) {;
@@ -80,20 +68,14 @@ export function useWebSocket(options: unknown)  {;
     },;
     [isConnected],;
   );
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
   useEffect(() => {;
     connect();
     return () => {;
       disconnect();
     };
   }, [connect, disconnect]);
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/auto/autonomy-17186719616
   return {;
     isConnected,;
     error,;

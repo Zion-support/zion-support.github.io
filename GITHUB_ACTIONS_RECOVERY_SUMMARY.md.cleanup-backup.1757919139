@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 # GitHub Actions Recovery Summary
 
 ## Recovery Status
@@ -51,4 +47,3 @@ For workflow issues, contact the DevOps team or check the automation logs.
 
 Last Updated: 2025-08-20
 Recovery Completed: 2025-08-15
->>>>>>> origin/auto/autonomy-17186719616

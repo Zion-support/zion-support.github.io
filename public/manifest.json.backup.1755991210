@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Revolutionary Technology Solutions",
-  "short_name": "Zion Tech",
-  "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#06b6d4",
-=======
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
   "description": "Revolutionary AI & Quantum Technology Solutions",
@@ -15,21 +6,12 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-<<<<<<< HEAD
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/icon-192x192.png",
-=======
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -61,15 +43,11 @@
     },
     {
       "src": "/icons/icon-192x192.png",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-<<<<<<< HEAD
-      "src": "/icon-512x512.png",
-=======
       "src": "/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -77,7 +55,6 @@
     },
     {
       "src": "/icons/icon-512x512.png",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
@@ -91,23 +68,7 @@
       "url": "/services",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/favicon.ico",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View our competitive pricing plans",
-      "url": "/pricing",
-      "icons": [
-        {
-          "src": "/favicon.ico",
-=======
           "src": "/icons/services-96x96.png",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
           "sizes": "96x96"
         }
       ]
@@ -119,9 +80,6 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/favicon.ico",
-=======
           "src": "/icons/contact-96x96.png",
           "sizes": "96x96"
         }
@@ -135,7 +93,6 @@
       "icons": [
         {
           "src": "/icons/about-96x96.png",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
           "sizes": "96x96"
         }
       ]
@@ -143,24 +100,15 @@
   ],
   "screenshots": [
     {
-<<<<<<< HEAD
-      "src": "/screenshot-wide.png",
-=======
       "src": "/screenshots/desktop-1.png",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Homepage - Revolutionary Technology Solutions"
     },
     {
-<<<<<<< HEAD
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-=======
       "src": "/screenshots/mobile-1.png",
       "sizes": "390x844",
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Mobile - AI & Quantum Services"
@@ -172,10 +120,6 @@
       "url": "https://ziontechgroup.com"
     }
   ],
-<<<<<<< HEAD
-  "related_applications": [],
-=======
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -184,45 +128,10 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
-<<<<<<< HEAD
-  "capture_links": "existing-client-navigate",
-  "file_handlers": [
-    {
-      "action": "/",
-      "accept": {
-        "text/*": [".txt", ".md", ".html"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
-=======
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a
   "protocol_handlers": [
     {
       "protocol": "web+zion",
       "url": "/?protocol=%s"
     }
-<<<<<<< HEAD
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": ["image/*", "text/*", "application/pdf"]
-        }
-      ]
-    }
-  }
-}
-=======
   ]
 }
->>>>>>> cd1ee3c44c95b58078a38d33c1abd7a77d8f4d5a

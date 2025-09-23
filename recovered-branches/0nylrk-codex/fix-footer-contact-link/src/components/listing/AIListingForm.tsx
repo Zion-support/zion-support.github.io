@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import React{ useState } from "react";
-=======
 import React, { useState } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,21 +22,12 @@ interface AIListingFormProps {
   };
 }
 
-<<<<<<< HEAD
-export function AIListingForm({ onSubmitisLoadinginitialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast();
-  const [titlesetTitle] = useState(initialValues.title || "");
-  const [categorysetCategory] = useState(initialValues.category || "");
-  const [keyFeaturesetKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudiencesetTargetAudience] = useState(initialValues.targetAudience || "");
-=======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleSubmit = () => {
     if (!title || !category) {
@@ -79,11 +66,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-<<<<<<< HEAD
-          placeholder="e.g. AI ToolDigital ProductService"
-=======
           placeholder="e.g. AI Tool, Digital Product, Service"
->>>>>>> origin/auto/autonomy-17186719616
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />
@@ -105,11 +88,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
-<<<<<<< HEAD
-          placeholder="e.g. DevelopersMarketersStartups"
-=======
           placeholder="e.g. Developers, Marketers, Startups"
->>>>>>> origin/auto/autonomy-17186719616
           className="bg-zion-blue border border-zion-blue-light text-white"
           disabled={isLoading}
         />

@@ -41,11 +41,8 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
 
   useEffect(() => {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     if (!toAddress) return;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     if (
       !toAddress ||
       !toAddress.address ||
@@ -53,9 +50,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
       !toAddress.country
     )
       return;
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     const fetchRates = async () => {
       setLoading(true);
@@ -98,12 +92,9 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
             <label key={rate.id} className="flex items-center gap-2">
               <RadioGroupItem value={rate.id} />
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
               <span>{`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}</span>
               {rate.tax && <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
               <span>
                 {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
                 {rate.delivery_days && ` (${rate.delivery_days}d)`}
@@ -111,9 +102,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
               {rate.tax && (
                 <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
               )}
-<<<<<<< HEAD
-=======
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
             </label>
           ))}

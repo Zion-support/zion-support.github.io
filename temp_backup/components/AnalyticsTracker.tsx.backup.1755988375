@@ -364,11 +364,6 @@ interface LayoutShiftEntry extends PerformanceEntry {
 }
 
 interface LayoutShiftSource {
-<<<<<<< HEAD
-  node?: any;
-  currentRect?: any;
-  previousRect?: any;
-=======
   node?: Node;
   currentRect?: DOMRectReadOnly;
   previousRect?: DOMRectReadOnly;
@@ -398,7 +393,6 @@ declare global {
     readonly bottom: number;
     readonly left: number;
   }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a942
 }
 
 // Extend Window interface for gtag

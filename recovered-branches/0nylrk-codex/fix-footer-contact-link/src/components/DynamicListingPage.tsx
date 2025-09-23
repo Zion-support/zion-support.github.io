@@ -1,26 +1,14 @@
-<<<<<<< HEAD
-import { useStateuseEffect } from "react";
-=======
 import { useState, useEffect } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { useNavigate } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-<<<<<<< HEAD
-import { SelectValueSelectTriggerSelectContentSelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Slider } from "@/components/ui/slider";
-import { ProductListingView } from "@/types/listings";
-import { SearchFilterLayoutGridListStar } from "lucide-react";
-=======
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 import { toast } from "@/hooks/use-toast";
 
 interface PriceRange {
@@ -43,18 +31,6 @@ export function DynamicListingPage({
   categorySlug,
   listings: allListings,
   categoryFilters,
-<<<<<<< HEAD
-  initialPrice = { min: 0max: 10000 }
-}: DynamicListingPageProps) {
-  const navigate = useNavigate();
-  const [searchQuerysetSearchQuery] = useState("");
-  const [selectedCategorysetSelectedCategory] = useState("all");
-  const [viewsetView] = useState<ListingView>("grid");
-  const [isLoadingsetIsLoading] = useState(false);
-  const [priceRangesetPriceRange] = useState<PriceRange>(initialPrice);
-
-  const [selectedRatingsetSelectedRating] = useState<number | null>(null);
-=======
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate();
@@ -65,36 +41,23 @@ export function DynamicListingPage({
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
       const min = Math.min(...listingsWithPrice.map(l => l.price || 0));
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-<<<<<<< HEAD
-      setPriceRange({ minmax });
-    }
-  }[allListings]);
-
-  const [currentPriceFiltersetCurrentPriceFilter] = useState<[number]>([
-=======
       setPriceRange({ min, max });
     }
   }, [allListings]);
 
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
->>>>>>> origin/auto/autonomy-17186719616
     initialPrice.min,
     initialPrice.max
   ]);
 
   const handleSliderChange = (values: number[]) => {
-<<<<<<< HEAD
-    setCurrentPriceFilter([values[0]values[1]]);
-=======
     setCurrentPriceFilter([values[0], values[1]]);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const filteredListings = allListings.filter(listing => {
@@ -130,15 +93,9 @@ export function DynamicListingPage({
           description: `Your quote request for ${listing.title} has been sent.`
         });
         
-<<<<<<< HEAD
-        navigate("/request-quote"{
-          state: { 
-            serviceType: categorySlug
-=======
         navigate("/request-quote", {
           state: { 
             serviceType: categorySlug, 
->>>>>>> origin/auto/autonomy-17186719616
             specificItem: {
               id: listing.id,
               title: listing.title,
@@ -148,11 +105,7 @@ export function DynamicListingPage({
           }
         });
       }
-<<<<<<< HEAD
-    }500);
-=======
     }, 500);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
@@ -179,11 +132,7 @@ export function DynamicListingPage({
                 <Select 
                   value={selectedCategory} 
                   onValueChange={(value: string) => {
-<<<<<<< HEAD
-                    console.log("Category selected:"value);
-=======
                     console.log("Category selected:", value);
->>>>>>> origin/auto/autonomy-17186719616
                     setSelectedCategory(value);
                   }}
                 >
@@ -207,11 +156,7 @@ export function DynamicListingPage({
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
-<<<<<<< HEAD
-                    defaultValue={[priceRange.minpriceRange.max]}
-=======
                     defaultValue={[priceRange.min, priceRange.max]}
->>>>>>> origin/auto/autonomy-17186719616
                     min={priceRange.min}
                     max={priceRange.max}
                     step={(priceRange.max - priceRange.min) / 100}
@@ -231,21 +176,13 @@ export function DynamicListingPage({
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-                  {[null345].map((rating) => (
-=======
                   {[null, 3, 4, 5].map((rating) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant="outline"
                       size="sm"
                       onClick={() => {
-<<<<<<< HEAD
-                        console.log("Rating selected:"rating);
-=======
                         console.log("Rating selected:", rating);
->>>>>>> origin/auto/autonomy-17186719616
                         setSelectedRating(rating);
                       }}
                       className={`${
@@ -258,11 +195,7 @@ export function DynamicListingPage({
                         "Any"
                       ) : (
                         <div className="flex items-center">
-<<<<<<< HEAD
-                          {[...Array(rating)].map((_i) => (
-=======
                           {[...Array(rating)].map((_, i) => (
->>>>>>> origin/auto/autonomy-17186719616
                             <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
                           ))}
                           <span className="ml-1">& Up</span>
@@ -280,11 +213,7 @@ export function DynamicListingPage({
                   console.log("Resetting filters");
                   setSearchQuery("");
                   setSelectedCategory("all");
-<<<<<<< HEAD
-                  setCurrentPriceFilter([priceRange.minpriceRange.max]);
-=======
                   setCurrentPriceFilter([priceRange.min, priceRange.max]);
->>>>>>> origin/auto/autonomy-17186719616
                   setSelectedRating(null);
                 }}
               >
@@ -303,11 +232,7 @@ export function DynamicListingPage({
                     placeholder="Search listings..."
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-<<<<<<< HEAD
-                      console.log("Search query:"e.target.value);
-=======
                       console.log("Search query:", e.target.value);
->>>>>>> origin/auto/autonomy-17186719616
                       setSearchQuery(e.target.value);
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
@@ -345,11 +270,7 @@ export function DynamicListingPage({
 
             {isLoading ? (
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-<<<<<<< HEAD
-                {[1234].map((i) => (
-=======
                 {[1, 2, 3, 4].map((i) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <div key={i} className="rounded-lg overflow-hidden border border-zion-blue-light">
                     <Skeleton className="h-48 w-full bg-zion-blue-light/20" />
                     <div className="p-4">
@@ -385,11 +306,7 @@ export function DynamicListingPage({
                   onClick={() => {
                     setSearchQuery("");
                     setSelectedCategory("all");
-<<<<<<< HEAD
-                    setCurrentPriceFilter([priceRange.minpriceRange.max]);
-=======
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
->>>>>>> origin/auto/autonomy-17186719616
                     setSelectedRating(null);
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

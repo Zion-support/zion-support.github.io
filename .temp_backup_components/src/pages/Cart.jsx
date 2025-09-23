@@ -29,7 +29,7 @@ export default function CartPage() {
                 dispatch(setItemsAction([]));
             }
         }
-        ;
+        
         load();
     }, [user, dispatch]);
     const updateQuantity = async (id, qty) => {

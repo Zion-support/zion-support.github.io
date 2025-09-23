@@ -11,11 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-<<<<<<< HEAD
-# Next.js plugin is not needed for static export
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
-=======
 [build.processing.css]
   bundle = true
   minify = true
@@ -65,7 +60,6 @@
 
 [functions.healthCheckCron]
     schedule = "*/5 * * * *"
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"

@@ -10,12 +10,12 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "eslint app",
+    "lint": "eslint app components lib pages",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint . --fix",
-    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc -p tsconfig.typecheck.json",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
@@ -28,7 +28,6 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@netlify/plugin-nextjs": "^5.13.3",
-    "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -57,14 +56,17 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+    "@headlessui/react": "^2.2.8",
     "@next/bundle-analyzer": "^14.2.0",
     "@next/swc-linux-x64-gnu": "^15.5.3",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
-    "@types/node": "^16.18.126",
-    "@types/react": "^19.1.13",
+    "@types/node": "16.18.126",
+    "@types/react": "19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.44.1",
+    "@typescript-eslint/parser": "^8.44.1",
     "babel-jest": "^29.7.0",
     "critters": "^0.0.23",
     "eslint": "^8.0.0",
@@ -77,7 +79,7 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-    "typescript": "^5.0.0"
+    "typescript": "5.9.2"
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom",
@@ -88,14 +90,13 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
+      "<rootDir>/automation/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/recovered-branches/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/backup-problematic-files/",
+      "<rootDir>/server/"
     ],
     "watchPathIgnorePatterns": [
       "<rootDir>/automation/backups/.*",
@@ -159,15 +160,6 @@
       "<rootDir>/components/api/docs/",
       "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/server/"
     ]
   },
   "packageManager": "npm@11.6.0"

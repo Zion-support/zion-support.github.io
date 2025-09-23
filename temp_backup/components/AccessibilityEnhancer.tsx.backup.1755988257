@@ -385,18 +385,6 @@ const AccessibilityEnhancer: React.FC<{
 
   // Focus management
   useEffect(() => {
-<<<<<<< HEAD
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        setFocusHistory(prev => [...prev.slice(-9), target]);
-        setLastFocused(target);
-        
-        // Enhanced focus indicator
-        if (settings.focusIndicator) {
-          target.style.outline = '3px solid #06b6d4';
-          target.style.outlineOffset = '2px';
-=======
     const handleFocusIn = (e: Event) => {
       const target = e.target as HTMLElement;
       
@@ -407,20 +395,13 @@ const AccessibilityEnhancer: React.FC<{
                      target.textContent?.trim();
         if (label) {
           announceToScreenReader(label);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
         }
       }
     };
 
-<<<<<<< HEAD
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target && settings.focusIndicator) {
-=======
     const handleFocusOut = (e: Event) => {
       const target = e.target as HTMLElement;
       if (settings.focusIndicators) {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
         target.style.outline = '';
         target.style.outlineOffset = '';
       }

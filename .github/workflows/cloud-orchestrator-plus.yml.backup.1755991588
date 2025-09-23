@@ -22,13 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-<<<<<<< HEAD
-          cache: npm
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
-=======
 
       - name: Install
         run: npm ci
@@ -52,5 +45,3 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node automation/advanced-git-sync.cjs || node automation/git-sync.cjs
 
-
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "Zion Tech Group - Revolutionary 2044 Technology Solutions",
-  "short_name": "Zion Tech",
-  "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#06b6d4",
-=======
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
   "description": "Revolutionary AI & Quantum Technology Solutions",
@@ -15,34 +6,18 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-<<<<<<< HEAD
-      "src": "/logos/zion-logo.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logos/zion-logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-=======
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       "src": "/icons/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
@@ -93,23 +68,7 @@
       "url": "/services",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Find Talent",
-      "short_name": "Talent",
-      "description": "Browse technical talent",
-      "url": "/talent",
-      "icons": [
-        {
-          "src": "/icon-96x96.png",
-=======
           "src": "/icons/services-96x96.png",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
           "sizes": "96x96"
         }
       ]
@@ -121,11 +80,6 @@
       "url": "/contact",
       "icons": [
         {
-<<<<<<< HEAD
-          "src": "/icons/dashboard-shortcut.png",
-          "sizes": "96x96",
-          "type": "image/png"
-=======
           "src": "/icons/contact-96x96.png",
           "sizes": "96x96"
         }
@@ -140,22 +94,12 @@
         {
           "src": "/icons/about-96x96.png",
           "sizes": "96x96"
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
         }
       ]
     }
   ],
   "screenshots": [
     {
-<<<<<<< HEAD
-      "src": "/screenshots/desktop-home.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/mobile-home.png",
-=======
       "src": "/screenshots/desktop-1.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -164,21 +108,12 @@
     },
     {
       "src": "/screenshots/mobile-1.png",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Mobile - AI & Quantum Services"
     }
   ],
-<<<<<<< HEAD
-  "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  }
-}
-=======
   "related_applications": [
     {
       "platform": "webapp",
@@ -200,4 +135,3 @@
     }
   ]
 }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84

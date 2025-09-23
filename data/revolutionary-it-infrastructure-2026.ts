@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface RevolutionaryITInfrastructure2026 {
   id: string;
   name: string;
@@ -43,20 +40,14 @@ export interface RevolutionaryITInfrastructure2026 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure2026[] = [
   {
     id: 'quantum-resistant-cybersecurity-suite',

@@ -6,11 +6,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-<<<<<<< HEAD
-  contents: read
-=======
   contents: write
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 concurrency:
   group: seo-audit-${{ github.ref }}

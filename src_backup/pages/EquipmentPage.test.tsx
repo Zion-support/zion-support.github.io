@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-
-import React from 'react';
-import { render, screen } from '@testing - library / react';
-import { MemoryRouter } from 'react-router-dom';
-import EquipmentPage from './EquipmentPage';
-describe ('EquipmentPage', () => {
-  it ('renders equipment page correctly', () => {
-    render (
-      <MemoryRouter>;
-        <EquipmentPage />;
-      </MemoryRouter>);
-    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
-
-  });
-  const [selectedService, setSelectedService] = useState('');
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '@/data/servicesData';
@@ -53,7 +31,6 @@ export function ContactPage() {
     window.location.href = mailtoLink;
   };
 
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Hero Section */}
@@ -119,15 +96,7 @@ export function ContactPage() {
             <p className="text-gray-600 mb-8">
               Fill out the form below and we'll get back to you within 24 hours to discuss your project requirements.
             </p>
-<<<<<<< HEAD
-
-
             
-
-
-=======
-            
->>>>>>> origin/auto/autonomy-17186719616
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -162,15 +131,7 @@ export function ContactPage() {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-
-
               
-
-
-=======
-              
->>>>>>> origin/auto/autonomy-17186719616
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -257,15 +218,7 @@ export function ContactPage() {
                   ))}
                 </select>
               </div>
-<<<<<<< HEAD
-
-
               
-
-
-=======
-              
->>>>>>> origin/auto/autonomy-17186719616
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
@@ -391,33 +344,6 @@ export function ContactPage() {
             </div>
 
             {/* Business Hours */}
-<<<<<<< HEAD
-
-
-            <div className="bg-white rounded-xl shadow-lg p-8">;
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>;
-              <div className="space-y-3">;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Monday - Friday</span>;
-                  <span className="font-semibold">8:00 AM - 6:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Saturday</span>;
-                  <span className="font-semibold">9:00 AM - 2:00 PM EST</span>;
-                </div>;
-                <div className="flex justify-between">;
-                  <span className="text-gray-600">Sunday</span>;
-                  <span className="font-semibold">Closed</span>;
-                </div>;
-                <div className="pt-3 border-t border-gray-200">;
-                  <p className="text-sm text-gray-600">;
-                    <span className="font-semibold text-green-600">24/7 Emergency Support</span> available for critical issues;
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-
-=======
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Business Hours</h3>
               <div className="space-y-3">
@@ -440,7 +366,6 @@ export function ContactPage() {
                 </div>
               </div>
             </div>
->>>>>>> origin/auto/autonomy-17186719616
 
             {/* Quick Actions */}
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -487,11 +412,7 @@ export function ContactPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-<<<<<<< HEAD
-              href="tel: +13024640950"
-=======
               href="tel:+13024640950"
->>>>>>> origin/auto/autonomy-17186719616
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
             >
               📞 Call +1 302 464 0950
@@ -506,15 +427,5 @@ export function ContactPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-
-
-  );
-};
-
-
-
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

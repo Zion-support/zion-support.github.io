@@ -18,8 +18,4 @@ const path = require("path")
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
-<<<<<<< HEAD
       "
-=======
-      "
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

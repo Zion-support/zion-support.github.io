@@ -80,7 +80,6 @@ import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative
 import { cuttingEdgeEnterpriseSolutions2025 } from '../data/2025-cutting-edge-enterprise-solutions';
 import { innovativeMicroSaasSolutionsV2 } from '../data/2025-innovative-micro-saas-solutions-v2';
 
-
 // Import our new innovative 2040 services
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
@@ -236,31 +235,12 @@ const allServices = [
   // Our new 2025 cutting-edge innovative services expansion
   ...cuttingEdgeInnovativeServices2025,
   ...advancedITInfrastructureSolutions2025,
-<<<<<<< HEAD
-  
-  // Our new 2025 ultimate innovative services
-  ...ultimateInnovativeServices2025,
-  ...cuttingEdgeEnterpriseSolutions2025,
-  ...innovativeMicroSaasSolutionsV2,
-  
-  // Our new 2025 service data
-  ...advancedAIAutomationServices2025,
-  ...innovativeMicroSaasSolutions2025,
-  ...cuttingEdgeAIServices2025,
-  ...innovative2025AIAutonomousServices,
-  ...realPracticalMicroSaasServices2025,
-  ...advancedAIITSpecializedServices2025,
-  ...realEnterpriseMicroSaas2025,
-  
-  ...advancedAIAutomationSolutions2025
-=======
   ...advancedAIAutomationSolutions2025,
   
   // Our new innovative services expansion v3
   ...innovativeMicroSaasExpansionV3,
   ...innovativeITInfrastructureExpansionV3,
   ...innovativeAIServicesExpansionV3
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7156
 ];
 
 const categories = [

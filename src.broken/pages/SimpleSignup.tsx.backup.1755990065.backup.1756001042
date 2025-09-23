@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { useFormik } from 'formik';
@@ -10,7 +8,6 @@ import { toast } from '@/hooks/use-toast';
 import { signupUser } from '@/services/signupApi';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import {logErrorToProduction} from '@/utils/productionLogger';
-
 
 const SignupSchema = Yup.object({
   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -89,7 +86,6 @@ export default function SimpleSignup() {
       </button>
     </form>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function SimpleSignup() {
   return (
@@ -97,9 +93,6 @@ export function SimpleSignup() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

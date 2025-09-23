@@ -28,11 +28,6 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-<<<<<<< HEAD
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
-=======
         run: npm ci
 
       - name: Run Automation Guardian (10m)
@@ -57,4 +52,3 @@ jobs:
           else
             echo "No changes to push"
           fi
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

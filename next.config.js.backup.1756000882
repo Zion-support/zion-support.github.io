@@ -1,27 +1,16 @@
 const path = require('path');
 
-<<<<<<< HEAD
-// Define assetPrefix based on environment
-const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
-<<<<<<< HEAD
-
-  // Disable ESLint during build to avoid parsing errors
-=======
   swcMinify: true,
   
   // Disable TypeScript and ESLint during build to avoid parsing errors
   typescript: {
     ignoreBuildErrors: true,
   },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -76,8 +65,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
 
-<<<<<<< HEAD
-=======
   // Experimental features for better performance
   experimental: {
     optimizeCss: true,
@@ -103,7 +90,6 @@ const nextConfig = {
   },
 
   // Webpack configuration
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
   webpack: (config, { dev, isServer }) => {
     // Simple webpack configuration
     if (!isServer) {
@@ -116,8 +102,6 @@ const nextConfig = {
       };
     }
 
-<<<<<<< HEAD
-=======
     // Handle ESM packages
     config.module.rules.push({
       test: /\.m?js$/,
@@ -187,7 +171,6 @@ const nextConfig = {
       };
     }
     
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
     return config;
   },
 };

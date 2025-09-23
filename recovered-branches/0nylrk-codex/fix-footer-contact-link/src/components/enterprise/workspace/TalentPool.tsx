@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -15,11 +11,7 @@ export function TalentPool() {
       id: "talent-1",
       name: "Jessica Lee",
       role: "UI/UX Designer",
-<<<<<<< HEAD
-      skills: ["Figma"Sketch"User Testing"],
-=======
       skills: ["Figma", "Sketch", "User Testing"],
->>>>>>> origin/auto/autonomy-17186719616
       status: "available",
       match: 95
     },
@@ -27,11 +19,7 @@ export function TalentPool() {
       id: "talent-2",
       name: "Marcus Wright",
       role: "Full Stack Developer",
-<<<<<<< HEAD
-      skills: ["React"Node.js"MongoDB"],
-=======
       skills: ["React", "Node.js", "MongoDB"],
->>>>>>> origin/auto/autonomy-17186719616
       status: "interviewing",
       match: 92
     },
@@ -39,11 +27,7 @@ export function TalentPool() {
       id: "talent-3",
       name: "Aisha Patel",
       role: "Product Manager",
-<<<<<<< HEAD
-      skills: ["Agile"Roadmapping"User Research"],
-=======
       skills: ["Agile", "Roadmapping", "User Research"],
->>>>>>> origin/auto/autonomy-17186719616
       status: "available",
       match: 88
     }
@@ -90,11 +74,7 @@ export function TalentPool() {
                 </div>
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
-<<<<<<< HEAD
-                {talent.skills.map((skillindex) => (
-=======
                 {talent.skills.map((skill, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>

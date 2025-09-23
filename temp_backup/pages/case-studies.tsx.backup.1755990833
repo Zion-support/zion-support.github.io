@@ -190,45 +190,6 @@ export default function CaseStudies() {
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
       </Head>
 
-<<<<<<< HEAD
-        {/* Success Metrics */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Success by the Numbers
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Proven results that speak for themselves
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {successMetrics.map((metric, index) => (
-                <motion.div
-                  key={metric.metric}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 text-center"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    {metric.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{metric.metric}</h3>
-                  <p className="text-gray-300 text-sm">{metric.description}</p>
-                </motion.div>
-              ))}
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
@@ -315,29 +276,11 @@ export default function CaseStudies() {
                   ))}
                 </div>
               </div>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
             </div>
           </div>
         </motion.div>
 
         {/* Featured Case Studies */}
-<<<<<<< HEAD
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Featured Success Stories
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Transformative implementations that set new industry standards
-=======
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -430,7 +373,6 @@ export default function CaseStudies() {
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Case Studies Found</h3>
               <p className="text-gray-500">
                 Try adjusting your search terms or filters to find relevant case studies.
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
               </p>
             </div>
           ) : (
@@ -466,100 +408,9 @@ export default function CaseStudies() {
                       </p>
                     </div>
 
-<<<<<<< HEAD
-        {/* Industry Case Studies */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Industry Success Stories
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Proven results across diverse sectors and use cases
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {industryCaseStudies.map((industry, index) => (
-                <motion.div
-                  key={industry.industry}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-6 text-center">{industry.industry}</h3>
-                  <div className="space-y-6">
-                    {industry.caseStudies.map((study, studyIndex) => (
-                      <div key={studyIndex} className="border-l-2 border-blue-500/30 pl-4">
-                        <h4 className="text-lg font-bold text-white mb-2">{study.client}</h4>
-                        <div className="mb-3">
-                          <div className="text-gray-400 text-sm mb-1">Challenge:</div>
-                          <p className="text-gray-300 text-sm">{study.challenge}</p>
-                        </div>
-                        <div className="mb-3">
-                          <div className="text-gray-400 text-sm mb-1">Solution:</div>
-                          <p className="text-gray-300 text-sm">{study.solution}</p>
-                        </div>
-                        <div>
-                          <div className="text-gray-400 text-sm mb-1">Results:</div>
-                          <p className="text-green-400 text-sm font-semibold">{study.results}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Client Testimonials */}
-        <section className="py-20 bg-black/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Direct feedback from the organizations we've transformed
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.author}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-green-500/50 transition-all duration-300"
-                >
-                  <div className="mb-4">
-                    <div className="flex text-yellow-400 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-current" />
-                      ))}
-=======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Challenge:</h4>
                       <p className="text-gray-300 text-sm line-clamp-2">{study.challenge}</p>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                     </div>
 
                     <div className="mb-4">

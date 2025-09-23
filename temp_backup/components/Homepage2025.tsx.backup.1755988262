@@ -15,8 +15,6 @@ import { aiAutonomousServices } from '../data/2025-innovative-ai-autonomous-serv
 import { quantumSpaceInnovationServices } from '../data/2025-quantum-space-innovations';
 
 const Homepage2025: React.FC = () => {
-<<<<<<< HEAD
-=======
   // Enhanced animation variants for better performance
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -127,7 +125,6 @@ const Homepage2025: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
   return (
     <Layout>
       {/* Enhanced Background */}
@@ -157,24 +154,6 @@ const Homepage2025: React.FC = () => {
               
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">
                 Zion Tech Group
-<<<<<<< HEAD
-              </h1>
-              <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Pioneering the future of technology with innovative solutions that drive business transformation and human advancement
-              </p>
-              
-              {/* Enhanced CTA Section */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
-                <Link href="/get-started">
-                  <motion.button 
-                    className="group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 backdrop-blur-sm"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="flex items-center gap-3 text-lg">
-                      Get Started
-                      <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-=======
               </motion.h1>
               
               <motion.p 
@@ -194,29 +173,9 @@ const Homepage2025: React.FC = () => {
                     <span className="flex items-center gap-2">
                       Explore Services
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                     </span>
                   </motion.button>
                 </Link>
-<<<<<<< HEAD
-                <Link href="/services">
-                  <motion.button 
-                    className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-lg">Explore Services</span>
-                  </motion.button>
-                </Link>
-                <Link href="/comprehensive-2025-services-showcase">
-                  <motion.button 
-                    className="px-10 py-5 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <span className="text-lg">2025 Showcase</span>
-                  </motion.button>
-=======
                 <Link href="/contact" aria-label="Contact us">
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
                     Contact Us
@@ -226,7 +185,6 @@ const Homepage2025: React.FC = () => {
                   <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-black">
                     Futuristic Services
                   </button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                 </Link>
               </div>
               
@@ -250,17 +208,12 @@ const Homepage2025: React.FC = () => {
                   <span>Proven Results</span>
                 </div>
                 <div className="flex items-center space-x-2">
-<<<<<<< HEAD
-                  <Rocket className="w-5 h-5 text-cyan-400" />
-                  <span>Innovation First</span>
-=======
                   <Brain className="w-4 h-4 text-cyan-400" aria-hidden="true" />
                   <span>AI Innovation</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Atom className="w-4 h-4 text-purple-400" aria-hidden="true" />
                   <span>Quantum Technology</span>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                 </div>
               </motion.div>
             </motion.div>
@@ -316,11 +269,6 @@ const Homepage2025: React.FC = () => {
               </p>
             </motion.div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {/* AI Autonomous Services */}
-              {aiAutonomousServices.slice(0, 3).map((service, index) => (
-=======
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -339,7 +287,6 @@ const Homepage2025: React.FC = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
             >
               {featuredServices.map((service) => (
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

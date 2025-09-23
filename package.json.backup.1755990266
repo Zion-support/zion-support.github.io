@@ -90,13 +90,6 @@
     "typescript": "5.8.3",
     "vitest": "^3.2.4"
   },
-<<<<<<< HEAD
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-=======
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -114,7 +107,6 @@
     "doc": "docs",
     "test": "tests"
   },
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"

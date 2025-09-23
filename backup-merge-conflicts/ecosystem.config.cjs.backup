@@ -1,63 +1,12 @@
-<<<<<<< HEAD
-module.exports = {
-  apps: [
-    {
-<<<<<<< HEAD
-      name: 'auto-fix',
-      script: 'scripts/pm2/auto-fix.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: 'logs/pm2/auto-fix.log',
-      error_file: 'logs/pm2/auto-fix-error.log',
-      out_file: 'logs/pm2/auto-fix-out.log',
-    },
-    {
-      name: 'healthcheck',
-      script: 'scripts/pm2/healthcheck.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '128M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      log_file: 'logs/pm2/health.log',
-      error_file: 'logs/pm2/health-error.log',
-      out_file: 'logs/pm2/health-out.log',
-    },
-    {
-      name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.js',
-=======
       name: 'bolt-zion-app',
       script: 'npm',
       args: 'run start',
       cwd: './',
->>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true',
-      },
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log',
-    },
-    {
-      name: 'auto-commit-fixes',
-      script: 'scripts/pm2/auto-commit-fixes.js',
-=======
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -93,26 +42,12 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
->>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
-<<<<<<< HEAD
-        PM2_PROCESS_NAME: 'auto-commit-fixes',
-        COMMIT_FREQUENCY: 'hourly',
-        AUTO_PUSH: 'false',
-      },
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log',
-    },
-    {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
-=======
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -125,42 +60,10 @@ module.exports = {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
->>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
-<<<<<<< HEAD
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'dependency-monitor',
-        AUTO_UPDATE_DEV: 'true',
-        SECURITY_ALERTS: 'true',
-      },
-      log_file: 'logs/pm2/dependency-monitor.log',
-      error_file: 'logs/pm2/dependency-monitor-error.log',
-      out_file: 'logs/pm2/dependency-monitor-out.log',
-    },
-    {
-      name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'performance-monitor',
-        PERFORMANCE_THRESHOLD: '3000',
-        BUNDLE_SIZE_LIMIT: '2MB',
-      },
-      log_file: 'logs/pm2/performance-monitor.log',
-      error_file: 'logs/pm2/performance-monitor-error.log',
-      out_file: 'logs/pm2/performance-monitor-out.log',
-    }
-  ],
-};
-=======
       env: {
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
@@ -545,6 +448,5 @@ module.exports = {}
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
 };
->>>>>>> main
 >>>>>>> main
 >>>>>>> main

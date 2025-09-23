@@ -11,9 +11,6 @@ export default function Home() {
         <meta property="og:description" content="Zion — automatically suggested description." />
         <meta name="twitter:card" content="summary_large_image" /></Head>
 
-<<<<<<< HEAD
-      {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
-=======
       {/* Featured Reports */}
       <section className="py-16 bg-slate-900/30">
         <div className="container mx-auto px-6">
@@ -131,7 +128,6 @@ export default function Home() {
       </section>
       
 {/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */}
->>>>>>> origin/cursor/optimize-application-internal-links-0f5e
 
  <section className="mx-auto max-w-7xl px-6 pb-14">
    <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>

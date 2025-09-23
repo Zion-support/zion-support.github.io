@@ -14,12 +14,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [isSpacing, setIsSpacing] = useState(false);
   const [isFocusVisible, setIsFocusVisible] = useState(false);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    // Check user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-=======
   const [currentFocus, setCurrentFocus] = useState<HTMLElement | null>(null);
   const [focusHistory, setFocusHistory] = useState<HTMLElement[]>([]);
 
@@ -44,7 +38,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // Apply accessibility settings
   useEffect(() => {
     const root = document.documentElement;
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     
     setIsReducedMotion(prefersReducedMotion);
     setIsHighContrast(prefersHighContrast);
@@ -56,10 +49,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
     const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
 
-<<<<<<< HEAD
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-=======
     // Focus indicator
     if (settings.focusIndicator) {
       root.style.setProperty('--focus-outline', '3px solid #0066cc');
@@ -105,7 +94,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     document.addEventListener('focusin', handleFocusChange);
     document.addEventListener('focusout', handleBlur);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange);

@@ -1,9 +1,5 @@
 const nextConfig = {
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -61,9 +57,6 @@ const nextConfig = {
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
     swcTraceProfiling: false,
-<<<<<<< HEAD
-    
-=======
     // Removed esmExternals to prevent external module dynamic import issues
     esmExternals: undefined,
     // Enable React 19 streaming features
@@ -71,7 +64,6 @@ const nextConfig = {
     // Enable React Compiler for automatic memoization optimizations (experimental)
     reactCompiler: true,
     // Partial Prerendering currently requires canary – disabled for now
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   },
 
   images: {
@@ -229,10 +221,6 @@ const nextConfig = {
     }),
   },
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-project-with-netlify-9d19
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -250,130 +238,13 @@ const nextConfig = {
     'remark-parse',
     'remark-rehype',
     'formik',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // ESM packages that need transpilation for Node.js compatibility
-    'micromark',
-    'micromark-util-character',
-    'micromark-util-chunked',
-    'micromark-util-classify-character',
-    'micromark-util-combine-extensions',
-    'micromark-util-decode-numeric-character-reference',
-    'micromark-util-decode-string',
-    'micromark-util-encode',
-    'micromark-util-html-tag-name',
-    'micromark-util-normalize-identifier',
-    'micromark-util-resolve-all',
-    'micromark-util-sanitize-uri',
-    'micromark-util-subtokenize',
-    'micromark-util-symbol',
-    'micromark-util-types',
-    'micromark-core-commonmark',
-    'decode-named-character-reference',
-    'character-entities',
-    'character-entities-legacy',
-    'character-reference-invalid',
-    'devlop',
-    // UI libraries that need transpilation
-    '@chakra-ui/react',
-    '@radix-ui/react-accordion',
-    '@radix-ui/react-alert-dialog',
-    '@radix-ui/react-aspect-ratio',
-    '@radix-ui/react-avatar',
-    '@radix-ui/react-checkbox',
-    '@radix-ui/react-dialog',
-    '@radix-ui/react-dropdown-menu',
-    '@radix-ui/react-label',
-    '@radix-ui/react-popover',
-    '@radix-ui/react-progress',
-    '@radix-ui/react-scroll-area',
-    '@radix-ui/react-select',
-    '@radix-ui/react-separator',
-    '@radix-ui/react-slider',
-    '@radix-ui/react-slot',
-    '@radix-ui/react-switch',
-    '@radix-ui/react-tabs',
-    '@radix-ui/react-toast',
-    '@radix-ui/react-toggle',
-    '@radix-ui/react-tooltip',
-    '@radix-ui/react-hover-card',
-    '@radix-ui/react-navigation-menu',
-    '@hookform/resolvers',
-    '@google/model-viewer',
-    '@reduxjs/toolkit',
-    '@reown/appkit-adapter-ethers',
-    '@reown/appkit',
-    '@coinbase/wallet-sdk',
-    '@reown/appkit-common',
-    '@reown/appkit-controllers',
-    '@reown/appkit-pay',
-    '@reown/appkit-ui',
-    '@reown/appkit-wallet',
-    '@reown/appkit-utils',
-    'ethers',
-    'viem',
-    '@wagmi/core',
-    '@wagmi/connectors',
-    '@tanstack/react-query',
-    'axios',
-    'class-variance-authority',
-    'clsx',
-    'devlop',
-    'tailwind-merge',
-    'embla-carousel-react',
-    'framer-motion',
-    'hast-util-to-jsx-runtime',
-    'html-url-attributes',
-    'jspdf-autotable',
-    'jspdf',
-    'recharts',
-    'comma-separated-tokens',
-    'estree-util-is-identifier-name',
-    'hast-util-whitespace',
-    'property-information',
-    'react-hook-form',
-    'space-separated-tokens',
-    'style-to-object',
-    'unist-util-position',
-    'unist-util-stringify-position',
-    'unist-util-visit',
-    'vfile',
-    'zod',
-    'react-i18next',
-    'react-loading-skeleton',
-    'react-redux',
-    'remark-parse',
-    'remark-rehype',
-    'unified',
-    'micromark',
-    'micromark-util-character',
-    'micromark-util-chunked',
-    'micromark-util-classify-character',
-    'micromark-util-combine-extensions',
-    'micromark-util-decode-numeric-character-reference',
-    'micromark-util-decode-string',
-    'micromark-util-encode',
-    'micromark-util-html-tag-name',
-    'micromark-util-normalize-identifier',
-    'micromark-util-resolve-all',
-    'micromark-util-sanitize-uri',
-    'micromark-util-subtokenize',
-    'micromark-util-symbol',
-    'micromark-util-types',
-    // lodash is installed for Formik compatibility; lodash-es is used directly in our code.
 =======
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     'lodash',
     'lodash-es',
     'lodash/isPlainObject',
     'lodash/cloneDeep',
     'lodash/clone',
     'lodash/toPath',
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-project-with-netlify-9d19
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     'helia',
     '@helia/json',
     'multiformats',
@@ -445,7 +316,6 @@ const nextConfig = {
         })
       );
 
-
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -456,12 +326,9 @@ const nextConfig = {
           aggregateTimeout: 300,
           poll: false, // Use native file watching instead of polling
         };
-<<<<<<< HEAD
-=======
 
         // Disable source maps in development for faster HMR startup
         config.devtool = false;
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
       }
 
       // Alias react-router-dom to a lightweight stub to avoid build errors
@@ -712,15 +579,11 @@ const nextConfig = {
       /memory.*cache/i,
     ];
 
-<<<<<<< HEAD
-
-=======
     // CRITICAL FIX: Ensure usedExports is disabled globally to avoid conflicts with cacheUnaffected
     config.optimization = {
       ...config.optimization,
       usedExports: false,
     };
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
@@ -1035,8 +898,6 @@ const nextConfig = {
 
     return config;
   },
-<<<<<<< HEAD
-=======
   async rewrites() {
     return [
 <<<<<<< HEAD
@@ -1103,7 +964,6 @@ const nextConfig = {
       { source: '/Zion-Holdings/zion.app/issues', destination: '/', permanent: true },
       { source: '/Zion-Holdings/zion.app/tree/main/automation', destination: '/', permanent: true },
       { source: '/Zion-Holdings/zion.app/tree/main/docs', destination: '/', permanent: true }
->>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-1131
     ];
   },
   

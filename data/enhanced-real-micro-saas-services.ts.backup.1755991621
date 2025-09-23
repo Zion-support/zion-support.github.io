@@ -6827,9 +6827,6 @@ export const searchServices = (query: string): EnhancedRealMicroSaasService[] =>
     service.technology.some(tech => tech.toLowerCase().includes(lowerQuery)) ||
     service.useCases.some(useCase => useCase.toLowerCase().includes(lowerQuery))
   );
-<<<<<<< HEAD
-};
-=======
 };
 
 // Append additional real, production-grade services referenced across pages
@@ -7835,4 +7832,3 @@ const additionalZionServices: EnhancedRealMicroSaasService[] = [
 ];
 
 enhancedRealMicroSaasServices.push(...additionalZionServices);
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe5e

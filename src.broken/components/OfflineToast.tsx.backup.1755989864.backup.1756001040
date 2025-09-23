@@ -15,9 +15,6 @@ export default function OfflineToast() {
       toast.success('Back online. Syncing queued actions...');
       navigator.serviceWorker.ready.then(reg => {
 <<<<<<< HEAD
-        reg.active?.postMessage({ type: 'SYNC_QUEUE' });
-=======
-<<<<<<< HEAD
         try {
           // Use MessageChannel to properly handle async response
           const channel = new MessageChannel();
@@ -43,7 +40,6 @@ export default function OfflineToast() {
         console.warn('Service worker not ready:', error);
 =======
         reg.active?.postMessage({ type: 'SYNC_QUEUE' });
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       });
     };
@@ -52,14 +48,11 @@ export default function OfflineToast() {
       if (event.data?.type === 'QUEUE_SYNCED') {
         toast.success('Offline actions synchronized');
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       } else if (event.data?.type === 'SYNC_FAILED') {
         console.warn('Background sync failed:', event.data.error);
       } else if (event.data?.type === 'SYNC_TIMEOUT') {
         console.warn('Background sync timed out:', event.data.error);
 =======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       }
     };

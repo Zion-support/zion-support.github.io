@@ -43,14 +43,11 @@ const queryClient = new QueryClient({
 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const rootElement = document.getElementById('root');
 
 function renderApp() {
   const app = (
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
   React.useEffect(() => {
@@ -70,9 +67,6 @@ try {
   console.log("main.tsx: Before ReactDOM.createRoot");
   // Render the app with proper provider structure
   ReactDOM.createRoot(document.getElementById('root')!).render(
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     <React.StrictMode>
       <HelmetProvider>
@@ -86,8 +80,6 @@ try {
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
@@ -95,7 +87,6 @@ try {
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
                       <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
                         <ViewModeProvider>
                           <CartProvider>
@@ -108,9 +99,6 @@ try {
                         </ViewModeProvider>
                         <LanguageDetectionPopup />
                       </ErrorBoundary>
-<<<<<<< HEAD
-=======
->>>>>>> origin/7yfp2f-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
                     </LanguageProvider>
                   </AnalyticsProvider>

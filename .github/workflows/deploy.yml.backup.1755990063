@@ -25,15 +25,6 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-<<<<<<< HEAD
-
-      - name: Install dependencies
-        run: npm ci --no-audit --no-fund
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-=======
       - name: Install dependencies (for Sentry CLI and potential build step)
         run: npm ci
       - name: Build application (to generate sourcemaps for Sentry)
@@ -63,5 +54,4 @@ concurrency:
           # env: production
           # started_at: ${{ steps.start_time.outputs.time }} # Requires a step to output current time
           # name: "Netlify Production Deployment"
->>>>>>> origin/automation-error-fixes
 

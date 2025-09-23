@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 interface NewsletterSubscription.testProps {
@@ -14,4 +12,3 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
     </div>
   );
 }
->>>>>>> main

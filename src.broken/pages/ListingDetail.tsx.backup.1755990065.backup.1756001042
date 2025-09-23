@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -291,7 +289,6 @@ export default function ListingDetail() {
       </Dialog>
     </>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function ListingDetail() {
   return (
@@ -299,9 +296,6 @@ export function ListingDetail() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

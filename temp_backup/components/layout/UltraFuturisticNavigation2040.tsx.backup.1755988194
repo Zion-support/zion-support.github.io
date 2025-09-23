@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  ChevronDown, 
-  Phone, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube,
-  Home,
-  Briefcase,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cloud,
-  Target,
-  Building,
-  Users,
-  BookOpen,
-  FileText,
-  Video,
-  Code,
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -78,7 +49,6 @@ import {
   Phone,
   Mail,
   ArrowRight,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
   Star
 } from 'lucide-react';
 import Link from 'next/link';
@@ -156,34 +126,6 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
-    label: 'Solutions',
-    href: '/solutions',
-    icon: <Target className="w-4 h-4" />,
-    description: 'Industry-specific technology solutions',
-    neonColor: 'shadow-green-400/50',
-    children: [
-      {
-        label: 'Enterprise Solutions',
-        href: '/solutions/enterprise',
-        icon: <Building className="w-4 h-4" />,
-        description: 'Large-scale enterprise solutions',
-        neonColor: 'shadow-blue-400/50'
-      },
-      {
-        label: 'Startup Solutions',
-        href: '/solutions/startup',
-        icon: <Rocket className="w-4 h-4" />,
-        description: 'Growth-focused startup solutions',
-        neonColor: 'shadow-purple-400/50'
-      },
-      {
-        label: 'Government Solutions',
-        href: '/solutions/government',
-        icon: <Shield className="w-4 h-4" />,
-        description: 'Secure government technology',
-        neonColor: 'shadow-green-400/50'
-=======
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -492,46 +434,10 @@ const navigationItems: NavigationItem[] = [
         description: 'Cloud migration services',
         icon: <Cloud className="w-4 h-4" />
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
       }
     ]
   },
   {
-<<<<<<< HEAD
-    label: 'About',
-    href: '/about',
-    icon: <Users className="w-4 h-4" />,
-    description: 'Learn about our company and mission',
-    neonColor: 'shadow-yellow-400/50'
-  },
-  {
-    label: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-4 h-4" />,
-    description: 'Educational content and tools',
-    neonColor: 'shadow-orange-400/50',
-    children: [
-      {
-        label: 'Blog',
-        href: '/blog',
-        icon: <FileText className="w-4 h-4" />,
-        description: 'Latest insights and updates',
-        neonColor: 'shadow-blue-400/50'
-      },
-      {
-        label: 'Webinars',
-        href: '/webinars',
-        icon: <Video className="w-4 h-4" />,
-        description: 'Educational webinars and events',
-        neonColor: 'shadow-purple-400/50'
-      },
-      {
-        label: 'Documentation',
-        href: '/docs',
-        icon: <Code className="w-4 h-4" />,
-        description: 'Technical documentation',
-        neonColor: 'shadow-green-400/50'
-=======
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
@@ -608,7 +514,6 @@ const navigationItems: NavigationItem[] = [
         href: '/news',
         description: 'Company updates',
         icon: <Newspaper className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-21a7
       }
     ]
   },

@@ -14,10 +14,7 @@ export interface Revolutionary2026ItService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
   {
     id: "2026-revolutionary-it",

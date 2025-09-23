@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Layout from '../components/layout/Layout';
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { innovative2025MicroSaasServices } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
 import Link from 'next/link';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
@@ -77,11 +72,6 @@ const categories = [
 ];
 
 const Comprehensive2025ServicesShowcase: React.FC = () => {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('name');
-=======
   const allServices = [...innovative2025MicroSaasServices, ...innovative2025ITEnterpriseBatch];
   
   const categories = [
@@ -93,7 +83,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
     'Developer Tools',
     'Enterprise Security'
   ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
 
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -195,8 +184,6 @@ const Comprehensive2025ServicesShowcase: React.FC = () => {
         return '⚡';
     }
   };
-
-
 
   return (
     <Layout>

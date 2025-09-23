@@ -228,8 +228,6 @@ const ServicesShowcase2037: React.FC = () => {
               Discover our cutting-edge portfolio featuring {all2037Services.length} innovative services across AI governance, quantum security, edge computing, and specialized micro SAAS solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           {/* Filters and Search */}
           <div className="mb-8 space-y-4">
@@ -328,7 +326,6 @@ const ServicesShowcase2037: React.FC = () => {
               Our innovative services deliver measurable results and transform businesses across industries
             </p>
           </div>
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div 
@@ -437,14 +434,7 @@ const ServicesShowcase2037: React.FC = () => {
           )}
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Contact Section */}
-      <ContactSection />
-    </Layout>
-=======
     </div>
->>>>>>> cd4748dc562b148d65a1b4346338fa475b702844
   );
 };
 

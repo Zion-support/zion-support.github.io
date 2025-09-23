@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-import Homepage2044 from '../components/Homepage2044';
-import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
-
-export default function Home() {
-  return (
-    <EnhancedErrorBoundary>
-      <Homepage2044 />
-    </EnhancedErrorBoundary>
-=======
 import React from 'react';
 <<<<<<< HEAD
 import Homepage2045 from '../components/Homepage2045';
@@ -33,23 +20,12 @@ const HomePage: React.FC = () => {
     url: "https://ziontechgroup.com",
     type: "website"
   };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 
 export default function Home() {
   return (
-<<<<<<< HEAD
-    <ErrorBoundary>
-      <SEOOptimizer />
-      <AnalyticsTracker />
-      <Homepage2045 />
-      <PerformanceMonitor />
-      <AccessibilityEnhancer />
-    </ErrorBoundary>
-=======
     <Layout seo={seoConfig}>
       <Homepage2040 />
     </Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
 >>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   );
 };
@@ -101,8 +77,6 @@ export default function Home() {
 {/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */}
     </div>
   );
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -135,7 +109,6 @@ interface Service {
   lastUpdated: string;
   path?: string;
   files?: string[];
->>>>>>> origin/cursor/automate-ai-and-it-service-creation-6b2f
 }
 
 interface ServiceCategory {

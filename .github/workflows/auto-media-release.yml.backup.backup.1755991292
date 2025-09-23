@@ -29,11 +29,6 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-<<<<<<< HEAD:.github/workflows/auto-media-release.yml.backup
-        run: npm ci
-      - name: Run Autonomous Meta Orchestrator (once)
-        run: node automation/autonomous-meta-orchestrator.cjs once
-=======
         run: npm ci --no-audit --no-fund
       - name: Run automations bundle
         run: |
@@ -44,7 +39,6 @@ jobs:
           npm run type-check || true
       - name: Build (non-blocking)
         run: npm run build || true
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c:.github/workflows/rapid-sync.yml
       - name: Commit and push changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then

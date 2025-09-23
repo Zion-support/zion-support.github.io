@@ -126,6 +126,6 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
       </div>
     </div>);
 }
-;
+
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';

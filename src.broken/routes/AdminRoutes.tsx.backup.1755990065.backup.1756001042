@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -116,7 +114,6 @@ const AdminRoutes = () => {
 
 export default AdminRoutes;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function AdminRoutes() {
   return (
@@ -126,7 +123,4 @@ export function AdminRoutes() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

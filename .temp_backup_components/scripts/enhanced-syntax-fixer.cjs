@@ -19,8 +19,4 @@ const { execSync } = require('child_process')
           if (&& !body.trim().endsWith(')
     && !body.trim().endsWith('}') && !body.trim().endsWith('}')
     const reportPath = 'enhanced-syntax-fix-report.json;'
-<<<<<<< HEAD
     console.error(' Enhanced syntax fixer "failed")
-=======
-    console.error(' Enhanced syntax fixer "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -23,10 +23,6 @@ function start() {
       pid: process.pid,
       uptimeMs: Math.round(process.uptime() * 1000)
     };
-<<<<<<< HEAD
-    fs.writeFileSync(statusFile, JSON.stringify(status, null, 2));
-  }, 5000);
-=======
 
     // System details
     for (const [name, system] of this.automationSystems) {
@@ -188,7 +184,6 @@ function start() {
       this.log(`📊 API available at: http://localhost:${port}/api/status`);
     });
   }
->>>>>>> origin/main
 }
 
 if (require.main === module) start();

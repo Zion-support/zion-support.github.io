@@ -83,12 +83,6 @@ const navigationItems: NavigationItem[] = [
         icon: <Cpu className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
-        name: 'Micro SAAS', 
-        href: '/micro-saas', 
-        description: 'Business automation solutions',
-        icon: <Target className="w-4 h-4" />
-=======
         name: 'Specialized Solutions', 
         href: '/solutions', 
         description: 'Industry-specific solutions',
@@ -111,7 +105,6 @@ const navigationItems: NavigationItem[] = [
         href: '/government-technology-solutions', 
         description: 'Government technology solutions',
         icon: <Play className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-0fc2
       }
     ]
   },

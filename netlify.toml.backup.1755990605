@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -267,8 +266,4 @@
 
 [[scheduled.functions]]
   name = "component-size-report"
-<<<<<<< HEAD
-  schedule = "*/5 * * * *"}‬```
-=======
   schedule = "*/5 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-5293

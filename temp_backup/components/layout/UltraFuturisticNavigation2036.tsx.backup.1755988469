@@ -428,57 +428,10 @@ const navigationItems: NavigationItem[] = [
         icon: <BookOpen className="w-4 h-4" />
       },
       { 
-<<<<<<< HEAD
-        name: 'Energy & Utilities', 
-        href: '/energy-utilities-solutions', 
-        description: 'Energy solutions',
-        icon: <Zap className="w-4 h-4" />
-      },
-      { 
-        name: 'Entertainment & Media', 
-        href: '/entertainment-media-solutions', 
-        description: 'Media solutions',
-        icon: <Film className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Get Started',
-    href: '/get-started',
-    icon: <ArrowRight className="w-5 h-5" />,
-    description: 'Start your journey',
-    category: 'get-started',
-    children: [
-      { 
-        name: 'Get Started Guide', 
-        href: '/get-started', 
-        description: 'Begin your journey',
-        icon: <ArrowRight className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Request Quote', 
-        href: '/quote', 
-        description: 'Get a custom quote',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Schedule Demo', 
-        href: '/demo', 
-        description: 'See our solutions',
-        icon: <Video className="w-4 h-4" />
-      },
-      { 
-        name: 'Contact Sales', 
-        href: '/contact', 
-        description: 'Talk to our team',
-        icon: <MessageCircle className="w-4 h-4" />
-=======
         name: 'Energy', 
         href: '/energy-technology-solutions', 
         description: 'Energy technology',
         icon: <Zap className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-b7a7
       }
     ]
   }

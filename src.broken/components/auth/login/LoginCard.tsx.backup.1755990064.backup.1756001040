@@ -2,11 +2,6 @@ import React from 'react';
 export function LoginCard() {
   return (
 <<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-=======
-<<<<<<< HEAD
     <div className="mx-auto w-full max-w-sm lg:w-96">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold tracking-tight text-white">
@@ -36,7 +31,6 @@ export function LoginCard() {
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

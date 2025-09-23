@@ -1,32 +1,17 @@
 
-<<<<<<< HEAD
-import React{ useEffect } from "react";
-import { useDisputes } from "@/hooks/useDisputes";
-import { DisputesList } from "./DisputesList";
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-=======
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 
 export function DisputeDashboard() {
-<<<<<<< HEAD
-  const { disputesisLoadingrefetch } = useDisputes();
-
-  useEffect(() => {
-    refetch();
-  }[refetch]);
-=======
   const { disputes, isLoading, refetch } = useDisputes();
 
   useEffect(() => {
     refetch();
   }, [refetch]);
->>>>>>> origin/auto/autonomy-17186719616
 
   const openDisputes = disputes.filter(d => d.status === 'open');
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review');
@@ -57,11 +42,7 @@ export function DisputeDashboard() {
           <CardContent>
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
               <div className="bg-red-600 h-2.5 rounded-full" style={{ 
-<<<<<<< HEAD
-                width: `${Math.min(100(openDisputes.length / Math.max(1disputes.length)) * 100)}%` 
-=======
                 width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
->>>>>>> origin/auto/autonomy-17186719616
               }}></div>
             </div>
           </CardContent>
@@ -78,11 +59,7 @@ export function DisputeDashboard() {
           <CardContent>
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
-<<<<<<< HEAD
-                width: `${Math.min(100(underReviewDisputes.length / Math.max(1disputes.length)) * 100)}%` 
-=======
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
->>>>>>> origin/auto/autonomy-17186719616
               }}></div>
             </div>
           </CardContent>
@@ -99,11 +76,7 @@ export function DisputeDashboard() {
           <CardContent>
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
-<<<<<<< HEAD
-                width: `${Math.min(100(resolvedDisputes.length / Math.max(1disputes.length)) * 100)}%` 
-=======
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
->>>>>>> origin/auto/autonomy-17186719616
               }}></div>
             </div>
           </CardContent>

@@ -45,37 +45,6 @@ const navigationItems: NavigationItem[] = [
     category: 'main',
     children: [
       {
-<<<<<<< HEAD
-        label: 'AI & Machine Learning',
-        href: '/services?category=ai-ml',
-        icon: <Brain className="w-4 h-4" />,
-        description: 'Advanced AI solutions for enterprise',
-        featured: true,
-        neonColor: 'shadow-purple-400/50',
-        category: 'ai'
-      },
-      {
-        label: 'Quantum Computing',
-        href: '/services?category=quantum',
-        icon: <Atom className="w-4 h-4" />,
-        description: 'Next-generation quantum solutions',
-        featured: true,
-        neonColor: 'shadow-blue-400/50',
-        category: 'quantum'
-      },
-      {
-        label: 'Cybersecurity',
-        href: '/services?category=security',
-        icon: <Shield className="w-4 h-4" />,
-        description: 'Advanced security solutions',
-        neonColor: 'shadow-red-400/50',
-        category: 'security'
-      },
-      { 
-        name: 'Autonomous Customer Success 2045', 
-        href: '/autonomous-customer-success-2045', 
-        description: 'AI-powered customer success',
-=======
         label: 'AI & Autonomous Ecosystems',
         href: '/ai-autonomous-content-creation-2025',
         icon: <Brain className="w-4 h-4" />,
@@ -247,7 +216,6 @@ const navigationItems: NavigationItem[] = [
       {
         label: 'Healthcare & Biotech',
         href: '/healthcare-ai-solutions',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1eea
         icon: <Heart className="w-4 h-4" />,
         color: 'from-pink-500 to-purple-500'
       }
