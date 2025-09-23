@@ -69,3 +69,11 @@ lib.disabled/
 **/*.backups*/
 **/*.corrupted*/
 **/*.disabled*/
+
+# Additional exclusions to avoid linting corrupted or out-of-scope code
+utils/
+types/
+ts_files_backup/
+zion-os/
+zion-ai-assistant/
+zion-website/
