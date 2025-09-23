@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Job } from '@/types/jobs'; // Added import
@@ -13,7 +12,7 @@ export function useJobDetails(jobId: string | undefined) {
       setIsLoading(false);
       return;
     }
-    
+
     try {
       setIsLoading(true);
       const { data, error } = await supabase
@@ -21,11 +20,12 @@ export function useJobDetails(jobId: string | undefined) {
         .select('*')
         .eq('id', jobId)
         .single();
-        
+
       if (error) throw error;
       setJob(data);
       setError(null);
-    } catch (err: any) { // Typed err as any
+    } catch (err: any) {
+      // Typed err as any
       console.error('Error loading job details:', err);
       setError(err.message);
     } finally {
@@ -42,7 +42,7 @@ export function useJobDetails(jobId: string | undefined) {
     job,
     isLoading,
     error,
-    loadJobDetails
+    loadJobDetails,
   };
 }
 

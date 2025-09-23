@@ -5,7 +5,7 @@ export default function ZgpLibraryAlias() {
     router.replace('/dao/templates');
   }, [router]);
   return (
-    <div className="min-h-screen flex items-center justify-center text-gray-60o0">
+    <div className='min-h-screen flex items-center justify-center text-gray-60o0'>
       Redirecting to /dao/templates…
     </div>
   );

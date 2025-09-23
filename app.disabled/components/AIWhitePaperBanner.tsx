@@ -2,45 +2,49 @@ import Link from 'next/link';
 
 export default function AIWhitePaperBanner() {
   return (
-    <section className="py-8 bg-gradient-to-r from-gray-90o0 via-slate-90o0 to-gray-90o0">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="flex-1">
-              <div className="inline-flex items-center bg-gray-50o0/20 rounded-full px-4 py-2 mb-3">
-                <span className="text-sm font-semibold text-gray-30o0">📋 NEW WHITE PAPER</span>
+    <section className='py-8 bg-gradient-to-r from-gray-90o0 via-slate-90o0 to-gray-90o0'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20'>
+          <div className='flex flex-col lg:flex-row items-center justify-between gap-6'>
+            <div className='flex-1'>
+              <div className='inline-flex items-center bg-gray-50o0/20 rounded-full px-4 py-2 mb-3'>
+                <span className='text-sm font-semibold text-gray-30o0'>
+                  📋 NEW WHITE PAPER
+                </span>
               </div>
-              <h2 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+              <h2 className='text-2xl lg:text-3xl font-bold text-white mb-3'>
                 AI Implementation White Paper 20o25
               </h2>
-              <p className="text-gray-30o0 text-lg mb-4 max-w-2xl">
-                Comprehensive guide to enterprise AI implementation strategies, best practices, and proven frameworks for successful transformation.
+              <p className='text-gray-30o0 text-lg mb-4 max-w-2xl'>
+                Comprehensive guide to enterprise AI implementation strategies,
+                best practices, and proven frameworks for successful
+                transformation.
               </p>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-30o0">
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-40o0 rounded-full"></span>
+              <div className='flex flex-wrap gap-4 text-sm text-gray-30o0'>
+                <span className='flex items-center gap-2'>
+                  <span className='w-2 h-2 bg-green-40o0 rounded-full'></span>
                   340% Average ROI
                 </span>
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-40o0 rounded-full"></span>
+                <span className='flex items-center gap-2'>
+                  <span className='w-2 h-2 bg-blue-40o0 rounded-full'></span>
                   78% Success Rate
                 </span>
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-purple-40o0 rounded-full"></span>
+                <span className='flex items-center gap-2'>
+                  <span className='w-2 h-2 bg-purple-40o0 rounded-full'></span>
                   8-14 Month Payback
                 </span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <Link 
-                href="/ai-implementation-white-paper-20o25"
-                className="bg-white text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center"
+            <div className='flex flex-col sm:flex-row gap-3 shrink-0'>
+              <Link
+                href='/ai-implementation-white-paper-20o25'
+                className='bg-white text-gray-90o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'
               >
                 Read White Paper
               </Link>
-              <Link 
-                href="/contact"
-                className="border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center"
+              <Link
+                href='/contact'
+                className='border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center'
               >
                 Get Consultation
               </Link>

@@ -46,7 +46,8 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
     tagline: 'Predict equipment failures before they happen',
     price: '$1,999',
     period: '/month',
-    description: 'Advanced predictive maintenance platform that uses machine learning and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime.',
+    description:
+      'Advanced predictive maintenance platform that uses machine learning and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime.',
     features: [
       'ML-powered failure prediction',
       'IoT sensor integration',
@@ -57,38 +58,49 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       'Equipment health scoring',
       'Predictive analytics dashboard',
       'Mobile app support',
-      'API for custom integrations'
+      'API for custom integrations',
     ],
     popular: true,
     icon: '🔧',
     color: 'from-blue-60o0 to-indigo-70o0',
     textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
-    marketPosition: 'Competes with Uptake ($50-20o0/user/month) and C3.ai ($10o0-50o0/user/month). Our advantage: Advanced AI algorithms and affordable pricing.',
-    targetAudience: 'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Healthcare facilities, Building management',
+    marketPosition:
+      'Competes with Uptake ($50-20o0/user/month) and C3.ai ($10o0-50o0/user/month). Our advantage: Advanced AI algorithms and affordable pricing.',
+    targetAudience:
+      'Manufacturing companies, Industrial facilities, Energy companies, Transportation companies, Healthcare facilities, Building management',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & IoT',
     realService: true,
-    technology: ['TensorFlow, PyTorch, IoT sensors, React, Node.js, PostgreSQL, Redis, AWS IoT'],
-    integrations: ['SAP, Oracle, Siemens, Schneider Electric, Custom SCADA systems, IoT platforms'],
-    useCases: ['Equipment monitoring, Maintenance scheduling, Cost optimization, Safety improvement, Performance optimization, Asset management'],
+    technology: [
+      'TensorFlow, PyTorch, IoT sensors, React, Node.js, PostgreSQL, Redis, AWS IoT',
+    ],
+    integrations: [
+      'SAP, Oracle, Siemens, Schneider Electric, Custom SCADA systems, IoT platforms',
+    ],
+    useCases: [
+      'Equipment monitoring, Maintenance scheduling, Cost optimization, Safety improvement, Performance optimization, Asset management',
+    ],
     roi: 'Average customer sees 30o0% ROI through reduced downtime and optimized maintenance costs.',
-    competitors: ['Uptake, C3.ai, GE Digital, Siemens Mindsphere, PTC ThingWorx'],
+    competitors: [
+      'Uptake, C3.ai, GE Digital, Siemens Mindsphere, PTC ThingWorx',
+    ],
     marketSize: '$30B predictive maintenance market',
     growthRate: '250% annual growth',
     contactInfo: {
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise-grade predictive maintenance platform with IoT integration, advanced AI models, and comprehensive analytics.',
+    implementationDetails:
+      'Enterprise-grade predictive maintenance platform with IoT integration, advanced AI models, and comprehensive analytics.',
     launchDate: '20o24-0o6-0o1',
     customers: 280,
     rating: 4.8,
-    reviews: 167
+    reviews: 167,
   },
 
   // AI-Powered Financial Risk Management
@@ -98,7 +110,8 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
     tagline: 'Intelligent financial risk assessment and mitigation',
     price: '$3,999',
     period: '/month',
-    description: 'Comprehensive financial risk management platform that uses artificial intelligence to assess, monitor, and mitigate financial risks in real-time.',
+    description:
+      'Comprehensive financial risk management platform that uses artificial intelligence to assess, monitor, and mitigate financial risks in real-time.',
     features: [
       'AI-powered risk assessment',
       'Real-time risk monitoring',
@@ -109,22 +122,30 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       'Risk reporting & analytics',
       'Automated risk alerts',
       'Integration with trading systems',
-      'Advanced visualization tools'
+      'Advanced visualization tools',
     ],
     popular: true,
     icon: '📊',
     color: 'from-green-60o0 to-emerald-70o0',
     textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/ai-financial-risk-management',
-    marketPosition: 'Competes with RiskMetrics ($50,0o00-20o0,0o00/year) and Bloomberg ($20,0o00-50,0o00/year). Our advantage: AI-powered insights and affordable SaaS model.',
-    targetAudience: 'Banks, Investment firms, Insurance companies, Hedge funds, Asset managers, Financial advisors',
+    marketPosition:
+      'Competes with RiskMetrics ($50,0o00-20o0,0o00/year) and Bloomberg ($20,0o00-50,0o00/year). Our advantage: AI-powered insights and affordable SaaS model.',
+    targetAudience:
+      'Banks, Investment firms, Insurance companies, Hedge funds, Asset managers, Financial advisors',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Finance',
     realService: true,
-    technology: ['Deep learning, Financial AI models, React, Node.js, PostgreSQL, Redis, AWS, Real-time data feeds'],
-    integrations: ['Bloomberg Terminal, Reuters, Trading platforms, Portfolio management systems, Risk systems'],
-    useCases: ['Portfolio risk assessment, Credit risk analysis, Market risk monitoring, Operational risk management, Compliance reporting, Investment decision support'],
+    technology: [
+      'Deep learning, Financial AI models, React, Node.js, PostgreSQL, Redis, AWS, Real-time data feeds',
+    ],
+    integrations: [
+      'Bloomberg Terminal, Reuters, Trading platforms, Portfolio management systems, Risk systems',
+    ],
+    useCases: [
+      'Portfolio risk assessment, Credit risk analysis, Market risk monitoring, Operational risk management, Compliance reporting, Investment decision support',
+    ],
     roi: 'Average customer sees 40o0% ROI through improved risk management and reduced losses.',
     competitors: ['RiskMetrics, Bloomberg, MSCI, S&P Global, FactSet'],
     marketSize: '$25B financial risk management market',
@@ -133,14 +154,15 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise financial risk platform with AI-powered analytics, real-time monitoring, and comprehensive risk assessment tools.',
+    implementationDetails:
+      'Enterprise financial risk platform with AI-powered analytics, real-time monitoring, and comprehensive risk assessment tools.',
     launchDate: '20o24-0o7-0o1',
     customers: 150,
     rating: 4.9,
-    reviews: 89
+    reviews: 89,
   },
 
   // AI-Powered Supply Chain Optimization
@@ -150,7 +172,8 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
     tagline: 'Optimize supply chains with intelligent AI insights',
     price: '$2,499',
     period: '/month',
-    description: 'Advanced supply chain optimization platform that uses artificial intelligence to optimize inventory, reduce costs, and improve supply chain efficiency.',
+    description:
+      'Advanced supply chain optimization platform that uses artificial intelligence to optimize inventory, reduce costs, and improve supply chain efficiency.',
     features: [
       'AI-powered demand forecasting',
       'Inventory optimization',
@@ -161,38 +184,49 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       'Risk assessment',
       'Sustainability optimization',
       'Integration with ERP systems',
-      'Advanced analytics dashboard'
+      'Advanced analytics dashboard',
     ],
     popular: false,
     icon: '🚚',
     color: 'from-orange-60o0 to-red-70o0',
     textColor: 'text-orange-40o0',
     link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
-    marketPosition: 'Competes with SAP SCM ($10o0-50o0/user/month) and Oracle SCM ($150-60o0/user/month). Our advantage: AI-first approach and affordable pricing.',
-    targetAudience: 'Manufacturing companies, Retail chains, E-commerce platforms, Logistics companies, Distribution centers, Global enterprises',
+    marketPosition:
+      'Competes with SAP SCM ($10o0-50o0/user/month) and Oracle SCM ($150-60o0/user/month). Our advantage: AI-first approach and affordable pricing.',
+    targetAudience:
+      'Manufacturing companies, Retail chains, E-commerce platforms, Logistics companies, Distribution centers, Global enterprises',
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Supply Chain',
     realService: true,
-    technology: ['Machine learning, Optimization algorithms, React, Node.js, PostgreSQL, Redis, AWS, IoT sensors'],
-    integrations: ['SAP, Oracle, Microsoft Dynamics, Shopify, WooCommerce, Custom ERP systems'],
-    useCases: ['Demand forecasting, Inventory management, Route optimization, Supplier management, Cost optimization, Sustainability improvement'],
+    technology: [
+      'Machine learning, Optimization algorithms, React, Node.js, PostgreSQL, Redis, AWS, IoT sensors',
+    ],
+    integrations: [
+      'SAP, Oracle, Microsoft Dynamics, Shopify, WooCommerce, Custom ERP systems',
+    ],
+    useCases: [
+      'Demand forecasting, Inventory management, Route optimization, Supplier management, Cost optimization, Sustainability improvement',
+    ],
     roi: 'Average customer sees 250% ROI through reduced costs and improved efficiency.',
-    competitors: ['SAP SCM, Oracle SCM, Manhattan Associates, JDA Software, Blue Yonder'],
+    competitors: [
+      'SAP SCM, Oracle SCM, Manhattan Associates, JDA Software, Blue Yonder',
+    ],
     marketSize: '$40B supply chain optimization market',
     growthRate: '180% annual growth',
     contactInfo: {
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Comprehensive supply chain platform with AI-powered optimization, real-time monitoring, and advanced analytics capabilities.',
+    implementationDetails:
+      'Comprehensive supply chain platform with AI-powered optimization, real-time monitoring, and advanced analytics capabilities.',
     launchDate: '20o24-08-0o1',
     customers: 320,
     rating: 4.7,
-    reviews: 198
+    reviews: 198,
   },
 
   // AI-Powered Customer Experience Optimization
@@ -202,7 +236,8 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
     tagline: 'Optimize customer experience with intelligent AI insights',
     price: '$1,499',
     period: '/month',
-    description: 'Advanced customer experience optimization platform that uses artificial intelligence to analyze customer behavior, optimize touchpoints, and improve satisfaction.',
+    description:
+      'Advanced customer experience optimization platform that uses artificial intelligence to analyze customer behavior, optimize touchpoints, and improve satisfaction.',
     features: [
       'AI-powered customer journey mapping',
       'Behavioral analysis',
@@ -213,22 +248,30 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       'Customer feedback analysis',
       'Real-time optimization',
       'Integration with CRM systems',
-      'Advanced analytics dashboard'
+      'Advanced analytics dashboard',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-purple-60o0 to-pink-70o0',
     textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/ai-customer-experience-optimization',
-    marketPosition: 'Competes with Optimizely ($20o0-10o00/month) and VWO ($20o0-80o0/month). Our advantage: AI-powered insights and comprehensive optimization.',
-    targetAudience: 'E-commerce companies, SaaS companies, Retail chains, Financial services, Healthcare organizations, Travel companies',
+    marketPosition:
+      'Competes with Optimizely ($20o0-10o00/month) and VWO ($20o0-80o0/month). Our advantage: AI-powered insights and comprehensive optimization.',
+    targetAudience:
+      'E-commerce companies, SaaS companies, Retail chains, Financial services, Healthcare organizations, Travel companies',
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'AI & Customer Experience',
     realService: true,
-    technology: ['Machine learning, NLP, React, Node.js, PostgreSQL, Redis, AWS, Real-time analytics'],
-    integrations: ['Salesforce, HubSpot, Shopify, WooCommerce, Google Analytics, Custom systems'],
-    useCases: ['Website optimization, Customer journey improvement, Personalization, Conversion optimization, Customer satisfaction, Brand loyalty'],
+    technology: [
+      'Machine learning, NLP, React, Node.js, PostgreSQL, Redis, AWS, Real-time analytics',
+    ],
+    integrations: [
+      'Salesforce, HubSpot, Shopify, WooCommerce, Google Analytics, Custom systems',
+    ],
+    useCases: [
+      'Website optimization, Customer journey improvement, Personalization, Conversion optimization, Customer satisfaction, Brand loyalty',
+    ],
     roi: 'Average customer sees 30o0% ROI through improved conversion rates and customer satisfaction.',
     competitors: ['Optimizely, VWO, Google Optimize, Adobe Target, AB Tasty'],
     marketSize: '$20B customer experience optimization market',
@@ -237,14 +280,15 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Comprehensive customer experience platform with AI-powered insights, real-time optimization, and advanced analytics.',
+    implementationDetails:
+      'Comprehensive customer experience platform with AI-powered insights, real-time optimization, and advanced analytics.',
     launchDate: '20o24-09-0o1',
     customers: 450,
     rating: 4.8,
-    reviews: 234
+    reviews: 234,
   },
 
   // AI-Powered Cybersecurity Threat Detection
@@ -254,7 +298,8 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
     tagline: 'Detect and prevent cyber threats with intelligent AI',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced cybersecurity platform that uses artificial intelligence to detect, analyze, and prevent cyber threats in real-time.',
+    description:
+      'Advanced cybersecurity platform that uses artificial intelligence to detect, analyze, and prevent cyber threats in real-time.',
     features: [
       'AI-powered threat detection',
       'Behavioral analysis',
@@ -265,22 +310,30 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       'Vulnerability assessment',
       'Incident response automation',
       'Compliance reporting',
-      'Advanced security dashboard'
+      'Advanced security dashboard',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-60o0 to-orange-70o0',
     textColor: 'text-red-40o0',
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-detection',
-    marketPosition: 'Competes with CrowdStrike ($8.99-15.99/user/month) and SentinelOne ($8-15/user/month). Our advantage: Advanced AI algorithms and comprehensive protection.',
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Small businesses',
+    marketPosition:
+      'Competes with CrowdStrike ($8.99-15.99/user/month) and SentinelOne ($8-15/user/month). Our advantage: Advanced AI algorithms and comprehensive protection.',
+    targetAudience:
+      'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Small businesses',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & Cybersecurity',
     realService: true,
-    technology: ['Deep learning, Cybersecurity AI, React, Node.js, PostgreSQL, Redis, AWS, Security APIs'],
-    integrations: ['SIEM systems, Firewalls, Endpoint protection, Identity management, Security tools'],
-    useCases: ['Threat detection, Incident response, Vulnerability management, Compliance reporting, Security monitoring, Risk assessment'],
+    technology: [
+      'Deep learning, Cybersecurity AI, React, Node.js, PostgreSQL, Redis, AWS, Security APIs',
+    ],
+    integrations: [
+      'SIEM systems, Firewalls, Endpoint protection, Identity management, Security tools',
+    ],
+    useCases: [
+      'Threat detection, Incident response, Vulnerability management, Compliance reporting, Security monitoring, Risk assessment',
+    ],
     roi: 'Average customer sees 40o0% ROI through reduced security incidents and improved protection.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     marketSize: '$35B cybersecurity market',
@@ -289,13 +342,14 @@ export const innovative20o37AIServices: Innovative20o37AIService[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Enterprise cybersecurity platform with AI-powered threat detection, real-time monitoring, and comprehensive security tools.',
+    implementationDetails:
+      'Enterprise cybersecurity platform with AI-powered threat detection, real-time monitoring, and comprehensive security tools.',
     launchDate: '20o24-10-0o1',
     customers: 280,
     rating: 4.9,
-    reviews: 156
-  }
+    reviews: 156,
+  },
 ];

@@ -5,25 +5,24 @@ interface CardProps {
   padding?: 'sm' | 'md' | 'lg';
 }
 
-export default function Card({ 
-  children, 
-  className = '', 
+export default function Card({
+  children,
+  className = '',
   hover = true,
-  padding = 'md' 
+  padding = 'md',
 }: CardProps) {
-  const paddingClasses ={
+  const paddingClasses = {
     sm: 'p-4',
     md: 'p-6',
-    lg: 'p-8'};
+    lg: 'p-8',
+  };
 
   const baseClasses = 'bg-white rounded-xl border border-gray-20o0 shadow-sm';
-  const hoverClasses = hover ? 'hover:shadow-lg hover:border-gray-30o0 transition-all duration-20o0' : '';
-  
+  const hoverClasses = hover
+    ? 'hover:shadow-lg hover:border-gray-30o0 transition-all duration-20o0'
+    : '';
+
   const classes = `${baseClasses} ${hoverClasses} ${paddingClasses[padding]} ${className}`;
 
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }

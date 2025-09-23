@@ -4,19 +4,19 @@ import OptimizedImage from '../components/OptimizedImage';
 
 describe('OptimizedImage', () => {
   test('renders without crashing', () => {
-    render(<OptimizedImage  />);
+    render(<OptimizedImage />);
     expect(screen.getByTestId('optimizedimage')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
-    render(<OptimizedImage  />);
+    render(<OptimizedImage />);
   });
-  
+
   test('handles user interactions', () => {
-    render(<OptimizedImage  />);
+    render(<OptimizedImage />);
   });
-  
+
   test('applies correct styling', () => {
-    render(<OptimizedImage  />);
+    render(<OptimizedImage />);
   });
 });

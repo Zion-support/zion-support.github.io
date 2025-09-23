@@ -4,63 +4,63 @@
  */
 
 class ZionFeedback {
-    constructor() {
-        this.baseUrl = '/api/feedback';
-        this.currentContent = this.getCurrentContent();
-        this.feedbackForms = new Map();
-        
-        this.init();
+  constructor() {
+    this.baseUrl = '/api/feedback';
+    this.currentContent = this.getCurrentContent();
+    this.feedbackForms = new Map();
+
+    this.init();
+  }
+
+  init() {
+    this.createFeedbackWidget();
+    this.setupEventListeners();
+  }
+
+  getCurrentContent() {
+    // Extract content context from current page
+    const path = window.location.pathname;
+    const courseMatch = path.match(/\/course\/(\d+)/);
+    const lessonMatch = path.match(/\/lesson\/(\d+)/);
+
+    if (courseMatch) {
+      return {
+        type: 'course',
+        id: courseMatch[1],
+        title: document.title,
+      };
+    } else if (lessonMatch) {
+      return {
+        type: 'lesson',
+        id: lessonMatch[1],
+        title: document.title,
+      };
     }
-    
-    init() {
-        this.createFeedbackWidget();
-        this.setupEventListeners();
-    }
-    
-    getCurrentContent() {
-        // Extract content context from current page
-        const path = window.location.pathname;
-        const courseMatch = path.match(/\/course\/(\d+)/);
-        const lessonMatch = path.match(/\/lesson\/(\d+)/);
-        
-        if (courseMatch) {
-            return {
-                type: 'course',
-                id: courseMatch[1],
-                title: document.title
-            };
-        } else if (lessonMatch) {
-            return {
-                type: 'lesson',
-                id: lessonMatch[1],
-                title: document.title
-            };
-        }
-        
-        return {
-            type: 'general',
-            id: null,
-            title: document.title
-        };
-    }
-    
-    createFeedbackWidget() {
-        // Create floating feedback button
-        const feedbackButton = document.createElement('div');
-        feedbackButton.className = 'zion-feedback-button';
-        feedbackButton.innerHTML = `
+
+    return {
+      type: 'general',
+      id: null,
+      title: document.title,
+    };
+  }
+
+  createFeedbackWidget() {
+    // Create floating feedback button
+    const feedbackButton = document.createElement('div');
+    feedbackButton.className = 'zion-feedback-button';
+    feedbackButton.innerHTML = `
             <button class="feedback-trigger" title="Submit Feedback">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
             </button>
         `;
-        
-        // Create feedback modal
-        const feedbackModal = document.createElement('div');
-        feedbackModal.className = 'zion-feedback-modal';
-        feedbackModal.style.display = 'none';
-        feedbackModal.innerHTML = `
+
+    // Create feedback modal
+    const feedbackModal = document.createElement('div');
+    feedbackModal.className = 'zion-feedback-modal';
+    feedbackModal.style.display = 'none';
+    feedbackModal.innerHTML = `
             <div class="feedback-modal-content">
                 <div class="feedback-modal-header">
                     <h3>Submit Feedback</h3>
@@ -118,24 +118,24 @@ class ZionFeedback {
                 </div>
             </div>
         `;
-        
-        // Add to page
-        document.body.appendChild(feedbackButton);
-        document.body.appendChild(feedbackModal);
-        
-        // Store reference
-        this.feedbackForms.set(feedbackModal, feedbackModal);
-        
-        // Add styles
-        this.addStyles();
-    }
-    
-    addStyles() {
-        if (document.getElementById('zion-feedback-styles')) return;
-        
-        const styles = document.createElement('style');
-        styles.id = 'zion-feedback-styles';
-        styles.textContent = `
+
+    // Add to page
+    document.body.appendChild(feedbackButton);
+    document.body.appendChild(feedbackModal);
+
+    // Store reference
+    this.feedbackForms.set(feedbackModal, feedbackModal);
+
+    // Add styles
+    this.addStyles();
+  }
+
+  addStyles() {
+    if (document.getElementById('zion-feedback-styles')) return;
+
+    const styles = document.createElement('style');
+    styles.id = 'zion-feedback-styles';
+    styles.textContent = `
             .zion-feedback-button {
                 position: fixed;
                 bottom: 20px;
@@ -355,116 +355,123 @@ class ZionFeedback {
                 }
             }
         `;
-        
-        document.head.appendChild(styles);
+
+    document.head.appendChild(styles);
+  }
+
+  setupEventListeners() {
+    // Feedback button click
+    document.addEventListener('click', e => {
+      if (e.target.closest('.feedback-trigger')) {
+        this.showFeedbackModal();
+      }
+
+      if (
+        e.target.closest('.feedback-close') ||
+        e.target.closest('.feedback-cancel')
+      ) {
+        this.hideFeedbackModal();
+      }
+    });
+
+    // Form submission
+    document.addEventListener('submit', e => {
+      if (e.target.classList.contains('feedback-form')) {
+        e.preventDefault();
+        this.handleFeedbackSubmission(e.target);
+      }
+    });
+
+    // Close modal on outside click
+    document.addEventListener('click', e => {
+      if (e.target.classList.contains('zion-feedback-modal')) {
+        this.hideFeedbackModal();
+      }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        this.hideFeedbackModal();
+      }
+    });
+  }
+
+  showFeedbackModal() {
+    const modal = document.querySelector('.zion-feedback-modal');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
     }
-    
-    setupEventListeners() {
-        // Feedback button click
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.feedback-trigger')) {
-                this.showFeedbackModal();
-            }
-            
-            if (e.target.closest('.feedback-close') || e.target.closest('.feedback-cancel')) {
-                this.hideFeedbackModal();
-            }
-        });
-        
-        // Form submission
-        document.addEventListener('submit', (e) => {
-            if (e.target.classList.contains('feedback-form')) {
-                e.preventDefault();
-                this.handleFeedbackSubmission(e.target);
-            }
-        });
-        
-        // Close modal on outside click
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('zion-feedback-modal')) {
-                this.hideFeedbackModal();
-            }
-        });
-        
-        // Close modal on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                this.hideFeedbackModal();
-            }
-        });
+  }
+
+  hideFeedbackModal() {
+    const modal = document.querySelector('.zion-feedback-modal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
     }
-    
-    showFeedbackModal() {
-        const modal = document.querySelector('.zion-feedback-modal');
-        if (modal) {
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+  }
+
+  async handleFeedbackSubmission(form) {
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('.feedback-submit');
+    const originalText = submitButton.textContent;
+
+    // Disable submit button
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitting...';
+
+    // Clear previous errors
+    form.querySelectorAll('.feedback-error').forEach(el => el.remove());
+
+    try {
+      const feedbackData = {
+        feedback_type: formData.get('feedback_type'),
+        content_type: this.currentContent.type,
+        content_id: this.currentContent.id,
+        title: formData.get('title'),
+        description: formData.get('description'),
+        priority: formData.get('priority'),
+      };
+
+      const response = await fetch(`${this.baseUrl}/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(feedbackData),
+      });
+
+      if (response.ok) {
+        this.showSuccessMessage(form);
+
+        // Track feedback submission in analytics
+        if (window.zionAnalytics) {
+          window.zionAnalytics.trackEvent('feedback_submit', {
+            feedback_type: feedbackData.feedback_type,
+            content_type: feedbackData.content_type,
+            content_id: feedbackData.content_id,
+          });
         }
+      } else {
+        const errorData = await response.json();
+        this.showErrorMessage(
+          form,
+          errorData.error || 'Failed to submit feedback'
+        );
+      }
+    } catch (error) {
+      this.showErrorMessage(form, 'Network error. Please try again.');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
     }
-    
-    hideFeedbackModal() {
-        const modal = document.querySelector('.zion-feedback-modal');
-        if (modal) {
-            modal.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    }
-    
-    async handleFeedbackSubmission(form) {
-        const formData = new FormData(form);
-        const submitButton = form.querySelector('.feedback-submit');
-        const originalText = submitButton.textContent;
-        
-        // Disable submit button
-        submitButton.disabled = true;
-        submitButton.textContent = 'Submitting...';
-        
-        // Clear previous errors
-        form.querySelectorAll('.feedback-error').forEach(el => el.remove());
-        
-        try {
-            const feedbackData ={
-                feedback_type: formData.get('feedback_type'),
-                content_type: this.currentContent.type,
-                content_id: this.currentContent.id,
-                title: formData.get('title'),
-                description: formData.get('description'),
-                priority: formData.get('priority')
-            };
-            
-            const response = await fetch(`${this.baseUrl}/submit`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'},
-                body: JSON.stringify(feedbackData)
-            });
-            
-            if (response.ok) {
-                this.showSuccessMessage(form);
-                
-                // Track feedback submission in analytics
-                if (window.zionAnalytics) {
-                    window.zionAnalytics.trackEvent('feedback_submit', {
-                        feedback_type: feedbackData.feedback_type,
-                        content_type: feedbackData.content_type,
-                        content_id: feedbackData.content_id
-                    });
-                }
-            } else {
-                const errorData = await response.json();
-                this.showErrorMessage(form, errorData.error || 'Failed to submit feedback');
-            }
-        } catch (error) {
-            this.showErrorMessage(form, 'Network error. Please try again.');
-        } finally {
-            submitButton.disabled = false;
-            submitButton.textContent = originalText;
-        }
-    }
-    
-    showSuccessMessage(form) {
-        const modalBody = form.closest('.feedback-modal-body');
-        modalBody.innerHTML = `
+  }
+
+  showSuccessMessage(form) {
+    const modalBody = form.closest('.feedback-modal-body');
+    modalBody.innerHTML = `
             <div class="feedback-success">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -477,37 +484,41 @@ class ZionFeedback {
                 </button>
             </div>
         `;
-    }
-    
-    showErrorMessage(form, message) {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'feedback-error';
-        errorDiv.textContent = message;
-        form.appendChild(errorDiv);
-    }
-    
-    // Public methods
-    showFeedbackForContent(contentType, contentId, contentTitle) {
-        this.currentContent ={ type: contentType, id: contentId, title: contentTitle };
-        this.showFeedbackModal();
-    }
-    
-    getFeedbackStats() {
-        return fetch(`${this.baseUrl}/list`)
-            .then(response => response.json())
-            .catch(error => {
-                console.error('Failed to fetch feedback stats:', error);
-                return { feedbacks: [] };
-            });
-    }
+  }
+
+  showErrorMessage(form, message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'feedback-error';
+    errorDiv.textContent = message;
+    form.appendChild(errorDiv);
+  }
+
+  // Public methods
+  showFeedbackForContent(contentType, contentId, contentTitle) {
+    this.currentContent = {
+      type: contentType,
+      id: contentId,
+      title: contentTitle,
+    };
+    this.showFeedbackModal();
+  }
+
+  getFeedbackStats() {
+    return fetch(`${this.baseUrl}/list`)
+      .then(response => response.json())
+      .catch(error => {
+        console.error('Failed to fetch feedback stats:', error);
+        return { feedbacks: [] };
+      });
+  }
 }
 
 // Initialize feedback when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.zionFeedback = new ZionFeedback();
+  window.zionFeedback = new ZionFeedback();
 });
 
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = ZionFeedback;
+  module.exports = ZionFeedback;
 }

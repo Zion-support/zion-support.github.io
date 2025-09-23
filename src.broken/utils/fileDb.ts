@@ -8,7 +8,10 @@ function ensureDataDir(): void {
   }
 }
 
-export function readJsonFile<T extends JsonRecord>(fileName: string, fallback: T): T {
+export function readJsonFile<T extends JsonRecord>(
+  fileName: string,
+  fallback: T
+): T {
   ensureDataDir();
   const targetPath = path.join(dataDir, fileName);
   try {
@@ -23,13 +26,20 @@ export function readJsonFile<T extends JsonRecord>(fileName: string, fallback: T
   }
 }
 
-export function writeJsonFile<T extends JsonRecord>(fileName: string, data: T): void {
+export function writeJsonFile<T extends JsonRecord>(
+  fileName: string,
+  data: T
+): void {
   ensureDataDir();
   const targetPath = path.join(dataDir, fileName);
   fs.writeFileSync(targetPath, JSON.stringify(data, null, 2), 'utf8');
 }
 
-export function updateJsonFile<T extends JsonRecord>(fileName: string, updater: (current: T) => T, fallback: T): T {
+export function updateJsonFile<T extends JsonRecord>(
+  fileName: string,
+  updater: (current: T) => T,
+  fallback: T
+): T {
   const current = readJsonFile<T>(fileName, fallback);
   const updated = updater(current);
   writeJsonFile<T>(fileName, updated);

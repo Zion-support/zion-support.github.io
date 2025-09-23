@@ -8,7 +8,13 @@ interface ToastProps {
   onRemove: (id: string) => void;
 }
 
-const Toast: React.FC<ToastProps> = ({ id, type, title, message, onRemove }) => {
+const Toast: React.FC<ToastProps> = ({
+  id,
+  type,
+  title,
+  message,
+  onRemove,
+}) => {
   const getToastStyles = () => {
     switch (type) {
       case 'success':
@@ -25,14 +31,14 @@ const Toast: React.FC<ToastProps> = ({ id, type, title, message, onRemove }) => 
 
   return (
     <div className={`p-4 rounded-lg shadow-lg ${getToastStyles()}`}>
-      <div className="flex justify-between items-start">
+      <div className='flex justify-between items-start'>
         <div>
-          <h4 className="font-semibold">{title}</h4>
-          {message && <p className="text-sm mt-1">{message}</p>}
+          <h4 className='font-semibold'>{title}</h4>
+          {message && <p className='text-sm mt-1'>{message}</p>}
         </div>
         <button
           onClick={() => onRemove(id)}
-          className="ml-4 text-white hover:text-gray-20o0"
+          className='ml-4 text-white hover:text-gray-20o0'
         >
           ×
         </button>

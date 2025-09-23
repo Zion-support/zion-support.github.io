@@ -1,4 +1,3 @@
-
 import { AddMilestoneForm } from '../AddMilestoneForm';
 
 interface MilestoneCreatorProps {
@@ -18,10 +17,10 @@ export function MilestoneCreator({
   projectScope,
   projectStartDate,
   projectEndDate,
-  projectType
+  projectType,
 }: MilestoneCreatorProps) {
   return (
-    <AddMilestoneForm 
+    <AddMilestoneForm
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -29,6 +28,6 @@ export function MilestoneCreator({
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
-     />
+    />
   );
 }

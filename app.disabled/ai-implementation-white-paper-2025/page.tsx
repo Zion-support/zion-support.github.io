@@ -2,44 +2,58 @@ import Link from 'next/link';
 import ErrorBoundary from '../components/ErrorBoundary';
 import SEO from '../components/SEO';
 
-export const metadata ={
-  title: 'AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices',
-  description: 'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.',
-  keywords: ['AI implementation', 'enterprise AI strategy', 'AI white paper', 'AI best practices', 'AI transformation framework', 'AI implementation guide']};
+export const metadata = {
+  title:
+    'AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices',
+  description:
+    'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.',
+  keywords: [
+    'AI implementation',
+    'enterprise AI strategy',
+    'AI white paper',
+    'AI best practices',
+    'AI transformation framework',
+    'AI implementation guide',
+  ],
+};
 
 export default function AIImplementationWhitePaper20o25() {
   return (
     <ErrorBoundary>
       <SEO
-        title="AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices"
-        description="Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation."
-        keywords="AI implementation, enterprise AI strategy, AI white paper, AI best practices, AI transformation framework"
-        url="/ai-implementation-white-paper-20o25"
-       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-slate-90o0">
+        title='AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices'
+        description='Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.'
+        keywords='AI implementation, enterprise AI strategy, AI white paper, AI best practices, AI transformation framework'
+        url='/ai-implementation-white-paper-20o25'
+      />
+
+      <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-slate-90o0'>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-gray-60o0 bg-opacity-20 rounded-full px-6 py-2 mb-6">
-              <span className="text-sm font-medium text-gray-30o0">📋 COMPREHENSIVE WHITE PAPER</span>
+        <section className='pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <div className='inline-flex items-center bg-gray-60o0 bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+              <span className='text-sm font-medium text-gray-30o0'>
+                📋 COMPREHENSIVE WHITE PAPER
+              </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               AI Implementation White Paper 20o25
             </h1>
-            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Enterprise Strategy & Best Practices for Successful AI Transformation. A comprehensive guide to implementing AI solutions that deliver measurable business results.
+            <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-3xl mx-auto leading-relaxed'>
+              Enterprise Strategy & Best Practices for Successful AI
+              Transformation. A comprehensive guide to implementing AI solutions
+              that deliver measurable business results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-gray-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-70o0 transition-colors"
+                href='/contact'
+                className='bg-gray-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-70o0 transition-colors'
               >
                 Download Full Report
               </Link>
               <Link
-                href="#executive-summary"
-                className="border-2 border-gray-40o0 text-gray-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-40o0 hover:text-white transition-colors"
+                href='#executive-summary'
+                className='border-2 border-gray-40o0 text-gray-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-40o0 hover:text-white transition-colors'
               >
                 Read Executive Summary
               </Link>
@@ -48,50 +62,75 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* Executive Summary */}
-        <section id="executive-summary" className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Executive Summary</h2>
-            <div className="bg-gradient-to-r from-gray-80o0 to-gray-90o0 p-8 rounded-xl shadow-2xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section id='executive-summary' className='py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-6xl mx-auto'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Executive Summary
+            </h2>
+            <div className='bg-gradient-to-r from-gray-80o0 to-gray-90o0 p-8 rounded-xl shadow-2xl'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Key Findings</h3>
-                  <ul className="space-y-3 text-gray-30o0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-green-40o0 mt-1">✓</span>
-                      <span>92% of successful AI implementations follow a structured framework</span>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    Key Findings
+                  </h3>
+                  <ul className='space-y-3 text-gray-30o0'>
+                    <li className='flex items-start gap-3'>
+                      <span className='text-green-40o0 mt-1'>✓</span>
+                      <span>
+                        92% of successful AI implementations follow a structured
+                        framework
+                      </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-green-40o0 mt-1">✓</span>
-                      <span>Companies with dedicated AI governance achieve 3x better ROI</span>
+                    <li className='flex items-start gap-3'>
+                      <span className='text-green-40o0 mt-1'>✓</span>
+                      <span>
+                        Companies with dedicated AI governance achieve 3x better
+                        ROI
+                      </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-green-40o0 mt-1">✓</span>
-                      <span>Phased implementation reduces risk by 67% compared to big-bang approaches</span>
+                    <li className='flex items-start gap-3'>
+                      <span className='text-green-40o0 mt-1'>✓</span>
+                      <span>
+                        Phased implementation reduces risk by 67% compared to
+                        big-bang approaches
+                      </span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-green-40o0 mt-1">✓</span>
-                      <span>Change management is the #1 factor in AI project success</span>
+                    <li className='flex items-start gap-3'>
+                      <span className='text-green-40o0 mt-1'>✓</span>
+                      <span>
+                        Change management is the #1 factor in AI project success
+                      </span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Business Impact</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-30o0">Average ROI:</span>
-                      <span className="text-green-40o0 font-bold text-xl">340%</span>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    Business Impact
+                  </h3>
+                  <div className='space-y-4'>
+                    <div className='flex justify-between items-center'>
+                      <span className='text-gray-30o0'>Average ROI:</span>
+                      <span className='text-green-40o0 font-bold text-xl'>
+                        340%
+                      </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-30o0">Time to Value:</span>
-                      <span className="text-blue-40o0 font-bold text-xl">6-12 months</span>
+                    <div className='flex justify-between items-center'>
+                      <span className='text-gray-30o0'>Time to Value:</span>
+                      <span className='text-blue-40o0 font-bold text-xl'>
+                        6-12 months
+                      </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-30o0">Success Rate:</span>
-                      <span className="text-purple-40o0 font-bold text-xl">78%</span>
+                    <div className='flex justify-between items-center'>
+                      <span className='text-gray-30o0'>Success Rate:</span>
+                      <span className='text-purple-40o0 font-bold text-xl'>
+                        78%
+                      </span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-30o0">Cost Reduction:</span>
-                      <span className="text-orange-40o0 font-bold text-xl">45%</span>
+                    <div className='flex justify-between items-center'>
+                      <span className='text-gray-30o0'>Cost Reduction:</span>
+                      <span className='text-orange-40o0 font-bold text-xl'>
+                        45%
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -101,18 +140,23 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* Implementation Framework */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Proven Implementation Framework</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className='py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-6xl mx-auto'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Proven Implementation Framework
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {/* Phase 1 */}
-              <div className="bg-gradient-to-br from-blue-80o0 to-blue-90o0 p-8 rounded-xl shadow-2xl">
-                <div className="text-4xl mb-4">🔍</div>
-                <h3 className="text-xl font-bold text-white mb-4">Phase 1: Discovery & Assessment</h3>
-                <p className="text-gray-30o0 mb-6">
-                  Comprehensive analysis of current state, AI readiness, and opportunity identification.
+              <div className='bg-gradient-to-br from-blue-80o0 to-blue-90o0 p-8 rounded-xl shadow-2xl'>
+                <div className='text-4xl mb-4'>🔍</div>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Phase 1: Discovery & Assessment
+                </h3>
+                <p className='text-gray-30o0 mb-6'>
+                  Comprehensive analysis of current state, AI readiness, and
+                  opportunity identification.
                 </p>
-                <ul className="text-sm text-gray-40o0 space-y-2">
+                <ul className='text-sm text-gray-40o0 space-y-2'>
                   <li>• Current state analysis</li>
                   <li>• AI readiness assessment</li>
                   <li>• Opportunity mapping</li>
@@ -122,13 +166,16 @@ export default function AIImplementationWhitePaper20o25() {
               </div>
 
               {/* Phase 2 */}
-              <div className="bg-gradient-to-br from-green-80o0 to-green-90o0 p-8 rounded-xl shadow-2xl">
-                <div className="text-4xl mb-4">📋</div>
-                <h3 className="text-xl font-bold text-white mb-4">Phase 2: Strategy & Planning</h3>
-                <p className="text-gray-30o0 mb-6">
-                  Development of comprehensive AI strategy, roadmap, and implementation plan.
+              <div className='bg-gradient-to-br from-green-80o0 to-green-90o0 p-8 rounded-xl shadow-2xl'>
+                <div className='text-4xl mb-4'>📋</div>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Phase 2: Strategy & Planning
+                </h3>
+                <p className='text-gray-30o0 mb-6'>
+                  Development of comprehensive AI strategy, roadmap, and
+                  implementation plan.
                 </p>
-                <ul className="text-sm text-gray-40o0 space-y-2">
+                <ul className='text-sm text-gray-40o0 space-y-2'>
                   <li>• AI strategy development</li>
                   <li>• Technology selection</li>
                   <li>• Resource planning</li>
@@ -138,13 +185,16 @@ export default function AIImplementationWhitePaper20o25() {
               </div>
 
               {/* Phase 3 */}
-              <div className="bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-xl shadow-2xl">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-4">Phase 3: Pilot & Implementation</h3>
-                <p className="text-gray-30o0 mb-6">
-                  Controlled pilot implementation followed by scaled deployment across the organization.
+              <div className='bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-xl shadow-2xl'>
+                <div className='text-4xl mb-4'>🚀</div>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Phase 3: Pilot & Implementation
+                </h3>
+                <p className='text-gray-30o0 mb-6'>
+                  Controlled pilot implementation followed by scaled deployment
+                  across the organization.
                 </p>
-                <ul className="text-sm text-gray-40o0 space-y-2">
+                <ul className='text-sm text-gray-40o0 space-y-2'>
                   <li>• Pilot program design</li>
                   <li>• Proof of concept</li>
                   <li>• Phased rollout</li>
@@ -154,13 +204,16 @@ export default function AIImplementationWhitePaper20o25() {
               </div>
 
               {/* Phase 4 */}
-              <div className="bg-gradient-to-br from-orange-80o0 to-orange-90o0 p-8 rounded-xl shadow-2xl">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-white mb-4">Phase 4: Scale & Optimize</h3>
-                <p className="text-gray-30o0 mb-6">
-                  Full-scale deployment, continuous improvement, and innovation pipeline development.
+              <div className='bg-gradient-to-br from-orange-80o0 to-orange-90o0 p-8 rounded-xl shadow-2xl'>
+                <div className='text-4xl mb-4'>📈</div>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Phase 4: Scale & Optimize
+                </h3>
+                <p className='text-gray-30o0 mb-6'>
+                  Full-scale deployment, continuous improvement, and innovation
+                  pipeline development.
                 </p>
-                <ul className="text-sm text-gray-40o0 space-y-2">
+                <ul className='text-sm text-gray-40o0 space-y-2'>
                   <li>• Full deployment</li>
                   <li>• Performance optimization</li>
                   <li>• Advanced analytics</li>
@@ -173,38 +226,76 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* Best Practices */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-90o0 to-gray-80o0">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Best Practices for Success</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white mb-6">Technical Excellence</h3>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Data Quality & Governance</h4>
-                  <p className="text-gray-30o0">Implement robust data quality frameworks and governance structures to ensure AI systems have access to clean, reliable data.</p>
+        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-90o0 to-gray-80o0'>
+          <div className='max-w-6xl mx-auto'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Best Practices for Success
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+              <div className='space-y-6'>
+                <h3 className='text-2xl font-bold text-white mb-6'>
+                  Technical Excellence
+                </h3>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Data Quality & Governance
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Implement robust data quality frameworks and governance
+                    structures to ensure AI systems have access to clean,
+                    reliable data.
+                  </p>
                 </div>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Model Management</h4>
-                  <p className="text-gray-30o0">Establish MLOps practices for model versioning, monitoring, and continuous improvement to maintain optimal performance.</p>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Model Management
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Establish MLOps practices for model versioning, monitoring,
+                    and continuous improvement to maintain optimal performance.
+                  </p>
                 </div>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Security & Compliance</h4>
-                  <p className="text-gray-30o0">Implement comprehensive security measures and ensure compliance with relevant regulations and industry standards.</p>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Security & Compliance
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Implement comprehensive security measures and ensure
+                    compliance with relevant regulations and industry standards.
+                  </p>
                 </div>
               </div>
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white mb-6">Organizational Readiness</h3>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Change Management</h4>
-                  <p className="text-gray-30o0">Develop comprehensive change management strategies to ensure smooth adoption and minimize resistance to AI implementations.</p>
+              <div className='space-y-6'>
+                <h3 className='text-2xl font-bold text-white mb-6'>
+                  Organizational Readiness
+                </h3>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Change Management
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Develop comprehensive change management strategies to ensure
+                    smooth adoption and minimize resistance to AI
+                    implementations.
+                  </p>
                 </div>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Skills Development</h4>
-                  <p className="text-gray-30o0">Invest in upskilling programs and talent acquisition to build internal AI capabilities and expertise.</p>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Skills Development
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Invest in upskilling programs and talent acquisition to
+                    build internal AI capabilities and expertise.
+                  </p>
                 </div>
-                <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold text-white mb-2">Executive Sponsorship</h4>
-                  <p className="text-gray-30o0">Secure strong executive sponsorship and create cross-functional teams to drive AI initiatives forward.</p>
+                <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                  <h4 className='text-lg font-semibold text-white mb-2'>
+                    Executive Sponsorship
+                  </h4>
+                  <p className='text-gray-30o0'>
+                    Secure strong executive sponsorship and create
+                    cross-functional teams to drive AI initiatives forward.
+                  </p>
                 </div>
               </div>
             </div>
@@ -212,13 +303,17 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* Technology Stack */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Recommended Technology Stack</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-80o0 to-blue-90o0 p-8 rounded-xl shadow-2xl">
-                <h3 className="text-xl font-bold text-white mb-4">Infrastructure & Platform</h3>
-                <ul className="space-y-3 text-gray-30o0">
+        <section className='py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-6xl mx-auto'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Recommended Technology Stack
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='bg-gradient-to-br from-blue-80o0 to-blue-90o0 p-8 rounded-xl shadow-2xl'>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Infrastructure & Platform
+                </h3>
+                <ul className='space-y-3 text-gray-30o0'>
                   <li>• Cloud platforms (AWS, Azure, GCP)</li>
                   <li>• Container orchestration (Kubernetes)</li>
                   <li>• Data lakes and warehouses</li>
@@ -226,9 +321,11 @@ export default function AIImplementationWhitePaper20o25() {
                   <li>• API management platforms</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-green-80o0 to-green-90o0 p-8 rounded-xl shadow-2xl">
-                <h3 className="text-xl font-bold text-white mb-4">AI & ML Tools</h3>
-                <ul className="space-y-3 text-gray-30o0">
+              <div className='bg-gradient-to-br from-green-80o0 to-green-90o0 p-8 rounded-xl shadow-2xl'>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  AI & ML Tools
+                </h3>
+                <ul className='space-y-3 text-gray-30o0'>
                   <li>• ML frameworks (TensorFlow, PyTorch)</li>
                   <li>• AutoML platforms</li>
                   <li>• Model serving and inference</li>
@@ -236,9 +333,11 @@ export default function AIImplementationWhitePaper20o25() {
                   <li>• Experiment tracking tools</li>
                 </ul>
               </div>
-              <div className="bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-xl shadow-2xl">
-                <h3 className="text-xl font-bold text-white mb-4">Data & Analytics</h3>
-                <ul className="space-y-3 text-gray-30o0">
+              <div className='bg-gradient-to-br from-purple-80o0 to-purple-90o0 p-8 rounded-xl shadow-2xl'>
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  Data & Analytics
+                </h3>
+                <ul className='space-y-3 text-gray-30o0'>
                   <li>• Data integration platforms</li>
                   <li>• Real-time streaming</li>
                   <li>• Business intelligence tools</li>
@@ -251,59 +350,91 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* ROI Analysis */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-90o0 to-gray-80o0">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">ROI Analysis & Metrics</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-90o0 to-gray-80o0'>
+          <div className='max-w-6xl mx-auto'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              ROI Analysis & Metrics
+            </h2>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Financial Metrics</h3>
-                <div className="space-y-4">
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Cost Savings</span>
-                      <span className="text-green-40o0 font-bold text-xl">$2.1M</span>
+                <h3 className='text-2xl font-bold text-white mb-6'>
+                  Financial Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>Cost Savings</span>
+                      <span className='text-green-40o0 font-bold text-xl'>
+                        $2.1M
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average annual savings per implementation</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average annual savings per implementation
+                    </p>
                   </div>
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Revenue Impact</span>
-                      <span className="text-blue-40o0 font-bold text-xl">+15%</span>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>Revenue Impact</span>
+                      <span className='text-blue-40o0 font-bold text-xl'>
+                        +15%
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average revenue increase within 18 months</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average revenue increase within 18 months
+                    </p>
                   </div>
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Payback Period</span>
-                      <span className="text-purple-40o0 font-bold text-xl">8-14 months</span>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>Payback Period</span>
+                      <span className='text-purple-40o0 font-bold text-xl'>
+                        8-14 months
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average time to ROI realization</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average time to ROI realization
+                    </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Operational Metrics</h3>
-                <div className="space-y-4">
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Process Efficiency</span>
-                      <span className="text-orange-40o0 font-bold text-xl">+67%</span>
+                <h3 className='text-2xl font-bold text-white mb-6'>
+                  Operational Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>Process Efficiency</span>
+                      <span className='text-orange-40o0 font-bold text-xl'>
+                        +67%
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average improvement in process speed</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average improvement in process speed
+                    </p>
                   </div>
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Error Reduction</span>
-                      <span className="text-red-40o0 font-bold text-xl">-89%</span>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>Error Reduction</span>
+                      <span className='text-red-40o0 font-bold text-xl'>
+                        -89%
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average reduction in manual errors</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average reduction in manual errors
+                    </p>
                   </div>
-                  <div className="bg-white bg-opacity-10 p-6 rounded-xl">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-30o0">Customer Satisfaction</span>
-                      <span className="text-green-40o0 font-bold text-xl">+34%</span>
+                  <div className='bg-white bg-opacity-10 p-6 rounded-xl'>
+                    <div className='flex justify-between items-center mb-2'>
+                      <span className='text-gray-30o0'>
+                        Customer Satisfaction
+                      </span>
+                      <span className='text-green-40o0 font-bold text-xl'>
+                        +34%
+                      </span>
                     </div>
-                    <p className="text-sm text-gray-40o0">Average improvement in customer metrics</p>
+                    <p className='text-sm text-gray-40o0'>
+                      Average improvement in customer metrics
+                    </p>
                   </div>
                 </div>
               </div>
@@ -312,22 +443,26 @@ export default function AIImplementationWhitePaper20o25() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Implement AI Successfully?</h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Download the complete white paper and get started with your AI transformation journey. Our experts are ready to help you implement these proven strategies.
+        <section className='py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-4xl mx-auto text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
+              Ready to Implement AI Successfully?
+            </h2>
+            <p className='text-xl text-gray-30o0 mb-8'>
+              Download the complete white paper and get started with your AI
+              transformation journey. Our experts are ready to help you
+              implement these proven strategies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-gray-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-70o0 transition-colors"
+                href='/contact'
+                className='bg-gray-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-70o0 transition-colors'
               >
                 Download Full White Paper
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-gray-40o0 text-gray-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-40o0 hover:text-white transition-colors"
+                href='/services'
+                className='border-2 border-gray-40o0 text-gray-30o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-40o0 hover:text-white transition-colors'
               >
                 Explore AI Services
               </Link>

@@ -1,17 +1,21 @@
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Autonomous Compliance Operating Model',
-  description: 'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.'
+  description:
+    'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.',
 };
 
 export default function AutonomousCompliance20o26() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Autonomous Compliance Operating Model</h1>
-      <p className="text-gray-60o0 mb-8">
-        Implement compliance-as-code for AI systems. Automate control mapping, evidence collection, and continuous testing to maintain audit readiness
+    <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>
+        AI 20o26: Autonomous Compliance Operating Model
+      </h1>
+      <p className='text-gray-60o0 mb-8'>
+        Implement compliance-as-code for AI systems. Automate control mapping,
+        evidence collection, and continuous testing to maintain audit readiness
         without slowing down delivery.
       </p>
-      <section className="prose max-w-none">
+      <section className='prose max-w-none'>
         <h2>Core Capabilities</h2>
         <ul>
           <li>Controls Library: SOC2, ISO 270o01, PCI, HIPAA mappings</li>
@@ -26,9 +30,11 @@ export default function AutonomousCompliance20o26() {
           <li>Incident workflows with RCA and corrective actions</li>
         </ul>
         <h2>Outcomes</h2>
-        <p>Reduce manual effort, improve control effectiveness, and provide provable assurance of responsible AI operations.</p>
+        <p>
+          Reduce manual effort, improve control effectiveness, and provide
+          provable assurance of responsible AI operations.
+        </p>
       </section>
     </main>
   );
 }
-

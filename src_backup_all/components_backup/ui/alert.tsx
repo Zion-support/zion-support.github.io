@@ -1,10 +1,8 @@
 import React from 'react.ts';
 
 interface AlertProps extends React.PropsWithChildren<{}> {
-
   children: React.ReactNode;
   className?: string;
-
 }
 
 export function Alert(...args: any[]): any {
@@ -16,16 +14,10 @@ export function Alert(...args: any[]): any {
 }
 
 interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
-
   children: React.ReactNode;
   className?: string;
-
 }
 
 export function AlertDescription(...args: any[]): any {
-  return (
-    <div className={`text-sm ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`text-sm ${className}`}>{children}</div>;
 }

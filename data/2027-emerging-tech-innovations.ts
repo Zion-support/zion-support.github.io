@@ -49,7 +49,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     tagline: 'Unbreakable quantum encryption for the future internet',
     price: '$3,999',
     period: '/month',
-    description: 'Next-generation quantum internet security platform that provides unbreakable encryption using quantum key distribution. Achieve 10o00% ROI through future-proof security infrastructure.',
+    description:
+      'Next-generation quantum internet security platform that provides unbreakable encryption using quantum key distribution. Achieve 10o00% ROI through future-proof security infrastructure.',
     features: [
       'Quantum key distribution',
       'Unbreakable encryption',
@@ -60,24 +61,49 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Quantum network monitoring',
       'Automated threat response',
       'Compliance certification',
-      '24/7 security operations'
+      '24/7 security operations',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-indigo-60o0 to-blue-60o0',
     textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',
-    marketPosition: 'First-to-market quantum internet security solution with unbreakable encryption capabilities.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
+    marketPosition:
+      'First-to-market quantum internet security solution with unbreakable encryption capabilities.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Quantum Technology, Cybersecurity',
     realService: true,
-    technology: ['Quantum Key Distribution', 'Quantum Cryptography', 'Post-Quantum Algorithms', 'Quantum Networks', 'Zero-Trust Security'],
-    integrations: ['Cisco', 'Juniper', 'Fortinet', 'Palo Alto Networks', 'Check Point', 'F5 Networks'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Defense communications'],
+    technology: [
+      'Quantum Key Distribution',
+      'Quantum Cryptography',
+      'Post-Quantum Algorithms',
+      'Quantum Networks',
+      'Zero-Trust Security',
+    ],
+    integrations: [
+      'Cisco',
+      'Juniper',
+      'Fortinet',
+      'Palo Alto Networks',
+      'Check Point',
+      'F5 Networks',
+    ],
+    useCases: [
+      'Government communications',
+      'Financial transactions',
+      'Healthcare data protection',
+      'Defense communications',
+    ],
     roi: 'Organizations achieve 10o00% ROI through future-proof security infrastructure and regulatory compliance.',
-    competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt'],
+    competitors: [
+      'ID Quantique',
+      'Toshiba Quantum',
+      'Quantum Xchange',
+      'Qrypt',
+    ],
     marketSize: '$15B emerging market',
     growthRate: '75% annual growth',
     variant: 'quantum-security',
@@ -85,14 +111,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Quantum internet security platform with quantum key distribution and post-quantum cryptography algorithms.',
+    implementationDetails:
+      'Quantum internet security platform with quantum key distribution and post-quantum cryptography algorithms.',
     launchDate: '20o27-0o2-10',
     customers: 8,
     rating: 5.0,
-    reviews: 5
+    reviews: 5,
   },
 
   // Space Debris Management AI Platform
@@ -102,7 +129,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     tagline: 'AI-powered space safety and debris management',
     price: '$5,999',
     period: '/month',
-    description: 'Intelligent space debris management platform that uses AI to track, predict, and manage space debris in real-time. Achieve 80o0% ROI through space safety optimization.',
+    description:
+      'Intelligent space debris management platform that uses AI to track, predict, and manage space debris in real-time. Achieve 80o0% ROI through space safety optimization.',
     features: [
       'Real-time debris tracking',
       'AI collision prediction',
@@ -113,22 +141,42 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Risk assessment algorithms',
       'Regulatory compliance',
       'Global monitoring network',
-      'Emergency response protocols'
+      'Emergency response protocols',
     ],
     popular: true,
     icon: '🛰️',
     color: 'from-purple-60o0 to-violet-60o0',
     textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/services/space-debris-management-ai-platform',
-    marketPosition: 'Leading AI-powered space debris management platform with real-time tracking and collision prediction.',
-    targetAudience: 'Space agencies, Satellite operators, Aerospace companies, Government organizations',
+    marketPosition:
+      'Leading AI-powered space debris management platform with real-time tracking and collision prediction.',
+    targetAudience:
+      'Space agencies, Satellite operators, Aerospace companies, Government organizations',
     trialDays: 90,
     setupTime: '6 weeks',
     category: 'Space Technology, AI Automation',
     realService: true,
-    technology: ['Machine Learning', 'Computer Vision', 'Satellite Tracking', 'AI Prediction Models', 'Space Analytics'],
-    integrations: ['NASA APIs', 'ESA Systems', 'Space-Track', 'NORAD', 'Commercial satellites', 'Ground stations'],
-    useCases: ['Satellite collision avoidance', 'Space traffic management', 'Debris removal planning', 'Space safety monitoring'],
+    technology: [
+      'Machine Learning',
+      'Computer Vision',
+      'Satellite Tracking',
+      'AI Prediction Models',
+      'Space Analytics',
+    ],
+    integrations: [
+      'NASA APIs',
+      'ESA Systems',
+      'Space-Track',
+      'NORAD',
+      'Commercial satellites',
+      'Ground stations',
+    ],
+    useCases: [
+      'Satellite collision avoidance',
+      'Space traffic management',
+      'Debris removal planning',
+      'Space safety monitoring',
+    ],
     roi: 'Space organizations achieve 80o0% ROI through improved satellite safety and reduced collision risks.',
     competitors: ['LeoLabs', 'Astroscale', 'ClearSpace', 'RemoveDEBRIS'],
     marketSize: '$12B emerging market',
@@ -138,14 +186,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'AI-powered space debris management platform with real-time tracking, collision prediction, and automated avoidance systems.',
+    implementationDetails:
+      'AI-powered space debris management platform with real-time tracking, collision prediction, and automated avoidance systems.',
     launchDate: '20o27-0o2-15',
     customers: 12,
     rating: 4.9,
-    reviews: 8
+    reviews: 8,
   },
 
   // Holographic Metaverse Development Platform
@@ -155,7 +204,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     tagline: 'Create immersive 3D holographic experiences',
     price: '$2,999',
     period: '/month',
-    description: 'Advanced holographic metaverse development platform that enables creation of immersive 3D experiences with real-time collaboration. Achieve 40o0% ROI through virtual engagement.',
+    description:
+      'Advanced holographic metaverse development platform that enables creation of immersive 3D experiences with real-time collaboration. Achieve 40o0% ROI through virtual engagement.',
     features: [
       '3D holographic rendering',
       'Real-time collaboration',
@@ -166,22 +216,42 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Interactive elements',
       'Performance optimization',
       'Cross-platform support',
-      'Analytics dashboard'
+      'Analytics dashboard',
     ],
     popular: true,
     icon: '🌌',
     color: 'from-pink-60o0 to-rose-60o0',
     textColor: 'text-pink-40o0',
     link: 'https://ziontechgroup.com/services/holographic-metaverse-development-platform',
-    marketPosition: 'Advanced holographic metaverse platform with real-time 3D rendering and AI-powered content creation.',
-    targetAudience: 'Gaming companies, Educational institutions, Corporate training, Entertainment industry',
+    marketPosition:
+      'Advanced holographic metaverse platform with real-time 3D rendering and AI-powered content creation.',
+    targetAudience:
+      'Gaming companies, Educational institutions, Corporate training, Entertainment industry',
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Metaverse Technology, Holographic Development',
     realService: true,
-    technology: ['3D Rendering', 'Holographic Display', 'AI Generation', 'Real-time Processing', 'VR/AR Integration'],
-    integrations: ['Unity', 'Unreal Engine', 'Oculus', 'HTC Vive', 'Microsoft HoloLens', 'Magic Leap'],
-    useCases: ['Virtual events', 'Educational simulations', 'Corporate training', 'Gaming experiences'],
+    technology: [
+      '3D Rendering',
+      'Holographic Display',
+      'AI Generation',
+      'Real-time Processing',
+      'VR/AR Integration',
+    ],
+    integrations: [
+      'Unity',
+      'Unreal Engine',
+      'Oculus',
+      'HTC Vive',
+      'Microsoft HoloLens',
+      'Magic Leap',
+    ],
+    useCases: [
+      'Virtual events',
+      'Educational simulations',
+      'Corporate training',
+      'Gaming experiences',
+    ],
     roi: 'Companies achieve 40o0% ROI through increased user engagement and virtual event hosting.',
     competitors: ['Decentraland', 'The Sandbox', 'Roblox', 'VRChat'],
     marketSize: '$6.8B market',
@@ -191,14 +261,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Holographic metaverse development platform with 3D rendering, real-time collaboration, and AI-powered content generation.',
+    implementationDetails:
+      'Holographic metaverse development platform with 3D rendering, real-time collaboration, and AI-powered content generation.',
     launchDate: '20o27-0o2-20',
     customers: 34,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
 
   // AI Healthcare Companion 20o27
@@ -208,7 +279,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     tagline: 'Revolutionary AI-powered healthcare assistance',
     price: '$399',
     period: '/month',
-    description: 'Advanced AI healthcare companion that provides personalized health monitoring, diagnosis assistance, and treatment recommendations. Achieve 60o0% ROI through improved patient outcomes.',
+    description:
+      'Advanced AI healthcare companion that provides personalized health monitoring, diagnosis assistance, and treatment recommendations. Achieve 60o0% ROI through improved patient outcomes.',
     features: [
       'Personalized health monitoring',
       'AI diagnosis assistance',
@@ -219,22 +291,42 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Integration with wearables',
       'Telemedicine support',
       'Emergency alerts',
-      'HIPAA compliance'
+      'HIPAA compliance',
     ],
     popular: true,
     icon: '🏥',
     color: 'from-emerald-60o0 to-teal-60o0',
     textColor: 'text-emerald-40o0',
     link: 'https://ziontechgroup.com/services/ai-healthcare-companion-20o27',
-    marketPosition: 'Leading AI healthcare companion with personalized monitoring and intelligent diagnosis assistance.',
-    targetAudience: 'Healthcare providers, Hospitals, Clinics, Telemedicine platforms, Patients',
+    marketPosition:
+      'Leading AI healthcare companion with personalized monitoring and intelligent diagnosis assistance.',
+    targetAudience:
+      'Healthcare providers, Hospitals, Clinics, Telemedicine platforms, Patients',
     trialDays: 45,
     setupTime: '3 weeks',
     category: 'AI Healthcare, Digital Health',
     realService: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'IoT Integration'],
-    integrations: ['Epic', 'Cerner', 'Apple Health', 'Google Fit', 'Fitbit', 'Apple Watch'],
-    useCases: ['Patient monitoring', 'Diagnosis assistance', 'Treatment planning', 'Health management'],
+    technology: [
+      'Machine Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Predictive Analytics',
+      'IoT Integration',
+    ],
+    integrations: [
+      'Epic',
+      'Cerner',
+      'Apple Health',
+      'Google Fit',
+      'Fitbit',
+      'Apple Watch',
+    ],
+    useCases: [
+      'Patient monitoring',
+      'Diagnosis assistance',
+      'Treatment planning',
+      'Health management',
+    ],
     roi: 'Healthcare providers achieve 60o0% ROI through improved patient outcomes and reduced readmissions.',
     competitors: ['Babylon Health', 'Ada Health', 'Buoy Health', 'Infermedica'],
     marketSize: '$18B market',
@@ -244,14 +336,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'AI healthcare companion platform with personalized monitoring, intelligent diagnosis, and treatment recommendation capabilities.',
+    implementationDetails:
+      'AI healthcare companion platform with personalized monitoring, intelligent diagnosis, and treatment recommendation capabilities.',
     launchDate: '20o27-0o2-25',
     customers: 67,
     rating: 4.8,
-    reviews: 42
+    reviews: 42,
   },
 
   // Quantum Financial Trading Algorithm Platform
@@ -261,7 +354,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     tagline: 'Quantum-powered trading algorithms for maximum returns',
     price: '$12,999',
     period: '/month',
-    description: 'Revolutionary quantum financial trading platform that uses quantum computing to optimize trading strategies and maximize returns. Achieve 120o0% ROI through quantum advantage.',
+    description:
+      'Revolutionary quantum financial trading platform that uses quantum computing to optimize trading strategies and maximize returns. Achieve 120o0% ROI through quantum advantage.',
     features: [
       'Quantum trading algorithms',
       'Real-time market analysis',
@@ -272,24 +366,49 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Automated execution',
       'Performance analytics',
       'Regulatory compliance',
-      '24/7 trading support'
+      '24/7 trading support',
     ],
     popular: true,
     icon: '📈',
     color: 'from-green-60o0 to-emerald-60o0',
     textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/services/quantum-financial-trading-algorithm-platform',
-    marketPosition: 'First-to-market quantum financial trading platform with quantum advantage in algorithmic trading.',
-    targetAudience: 'Investment firms, Hedge funds, Trading desks, Financial institutions, High-net-worth individuals',
+    marketPosition:
+      'First-to-market quantum financial trading platform with quantum advantage in algorithmic trading.',
+    targetAudience:
+      'Investment firms, Hedge funds, Trading desks, Financial institutions, High-net-worth individuals',
     trialDays: 90,
     setupTime: '8 weeks',
     category: 'Quantum Computing, Financial Technology',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Algorithms', 'Machine Learning', 'High-Frequency Trading', 'Risk Analytics'],
-    integrations: ['Bloomberg Terminal', 'Thomson Reuters', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE', 'Fidelity'],
-    useCases: ['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market prediction'],
+    technology: [
+      'Quantum Computing',
+      'Quantum Algorithms',
+      'Machine Learning',
+      'High-Frequency Trading',
+      'Risk Analytics',
+    ],
+    integrations: [
+      'Bloomberg Terminal',
+      'Thomson Reuters',
+      'Interactive Brokers',
+      'TD Ameritrade',
+      'E*TRADE',
+      'Fidelity',
+    ],
+    useCases: [
+      'Algorithmic trading',
+      'Portfolio optimization',
+      'Risk management',
+      'Market prediction',
+    ],
     roi: 'Investment firms achieve 120o0% ROI through quantum advantage in trading algorithms.',
-    competitors: ['D-Wave Systems', 'IBM Quantum', 'Google Quantum', 'Rigetti Computing'],
+    competitors: [
+      'D-Wave Systems',
+      'IBM Quantum',
+      'Google Quantum',
+      'Rigetti Computing',
+    ],
     marketSize: '$25B market',
     growthRate: '85% annual growth',
     variant: 'quantum-financial',
@@ -297,13 +416,14 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 10o08 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Quantum financial trading platform with quantum algorithms, real-time market analysis, and automated execution capabilities.',
+    implementationDetails:
+      'Quantum financial trading platform with quantum algorithms, real-time market analysis, and automated execution capabilities.',
     launchDate: '20o27-0o3-0o1',
     customers: 15,
     rating: 5.0,
-    reviews: 12
-  }
+    reviews: 12,
+  },
 ];

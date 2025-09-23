@@ -8,7 +8,7 @@ export function StructuredData({ data }: StructuredDataProps) {
   const json = JSON.stringify(data);
   return (
     <Helmet>
-      <script type="application/ld+json">{json}</script>
+      <script type='application/ld+json'>{json}</script>
     </Helmet>
   );
 }

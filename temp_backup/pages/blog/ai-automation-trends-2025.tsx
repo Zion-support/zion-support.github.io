@@ -11,16 +11,16 @@ export default function AIAutomationTrends20o25() {
         <meta
           name='description'
           content='Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems in 20o25 and beyond.'
-         />
+        />
         <meta
           property='og:title'
           content='AI Automation Trends 20o25: The Future of Autonomous Systems'
-         />
+        />
         <meta
           property='og:description'
           content='Explore the cutting-edge trends shaping the future of AI automation and autonomous technology systems.'
-         />
-        <meta name='twitter:card' content='summary_large_image'  />
+        />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -51,8 +51,8 @@ export default function AIAutomationTrends20o25() {
                   AI Automation Trends 20o25: The Future of Autonomous Systems
                 </h1>
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-                  As we move deeper into 20o25, the landscape of AI automation is
-                  evolving at an unprecedented pace. Autonomous systems are
+                  As we move deeper into 20o25, the landscape of AI automation
+                  is evolving at an unprecedented pace. Autonomous systems are
                   becoming more sophisticated, more reliable, and more
                   integrated into our daily lives.
                 </p>

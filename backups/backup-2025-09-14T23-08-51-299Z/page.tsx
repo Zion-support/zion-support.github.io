@@ -31,7 +31,9 @@ import UltimateContentDiscoveryWidget20o25 from '../components/UltimateContentDi
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
+const PerformanceMetrics = lazy(
+  () => import('../components/PerformanceMetrics')
+);
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
@@ -113,68 +115,75 @@ export default function HomePage() {
   return (
     <EnhancedErrorBoundary>
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-90o0 dark:to-gray-80o0'>
-        <EnhancedSEO 
-          title="AI-Powered Business Solutions - 20o26 Revolutionary Breakthrough"
-          description="Discover the ultimate AI-powered business solutions with 80o0% ROI success stories. Revolutionary breakthrough technology for 20o26."
-          keywords={['AI', 'business solutions', 'ROI', '20o26', 'breakthrough', 'revolutionary']}
-         />
-        
-        <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen"  />}>
+        <EnhancedSEO
+          title='AI-Powered Business Solutions - 20o26 Revolutionary Breakthrough'
+          description='Discover the ultimate AI-powered business solutions with 80o0% ROI success stories. Revolutionary breakthrough technology for 20o26.'
+          keywords={[
+            'AI',
+            'business solutions',
+            'ROI',
+            '20o26',
+            'breakthrough',
+            'revolutionary',
+          ]}
+        />
+
+        <Suspense fallback={<EnhancedLoadingSpinner variant='fullscreen' />}>
           {/* Advanced Performance Monitoring */}
-          <PerformanceMonitor  />
-          
+          <PerformanceMonitor />
+
           {/* AI 20o26 Revolutionary Breakthrough Ultimate Promotion Banner - NEW */}
-          <AI20o26RevolutionaryBreakthroughUltimatePromotionBanner  />
-          
+          <AI20o26RevolutionaryBreakthroughUltimatePromotionBanner />
+
           {/* AI 20o26 Global Transformation 80o0% ROI Success Banner - NEW */}
-          <AI20o26GlobalTransformation80o0ROISuccessBanner  />
-          
+          <AI20o26GlobalTransformation80o0ROISuccessBanner />
+
           {/* AI 20o26 Implementation Framework Ultimate Promotion Banner - NEW */}
-          <AI20o26ImplementationFrameworkUltimatePromotionBanner  />
-          
+          <AI20o26ImplementationFrameworkUltimatePromotionBanner />
+
           {/* Advanced Performance Optimizer */}
-          <AdvancedPerformanceOptimizer  />
-          
+          <AdvancedPerformanceOptimizer />
+
           {/* AI Content Generator */}
-          <AIContentGenerator  />
-          
+          <AIContentGenerator />
+
           {/* Advanced Analytics Dashboard */}
-          <AdvancedAnalyticsDashboard  />
-          
+          <AdvancedAnalyticsDashboard />
+
           {/* Interactive AI Calculator */}
-          <InteractiveAICalculator  />
-          
+          <InteractiveAICalculator />
+
           {/* AI 20o25 Ultimate Breakthrough Banner - NEW */}
-          <AI20o25UltimateBreakthroughBanner  />
-          
+          <AI20o25UltimateBreakthroughBanner />
+
           {/* Revolutionary Content 20o25 Banner */}
-          <RevolutionaryContent20o25Banner  />
-          
+          <RevolutionaryContent20o25Banner />
+
           {/* AI 20o25 Breakthrough Banner */}
-          <AI20o25BreakthroughBanner  />
-          
+          <AI20o25BreakthroughBanner />
+
           {/* New Content 20o25 Promotion Banner */}
-          <NewContent20o25PromotionBanner  />
-          
+          <NewContent20o25PromotionBanner />
+
           {/* Latest Content Showcase 20o25 */}
-          <LatestContentShowcase20o25  />
-          
+          <LatestContentShowcase20o25 />
+
           {/* Quantum AI 20o25 Breakthrough Promotion Banner - NEW */}
-          <QuantumAI20o25BreakthroughPromotionBanner  />
-          
+          <QuantumAI20o25BreakthroughPromotionBanner />
+
           {/* Autonomous Business Operations Promotion Banner - NEW */}
-          <AutonomousBusinessOperationsPromotionBanner  />
-          
+          <AutonomousBusinessOperationsPromotionBanner />
+
           {/* AI 10o00% ROI Success Story Banner - NEW */}
-          <AI10o00ROISuccessStoryBanner  />
-          
+          <AI10o00ROISuccessStoryBanner />
+
           {/* Content Promotion Banners */}
-          <UltimateContentShowcase20o25  />
-          
-          <RevolutionaryContent20o26Banner  />
-          <FeaturedContentShowcase20o26  />
-          <EnhancedContentPromotionBanner20o26  />
-          <ComprehensiveContentShowcase20o26  />
+          <UltimateContentShowcase20o25 />
+
+          <RevolutionaryContent20o26Banner />
+          <FeaturedContentShowcase20o26 />
+          <EnhancedContentPromotionBanner20o26 />
+          <ComprehensiveContentShowcase20o26 />
         </Suspense>
       </div>
     </EnhancedErrorBoundary>

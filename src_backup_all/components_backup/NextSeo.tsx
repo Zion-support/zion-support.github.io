@@ -7,4 +7,3 @@ interface NextSeoProps {
 const NextSeo: React.FC<NextSeoProps> = () => null;
 
 export default NextSeo;
-

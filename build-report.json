@@ -1,9 +1,7 @@
 {
   "timestamp": "2025-08-14T22:01:43.134Z",
   "success": false,
-  "errors": [
-    "❌ Build failed: Command failed: npm run build"
-  ],
+  "errors": ["❌ Build failed: Command failed: npm run build"],
   "warnings": [
     "Node.js version v22.16.0 is not v20.x",
     "Environment variable NODE_VERSION not set",

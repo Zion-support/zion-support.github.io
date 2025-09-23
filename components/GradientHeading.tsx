@@ -9,7 +9,7 @@ interface GradientHeadingProps {
 const GradientHeading: React.FC<GradientHeadingProps> = ({
   children,
   className,
-  as: Component = 'h1'
+  as: Component = 'h1',
 }) => {
   return (
     <Component

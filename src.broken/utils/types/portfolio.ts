@@ -1,11 +1,11 @@
-export type ProjectMedia ={
+export type ProjectMedia = {
   imageUrl?: string;
   pdfUrl?: string;
   githubUrl?: string;
   demoUrl?: string;
 };
 
-export type Project ={
+export type Project = {
   id: string;
   title: string;
   description: string;
@@ -13,7 +13,7 @@ export type Project ={
   media: ProjectMedia;
 };
 
-export type WorkExperience ={
+export type WorkExperience = {
   id: string;
   company: string;
   role: string;
@@ -24,7 +24,7 @@ export type WorkExperience ={
   logoUrl?: string;
 };
 
-export type EducationItem ={
+export type EducationItem = {
   id: string;
   school: string;
   degree: string;
@@ -34,7 +34,7 @@ export type EducationItem ={
   logoUrl?: string;
 };
 
-export type ResumeVersion ={
+export type ResumeVersion = {
   id: string;
   name: string; // e.g., "AI Engineer", "Cloud DevOps"
   createdAt: string;
@@ -49,7 +49,7 @@ export type ResumeVersion ={
   projects: Project[];
 };
 
-export type TalentPortfolio ={
+export type TalentPortfolio = {
   talentSlug?: string;
   versions: ResumeVersion[];
   activeVersionId?: string;
@@ -60,13 +60,13 @@ export type AiAssistAction =
   | 'format-description'
   | 'suggest-bullets';
 
-export type AiAssistRequest ={
+export type AiAssistRequest = {
   action: AiAssistAction;
   text?: string;
   context?: Record<string, unknown>;
 };
 
-export type AiAssistResponse ={
+export type AiAssistResponse = {
   ok: boolean;
   result?: string | string[];
   error?: string;

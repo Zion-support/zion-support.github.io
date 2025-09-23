@@ -36,7 +36,9 @@ export default function RoadmapPage() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const savedRole = window.localStorage.getItem('zion_user_role') as UserRole | null;
+    const savedRole = window.localStorage.getItem(
+      'zion_user_role'
+    ) as UserRole | null;
     if (savedRole) setRole(savedRole);
   }, []);
 
@@ -49,7 +51,8 @@ export default function RoadmapPage() {
     await fetch('/api/roadmap/upvote', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ featureId: feature.id, voterId: userId, role })});
+      body: JSON.stringify({ featureId: feature.id, voterId: userId, role }),
+    });
     load();
   }
 
@@ -57,49 +60,69 @@ export default function RoadmapPage() {
     await fetch('/api/roadmap/follow', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ featureId: feature.id, followerId: userId })});
+      body: JSON.stringify({ featureId: feature.id, followerId: userId }),
+    });
     load();
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-950 to-zinc-90o0 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <main className='min-h-screen bg-gradient-to-b from-zinc-950 to-zinc-90o0 text-white'>
+      <div className='max-w-7xl mx-auto px-4 py-10'>
+        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
           <div>
-            <h1 className="text-3xl font-bold">Zion Roadmap</h1>
-            <p className="text-zinc-40o0 mt-1">Transparent, community-driven roadmap. View, follow, and vote on upcoming features.</p>
+            <h1 className='text-3xl font-bold'>Zion Roadmap</h1>
+            <p className='text-zinc-40o0 mt-1'>
+              Transparent, community-driven roadmap. View, follow, and vote on
+              upcoming features.
+            </p>
           </div>
-          <div className="flex items-center gap-3">
-            <label className="text-sm text-zinc-30o0">Your role</label>
-            <select className="bg-zinc-90o0 border border-zinc-80o0 rounded px-2 py-1 text-sm" value={role} onChange={(e) => setRole(e.target.value as UserRole)}>
+          <div className='flex items-center gap-3'>
+            <label className='text-sm text-zinc-30o0'>Your role</label>
+            <select
+              className='bg-zinc-90o0 border border-zinc-80o0 rounded px-2 py-1 text-sm'
+              value={role}
+              onChange={e => setRole(e.target.value as UserRole)}
+            >
               <option>Talent</option>
               <option>Client</option>
               <option>ZION$ staker</option>
             </select>
-            <Link href="/roadmap/suggest"><a className="px-3 py-1.5 text-sm rounded bg-emerald-60o0 hover:bg-emerald-50o0">Suggest a Feature</a></Link>
+            <Link href='/roadmap/suggest'>
+              <a className='px-3 py-1.5 text-sm rounded bg-emerald-60o0 hover:bg-emerald-50o0'>
+                Suggest a Feature
+              </a>
+            </Link>
           </div>
         </div>
 
-        <div className="mt-8">
+        <div className='mt-8'>
           {loading || !data ? (
-            <div className="text-zinc-40o0">Loading roadmap…</div>
+            <div className='text-zinc-40o0'>Loading roadmap…</div>
           ) : (
-            <RoadmapBoard features={data} onUpvote={handleUpvote} onFollow={handleFollow}  />
+            <RoadmapBoard
+              features={data}
+              onUpvote={handleUpvote}
+              onFollow={handleFollow}
+            />
           )}
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-zinc-30o0">
-          <div className="p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40">
-            <div className="font-semibold text-zinc-20o0">Voting Heat</div>
-            <div className="mt-2 h-24 bg-gradient-to-r from-amber-50o0/30 via-rose-50o0/30 to-indigo-50o0/30 rounded"  />
+        <div className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-zinc-30o0'>
+          <div className='p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40'>
+            <div className='font-semibold text-zinc-20o0'>Voting Heat</div>
+            <div className='mt-2 h-24 bg-gradient-to-r from-amber-50o0/30 via-rose-50o0/30 to-indigo-50o0/30 rounded' />
           </div>
-          <div className="p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40">
-            <div className="font-semibold text-zinc-20o0">Milestones</div>
-            <div className="mt-2 text-zinc-40o0">GitHub-style milestones coming soon.</div>
+          <div className='p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40'>
+            <div className='font-semibold text-zinc-20o0'>Milestones</div>
+            <div className='mt-2 text-zinc-40o0'>
+              GitHub-style milestones coming soon.
+            </div>
           </div>
-          <div className="p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40">
-            <div className="font-semibold text-zinc-20o0">Changelogs</div>
-            <div className="mt-2 text-zinc-40o0">Admin can publish roadmap version releases.</div>
+          <div className='p-4 rounded-xl border border-zinc-80o0 bg-zinc-90o0/40'>
+            <div className='font-semibold text-zinc-20o0'>Changelogs</div>
+            <div className='mt-2 text-zinc-40o0'>
+              Admin can publish roadmap version releases.
+            </div>
           </div>
         </div>
       </div>

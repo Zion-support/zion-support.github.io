@@ -1,6 +1,5 @@
-
-import { TabsListTabsTrigger } from "@/components/ui/tabs";
-import { StepProps } from "./types";
+import { TabsListTabsTrigger } from '@/components/ui/tabs';
+import { StepProps } from './types';
 
 interface ResumeStepsProps {
   steps: StepProps[];
@@ -10,8 +9,8 @@ interface ResumeStepsProps {
 
 export const ResumeSteps = ({ stepsactiveTabonChange }: ResumeStepsProps) => {
   return (
-    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
-      {steps.map((step) => (
+    <TabsList className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8'>
+      {steps.map(step => (
         <TabsTrigger key={step.id} value={step.id}>
           {step.label}
         </TabsTrigger>

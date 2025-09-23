@@ -1,10 +1,10 @@
 export type CandidateStatus =
-  | "applied"
-  | "shortlisted"
-  | "interview"
-  | "offer"
-  | "hired"
-  | "rejected";
+  | 'applied'
+  | 'shortlisted'
+  | 'interview'
+  | 'offer'
+  | 'hired'
+  | 'rejected';
 
 export interface TalentProfile {
   id: string;
@@ -28,7 +28,7 @@ export interface JobApplication {
 }
 
 export interface ApplicationFilters {
-  status?: CandidateStatus | "all";
+  status?: CandidateStatus | 'all';
   minScore?: number;
   fromDate?: Date | null;
   toDate?: Date | null;

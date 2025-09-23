@@ -1,14 +1,22 @@
-
 // Define the types for our sitemap structure
-export type SitemapItem ={
+export type SitemapItem = {
   path: string;
   label: string;
   description?: string;
   priority?: number;
-  changeFreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changeFreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
   lastmod?: string;
   requiredAuth?: boolean;
-  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>;
+  requiredRoles?: Array<
+    'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'
+  >;
   children?: SitemapItem[];
 };
 
@@ -20,87 +28,101 @@ export const publicPages: SitemapItem[] = [
   {
     path: '/',
     label: 'Home',
-    description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
+    description:
+      "The world's first free marketplace dedicated to high-tech and artificial intelligence",
     priority: 1.0,
     changeFreq: 'weekly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/about',
     label: 'About Us',
     description: 'Learn about the Zion AI Marketplace mission and team',
     priority: 0.8,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/contact',
     label: 'Contact',
     description: 'Get in touch with the Zion team',
-    priority: 0.8, 
+    priority: 0.8,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/talent',
     label: 'Talent Directory',
     description: 'Browse skilled AI and tech professionals',
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/marketplace',
     label: 'Marketplace',
     description: 'Explore AI services, products and equipment',
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/services',
     label: 'Services',
     description: 'Find professional tech and AI services',
     priority: 0.8,
     changeFreq: 'weekly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/equipment',
     label: 'Equipment',
     description: 'Specialized hardware and tech equipment',
     priority: 0.8,
     changeFreq: 'weekly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/categories',
     label: 'Categories',
     description: 'Browse service and talent categories',
     priority: 0.7,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/blog',
     label: 'Blog',
     description: 'Articles and insights about AI and tech',
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/faq',
     label: 'FAQ',
     description: 'Frequently asked questions about Zion',
     priority: 0.7,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/terms',
     label: 'Terms of Service',
     description: 'Terms and conditions for using Zion',
     priority: 0.5,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/privacy',
     label: 'Privacy Policy',
     description: 'How we handle your data',
     priority: 0.5,
     changeFreq: 'monthly',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Authentication Pages
 export const authPages: SitemapItem[] = [
@@ -110,7 +132,8 @@ export const authPages: SitemapItem[] = [
     description: 'Sign in to your account',
     priority: 0.6,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/signup',
     label: 'Sign Up',
@@ -125,15 +148,17 @@ export const authPages: SitemapItem[] = [
         description: 'Sign up as a talent or creator',
         priority: 0.6,
         changeFreq: 'monthly',
-        lastmod: currentDate},
+        lastmod: currentDate,
+      },
       {
         path: '/signup/client',
         label: 'Client Registration',
         description: 'Sign up as an employer or buyer',
         priority: 0.6,
         changeFreq: 'monthly',
-        lastmod: currentDate}
-    ]
+        lastmod: currentDate,
+      },
+    ],
   },
   {
     path: '/forgot-password',
@@ -141,7 +166,9 @@ export const authPages: SitemapItem[] = [
     description: 'Reset your password',
     priority: 0.5,
     changeFreq: 'monthly',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
@@ -153,7 +180,8 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/talent-onboarding',
     label: 'Talent Onboarding',
@@ -162,7 +190,8 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.8,
     changeFreq: 'monthly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/portfolio',
     label: 'Portfolio',
@@ -171,7 +200,8 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.8,
     changeFreq: 'weekly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/create-profile',
     label: 'Create Profile',
@@ -180,7 +210,9 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.7,
     changeFreq: 'monthly',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
@@ -192,7 +224,8 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/post-job',
     label: 'Post a Job',
@@ -201,7 +234,8 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.8,
     changeFreq: 'weekly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/hiring-tracker',
     label: 'Hiring Pipeline',
@@ -210,7 +244,9 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.7,
     changeFreq: 'daily',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
@@ -221,7 +257,8 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.9,
     changeFreq: 'hourly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/notifications',
     label: 'Notifications',
@@ -229,7 +266,8 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.8,
     changeFreq: 'hourly',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/project/:projectId/room',
     label: 'Project Room',
@@ -237,7 +275,8 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.6,
     changeFreq: 'never',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/dashboard/disputes',
     label: 'Disputes',
@@ -245,7 +284,9 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.7,
     changeFreq: 'daily',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
@@ -257,7 +298,8 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.9,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/admin/reviews',
     label: 'Reviews Moderation',
@@ -266,7 +308,8 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.7,
     changeFreq: 'daily',
-    lastmod: currentDate},
+    lastmod: currentDate,
+  },
   {
     path: '/admin/disputes',
     label: 'Dispute Management',
@@ -275,7 +318,9 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.8,
     changeFreq: 'daily',
-    lastmod: currentDate}];
+    lastmod: currentDate,
+  },
+];
 
 // Dynamic Path Patterns
 export const dynamicPaths = {
@@ -285,7 +330,8 @@ export const dynamicPaths = {
   projectRoom: '/project/:projectId/room',
   jobDetails: '/job/:id',
   categoryDetails: '/categories/:slug',
-  disputeDetails: '/dashboard/disputes/:disputeId'};
+  disputeDetails: '/dashboard/disputes/:disputeId',
+};
 
 // The complete sitemap
 export const completeSitemap: SitemapItem[] = [
@@ -294,33 +340,39 @@ export const completeSitemap: SitemapItem[] = [
   ...talentRoutes,
   ...clientRoutes,
   ...sharedRoutes,
-  ...adminRoutes];
+  ...adminRoutes,
+];
 
 // Helper function to get appropriate routes based on user role
 export const getAccessibleRoutes = (
-  isAuthenticated: boolean, 
+  isAuthenticated: boolean,
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
   // Public routes accessible to everyone
   let accessibleRoutes = [...publicPages, ...authPages];
-  
+
   // Add authenticated-only routes
   if (isAuthenticated) {
     accessibleRoutes = [...accessibleRoutes, ...sharedRoutes];
-    
+
     // Add role-specific routes
     if (userType === 'creator' || userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
     }
-    
+
     if (userType === 'employer' || userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes];
     }
-    
+
     if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes];
+      accessibleRoutes = [
+        ...accessibleRoutes,
+        ...talentRoutes,
+        ...clientRoutes,
+        ...adminRoutes,
+      ];
     }
   }
-  
+
   return accessibleRoutes;
 };

@@ -1,32 +1,47 @@
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Failure Modes and Mitigations',
-  description: 'Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.',
-  keywords: ['agent failures', 'mitigations', 'policy-as-code', 'evals', 'guardrails']};
+  description:
+    'Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.',
+  keywords: [
+    'agent failures',
+    'mitigations',
+    'policy-as-code',
+    'evals',
+    'guardrails',
+  ],
+};
 
 export default function AgentFailureModesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className='min-h-screen bg-white'>
       <SEO
-        title="AI 20o26: Agent Failure Modes and Mitigations"
-        description="Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails."
-        keywords="agent failures, mitigations, policy-as-code, evals, guardrails"
-        url="/blog/ai-20o26-agent-failure-modes-and-mitigations"
-       />
+        title='AI 20o26: Agent Failure Modes and Mitigations'
+        description='Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.'
+        keywords='agent failures, mitigations, policy-as-code, evals, guardrails'
+        url='/blog/ai-20o26-agent-failure-modes-and-mitigations'
+      />
 
-      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold opacity-90">Reliability • 20o25-09-15</p>
-          <h1 className="text-3xl md:text-5xl font-bold mt-2">Agent Failure Modes and Mitigations</h1>
-          <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">A practical catalog of failures with prevention and containment strategies.</p>
+      <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <p className='text-sm font-semibold opacity-90'>
+            Reliability • 20o25-09-15
+          </p>
+          <h1 className='text-3xl md:text-5xl font-bold mt-2'>
+            Agent Failure Modes and Mitigations
+          </h1>
+          <p className='text-lg md:text-xl opacity-90 mt-4 max-w-3xl'>
+            A practical catalog of failures with prevention and containment
+            strategies.
+          </p>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <article className="prose prose-lg max-w-none">
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8'>
+          <article className='prose prose-lg max-w-none'>
             <h2>Frequent Failure Modes</h2>
             <ul>
               <li>Hallucinated tool calls and unsafe effectors</li>
@@ -36,18 +51,30 @@ export default function AgentFailureModesPage() {
             </ul>
             <h3>Mitigations</h3>
             <ul>
-              <li>Policy-as-code with explicit allow/deny tool lists and risk tiers</li>
+              <li>
+                Policy-as-code with explicit allow/deny tool lists and risk
+                tiers
+              </li>
               <li>Eval-gated releases and continuous regression suites</li>
-              <li>Runtime governors: budget caps, step limits, and escalation rules</li>
+              <li>
+                Runtime governors: budget caps, step limits, and escalation
+                rules
+              </li>
               <li>Isolation domains and signed tool manifests</li>
             </ul>
           </article>
 
-          <div className="flex gap-4">
-            <Link href="/content/ai-20o26-evaluation-hub" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
+          <div className='flex gap-4'>
+            <Link
+              href='/content/ai-20o26-evaluation-hub'
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
+            >
               Evaluation Hub
             </Link>
-            <Link href="/content/ai-20o26-policy-as-code-starter-kit" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link
+              href='/content/ai-20o26-policy-as-code-starter-kit'
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
+            >
               Policy-as-Code Kit
             </Link>
           </div>
@@ -56,4 +83,3 @@ export default function AgentFailureModesPage() {
     </main>
   );
 }
-

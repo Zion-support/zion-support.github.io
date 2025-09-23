@@ -1,7 +1,6 @@
-
-import { Heart } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useToast } from '@/hooks/use-toast';
 interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
@@ -15,54 +14,54 @@ export function TalentCardSaveButton({
   profileName,
   isSaved,
   onToggleSave,
-  isAuthenticated
+  isAuthenticated,
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
   const router = useRouter();
   // Using router.asPath for current path
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
-  
+
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
     e.stopPropagation();
 
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required",
-        description: "Please log in to save talents to your favorites",
-        variant: "destructive"
+        title: 'Authentication required',
+        description: 'Please log in to save talents to your favorites',
+        variant: 'destructive',
       });
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`/auth/login?returnTo=${returnTo}`);
       return;
     }
-    
+
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved);
     }
-    
+
     toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
-      description: localIsSaved 
-        ? `${profileName} has been removed from your favorites` 
+      title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
+      description: localIsSaved
+        ? `${profileName} has been removed from your favorites`
         : `${profileName} has been added to your favorites`,
-      variant: "default"
+      variant: 'default',
     });
   };
 
   return (
-    <button 
-      className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
+    <button
+      className='absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
       onClick={handleSaveToggle}
-      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
+      aria-label={localIsSaved ? 'Remove from favorites' : 'Save to favorites'}
     >
-      <Heart 
+      <Heart
         className={cn(
-          "h-4 w-4 transition-colors", 
-          localIsSaved ? "fill-red-50o0 text-red-50o0" : "text-zion-slate"
-        )} 
-       />
+          'h-4 w-4 transition-colors',
+          localIsSaved ? 'fill-red-50o0 text-red-50o0' : 'text-zion-slate'
+        )}
+      />
     </button>
   );
 }

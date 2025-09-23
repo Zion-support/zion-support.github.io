@@ -1,5 +1,5 @@
 // SEO Meta Tags Configuration
-export const defaultSEO ={
+export const defaultSEO = {
   siteName: 'Zion Tech Group',
   title: 'Zion Tech Group - AI-Powered Business Solutions',
   description:
@@ -44,4 +44,3 @@ export const defaultSEO ={
 };
 
 export default defaultSEO;
-

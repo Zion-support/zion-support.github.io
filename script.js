@@ -25,15 +25,15 @@
     dialog.removeAttribute('open');
   }
 
-  openButtons.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', e => {
       const source = btn.getAttribute('data-source') || 'unknown';
       openDialog(source);
     });
   });
 
   // Handle submission via mailto
-  submitButton?.addEventListener('click', (e) => {
+  submitButton?.addEventListener('click', e => {
     // Let the dialog resolve; prevent default to build our mailto
     e.preventDefault();
 
@@ -43,7 +43,7 @@
 
     if (!name || !email || !message) {
       // Basic validation
-      [nameInput, emailInput, messageInput].forEach((el) => {
+      [nameInput, emailInput, messageInput].forEach(el => {
         if (!el.value) {
           el.setAttribute('aria-invalid', 'true');
           el.focus();
@@ -55,7 +55,9 @@
     }
 
     const subject = encodeURIComponent(`Project inquiry — ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}\nSource: ${dialog.dataset.source || 'unknown'}`);
+    const body = encodeURIComponent(
+      `${message}\n\n— ${name}\n${email}\nSource: ${dialog.dataset.source || 'unknown'}`
+    );
 
     const mailto = `mailto:talent@example.com?subject=${subject}&body=${body}`;
 

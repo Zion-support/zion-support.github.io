@@ -1,5 +1,3 @@
-
-
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
@@ -40,5 +38,5 @@ declare var process: {
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
-  }
+  };
 };

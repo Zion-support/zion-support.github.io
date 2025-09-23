@@ -38,11 +38,11 @@ export interface EnhancedService20o25 {
   reviews: number;
 }
 
-const contact ={
+const contact = {
   mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 10o08 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const enhancedServices20o25: EnhancedService20o25[] = [
@@ -52,28 +52,38 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Intelligent threat detection and response',
     price: '$199',
     period: '/month',
-    description: 'AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
+    description:
+      'AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
     features: [
       'AI threat detection',
       'Automated incident response',
       'Behavioral analytics',
       'Threat intelligence',
-      'Compliance reporting'
+      'Compliance reporting',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-60o0 to-orange-70o0',
     textColor: 'text-red-30o0',
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel',
-    marketPosition: 'Next-generation AI-powered cybersecurity with zero false positives.',
+    marketPosition:
+      'Next-generation AI-powered cybersecurity with zero false positives.',
     targetAudience: ['Enterprise security', 'SOC teams', 'Compliance officers'],
     trialDays: 14,
     setupTime: '2 days',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Machine Learning', 'Behavioral Analysis', 'Threat Intelligence'],
+    technology: [
+      'Machine Learning',
+      'Behavioral Analysis',
+      'Threat Intelligence',
+    ],
     integrations: ['SIEM systems', 'EDR platforms', 'Cloud providers'],
-    useCases: ['Threat detection', 'Incident response', 'Compliance monitoring'],
+    useCases: [
+      'Threat detection',
+      'Incident response',
+      'Compliance monitoring',
+    ],
     roi: 'Reduces security incidents by 85%',
     competitors: ['Darktrace', 'CrowdStrike', 'SentinelOne'],
     marketSize: '$45B cybersecurity',
@@ -84,7 +94,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     launchDate: '20o25-0o7-15',
     customers: 45,
     rating: 4.7,
-    reviews: 32
+    reviews: 32,
   },
   {
     id: 'autonomous-devops-orchestrator',
@@ -92,20 +102,22 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Self-healing infrastructure and deployment automation',
     price: '$159',
     period: '/month',
-    description: 'Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance.',
+    description:
+      'Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance.',
     features: [
       'Self-healing infrastructure',
       'Intelligent deployment',
       'Performance optimization',
       'Cost management',
-      'Multi-cloud orchestration'
+      'Multi-cloud orchestration',
     ],
     popular: false,
     icon: '🤖',
     color: 'from-green-60o0 to-teal-70o0',
     textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/autonomous-devops-orchestrator',
-    marketPosition: 'First autonomous DevOps platform with AI-driven decision making.',
+    marketPosition:
+      'First autonomous DevOps platform with AI-driven decision making.',
     targetAudience: ['DevOps engineers', 'Platform teams', 'SREs'],
     trialDays: 14,
     setupTime: '3 days',
@@ -113,18 +125,23 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     realService: true,
     technology: ['AI/ML', 'Kubernetes', 'Terraform', 'Cloud APIs'],
     integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'GitHub'],
-    useCases: ['Infrastructure automation', 'Deployment optimization', 'Cost reduction'],
+    useCases: [
+      'Infrastructure automation',
+      'Deployment optimization',
+      'Cost reduction',
+    ],
     roi: 'Reduces DevOps overhead by 60%',
     competitors: ['HashiCorp', 'Pulumi', 'Spacelift'],
     marketSize: '$12B DevOps tools',
     growthRate: '19% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI models, infrastructure as code, monitoring integration.',
+    implementationDetails:
+      'AI models, infrastructure as code, monitoring integration.',
     launchDate: '20o25-0o6-20',
     customers: 28,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'blockchain-enterprise-platform',
@@ -132,20 +149,22 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Enterprise-grade blockchain solutions for business',
     price: '$399',
     period: '/month',
-    description: 'Comprehensive blockchain platform enabling enterprises to build, deploy, and manage blockchain applications with enterprise features.',
+    description:
+      'Comprehensive blockchain platform enabling enterprises to build, deploy, and manage blockchain applications with enterprise features.',
     features: [
       'Multi-chain support',
       'Smart contract development',
       'Enterprise security',
       'Scalability solutions',
-      'Integration APIs'
+      'Integration APIs',
     ],
     popular: true,
     icon: '🔗',
     color: 'from-blue-60o0 to-indigo-70o0',
     textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform',
-    marketPosition: 'Enterprise blockchain platform with built-in compliance and scalability.',
+    marketPosition:
+      'Enterprise blockchain platform with built-in compliance and scalability.',
     targetAudience: ['Financial services', 'Supply chain', 'Healthcare'],
     trialDays: 30,
     setupTime: '2 weeks',
@@ -153,18 +172,23 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     realService: true,
     technology: ['Ethereum', 'Hyperledger', 'Polkadot', 'Smart contracts'],
     integrations: ['Enterprise systems', 'Cloud providers', 'Payment gateways'],
-    useCases: ['Supply chain tracking', 'Digital identity', 'Asset tokenization'],
+    useCases: [
+      'Supply chain tracking',
+      'Digital identity',
+      'Asset tokenization',
+    ],
     roi: 'Increases transparency and reduces fraud by 90%',
     competitors: ['ConsenSys', 'R3 Corda', 'Hyperledger'],
     marketSize: '$19B blockchain',
     growthRate: '87% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-chain architecture, smart contracts, enterprise APIs.',
+    implementationDetails:
+      'Multi-chain architecture, smart contracts, enterprise APIs.',
     launchDate: '20o25-0o5-10',
     customers: 22,
     rating: 4.5,
-    reviews: 15
+    reviews: 15,
   },
   {
     id: 'ai-content-intelligence-suite',
@@ -172,20 +196,22 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Intelligent content creation and optimization',
     price: '$89',
     period: '/month',
-    description: 'AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO performance.',
+    description:
+      'AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO performance.',
     features: [
       'AI content generation',
       'SEO optimization',
       'Content analytics',
       'Multi-language support',
-      'Brand voice consistency'
+      'Brand voice consistency',
     ],
     popular: false,
     icon: '✍️',
     color: 'from-purple-60o0 to-pink-70o0',
     textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/ai-content-intelligence-suite',
-    marketPosition: 'AI content platform with built-in SEO and brand consistency.',
+    marketPosition:
+      'AI content platform with built-in SEO and brand consistency.',
     targetAudience: ['Marketing teams', 'Content creators', 'SEO specialists'],
     trialDays: 7,
     setupTime: '1 hour',
@@ -204,7 +230,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     launchDate: '20o25-0o4-25',
     customers: 67,
     rating: 4.4,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'iot-enterprise-platform',
@@ -212,39 +238,51 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Scalable IoT infrastructure for enterprise',
     price: '$249',
     period: '/month',
-    description: 'Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.',
+    description:
+      'Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.',
     features: [
       'Device management',
       'Real-time analytics',
       'Data visualization',
       'Automation workflows',
-      'Security & compliance'
+      'Security & compliance',
     ],
     popular: true,
     icon: '🌐',
     color: 'from-teal-60o0 to-green-70o0',
     textColor: 'text-teal-30o0',
     link: 'https://ziontechgroup.com/services/iot-enterprise-platform',
-    marketPosition: 'Enterprise IoT platform with built-in security and scalability.',
+    marketPosition:
+      'Enterprise IoT platform with built-in security and scalability.',
     targetAudience: ['Manufacturing', 'Smart cities', 'Energy companies'],
     trialDays: 21,
     setupTime: '1 week',
     category: 'IoT & Edge Computing',
     realService: true,
-    technology: ['MQTT', 'WebSocket', 'Time-series databases', 'Edge computing'],
+    technology: [
+      'MQTT',
+      'WebSocket',
+      'Time-series databases',
+      'Edge computing',
+    ],
     integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT'],
-    useCases: ['Smart manufacturing', 'Asset monitoring', 'Predictive maintenance'],
+    useCases: [
+      'Smart manufacturing',
+      'Asset monitoring',
+      'Predictive maintenance',
+    ],
     roi: 'Reduces operational costs by 30%',
     competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT'],
     marketSize: '$35B IoT platforms',
     growthRate: '28% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Device SDKs, cloud infrastructure, analytics engine.',
+    implementationDetails:
+      'Device SDKs, cloud infrastructure, analytics engine.',
     launchDate: '20o25-0o3-15',
     customers: 38,
     rating: 4.6,
-    reviews: 25
+    reviews: 25,
   },
   {
     id: 'ai-customer-success-platform',
@@ -252,21 +290,27 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Intelligent customer success automation',
     price: '$129',
     period: '/month',
-    description: 'AI-powered customer success platform that predicts churn, automates engagement, and optimizes customer lifecycle management.',
+    description:
+      'AI-powered customer success platform that predicts churn, automates engagement, and optimizes customer lifecycle management.',
     features: [
       'Churn prediction',
       'Automated engagement',
       'Customer health scoring',
       'Success playbooks',
-      'Analytics dashboard'
+      'Analytics dashboard',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-emerald-60o0 to-teal-70o0',
     textColor: 'text-emerald-30o0',
     link: 'https://ziontechgroup.com/services/ai-customer-success-platform',
-    marketPosition: 'AI-driven customer success with predictive analytics and automation.',
-    targetAudience: ['Customer success teams', 'Account managers', 'Growth teams'],
+    marketPosition:
+      'AI-driven customer success with predictive analytics and automation.',
+    targetAudience: [
+      'Customer success teams',
+      'Account managers',
+      'Growth teams',
+    ],
     trialDays: 14,
     setupTime: '2 days',
     category: 'Customer Success',
@@ -284,7 +328,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     launchDate: '20o25-0o2-20',
     customers: 52,
     rating: 4.7,
-    reviews: 38
+    reviews: 38,
   },
   {
     id: 'quantum-cryptography-suite',
@@ -292,39 +336,50 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Future-proof cryptography for quantum era',
     price: '$179',
     period: '/month',
-    description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
+    description:
+      'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
     features: [
       'Post-quantum cryptography',
       'Quantum key distribution',
       'Hybrid encryption',
       'Performance optimization',
-      'Compliance standards'
+      'Compliance standards',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-indigo-60o0 to-blue-70o0',
     textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/services/quantum-cryptography-suite',
-    marketPosition: 'First post-quantum cryptography platform for enterprise security.',
+    marketPosition:
+      'First post-quantum cryptography platform for enterprise security.',
     targetAudience: ['Financial services', 'Government', 'Healthcare'],
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Post-quantum algorithms', 'Quantum key distribution', 'Hybrid encryption'],
+    technology: [
+      'Post-quantum algorithms',
+      'Quantum key distribution',
+      'Hybrid encryption',
+    ],
     integrations: ['PKI systems', 'VPN solutions', 'Cloud providers'],
-    useCases: ['Data protection', 'Secure communications', 'Compliance readiness'],
+    useCases: [
+      'Data protection',
+      'Secure communications',
+      'Compliance readiness',
+    ],
     roi: 'Future-proofs security investments against quantum threats',
     competitors: ['ISARA', 'Post-Quantum', 'Quantum Xchange'],
     marketSize: '$3.2B quantum security',
     growthRate: '45% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cryptographic libraries, key management, performance optimization.',
+    implementationDetails:
+      'Cryptographic libraries, key management, performance optimization.',
     launchDate: '20o25-0o1-15',
     customers: 18,
     rating: 4.8,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'ai-supply-chain-optimizer',
@@ -332,28 +387,38 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Intelligent supply chain optimization and forecasting',
     price: '$199',
     period: '/month',
-    description: 'AI-powered supply chain platform that optimizes inventory, predicts demand, and automates procurement processes.',
+    description:
+      'AI-powered supply chain platform that optimizes inventory, predicts demand, and automates procurement processes.',
     features: [
       'Demand forecasting',
       'Inventory optimization',
       'Procurement automation',
       'Risk assessment',
-      'Real-time tracking'
+      'Real-time tracking',
     ],
     popular: true,
     icon: '📦',
     color: 'from-orange-60o0 to-red-70o0',
     textColor: 'text-orange-30o0',
     link: 'https://ziontechgroup.com/services/ai-supply-chain-optimizer',
-    marketPosition: 'AI-first supply chain optimization with real-time insights.',
-    targetAudience: ['Supply chain managers', 'Operations', 'Procurement teams'],
+    marketPosition:
+      'AI-first supply chain optimization with real-time insights.',
+    targetAudience: [
+      'Supply chain managers',
+      'Operations',
+      'Procurement teams',
+    ],
     trialDays: 21,
     setupTime: '1 week',
     category: 'Supply Chain & Logistics',
     realService: true,
     technology: ['Machine Learning', 'IoT', 'Blockchain', 'Cloud computing'],
     integrations: ['ERP systems', 'WMS', 'TMS', 'Supplier portals'],
-    useCases: ['Inventory management', 'Demand planning', 'Supplier optimization'],
+    useCases: [
+      'Inventory management',
+      'Demand planning',
+      'Supplier optimization',
+    ],
     roi: 'Reduces supply chain costs by 25%',
     competitors: ['SAP', 'Oracle', 'Blue Yonder'],
     marketSize: '$18B supply chain software',
@@ -364,7 +429,7 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     launchDate: '20o25-0o1-10',
     customers: 35,
     rating: 4.6,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'autonomous-financial-advisor',
@@ -372,39 +437,50 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'AI-powered financial planning and investment management',
     price: '$149',
     period: '/month',
-    description: 'Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated rebalancing.',
+    description:
+      'Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and automated rebalancing.',
     features: [
       'AI investment recommendations',
       'Portfolio optimization',
       'Risk assessment',
       'Automated rebalancing',
-      'Tax optimization'
+      'Tax optimization',
     ],
     popular: false,
     icon: '💰',
     color: 'from-green-60o0 to-emerald-70o0',
     textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/services/autonomous-financial-advisor',
-    marketPosition: 'AI-first financial advisory with institutional-grade algorithms.',
-    targetAudience: ['Financial advisors', 'Wealth managers', 'Individual investors'],
+    marketPosition:
+      'AI-first financial advisory with institutional-grade algorithms.',
+    targetAudience: [
+      'Financial advisors',
+      'Wealth managers',
+      'Individual investors',
+    ],
     trialDays: 14,
     setupTime: '3 days',
     category: 'FinTech & Wealth Management',
     realService: true,
     technology: ['Machine Learning', 'Quantitative models', 'Risk analytics'],
     integrations: ['Brokerage APIs', 'Banking systems', 'Tax software'],
-    useCases: ['Portfolio management', 'Retirement planning', 'Tax optimization'],
+    useCases: [
+      'Portfolio management',
+      'Retirement planning',
+      'Tax optimization',
+    ],
     roi: 'Improves portfolio returns by 15-25%',
     competitors: ['Betterment', 'Wealthfront', 'Personal Capital'],
     marketSize: '$12B robo-advisory',
     growthRate: '31% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'ML models, portfolio optimization engine, risk analytics.',
+    implementationDetails:
+      'ML models, portfolio optimization engine, risk analytics.',
     launchDate: '20o25-0o2-0o1',
     customers: 42,
     rating: 4.7,
-    reviews: 31
+    reviews: 31,
   },
   {
     id: 'quantum-machine-learning-platform',
@@ -412,20 +488,22 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     tagline: 'Quantum-enhanced machine learning for complex problems',
     price: '$299',
     period: '/month',
-    description: 'Advanced platform that combines quantum computing principles with machine learning to solve complex optimization and pattern recognition problems.',
+    description:
+      'Advanced platform that combines quantum computing principles with machine learning to solve complex optimization and pattern recognition problems.',
     features: [
       'Quantum-enhanced algorithms',
       'Hybrid classical-quantum models',
       'Optimization solvers',
       'Pattern recognition',
-      'Scalable architecture'
+      'Scalable architecture',
     ],
     popular: true,
     icon: '⚛️',
     color: 'from-purple-60o0 to-indigo-70o0',
     textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',
-    marketPosition: 'First quantum-enhanced ML platform for enterprise applications.',
+    marketPosition:
+      'First quantum-enhanced ML platform for enterprise applications.',
     targetAudience: ['Data scientists', 'Research teams', 'Enterprise AI'],
     trialDays: 30,
     setupTime: '2 weeks',
@@ -433,17 +511,22 @@ export const enhancedServices20o25: EnhancedService20o25[] = [
     realService: true,
     technology: ['Quantum algorithms', 'Machine Learning', 'Cloud computing'],
     integrations: ['AWS Braket', 'Azure Quantum', 'Google Quantum'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Logistics optimization'],
+    useCases: [
+      'Drug discovery',
+      'Financial modeling',
+      'Logistics optimization',
+    ],
     roi: '10-10o0x faster than classical ML for specific problems',
     competitors: ['D-Wave', 'IBM Quantum', 'Rigetti'],
     marketSize: '$8.5B quantum computing',
     growthRate: '25% CAGR',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum simulators, hybrid algorithms, cloud deployment.',
+    implementationDetails:
+      'Quantum simulators, hybrid algorithms, cloud deployment.',
     launchDate: '20o25-0o3-0o1',
     customers: 15,
     rating: 4.8,
-    reviews: 8
-  }
+    reviews: 8,
+  },
 ];
