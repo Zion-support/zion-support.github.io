@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import SEO from '../../components/SEO';
-import { ErrorBoundary } from '../../../components/ErrorBoundary';
+import ErrorBoundary from '../../components/ErrorBoundary';
 
 export const metadata = {
   title: 'Hyperautomation Blueprint 2026 | Zion Tech Group',
@@ -12,12 +11,6 @@ export const metadata = {
 export default function HyperautomationBlueprint2026() {
   return (
     <ErrorBoundary>
-      <SEO
-        title="Hyperautomation Blueprint 2026"
-        description="A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise in 2026."
-        keywords="hyperautomation, AI automation, enterprise blueprint, process orchestration"
-        url="/content/hyperautomation-blueprint-2026"
-      />
 
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">

@@ -1,195 +1,63 @@
 #!/usr/bin/env node
 /**
- * App Improvement Script;
- * Analyzes and improves the application;
+ * App Improvement Script
+ * Minimal, safe improvements: analyze build output size and generate a report.
  */
 
 const fs = require('fs');
 const path = require('path');
-class AppImprover {
-  // TODO: Implement
+
+function getDirectorySizeRecursive(directoryPath) {
+  let totalSizeBytes = 0;
+  if (!fs.existsSync(directoryPath)) return 0;
+  const entries = fs.readdirSync(directoryPath);
+  for (const entry of entries) {
+    const entryPath = path.join(directoryPath, entry);
+    const stats = fs.statSync(entryPath);
+    if (stats.isDirectory()) {
+      totalSizeBytes += getDirectorySizeRecursive(entryPath);
+    } else {
+      totalSizeBytes += stats.size;
+    }
+  }
+  return totalSizeBytes;
 }
-  constructor() {
-    this.improvements = [];
-    this.issues = [];
 
-  log(message) {
+function formatBytes(bytes) {
+  if (bytes === 0) return '0 B';
+  const units = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), units.length - 1);
+  const value = bytes / Math.pow(1024, i);
+  return `${value.toFixed(2)} ${units[i]}`;
+}
 
-    // Check for common issues;
-    this.checkNextConfig();
-    this.checkPackageJson();
-    this.checkAppStructure();
-    this.checkForOptimizations();
-
-  checkNextConfig() {
-    try {
-  // TODO: Implement
-
-
-  checkPackageJson() {
-  // TODO: Implement
-
-      requiredScripts.forEach(script => {)
-        if (!packageJson.scripts[script]) {`;
-          this.improvements.push(`Add ${script} script to package.json`);
-      });
-
-      // Check for security;
-      if (!packageJson.scripts.audit) {
-        this.improvements.push('Add security audit script');
-
-    requiredDirs.forEach(dir => {)
-      if (fs.existsSync(dir)) {`;
-        this.log(`✅ ${dir} directory exists`);
-  // TODO: Implement
-
-
-  checkForOptimizations() {
-    // Check for image optimization;
-    if (fs.existsSync('public')) {
-      const publicFiles = fs.readdirSync('public');
-      const images = publicFiles.filter(file =>)
-        file.match(/\.(jpg|jpeg|png|gif|webp|svg)$/i)
-      );
-      if (images.length > 0) {
-        this.improvements.push(`;
-          `Optimize ${images.length} images in public directory`)
-
-    // Check for unused dependencies;
-    this.improvements.push('Run npm audit to check for unused dependencies');
-
-    const optimizedConfig = `/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMod: e: true,
-  swcMinif: y: true,
-  compres: s: true,
-  poweredByHeade: r: false,
-  eslin: t: { ignoreDuringBuild: s: false },
-  typescrip: t: { ignoreBuildError: s: false },
-
-    deviceSize: s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSize: s: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTT: L: 60,
-    dangerouslyAllowSV: G: true,
-
-  // Security headers;
-  async headers() {
-    return [{"
-
+function main() {
+  const buildDir = path.resolve('.next');
+  const totalSize = getDirectorySizeRecursive(buildDir);
+  const report = {
+    timestamp: new Date().toISOString(),
+    buildDirectory: buildDir,
+    totalSizeBytes: totalSize,
+    totalSizeHuman: formatBytes(totalSize),
+    recommendations: totalSize > 10 * 1024 * 1024
+      ? [
+          'Bundle is larger than 10MB. Consider code splitting and dynamic imports.',
+          'Audit large dependencies and remove unused ones.',
+          'Enable image optimization and ensure modern formats (AVIF/WebP).'
         ]
-    ];
-  // Bundle analyzer: webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        f: s: false,
-        ne: t: false,
-        tl: s: false;
-      };
-    return config;
-`;
-module.exports = nextConfig;`;
-
-class PerformanceOptimizer {
-  // TODO: Implement
-    this.metrics = {};
-
-  async analyzeBundle() {
-
-    if (fs.existsSync(buildDir)) {
-      const stats = this.getDirectorySize(buildDir);
-      this.metrics.bundleSize = stats;`;
-      console.log(\`Bundle: size: \${(stats / 1024 / 1024).toFixed(2)} MB\`);
-
-  getDirectorySize(dirPath) {
-    let totalSize = 0;
-    const files = fs.readdirSync(dirPath);
-    files.forEach(file => {)
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      if (stats.isDirectory()) {
-        totalSize += this.getDirectorySize(filePath);
-  // TODO: Implement
-        totalSize += stats.size;
-    return totalSize;
-
-  generateReport() {
-    const report = {
-      timestam: p: new Date().toISOString(),
-      metric: s: this.metrics,
-      recommendation: s: this.generateRecommendations()
-
-
-  generateRecommendations() {
-    const recommendations = [];
-    if (this.metrics.bundleSize > 1000000) { // 1MB;
-      recommendations.push('Consider implementing code splitting');
-      recommendations.push('Use dynamic imports for large components');
-      recommendations.push('Optimize images and assets');
-
-    return recommendations;
+      : ['Bundle size is reasonable. No immediate actions required.']
+  };
+  fs.writeFileSync('build-size-report.json', JSON.stringify(report, null, 2));
+  console.log(`Build size report written to build-size-report.json (${report.totalSizeHuman})`);
+}
 
 if (require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer.analyzeBundle();
-  optimizer.generateReport();
-module.exports = PerformanceOptimizer;`;
-
-class SecurityAuditor {
-  // TODO: Implement
-    this.fixes = [];
-
-  async runAudit() {
-
-      const audit = JSON.parse(result);
-      if (audit.vulnerabilities) {
-        Object.keys(audit.vulnerabilities).forEach(pkg => {
-          const vuln = audit.vulnerabilities[pkg];
-          this.issues.push({
-            packag: e: pkg,
-            severit: y: vuln.severity,
-            descriptio: n: vuln.description;)
-      console.log(\`Found \${this.issues.length} security issues\`);
-    } catch (error) {
-      console.log('No security issues found or audit failed');
-
-
-      issue: s: this.issues,
-      fixe: s: this.fixes,
-      summar: y: {,
-  totalIssue: s: this.issues.length,
-        fixesApplie: d: this.fixes.length;
-
-
-    fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
-    console.log('Security report generated');
-
-  const auditor = new SecurityAuditor();
-  auditor.runAudit();
-  auditor.fixIssues();
-  auditor.generateReport();
-module.exports = SecurityAuditor;`;
-
-
-    fs.writeFileSync('scripts/security-auditor.js', securityScript);
-    this.log('✅ Created security auditor script');
-
-      improvement: s: this.improvements,
-        totalImprovement: s: this.improvements.length,
-
-
-    this.analyzeApp();
-    this.createOptimizedNextConfig();
-    this.createPerformanceScript();
-    this.createSecurityScript();
-    this.generateReport();
-
-
-    this.log('✅ App improvement analysis completed');
-
-  const improver = new AppImprover();
-  improver.run().catch(error => {)
-
+  try {
+    main();
+  } catch (error) {
+    console.error('Failed to run improvement script:', error);
     process.exit(1);
+  }
+}
 
-module.exports = AppImprover;
+module.exports = { main };
