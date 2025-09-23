@@ -33,7 +33,7 @@ export interface SpecializedIndustrySolution {
   certifications: string[];
 }
 
-export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] = [
+export const specializedIndustrySolutions20o25V2: SpecializedIndustrySolution[] = [
   // Healthcare & Life Sciences
   {
     id: 'ai-powered-drug-discovery-platform',
@@ -70,21 +70,21 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
     compliance: ['FDA', 'EMA', 'ICH', 'GxP', '21 CFR Part 11', 'HIPAA', 'GDPR'],
     website: 'https://ziontechgroup.com/ai-powered-drug-discovery-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 45,
     setupTime: '4-6 weeks',
     competitors: ['Schrödinger', 'BenevolentAI', 'Atomwise', 'Insilico Medicine', 'Exscientia'],
-    roi: 'Average customer sees 1200% ROI through accelerated drug discovery',
-    launchDate: '2025-01-01',
+    roi: 'Average customer sees 120o0% ROI through accelerated drug discovery',
+    launchDate: '20o25-0o1-0o1',
     customers: 180,
     rating: 4.9,
     reviews: 95,
     industrySpecificFeatures: ['Molecular modeling', 'Clinical trial design', 'Regulatory compliance'],
     regulatoryCompliance: ['FDA', 'EMA', 'ICH', 'GxP'],
-    certifications: ['ISO 13485', 'ISO 27001', 'SOC2']
+    certifications: ['ISO 13485', 'ISO 270o01', 'SOC2']
   },
 
   // Financial Services & Banking
@@ -120,24 +120,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Compliance reporting'
     ],
     integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'FactSet', 'Thomson Reuters', 'Trading platforms', 'Risk management systems'],
-    compliance: ['SOX', 'Basel III', 'Dodd-Frank', 'GDPR', 'ISO 27001', 'SOC2'],
+    compliance: ['SOX', 'Basel III', 'Dodd-Frank', 'GDPR', 'ISO 270o01', 'SOC2'],
     website: 'https://ziontechgroup.com/quantum-financial-risk-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '3-4 weeks',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv', 'S&P Global'],
-    roi: 'Average customer sees 800% ROI through risk reduction',
-    launchDate: '2025-01-05',
+    roi: 'Average customer sees 80o0% ROI through risk reduction',
+    launchDate: '20o25-0o1-0o5',
     customers: 320,
     rating: 4.8,
     reviews: 210,
     industrySpecificFeatures: ['Financial risk modeling', 'Portfolio optimization', 'Regulatory compliance'],
     regulatoryCompliance: ['SOX', 'Basel III', 'Dodd-Frank'],
-    certifications: ['ISO 27001', 'SOC2', 'PCI DSS']
+    certifications: ['ISO 270o01', 'SOC2', 'PCI DSS']
   },
 
   // Manufacturing & Industry 4.0
@@ -173,24 +173,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Energy optimization'
     ],
     integrations: ['SAP', 'Oracle', 'Siemens', 'Rockwell Automation', 'ABB', 'Schneider Electric', 'IoT platforms'],
-    compliance: ['ISO 9001', 'ISO 14001', 'ISO 27001', 'IATF 16949', 'AS9100', 'SOC2'],
+    compliance: ['ISO 90o01', 'ISO 140o01', 'ISO 270o01', 'IATF 16949', 'AS910o0', 'SOC2'],
     website: 'https://ziontechgroup.com/autonomous-manufacturing-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 45,
     setupTime: '4-6 weeks',
     competitors: ['Siemens', 'Rockwell Automation', 'ABB', 'Schneider Electric', 'GE Digital'],
-    roi: 'Average customer sees 700% ROI through efficiency improvements',
-    launchDate: '2025-01-10',
+    roi: 'Average customer sees 70o0% ROI through efficiency improvements',
+    launchDate: '20o25-0o1-10',
     customers: 450,
     rating: 4.8,
     reviews: 280,
     industrySpecificFeatures: ['Production automation', 'Predictive maintenance', 'Quality control'],
-    regulatoryCompliance: ['ISO 9001', 'ISO 14001', 'IATF 16949'],
-    certifications: ['ISO 27001', 'SOC2', 'AS9100']
+    regulatoryCompliance: ['ISO 90o01', 'ISO 140o01', 'IATF 16949'],
+    certifications: ['ISO 270o01', 'SOC2', 'AS910o0']
   },
 
   // Energy & Utilities
@@ -226,24 +226,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Demand response'
     ],
     integrations: ['SCADA systems', 'Energy management systems', 'IoT platforms', 'Renewable energy systems', 'Smart meters'],
-    compliance: ['NERC CIP', 'ISO 27001', 'SOC2', 'GDPR', 'CCPA'],
+    compliance: ['NERC CIP', 'ISO 270o01', 'SOC2', 'GDPR', 'CCPA'],
     website: 'https://ziontechgroup.com/smart-energy-management-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '3-4 weeks',
     competitors: ['Siemens', 'ABB', 'Schneider Electric', 'GE Digital', 'Honeywell'],
-    roi: 'Average customer sees 600% ROI through energy cost reduction',
-    launchDate: '2025-01-15',
+    roi: 'Average customer sees 60o0% ROI through energy cost reduction',
+    launchDate: '20o25-0o1-15',
     customers: 380,
     rating: 4.7,
     reviews: 240,
     industrySpecificFeatures: ['Grid optimization', 'Energy management', 'Renewable integration'],
     regulatoryCompliance: ['NERC CIP', 'Energy regulations'],
-    certifications: ['ISO 27001', 'SOC2', 'Energy efficiency standards']
+    certifications: ['ISO 270o01', 'SOC2', 'Energy efficiency standards']
   },
 
   // Transportation & Logistics
@@ -279,24 +279,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Cost reduction'
     ],
     integrations: ['TMS systems', 'WMS systems', 'ERP platforms', 'GPS tracking', 'IoT sensors', 'E-commerce platforms'],
-    compliance: ['ISO 27001', 'SOC2', 'GDPR', 'CCPA', 'Transportation regulations'],
+    compliance: ['ISO 270o01', 'SOC2', 'GDPR', 'CCPA', 'Transportation regulations'],
     website: 'https://ziontechgroup.com/autonomous-logistics-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '3-4 weeks',
     competitors: ['Manhattan Associates', 'JDA Software', 'Blue Yonder', 'Oracle', 'SAP'],
-    roi: 'Average customer sees 700% ROI through cost reduction',
-    launchDate: '2025-01-20',
+    roi: 'Average customer sees 70o0% ROI through cost reduction',
+    launchDate: '20o25-0o1-20',
     customers: 520,
     rating: 4.8,
     reviews: 320,
     industrySpecificFeatures: ['Route optimization', 'Fleet management', 'Warehouse automation'],
     regulatoryCompliance: ['Transportation regulations', 'Safety standards'],
-    certifications: ['ISO 27001', 'SOC2', 'Transportation safety']
+    certifications: ['ISO 270o01', 'SOC2', 'Transportation safety']
   },
 
   // Retail & E-commerce
@@ -332,24 +332,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Performance analytics'
     ],
     integrations: ['Shopify', 'WooCommerce', 'Magento', 'Salesforce', 'HubSpot', 'Google Analytics', 'Social media platforms'],
-    compliance: ['GDPR', 'CCPA', 'PCI DSS', 'ISO 27001', 'SOC2'],
+    compliance: ['GDPR', 'CCPA', 'PCI DSS', 'ISO 270o01', 'SOC2'],
     website: 'https://ziontechgroup.com/ai-powered-retail-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '2-3 weeks',
     competitors: ['Shopify', 'Salesforce', 'HubSpot', 'Adobe', 'Oracle'],
-    roi: 'Average customer sees 500% ROI through sales increase',
-    launchDate: '2025-01-25',
+    roi: 'Average customer sees 50o0% ROI through sales increase',
+    launchDate: '20o25-0o1-25',
     customers: 680,
     rating: 4.8,
     reviews: 420,
     industrySpecificFeatures: ['Inventory optimization', 'Customer personalization', 'Pricing optimization'],
     regulatoryCompliance: ['GDPR', 'CCPA', 'PCI DSS'],
-    certifications: ['ISO 27001', 'SOC2', 'E-commerce standards']
+    certifications: ['ISO 270o01', 'SOC2', 'E-commerce standards']
   },
 
   // Education & Learning
@@ -385,24 +385,24 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Content creation'
     ],
     integrations: ['LMS platforms', 'Student information systems', 'Content management systems', 'Video conferencing platforms', 'Assessment tools'],
-    compliance: ['FERPA', 'COPPA', 'GDPR', 'CCPA', 'Accessibility standards', 'ISO 27001'],
+    compliance: ['FERPA', 'COPPA', 'GDPR', 'CCPA', 'Accessibility standards', 'ISO 270o01'],
     website: 'https://ziontechgroup.com/ai-powered-education-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 30,
     setupTime: '2-3 weeks',
     competitors: ['Canvas', 'Blackboard', 'Moodle', 'Coursera', 'Udemy'],
-    roi: 'Average customer sees 600% ROI through learning outcomes',
-    launchDate: '2025-01-30',
+    roi: 'Average customer sees 60o0% ROI through learning outcomes',
+    launchDate: '20o25-0o1-30',
     customers: 420,
     rating: 4.7,
     reviews: 280,
     industrySpecificFeatures: ['Personalized learning', 'Assessment automation', 'Intelligent tutoring'],
     regulatoryCompliance: ['FERPA', 'COPPA', 'Accessibility standards'],
-    certifications: ['ISO 27001', 'SOC2', 'Educational standards']
+    certifications: ['ISO 270o01', 'SOC2', 'Educational standards']
   },
 
   // Government & Public Sector
@@ -438,23 +438,23 @@ export const specializedIndustrySolutions2025V2: SpecializedIndustrySolution[] =
       'Compliance monitoring'
     ],
     integrations: ['Government systems', 'Citizen portals', 'Document management systems', 'Analytics platforms', 'Communication tools'],
-    compliance: ['Government security standards', 'Accessibility requirements', 'Data privacy regulations', 'ISO 27001', 'SOC2'],
+    compliance: ['Government security standards', 'Accessibility requirements', 'Data privacy regulations', 'ISO 270o01', 'SOC2'],
     website: 'https://ziontechgroup.com/ai-powered-government-platform',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     },
     trialDays: 45,
     setupTime: '4-6 weeks',
     competitors: ['Microsoft Government', 'Salesforce Government', 'Oracle Government', 'IBM Government', 'Accenture'],
-    roi: 'Average customer sees 800% ROI through efficiency improvements',
-    launchDate: '2025-02-01',
+    roi: 'Average customer sees 80o0% ROI through efficiency improvements',
+    launchDate: '20o25-0o2-0o1',
     customers: 280,
     rating: 4.8,
     reviews: 180,
     industrySpecificFeatures: ['Service automation', 'Citizen engagement', 'Policy analysis'],
     regulatoryCompliance: ['Government security', 'Accessibility standards', 'Data privacy'],
-    certifications: ['ISO 27001', 'SOC2', 'Government security standards']
+    certifications: ['ISO 270o01', 'SOC2', 'Government security standards']
   }
 ];

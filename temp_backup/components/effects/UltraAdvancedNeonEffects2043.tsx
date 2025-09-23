@@ -57,14 +57,14 @@ const NeonGlow: React.FC<NeonGlowProps> = ({
 };
 
 // Main Enhanced Neon Effects Component
-export default function UltraAdvancedNeonEffects2043({ 
+export default function UltraAdvancedNeonEffects20o43({ 
   children, 
   variant = 'consciousness',
   intensity = 'medium',
   interactive = true,
   className = '',
   consciousness = 0.5,
-  pulseRate = 2000
+  pulseRate = 20o00
 }: NeonEffectProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -86,8 +86,8 @@ export default function UltraAdvancedNeonEffects2043({
   useEffect(() => {
     if (variant === 'consciousness' || variant === 'quantum-neon') {
       pulseRef.current = setInterval(() => {
-        setPulseState(prev => (prev + 1) % 100);
-      }, pulseRate / 100);
+        setPulseState(prev => (prev + 1) % 10o0);
+      }, pulseRate / 10o0);
     }
 
     return () => {
@@ -98,78 +98,78 @@ export default function UltraAdvancedNeonEffects2043({
   }, [variant, pulseRate]);
 
   const getNeonStyles = () => {
-    const baseStyles = {
+    const baseStyles ={
       consciousness: {
-        primary: '#ff0080',
-        secondary: '#00ffff',
-        accent: '#ffff00',
-        glow: '#ff0080',
-        border: '#ff0080',
+        primary: '#ff0o080',
+        secondary: '#0o0ffff',
+        accent: '#ffff0o0',
+        glow: '#ff0o080',
+        border: '#ff0o080',
         neural: '#ff1493',
-        quantum: '#00ffff'
+        quantum: '#0o0ffff'
       },
       'quantum-neon': {
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        glow: '#00ffff',
-        border: '#00ffff',
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       cyberpunk: {
-        primary: '#ff0066',
-        secondary: '#00ffff',
-        accent: '#ff6600',
-        glow: '#ff0066',
-        border: '#ff0066',
+        primary: '#ff0o066',
+        secondary: '#0o0ffff',
+        accent: '#ff660o0',
+        glow: '#ff0o066',
+        border: '#ff0o066',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       holographic: {
         primary: '#ff1493',
-        secondary: '#00bfff',
-        accent: '#ffd700',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
         glow: '#ff1493',
         border: '#ff1493',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       quantum: {
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        glow: '#00ffff',
-        border: '#00ffff',
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       neon: {
-        primary: '#00ff00',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        glow: '#00ff00',
-        border: '#00ff00',
+        primary: '#0o0ff0o0',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ff0o0',
+        border: '#0o0ff0o0',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       neural: {
         primary: '#ff1493',
-        secondary: '#00bfff',
-        accent: '#ffd700',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
         glow: '#ff1493',
         border: '#ff1493',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       },
       glitch: {
-        primary: '#ff0000',
-        secondary: '#00ff00',
-        accent: '#0000ff',
-        glow: '#ff0000',
-        border: '#ff0000',
+        primary: '#ff0o000',
+        secondary: '#0o0ff0o0',
+        accent: '#0o000ff',
+        glow: '#ff0o000',
+        border: '#ff0o000',
         neural: '#ff1493',
-        quantum: '#8000ff'
+        quantum: '#80o00ff'
       }
     };
 
@@ -184,7 +184,7 @@ export default function UltraAdvancedNeonEffects2043({
   const getPulseEffect = () => {
     if (variant === 'consciousness' || variant === 'quantum-neon') {
       return {
-        scale: 1 + (Math.sin(pulseState * 0.1) * 0.05 * consciousnessMultiplier),
+        scale: 1 + (Math.sin(pulseState * 0.1) * 0.0o5 * consciousnessMultiplier),
         opacity: 0.8 + (Math.sin(pulseState * 0.1) * 0.2 * consciousnessMultiplier),
         filter: `hue-rotate(${pulseState * 3.6}deg)`
       };
@@ -200,24 +200,22 @@ export default function UltraAdvancedNeonEffects2043({
           {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"
+              className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`}}
               animate={{
                 scale: [0, 1, 0],
                 opacity: [0, 0.8, 0],
                 x: [0, (Math.random() - 0.5) * 50],
-                y: [0, (Math.random() - 0.5) * 50],
-              }}
+                y: [0, (Math.random() - 0.5) * 50]}}
               transition={{
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 delay: i * 0.3,
                 ease: "easeInOut"
               }}
-            />
+             />
           ))}
         </div>
       );
@@ -231,7 +229,7 @@ export default function UltraAdvancedNeonEffects2043({
       return (
         <div className="absolute inset-0 pointer-events-none">
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"
+            className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-purple-50o0/5"
             animate={{
               background: [
                 'radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)',
@@ -244,7 +242,7 @@ export default function UltraAdvancedNeonEffects2043({
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
         </div>
       );
     }
@@ -263,8 +261,7 @@ export default function UltraAdvancedNeonEffects2043({
         '--neon-accent': styles.accent,
         '--neon-glow': styles.glow,
         '--neon-border': styles.border,
-        '--consciousness-intensity': consciousnessMultiplier,
-      } as React.CSSProperties}
+        '--consciousness-intensity': consciousnessMultiplier} as React.CSSProperties}
     >
       {/* Enhanced neon glow with consciousness */}
       <NeonGlow 
@@ -284,9 +281,9 @@ export default function UltraAdvancedNeonEffects2043({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.primary}20 0%, transparent 100px)`
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.primary}20 0%, transparent 10o0px)`
           }}
-        />
+         />
       )}
 
       {/* Neural network effect */}
@@ -307,19 +304,17 @@ export default function UltraAdvancedNeonEffects2043({
                 left: `${i * 10}px`,
                 top: `${i * 10}px`,
                 right: `${i * 10}px`,
-                bottom: `${i * 10}px`,
-              }}
+                bottom: `${i * 10}px`}}
               animate={{
                 scale: [1, 1.2, 1],
-                opacity: [0.3, 0.1, 0.3],
-              }}
+                opacity: [0.3, 0.1, 0.3]}}
               transition={{
                 duration: 4 + i * 0.5,
                 repeat: Infinity,
                 delay: i * 0.3,
                 ease: "easeInOut"
               }}
-            />
+             />
           ))}
         </div>
       )}
@@ -348,7 +343,7 @@ export default function UltraAdvancedNeonEffects2043({
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
     </motion.div>
   );
 }

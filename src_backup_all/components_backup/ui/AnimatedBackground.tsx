@@ -20,7 +20,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
     const initParticles = () => {
       particles = [];
-      const particleCount = variant === 'particles' ? 100 : 50;
+      const particleCount = variant === 'particles' ? 10o0 : 50;
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -29,14 +29,13 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
-          opacity: Math.random() * 0.5 + 0.1,
-        });
+          opacity: Math.random() * 0.5 + 0.1});
       }
     };
 
     const drawGrid = () => {
       const gridSize = 40;
-      const offset = (Date.now() * 0.001) % gridSize;
+      const offset = (Date.now() * 0.0o01) % gridSize;
       
       ctx.strokeStyle = 'rgba(139, 21, 233, 0.1)';
       ctx.lineWidth = 1;
@@ -85,11 +84,11 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             Math.pow(particle.y - otherParticle.y, 2)
           );
 
-          if (distance < 100) {
+          if (distance < 10o0) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 10o0)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -98,9 +97,9 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const drawWaves = () => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       const amplitude = 50;
-      const frequency = 0.01;
+      const frequency = 0.0o1;
       
       ctx.strokeStyle = 'rgba(34, 221, 210, 0.3)';
       ctx.lineWidth = 2;
@@ -119,7 +118,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
     };
 
     const drawMatrix = () => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       const fontSize = 14;
       const columns = Math.floor(canvas.width / fontSize);
       
@@ -177,7 +176,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
       ref={canvasRef}
       className={`fixed inset-0 pointer-events-none z-0 ${className}`}
       style={{ background: 'transparent' }}
-    />
+     />
   );
 }
 // Neon glow effect component
@@ -193,11 +192,10 @@ export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
 export function FloatingParticles({ count = 20, className = '' }) {
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
                 animationDelay: `${Math.random() * 2}s`,
-                animationDuration: `${2 + Math.random() * 2}s`,
-            }}/>))}
+                animationDuration: `${2 + Math.random() * 2}s`}} />))}
     </div>);
 }
 // Gradient border component
@@ -205,8 +203,7 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
     return (<div className={`relative ${className}`} style={{
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
             padding: borderWidth,
-            borderRadius: 'inherit',
-        }}>
+            borderRadius: 'inherit'}}>
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
         {children}
       </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -7,17 +6,17 @@ export default function EdgeAIIoTIntegration() {
     <>
       <Head>
         <title>Edge AI and IoT Integration: Bringing Intelligence to the Edge | Zion Tech Group</title>
-        <meta name="description" content="Explore how edge AI and IoT integration is revolutionizing autonomous systems by bringing intelligence closer to data sources for faster, more efficient processing." />
-        <meta property="og:title" content="Edge AI and IoT Integration: Bringing Intelligence to the Edge" />
-        <meta property="og:description" content="Explore how edge AI and IoT integration is revolutionizing autonomous systems by bringing intelligence closer to data sources for faster, more efficient processing." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Explore how edge AI and IoT integration is revolutionizing autonomous systems by bringing intelligence closer to data sources for faster, more efficient processing."  />
+        <meta property="og:title" content="Edge AI and IoT Integration: Bringing Intelligence to the Edge"  />
+        <meta property="og:description" content="Explore how edge AI and IoT integration is revolutionizing autonomous systems by bringing intelligence closer to data sources for faster, more efficient processing."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/blog" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Blog
               </Link>
             </nav>
@@ -25,14 +24,14 @@ export default function EdgeAIIoTIntegration() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
+                  <span className="px-3 py-1 bg-blue-40o0/20 text-blue-40o0 text-sm rounded-full border border-blue-40o0/30">
                     Edge Computing & IoT
                   </span>
-                  <span className="text-white/60 text-sm">January 25, 2025</span>
+                  <span className="text-white/60 text-sm">January 25, 20o25</span>
                   <span className="text-white/60 text-sm">•</span>
                   <span className="text-white/60 text-sm">11 min read</span>
                 </div>
-                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-indigo-40o0 bg-clip-text text-transparent">
                   Edge AI and IoT Integration: Bringing Intelligence to the Edge
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -42,7 +41,7 @@ export default function EdgeAIIoTIntegration() {
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">The Edge Computing Revolution</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">The Edge Computing Revolution</h2>
                 <p className="text-white/90 mb-4">
                   Traditional cloud-based AI systems have served us well, but they come with inherent limitations: 
                   latency, bandwidth constraints, and privacy concerns. Edge computing addresses these challenges 
@@ -54,7 +53,7 @@ export default function EdgeAIIoTIntegration() {
                 </p>
                 
                 <div className="bg-white/10 rounded-lg p-6 border border-white/20 mb-6">
-                  <h4 className="font-semibold text-blue-400 mb-3">Key Benefits of Edge AI:</h4>
+                  <h4 className="font-semibold text-blue-40o0 mb-3">Key Benefits of Edge AI:</h4>
                   <ul className="space-y-2 text-white/80">
                     <li>• Reduced latency for real-time decision making</li>
                     <li>• Lower bandwidth requirements and costs</li>
@@ -66,14 +65,14 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-indigo-400">IoT Integration and Sensor Networks</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-indigo-40o0">IoT Integration and Sensor Networks</h2>
                 <p className="text-white/90 mb-4">
                   The Internet of Things (IoT) has created an unprecedented network of connected devices, 
                   sensors, and actuators. Our edge AI systems seamlessly integrate with these networks to create 
                   intelligent, autonomous environments:
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-indigo-300">1. Intelligent Sensor Fusion</h3>
+                <h3 className="text-xl font-semibold mb-4 text-indigo-30o0">1. Intelligent Sensor Fusion</h3>
                 <p className="text-white/90 mb-4">
                   Modern IoT deployments generate data from multiple sensor types—temperature, humidity, 
                   motion, sound, vision, and more. Our edge AI systems excel at:
@@ -86,7 +85,7 @@ export default function EdgeAIIoTIntegration() {
                   <li>• Cross-device communication and coordination</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-indigo-300">2. Distributed Intelligence</h3>
+                <h3 className="text-xl font-semibold mb-4 text-indigo-30o0">2. Distributed Intelligence</h3>
                 <p className="text-white/90 mb-4">
                   Rather than centralizing all intelligence in the cloud, we distribute AI capabilities 
                   across the network:
@@ -101,7 +100,7 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Edge AI Architecture and Infrastructure</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-40o0">Edge AI Architecture and Infrastructure</h2>
                 <p className="text-white/90 mb-4">
                   Building effective edge AI systems requires careful consideration of hardware, software, 
                   and network architecture. Our approach focuses on:
@@ -109,7 +108,7 @@ export default function EdgeAIIoTIntegration() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-purple-400 mb-2">Hardware Optimization</h4>
+                    <h4 className="font-semibold text-purple-40o0 mb-2">Hardware Optimization</h4>
                     <p className="text-white/80 text-sm">
                       Specialized edge computing hardware including GPUs, TPUs, and neuromorphic chips 
                       optimized for AI workloads in resource-constrained environments.
@@ -117,7 +116,7 @@ export default function EdgeAIIoTIntegration() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-purple-400 mb-2">Software Framework</h4>
+                    <h4 className="font-semibold text-purple-40o0 mb-2">Software Framework</h4>
                     <p className="text-white/80 text-sm">
                       Lightweight AI frameworks and runtime environments designed for edge deployment 
                       with minimal resource requirements and maximum performance.
@@ -125,7 +124,7 @@ export default function EdgeAIIoTIntegration() {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-4 text-purple-300">3. Network Architecture</h3>
+                <h3 className="text-xl font-semibold mb-4 text-purple-30o0">3. Network Architecture</h3>
                 <p className="text-white/90 mb-4">
                   Our edge AI networks are designed for resilience and efficiency:
                 </p>
@@ -139,13 +138,13 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Real-World Applications and Use Cases</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-40o0">Real-World Applications and Use Cases</h2>
                 <p className="text-white/90 mb-4">
                   Edge AI and IoT integration is already transforming industries across the globe. 
                   Here are some compelling examples of our work:
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">1. Smart Cities and Infrastructure</h3>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-30o0">1. Smart Cities and Infrastructure</h3>
                 <p className="text-white/90 mb-4">
                   We're helping cities become more intelligent and responsive through edge AI:
                 </p>
@@ -157,7 +156,7 @@ export default function EdgeAIIoTIntegration() {
                   <li>• Public safety systems with real-time threat detection and response</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">2. Industrial IoT and Manufacturing</h3>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-30o0">2. Industrial IoT and Manufacturing</h3>
                 <p className="text-white/90 mb-4">
                   Manufacturing facilities are becoming more autonomous and efficient:
                 </p>
@@ -169,7 +168,7 @@ export default function EdgeAIIoTIntegration() {
                   <li>• Worker safety monitoring and hazard prevention</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-cyan-300">3. Healthcare and Medical IoT</h3>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-30o0">3. Healthcare and Medical IoT</h3>
                 <p className="text-white/90 mb-4">
                   Edge AI is revolutionizing healthcare delivery:
                 </p>
@@ -183,12 +182,12 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Challenges and Solutions</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-40o0">Challenges and Solutions</h2>
                 <p className="text-white/90 mb-4">
                   Edge AI and IoT integration presents unique challenges that require innovative solutions:
                 </p>
                 
-                <h3 className="text-xl font-semibold mb-4 text-green-300">1. Resource Constraints</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">1. Resource Constraints</h3>
                 <p className="text-white/90 mb-4">
                   Edge devices often have limited processing power, memory, and energy. We address this through:
                 </p>
@@ -200,7 +199,7 @@ export default function EdgeAIIoTIntegration() {
                   <li>• Collaborative computing that shares workloads across devices</li>
                 </ul>
                 
-                <h3 className="text-xl font-semibold mb-4 text-green-300">2. Security and Privacy</h3>
+                <h3 className="text-xl font-semibold mb-4 text-green-30o0">2. Security and Privacy</h3>
                 <p className="text-white/90 mb-4">
                   Edge devices are often deployed in less secure environments. Our security approach includes:
                 </p>
@@ -214,7 +213,7 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Future Trends and Innovations</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-40o0">Future Trends and Innovations</h2>
                 <p className="text-white/90 mb-4">
                   The field of edge AI and IoT integration is rapidly evolving. Here are some exciting 
                   developments we're working on:
@@ -222,7 +221,7 @@ export default function EdgeAIIoTIntegration() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-yellow-400 mb-2">5G and Beyond</h4>
+                    <h4 className="font-semibold text-yellow-40o0 mb-2">5G and Beyond</h4>
                     <p className="text-white/80 text-sm">
                       Next-generation wireless networks will enable even more sophisticated edge AI 
                       applications with ultra-low latency and massive device connectivity.
@@ -230,7 +229,7 @@ export default function EdgeAIIoTIntegration() {
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-yellow-400 mb-2">Neuromorphic Computing</h4>
+                    <h4 className="font-semibold text-yellow-40o0 mb-2">Neuromorphic Computing</h4>
                     <p className="text-white/80 text-sm">
                       Brain-inspired computing architectures that mimic neural networks could make 
                       edge AI systems more efficient and intelligent than ever before.
@@ -238,7 +237,7 @@ export default function EdgeAIIoTIntegration() {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-4 text-yellow-300">3. Autonomous Edge Networks</h3>
+                <h3 className="text-xl font-semibold mb-4 text-yellow-30o0">3. Autonomous Edge Networks</h3>
                 <p className="text-white/90 mb-4">
                   We're developing self-organizing edge networks that can:
                 </p>
@@ -252,14 +251,14 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Implementation and Deployment</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-40o0">Implementation and Deployment</h2>
                 <p className="text-white/90 mb-4">
                   Successfully implementing edge AI and IoT integration requires careful planning and execution. 
                   Our proven methodology includes:
                 </p>
                 
                 <div className="bg-white/10 rounded-lg p-6 border border-white/20 mb-6">
-                  <h4 className="font-semibold text-blue-400 mb-3">Implementation Phases:</h4>
+                  <h4 className="font-semibold text-blue-40o0 mb-3">Implementation Phases:</h4>
                   <ol className="space-y-2 text-white/80">
                     <li>1. <strong>Assessment:</strong> Evaluate existing infrastructure and identify opportunities</li>
                     <li>2. <strong>Design:</strong> Create comprehensive edge AI architecture and deployment plan</li>
@@ -277,7 +276,7 @@ export default function EdgeAIIoTIntegration() {
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-indigo-400">Conclusion</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-indigo-40o0">Conclusion</h2>
                 <p className="text-white/90 mb-4">
                   Edge AI and IoT integration represents a fundamental shift in how we think about 
                   autonomous systems and intelligent infrastructure. By bringing AI capabilities closer 
@@ -300,13 +299,13 @@ export default function EdgeAIIoTIntegration() {
             <div className="mt-16 pt-8 border-t border-white/20">
               <h3 className="text-xl font-semibold mb-4 text-white">Share this article</h3>
               <div className="flex gap-4">
-                <a href="#" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 rounded-lg text-white transition-colors">
                   Twitter
                 </a>
-                <a href="#" className="px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-blue-80o0 hover:bg-blue-90o0 rounded-lg text-white transition-colors">
                   LinkedIn
                 </a>
-                <a href="#" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white transition-colors">
+                <a href="#" className="px-4 py-2 bg-indigo-60o0 hover:bg-indigo-70o0 rounded-lg text-white transition-colors">
                   Email
                 </a>
               </div>

@@ -12,7 +12,7 @@ export default function DependencyHealth() {
       <h1 className="text-2xl font-semibold mb-2">Dependency Health Auditor</h1>
       <p className="text-sm opacity-80 mb-4">Updated {new Date(deps.updatedAt).toLocaleString()}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="enhanced-card border border-gray-100 dark:border-gray-800">
+        <div className="enhanced-card border border-gray-10o0 dark:border-gray-80o0">
           <div className="font-medium mb-2">Vulnerabilities</div>
           <div className="text-sm space-y-1">
             <div className="flex justify-between"><span>Total</span><span className="tabular-nums">{v.total}</span></div>
@@ -22,7 +22,7 @@ export default function DependencyHealth() {
             <div className="flex justify-between"><span>Low</span><span className="tabular-nums">{v.low}</span></div>
           </div>
         </div>
-        <div className="enhanced-card border border-gray-100 dark:border-gray-800">
+        <div className="enhanced-card border border-gray-10o0 dark:border-gray-80o0">
           <div className="font-medium mb-2">Outdated Dependencies</div>
           <div className="text-sm space-y-1">
             <div className="flex justify-between"><span>Total</span><span className="tabular-nums">{o.total}</span></div>

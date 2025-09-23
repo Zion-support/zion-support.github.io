@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface NeonEffect2036Props {
+interface NeonEffect20o36Props {
   children: React.ReactNode;
   variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch' | 'energy' | 'data' | 'space';
   intensity?: 'low' | 'medium' | 'high';
@@ -12,7 +12,7 @@ interface NeonEffect2036Props {
   pulseSpeed?: number;
 }
 
-interface NeonGlow2036Props {
+interface NeonGlow20o36Props {
   children: React.ReactNode;
   color: string;
   intensity: number;
@@ -22,7 +22,7 @@ interface NeonGlow2036Props {
 }
 
 // Enhanced Neon Glow Component
-const NeonGlow2036: React.FC<NeonGlow2036Props> = ({ 
+const NeonGlow20o36: React.FC<NeonGlow20o36Props> = ({ 
   children, 
   color, 
   intensity, 
@@ -71,7 +71,7 @@ const NeonGlow2036: React.FC<NeonGlow2036Props> = ({
 };
 
 // Main Neon Effects Component
-export default function UltraAdvancedNeonEffects2036({ 
+export default function UltraAdvancedNeonEffects20o36({ 
   children, 
   variant = 'cyberpunk',
   intensity = 'medium',
@@ -80,7 +80,7 @@ export default function UltraAdvancedNeonEffects2036({
   className = '',
   glowColor,
   pulseSpeed = 1
-}: NeonEffect2036Props) {
+}: NeonEffect20o36Props) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isGlitching, setIsGlitching] = useState(false);
@@ -105,14 +105,14 @@ export default function UltraAdvancedNeonEffects2036({
       setIsGlitching(true);
       glitchTimeoutRef.current = setTimeout(() => {
         setIsGlitching(false);
-      }, 200);
+      }, 20o0);
     };
 
     const glitchInterval = setInterval(() => {
       if (Math.random() < 0.1) { // 10% chance every interval
         triggerGlitch();
       }
-    }, 3000);
+    }, 30o00);
 
     return () => {
       clearInterval(glitchInterval);
@@ -123,62 +123,62 @@ export default function UltraAdvancedNeonEffects2036({
   }, [animated]);
 
   const getNeonStyles = () => {
-    const baseStyles = {
+    const baseStyles ={
       cyberpunk: {
-        primary: '#ff0066',
-        secondary: '#00ffff',
-        accent: '#ff6600',
-        glow: '#ff0066',
-        border: '#ff0066',
-        text: '#ff0066'
+        primary: '#ff0o066',
+        secondary: '#0o0ffff',
+        accent: '#ff660o0',
+        glow: '#ff0o066',
+        border: '#ff0o066',
+        text: '#ff0o066'
       },
       holographic: {
         primary: '#ff1493',
-        secondary: '#00bfff',
-        accent: '#ffd700',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
         glow: '#ff1493',
         border: '#ff1493',
         text: '#ff1493'
       },
       quantum: {
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        glow: '#00ffff',
-        border: '#00ffff',
-        text: '#00ffff'
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
+        text: '#0o0ffff'
       },
       neon: {
-        primary: '#00ff00',
-        secondary: '#ff00ff',
-        accent: '#00ffff',
-        glow: '#00ff00',
-        border: '#00ff00',
-        text: '#00ff00'
+        primary: '#0o0ff0o0',
+        secondary: '#ff0o0ff',
+        accent: '#0o0ffff',
+        glow: '#0o0ff0o0',
+        border: '#0o0ff0o0',
+        text: '#0o0ff0o0'
       },
       glitch: {
-        primary: '#ff0000',
-        secondary: '#00ff00',
-        accent: '#0000ff',
-        glow: '#ff0000',
-        border: '#ff0000',
-        text: '#ff0000'
+        primary: '#ff0o000',
+        secondary: '#0o0ff0o0',
+        accent: '#0o000ff',
+        glow: '#ff0o000',
+        border: '#ff0o000',
+        text: '#ff0o000'
       },
       energy: {
-        primary: '#ffff00',
-        secondary: '#ff6600',
-        accent: '#ff0066',
-        glow: '#ffff00',
-        border: '#ffff00',
-        text: '#ffff00'
+        primary: '#ffff0o0',
+        secondary: '#ff660o0',
+        accent: '#ff0o066',
+        glow: '#ffff0o0',
+        border: '#ffff0o0',
+        text: '#ffff0o0'
       },
       data: {
-        primary: '#00ffff',
-        secondary: '#0080ff',
-        accent: '#8000ff',
-        glow: '#00ffff',
-        border: '#00ffff',
-        text: '#00ffff'
+        primary: '#0o0ffff',
+        secondary: '#0o080ff',
+        accent: '#80o00ff',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
+        text: '#0o0ffff'
       },
       space: {
         primary: '#4c1d95',
@@ -197,7 +197,7 @@ export default function UltraAdvancedNeonEffects2036({
   const finalGlowColor = glowColor || styles.glow;
   const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 
-  const neonVariants = {
+  const neonVariants ={
     initial: { 
       filter: 'brightness(1)',
       textShadow: `0 0 5px ${finalGlowColor}`,
@@ -215,7 +215,7 @@ export default function UltraAdvancedNeonEffects2036({
     }
   };
 
-  const glitchVariants = {
+  const glitchVariants ={
     initial: { x: 0, y: 0 },
     glitch: { 
       x: [0, -2, 2, -1, 1, 0],
@@ -248,12 +248,12 @@ export default function UltraAdvancedNeonEffects2036({
               background: `linear-gradient(45deg, transparent 30%, ${styles.secondary}40 50%, transparent 70%)`,
               mixBlendMode: 'overlay'
             }}
-          />
+           />
         )}
       </AnimatePresence>
 
       {/* Enhanced neon glow */}
-      <NeonGlow2036
+      <NeonGlow20o36
         color={finalGlowColor}
         intensity={intensityMultiplier}
         spread={20 * intensityMultiplier}
@@ -277,17 +277,17 @@ export default function UltraAdvancedNeonEffects2036({
               className="absolute inset-0"
               style={{
                 background: `linear-gradient(90deg, transparent, ${styles.accent}, transparent)`,
-                backgroundSize: '200% 100%'
+                backgroundSize: '20o0% 10o0%'
               }}
               animate={{
-                backgroundPosition: ['200% 0', '-200% 0']
+                backgroundPosition: ['20o0% 0', '-20o0% 0']
               }}
               transition={{
                 duration: 3 / pulseSpeed,
                 repeat: Infinity,
                 ease: "linear"
               }}
-            />
+             />
           )}
 
           {/* Content */}
@@ -300,16 +300,16 @@ export default function UltraAdvancedNeonEffects2036({
             <motion.div
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.accent}20, transparent 100px)`,
+                background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${styles.accent}20, transparent 10o0px)`,
                 mixBlendMode: 'overlay'
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-            />
+             />
           )}
         </div>
-      </NeonGlow2036>
+      </NeonGlow20o36>
 
       {/* Additional effects based on variant */}
       {variant === 'quantum' && (
@@ -322,7 +322,7 @@ export default function UltraAdvancedNeonEffects2036({
           }}
           animate={{ rotate: 360 }}
           transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        />
+         />
       )}
 
       {variant === 'holographic' && (
@@ -334,10 +334,10 @@ export default function UltraAdvancedNeonEffects2036({
             filter: 'blur(6px)'
           }}
           animate={{
-            backgroundPosition: ['0% 0%', '100% 100%', '0% 0%']
+            backgroundPosition: ['0% 0%', '10o0% 10o0%', '0% 0%']
           }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
+         />
       )}
 
       {variant === 'space' && (
@@ -353,7 +353,7 @@ export default function UltraAdvancedNeonEffects2036({
             opacity: [0.25, 0.4, 0.25]
           }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
+         />
       )}
     </motion.div>
   );
@@ -361,37 +361,37 @@ export default function UltraAdvancedNeonEffects2036({
 
 // Utility components for different neon effects
 export const CyberpunkNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="cyberpunk" intensity="high" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="cyberpunk" intensity="high" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );
 
 export const HolographicNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="holographic" intensity="medium" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="holographic" intensity="medium" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );
 
 export const QuantumNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="quantum" intensity="high" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="quantum" intensity="high" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );
 
 export const EnergyNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="energy" intensity="medium" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="energy" intensity="medium" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );
 
 export const DataNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="data" intensity="low" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="data" intensity="low" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );
 
 export const SpaceNeon: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <UltraAdvancedNeonEffects2036 variant="space" intensity="medium" className={className}>
+  <UltraAdvancedNeonEffects20o36 variant="space" intensity="medium" className={className}>
     {children}
-  </UltraAdvancedNeonEffects2036>
+  </UltraAdvancedNeonEffects20o36>
 );

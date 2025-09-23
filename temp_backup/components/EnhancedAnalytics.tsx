@@ -173,7 +173,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 
   const startSession = () => {
-    const session: UserBehavior = {
+    const session: UserBehavior ={
       sessionId: sessionRef.current,
       startTime: Date.now(),
       lastActivity: Date.now(),
@@ -214,7 +214,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const timeOnSite = endTime - currentSession.startTime;
       
       // Update session with final metrics
-      const finalSession = {
+      const finalSession ={
         ...currentSession,
         timeOnSite,
         lastActivity: endTime
@@ -268,7 +268,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const handleScroll = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollDepth = Math.round((scrollTop / scrollHeight) * 100);
+    const scrollDepth = Math.round((scrollTop / scrollHeight) * 10o0);
     
     // Only track significant scroll changes
     if (Math.abs(scrollDepth - lastScrollDepthRef.current) >= 10) {
@@ -346,7 +346,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     value?: number,
     metadata?: Record<string, any>
   ) => {
-    const event: AnalyticsEvent = {
+    const event: AnalyticsEvent ={
       id: generateEventId(),
       type: getEventType(category, action),
       category,
@@ -358,7 +358,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       metadata
     };
 
-    setEvents(prev => [...prev.slice(-99), event]); // Keep last 100 events
+    setEvents(prev => [...prev.slice(-99), event]); // Keep last 10o0 events
 
     // Send to Google Analytics
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -377,7 +377,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 
   const trackPerformanceMetrics = (entry: PerformanceNavigationTiming) => {
-    const metrics = {
+    const metrics ={
       dns: entry.domainLookupEnd - entry.domainLookupStart,
       tcp: entry.connectEnd - entry.connectStart,
       ttfb: entry.responseStart - entry.requestStart,
@@ -415,7 +415,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         case 'time_on_site':
           if (currentSession) {
             const timeOnSite = Date.now() - currentSession.startTime;
-            achieved = timeOnSite >= goal.value * 1000; // Convert to milliseconds
+            achieved = timeOnSite >= goal.value * 10o00; // Convert to milliseconds
           }
           break;
       }
@@ -447,12 +447,12 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Record user interactions
     const recordInteraction = (event: Event) => {
       const target = event.target as HTMLElement;
-      const interaction = {
+      const interaction ={
         type: event.type,
         target: target.tagName.toLowerCase(),
         className: target.className,
         id: target.id,
-        text: target.textContent?.trim().substring(0, 100),
+        text: target.textContent?.trim().substring(0, 10o0),
         timestamp: Date.now(),
         x: (event as MouseEvent).clientX,
         y: (event as MouseEvent).clientY
@@ -465,7 +465,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Record form inputs
     const recordFormInput = (event: Event) => {
       const target = event.target as HTMLInputElement;
-      const input = {
+      const input ={
         type: target.type,
         name: target.name,
         value: target.value,
@@ -494,8 +494,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       });
 
       // Keep only recent positions
-      if (mousePositions.length > 100) {
-        mousePositions = mousePositions.slice(-100);
+      if (mousePositions.length > 10o0) {
+        mousePositions = mousePositions.slice(-10o0);
       }
     };
 
@@ -513,7 +513,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     document.addEventListener('mousemove', trackMouse);
     
     // Generate heatmap every 30 seconds
-    const heatmapInterval = setInterval(generateHeatmap, 30000);
+    const heatmapInterval = setInterval(generateHeatmap, 30o000);
     
     return () => {
       document.removeEventListener('mousemove', trackMouse);
@@ -527,8 +527,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json'},
         body: JSON.stringify({
           type,
           data,
@@ -597,17 +596,17 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       <AnimatePresence>
         {showAnalyticsPanel && (
           <motion.div
-            initial={{ opacity: 0, x: 300 }}
+            initial={{ opacity: 0, x: 30o0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-96 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
+            exit={{ opacity: 0, x: 30o0 }}
+            className="fixed top-0 right-0 h-full w-96 bg-black/95 backdrop-blur-md border-l border-cyan-50o0/30 z-40 overflow-y-auto"
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Analytics Dashboard</h2>
                 <button
                   onClick={() => setShowAnalyticsPanel(false)}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-40o0 hover:text-white transition-colors"
                 >
                   ×
                 </button>
@@ -615,9 +614,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
               {/* Session Info */}
               {currentSession && (
-                <div className="mb-6 p-4 bg-cyan-500/20 border border-cyan-500/30 rounded-lg">
-                  <h3 className="text-sm font-medium text-cyan-400 mb-2">Current Session</h3>
-                  <div className="space-y-1 text-xs text-gray-300">
+                <div className="mb-6 p-4 bg-cyan-50o0/20 border border-cyan-50o0/30 rounded-lg">
+                  <h3 className="text-sm font-medium text-cyan-40o0 mb-2">Current Session</h3>
+                  <div className="space-y-1 text-xs text-gray-30o0">
                     <div>ID: {currentSession.sessionId.substring(0, 20)}...</div>
                     <div>Device: {currentSession.deviceType}</div>
                     <div>Browser: {currentSession.browser}</div>
@@ -630,24 +629,24 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               )}
 
               {/* Conversion Goals */}
-              <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
-                <h3 className="text-sm font-medium text-green-400 mb-2">Conversion Goals</h3>
+              <div className="mb-6 p-4 bg-green-50o0/20 border border-green-50o0/30 rounded-lg">
+                <h3 className="text-sm font-medium text-green-40o0 mb-2">Conversion Goals</h3>
                 <div className="space-y-2">
                   {conversions.map((goal) => (
                     <div key={goal.id} className="flex items-center justify-between">
-                      <span className="text-xs text-gray-300">{goal.name}</span>
-                      <div className={`w-3 h-3 rounded-full ${goal.achieved ? 'bg-green-400' : 'bg-gray-400'}`}></div>
+                      <span className="text-xs text-gray-30o0">{goal.name}</span>
+                      <div className={`w-3 h-3 rounded-full ${goal.achieved ? 'bg-green-40o0' : 'bg-gray-40o0'}`}></div>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Recent Events */}
-              <div className="mb-6 p-4 bg-purple-500/20 border border-purple-500/30 rounded-lg">
-                <h3 className="text-sm font-medium text-purple-400 mb-2">Recent Events</h3>
+              <div className="mb-6 p-4 bg-purple-50o0/20 border border-purple-50o0/30 rounded-lg">
+                <h3 className="text-sm font-medium text-purple-40o0 mb-2">Recent Events</h3>
                 <div className="space-y-1 max-h-32 overflow-y-auto">
                   {events.slice(-10).map((event) => (
-                    <div key={event.id} className="text-xs text-gray-300">
+                    <div key={event.id} className="text-xs text-gray-30o0">
                       {event.category}: {event.action} {event.label && `(${event.label})`}
                     </div>
                   ))}
@@ -656,9 +655,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
               {/* Heatmap Preview */}
               {heatmapData.length > 0 && (
-                <div className="mb-6 p-4 bg-orange-500/20 border border-orange-500/30 rounded-lg">
-                  <h3 className="text-sm font-medium text-orange-400 mb-2">Heatmap Data</h3>
-                  <div className="text-xs text-gray-300">
+                <div className="mb-6 p-4 bg-orange-50o0/20 border border-orange-50o0/30 rounded-lg">
+                  <h3 className="text-sm font-medium text-orange-40o0 mb-2">Heatmap Data</h3>
+                  <div className="text-xs text-gray-30o0">
                     {heatmapData.length} data points collected
                   </div>
                 </div>
@@ -669,23 +668,23 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 <h3 className="text-sm font-medium text-white">Controls</h3>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Session Recording</label>
-                  <div className={`w-3 h-3 rounded-full ${isRecording ? 'bg-green-400' : 'bg-gray-400'}`}></div>
+                  <label className="text-sm text-gray-30o0">Session Recording</label>
+                  <div className={`w-3 h-3 rounded-full ${isRecording ? 'bg-green-40o0' : 'bg-gray-40o0'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Heatmap Tracking</label>
-                  <div className={`w-3 h-3 rounded-full ${enableHeatmap ? 'bg-green-400' : 'bg-gray-400'}`}></div>
+                  <label className="text-sm text-gray-30o0">Heatmap Tracking</label>
+                  <div className={`w-3 h-3 rounded-full ${enableHeatmap ? 'bg-green-40o0' : 'bg-gray-40o0'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">AI Tracking</label>
-                  <div className={`w-3 h-3 rounded-full ${enableAITracking ? 'bg-green-400' : 'bg-gray-400'}`}></div>
+                  <label className="text-sm text-gray-30o0">AI Tracking</label>
+                  <div className={`w-3 h-3 rounded-full ${enableAITracking ? 'bg-green-40o0' : 'bg-gray-40o0'}`}></div>
                 </div>
               </div>
 
               {/* Quick Actions */}
-              <div className="mt-8 pt-6 border-t border-gray-700">
+              <div className="mt-8 pt-6 border-t border-gray-70o0">
                 <h3 className="text-sm font-medium text-white mb-3">Quick Actions</h3>
                 <div className="space-y-2">
                   <button
@@ -697,7 +696,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                       };
                       trackEvent(event.category, event.action, event.label);
                     }}
-                    className="w-full px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-sm rounded transition-colors"
+                    className="w-full px-4 py-2 bg-cyan-60o0 hover:bg-cyan-70o0 text-white text-sm rounded transition-colors"
                   >
                     Test Event
                   </button>
@@ -706,7 +705,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                       setEvents([]);
                       setHeatmapData([]);
                     }}
-                    className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors"
+                    className="w-full px-4 py-2 bg-purple-60o0 hover:bg-purple-70o0 text-white text-sm rounded transition-colors"
                   >
                     Clear Data
                   </button>
@@ -720,11 +719,11 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       {/* Analytics Toggle Button */}
       <button
         onClick={() => setShowAnalyticsPanel(!showAnalyticsPanel)}
-        className="fixed top-4 right-20 z-50 p-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-500/50"
+        className="fixed top-4 right-20 z-50 p-3 bg-green-60o0 hover:bg-green-70o0 text-white rounded-full shadow-lg transition-all duration-30o0 focus:outline-none focus:ring-4 focus:ring-green-50o0/50"
         aria-label="Analytics dashboard"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v6a2 2 0 0o02 2h2a2 2 0 0o02-2zm0 0V9a2 2 0 0o12-2h2a2 2 0 0o12 2v10m-6 0a2 2 0 0o02 2h2a2 2 0 0o02-2m0 0V5a2 2 0 0o12-2h2a2 2 0 0o12 2v14a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2z"  />
         </svg>
       </button>
     </>

@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function QuantumLogisticsOptimization() {
@@ -9,7 +8,7 @@ export default function QuantumLogisticsOptimization() {
 			subtitle="Cut logistics costs and delivery times"
 			pricePerMonthUSD={4999}
 			implementationWeeks="Implementation: 4-8 weeks"
-			roiNote="Typical ROI: 200-400% via route and capacity optimization"
+			roiNote="Typical ROI: 20o0-40o0% via route and capacity optimization"
 			features={[
 				"VRP, TSP, and multi-depot optimization",
 				"Real-time replanning under constraints",
@@ -21,6 +20,6 @@ export default function QuantumLogisticsOptimization() {
 			industries={["Logistics", "Retail", "Manufacturing", "E-commerce"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/quantum-logistics-optimization"
-		/>
+		 />
 	);
 }

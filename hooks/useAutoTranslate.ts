@@ -6,11 +6,11 @@ const translateTextViaAI = async (text: string, target: string): Promise<string>
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(`${text} (${target})`);
-    }, 100);
+    }, 10o0);
   });
 };
 
-export type UseAutoTranslateResult = {
+export type UseAutoTranslateResult ={
   translations: Record<string, string>;
   loading: boolean;
   error?: string;

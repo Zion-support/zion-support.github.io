@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 // Function to convert kebab-case to PascalCase
 function kebabToPascal(str) {
   return str
@@ -15,7 +13,7 @@ function createPageTemplate(pageName, filePath) {
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint working' });
+  res.status(20o0).json({ message: 'API endpoint working' });
 }`;
   }
   
@@ -26,7 +24,7 @@ const ${componentName}: NextPage = () => {
     <div>
       <Head>
         <title>${componentName} - Zion Tech Solutions</title>
-        <meta name="description" content="${componentName} page" />
+        <meta name="description" content="${componentName} page"  />
       </Head>
       
       <main>

@@ -109,8 +109,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         currentUsage: 12,
         location: 'San Francisco',
         department: 'Engineering',
-        cost: 250000,
-        lastUpdated: '2024-01-15',
+        cost: 250o000,
+        lastUpdated: '20o24-0o1-15',
         tags: ['AI', 'Machine Learning', 'Development'],
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
@@ -123,12 +123,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         category: 'Cloud Computing',
         status: 'available',
         priority: 'critical',
-        capacity: 1000,
+        capacity: 10o00,
         currentUsage: 750,
         location: 'AWS US-East-1',
         department: 'IT Operations',
-        cost: 50000,
-        lastUpdated: '2024-01-14',
+        cost: 50o000,
+        lastUpdated: '20o24-0o1-14',
         tags: ['Cloud', 'AWS', 'Infrastructure'],
         description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
@@ -141,12 +141,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         category: 'Security',
         status: 'available',
         priority: 'high',
-        capacity: 100,
+        capacity: 10o0,
         currentUsage: 85,
         location: 'Corporate Network',
         department: 'Security',
-        cost: 75000,
-        lastUpdated: '2024-01-13',
+        cost: 750o00,
+        lastUpdated: '20o24-0o1-13',
         tags: ['Security', 'Threat Detection', 'Monitoring'],
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
@@ -159,12 +159,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         category: 'Infrastructure',
         status: 'maintenance',
         priority: 'critical',
-        capacity: 10000,
+        capacity: 10o000,
         currentUsage: 0,
         location: 'Austin, TX',
         department: 'Facilities',
-        cost: 2000000,
-        lastUpdated: '2024-01-12',
+        cost: 20o00000,
+        lastUpdated: '20o24-0o1-12',
         tags: ['Data Center', 'Facility', 'Infrastructure'],
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
@@ -181,8 +181,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         currentUsage: 45,
         location: 'Cloud Platform',
         department: 'Engineering',
-        cost: 30000,
-        lastUpdated: '2024-01-11',
+        cost: 30o000,
+        lastUpdated: '20o24-0o1-11',
         tags: ['DevOps', 'CI/CD', 'Automation'],
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
@@ -223,7 +223,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
 
   // Calculate resource stats
-  const resourceStats = {
+  const resourceStats ={
     totalResources: resources.length,
     availableResources: resources.filter(r => r.status === 'available').length,
     allocatedResources: resources.filter(r => r.status === 'allocated').length,
@@ -241,7 +241,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / resources.length) * 100
+          percentage: (count / resources.length) * 10o0
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 5);
@@ -252,38 +252,38 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const getStatusDisplay = (status: string) => {
     switch (status) {
       case 'available':
-        return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
+        return { color: 'text-green-40o0 bg-green-40o0/20', icon: <CheckCircle className="w-4 h-4"  /> };
       case 'allocated':
-        return { color: 'text-blue-400 bg-blue-400/20', icon: <Users className="w-4 h-4" /> };
+        return { color: 'text-blue-40o0 bg-blue-40o0/20', icon: <Users className="w-4 h-4"  /> };
       case 'maintenance':
-        return { color: 'text-yellow-400 bg-yellow-400/20', icon: <AlertCircle className="w-4 h-4" /> };
+        return { color: 'text-yellow-40o0 bg-yellow-40o0/20', icon: <AlertCircle className="w-4 h-4"  /> };
       case 'unavailable':
-        return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
+        return { color: 'text-red-40o0 bg-red-40o0/20', icon: <XCircle className="w-4 h-4"  /> };
       default:
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
+        return { color: 'text-zinc-40o0 bg-zinc-40o0/20', icon: <Circle className="w-4 h-4"  /> };
     }
   };
 
   // Get type icon
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'human': return <Users className="w-5 h-5" />;
-      case 'infrastructure': return <Server className="w-5 h-5" />;
-      case 'software': return <Database className="w-5 h-5" />;
-      case 'equipment': return <Briefcase className="w-5 h-5" />;
-      case 'facility': return <Building className="w-5 h-5" />;
-      default: return <Globe className="w-5 h-5" />;
+      case 'human': return <Users className="w-5 h-5"  />;
+      case 'infrastructure': return <Server className="w-5 h-5"  />;
+      case 'software': return <Database className="w-5 h-5"  />;
+      case 'equipment': return <Briefcase className="w-5 h-5"  />;
+      case 'facility': return <Building className="w-5 h-5"  />;
+      default: return <Globe className="w-5 h-5"  />;
     }
   };
 
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-      default: return 'text-zinc-400 bg-zinc-400/20';
+      case 'low': return 'text-green-40o0 bg-green-40o0/20';
+      case 'medium': return 'text-yellow-40o0 bg-yellow-40o0/20';
+      case 'high': return 'text-orange-40o0 bg-orange-40o0/20';
+      case 'critical': return 'text-red-40o0 bg-red-40o0/20';
+      default: return 'text-zinc-40o0 bg-zinc-40o0/20';
     }
   };
 
@@ -299,10 +299,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get utilization color
   const getUtilizationColor = (utilization: number) => {
-    if (utilization >= 90) return 'text-red-400';
-    if (utilization >= 75) return 'text-yellow-400';
-    if (utilization >= 50) return 'text-blue-400';
-    return 'text-green-400';
+    if (utilization >= 90) return 'text-red-40o0';
+    if (utilization >= 75) return 'text-yellow-40o0';
+    if (utilization >= 50) return 'text-blue-40o0';
+    return 'text-green-40o0';
   };
 
   return (
@@ -311,24 +311,24 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
         <div>
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
-          <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
+          <p className="text-zinc-40o0 text-lg">Monitor and manage all company resources efficiently</p>
         </div>
 
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
-          <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
+          <div className="flex items-center gap-1 p-1 bg-zinc-90o0/30 rounded-lg">
             {[
-              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4" /> },
-              { id: 'list', label: 'List', icon: <BarChart3 className="w-4 h-4" /> },
-              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4" /> }
+              { id: 'grid', label: 'Grid', icon: <Target className="w-4 h-4"  /> },
+              { id: 'list', label: 'List', icon: <BarChart3 className="w-4 h-4"  /> },
+              { id: 'timeline', label: 'Timeline', icon: <Calendar className="w-4 h-4"  /> }
             ].map((mode) => (
               <button
                 key={mode.id}
                 onClick={() => setViewMode(mode.id as any)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-30o0 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                    : 'text-zinc-40o0 hover:text-white hover:bg-zinc-80o0/50'
                 }`}
               >
                 {mode.icon}
@@ -342,7 +342,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-4 h-4"  />
             Add Resource
           </button>
         </div>
@@ -354,40 +354,40 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>
-            <div className="text-zinc-400">Total Resources</div>
+            <div className="text-zinc-40o0">Total Resources</div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center"
           >
-            <div className="text-3xl font-bold text-green-400 mb-2">{resourceStats.availableResources}</div>
-            <div className="text-zinc-400">Available</div>
+            <div className="text-3xl font-bold text-green-40o0 mb-2">{resourceStats.availableResources}</div>
+            <div className="text-zinc-40o0">Available</div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center"
           >
-            <div className="text-3xl font-bold text-blue-400 mb-2">{resourceStats.allocatedResources}</div>
-            <div className="text-zinc-400">Allocated</div>
+            <div className="text-3xl font-bold text-blue-40o0 mb-2">{resourceStats.allocatedResources}</div>
+            <div className="text-zinc-40o0">Allocated</div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>
-            <div className="text-zinc-400">Avg Utilization</div>
+            <div className="text-zinc-40o0">Avg Utilization</div>
           </motion.div>
         </div>
       )}
@@ -399,33 +399,33 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.totalCapacity.toLocaleString()}</div>
-            <div className="text-zinc-400 text-sm">Combined capacity across all resources</div>
+            <div className="text-zinc-40o0 text-sm">Combined capacity across all resources</div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>
-            <div className="text-3xl font-bold text-green-400 mb-2">{formatCurrency(resourceStats.averageCost)}</div>
-            <div className="text-zinc-400 text-sm">Per resource annually</div>
+            <div className="text-3xl font-bold text-green-40o0 mb-2">{formatCurrency(resourceStats.averageCost)}</div>
+            <div className="text-zinc-40o0 text-sm">Per resource annually</div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>
-            <div className="text-3xl font-bold text-yellow-400 mb-2">{resourceStats.maintenanceResources}</div>
-            <div className="text-zinc-400 text-sm">Resources under maintenance</div>
+            <div className="text-3xl font-bold text-yellow-40o0 mb-2">{resourceStats.maintenanceResources}</div>
+            <div className="text-zinc-40o0 text-sm">Resources under maintenance</div>
           </motion.div>
         </div>
       )}
@@ -441,10 +441,10 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
-                className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
+                className="p-4 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-lg text-center"
               >
                 <div className="text-2xl font-bold text-white mb-1">{dept.count}</div>
-                <div className="text-zinc-400 text-sm mb-1">{dept.name}</div>
+                <div className="text-zinc-40o0 text-sm mb-1">{dept.name}</div>
                 <div className="text-zion-cyan text-xs">{dept.percentage.toFixed(1)}%</div>
               </motion.div>
             ))}
@@ -459,7 +459,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-90o0/50 border border-zinc-70o0/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="all">All Types</option>
             <option value="human">Human Resources</option>
@@ -473,7 +473,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-90o0/50 border border-zinc-70o0/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="all">All Statuses</option>
             <option value="available">Available</option>
@@ -486,7 +486,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+            className="px-4 py-2 bg-zinc-90o0/50 border border-zinc-70o0/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           >
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
@@ -497,13 +497,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
           {/* Search */}
           <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-40o0 w-4 h-4"  />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search resources..."
-              className="w-full pl-10 pr-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 bg-zinc-90o0/50 border border-zinc-70o0/50 rounded-lg text-white placeholder-zinc-40o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
           </div>
         </div>
@@ -517,18 +517,18 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
+            className="p-6 bg-zinc-90o0/30 border border-zinc-70o0/50 rounded-xl hover:bg-zinc-90o0/50 transition-all duration-30o0"
           >
             {/* Resource Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="p-3 bg-zinc-800/50 rounded-lg text-zion-cyan">
+                  <div className="p-3 bg-zinc-80o0/50 rounded-lg text-zion-cyan">
                     {getTypeIcon(resource.type)}
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{resource.name}</h3>
-                    <p className="text-zinc-400 text-sm">{resource.description}</p>
+                    <p className="text-zinc-40o0 text-sm">{resource.description}</p>
                   </div>
                 </div>
 
@@ -542,44 +542,44 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(resource.priority)}`}>
                     {resource.priority.charAt(0).toUpperCase() + resource.priority.slice(1)}
                   </span>
-                  <span className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">
+                  <span className="px-3 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full">
                     {resource.category}
                   </span>
                 </div>
               </div>
 
               <div className="flex items-center gap-2 ml-4">
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                  <Eye className="w-4 h-4" />
+                <button className="p-2 text-zinc-40o0 hover:text-white hover:bg-zinc-80o0/50 rounded-lg transition-colors">
+                  <Eye className="w-4 h-4"  />
                 </button>
-                <button className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                  <Edit className="w-4 h-4" />
+                <button className="p-2 text-zinc-40o0 hover:text-white hover:bg-zinc-80o0/50 rounded-lg transition-colors">
+                  <Edit className="w-4 h-4"  />
                 </button>
-                <button className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-400/20 rounded-lg transition-colors">
-                  <Trash2 className="w-4 h-4" />
+                <button className="p-2 text-zinc-40o0 hover:text-red-40o0 hover:bg-red-40o0/20 rounded-lg transition-colors">
+                  <Trash2 className="w-4 h-4"  />
                 </button>
               </div>
             </div>
 
             {/* Resource Details */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-              <div className="p-3 bg-zinc-800/30 rounded-lg">
-                <div className="text-sm text-zinc-400 mb-1">Location</div>
+              <div className="p-3 bg-zinc-80o0/30 rounded-lg">
+                <div className="text-sm text-zinc-40o0 mb-1">Location</div>
                 <div className="text-white font-medium">{resource.location}</div>
               </div>
 
-              <div className="p-3 bg-zinc-800/30 rounded-lg">
-                <div className="text-sm text-zinc-400 mb-1">Department</div>
+              <div className="p-3 bg-zinc-80o0/30 rounded-lg">
+                <div className="text-sm text-zinc-40o0 mb-1">Department</div>
                 <div className="text-white font-medium">{resource.department}</div>
               </div>
 
-              <div className="p-3 bg-zinc-800/30 rounded-lg">
-                <div className="text-sm text-zinc-400 mb-1">Manager</div>
+              <div className="p-3 bg-zinc-80o0/30 rounded-lg">
+                <div className="text-sm text-zinc-40o0 mb-1">Manager</div>
                 <div className="text-white font-medium">{resource.manager}</div>
               </div>
 
-              <div className="p-3 bg-zinc-800/30 rounded-lg">
-                <div className="text-sm text-zinc-400 mb-1">Annual Cost</div>
+              <div className="p-3 bg-zinc-80o0/30 rounded-lg">
+                <div className="text-sm text-zinc-40o0 mb-1">Annual Cost</div>
                 <div className="text-white font-medium">{formatCurrency(resource.cost)}</div>
               </div>
             </div>
@@ -587,24 +587,24 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             {/* Capacity and Utilization */}
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-zinc-300">Capacity & Utilization</span>
+                <span className="text-sm text-zinc-30o0">Capacity & Utilization</span>
                 <span className={`text-sm font-medium ${getUtilizationColor(resource.utilization)}`}>
                   {resource.utilization}% utilized
                 </span>
               </div>
-              <div className="w-full bg-zinc-700 rounded-full h-2">
+              <div className="w-full bg-zinc-70o0 rounded-full h-2">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${resource.utilization}%` }}
                   transition={{ duration: 1, delay: index * 0.1 }}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    resource.utilization >= 90 ? 'bg-red-500' :
-                    resource.utilization >= 75 ? 'bg-yellow-500' :
-                    resource.utilization >= 50 ? 'bg-blue-500' : 'bg-green-500'
+                  className={`h-2 rounded-full transition-all duration-30o0 ${
+                    resource.utilization >= 90 ? 'bg-red-50o0' :
+                    resource.utilization >= 75 ? 'bg-yellow-50o0' :
+                    resource.utilization >= 50 ? 'bg-blue-50o0' : 'bg-green-50o0'
                   }`}
                 />
               </div>
-              <div className="flex justify-between text-xs text-zinc-400 mt-1">
+              <div className="flex justify-between text-xs text-zinc-40o0 mt-1">
                 <span>Current: {resource.currentUsage}</span>
                 <span>Capacity: {resource.capacity}</span>
               </div>
@@ -615,7 +615,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
               {resource.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
+                  className="px-2 py-1 bg-zinc-80o0/50 text-zinc-30o0 text-xs rounded-full"
                 >
                   {tag}
                 </span>
@@ -623,18 +623,18 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             </div>
 
             {/* Last Updated */}
-            <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
-              <div className="flex items-center gap-2 text-sm text-zinc-400">
-                <Clock className="w-4 h-4" />
+            <div className="flex items-center justify-between pt-4 border-t border-zinc-70o0/50">
+              <div className="flex items-center gap-2 text-sm text-zinc-40o0">
+                <Clock className="w-4 h-4"  />
                 Last updated: {new Date(resource.lastUpdated).toLocaleDateString()}
               </div>
 
               <div className="flex items-center gap-2">
-                <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
-                  <Download className="w-4 h-4" />
+                <button className="p-2 text-zinc-40o0 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
+                  <Download className="w-4 h-4"  />
                 </button>
-                <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
-                  <Share2 className="w-4 h-4" />
+                <button className="p-2 text-zinc-40o0 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
+                  <Share2 className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -649,9 +649,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           animate={{ opacity: 1 }}
           className="text-center py-12"
         >
-          <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-          <h3 className="text-xl font-medium text-zinc-300 mb-2">No resources found</h3>
-          <p className="text-zinc-400 mb-4">
+          <Target className="w-16 h-16 text-zinc-60o0 mx-auto mb-4"  />
+          <h3 className="text-xl font-medium text-zinc-30o0 mb-2">No resources found</h3>
+          <p className="text-zinc-40o0 mb-4">
             Try adjusting your filters or add a new resource to get started!
           </p>
           <button

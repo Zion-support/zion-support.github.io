@@ -1,4 +1,3 @@
-import React from 'react';
 export function JobMatchCard() {
   return (
     <div>

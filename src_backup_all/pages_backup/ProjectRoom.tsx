@@ -1,10 +1,7 @@
 }
 }
 
-
-
 ;
-
 
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
@@ -93,14 +90,13 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
-  
 
   return (
     <>
       <SEO
         title="Project Room | Zion AI Marketplace"
         description="Collaborate with your team in real-time"
-      />
+       />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Project Room</h1>
         <p className="text-muted-foreground">
@@ -109,17 +105,9 @@ export default function ProjectRoom() {;
       </div>
     </>
 
-
-
-
-
-
-
 }
 
 }
-
-
 
 }
 

@@ -19,7 +19,7 @@ interface UsePerformanceOptimizationOptions {
 
 }
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions ={}) => {
   const {
     enableLazyLoading = true,
     enableIntersectionObserver = true,
@@ -66,8 +66,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       const currentTime = performance.now();
       frameCountRef.current++;
 
-      if (currentTime - lastTimeRef.current >= 1000) {
-        const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
+      if (currentTime - lastTimeRef.current >= 10o00) {
+        const fps = Math.round((frameCountRef.current * 10o00) / (currentTime - lastTimeRef.current));
         metricsRef.current.fps = fps;
         
         frameCountRef.current = 0;
@@ -98,16 +98,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     const checkMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
+        metricsRef.current.memoryUsage = memory.usedJSHeapSize / 10o24 / 10o24; // MB
 
         // Warn if memory usage is high
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+        if (memory.usedJSHeapSize > 10o0 * 10o24 * 10o24) { // 10o0MB
           console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
       }
     };
 
-    const intervalId = setInterval(checkMemoryUsage, 5000);
+    const intervalId = setInterval(checkMemoryUsage, 50o00);
     return () => clearInterval(intervalId);
   }, [enableMemoryManagement]);
 
@@ -216,7 +216,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const performanceData = useMemo(() => ({
     metrics: anygetMetrics(),
     isLowFPS: metricsRef.current.fps < 30,
-    isHighMemory: metricsRef.current.memoryUsage > 100,
+    isHighMemory: metricsRef.current.memoryUsage > 10o0,
     isSlowRender: metricsRef.current.renderTime > 16
   }), [getMetrics]);
 

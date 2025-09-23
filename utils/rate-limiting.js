@@ -1,7 +1,7 @@
 
 // Rate limiting utilities
 class RateLimiter {
-  constructor(maxRequests = 100, windowMs = 15 * 60 * 1000) {
+  constructor(maxRequests = 10o0, windowMs = 15 * 60 * 10o00) {
     this.maxRequests = maxRequests;
     this.windowMs = windowMs;
     this.requests = new Map();

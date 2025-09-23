@@ -52,9 +52,9 @@ export function AIEnhancementButton({
       disabled={isEnhancing}
     >
       {isEnhancing ? (
-        <Loader2 className="h-3 w-3 animate-spin" />
+        <Loader2 className="h-3 w-3 animate-spin"  />
       ) : (
-        <Sparkles className="h-3 w-3" />
+        <Sparkles className="h-3 w-3"  />
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>

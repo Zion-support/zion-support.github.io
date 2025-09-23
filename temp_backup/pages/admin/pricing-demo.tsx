@@ -9,15 +9,13 @@ export default function PricingDemoPage() {
     timelineWeeks: 2,
     scope: 'Build UI components and integrate APIs',
     experienceLevel: 'mid' as 'junior' | 'mid' | 'senior',
-    applied: '',
-  });
+    applied: ''});
 
   const [talentForm, setTalentForm] = useState({
     skills: 'DevOps, Kubernetes, AWS',
     yearsExperience: 4,
     location: 'Brazil',
-    applied: '',
-  });
+    applied: ''});
 
   return (
     <div className="mx-auto max-w-3xl p-6 space-y-10">
@@ -44,7 +42,7 @@ export default function PricingDemoPage() {
           experienceLevel={clientForm.experienceLevel}
           onApplySuggestion={(min, max) => setClientForm({ ...clientForm, applied: `Applied: $${min}–$${max}` })}
         />
-        {clientForm.applied && <div className="text-sm text-gray-700">{clientForm.applied}</div>}
+        {clientForm.applied && <div className="text-sm text-gray-70o0">{clientForm.applied}</div>}
       </section>
 
       <section className="space-y-4">
@@ -60,10 +58,10 @@ export default function PricingDemoPage() {
           location={talentForm.location}
           onApplySuggestion={(hourly, min, max) => setTalentForm({ ...talentForm, applied: `Applied: $${hourly}/hour; Range $${min}–$${max}` })}
         />
-        {talentForm.applied && <div className="text-sm text-gray-700">{talentForm.applied}</div>}
+        {talentForm.applied && <div className="text-sm text-gray-70o0">{talentForm.applied}</div>}
       </section>
 
-      <p className="text-xs text-gray-500">Disclaimer: Based on market data & trends. Do not auto-submit changes.</p>
+      <p className="text-xs text-gray-50o0">Disclaimer: Based on market data & trends. Do not auto-submit changes.</p>
     </div>
   );
 }

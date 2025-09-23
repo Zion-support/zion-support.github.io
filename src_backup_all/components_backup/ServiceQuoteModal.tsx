@@ -16,7 +16,6 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ServiceQuoteModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -24,11 +23,11 @@ interface ServiceQuoteModalProps {
 }
 
 const BUDGET_RANGES = [
-  { label: "Less than $5,000", value: "0-5000" },
-  { label: "$5,000 - $10,000", value: "5000-10000" },
-  { label: "$10,000 - $25,000", value: "10000-25000" },
-  { label: "$25,000 - $50,000", value: "25000-50000" },
-  { label: "$50,000+", value: "50000+" },
+  { label: "Less than $5,0o00", value: "0-50o00" },
+  { label: "$5,0o00 - $10,0o00", value: "50o00-10o000" },
+  { label: "$10,0o00 - $25,0o00", value: "10o000-250o00" },
+  { label: "$25,0o00 - $50,0o00", value: "250o00-50o000" },
+  { label: "$50,0o00+", value: "50o000+" },
 ];
 
 const TIMELINE_OPTIONS = [
@@ -42,9 +41,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   const [formData, setFormData] = useState({
     description: '',
     email: '',
-    budget: BUDGET_RANGES[0]?.value || '0-5000',
-    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
-  });
+    budget: BUDGET_RANGES[0]?.value || '0-50o00',
+    timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
@@ -66,13 +64,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
           service: service ? {
             id: service.id,
             title: service.title,
-            category: service.category,
-          } : null,
+            category: service.category} : null,
           quoteDetails: {
             ...formData,
             startDate: startDate?.toISOString(),
-            endDate: endDate?.toISOString(),
-          }
+            endDate: endDate?.toISOString()}
         }
       });
 
@@ -81,17 +77,15 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       // Show success message
       toast({
         title: "Quote Request Submitted!",
-        description: "We've sent your request to the service provider. They will contact you soon.",
-      });
+        description: "We've sent your request to the service provider. They will contact you soon."});
 
       // Close the modal and reset form
       onOpenChange(false);
       setFormData({
         description: '',
         email: '',
-        budget: BUDGET_RANGES[0]?.value || '0-5000',
-        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month',
-      });
+        budget: BUDGET_RANGES[0]?.value || '0-50o00',
+        timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'});
       setStartDate(new Date());
       setEndDate(undefined);
       setCurrentStep('details');
@@ -100,8 +94,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSubmitting(false);
     }
@@ -119,7 +112,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
+      <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[60o0px]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-semibold text-white">
             Request Service Quote
@@ -146,7 +139,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
-                />
+                 />
               </div>
 
               <div className="space-y-2">
@@ -156,7 +149,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your budget range" />
+                    <SelectValue placeholder="Select your budget range"  />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
@@ -180,7 +173,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your timeline" />
+                    <SelectValue placeholder="Select your timeline"  />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {TIMELINE_OPTIONS.map((option) => (
@@ -204,7 +197,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
+                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true"  />
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
@@ -215,7 +208,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-                      />
+                       />
                     </PopoverContent>
                   </Popover>
                 </div>
@@ -231,7 +224,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
+                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true"  />
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
@@ -265,7 +258,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                   placeholder="your@email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
-                />
+                 />
               </div>
 
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">

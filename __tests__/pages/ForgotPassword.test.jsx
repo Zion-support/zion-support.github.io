@@ -6,15 +6,15 @@ describe('ForgotPassword Page', () => {'  beforeEach(() => {
     // Reset mocks before each test
     // require('../../src/services/auth').forgotPassword.mockClear();  });
 
-  test('renders email input and submit button', () => {'    render(<MemoryRouterProvider><ForgotPassword /></MemoryRouterProvider>);
+  test('renders email input and submit button', () => {'    render(<MemoryRouterProvider><ForgotPassword  /></MemoryRouterProvider>);
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /send reset link/i })).toBeInTheDocument();  });
 
-  test('allows typing in email input', () => {'    render(<MemoryRouterProvider><ForgotPassword /></MemoryRouterProvider>);
+  test('allows typing in email input', () => {'    render(<MemoryRouterProvider><ForgotPassword  /></MemoryRouterProvider>);
     const emailInput = screen.getByLabelText(/email address/i);
     fireEvent.change(emailInput, { target: { value: test@example.com' } });    expect(emailInput.value).toBe('test@example.com');  });
 
-  test('shows success message on successful submission (mocked), async () => {'    // require('../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: Reset link sent' });    render(<MemoryRouterProvider><ForgotPassword /></MemoryRouterProvider>);
+  test('shows success message on successful submission (mocked), async () => {'    // require('../../src/services/auth').forgotPassword.mockResolvedValueOnce({ message: Reset link sent' });    render(<MemoryRouterProvider><ForgotPassword  /></MemoryRouterProvider>);
     fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: success@example.com' } });    fireEvent.click(screen.getByRole('button', { name: /send reset link/i }));
     // await waitFor(() => {
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe('ForgotPassword Page', () => {'  beforeEach(() => {
     });
   });
 
-  test('shows error message on failed submission (mocked), async () => {'    // require('../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error('Failed to send link'));    render(<MemoryRouterProvider><ForgotPassword /></MemoryRouterProvider>);
+  test('shows error message on failed submission (mocked), async () => {'    // require('../../src/services/auth').forgotPassword.mockRejectedValueOnce(new Error('Failed to send link'));    render(<MemoryRouterProvider><ForgotPassword  /></MemoryRouterProvider>);
     fireEvent.change(screen.getByLabelText(/email address/i), { target: { value: error@example.com' } });    fireEvent.click(screen.getByRole('button', { name: /send reset link/i }));
     // This test needs the actual API call to be implemented in the component and mocked here.
     // For now, the component doesn't show a distinct error message for API failure, only a generic success.'    // await waitFor(() => {

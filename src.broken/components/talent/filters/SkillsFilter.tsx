@@ -1,4 +1,3 @@
-import React from 'react';
 export function SkillsFilter() {
   return (
     <div>

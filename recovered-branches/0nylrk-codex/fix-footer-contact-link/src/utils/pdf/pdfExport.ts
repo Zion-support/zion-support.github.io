@@ -18,7 +18,7 @@ export interface ExportOptions {
   fontFamily?: FontFamily;
 }
 
-const defaultOptions: ExportOptions = {
+const defaultOptions: ExportOptions ={
   theme: 'light',
   includePortfolio: true,
   maxProjects: 2,
@@ -27,9 +27,9 @@ const defaultOptions: ExportOptions = {
 
 export async function exportResumeToPDF(
   resume: Resume, 
-  options: Partial<ExportOptions> = {}
+  options: Partial<ExportOptions> ={}
 ): Promise<Blob> {
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+  const mergedOptions: ExportOptions ={ ...defaultOptions, ...options };
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   
   // Create new PDF document (A4)

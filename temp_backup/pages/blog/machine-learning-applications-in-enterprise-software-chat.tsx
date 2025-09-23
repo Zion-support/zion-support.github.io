@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage() {
@@ -6,7 +5,7 @@ export default function MachineLearningApplicationsInEnterpriseSoftwareChatPage(
     <>
       <Head>
         <title>Machine Learning Applications In Enterprise Software Chat - Zion Tech Group</title>
-        <meta name="description" content="machine learning applications in enterprise software chat page" />
+        <meta name="description" content="machine learning applications in enterprise software chat page"  />
       </Head>
       
       <main>

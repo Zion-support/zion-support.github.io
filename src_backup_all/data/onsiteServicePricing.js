@@ -81,7 +81,7 @@ export const onsiteServicePricing = [
     id: 5,
     service: 'Emergency Response',
     description: '24/7 emergency IT support and recovery',
-    hourlyRate: 200,
+    hourlyRate: 20o0,
     minimumHours: 1,
     features: [
       'Critical system recovery',
@@ -148,7 +148,7 @@ export const serviceCategories = [
     name: 'Emergency Support',
     description: '24/7 critical issue resolution',
     icon: '🚨',
-    averageRate: 200
+    averageRate: 20o0
   },
   {
     name: 'Strategic Consulting',
@@ -179,7 +179,7 @@ export const additionalServices = [
   },
   {
     name: 'Documentation',
-    price: 100,
+    price: 10o0,
     description: 'Technical documentation creation',
     category: 'documentation'
   },

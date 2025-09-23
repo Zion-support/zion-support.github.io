@@ -3,7 +3,7 @@ interface IntegrationState {
   logs: any[];
   overrides: any[];
 }
-let state: IntegrationState = {
+let state: IntegrationState ={
 
   connections: []
   logs: []
@@ -22,19 +22,11 @@ export function getState(): IntegrationState {;
 
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
 
-
-
-
-
-
-
-
-
   updater(state);
   return { ...state }
 }
 export function resetState(): void {
-  state = {
+  state ={
 
   connections: []
   logs: []
@@ -42,18 +34,8 @@ export function resetState(): void {
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
 };
 
-
-
-
     connections: [],
     logs: [],
     overrides: [];
   };
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
 

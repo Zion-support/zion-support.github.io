@@ -46,14 +46,13 @@ export interface WalletContextType extends WalletState {
   appKit: AppKitInstanceInterface | null;
 }
 
-const initialWalletState: WalletState = {
+const initialWalletState: WalletState ={
   provider: null,
   signer: null,
   address: null,
   chainId: null,
   isConnected: false,
-  isWalletSystemAvailable: false,
-};
+  isWalletSystemAvailable: false};
 
 export const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
@@ -95,21 +94,19 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       console.error(errorMessage, 'Resolved Project ID:', projectId);
   }
 
-  const metadata = {
+  const metadata ={
     name: 'Zion',
     description: 'Zion Finance Platform',
     url: typeof window !== 'undefined' ? window.location.origin : 'https://example.com',
-    icons: ['https://avatars.githubusercontent.com/u/37784886'],
-  };
+    icons: ['https://avatars.githubusercontent.com/u/37784886']};
 
-  const ZION_CHAIN_MAP: Record<number, any> = {
+  const ZION_CHAIN_MAP: Record<number, any> ={
     1: mainnet,
     5: goerli,
     137: polygon,
     10: optimism,
     42161: arbitrum,
-    8453: base,
-  };
+    8453: base};
 
   const targetNetwork = ZION_CHAIN_MAP[ZION_TOKEN_NETWORK_ID] || mainnet;
 
@@ -126,8 +123,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       if (appKitRef.current) appKitRef.current = null; // Ensure it's nulled if it somehow existed
       setWallet(prev => ({
         ...initialWalletState, // Reset to initial, ensuring all fields are non-connected
-        isWalletSystemAvailable: false,
-      }));
+        isWalletSystemAvailable: false}));
       return;
     }
 
@@ -155,8 +151,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
           defaultNetwork: targetNetwork,
           projectId: rawProjectId,
           metadata,
-          features: { analytics: false },
-        });
+          features: { analytics: false }});
         console.log('WalletContext: appKitInstance created successfully:', appKitRef.current);
         // On successful creation, system is available. Connection state will be updated by subscriptions.
         setWallet(prev => ({
@@ -170,8 +165,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         appKitRef.current = null;
         setWallet(prev => ({
           ...initialWalletState,
-          isWalletSystemAvailable: false,
-        }));
+          isWalletSystemAvailable: false}));
       }
     } else {
       // AppKit already initialized. This block might be hit if dependencies change (e.g. projectId)
@@ -179,8 +173,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       console.log('WalletContext: AppKit already initialized. Ensuring state consistency. ID:', rawProjectId);
       setWallet(prev => ({
         ...prev,
-        isWalletSystemAvailable: true,
-      }));
+        isWalletSystemAvailable: true}));
     }
   }, [isProjectIdValid, rawProjectId, targetNetwork]); // Added targetNetwork
 
@@ -200,8 +193,7 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       // If appKit is not available (e.g., invalid project ID), ensure state reflects this
       setWallet(prev => ({
         ...initialWalletState,
-        isWalletSystemAvailable: false,
-      }));
+        isWalletSystemAvailable: false}));
       return;
     }
 

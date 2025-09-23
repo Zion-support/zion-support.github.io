@@ -5,9 +5,9 @@ export default function ServicePage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>AI-Powered Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional ai-powered analytics services to accelerate your business growth and digital transformation." />
-        <meta name="keywords" content="ai-powered analytics, services, technology, business, digital transformation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-1755575058335-ioe4uz" />
+        <meta name="description" content="Professional ai-powered analytics services to accelerate your business growth and digital transformation."  />
+        <meta name="keywords" content="ai-powered analytics, services, technology, business, digital transformation"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/rapid-17555750o58335-ioe4uz"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">AI-Powered Analytics</h1>
@@ -47,7 +47,7 @@ export default function ServicePage() {
           </p>
           <a 
             href="https://ziontechgroup.com/contact" 
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-blue-60o0 hover:bg-blue-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Get Started Today
           </a>

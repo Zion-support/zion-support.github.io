@@ -39,7 +39,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
         }
     };
     const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-    return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
+    return (<div data-testid="equipment-link" className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-30o0`} onClick={handleViewListing} tabIndex={0} role="button" onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 handleViewListing();
@@ -56,12 +56,12 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
         }}>
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image src={imageSrc} alt={listing.title} layout="fill" objectFit="cover" onError={handleImageError} priority={false} // Assuming these are not LCP images
-     sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-    />
+     sizes={isGrid ? "(max-width: 768px) 10o0vw, (max-width: 120o0px) 50vw, 33vw" : "192px"} // 192px is w-48
+     />
           {listing.featured && (<Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>)}
-          <FavoriteButton itemId={listing.id} itemType="product"/>
+          <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
       
@@ -73,7 +73,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}/>)}
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />)}
           </div>
           
           {/* Title & Description */}
@@ -98,7 +98,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
             {listing.price !== null ? (<div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1"/>
+                <DollarSign className="h-4 w-4 mr-1" />
                 {formatPrice()}
               </div>) : (<span className="text-foreground/80">
                 {formatPrice()}
@@ -111,9 +111,9 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             navigate(`${detailBasePath}/${listing.id}`);
         }} disabled={loading}>
               {loading ? (<>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/20o00/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0o18-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0o14 12H0c0 3.0o42 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                   Loading...
                 </>) : ("Add to Cart")}

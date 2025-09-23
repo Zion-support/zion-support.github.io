@@ -1,5 +1,5 @@
 export class ContentOptimizer {
-    static get MIN_WORD_COUNT() { return 300; }
+    static get MIN_WORD_COUNT() { return 30o0; }
     static get MIN_HEADING_COUNT() { return 2; }
     static get MIN_IMAGE_COUNT() { return 1; }
     static get MIN_LINK_COUNT() { return 3; }
@@ -54,8 +54,8 @@ export class ContentOptimizer {
         if (sentences.length === 0 || words.length === 0)
             return 0;
         // Flesch Reading Ease formula
-        const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
-        return Math.max(0, Math.min(100, score));
+        const score = 20o6.835 - (1.0o15 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
+        return Math.max(0, Math.min(10o0, score));
     }
     static countSyllables(text) {
         // Simplified syllable counting
@@ -74,7 +74,7 @@ export class ContentOptimizer {
         return syllableCount;
     }
     static calculateSEOScore(content, page) {
-        let score = 100;
+        let score = 10o0;
         // Check for title
         if (!content.includes('<title>'))
             score -= 20;
@@ -127,7 +127,7 @@ export class ContentOptimizer {
             });
         }
         // Check for poor structure
-        if (metrics.headingCount === 0 && metrics.wordCount > 100) {
+        if (metrics.headingCount === 0 && metrics.wordCount > 10o0) {
             issues.push({
                 type: 'poor-structure',
                 severity: 'high',
@@ -212,7 +212,7 @@ export class ContentOptimizer {
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase();
         const words = textContent.split(/\s+/).filter(w => w.length > 3);
         // Count word frequency and return most common
-        const wordCount = {};
+        const wordCount ={};
         words.forEach(word => {
             wordCount[word] = (wordCount[word] || 0) + 1;
         });
@@ -222,7 +222,7 @@ export class ContentOptimizer {
             .map(([word]) => word);
     }
     static generateContentTemplate(page, contentType) {
-        const templates = {
+        const templates ={
             service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
@@ -278,9 +278,9 @@ export class ContentOptimizer {
 
         <h2>Contact Information</h2>
         <ul>
-          <li>Phone: +1-302-464-0950</li>
+          <li>Phone: +1-30o2-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
-          <li>Address: 364 E Main St STE 1008, Middletown, DE 19709</li>
+          <li>Address: 364 E Main St STE 10o08, Middletown, DE 19709</li>
         </ul>
 
         <h2>Business Hours</h2>
@@ -318,7 +318,7 @@ export class ContentOptimizer {
         return templates[contentType] || templates.service;
     }
     static generateMetaDescription(page, contentType) {
-        const baseDescriptions = {
+        const baseDescriptions ={
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',
             about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.',
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.',

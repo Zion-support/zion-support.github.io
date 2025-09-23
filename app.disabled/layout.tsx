@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './globals.css'
 =======
 // global styles are optional; keeping layout minimal
@@ -61,3 +62,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+=======
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

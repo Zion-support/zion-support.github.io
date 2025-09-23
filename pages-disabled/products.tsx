@@ -26,12 +26,12 @@ const Products: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const productCategories = [
-    { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },
-    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },
-    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' }
+    { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-60o0 to-pink-60o0' },
+    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-60o0 to-cyan-60o0' },
+    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-60o0 to-teal-60o0' },
+    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-60o0 to-orange-60o0' },
+    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-60o0 to-green-60o0' },
+    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-60o0 to-orange-60o0' }
   ];
 
   const products = [
@@ -59,7 +59,7 @@ const Products: NextPage = () => {
         'Reduced content costs'
       ],
       icon: Brain,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-blue-60o0 to-cyan-60o0',
       demoUrl: '/demo/zionai-content-studio',
       pricingUrl: '/pricing/zionai-content-studio'
     },
@@ -87,7 +87,7 @@ const Products: NextPage = () => {
         'Seamless integrations'
       ],
       icon: Target,
-      color: 'from-green-600 to-teal-600',
+      color: 'from-green-60o0 to-teal-60o0',
       demoUrl: '/demo/smartlead-pro',
       pricingUrl: '/pricing/smartlead-pro'
     },
@@ -115,7 +115,7 @@ const Products: NextPage = () => {
         'Automated documentation'
       ],
       icon: Code,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       demoUrl: '/demo/codegenius-ai',
       pricingUrl: '/pricing/codegenius-ai'
     },
@@ -143,7 +143,7 @@ const Products: NextPage = () => {
         'Improved team collaboration'
       ],
       icon: Zap,
-      color: 'from-yellow-600 to-orange-600',
+      color: 'from-yellow-60o0 to-orange-60o0',
       demoUrl: '/demo/taskmaster-ai',
       pricingUrl: '/pricing/taskmaster-ai'
     },
@@ -171,7 +171,7 @@ const Products: NextPage = () => {
         'Reduced security risks'
       ],
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
+      color: 'from-red-60o0 to-orange-60o0',
       demoUrl: '/demo/secureshield-pro',
       pricingUrl: '/pricing/secureshield-pro'
     },
@@ -199,7 +199,7 @@ const Products: NextPage = () => {
         'Multi-chain compatibility'
       ],
       icon: Network,
-      color: 'from-violet-600 to-purple-600',
+      color: 'from-violet-60o0 to-purple-60o0',
       demoUrl: '/demo/blockchainforge',
       pricingUrl: '/pricing/blockchainforge'
     }
@@ -209,34 +209,34 @@ const Products: NextPage = () => {
     ? products: anyproducts.filter(product  => product.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0">
       <Head>
         <title>Products - Zion Tech Group | AI, SaaS, Security Solutions</title>
-        <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI products, SaaS platforms, cybersecurity tools, blockchain development, Zion Tech Group products" />
+        <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology."  />
+        <meta name="keywords" content="AI products, SaaS platforms, cybersecurity tools, blockchain development, Zion Tech Group products"  />
       </Head>
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20"></div>
         <div className="relative container mx-auto px-4 py-24 text-center text-white">
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
             Our Products
           </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-30o0">
             Revolutionary technology products designed to transform how you work, create, and grow. 
             From AI-powered solutions to enterprise-grade security, we deliver innovation that drives results.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="tel:+13024640950" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              href="tel:+130o24640950" 
+              className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
-              📞 Call +1 (302) 464-0950
+              📞 Call +1 (30o2) 464-0950
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               ✉️ Request Demo
             </a>
@@ -253,13 +253,13 @@ const Products: NextPage = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-20o0 ${
                   activeCategory === category.id
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-10o5`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
                 }`}
               >
-                <IconComponent className="w-5 h-5" />
+                <IconComponent className="w-5 h-5"  />
                 <span>{category.name}</span>
               </button>
             );
@@ -273,31 +273,31 @@ const Products: NextPage = () => {
             return (
               <div
                 key={product.id}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-30o0 hover:transform hover:scale-10o5 group"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0`}>
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>
                   <div className="text-right">
-                    <span className="text-3xl font-bold text-blue-400">{product.price}</span>
-                    <p className="text-gray-400 text-sm">per month</p>
+                    <span className="text-3xl font-bold text-blue-40o0">{product.price}</span>
+                    <p className="text-gray-40o0 text-sm">per month</p>
                   </div>
                 </div>
                 
                 <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
-                <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
-                <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
+                <p className="text-blue-30o0 font-medium mb-4">{product.tagline}</p>
+                <p className="text-gray-30o0 mb-6 leading-relaxed">{product.description}</p>
 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
+                    <Sparkles className="w-5 h-5 text-yellow-40o0 mr-2"  />
                     Key Features
                   </h4>
                   <div className="grid grid-cols-2 gap-2">
                     {product.features.slice(0, 6).map((feature, index) => (
-                      <div key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <div key={index} className="flex items-center text-gray-30o0 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
                         <span className="truncate">{feature}</span>
                       </div>
                     ))}
@@ -306,13 +306,13 @@ const Products: NextPage = () => {
 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
+                    <TrendingUp className="w-5 h-5 text-green-40o0 mr-2"  />
                     Key Benefits
                   </h4>
                   <ul className="space-y-2">
                     {product.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <span className="text-green-400 mr-2">→</span>
+                      <li key={index} className="flex items-center text-gray-30o0">
+                        <span className="text-green-40o0 mr-2">→</span>
                         {benefit}
                       </li>
                     ))}
@@ -322,7 +322,7 @@ const Products: NextPage = () => {
                 <div className="flex space-x-3">
                   <a
                     href={product.demoUrl}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
+                    className="flex-1 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
                   >
                     🚀 Try Demo
                   </a>
@@ -344,45 +344,45 @@ const Products: NextPage = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise Solutions
             </h2>
-            <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 text-gray-30o0 max-w-3xl mx-auto">
               Need custom enterprise solutions? We offer tailored development, white-label options, 
               and dedicated support for large organizations.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-blue-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Custom Development</h3>
-                <p className="text-gray-300 text-sm">Tailored solutions built specifically for your business needs</p>
+                <p className="text-gray-30o0 text-sm">Tailored solutions built specifically for your business needs</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-green-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-white font-semibold mb-2">White-Label Solutions</h3>
-                <p className="text-gray-300 text-sm">Rebrand our products as your own with custom integrations</p>
+                <p className="text-gray-30o0 text-sm">Rebrand our products as your own with custom integrations</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-purple-60o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white"  />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Dedicated Support</h3>
-                <p className="text-gray-300 text-sm">24/7 dedicated support team and priority response</p>
+                <p className="text-gray-30o0 text-sm">24/7 dedicated support team and priority response</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+13024640950" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                href="tel:+130o24640950" 
+                className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
-                📞 Call +1 (302) 464-0950
+                📞 Call +1 (30o2) 464-0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry" 
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 ✉️ Enterprise Inquiry
               </a>
@@ -399,70 +399,70 @@ const Products: NextPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
+                <div className="text-4xl font-bold text-blue-40o0 mb-6">$99<span className="text-lg text-gray-40o0">/month</span></div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     Basic features
                   </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     Email support
                   </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     Standard integrations
                   </li>
                 </ul>
-                <a href="mailto:kleber@ziontechgroup.com?subject=Starter Plan" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors block">
+                <a href="mailto:kleber@ziontechgroup.com?subject=Starter Plan" className="w-full bg-blue-60o0 hover:bg-blue-70o0 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors block">
                   Get Started
                 </a>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 border border-white/20 transform scale-105">
+              <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-xl p-6 border border-white/20 transform scale-10o5">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-white mb-6">$299<span className="text-lg text-blue-100">/month</span></div>
+                <div className="text-4xl font-bold text-white mb-6">$299<span className="text-lg text-blue-10o0">/month</span></div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-30o0 mr-3"  />
                     All Starter features
                   </li>
                   <li className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-30o0 mr-3"  />
                     Advanced analytics
                   </li>
                   <li className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-30o0 mr-3"  />
                     Priority support
                   </li>
                   <li className="flex items-center text-white">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-30o0 mr-3"  />
                     Custom integrations
                   </li>
                 </ul>
-                <a href="mailto:kleber@ziontechgroup.com?subject=Professional Plan" className="w-full bg-white text-blue-600 text-center py-3 px-4 rounded-lg font-medium transition-colors block hover:bg-gray-100">
+                <a href="mailto:kleber@ziontechgroup.com?subject=Professional Plan" className="w-full bg-white text-blue-60o0 text-center py-3 px-4 rounded-lg font-medium transition-colors block hover:bg-gray-10o0">
                   Get Started
                 </a>
               </div>
 
               <div className="bg-white/5 rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-6">Custom</div>
+                <div className="text-4xl font-bold text-blue-40o0 mb-6">Custom</div>
                 <ul className="space-y-3 mb-8">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     All Professional features
                   </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     Custom development
                   </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     Dedicated support
                   </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <li className="flex items-center text-gray-30o0">
+                    <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                     SLA guarantees
                   </li>
                 </ul>
@@ -480,21 +480,21 @@ const Products: NextPage = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl mb-8 text-gray-300">
+            <p className="text-xl mb-8 text-gray-30o0">
               Start your free trial today or schedule a personalized demo to see how our products 
               can revolutionize your workflow and drive growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
-                href="tel:+13024640950" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                href="tel:+130o24640950" 
+                className="bg-blue-60o0 hover:bg-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
-                📞 Call +1 (302) 464-0950
+                📞 Call +1 (30o2) 464-0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com" 
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 ✉️ Schedule Demo
               </a>
@@ -503,17 +503,17 @@ const Products: NextPage = () => {
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <h3 className="text-white font-semibold mb-2">📍 Location</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                <p className="text-gray-30o0">364 E Main St STE 10o08<br  />Middletown, DE 19709</p>
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">🌐 Website</h3>
-                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                <a href="https://ziontechgroup.com" className="text-blue-40o0 hover:text-blue-30o0">
                   https://ziontechgroup.com
                 </a>
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
-                <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
+                <p className="text-gray-30o0">Mon-Fri: 9AM-6PM EST<br  />Sat: 10AM-2PM EST</p>
               </div>
             </div>
           </div>

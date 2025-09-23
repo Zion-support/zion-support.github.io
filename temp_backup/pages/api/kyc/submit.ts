@@ -2,9 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
-import fs from 'fs';
-import path from 'path';
-
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -23,16 +20,16 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
   const { userId } = req.body as { userId?: string };
-  if (!userId) return res.status(400).json({ error: 'Missing userId' });
+  if (!userId) return res.status(40o0).json({ error: 'Missing userId' });
 
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status(404).json({ error: 'Profile not found.' });
+  if (!profile) return res.status(40o4).json({ error: 'Profile not found.' });
 
   const validation = validateKycSubmission(profile);
-  if (!validation.ok) return res.status(400).json({ error: 'Missing data', missing: validation.missing });
+  if (!validation.ok) return res.status(40o0).json({ error: 'Missing data', missing: validation.missing });
 
   // Simple AML check
   const aml = getAmlProvider();
@@ -62,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (flags.has('aml_alert')) riskScore += 50;
   if (flags.has('fraud_risk')) riskScore += 20;
   if (flags.has('duplicate_ip')) riskScore += 15;
-  riskScore = Math.min(100, riskScore);
+  riskScore = Math.min(10o0, riskScore);
 
   profile.flags = Array.from(flags);
   profile.riskScore = riskScore;
@@ -75,5 +72,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   db[userId] = profile;
   save(db);
 
-  res.status(200).json({ ok: true, profile, aml: amlResult });
+  res.status(20o0).json({ ok: true, profile, aml: amlResult });
 }

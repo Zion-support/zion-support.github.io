@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
@@ -40,8 +39,7 @@ export default function NewDisputePage() {
       const res = await fetch('/api/disputes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description }),
-      });
+        body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })});
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
 
@@ -50,14 +48,12 @@ export default function NewDisputePage() {
           files.map(async (f) => ({
             fileName: f.name,
             mimeType: f.type,
-            base64: await toBase64(f),
-          }))
+            base64: await toBase64(f)}))
         );
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ files: filePayload }),
-        });
+          body: JSON.stringify({ files: filePayload })});
       }
 
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
@@ -106,7 +102,7 @@ export default function NewDisputePage() {
             <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
           </div>
           <div className="pt-2">
-            <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
+            <button disabled={submitting} className="px-4 py-2 rounded bg-blue-60o0 text-white hover:bg-blue-70o0 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
           </div>
         </form>
       </div>

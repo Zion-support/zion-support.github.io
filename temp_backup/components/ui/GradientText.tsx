@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface GradientTextProps {
   children: React.ReactNode;
   className?: string;
@@ -10,7 +8,7 @@ interface GradientTextProps {
 export default function GradientText({ 
   children, 
   className = '', 
-  gradient = 'from-blue-400 via-purple-500 to-pink-500',
+  gradient = 'from-blue-40o0 via-purple-50o0 to-pink-50o0',
   animate = false 
 }: GradientTextProps) {
   return (

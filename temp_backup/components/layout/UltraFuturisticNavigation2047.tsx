@@ -26,69 +26,69 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Innovative Services 2025',
-    href: '/2025-innovative-services-showcase-v2',
-    icon: <Rocket className="w-5 h-5" />,
+    name: 'Innovative Services 20o25',
+    href: '/20o25-innovative-services-showcase-v2',
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Cutting-edge AI, quantum, and IT solutions',
-    badge: 'New 2025',
+    badge: 'New 20o25',
     category: 'services',
-    color: 'from-emerald-500 to-cyan-500',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       { 
         name: 'AI Autonomous Ecosystem', 
-        href: '/2025-innovative-services-showcase-v2', 
+        href: '/20o25-innovative-services-showcase-v2', 
         description: 'Revolutionary AI autonomous solutions',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
         featured: true
       },
       { 
         name: 'Quantum & Emerging Tech', 
-        href: '/2025-innovative-services-showcase-v2', 
+        href: '/20o25-innovative-services-showcase-v2', 
         description: 'Quantum computing and breakthrough technologies',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0',
         featured: true
       },
       { 
         name: 'IT Infrastructure V2', 
-        href: '/2025-innovative-services-showcase-v2', 
+        href: '/20o25-innovative-services-showcase-v2', 
         description: 'Advanced IT infrastructure solutions',
-        icon: <Cpu className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
+        icon: <Cpu className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-50o0'
       }
     ]
   },
   {
-    name: 'Revolutionary Services 2046',
+    name: 'Revolutionary Services 20o46',
     href: '/services',
-    icon: <Sparkles className="w-5 h-5" />,
+    icon: <Sparkles className="w-5 h-5"  />,
     description: 'Future-defining technology solutions',
-    badge: '2046',
+    badge: '20o46',
     category: 'services',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       { 
         name: 'All Services', 
         href: '/services', 
         description: 'Complete revolutionary services overview',
-        icon: <Grid className="w-4 h-4" />,
+        icon: <Grid className="w-4 h-4"  />,
         featured: true
       },
       { 
-        name: 'AI Consciousness Evolution 2046', 
-        href: '/ai-consciousness-evolution-platform-2046', 
+        name: 'AI Consciousness Evolution 20o46', 
+        href: '/ai-consciousness-evolution-platform-20o46', 
         description: 'Next-generation AI consciousness',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
         featured: true
       },
       { 
-        name: 'Quantum AI Neural Networks 2046', 
-        href: '/quantum-ai-neural-network-platform-2046', 
+        name: 'Quantum AI Neural Networks 20o46', 
+        href: '/quantum-ai-neural-network-platform-20o46', 
         description: 'Quantum-powered AI neural networks',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0',
         featured: true
       }
     ]
@@ -96,127 +96,127 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Advanced AI consciousness solutions',
-    badge: '2046',
+    badge: '20o46',
     category: 'ai',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       { 
         name: 'AI Consciousness Evolution', 
-        href: '/ai-consciousness-evolution-platform-2046', 
+        href: '/ai-consciousness-evolution-platform-20o46', 
         description: 'Next-generation AI consciousness platform',
-        icon: <Brain className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       { 
         name: 'AI Autonomous Business Intelligence', 
-        href: '/autonomous-ai-business-intelligence-platform-2046', 
+        href: '/autonomous-ai-business-intelligence-platform-20o46', 
         description: 'Fully autonomous AI business intelligence',
-        icon: <BarChart3 className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
+        icon: <BarChart3 className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-50o0'
       },
       { 
         name: 'AI Content Factory Pro', 
-        href: '/ai-autonomous-content-factory-pro-2025', 
+        href: '/ai-autonomous-content-factory-pro-20o25', 
         description: 'Autonomous AI content creation',
-        icon: <FileText className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <FileText className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       }
     ]
   },
   {
     name: 'Quantum Technology',
     href: '/quantum-technology',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing and technology solutions',
-    badge: '2046',
+    badge: '20o46',
     category: 'quantum',
-    color: 'from-blue-500 to-indigo-500',
+    color: 'from-blue-50o0 to-indigo-50o0',
     children: [
       { 
         name: 'Quantum AI Neural Networks', 
-        href: '/quantum-ai-neural-network-platform-2046', 
+        href: '/quantum-ai-neural-network-platform-20o46', 
         description: 'Quantum-powered AI neural networks',
-        icon: <Atom className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       { 
         name: 'Quantum Cybersecurity Intelligence', 
-        href: '/quantum-cybersecurity-intelligence-platform-2046', 
+        href: '/quantum-cybersecurity-intelligence-platform-20o46', 
         description: 'Quantum-resistant security with AI',
-        icon: <Shield className="w-4 h-4" />,
-        color: 'from-red-500 to-orange-500'
+        icon: <Shield className="w-4 h-4"  />,
+        color: 'from-red-50o0 to-orange-50o0'
       },
       { 
         name: 'Quantum AI Fusion Platform', 
-        href: '/quantum-ai-neural-network-fusion-platform-2025', 
+        href: '/quantum-ai-neural-network-fusion-platform-20o25', 
         description: 'Quantum-AI hybrid computing',
-        icon: <Zap className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
+        icon: <Zap className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'
       }
     ]
   },
   {
     name: 'IT Infrastructure',
     href: '/it-infrastructure',
-    icon: <Cpu className="w-5 h-5" />,
+    icon: <Cpu className="w-5 h-5"  />,
     description: 'Advanced IT infrastructure solutions',
-    badge: '2025',
+    badge: '20o25',
     category: 'it',
-    color: 'from-emerald-500 to-teal-500',
+    color: 'from-emerald-50o0 to-teal-50o0',
     children: [
       { 
         name: 'Autonomous DevOps Intelligence', 
-        href: '/autonomous-devops-intelligence-platform-2025', 
+        href: '/autonomous-devops-intelligence-platform-20o25', 
         description: 'AI-powered DevOps optimization',
-        icon: <Code className="w-4 h-4" />,
-        color: 'from-emerald-500 to-teal-500'
+        icon: <Code className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-50o0'
       },
       { 
         name: 'Edge Computing Orchestration', 
-        href: '/edge-computing-orchestration-platform-2025', 
+        href: '/edge-computing-orchestration-platform-20o25', 
         description: 'Edge computing optimization platform',
-        icon: <Network className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Network className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       { 
         name: 'Multi-Cloud Management', 
-        href: '/multi-cloud-management-intelligence-platform-2025', 
+        href: '/multi-cloud-management-intelligence-platform-20o25', 
         description: 'AI-powered multi-cloud management',
-        icon: <Cloud className="w-4 h-4" />,
-        color: 'from-purple-500 to-pink-500'
+        icon: <Cloud className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'
       }
     ]
   },
   {
     name: 'Space Technology',
     href: '/space-technology',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Space exploration and technology solutions',
-    badge: '2046',
+    badge: '20o46',
     category: 'space',
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       { 
         name: 'Space Resource Intelligence', 
-        href: '/space-resource-intelligence-platform-2025', 
+        href: '/space-resource-intelligence-platform-20o25', 
         description: 'AI-powered space resource discovery',
-        icon: <Globe className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
+        icon: <Globe className="w-4 h-4"  />,
+        color: 'from-indigo-50o0 to-purple-50o0'
       },
       { 
         name: 'Space Mining Automation', 
         href: '/space-mining-automation-platform', 
         description: 'Automated space mining operations',
-        icon: <Rocket className="w-4 h-4" />,
-        color: 'from-blue-500 to-cyan-500'
+        icon: <Rocket className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'
       }
     ]
   }
 ];
 
-const UltraFuturisticNavigation2047: React.FC = () => {
+const UltraFuturisticNavigation20o47: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -241,14 +241,14 @@ const UltraFuturisticNavigation2047: React.FC = () => {
   return (
     <>
       {/* Background Blur Effect */}
-      <div className={`fixed inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-300 ${
-        isOpen ? 'opacity-100 z-40' : 'opacity-0 pointer-events-none'
+      <div className={`fixed inset-0 bg-black/20 backdrop-blur-md transition-opacity duration-30o0 ${
+        isOpen ? 'opacity-10o0 z-40' : 'opacity-0 pointer-events-none'
       }`} onClick={() => setIsOpen(false)} />
 
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled 
-          ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
+          ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20' 
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -256,14 +256,14 @@ const UltraFuturisticNavigation2047: React.FC = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <motion.div
-                className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/50 transition-all duration-300"
-                whileHover={{ scale: 1.05, rotate: 5 }}
+                className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center shadow-lg group-hover:shadow-cyan-50o0/50 transition-all duration-30o0"
+                whileHover={{ scale: 1.0o5, rotate: 5 }}
               >
-                <Brain className="w-7 h-7 text-white" />
+                <Brain className="w-7 h-7 text-white"  />
               </motion.div>
               <div className="hidden sm:block">
                 <div className="text-xl font-bold text-white">Zion Tech Group</div>
-                <div className="text-xs text-cyan-400">Innovating the Future</div>
+                <div className="text-xs text-cyan-40o0">Innovating the Future</div>
               </div>
             </Link>
 
@@ -273,18 +273,18 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                    className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
                   >
                     {item.icon}
                     <span className="font-medium">{item.name}</span>
                     {item.badge && (
-                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full">
+                      <span className="px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-full">
                         {item.badge}
                       </span>
                     )}
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
 
                   {/* Dropdown Menu */}
@@ -295,13 +295,13 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10 overflow-hidden"
                         onMouseLeave={closeDropdown}
                       >
                         <div className="p-4">
                           <div className="mb-4">
                             <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
-                            <p className="text-sm text-gray-400">{item.description}</p>
+                            <p className="text-sm text-gray-40o0">{item.description}</p>
                           </div>
                           
                           <div className="space-y-2">
@@ -309,24 +309,24 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                               <Link
                                 key={child.name}
                                 href={child.href}
-                                className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-200 group ${
+                                className={`flex items-center space-x-3 p-3 rounded-xl transition-all duration-20o0 group ${
                                   child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20' 
-                                    : 'hover:bg-gray-800/50'
+                                    ? 'bg-gradient-to-r from-cyan-50o0/10 to-blue-50o0/10 border border-cyan-50o0/20' 
+                                    : 'hover:bg-gray-80o0/50'
                                 }`}
                                 onClick={closeDropdown}
                               >
-                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-600 to-gray-700'} flex items-center justify-center`}>
+                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${child.color || 'from-gray-60o0 to-gray-70o0'} flex items-center justify-center`}>
                                   {child.icon}
                                 </div>
                                 <div className="flex-1">
-                                  <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                  <div className="text-sm font-medium text-white group-hover:text-cyan-40o0 transition-colors duration-20o0">
                                     {child.name}
                                   </div>
-                                  <div className="text-xs text-gray-400">{child.description}</div>
+                                  <div className="text-xs text-gray-40o0">{child.description}</div>
                                 </div>
                                 {child.featured && (
-                                  <Star className="w-4 h-4 text-yellow-400" />
+                                  <Star className="w-4 h-4 text-yellow-40o0"  />
                                 )}
                               </Link>
                             ))}
@@ -342,36 +342,36 @@ const UltraFuturisticNavigation2047: React.FC = () => {
             {/* Right Side Actions */}
             <div className="hidden lg:flex items-center space-x-4">
               {/* Search */}
-              <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
-                <Search className="w-5 h-5" />
+              <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">
+                <Search className="w-5 h-5"  />
               </button>
 
               {/* Notifications */}
-              <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200 relative">
-                <Bell className="w-5 h-5" />
-                <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
+              <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0 relative">
+                <Bell className="w-5 h-5"  />
+                <span className="absolute top-0 right-0 w-2 h-2 bg-red-50o0 rounded-full"></span>
               </button>
 
               {/* User Menu */}
               <div className="relative group">
-                <button className="flex items-center space-x-2 p-2 text-gray-400 hover:text-white transition-colors duration-200">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
-                    <User className="w-4 h-4 text-white" />
+                <button className="flex items-center space-x-2 p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center">
+                    <User className="w-4 h-4 text-white"  />
                   </div>
                 </button>
                 
-                <div className="absolute top-full right-0 mt-2 w-48 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="absolute top-full right-0 mt-2 w-48 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10 opacity-0 invisible group-hover:opacity-10o0 group-hover:visible transition-all duration-20o0">
                   <div className="p-2 space-y-1">
-                    <Link href="/profile" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 text-gray-300 hover:text-white transition-colors duration-200">
-                      <User className="w-4 h-4" />
+                    <Link href="/profile" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-80o0/50 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                      <User className="w-4 h-4"  />
                       <span>Profile</span>
                     </Link>
-                    <Link href="/settings" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 text-gray-300 hover:text-white transition-colors duration-200">
-                      <Cog className="w-4 h-4" />
+                    <Link href="/settings" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-80o0/50 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                      <Cog className="w-4 h-4"  />
                       <span>Settings</span>
                     </Link>
-                    <Link href="/logout" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 text-gray-300 hover:text-white transition-colors duration-200">
-                      <LogOut className="w-4 h-4" />
+                    <Link href="/logout" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-80o0/50 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                      <LogOut className="w-4 h-4"  />
                       <span>Logout</span>
                     </Link>
                   </div>
@@ -381,7 +381,7 @@ const UltraFuturisticNavigation2047: React.FC = () => {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-xl font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-2 rounded-xl font-medium hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25"
               >
                 Get Started
               </Link>
@@ -390,9 +390,9 @@ const UltraFuturisticNavigation2047: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+              className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -402,20 +402,20 @@ const UltraFuturisticNavigation2047: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
+            initial={{ opacity: 0, x: '10o0%' }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            exit={{ opacity: 0, x: '10o0%' }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl z-50 border-l border-cyan-500/20 shadow-2xl shadow-cyan-500/10"
+            className="fixed top-0 right-0 h-full w-80 bg-gray-90o0/95 backdrop-blur-xl z-50 border-l border-cyan-50o0/20 shadow-2xl shadow-cyan-50o0/10"
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-8">
                 <div className="text-xl font-bold text-white">Menu</div>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                  className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
 
@@ -424,15 +424,15 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                   <div key={item.name}>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white transition-colors duration-200"
+                      className="w-full flex items-center justify-between p-3 text-left text-gray-30o0 hover:text-white transition-colors duration-20o0"
                     >
                       <div className="flex items-center space-x-3">
                         {item.icon}
                         <span>{item.name}</span>
                       </div>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                         activeDropdown === item.name ? 'rotate-180' : ''
-                      }`} />
+                      }`}  />
                     </button>
 
                     {activeDropdown === item.name && (
@@ -441,7 +441,7 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block p-2 text-sm text-gray-400 hover:text-white transition-colors duration-200"
+                            className="block p-2 text-sm text-gray-40o0 hover:text-white transition-colors duration-20o0"
                             onClick={() => setIsOpen(false)}
                           >
                             {child.name}
@@ -452,10 +452,10 @@ const UltraFuturisticNavigation2047: React.FC = () => {
                   </div>
                 ))}
 
-                <div className="pt-6 border-t border-gray-700">
+                <div className="pt-6 border-t border-gray-70o0">
                   <Link
                     href="/contact"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
+                    className="block w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-6 py-3 rounded-xl font-medium text-center hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started
@@ -470,4 +470,4 @@ const UltraFuturisticNavigation2047: React.FC = () => {
   );
 };
 
-export default UltraFuturisticNavigation2047;
+export default UltraFuturisticNavigation20o47;

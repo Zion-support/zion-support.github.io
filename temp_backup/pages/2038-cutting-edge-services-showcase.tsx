@@ -9,71 +9,71 @@ import {
   Phone, Mail, MapPin, Globe
 } from 'lucide-react';
 
-// Import our new 2038 services
-import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
-import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services';
+// Import our new 20o38 services
+import { innovative20o38CuttingEdgeServices } from '../data/innovative-20o38-cutting-edge-services';
+import { innovative20o38ITMicroSaasServices } from '../data/innovative-20o38-it-micro-saas-services';
 
 // Create unified services array
-const all2038Services = [
-  ...innovative2038CuttingEdgeServices,
-  ...innovative2038ITMicroSaasServices
+const all20o38Services = [
+  ...innovative20o38CuttingEdgeServices,
+  ...innovative20o38ITMicroSaasServices
 ];
 
 const categories = [
   {
     id: 'all',
     name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of cutting-edge 2038 services'
+    icon: <Grid className="w-6 h-6"  />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of cutting-edge 20o38 services'
   },
   {
     id: 'ai-quantum',
     name: 'AI & Quantum',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-500',
+    icon: <Brain className="w-6 h-6"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     description: 'Revolutionary AI and quantum computing solutions'
   },
   {
     id: 'space-tech',
     name: 'Space Technology',
-    icon: <Rocket className="w-6 h-6" />,
-    color: 'from-pink-500 to-rose-500',
+    icon: <Rocket className="w-6 h-6"  />,
+    color: 'from-pink-50o0 to-rose-50o0',
     description: 'ArrowRight-generation space exploration and mining'
   },
   {
     id: 'cybersecurity',
     name: 'Cybersecurity',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-red-500 to-orange-500',
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-red-50o0 to-orange-50o0',
     description: 'Quantum-powered security and threat intelligence'
   },
   {
     id: 'healthcare',
     name: 'Healthcare AI',
-    icon: <Heart className="w-6 h-6" />,
-    color: 'from-red-500 to-pink-500',
+    icon: <Heart className="w-6 h-6"  />,
+    color: 'from-red-50o0 to-pink-50o0',
     description: 'Autonomous healthcare and medical AI'
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
+    icon: <Target className="w-6 h-6"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     description: 'Intelligent business automation solutions'
   },
   {
     id: 'it-infrastructure',
     name: 'IT Infrastructure',
-    icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
+    icon: <Building className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-purple-50o0',
     description: 'Advanced IT and DevOps solutions'
   },
   {
     id: 'climate-tech',
     name: 'Climate Technology',
-    icon: <Globe className="w-6 h-6" />,
-    color: 'from-teal-500 to-green-500',
+    icon: <Globe className="w-6 h-6"  />,
+    color: 'from-teal-50o0 to-green-50o0',
     description: 'AI-powered climate prediction and analysis'
   }
 ];
@@ -87,7 +87,7 @@ const sortOptions = [
   { value: 'rating', label: 'Highest Rated' }
 ];
 
-export default function CuttingEdge2038ServicesShowcase() {
+export default function CuttingEdge20o38ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -96,7 +96,7 @@ export default function CuttingEdge2038ServicesShowcase() {
   const pageSize = 12;
 
   // Filter services based on search and category
-  const filteredServices = all2038Services.filter(service => {
+  const filteredServices = all20o38Services.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -147,16 +147,16 @@ export default function CuttingEdge2038ServicesShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       <SEO 
-        title="2038 Cutting-Edge Services Showcase | Zion Tech Group"
-        description="Discover the future of technology with our revolutionary 2038 services. AI-powered solutions, quantum computing, space technology, and intelligent micro SAAS platforms."
-        keywords="2038 services, AI services, quantum computing, space technology, micro SAAS, cybersecurity, healthcare AI, climate technology"
-      />
+        title="20o38 Cutting-Edge Services Showcase | Zion Tech Group"
+        description="Discover the future of technology with our revolutionary 20o38 services. AI-powered solutions, quantum computing, space technology, and intelligent micro SAAS platforms."
+        keywords="20o38 services, AI services, quantum computing, space technology, micro SAAS, cybersecurity, healthcare AI, climate technology"
+       />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -164,15 +164,15 @@ export default function CuttingEdge2038ServicesShowcase() {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              2038
+            <span className="bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">
+              20o38
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <br  />
+            <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               Cutting-Edge
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+            <br  />
+            <span className="bg-gradient-to-r from-emerald-40o0 to-teal-40o0 bg-clip-text text-transparent">
               Services
             </span>
           </motion.h1>
@@ -181,7 +181,7 @@ export default function CuttingEdge2038ServicesShowcase() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto"
           >
             Experience the future of technology with our revolutionary AI-powered, quantum-enhanced, and autonomous services. 
             From space mining to neural interfaces, we're building tomorrow's solutions today.
@@ -196,16 +196,16 @@ export default function CuttingEdge2038ServicesShowcase() {
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="flex flex-col items-center">
-                <Phone className="w-6 h-6 text-cyan-400 mb-2" />
-                <p className="text-white font-semibold">+1 302 464 0950</p>
+                <Phone className="w-6 h-6 text-cyan-40o0 mb-2"  />
+                <p className="text-white font-semibold">+1 30o2 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-6 h-6 text-purple-400 mb-2" />
+                <Mail className="w-6 h-6 text-purple-40o0 mb-2"  />
                 <p className="text-white font-semibold">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-6 h-6 text-emerald-400 mb-2" />
-                <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="w-6 h-6 text-emerald-40o0 mb-2"  />
+                <p className="text-white font-semibold text-sm">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
               </div>
             </div>
           </motion.div>
@@ -222,9 +222,9 @@ export default function CuttingEdge2038ServicesShowcase() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">2038</span> Services
+              Revolutionary <span className="bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">20o38</span> Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Our cutting-edge services represent the pinnacle of technological innovation, combining AI, quantum computing, 
               and autonomous systems to solve humanity's greatest challenges.
             </p>
@@ -238,20 +238,20 @@ export default function CuttingEdge2038ServicesShowcase() {
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{all2038Services.length}</div>
-              <div className="text-gray-300">Revolutionary Services</div>
+              <div className="text-3xl font-bold text-cyan-40o0 mb-2">{all20o38Services.length}</div>
+              <div className="text-gray-30o0">Revolutionary Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">$2.5T+</div>
-              <div className="text-gray-300">Total Market Size</div>
+              <div className="text-3xl font-bold text-purple-40o0 mb-2">$2.5T+</div>
+              <div className="text-gray-30o0">Total Market Size</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">500%+</div>
-              <div className="text-gray-300">Average Growth Rate</div>
+              <div className="text-3xl font-bold text-emerald-40o0 mb-2">50o0%+</div>
+              <div className="text-gray-30o0">Average Growth Rate</div>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
-              <div className="text-gray-300">Average Rating</div>
+              <div className="text-3xl font-bold text-pink-40o0 mb-2">4.8</div>
+              <div className="text-gray-30o0">Average Rating</div>
             </div>
           </motion.div>
 
@@ -265,13 +265,13 @@ export default function CuttingEdge2038ServicesShowcase() {
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               {/* Search */}
               <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/20 rounded-xl text-white placeholder-gray-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent"
                 />
               </div>
 
@@ -281,10 +281,10 @@ export default function CuttingEdge2038ServicesShowcase() {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-20o0 ${
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
-                        : 'bg-white/20 text-gray-300 hover:bg-white/30'
+                        : 'bg-white/20 text-gray-30o0 hover:bg-white/30'
                     }`}
                   >
                     {category.icon}
@@ -298,10 +298,10 @@ export default function CuttingEdge2038ServicesShowcase() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-white/20 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                  className="bg-white/20 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-40o0"
                 >
                   {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value} className="bg-gray-800">
+                    <option key={option.value} value={option.value} className="bg-gray-80o0">
                       {option.label}
                     </option>
                   ))}
@@ -310,19 +310,19 @@ export default function CuttingEdge2038ServicesShowcase() {
                 <div className="flex bg-white/20 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-md transition-all duration-200 ${
-                      viewMode === 'grid' ? 'bg-cyan-400 text-white' : 'text-gray-300 hover:text-white'
+                    className={`p-2 rounded-md transition-all duration-20o0 ${
+                      viewMode === 'grid' ? 'bg-cyan-40o0 text-white' : 'text-gray-30o0 hover:text-white'
                     }`}
                   >
-                    <Grid className="w-5 h-5" />
+                    <Grid className="w-5 h-5"  />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-md transition-all duration-200 ${
-                      viewMode === 'list' ? 'bg-cyan-400 text-white' : 'text-gray-300 hover:text-white'
+                    className={`p-2 rounded-md transition-all duration-20o0 ${
+                      viewMode === 'list' ? 'bg-cyan-40o0 text-white' : 'text-gray-30o0 hover:text-white'
                     }`}
                   >
-                    <List className="w-5 h-5" />
+                    <List className="w-5 h-5"  />
                   </button>
                 </div>
               </div>
@@ -337,7 +337,7 @@ export default function CuttingEdge2038ServicesShowcase() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 ${
+                className={`bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden hover:transform hover:scale-10o5 transition-all duration-30o0 ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
@@ -347,21 +347,21 @@ export default function CuttingEdge2038ServicesShowcase() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-3 py-1 rounded-full text-sm font-semibold">
                           Popular
                         </span>
                       )}
                     </div>
                     
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                    <p className="text-gray-300 mb-4">{service.tagline}</p>
+                    <p className="text-gray-30o0 mb-4">{service.tagline}</p>
                     
                     <div className="flex items-center gap-2 mb-4">
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
+                      <span className="text-2xl font-bold text-cyan-40o0">{service.price}</span>
+                      <span className="text-gray-40o0">{service.period}</span>
                     </div>
                     
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
+                    <p className="text-gray-30o0 text-sm mb-4 line-clamp-3">{service.description}</p>
                     
                     <div className="flex items-center gap-2 mb-4">
                       <div className="flex items-center gap-1">
@@ -369,21 +369,21 @@ export default function CuttingEdge2038ServicesShowcase() {
                           <Star
                             key={i}
                             className={`w-4 h-4 ${
-                              i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
+                              i < Math.floor(service.rating) ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'
                             }`}
-                          />
+                           />
                         ))}
                       </div>
-                      <span className="text-gray-400 text-sm">({service.reviews} reviews)</span>
+                      <span className="text-gray-40o0 text-sm">({service.reviews} reviews)</span>
                     </div>
                     
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-400">{service.category}</span>
+                      <span className="text-sm text-gray-40o0">{service.category}</span>
                       <a
                         href={service.link}
-                        className="bg-gradient-to-r from-cyan-400 to-blue-400 text-white px-4 py-2 rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-200 flex items-center gap-2"
+                        className="bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white px-4 py-2 rounded-lg hover:from-cyan-50o0 hover:to-blue-50o0 transition-all duration-20o0 flex items-center gap-2"
                       >
-                        Learn More <ArrowRight className="w-4 h-4" />
+                        Learn More <ArrowRight className="w-4 h-4"  />
                       </a>
                     </div>
                   </div>
@@ -397,15 +397,15 @@ export default function CuttingEdge2038ServicesShowcase() {
                           <div className="flex items-center gap-3 mb-2">
                             <h3 className="text-xl font-bold text-white">{service.name}</h3>
                             {service.popular && (
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-2 py-1 rounded-full text-xs font-semibold">
+                              <span className="bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-2 py-1 rounded-full text-xs font-semibold">
                                 Popular
                               </span>
                             )}
                           </div>
-                          <p className="text-gray-300 mb-2">{service.tagline}</p>
-                          <p className="text-gray-400 text-sm mb-3">{service.description}</p>
+                          <p className="text-gray-30o0 mb-2">{service.tagline}</p>
+                          <p className="text-gray-40o0 text-sm mb-3">{service.description}</p>
                           
-                          <div className="flex items-center gap-4 text-sm text-gray-400">
+                          <div className="flex items-center gap-4 text-sm text-gray-40o0">
                             <span>{service.category}</span>
                             <span>•</span>
                             <span>{service.setupTime} setup</span>
@@ -417,8 +417,8 @@ export default function CuttingEdge2038ServicesShowcase() {
                       
                       <div className="text-right">
                         <div className="flex items-center gap-2 mb-3">
-                          <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                          <span className="text-gray-400">{service.period}</span>
+                          <span className="text-2xl font-bold text-cyan-40o0">{service.price}</span>
+                          <span className="text-gray-40o0">{service.period}</span>
                         </div>
                         
                         <div className="flex items-center gap-2 mb-3">
@@ -427,19 +427,19 @@ export default function CuttingEdge2038ServicesShowcase() {
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
-                                  i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
+                                  i < Math.floor(service.rating) ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'
                                 }`}
-                              />
+                               />
                             ))}
                           </div>
-                          <span className="text-gray-400 text-sm">({service.reviews})</span>
+                          <span className="text-gray-40o0 text-sm">({service.reviews})</span>
                         </div>
                         
                         <a
                           href={service.link}
-                          className="bg-gradient-to-r from-cyan-400 to-blue-400 text-white px-4 py-2 rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-200 flex items-center gap-2"
+                          className="bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white px-4 py-2 rounded-lg hover:from-cyan-50o0 hover:to-blue-50o0 transition-all duration-20o0 flex items-center gap-2"
                         >
-                          Learn More <ArrowRight className="w-4 h-4" />
+                          Learn More <ArrowRight className="w-4 h-4"  />
                         </a>
                       </div>
                     </div>
@@ -462,10 +462,10 @@ export default function CuttingEdge2038ServicesShowcase() {
                   <button
                     key={index}
                     onClick={() => handlePageChange(index + 1)}
-                    className={`px-4 py-2 rounded-lg transition-all duration-200 ${
+                    className={`px-4 py-2 rounded-lg transition-all duration-20o0 ${
                       currentPage === index + 1
-                        ? 'bg-gradient-to-r from-cyan-400 to-blue-400 text-white'
-                        : 'bg-white/20 text-gray-300 hover:bg-white/30'
+                        ? 'bg-gradient-to-r from-cyan-40o0 to-blue-40o0 text-white'
+                        : 'bg-white/20 text-gray-30o0 hover:bg-white/30'
                     }`}
                   >
                     {index + 1}
@@ -478,7 +478,7 @@ export default function CuttingEdge2038ServicesShowcase() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -493,9 +493,9 @@ export default function CuttingEdge2038ServicesShowcase() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-8"
+            className="text-xl text-gray-30o0 mb-8"
           >
-            Contact us today to learn more about our revolutionary 2038 services and how they can transform your business.
+            Contact us today to learn more about our revolutionary 20o38 services and how they can transform your business.
           </motion.p>
           
           <motion.div 
@@ -505,21 +505,21 @@ export default function CuttingEdge2038ServicesShowcase() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+              <Phone className="w-8 h-8 text-cyan-40o0 mx-auto mb-4"  />
               <h3 className="text-white font-semibold mb-2">Call Us</h3>
-              <p className="text-cyan-400 font-semibold">+1 302 464 0950</p>
+              <p className="text-cyan-40o0 font-semibold">+1 30o2 464 0950</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-              <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+              <Mail className="w-8 h-8 text-purple-40o0 mx-auto mb-4"  />
               <h3 className="text-white font-semibold mb-2">Email Us</h3>
-              <p className="text-purple-400 font-semibold">kleber@ziontechgroup.com</p>
+              <p className="text-purple-40o0 font-semibold">kleber@ziontechgroup.com</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-              <Globe className="w-8 h-8 text-emerald-400 mx-auto mb-4" />
+              <Globe className="w-8 h-8 text-emerald-40o0 mx-auto mb-4"  />
               <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-              <p className="text-emerald-400 font-semibold text-sm">ziontechgroup.com</p>
+              <p className="text-emerald-40o0 font-semibold text-sm">ziontechgroup.com</p>
             </div>
           </motion.div>
         </div>

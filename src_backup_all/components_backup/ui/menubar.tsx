@@ -25,7 +25,7 @@ const Menubar = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 Menubar.displayName = MenubarPrimitive.Root.displayName
 
@@ -40,7 +40,7 @@ const MenubarTrigger = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName
 
@@ -60,7 +60,7 @@ const MenubarSubTrigger = React.forwardRef<
     {...props}
   >
     {children}
-    <ChevronRight className="ml-auto h-4 w-4" />
+    <ChevronRight className="ml-auto h-4 w-4"  />
   </MenubarPrimitive.SubTrigger>
 ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
@@ -76,7 +76,7 @@ const MenubarSubContent = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 MenubarSubContent.displayName = MenubarPrimitive.SubContent.displayName
 
@@ -99,7 +99,7 @@ const MenubarContent = React.forwardRef<
           className
         )}
         {...props}
-      />
+       />
     </MenubarPrimitive.Portal>
   )
 )
@@ -119,7 +119,7 @@ const MenubarItem = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 MenubarItem.displayName = MenubarPrimitive.Item.displayName
 
@@ -138,7 +138,7 @@ const MenubarCheckboxItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <MenubarPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <Check className="h-4 w-4"  />
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
@@ -160,7 +160,7 @@ const MenubarRadioItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <MenubarPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
+        <Circle className="h-2 w-2 fill-current"  />
       </MenubarPrimitive.ItemIndicator>
     </span>
     {children}
@@ -182,7 +182,7 @@ const MenubarLabel = React.forwardRef<
       className
     )}
     {...props}
-  />
+   />
 ))
 MenubarLabel.displayName = MenubarPrimitive.Label.displayName
 
@@ -194,7 +194,7 @@ const MenubarSeparator = React.forwardRef<
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
     {...props}
-  />
+   />
 ))
 MenubarSeparator.displayName = MenubarPrimitive.Separator.displayName
 
@@ -209,7 +209,7 @@ const MenubarShortcut = ({
         className
       )}
       {...props}
-    />
+     />
   )
 }
 MenubarShortcut.displayname = "MenubarShortcut"
@@ -230,5 +230,4 @@ export {
   MenubarSubTrigger,
   MenubarGroup,
   MenubarSub,
-  MenubarShortcut,
-}
+  MenubarShortcut}

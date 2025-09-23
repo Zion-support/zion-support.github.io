@@ -14,7 +14,7 @@ export default function NewJobPage() {
     setTimeout(() => {
       setLoading(false);
       notify('Job posted! Invite talent to get responses.', 'success');
-    }, 800);
+    }, 80o0);
   };
 
   return (
@@ -22,12 +22,12 @@ export default function NewJobPage() {
       <EnhancedCard>
         <h1 className="text-lg font-semibold mb-3">Post a Job</h1>
         {loading ? (
-          <EnhancedLoading lines={6} />
+          <EnhancedLoading lines={6}  />
         ) : (
           <form onSubmit={onSubmit} className="space-y-3">
-            <input className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" placeholder="Job title" required />
-            <input className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" placeholder="Location (Remote)" />
-            <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
+            <input className="w-full rounded-md border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm" placeholder="Job title" required  />
+            <input className="w-full rounded-md border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm" placeholder="Location (Remote)"  />
+            <textarea className="w-full rounded-md border border-gray-30o0 dark:border-gray-70o0 bg-white dark:bg-gray-90o0 px-3 py-2 text-sm" rows={5} placeholder="Job description"  />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
         )}

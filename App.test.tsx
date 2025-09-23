@@ -6,7 +6,7 @@ describe('Smoke', () => {
     function Dummy() {
       return <main>ok</main>
     }
-    render(<Dummy />)
+    render(<Dummy  />)
     expect(screen.getByRole('main')).toHaveTextContent('ok')
   })
 })

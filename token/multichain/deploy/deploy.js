@@ -24,7 +24,7 @@ async function main() {
   await executor.deployed();
   console.warn("GovernanceExecutor deployed:", executor.address);
   
-  const output = {
+  const output ={
     ZIONDollar: token.address,
     VoteRelay: relay.address,
     GovernanceExecutor: executor.address

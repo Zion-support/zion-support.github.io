@@ -61,15 +61,15 @@ const LinkHealthChecker = ({ links, className = '' }) => {
     const getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':
-                return <CheckCircle className="w-5 h-5 text-green-500"/>;
+                return <CheckCircle className="w-5 h-5 text-green-50o0" />;
             case 'broken':
-                return <XCircle className="w-5 h-5 text-red-500"/>;
+                return <XCircle className="w-5 h-5 text-red-50o0" />;
             case 'external':
-                return <ExternalLink className="w-5 h-5 text-blue-500"/>;
+                return <ExternalLink className="w-5 h-5 text-blue-50o0" />;
             case 'checking':
-                return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
+                return <AlertTriangle className="w-5 h-5 text-yellow-50o0 animate-pulse" />;
             default:
-                return <AlertTriangle className="w-5 h-5 text-gray-500"/>;
+                return <AlertTriangle className="w-5 h-5 text-gray-50o0" />;
         }
     };
     const getStatusText = (status) => {
@@ -89,15 +89,15 @@ const LinkHealthChecker = ({ links, className = '' }) => {
     const getStatusColor = (status) => {
         switch (status) {
             case 'healthy':
-                return 'text-green-500';
+                return 'text-green-50o0';
             case 'broken':
-                return 'text-red-500';
+                return 'text-red-50o0';
             case 'external':
-                return 'text-blue-500';
+                return 'text-blue-50o0';
             case 'checking':
-                return 'text-yellow-500';
+                return 'text-yellow-50o0';
             default:
-                return 'text-gray-500';
+                return 'text-gray-50o0';
         }
     };
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
@@ -108,14 +108,14 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-lg font-semibold text-white">Link Health Status</h3>
-          <p className="text-sm text-gray-400">Monitoring the health of our website links</p>
+          <p className="text-sm text-gray-40o0">Monitoring the health of our website links</p>
         </div>
-        <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">
+        <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-60o0 hover:bg-blue-70o0 disabled:bg-gray-60o0 text-white rounded-lg transition-colors duration-30o0 flex items-center gap-2">
           {isChecking ? (<>
-              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>
+              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               Checking...
             </>) : (<>
-              <CheckCircle className="w-4 h-4"/>
+              <CheckCircle className="w-4 h-4" />
               Recheck
             </>)}
         </button>
@@ -123,17 +123,17 @@ const LinkHealthChecker = ({ links, className = '' }) => {
 
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
-          <div className="text-2xl font-bold text-green-400">{healthyCount}</div>
-          <div className="text-sm text-green-300">Healthy</div>
+        <div className="text-center p-3 bg-green-50o0/20 border border-green-50o0/30 rounded-lg">
+          <div className="text-2xl font-bold text-green-40o0">{healthyCount}</div>
+          <div className="text-sm text-green-30o0">Healthy</div>
         </div>
-        <div className="text-center p-3 bg-red-500/20 border border-red-500/30 rounded-lg">
-          <div className="text-2xl font-bold text-red-400">{brokenCount}</div>
-          <div className="text-sm text-red-300">Broken</div>
+        <div className="text-center p-3 bg-red-50o0/20 border border-red-50o0/30 rounded-lg">
+          <div className="text-2xl font-bold text-red-40o0">{brokenCount}</div>
+          <div className="text-sm text-red-30o0">Broken</div>
         </div>
-        <div className="text-center p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg">
-          <div className="text-2xl font-bold text-blue-400">{externalCount}</div>
-          <div className="text-sm text-blue-300">External</div>
+        <div className="text-center p-3 bg-blue-50o0/20 border border-blue-50o0/30 rounded-lg">
+          <div className="text-2xl font-bold text-blue-40o0">{externalCount}</div>
+          <div className="text-sm text-blue-30o0">External</div>
         </div>
       </div>
 
@@ -143,20 +143,20 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             const status = linkStatuses[index];
             if (!status)
                 return null;
-            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300">
+            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-30o0">
               <div className="flex items-center gap-3">
                 {getStatusIcon(status.status)}
                 <div>
                   <div className="text-white font-medium">{link.label}</div>
-                  <div className="text-sm text-gray-400">{link.url}</div>
-                  {status.error && (<div className="text-xs text-red-400 mt-1">{status.error}</div>)}
+                  <div className="text-sm text-gray-40o0">{link.url}</div>
+                  {status.error && (<div className="text-xs text-red-40o0 mt-1">{status.error}</div>)}
                 </div>
               </div>
               <div className="text-right">
                 <div className={`text-sm font-medium ${getStatusColor(status.status)}`}>
                   {getStatusText(status.status)}
                 </div>
-                {status.responseTime && (<div className="text-xs text-gray-400">
+                {status.responseTime && (<div className="text-xs text-gray-40o0">
                     {status.responseTime}ms
                   </div>)}
               </div>
@@ -165,17 +165,17 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       </div>
 
       {/* Recommendations */}
-      {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-          <h4 className="text-red-400 font-semibold mb-2">⚠️ Action Required</h4>
-          <p className="text-sm text-red-300">
+      {brokenCount > 0 && (<div className="mt-6 p-4 bg-red-50o0/10 border border-red-50o0/20 rounded-lg">
+          <h4 className="text-red-40o0 font-semibold mb-2">⚠️ Action Required</h4>
+          <p className="text-sm text-red-30o0">
             {brokenCount} link{brokenCount !== 1 ? 's' : ''} {brokenCount !== 1 ? 'are' : 'is'} broken and need attention. 
             Please review and fix these links to improve user experience.
           </p>
         </div>)}
 
-      {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
-          <h4 className="text-green-400 font-semibold mb-2">✅ All Links Healthy</h4>
-          <p className="text-sm text-green-300">
+      {healthyCount === links.length && (<div className="mt-6 p-4 bg-green-50o0/10 border border-green-50o0/20 rounded-lg">
+          <h4 className="text-green-40o0 font-semibold mb-2">✅ All Links Healthy</h4>
+          <p className="text-sm text-green-30o0">
             Great job! All links are working properly. Your website is in excellent health.
           </p>
         </div>)}

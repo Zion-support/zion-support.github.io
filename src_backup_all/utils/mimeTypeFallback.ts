@@ -3,7 +3,7 @@ interface MimeTypeMapping {
 }
 
 class MimeTypeFallback {
-  private mimeTypes: MimeTypeMapping = {
+  private mimeTypes: MimeTypeMapping ={
     '.js': 'application/javascript',
     '.mjs': 'application/javascript',
     '.css': 'text/css',

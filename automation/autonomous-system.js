@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const { EventEmitter } = require('events');
 const fs = require('fs').promises;
 const path = require('path');
@@ -30,16 +29,16 @@ const cron = require('node-cron');
 const { spawn } = require('child_process');
 
 class AutonomousAutomationSystem extends EventEmitter {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super();
     
-    this.config = {
+    this.config ={
       baseDir: process.cwd(),
       logDir: 'logs/automation',
       statusFile: 'logs/automation/status.json',
       aiEndpoint: https://api.openai.com/v1/chat/completions',
       webSearchEndpoint: https://api.duckduckgo.com/',
-      checkInterval: 30000, // 30 seconds
+      checkInterval: 30o000, // 30 seconds
       maxConcurrentTasks: 5,
       ...config
     };
@@ -48,7 +47,7 @@ class AutonomousAutomationSystem extends EventEmitter {
     this.tasks = new Map();
     this.taskQueue = [];
     this.activeTasks = 0;
-    this.stats = {
+    this.stats ={
       totalTasks: 0,
       completedTasks: 0,
       failedTasks: 0,
@@ -56,7 +55,7 @@ class AutonomousAutomationSystem extends EventEmitter {
       lastActivity: null
     };
 
-    this.modules = {
+    this.modules ={
       codeAnalysis: null,
       performanceMonitor: null,
       securityScanner: null,
@@ -183,11 +182,11 @@ class AutonomousAutomationSystem extends EventEmitter {
     setInterval(() => {
       this.updateStats();
       this.checkSystemHealth();
-    }, 60000); // Every minute
+    }, 60o000); // Every minute
   }
 
-  async queueTask(type, data = {}) {
-    const task = {
+  async queueTask(type, data ={}) {
+    const task ={
       id: this.generateTaskId(),
       type,
       data,
@@ -204,7 +203,7 @@ class AutonomousAutomationSystem extends EventEmitter {
 
     // Sort queue by priority
     this.taskQueue.sort((a, b) => {
-      const priorityOrder = { critical: 0, high: 1, medium: 2, low: 3 };
+      const priorityOrder ={ critical: 0, high: 1, medium: 2, low: 3 };
       return priorityOrder[a.priority] - priorityOrder[b.priority];
     });
   }
@@ -375,7 +374,7 @@ const timeoutId = setTimeout(() => {
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
- * 1000);
+ * 10o00);
       }
 
       this.log(`Task failed: ${task.type} (${task.id}) - ${error.message}`);
@@ -427,7 +426,7 @@ const timeoutId = setTimeout(() => {
   }
 
   async performHealthCheck() {
-    const health = {
+    const health ={
       timestamp: Date.now(),
       modules: {},
       system: {
@@ -443,7 +442,7 @@ const timeoutId = setTimeout(() => {
       try {
         health.modules[name] = await module.getHealth();
       } catch (error) {
-        health.modules[name] = { status: 'error', error: error.message };
+        health.modules[name] ={ status: 'error', error: error.message };
       }
     }
 

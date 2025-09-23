@@ -14,32 +14,32 @@ const AdvancedAnalyticsDashboard = () => {
             value: '$2.4M',
             change: 12.5,
             changeType: 'increase',
-            icon: <DollarSign className="w-6 h-6"/>,
-            color: 'from-green-500 to-emerald-600'
+            icon: <DollarSign className="w-6 h-6" />,
+            color: 'from-green-50o0 to-emerald-60o0'
         },
         {
             title: 'Active Clients',
             value: '1,247',
             change: 8.2,
             changeType: 'increase',
-            icon: <Users className="w-6 h-6"/>,
-            color: 'from-blue-500 to-cyan-600'
+            icon: <Users className="w-6 h-6" />,
+            color: 'from-blue-50o0 to-cyan-60o0'
         },
         {
             title: 'Service Performance',
             value: '94.2%',
             change: 2.1,
             changeType: 'increase',
-            icon: <Target className="w-6 h-6"/>,
-            color: 'from-purple-500 to-pink-600'
+            icon: <Target className="w-6 h-6" />,
+            color: 'from-purple-50o0 to-pink-60o0'
         },
         {
             title: 'Client Satisfaction',
             value: '4.8/5',
             change: 0.3,
             changeType: 'increase',
-            icon: <Star className="w-6 h-6"/>,
-            color: 'from-yellow-500 to-orange-600'
+            icon: <Star className="w-6 h-6" />,
+            color: 'from-yellow-50o0 to-orange-60o0'
         }
     ];
     const servicePerformance = [
@@ -48,7 +48,7 @@ const AdvancedAnalyticsDashboard = () => {
             performance: 96,
             growth: 15.2,
             clients: 89,
-            revenue: 450000,
+            revenue: 450o000,
             status: 'trending'
         },
         {
@@ -56,7 +56,7 @@ const AdvancedAnalyticsDashboard = () => {
             performance: 92,
             growth: 28.7,
             clients: 23,
-            revenue: 1200000,
+            revenue: 120o0000,
             status: 'trending'
         },
         {
@@ -64,15 +64,15 @@ const AdvancedAnalyticsDashboard = () => {
             performance: 88,
             growth: 12.4,
             clients: 156,
-            revenue: 780000,
+            revenue: 780o000,
             status: 'stable'
         },
         {
             name: 'Cybersecurity Suite',
             performance: 94,
             growth: 18.9,
-            clients: 203,
-            revenue: 920000,
+            clients: 20o3,
+            revenue: 920o000,
             status: 'trending'
         },
         {
@@ -80,39 +80,39 @@ const AdvancedAnalyticsDashboard = () => {
             performance: 85,
             growth: 8.7,
             clients: 67,
-            revenue: 340000,
+            revenue: 340o000,
             status: 'stable'
         }
     ];
     const categoryDistribution = [
-        { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
-        { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },
-        { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },
-        { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },
-        { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+        { label: 'AI & ML', value: 35, color: 'from-purple-50o0 to-pink-60o0' },
+        { label: 'Quantum', value: 20, color: 'from-blue-50o0 to-cyan-60o0' },
+        { label: 'Blockchain', value: 25, color: 'from-green-50o0 to-emerald-60o0' },
+        { label: 'Cybersecurity', value: 15, color: 'from-red-50o0 to-pink-60o0' },
+        { label: 'IoT', value: 5, color: 'from-orange-50o0 to-yellow-60o0' }
     ];
     const getStatusIcon = (status) => {
         switch (status) {
             case 'trending':
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
+                return <TrendingUp className="w-4 h-4 text-green-50o0" />;
             case 'stable':
-                return <Activity className="w-4 h-4 text-blue-500"/>;
+                return <Activity className="w-4 h-4 text-blue-50o0" />;
             case 'declining':
-                return <TrendingDown className="w-4 h-4 text-red-500"/>;
+                return <TrendingDown className="w-4 h-4 text-red-50o0" />;
             default:
-                return <Activity className="w-4 h-4 text-gray-500"/>;
+                return <Activity className="w-4 h-4 text-gray-50o0" />;
         }
     };
     const getStatusColor = (status) => {
         switch (status) {
             case 'trending':
-                return 'bg-green-100 text-green-800';
+                return 'bg-green-10o0 text-green-80o0';
             case 'stable':
-                return 'bg-blue-100 text-blue-800';
+                return 'bg-blue-10o0 text-blue-80o0';
             case 'declining':
-                return 'bg-red-100 text-red-800';
+                return 'bg-red-10o0 text-red-80o0';
             default:
-                return 'bg-gray-100 text-gray-800';
+                return 'bg-gray-10o0 text-gray-80o0';
         }
     };
     return (<div className="max-w-7xl mx-auto p-6">
@@ -146,8 +146,8 @@ const AdvancedAnalyticsDashboard = () => {
                     {metric.icon}
                   </div>
                   <div className="flex items-center gap-1">
-                    {metric.changeType === 'increase' ? (<ArrowUpRight className="w-4 h-4 text-green-500"/>) : (<ArrowDownRight className="w-4 h-4 text-red-500"/>)}
-                    <span className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-600' : 'text-red-600'}`}>
+                    {metric.changeType === 'increase' ? (<ArrowUpRight className="w-4 h-4 text-green-50o0" />) : (<ArrowDownRight className="w-4 h-4 text-red-50o0" />)}
+                    <span className={`text-sm font-medium ${metric.changeType === 'increase' ? 'text-green-60o0' : 'text-red-60o0'}`}>
                       {metric.change}%
                     </span>
                   </div>
@@ -170,7 +170,7 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-zion-cyan"/>
+              <BarChart3 className="w-5 h-5 text-zion-cyan" />
               Service Performance Overview
             </CardTitle>
           </CardHeader>
@@ -202,15 +202,15 @@ const AdvancedAnalyticsDashboard = () => {
                       </td>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-1">
-                          <TrendingUp className="w-4 h-4 text-green-500"/>
-                          <span className="text-green-600 font-medium">+{service.growth}%</span>
+                          <TrendingUp className="w-4 h-4 text-green-50o0" />
+                          <span className="text-green-60o0 font-medium">+{service.growth}%</span>
                         </div>
                       </td>
                       <td className="py-3 px-4">
                         <span className="font-medium">{service.clients}</span>
                       </td>
                       <td className="py-3 px-4">
-                        <span className="font-medium">${(service.revenue / 1000).toFixed(0)}K</span>
+                        <span className="font-medium">${(service.revenue / 10o00).toFixed(0)}K</span>
                       </td>
                       <td className="py-3 px-4">
                         <Badge className={getStatusColor(service.status)}>
@@ -234,7 +234,7 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <PieChart className="w-5 h-5 text-zion-purple"/>
+              <PieChart className="w-5 h-5 text-zion-purple" />
               Service Category Distribution
             </CardTitle>
           </CardHeader>
@@ -260,14 +260,14 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Brain className="w-5 h-5 text-zion-cyan"/>
+              <Brain className="w-5 h-5 text-zion-cyan" />
               Key Insights
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="flex items-start gap-3 p-3 bg-zion-green/10 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-zion-green mt-1"/>
+                <TrendingUp className="w-5 h-5 text-zion-green mt-1" />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">AI Services Growth</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -277,7 +277,7 @@ const AdvancedAnalyticsDashboard = () => {
               </div>
               
               <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">
-                <Users className="w-5 h-5 text-zion-blue mt-1"/>
+                <Users className="w-5 h-5 text-zion-blue mt-1" />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Client Acquisition</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -287,7 +287,7 @@ const AdvancedAnalyticsDashboard = () => {
               </div>
               
               <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">
-                <Star className="w-5 h-5 text-zion-purple mt-1"/>
+                <Star className="w-5 h-5 text-zion-purple mt-1" />
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Satisfaction Score</h4>
                   <p className="text-sm text-zion-slate-light">
@@ -310,11 +310,11 @@ const AdvancedAnalyticsDashboard = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access', '_blank')}>
-              <Rocket className="w-5 h-5 mr-2"/>
+              <Rocket className="w-5 h-5 mr-2" />
               Request Access
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
-              <Shield className="w-5 h-5 mr-2"/>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>
+              <Shield className="w-5 h-5 mr-2" />
               Schedule Demo
             </Button>
           </div>

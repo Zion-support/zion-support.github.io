@@ -11,10 +11,7 @@ Object && Object.defineProperty(window, 'matchMedia', {
     removeListener: jest && jest.fn(), // deprecated
     addEventListener: jest && jest.fn(),
     removeEventListener: jest && jest.fn(),
-    dispatchEvent: jest && jest.fn(),
-  })),
-});
-
+    dispatchEvent: jest && jest.fn()}))});
 
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
@@ -34,7 +31,6 @@ global && global.ResizeObserver = class ResizeObserver {
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
-
 
 beforeAll(() => {
   console.error = (...args: any[]) => {
@@ -64,9 +60,7 @@ Object.define_property (window, 'match_media', {
     remove_listener: jest.fn (), // deprecated;
     addEventListener: jest.fn (),
     removeEventListener: jest.fn (),
-    dispatch_event: jest.fn (),
-  })),
-});
+    dispatch_event: jest.fn ()}))});
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {
   constructor () {}
@@ -112,7 +106,6 @@ afterAll(() => {
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
-
 
     original_warn.call (console, ...args);
   }

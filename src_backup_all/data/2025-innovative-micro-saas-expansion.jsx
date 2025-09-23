@@ -1,11 +1,11 @@
-export const INNOVATIVE_MICRO_SAAS_2025 = [
+export const INNOVATIVE_MICRO_SAAS_20o25 = [
   // Emerging Technology Solutions
   {
     id: "metaverse-platform",
     title: "Metaverse Business Platform",
     description: "Comprehensive platform for businesses to establish presence in the metaverse with virtual offices, events, and commerce",
     category: "Metaverse",
-    price: "$8,500/month",
+    price: "$8,50o0/month",
     features: [
       "Virtual office creation",
       "3D event hosting",
@@ -23,7 +23,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/metaverse-platform",
     image: "/images/metaverse-platform.jpg",
     technology: "VR/AR + 3D + AI",
-    marketSize: "$3.8B by 2025",
+    marketSize: "$3.8B by 20o25",
     targetIndustry: "Retail, Events, Real Estate, Education"
   },
   {
@@ -31,7 +31,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "Web3 Infrastructure Platform",
     description: "Complete Web3 infrastructure for decentralized applications, NFTs, and blockchain integration",
     category: "Web3",
-    price: "$12,500/month",
+    price: "$12,50o0/month",
     features: [
       "Smart contract deployment",
       "NFT marketplace",
@@ -49,7 +49,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/web3-infrastructure",
     image: "/images/web3-infrastructure.jpg",
     technology: "Blockchain + Web3 + DeFi",
-    marketSize: "$4.2B by 2025",
+    marketSize: "$4.2B by 20o25",
     targetIndustry: "Finance, Gaming, Art, Real Estate"
   },
   
@@ -59,7 +59,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Customer Success Platform",
     description: "Intelligent platform that predicts customer churn and automates retention strategies",
     category: "Customer Success",
-    price: "$6,500/month",
+    price: "$6,50o0/month",
     features: [
       "Churn prediction",
       "Automated retention",
@@ -77,7 +77,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-customer-success",
     image: "/images/ai-customer-success.jpg",
     technology: "AI + ML + Analytics",
-    marketSize: "$2.8B by 2025",
+    marketSize: "$2.8B by 20o25",
     targetIndustry: "SaaS, E-commerce, Services"
   },
   {
@@ -85,7 +85,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Sales Optimization Platform",
     description: "Comprehensive platform for optimizing sales processes, lead scoring, and revenue forecasting",
     category: "Sales",
-    price: "$7,500/month",
+    price: "$7,50o0/month",
     features: [
       "Lead scoring AI",
       "Revenue forecasting",
@@ -103,7 +103,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-sales-optimization",
     image: "/images/ai-sales-optimization.jpg",
     technology: "AI + Analytics + CRM",
-    marketSize: "$3.5B by 2025",
+    marketSize: "$3.5B by 20o25",
     targetIndustry: "B2B, Enterprise, Sales Teams"
   },
   
@@ -113,7 +113,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "Real-Time Business Analytics Platform",
     description: "Live analytics platform for instant business insights and decision-making",
     category: "Analytics",
-    price: "$5,500/month",
+    price: "$5,50o0/month",
     features: [
       "Real-time dashboards",
       "Live data streaming",
@@ -131,7 +131,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/real-time-analytics",
     image: "/images/real-time-analytics.jpg",
     technology: "Real-time + Analytics + AI",
-    marketSize: "$2.4B by 2025",
+    marketSize: "$2.4B by 20o25",
     targetIndustry: "E-commerce, Finance, Manufacturing"
   },
   {
@@ -139,7 +139,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Data Governance Platform",
     description: "Intelligent platform for automated data governance, compliance, and quality management",
     category: "Data Governance",
-    price: "$9,500/month",
+    price: "$9,50o0/month",
     features: [
       "Automated compliance",
       "Data quality monitoring",
@@ -157,7 +157,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/data-governance",
     image: "/images/data-governance.jpg",
     technology: "AI + Compliance + Data",
-    marketSize: "$3.1B by 2025",
+    marketSize: "$3.1B by 20o25",
     targetIndustry: "Enterprise, Healthcare, Finance"
   },
   
@@ -167,7 +167,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "Zero Trust Security Platform",
     description: "Comprehensive zero trust security platform for modern enterprise environments",
     category: "Security",
-    price: "$11,500/month",
+    price: "$11,50o0/month",
     features: [
       "Identity verification",
       "Device trust scoring",
@@ -185,7 +185,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/zero-trust-security",
     image: "/images/zero-trust-security.jpg",
     technology: "Zero Trust + AI + Security",
-    marketSize: "$4.8B by 2025",
+    marketSize: "$4.8B by 20o25",
     targetIndustry: "Enterprise, Government, Healthcare"
   },
   {
@@ -193,7 +193,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Compliance Automation Platform",
     description: "Intelligent platform that automates regulatory compliance across multiple industries",
     category: "Compliance",
-    price: "$8,500/month",
+    price: "$8,50o0/month",
     features: [
       "Regulatory monitoring",
       "Automated reporting",
@@ -211,7 +211,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-compliance",
     image: "/images/ai-compliance.jpg",
     technology: "AI + Compliance + Automation",
-    marketSize: "$2.9B by 2025",
+    marketSize: "$2.9B by 20o25",
     targetIndustry: "Finance, Healthcare, Legal"
   },
   
@@ -221,7 +221,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Collaboration Platform",
     description: "Intelligent platform that enhances team collaboration with AI-powered insights and automation",
     category: "Collaboration",
-    price: "$4,500/month",
+    price: "$4,50o0/month",
     features: [
       "Smart meeting scheduling",
       "Task automation",
@@ -239,7 +239,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-collaboration",
     image: "/images/ai-collaboration.jpg",
     technology: "AI + Collaboration + Automation",
-    marketSize: "$3.2B by 2025",
+    marketSize: "$3.2B by 20o25",
     targetIndustry: "Enterprise, Remote Teams, Startups"
   },
   {
@@ -247,7 +247,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "VR Meeting Platform",
     description: "Immersive virtual reality platform for remote meetings and collaboration",
     category: "VR Collaboration",
-    price: "$6,500/month",
+    price: "$6,50o0/month",
     features: [
       "VR meeting rooms",
       "3D presentations",
@@ -265,7 +265,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/vr-meetings",
     image: "/images/vr-meetings.jpg",
     technology: "VR + Collaboration + 3D",
-    marketSize: "$2.1B by 2025",
+    marketSize: "$2.1B by 20o25",
     targetIndustry: "Enterprise, Education, Design"
   },
   
@@ -275,7 +275,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Marketing Automation Platform",
     description: "Intelligent marketing platform that automates campaigns and personalizes customer experiences",
     category: "Marketing",
-    price: "$7,500/month",
+    price: "$7,50o0/month",
     features: [
       "Campaign automation",
       "Personalization engine",
@@ -293,7 +293,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-marketing",
     image: "/images/ai-marketing.jpg",
     technology: "AI + Marketing + Automation",
-    marketSize: "$4.5B by 2025",
+    marketSize: "$4.5B by 20o25",
     targetIndustry: "E-commerce, B2B, SaaS"
   },
   {
@@ -301,7 +301,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "Voice Search Optimization Platform",
     description: "Platform for optimizing content and SEO for voice search and virtual assistants",
     category: "Voice SEO",
-    price: "$4,500/month",
+    price: "$4,50o0/month",
     features: [
       "Voice keyword research",
       "Content optimization",
@@ -319,7 +319,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/voice-seo",
     image: "/images/voice-seo.jpg",
     technology: "Voice + SEO + AI",
-    marketSize: "$1.8B by 2025",
+    marketSize: "$1.8B by 20o25",
     targetIndustry: "E-commerce, Content, Local Business"
   },
   
@@ -329,7 +329,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "AI Accounting Platform",
     description: "Intelligent accounting platform with automated bookkeeping and financial insights",
     category: "FinTech",
-    price: "$5,500/month",
+    price: "$5,50o0/month",
     features: [
       "Automated bookkeeping",
       "Expense categorization",
@@ -347,7 +347,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/ai-accounting",
     image: "/images/ai-accounting.jpg",
     technology: "AI + Accounting + Automation",
-    marketSize: "$2.6B by 2025",
+    marketSize: "$2.6B by 20o25",
     targetIndustry: "Small Business, Freelancers, Startups"
   },
   {
@@ -355,7 +355,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     title: "Crypto Payment Platform",
     description: "Complete platform for accepting and processing cryptocurrency payments",
     category: "Crypto",
-    price: "$8,500/month",
+    price: "$8,50o0/month",
     features: [
       "Multi-crypto support",
       "Instant settlements",
@@ -373,7 +373,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
     link: "/services/crypto-payments",
     image: "/images/crypto-payments.jpg",
     technology: "Blockchain + Crypto + Payments",
-    marketSize: "$3.4B by 2025",
+    marketSize: "$3.4B by 20o25",
     targetIndustry: "E-commerce, Online Services, Gaming"
   }
 ];
@@ -391,7 +391,7 @@ export const INNOVATIVE_CATEGORIES = [
     "Business Automation"
 ];
 
-export const INNOVATIVE_PRICING = {
+export const INNOVATIVE_PRICING ={
     basic: {
         price: 199,
         currency: "$",
@@ -412,10 +412,10 @@ export const INNOVATIVE_PRICING = {
     }
 };
 
-export const INNOVATIVE_CONTACT = {
-    phone: "+1 302 464 0950",
+export const INNOVATIVE_CONTACT ={
+    phone: "+1 30o2 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
+    address: "364 E Main St STE 10o08, Middletown DE 19709",
     website: "https://ziontechgroup.com",
     supportHours: "24/7",
     responseTime: "< 2 hours"

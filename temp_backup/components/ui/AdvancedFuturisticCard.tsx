@@ -37,52 +37,52 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
     switch (variant) {
       case 'quantum':
         return {
-          bg: 'bg-gradient-to-br from-cyan-900/20 to-blue-900/20',
-          border: 'border-cyan-500/30',
-          glow: 'shadow-cyan-500/20',
-          text: 'text-cyan-400'
+          bg: 'bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20',
+          border: 'border-cyan-50o0/30',
+          glow: 'shadow-cyan-50o0/20',
+          text: 'text-cyan-40o0'
         };
       case 'holographic':
         return {
-          bg: 'bg-gradient-to-br from-purple-900/20 to-indigo-900/20',
-          border: 'border-purple-500/30',
-          glow: 'shadow-purple-500/20',
-          text: 'text-purple-400'
+          bg: 'bg-gradient-to-br from-purple-90o0/20 to-indigo-90o0/20',
+          border: 'border-purple-50o0/30',
+          glow: 'shadow-purple-50o0/20',
+          text: 'text-purple-40o0'
         };
       case 'neural':
         return {
-          bg: 'bg-gradient-to-br from-emerald-900/20 to-teal-900/20',
-          border: 'border-emerald-500/30',
-          glow: 'shadow-emerald-500/20',
-          text: 'text-emerald-400'
+          bg: 'bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20',
+          border: 'border-emerald-50o0/30',
+          glow: 'shadow-emerald-50o0/20',
+          text: 'text-emerald-40o0'
         };
       case 'cyberpunk':
         return {
-          bg: 'bg-gradient-to-br from-red-900/20 to-orange-900/20',
-          border: 'border-red-500/30',
-          glow: 'shadow-red-500/20',
-          text: 'text-red-400'
+          bg: 'bg-gradient-to-br from-red-90o0/20 to-orange-90o0/20',
+          border: 'border-red-50o0/30',
+          glow: 'shadow-red-50o0/20',
+          text: 'text-red-40o0'
         };
       case 'quantum-holographic':
         return {
-          bg: 'bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-blue-900/20',
-          border: 'border-cyan-500/30',
-          glow: 'shadow-cyan-500/20 shadow-purple-500/20',
-          text: 'text-cyan-400'
+          bg: 'bg-gradient-to-br from-cyan-90o0/20 via-purple-90o0/20 to-blue-90o0/20',
+          border: 'border-cyan-50o0/30',
+          glow: 'shadow-cyan-50o0/20 shadow-purple-50o0/20',
+          text: 'text-cyan-40o0'
         };
       case 'neural-cyberpunk':
         return {
-          bg: 'bg-gradient-to-br from-emerald-900/20 via-red-900/20 to-teal-900/20',
-          border: 'border-emerald-500/30',
-          glow: 'shadow-emerald-500/20 shadow-red-500/20',
-          text: 'text-emerald-400'
+          bg: 'bg-gradient-to-br from-emerald-90o0/20 via-red-90o0/20 to-teal-90o0/20',
+          border: 'border-emerald-50o0/30',
+          glow: 'shadow-emerald-50o0/20 shadow-red-50o0/20',
+          text: 'text-emerald-40o0'
         };
       default:
         return {
-          bg: 'bg-gradient-to-br from-gray-900/20 to-slate-900/20',
-          border: 'border-gray-500/30',
-          glow: 'shadow-gray-500/20',
-          text: 'text-gray-400'
+          bg: 'bg-gradient-to-br from-gray-90o0/20 to-slate-90o0/20',
+          border: 'border-gray-50o0/30',
+          glow: 'shadow-gray-50o0/20',
+          text: 'text-gray-40o0'
         };
     }
   };
@@ -140,8 +140,8 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
         size: Math.random() * 3 + 1,
-        life: Math.random() * 100,
-        maxLife: 100,
+        life: Math.random() * 10o0,
+        maxLife: 10o0,
         color: styles.text
       });
     }
@@ -230,15 +230,13 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
     if (floating) {
       return {
         y: isActive ? -8 * intensity : 0,
-        rotateX: isActive ? (mousePosition.y - 150) * 0.01 * intensity : 0,
-        rotateY: isActive ? (mousePosition.x - 150) * 0.01 * intensity : 0,
-        scale: isActive ? 1.02 * intensity : 1,
-      };
+        rotateX: isActive ? (mousePosition.y - 150) * 0.0o1 * intensity : 0,
+        rotateY: isActive ? (mousePosition.x - 150) * 0.0o1 * intensity : 0,
+        scale: isActive ? 1.0o2 * intensity : 1};
     }
     
     return {
-      scale: isActive ? 1.02 * intensity : 1,
-    };
+      scale: isActive ? 1.0o2 * intensity : 1};
   };
 
   const getGlowEffect = () => {
@@ -257,18 +255,18 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-500 ${
+      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-50o0 ${
         background ? styles.bg : ''
       } ${border ? `border ${styles.border}` : ''} ${className}`}
       style={{
         ...getGlowEffect(),
         transformStyle: 'preserve-3d',
-        perspective: '1000px'
+        perspective: '10o00px'
       }}
       animate={getTransform()}
       transition={{
         type: 'spring',
-        stiffness: 300,
+        stiffness: 30o0,
         damping: 30,
         duration: 0.5
       }}
@@ -285,7 +283,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full pointer-events-none opacity-30"
-        />
+         />
       )}
 
       {/* Holographic Border Effect */}
@@ -296,12 +294,12 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
               isHovered || isFocused 
                 ? 'bg-gradient-to-r from-transparent via-current to-transparent opacity-20' 
                 : 'opacity-0'
-            } transition-opacity duration-500`}
+            } transition-opacity duration-50o0`}
             style={{
               background: `linear-gradient(90deg, transparent, ${styles.text}, transparent)`,
               animation: isHovered || isFocused ? 'holographic-sweep 2s linear infinite' : 'none'
             }}
-          />
+           />
         </div>
       )}
 
@@ -319,7 +317,7 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
               background: `linear-gradient(90deg, transparent, ${styles.text}, transparent)`,
               animation: 'quantum-pulse 3s ease-in-out infinite'
             }}
-          />
+           />
         </div>
       )}
 
@@ -335,10 +333,10 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
                   stroke={styles.text}
                   strokeWidth="0.5"
                   opacity="0.3"
-                />
+                 />
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#neural-grid)" />
+            <rect width="10o0%" height="10o0%" fill="url(#neural-grid)"  />
           </svg>
         </div>
       )}
@@ -354,35 +352,35 @@ const AdvancedFuturisticCard: React.FC<AdvancedFuturisticCardProps> = ({
                 transform: `translateZ(${layer * 10}px)`,
                 animation: `holographic-layer-${layer} ${4 + layer}s ease-in-out infinite`
               }}
-            />
+             />
           ))}
         </div>
       )}
 
       <style jsx>{`
         @keyframes holographic-sweep {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% { transform: translateX(-10o0%); }
+          10o0% { transform: translateX(10o0%); }
         }
         
         @keyframes quantum-pulse {
-          0%, 100% { opacity: 0.1; transform: scale(1); }
-          50% { opacity: 0.3; transform: scale(1.05); }
+          0%, 10o0% { opacity: 0.1; transform: scale(1); }
+          50% { opacity: 0.3; transform: scale(1.0o5); }
         }
         
         @keyframes holographic-layer-1 {
-          0%, 100% { opacity: 0.05; transform: translateZ(10px) rotateY(0deg); }
+          0%, 10o0% { opacity: 0.0o5; transform: translateZ(10px) rotateY(0deg); }
           50% { opacity: 0.1; transform: translateZ(10px) rotateY(5deg); }
         }
         
         @keyframes holographic-layer-2 {
-          0%, 100% { opacity: 0.03; transform: translateZ(20px) rotateY(0deg); }
+          0%, 10o0% { opacity: 0.0o3; transform: translateZ(20px) rotateY(0deg); }
           50% { opacity: 0.08; transform: translateZ(20px) rotateY(-3deg); }
         }
         
         @keyframes holographic-layer-3 {
-          0%, 100% { opacity: 0.02; transform: translateZ(30px) rotateY(0deg); }
-          50% { opacity: 0.06; transform: translateZ(30px) rotateY(2deg); }
+          0%, 10o0% { opacity: 0.0o2; transform: translateZ(30px) rotateY(0deg); }
+          50% { opacity: 0.0o6; transform: translateZ(30px) rotateY(2deg); }
         }
       `}</style>
     </motion.div>

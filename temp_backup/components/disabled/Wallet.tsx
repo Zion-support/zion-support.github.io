@@ -30,9 +30,9 @@ export function Wallet({ onProvider }: { onProvider: (p: ethers.providers.Web3Pr
   return (
     <div className="flex items-center gap-2">
       {account ? (
-        <span className="px-2 py-1 rounded bg-green-100 text-green-800 text-sm">{account.slice(0,6)}...{account.slice(-4)}</span>
+        <span className="px-2 py-1 rounded bg-green-10o0 text-green-80o0 text-sm">{account.slice(0,6)}...{account.slice(-4)}</span>
       ) : (
-        <button onClick={connect} className="px-3 py-1 rounded bg-blue-600 text-white text-sm">Connect Wallet</button>
+        <button onClick={connect} className="px-3 py-1 rounded bg-blue-60o0 text-white text-sm">Connect Wallet</button>
       )}
     </div>
   );

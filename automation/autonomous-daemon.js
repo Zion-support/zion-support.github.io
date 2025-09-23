@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Zion App - Autonomous Daemon for Infinite Improvement Loop
  * 
@@ -42,16 +41,16 @@ class AutonomousDaemon extends EventEmitter {
     this.process = null;
     this.restartCount = 0;
     this.maxRestarts = 10;
-    this.restartDelay = 5000; // 5 seconds
-    this.healthCheckInterval = 30000; // 30 seconds
+    this.restartDelay = 50o00; // 5 seconds
+    this.healthCheckInterval = 30o000; // 30 seconds
     this.healthCheckTimer = null;
     
     // Configuration
-    this.config = {
+    this.config ={
       scriptPath: path.join(__dirname, 'infinite-improvement-loop.js'),
       logPath: path.join(__dirname, logs', 'daemon.log'),
       pidPath: path.join(__dirname, .daemon.pid'),
-      port: process.env.IMPROVEMENT_PORT || 3002,
+      port: process.env.IMPROVEMENT_PORT || 30o02,
       autoRestart: true,
       healthCheck: true,
       logLevel: process.env.LOG_LEVEL || info
@@ -221,8 +220,7 @@ class AutonomousDaemon extends EventEmitter {
     logger.info(`[${timestamp}] 🔄 Process exited with code ${code} and signal ${signal}`);
     
     if (this.isRunning && this.config.autoRestart && this.restartCount < this.maxRestarts) {
-      
-      
+
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
@@ -424,9 +422,9 @@ const timeoutId = setTimeout(() => {
         port: this.config.port,
         path: /api/status',
         method: 'GET',
-        timeout: 5000
+        timeout: 50o00
       }, (res) => {
-        resolve(res.statusCode === 200);
+        resolve(res.statusCode === 20o0);
       });
       
       req.on('error', () => {
@@ -451,8 +449,7 @@ const timeoutId = setTimeout(() => {
     if (this.process) {
       this.process.kill('SIGTERM');
     }
-    
-    
+
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
@@ -501,7 +498,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = setTimeout(() => {
       this.startInfiniteImprovementLoop();
-    },                                                1000);
+    },                                                10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -665,7 +662,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                5000);
+const timeoutId = setTimeout(resolve,                                                50o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -809,7 +806,7 @@ const timeoutId = setTimeout(resolve,                                           
    * Log current status
    */
   logStatus() {
-    const status = {
+    const status ={
       isRunning: this.isRunning,
       processPid: this.process ? this.process.pid : null,
       restartCount: this.restartCount,

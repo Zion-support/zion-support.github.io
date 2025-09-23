@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Button from './Button';
@@ -46,12 +45,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
         <div className="text-center mb-6">
           <div className="text-4xl mb-4">{service.icon}</div>
           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-          <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+          <p className="text-gray-30o0 text-sm mb-4">{service.tagline}</p>
           
           {/* Price */}
           <div className="flex items-center justify-center mb-4">
-            <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-            <span className="text-gray-400 ml-1">{service.period}</span>
+            <span className="text-2xl font-bold text-cyan-40o0">{service.price}</span>
+            <span className="text-gray-40o0 ml-1">{service.period}</span>
           </div>
           
           {/* Rating */}
@@ -61,16 +60,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
                 <Star
                   key={i}
                   className={`w-4 h-4 ${
-                    i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
+                    i < Math.floor(service.rating) ? 'text-yellow-40o0 fill-current' : 'text-gray-60o0'
                   }`}
-                />
+                 />
               ))}
             </div>
-            <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
+            <span className="text-gray-40o0 text-sm ml-2">({service.reviews})</span>
           </div>
           
           {/* Category and Setup */}
-          <div className="text-sm text-gray-400 mb-4">
+          <div className="text-sm text-gray-40o0 mb-4">
             <div>{service.category}</div>
             <div>{service.setupTime} setup • {service.trialDays} day trial</div>
           </div>
@@ -78,7 +77,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
 
         {/* Description */}
         <div className="flex-1 mb-6">
-          <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
+          <p className="text-gray-30o0 text-sm leading-relaxed">{service.description}</p>
         </div>
 
         {/* Features Preview */}
@@ -86,13 +85,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
           <h4 className="text-white font-semibold mb-3">Key Features:</h4>
           <ul className="space-y-2">
             {service.features.slice(0, 3).map((feature, index) => (
-              <li key={index} className="flex items-start text-sm text-gray-400">
-                <span className="text-cyan-400 mr-2">•</span>
+              <li key={index} className="flex items-start text-sm text-gray-40o0">
+                <span className="text-cyan-40o0 mr-2">•</span>
                 {feature}
               </li>
             ))}
             {service.features.length > 3 && (
-              <li className="text-sm text-gray-500 italic">
+              <li className="text-sm text-gray-50o0 italic">
                 +{service.features.length - 3} more features
               </li>
             )}
@@ -101,19 +100,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
 
         {/* Contact Info (if enabled) */}
         {showContactInfo && (
-          <div className="mb-6 p-4 bg-black/20 rounded-lg border border-gray-700">
+          <div className="mb-6 p-4 bg-black/20 rounded-lg border border-gray-70o0">
             <h4 className="text-white font-semibold mb-3 text-center">Contact Information</h4>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center text-gray-400">
-                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+              <div className="flex items-center text-gray-40o0">
+                <Phone className="w-4 h-4 mr-2 text-cyan-40o0"  />
                 {service.contactInfo.mobile}
               </div>
-              <div className="flex items-center text-gray-400">
-                <Mail className="w-4 h-4 mr-2 text-purple-400" />
+              <div className="flex items-center text-gray-40o0">
+                <Mail className="w-4 h-4 mr-2 text-purple-40o0"  />
                 {service.contactInfo.email}
               </div>
-              <div className="flex items-center text-gray-400">
-                <MapPin className="w-4 h-4 mr-2 text-pink-400" />
+              <div className="flex items-center text-gray-40o0">
+                <MapPin className="w-4 h-4 mr-2 text-pink-40o0"  />
                 {service.contactInfo.address}
               </div>
             </div>
@@ -129,14 +128,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
             className="w-full"
           >
             Learn More
-            <ArrowRight className="ml-2 w-4 h-4" />
+            <ArrowRight className="ml-2 w-4 h-4"  />
           </Button>
         </div>
 
         {/* Popular Badge */}
         {service.popular && (
           <div className="absolute top-4 right-4">
-            <span className="px-2 py-1 text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full">
+            <span className="px-2 py-1 text-xs font-semibold bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black rounded-full">
               Popular
             </span>
           </div>

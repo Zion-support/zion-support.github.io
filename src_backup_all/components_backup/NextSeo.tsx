@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface NextSeoProps {
   title?: string;
   description?: string;

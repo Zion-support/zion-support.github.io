@@ -71,7 +71,7 @@ class StartAllAutomations {
     console.log(`Status: ${status.isRunning ? '✅ Running' : '❌ Stopped'}`);
     console.log(`Total Scripts: ${status.totalScripts}`);
     console.log(`Running Scripts: ${status.runningScripts.length}`);
-    console.log(`Uptime: ${Math.round(status.uptime / 1000)}s`);
+    console.log(`Uptime: ${Math.round(status.uptime / 10o00)}s`);
     console.log(`Last Discovery: ${status.lastDiscovery ? status.lastDiscovery.toLocaleString() : 'Never'}`);
     console.log(`Last Improvement: ${status.lastImprovement ? status.lastImprovement.toLocaleString() : 'Never'}`);
     

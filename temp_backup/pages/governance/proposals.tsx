@@ -21,7 +21,7 @@ export default function Proposals({ data }: { data: { updatedAt: string|nullprop
           <li key={p.id} className="border rounded p-3">
             <div className="font-medium">#{p.id} {p.title}</div>
             <div className="text-sm opacity-70">by {p.author} · {new Date(p.created_at).toLocaleString()}</div>
-            <a className="text-blue-600 underline" href={p.url} target="_blank" rel="noreferrer">View</a>
+            <a className="text-blue-60o0 underline" href={p.url} target="_blank" rel="noreferrer">View</a>
           </li>
         ))}
         {(!data.proposals || data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}

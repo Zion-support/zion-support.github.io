@@ -1,11 +1,10 @@
-import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-const categoryIcons = {
+const categoryIcons ={
     'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
@@ -15,15 +14,15 @@ const categoryIcons = {
     'E-commerce': ShoppingCart,
     'EdTech': GraduationCap
 };
-const categoryColors = {
-    'AI Business Solutions': 'from-purple-500 to-indigo-600',
-    'IT Infrastructure': 'from-blue-500 to-cyan-600',
-    'Data Analytics': 'from-green-500 to-emerald-600',
-    'AI Development': 'from-orange-500 to-red-600',
-    'FinTech': 'from-yellow-500 to-orange-600',
-    'HealthTech': 'from-pink-500 to-rose-600',
-    'E-commerce': 'from-indigo-500 to-purple-600',
-    'EdTech': 'from-teal-500 to-green-600'
+const categoryColors ={
+    'AI Business Solutions': 'from-purple-50o0 to-indigo-60o0',
+    'IT Infrastructure': 'from-blue-50o0 to-cyan-60o0',
+    'Data Analytics': 'from-green-50o0 to-emerald-60o0',
+    'AI Development': 'from-orange-50o0 to-red-60o0',
+    'FinTech': 'from-yellow-50o0 to-orange-60o0',
+    'HealthTech': 'from-pink-50o0 to-rose-60o0',
+    'E-commerce': 'from-indigo-50o0 to-purple-60o0',
+    'EdTech': 'from-teal-50o0 to-green-60o0'
 };
 const features = [
     "AI-Powered Automation",
@@ -41,22 +40,22 @@ const features = [
 ];
 const benefits = [
     {
-        icon: <Zap className="h-6 w-6"/>,
+        icon: <Zap className="h-6 w-6" />,
         title: "Immediate Deployment",
         description: "All services are ready for immediate deployment with no setup delays"
     },
     {
-        icon: <Shield className="h-6 w-6"/>,
+        icon: <Shield className="h-6 w-6" />,
         title: "Enterprise Security",
         description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
     },
     {
-        icon: <TrendingUp className="h-6 w-6"/>,
+        icon: <TrendingUp className="h-6 w-6" />,
         title: "Proven ROI",
-        description: "Average 300% ROI within 6 months of implementation"
+        description: "Average 30o0% ROI within 6 months of implementation"
     },
     {
-        icon: <CheckCircle className="h-6 w-6"/>,
+        icon: <CheckCircle className="h-6 w-6" />,
         title: "Quality Guaranteed",
         description: "30-day money-back guarantee with free migration support"
     }
@@ -76,14 +75,14 @@ export function ServicesShowcase() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/micro-saas-services">
-              <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
-                <Brain className="h-5 w-5 mr-2"/>
+              <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-10o0">
+                <Brain className="h-5 w-5 mr-2" />
                 Explore All Services
               </Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
-                <Phone className="h-5 w-5 mr-2"/>
+                <Phone className="h-5 w-5 mr-2" />
                 Get Consultation
               </Button>
             </Link>
@@ -95,10 +94,10 @@ export function ServicesShowcase() {
           {MICRO_SAAS_CATEGORIES.map((category) => {
             const IconComponent = categoryIcons[category.label];
             const colorClass = categoryColors[category.label];
-            return (<Card key={category.value} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+            return (<Card key={category.value} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${colorClass} rounded-full flex items-center justify-center mb-4`}>
-                    {IconComponent && <IconComponent className="h-8 w-8 text-white"/>}
+                    {IconComponent && <IconComponent className="h-8 w-8 text-white" />}
                   </div>
                   <CardTitle className="text-lg">{category.label}</CardTitle>
                 </CardHeader>
@@ -117,9 +116,9 @@ export function ServicesShowcase() {
             Featured Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+            {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-30o0 hover:scale-10o5">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg" />
                   <Badge className="absolute top-4 right-4 bg-zion-purple">
                     {service.category}
                   </Badge>
@@ -127,13 +126,13 @@ export function ServicesShowcase() {
                 <CardHeader>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {service.description.substring(0, 100)}...
+                    {service.description.substring(0, 10o0)}...
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 mr-1"/>
+                      <Star className="h-4 w-4 text-yellow-40o0 mr-1" />
                       <span className="text-sm">{service.rating}</span>
                       <span className="text-zion-slate-light text-sm ml-1">({service.reviewCount})</span>
                     </div>
@@ -163,7 +162,7 @@ export function ServicesShowcase() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {features.map((feature, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-10 w-10 text-zion-purple"/>
+                  <CheckCircle className="h-10 w-10 text-zion-purple" />
                 </div>
                 <p className="font-medium text-white text-sm">{feature}</p>
               </div>))}
@@ -196,7 +195,7 @@ export function ServicesShowcase() {
             <h3 className="text-3xl font-bold text-zion-blue mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            <p className="text-gray-60o0 text-lg max-w-3xl mx-auto">
               Get in touch with our team to discuss your needs and discover how our micro SAAS solutions can drive your success
             </p>
           </div>
@@ -206,28 +205,28 @@ export function ServicesShowcase() {
               <h4 className="text-2xl font-bold text-zion-blue mb-6">Contact Information</h4>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-zion-purple mr-3"/>
+                  <Phone className="h-5 w-5 text-zion-purple mr-3" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
+                    <p className="text-gray-60o0">{CONTACT_INFO.mobile}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-zion-purple mr-3"/>
+                  <Mail className="h-5 w-5 text-zion-purple mr-3" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-600">{CONTACT_INFO.email}</p>
+                    <p className="text-gray-60o0">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-5 w-5 text-zion-purple mr-3"/>
+                  <MapPin className="h-5 w-5 text-zion-purple mr-3" />
                   <div>
                     <p className="font-medium">Address</p>
-                    <p className="text-gray-600">{CONTACT_INFO.address}</p>
+                    <p className="text-gray-60o0">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Globe className="h-5 w-5 text-zion-purple mr-3"/>
+                  <Globe className="h-5 w-5 text-zion-purple mr-3" />
                   <div>
                     <p className="font-medium">Website</p>
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
@@ -260,7 +259,7 @@ export function ServicesShowcase() {
               
               <div className="mt-8 p-6 bg-zion-blue/5 rounded-lg border border-zion-blue/20">
                 <h5 className="font-medium text-zion-blue mb-2">What's Included:</h5>
-                <ul className="text-sm text-gray-600 space-y-1">
+                <ul className="text-sm text-gray-60o0 space-y-1">
                   <li>• 24/7 Technical Support</li>
                   <li>• 99.9% Uptime Guarantee</li>
                   <li>• SOC 2 Type II Compliant</li>
@@ -276,7 +275,7 @@ export function ServicesShowcase() {
             <Link to="/micro-saas-services">
               <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark">
                 Explore All Micro SAAS Services
-                <ArrowRight className="h-5 w-5 ml-2"/>
+                <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
           </div>

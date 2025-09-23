@@ -23,7 +23,7 @@ exports.handler = async function(event, context) {
 
     // Commit report to repo
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     const path = 'data/link-health.json';
@@ -67,8 +67,8 @@ exports.handler = async function(event, context) {
       return { statusCode: resCommit.status, body: JSON.stringify({ error: commitJson }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

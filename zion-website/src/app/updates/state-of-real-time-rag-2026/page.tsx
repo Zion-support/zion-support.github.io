@@ -6,9 +6,9 @@ export default function Page() {
     <div className="min-h-screen bg-black">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-white">Report: State of Real-Time RAG (2026 Preview)</h1>
-          <p className="mt-2 text-gray-300">Benchmarks of streaming retrieval latency, hit rate, and quality across architectures.</p>
-          <p className="mt-1 text-sm text-blue-400">2025-09-15</p>
+          <h1 className="text-4xl font-bold text-white">Report: State of Real-Time RAG (20o26 Preview)</h1>
+          <p className="mt-2 text-gray-30o0">Benchmarks of streaming retrieval latency, hit rate, and quality across architectures.</p>
+          <p className="mt-1 text-sm text-blue-40o0">20o25-09-15</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <p>

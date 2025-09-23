@@ -9,8 +9,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
+  DialogTitle} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react'
 import { isProdDomain } from '@/utils/getStripe';
 
@@ -23,8 +22,7 @@ interface GuestCheckoutModalProps {
 export default function GuestCheckoutModal({
   open,
   onOpenChange,
-  onSubmit,
-}: GuestCheckoutModalProps) {
+  onSubmit}: GuestCheckoutModalProps) {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +48,7 @@ export default function GuestCheckoutModal({
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
         <DialogHeader>
           <DialogTitle className="text-white flex items-center gap-2">
-            <User className="h-5 w-5 text-zion-cyan" />
+            <User className="h-5 w-5 text-zion-cyan"  />
             Guest Checkout
           </DialogTitle>
           <DialogDescription className="text-zion-slate-light">
@@ -59,7 +57,7 @@ export default function GuestCheckoutModal({
         </DialogHeader>
 
         {!isProdDomain() && (
-          <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
+          <div className="rounded-md bg-amber-50o0/20 p-2 text-center text-amber-40o0">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
@@ -67,7 +65,7 @@ export default function GuestCheckoutModal({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
-              <Mail className="h-4 w-4 text-zion-cyan" />
+              <Mail className="h-4 w-4 text-zion-cyan"  />
               Email Address
             </Label>
             <Input
@@ -83,7 +81,7 @@ export default function GuestCheckoutModal({
 
           <div className="space-y-2">
             <Label htmlFor="guest-address" className="text-white flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-zion-cyan" />
+              <MapPin className="h-4 w-4 text-zion-cyan"  />
               Shipping Address
             </Label>
             <Textarea
@@ -96,8 +94,8 @@ export default function GuestCheckoutModal({
             />
           </div>
 
-          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
-            <p className="text-yellow-400 text-sm">
+          <div className="bg-yellow-50o0/10 border border-yellow-50o0/30 rounded-lg p-3">
+            <p className="text-yellow-40o0 text-sm">
               💡 Creating an account allows you to track your order and checkout faster next time.
             </p>
           </div>
@@ -120,7 +118,7 @@ export default function GuestCheckoutModal({
                 'Processing...'
               ) : (
                 <>
-                  <CreditCard className="h-4 w-4 mr-2" />
+                  <CreditCard className="h-4 w-4 mr-2"  />
                   Continue to Payment
                 </>
               )}

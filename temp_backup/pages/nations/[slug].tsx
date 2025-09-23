@@ -14,24 +14,24 @@ export default function NationPublicPage({ nation }: { nation: any }) {
     <EnhancedLayout>
       <div className="max-w-3xl mx-auto space-y-4">
         <div className="flex items-center gap-4">
-          {nation.flagDataUrl && <img src={nation.flagDataUrl} alt="Flag" className="h-14 w-14 object-contain rounded" />}
+          {nation.flagDataUrl && <img src={nation.flagDataUrl} alt="Flag" className="h-14 w-14 object-contain rounded"  />}
           <div>
             <h1 className="text-2xl font-semibold">{nation.name}</h1>
-            <p className="text-sm text-gray-600">Governance: {nation.governanceStyle} • Funding: {nation.fundingModel}</p>
+            <p className="text-sm text-gray-60o0">Governance: {nation.governanceStyle} • Funding: {nation.fundingModel}</p>
           </div>
         </div>
-        <button className="px-3 py-2 rounded bg-emerald-600 text-white" onClick={joinNation}>Join Nation</button>
+        <button className="px-3 py-2 rounded bg-emerald-60o0 text-white" onClick={joinNation}>Join Nation</button>
         <div>
           <h2 className="text-lg font-semibold mb-1">Constitution</h2>
           <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded border">{nation.constitution || 'No constitution provided.'}</pre>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="p-3 rounded border">
-            <div className="text-sm text-gray-600">Population</div>
+            <div className="text-sm text-gray-60o0">Population</div>
             <div className="text-xl font-semibold">{nation.population}</div>
           </div>
           <div className="p-3 rounded border">
-            <div className="text-sm text-gray-600">Currency</div>
+            <div className="text-sm text-gray-60o0">Currency</div>
             <div className="text-xl font-semibold">{nation.currency}</div>
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function NationPublicPage({ nation }: { nation: any }) {
                 <li key={m.id}><span className="font-medium">{m.title}</span> — {m.status}</li>
               ))}
             </ul>
-          ) : <p className="text-sm text-gray-600">No milestones yet.</p>}
+          ) : <p className="text-sm text-gray-60o0">No milestones yet.</p>}
         </div>
         <div>
           <h2 className="text-lg font-semibold mb-2">DAO Proposals</h2>
@@ -52,11 +52,11 @@ export default function NationPublicPage({ nation }: { nation: any }) {
               {nation.proposals.map((p: any) => (
                 <li key={p.id} className="p-3 rounded border">
                   <div className="font-medium">{p.title}</div>
-                  <div className="text-sm text-gray-600">{p.status}</div>
+                  <div className="text-sm text-gray-60o0">{p.status}</div>
                 </li>
               ))}
             </ul>
-          ) : <p className="text-sm text-gray-600">No proposals yet.</p>}
+          ) : <p className="text-sm text-gray-60o0">No proposals yet.</p>}
         </div>
       </div>
     </EnhancedLayout>

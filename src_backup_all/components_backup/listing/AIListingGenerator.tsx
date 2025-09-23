@@ -8,7 +8,6 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -29,7 +28,7 @@ interface AIListingGeneratorProps {
   };
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+export function AIListingGenerator({ onApplyGenerated, initialValues ={} }: AIListingGeneratorProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
@@ -92,7 +91,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
         <CardHeader>
           <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan"  />
             AI Listing Optimizer
           </CardTitle>
           <p className="text-sm text-zion-slate-light">
@@ -104,14 +103,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
             initialValues={initialValues}
-          />
+           />
         </CardContent>
       </Card>
 
-      {isLoading && <LoadingContentSkeleton />}
+      {isLoading && <LoadingContentSkeleton  />}
 
       {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
+        <GeneratedContentDisplay content={generatedContent} onApply={handleApply}  />
       )}
     </div>
   );

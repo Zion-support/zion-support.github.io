@@ -5,13 +5,13 @@ export default function TutorialPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Mastering Mobile App Development - Zion Tech Group</title>
-        <meta name="description" content="Learn mobile app development with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users." />
-        <meta name="keywords" content="tutorial, mobile app development, learning, guide, education, technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755574861838-1dwjxb" />
+        <meta name="description" content="Learn mobile app development with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users."  />
+        <meta name="keywords" content="tutorial, mobile app development, learning, guide, education, technology"  />
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755574861838-1dwjxb"  />
       
-        <meta property="og:title" content="Mastering Mobile App Development" />
-        <meta property="og:description" content="Mastering Mobile App Development — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Mastering Mobile App Development"  />
+        <meta property="og:description" content="Mastering Mobile App Development — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Mastering Mobile App Development</h1>
         
@@ -50,7 +50,7 @@ export default function TutorialPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/tutorials" 
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Start Learning
           </a>

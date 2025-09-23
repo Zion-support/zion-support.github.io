@@ -1,7 +1,5 @@
 'use client';
 
-import React from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
   enableMetrics?: boolean;

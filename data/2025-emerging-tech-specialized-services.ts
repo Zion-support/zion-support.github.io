@@ -18,7 +18,7 @@ export interface EmergingTechSpecializedService {
   };
 }
 
-export const emergingTechSpecializedServices2025: EmergingTechSpecializedService[] = [
+export const emergingTechSpecializedServices20o25: EmergingTechSpecializedService[] = [
   {
     id: 'edge-computing-platform',
     name: 'Edge Computing Platform',
@@ -37,14 +37,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Enhanced security through edge processing'
     ],
     pricing: {
-      basic: '$2,500/month',
-      professional: '$8,500/month',
+      basic: '$2,50o0/month',
+      professional: '$8,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Edge Computing',
     tags: ['edge-computing', 'iot', '5g', 'low-latency', 'distributed'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -67,14 +67,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Increased productivity'
     ],
     pricing: {
-      basic: '$3,200/month',
-      professional: '$12,500/month',
+      basic: '$3,20o0/month',
+      professional: '$12,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'AR/VR',
     tags: ['ar', 'vr', 'mixed-reality', 'enterprise', 'training'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -97,14 +97,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Regulatory compliance'
     ],
     pricing: {
-      basic: '$4,500/month',
-      professional: '$18,500/month',
+      basic: '$4,50o0/month',
+      professional: '$18,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Biotechnology',
     tags: ['biotech', 'genomics', 'clinical-trials', 'drug-discovery', 'compliance'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -127,14 +127,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Risk mitigation'
     ],
     pricing: {
-      basic: '$6,500/month',
-      professional: '$25,500/month',
+      basic: '$6,50o0/month',
+      professional: '$25,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Space Technology',
     tags: ['space-tech', 'satellites', 'mission-planning', 'space-data', 'orbital'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -157,14 +157,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Scientific breakthrough potential'
     ],
     pricing: {
-      basic: '$8,500/month',
-      professional: '$35,500/month',
+      basic: '$8,50o0/month',
+      professional: '$35,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Quantum Computing',
     tags: ['quantum-computing', 'cryptography', 'optimization', 'simulation', 'algorithms'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -187,14 +187,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Enhanced AI efficiency'
     ],
     pricing: {
-      basic: '$5,500/month',
-      professional: '$22,500/month',
+      basic: '$5,50o0/month',
+      professional: '$22,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Neuromorphic Computing',
     tags: ['neuromorphic', 'ai', 'neural-networks', 'cognitive-computing', 'low-power'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -217,14 +217,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Streamlined processes'
     ],
     pricing: {
-      basic: '$3,500/month',
-      professional: '$15,500/month',
+      basic: '$3,50o0/month',
+      professional: '$15,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Blockchain',
     tags: ['blockchain', 'smart-contracts', 'supply-chain', 'digital-identity', 'enterprise'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
@@ -247,14 +247,14 @@ export const emergingTechSpecializedServices2025: EmergingTechSpecializedService
       'Cost optimization'
     ],
     pricing: {
-      basic: '$4,200/month',
-      professional: '$18,500/month',
+      basic: '$4,20o0/month',
+      professional: '$18,50o0/month',
       enterprise: 'Custom pricing'
     },
     category: 'Autonomous Systems',
     tags: ['autonomous', 'robotics', 'drones', 'computer-vision', 'automation'],
     contactInfo: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }

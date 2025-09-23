@@ -1,4 +1,3 @@
-import React from 'react';
 import type { OrgData } from '../../types/org';
 import PersonCard from './PersonCard';
 
@@ -8,7 +7,7 @@ export default function OrgTree({ data, showPhotos }: { data: OrgData; showPhoto
       <Section title="Founders">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.founders.map((p) => (
-            <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+            <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
           ))}
         </div>
       </Section>
@@ -20,10 +19,10 @@ export default function OrgTree({ data, showPhotos }: { data: OrgData; showPhoto
             if (members.length === 0) return null;
             return (
               <div key={dept}>
-                <h4 className="text-sm font-semibold text-gray-600 dark:text-gray-300 mb-2">{dept}</h4>
+                <h4 className="text-sm font-semibold text-gray-60o0 dark:text-gray-30o0 mb-2">{dept}</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {members.map((p) => (
-                    <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+                    <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
                   ))}
                 </div>
               </div>
@@ -36,7 +35,7 @@ export default function OrgTree({ data, showPhotos }: { data: OrgData; showPhoto
         <Section title="Contributors">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {data.contributors.map((p) => (
-              <PersonCard key={p.id} person={p} showPhoto={showPhotos} />
+              <PersonCard key={p.id} person={p} showPhoto={showPhotos}  />
             ))}
           </div>
         </Section>
@@ -46,9 +45,9 @@ export default function OrgTree({ data, showPhotos }: { data: OrgData; showPhoto
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {data.delegates.map((p) => (
             <div key={p.id}>
-              <PersonCard person={p} showPhoto={showPhotos} />
+              <PersonCard person={p} showPhoto={showPhotos}  />
               {p.votingPower !== undefined && (
-                <div className="mt-2 text-xs text-gray-600 dark:text-gray-300">Voting power: {p.votingPower}</div>
+                <div className="mt-2 text-xs text-gray-60o0 dark:text-gray-30o0">Voting power: {p.votingPower}</div>
               )}
             </div>
           ))}

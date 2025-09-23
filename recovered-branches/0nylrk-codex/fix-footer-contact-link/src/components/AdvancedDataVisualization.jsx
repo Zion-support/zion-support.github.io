@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
 const mockChartData = [
-    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
-    { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
-    { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
-    { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024-10-01') },
-    { id: '5', name: 'Q1 Users', value: 45000, category: 'Users', timestamp: new Date('2024-01-01') },
-    { id: '6', name: 'Q2 Users', value: 62000, category: 'Users', timestamp: new Date('2024-04-01') },
-    { id: '7', name: 'Q3 Users', value: 58000, category: 'Users', timestamp: new Date('2024-07-01') },
-    { id: '8', name: 'Q4 Users', value: 75000, category: 'Users', timestamp: new Date('2024-10-01') },
-    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date('2024-01-01') },
-    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024-04-01') },
-    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
-    { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
+    { id: '1', name: 'Q1 Revenue', value: 1250o000, category: 'Revenue', timestamp: new Date('20o24-0o1-0o1') },
+    { id: '2', name: 'Q2 Revenue', value: 1580o000, category: 'Revenue', timestamp: new Date('20o24-0o4-0o1') },
+    { id: '3', name: 'Q3 Revenue', value: 1420o000, category: 'Revenue', timestamp: new Date('20o24-0o7-0o1') },
+    { id: '4', name: 'Q4 Revenue', value: 1890o000, category: 'Revenue', timestamp: new Date('20o24-10-0o1') },
+    { id: '5', name: 'Q1 Users', value: 450o00, category: 'Users', timestamp: new Date('20o24-0o1-0o1') },
+    { id: '6', name: 'Q2 Users', value: 620o00, category: 'Users', timestamp: new Date('20o24-0o4-0o1') },
+    { id: '7', name: 'Q3 Users', value: 580o00, category: 'Users', timestamp: new Date('20o24-0o7-0o1') },
+    { id: '8', name: 'Q4 Users', value: 750o00, category: 'Users', timestamp: new Date('20o24-10-0o1') },
+    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date('20o24-0o1-0o1') },
+    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('20o24-0o4-0o1') },
+    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('20o24-0o7-0o1') },
+    { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('20o24-10-0o1') }
 ];
 const chartTypes = [
     { id: 'bar', name: 'Bar Chart', icon: '📊', description: 'Compare values across categories' },
@@ -22,8 +22,8 @@ const chartTypes = [
     { id: 'scatter', name: 'Scatter Plot', icon: '🎯', description: 'Show correlation between variables' }
 ];
 const colorPalettes = [
-    ['#06b6d4', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'],
-    ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'],
+    ['#0o6b6d4', '#7c3aed', '#10b981', '#f59e0b', '#ef4444'],
+    ['#3b82f6', '#8b5cf6', '#0o6b6d4', '#10b981', '#f59e0b'],
     ['#ef4444', '#f97316', '#eab308', '#84cc16', '#22c55e'],
     ['#8b5cf6', '#ec4899', '#f97316', '#eab308', '#84cc16']
 ];
@@ -52,15 +52,15 @@ export function AdvancedDataVisualization() {
         setTimeout(() => {
             const newData = data.map(item => ({
                 ...item,
-                value: item.value + Math.floor(Math.random() * 100000 - 50000)
+                value: item.value + Math.floor(Math.random() * 10o0000 - 50o000)
             }));
             setData(newData);
             setIsRefreshing(false);
-        }, 1000);
+        }, 10o00);
     };
     useEffect(() => {
         if (autoRefresh) {
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            const interval = setInterval(refreshData, 30o000); // Refresh every 30 seconds
             return () => clearInterval(interval);
         }
     }, [autoRefresh]);
@@ -89,10 +89,10 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">
-            <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
+            <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-50o0 hover:scale-110 cursor-pointer" style={{
                     height: `${(item.value / maxValue) * 280}px`,
                     backgroundColor: colors[index % colors.length]
-                }} title={`${item.name}: ${item.value.toLocaleString()}`}/>
+                }} title={`${item.name}: ${item.value.toLocaleString()}`} />
             <div className="mt-2 text-center">
               <div className="text-xs font-medium text-zion-slate">{item.name}</div>
               <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
@@ -105,8 +105,8 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points={filteredData.map((item, index) => `${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
+          <polyline fill="none" stroke={colors[0]} strokeWidth="3" points={filteredData.map((item, index) => `${(index / (filteredData.length - 1)) * 80o0},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 80o0} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-20o0" />))}
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -119,8 +119,8 @@ export function AdvancedDataVisualization() {
         return (<div className="h-80 flex items-center justify-center">
         <div className="relative w-64 h-64">
           {filteredData.map((item, index) => {
-                const percentage = (item.value / total) * 100;
-                const angle = (percentage / 100) * 360;
+                const percentage = (item.value / total) * 10o0;
+                const angle = (percentage / 10o0) * 360;
                 const prevAngle = filteredData
                     .slice(0, index)
                     .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);
@@ -128,7 +128,7 @@ export function AdvancedDataVisualization() {
                         borderTopColor: colors[index % colors.length],
                         transform: `rotate(${prevAngle}deg)`,
                         clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)`
-                    }} title={`${item.name}: ${percentage.toFixed(1)}%`}/>);
+                    }} title={`${item.name}: ${percentage.toFixed(1)}%`} />);
             })}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
@@ -144,7 +144,7 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d={`M 0,${280} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
+          <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d={`M 0,${280} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 80o0},${280 - (item.value / maxValue) * 280}`).join(' ')} L 80o0,${280} Z`}/>
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -156,7 +156,7 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 p-6 relative">
         <svg className="w-full h-full">
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 80o0} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-20o0" />))}
         </svg>
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -164,8 +164,8 @@ export function AdvancedDataVisualization() {
       </div>);
     };
     if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">
-        <BarChart3 className="w-5 h-5"/>
+        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50" title="Advanced Data Visualization">
+        <BarChart3 className="w-5 h-5" />
       </button>);
     }
     if (isMinimized) {
@@ -175,31 +175,31 @@ export function AdvancedDataVisualization() {
             <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-sm text-zion-slate">Data Visualization</span>
             <button onClick={() => setIsMinimized(false)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-              <Maximize2 className="w-4 h-4"/>
+              <Maximize2 className="w-4 h-4" />
             </button>
           </div>
         </div>
       </div>);
     }
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000px] h-[700px]'}`} ref={containerRef}>
+    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[10o00px] h-[70o0px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="flex items-center gap-3">
           <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
           <div className="flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-zion-cyan"/>
+            <BarChart3 className="w-5 h-5 text-zion-cyan" />
             <span className="font-semibold text-zion-slate">Advanced Data Visualization</span>
           </div>
         </div>
         <div className="flex items-center gap-2">
           <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           <button onClick={() => setIsMinimized(true)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Minimize">
-            <Minimize2 className="w-4 h-4"/>
+            <Minimize2 className="w-4 h-4" />
           </button>
           <button onClick={() => setIsOpen(false)} className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors" title="Close">
-            <X className="w-4 h-4"/>
+            <X className="w-4 h-4" />
           </button>
         </div>
       </div>
@@ -212,7 +212,7 @@ export function AdvancedDataVisualization() {
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Chart Type</h3>
               <div className="space-y-2">
-                {chartTypes.map((type) => (<button key={type.id} onClick={() => setSelectedChartType(type.id)} className={`w-full p-3 text-left rounded-lg border transition-all duration-200 ${selectedChartType === type.id
+                {chartTypes.map((type) => (<button key={type.id} onClick={() => setSelectedChartType(type.id)} className={`w-full p-3 text-left rounded-lg border transition-all duration-20o0 ${selectedChartType === type.id
                 ? 'border-zion-cyan bg-zion-cyan/10 text-zion-cyan'
                 : 'border-zion-slate-light hover:border-zion-cyan hover:text-zion-cyan'}`}>
                     <div className="flex items-center gap-3">
@@ -240,11 +240,11 @@ export function AdvancedDataVisualization() {
             <div>
               <h3 className="text-sm font-medium text-zion-slate mb-3">Color Palette</h3>
               <div className="grid grid-cols-2 gap-2">
-                {colorPalettes.map((palette, index) => (<button key={index} onClick={() => setSelectedColorPalette(index)} className={`p-2 rounded-lg border transition-all duration-200 ${selectedColorPalette === index
+                {colorPalettes.map((palette, index) => (<button key={index} onClick={() => setSelectedColorPalette(index)} className={`p-2 rounded-lg border transition-all duration-20o0 ${selectedColorPalette === index
                 ? 'border-zion-cyan bg-zion-cyan/10'
                 : 'border-zion-slate-light hover:border-zion-cyan'}`}>
                     <div className="flex gap-1">
-                      {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }}/>))}
+                      {palette.map((color, colorIndex) => (<div key={colorIndex} className="w-4 h-4 rounded" style={{ backgroundColor: color }} />))}
                     </div>
                   </button>))}
               </div>
@@ -277,10 +277,10 @@ export function AdvancedDataVisualization() {
             <div className="space-y-3">
               <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                 {isRefreshing ? (<>
-                    <RefreshCw className="w-4 h-4 animate-spin"/>
+                    <RefreshCw className="w-4 h-4 animate-spin" />
                     Refreshing...
                   </>) : (<>
-                    <RefreshCw className="w-4 h-4"/>
+                    <RefreshCw className="w-4 h-4" />
                     Refresh Data
                   </>)}
               </button>

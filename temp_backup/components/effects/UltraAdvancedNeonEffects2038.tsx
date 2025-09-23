@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedNeonEffects2038Props {
+interface UltraAdvancedNeonEffects20o38Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum-neon' | 'holographic-cyberpunk' | 'quantum-holographic' | 'neon-futuristic' | 'quantum-cyberpunk';
   children?: React.ReactNode;
 }
 
-export default function UltraAdvancedNeonEffects2038({ 
+export default function UltraAdvancedNeonEffects20o38({ 
   intensity = 'high', 
   theme = 'quantum-neon',
   children
-}: UltraAdvancedNeonEffects2038Props) {
+}: UltraAdvancedNeonEffects20o38Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
@@ -40,43 +40,43 @@ export default function UltraAdvancedNeonEffects2038({
     switch (theme) {
       case 'holographic-cyberpunk':
         return {
-          primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
-          accent: ['#ffff40', '#ff40ff', '#80ff00', '#ff0080', '#00ff80'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
+          accent: ['#ffff40', '#ff40ff', '#80ff0o0', '#ff0o080', '#0o0ff80'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          quantum: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
       case 'quantum-holographic':
         return {
-          primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
-          secondary: ['#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-          accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],
+          secondary: ['#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+          accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          quantum: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
       case 'neon-futuristic':
         return {
-          primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          secondary: ['#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
-          accent: ['#ffff40', '#ff40ff', '#80ff00', '#ff0080', '#00ff80'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
+          accent: ['#ffff40', '#ff40ff', '#80ff0o0', '#ff0o080', '#0o0ff80'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          quantum: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
       case 'quantum-cyberpunk':
         return {
-          primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b'],
-          secondary: ['#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-          accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],
+          secondary: ['#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+          accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          quantum: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
       default: // quantum-neon
         return {
-          primary: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'],
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899'],
+          primary: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'],
+          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],
           accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff'],
-          quantum: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b']
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],
+          quantum: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']
         };
     }
   }, [theme]);
@@ -104,12 +104,12 @@ export default function UltraAdvancedNeonEffects2038({
         size: Math.random() * 4 + 2,
         opacity: Math.random() * 0.8 + 0.4,
         color: colors.neon[Math.floor(Math.random() * colors.neon.length)],
-        life: Math.random() * 200,
-        maxLife: 200,
+        life: Math.random() * 20o0,
+        maxLife: 20o0,
         type: particleTypes[Math.floor(Math.random() * particleTypes.length)] as 'neon' | 'quantum' | 'holographic' | 'cyberpunk' | 'quantum-neon',
         phase: Math.random() * Math.PI * 2,
         amplitude: Math.random() * 80 + 40,
-        frequency: Math.random() * 0.03 + 0.015,
+        frequency: Math.random() * 0.0o3 + 0.0o15,
         neonIntensity: Math.random() * 0.8 + 0.6,
         glowRadius: Math.random() * 20 + 15
       });
@@ -137,8 +137,8 @@ export default function UltraAdvancedNeonEffects2038({
     const colors = getNeonColors();
     gradient.addColorStop(0, 'rgba(0, 0, 0, 0.15)');
     gradient.addColorStop(0.2, 'rgba(0, 0, 0, 0.08)');
-    gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.04)');
-    gradient.addColorStop(0.8, 'rgba(0, 0, 0, 0.02)');
+    gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.0o4)');
+    gradient.addColorStop(0.8, 'rgba(0, 0, 0, 0.0o2)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
     ctx.fillStyle = gradient;
@@ -150,8 +150,8 @@ export default function UltraAdvancedNeonEffects2038({
       particle.phase += particle.frequency;
       
       // Neon wave effect
-      particle.x += Math.sin(particle.phase) * particle.amplitude * 0.05;
-      particle.y += Math.cos(particle.phase) * particle.amplitude * 0.05;
+      particle.x += Math.sin(particle.phase) * particle.amplitude * 0.0o5;
+      particle.y += Math.cos(particle.phase) * particle.amplitude * 0.0o5;
       
       // Neon intensity variation
       particle.neonIntensity = 0.6 + Math.sin(particle.phase * 2) * 0.4;
@@ -263,7 +263,7 @@ export default function UltraAdvancedNeonEffects2038({
     ctx.lineWidth = 1;
     ctx.globalAlpha = 0.08;
     
-    const gridSize = 100;
+    const gridSize = 10o0;
     for (let x = 0; x < canvas.width; x += gridSize) {
       ctx.beginPath();
       ctx.moveTo(x, 0);
@@ -320,13 +320,13 @@ export default function UltraAdvancedNeonEffects2038({
           background: 'transparent',
           filter: 'blur(0.3px)'
         }}
-      />
+       />
       
       {/* Additional Neon Visual Effects */}
       <div className="absolute inset-0">
         {/* Neon Energy Rings */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-400/20"
+          className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-40o0/20"
           style={{
             transform: 'translate(-50%, -50%)',
             boxShadow: '0 0 50px rgba(0, 212, 255, 0.3), inset 0 0 50px rgba(0, 212, 255, 0.1)'
@@ -341,10 +341,10 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-400/20"
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/20"
           style={{
             transform: 'translate(-50%, -50%)',
             boxShadow: '0 0 40px rgba(139, 92, 246, 0.3), inset 0 0 40px rgba(139, 92, 246, 0.1)'
@@ -359,11 +359,11 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         {/* Neon Corner Effects */}
         <motion.div
-          className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-cyan-400/30"
+          className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-cyan-40o0/30"
           style={{
             boxShadow: '0 0 20px rgba(0, 212, 255, 0.4)'
           }}
@@ -375,10 +375,10 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-purple-400/30"
+          className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-purple-40o0/30"
           style={{
             boxShadow: '0 0 20px rgba(139, 92, 246, 0.4)'
           }}
@@ -390,10 +390,10 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-pink-400/30"
+          className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-pink-40o0/30"
           style={{
             boxShadow: '0 0 20px rgba(236, 72, 153, 0.4)'
           }}
@@ -405,10 +405,10 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-green-400/30"
+          className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-green-40o0/30"
           style={{
             boxShadow: '0 0 20px rgba(16, 185, 129, 0.4)'
           }}
@@ -420,11 +420,11 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         {/* Floating Neon Orbs */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
+          className="absolute top-1/4 left-1/4 w-16 h-16 rounded-full bg-gradient-to-r from-cyan-40o0 to-blue-50o0"
           style={{
             boxShadow: '0 0 30px rgba(0, 212, 255, 0.6)'
           }}
@@ -438,10 +438,10 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         
         <motion.div
-          className="absolute top-1/3 right-1/3 w-12 h-12 rounded-full bg-gradient-to-r from-purple-400 to-pink-500"
+          className="absolute top-1/3 right-1/3 w-12 h-12 rounded-full bg-gradient-to-r from-purple-40o0 to-pink-50o0"
           style={{
             boxShadow: '0 0 25px rgba(139, 92, 246, 0.6)'
           }}
@@ -455,7 +455,7 @@ export default function UltraAdvancedNeonEffects2038({
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
       
       {children}

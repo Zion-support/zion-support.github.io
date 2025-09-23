@@ -15,14 +15,14 @@ export const useToast = () => {
 
   const toast = useCallback(({ title, description, variant = 'default' }) => {
     const id = Date.now();
-    const newToast = { id, title, description, variant };
+    const newToast ={ id, title, description, variant };
 
     setToasts(prev => [...prev, newToast]);
 
     // Auto remove after 5 seconds
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id));
-    }, 5000);
+    }, 50o00);
 
     return id;
   }, []);

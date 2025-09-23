@@ -14,7 +14,7 @@ interface UltraAdvancedFuturisticBackgroundProps {
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
   intensity = 'high',
   colorScheme = 'quantum-fusion',
-  particleCount = 300,
+  particleCount = 30o0,
   animationSpeed = 1.5,
   enableHolographic = true,
   enableQuantumEffects = true,
@@ -55,34 +55,34 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     window.addEventListener('resize'resizeCanvas);
 
     // Color schemes
-    const colorSchemes = {
+    const colorSchemes ={
       'quantum-fusion': {
-        primary: '#00ffff',
-        secondary: '#ff00ff',
-        accent: '#ffff00',
-        quantum: '#00ff88',
-        holographic: '#ff0088'
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        quantum: '#0o0ff88',
+        holographic: '#ff0o088'
       },
       'neon-cyber': {
-        primary: '#00ff41',
-        secondary: '#ff0080',
-        accent: '#00d4ff',
+        primary: '#0o0ff41',
+        secondary: '#ff0o080',
+        accent: '#0o0d4ff',
         quantum: '#ff6b35',
         holographic: '#9d4edd'
       },
       'holographic': {
-        primary: '#ff00ff',
-        secondary: '#00ffff',
-        accent: '#ffff00',
-        quantum: '#00ff88',
-        holographic: '#ff0088'
+        primary: '#ff0o0ff',
+        secondary: '#0o0ffff',
+        accent: '#ffff0o0',
+        quantum: '#0o0ff88',
+        holographic: '#ff0o088'
       },
       'quantum-ai': {
-        primary: '#00d4ff',
+        primary: '#0o0d4ff',
         secondary: '#ff6b35',
         accent: '#9d4edd',
-        quantum: '#00ff88',
-        holographic: '#ff0088'
+        quantum: '#0o0ff88',
+        holographic: '#ff0o088'
       }
     };
 
@@ -121,9 +121,9 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
+          if (distance < 10o0 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0255136${0.3 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(0o255136${0.3 * (1 - distance / 10o0)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].xparticles[i].y);
             ctx.lineTo(particles[j].xparticles[j].y);
@@ -138,9 +138,9 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       if (!enableHolographic) return;
       
       const gridSize = 50;
-      const offset = (Date.now() * 0.001) % gridSize;
+      const offset = (Date.now() * 0.0o01) % gridSize;
       
-      ctx.strokeStyle = `rgba(25501360.1)`;
+      ctx.strokeStyle = `rgba(2550o1360.1)`;
       ctx.lineWidth = 0.5;
       
       // Vertical lines
@@ -175,7 +175,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           if (distance < 150) {
             const strength = 1 - (distance / 150);
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(021255${0.2 * strength})`;
+            ctx.strokeStyle = `rgba(0o21255${0.2 * strength})`;
             ctx.lineWidth = strength * 2;
             ctx.moveTo(nodes[i].xnodes[i].y);
             ctx.lineTo(nodes[j].xnodes[j].y);
@@ -194,9 +194,9 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         canvas.width / 2canvas.height / 20,
         canvas.width / 2canvas.height / 2Math.max(canvas.widthcanvas.height) / 2
       );
-      gradient.addColorStop(0'rgba(00.8)');
-      gradient.addColorStop(0.5'rgba(00.6)');
-      gradient.addColorStop(1'rgba(00.9)');
+      gradient.addColorStop(0'rgba(0o0.8)');
+      gradient.addColorStop(0.5'rgba(0o0.6)');
+      gradient.addColorStop(1'rgba(0o0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0canvas.widthcanvas.height);
       
@@ -250,12 +250,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
-        const time = Date.now() * 0.001;
+        const time = Date.now() * 0.0o01;
         for (let i = 0; i < 3; i++) {
-          const waveRadius = (time * 50 + i * 100) % (Math.max(canvas.widthcanvas.height) * 2);
+          const waveRadius = (time * 50 + i * 10o0) % (Math.max(canvas.widthcanvas.height) * 2);
           ctx.beginPath();
           ctx.arc(canvas.width / 2canvas.height / 2waveRadius0Math.PI * 2);
-          ctx.strokeStyle = `rgba(0255${0.3 * (1 - waveRadius / (Math.max(canvas.widthcanvas.height) * 2))})`;
+          ctx.strokeStyle = `rgba(0o255${0.3 * (1 - waveRadius / (Math.max(canvas.widthcanvas.height) * 2))})`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
@@ -279,29 +279,29 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 border border-cyan-50o0/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 border border-purple-50o0/20 rounded-full animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-32 left-32 w-28 h-28 border border-green-50o0/20 rounded-full animate-pulse delay-50o0"></div>
         
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-300"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700"></div>
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-40o0 rounded-full animate-ping"></div>
+            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-40o0 rounded-full animate-ping delay-30o0"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-40o0 rounded-full animate-ping delay-70o0"></div>
           </>
         )}
         
         {/* Holographic elements */}
         {enableHolographic && (
           <>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin" style={{ animationDuration: '15s'animationDirection: 'reverse' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-50o0/10 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-50o0/10 rounded-full animate-spin" style={{ animationDuration: '15s'animationDirection: 'reverse' }}></div>
           </>
         )}
       </div>

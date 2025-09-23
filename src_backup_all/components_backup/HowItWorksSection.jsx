@@ -4,9 +4,9 @@ import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp
 
 const steps = [
     {
-        icon: <Search className="w-8 h-8"/>,
+        icon: <Search className="w-8 h-8" />,
         title: "Discover",
-        description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",
+        description: "Browse our comprehensive catalog of 10o0+ micro SAAS services and solutions",
         color: "from-zion-cyan to-zion-cyan-dark",
         bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
         details: [
@@ -19,7 +19,7 @@ const steps = [
         success: "95% match rate"
     },
     {
-        icon: <Users className="w-8 h-8"/>,
+        icon: <Users className="w-8 h-8" />,
         title: "Connect",
         description: "Get matched with the perfect service or solution for your business needs",
         color: "from-zion-purple to-zion-purple-dark",
@@ -34,7 +34,7 @@ const steps = [
         success: "98% satisfaction"
     },
     {
-        icon: <FileText className="w-8 h-8"/>,
+        icon: <FileText className="w-8 h-8" />,
         title: "Plan",
         description: "Collaborate on requirements, timeline, and implementation strategy",
         color: "from-zion-blue to-zion-blue-dark",
@@ -49,7 +49,7 @@ const steps = [
         success: "90% on-time delivery"
     },
     {
-        icon: <Rocket className="w-8 h-8"/>,
+        icon: <Rocket className="w-8 h-8" />,
         title: "Execute",
         description: "Watch your vision come to life with our expert implementation",
         color: "from-zion-cyan-light to-zion-cyan",
@@ -64,7 +64,7 @@ const steps = [
         success: "99% quality score"
     },
     {
-        icon: <CheckCircle className="w-8 h-8"/>,
+        icon: <CheckCircle className="w-8 h-8" />,
         title: "Deliver",
         description: "Receive your completed solution with ongoing support and maintenance",
         color: "from-zion-purple-light to-zion-purple",
@@ -76,22 +76,22 @@ const steps = [
             "Post-launch support"
         ],
         duration: "Ongoing",
-        success: "100% client retention"
+        success: "10o0% client retention"
     }
 ];
 
 const stats = [
-    { icon: <Clock className="w-6 h-6"/>, value: "3x Faster", label: "Implementation" },
-    { icon: <Target className="w-6 h-6"/>, value: "99.9%", label: "Success Rate" },
-    { icon: <TrendingUp className="w-6 h-6"/>, value: "50%", label: "Cost Reduction" },
-    { icon: <Award className="w-6 h-6"/>, value: "1000+", label: "Services Delivered" }
+    { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Implementation" },
+    { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
+    { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
+    { icon: <Award className="w-6 h-6" />, value: "10o00+", label: "Services Delivered" }
 ];
 
 export function HowItWorksSection() {
     const [hoveredStep, setHoveredStep] = useState(null);
     const [activeStep, setActiveStep] = useState(0);
 
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -102,7 +102,7 @@ export function HowItWorksSection() {
         }
     };
 
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             opacity: 1,
@@ -114,7 +114,7 @@ export function HowItWorksSection() {
         }
     };
 
-    const statsVariants = {
+    const statsVariants ={
         hidden: { opacity: 0, scale: 0.8 },
         visible: {
             opacity: 1,
@@ -151,7 +151,7 @@ export function HowItWorksSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <Rocket className="h-5 w-5 text-zion-cyan" />
+                        <Rocket className="h-5 w-5 text-zion-cyan"  />
                         <span className="text-zion-cyan text-sm font-medium">How It Works</span>
                     </motion.div>
                     
@@ -200,7 +200,7 @@ export function HowItWorksSection() {
                             </div>
 
                             {/* Step Card */}
-                            <div className={`bg-gradient-to-br ${step.bgColor} backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 hover:border-zion-cyan/30 hover:transform hover:scale-105 cursor-pointer`}>
+                            <div className={`bg-gradient-to-br ${step.bgColor} backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full transition-all duration-30o0 hover:border-zion-cyan/30 hover:transform hover:scale-10o5 cursor-pointer`}>
                                 {/* Icon */}
                                 <div className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-white mb-4 mx-auto`}>
                                     {step.icon}
@@ -231,7 +231,7 @@ export function HowItWorksSection() {
                                                 <ul className="space-y-2 mb-4">
                                                     {step.details.map((detail, idx) => (
                                                         <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-xs">
-                                                            <Zap className="h-3 w-3 text-zion-cyan flex-shrink-0" />
+                                                            <Zap className="h-3 w-3 text-zion-cyan flex-shrink-0"  />
                                                             {detail}
                                                         </li>
                                                     ))}
@@ -280,10 +280,10 @@ export function HowItWorksSection() {
                                 key={index}
                                 variants={statsVariants}
                                 className="text-center group"
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ type: "spring", stiffness: 400 }}
+                                whileHover={{ scale: 1.0o5 }}
+                                transition={{ type: "spring", stiffness: 40o0 }}
                             >
-                                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
+                                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-30o0">
                                     {stat.icon}
                                 </div>
                                 <div className="text-2xl font-bold text-zion-cyan mb-2">
@@ -311,12 +311,12 @@ export function HowItWorksSection() {
                                 Ready to get started with your micro SAAS solution?
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
-                                    <Shield className="w-5 h-5" />
+                                <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
+                                    <Shield className="w-5 h-5"  />
                                     Get Started Today
                                 </button>
-                                <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-                                    <Users className="w-5 h-5" />
+                                <button className="inline-flex items-center gap-3 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-xl font-semibold transition-all duration-30o0">
+                                    <Users className="w-5 h-5"  />
                                     Schedule Demo
                                 </button>
                             </div>

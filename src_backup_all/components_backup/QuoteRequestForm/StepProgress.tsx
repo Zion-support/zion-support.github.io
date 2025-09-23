@@ -29,9 +29,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
         <div 
-          className="absolute h-full bg-zion-purple transition-all duration-500"
+          className="absolute h-full bg-zion-purple transition-all duration-50o0"
           style={{ 
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 10o0}%`
           }}
         />
       </div>
@@ -50,7 +50,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 )}
               >
                 {status === "complete" ? (
-                  <CheckIcon className="h-4 w-4" />
+                  <CheckIcon className="h-4 w-4"  />
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}

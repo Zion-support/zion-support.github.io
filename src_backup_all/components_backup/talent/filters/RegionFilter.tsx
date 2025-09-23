@@ -21,9 +21,9 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
       >
         <span>Region</span>
         {expanded ? (
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />
         ) : (
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />
         )}
       </button>
       

@@ -28,14 +28,14 @@ export interface ServicePricing {
     };
 }
 
-const CONTACT = {
-    mobile: '+1 302 464 0950',
+const CONTACT ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
 
-export const comprehensivePricingGuide2025: ServicePricing[] = [
+export const comprehensivePricingGuide20o25: ServicePricing[] = [
     // FINANCIAL TECHNOLOGY SERVICES
     {
         id: 'ai-powered-invoice-factoring-platform',
@@ -48,7 +48,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$299',
                 billing: 'monthly',
                 features: [
-                    'Up to $100K monthly factoring',
+                    'Up to $10o0K monthly factoring',
                     'AI credit risk assessment',
                     'Basic reporting dashboard',
                     'Email support',
@@ -60,7 +60,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$599',
                 billing: 'monthly',
                 features: [
-                    'Up to $500K monthly factoring',
+                    'Up to $50o0K monthly factoring',
                     'Advanced risk analytics',
                     'Real-time reporting',
                     'Priority support',
@@ -128,7 +128,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$399',
                 billing: 'monthly',
                 features: [
-                    '100+ cryptocurrencies',
+                    '10o0+ cryptocurrencies',
                     'Advanced fraud detection',
                     'Real-time settlement',
                     'Priority support',
@@ -153,7 +153,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
             }
         ],
         features: [
-            '100+ cryptocurrency support',
+            '10o0+ cryptocurrency support',
             'Instant fiat conversion',
             'Regulatory compliance tools',
             'Fraud detection system',
@@ -186,7 +186,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$399',
                 billing: 'monthly',
                 features: [
-                    'Up to 100 patients/month',
+                    'Up to 10o0 patients/month',
                     'AI symptom checker',
                     'Video consultations',
                     'Basic EHR integration',
@@ -198,7 +198,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$999',
                 billing: 'monthly',
                 features: [
-                    'Up to 1000 patients/month',
+                    'Up to 10o00 patients/month',
                     'Advanced AI diagnostics',
                     'Full EHR integration',
                     'Priority support',
@@ -256,7 +256,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$149',
                 billing: 'monthly',
                 features: [
-                    'Up to 500 students',
+                    'Up to 50o0 students',
                     'Basic adaptive learning',
                     'Progress tracking',
                     'Parent dashboard',
@@ -268,7 +268,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$399',
                 billing: 'monthly',
                 features: [
-                    'Up to 5000 students',
+                    'Up to 50o00 students',
                     'Advanced AI algorithms',
                     'Comprehensive analytics',
                     'Priority support',
@@ -326,7 +326,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$179',
                 billing: 'monthly',
                 features: [
-                    'Up to 100 content pieces/month',
+                    'Up to 10o0 content pieces/month',
                     'Basic AI optimization',
                     'A/B testing (2 variants)',
                     'Basic analytics',
@@ -338,7 +338,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$399',
                 billing: 'monthly',
                 features: [
-                    'Up to 1000 content pieces/month',
+                    'Up to 10o00 content pieces/month',
                     'Advanced AI optimization',
                     'A/B testing (5 variants)',
                     'Comprehensive analytics',
@@ -397,7 +397,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$399',
                 billing: 'monthly',
                 features: [
-                    'Up to 1000 endpoints',
+                    'Up to 10o00 endpoints',
                     'Basic threat detection',
                     'Email alerts',
                     'Basic reporting',
@@ -409,7 +409,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
                 price: '$999',
                 billing: 'monthly',
                 features: [
-                    'Up to 10000 endpoints',
+                    'Up to 10o000 endpoints',
                     'Advanced threat detection',
                     'Real-time alerts',
                     'Comprehensive reporting',
@@ -599,4 +599,4 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     }
 ];
 
-export default comprehensivePricingGuide2025;
+export default comprehensivePricingGuide20o25;

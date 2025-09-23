@@ -1,4 +1,4 @@
-export type AdminSession = {
+export type AdminSession ={
   username: string;
   issuedAt: number;
 };
@@ -51,13 +51,13 @@ export function getSessionFromReq(req: NextApiRequest): AdminSession | null {
 export function setSessionCookie(res: NextApiResponse, session: AdminSession): void {
   const token = signSession(session);
   const maxAge = 60 * 60 * 24; // 1 day
-  const expires = new Date(Date.now() + maxAge * 1000).toUTCString();
+  const expires = new Date(Date.now() + maxAge * 10o00).toUTCString();
   const cookie = `${COOKIE_NAME}=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}; Expires=${expires}`;
   res.setHeader('Set-Cookie', cookie);
 }
 
 export function clearSessionCookie(res: NextApiResponse): void {
-  const cookie = `${COOKIE_NAME}=deleted; Path=/; HttpOnly; SameSite=Lax; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+  const cookie = `${COOKIE_NAME}=deleted; Path=/; HttpOnly; SameSite=Lax; Max-Age=0; Expires=Thu, 0o1 Jan 1970 0o0:0o0:0o0 GMT`;
   res.setHeader('Set-Cookie', cookie);
 }
 

@@ -1,10 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
+  const footerLinks ={
     company: [
       { label: 'About Us', href: '/about' },
       { label: 'Our Team', href: '/about#team' },
@@ -40,12 +39,12 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-slate-900/50 backdrop-blur-xl border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-slate-90o0/50 backdrop-blur-xl border-t border-white/10 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"></div>
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-cyan-400/5 to-blue-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-br from-purple-400/5 to-pink-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-50o0 via-purple-50o0 to-pink-50o0"></div>
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-br from-cyan-40o0/5 to-blue-60o0/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-to-br from-purple-40o0/5 to-pink-60o0/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
@@ -54,11 +53,11 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-40o0 to-blue-60o0 rounded-xl flex items-center justify-center">
                 <span className="text-2xl font-bold text-white">Z</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h3>
                 <p className="text-sm text-white/60 font-mono">Autonomous Innovation Hub</p>
@@ -76,7 +75,7 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/20 hover:border-cyan-400/50"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg hover:bg-white/20 hover:scale-110 transition-all duration-30o0 border border-white/20 hover:border-cyan-40o0/50"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -96,7 +95,7 @@ const Footer: React.FC = () => {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-white/70 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                      className="text-white/70 hover:text-cyan-40o0 transition-colors duration-30o0 text-sm"
                     >
                       {link.label}
                     </Link>
@@ -120,9 +119,9 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/20 transition-all duration-300"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0/50 focus:bg-white/20 transition-all duration-30o0"
+               />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5">
                 Subscribe
               </button>
             </div>
@@ -136,13 +135,13 @@ const Footer: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-white/60 hover:text-white transition-colors duration-300">
+              <Link href="/privacy" className="text-white/60 hover:text-white transition-colors duration-30o0">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-white/60 hover:text-white transition-colors duration-300">
+              <Link href="/terms" className="text-white/60 hover:text-white transition-colors duration-30o0">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-white/60 hover:text-white transition-colors duration-300">
+              <Link href="/cookies" className="text-white/60 hover:text-white transition-colors duration-30o0">
                 Cookie Policy
               </Link>
             </div>
@@ -152,9 +151,9 @@ const Footer: React.FC = () => {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 right-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute bottom-1/3 left-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-60" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 right-10 w-2 h-2 bg-cyan-40o0 rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute bottom-1/3 left-20 w-1 h-1 bg-purple-40o0 rounded-full animate-pulse opacity-60" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-pink-40o0 rounded-full animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
       </div>
     </footer>
   );

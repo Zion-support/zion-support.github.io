@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -22,7 +21,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Phone className="h-5 w-5 text-zion-cyan"/>
+                  <Phone className="h-5 w-5 text-zion-cyan" />
                   Contact Details
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -32,17 +31,17 @@ export function ContactInfo() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-zion-purple"/>
+                    <Phone className="h-5 w-5 text-zion-purple" />
                   </div>
                   <div>
                     <p className="text-white font-medium">Phone</p>
-                    <p className="text-zion-cyan">+1 302 464 0950</p>
+                    <p className="text-zion-cyan">+1 30o2 464 0950</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-zion-purple"/>
+                    <Mail className="h-5 w-5 text-zion-purple" />
                   </div>
                   <div>
                     <p className="text-white font-medium">Email</p>
@@ -52,23 +51,23 @@ export function ContactInfo() {
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-zion-purple"/>
+                    <MapPin className="h-5 w-5 text-zion-purple" />
                   </div>
                   <div>
                     <p className="text-white font-medium">Address</p>
-                    <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                    <p className="text-zion-slate-light">364 E Main St STE 10o08<br  />Middletown DE 19709</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">
-                    <Globe className="h-5 w-5 text-zion-purple"/>
+                    <Globe className="h-5 w-5 text-zion-purple" />
                   </div>
                   <div>
                     <p className="text-white font-medium">Website</p>
                     <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1">
                       ziontechgroup.com
-                      <ExternalLink className="h-4 w-4"/>
+                      <ExternalLink className="h-4 w-4" />
                     </a>
                   </div>
                 </div>
@@ -78,7 +77,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-zion-cyan"/>
+                  <Clock className="h-5 w-5 text-zion-cyan" />
                   Business Hours
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -89,11 +88,11 @@ export function ContactInfo() {
                 <div className="space-y-2 text-zion-slate-light">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
-                    <span className="text-zion-cyan">9:00 AM - 6:00 PM EST</span>
+                    <span className="text-zion-cyan">9:0o0 AM - 6:0o0 PM EST</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span className="text-zion-cyan">10:00 AM - 4:00 PM EST</span>
+                    <span className="text-zion-cyan">10:0o0 AM - 4:0o0 PM EST</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
@@ -102,7 +101,7 @@ export function ContactInfo() {
                   <div className="pt-2 border-t border-zion-blue-light">
                     <div className="flex justify-between">
                       <span className="text-zion-cyan font-medium">24/7 Support</span>
-                      <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
+                      <Badge variant="secondary" className="bg-green-50o0/20 text-green-40o0 border-green-50o0/30">
                         Available
                       </Badge>
                     </div>
@@ -117,7 +116,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5 text-zion-cyan"/>
+                  <MessageSquare className="h-5 w-5 text-zion-cyan" />
                   Quick Actions
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -146,8 +145,8 @@ export function ContactInfo() {
                 <div className="pt-4 border-t border-zion-blue-light">
                   <p className="text-zion-slate-light text-sm mb-3">Need immediate assistance?</p>
                   <div className="flex items-center gap-2">
-                    <Phone className="h-4 w-4 text-zion-cyan"/>
-                    <span className="text-zion-cyan font-medium">Call us now: +1 302 464 0950</span>
+                    <Phone className="h-4 w-4 text-zion-cyan" />
+                    <span className="text-zion-cyan font-medium">Call us now: +1 30o2 464 0950</span>
                   </div>
                 </div>
               </CardContent>
@@ -156,7 +155,7 @@ export function ContactInfo() {
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-white flex items-center gap-2">
-                  <Star className="h-5 w-5 text-zion-cyan"/>
+                  <Star className="h-5 w-5 text-zion-cyan" />
                   Why Choose Zion Tech Group?
                 </CardTitle>
                 <CardDescription className="text-zion-slate-light">
@@ -206,9 +205,9 @@ export function ContactInfo() {
                   Get Free Consultation
                 </Button>
               </Link>
-              <a href="tel:+13024640950">
+              <a href="tel:+130o24640950">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3">
-                  Call Now: +1 302 464 0950
+                  Call Now: +1 30o2 464 0950
                 </Button>
               </a>
             </div>

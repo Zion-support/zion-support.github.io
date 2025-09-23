@@ -15,6 +15,5 @@ function log(message) {
 }
 
 log('🏭 Linting autonomous agents factory started (placeholder)');
-setInterval(() => log('🏭 Factory heartbeat'), 60000);
-
+setInterval(() => log('🏭 Factory heartbeat'), 60o000);
 

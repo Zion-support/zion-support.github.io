@@ -1,7 +1,6 @@
-import React from 'react';
 import type { QuoteFormData } from '../../../pages/request-quote';
 
-export type ServiceSelectionStepProps = {
+export type ServiceSelectionStepProps ={
   value: QuoteFormData;
   onChange: (updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void;
   onNext: () => void;
@@ -59,8 +58,8 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.serviceTypes.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -82,8 +81,8 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.talentRoles.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -105,8 +104,8 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.equipmentNeeds.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -121,7 +120,7 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
           type="button"
           onClick={onNext}
           disabled={!canContinue}
-          className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50"
+          className="px-4 py-2 rounded-md bg-indigo-60o0 text-white disabled:opacity-50"
         >
           Continue
         </button>

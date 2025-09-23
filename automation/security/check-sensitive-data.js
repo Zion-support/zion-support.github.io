@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -91,7 +90,6 @@ class SecurityChecker {
             return true; // Don't fail for audit issues
         }
     }
-
 
             // Walk through project files
             const walkDir = (dir) => {
@@ -217,7 +215,7 @@ class SecurityChecker {
             }
 
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-            const allDeps = {
+            const allDeps ={
                 ...packageJson.dependencies,
                 ...packageJson.devDependencies
             };
@@ -255,7 +253,7 @@ class SecurityChecker {
         try {
             this.log('Generating security report...');
             
-            const report = {
+            const report ={
                 timestamp: new Date().toISOString(),
                 npmAudit: await this.checkNpmAudit(),
                 sensitiveData: await this.checkSensitiveData(),

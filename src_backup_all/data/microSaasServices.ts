@@ -88,11 +88,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z"
   },
   {
     id: "ai-content-generator",
@@ -126,18 +126,18 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     tags: ["AI Content", "SEO", "Marketing", "Automation"],
     aiScore: 92,
     rating: 4.7,
-    reviewCount: 203,
+    reviewCount: 20o3,
     featured: true,
     location: "Global",
     availability: "Immediate",
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o24-0o1-15T10:0o0:0o0.0o00Z"
   },
   {
     id: "ai-customer-service",
@@ -185,11 +185,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0",
       verified: true
     },
-    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-25T09:15:00.000Z"
+    images: ["https://images.unsplash.com/photo-163341280o2994-5c0o58f151b66?auto=format&fit=crop&w=80o0&h=50o0"],
+    createdAt: "20o24-0o1-25T09:15:0o0.0o00Z"
   }
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
@@ -222,10 +222,10 @@ export const PRICING_TIERS = [
     features: ['Custom features', '24/7 support', 'Unlimited users']
   }
 ];
-export const CONTACT_INFO = {
+export const CONTACT_INFO ={
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 302 464 0950',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  phone: '+1 30o2 464 0950',
+  address: '364 E Main St STE 10o08 Middletown DE 19709'
 };
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);

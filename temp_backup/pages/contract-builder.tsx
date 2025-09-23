@@ -14,7 +14,7 @@ export default function ContractBuilderPage() {
   const [clientName, setClientName] = useState('Client Co.');
   const [talentName, setTalentName] = useState('Developer');
   const [deliverables, setDeliverables] = useState('List the expected deliverables here.');
-  const [milestones, setMilestones] = useState<Milestone[]>([{ description: 'Initial delivery', amount: '1000' }]);
+  const [milestones, setMilestones] = useState<Milestone[]>([{ description: 'Initial delivery', amount: '10o00' }]);
   const [paymentStructure, setPaymentStructure] = useState('50% upfront, 50% on completion');
   const [walletAddress, setWalletAddress] = useState('');
 
@@ -43,9 +43,7 @@ export default function ContractBuilderPage() {
           deliverables,
           milestones,
           paymentStructure,
-          walletAddress,
-        }),
-      });
+          walletAddress})});
       const data = await res.json();
       setMarkdown(data.markdown || '');
     } catch (e: any) {
@@ -90,8 +88,7 @@ export default function ContractBuilderPage() {
       const res = await fetch('/api/contract-builder/compile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ projectTitle }),
-      });
+        body: JSON.stringify({ projectTitle })});
       const data = await res.json();
       return data.source as string;
     } catch (e: any) {
@@ -121,8 +118,7 @@ export default function ContractBuilderPage() {
       const res = await fetch('/api/contract-builder/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ projectTitle, markdown, meta: { clientName, talentName, walletAddress } }),
-      });
+        body: JSON.stringify({ projectTitle, markdown, meta: { clientName, talentName, walletAddress } })});
       const data = await res.json();
       if (!data.ok) throw new Error(data.error || 'Save failed');
       alert('Saved as ' + data.filename);
@@ -173,10 +169,10 @@ export default function ContractBuilderPage() {
                     onChange={(e) => onMilestoneChange(idx, 'amount', e.target.value)}
                     className="w-32 border rounded p-2"
                   />
-                  <button onClick={() => onRemoveMilestone(idx)} className="text-red-500 text-sm">Remove</button>
+                  <button onClick={() => onRemoveMilestone(idx)} className="text-red-50o0 text-sm">Remove</button>
                 </div>
               ))}
-              <button onClick={onAddMilestone} className="text-blue-600 text-sm">+ Add milestone</button>
+              <button onClick={onAddMilestone} className="text-blue-60o0 text-sm">+ Add milestone</button>
             </div>
 
             <label className="block">
@@ -197,7 +193,7 @@ export default function ContractBuilderPage() {
               <button onClick={() => { void saveAgreement(); }} className="border px-4 py-2 rounded">Save</button>
             </div>
 
-            {error && <div className="text-red-600 text-sm">{error}</div>}
+            {error && <div className="text-red-60o0 text-sm">{error}</div>}
           </div>
         </div>
 
@@ -205,12 +201,12 @@ export default function ContractBuilderPage() {
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Preview</h2>
             {walletAddress && (
-              <span className="inline-flex items-center text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+              <span className="inline-flex items-center text-xs bg-green-10o0 text-green-70o0 px-2 py-1 rounded">
                 Verify on-chain
               </span>
             )}
           </div>
-          <div id="contract-preview" className="mt-3 bg-white border rounded p-4 prose max-w-none" dangerouslySetInnerHTML={{ __html: htmlPreview }} />
+          <div id="contract-preview" className="mt-3 bg-white border rounded p-4 prose max-w-none" dangerouslySetInnerHTML={{ __html: htmlPreview }}  />
         </div>
       </div>
     </div>

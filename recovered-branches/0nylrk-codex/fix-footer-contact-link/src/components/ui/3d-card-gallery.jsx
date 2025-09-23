@@ -67,7 +67,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             return;
         const interval = setInterval(() => {
             setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length);
-        }, 3000);
+        }, 30o00);
         return () => clearInterval(interval);
     }, [isPlaying, viewMode, filteredAndSortedItems.length]);
     // Handle card click
@@ -83,35 +83,35 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const getStatusColor = (status) => {
         switch (status) {
             case 'active':
-                return 'border-green-500/50 bg-green-500/10 text-green-400';
+                return 'border-green-50o0/50 bg-green-50o0/10 text-green-40o0';
             case 'beta':
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
+                return 'border-yellow-50o0/50 bg-yellow-50o0/10 text-yellow-40o0';
             case 'coming-soon':
-                return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
+                return 'border-blue-50o0/50 bg-blue-50o0/10 text-blue-40o0';
             case 'deprecated':
-                return 'border-red-500/50 bg-red-500/10 text-red-400';
+                return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0';
         }
     };
     // Get complexity color
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'beginner':
-                return 'border-green-500/50 bg-green-500/10 text-green-400';
+                return 'border-green-50o0/50 bg-green-50o0/10 text-green-40o0';
             case 'intermediate':
-                return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
+                return 'border-yellow-50o0/50 bg-yellow-50o0/10 text-yellow-40o0';
             case 'advanced':
-                return 'border-orange-500/50 bg-orange-500/10 text-orange-400';
+                return 'border-orange-50o0/50 bg-orange-50o0/10 text-orange-40o0';
             case 'expert':
-                return 'border-red-500/50 bg-red-500/10 text-red-400';
+                return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0';
             default:
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
+                return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0';
         }
     };
     // Get category icon
     const getCategoryIcon = (category) => {
-        const iconMap = {
+        const iconMap ={
             'AI & ML': Brain,
             'Cybersecurity': Shield,
             'Cloud': Globe,
@@ -129,7 +129,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery</h3>
-          <p className="text-zinc-300 text-sm">
+          <p className="text-zinc-30o0 text-sm">
             {filteredAndSortedItems.length} items • Interactive 3D experience
           </p>
         </div>
@@ -137,35 +137,35 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">
-            {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode
+            {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode
                 ? 'bg-zion-cyan text-zion-blue-dark'
-                : 'text-zinc-400 hover:text-white'}`}>
-                {mode === 'grid' ? <Grid className="w-4 h-4"/> :
-                mode === 'list' ? <List className="w-4 h-4"/> :
-                    <Play className="w-4 h-4"/>}
+                : 'text-zinc-40o0 hover:text-white'}`}>
+                {mode === 'grid' ? <Grid className="w-4 h-4" /> :
+                mode === 'list' ? <List className="w-4 h-4" /> :
+                    <Play className="w-4 h-4" />}
               </button>))}
           </div>
           
           {/* Carousel Controls */}
           {viewMode === 'carousel' && (<div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
-              <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-400 hover:text-white p-2">
-                {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
+              <Button size="sm" variant="ghost" onClick={() => setIsPlaying(!isPlaying)} className="text-zinc-40o0 hover:text-white p-2">
+                {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>
               
-              <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-400 hover:text-white p-2">
-                <RotateCcw className="w-4 h-4"/>
+              <Button size="sm" variant="ghost" onClick={() => setCurrentCarouselIndex(0)} className="text-zinc-40o0 hover:text-white p-2">
+                <RotateCcw className="w-4 h-4" />
               </Button>
             </div>)}
           
           {/* Sort Controls */}
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-3 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-sm focus:border-zion-cyan focus:outline-none">
             <option value="rating">Sort by Rating</option>
             <option value="downloads">Sort by Downloads</option>
             <option value="lastUpdated">Sort by Date</option>
             <option value="title">Sort by Title</option>
           </select>
           
-          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
+          <Button size="sm" variant="outline" onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
             {sortOrder === 'asc' ? '↑' : '↓'}
           </Button>
         </div>
@@ -175,19 +175,19 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       {showFilters && (<div className="mb-6 space-y-4">
           {/* Search */}
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400"/>
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-40o0" />
+            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search cards..." className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-40o0 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"/>
           </div>
           
           {/* Filter Chips */}
           <div className="flex flex-wrap gap-2">
-            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, verified: !prev.verified }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-              <Shield className="w-4 h-4 mr-1"/>
+            <Button size="sm" variant={filters.verified ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, verified: !prev.verified }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover:text-white'}>
+              <Shield className="w-4 h-4 mr-1" />
               Verified Only
             </Button>
             
-            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, featured: !prev.featured }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-              <Star className="w-4 h-4 mr-1"/>
+            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, featured: !prev.featured }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover:text-white'}>
+              <Star className="w-4 h-4 mr-1" />
               Featured Only
             </Button>
             
@@ -197,7 +197,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     category: prev.category.includes(category)
                         ? prev.category.filter(c => c !== category)
                         : [...prev.category, category]
-                }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
+                }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover:text-white'}>
                 {category}
               </Button>))}
           </div>
@@ -210,12 +210,12 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-4">
-          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.05 }} onClick={() => handleCardClick(item)}>
+          {filteredAndSortedItems.map((item, index) => (<motion.div key={item.id} className="flex items-center gap-4 p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-20o0 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.0o5 }} onClick={() => handleCardClick(item)}>
               {/* Image */}
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
                     const CategoryIcon = getCategoryIcon(item.category);
-                    return <CategoryIcon className="w-8 h-8 text-white"/>;
+                    return <CategoryIcon className="w-8 h-8 text-white" />;
                 })()}
               </div>
               
@@ -230,10 +230,10 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     {item.metadata.complexity}
                   </Badge>
                 </div>
-                <p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>
-                <div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">
+                <p className="text-zinc-40o0 text-sm line-clamp-2">{item.description}</p>
+                <div className="flex items-center gap-4 mt-2 text-xs text-zinc-50o0">
                   <span className="flex items-center gap-1">
-                    <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"/>
+                    <Star className="w-3 h-3 fill-yellow-40o0 text-yellow-40o0" />
                     {item.rating}
                   </span>
                   <span>({item.reviews} reviews)</span>
@@ -248,7 +248,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                         e.stopPropagation();
                         action.action();
                     }} disabled={action.disabled} className="text-xs">
-                    <action.icon className="w-3 h-3 mr-1"/>
+                    <action.icon className="w-3 h-3 mr-1" />
                     {action.label}
                   </Button>))}
               </div>
@@ -258,7 +258,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
       {/* Carousel View */}
       {viewMode === 'carousel' && (<div className="relative">
           <div className="overflow-hidden rounded-lg">
-            <motion.div className="flex" animate={{ x: -currentCarouselIndex * 100 + '%' }} transition={{ duration: 0.5, ease: "easeInOut" }}>
+            <motion.div className="flex" animate={{ x: -currentCarouselIndex * 10o0 + '%' }} transition={{ duration: 0.5, ease: "easeInOut" }}>
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">
                   <Card3D item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon} isCarousel={true}/>
                 </div>))}
@@ -267,7 +267,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
           
           {/* Carousel Navigation */}
           <div className="flex items-center justify-center gap-2 mt-4">
-            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-600 hover:bg-zinc-500'}`}/>))}
+            {filteredAndSortedItems.map((_, index) => (<button key={index} onClick={() => setCurrentCarouselIndex(index)} className={`w-2 h-2 rounded-full transition-all duration-20o0 ${index === currentCarouselIndex ? 'bg-zion-cyan w-6' : 'bg-zinc-60o0 hover:bg-zinc-50o0'}`}/>))}
           </div>
         </div>)}
 
@@ -278,8 +278,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-4xl w-full max-h-[80vh] overflow-y-auto" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedItem.title}</h3>
-                <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-400 hover:text-white">
-                  <X className="w-4 h-4"/>
+                <Button size="sm" variant="ghost" onClick={() => setSelectedItem(null)} className="text-zinc-40o0 hover:text-white">
+                  <X className="w-4 h-4" />
                 </Button>
               </div>
               
@@ -289,7 +289,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
                 const CategoryIcon = getCategoryIcon(selectedItem.category);
-                return <CategoryIcon className="w-24 h-24 text-white"/>;
+                return <CategoryIcon className="w-24 h-24 text-white" />;
             })()}
                   </div>
                   
@@ -301,14 +301,14 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                       <Badge variant="outline" className={getComplexityColor(selectedItem.metadata.complexity)}>
                         {selectedItem.metadata.complexity}
                       </Badge>
-                      {selectedItem.metadata.verified && (<Badge variant="outline" className="border-green-500/30 text-green-400">
+                      {selectedItem.metadata.verified && (<Badge variant="outline" className="border-green-50o0/30 text-green-40o0">
                           Verified
                         </Badge>)}
                     </div>
                     
-                    <div className="flex items-center gap-4 text-sm text-zinc-400">
+                    <div className="flex items-center gap-4 text-sm text-zinc-40o0">
                       <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"/>
+                        <Star className="w-4 h-4 fill-yellow-40o0 text-yellow-40o0" />
                         {selectedItem.rating} ({selectedItem.reviews} reviews)
                       </span>
                       <span>•</span>
@@ -321,13 +321,13 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 
                 {/* Details */}
                 <div className="space-y-4">
-                  <p className="text-zinc-300">{selectedItem.description}</p>
+                  <p className="text-zinc-30o0">{selectedItem.description}</p>
                   
                   <div>
                     <h4 className="text-white font-medium mb-2">Features</h4>
                     <div className="space-y-1">
-                      {selectedItem.features.map((feature, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zinc-300">
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"/>
+                      {selectedItem.features.map((feature, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zinc-30o0">
+                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                           {feature}
                         </div>))}
                     </div>
@@ -346,7 +346,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                       <h4 className="text-white font-medium mb-2">Actions</h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedItem.actions.map((action, index) => (<Button key={index} size="sm" variant={action.variant || 'outline'} onClick={action.action} disabled={action.disabled}>
-                            <action.icon className="w-4 h-4 mr-2"/>
+                            <action.icon className="w-4 h-4 mr-2" />
                             {action.label}
                           </Button>))}
                       </div>
@@ -363,8 +363,8 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
     const [isLiked, setIsLiked] = useState(false);
     const x = useMotionValue(0);
     const y = useMotionValue(0);
-    const rotateX = useSpring(useTransform(y, [-100, 100], [15, -15]), { stiffness: 300, damping: 30 });
-    const rotateY = useSpring(useTransform(x, [-100, 100], [-15, 15]), { stiffness: 300, damping: 30 });
+    const rotateX = useSpring(useTransform(y, [-10o0, 10o0], [15, -15]), { stiffness: 30o0, damping: 30 });
+    const rotateY = useSpring(useTransform(x, [-10o0, 10o0], [-15, 15]), { stiffness: 30o0, damping: 30 });
     const CategoryIcon = getCategoryIcon(item.category);
     const handleMouseMove = useCallback((event) => {
         if (!isHovered)
@@ -384,7 +384,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         e.stopPropagation();
         setIsLiked(!isLiked);
     }, [isLiked]);
-    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.02 }}>
+    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.0o2 }}>
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
             transformStyle: 'preserve-3d',
             rotateX,
@@ -392,14 +392,14 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
         }} transition={{ duration: 0.3 }}>
         {/* Background Image/Pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20"/>
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />
         
         {/* Content */}
         <div className="relative z-10 p-6 h-full flex flex-col">
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
-              <CategoryIcon className="w-6 h-6 text-white"/>
+              <CategoryIcon className="w-6 h-6 text-white" />
             </div>
             
             <div className="flex items-center gap-2">
@@ -414,10 +414,10 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
           
           {/* Title and Description */}
           <div className="flex-1">
-            <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-hover:text-zion-cyan transition-colors duration-200">
+            <h4 className="text-white font-semibold text-lg mb-2 line-clamp-2 group-hover:text-zion-cyan transition-colors duration-20o0">
               {item.title}
             </h4>
-            <p className="text-zinc-300 text-sm line-clamp-3">
+            <p className="text-zinc-30o0 text-sm line-clamp-3">
               {item.description}
             </p>
           </div>
@@ -425,9 +425,9 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
           {/* Footer */}
           <div className="space-y-3">
             {/* Rating and Downloads */}
-            <div className="flex items-center justify-between text-xs text-zinc-400">
+            <div className="flex items-center justify-between text-xs text-zinc-40o0">
               <span className="flex items-center gap-1">
-                <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"/>
+                <Star className="w-3 h-3 fill-yellow-40o0 text-yellow-40o0" />
                 {item.rating} ({item.reviews})
               </span>
               <span>{item.metadata.downloads.toLocaleString()} downloads</span>
@@ -435,30 +435,30 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             
             {/* Tags */}
             <div className="flex flex-wrap gap-1">
-              {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
+              {item.tags.slice(0, 3).map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-40o0 hover:text-white">
                   {tag}
                 </Badge>))}
             </div>
             
             {/* Actions */}
             <div className="flex items-center gap-2">
-              <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-400 hover:text-red-300' : 'text-zinc-400 hover:text-white'}`}>
-                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`}/>
+              <Button size="sm" variant="ghost" onClick={handleLike} className={`p-2 text-xs ${isLiked ? 'text-red-40o0 hover:text-red-30o0' : 'text-zinc-40o0 hover:text-white'}`}>
+                <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />
               </Button>
               
-              <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
-                <Share2 className="w-4 h-4"/>
+              <Button size="sm" variant="ghost" className="p-2 text-zinc-40o0 hover:text-white text-xs">
+                <Share2 className="w-4 h-4" />
               </Button>
               
-              <Button size="sm" variant="ghost" className="p-2 text-zinc-400 hover:text-white text-xs">
-                <Eye className="w-4 h-4"/>
+              <Button size="sm" variant="ghost" className="p-2 text-zinc-40o0 hover:text-white text-xs">
+                <Eye className="w-4 h-4" />
               </Button>
             </div>
           </div>
         </div>
         
         {/* Hover Overlay */}
-        <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}/>
+        <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }} />
       </motion.div>
     </motion.div>);
 }

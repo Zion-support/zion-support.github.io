@@ -8,8 +8,7 @@ import {
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+  PaginationPrevious} from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -29,8 +28,7 @@ export function CountryTabs({
   handleCountrySelect,
   onQuote,
   searchQuery,
-  setSearchQuery,
-}: CountryTabsProps) {
+  setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
@@ -77,7 +75,7 @@ export function CountryTabs({
                 onSelect={handleCountrySelect}
                 onQuote={onQuote}
                 isPopular={true}
-              />
+               />
             ))}
         </div>
       </TabsContent>
@@ -85,7 +83,7 @@ export function CountryTabs({
       <TabsContent value="all" className="mt-0">
         <div className="mb-6 max-w-md mx-auto">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"  />
             <Input
               type="text"
               placeholder="Search by country..."
@@ -104,7 +102,7 @@ export function CountryTabs({
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
-            />
+             />
           ))}
         </div>
 

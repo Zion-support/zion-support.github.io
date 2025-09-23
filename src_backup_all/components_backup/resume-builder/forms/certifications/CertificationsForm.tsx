@@ -41,23 +41,20 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       issue_date: '',
       expiration_date: '',
       credential_id: '',
-      credential_url: '',
-    },
-  });
+      credential_url: ''}});
 
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null);
       let success;
 
-      const certData: Certification = {
+      const certData: Certification ={
         name: data.name,
         issuing_organization: data.issuing_organization,
         issue_date: data.issue_date || undefined,
         expiration_date: data.expiration_date || undefined,
         credential_id: data.credential_id,
-        credential_url: data.credential_url,
-      };
+        credential_url: data.credential_url};
 
       if (editingId) {
         success = await updateCertification(editingId, certData);
@@ -72,8 +69,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           issue_date: '',
           expiration_date: '',
           credential_id: '',
-          credential_url: '',
-        });
+          credential_url: ''});
         setEditingId(null);
       }
     } catch (err: any) {
@@ -86,8 +82,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     form.reset({
       ...cert,
       issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date),
-    });
+      expiration_date: formatDateValue(cert.expiration_date)});
   };
 
   const handleDelete = async (id: string) => {
@@ -110,7 +105,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
-        />
+         />
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -120,7 +115,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
-            <CertificationFormFields form={form} />
+            <CertificationFormFields form={form}  />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
@@ -137,8 +132,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-                      credential_url: '',
-                    });
+                      credential_url: ''});
                   } else {
                     onBack();
                   }
@@ -149,7 +143,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
-                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
                   {editingId ? 'Update' : 'Add'} Certification
                 </Button>
 

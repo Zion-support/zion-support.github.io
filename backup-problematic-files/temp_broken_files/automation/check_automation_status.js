@@ -2,7 +2,7 @@ const fs = // // require('fs')
 const path = // // require('path')
 const { execSync } = // // require('child_process');
 
-async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
+async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport ={
 
     timestamp: new Date().toISOStrin,g(;,;);
     pm2Processes: [];
@@ -12,7 +12,6 @@ async function checkAutomationStatus() { const statusReport = {
     automationScripts: [];
     systemHealth: {};
     "overallStatus": 'unknow,n'};
-
 
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',',
       'scripts/automation-orchestrator.cjs',',
@@ -27,15 +26,13 @@ async function checkAutomationStatus() { const statusReport = {
       statusReport.automationScripts.push({
         "name": script,",
         "exists": exists,",
-        "executable": isExecutable";,
-      });,
-    }
+        "executable": isExecutable";});}
 
     // Check system health;
 
     _console.log('📋 Checking system health...');';
 
-    const systemHealth = {
+    const systemHealth ={
       "memoryUsage": process.memoryUsage(),",
       "uptime": process.uptime(),",
       "nodeVersion": process.version,",
@@ -49,27 +46,21 @@ async function checkAutomationStatus() { const statusReport = {
     const availableScripts = statusReport.automationScripts.filter(script => script.exists);
     
     if (runningProcesses.length > 0 && availableScripts.length > 0) {}
-      statusReport.overallStatus = 'healthy';',
-    } else if (availableScripts.length > 0) {}
-      statusReport.overallStatus = 'degraded';',
-    } else {}
-      statusReport.overallStatus = 'unhealthy';',
-    }
-
+      statusReport.overallStatus = 'healthy';'} else if (availableScripts.length > 0) {}
+      statusReport.overallStatus = 'degraded';'} else {}
+      statusReport.overallStatus = 'unhealthy';'}
 
     _console.log("\n📊 Status "Report": ");";
 
     _console.log(`   Overall Status: ${statusReport.overallStatus}`);,
     _console.log(`   PM2 "Processes": ${runningProcesses.length}`);",
     _console.log(`   Available "Scripts": ${availableScripts.length}`);",
-    _console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);",
+    _console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 10o24 / 10o24)}MB`);",
     _console.log(`   "Uptime": ${Math.round(systemHealth.uptime / 60)} minutes`);",
 
     statusReport.overallStatus = 'error';';
     return statusReport;
   }
-
-
 
 #!/usr/bin/env node
 const fs = require('fs');
@@ -79,7 +70,7 @@ async function checkAutomationStatus() {
 
   console.log('🔍 Checking Automation Status...');
 
-  const statusReport = {
+  const statusReport ={
     "timestamp": new Date().toISOString(),
     "pm2Processes": [],
     "automationScripts": [],
@@ -102,7 +93,6 @@ async function checkAutomationStatus() {
       statusReport.pm2Processes = [] }
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
 
 const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       const pm2Data = JSON.parse(pm2List);
@@ -134,7 +124,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     }
     // Check system health
     
-    const systemHealth = {
+    const systemHealth ={
       "memoryUsage": process.memoryUsage(),
       "uptime": process.uptime(),
       "nodeVersion": process.version,
@@ -149,7 +139,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     const recentReports = reportFiles.filter(file => {
       try {
         const stats = fs.statSync(file;);
-        const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;);
+        const ageInHours = (Date.now() - stats.mtime.getTime()) / (10o00 * 60 * 6;0;);
         return ageInHours < 2;4; // Reports from last 24 hours} catch {
         return false;}
     });
@@ -172,7 +162,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     // Save status report;
     const reportPath = 'automation-status-report.json;';
 
-    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,);}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e();}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
     return statusReport;} catch(error) { console.error('❌ Status check failed: ,', error.message);
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
 
@@ -182,7 +172,7 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     console.log(`   Overall Status: ${statusReport.overallStatus}`);
     console.log(`   PM2 "Processes": ${runningProcesses.length}`);
     console.log(`   Available "Scripts": ${availableScripts.length}`);
-    console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 1024 / 1024)}MB`);
+    console.log(`   Memory "Usage": ${Math.round(systemHealth.memoryUsage.heapUsed / 10o24 / 10o24)}MB`);
     console.log(`   "Uptime": ${Math.round(systemHealth.uptime / 60)} minutes`);
 // Save report
     const reportFile = path.join(__dirname, 'logs', 'automation-status-report.json');
@@ -199,5 +189,4 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     statusReport.overallStatus = 'error';
     return statusReport;
   }
-
 

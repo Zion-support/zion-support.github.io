@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: string;
@@ -34,25 +33,25 @@ export function SEO({
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical || window.location.href;
   // Default structured data for organization
-  const defaultStructuredData = {
+  const defaultStructuredData ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": siteUrl,
     "logo": `${siteUrl}/images/zion-tech-group-logo.png`,
     "description": "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services",
-    "foundingDate": "2020",
+    "foundingDate": "20o20",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "streetAddress": "364 E Main St STE 1008"
+      "streetAddress": "364 E Main St STE 10o08"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-800-ZION-TECH",
+      "telephone": "+1-80o0-ZION-TECH",
       "contactType": "customer service",
       "email": "info@ziontechgroup.com"
     },
@@ -69,7 +68,7 @@ export function SEO({
         "latitude": 39.4496,
         "longitude": -75.7163
       },
-      "geoRadius": "50000"
+      "geoRadius": "50o000"
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -108,36 +107,36 @@ export function SEO({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content={author || 'Zion Tech Group'} />
+      <meta name="description" content={description}  />
+      {keywords && <meta name="keywords" content={keywords}  />}
+      <meta name="author" content={author || 'Zion Tech Group'}  />
       {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonical} />
+      <link rel="canonical" href={fullCanonical}  />
       {/* Robots Meta */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`}  />
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={fullImageUrl} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:title" content={fullTitle}  />
+      <meta property="og:description" content={description}  />
+      <meta property="og:type" content={type}  />
+      <meta property="og:title" content={title}  />
+      <meta property="og:description" content={metaDescription}  />
+      <meta property="og:url" content={fullUrl}  />
+      <meta property="og:image" content={fullImageUrl}  />
+      <meta property="og:image:width" content="120o0"  />
+      <meta property="og:image:height" content="630"  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
+      <meta property="og:locale" content="en_US"  />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image"  />
+      <meta name="twitter:site" content="@ziontechgroup"  />
+      <meta name="twitter:creator" content="@ziontechgroup"  />
+      <meta name="twitter:title" content={fullTitle}  />
+      <meta name="twitter:description" content={description}  />
+      <meta name="twitter:image" content={image}  />
       {/* Additional Meta Tags */}
-      <meta name="author" content={author} />
-      <meta name="keywords" content={tags.join(', ')} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="author" content={author}  />
+      <meta name="keywords" content={tags.join(', ')}  />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}

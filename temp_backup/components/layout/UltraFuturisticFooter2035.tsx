@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -14,7 +13,7 @@ const footerSections = [
   {
     title: 'Featured Services',
     description: 'Our most popular and innovative solutions',
-    icon: <Star className="w-5 h-5 text-yellow-400" />,
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
     links: [
       { name: 'AI-Powered Business Intelligence', href: '/services/ai-powered-business-intelligence-suite' },
       { name: 'Autonomous Customer Service AI', href: '/services/autonomous-customer-service-ai' },
@@ -26,9 +25,9 @@ const footerSections = [
   {
     title: 'AI & Consciousness',
     description: 'Revolutionary AI platforms and solutions',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
     links: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25' },
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' },
@@ -42,7 +41,7 @@ const footerSections = [
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
     links: [
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
@@ -60,7 +59,7 @@ const footerSections = [
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure solutions',
-    icon: <Shield className="w-5 h-5 text-purple-400" />,
+    icon: <Shield className="w-5 h-5 text-purple-40o0"  />,
     links: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
@@ -76,7 +75,7 @@ const footerSections = [
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-emerald-400" />,
+    icon: <Rocket className="w-5 h-5 text-emerald-40o0"  />,
     links: [
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations' },
       { name: 'AI Customer Success', href: '/ai-customer-success-platform' },
@@ -91,7 +90,7 @@ const footerSections = [
   {
     title: 'Industry Solutions',
     description: 'Industry-specific technology solutions',
-    icon: <Building className="w-5 h-5 text-orange-400" />,
+    icon: <Building className="w-5 h-5 text-orange-40o0"  />,
     links: [
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
       { name: 'Financial Services', href: '/financial-solutions' },
@@ -107,7 +106,7 @@ const footerSections = [
   {
     title: 'Resources',
     description: 'Documentation, support, and learning',
-    icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
+    icon: <BookOpen className="w-5 h-5 text-cyan-40o0"  />,
     links: [
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api-documentation' },
@@ -122,7 +121,7 @@ const footerSections = [
 ];
 
 const quickLinks = [
-  { name: 'All Services', href: '/comprehensive-services-showcase-2025' },
+  { name: 'All Services', href: '/comprehensive-services-showcase-20o25' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Market Pricing', href: '/market-pricing' },
   { name: 'Training', href: '/training' },
@@ -157,17 +156,17 @@ const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
 ];
 
-export default function UltraFuturisticFooter2035() {
+export default function UltraFuturisticFooter20o35() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-cyan-500/20 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 border-t border-cyan-50o0/20 overflow-hidden">
       {/* Futuristic Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.0o5),transparent_50%)]"  />
       </div>
 
       <div className="relative z-10">
@@ -179,36 +178,36 @@ export default function UltraFuturisticFooter2035() {
             <div className="lg:col-span-2 xl:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <Zap className="w-7 h-7 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+                    <Zap className="w-7 h-7 text-white"  />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur-lg opacity-50"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl blur-lg opacity-50"></div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </div>
-                  <div className="text-sm text-gray-400">Innovation • Intelligence • Impact</div>
+                  <div className="text-sm text-gray-40o0">Innovation • Intelligence • Impact</div>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 max-w-md">
+              <p className="text-gray-30o0 mb-6 max-w-md">
                 Transforming businesses with cutting-edge AI, quantum computing, and innovative micro SAAS solutions. 
                 We help organizations achieve exponential growth through intelligent automation and breakthrough technologies.
               </p>
 
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
-                <a href={`tel:${contactInfo.mobile}`} className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Phone className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href={`tel:${contactInfo.mobile}`} className="flex items-center text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Phone className="w-4 h-4 mr-3 text-cyan-40o0"  />
                   {contactInfo.mobile}
                 </a>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
-                  <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center text-gray-30o0 hover:text-cyan-40o0 transition-colors">
+                  <Mail className="w-4 h-4 mr-3 text-cyan-40o0"  />
                   {contactInfo.email}
                 </a>
-                <div className="flex items-start text-gray-300">
-                  <MapPin className="w-4 h-4 mr-3 text-cyan-400 mt-0.5 flex-shrink-0" />
+                <div className="flex items-start text-gray-30o0">
+                  <MapPin className="w-4 h-4 mr-3 text-cyan-40o0 mt-0.5 flex-shrink-0"  />
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
@@ -221,9 +220,9 @@ export default function UltraFuturisticFooter2035() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800/50 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300 hover:scale-110"
+                    className="w-10 h-10 bg-gray-80o0/50 border border-gray-70o0 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-cyan-40o0 hover:border-cyan-50o0/50 transition-all duration-30o0 hover:scale-110"
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-5 h-5"  />
                   </a>
                 ))}
               </div>
@@ -237,7 +236,7 @@ export default function UltraFuturisticFooter2035() {
                     {section.icon}
                     {section.title}
                   </h3>
-                  <p className="text-sm text-gray-400 mb-4">{section.description}</p>
+                  <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>
                   <ul className="space-y-2">
                     {section.links.map((link) => (
                       <li key={link.name}>
@@ -245,13 +244,13 @@ export default function UltraFuturisticFooter2035() {
                           href={link.href}
                           className={`flex items-center text-sm transition-colors ${
                             link.featured 
-                              ? 'text-cyan-400 hover:text-cyan-300 font-medium' 
-                              : 'text-gray-400 hover:text-cyan-400'
+                              ? 'text-cyan-40o0 hover:text-cyan-30o0 font-medium' 
+                              : 'text-gray-40o0 hover:text-cyan-40o0'
                           }`}
                         >
-                          {link.featured && <Star className="w-3 h-3 mr-2 text-cyan-400" />}
+                          {link.featured && <Star className="w-3 h-3 mr-2 text-cyan-40o0"  />}
                           {link.name}
-                          {link.featured && <span className="ml-2 px-2 py-1 text-xs bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 rounded-full border border-cyan-500/30">Featured</span>}
+                          {link.featured && <span className="ml-2 px-2 py-1 text-xs bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 text-cyan-40o0 rounded-full border border-cyan-50o0/30">Featured</span>}
                         </Link>
                       </li>
                     ))}
@@ -271,7 +270,7 @@ export default function UltraFuturisticFooter2035() {
               className="space-y-4"
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="text-cyan-400">
+                <div className="text-cyan-40o0">
                   {section.icon}
                 </div>
                 <h4 className="text-white font-semibold text-lg">{section.title}</h4>
@@ -281,9 +280,9 @@ export default function UltraFuturisticFooter2035() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                      className="text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-30o0 text-sm flex items-center group"
                     >
-                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
                       {link.name}
                     </Link>
                   </li>
@@ -308,9 +307,9 @@ export default function UltraFuturisticFooter2035() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-30o0 text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
                     {link.name}
                   </Link>
                 </li>
@@ -331,9 +330,9 @@ export default function UltraFuturisticFooter2035() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                    className="text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-30o0 text-sm flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
                     {link.name}
                   </Link>
                 </li>
@@ -356,7 +355,7 @@ export default function UltraFuturisticFooter2035() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 text-gray-300 hover:text-cyan-400 group"
+                  className="flex items-center space-x-2 p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-30o0 text-gray-30o0 hover:text-cyan-40o0 group"
                 >
                   {link.icon}
                   <span className="text-sm">{link.name}</span>
@@ -373,16 +372,16 @@ export default function UltraFuturisticFooter2035() {
             className="space-y-4"
           >
             <h4 className="text-white font-semibold text-lg mb-4">Stay Updated</h4>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-gray-30o0 text-sm mb-4">
               Get the latest insights on AI consciousness, quantum computing, and revolutionary technology.
             </p>
             <div className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              />
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium">
+                className="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent"
+               />
+              <button className="w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-4 py-2 rounded-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 text-sm font-medium">
                 Subscribe
               </button>
             </div>
@@ -395,7 +394,7 @@ export default function UltraFuturisticFooter2035() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-cyan-300 transition-colors duration-300 text-sm hover:translate-x-1 transform inline-block"
+                      className="text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-30o0 text-sm hover:translate-x-1 transform inline-block"
                     >
                       {link.name}
                     </Link>
@@ -412,7 +411,7 @@ export default function UltraFuturisticFooter2035() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-cyan-300 transition-colors duration-300 text-sm hover:translate-x-1 transform inline-block"
+                      className="text-gray-30o0 hover:text-cyan-30o0 transition-colors duration-30o0 text-sm hover:translate-x-1 transform inline-block"
                     >
                       {link.name}
                     </Link>
@@ -423,12 +422,12 @@ export default function UltraFuturisticFooter2035() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-3xl p-8 mb-16">
+          <div className="bg-gradient-to-r from-cyan-50o0/10 to-purple-50o0/10 border border-cyan-50o0/20 rounded-3xl p-8 mb-16">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Stay Ahead of the Future
               </h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
                 Get the latest insights on AI, quantum computing, and emerging technologies. 
                 Be the first to know about our revolutionary new services.
               </p>
@@ -436,9 +435,9 @@ export default function UltraFuturisticFooter2035() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  className="flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50"
+                 />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-xl font-medium hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5">
                   Subscribe
                 </button>
               </div>
@@ -446,11 +445,11 @@ export default function UltraFuturisticFooter2035() {
           </div>
 
           {/* Bottom Section */}
-          <div className="py-8 border-t border-gray-800">
+          <div className="py-8 border-t border-gray-80o0">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               {/* Copyright */}
-              <div className="text-sm text-gray-400">
-                <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+              <div className="text-sm text-gray-40o0">
+                <p>&copy; 20o25 Zion Tech Group. All rights reserved.</p>
                 <p className="mt-1">Revolutionizing technology, one innovation at a time.</p>
               </div>
 
@@ -460,7 +459,7 @@ export default function UltraFuturisticFooter2035() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-gray-400 hover:text-cyan-300 transition-colors duration-200"
+                    className="text-gray-40o0 hover:text-cyan-30o0 transition-colors duration-20o0"
                   >
                     {link.name}
                   </Link>
@@ -470,10 +469,10 @@ export default function UltraFuturisticFooter2035() {
               {/* Back to Top */}
               <button
                 onClick={scrollToTop}
-                className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-200"
+                className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 rounded-lg text-cyan-40o0 hover:from-cyan-50o0/30 hover:to-blue-50o0/30 transition-all duration-20o0"
               >
                 <span className="text-sm">Back to Top</span>
-                <ArrowUp className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform duration-200" />
+                <ArrowUp className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform duration-20o0"  />
               </button>
             </div>
           </div>
@@ -489,23 +488,23 @@ export default function UltraFuturisticFooter2035() {
       >
         <Link
           href="/contact"
-          className="group w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-110"
+          className="group w-14 h-14 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-50o0/25 hover:shadow-cyan-50o0/40 transition-all duration-30o0 hover:scale-110"
         >
-          <MessageCircle className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
+          <MessageCircle className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-30o0"  />
         </Link>
       </motion.div>
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-50o0/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-50o0/5 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-50o0/5 rounded-full blur-3xl animate-pulse delay-20o00"></div>
       </div>
 
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full opacity-30"
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-40o0 rounded-full opacity-30"
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.6, 0.3]
@@ -515,9 +514,9 @@ export default function UltraFuturisticFooter2035() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
         <motion.div
-          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full opacity-40"
+          className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-40o0 rounded-full opacity-40"
           animate={{
             scale: [1, 2, 1],
             opacity: [0.4, 0.8, 0.4]
@@ -527,9 +526,9 @@ export default function UltraFuturisticFooter2035() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
         <motion.div
-          className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-400 rounded-full opacity-30"
+          className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-blue-40o0 rounded-full opacity-30"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -539,11 +538,11 @@ export default function UltraFuturisticFooter2035() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
       </div>
 
       {/* Bottom Gradient Line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-cyan-50o0/50 to-transparent"></div>
     </footer>
   );
 }

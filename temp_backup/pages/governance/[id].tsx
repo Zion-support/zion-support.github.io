@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 
@@ -44,9 +43,9 @@ export default function ProposalDetail() {
         <h1 className="text-2xl font-semibold">{proposal.title}</h1>
         <div className="text-xs px-2 py-0.5 rounded-full border">{proposal.status}</div>
       </div>
-      <p className="text-gray-700 whitespace-pre-wrap">{proposal.summary}</p>
+      <p className="text-gray-70o0 whitespace-pre-wrap">{proposal.summary}</p>
       {proposal.fundingAsk ? <div>Funding ask: <span className="font-medium">{proposal.fundingAsk}</span></div> : null}
-      <div className="text-sm text-gray-500">Voting ends {new Date(proposal.endTime).toLocaleString()}</div>
+      <div className="text-sm text-gray-50o0">Voting ends {new Date(proposal.endTime).toLocaleString()}</div>
       {proposal.referenceLinks?.length ? (
         <div>
           <div className="text-sm font-medium mb-2">References</div>
@@ -61,22 +60,22 @@ export default function ProposalDetail() {
       <div className="border rounded p-4 space-y-3">
         <div className="text-sm font-medium">Cast your vote</div>
         <div className="flex gap-2">
-          <button disabled={!canVote || loading} onClick={() => cast('approve')} className="px-3 py-1.5 rounded bg-green-600 text-white disabled:opacity-50">Approve</button>
-          <button disabled={!canVote || loading} onClick={() => cast('reject')} className="px-3 py-1.5 rounded bg-red-600 text-white disabled:opacity-50">Reject</button>
-          <button disabled={!canVote || loading} onClick={() => cast('abstain')} className="px-3 py-1.5 rounded bg-gray-700 text-white disabled:opacity-50">Abstain</button>
+          <button disabled={!canVote || loading} onClick={() => cast('approve')} className="px-3 py-1.5 rounded bg-green-60o0 text-white disabled:opacity-50">Approve</button>
+          <button disabled={!canVote || loading} onClick={() => cast('reject')} className="px-3 py-1.5 rounded bg-red-60o0 text-white disabled:opacity-50">Reject</button>
+          <button disabled={!canVote || loading} onClick={() => cast('abstain')} className="px-3 py-1.5 rounded bg-gray-70o0 text-white disabled:opacity-50">Abstain</button>
         </div>
-        {!canVote && <div className="text-xs text-gray-500">Voting is not active.</div>}
-        {error && <div className="text-sm text-red-600">{error}</div>}
+        {!canVote && <div className="text-xs text-gray-50o0">Voting is not active.</div>}
+        {error && <div className="text-sm text-red-60o0">{error}</div>}
       </div>
 
       <div className="border rounded p-4 space-y-2">
         <div className="text-sm font-medium">Results Transparency</div>
         <div className="grid grid-cols-3 gap-2 text-sm">
-          <div className="border rounded p-3"><div className="text-gray-500">Approve</div><div className="text-xl font-semibold">{votesData?.tally?.approve ?? 0}</div></div>
-          <div className="border rounded p-3"><div className="text-gray-500">Reject</div><div className="text-xl font-semibold">{votesData?.tally?.reject ?? 0}</div></div>
-          <div className="border rounded p-3"><div className="text-gray-500">Abstain</div><div className="text-xl font-semibold">{votesData?.tally?.abstain ?? 0}</div></div>
+          <div className="border rounded p-3"><div className="text-gray-50o0">Approve</div><div className="text-xl font-semibold">{votesData?.tally?.approve ?? 0}</div></div>
+          <div className="border rounded p-3"><div className="text-gray-50o0">Reject</div><div className="text-xl font-semibold">{votesData?.tally?.reject ?? 0}</div></div>
+          <div className="border rounded p-3"><div className="text-gray-50o0">Abstain</div><div className="text-xl font-semibold">{votesData?.tally?.abstain ?? 0}</div></div>
         </div>
-        <div className="text-xs text-gray-600">Total power: {votesData?.tally?.total ?? 0}</div>
+        <div className="text-xs text-gray-60o0">Total power: {votesData?.tally?.total ?? 0}</div>
         {proposal.executedTxHash && (
           <div className="text-sm">On-chain TX: <a className="underline" href={`https://etherscan.io/tx/${proposal.executedTxHash}`} target="_blank" rel="noreferrer">{proposal.executedTxHash}</a></div>
         )}

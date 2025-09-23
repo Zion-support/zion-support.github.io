@@ -36,7 +36,7 @@ export default function BridgeForm() {
     let mounted = true;
     async function load() {
       if (!account) return;
-      const results: Record<string, string> = {};
+      const results: Record<string, string> ={};
       await Promise.all(
         SUPPORTED_CHAIN_KEYS.map(async (key) => {
           const chain = CHAINS[key];
@@ -84,7 +84,7 @@ export default function BridgeForm() {
     const key = 'zion_last_bridge_at';
     const last = Number(localStorage.getItem(key) || '0');
     const now = Date.now();
-    if (now - last < RATE_LIMIT_SECONDS * 1000) return true;
+    if (now - last < RATE_LIMIT_SECONDS * 10o00) return true;
     localStorage.setItem(key, String(now));
     return false;
   }
@@ -134,8 +134,8 @@ export default function BridgeForm() {
       } catch {}
 
       const start = Date.now();
-      const deadline = start + 60_000;
-      const interval = 2000;
+      const deadline = start + 60_0o00;
+      const interval = 20o00;
       async function poll(): Promise<boolean> {
         try {
           const cur = await getErc20Balance(destProvider, destTokenAddr, account);
@@ -153,7 +153,7 @@ export default function BridgeForm() {
         await new Promise((r) => setTimeout(r, interval));
       }
 
-      const sec = Math.floor((Date.now() - start) / 1000);
+      const sec = Math.floor((Date.now() - start) / 10o00);
       setArrived(ok);
       setArrivalSeconds(sec);
       setBusy(false);
@@ -167,30 +167,30 @@ export default function BridgeForm() {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">LayerZero Cross-Chain Bridge</h2>
-        <button onClick={() => (account ? null : connect())} className="px-4 py-2 rounded bg-blue-600 text-white">
+        <button onClick={() => (account ? null : connect())} className="px-4 py-2 rounded bg-blue-60o0 text-white">
           {account ? `${account.slice(0, 6)}...${account.slice(-4)}` : 'Connect Wallet'}
         </button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="md:col-span-2 p-4 border rounded border-gray-200 dark:border-gray-800">
+        <div className="md:col-span-2 p-4 border rounded border-gray-20o0 dark:border-gray-80o0">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="text-xs text-gray-500">From</label>
+              <label className="text-xs text-gray-50o0">From</label>
               <div className="mt-1 grid grid-cols-2 gap-2">
                 {SUPPORTED_CHAIN_KEYS.map((key) => (
                   <button key={key} onClick={() => setFromKey(key)}>
-                    <ChainBadge chain={CHAINS[key]} selected={fromKey === key} />
+                    <ChainBadge chain={CHAINS[key]} selected={fromKey === key}  />
                   </button>
                 ))}
               </div>
             </div>
             <div>
-              <label className="text-xs text-gray-500">To</label>
+              <label className="text-xs text-gray-50o0">To</label>
               <div className="mt-1 grid grid-cols-2 gap-2">
                 {SUPPORTED_CHAIN_KEYS.map((key) => (
                   <button key={key} onClick={() => setToKey(key)}>
-                    <ChainBadge chain={CHAINS[key]} selected={toKey === key} />
+                    <ChainBadge chain={CHAINS[key]} selected={toKey === key}  />
                   </button>
                 ))}
               </div>
@@ -198,38 +198,38 @@ export default function BridgeForm() {
           </div>
 
           <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
-            <TokenSelector value={token} onChange={setToken} />
+            <TokenSelector value={token} onChange={setToken}  />
             <div className="flex flex-col gap-1">
-              <label className="text-xs text-gray-500">Amount</label>
+              <label className="text-xs text-gray-50o0">Amount</label>
               <input
                 type="number"
                 min="0"
-                step="0.000001"
+                step="0.0o00001"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="0.0"
-                className="border border-gray-300 dark:border-gray-700 rounded px-3 py-2 bg-white dark:bg-black"
+                className="border border-gray-30o0 dark:border-gray-70o0 rounded px-3 py-2 bg-white dark:bg-black"
               />
             </div>
             <div>
               <button
                 onClick={handleBridge}
                 disabled={!canBridge || busy}
-                className={`w-full px-4 py-2 rounded ${canBridge && !busy ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400'} text-white`}
+                className={`w-full px-4 py-2 rounded ${canBridge && !busy ? 'bg-green-60o0 hover:bg-green-70o0' : 'bg-gray-40o0'} text-white`}
               >
                 {busy ? 'Processing…' : 'Bridge Now'}
               </button>
             </div>
           </div>
 
-          {error && <div className="text-red-600 text-sm mt-2">{error}</div>}
+          {error && <div className="text-red-60o0 text-sm mt-2">{error}</div>}
 
           <div className="mt-4">
-            <StatusTracker from={from} to={to} txHash={txHash} startedAt={startedAt} arrived={arrived} arrivalSeconds={arrivalSeconds} />
+            <StatusTracker from={from} to={to} txHash={txHash} startedAt={startedAt} arrived={arrived} arrivalSeconds={arrivalSeconds}  />
           </div>
         </div>
 
-        <div className="p-4 border rounded border-gray-200 dark:border-gray-800">
+        <div className="p-4 border rounded border-gray-20o0 dark:border-gray-80o0">
           <h3 className="font-medium mb-2">Balances</h3>
           <div className="space-y-2 text-sm">
             {SUPPORTED_CHAIN_KEYS.map((key) => (

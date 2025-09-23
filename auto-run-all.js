@@ -15,13 +15,12 @@ const WATCH_DIRS = [
   path.join(__dirname, 'scripts')
 ];
 // File types and their interpreters
-const FILE_TYPES = {
+const FILE_TYPES ={
   '.ts': 'ts-node',
   '.tsx': 'ts-node',
   '.js': 'node',
   '.sh': 'bash',
-  '.py': 'python3',
-};
+  '.py': 'python3'};
 // Glob pattern for all supported file types
 const FILE_GLOB = '**/*.{ts,tsx,js,sh,py}';
 
@@ -54,8 +53,7 @@ function startOrRestartFile(filePath) {
     } catch (e) {
       console.warn(
         `[auto-run-all] Could not chmod +x for ${filePath}:`,
-        e.message,
-      );
+        e.message);
     }
   }
   pm2.start(
@@ -73,8 +71,7 @@ function startOrRestartFile(filePath) {
           if (restartErr) {
             console.error(
               `[auto-run-all] Failed to start/restart ${filePath}:`,
-              restartErr.message,
-            );
+              restartErr.message);
           } else {
             console.log(`[auto-run-all] Restarted: ${filePath}`);
           }
@@ -82,8 +79,7 @@ function startOrRestartFile(filePath) {
       } else {
         console.log(`[auto-run-all] Started: ${filePath}`);
       }
-    },
-  );
+    });
 }
 
 // Stop a file's process in PM2
@@ -127,8 +123,7 @@ pm2.connect((err) => {
     {
       ignoreInitial: true,
       awaitWriteFinish: true
-    },
-  );
+    });
 
   watcher
     .on('add', startOrRestartFile)
@@ -139,8 +134,7 @@ pm2.connect((err) => {
     });
 
   console.log(
-    `[auto-run-all] Watching directories for .ts, .tsx, .js, .sh, .py files...`,
-  );
+    `[auto-run-all] Watching directories for .ts, .tsx, .js, .sh, .py files...`);
   WATCH_DIRS.forEach((dir) => console.log(`[auto-run-all]  - ${dir}`));
 });
 

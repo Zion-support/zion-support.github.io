@@ -8,8 +8,6 @@ import {
   Target, Lightbulb, Code, Palette, Gamepad2
 } from 'lucide-react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-
 // Type definitions for DOM elements
 type Node = any;
 
@@ -25,54 +23,54 @@ const navigationItems: NavigationItem[] = [
   {
     label: 'Home',
     href: '/',
-    icon: <Home className="w-4 h-4" />
+    icon: <Home className="w-4 h-4"  />
   },
   {
     label: 'Services',
     href: '/services',
-    icon: <Briefcase className="w-4 h-4" />,
+    icon: <Briefcase className="w-4 h-4"  />,
     description: 'Explore our comprehensive technology solutions',
     children: [
       {
         label: 'AI & Machine Learning',
         href: '/services?category=ai',
-        icon: <Brain className="w-4 h-4" />,
+        icon: <Brain className="w-4 h-4"  />,
         description: 'Advanced AI solutions for enterprise'
       },
       {
         label: 'Quantum Computing',
         href: '/services?category=quantum',
-        icon: <Atom className="w-4 h-4" />,
+        icon: <Atom className="w-4 h-4"  />,
         description: 'Next-generation quantum solutions'
       },
       {
         label: 'Space Technology',
         href: '/services?category=space',
-        icon: <Satellite className="w-4 h-4" />,
+        icon: <Satellite className="w-4 h-4"  />,
         description: 'Innovative space tech applications'
       },
       {
         label: 'Cybersecurity',
         href: '/services?category=cyber',
-        icon: <Shield className="w-4 h-4" />,
+        icon: <Shield className="w-4 h-4"  />,
         description: 'Enterprise-grade security solutions'
       },
       {
         label: 'Cloud & DevOps',
         href: '/services?category=cloud',
-        icon: <Cloud className="w-4 h-4" />,
+        icon: <Cloud className="w-4 h-4"  />,
         description: 'Scalable cloud infrastructure'
       },
       {
         label: 'FinTech Solutions',
         href: '/services?category=fintech',
-        icon: <ChartBar className="w-4 h-4" />,
+        icon: <ChartBar className="w-4 h-4"  />,
         description: 'Financial technology innovations'
       },
       {
         label: 'View All Services',
         href: '/services',
-        icon: <Globe className="w-4 h-4" />,
+        icon: <Globe className="w-4 h-4"  />,
         description: 'Complete service portfolio'
       }
     ]
@@ -80,37 +78,37 @@ const navigationItems: NavigationItem[] = [
   {
     label: 'Solutions',
     href: '/solutions',
-    icon: <Target className="w-4 h-4" />,
+    icon: <Target className="w-4 h-4"  />,
     description: 'Industry-specific solutions and use cases',
     children: [
       {
         label: 'Healthcare',
         href: '/healthcare-solutions',
-        icon: <Users className="w-4 h-4" />,
+        icon: <Users className="w-4 h-4"  />,
         description: 'Medical technology solutions'
       },
       {
         label: 'Finance',
         href: '/financial-solutions',
-        icon: <ChartBar className="w-4 h-4" />,
+        icon: <ChartBar className="w-4 h-4"  />,
         description: 'Fintech and banking solutions'
       },
       {
         label: 'Manufacturing',
         href: '/manufacturing-solutions',
-        icon: <Cpu className="w-4 h-4" />,
+        icon: <Cpu className="w-4 h-4"  />,
         description: 'Industry 4.0 solutions'
       },
       {
         label: 'Retail',
         href: '/retail-solutions',
-        icon: <Globe className="w-4 h-4" />,
+        icon: <Globe className="w-4 h-4"  />,
         description: 'E-commerce and retail tech'
       },
       {
         label: 'Government',
         href: '/government-solutions',
-        icon: <Shield className="w-4 h-4" />,
+        icon: <Shield className="w-4 h-4"  />,
         description: 'Public sector solutions'
       }
     ]
@@ -118,43 +116,43 @@ const navigationItems: NavigationItem[] = [
   {
     label: 'About',
     href: '/about',
-    icon: <Users className="w-4 h-4" />,
+    icon: <Users className="w-4 h-4"  />,
     description: 'Learn about our mission and team'
   },
   {
     label: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-4 h-4" />,
+    icon: <BookOpen className="w-4 h-4"  />,
     description: 'Whitepapers, case studies, and insights',
     children: [
       {
         label: 'Blog',
         href: '/blog',
-        icon: <Lightbulb className="w-4 h-4" />,
+        icon: <Lightbulb className="w-4 h-4"  />,
         description: 'Industry insights and updates'
       },
       {
         label: 'Case Studies',
         href: '/case-studies',
-        icon: <Target className="w-4 h-4" />,
+        icon: <Target className="w-4 h-4"  />,
         description: 'Success stories and implementations'
       },
       {
         label: 'Whitepapers',
         href: '/white-papers',
-        icon: <BookOpen className="w-4 h-4" />,
+        icon: <BookOpen className="w-4 h-4"  />,
         description: 'In-depth research and analysis'
       },
       {
         label: 'Webinars',
         href: '/webinars',
-        icon: <Users className="w-4 h-4" />,
+        icon: <Users className="w-4 h-4"  />,
         description: 'Educational content and training'
       },
       {
         label: 'Documentation',
         href: '/docs',
-        icon: <Code className="w-4 h-4" />,
+        icon: <Code className="w-4 h-4"  />,
         description: 'Technical guides and APIs'
       }
     ]
@@ -162,12 +160,12 @@ const navigationItems: NavigationItem[] = [
   {
     label: 'Contact',
     href: '/contact',
-    icon: <Phone className="w-4 h-4" />,
+    icon: <Phone className="w-4 h-4"  />,
     description: 'Get in touch with our experts'
   }
 ];
 
-const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
+const UltraAdvancedFuturisticNavigation20o35: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -227,9 +225,9 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
   }, [router.asPath]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50' 
+        ? 'bg-gray-90o0/95 backdrop-blur-xl border-b border-gray-70o0/50' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,15 +236,15 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
           <Link href="/" className="flex items-center space-x-3 group">
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center"
+              className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-xl flex items-center justify-center"
             >
-              <Rocket className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
+              <Rocket className="w-6 h-6 lg:w-7 lg:h-7 text-white"  />
             </motion.div>
             <div className="hidden sm:block">
-              <div className="text-xl lg:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <div className="text-xl lg:text-2xl font-bold text-white group-hover:text-cyan-40o0 transition-colors duration-30o0">
                 Zion Tech Group
               </div>
-              <div className="text-xs text-gray-400">Innovating Tomorrow</div>
+              <div className="text-xs text-gray-40o0">Innovating Tomorrow</div>
             </div>
           </Link>
 
@@ -255,7 +253,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
             {navigationItems.map((item, index) => (
               <div key={item.label} className="relative group">
                 <button
-                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-30o0 py-2"
                   onMouseEnter={() => setActiveDropdown(item.label)}
                   onMouseLeave={() => setActiveDropdown(null)}
                   onClick={() => {
@@ -267,7 +265,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                   {item.icon}
                   <span className="font-medium">{item.label}</span>
                   {item.children && (
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className="w-4 h-4 transition-transform duration-30o0 group-hover:rotate-180"  />
                   )}
                 </button>
 
@@ -278,27 +276,27 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
+                    className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl shadow-2xl overflow-hidden"
                     onMouseEnter={() => setActiveDropdown(item.label)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <div className="p-4">
-                      <div className="text-sm font-semibold text-cyan-400 mb-3">{item.description}</div>
+                      <div className="text-sm font-semibold text-cyan-40o0 mb-3">{item.description}</div>
                       <div className="space-y-2">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             href={child.href}
-                            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors duration-20o0 group"
                           >
-                            <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                            <div className="text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                               {child.icon}
                             </div>
                             <div>
-                              <div className="text-white font-medium group-hover:text-cyan-400 transition-colors duration-200">
+                              <div className="text-white font-medium group-hover:text-cyan-40o0 transition-colors duration-20o0">
                                 {child.label}
                               </div>
-                              <div className="text-sm text-gray-400">{child.description}</div>
+                              <div className="text-sm text-gray-40o0">{child.description}</div>
                             </div>
                           </Link>
                         ))}
@@ -314,20 +312,20 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
           <div className="flex items-center space-x-4">
             {/* Search Button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+              className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5"  />
             </motion.button>
 
             {/* Contact Button */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push('/contact')}
-              className="hidden sm:block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300"
+              className="hidden sm:block bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-40o0 hover:to-blue-40o0 text-white font-medium py-2 px-4 rounded-lg transition-all duration-30o0"
             >
               Get Started
             </motion.button>
@@ -335,9 +333,9 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+              className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -350,7 +348,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-gray-900/95 backdrop-blur-xl z-50"
+            className="absolute inset-0 bg-gray-90o0/95 backdrop-blur-xl z-50"
           >
             <div className="max-w-2xl mx-auto px-4 pt-20">
               <form onSubmit={handleSearch} className="relative">
@@ -360,20 +358,20 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                   placeholder="Search our services, solutions, and resources..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-gray-800/50 border border-gray-600 rounded-2xl px-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-lg"
+                  className="w-full bg-gray-80o0/50 border border-gray-60o0 rounded-2xl px-6 py-4 text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-40o0 focus:border-transparent text-lg"
                   autoFocus
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded-xl transition-colors duration-200"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-3 bg-cyan-50o0 hover:bg-cyan-40o0 text-white rounded-xl transition-colors duration-20o0"
                 >
-                  <Search className="w-5 h-5" />
+                  <Search className="w-5 h-5"  />
                 </button>
               </form>
               <div className="mt-8 text-center">
                 <button
                   onClick={() => setIsSearchOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-40o0 hover:text-white transition-colors duration-20o0"
                 >
                   Press ESC to close
                 </button>
@@ -391,7 +389,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 overflow-hidden"
+            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-70o0/50 overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
@@ -405,7 +403,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                         setIsMobileMenuOpen(false);
                       }
                     }}
-                    className="flex items-center justify-between w-full text-left p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                    className="flex items-center justify-between w-full text-left p-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-colors duration-20o0"
                   >
                     <div className="flex items-center space-x-3">
                       {item.icon}
@@ -413,10 +411,10 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                     </div>
                     {item.children && (
                       <ChevronRight 
-                        className={`w-4 h-4 transition-transform duration-200 ${
+                        className={`w-4 h-4 transition-transform duration-20o0 ${
                           activeDropdown === item.label ? 'rotate-90' : ''
                         }`} 
-                      />
+                       />
                     )}
                   </button>
                   
@@ -433,7 +431,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                           key={child.label}
                           href={child.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="flex items-center space-x-3 p-3 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                          className="flex items-center space-x-3 p-3 text-gray-40o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-colors duration-20o0"
                         >
                           {child.icon}
                           <span>{child.label}</span>
@@ -449,7 +447,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-medium py-3 px-4 rounded-lg text-center transition-all duration-300"
+                  className="block w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-40o0 hover:to-blue-40o0 text-white font-medium py-3 px-4 rounded-lg text-center transition-all duration-30o0"
                 >
                   Get Started
                 </Link>
@@ -462,4 +460,4 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFuturisticNavigation2035;
+export default UltraAdvancedFuturisticNavigation20o35;

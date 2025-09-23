@@ -1,6 +1,4 @@
-import React from 'react';
-
-type EnhancedCardProps = {
+type EnhancedCardProps ={
   title?: string;
   children: React.ReactNode;
   footer?: React.ReactNode;
@@ -8,9 +6,9 @@ type EnhancedCardProps = {
 
 export default function EnhancedCard({ title, children, footer }: EnhancedCardProps) {
   return (
-    <div className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm">
+    <div className="rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white dark:bg-gray-90o0 shadow-sm">
       {title ? (
-        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-800 font-medium text-sm">
+        <div className="px-4 py-3 border-b border-gray-20o0 dark:border-gray-80o0 font-medium text-sm">
           {title}
         </div>
       ) : null}
@@ -18,7 +16,7 @@ export default function EnhancedCard({ title, children, footer }: EnhancedCardPr
         {children}
       </div>
       {footer ? (
-        <div className="px-4 py-3 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-500">
+        <div className="px-4 py-3 border-t border-gray-20o0 dark:border-gray-80o0 text-sm text-gray-50o0">
           {footer}
         </div>
       ) : null}

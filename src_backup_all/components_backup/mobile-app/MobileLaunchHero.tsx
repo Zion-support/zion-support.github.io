@@ -1,5 +1,4 @@
 
-import React from "react";
 import Link from "next/link";
 import { ArrowRight, Smartphone } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,7 @@ export const MobileLaunchHero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 text-white">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              The Power of <span className="text-zion-cyan">Zion</span><br />
+              The Power of <span className="text-zion-cyan">Zion</span><br  />
               In Your Pocket
             </h1>
             
@@ -29,14 +28,14 @@ export const MobileLaunchHero: React.FC = () => {
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-              />
+               />
             </div>
             
             <div className="flex flex-wrap gap-4">
               <Link href="/open-app">
                 <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
                   Open App
-                  <ArrowRight size={20} />
+                  <ArrowRight size={20}  />
                 </Button>
               </Link>
               
@@ -56,7 +55,7 @@ export const MobileLaunchHero: React.FC = () => {
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
-                    <Smartphone className="w-40 h-40 text-white opacity-40" />
+                    <Smartphone className="w-40 h-40 text-white opacity-40"  />
                     {/* In production, replace with actual app screenshot */}
                   </div>
                 </CardContent>

@@ -35,7 +35,7 @@ export interface BlockchainWeb3Service {
   reviews: number;
 }
 
-export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
+export const blockchainWeb3Services20o25: BlockchainWeb3Service[] = [
   {
     id: 'decentralized-identity-management',
     name: 'Decentralized Identity Management Platform',
@@ -82,7 +82,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.',
-    roi: 'Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.',
+    roi: 'Organizations achieve 40o0% ROI through reduced fraud, improved compliance, and enhanced user trust.',
     useCases: [
       'KYC/AML compliance',
       'Healthcare patient identity',
@@ -93,13 +93,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     ],
     integrations: ['Salesforce, SAP, Oracle, Microsoft 365, Custom enterprise systems'],
     support: '24/7 technical support, compliance consulting, custom development, and dedicated success manager.',
-    compliance: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards'],
+    compliance: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 270o01, W3C DID standards'],
     link: 'https://ziontechgroup.com/decentralized-identity-management',
     icon: '🆔',
-    color: 'from-indigo-500 to-purple-600',
+    color: 'from-indigo-50o0 to-purple-60o0',
     popular: true,
-    launchDate: '2024-02-20',
-    customers: 1200,
+    launchDate: '20o24-0o2-20',
+    customers: 120o0,
     rating: 4.8,
     reviews: 850
   },
@@ -149,7 +149,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['OpenAI GPT-4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.',
-    roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
+    roi: 'Users achieve 20o0-40o0% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
     useCases: [
       'Yield farming optimization',
       'Liquidity provision strategies',
@@ -160,15 +160,15 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     ],
     integrations: ['MetaMask, WalletConnect, Uniswap, Curve, Aave, Compound, Custom DeFi protocols'],
     support: '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, Financial regulations compliance'],
     link: 'https://ziontechgroup.com/ai-powered-defi-yield-optimizer',
     icon: '🌾',
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-green-50o0 to-emerald-60o0',
     popular: true,
-    launchDate: '2024-01-15',
-    customers: 8500,
+    launchDate: '20o24-0o1-15',
+    customers: 850o0,
     rating: 4.9,
-    reviews: 6200
+    reviews: 620o0
   },
   {
     id: 'nft-marketplace-intelligence-platform',
@@ -197,7 +197,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'API for developers'
     ],
     benefits: [
-      'Improve NFT investment returns by 200%',
+      'Improve NFT investment returns by 20o0%',
       'Reduce investment risks through AI analysis',
       'Identify undervalued NFT opportunities',
       'Optimize portfolio allocation',
@@ -216,7 +216,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js'],
     realImplementation: true,
     implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
-    roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.',
+    roi: 'NFT investors achieve 30o0% ROI through improved decision-making and optimized portfolio management.',
     useCases: [
       'NFT investment research',
       'Portfolio optimization',
@@ -227,15 +227,15 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     ],
     integrations: ['OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms'],
     support: '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'],
+    compliance: ['SOC 2 Type II, ISO 270o01, GDPR, Financial regulations compliance'],
     link: 'https://ziontechgroup.com/nft-marketplace-intelligence-platform',
     icon: '🎨',
-    color: 'from-pink-500 to-rose-600',
+    color: 'from-pink-50o0 to-rose-60o0',
     popular: true,
-    launchDate: '2024-03-01',
-    customers: 3200,
+    launchDate: '20o24-0o3-0o1',
+    customers: 320o0,
     rating: 4.7,
-    reviews: 2100
+    reviews: 210o0
   },
   {
     id: 'blockchain-supply-chain-traceability',
@@ -264,7 +264,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'API for system integration'
     ],
     benefits: [
-      'Improve supply chain transparency by 100%',
+      'Improve supply chain transparency by 10o0%',
       'Reduce compliance costs by 40%',
       'Enhance brand trust and reputation',
       'Optimize inventory management',
@@ -278,12 +278,12 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Retail chains',
       'Logistics companies'
     ],
-    marketPosition: 'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01-0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
+    marketPosition: 'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.0o1-0.10/transaction), SAP Blockchain ($50o0-20o00/user), and Oracle Blockchain ($10o00-50o00/user). Our advantage: Multi-industry focus and IoT integration.',
     competitors: ['IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain'],
     techStack: ['Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms'],
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
-    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
+    roi: 'Organizations achieve 30o0% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
     useCases: [
       'Food safety tracking',
       'Pharmaceutical authenticity',
@@ -294,12 +294,12 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     ],
     integrations: ['SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms'],
     support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
+    compliance: ['ISO 270o01, SOC 2 Type II, GDPR, Industry-specific standards'],
     link: 'https://ziontechgroup.com/blockchain-supply-chain-traceability',
     icon: '🔗',
-    color: 'from-blue-500 to-cyan-600',
+    color: 'from-blue-50o0 to-cyan-60o0',
     popular: true,
-    launchDate: '2024-02-10',
+    launchDate: '20o24-0o2-10',
     customers: 950,
     rating: 4.8,
     reviews: 680
@@ -350,7 +350,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     techStack: ['IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.',
-    roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.',
+    roi: 'Content creators earn 20o0-50o0% more compared to traditional social media platforms through direct monetization.',
     useCases: [
       'Social networking',
       'Content creation and sharing',
@@ -361,14 +361,14 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     ],
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
+    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 270o01'],
     link: 'https://ziontechgroup.com/web3-social-media-platform',
     icon: '🌐',
-    color: 'from-purple-500 to-indigo-600',
+    color: 'from-purple-50o0 to-indigo-60o0',
     popular: true,
-    launchDate: '2024-01-01',
-    customers: 25000,
+    launchDate: '20o24-0o1-0o1',
+    customers: 250o00,
     rating: 4.6,
-    reviews: 18000
+    reviews: 180o00
   }
 ];

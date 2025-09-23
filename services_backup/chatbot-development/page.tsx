@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Chatbot Development | Zion Tech Group",
   description:
     "Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff."};
@@ -6,10 +6,10 @@ export const metadata = {
 export default function ChatbotDevelopmentPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
         Chatbot Development
       </h1>
-      <p className="text-xl text-gray-600 mb-12">
+      <p className="text-xl text-gray-60o0 mb-12">
         Build intelligent chatbots with AI-powered natural language
         understanding, multi-platform deployment, and seamless human handoff.
       </p>
@@ -22,7 +22,7 @@ export default function ChatbotDevelopmentPage() {
             "Context-aware responses",
             "Multi-language support",
             "Sentiment analysis"]}
-        />
+         />
         <FeatureCard
           title="Multi-Platform Deployment"
           features={[
@@ -30,7 +30,7 @@ export default function ChatbotDevelopmentPage() {
             "Mobile app integration",
             "Social media platforms",
             "Voice assistants"]}
-        />
+         />
         <FeatureCard
           title="Advanced Features"
           features={[
@@ -38,53 +38,53 @@ export default function ChatbotDevelopmentPage() {
             "Analytics & insights",
             "Custom integrations",
             "A/B testing"]}
-        />
+         />
       </div>
 
-      <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-20o0 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
           Why Choose Our Chatbot Development?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start">
-            <span className="text-amber-500 mr-3 text-xl">✓</span>
+            <span className="text-amber-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-gray-90o0">
                 24/7 Customer Support
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Provide instant responses to customer queries around the clock
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-amber-500 mr-3 text-xl">✓</span>
+            <span className="text-amber-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-gray-90o0">
                 Reduce Support Costs by 60%
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Handle common queries automatically, freeing up human agents
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-amber-500 mr-3 text-xl">✓</span>
+            <span className="text-amber-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">
+              <h3 className="font-semibold text-gray-90o0">
                 Improve Customer Satisfaction
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-60o0">
                 Instant responses and 24/7 availability boost customer
                 experience
               </p>
             </div>
           </div>
           <div className="flex items-start">
-            <span className="text-amber-500 mr-3 text-xl">✓</span>
+            <span className="text-amber-50o0 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Easy Integration</h3>
-              <p className="text-gray-600">
+              <h3 className="font-semibold text-gray-90o0">Easy Integration</h3>
+              <p className="text-gray-60o0">
                 Seamlessly integrate with your existing systems and workflows
               </p>
             </div>
@@ -92,26 +92,26 @@ export default function ChatbotDevelopmentPage() {
         </div>
       </div>
 
-      <Pricing />
+      <Pricing  />
 
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
           Ready to Build Your Intelligent Chatbot?
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-60o0 mb-6">
           Start with a free consultation to design the perfect chatbot for your
           business needs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-amber-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-70o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-amber-600 text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 hover:text-white transition-colors"
+            className="border-2 border-amber-60o0 text-amber-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-amber-60o0 hover:text-white transition-colors"
           >
             Email Us
           </a>
@@ -128,12 +128,12 @@ function FeatureCard({
   features: string[];
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-60o0">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-amber-500 mr-2">•</span> {f}
+            <span className="text-amber-50o0 mr-2">•</span> {f}
           </li>
         ))}
       </ul>
@@ -144,7 +144,7 @@ function FeatureCard({
 function Pricing() {
   return (
     <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
         Pricing Plans
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -153,21 +153,21 @@ function Pricing() {
           price="$1,999/mo"
           features={[
             "Simple Q&A chatbot",
-            "Up to 1,000 conversations/month",
+            "Up to 1,0o00 conversations/month",
             "Basic integrations",
             "Email support"]}
-        />
+         />
         <Plan
           name="Professional"
           price="$4,999/mo"
           features={[
             "Advanced AI capabilities",
-            "Up to 10,000 conversations/month",
+            "Up to 10,0o00 conversations/month",
             "Custom integrations",
             "Priority support",
             "Analytics dashboard"]}
           popular={true}
-        />
+         />
         <Plan
           name="Enterprise"
           price="$12,999/mo"
@@ -177,7 +177,7 @@ function Pricing() {
             "White-label solution",
             "Dedicated support",
             "Multi-platform deployment"]}
-        />
+         />
       </div>
     </div>
   );
@@ -195,28 +195,28 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-amber-500 ring-2 ring-amber-200" : "border-gray-200"}`}
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-amber-50o0 ring-2 ring-amber-20o0" : "border-gray-20o0"}`}
     >
       {popular && (
-        <div className="bg-amber-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+        <div className="bg-amber-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
         </div>
       )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-amber-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
+      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-amber-60o0 mb-4">{price}</div>
+      <ul className="space-y-2 text-gray-60o0 mb-6">
         {features.map((f) => (
           <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span> {f}
+            <span className="text-green-50o0 mr-2">✓</span> {f}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel:+130o24640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-            ? "bg-amber-600 text-white hover:bg-amber-700"
-            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+            ? "bg-amber-60o0 text-white hover:bg-amber-70o0"
+            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
         }`}
       >
         Get Started

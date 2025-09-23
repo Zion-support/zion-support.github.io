@@ -6,14 +6,14 @@ export default function Page() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Report: AI Compliance Readiness 2026
+          Report: AI Compliance Readiness 20o26
         </h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
-          A practical readiness checklist and maturity model to help enterprises prepare for 2026 AI
+        <p className="mt-4 text-lg leading-8 text-gray-30o0">
+          A practical readiness checklist and maturity model to help enterprises prepare for 20o26 AI
           regulations. Learn how to operationalize policy-as-code, evidence collection, and continuous
           monitoring across model, data, runtime, and supply chain.
         </p>
-        <div className="mt-8 space-y-4 text-gray-300">
+        <div className="mt-8 space-y-4 text-gray-30o0">
           <p>
             This report outlines control families, required artifacts, and implementation patterns for
             auditability and risk management. It includes quick-start templates and reference

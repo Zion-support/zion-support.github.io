@@ -24,8 +24,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
           addItem({ // addItem from cartSlice expects { id, title, price }
             id: action.payload.id,
             title: action.payload.title, // action.payload is now { id, title, price, quantity? }
-            price: action.payload.price,
-          })
+            price: action.payload.price})
         );
         break;
       case 'REMOVE_ITEM':
@@ -42,10 +41,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const value: CartContextType = {
+  const value: CartContextType ={
     items,
-    dispatch,
-  };
+    dispatch};
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

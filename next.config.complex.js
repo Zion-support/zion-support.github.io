@@ -1,7 +1,7 @@
 
 
 /** @type {import ('next').NextConfig} */;
-const next_config = {
+const next_config ={
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -10,7 +10,7 @@ const next_config = {
   page_extensions: ['tsxtsjsxjs'],
 
 /** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
+const nextConfig ={reactStrictMode: true;
   compress: true;
   poweredByHeader: false;
   eslint: { ignoreDuringBuilds: true }
@@ -34,7 +34,7 @@ const nextConfig = {reactStrictMode: true;
   distDir: '.next';
 }
 module.exports = nextConfig;
-const nextConfig = {;
+const nextConfig ={;
   reactStrictMode: true;
   reactStrictMode: true,;
   reactStrictMode: true;
@@ -64,5 +64,4 @@ const nextConfig = {;
   distDir: '.next';
 },;
 module.exports = nextConfig,;
-
 

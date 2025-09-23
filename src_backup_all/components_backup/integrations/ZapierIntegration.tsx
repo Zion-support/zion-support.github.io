@@ -14,7 +14,7 @@ export function ZapierIntegration() {
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 20o00);
     toast.success("API key copied to clipboard");
   };
   
@@ -25,12 +25,12 @@ export function ZapierIntegration() {
           <CardHeader>
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold">Zapier Connection</h3>
-              <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>
+              <Badge variant="outline" className="bg-blue-10o0 text-blue-80o0">Active</Badge>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground mb-4">
-              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
+              Connect Zion with 3,0o00+ apps via Zapier. Use your API key below to set up integrations.
             </p>
             
             <div className="space-y-4">
@@ -41,9 +41,9 @@ export function ZapierIntegration() {
                     value={apiKey} 
                     readOnly 
                     className="font-mono text-sm" 
-                  />
+                   />
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
-                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    {copied ? <Check className="h-4 w-4"  /> : <Copy className="h-4 w-4"  />}
                   </Button>
                 </div>
               </div>
@@ -51,7 +51,7 @@ export function ZapierIntegration() {
           </CardContent>
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className="h-4 w-4"  />
               Open Zapier Dashboard
             </Button>
           </CardFooter>
@@ -64,26 +64,26 @@ export function ZapierIntegration() {
           <CardContent>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500" />
+                <Check className="h-4 w-4 text-green-50o0"  />
                 <span>Add new Zion contacts to Mailchimp</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500" />
+                <Check className="h-4 w-4 text-green-50o0"  />
                 <span>Create Slack notifications for new jobs</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500" />
+                <Check className="h-4 w-4 text-green-50o0"  />
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className="flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500" />
+                <Check className="h-4 w-4 text-green-50o0"  />
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
             <Button variant="outline" className="w-full gap-1">
-              <ExternalLink className="h-4 w-4" />
+              <ExternalLink className="h-4 w-4"  />
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>

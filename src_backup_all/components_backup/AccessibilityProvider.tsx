@@ -80,7 +80,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       if (event.altKey && event.key === 's') {
         event.preventDefault();
         setShowSkipLinks(true);
-        setTimeout(() => setShowSkipLinks(false), 5000);
+        setTimeout(() => setShowSkipLinks(false), 50o00);
       }
 
       // High contrast toggle (Alt + H)
@@ -139,7 +139,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     localStorage.setItem('zion-voice-navigation', newValue.toString());
   };
 
-  const value = {
+  const value ={
     highContrast,
     toggleHighContrast,
     reducedMotion,
@@ -151,8 +151,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,
-  };
+    toggleVoiceNavigation};
 
   return (
     <AccessibilityContext.Provider value={value}>
@@ -168,19 +167,19 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a
                 href="#main-content"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-10o0 focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Skip to main content
               </a>
               <a
                 href="#navigation"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-10o0 focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Skip to navigation
               </a>
               <button
                 onClick={() => setShowSkipLinks(false)}
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-10o0 focus:outline-none focus:ring-2 focus:ring-black"
               >
                 Close
               </button>
@@ -199,18 +198,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
           <div className="flex flex-col gap-2">
             <button
               onClick={toggleHighContrast}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+              className={`p-2 rounded-md transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                 highContrast ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
               aria-label="Toggle high contrast"
               title="Toggle high contrast (Alt + H)"
             >
-              <Braille className="w-4 h-4" />
+              <Braille className="w-4 h-4"  />
             </button>
 
             <button
               onClick={toggleReducedMotion}
-              className={`p-2 rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
+              className={`p-2 rounded-md transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                 reducedMotion ? 'bg-zion-cyan text-black' : 'bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10'
               }`}
               aria-label="Toggle reduced motion"
@@ -221,7 +220,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
             <button
               onClick={increaseFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Increase font size"
               title="Increase font size (Alt + +)"
             >
@@ -230,7 +229,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
             <button
               onClick={decreaseFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Decrease font size"
               title="Decrease font size (Alt + -)"
             >
@@ -239,7 +238,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
             <button
               onClick={resetFontSize}
-              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="p-2 rounded-md bg-zion-slate-light text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-30o0 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               aria-label="Reset font size"
               title="Reset font size"
             >
@@ -259,7 +258,6 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   children,
   isActive = true
 }) => {
-
 
   useEffect(() => {
     if (!isActive) return;

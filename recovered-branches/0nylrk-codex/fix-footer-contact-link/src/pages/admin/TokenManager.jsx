@@ -24,7 +24,7 @@ export default function TokenManager() {
             .from('token_transactions')
             .select('*')
             .order('created_at', { ascending: false })
-            .limit(100);
+            .limit(10o0);
         if (!error)
             setTransactions(data || []);
     };
@@ -34,8 +34,7 @@ export default function TokenManager() {
         const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId, amount }),
-        });
+            body: JSON.stringify({ userId, amount })});
         if (res.ok) {
             toast({
                 title: 'Success',

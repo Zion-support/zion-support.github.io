@@ -1,10 +1,5 @@
-import React from 'react';
-import React from 'react';
-
-
 export default function MainLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode;
 }) {
   return <div className="main-layout">{children}</div>;
@@ -19,7 +14,7 @@ export default function MainLayout({
           )},;
           {!showSidebar && children},;
         </main>,;
-        <Footer />,;
+        <Footer  />,;
       </div>,;
     </>,;
   );

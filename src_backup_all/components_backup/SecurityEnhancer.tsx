@@ -81,7 +81,7 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Log security event
   const logSecurityEvent = useCallback((event: Omit<SecurityEvent, 'id' | 'timestamp'>) => {
-    const securityEvent: SecurityEvent = {
+    const securityEvent: SecurityEvent ={
       ...event,
       id: generateEventId(),
       timestamp: Date.now()
@@ -107,9 +107,9 @@ export const SecurityEnhancer: React.FC = () => {
       const events = JSON.parse(storedEvents);
       events.push(securityEvent);
       
-      // Keep only last 100 events
-      if (events.length > 100) {
-        events.splice(0, events.length - 100);
+      // Keep only last 10o0 events
+      if (events.length > 10o0) {
+        events.splice(0, events.length - 10o0);
       }
       
       localStorage.setItem('security-events', JSON.stringify(events));
@@ -127,9 +127,9 @@ export const SecurityEnhancer: React.FC = () => {
       const events = JSON.parse(storedEvents);
       events.push(event);
       
-      // Keep only last 100 events
-      if (events.length > 100) {
-        events.splice(0, events.length - 100);
+      // Keep only last 10o0 events
+      if (events.length > 10o0) {
+        events.splice(0, events.length - 10o0);
       }
       
       localStorage.setItem('security-events', JSON.stringify(events));
@@ -332,7 +332,7 @@ export const SecurityEnhancer: React.FC = () => {
       
       // Rate limiting for form submissions
       const clientId = navigator.userAgent + window.location.hostname;
-      if (!checkRateLimit(clientId, 10, 60000)) { // 10 submissions per minute
+      if (!checkRateLimit(clientId, 10, 60o000)) { // 10 submissions per minute
         event.preventDefault();
         return;
       }
@@ -424,7 +424,7 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Export security report
   const exportReport = useCallback(() => {
-    const report = {
+    const report ={
       config,
       events: securityEvents,
       statistics: {
@@ -446,20 +446,20 @@ export const SecurityEnhancer: React.FC = () => {
   }, [config, securityEvents, blockedRequests, allowedRequests, threatLevel]);
 
   return (
-    <div className="fixed top-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-300 rounded-lg p-4 shadow-lg z-40 max-w-sm">
+    <div className="fixed top-4 left-4 bg-white/90 backdrop-blur-sm border border-gray-30o0 rounded-lg p-4 shadow-lg z-40 max-w-sm">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-gray-900">Security Monitor</h3>
+        <h3 className="text-sm font-semibold text-gray-90o0">Security Monitor</h3>
         <div className="flex gap-2">
           <button
             onClick={exportReport}
-            className="px-2 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
+            className="px-2 py-1 text-xs bg-blue-60o0 text-white rounded hover:bg-blue-70o0"
             title="Export security report"
           >
             Export
           </button>
           <button
             onClick={clearEvents}
-            className="px-2 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700"
+            className="px-2 py-1 text-xs bg-red-60o0 text-white rounded hover:bg-red-70o0"
             title="Clear security events"
           >
             Clear
@@ -469,16 +469,16 @@ export const SecurityEnhancer: React.FC = () => {
 
       {/* Threat Level Indicator */}
       <div className={`mb-3 p-2 rounded text-center text-white text-xs font-medium ${
-        threatLevel === 'low' ? 'bg-green-500' :
-        threatLevel === 'medium' ? 'bg-yellow-500' :
-        'bg-red-500'
+        threatLevel === 'low' ? 'bg-green-50o0' :
+        threatLevel === 'medium' ? 'bg-yellow-50o0' :
+        'bg-red-50o0'
       }`}>
         Threat Level: {threatLevel.toUpperCase()}
       </div>
 
       {/* Security Statistics */}
       <div className="bg-gray-50 p-2 rounded mb-3">
-        <h4 className="font-medium text-gray-700 mb-2 text-xs">Statistics</h4>
+        <h4 className="font-medium text-gray-70o0 mb-2 text-xs">Statistics</h4>
         <div className="grid grid-cols-2 gap-2 text-xs">
           <div>Blocked: {blockedRequests}</div>
           <div>Allowed: {allowedRequests}</div>
@@ -489,7 +489,7 @@ export const SecurityEnhancer: React.FC = () => {
 
       {/* Security Configuration */}
       <div className="bg-gray-50 p-2 rounded mb-3">
-        <h4 className="font-medium text-gray-700 mb-2 text-xs">Configuration</h4>
+        <h4 className="font-medium text-gray-70o0 mb-2 text-xs">Configuration</h4>
         <div className="space-y-1 text-xs">
           {Object.entries(config).map(([key, value]) => (
             <label key={key} className="flex items-center gap-2 cursor-pointer">
@@ -499,7 +499,7 @@ export const SecurityEnhancer: React.FC = () => {
                 onChange={() => toggleFeature(key as keyof SecurityConfig)}
                 className="w-3 h-3"
               />
-              <span className="text-gray-600">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
+              <span className="text-gray-60o0">{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}</span>
             </label>
           ))}
         </div>
@@ -507,14 +507,14 @@ export const SecurityEnhancer: React.FC = () => {
 
       {/* Recent Security Events */}
       <div className="bg-gray-50 p-2 rounded">
-        <h4 className="font-medium text-gray-700 mb-2 text-xs">Recent Events</h4>
+        <h4 className="font-medium text-gray-70o0 mb-2 text-xs">Recent Events</h4>
         <div className="space-y-1 max-h-20 overflow-y-auto">
           {securityEvents.slice(-5).map(event => (
             <div key={event.id} className={`text-xs p-1 rounded ${
-              event.severity === 'critical' ? 'bg-red-100 text-red-800' :
-              event.severity === 'high' ? 'bg-orange-100 text-orange-800' :
-              event.severity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-              'bg-green-100 text-green-800'
+              event.severity === 'critical' ? 'bg-red-10o0 text-red-80o0' :
+              event.severity === 'high' ? 'bg-orange-10o0 text-orange-80o0' :
+              event.severity === 'medium' ? 'bg-yellow-10o0 text-yellow-80o0' :
+              'bg-green-10o0 text-green-80o0'
             }`}>
               {event.type}: {event.description.slice(0, 30)}...
             </div>

@@ -1,4 +1,4 @@
-export const metadata = {
+export const metadata ={
   title: "Mobile App Development | Zion Tech Group",
   description:
     "Professional mobile app development services for iOS, Android, and cross-platform applications with modern technologies."};
@@ -8,10 +8,10 @@ export default function MobileDevelopmentPage() {
     <div className="animate-fade-in">
       <section className="py-12">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Mobile App Development
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-60o0 max-w-4xl mx-auto leading-relaxed">
             Professional mobile app development for iOS, Android, and
             cross-platform applications. We create engaging, high-performance
             mobile experiences that drive user engagement and business growth.
@@ -20,7 +20,7 @@ export default function MobileDevelopmentPage() {
 
         {/* Core Mobile Services */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
             Core Mobile Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -34,7 +34,7 @@ export default function MobileDevelopmentPage() {
                 "App Store optimization"]}
               price="Starting at $15k"
               icon="📱"
-            />
+             />
             <MobileServiceCard
               title="Native Android Development"
               description="Robust Android apps using Kotlin and Jetpack Compose"
@@ -45,7 +45,7 @@ export default function MobileDevelopmentPage() {
                 "Play Store optimization"]}
               price="Starting at $15k"
               icon="🤖"
-            />
+             />
             <MobileServiceCard
               title="Cross-Platform Development"
               description="Single codebase for iOS and Android using React Native or Flutter"
@@ -56,7 +56,7 @@ export default function MobileDevelopmentPage() {
                 "Faster development"]}
               price="Starting at $20k"
               icon="🔄"
-            />
+             />
             <MobileServiceCard
               title="Progressive Web Apps"
               description="Web apps that work like native mobile applications"
@@ -67,7 +67,7 @@ export default function MobileDevelopmentPage() {
                 "App-like experience"]}
               price="Starting at $12k"
               icon="🌐"
-            />
+             />
             <MobileServiceCard
               title="Mobile Backend Development"
               description="Scalable backend services and APIs for mobile applications"
@@ -78,7 +78,7 @@ export default function MobileDevelopmentPage() {
                 "Cloud integration"]}
               price="Starting at $18k"
               icon="⚙️"
-            />
+             />
             <MobileServiceCard
               title="App Maintenance & Support"
               description="Ongoing maintenance, updates, and technical support"
@@ -89,13 +89,13 @@ export default function MobileDevelopmentPage() {
                 "24/7 support"]}
               price="Starting at $2k/mo"
               icon="🔧"
-            />
+             />
           </div>
         </div>
 
         {/* Specialized Mobile Solutions */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
             Specialized Solutions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -109,7 +109,7 @@ export default function MobileDevelopmentPage() {
                 "Order tracking"]}
               price="$25k - $80k"
               icon="🛒"
-            />
+             />
             <SpecializedMobileCard
               title="Healthcare Mobile Apps"
               description="HIPAA-compliant mobile solutions for healthcare providers"
@@ -118,9 +118,9 @@ export default function MobileDevelopmentPage() {
                 "Telemedicine",
                 "Health records",
                 "Appointment booking"]}
-              price="$30k - $100k"
+              price="$30k - $10o0k"
               icon="🏥"
-            />
+             />
             <SpecializedMobileCard
               title="FinTech Mobile Apps"
               description="Secure financial applications with advanced security features"
@@ -131,7 +131,7 @@ export default function MobileDevelopmentPage() {
                 "Fraud detection"]}
               price="$35k - $120k"
               icon="💰"
-            />
+             />
             <SpecializedMobileCard
               title="Social & Communication Apps"
               description="Engaging social platforms and messaging applications"
@@ -142,13 +142,13 @@ export default function MobileDevelopmentPage() {
                 "Push notifications"]}
               price="$28k - $90k"
               icon="💬"
-            />
+             />
           </div>
         </div>
 
         {/* Technical Stack */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
             Technical Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -161,7 +161,7 @@ export default function MobileDevelopmentPage() {
                 "Flutter",
                 "Xamarin",
                 "Ionic"]}
-            />
+             />
             <TechStackCard
               title="Backend & APIs"
               details={[
@@ -171,7 +171,7 @@ export default function MobileDevelopmentPage() {
                 "REST APIs",
                 "GraphQL",
                 "WebSocket"]}
-            />
+             />
             <TechStackCard
               title="Cloud & Services"
               details={[
@@ -181,13 +181,13 @@ export default function MobileDevelopmentPage() {
                 "PostgreSQL",
                 "Redis",
                 "CDN"]}
-            />
+             />
           </div>
         </div>
 
         {/* App Categories */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
             App Categories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -196,30 +196,30 @@ export default function MobileDevelopmentPage() {
               description="Productivity and business management solutions"
               price="$15k - $50k"
               icon="💼"
-            />
+             />
             <AppCategoryCard
               title="Gaming Apps"
               description="Interactive games and entertainment applications"
               price="$20k - $80k"
               icon="🎮"
-            />
+             />
             <AppCategoryCard
               title="Educational Apps"
               description="Learning platforms and educational tools"
               price="$18k - $60k"
               icon="🎓"
-            />
+             />
             <AppCategoryCard
               title="Lifestyle Apps"
               description="Health, fitness, and lifestyle applications"
               price="$12k - $40k"
               icon="🏃"
-            />
+             />
           </div>
         </div>
 
-        <Pricing />
-        <ContactSection />
+        <Pricing  />
+        <ContactSection  />
       </section>
     </div>
   );
@@ -238,18 +238,18 @@ function MobileServiceCard({
   icon: string;
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
+    <div className="border border-gray-20o0 rounded-xl p-6 hover:border-blue-30o0 hover:shadow-lg transition-all duration-20o0 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-4">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-3">{title}</h3>
+      <p className="text-gray-60o0 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-60o0 space-y-2 mb-4">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {feature}
+            <span className="text-blue-50o0 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-blue-600">{price}</div>
+      <div className="text-lg font-semibold text-blue-60o0">{price}</div>
     </div>
   );
 }
@@ -267,18 +267,18 @@ function SpecializedMobileCard({
   icon: string;
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-8 hover:border-green-300 hover:shadow-lg transition-all duration-200 bg-white">
+    <div className="border border-gray-20o0 rounded-xl p-8 hover:border-green-30o0 hover:shadow-lg transition-all duration-20o0 bg-white">
       <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <ul className="text-gray-600 space-y-2 mb-6">
+      <h3 className="text-2xl font-bold text-gray-90o0 mb-3">{title}</h3>
+      <p className="text-gray-60o0 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-60o0 space-y-2 mb-6">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-green-500 mr-2">•</span> {feature}
+            <span className="text-green-50o0 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
-      <div className="text-xl font-semibold text-green-600">{price}</div>
+      <div className="text-xl font-semibold text-green-60o0">{price}</div>
     </div>
   );
 }
@@ -290,12 +290,12 @@ function TechStackCard({
   details: string[];
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-gray-50">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="text-gray-600 space-y-2">
+    <div className="border border-gray-20o0 rounded-xl p-6 bg-gray-50">
+      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
+      <ul className="text-gray-60o0 space-y-2">
         {details.map((detail) => (
           <li key={detail} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {detail}
+            <span className="text-blue-50o0 mr-2">•</span> {detail}
           </li>
         ))}
       </ul>
@@ -314,11 +314,11 @@ function AppCategoryCard({
   icon: string;
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:border-purple-300 hover:shadow-lg transition-all duration-200 bg-white text-center">
+    <div className="border border-gray-20o0 rounded-xl p-6 hover:border-purple-30o0 hover:shadow-lg transition-all duration-20o0 bg-white text-center">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4 text-sm">{description}</p>
-      <div className="text-lg font-semibold text-purple-600">{price}</div>
+      <h3 className="text-lg font-bold text-gray-90o0 mb-2">{title}</h3>
+      <p className="text-gray-60o0 mb-4 text-sm">{description}</p>
+      <div className="text-lg font-semibold text-purple-60o0">{price}</div>
     </div>
   );
 }
@@ -326,7 +326,7 @@ function AppCategoryCard({
 function Pricing() {
   return (
     <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+      <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
         Mobile Development Packages
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -339,7 +339,7 @@ function Pricing() {
             "Basic UI/UX",
             "Single platform",
             "Testing"]}
-        />
+         />
         <Plan
           name="Full App Development"
           price="$35k–$80k"
@@ -349,7 +349,7 @@ function Pricing() {
             "Custom UI/UX",
             "Both platforms",
             "Backend integration"]}
-        />
+         />
         <Plan
           name="Enterprise Solution"
           price="$80k+"
@@ -359,7 +359,7 @@ function Pricing() {
             "Custom design",
             "Scalable backend",
             "Ongoing support"]}
-        />
+         />
       </div>
     </div>
   );
@@ -376,20 +376,20 @@ function Plan({
   features: string[];
 }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-8 bg-white hover:border-blue-300 hover:shadow-lg transition-all duration-200">
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="text-gray-600 space-y-3">
+    <div className="border border-gray-20o0 rounded-xl p-8 bg-white hover:border-blue-30o0 hover:shadow-lg transition-all duration-20o0">
+      <h4 className="text-2xl font-bold text-gray-90o0 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-60o0 mb-2">{price}</div>
+      <div className="text-gray-60o0 mb-6">{duration}</div>
+      <ul className="text-gray-60o0 space-y-3">
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
-            <span className="text-blue-500 mr-2">✓</span> {feature}
+            <span className="text-blue-50o0 mr-2">✓</span> {feature}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
-        className="mt-6 block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        href="tel:+130o24640950"
+        className="mt-6 block w-full bg-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
       >
         Get Started
       </a>
@@ -399,31 +399,31 @@ function Plan({
 
 function ContactSection() {
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-8 text-center">
-      <h3 className="text-3xl font-bold text-gray-900 mb-4">
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-20o0 rounded-xl p-8 text-center">
+      <h3 className="text-3xl font-bold text-gray-90o0 mb-4">
         Ready to Build Your Mobile App?
       </h3>
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+      <p className="text-lg text-gray-60o0 mb-8 max-w-3xl mx-auto">
         Let's discuss your mobile app idea and create a solution that engages
-        users and drives business growth. Our team has developed 100+ successful
+        users and drives business growth. Our team has developed 10o0+ successful
         mobile applications.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+          href="tel:+130o24640950"
+          className="bg-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors text-lg"
         >
-          Call +1 302 464 0950
+          Call +1 30o2 464 0950
         </a>
         <a
           href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg"
+          className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors text-lg"
         >
           Email Us
         </a>
       </div>
-      <div className="mt-6 text-sm text-gray-500">
-        <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+      <div className="mt-6 text-sm text-gray-50o0">
+        <p>Address: 364 E Main St STE 10o08, Middletown DE 19709</p>
       </div>
     </div>
   );

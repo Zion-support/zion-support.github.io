@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
 // Common syntax fixes
@@ -75,11 +73,9 @@ function fixFile(filePath) {
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
 
-
 async function main() {
   console.log('🔧 Starting comprehensive syntax fixes...');
 
-  
   const patterns = [
     'src/**/*.tsx',
     'src/**/*.ts',

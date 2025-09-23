@@ -22,7 +22,7 @@ function logAndAlert(message) {
     if (err) console.error('Failed to write log file:', err);  });
 
   if (process.env.SENDGRID_API_KEY) {
-    const email = {
+    const email ={
       to: alertEmail,
       from: process.env.SENDGRID_FROM_EMAIL || noreply@example.com',      subject: Zion App Alert',      text: message
     };
@@ -32,6 +32,6 @@ function logAndAlert(message) {
     console.error('SENDGRID_API_KEY not set. Alert email not sent.');  }
 }
 
-module.exports = {
+module.exports ={
   logAndAlert
 };

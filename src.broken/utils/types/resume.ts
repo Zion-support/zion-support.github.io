@@ -1,4 +1,4 @@
-export type WorkExperience = {
+export type WorkExperience ={
   id: string
   jobTitle: string
   company: string
@@ -7,7 +7,7 @@ export type WorkExperience = {
   description: string
 }
 
-export type Education = {
+export type Education ={
   id: string
   school: string
   degree?: string
@@ -17,14 +17,14 @@ export type Education = {
   description?: string
 }
 
-export type Certification = {
+export type Certification ={
   id: string
   name: string
   issuer?: string
   date?: string
 }
 
-export type PortfolioProject = {
+export type PortfolioProject ={
   id: string
   title: string
   summary: string
@@ -35,7 +35,7 @@ export type PortfolioProject = {
   githubUrl?: string
 }
 
-export type ResumeDocument = {
+export type ResumeDocument ={
   id: string
   ownerUserId?: string
   name: string // e.g., "DevOps Resume"
@@ -51,7 +51,7 @@ export type ResumeDocument = {
   createdAt: string
 }
 
-export type AiImprovePayload = {
+export type AiImprovePayload ={
   field: 'summary' | 'work' | 'education' | 'certifications' | 'projects'
   context: any
 }

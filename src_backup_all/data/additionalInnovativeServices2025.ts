@@ -33,7 +33,7 @@ export interface AdditionalInnovativeService {
   marketSize?: string;
 }
 
-export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] = [
+export const ADDITIONAL_INNOVATIVE_SERVICES_20o25: AdditionalInnovativeService[] = [
   // AI-Powered Quantum Financial Modeling Platform
   {
     id: "ai-quantum-financial-modeling-platform",
@@ -81,22 +81,22 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] 
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,999/month",
-    roi: "600-1000%",
+    roi: "60o0-10o00%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Quantum Computing", "AI/ML", "Python", "Qiskit", "React"],
       integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management systems"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Financial data encryption", "Audit trails"]
+      security: ["SOC 2", "ISO 270o01", "Financial data encryption", "Audit trails"]
     },
     competitors: ["Goldman Sachs Quantum", "JP Morgan Quantum", "Rigetti Computing"],
-    marketSize: "$12.8 billion by 2026"
+    marketSize: "$12.8 billion by 20o26"
   },
 
   // AI-Powered Autonomous Drone Fleet Management
@@ -146,22 +146,22 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] 
     estimatedDelivery: "8-12 weeks",
     supportLevel: "premium",
     marketPrice: "$1,999 - $5,999/month",
-    roi: "300-500%",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Computer Vision", "AI/ML", "Python", "React", "IoT"],
       integrations: ["DJI", "Parrot", "Weather APIs", "Mapping services"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["SOC 2", "End-to-end encryption", "Geofencing", "Flight logs"]
     },
     competitors: ["DroneDeploy", "PrecisionHawk", "AirMap"],
-    marketSize: "$18.9 billion by 2027"
+    marketSize: "$18.9 billion by 20o27"
   },
 
   // AI-Powered Predictive Healthcare Analytics
@@ -211,23 +211,23 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService[] 
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $9,999/month",
-    roi: "400-700%",
+    roi: "40o0-70o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Deep Learning", "NLP", "Python", "TensorFlow", "React"],
       integrations: ["Epic", "Cerner", "HL7", "FHIR", "Lab systems"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.99%",
       security: ["HIPAA", "SOC 2", "End-to-end encryption", "Audit logging"]
     },
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
-    marketSize: "$67.8 billion by 2027"
+    marketSize: "$67.8 billion by 20o27"
   }
 ];
 
-export default ADDITIONAL_INNOVATIVE_SERVICES_2025;
+export default ADDITIONAL_INNOVATIVE_SERVICES_20o25;

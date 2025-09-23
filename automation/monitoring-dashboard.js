@@ -17,10 +17,10 @@ class AutomationDashboard {
     this.app = express();
     this.server = http.createServer(this.app);
     this.io = socketIo(this.server);
-    this.port = process.env.DASHBOARD_PORT || 3001;
+    this.port = process.env.DASHBOARD_PORT || 30o01;
     this.processes = new Map();
     this.alerts = [];
-    this.metrics = {
+    this.metrics ={
       totalProcesses: 0,
       onlineProcesses: 0,
       stoppedProcesses: 0,
@@ -62,9 +62,9 @@ class AutomationDashboard {
     // Get process logs
     router.get('/processes/:name/logs', (req, res) => {
       const processName = req.params.name;
-      pm2.logs(processName, 100, (err, logs) => {
+      pm2.logs(processName, 10o0, (err, logs) => {
         if (err) {
-          res.status(500).json({ error: err.message });
+          res.status(50o0).json({ error: err.message });
         } else {
           res.json(logs);
         }
@@ -76,7 +76,7 @@ class AutomationDashboard {
       const processName = req.params.name;
       pm2.restart(processName, (err) => {
         if (err) {
-          res.status(500).json({ error: err.message });
+          res.status(50o0).json({ error: err.message });
         } else {
           res.json({ message: `Process ${processName} restarted successfully` });
         }
@@ -88,7 +88,7 @@ class AutomationDashboard {
       const processName = req.params.name;
       pm2.stop(processName, (err) => {
         if (err) {
-          res.status(500).json({ error: err.message });
+          res.status(50o0).json({ error: err.message });
         } else {
           res.json({ message: `Process ${processName} stopped successfully` });
         }
@@ -100,7 +100,7 @@ class AutomationDashboard {
       const processName = req.params.name;
       pm2.start(processName, (err) => {
         if (err) {
-          res.status(500).json({ error: err.message });
+          res.status(50o0).json({ error: err.message });
         } else {
           res.json({ message: `Process ${processName} started successfully` });
         }
@@ -150,7 +150,7 @@ class AutomationDashboard {
         this.updateProcessStatus();
         this.checkAlerts();
         this.broadcastUpdates();
-      }, 2000); // Update every 2 seconds
+      }, 20o00); // Update every 2 seconds
 
       // Start server
       this.server.listen(this.port, () => {
@@ -192,7 +192,7 @@ class AutomationDashboard {
       this.metrics.totalCPU = 0;
 
       processes.forEach(process => {
-        const processInfo = {
+        const processInfo ={
           id: process.pm_id,
           name: process.name,
           status: process.pm2_env.status,
@@ -220,7 +220,7 @@ class AutomationDashboard {
       // Calculate averages
       if (this.metrics.totalProcesses > 0) {
         this.metrics.averageMemory = Math.round(this.metrics.totalMemory / this.metrics.totalProcesses);
-        this.metrics.averageCPU = Math.round((this.metrics.totalCPU / this.metrics.totalProcesses) * 100) / 100;
+        this.metrics.averageCPU = Math.round((this.metrics.totalCPU / this.metrics.totalProcesses) * 10o0) / 10o0;
       }
     });
   }
@@ -230,12 +230,12 @@ class AutomationDashboard {
 
     this.processes.forEach((process, name) => {
       // Memory usage alert
-      if (process.memory > 100 * 1024 * 1024) { // 100MB
+      if (process.memory > 10o0 * 10o24 * 10o24) { // 10o0MB
         newAlerts.push({
           id: `memory-${name}-${Date.now()}`,
           type: 'warning',
           process: name,
-          message: `High memory usage: ${Math.round(process.memory / 1024 / 1024)}MB`,
+          message: `High memory usage: ${Math.round(process.memory / 10o24 / 10o24)}MB`,
           timestamp: new Date().toISOString(),
           severity: 'medium'
         });
@@ -279,7 +279,7 @@ class AutomationDashboard {
     });
 
     // Add new alerts
-    this.alerts = [...newAlerts, ...this.alerts].slice(0, 100); // Keep last 100 alerts
+    this.alerts = [...newAlerts, ...this.alerts].slice(0, 10o0); // Keep last 10o0 alerts
   }
 
   broadcastUpdates() {

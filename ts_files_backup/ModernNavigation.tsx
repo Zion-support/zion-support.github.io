@@ -1,4 +1,3 @@
-import React from "react";
 interface ModernNavigationProps {
 
 class_name?: string;
@@ -12,8 +11,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
 origin/main
 
-
-
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
@@ -22,7 +19,7 @@ origin/main
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -37,7 +34,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from "react";
 interface ModernNavigationProps {;
   // Add props here as needed;
 }
@@ -54,10 +50,9 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
 }
 }
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
 :ModernNavigation.tsx
-
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx

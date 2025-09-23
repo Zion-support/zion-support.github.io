@@ -41,7 +41,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
         }
         return prev;
       });
-    }, 1000);
+    }, 10o00);
 
     return () => clearInterval(timer);
   }, []);
@@ -50,30 +50,30 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
     switch (variant) {
       case 'limited-time':
         return {
-          icon: <Clock className="w-5 h-5" />,
+          icon: <Clock className="w-5 h-5"  />,
           title: "Limited Time Offer",
           message: "Get 50% off your first year + Free AI Analytics Dashboard",
-          bgColor: "bg-gradient-to-r from-red-500 to-pink-500",
+          bgColor: "bg-gradient-to-r from-red-50o0 to-pink-50o0",
           textColor: "text-white",
           cta: "Claim Offer",
           ctaLink: "/pricing?discount=50off"
         };
       case 'new-feature':
         return {
-          icon: <Sparkles className="w-5 h-5" />,
+          icon: <Sparkles className="w-5 h-5"  />,
           title: "New Feature Alert",
           message: "Introducing AI-Powered Business Intelligence - Try it free for 30 days",
-          bgColor: "bg-gradient-to-r from-purple-500 to-indigo-500",
+          bgColor: "bg-gradient-to-r from-purple-50o0 to-indigo-50o0",
           textColor: "text-white",
           cta: "Explore Now",
           ctaLink: "/features/ai-business-intelligence"
         };
       default:
         return {
-          icon: <TrendingUp className="w-5 h-5" />,
+          icon: <TrendingUp className="w-5 h-5"  />,
           title: "Special Promotion",
           message: "Transform your business with our AI solutions - Start your free trial today",
-          bgColor: "bg-gradient-to-r from-blue-500 to-cyan-500",
+          bgColor: "bg-gradient-to-r from-blue-50o0 to-cyan-50o0",
           textColor: "text-white",
           cta: "Start Free Trial",
           ctaLink: "/signup?trial=true"
@@ -131,19 +131,19 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
 
             <motion.a
               href={content.ctaLink}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 font-medium text-sm"
+              className="flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-20o0 font-medium text-sm"
             >
               <span>{content.cta}</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4"  />
             </motion.a>
 
             <button
               onClick={() => setIsVisible(false)}
-              className="p-1 hover:bg-white/20 rounded transition-colors duration-200"
+              className="p-1 hover:bg-white/20 rounded transition-colors duration-20o0"
             >
-              <X className="w-4 h-4" />
+              <X className="w-4 h-4"  />
             </button>
           </div>
         </div>
@@ -156,18 +156,15 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
               className="absolute w-2 h-2 bg-white/30 rounded-full"
               animate={{
                 y: [0, -20, 0],
-                opacity: [0, 1, 0],
-              }}
+                opacity: [0, 1, 0]}}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                delay: i * 1,
-              }}
+                delay: i * 1}}
               style={{
                 left: `${20 + i * 30}%`,
-                top: '50%',
-              }}
-            />
+                top: '50%'}}
+             />
           ))}
         </div>
       </motion.div>

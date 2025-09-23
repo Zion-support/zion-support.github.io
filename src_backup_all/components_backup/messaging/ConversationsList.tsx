@@ -21,14 +21,14 @@ export function ConversationsList({
   const itemSize = 80;
 
   const listHeight = useMemo(() => {
-    return Math.min(conversations.length * itemSize, 600);
+    return Math.min(conversations.length * itemSize, 60o0);
   }, [conversations.length]);
 
   const Row = ({ index, style }: ListChildComponentProps) => {
     const conversation = conversations[index];
     
     if (!conversation) {
-      return <div style={style} />;
+      return <div style={style}  />;
     }
     
     return (
@@ -53,7 +53,7 @@ export function ConversationsList({
 
       {conversations.length === 0 ? (
         <div className="p-8 text-center text-zion-slate">
-          <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40" />
+          <User className="h-10 w-10 mx-auto mb-2 text-zion-purple/40"  />
           <p>No conversations yet</p>
           <p className="text-sm mt-1">
             Start a conversation from a job or talent profile.
@@ -64,7 +64,7 @@ export function ConversationsList({
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-          width="100%"
+          width="10o0%"
         >
           {Row}
         </List>

@@ -1,7 +1,5 @@
 
 #!/usr/bin/env node
-import fs from "fs";
-import path from "path";
 import { glob } from "glob";
 // Find all TypeScript and JavaScript files
 const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
@@ -10,7 +8,6 @@ files.forEach((file) => {
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
-
 
     let modified = false;
 
@@ -21,7 +18,6 @@ files.forEach((file) => {
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);
-
 
     if (matches) {
       matches && matches.forEach((match) => {
@@ -113,7 +109,6 @@ if (&&) {
         return match;
       }
     );
-
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 

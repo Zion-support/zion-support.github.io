@@ -17,41 +17,41 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
-  const colorSchemes = {
+  const colorSchemes ={
     quantum: {
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
+      primary: '#0o0ffff',
+      secondary: '#ff0o0ff',
+      accent: '#ffff0o0',
       background: 'rgba(0, 0, 0, 0.8)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080']
+      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080']
     },
     cyberpunk: {
-      primary: '#ff0080',
-      secondary: '#00ffff',
-      accent: '#ffff00',
+      primary: '#ff0o080',
+      secondary: '#0o0ffff',
+      accent: '#ffff0o0',
       background: 'rgba(20, 0, 40, 0.9)',
-      particles: ['#ff0080', '#00ffff', '#ffff00', '#ff4000', '#8000ff']
+      particles: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff40o00', '#80o00ff']
     },
     holographic: {
-      primary: '#00ffff',
-      secondary: '#ff00ff',
-      accent: '#ffff00',
+      primary: '#0o0ffff',
+      secondary: '#ff0o0ff',
+      accent: '#ffff0o0',
       background: 'rgba(0, 20, 40, 0.85)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff80', '#ff8000']
+      particles: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff80', '#ff80o00']
     },
     neural: {
-      primary: '#00ff80',
-      secondary: '#ff0080',
-      accent: '#ffff00',
+      primary: '#0o0ff80',
+      secondary: '#ff0o080',
+      accent: '#ffff0o0',
       background: 'rgba(0, 40, 20, 0.9)',
-      particles: ['#00ff80', '#ff0080', '#ffff00', '#00ffff', '#ff8000']
+      particles: ['#0o0ff80', '#ff0o080', '#ffff0o0', '#0o0ffff', '#ff80o00']
     }
   };
 
-  const intensitySettings = {
+  const intensitySettings ={
     low: { particleCount: 50, speed: 0.5, size: 2 },
-    medium: { particleCount: 100, speed: 1, size: 3 },
-    high: { particleCount: 200, speed: 1.5, size: 4 }
+    medium: { particleCount: 10o0, speed: 1, size: 3 },
+    high: { particleCount: 20o0, speed: 1.5, size: 4 }
   };
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
 
     // Matrix rain effect
     const matrixRain = () => {
-      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const characters = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 14;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
@@ -84,7 +84,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
       }
 
       const draw = () => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = colors.primary;
@@ -123,8 +123,8 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         this.vy = (Math.random() - 0.5) * settings.speed;
         this.size = Math.random() * settings.size + 1;
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
-        this.life = Math.random() * 100;
-        this.maxLife = 100;
+        this.life = Math.random() * 10o0;
+        this.maxLife = 10o0;
       }
 
       update() {
@@ -178,7 +178,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 10o0) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -224,22 +224,22 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'transparent' }}
-      />
+       />
       
       {/* Holographic overlay */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"  />
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-black/20"  />
         
         {/* Scanning lines effect */}
         <motion.div
           className="absolute inset-0"
           animate={{
             background: [
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(255, 255, 0, 0.1) 50%, transparent 100%)',
-              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%)'
+              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)',
+              'linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%)',
+              'linear-gradient(90deg, transparent 0%, rgba(255, 255, 0, 0.1) 50%, transparent 10o0%)',
+              'linear-gradient(90deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)'
             ]
           }}
           transition={{
@@ -247,7 +247,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
 
       {/* Content */}
@@ -260,10 +260,10 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+            className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-60"
             animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
+              x: [0, 10o0, 0],
+              y: [0, -10o0, 0],
               scale: [1, 1.5, 1],
               opacity: [0.6, 1, 0.6]
             }}
@@ -277,7 +277,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`
             }}
-          />
+           />
         ))}
       </div>
 
@@ -287,9 +287,9 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
           className="absolute inset-0"
           animate={{
             boxShadow: [
-              'inset 0 0 100px rgba(0, 255, 255, 0.1)',
-              'inset 0 0 200px rgba(255, 0, 255, 0.1)',
-              'inset 0 0 100px rgba(0, 255, 255, 0.1)'
+              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)',
+              'inset 0 0 20o0px rgba(255, 0, 255, 0.1)',
+              'inset 0 0 10o0px rgba(0, 255, 255, 0.1)'
             ]
           }}
           transition={{
@@ -297,7 +297,7 @@ const UltraAdvancedFuturisticMatrixBackground: React.FC<UltraAdvancedFuturisticM
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
       </div>
     </div>
   );

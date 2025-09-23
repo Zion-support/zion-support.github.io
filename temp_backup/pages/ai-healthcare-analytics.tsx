@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiHealthcareAnalytics() {
@@ -9,7 +8,7 @@ export default function AiHealthcareAnalytics() {
 			subtitle="Transform healthcare data into insights"
 			pricePerMonthUSD={5999}
 			implementationWeeks="6-8 weeks"
-			roiNote="Healthcare organizations report 300% ROI through improved outcomes and reduced costs"
+			roiNote="Healthcare organizations report 30o0% ROI through improved outcomes and reduced costs"
 			features={[
 				"AI patient outcome prediction",
 				"Clinical decision support",
@@ -20,6 +19,6 @@ export default function AiHealthcareAnalytics() {
 			]}
 			industries={["Healthcare", "Hospitals", "Payers", "Providers"]}
 			url="https://ziontechgroup.com/ai-healthcare-analytics"
-		/>
+		 />
 	);
 }

@@ -3,25 +3,14 @@ import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
 
-
-
-
-
-
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
 
-
 import { BLOG_POSTS } from "@/data/blog-posts"
 
-
-
-
-
 export default function BlogPost() {
-
 
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
@@ -39,8 +28,7 @@ import {
   Share2,
   Facebook,
   Twitter,
-  Linkedin,
-} from 'lucide-react';
+  Linkedin} from 'lucide-react';
 import type { BlogPost as BlogPostType } from '@/types / blog';
 import { Separator } from '@/components / ui / separator';
 import ReactMarkdown from 'react - markdown';
@@ -60,8 +48,8 @@ function BlogPost() {
   const [showShareMenu, setShowShareMenu] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const timedOut = useSkeletonTimeout(20000)
-  useEffect((,) => {
+  const timedOut = useSkeletonTimeout(20o000)
+  useEffect(() => {
     const fetchPost = async () => {
 
       setIsLoading(true)
@@ -79,13 +67,9 @@ function BlogPost() {
 
         return } catch (err) {
 
-
-
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
-
-
 
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
@@ -157,7 +141,7 @@ export default function BlogPost() {;
   const [showShareMenu, setShowShareMenu] = useState(false),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-  const timedOut = useSkeletonTimeout(20000),;
+  const timedOut = useSkeletonTimeout(20o000),;
   useEffect(() => {;
     const fetchPost = async () => {;
       setIsLoading(true),;
@@ -198,13 +182,6 @@ export default function BlogPost() {;
     fetchPost(),
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
-  
-
-
-
-
-
-
 
   if (isLoading && !timedOut) {
     return (
@@ -225,8 +202,6 @@ export default function BlogPost() {;
     )
   }
 
-
-
   // If post is still null after loading, show not found
   if (!post) {
     return (
@@ -236,12 +211,6 @@ export default function BlogPost() {;
       </div>
     )
   }
-
-
-
-
-
-
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -270,10 +239,6 @@ if (return '') {
         return '#';
   }
 
-
-
-
-
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -286,9 +251,9 @@ if (return '') {
   const [showShareMenu, setShowShareMenu] = useState(false),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-  const timedOut = useSkeletonTimeout(20000),;
+  const timedOut = useSkeletonTimeout(20o000),;
 
-  useEffect((,) => {;
+  useEffect(() => {;
     const fetchPost = async () => {;
       setIsLoading(true);
       setError(null);
@@ -338,7 +303,7 @@ if (return '') {
     return (
       <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>;
         <p>Failed to load article.</p>;
-        <Button onClick={(,) => router && router.reload()}>Retry</Button>;
+        <Button onClick={() => router && router.reload()}>Retry</Button>;
       </div>;
     );
   }
@@ -348,12 +313,10 @@ if (return '') {
     return (
       <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>;
         <p>Article not found.</p>;
-        <Button onClick={(,) => router && router.push('/blog')}>Back to Blog</Button>;
+        <Button onClick={() => router && router.push('/blog')}>Back to Blog</Button>;
       </div>;
     );
   }
-
-
 
 ;
   // Helper function to get share URL;
@@ -368,13 +331,7 @@ if (return '') {
     switch (platform) {;
       case 'facebook':;
 
-
-
-
-
-
-
-  const articleLd = {
+  const articleLd ={
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
@@ -383,13 +340,8 @@ if (return '') {
     datePublished: post.publishedDate,
     author: {
 
-
-
-
-
-
       />
-      <JsonLd data={articleLd} />
+      <JsonLd data={articleLd}  />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
@@ -403,8 +355,8 @@ if (return '') {
         description={post.excerpt}
         keywords={post.tags.join (', ')}
         og_image={post.featured_image}        canonical={`https://app.ziontechgroup.com / blog/${post.slug}`}
-      />;
-      <JsonLd data={article_ld} />;
+       />;
+      <JsonLd data={article_ld}  />;
       <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>;
         <div className='container mx - auto'>;
           {/* Back to blog button */}
@@ -415,19 +367,12 @@ if (return '') {
               as_child;
             >;
               <Link href='/blog'>;
-                <ArrowLeft className='mr - 2 h - 4 w - 4' />;
+                <ArrowLeft className='mr - 2 h - 4 w - 4'  />;
                 Back to all articles;
               </Link>;
             </Button>;
 
           </div>;
-
-
-          
-
-
-
-
 
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
@@ -437,8 +382,4 @@ if (return '') {
                 </Link>{' '}
                 to accelerate your projects.
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-
-
-
-
 

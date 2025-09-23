@@ -101,7 +101,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-zion-slate-dark">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,7 +124,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       className="flex items-center space-x-1 text-zion-slate-light hover:text-white transition-colors"
                     >
                       <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-4 h-4"  />
                     </button>
                   ) : (
                     <Link
@@ -147,7 +147,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                             to={child.href}
                             className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 transition-colors"
                           >
-                            {child.icon && <child.icon className="w-4 h-4" />}
+                            {child.icon && <child.icon className="w-4 h-4"  />}
                             <span>{child.label}</span>
                           </Link>
                         ))}
@@ -160,15 +160,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
-              <Search />
-              <ThemeToggle />
+              <Search  />
+              <ThemeToggle  />
               
               {/* Mobile menu button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 text-zion-slate-light hover:text-white transition-colors"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
               </button>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
                     >
                       <span>{item.label}</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <ChevronRight className="w-4 h-4"  />
                     </button>
                   ) : (
                     <Link
@@ -195,7 +195,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
                       }`}
                     >
-                      {item.icon && <item.icon className="w-4 h-4" />}
+                      {item.icon && <item.icon className="w-4 h-4"  />}
                       <span>{item.label}</span>
                     </Link>
                   )}
@@ -209,7 +209,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           to={child.href}
                           className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
                         >
-                          {child.icon && <child.icon className="w-4 h-4" />}
+                          {child.icon && <child.icon className="w-4 h-4"  />}
                           <span>{child.label}</span>
                         </Link>
                       ))}
@@ -223,7 +223,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-slate-dark border-r border-zion-cyan/20 transform transition-transform duration-300 ease-in-out ${
+      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-slate-dark border-r border-zion-cyan/20 transform transition-transform duration-30o0 ease-in-out ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
         <div className="flex items-center justify-between h-16 px-4 border-b border-zion-cyan/20">
@@ -232,7 +232,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             onClick={() => setSidebarOpen(false)}
             className="p-2 text-zion-slate-light hover:text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5"  />
           </button>
         </div>
         
@@ -245,10 +245,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
                 >
                   <div className="flex items-center space-x-3">
-                    {item.icon && <item.icon className="w-4 h-4" />}
+                    {item.icon && <item.icon className="w-4 h-4"  />}
                     <span>{item.label}</span>
                   </div>
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-4 h-4"  />
                 </button>
               ) : (
                 <Link
@@ -257,7 +257,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
                   }`}
                 >
-                  {item.icon && <item.icon className="w-4 h-4" />}
+                  {item.icon && <item.icon className="w-4 h-4"  />}
                   <span>{item.label}</span>
                 </Link>
               )}
@@ -271,7 +271,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       to={child.href}
                       className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
                     >
-                      {child.icon && <child.icon className="w-4 h-4" />}
+                      {child.icon && <child.icon className="w-4 h-4"  />}
                       <span>{child.label}</span>
                     </Link>
                   ))}
@@ -304,16 +304,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5"  />
                 </a>
                 <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Twitter className="w-5 h-5" />
+                  <Twitter className="w-5 h-5"  />
                 </a>
                 <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Github className="w-5 h-5" />
+                  <Github className="w-5 h-5"  />
                 </a>
                 <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Youtube className="w-5 h-5" />
+                  <Youtube className="w-5 h-5"  />
                 </a>
               </div>
             </div>
@@ -343,7 +343,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="border-t border-zion-cyan/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-zion-slate-light text-sm">
-              © 2025 Zion Tech Group. All rights reserved.
+              © 20o25 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
@@ -360,7 +360,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
 
-      <ScrollToTop />
+      <ScrollToTop  />
     </div>
   );
 }

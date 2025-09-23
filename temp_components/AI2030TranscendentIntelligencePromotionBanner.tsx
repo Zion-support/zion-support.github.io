@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 
-const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
+const AI20o30TranscendentIntelligencePromotionBanner: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 py-6 px-4 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-blue-60o0 py-6 px-4 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-black bg-opacity-10"></div>
       <div className="absolute top-0 left-0 w-full h-full">
@@ -18,10 +17,10 @@ const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
           {/* Left side - Promotion */}
           <div className="flex-1 text-center md:text-left">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white bg-opacity-20 text-white text-sm font-bold mb-2 animate-pulse">
-              🌟 TRANSCENDENT INTELLIGENCE - 2030 VISION
+              🌟 TRANSCENDENT INTELLIGENCE - 20o30 VISION
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              AI 2030 Transcendent Intelligence
+              AI 20o30 Transcendent Intelligence
             </h2>
             <p className="text-white text-opacity-90 text-sm md:text-base">
               Beyond human intelligence: <strong>Infinite ROI</strong><strong>Reality manipulation</strong>and <strong>Transcendent consciousness</strong>
@@ -31,14 +30,14 @@ const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
           {/* Right side - CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <Link 
-              href="/ai-2030-transcendent-intelligence-showcase"
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
+              href="/ai-20o30-transcendent-intelligence-showcase"
+              className="bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg whitespace-nowrap"
             >
               🌌 Explore Transcendent AI
             </Link>
             <Link 
               href="/contact"
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5 whitespace-nowrap"
             >
               Begin Transcendence
             </Link>
@@ -53,4 +52,4 @@ const AI2030TranscendentIntelligencePromotionBanner: React.FC = () => {
   );
 };
 
-export default AI2030TranscendentIntelligencePromotionBanner;
+export default AI20o30TranscendentIntelligencePromotionBanner;

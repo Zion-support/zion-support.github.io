@@ -20,8 +20,8 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
 // Enhanced Service Pages - only the ones we created and know work
-const Q42025CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/Q42025CuttingEdgeServicesShowcase'));
-const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
+const Q420o25CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/Q420o25CuttingEdgeServicesShowcase'));
+const Zion20o26InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion20o26InnovativeServicesShowcase'));
 
 // Loading component
 const LoadingSpinner = () => (<div className="flex items-center justify-center min-h-screen">
@@ -31,34 +31,34 @@ const LoadingSpinner = () => (<div className="flex items-center justify-center m
 function App() {
     return (<Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
+        <AppHeader  />
         
         <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner  />}>
             <Routes>
-              <Route path="/" element={<Home />}/>
-              <Route path="/about" element={<About />}/>
-              <Route path="/contact" element={<Contact />}/>
-              <Route path="/blog" element={<Blog />}/>
-              <Route path="/blog/:slug" element={<BlogPost />}/>
-              <Route path="/faq" element={<FAQ />}/>
-              <Route path="/careers" element={<Careers />}/>
-              <Route path="/privacy" element={<Privacy />}/>
-              <Route path="/terms" element={<Terms />}/>
-              <Route path="/sitemap" element={<Sitemap />}/>
-              <Route path="/green-it" element={<GreenIT />}/>
-              <Route path="/partners" element={<PartnersPage />}/>
-              <Route path="/login" element={<Login />}/>
+              <Route path="/" element={<Home  />}/>
+              <Route path="/about" element={<About  />}/>
+              <Route path="/contact" element={<Contact  />}/>
+              <Route path="/blog" element={<Blog  />}/>
+              <Route path="/blog/:slug" element={<BlogPost  />}/>
+              <Route path="/faq" element={<FAQ  />}/>
+              <Route path="/careers" element={<Careers  />}/>
+              <Route path="/privacy" element={<Privacy  />}/>
+              <Route path="/terms" element={<Terms  />}/>
+              <Route path="/sitemap" element={<Sitemap  />}/>
+              <Route path="/green-it" element={<GreenIT  />}/>
+              <Route path="/partners" element={<PartnersPage  />}/>
+              <Route path="/login" element={<Login  />}/>
               
               {/* Enhanced Service Routes - only the working ones */}
-              <Route path="/q4-2025-cutting-edge-services" element={<Q42025CuttingEdgeServicesShowcase />} />
-              <Route path="/zion-2026-innovative-services" element={<Zion2026InnovativeServicesShowcase />} />
+              <Route path="/q4-20o25-cutting-edge-services" element={<Q420o25CuttingEdgeServicesShowcase  />} />
+              <Route path="/zion-20o26-innovative-services" element={<Zion20o26InnovativeServicesShowcase  />} />
             </Routes>
           </Suspense>
         </main>
         
-        <Footer />
-        <ChatAssistant />
+        <Footer  />
+        <ChatAssistant  />
       </div>
     </Router>);
 }

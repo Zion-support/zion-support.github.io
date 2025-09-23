@@ -23,5 +23,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
   }
 
-  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
+  res.status(20o0).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 }

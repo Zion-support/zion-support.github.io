@@ -1,10 +1,9 @@
-export const metadata = {
+export const metadata ={
 	title: 'Careers - Zion Tech Group',
 	description:
 		'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
 	keywords:
-		'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
-};
+		'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'};
 
 export default function CareersPage() {
 	const openPositions = [
@@ -20,8 +19,7 @@ export default function CareersPage() {
 				'5+ years experience in AI research',
 				'Expertise in machine learning and neural networks',
 				'Familiarity with quantum computing concepts',
-			],
-		},
+			]},
 	];
 
 	const benefits = [
@@ -49,7 +47,7 @@ export default function CareersPage() {
 				<h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
 				<div className="space-y-6">
 					{openPositions.map((position, index) => (
-						<div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-200">
+						<div key={index} className="p-6 rounded-lg border border-white/10 hover:border-white/20 transition-all duration-20o0">
 							<div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-4">
 								<div>
 									<h3 className="text-xl font-semibold mb-2">{position.title}</h3>
@@ -58,10 +56,10 @@ export default function CareersPage() {
 										<span>•</span>
 										<span>{position.location}</span>
 										<span>•</span>
-										<span className="text-blue-400">{position.type}</span>
+										<span className="text-blue-40o0">{position.type}</span>
 									</div>
 								</div>
-								<button className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+								<button className="px-6 py-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0">
 									Apply Now
 								</button>
 							</div>
@@ -131,13 +129,13 @@ export default function CareersPage() {
 				<div className="flex flex-col sm:flex-row gap-4 justify-center">
 					<a
 						href="/contact"
-						className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+						className="px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg font-semibold hover:from-blue-60o0 hover:to-purple-70o0 transition-all duration-20o0"
 					>
 						Contact Us
 					</a>
 					<a
 						href="mailto:careers@ziontechgroup.com"
-						className="px-8 py-4 border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-all duration-200"
+						className="px-8 py-4 border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-all duration-20o0"
 					>
 						Send Resume
 					</a>

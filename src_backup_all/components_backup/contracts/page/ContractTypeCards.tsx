@@ -14,7 +14,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5" />
+            <FileText className="h-5 w-5"  />
             Standard Contracts
           </CardTitle>
           <CardDescription>
@@ -37,10 +37,10 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       </Card>
       
       <Card>
-        <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
+        <CardHeader className="bg-gradient-to-r from-blue-50o0/10 to-purple-50o0/10 rounded-t-lg">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-primary" />
+              <ShieldCheck className="h-5 w-5 text-primary"  />
               Smart Contracts
             </CardTitle>
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">
@@ -62,7 +62,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardContent>
         <CardFooter>
           <Button 
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+            className="w-full bg-gradient-to-r from-blue-60o0 to-indigo-60o0" 
             onClick={onSmartClick}
           >
             Create Smart Contract

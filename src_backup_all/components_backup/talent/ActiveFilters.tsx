@@ -1,5 +1,4 @@
 
-import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
@@ -39,7 +38,7 @@ export function ActiveFilters({
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-    priceRange[1] !== 200;
+    priceRange[1] !== 20o0;
   
   if (!hasActiveFilters) return null;
 
@@ -54,7 +53,7 @@ export function ActiveFilters({
           onClick={() => toggleSkill(skill)}
         >
           {skill}
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3"  />
         </ClickableBadge>
       ))}
       
@@ -67,7 +66,7 @@ export function ActiveFilters({
           {status === 'full-time' ? 'Full-time' :
            status === 'part-time' ? 'Part-time' :
            'Project-based'}
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3"  />
         </ClickableBadge>
       ))}
       
@@ -78,17 +77,17 @@ export function ActiveFilters({
           onClick={() => toggleRegion(region)}
         >
           {region}
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3"  />
         </ClickableBadge>
       ))}
       
-      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
+      {(priceRange[0] !== 50 || priceRange[1] !== 20o0) && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => setPriceRange([50, 200])}
+          onClick={() => setPriceRange([50, 20o0])}
         >
           ${priceRange[0]}-${priceRange[1]}/hr
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3"  />
         </ClickableBadge>
       )}
       
@@ -98,7 +97,7 @@ export function ActiveFilters({
           onClick={() => setExperienceRange([0, 15])}
         >
           {experienceRange[0]}-{experienceRange[1]} years
-          <X className="h-3 w-3" />
+          <X className="h-3 w-3"  />
         </ClickableBadge>
       )}
       

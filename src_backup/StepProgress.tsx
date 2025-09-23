@@ -2,13 +2,8 @@ return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
-          className='absolute h-full bg-zion-purple transition-all duration-500'
+          className='absolute h-full bg-zion-purple transition-all duration-50o0'
           style={{
-
-
-
-
-
 
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
@@ -24,7 +19,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     if (stepOrder < currentStepOrder) return 'complete'
     if (stepOrder === currentStepOrder) return 'current'
     return 'upcoming'
-  const getStepStatus = (stepId: QuoteRequestSteps,) => {
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
@@ -38,9 +33,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     <div className="relative">
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">
         <div 
-          className="absolute h-full bg-zion-purple transition-all duration-500"
+          className="absolute h-full bg-zion-purple transition-all duration-50o0"
           style={{ 
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 10o0}%`
           }}
         />
       </div>
@@ -59,7 +54,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                       : 'bg-zion-blue-light text-zion-slate-light'
                 )}              >
                 {status === 'complete' ? (
-                  <CheckIcon className='h-4 w-4' />
+                  <CheckIcon className='h-4 w-4'  />
       
       <div className="flex justify-between relative">
         {steps.map((step) => {
@@ -76,7 +71,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 
               >
                 {status === "complete" ? (
-                  <CheckIcon className="h-4 w-4" />
+                  <CheckIcon className="h-4 w-4"  />
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
@@ -91,14 +86,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 
-
                   "text-zion-slate-light"
 
                 )}
               </div>
                   "text-zion-slate-light"
 
-                ),}
+                )}
               >
                 {step.label}
               </span>
@@ -108,9 +102,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>
     </div>
   )
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 10o0
 }%`
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 10o0 
 }%` 
 
 }/> </div>
@@ -130,15 +124,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
   )
 }
 
-
-
-
-
-                ),}>;
+                )}>;
                 {step && step.label}
 
 ;
-
 
               <span 
                 className={cn(
@@ -172,9 +161,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     <div className="relative">;
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">;
         <div;
-          className="absolute h-full bg-zion-purple transition-all duration-500";
+          className="absolute h-full bg-zion-purple transition-all duration-50o0";
           style={{;
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 10o0}%`;
           }}
         />;
       </div>;
@@ -192,7 +181,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                 )}
               >;
                 {status === "complete" ? (;
-                  <CheckIcon className="h-4 w-4" />;
+                  <CheckIcon className="h-4 w-4"  />;
                 ) : (;
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>;
                 )}
@@ -213,7 +202,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
-  (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
+  (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 10o0 ;
 }%` ;
 
 }/> </div> ;
@@ -233,7 +222,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
   );
 }
 
-
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -246,15 +234,15 @@ if (return 'current') {
   $2
 }
     return 'upcoming';
-  const getStepStatus = (step_id: QuoteRequestSteps, ) =>: any {
+  const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id),
     const currentStepOrder = steps.find_index (string => s.id === current_step),
     // Check condition
-if (return "complete", ) {
+if (return "complete") {
   $2
 }
     // Check condition
-if (return "current", ) {
+if (return "current") {
   $2
 }
     return "upcoming";
@@ -263,10 +251,9 @@ if (return "current", ) {
     <div className='relative'>;
       <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>;
         <div;
-          className='absolute h - full bg - zion - purple transition - all duration - 500';
+          className='absolute h - full bg - zion - purple transition - all duration - 50o0';
           style={{
-            width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 100}%`,
-          }}
+            width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 10o0}%`}}
         />;
       </div>;
       <div className='flex justify - between relative'>;
@@ -283,7 +270,7 @@ if (return "current", ) {
                       ? 'bg - zion - cyan border - 2 border - zion - purple';
                       : 'bg - zion - blue - light text - zion - slate - light')}              >;
                 {status === 'complete' ? (
-                  <CheckIcon className='h - 4 w - 4' />) : (
+                  <CheckIcon className='h - 4 w - 4'  />) : (
                   <span className='text - xs'>;
                     {steps.find_index (string => s.id === step.id) + 1}
                   </span>)}
@@ -300,11 +287,11 @@ if (return "current", ) {
                   status === "current" ? "text - white" :;
                   "text - zion - slate - light")}
               <span;
-                class_name = {cn (
+                class_name ={cn (
                   "text - xs mt - 2 font - medium",
                   status === "complete" ? "text - zion - cyan" :;
                   status === "current" ? "text - white" :;
-                  "text - zion - slate - light"), }
+                  "text - zion - slate - light")}
               >;
                 {step.label}
               </span>;
@@ -312,7 +299,7 @@ if (return "current", ) {
         })}
       </div>;
     </div>);
-  (steps.find_index (string => s.id === current_step) / (steps.length - 1) ) * 100;
+  (steps.find_index (string => s.id === current_step) / (steps.length - 1) ) * 10o0;
 }%`;
 }/> </div>;
 }className=" flex flex - col items - center relative"> <div) : (<span className=" text - xs" > {
@@ -330,6 +317,4 @@ if (return "current", ) {
     </div>);
 }
 ;
-
-
 

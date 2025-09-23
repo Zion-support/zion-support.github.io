@@ -6,10 +6,9 @@ interface WishlistState {
   itemCount: number;
 }
 
-const initialState: WishlistState = {
+const initialState: WishlistState ={
   items: [],
-  itemCount: 0,
-};
+  itemCount: 0};
 
 const wishlistSlice = createSlice({
   name: 'wishlist',
@@ -29,9 +28,7 @@ const wishlistSlice = createSlice({
     clearWishlist: (state) => {
       state.items = [];
       state.itemCount = 0;
-    },
-  },
-});
+    }}});
 
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

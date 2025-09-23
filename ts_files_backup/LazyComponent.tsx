@@ -9,14 +9,14 @@ interface LazyComponentProps {
 
 export default function LazyComponent({ 
   component
-  fallback = <LoadingSpinner size="md" text="Loading..." />,
+  fallback = <LoadingSpinner size="md" text="Loading..."  />,
   ...props 
 }: LazyComponentProps) {
   const LazyLoadedComponent = lazy(component);
 
   return (
     <Suspense fallback={fallback}>
-      <LazyLoadedComponent {...props} />
+      <LazyLoadedComponent {...props}  />
     </Suspense>
   );
 }
@@ -25,7 +25,7 @@ export default function LazyComponent({
 export const LazyROICalculator = (props: any) => (
   <LazyComponent 
     component={() => import('./ROICalculator')} 
-    fallback={<LoadingSpinner size="lg" text="Loading ROI Calculator..." />}
+    fallback={<LoadingSpinner size="lg" text="Loading ROI Calculator..."  />}
     {...props}
   />
 );
@@ -41,7 +41,7 @@ export const LazyStructuredData = (props: any) => (
 export const LazyInteractiveWidget = (props: any) => (
   <LazyComponent 
     component={() => import('./InteractiveContentDiscoveryWidget')} 
-    fallback={<LoadingSpinner size="lg" text="Loading Interactive Widget..." />}
+    fallback={<LoadingSpinner size="lg" text="Loading Interactive Widget..."  />}
     {...props}
   />
 );

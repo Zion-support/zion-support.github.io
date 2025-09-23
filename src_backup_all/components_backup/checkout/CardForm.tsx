@@ -26,8 +26,7 @@ export default function CardForm({ amount, onSuccess }: Props) {
       const res = await fetch('/api/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) }),
-      });
+        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) })});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to create payment');
 
@@ -41,10 +40,7 @@ export default function CardForm({ amount, onSuccess }: Props) {
               name:
                 user && typeof user !== 'boolean'
                   ? user.displayName
-                  : undefined,
-            },
-          },
-        },
+                  : undefined}}},
         { handleActions: false }
       );
 
@@ -62,8 +58,7 @@ export default function CardForm({ amount, onSuccess }: Props) {
           await fetch('/api/points/increment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId: user.id, amount: 50, reason: 'purchase' }),
-          });
+            body: JSON.stringify({ userId: user.id, amount: 50, reason: 'purchase' })});
           mutate('user');
         }
         console.log('Payment Success');
@@ -84,14 +79,12 @@ export default function CardForm({ amount, onSuccess }: Props) {
       const res = await fetch('/api/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) }),
-      });
+        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) })});
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to create payment');
 
       const result = await stripe.confirmCardPayment(data.clientSecret, {
-        payment_method: 'pm_card_visa',
-      });
+        payment_method: 'pm_card_visa'});
 
       if (result.error) throw new Error(result.error.message);
       if (result.paymentIntent?.status === 'succeeded') {
@@ -99,8 +92,7 @@ export default function CardForm({ amount, onSuccess }: Props) {
           await fetch('/api/points/increment', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userId: user.id, amount: 50, reason: 'purchase' }),
-          });
+            body: JSON.stringify({ userId: user.id, amount: 50, reason: 'purchase' })});
           mutate('user');
         }
         console.log('Payment Success');

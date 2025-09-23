@@ -1,5 +1,4 @@
 
-import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
@@ -16,37 +15,37 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
     {
       title: t('home.tool_ai_matcher'),
       description: t('home.tool_ai_matcher_desc'),
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      icon: <Search className="h-6 w-6 text-zion-cyan"  />,
       link: "/marketplace"
     },
     {
       title: t('home.tool_talent'),
       description: t('home.tool_talent_desc'),
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      icon: <Users className="h-6 w-6 text-zion-purple"  />,
       link: "/talent"
     },
     {
       title: t('home.tool_services'),
       description: t('home.tool_services_desc'),
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+      icon: <Briefcase className="h-6 w-6 text-zion-cyan"  />,
       link: "/services"
     },
     {
       title: t('home.tool_equipment'),
       description: t('home.tool_equipment_desc'),
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      icon: <Settings className="h-6 w-6 text-zion-purple"  />,
       link: "/equipment"
     },
     {
       title: t('nav.community'),
       description: t('home.tool_chat_desc'),
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+      icon: <MessageSquare className="h-6 w-6 text-zion-cyan"  />,
       link: "/community"
     },
     {
       title: t('home.tool_mobile_app', 'Mobile App'),
       description: t('home.tool_mobile_app_desc', 'Zion on the go'),
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
+      icon: <Smartphone className="h-6 w-6 text-zion-purple"  />,
       link: "/mobile-launch"
     }
   ];
@@ -68,7 +67,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             <Link
               key={index}
               href={link.link}
-              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
+              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-30o0 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
                 {link.icon}
@@ -77,7 +76,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
               <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
               <div className="flex items-center text-zion-cyan text-xs mt-auto">
                 <span>{t('general.explore')}</span>
-                <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1"  />
               </div>
             </Link>
           ))}

@@ -31,7 +31,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const { execSync, spawnSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -111,7 +110,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(res,                                                WAIT_MINUTES * 60 * 1000);
+const timeoutId = setTimeout(res,                                                WAIT_MINUTES * 60 * 10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -232,7 +231,6 @@ if (require.main === module) {
 }
 
 module.exports = Script;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Brain, Cpu, Rocket, Sparkles, Zap, TrendingUp } from 'lucide-react';
 import Button from '../ui/Button';
@@ -24,15 +23,15 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
   ctaText = "Explore Revolutionary Services",
   ctaLink = "/services",
   stats = [
-    { value: '200+', label: 'Revolutionary Services', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <Zap className="w-6 h-6" /> },
-    { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Rocket className="w-6 h-6" /> },
-    { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
-    { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <Sparkles className="w-6 h-6" /> },
-    { value: '800%+', label: 'Average ROI', color: 'text-purple-400', icon: <TrendingUp className="w-6 h-6" /> }
+    { value: '20o0+', label: 'Revolutionary Services', color: 'text-cyan-40o0', icon: <Cpu className="w-6 h-6"  /> },
+    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-40o0', icon: <Zap className="w-6 h-6"  /> },
+    { value: '30+', label: 'Day Free Trials', color: 'text-blue-40o0', icon: <Rocket className="w-6 h-6"  /> },
+    { value: '24/7', label: 'AI Support', color: 'text-green-40o0', icon: <Brain className="w-6 h-6"  /> },
+    { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-40o0', icon: <Sparkles className="w-6 h-6"  /> },
+    { value: '80o0%+', label: 'Average ROI', color: 'text-purple-40o0', icon: <TrendingUp className="w-6 h-6"  /> }
   ]
 }) => {
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -43,7 +42,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -55,7 +54,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
     }
   };
 
-  const floatingVariants = {
+  const floatingVariants ={
     float: {
       y: [-10, 10, -10],
       transition: {
@@ -70,29 +69,28 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Quantum particle background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-cyan-90o0/20"  />
         
         {/* Floating quantum particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+            className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-60"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`}}
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.6, 1, 0.6],
-              x: [0, Math.random() * 100 - 50],
-              y: [0, Math.random() * 100 - 50]
+              x: [0, Math.random() * 10o0 - 50],
+              y: [0, Math.random() * 10o0 - 50]
             }}
             transition={{
               duration: Math.random() * 5 + 5,
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
       </div>
 
@@ -107,9 +105,9 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
           {/* Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-4 py-2 text-sm text-cyan-300"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 rounded-full px-4 py-2 text-sm text-cyan-30o0"
           >
-            <Sparkles className="w-4 h-4" />
+            <Sparkles className="w-4 h-4"  />
             <span>Revolutionary Technology</span>
           </motion.div>
 
@@ -118,7 +116,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
             variants={itemVariants}
             className="text-5xl md:text-7xl font-bold text-white leading-tight"
           >
-            <span className="bg-gradient-to-r from-white via-cyan-300 to-purple-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-cyan-30o0 to-purple-30o0 bg-clip-text text-transparent">
               {title}
             </span>
           </motion.h1>
@@ -126,7 +124,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
           {/* Subtitle */}
           <motion.h2
             variants={itemVariants}
-            className="text-2xl md:text-3xl font-semibold text-gray-300 max-w-4xl mx-auto"
+            className="text-2xl md:text-3xl font-semibold text-gray-30o0 max-w-4xl mx-auto"
           >
             {subtitle}
           </motion.h2>
@@ -134,7 +132,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-40o0 max-w-3xl mx-auto leading-relaxed"
           >
             {description}
           </motion.p>
@@ -148,11 +146,11 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
               href={ctaLink}
               variant="primary"
               size="lg"
-              className="group bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+              className="group bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-40o0 hover:to-purple-50o0 text-white px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/25"
             >
               <span className="flex items-center space-x-2">
                 <span>{ctaText}</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-30o0"  />
               </span>
             </Button>
             
@@ -160,7 +158,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
               href="/contact"
               variant="secondary"
               size="lg"
-              className="border-2 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
+              className="border-2 border-cyan-50o0/50 text-cyan-30o0 hover:bg-cyan-50o0/10 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-30o0"
             >
               Contact Our Team
             </Button>
@@ -175,17 +173,17 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
               <motion.div
                 key={index}
                 className="text-center group"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 transition={{ duration: 0.2 }}
               >
                 <div className="flex flex-col items-center space-y-2">
-                  <div className={`p-3 rounded-full bg-black/30 border border-white/10 group-hover:border-cyan-500/50 transition-colors duration-300 ${stat.color}`}>
+                  <div className={`p-3 rounded-full bg-black/30 border border-white/10 group-hover:border-cyan-50o0/50 transition-colors duration-30o0 ${stat.color}`}>
                     {stat.icon}
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-white">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-400 group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className="text-sm text-gray-40o0 group-hover:text-cyan-30o0 transition-colors duration-30o0">
                     {stat.label}
                   </div>
                 </div>
@@ -197,32 +195,32 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
 
       {/* Floating geometric shapes */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rotate-45"
+        className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rotate-45"
         variants={floatingVariants}
         animate="float"
-      />
+       />
       
       <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+        className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full"
         variants={floatingVariants}
         animate="float"
         style={{ animationDelay: '1s' }}
-      />
+       />
       
       <motion.div
-        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-12"
+        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-40o0/30 transform rotate-12"
         variants={floatingVariants}
         animate="float"
         style={{ animationDelay: '2s' }}
-      />
+       />
 
       {/* Neural network connections */}
       <div className="absolute inset-0 pointer-events-none">
         <svg className="w-full h-full">
           <defs>
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.3" />
+            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="10o0%" y2="10o0%">
+              <stop offset="0%" stopColor="#0o0ffff" stopOpacity="0.3"  />
+              <stop offset="10o0%" stopColor="#8b5cf6" stopOpacity="0.3"  />
             </linearGradient>
           </defs>
           
@@ -230,7 +228,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
           {[...Array(8)].map((_, i) => (
             <motion.path
               key={i}
-              d={`M ${Math.random() * 100} ${Math.random() * 100} Q ${Math.random() * 100} ${Math.random() * 100} ${Math.random() * 100} ${Math.random() * 100}`}
+              d={`M ${Math.random() * 10o0} ${Math.random() * 10o0} Q ${Math.random() * 10o0} ${Math.random() * 10o0} ${Math.random() * 10o0} ${Math.random() * 10o0}`}
               stroke="url(#neuralGradient)"
               strokeWidth="1"
               fill="none"
@@ -242,7 +240,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
                 delay: i * 0.5,
                 ease: "easeInOut"
               }}
-            />
+             />
           ))}
         </svg>
       </div>
@@ -259,9 +257,9 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
           ease: "easeInOut"
         }}
       >
-        <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-cyan-40o0/50 rounded-full flex justify-center">
           <motion.div
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+            className="w-1 h-3 bg-cyan-40o0 rounded-full mt-2"
             animate={{
               y: [0, 12, 0]
             }}
@@ -270,7 +268,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
               repeat: Infinity,
               ease: "easeInOut"
             }}
-          />
+           />
         </div>
       </motion.div>
     </section>

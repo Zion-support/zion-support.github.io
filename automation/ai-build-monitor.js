@@ -52,7 +52,7 @@ class AIBuildMonitor {
       if (fs.existsSync(this.learningDataFile)) {
         this.learningData = JSON.parse(fs.readFileSync(this.learningDataFile, 'utf8'));
       } else {
-        this.learningData = {
+        this.learningData ={
           buildPatterns: [],
           failureSignatures: [],
           successPatterns: [],
@@ -62,7 +62,7 @@ class AIBuildMonitor {
       }
     } catch (error) {
       this.log(`Failed to load learning data: ${error.message}`, 'ERROR');
-      this.learningData = {
+      this.learningData ={
         buildPatterns: [],
         failureSignatures: [],
         successPatterns: [],
@@ -77,7 +77,7 @@ class AIBuildMonitor {
       if (fs.existsSync(this.predictionModelFile)) {
         this.predictionModel = JSON.parse(fs.readFileSync(this.predictionModelFile, 'utf8'));
       } else {
-        this.predictionModel = {
+        this.predictionModel ={
           failureProbability: 0.1,
           riskFactors: {},
           confidenceScore: 0.5,
@@ -86,7 +86,7 @@ class AIBuildMonitor {
       }
     } catch (error) {
       this.log(`Failed to load prediction model: ${error.message}`, 'ERROR');
-      this.predictionModel = {
+      this.predictionModel ={
         failureProbability: 0.1,
         riskFactors: {},
         confidenceScore: 0.5,
@@ -104,12 +104,12 @@ class AIBuildMonitor {
     // Schedule regular monitoring
     setInterval(() => {
       this.performPredictiveAnalysis();
-    }, 30 * 60 * 1000); // Every 30 minutes
+    }, 30 * 60 * 10o00); // Every 30 minutes
     
     // Schedule learning updates
     setInterval(() => {
       this.updateLearningModel();
-    }, 60 * 60 * 1000); // Every hour
+    }, 60 * 60 * 10o00); // Every hour
     
     this.log('AI Build Monitor started successfully');
   }
@@ -384,7 +384,7 @@ class AIBuildMonitor {
         }
       }
     },
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 10o00
   }`;
           
           config = config.replace('export default defineConfig({', `export default defineConfig({${optimizations}`);
@@ -405,7 +405,7 @@ class AIBuildMonitor {
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
         stdio: 'pipe',
-        timeout: 300000 // 5 minutes
+        timeout: 30o0000 // 5 minutes
       });
       
       this.log('Preemptive build test successful');
@@ -443,7 +443,7 @@ class AIBuildMonitor {
 
   analyzeRecentPatterns() {
     // Analyze recent build history for patterns
-    const patterns = {
+    const patterns ={
       failureRate: 0.2,
       commonErrors: [],
       buildTimeTrend: 'stable',
@@ -533,7 +533,7 @@ class AIBuildMonitor {
 
   extractBuildPatterns(buildHistory) {
     // Extract patterns from build history
-    const patterns = {
+    const patterns ={
       timeOfDay: {},
       dayOfWeek: {},
       failureTriggers: [],

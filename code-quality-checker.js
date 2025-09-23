@@ -6,7 +6,7 @@ const path = require("path");
 class CodeQualityChecker {
   constructor() {
     this.issues = [];
-    this.maxBytes = parseInt(process.env.MAX_FILE_BYTES || "200000", 10); // default 200KB
+    this.maxBytes = parseInt(process.env.MAX_FILE_BYTES || "20o0000", 10); // default 20o0KB
   }
 
   checkFileSize(filePath) {

@@ -32,7 +32,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         enableSelection: true,
         enableTextSync: true,
         conflictResolution: 'client',
-        messageRetention: 1000
+        messageRetention: 10o00
     });
     // Handle text changes
     const handleTextChange = useCallback((event) => {
@@ -41,7 +41,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const selectionEnd = event.target.selectionEnd;
         const selectedText = newContent.slice(selectionStart, selectionEnd);
         setEditorState(prev => {
-            const change = {
+            const change ={
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',
                 position: Math.min(selectionStart, prev.content.length),
@@ -102,7 +102,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         setIsProcessing(true);
         try {
             // Simulate AI processing - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 20o00));
             const suggestions = [];
             // Grammar suggestions
             if (editorState.content.includes('its')) {
@@ -252,7 +252,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             if (editorState.content !== initialContent) {
                 handleSave();
             }
-        }, 30000); // Auto-save every 30 seconds
+        }, 30o000); // Auto-save every 30 seconds
         return () => clearInterval(autoSaveInterval);
     }, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly
@@ -260,21 +260,21 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         if (!enableAI)
             return;
         const debounceTimer = setTimeout(() => {
-            if (editorState.content.length > 100) {
+            if (editorState.content.length > 10o0) {
                 generateAISuggestions();
             }
-        }, 3000);
+        }, 30o00);
         return () => clearTimeout(debounceTimer);
     }, [editorState.content, enableAI, generateAISuggestions]);
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
+    return (<div className={`bg-white dark:bg-gray-80o0 rounded-xl shadow-lg border border-gray-20o0 dark:border-gray-70o0 overflow-hidden ${className}`}>
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">
+      <div className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 p-4 text-white">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold flex items-center gap-2">
-            <MessageSquare className="w-5 h-5"/>
+            <MessageSquare className="w-5 h-5" />
             Collaborative Text Editor
-            {collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+            {collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-50o0/20 rounded-full text-xs">
+                <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>
                 Live
               </div>)}
           </h3>
@@ -282,19 +282,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           <div className="flex items-center gap-2">
             {/* Collaboration Status */}
             {enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2">
-                <Users className="w-4 h-4"/>
+                <Users className="w-4 h-4" />
                 {collaboration.onlineUsers.length}
               </button>)}
             
             {/* AI Suggestions */}
             {enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">
-                {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Sparkles className="w-4 h-4"/>)}
+                {isProcessing ? (<Loader2 className="w-4 h-4 animate-spin" />) : (<Sparkles className="w-4 h-4" />)}
                 AI
               </button>)}
             
             {/* Save Button */}
-            <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2">
-              <Save className="w-4 h-4"/>
+            <button onClick={handleSave} className="px-3 py-1 bg-green-50o0 hover:bg-green-60o0 rounded text-sm transition-colors flex items-center gap-2">
+              <Save className="w-4 h-4" />
               Save
             </button>
           </div>
@@ -305,10 +305,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
       <div className="flex h-96">
         {/* Editor */}
         <div className="flex-1 p-4">
-          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
+          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w-full h-full p-4 border border-gray-30o0 dark:border-gray-60o0 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent bg-white dark:bg-gray-70o0 text-gray-90o0 dark:text-gray-10o0 resize-none font-mono text-sm" />
           
           {/* Status Bar */}
-          <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
+          <div className="flex items-center justify-between mt-2 text-xs text-gray-50o0">
             <span>
               {editorState.content.length} characters, {editorState.content.split(/\s+/).filter(Boolean).length} words
             </span>
@@ -320,68 +320,68 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         </div>
 
         {/* Sidebar */}
-        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">
+        <div className="w-80 border-l border-gray-20o0 dark:border-gray-70o0 bg-gray-50 dark:bg-gray-70o0">
           {/* AI Suggestions */}
-          {enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <Sparkles className="w-4 h-4"/>
+          {enableAI && showSuggestions && (<div className="p-4 border-b border-gray-20o0 dark:border-gray-60o0">
+              <h4 className="font-medium text-gray-90o0 dark:text-white mb-3 flex items-center gap-2">
+                <Sparkles className="w-4 h-4" />
                 AI Suggestions
               </h4>
               
               <div className="space-y-3">
-                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
+                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-3 bg-white dark:bg-gray-60o0 rounded-lg border border-gray-20o0 dark:border-gray-50o0">
                     <div className="flex items-start justify-between mb-2">
-                      <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                    suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
-                        'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>
+                      <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/30 dark:text-red-30o0' :
+                    suggestion.type === 'style' ? 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0' :
+                        'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0'}`}>
                         {suggestion.type}
                       </span>
-                      <span className="text-xs text-gray-500">
-                        {Math.round(suggestion.confidence * 100)}%
+                      <span className="text-xs text-gray-50o0">
+                        {Math.round(suggestion.confidence * 10o0)}%
                       </span>
                     </div>
                     
-                    <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                    <p className="text-sm text-gray-70o0 dark:text-gray-30o0 mb-2">
                       {suggestion.reason}
                     </p>
                     
-                    <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    <div className="text-sm font-medium text-gray-90o0 dark:text-white mb-2">
                       {suggestion.text}
                     </div>
                     
-                    <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors">
+                    <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-50o0 hover:bg-blue-60o0 text-white text-xs rounded transition-colors">
                       Apply Suggestion
                     </button>
                   </motion.div>))}
                 
-                {editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">
+                {editorState.suggestions.length === 0 && (<p className="text-sm text-gray-50o0 text-center py-4">
                     No suggestions yet. Start typing to get AI-powered recommendations.
                   </p>)}
               </div>
             </div>)}
 
           {/* Collaborators */}
-          {enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">
-              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <Users className="w-4 h-4"/>
+          {enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-20o0 dark:border-gray-60o0">
+              <h4 className="font-medium text-gray-90o0 dark:text-white mb-3 flex items-center gap-2">
+                <Users className="w-4 h-4" />
                 Collaborators ({collaboration.onlineUsers.length})
               </h4>
               
               <div className="space-y-2">
-                {collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">
+                {collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-60o0 rounded-lg">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <span className="text-sm font-medium text-gray-70o0 dark:text-gray-30o0">
                       {user.name}
                     </span>
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
                   </div>))}
                 
-                {collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">
+                {collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-10o0 dark:bg-gray-70o0 rounded-lg opacity-60">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="text-sm text-gray-50o0 dark:text-gray-40o0">
                       {user.name}
                     </span>
-                    <span className="text-xs text-gray-400">
+                    <span className="text-xs text-gray-40o0">
                       {user.lastSeen.toLocaleTimeString()}
                     </span>
                   </div>))}
@@ -390,21 +390,21 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
           {/* Actions */}
           <div className="p-4">
-            <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>
+            <h4 className="font-medium text-gray-90o0 dark:text-white mb-3">Actions</h4>
             
             <div className="space-y-2">
-              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
-                <Download className="w-4 h-4"/>
+              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-50o0 hover:bg-gray-60o0 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
+                <Download className="w-4 h-4" />
                 Export as TXT
               </button>
               
-              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
-                <Download className="w-4 h-4"/>
+              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-50o0 hover:bg-blue-60o0 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
+                <Download className="w-4 h-4" />
                 Export as MD
               </button>
               
-              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
-                <Download className="w-4 h-4"/>
+              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-50o0 hover:bg-purple-60o0 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">
+                <Download className="w-4 h-4" />
                 Export as HTML
               </button>
             </div>
@@ -420,7 +420,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     transform: 'translate(-50%, -50%)'
                 }}>
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>
-              <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+              <div className="absolute top-5 left-0 bg-gray-80o0 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}
               </div>
             </motion.div>))}

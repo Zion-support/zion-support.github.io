@@ -1,7 +1,7 @@
 import React, { useMemo, useRef } from 'react';
 
-export type DoughnutSlice = { label: string; value: number; color?: string };
-export type SimpleDoughnutChartProps = {
+export type DoughnutSlice ={ label: string; value: number; color?: string };
+export type SimpleDoughnutChartProps ={
   data: DoughnutSlice[];
   radius?: number;
   thickness?: number;
@@ -33,7 +33,7 @@ export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20,
         strokeWidth={thickness}
         strokeDasharray={dasharray}
         strokeDashoffset={-offset}
-      />
+       />
     );
     offset += length;
     return circle;
@@ -42,18 +42,18 @@ export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20,
   return (
     <div className="w-full">
       <div className="flex justify-end gap-2 mb-2">
-        {onExportCsv && <button className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800" onClick={() => onExportCsv(csvRows)}>Export CSV</button>}
-        {onExportPng && <button className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800" onClick={() => svgRef.current && onExportPng(svgRef.current)}>Export PNG</button>}
+        {onExportCsv && <button className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0" onClick={() => onExportCsv(csvRows)}>Export CSV</button>}
+        {onExportPng && <button className="text-xs px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-80o0" onClick={() => svgRef.current && onExportPng(svgRef.current)}>Export PNG</button>}
       </div>
       <svg ref={svgRef} width={radius * 2 + 20} height={radius * 2 + 20} className="mx-auto block">
-        <circle r={radius} cx={radius + 10} cy={radius + 10} fill="transparent" stroke="#e5e7eb" strokeWidth={thickness} />
+        <circle r={radius} cx={radius + 10} cy={radius + 10} fill="transparent" stroke="#e5e7eb" strokeWidth={thickness}  />
         {slices}
       </svg>
       <div className="flex flex-wrap justify-center gap-3 mt-3">
         {data.map((d, idx) => (
           <div key={d.label} className="flex items-center gap-2 text-xs">
-            <span className="inline-block w-3 h-3 rounded" style={{ backgroundColor: d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444', '#22d3ee'][idx % 5] }} />
-            <span>{d.label} ({((d.value / total) * 100).toFixed(0)}%)</span>
+            <span className="inline-block w-3 h-3 rounded" style={{ backgroundColor: d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444', '#22d3ee'][idx % 5] }}  />
+            <span>{d.label} ({((d.value / total) * 10o0).toFixed(0)}%)</span>
           </div>
         ))}
       </div>

@@ -7,7 +7,7 @@ const AugmentedRealityInEnterpriseApplicationsChat: NextPage = () => {
     <div>
       <Head>
         <title>AugmentedRealityInEnterpriseApplicationsChat - Zion Tech Solutions</title>
-        <meta name="description" content="AugmentedRealityInEnterpriseApplicationsChat blog post" />
+        <meta name="description" content="AugmentedRealityInEnterpriseApplicationsChat blog post"  />
       </Head>
       
       <main>

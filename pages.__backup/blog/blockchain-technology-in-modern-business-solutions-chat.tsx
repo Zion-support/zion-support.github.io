@@ -7,7 +7,7 @@ const BlockchainTechnologyInModernBusinessSolutionsChat: NextPage = () => {
     <div>
       <Head>
         <title>BlockchainTechnologyInModernBusinessSolutionsChat - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainTechnologyInModernBusinessSolutionsChat blog post" />
+        <meta name="description" content="BlockchainTechnologyInModernBusinessSolutionsChat blog post"  />
       </Head>
       
       <main>

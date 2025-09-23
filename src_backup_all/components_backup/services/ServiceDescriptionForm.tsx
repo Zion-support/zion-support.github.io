@@ -12,12 +12,10 @@ import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
-  targetAudience: z.string(),
-});
+  targetAudience: z.string()});
 
 type FormData = z.infer<typeof formSchema>;
 
@@ -34,9 +32,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     defaultValues: {
       title: "",
       keyFeatures: "",
-      targetAudience: "",
-    },
-  });
+      targetAudience: ""}});
 
   const handleSubmit = async (data: FormData) => {
     setIsLoading(true);
@@ -82,7 +78,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="flex items-center text-white">
-          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan"  />
           AI Service Description Generator
         </CardTitle>
         <CardDescription className="text-zion-slate-light">
@@ -104,9 +100,9 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       placeholder="e.g. Professional Web Design Services"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
-                    />
+                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />
@@ -123,9 +119,9 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
                       disabled={isLoading}
-                    />
+                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />
@@ -142,9 +138,9 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
-                    />
+                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />
@@ -156,12 +152,12 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
             >
               {isLoading ? (
                 <>
-                  <Loader className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader className="mr-2 h-4 w-4 animate-spin"  />
                   Generating Description...
                 </>
               ) : (
                 <>
-                  <Sparkles className="h-4 w-4 mr-2" />
+                  <Sparkles className="h-4 w-4 mr-2"  />
                   Generate Description
                 </>
               )}

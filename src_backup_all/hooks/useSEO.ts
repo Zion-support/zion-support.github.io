@@ -23,7 +23,7 @@ interface UseSEOOptions {
 
 }
 
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
+export const useSEO = (seoData: SEOData, options: UseSEOOptions ={}) => {
   const {
     enableAutoTitle = true,
     enableStructuredData = true,
@@ -174,7 +174,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
+      streetAddress: '364 E Main St STE 10o08',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
@@ -182,7 +182,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
+      telephone: '+1-30o2-464-0950',
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
@@ -243,7 +243,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        const metrics = {
+        const metrics ={
           dns: anynavigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,

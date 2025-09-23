@@ -14,7 +14,7 @@ interface PerformanceEnhancerProps {
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-10o0px" });
 
   useEffect(() => {
     // Preload critical resources
@@ -22,7 +22,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@40o0;50o0;60o0;70o0&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
@@ -58,7 +58,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
             });
           }, {
             rootMargin: '50px 0px',
-            threshold: 0.01
+            threshold: 0.0o1
           });
 
           // Observe all lazy images
@@ -80,9 +80,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
         const style = document.createElement('style');
         style.textContent = `
           *, *::before, *::after {
-            animation-duration: 0.01ms !important;
+            animation-duration: 0.0o1ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            transition-duration: 0.0o1ms !important;
           }
         `;
         document.head.appendChild(style);

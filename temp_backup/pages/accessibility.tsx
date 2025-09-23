@@ -1,4 +1,3 @@
-import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -23,7 +22,7 @@ const accessibilityFeatures = [
     description: "High contrast themes, scalable fonts, and screen reader compatibility",
     features: [
       "WCAG 2.1 AA compliant color contrast",
-      "Scalable text up to 200% without loss of functionality",
+      "Scalable text up to 20o0% without loss of functionality",
       "Alt text for all images and media",
       "Focus indicators for keyboard navigation",
       "Screen reader compatibility",
@@ -120,7 +119,7 @@ const complianceStandards = [
     icon: Users
   },
   {
-    name: "EN 301 549",
+    name: "EN 30o1 549",
     description: "European accessibility standard",
     status: "Compliant",
     icon: Globe
@@ -157,7 +156,7 @@ export default function AccessibilityPage() {
       icon: Eye,
       features: [
         'High contrast color schemes',
-        'Resizable text up to 200%',
+        'Resizable text up to 20o0%',
         'Color-blind friendly palettes',
         'Clear visual hierarchy'
       ]
@@ -195,7 +194,7 @@ export default function AccessibilityPage() {
       icon: CheckCircle
     },
     {
-      standard: 'EN 301 549',
+      standard: 'EN 30o1 549',
       description: 'European accessibility standard compliance',
       status: 'Compliant',
       icon: CheckCircle
@@ -254,12 +253,12 @@ export default function AccessibilityPage() {
       description="Learn about our commitment to web accessibility and how we ensure our website is accessible to all users, including those with disabilities."
       keywords="accessibility, WCAG, ADA compliance, screen reader, keyboard navigation, inclusive design"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-20o00"></div>
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -269,7 +268,7 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8">
                 Building technology that works for everyone, regardless of ability
               </p>
             </motion.div>
@@ -285,10 +284,10 @@ export default function AccessibilityPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
                   Accessibility Features
                 </h2>
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-60o0 mb-8">
                   Comprehensive accessibility solutions for all users
                 </p>
               </div>
@@ -307,10 +306,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
                 Compliance Standards
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 Our website complies with internationally recognized accessibility standards 
                 and guidelines to ensure the highest level of accessibility.
               </p>
@@ -328,13 +327,13 @@ export default function AccessibilityPage() {
                     viewport={{ once: true }}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-xl font-bold text-gray-900">{standard.standard}</h3>
-                      <div className="flex items-center text-green-600">
-                        <standard.icon className="w-5 h-5 mr-2" />
+                      <h3 className="text-xl font-bold text-gray-90o0">{standard.standard}</h3>
+                      <div className="flex items-center text-green-60o0">
+                        <standard.icon className="w-5 h-5 mr-2"  />
                         <span className="font-semibold">{standard.status}</span>
                       </div>
                     </div>
-                    <p className="text-gray-600">{standard.description}</p>
+                    <p className="text-gray-60o0">{standard.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -352,10 +351,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
                 Testing & Validation
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We use a combination of automated tools and manual testing to ensure 
                 our website meets accessibility standards and provides a great user experience.
               </p>
@@ -372,13 +371,13 @@ export default function AccessibilityPage() {
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <tool.icon className="w-8 h-8 text-indigo-600" />
+                    <div className="bg-indigo-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <tool.icon className="w-8 h-8 text-indigo-60o0"  />
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
                       {tool.name}
                     </h3>
-                    <p className="text-gray-600 text-sm">{tool.description}</p>
+                    <p className="text-gray-60o0 text-sm">{tool.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -396,10 +395,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
                 Contact & Feedback
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We welcome feedback on the accessibility of our website. If you encounter 
                 any accessibility barriers or have suggestions for improvement, please let us know.
               </p>
@@ -409,12 +408,12 @@ export default function AccessibilityPage() {
               <div className="bg-gray-50 rounded-lg p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Report an Issue</h3>
-                    <p className="text-gray-600 mb-4">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-4">Report an Issue</h3>
+                    <p className="text-gray-60o0 mb-4">
                       If you encounter any accessibility issues on our website, 
                       please contact us and we will work to resolve them promptly.
                     </p>
-                    <div className="space-y-2 text-sm text-gray-600">
+                    <div className="space-y-2 text-sm text-gray-60o0">
                       <p><strong>Email:</strong> accessibility@ziontechgroup.com</p>
                       <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                       <p><strong>Response Time:</strong> Within 48 hours</p>
@@ -422,14 +421,14 @@ export default function AccessibilityPage() {
                   </div>
                   
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Provide Feedback</h3>
-                    <p className="text-gray-600 mb-4">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-4">Provide Feedback</h3>
+                    <p className="text-gray-60o0 mb-4">
                       We value your input and suggestions for improving our accessibility. 
                       Your feedback helps us create a better experience for everyone.
                     </p>
-                    <button className="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg transition-colors duration-300 font-semibold flex items-center">
+                    <button className="bg-indigo-50o0 hover:bg-indigo-60o0 text-white py-2 px-6 rounded-lg transition-colors duration-30o0 font-semibold flex items-center">
                       Send Feedback
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2"  />
                     </button>
                   </div>
                 </div>
@@ -439,7 +438,7 @@ export default function AccessibilityPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center"
@@ -451,20 +450,20 @@ export default function AccessibilityPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Committed to Accessibility
               </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-indigo-10o0 mb-8 max-w-3xl mx-auto">
                 We are continuously working to improve the accessibility of our website. 
                 If you have any questions or need assistance, please don't hesitate to contact us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  className="px-8 py-4 bg-white text-indigo-60o0 rounded-lg hover:shadow-lg transition-all duration-30o0 font-semibold"
                 >
                   Contact Us
                 </a>
                 <a
                   href="/help"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-60o0 transition-all duration-30o0 font-semibold"
                 >
                   Get Help
                 </a>

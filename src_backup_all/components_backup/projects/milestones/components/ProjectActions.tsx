@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ShieldAlert } from 'lucide-react'
@@ -25,7 +24,7 @@ export function ProjectActions({
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
-            <ShieldAlert className="h-4 w-4 mr-2" />
+            <ShieldAlert className="h-4 w-4 mr-2"  />
             View Active Dispute
           </Link>
         </Button>
@@ -33,7 +32,7 @@ export function ProjectActions({
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
-        />
+         />
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>

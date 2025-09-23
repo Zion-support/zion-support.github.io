@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -87,4 +88,15 @@ body {
   .no-print {
     display: none !important;
   }
+=======
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+>>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 }

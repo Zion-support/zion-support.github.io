@@ -12,14 +12,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return result;
 };
 
-type Datum = { label: string; value: number };
+type Datum ={ label: string; value: number };
 
 function PieChart({ data, size = 160 }: { data: Datum[]; size?: number }) {
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
   let acc = 0;
   const radius = size / 2;
   const center = radius;
-  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#06b6d4'];
+  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#0o6b6d4'];
 
   const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
@@ -31,7 +31,7 @@ function PieChart({ data, size = 160 }: { data: Datum[]; size?: number }) {
     const y2 = center + radius * Math.sin(end);
     const largeArc = end - start > Math.PI ? 1 : 0;
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
-    return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
+    return <path key={d.label} d={path} fill={colors[i % colors.length]}  />;
   });
 
   return (
@@ -47,8 +47,8 @@ function LineChart({ data, width = 360, height = 140 }: { data: { date: string; 
     return `${x},${y}`;
   }).join(' ');
   return (
-    <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-900/40">
-      <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
+    <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-90o0/40">
+      <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points}  />
     </svg>
   );
 }
@@ -57,7 +57,7 @@ function Funnel({ data }: { data: Datum[] }) {
   return (
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
-        <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
+        <div key={d.label} className="bg-purple-50o0 text-white text-sm px-3 py-2 rounded" style={{ width: `${10o0 - i * 12}%` }}>
           {d.label}: {d.value}
         </div>
       ))}
@@ -66,7 +66,7 @@ function Funnel({ data }: { data: Datum[] }) {
 }
 
 export default function UsageAnalytics() {
-  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 360o0 * 10o00));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
   const [loading, setLoading] = useState(false);
@@ -100,10 +100,10 @@ export default function UsageAnalytics() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Usage Analytics</h1>
-          <button onClick={refresh} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Refresh</button>
+          <button onClick={refresh} disabled={loading} className="px-3 py-2 rounded bg-blue-60o0 text-white disabled:opacity-50">Refresh</button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-900">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 border rounded p-4 bg-white/70 dark:bg-gray-90o0">
           <div>
             <div className="text-sm">Start</div>
             <DatePicker selected={start} onChange={(d) => d && setStart(d)} className="w-full border rounded px-2 py-1 bg-transparent" />
@@ -125,38 +125,38 @@ export default function UsageAnalytics() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+          <div className="border rounded p-4 bg-white/70 dark:bg-gray-90o0">
             <div className="font-medium mb-2">Most Used Features</div>
             <div className="flex items-center gap-4">
-              <PieChart data={pagesMostUsed.slice(0, 6)} />
+              <PieChart data={pagesMostUsed.slice(0, 6)}  />
               <ul className="text-sm">
                 {pagesMostUsed.slice(0, 6).map((d) => (
-                  <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
+                  <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-50o0">{d.value}</span></li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
+          <div className="border rounded p-4 bg-white/70 dark:bg-gray-90o0 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
-            <LineChart data={line} />
+            <LineChart data={line}  />
             <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
               {events.slice(0, 8).map((e) => (
                 <div key={e.label} className="flex justify-between border rounded px-2 py-1">
                   <span>{e.label}</span>
-                  <span className="text-gray-500">{e.value}</span>
+                  <span className="text-gray-50o0">{e.value}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
+        <div className="border rounded p-4 bg-white/70 dark:bg-gray-90o0">
           <div className="font-medium mb-2">Funnel</div>
-          <Funnel data={funnel} />
+          <Funnel data={funnel}  />
         </div>
 
-        <div className="text-xs text-gray-500 dark:text-gray-400">
+        <div className="text-xs text-gray-50o0 dark:text-gray-40o0">
           Optional providers supported (setup via env): Plausible, PostHog. Currently using local event log for aggregation.
         </div>
       </div>

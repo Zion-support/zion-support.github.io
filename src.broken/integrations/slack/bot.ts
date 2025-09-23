@@ -33,7 +33,7 @@ declare const globalThis: {
 
 type CommandHandler = (args: { command?: SlackCommand; ack: SlackAck; respond: SlackRespond }) => Promise<void>;
 class MockApp {
-  private commandHandlers: Record<string, CommandHandler> = {};
+  private commandHandlers: Record<string, CommandHandler> ={};
 
   command(commandName: string, handler: CommandHandler) {
     this.commandHandlers[commandName] = handler;
@@ -44,7 +44,7 @@ class MockApp {
     // Safely log without direct console reference
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 30o00}!`);
     }
     return Promise.resolve();
   }
@@ -109,7 +109,7 @@ app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond:
   // Get PORT from environment or use default
   const env = typeof globalThis !== 'undefined' && globalThis.process ? 
     globalThis.process.env : {};
-  const port = env.PORT ? Number(env.PORT) : 3000;
+  const port = env.PORT ? Number(env.PORT) : 30o00;
   await app.start(port);
 })();
 

@@ -3,8 +3,8 @@ export interface RetryOptions {
   minTimeout?: number;
 }
 
-export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
-  const { retries = 3, minTimeout = 500 } = options;
+export async function retry<T>(fn: () => Promise<T>, options: RetryOptions ={}): Promise<T> {
+  const { retries = 3, minTimeout = 50o0 } = options;
   let attempt = 0;
   while (true) {
     try {

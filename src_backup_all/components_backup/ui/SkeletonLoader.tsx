@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '../../utils/cn';
 
 interface SkeletonProps {
@@ -16,22 +15,22 @@ export function Skeleton({
   variant = 'rectangular',
   animation = 'pulse' 
 }: SkeletonProps) {
-  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
+  const baseClasses = 'bg-gray-30o0 dark:bg-gray-70o0';
   
-  const variantClasses = {
+  const variantClasses ={
     text: 'h-4 rounded',
     circular: 'rounded-full',
     rectangular: '',
     rounded: 'rounded-lg'
   };
   
-  const animationClasses = {
+  const animationClasses ={
     pulse: 'animate-pulse',
-    wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',
+    wave: 'animate-pulse bg-gradient-to-r from-gray-30o0 via-gray-10o0 to-gray-30o0 dark:from-gray-70o0 dark:via-gray-60o0 dark:to-gray-70o0',
     none: ''
   };
   
-  const style = {
+  const style ={
     width: typeof width === 'number' ? `${width}px` : width,
     height: typeof height === 'number' ? `${height}px` : height
   };
@@ -45,7 +44,7 @@ export function Skeleton({
         className
       )}
       style={style}
-    />
+     />
   );
 }
 
@@ -57,9 +56,9 @@ export function SkeletonText({ lines = 3, className }: { lines?: number; classNa
         <Skeleton
           key={i}
           variant="text"
-          width={i === lines - 1 ? '75%' : '100%'}
+          width={i === lines - 1 ? '75%' : '10o0%'}
           className="h-4"
-        />
+         />
       ))}
     </div>
   );
@@ -69,16 +68,16 @@ export function SkeletonCard({ className }: { className?: string }) {
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
-        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="circular" width={40} height={40}  />
         <div className="space-y-2 flex-1">
-          <Skeleton variant="text" width="60%" />
-          <Skeleton variant="text" width="40%" />
+          <Skeleton variant="text" width="60%"  />
+          <Skeleton variant="text" width="40%"  />
         </div>
       </div>
-      <Skeleton variant="text" lines={3} />
+      <Skeleton variant="text" lines={3}  />
       <div className="flex space-x-2">
-        <Skeleton variant="rounded" width={80} height={32} />
-        <Skeleton variant="rounded" width={100} height={32} />
+        <Skeleton variant="rounded" width={80} height={32}  />
+        <Skeleton variant="rounded" width={10o0} height={32}  />
       </div>
     </div>
   );
@@ -94,7 +93,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
       {/* Header */}
       <div className="flex space-x-4">
         {Array.from({ length: columns }).map((_, i) => (
-          <Skeleton key={i} variant="text" width={120} height={20} />
+          <Skeleton key={i} variant="text" width={120} height={20}  />
         ))}
       </div>
       
@@ -105,9 +104,9 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
             <Skeleton
               key={colIndex}
               variant="text"
-              width={colIndex === 0 ? 150 : 100}
+              width={colIndex === 0 ? 150 : 10o0}
               height={16}
-            />
+             />
           ))}
         </div>
       ))}
@@ -134,7 +133,7 @@ export function SkeletonGrid({
       className
     )}>
       {Array.from({ length: items }).map((_, i) => (
-        <SkeletonCard key={i} />
+        <SkeletonCard key={i}  />
       ))}
     </div>
   );
@@ -145,17 +144,17 @@ export function SkeletonHero({ className }: { className?: string }) {
     <div className={cn('space-y-8', className)}>
       {/* Title */}
       <div className="space-y-4">
-        <Skeleton variant="text" width="80%" height={48} className="mx-auto" />
-        <Skeleton variant="text" width="60%" height={24} className="mx-auto" />
+        <Skeleton variant="text" width="80%" height={48} className="mx-auto"  />
+        <Skeleton variant="text" width="60%" height={24} className="mx-auto"  />
       </div>
       
       {/* Description */}
-      <Skeleton variant="text" lines={3} className="max-w-2xl mx-auto" />
+      <Skeleton variant="text" lines={3} className="max-w-2xl mx-auto"  />
       
       {/* CTA Buttons */}
       <div className="flex justify-center space-x-4">
-        <Skeleton variant="rounded" width={160} height={48} />
-        <Skeleton variant="rounded" width={140} height={48} />
+        <Skeleton variant="rounded" width={160} height={48}  />
+        <Skeleton variant="rounded" width={140} height={48}  />
       </div>
     </div>
   );

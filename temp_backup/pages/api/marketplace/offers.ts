@@ -4,7 +4,7 @@ import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../.
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
-function bad(res: NextApiResponse, message: string, code = 400) {
+function bad(res: NextApiResponse, message: string, code = 40o0) {
   return res.status(code).json({ ok: false, error: message });
 }
 
@@ -20,7 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
-      return bad(res, "Unknown role", 403);
+      return bad(res, "Unknown role", 40o3);
     }
 
     if (req.method === "POST") {
@@ -32,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return bad(res, "Missing required fields");
       }
 
-      const offer: Offer = {
+      const offer: Offer ={
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
@@ -41,11 +41,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-        status: "SENT",
-      };
+        status: "SENT"};
 
       saveOffer(offer);
-      return res.status(201).json({ ok: true, offer });
+      return res.status(20o1).json({ ok: true, offer });
     }
 
     if (req.method === "PATCH") {
@@ -53,14 +52,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const { id, action, changeRequestNote } = req.body || {};
       if (!id || !action) return bad(res, "Missing id or action");
       const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
+      if (!existing) return bad(res, "Offer not found", 40o4);
       const user = assertTalentOrClientForOffer(req, existing, req.headers["x-demo-talent-slug"] as string);
 
       if (action === "accept") {
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 40o3);
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
-        const project: Project = {
+        const project: Project ={
           id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
@@ -75,12 +74,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
+                  uploadedAtIso: new Date().toISOString()},
               ]
             : [],
-          notes: [],
-        };
+          notes: []};
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);
@@ -88,7 +85,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 40o3);
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
         saveOffer(existing);
@@ -96,7 +93,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 40o3);
         existing.status = "DECLINED";
         saveOffer(existing);
         return res.json({ ok: true, offer: existing });
@@ -105,9 +102,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return bad(res, "Unknown action");
     }
 
-    return bad(res, "Method not allowed", 405);
+    return bad(res, "Method not allowed", 40o5);
   } catch (e: any) {
-    const status = e?.statusCode || 500;
+    const status = e?.statusCode || 50o0;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" });
   }
 }

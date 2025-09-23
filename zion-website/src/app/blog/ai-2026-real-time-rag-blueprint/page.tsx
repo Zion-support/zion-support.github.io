@@ -5,8 +5,8 @@ export default function BlogPostPage() {
     <div className="min-h-screen bg-white">
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
-          <h1 className="text-4xl font-bold text-gray-900">AI 2026: Real-Time RAG Blueprint</h1>
-          <p className="mt-2 text-gray-500">Architectures and evals for sub-second retrieval-augmented generation at scale.</p>
+          <h1 className="text-4xl font-bold text-gray-90o0">AI 20o26: Real-Time RAG Blueprint</h1>
+          <p className="mt-2 text-gray-50o0">Architectures and evals for sub-second retrieval-augmented generation at scale.</p>
         </header>
         <section className="prose prose-lg mt-8">
           <p>

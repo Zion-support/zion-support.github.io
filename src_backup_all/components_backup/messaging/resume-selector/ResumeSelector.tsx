@@ -99,7 +99,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       }
       
       // Create a custom resume option
-      const customOption: ResumeOption = {
+      const customOption: ResumeOption ={
         id: 'custom-upload',
         title: file.name,
         type: 'custom_upload',
@@ -136,8 +136,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded.",
-      });
+        description: "Your resume has been downloaded."});
     } catch (error) {
       logErrorToProduction('Error downloading PDF:', { data: error });
       toast({
@@ -165,17 +164,17 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="recent" id="recent" />
+          <RadioGroupItem value="recent" id="recent"  />
           <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
         </div>
         
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="select" id="select" />
+          <RadioGroupItem value="select" id="select"  />
           <Label htmlFor="select" className="text-white">Select from saved versions</Label>
         </div>
         
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="upload" id="upload" />
+          <RadioGroupItem value="upload" id="upload"  />
           <Label htmlFor="upload" className="text-white">Upload a custom resume (PDF)</Label>
         </div>
       </RadioGroup>
@@ -186,7 +185,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
-        />
+         />
       )}
       
       {selectedOption === 'select' && (
@@ -196,14 +195,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           handleResumeSelect={handleResumeSelect}
           handleDownloadResume={handleDownloadResume}
           isLoading={isLoading}
-        />
+         />
       )}
       
       {selectedOption === 'upload' && (
         <UploadSection
           customFile={customFile}
           onFileUpload={handleFileUpload}
-        />
+         />
       )}
       
       {/* Generate Resume Now button */}
@@ -213,7 +212,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
           onClick={handleGenerateResume}
           className="text-zion-purple border-zion-purple/20"
         >
-          <Plus className="h-4 w-4 mr-2" />
+          <Plus className="h-4 w-4 mr-2"  />
           Generate Resume Now
         </Button>
       </div>

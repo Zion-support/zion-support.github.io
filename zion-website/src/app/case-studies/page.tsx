@@ -13,7 +13,7 @@ const caseStudies = [
   {
     id: 1,
     title: 'Global Financial Services Transformation',
-    client: 'Fortune 500 Investment Bank',
+    client: 'Fortune 50o0 Investment Bank',
     industry: 'Financial Services',
     challenge: 'Reduce operational costs while improving risk assessment accuracy',
     solution: 'Implemented autonomous AI trading systems and quantum-enhanced risk modeling',
@@ -116,7 +116,7 @@ const caseStudies = [
       '70% faster drug discovery timeline',
       '80% improvement in molecular analysis accuracy',
       'Automated research data processing',
-      'Reduced R&D costs by $500M annually'
+      'Reduced R&D costs by $50o0M annually'
     ],
     duration: '20 months',
     team: '35 research scientists and quantum engineers',
@@ -140,7 +140,7 @@ export default function CaseStudiesPage() {
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Success Stories
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-6 text-lg leading-8 text-gray-30o0">
             Discover how leading organizations are transforming their operations with our cutting-edge AI and technology solutions.
           </p>
         </div>
@@ -149,14 +149,14 @@ export default function CaseStudiesPage() {
         <div className="mx-auto mt-16 max-w-7xl">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: 'Projects Completed', value: '500+' },
+              { label: 'Projects Completed', value: '50o0+' },
               { label: 'Client Satisfaction', value: '98%' },
               { label: 'Average ROI', value: '340%' },
               { label: 'Global Reach', value: '50+ Countries' }
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl font-bold text-blue-400">{stat.value}</div>
-                <div className="text-sm text-gray-300 mt-1">{stat.label}</div>
+                <div className="text-3xl font-bold text-blue-40o0">{stat.value}</div>
+                <div className="text-sm text-gray-30o0 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function CaseStudiesPage() {
             {industries.map((industry) => (
               <button
                 key={industry}
-                className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-200"
+                className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors duration-20o0"
               >
                 {industry}
               </button>
@@ -181,38 +181,38 @@ export default function CaseStudiesPage() {
           <h2 className="text-2xl font-bold text-white mb-8">Featured Success Stories</h2>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
             {featuredStudies.map((study) => (
-              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-30o0 group">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 bg-blue-500/20 rounded-xl">
-                    <study.icon className="h-6 w-6 text-blue-400" />
+                  <div className="p-3 bg-blue-50o0/20 rounded-xl">
+                    <study.icon className="h-6 w-6 text-blue-40o0"  />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">{study.industry}</div>
+                    <div className="text-sm text-gray-40o0">{study.industry}</div>
                     <div className="font-semibold text-white">{study.client}</div>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-40o0 transition-colors duration-20o0">
                   {study.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-4">{study.challenge}</p>
+                <p className="text-gray-30o0 mb-4">{study.challenge}</p>
                 
                 <div className="space-y-3 mb-6">
                   <div className="text-sm">
-                    <span className="text-gray-400">Duration:</span>
+                    <span className="text-gray-40o0">Duration:</span>
                     <span className="text-white ml-2">{study.duration}</span>
                   </div>
                   <div className="text-sm">
-                    <span className="text-gray-400">Team:</span>
+                    <span className="text-gray-40o0">Team:</span>
                     <span className="text-white ml-2">{study.team}</span>
                   </div>
                 </div>
                 
                 <div className="space-y-2 mb-6">
                   {study.results.slice(0, 2).map((result, index) => (
-                    <div key={index} className="text-sm text-green-400 flex items-center gap-2">
-                      <div className="w-1 h-1 bg-green-400 rounded-full"></div>
+                    <div key={index} className="text-sm text-green-40o0 flex items-center gap-2">
+                      <div className="w-1 h-1 bg-green-40o0 rounded-full"></div>
                       {result}
                     </div>
                   ))}
@@ -220,10 +220,10 @@ export default function CaseStudiesPage() {
                 
                 <Link 
                   href={`/case-studies/${study.id}`}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-blue-40o0 hover:text-blue-30o0 font-medium text-sm transition-colors duration-20o0"
                 >
                   View Case Study
-                  <ArrowRightIcon className="h-4 w-4" />
+                  <ArrowRightIcon className="h-4 w-4"  />
                 </Link>
               </div>
             ))}
@@ -235,33 +235,33 @@ export default function CaseStudiesPage() {
           <h2 className="text-2xl font-bold text-white mb-8">More Success Stories</h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             {regularStudies.map((study) => (
-              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group">
+              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-30o0 group">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <study.icon className="h-5 w-5 text-blue-400" />
+                  <div className="p-2 bg-blue-50o0/20 rounded-lg">
+                    <study.icon className="h-5 w-5 text-blue-40o0"  />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400">{study.industry}</div>
+                    <div className="text-sm text-gray-40o0">{study.industry}</div>
                     <div className="font-semibold text-white">{study.client}</div>
                   </div>
                 </div>
                 
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-40o0 transition-colors duration-20o0">
                   {study.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-4 text-sm">{study.challenge}</p>
+                <p className="text-gray-30o0 mb-4 text-sm">{study.challenge}</p>
                 
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-400">
+                  <div className="text-sm text-gray-40o0">
                     {study.duration} • {study.team}
                   </div>
                   <Link 
                     href={`/case-studies/${study.id}`}
-                    className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors duration-200"
+                    className="inline-flex items-center gap-1 text-blue-40o0 hover:text-blue-30o0 font-medium text-sm transition-colors duration-20o0"
                   >
                     Read More
-                    <ArrowRightIcon className="h-3 w-3" />
+                    <ArrowRightIcon className="h-3 w-3"  />
                   </Link>
                 </div>
               </div>
@@ -271,21 +271,21 @@ export default function CaseStudiesPage() {
 
         {/* CTA Section */}
         <div className="mx-auto mt-24 max-w-2xl">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-sm rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Write Your Success Story?</h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-30o0 mb-6">
               Let's discuss how our AI and technology solutions can transform your organization.
             </p>
             <div className="flex gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+                className="px-6 py-3 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors duration-20o0 font-medium"
               >
                 Start Your Project
               </Link>
               <Link 
                 href="/solutions"
-                className="px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-colors duration-200 font-medium"
+                className="px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-colors duration-20o0 font-medium"
               >
                 View Solutions
               </Link>

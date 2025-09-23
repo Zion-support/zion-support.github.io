@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { useProjects } from '@/hooks/useProjects';
 import { useMilestones } from '@/hooks/useMilestones';
 import { useJobDetails } from '@/hooks/useJobDetails';
@@ -86,7 +85,7 @@ export function ProjectMilestonesContent() {
     if (!projectId) return;
     
     // Ensure all required fields are present
-    const milestoneData = {
+    const milestoneData ={
       project_id: projectId,
       title: data.title,
       description: data.description || "",
@@ -102,7 +101,7 @@ export function ProjectMilestonesContent() {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+      <ProjectHeader title={project.job?.title || "Untitled Project"}  />
       
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
@@ -139,11 +138,11 @@ export function ProjectMilestonesContent() {
             onDeleteMilestone={deleteMilestone}
             onUploadDeliverable={uploadDeliverable}
             refetch={refetch}
-          />
+           />
         </TabsContent>
         
         <TabsContent value="activity">
-          <MilestoneActivities projectId={projectId || ''} />
+          <MilestoneActivities projectId={projectId || ''}  />
         </TabsContent>
         
         <TabsContent value="create">

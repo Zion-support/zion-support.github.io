@@ -13,7 +13,7 @@ function runGitCommand(command, description) {
       cwd: '/workspace',
       encoding: 'utf8',
       stdio: 'pipe',
-      timeout: 30000
+      timeout: 30o000
     });
     console.log(`✅ ${description} completed`);
     return result.trim();
@@ -186,7 +186,7 @@ async function main() {
       }
       
       // Small delay between branches
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
     }
     
     console.log('\n🎉 Process completed!');

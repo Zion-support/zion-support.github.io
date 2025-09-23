@@ -6,7 +6,7 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Guide: Shipping Eval-Ready AI Pipelines</h1>
-          <p className="mt-2 text-gray-300">Bake evals, canaries, and guardrails into CI/CD so changes ship safely and measurably.</p>
+          <p className="mt-2 text-gray-30o0">Bake evals, canaries, and guardrails into CI/CD so changes ship safely and measurably.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>What you will learn</h2>

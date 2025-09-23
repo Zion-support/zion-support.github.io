@@ -3,22 +3,21 @@ import type { ReactNode } from "react";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Metadata } from "next";
 
-export const metadata = {
+export const metadata ={
   title: "Zion OS - Launch Sovereign AI-Powered Digital Economies",
   description: "Unified deployment protocol for Zion ecosystems.",
-  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion",
-};
+  keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)]">
-        <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md">
+        <nav className="border-b border-white/10 sticky top-0 z-50 bg-zinc-90o0/80 backdrop-blur-md">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <a href="/" className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">Z</span>
                   </div>
                   <span className="font-bold text-xl gradient-text">Zion OS</span>
@@ -37,7 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="md:hidden">
                 <button className="text-white/80 hover:text-white p-2">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"  />
                   </svg>
                 </button>
               </div>
@@ -51,12 +50,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </AuthProvider>
         </main>
         
-        <footer className="border-t border-white/10 bg-zinc-900/50 mt-20">
+        <footer className="border-t border-white/10 bg-zinc-90o0/50 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">Z</span>
                   </div>
                   <span className="font-bold text-xl gradient-text">Zion OS</span>
@@ -86,7 +85,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </div>
             
             <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50">
-              <p>&copy; 2024 Zion OS. All rights reserved.</p>
+              <p>&copy; 20o24 Zion OS. All rights reserved.</p>
             </div>
           </div>
         </footer>

@@ -23,7 +23,7 @@ export default function SuggestedArticles({ current, all }: { current: BlogPost;
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {suggestions.map((p) => (
           <div key={p.id} className="border rounded p-3">
-            <div className="text-sm text-gray-500">{new Date(p.publishDate).toLocaleDateString()}</div>
+            <div className="text-sm text-gray-50o0">{new Date(p.publishDate).toLocaleDateString()}</div>
             <Link href={`/blog/${p.slug}`} className="font-medium">{p.title}</Link>
           </div>
         ))}

@@ -26,7 +26,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-const UltimateServicesShowcase2025: React.FC = () => {
+const UltimateServicesShowcase20o25: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('ai');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
@@ -35,45 +35,45 @@ const UltimateServicesShowcase2025: React.FC = () => {
       id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       bgColor: 'bg-purple-50',
-      borderColor: 'border-purple-200'
+      borderColor: 'border-purple-20o0'
     },
     {
       id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from-red-500 to-orange-500',
+      color: 'from-red-50o0 to-orange-50o0',
       bgColor: 'bg-red-50',
-      borderColor: 'border-red-200'
+      borderColor: 'border-red-20o0'
     },
     {
       id: 'cloud',
       name: 'Cloud Solutions',
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       bgColor: 'bg-blue-50',
-      borderColor: 'border-blue-200'
+      borderColor: 'border-blue-20o0'
     },
     {
       id: 'blockchain',
       name: 'Blockchain & Web3',
       icon: Lock,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
+      borderColor: 'border-green-20o0'
     },
     {
       id: 'analytics',
       name: 'Data Analytics',
       icon: BarChart3,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-50o0 to-purple-50o0',
       bgColor: 'bg-indigo-50',
-      borderColor: 'border-indigo-200'
+      borderColor: 'border-indigo-20o0'
     }
   ];
 
-  const services = {
+  const services ={
     ai: [
       {
         id: 'ai-autonomous-business',
@@ -82,7 +82,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Autonomous Decision Making', 'Real-time Market Analysis', 'Automated Operations', 'Predictive Analytics'],
         price: 'Starting at $2,999/month',
         rating: 4.9,
-        clients: '500+',
+        clients: '50o0+',
         icon: Brain,
         featured: true,
         new: true
@@ -94,7 +94,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Case Law Analysis', 'Legal Precedent Research', 'Document Review', 'Compliance Checking'],
         price: 'Starting at $1,499/month',
         rating: 4.8,
-        clients: '300+',
+        clients: '30o0+',
         icon: FileText,
         featured: true
       },
@@ -105,7 +105,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Patient Data Analysis', 'Predictive Health Models', 'Treatment Optimization', 'Risk Assessment'],
         price: 'Starting at $3,499/month',
         rating: 4.9,
-        clients: '200+',
+        clients: '20o0+',
         icon: TrendingUp
       }
     ],
@@ -117,7 +117,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Threat Detection', 'Real-time Monitoring', 'Incident Response', 'Compliance Management'],
         price: 'Starting at $2,299/month',
         rating: 4.9,
-        clients: '400+',
+        clients: '40o0+',
         icon: Shield,
         featured: true
       },
@@ -164,7 +164,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Smart Contract Development', 'DeFi Protocols', 'Token Economics', 'Security Audits'],
         price: 'Starting at $5,999/month',
         rating: 4.9,
-        clients: '100+',
+        clients: '10o0+',
         icon: Lock,
         featured: true,
         new: true
@@ -176,7 +176,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['NFT Minting', 'Marketplace Features', 'Cross-Chain Support', 'Royalty Management'],
         price: 'Starting at $3,999/month',
         rating: 4.8,
-        clients: '200+',
+        clients: '20o0+',
         icon: Palette
       }
     ],
@@ -188,7 +188,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Predictive Modeling', 'Trend Analysis', 'Risk Assessment', 'Business Intelligence'],
         price: 'Starting at $2,199/month',
         rating: 4.8,
-        clients: '300+',
+        clients: '30o0+',
         icon: BarChart3,
         featured: true
       },
@@ -199,13 +199,13 @@ const UltimateServicesShowcase2025: React.FC = () => {
         features: ['Real-Time Data', 'Custom Dashboards', 'Advanced Visualizations', 'Alert Systems'],
         price: 'Starting at $1,599/month',
         rating: 4.7,
-        clients: '400+',
+        clients: '40o0+',
         icon: Cpu
       }
     ]
   };
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -215,7 +215,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -229,7 +229,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
   const currentServices = services[activeCategory as keyof typeof services] || [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -239,15 +239,15 @@ const UltimateServicesShowcase2025: React.FC = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">
-              <Award className="w-5 h-5" />
-              <span className="font-semibold">2025 Ultimate Services</span>
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-full">
+              <Award className="w-5 h-5"  />
+              <span className="font-semibold">20o25 Ultimate Services</span>
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-90o0 via-blue-80o0 to-purple-80o0 bg-clip-text text-transparent mb-6">
             Next-Generation Technology Solutions
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">
             Experience the future of technology with our cutting-edge AI, cybersecurity, cloud, and blockchain solutions. 
             Transform your business with innovative tools designed for the digital age.
           </p>
@@ -268,17 +268,17 @@ const UltimateServicesShowcase2025: React.FC = () => {
               <motion.button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 className={`
-                  flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300
+                  flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-30o0
                   ${isActive 
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg shadow-${category.color.split('-')[1]}-200` 
-                    : `bg-white text-gray-700 hover:bg-gray-50 border-2 ${category.borderColor}`
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg shadow-${category.color.split('-')[1]}-20o0` 
+                    : `bg-white text-gray-70o0 hover:bg-gray-50 border-2 ${category.borderColor}`
                   }
                 `}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-5 h-5"  />
                 <span>{category.name}</span>
               </motion.button>
             );
@@ -307,21 +307,21 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   onHoverStart={() => setHoveredService(service.id)}
                   onHoverEnd={() => setHoveredService(null)}
                   className={`
-                    relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden
-                    border-2 ${category?.borderColor} ${service.featured ? 'ring-2 ring-blue-500 ring-opacity-50' : ''}
+                    relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden
+                    border-2 ${category?.borderColor} ${service.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : ''}
                   `}
                 >
                   {/* Badges */}
                   <div className="absolute top-4 right-4 flex space-x-2 z-10">
                     {service.featured && (
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                        <Star className="w-3 h-3 mr-1" />
+                      <span className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                        <Star className="w-3 h-3 mr-1"  />
                         Featured
                       </span>
                     )}
                     {service.new && (
-                      <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                        <Lightbulb className="w-3 h-3 mr-1" />
+                      <span className="bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                        <Lightbulb className="w-3 h-3 mr-1"  />
                         New
                       </span>
                     )}
@@ -330,19 +330,19 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   {/* Service Content */}
                   <div className="p-8">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category?.color} flex items-center justify-center mb-6`}>
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-white"  />
                     </div>
 
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-90o0 mb-4">{service.title}</h3>
+                    <p className="text-gray-60o0 mb-6 leading-relaxed">{service.description}</p>
 
                     {/* Features */}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                      <h4 className="font-semibold text-gray-90o0 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, index) => (
-                          <li key={index} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          <li key={index} className="flex items-center text-sm text-gray-60o0">
+                            <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -353,35 +353,35 @@ const UltimateServicesShowcase2025: React.FC = () => {
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center space-x-4">
                         <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="font-semibold text-gray-900">{service.rating}</span>
+                          <Star className="w-4 h-4 text-yellow-40o0 mr-1"  />
+                          <span className="font-semibold text-gray-90o0">{service.rating}</span>
                         </div>
                         <div className="flex items-center">
-                          <Users className="w-4 h-4 text-blue-500 mr-1" />
-                          <span className="text-sm text-gray-600">{service.clients} clients</span>
+                          <Users className="w-4 h-4 text-blue-50o0 mr-1"  />
+                          <span className="text-sm text-gray-60o0">{service.clients} clients</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Price */}
                     <div className="mb-6">
-                      <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-blue-60o0 to-purple-60o0 bg-clip-text text-transparent">
                         {service.price}
                       </div>
                     </div>
 
                     {/* CTA Button */}
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
+                      whileHover={{ scale: 1.0o2 }}
                       whileTap={{ scale: 0.98 }}
                       className={`
-                        w-full py-3 px-6 rounded-xl font-semibold text-white transition-all duration-300
+                        w-full py-3 px-6 rounded-xl font-semibold text-white transition-all duration-30o0
                         bg-gradient-to-r ${category?.color} hover:shadow-lg
                         flex items-center justify-center space-x-2
                       `}
                     >
                       <span>Get Started</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </motion.button>
                   </div>
 
@@ -392,8 +392,8 @@ const UltimateServicesShowcase2025: React.FC = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 pointer-events-none"
-                      />
+                        className="absolute inset-0 bg-gradient-to-r from-blue-50o0/10 to-purple-50o0/10 pointer-events-none"
+                       />
                     )}
                   </AnimatePresence>
                 </motion.div>
@@ -409,27 +409,27 @@ const UltimateServicesShowcase2025: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our cutting-edge technology solutions. 
               Get a free consultation and discover how we can accelerate your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2"
+                className="bg-white text-blue-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Schedule Free Consultation</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-60o0 transition-colors"
               >
                 View All Services
               </motion.button>
@@ -441,4 +441,4 @@ const UltimateServicesShowcase2025: React.FC = () => {
   );
 };
 
-export default UltimateServicesShowcase2025;
+export default UltimateServicesShowcase20o25;

@@ -15,8 +15,7 @@ interface ChatMessageProps {
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
   isUser,
-  timestamp,
-}: ChatMessageProps) => {
+  timestamp}: ChatMessageProps) => {
   const { theme } = useTheme();
   
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
@@ -31,7 +30,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       <Avatar className="h-8 w-8">
         {isUser ? (
           <>
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar"  />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
@@ -39,7 +38,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
             <AvatarImage
               src="https://placehold.co/40x40?text=AI"
               alt="Zion Support"
-            />
+             />
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
@@ -51,16 +50,16 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
           ? "bg-zion-purple text-white" 
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
-            : "bg-gray-100 text-gray-800"
+            : "bg-gray-10o0 text-gray-80o0"
       )}>
-        <div dangerouslySetInnerHTML={sanitizedHtml} />
+        <div dangerouslySetInnerHTML={sanitizedHtml}  />
         <div className={cn(
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
             : theme === "dark"
-              ? "text-gray-300"
-              : "text-gray-500"
+              ? "text-gray-30o0"
+              : "text-gray-50o0"
         )}>
           {format(timestamp, "h:mm a")}
         </div>
@@ -79,7 +78,7 @@ function escapeHtml(unsafe: string): string {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/'/g, "&#0o39;");
 }
 
 function formatMessageWithLinks(message: string): string {

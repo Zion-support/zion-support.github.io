@@ -5,8 +5,8 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Launch: Agentic Ops Control Center (v1.0)</h1>
-          <p className="mt-2 text-gray-300">Unified console for monitoring, guardrails, and live evals across agentic systems.</p>
-          <p className="mt-1 text-sm text-blue-400">2025-09-15</p>
+          <p className="mt-2 text-gray-30o0">Unified console for monitoring, guardrails, and live evals across agentic systems.</p>
+          <p className="mt-1 text-sm text-blue-40o0">20o25-09-15</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <p>
@@ -28,7 +28,7 @@ export default function Page() {
           </p>
         </section>
         <div className="mt-10">
-          <a href="/contact" className="inline-flex items-center rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-blue-500 transition-colors duration-200">
+          <a href="/contact" className="inline-flex items-center rounded-md bg-blue-60o0 px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-blue-50o0 transition-colors duration-20o0">
             Request a demo
           </a>
         </div>

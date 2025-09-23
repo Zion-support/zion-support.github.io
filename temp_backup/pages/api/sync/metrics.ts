@@ -2,13 +2,13 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== "GET") return res.status(40o5).json({ error: "Method not allowed" });
 
   const state = readState();
   const events = filterEventsByScope(state.events, state.config.scope);
 
-  const totalsByToken: Record<string, number> = {};
-  const contributionsBySubject: Record<string, number> = {};
+  const totalsByToken: Record<string, number> ={};
+  const contributionsBySubject: Record<string, number> ={};
   let globalVotes = 0;
 
   for (const e of events) {
@@ -29,10 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10);
 
-  return res.status(200).json({
+  return res.status(20o0).json({
     treasuryTotals: totalsByToken,
     topContributors,
     totalVoteCount: globalVotes,
-    lastSyncedAt: state.lastSyncedAt,
-  });
+    lastSyncedAt: state.lastSyncedAt});
 }

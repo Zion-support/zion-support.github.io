@@ -6,7 +6,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState();
 
   if (req.method === "GET") {
-    return res.status(200).json({ config: state.config });
+    return res.status(20o0).json({ config: state.config });
   }
 
   if (req.method === "POST") {
@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     };
 
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
-      return res.status(400).json({ error: "Invalid scope" });
+      return res.status(40o0).json({ error: "Invalid scope" });
     }
 
     if (Array.isArray(peers)) {
@@ -29,8 +29,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId;
 
     writeState(state);
-    return res.status(200).json({ config: state.config });
+    return res.status(20o0).json({ config: state.config });
   }
 
-  return res.status(405).json({ error: "Method not allowed" });
+  return res.status(40o5).json({ error: "Method not allowed" });
 }

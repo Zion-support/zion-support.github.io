@@ -19,8 +19,8 @@ export default function MarketResearchPage() {
         'AI content generation toolsPredictive analytics platforms',
         'Automated customer serviceIntelligent process automation'
       ],
-      color: 'from-fuchsia-500 to-purple-600',
-      icon: <Zap className="w-8 h-8 text-white" />
+      color: 'from-fuchsia-50o0 to-purple-60o0',
+      icon: <Zap className="w-8 h-8 text-white"  />
     },
     {
       name: 'Database & Analytics',
@@ -35,8 +35,8 @@ export default function MarketResearchPage() {
         'Database performance monitoringReal-time analytics dashboards',
         'Data visualization toolsQuery optimization platforms'
       ],
-      color: 'from-cyan-500 to-blue-600',
-      icon: <BarChart3 className="w-8 h-8 text-white" />
+      color: 'from-cyan-50o0 to-blue-60o0',
+      icon: <BarChart3 className="w-8 h-8 text-white"  />
     },
     {
       name: 'Security & Identity',
@@ -51,8 +51,8 @@ export default function MarketResearchPage() {
         'Identity verification platformsAPI security gateways',
         'Compliance monitoring toolsThreat detection systems'
       ],
-      color: 'from-green-500 to-emerald-600',
-      icon: <Target className="w-8 h-8 text-white" />
+      color: 'from-green-50o0 to-emerald-60o0',
+      icon: <Target className="w-8 h-8 text-white"  />
     },
     {
       name: 'Business Intelligence',
@@ -67,8 +67,8 @@ export default function MarketResearchPage() {
         'Custom dashboard buildersData integration platforms',
         'Mobile analytics solutionsPredictive modeling tools'
       ],
-      color: 'from-orange-500 to-red-600',
-      icon: <Activity className="w-8 h-8 text-white" />
+      color: 'from-orange-50o0 to-red-60o0',
+      icon: <Activity className="w-8 h-8 text-white"  />
     },
     {
       name: 'API Management',
@@ -83,8 +83,8 @@ export default function MarketResearchPage() {
         'API rate limiting servicesDeveloper portal platforms',
         'API analytics toolsWebhook management systems'
       ],
-      color: 'from-indigo-500 to-purple-600',
-      icon: <Globe className="w-8 h-8 text-white" />
+      color: 'from-indigo-50o0 to-purple-60o0',
+      icon: <Globe className="w-8 h-8 text-white"  />
     },
     {
       name: 'User Experience Analytics',
@@ -99,8 +99,8 @@ export default function MarketResearchPage() {
         'Heatmap and session recordingA/B testing platforms',
         'User journey mapping toolsConversion funnel analytics'
       ],
-      color: 'from-teal-500 to-cyan-600',
-      icon: <Users className="w-8 h-8 text-white" />
+      color: 'from-teal-50o0 to-cyan-60o0',
+      icon: <Users className="w-8 h-8 text-white"  />
     }
   ],
 
@@ -117,7 +117,7 @@ export default function MarketResearchPage() {
         'Difficult customizationLong implementation times'
       ],
       marketShare: '45-60%',
-      pricing: 'High ($1000+/month)'
+      pricing: 'High ($10o00+/month)'
     },
     {
       company: 'Mid-Market Leaders',
@@ -131,7 +131,7 @@ export default function MarketResearchPage() {
         'Dependency on integrationsScalability challenges'
       ],
       marketShare: '25-35%',
-      pricing: 'Medium ($100-500/month)'
+      pricing: 'Medium ($10o0-50o0/month)'
     },
     {
       company: 'Micro SaaS Innovators',
@@ -145,7 +145,7 @@ export default function MarketResearchPage() {
         'Integration dependenciesMarket volatility risk'
       ],
       marketShare: '15-25%',
-      pricing: 'Low ($10-100/month)'
+      pricing: 'Low ($10-10o0/month)'
     }
   ],
 
@@ -154,7 +154,7 @@ export default function MarketResearchPage() {
       trend: 'AI-First Approach',
       description: 'Companies prioritizing AI capabilities in their products',
       impact: 'High',
-      timeline: '2024-2026',
+      timeline: '20o24-20o26',
       examples: [
         'AI-powered content generationIntelligent automation',
         'Predictive analyticsNatural language interfaces'
@@ -165,7 +165,7 @@ export default function MarketResearchPage() {
       trend: 'Privacy-First Design',
       description: 'Growing focus on data privacy and compliance',
       impact: 'High',
-      timeline: '2024-2027',
+      timeline: '20o24-20o27',
       examples: [
         'GDPR compliance toolsPrivacy analytics platforms',
         'Data anonymization servicesConsent management systems'
@@ -176,7 +176,7 @@ export default function MarketResearchPage() {
       trend: 'API-First Architecture',
       description: 'Shift towards API-centric application development',
       impact: 'Medium',
-      timeline: '2024-2026',
+      timeline: '20o24-20o26',
       examples: [
         'API management platformsDeveloper experience tools',
         'API analytics and monitoringIntegration platforms'
@@ -187,7 +187,7 @@ export default function MarketResearchPage() {
       trend: 'Real-Time Everything',
       description: 'Demand for real-time data and analytics',
       impact: 'Medium',
-      timeline: '2024-2025',
+      timeline: '20o24-20o25',
       examples: [
         'Real-time dashboardsLive collaboration tools',
         'Instant notificationsStreaming analytics'
@@ -243,7 +243,7 @@ export default function MarketResearchPage() {
       metric: 'Total VC Investment',
       value: '$45.2B',
       change: '+18.7% YoY',
-      description: 'Venture capital investment in SaaS companies in 2024'
+      description: 'Venture capital investment in SaaS companies in 20o24'
     },
     {
       metric: 'Average Series A',
@@ -269,27 +269,27 @@ export default function MarketResearchPage() {
     <>
       <Head>
         <title>Market Research & Industry Insights | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions." />
-        <meta property="og:title" content="Market Research & Industry Insights | Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Comprehensive market research, competitive analysis, and industry insights for micro SaaS services. Data-driven market intelligence to inform your business decisions."  />
+        <meta property="og:title" content="Market Research & Industry Insights | Zion Tech Group"  />
+        <meta property="og:description" content="Comprehensive market research and competitive analysis for micro SaaS services."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,20o4,0.08),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,20o4,0.0o6),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-grid opacity-10"  />
         
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse"  />
             Market Intelligence
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
             Comprehensive Market Research & Industry Insights
           </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed">
             Data-driven market intelligence, competitive analysis, and industry trends to help you make informed decisions about your micro SaaS business strategy and market positioning.
           </p>
         </div>
@@ -302,7 +302,7 @@ export default function MarketResearchPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Investment & Market Metrics
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Key investment metrics and market indicators for the SaaS industry to help you understand the current market landscape.
             </p>
           </div>
@@ -316,10 +316,10 @@ export default function MarketResearchPage() {
               >
                 <div className="p-6">
                   <div className="text-3xl font-bold text-white mb-2">{insight.value}</div>
-                  <div className="text-sm text-gray-400 mb-3">{insight.metric}</div>
-                  <div className="text-sm text-gray-300 mb-4">{insight.description}</div>
-                  <div className="inline-flex items-center text-sm text-green-400">
-                    <TrendingUp className="w-4 h-4 mr-1" />
+                  <div className="text-sm text-gray-40o0 mb-3">{insight.metric}</div>
+                  <div className="text-sm text-gray-30o0 mb-4">{insight.description}</div>
+                  <div className="inline-flex items-center text-sm text-green-40o0">
+                    <TrendingUp className="w-4 h-4 mr-1"  />
                     {insight.change}
                   </div>
                 </div>
@@ -336,7 +336,7 @@ export default function MarketResearchPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Market Segment Analysis
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Detailed analysis of key micro SaaS market segments with market size, growth rates, trends, and opportunities.
             </p>
           </div>
@@ -363,12 +363,12 @@ export default function MarketResearchPage() {
                         {/* Market Data */}
                         <div className="space-y-3 text-sm mb-6">
                           <div className="flex items-center justify-between">
-                            <span className="text-gray-400">Market Size:</span>
+                            <span className="text-gray-40o0">Market Size:</span>
                             <span className="text-white font-semibold">{segment.marketSize}</span>
                           </div>
                           <div className="flex items-center justify-between">
-                            <span className="text-gray-400">Growth Rate:</span>
-                            <span className="text-green-400 font-semibold">{segment.growthRate}</span>
+                            <span className="text-gray-40o0">Growth Rate:</span>
+                            <span className="text-green-40o0 font-semibold">{segment.growthRate}</span>
                           </div>
                         </div>
                       </div>
@@ -380,13 +380,13 @@ export default function MarketResearchPage() {
                         {/* Key Trends */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                            <TrendingUp className="w-5 h-5 mr-2 text-green-400" />
+                            <TrendingUp className="w-5 h-5 mr-2 text-green-40o0"  />
                             Key Trends
                           </h4>
                           <ul className="space-y-2">
                             {segment.keyTrends.map((trend, trendIndex) => (
-                              <li key={trendIndex} className="flex items-start text-gray-300 text-sm">
-                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+                              <li key={trendIndex} className="flex items-start text-gray-30o0 text-sm">
+                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0"  />
                                 {trend}
                               </li>
                             ))}
@@ -396,13 +396,13 @@ export default function MarketResearchPage() {
                         {/* Top Players */}
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                            <Award className="w-5 h-5 mr-2 text-yellow-400" />
+                            <Award className="w-5 h-5 mr-2 text-yellow-40o0"  />
                             Top Players
                           </h4>
                           <ul className="space-y-2">
                             {segment.topPlayers.map((player, playerIndex) => (
-                              <li key={playerIndex} className="flex items-start text-gray-300 text-sm">
-                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+                              <li key={playerIndex} className="flex items-start text-gray-30o0 text-sm">
+                                <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0"  />
                                 {player}
                               </li>
                             ))}
@@ -411,15 +411,15 @@ export default function MarketResearchPage() {
                       </div>
 
                       {/* Opportunities */}
-                      <div className="mt-8 pt-6 border-t border-gray-700">
+                      <div className="mt-8 pt-6 border-t border-gray-70o0">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                          <Target className="w-5 h-5 mr-2 text-blue-400" />
+                          <Target className="w-5 h-5 mr-2 text-blue-40o0"  />
                           Market Opportunities
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {segment.opportunities.map((opportunity, oppIndex) => (
-                            <div key={oppIndex} className="flex items-start text-gray-300 text-sm">
-                              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0" />
+                            <div key={oppIndex} className="flex items-start text-gray-30o0 text-sm">
+                              <span className="w-2 h-2 bg-cursor-blue rounded-full mr-3 mt-2 flex-shrink-0"  />
                               {opportunity}
                             </div>
                           ))}
@@ -441,7 +441,7 @@ export default function MarketResearchPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Competitive Landscape Analysis
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Understanding the competitive landscape and positioning strategies for different types of SaaS companies.
             </p>
           </div>
@@ -458,29 +458,29 @@ export default function MarketResearchPage() {
                   
                   {/* Examples */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <div className="text-sm text-gray-300">{analysis.examples.join()}</div>
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Examples:</h4>
+                    <div className="text-sm text-gray-30o0">{analysis.examples.join()}</div>
                   </div>
 
                   {/* Market Share & Pricing */}
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                     <div>
-                      <span className="text-gray-400">Market Share:</span>
+                      <span className="text-gray-40o0">Market Share:</span>
                       <div className="text-white font-semibold">{analysis.marketShare}</div>
                     </div>
                     <div>
-                      <span className="text-gray-400">Pricing:</span>
+                      <span className="text-gray-40o0">Pricing:</span>
                       <div className="text-white font-semibold">{analysis.pricing}</div>
                     </div>
                   </div>
 
                   {/* Strengths */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
+                    <h4 className="text-sm font-semibold text-green-40o0 mb-2">Strengths:</h4>
+                    <ul className="space-y-1 text-xs text-gray-30o0">
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-green-40o0 rounded-full mr-2 mt-1.5 flex-shrink-0"  />
                           {strength}
                         </li>
                       ))}
@@ -489,11 +489,11 @@ export default function MarketResearchPage() {
 
                   {/* Weaknesses */}
                   <div>
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
+                    <h4 className="text-sm font-semibold text-red-40o0 mb-2">Weaknesses:</h4>
+                    <ul className="space-y-1 text-xs text-gray-30o0">
                       {analysis.weaknesses.map((weakness, weaknessIndex) => (
                         <li key={weaknessIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-red-40o0 rounded-full mr-2 mt-1.5 flex-shrink-0"  />
                           {weakness}
                         </li>
                       ))}
@@ -513,7 +513,7 @@ export default function MarketResearchPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Emerging Market Trends
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Key trends shaping the micro SaaS landscape and creating new opportunities for innovation and growth.
             </p>
           </div>
@@ -530,26 +530,26 @@ export default function MarketResearchPage() {
                     <h3 className="text-xl font-bold text-white">{trend.trend}</h3>
                     <div className="flex items-center space-x-2">
                       <span className={`px-2 py-1 rounded text-xs font-medium ${
-                        trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
-                        trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-green-500/20 text-green-400'
+                        trend.impact === 'High' ? 'bg-red-50o0/20 text-red-40o0' :
+                        trend.impact === 'Medium' ? 'bg-yellow-50o0/20 text-yellow-40o0' :
+                        'bg-green-50o0/20 text-green-40o0'
                       }`}>
                         {trend.impact} Impact
                       </span>
-                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
+                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-50o0/20 text-blue-40o0">
                         {trend.timeline}
                       </span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <p className="text-gray-30o0 mb-4">{trend.description}</p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Examples:</h4>
+                    <ul className="space-y-1 text-xs text-gray-30o0">
                       {trend.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0"  />
                           {example}
                         </li>
                       ))}
@@ -557,8 +557,8 @@ export default function MarketResearchPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
-                    <p className="text-xs text-gray-300">{trend.opportunities}</p>
+                    <h4 className="text-sm font-semibold text-green-40o0 mb-2">Opportunities:</h4>
+                    <p className="text-xs text-gray-30o0">{trend.opportunities}</p>
                   </div>
                 </div>
               </Card>
@@ -574,7 +574,7 @@ export default function MarketResearchPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Pricing Strategy Analysis
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.
             </p>
           </div>
@@ -588,15 +588,15 @@ export default function MarketResearchPage() {
               >
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
-                  <p className="text-gray-300 mb-6">{strategy.description}</p>
+                  <p className="text-gray-30o0 mb-6">{strategy.description}</p>
                   
                   {/* Pros */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
+                    <h4 className="text-sm font-semibold text-green-40o0 mb-2">Pros:</h4>
+                    <ul className="space-y-1 text-xs text-gray-30o0">
                       {strategy.pros.map((pro, proIndex) => (
                         <li key={proIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-green-40o0 rounded-full mr-2 mt-1.5 flex-shrink-0"  />
                           {pro}
                         </li>
                       ))}
@@ -605,11 +605,11 @@ export default function MarketResearchPage() {
 
                   {/* Cons */}
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
+                    <h4 className="text-sm font-semibold text-red-40o0 mb-2">Cons:</h4>
+                    <ul className="space-y-1 text-xs text-gray-30o0">
                       {strategy.cons.map((con, conIndex) => (
                         <li key={conIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-red-40o0 rounded-full mr-2 mt-1.5 flex-shrink-0"  />
                           {con}
                         </li>
                       ))}
@@ -618,8 +618,8 @@ export default function MarketResearchPage() {
 
                   {/* Best For */}
                   <div>
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
-                    <p className="text-xs text-gray-300">{strategy.bestFor}</p>
+                    <h4 className="text-sm font-semibold text-blue-40o0 mb-2">Best For:</h4>
+                    <p className="text-xs text-gray-30o0">{strategy.bestFor}</p>
                   </div>
                 </div>
               </Card>
@@ -629,20 +629,20 @@ export default function MarketResearchPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dots opacity-10" />
+      <section className="section-padding bg-gradient-to-r from-cursor-blue to-blue-60o0 relative overflow-hidden">
+        <div className="absolute inset-0 bg-dots opacity-10"  />
         <div className="container-cursor text-center relative z-10">
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Apply This Market Intelligence?
           </h2>
-          <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-responsive-md text-blue-10o0 mb-12 max-w-4xl mx-auto leading-relaxed">
             Use our market research and competitive analysis to inform your business strategy, pricing decisions, and market positioning.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
             <Button
               href="/contact"
               size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow"
+              className="bg-white text-cursor-blue hover:bg-gray-10o0 shadow-2xl hover-glow"
             >
               Get Strategic Consultation
             </Button>

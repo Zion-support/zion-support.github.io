@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function WebDevelopmentChatPage() {
@@ -6,7 +5,7 @@ export default function WebDevelopmentChatPage() {
     <>
       <Head>
         <title>Web Development Chat - Zion Tech Group</title>
-        <meta name="description" content="web development chat page" />
+        <meta name="description" content="web development chat page"  />
       </Head>
       
       <main>

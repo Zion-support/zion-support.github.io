@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -13,26 +12,26 @@ export default function CloudCostOptimizerPage() {
     {
       title: 'Auto Rightsizing',
       description: 'Automatically optimize instance sizes based on actual usage patterns',
-      icon: <TrendingDown className="w-8 h-8" />,
-      color: 'from-green-500 to-emerald-500'
+      icon: <TrendingDown className="w-8 h-8"  />,
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
       title: 'Idle Resource Cleanup',
       description: 'Identify and terminate unused resources to eliminate waste',
-      icon: <Zap className="w-8 h-8" />,
-      color: 'from-yellow-500 to-orange-500'
+      icon: <Zap className="w-8 h-8"  />,
+      color: 'from-yellow-50o0 to-orange-50o0'
     },
     {
       title: 'Spot Instance Orchestration',
       description: 'Leverage spot instances for significant cost savings',
-      icon: <Cloud className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500'
+      icon: <Cloud className="w-8 h-8"  />,
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       title: 'Anomaly Detection',
       description: 'AI-powered detection of unusual spending patterns',
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500'
+      icon: <BarChart3 className="w-8 h-8"  />,
+      color: 'from-purple-50o0 to-pink-50o0'
     }
   ];
 
@@ -76,7 +75,7 @@ export default function CloudCostOptimizerPage() {
         description={service.description}
         keywords={["cloud cost optimization", "FinOps", "cloud savings", "resource optimization", "Zion Tech Group"]}
         canonical="https://ziontechgroup.com/cloud-cost-optimizer"
-      />
+       />
 
       {/* Hero Section */}
       <section className="relative py-16 lg:py-24">
@@ -87,13 +86,13 @@ export default function CloudCostOptimizerPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 mb-6">
-              <Cloud className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r from-cyan-50o0 to-blue-60o0 mb-6">
+              <Cloud className="w-10 h-10 text-white"  />
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               {service.name}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
               {service.tagline}
             </p>
             
@@ -101,19 +100,19 @@ export default function CloudCostOptimizerPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">{service.price}</div>
-                <div className="text-sm text-gray-400">{service.period}</div>
+                <div className="text-sm text-gray-40o0">{service.period}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">{service.trialDays}</div>
-                <div className="text-sm text-gray-400">Day Trial</div>
+                <div className="text-sm text-gray-40o0">Day Trial</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">{service.setupTime}</div>
-                <div className="text-sm text-gray-400">Setup</div>
+                <div className="text-sm text-gray-40o0">Setup</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">{service.rating.toFixed(1)}</div>
-                <div className="text-sm text-gray-400">Rating</div>
+                <div className="text-sm text-gray-40o0">Rating</div>
               </div>
             </div>
           </motion.div>
@@ -130,10 +129,10 @@ export default function CloudCostOptimizerPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/5 rounded-2xl border border-cyan-500/30 p-8"
+                className="bg-white/5 rounded-2xl border border-cyan-50o0/30 p-8"
               >
                 <h2 className="text-3xl font-bold text-white mb-6">Optimization Capabilities</h2>
-                <p className="text-gray-300 mb-8 text-lg">{service.description}</p>
+                <p className="text-gray-30o0 mb-8 text-lg">{service.description}</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {features.map((feature, index) => (
@@ -142,17 +141,17 @@ export default function CloudCostOptimizerPage() {
                         {feature.icon}
                       </div>
                       <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
-                      <p className="text-gray-300 text-sm">{feature.description}</p>
+                      <p className="text-gray-30o0 text-sm">{feature.description}</p>
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
+                <div className="flex items-center text-yellow-40o0"><Star className="w-4 h-4 mr-1"  />{service.rating.toFixed(1)}</div>
               </div>
-              <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Saving<ArrowRight className="w-5 h-5 ml-2" /></Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+              <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Saving<ArrowRight className="w-5 h-5 ml-2"  /></Button>
+              <div className="mt-6 space-y-3 text-sm text-slate-30o0">
+                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-40o0"  /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-40o0"  /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-40o0"  /><span className="text-xs">{service.contactInfo.address}</span></div>
               </div>
             </div>
           </div>
@@ -178,28 +177,28 @@ export default function CloudCostOptimizerPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-cyan-50o0/50 transition-all duration-30o0"
               >
                 <h3 className="text-white font-semibold mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-2">
                   {plan.price}
-                  <span className="text-base text-gray-400">{plan.period}</span>
+                  <span className="text-base text-gray-40o0">{plan.period}</span>
                 </div>
-                <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
-                <ul className="space-y-2 text-gray-300 text-sm mb-6">
+                <p className="text-gray-40o0 text-sm mb-4">{plan.description}</p>
+                <ul className="space-y-2 text-gray-30o0 text-sm mb-6">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <Check className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-emerald-40o0 mt-0.5 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="/contact"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 text-sm font-medium"
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </a>
               </motion.div>
             ))}
@@ -216,20 +215,20 @@ export default function CloudCostOptimizerPage() {
             transition={{ duration: 0.6, delay: 1.0 }}
           >
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Optimize Your Cloud Costs?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Start saving money on your cloud infrastructure today with our intelligent optimization platform.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
-                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold"
+                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 font-semibold"
               >
                 Start Saving
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </a>
               <a
                 href="/services"
-                className="flex items-center gap-2 px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 font-semibold"
+                className="flex items-center gap-2 px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-30o0 border border-white/20 font-semibold"
               >
                 View All Services
               </a>

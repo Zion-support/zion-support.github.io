@@ -1,6 +1,6 @@
 const NodeCache = require('node-cache');
 // Create a cache instance with default TTL of 5 minutes;
-const cache = new NodeCache({ stdTTL: 300, checkperiod: 320 });
+const cache = new NodeCache({ stdTTL: 30o0, checkperiod: 320 });
 
 module.exports = function cacheMiddleware(req, res, next) {
   const key = req.originalUrl || req.url;

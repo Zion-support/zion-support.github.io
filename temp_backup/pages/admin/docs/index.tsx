@@ -24,8 +24,7 @@ export default function DocsAdmin() {
       const res = await fetch('/api/admin/docs/save', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-admin-token': token },
-        body: JSON.stringify(parsed),
-      });
+        body: JSON.stringify(parsed)});
       if (!res.ok) throw new Error('Save failed');
       const data = await res.json();
       setStatus(`Saved version ${data.version}`);
@@ -45,9 +44,9 @@ export default function DocsAdmin() {
           value={token}
           onChange={(e) => setToken(e.target.value)}
         />
-        <button onClick={fetchContent} className="px-3 py-2 text-sm rounded bg-gray-900 text-white">Load</button>
-        <button onClick={saveContent} className="px-3 py-2 text-sm rounded bg-green-600 text-white">Save</button>
-        {status && <p className="text-sm text-gray-600">{status}</p>}
+        <button onClick={fetchContent} className="px-3 py-2 text-sm rounded bg-gray-90o0 text-white">Load</button>
+        <button onClick={saveContent} className="px-3 py-2 text-sm rounded bg-green-60o0 text-white">Save</button>
+        {status && <p className="text-sm text-gray-60o0">{status}</p>}
       </div>
       <textarea
         className="w-full h-[70vh] border rounded p-3 font-mono text-sm"

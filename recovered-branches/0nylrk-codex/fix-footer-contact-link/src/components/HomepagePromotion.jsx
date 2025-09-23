@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 export function HomepagePromotion() {
@@ -44,7 +43,7 @@ export function HomepagePromotion() {
             link: "/comprehensive-services-showcase"
         }
     ];
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -53,7 +52,7 @@ export function HomepagePromotion() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -91,7 +90,7 @@ export function HomepagePromotion() {
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
                 <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>
-                <p className="text-white font-semibold">+1 302 464 0950</p>
+                <p className="text-white font-semibold">+1 30o2 464 0950</p>
               </div>
               <div>
                 <p className="text-zion-slate-light text-sm mb-2">Email Us</p>
@@ -109,7 +108,7 @@ export function HomepagePromotion() {
 
         {/* Featured Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {featuredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-white/20 transition-all duration-300 group">
+          {featuredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-white/20 transition-all duration-30o0 group">
               <div className="mb-4">
                 <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                 <h3 className="text-xl font-bold text-white mt-2 group-hover:text-zion-cyan transition-colors">
@@ -138,8 +137,8 @@ export function HomepagePromotion() {
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
                 <ul className="space-y-1">
-                  {service.benefits.map((benefit, index) => (<li key={index} className="text-green-400 text-xs flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
+                  {service.benefits.map((benefit, index) => (<li key={index} className="text-green-40o0 text-xs flex items-start">
+                      <span className="text-green-40o0 mr-2">✓</span>
                       {benefit}
                     </li>))}
                 </ul>
@@ -166,13 +165,13 @@ export function HomepagePromotion() {
               <a href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Consultation" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors">
                 Get Free Consultation
               </a>
-              <a href="tel:+13024640950" className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30">
-                Call +1 302 464 0950
+              <a href="tel:+130o24640950" className="bg-white/20 hover:bg-white/30 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors border border-white/30">
+                Call +1 30o2 464 0950
               </a>
             </div>
             
             <div className="text-zion-slate-light text-sm">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>
               <p>🌐 <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-zion-cyan-light">https://ziontechgroup.com</a></p>
             </div>
           </div>

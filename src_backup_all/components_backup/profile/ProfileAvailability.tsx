@@ -10,9 +10,9 @@ interface ProfileAvailabilityProps {
 export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch(status) {
-      case 'available': return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
-      case 'limited': return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
-      case 'unavailable': return 'bg-rose-500/20 text-rose-400 border-rose-500/30';
+      case 'available': return 'bg-emerald-50o0/20 text-emerald-40o0 border-emerald-50o0/30';
+      case 'limited': return 'bg-amber-50o0/20 text-amber-40o0 border-amber-50o0/30';
+      case 'unavailable': return 'bg-rose-50o0/20 text-rose-40o0 border-rose-50o0/30';
       default: return '';
     }
   };
@@ -40,7 +40,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         
         {availability.nextAvailable && availability.status !== 'available' && (
           <div className="flex items-center gap-2 text-zion-slate-light">
-            <Calendar className="h-4 w-4" />
+            <Calendar className="h-4 w-4"  />
             <span>Next available: {availability.nextAvailable}</span>
           </div>
         )}
@@ -58,7 +58,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
               <div key={index} className="flex items-center gap-2 text-zion-slate">
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4 text-zion-cyan" />
+                  <Clock className="h-4 w-4 text-zion-cyan"  />
                   <span>{slot.hours}</span>
                 </div>
               </div>

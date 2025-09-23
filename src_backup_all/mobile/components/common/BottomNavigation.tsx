@@ -1,5 +1,3 @@
-import React from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -8,10 +6,10 @@ export function BottomNavigation() {
   const router = useRouter();
   
   const navItems = [
-    { path: "/mobile", icon: <Home />, label: "Home" },
-    { path: "/mobile/marketplace", icon: <ShoppingBag />, label: "Marketplace" },
-    { path: "/mobile/community", icon: <Users />, label: "Community" },
-    { path: "/mobile/profile", icon: <User />, label: "Profile" },
+    { path: "/mobile", icon: <Home  />, label: "Home" },
+    { path: "/mobile/marketplace", icon: <ShoppingBag  />, label: "Marketplace" },
+    { path: "/mobile/community", icon: <Users  />, label: "Community" },
+    { path: "/mobile/profile", icon: <User  />, label: "Profile" },
   ];
 
   return (

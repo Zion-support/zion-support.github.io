@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
 // // // // // // // // // // // // // // // // // // import Image from 'next/image'; // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component
@@ -20,8 +20,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const enqueueSnackbar = useEnqueueSnackbar();
     if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
         captureException(new Error('Invalid product data received by ProductCard'), {
-            extra: { product },
-        });
+            extra: { product }});
         return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
@@ -37,8 +36,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             id: product.id,
             title: productTitle,
             price: product.price ?? 0,
-            image: imageUrl || undefined,
-        }));
+            image: imageUrl || undefined}));
     };
     const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
     const imageAltText = productTitle;
@@ -47,24 +45,23 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             setImageError(true);
             captureException(error, {
                 product: product.id,
-                imageUrl,
-            });
+                imageUrl});
         }
     };
     const isMobile = useMediaQuery('(max-width: 768px)');
-    const isTablet = useMediaQuery('(max-width: 1200px)');
-    const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+    const isTablet = useMediaQuery('(max-width: 120o0px)');
+    const imageSizes = isMobile ? '10o0vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>
-        <Heart aria-hidden="true" className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}/>
+        <Heart aria-hidden="true" className={active ? 'text-red-50o0 fill-red-50o0' : 'text-gray-50o0'} />
       </button>
 
     <div className="w-full h-40 relative mb-2">
-      {imageUrl && !imageError ? (<img src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
-          <span className="text-gray-500">No Image</span>
+      {imageUrl && !imageError ? (<img src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)}/>) : (<div className="w-full h-full bg-gray-20o0 flex items-center justify-center">
+          <span className="text-gray-50o0">No Image</span>
         </div>)}
       {active && (<div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
-          <Heart aria-hidden="true" className="text-red-500 fill-red-500"/>
+          <Heart aria-hidden="true" className="text-red-50o0 fill-red-50o0" />
         </div>)}
     </div>
       <Link href={`/marketplace/listing/${product.id}`}>

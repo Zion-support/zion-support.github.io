@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +13,7 @@ export function TalentDashboard() {
           <h2 className="text-lg font-medium">New Job Matches</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
-              View all <ChevronRight className="h-4 w-4" />
+              View all <ChevronRight className="h-4 w-4"  />
             </Button>
           </Link>
         </div>
@@ -109,7 +108,7 @@ export function TalentDashboard() {
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="Update Resume"
           >
-            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
+            <FileText className="h-5 w-5 mb-1" aria-hidden="true"  />
             <span>Update Resume</span>
           </Button>
           <Button
@@ -117,7 +116,7 @@ export function TalentDashboard() {
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="View Portfolio"
           >
-            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
+            <Image className="h-5 w-5 mb-1" aria-hidden="true"  />
             <span>Portfolio</span>
           </Button>
           <Button
@@ -125,11 +124,11 @@ export function TalentDashboard() {
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="Set Availability"
           >
-            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
+            <Clock className="h-5 w-5 mb-1" aria-hidden="true"  />
             <span>Availability</span>
           </Button>
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
-            <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
+            <Zap className="h-5 w-5 mb-1" aria-hidden="true"  />
             <span>AI Resume Boost</span>
           </Button>
         </div>
@@ -146,7 +145,7 @@ export function TalentDashboard() {
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
-                <BookOpen className="h-6 w-6 text-primary" />
+                <BookOpen className="h-6 w-6 text-primary"  />
               </div>
               <div>
                 <h3 className="font-medium">Improve your profile visibility</h3>

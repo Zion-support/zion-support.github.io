@@ -4,12 +4,12 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
 
   const router = useRouter()
   const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
+  const tutorial = initialTutorial |TUTORIALS.find((t) => t.slug === slug)
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -29,7 +29,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -51,7 +50,7 @@ export default function Tutorial(): any ({;
 export default function Tutorial(): any ({ tutorial: initialTutorial }: TutorialPageProps) {;
   const router = useRouter(),;
   const slug = router && router.query.slug as string | undefined,;
-  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t,) => t && t.slug === slug),;
+  const tutorial = initialTutorial || TUTORIALS && TUTORIALS.find((t) => t && t.slug === slug),;
 
   if (!tutorial) {;
     return (
@@ -60,7 +59,7 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   }
   return (
     <>
-      <SEO title={tutorial.title} description={tutorial.excerpt} />
+      <SEO title={tutorial.title} description={tutorial.excerpt}  />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button
@@ -69,7 +68,7 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
             asChild
           >
             <Link href="/tutorials">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Tutorials
+              <ArrowLeft className="mr-2 h-4 w-4"  /> Back to Tutorials
             </Link>
           </Button>
           <h1 className="text-3xl font-bold text-white mb-4">{tutorial.title}</h1>
@@ -91,9 +90,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   );
 };
 }
-
-
-
 
 }
 
@@ -123,7 +119,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   }
   return (
     <>
-      <SEO title={tutorial.title} description={tutorial.excerpt} />
+      <SEO title={tutorial.title} description={tutorial.excerpt}  />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button
@@ -131,7 +127,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild>;
             <Link href='/tutorials'>;
-              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Tutorials;
+              <ArrowLeft className='mr-2 h-4 w-4'  /> Back to Tutorials;
             </Link>;
           </Button>;
           <h1 className='text-3xl font-bold text-white mb-4'>;
@@ -156,7 +152,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
     </>;
   );
 }
-
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -183,7 +178,7 @@ export default /**
 function Tutorial() {
   const router = use_router (),
   const slug = router.query.slug as string | undefined,
-  const tutorial = initial_tutorial || TUTORIALS.find ((t, ) => t.slug === slug),
+  const tutorial = initial_tutorial || TUTORIALS.find ((t) => t.slug === slug),
   // Check condition
 if ( {) {
   $2
@@ -195,7 +190,7 @@ if ( {) {
   }
   return (
     <>;
-      <SEO title={tutorial.title} description={tutorial.excerpt} />;
+      <SEO title={tutorial.title} description={tutorial.excerpt}  />;
       <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>;
         <div className='container mx - auto max - w-3xl'>;
           <Button;
@@ -204,7 +199,7 @@ if ( {) {
             as_child;
           >;
             <Link href='/tutorials'>;
-              <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Tutorials;
+              <ArrowLeft className='mr - 2 h - 4 w - 4'  /> Back to Tutorials;
             </Link>;
           </Button>;
           <h1 className='text - 3xl font - bold text - white mb - 4'>;
@@ -226,7 +221,4 @@ if ( {) {
     </>);
 }
 ;
-
-
-
 

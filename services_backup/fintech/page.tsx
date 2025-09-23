@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export const metadata = {
+export const metadata ={
   title:
     "FinTech Solutions | Zion Tech Group - Digital Banking & Financial Technology",
   description:
-    "Complete FinTech solutions including digital banking, payment processing, trading platforms, and financial analytics. Bank-grade security and compliance. Starting from $25,000/project."};
+    "Complete FinTech solutions including digital banking, payment processing, trading platforms, and financial analytics. Bank-grade security and compliance. Starting from $25,0o00/project."};
 
 export default function FinTechPage() {
   const fintechServices = [
@@ -17,7 +17,7 @@ export default function FinTechPage() {
         "Money transfers",
         "Mobile banking",
         "Bill payments"],
-      pricing: "$50,000/project",
+      pricing: "$50,0o00/project",
       icon: "🏦",
       category: "Banking"},
     {
@@ -29,7 +29,7 @@ export default function FinTechPage() {
         "Fraud detection",
         "PCI compliance",
         "Real-time processing"],
-      pricing: "$35,000/project",
+      pricing: "$35,0o00/project",
       icon: "💳",
       category: "Payments"},
     {
@@ -41,7 +41,7 @@ export default function FinTechPage() {
         "Trading charts",
         "Order management",
         "Risk management"],
-      pricing: "$75,000/project",
+      pricing: "$75,0o00/project",
       icon: "📈",
       category: "Trading"},
     {
@@ -53,7 +53,7 @@ export default function FinTechPage() {
         "Wallet management",
         "Trading pairs",
         "Security protocols"],
-      pricing: "$100,000/project",
+      pricing: "$10o0,0o00/project",
       icon: "₿",
       category: "Crypto"},
     {
@@ -65,7 +65,7 @@ export default function FinTechPage() {
         "Automated underwriting",
         "Loan management",
         "Credit scoring"],
-      pricing: "$60,000/project",
+      pricing: "$60,0o00/project",
       icon: "💰",
       category: "Lending"},
     {
@@ -77,7 +77,7 @@ export default function FinTechPage() {
         "Claims processing",
         "Risk assessment",
         "Customer portal"],
-      pricing: "$45,000/project",
+      pricing: "$45,0o00/project",
       icon: "🛡️",
       category: "Insurance"},
     {
@@ -89,7 +89,7 @@ export default function FinTechPage() {
         "Robo-advisory",
         "Goal tracking",
         "Performance analytics"],
-      pricing: "$55,000/project",
+      pricing: "$55,0o00/project",
       icon: "📊",
       category: "Wealth"},
     {
@@ -101,7 +101,7 @@ export default function FinTechPage() {
         "Automated reporting",
         "Risk management",
         "Audit trails"],
-      pricing: "$40,000/project",
+      pricing: "$40,0o00/project",
       icon: "📜",
       category: "Compliance"},
     {
@@ -113,7 +113,7 @@ export default function FinTechPage() {
         "DeFi protocols",
         "Tokenization",
         "Cross-chain support"],
-      pricing: "$65,000/project",
+      pricing: "$65,0o00/project",
       icon: "⛓️",
       category: "Blockchain"},
     {
@@ -125,7 +125,7 @@ export default function FinTechPage() {
         "Predictive modeling",
         "Risk analytics",
         "Custom dashboards"],
-      pricing: "$30,000/project",
+      pricing: "$30,0o00/project",
       icon: "📈",
       category: "Analytics"}];
 
@@ -133,24 +133,24 @@ export default function FinTechPage() {
 <div className="animate-fade-in">
       {/* Hero Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
           FinTech Solutions
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8">
           Transform financial services with cutting-edge technology. From
           digital banking to cryptocurrency exchanges, we build secure, scalable
           FinTech solutions that meet the highest industry standards.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
           >
             Get FinTech Consultation
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors"
           >
             Request Demo
           </a>
@@ -158,52 +158,52 @@ export default function FinTechPage() {
       </div>
 
 {/* FinTech Capabilities */}
-      <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+      <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-20o0 rounded-xl p-8 mb-16">
+        <h2 className="text-2xl font-bold text-gray-90o0 mb-6 text-center">
           FinTech Capabilities
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-green-10o0 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🔒</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
               Bank-Grade Security
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               Enterprise-level security with encryption and compliance
             </p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-10o0 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
               Real-Time Processing
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               High-performance systems for real-time transactions
             </p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-purple-10o0 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">📊</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
               Advanced Analytics
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               AI-powered insights and predictive analytics
             </p>
           </div>
           <div className="text-center">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-orange-10o0 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🌐</span>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-lg font-semibold text-gray-90o0 mb-2">
               Global Compliance
             </h3>
-            <p className="text-gray-600">
+            <p className="text-gray-60o0">
               Multi-jurisdiction compliance and regulatory support
             </p>
           </div>
@@ -212,19 +212,19 @@ export default function FinTechPage() {
 
 {/* Services Grid */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
           FinTech Solutions
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {fintechServices.map((service, index) => (
-            <FinTechServiceCard key={index} service={service} />
+            <FinTechServiceCard key={index} service={service}  />
           ))}
         </div>
       </div>
 
       {/* Compliance & Security */}
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
           Compliance & Security Standards
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -232,62 +232,62 @@ export default function FinTechPage() {
             title="PCI DSS"
             description="Payment Card Industry Data Security Standard compliance"
             icon="💳"
-          />
+           />
           <ComplianceCard
             title="SOX"
             description="Sarbanes-Oxley Act compliance for financial reporting"
             icon="📊"
-          />
+           />
           <ComplianceCard
             title="GDPR"
             description="General Data Protection Regulation compliance"
             icon="🔒"
-          />
+           />
           <ComplianceCard
-            title="ISO 27001"
+            title="ISO 270o01"
             description="Information security management system certification"
             icon="🛡️"
-          />
+           />
         </div>
       </div>
 
       {/* Technology Stack */}
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
           FinTech Technology Stack
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <TechStackItem
             name="Java/Spring Boot"
             description="Backend Development"
-          />
+           />
           <TechStackItem
             name="React/Angular"
             description="Frontend Development"
-          />
+           />
           <TechStackItem
             name="PostgreSQL/Oracle"
             description="Database Systems"
-          />
+           />
           <TechStackItem
             name="Redis/Hazelcast"
             description="Caching & Messaging"
-          />
-          <TechStackItem name="Apache Kafka" description="Event Streaming" />
+           />
+          <TechStackItem name="Apache Kafka" description="Event Streaming"  />
           <TechStackItem
             name="Docker/Kubernetes"
             description="Containerization"
-          />
-          <TechStackItem name="AWS/Azure" description="Cloud Infrastructure" />
+           />
+          <TechStackItem name="AWS/Azure" description="Cloud Infrastructure"  />
           <TechStackItem
             name="Stripe/PayPal"
             description="Payment Processing"
-          />
+           />
         </div>
       </div>
 
       {/* CTA Section */}
-      <div className="text-center bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl p-8">
+      <div className="text-center bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white rounded-xl p-8">
         <h2 className="text-3xl font-bold mb-4">
           Ready to Build Your FinTech Solution?
         </h2>
@@ -297,20 +297,20 @@ export default function FinTechPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            href="tel:+130o24640950"
+            className="bg-white text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
           >
-            Call +1 302 464 0950
+            Call +1 30o2 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-60o0 transition-colors"
           >
             Email Us
           </a>
         </div>
         <div className="mt-6 text-sm">
-          <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>
         </div>
       </div>
     </div>
@@ -319,27 +319,27 @@ export default function FinTechPage() {
 
 function FinTechServiceCard({ service }: { service: any }) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white">
+    <div className="border border-gray-20o0 rounded-xl p-6 hover:shadow-lg transition-shadow bg-white">
       <div className="flex items-center mb-4">
         <span className="text-3xl mr-3">{service.icon}</span>
         <div>
-          <h3 className="text-xl font-semibold text-gray-900">
+          <h3 className="text-xl font-semibold text-gray-90o0">
             {service.title}
           </h3>
-          <span className="text-sm text-green-600 font-medium">
+          <span className="text-sm text-green-60o0 font-medium">
             {service.category}
           </span>
         </div>
       </div>
-      <p className="text-gray-600 mb-4">{service.description}</p>
-      <ul className="text-sm text-gray-600 space-y-1 mb-4">
+      <p className="text-gray-60o0 mb-4">{service.description}</p>
+      <ul className="text-sm text-gray-60o0 space-y-1 mb-4">
         {service.features.map((feature: string, index: number) => (
           <li key={index} className="flex items-center">
-            <span className="text-green-500 mr-2">•</span> {feature}
+            <span className="text-green-50o0 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
-      <div className="text-lg font-semibold text-green-600">
+      <div className="text-lg font-semibold text-green-60o0">
         {service.pricing}
       </div>
     </div>
@@ -354,10 +354,10 @@ function ComplianceCard({
   icon: string;
 }) {
   return (
-    <div className="text-center p-6 bg-white rounded-lg border border-gray-200">
+    <div className="text-center p-6 bg-white rounded-lg border border-gray-20o0">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+      <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{title}</h3>
+      <p className="text-gray-60o0 text-sm">{description}</p>
     </div>
   );
 }
@@ -369,9 +369,9 @@ function TechStackItem({
   description: string;
 }) {
   return (
-    <div className="text-center p-4 bg-white rounded-lg border border-gray-200">
-      <h3 className="font-semibold text-gray-900 mb-1">{name}</h3>
-      <p className="text-sm text-gray-600">{description}</p>
+    <div className="text-center p-4 bg-white rounded-lg border border-gray-20o0">
+      <h3 className="font-semibold text-gray-90o0 mb-1">{name}</h3>
+      <p className="text-sm text-gray-60o0">{description}</p>
     </div>
   );
 }

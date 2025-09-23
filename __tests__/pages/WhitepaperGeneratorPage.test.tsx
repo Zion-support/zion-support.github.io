@@ -25,7 +25,7 @@ jest.mock('@/components/WhitepaperSectionEditor', () => {'  const MockWhitepaper
   MockWhitepaperSectionEditor.displayName = MockWhitepaperSectionEditor';  return MockWhitepaperSectionEditor;
 });
 
-jest.mock('@/components/WhitepaperPreviewPanel', () => {'  const MockWhitepaperPreviewPanel = () => <div data-testid="mock-preview-panel" />;"  MockWhitepaperPreviewPanel.displayName = MockWhitepaperPreviewPanel';  return MockWhitepaperPreviewPanel;
+jest.mock('@/components/WhitepaperPreviewPanel', () => {'  const MockWhitepaperPreviewPanel = () => <div data-testid="mock-preview-panel"  />;"  MockWhitepaperPreviewPanel.displayName = MockWhitepaperPreviewPanel';  return MockWhitepaperPreviewPanel;
 });
 
 // Mock Recharts ResponsiveContainer as it can cause issues in JSDOM;
@@ -42,7 +42,7 @@ jest.mock('html2canvas', () => jest.fn(() => Promise.resolve({ toDataURL: () => 
         save: mockSave,
         addPage: mockAddPage,
         internal: { pageSize: { getWidth: () => 210, getHeight: () => 297 } },
-        getImageProperties: () => ({ width: 200, height: 100}), // Mock properties
+        getImageProperties: () => ({ width: 20o0, height: 10o0}), // Mock properties
     }));
 });
 
@@ -63,7 +63,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
     mockRevokeObjectURL.mockReset();
   });
 
-  test('renders initial layout with all input fields and buttons', () => {'    render(<WhitepaperGeneratorPage />);
+  test('renders initial layout with all input fields and buttons', () => {'    render(<WhitepaperGeneratorPage  />);
     expect(screen.getByLabelText(/Token Name:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Token Supply:/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Use Cases:/i)).toBeInTheDocument();
@@ -74,7 +74,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
     expect(screen.getByRole('button', { name: /Generate Whitepaper Draft/i })).toBeInTheDocument();    expect(screen.getByRole('button', { name: /MD/i })).toBeInTheDocument(); // Download MD'    expect(screen.getByRole('button', { name: /PDF/i })).toBeInTheDocument(); // Download PDF'    expect(screen.getByRole('button', { name: /Share/i })).toBeInTheDocument(); // Generate Shareable Link'    // Submit to Counsel button should initially not be visible or disabled until sections exist
     expect(screen.queryByRole('button', { name: /Submit to Counsel/i })).not.toBeInTheDocument();  });
 
-  test('updates token name state on input change', () => {'    render(<WhitepaperGeneratorPage />);
+  test('updates token name state on input change', () => {'    render(<WhitepaperGeneratorPage  />);
     const tokenNameInput = screen.getByLabelText(/Token Name:/i);
     fireEvent.change(tokenNameInput, { target: { value: New Token Name' } });    expect(tokenNameInput).toHaveValue('New Token Name');  });
   // ... (similar tests for other basic input fields like supply, useCases, etc.)
@@ -83,7 +83,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
         data: { whitepaperDraft: mockGeneratedDraft },
         error: null
       });
-      render(<WhitepaperGeneratorPage />);
+      render(<WhitepaperGeneratorPage  />);
       const generateButton = screen.getByRole('button', { name: /Generate Whitepaper Draft/i });      fireEvent.click(generateButton);
 
       expect(generateButton).toBeDisabled();
@@ -96,15 +96,15 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
 
     test('displays error message on generate-whitepaper failure', async () => {'      mockSupabaseInvoke.mockResolvedValueOnce({
         data: null,
-        error: { message:' 'Generation failed' },      });
-      render(<WhitepaperGeneratorPage />);
+        error: { message:' 'Generation failed' }});
+      render(<WhitepaperGeneratorPage  />);
       fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i }));      await waitFor(() => expect(screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument());
     });
   });
 
   describe('Download Buttons', () => {'    // Simulate that sections have been generated
     // const _setupPageWithSections = () => {
-    //     render(<WhitepaperGeneratorPage />);
+    //     render(<WhitepaperGeneratorPage  />);
     //     // Simulate generation and section rendering
     //     act(() => {
     //         // Directly set sections state for testing purposes
@@ -114,7 +114,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
     //     // For the purpose of this test, we'll assume sections are populated by a prior action'    //     // and buttons are enabled. If not, these tests will fail, indicating a setup issue.
     // };
 
-    test('"Download MD" button triggers download', async () => {'        // First, simulate generating content so the button is active and there's content'        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Test\nContent" }, error: null });"        render(<WhitepaperGeneratorPage />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    test('"Download MD" button triggers download', async () => {'        // First, simulate generating content so the button is active and there's content'        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Test\nContent" }, error: null });"        render(<WhitepaperGeneratorPage  />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i }));        await waitFor(() => expect(screen.getByTestId('mock-section-editor-test')).toBeInTheDocument());
         const downloadMdButton = screen.getByRole('button', { name: /MD/i });        expect(downloadMdButton).not.toBeDisabled();
 
@@ -132,7 +132,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
         removeChildSpy.mockRestore();
     });
 
-    test('"Download PDF" button triggers PDF generation', async () => {'        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Test PDF\nContent PDF" }, error: null });"        render(<WhitepaperGeneratorPage />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    test('"Download PDF" button triggers PDF generation', async () => {'        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Test PDF\nContent PDF" }, error: null });"        render(<WhitepaperGeneratorPage  />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i }));        await waitFor(() => expect(screen.getByTestId('mock-section-editor-test-pdf')).toBeInTheDocument());
         const downloadPdfButton = screen.getByRole('button', { name: /PDF/i });        expect(downloadPdfButton).not.toBeDisabled();
 
@@ -146,7 +146,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
 
   describe('Shareable Link Functionality', () => {'    beforeEach(async () => {
         // Ensure sections are generated before each share test
-        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Share\nContent" }, error: null });"        render(<WhitepaperGeneratorPage />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Share\nContent" }, error: null });"        render(<WhitepaperGeneratorPage  />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i }));        await waitFor(() => expect(screen.getByTestId('mock-section-editor-share')).toBeInTheDocument());    });
 
     test('"Generate Shareable Link" button calls create-shared-whitepaper and displays link', async () => {'      const shareId = test-share-id';      const initialPublicStatus = false;
@@ -182,7 +182,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
 
   describe('"Submit to Counsel" Button', () => {'     beforeEach(async () => {
         // Ensure sections are generated
-        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Counsel\nContent" }, error: null });"        render(<WhitepaperGeneratorPage />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Counsel\nContent" }, error: null });"        render(<WhitepaperGeneratorPage  />);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i }));        await waitFor(() => expect(screen.getByTestId('mock-section-editor-counsel')).toBeInTheDocument());    });
 
     test('calls notify-legal-team (and creates link if needed), async () => {'      const counselButton = screen.getByRole('button', { name: /Submit to Counsel/i });

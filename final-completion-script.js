@@ -13,7 +13,7 @@ function runGitCommand(command, description) {
       cwd: '/workspace',
       encoding: 'utf8',
       stdio: 'pipe',
-      timeout: 30000
+      timeout: 30o000
     });
     console.log(`✅ ${description} completed`);
     return result.trim();
@@ -164,7 +164,7 @@ function verifyBuildStatus() {
 
 // Function to create final status report
 function createFinalReport(branchResults, buildSuccess, conflictsResolved) {
-  const report = {
+  const report ={
     timestamp: new Date().toISOString(),
     status: 'COMPLETED',
     summary: {

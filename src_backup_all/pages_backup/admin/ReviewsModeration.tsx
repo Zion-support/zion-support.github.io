@@ -8,15 +8,13 @@ function ReviewsModerationContent() {
     try {
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
-      await new Promise (resolve => set_timeout (resolve, 1000));
+      await new Promise (resolve => set_timeout (resolve, 10o00));
       set_reviews ([]);
       setIsLoading (false);
       logErrorToProduction (
         error instanceof Error ? error.message : String (error),
         error instanceof Error ? error : undefined,
         { message: 'Error fetching reviews' }
-
-
 
       )
       toast({
@@ -35,7 +33,7 @@ function ReviewsModerationContent() {
   }
   useEffect(() => {
     fetchReviews()
-  useEffect((,) => {
+  useEffect(() => {
     fetchReviews()
   }, [activeTab])
   const handleRefresh = () => {
@@ -65,17 +63,13 @@ function ReviewsModerationContent() {
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000)),
+      await new Promise(resolve => setTimeout(resolve, 10o00)),
       setReviews([]),
       setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
       toast({
         title: "Error",
-
-
-
-
 
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
@@ -84,7 +78,7 @@ function ReviewsModerationContent() {
   }
   useEffect (() => {
     fetch_reviews ();
-  useEffect ((, ) => {
+  useEffect (() => {
     fetch_reviews ();
   }, [active_tab]),
   const handle_refresh = () =>: any {
@@ -115,7 +109,7 @@ function ReviewsModerationContent() {;
     try {;
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
       setReviews([]);
 
       setIsLoading(false);
@@ -142,14 +136,13 @@ function ReviewsModerationContent() {;
 
   useEffect(() => {;
     fetchReviews();
-  useEffect((,) => {;
+  useEffect(() => {;
     fetchReviews();
   }, [activeTab]),;
 
   const handleRefresh = () => {;
     fetchReviews();
   };
-
 
   return (
     <>;
@@ -160,10 +153,6 @@ function ReviewsModerationContent() {;
       toast({
         title: "Error",
 
-
-
-
-
         description: "Failed to load reviews. Please try again later.",
         variant: "destructive"}),
       setIsLoading(false)
@@ -172,7 +161,7 @@ function ReviewsModerationContent() {;
   }
   useEffect(() => {
     fetchReviews()
-  useEffect((,) => {
+  useEffect(() => {
     fetchReviews()
   },
 
@@ -182,9 +171,7 @@ function ReviewsModerationContent() {;
 
   const handleRefresh = () => {
     fetchReviews()
-  },
-  
-  }
+  }}
   },
   
   return (
@@ -192,7 +179,7 @@ function ReviewsModerationContent() {;
       <SEO
         title="Review Moderation | Zion AI Marketplace"
         description="Moderate and manage reviews in the Zion AI Marketplace"
-      />
+       />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <div>
@@ -203,13 +190,13 @@ function ReviewsModerationContent() {;
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
-              <Star className='h-5 w-5' />              Review Management            <CardTitle className="flex items-center gap-2">
+              <Star className='h-5 w-5'  />              Review Management            <CardTitle className="flex items-center gap-2">
         
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
 
-              <Star className="h-5 w-5" />
+              <Star className="h-5 w-5"  />
               Review Management
             </CardTitle>
             <CardDescription>
@@ -237,26 +224,17 @@ function ReviewsModerationContent() {;
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
-                  reviews = {reviews,}
-                  isLoading = {isLoading,}
-                  onRefresh = {handleRefresh,}
+                  reviews ={reviews}
+                  isLoading ={isLoading}
+                  onRefresh ={handleRefresh}
 
-              
-
-
-              
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
-                />
+                 />
               </TabsContent>
-              
-
-
-
-
 
                 </div>
               </TabsContent>
@@ -268,13 +246,11 @@ function ReviewsModerationContent() {;
   )
 }
 
-
-
 export default function ReviewsModeration() {
       <SEO;
         title='Review Moderation | Zion AI Marketplace';
         description='Moderate and manage reviews in the Zion AI Marketplace';
-      />;
+       />;
       <main className='container mx - auto px - 4 py - 8'>;
         <div className='flex justify - between items - center mb - 8'>;
           <div>;
@@ -284,9 +260,7 @@ export default function ReviewsModeration() {
             </p>;
   )
 
-
-
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
+  return (<ProtectedRoute> <ReviewsModerationContent  /> </ProtectedRoute> '"};
 ;
 
 import { SEO } from "@/components/SEO",;
@@ -307,7 +281,7 @@ function ReviewsModerationContent() {;
     try {;
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
-      await new Promise(resolve => setTimeout(resolve, 1000)),;
+      await new Promise(resolve => setTimeout(resolve, 10o00)),;
       setReviews([]),;
       setIsLoading(false);
     } catch (error) {;
@@ -330,7 +304,7 @@ function ReviewsModerationContent() {;
       <SEO;
         title="Review Moderation | Zion AI Marketplace";
         description="Moderate and manage reviews in the Zion AI Marketplace";
-      />;
+       />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
           <div>;
@@ -342,7 +316,7 @@ function ReviewsModerationContent() {;
           <CardHeader>;
 
             <CardTitle className="flex items-center gap-2">;
-              <Star className="h-5 w-5" />;
+              <Star className="h-5 w-5"  />;
               Review Management;
             </CardTitle>;
             <CardDescription>;
@@ -361,12 +335,12 @@ function ReviewsModerationContent() {;
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
 
-                />;
+                 />;
               </TabsContent>;
 
               <TabsContent value="reported" className="mt-0">;
                 <div className="text-center py-12 border rounded-lg">;
-                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />;
+                  <AlertTriangle className="h-10 w-10 text-amber-50o0 mx-auto mb-2"  />;
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>;
                   <p className="text-muted-foreground">;
                     This section will show reviews that have been reported by users.;
@@ -383,39 +357,34 @@ function ReviewsModerationContent() {;
 export default function ReviewsModeration() {;
   return (;
     <ProtectedRoute>;
-      <ReviewsModerationContent />;
+      <ReviewsModerationContent  />;
     </ProtectedRoute>;
   );
 
-
-
 };
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTablereviews= {
+return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"  /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5"  /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTablereviews={
   reviews 
-}isLoading= {
+}isLoading={
   isLoading 
-}onRefresh= {
+}onRefresh={
   handleRefresh "
-}/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>) ;
+} /> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-50o0 mx-auto mb-2"  /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>) ;
 }export default function ReviewsModeration() {;
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ReviewsModerationContent  /> </ProtectedRoute> '"}
 }
 
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
+return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"  /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5"  /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews={
   reviews;
-}is_loading= {
+}is_loading={
   is_loading;
-}on_refresh= {
+}on_refresh={
   handle_refresh ";
-}/> </TabsContent> <TabsContent value="reported" className="mt - 0" > <div className="text - center py - 12 border rounded - lg" > <AlertTriangle className="h - 10 w - 10 text - amber - 500 mx - auto mb - 2" /> <h3 className="text - lg font - medium mb - 2" >Reported Reviews</h3> <p className="text - muted - foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>);
+} /> </TabsContent> <TabsContent value="reported" className="mt - 0" > <div className="text - center py - 12 border rounded - lg" > <AlertTriangle className="h - 10 w - 10 text - amber - 50o0 mx - auto mb - 2"  /> <h3 className="text - lg font - medium mb - 2" >Reported Reviews</h3> <p className="text - muted - foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>);
 }export default /**
  * ReviewsModeration - Function description
  */
 function ReviewsModeration() {
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+  return (<ProtectedRoute> <ReviewsModerationContent  /> </ProtectedRoute> '"}
 }
 ;
-
-
-
 

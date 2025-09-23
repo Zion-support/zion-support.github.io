@@ -50,7 +50,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatMessage ={
       id: Date.now().toString(),
       type: 'user',
       content: inputValue,
@@ -64,7 +64,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
 
     // Simulate AI response
     setTimeout(() => {
-      const botResponse: ChatMessage = {
+      const botResponse: ChatMessage ={
         id: (Date.now() + 1).toString(),
         type: 'bot',
         content: generateAIResponse(inputValue),
@@ -80,7 +80,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
         botResponse
       ]);
       setIsTyping(false);
-    }, 1000 + Math.random() * 2000);
+    }, 10o00 + Math.random() * 20o00);
   };
 
   const generateAIResponse = (userInput: string): string => {
@@ -95,7 +95,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
     } else if (input.includes('space') || input.includes('space technology')) {
       return 'We\'re pioneers in space technology! From space resource intelligence to interplanetary communication platforms, we\'re building the future of space exploration. What interests you most?';
     } else if (input.includes('contact') || input.includes('support')) {
-      return 'You can reach our team at kleber@ziontechgroup.com or call us at +1-302-464-0950. We\'re available 24/7 for enterprise clients. How can I assist you further?';
+      return 'You can reach our team at kleber@ziontechgroup.com or call us at +1-30o2-464-0950. We\'re available 24/7 for enterprise clients. How can I assist you further?';
     } else if (input.includes('demo') || input.includes('trial')) {
       return 'Absolutely! We offer free demos and trials of our services. I can schedule a personalized demo for you. What service would you like to see in action?';
     } else {
@@ -127,7 +127,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
 
   const handleQuickReply = (reply: string) => {
     setInputValue(reply);
-    setTimeout(() => handleSendMessage(), 100);
+    setTimeout(() => handleSendMessage(), 10o0);
   };
 
   return (
@@ -135,13 +135,13 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 ${className}`}
+        className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full shadow-2xl hover:shadow-blue-50o0/25 transition-all duration-30o0 ${className}`}
         whileHover={{ scale: 1.1, rotate: 5 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <MessageCircle className="w-6 h-6 text-white" />
+        <MessageCircle className="w-6 h-6 text-white"  />
       </motion.button>
 
       {/* Chat Window */}
@@ -151,17 +151,17 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-24 right-6 z-50 w-96 h-[500px] bg-gray-900 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden"
+            className="fixed bottom-24 right-6 z-50 w-96 h-[50o0px] bg-gray-90o0 rounded-2xl shadow-2xl border border-gray-70o0 overflow-hidden"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="p-2 bg-white/20 rounded-lg">
-                  <Bot className="w-5 h-5 text-white" />
+                  <Bot className="w-5 h-5 text-white"  />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Zion Tech Support</h3>
-                  <p className="text-blue-100 text-sm">AI-Powered Assistance</p>
+                  <p className="text-blue-10o0 text-sm">AI-Powered Assistance</p>
                 </div>
               </div>
               <div className="flex items-center space-x-2">
@@ -169,13 +169,13 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                   onClick={() => setIsMinimized(!isMinimized)}
                   className="p-1 text-white/80 hover:text-white transition-colors"
                 >
-                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                  {isMinimized ? <Maximize2 className="w-4 h-4"  /> : <Minimize2 className="w-4 h-4"  />}
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 text-white/80 hover:text-white transition-colors"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -195,23 +195,23 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                         <div className={`flex items-start space-x-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                           <div className={`p-2 rounded-full ${
                             message.type === 'user' 
-                              ? 'bg-blue-600' 
+                              ? 'bg-blue-60o0' 
                               : message.type === 'bot' 
-                                ? 'bg-purple-600' 
-                                : 'bg-gray-600'
+                                ? 'bg-purple-60o0' 
+                                : 'bg-gray-60o0'
                           }`}>
                             {message.type === 'user' ? (
-                              <User className="w-4 h-4 text-white" />
+                              <User className="w-4 h-4 text-white"  />
                             ) : message.type === 'bot' ? (
-                              <Bot className="w-4 h-4 text-white" />
+                              <Bot className="w-4 h-4 text-white"  />
                             ) : (
-                              <AlertCircle className="w-4 h-4 text-white" />
+                              <AlertCircle className="w-4 h-4 text-white"  />
                             )}
                           </div>
                           <div className={`p-3 rounded-2xl ${
                             message.type === 'user'
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-800 text-gray-100'
+                              ? 'bg-blue-60o0 text-white'
+                              : 'bg-gray-80o0 text-gray-10o0'
                           }`}>
                             <p className="text-sm">{message.content}</p>
                             <div className="flex items-center justify-between mt-2">
@@ -221,13 +221,13 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                               {message.type === 'user' && (
                                 <div className="flex items-center space-x-1">
                                   {message.status === 'sending' && (
-                                    <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                    <div className="w-3 h-3 border-2 border-white/30 border-t-white rounded-full animate-spin"  />
                                   )}
                                   {message.status === 'sent' && (
-                                    <CheckCircle className="w-3 h-3 text-green-400" />
+                                    <CheckCircle className="w-3 h-3 text-green-40o0"  />
                                   )}
                                   {message.status === 'error' && (
-                                    <AlertCircle className="w-3 h-3 text-red-400" />
+                                    <AlertCircle className="w-3 h-3 text-red-40o0"  />
                                   )}
                                 </div>
                               )}
@@ -244,21 +244,21 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                         className="flex justify-start"
                       >
                         <div className="flex items-start space-x-2">
-                          <div className="p-2 rounded-full bg-purple-600">
-                            <Bot className="w-4 h-4 text-white" />
+                          <div className="p-2 rounded-full bg-purple-60o0">
+                            <Bot className="w-4 h-4 text-white"  />
                           </div>
-                          <div className="p-3 rounded-2xl bg-gray-800">
+                          <div className="p-3 rounded-2xl bg-gray-80o0">
                             <div className="flex space-x-1">
-                              <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                              <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                              <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                              <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce"  />
+                              <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}  />
+                              <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}  />
                             </div>
                           </div>
                         </div>
                       </motion.div>
                     )}
                   </div>
-                  <div ref={messagesEndRef} />
+                  <div ref={messagesEndRef}  />
                 </div>
 
                 {/* Quick Replies */}
@@ -269,8 +269,8 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                         <motion.button
                           key={index}
                           onClick={() => handleQuickReply(reply)}
-                          className="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs rounded-full border border-gray-600 transition-colors"
-                          whileHover={{ scale: 1.05 }}
+                          className="px-3 py-1 bg-gray-80o0 hover:bg-gray-70o0 text-gray-30o0 text-xs rounded-full border border-gray-60o0 transition-colors"
+                          whileHover={{ scale: 1.0o5 }}
                           whileTap={{ scale: 0.95 }}
                         >
                           {reply}
@@ -281,7 +281,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                 )}
 
                 {/* Input */}
-                <div className="p-4 border-t border-gray-700">
+                <div className="p-4 border-t border-gray-70o0">
                   <div className="flex items-center space-x-2">
                     <input
                       ref={inputRef}
@@ -290,14 +290,14 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Type your message..."
-                      className="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="flex-1 px-4 py-2 bg-gray-80o0 border border-gray-60o0 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-blue-50o0 focus:ring-1 focus:ring-blue-50o0"
                     />
                     <button
                       onClick={handleSendMessage}
                       disabled={!inputValue.trim()}
-                      className="p-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed rounded-lg transition-colors"
+                      className="p-2 bg-blue-60o0 hover:bg-blue-70o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed rounded-lg transition-colors"
                     >
-                      <Send className="w-4 h-4 text-white" />
+                      <Send className="w-4 h-4 text-white"  />
                     </button>
                   </div>
                 </div>
