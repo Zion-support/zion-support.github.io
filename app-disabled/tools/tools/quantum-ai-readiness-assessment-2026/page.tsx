@@ -2,6 +2,10 @@
 <<<<<<< HEAD:app-disabled/tools/tools/quantum-ai-readiness-assessment-2026/page.tsx
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:app-disabled/tools/tools/quantum-ai-readiness-assessment-2026/page.tsx
+=======
+// Metadata moved to parent component
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;

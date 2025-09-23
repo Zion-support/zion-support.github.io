@@ -3,6 +3,7 @@ import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type SEOProps = {
   title?: string;
   description?: string;
@@ -20,6 +21,8 @@ export default function SEO({
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 interface SEOHeadProps {
 	title?: string;
 	description?: string;
@@ -62,9 +65,15 @@ export default function SEOHead({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       {keywordsContent && <meta name="keywords" content={keywordsContent} />}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
+=======
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+      <link rel="canonical" href={canonicalUrl} />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />} 
@@ -115,6 +124,7 @@ export default function SEOHead({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
     </Head>
   );
+<<<<<<< HEAD
 =======
 	title = 'Zion Tech Group - Advanced AI and Technology Solutions',
 	description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
@@ -216,4 +226,6 @@ export default function SEOHead({
 		</Head>
 	);
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 }
