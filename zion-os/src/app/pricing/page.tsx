@@ -1,3 +1,11 @@
+export default function PricingPage() {
+  return (
+    <main style={{ padding: "2rem" }}>
+      <h1>Pricing</h1>
+      <p>Simple and transparent pricing plans.</p>
+    </main>
+  );
+}
 
 
 

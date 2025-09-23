@@ -11,7 +11,7 @@ export default function SignUpPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { register } = useAuth();
+  const { signIn } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ export default function SignUpPage() {
     }
 
     try {
-      await register(name, email, password);
+      await signIn(email, password);
     } catch (error) {
       setError(error instanceof Error ? error.message : "Registration failed");
     } finally {
