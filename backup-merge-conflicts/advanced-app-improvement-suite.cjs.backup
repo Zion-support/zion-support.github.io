@@ -8,42 +8,6 @@ class AdvancedAppImprovementSuite {}
     this.projectRoot = projectRoot;
     this.reportsDir = path.join(this.projectRoot, "improvement-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
-<<<<<<< HEAD
-    this.ensureDirectories()}
-
-  ensureDirectories() {
-    if () {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString() {
-    ) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] ${message};`;
-    
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
-
-  async runCommand(command, description) {
-    this.log(`🚀 "Starting": ${description}`);
-    try {
-      const result = execSync(command, {
-        "cwd": this.projectRoot,
-        "encoding": "utf8",
-        "timeout": 300000 // 5 minutes timeout
-      };);
-      this.log(`✅ "Completed": ${description}`);
-      return { "success": true, "output": result }} catch (error) {
-      this.log(`❌ "Failed": ${description} - ${error.message}`);
-      return { "success": false, "error": error.message }}
-  }
-
-  async optimizeBundleSize() {
-=======
     
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
@@ -170,4 +134,3 @@ if (require.main === module) {}
   suite.start().catch(console.error);
 };
 module.exports = AdvancedAppImprovementSuite;
->>>>>>> main

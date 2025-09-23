@@ -7,10 +7,6 @@ class RobustSyntaxFixer {;}
     this.fixedFiles = [];
     this.errors = [],};
 ;
-<<<<<<< HEAD
-  log(message) {;
-    .toISOString()}] ${message}`),}
-=======
   log(message) {;}
     console.log(`[${new Date().toISOString()}] ${message}`),};
 ;
@@ -108,4 +104,3 @@ if (require.main === module) {;}
     process.exit(1),}),};
 ;
 module.exports = RobustSyntaxFixer);
->>>>>>> main

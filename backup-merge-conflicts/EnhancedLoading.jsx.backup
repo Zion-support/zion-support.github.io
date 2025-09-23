@@ -1,11 +1,5 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedLoading.jsx.backup
-<<<<<<< HEAD
-const { motion } from "framer-motion";"; const EnhancedLoading = ({ variant = "spinner",size = "md",text,className = "" }) => {} const sizeClasses = {} "; sm: "w-4 h-4","; md: "w-8 h-8","; lg: "w-12 h-12",; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }});} });} });} }) export { EnhancedLoading };";});,"}) ;,"});} }) export { EnhancedLoading } });} });} });} }) export { EnhancedLoading };";});,"}) ";'"'"
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedLoading.jsx.backup
-=======
 import { motion } from 'framer-motion';'; const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = '' }) => {} const sizeClasses = {} '; "sm": 'w-4 h-4','; "md": 'w-8 h-8','; "lg": 'w-12 h-12',; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }})} })} })} }) export { EnhancedLoading };"});,"}) ;,"})} }) export { EnhancedLoading } })} })} })} }) export { EnhancedLoading };"});,"}) ";
->>>>>>> main
 =======
 import { motion } from 'framer-motion';'; const EnhancedLoading = ({ variant = 'spinner',size = 'md',text,className = '' }) => {} const sizeClasses = {} '; "sm": 'w-4 h-4','; "md": 'w-8 h-8','; "lg": 'w-12 h-12',; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }; export { EnhancedLoading }})} })} })} }) export { EnhancedLoading };"});,"}) ;,"})} }) export { EnhancedLoading } })} })} })} }) export { EnhancedLoading };"});,"}) ";
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/EnhancedLoading.jsx

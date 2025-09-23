@@ -31,11 +31,6 @@ class LinkCheckerAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    findLinksInFiles() {
-=======
         console.log(message)};
     findLinksInFiles() {}
         this.log('Finding links in project files...');
@@ -238,4 +233,3 @@ if ( {})
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
 module.exports = LinkCheckerAutomation;
->>>>>>> main

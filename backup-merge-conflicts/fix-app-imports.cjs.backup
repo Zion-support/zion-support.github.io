@@ -5,18 +5,6 @@ const path = require('path');
 class AppImportsFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.appPath = path.join(this.projectRoot, 'src/App.tsx')}
-
-  log(message) {
-    .toISOString()}] ${message}`)}
-
-  checkFileExports(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        return { "exists": false, "hasDefault": false, "hasNamed": [] }}
-
-=======
     this.appPath = path.join(this.projectRoot, 'src/App.tsx')};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -115,4 +103,3 @@ if (require.main === module) {}
       console.error('App Imports Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = AppImportsFixer;
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -115,7 +113,6 @@ export function QuoteWizard($1) {
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
                 className={`p-4 cursor-pointer border-2 transition-colors ${selectedItem === item.id ? 'border-purple-500' : '"hover": borde r-purple-500/50'}`}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/quote/QuoteWizard.tsx
                 onClick={() => setSelectedItem(item.id)}

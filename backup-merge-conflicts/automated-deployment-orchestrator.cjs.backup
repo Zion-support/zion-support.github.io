@@ -80,10 +80,6 @@ const CONFIG = {}
 // Utility functions;
 const log = (message, level = "INFO") => {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-  const logMessage = `[${timestamp}] [${level}] ${message}`;
-  
-=======
   const logMessage = `[${timestamp}] [${level}] ${message}`;`
   console.log("logMessage);
   // Ensure log directory exists;
@@ -853,4 +849,3 @@ module.exports = {}
   HealthCheckSystem,
   DeploymentState,
   main};
->>>>>>> main

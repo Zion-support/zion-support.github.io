@@ -32,11 +32,6 @@ function fixHoverSyntax(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-      }`);
-      totalFixes++;
-      modified = true;
-=======
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
@@ -105,4 +100,3 @@ try {
   console.error('❌ Error:', error.message);
   process.exit(1);
 }
->>>>>>> main

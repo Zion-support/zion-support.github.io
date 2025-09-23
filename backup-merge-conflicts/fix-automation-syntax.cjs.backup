@@ -25,30 +25,6 @@ const automationFiles = ['automation/dependency-fixer.cjs']
     .replace(/:\s*\[\],/g, ': [];')
     .replace(/:\s*\{\},/g, ': {};')
     .replace(/\(\s*\[\],/g, '([];')
-<<<<<<< HEAD
-    .replace(/\(\s*\{\},/g, '({};');
-
-  return fixed}
-
-function fixFile(filePath) {
-  try {
-    
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      } else {
-      }
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message)}
-}
-
-// Fix all automation files
-automationFiles.forEach(fixFile);
-
-=======
     .replace(/\(\s*\{\},/g, '({};')
     const content = fs.readFileSync(filePath, 'utf8')
 console.log('\n� All automation files have been processed!')
->>>>>>> main

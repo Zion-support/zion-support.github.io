@@ -1,18 +1,5 @@
 #!/usr/bin/env node;
 /**
-<<<<<<< HEAD
- * Fix Syntax Errors Script
- * Automatically fixes common syntax errors in the codebase
- */
-
-const fs = require('fs');
-const path = require('path');
-
-class SyntaxErrorFixer {
-  constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
-=======
  * Syntax Error Fixer;
  * Automatically fixes common syntax errors in the codebase;
  */
@@ -195,5 +182,4 @@ module.exports = SyntaxErrorFixer;
       execSync('npm run format', { "stdio"})
       this.log(` Syntax fixing "failed"`)
       this.log(`� Syntax error fixing "failed"`)
->>>>>>> main
 >>>>>>> main

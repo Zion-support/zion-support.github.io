@@ -6,11 +6,6 @@ function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-<<<<<<< HEAD
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      }
-=======
     // Fix unterminated string constants (remove extra quotes)
     content = content.replace(/from 'react';''/g, "from 'react';");
     content = content.replace(/from 'next\/link';''/g, "from 'next/link';");
@@ -141,4 +136,3 @@ for (const file of pageFiles) {
 }
 
 console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);
->>>>>>> main

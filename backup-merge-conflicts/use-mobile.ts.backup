@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/hooks/use-mobile.ts
 import { useState, useEffect } from 'react'  export function useMobile() { const [isMobile, setIsMobile] = useState(false)  useEffect(() => {;""';
 }};';;';
 =======
@@ -18,19 +14,11 @@ import { useState,useEffect } from 'react' export function useMobile() { const [
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 import { useState,useEffect } from &apos;react&apos; export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;&quot;}};&apos;;&apos;;
-<<<<<<< HEAD
-const { useState,useEffect } from "react" export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};";";'"'"
-import { useEffect } from 'react';,
-import { useState } from 'react';,
-import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:backup-merge-conflicts/use-mobile.ts.backup
 =======
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import { useState,useEffect } from 'react' export function useMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => {;"}};';';
->>>>>>> pr-11935
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/hooks/use-mobile.ts
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

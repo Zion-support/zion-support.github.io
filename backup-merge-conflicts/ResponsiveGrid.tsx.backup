@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 <<<<<<< HEAD:backup-merge-conflicts/ResponsiveGrid.tsx.backup
 <<<<<<< HEAD
@@ -10,7 +8,6 @@ interface ResponsiveGridProps {;
 =======
 interface ResponsiveGridProps {
   "children": React.ReactNode;
->>>>>>> main
 =======
 ;
 interface ResponsiveGridProps {;

@@ -21,12 +21,6 @@ class ErrorDetectionMonitor {}
     this.lastCheck = null};
   log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    }
-
-  async runTypeScriptCheck() {
-    try {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async runTypeScriptCheck() {}
     try {}
@@ -217,4 +211,3 @@ if (require.main === module) {}
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
 module.exports = ErrorDetectionMonitor;
->>>>>>> main

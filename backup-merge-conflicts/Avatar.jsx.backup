@@ -1,10 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
-<<<<<<< HEAD
-export function Avatar(props: any) {
-    return (
-        <div className={`relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`}>
-=======
->>>>>>> pr-11935
       {children}
     </div>
     );
@@ -12,11 +5,7 @@ export function Avatar(props: any) {
 export function AvatarImage("props": "any) {;
     return (<img src={src"} alt={alt} className={`aspect-square h-full w-full ${className}`}  />);
 }
-<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11935
 export function AvatarFallback(props: any) {
     return (
         <div className={`flex h-full w-full items-center justify-center rounded-full bg-zion-slate ${className}`}>
@@ -42,10 +31,6 @@ export {Avatar, AvatarImage, AvatarFallback};
 export default Avatar;
 </div>
 =======
-<<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
-<<<<<<< HEAD
-</div>;
-=======
 </div>
 =======
 </div>
@@ -57,7 +42,6 @@ module.exports = function Avatar($1) { return ( <div className="min-h-screen bg-
 <<<<<<< HEAD:backup-merge-conflicts/Avatar.jsx.backup
 =======
 export function Avatar(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} export function AvatarImage(_) { return (<img src={src} alt={alt} className={`aspect-square h-full w-full ${className}`} />)} export function AvatarFallback(_) { return ( <div className="min-h-screen bg-white"> {children} </div>)} import _React from 'react'; import {cn} from '@/lib/utils'; const Avatar = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',className)} {...props}; />));';'; Avatar.displayName = 'Avatar';';'; const AvatarImage = _React.forwardRef(({className,src,alt = ",...props},ref) => (<img ref={ref} className = {cn('aspect-square h-full w-full',className)} src={src} alt={alt} {...props}; />));';'; AvatarImage.displayName = 'AvatarImage';';'; const AvatarFallback = _React.forwardRef(({className,...props},ref) => (<div ref={ref} className = {cn('flex h-full w-full items-center justify-center rounded-full bg-muted',className)} {...props}; />));';'; AvatarFallback.displayName = 'AvatarFallback'; export {Avatar,AvatarImage,AvatarFallback}; export default Avatar; </div> </div>;';';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

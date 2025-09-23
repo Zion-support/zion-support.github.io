@@ -1,7 +1,3 @@
-<<<<<<< HEAD:backup-merge-conflicts/TestimonialsSection.dynamic.test.js.backup
-<<<<<<< HEAD
-=======
->>>>>>> pr-11913:__tests__/TestimonialsSection.dynamic.test.js
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';

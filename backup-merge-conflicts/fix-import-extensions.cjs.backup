@@ -6,14 +6,6 @@ const glob = require('glob');
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.fixesApplied = 0}
-
-  log(message) {
-    .toISOString()}] ${message}`)}
-
-  async fixImportExtensions() {
-=======
     this.fixesApplied = 0};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -76,4 +68,3 @@ if (require.main === module) {}
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = ImportExtensionFixer;
->>>>>>> main

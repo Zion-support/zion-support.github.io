@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 =======
-=======
->>>>>>> pr-11913:src_backup_temp/data/aiServicesData.ts
 export interface AIService {;
   "id": "string;
   "title": string;

@@ -1,10 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/cuttingEdgeITInfrastructureServices2030.ts.backup
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
-""
-=======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
 ";";"
 =======
@@ -21,7 +15,6 @@ const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listin
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
->>>>>>> pr-11935
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/data/revolutionaryMicroSaasServices2030.ts

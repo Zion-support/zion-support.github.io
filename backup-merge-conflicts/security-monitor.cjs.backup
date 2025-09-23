@@ -14,9 +14,6 @@ class $1 {}
 ;
   log(message, type = "info") {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    }] ${message}`)}
-=======
     console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)};
 ;
   async ensureDirectoryExists(dirPath) {}
@@ -231,4 +228,3 @@ class $1 {}
 // Run the security monitor;
 const monitor = new SecurityMonitor();
 monitor.run().catch(console.error);
->>>>>>> main

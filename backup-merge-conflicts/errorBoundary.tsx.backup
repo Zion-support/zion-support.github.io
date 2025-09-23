@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD:backup-merge-conflicts/errorBoundary.tsx.backup
@@ -116,7 +114,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
 =======
     });
->>>>>>> main
 >>>>>>> main:src_backup_temp/utils/errorBoundary.tsx
 =======
     }

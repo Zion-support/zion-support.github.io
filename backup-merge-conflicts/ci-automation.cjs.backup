@@ -26,10 +26,6 @@ class $1 {}
 ;
   log(message, level = "INFO") {}
   const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    const logEntry = `[${timestamp}] [${level}] ${message}`;
-    
-=======
     const logEntry = `[${timestamp}] [${level}] ${message}`;`
     console.log("logEntry);
     // Append to log file;
@@ -269,4 +265,3 @@ if (require.main === module) {}
     process.exit(1)})};
 ;
 module.exports = CIAutomation;
->>>>>>> main

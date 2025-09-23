@@ -1,6 +1,4 @@
 =======
-<<<<<<< HEAD:backup-merge-conflicts/apiClient.ts.backup
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -8,7 +6,6 @@
 =======
 =======
 
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/services/apiClient.ts
 =======
 >>>>>>> pr-11935
 =======
@@ -29,10 +26,6 @@ apiClient.interceptors.response.use((response) => response,  async(error) => {;
 export default apiClient;
 =======
 <<<<<<< HEAD:backup-merge-conflicts/apiClient.ts.backup
-const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
-=======
-<<<<<<< HEAD:backup-merge-conflicts/apiClient.ts.backup
->>>>>>> main
 const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
 >>>>>>> main
 =======
