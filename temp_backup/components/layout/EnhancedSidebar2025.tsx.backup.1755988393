@@ -53,10 +53,6 @@ const sidebarItems: SidebarItem[] = [
     ]
   },
   {
-<<<<<<< HEAD
-    name: 'Services',
-    href: '/services',
-=======
     title: 'Quantum & Emerging Tech',
     icon: <Atom className="w-5 h-5" />,
     color: 'text-indigo-400',
@@ -100,7 +96,6 @@ const sidebarItems: SidebarItem[] = [
   },
   {
     title: 'Micro SAAS',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5614
     icon: <Rocket className="w-5 h-5" />,
     description: 'Our comprehensive technology solutions',
     badge: 'Featured',

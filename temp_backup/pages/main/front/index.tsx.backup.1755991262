@@ -544,8 +544,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-<<<<<<< HEAD
-=======
 
         {/* AUTO-GENERATED: FRONT_ADS_START */}
         <section className="mx-auto max-w-7xl px-6 pb-16">
@@ -1745,7 +1743,6 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
 
         {/* AUTO-GENERATED: FRONT_ADS_START */
 <section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">

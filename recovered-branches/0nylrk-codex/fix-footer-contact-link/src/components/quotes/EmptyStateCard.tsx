@@ -1,12 +1,7 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { CardContent } from "@/components/ui/card";
-import { MessageSquareArchiveIcon } from "lucide-react";
-=======
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 type EmptyStateCardProps = {
   type: 'active' | 'archived';

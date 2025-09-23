@@ -27,7 +27,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 
-
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
@@ -211,8 +210,6 @@ export function ProductSubmissionForm() {
       }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       // Upload model if provided
       if (values.model) {
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -239,7 +236,6 @@ export function ProductSubmissionForm() {
       }
 
 =======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       // Send listing to moderation service
       try {
@@ -254,13 +250,9 @@ export function ProductSubmissionForm() {
         });
       } catch (err) {
 <<<<<<< HEAD
-        console.error('Error invoking moderation:', err);
-=======
-<<<<<<< HEAD
         logErrorToProduction('Error invoking moderation:', { data: err });
 =======
         console.error('Error invoking moderation:', err);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       }
       

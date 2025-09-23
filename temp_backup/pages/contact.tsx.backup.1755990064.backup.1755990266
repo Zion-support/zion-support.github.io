@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -460,7 +456,6 @@ export default function ContactPage() {
                   <p className="text-white/70">We implement enterprise-grade security measures including encryption, access controls, and compliance with industry standards like GDPR, HIPAA, and SOC 2.</p>
 =======
 import React from 'react';
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
 import Layout from '../components/layout/Layout';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send, Star, Award, Zap, Users } from 'lucide-react';
 
@@ -637,9 +632,6 @@ const ContactPage: React.FC = () => {
                       </option>
                     ))}
                   </select>
-<<<<<<< HEAD
-=======
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
                 </div>
               </div>
@@ -683,30 +675,6 @@ const ContactPage: React.FC = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="p-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <Star className="h-10 w-10 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Expert Team</h3>
-                <p className="text-gray-300">
-                  Specialists in AI consciousness, quantum computing, and space technology
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="p-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <Zap className="h-10 w-10 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Innovation First</h3>
-                <p className="text-gray-300">
-                  Cutting-edge solutions that push the boundaries of what's possible
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="p-4 bg-green-500/20 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <Award className="h-10 w-10 text-green-400" />
-=======
             {/* FAQ Section */}
             <section className="mb-20">
               <h2 className="text-3xl font-bold mb-8 text-center text-white">Frequently Asked Questions</h2>
@@ -741,39 +709,12 @@ const ContactPage: React.FC = () => {
                     Absolutely! We specialize in integrating AI solutions with existing infrastructure. 
                     We'll assess your current systems and design solutions that work seamlessly.
                   </p>
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
                 <p className="text-gray-300">
                   Successful implementations across industries worldwide
                 </p>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the technology revolution and transform your business with 
-              cutting-edge AI, quantum computing, and space technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                Start Your Project
-              </button>
-              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </section>
-=======
             </section>
 
             {/* Call to Action */}
@@ -795,21 +736,17 @@ const ContactPage: React.FC = () => {
             </section>
           </div>
         </main>
->>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0
       </div>
     </Layout>
   );
 };
 
 export default ContactPage;
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
   return (
     <>
       <Head><title>contact - Zion App</title><meta name="description" content="contact page" /></Head><div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-6">contact</h1><p className="text-lg mb-4">This page is under construction.</p><div className="mt-4"><a href="/" className="text-blue-600 hover:underline">;
             ← Back to Home</a></div></div></>;
   );
->>>>>>> origin/automation-error-fixes
 =======
 >>>>>>> 2b8bbbb18a09713bdeef09b7c3a1ee123e0bd7d0

@@ -2,12 +2,8 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import Layout from './layout/Layout';
 import { 
-<<<<<<< HEAD
-  ArrowRight, Play, Star, Brain, Shield, Zap, Globe, Cpu, Eye, Loader2
-=======
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2,
   Zap, Globe, Cpu, Eye, Atom, Heart
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-33fe
 } from 'lucide-react';
 
 // Lazy load components for better performance
@@ -63,54 +59,6 @@ const EnhancedHomepage2026: React.FC = () => {
 
   const featuredServices = [
     {
-<<<<<<< HEAD
-      title: "AI Consciousness Orchestrator",
-      description: "Revolutionary AI consciousness management with ethical frameworks and human-AI collaboration",
-      icon: Brain,
-      color: "from-cyan-600 to-blue-700",
-      price: "$2,999/month",
-      features: ["Consciousness monitoring", "Ethical AI frameworks", "Human-AI collaboration"]
-    },
-    {
-      title: "Quantum Neural Interface Platform",
-      description: "Quantum-powered brain-computer interface for next-generation human-AI interaction",
-      icon: Atom,
-      color: "from-purple-600 to-pink-700",
-      price: "$4,999/month",
-      features: ["Quantum neural processing", "Brain-AI sync", "Real-time monitoring"]
-    },
-    {
-      title: "Autonomous Space Mining AI",
-      description: "AI-powered autonomous space resource extraction and management system",
-      icon: Rocket,
-      color: "from-orange-600 to-red-700",
-      price: "$8,999/month",
-      features: ["Autonomous mining", "Resource optimization", "Mission control"]
-    },
-    {
-      title: "Quantum Financial Prediction Engine",
-      description: "Quantum-powered financial prediction with 99.9% accuracy for institutional trading",
-      icon: Zap,
-      color: "from-green-600 to-emerald-700",
-      price: "$15,999/month",
-      features: ["Quantum analysis", "99.9% accuracy", "Real-time predictions"]
-    },
-    {
-      title: "Quantum Cybersecurity Fortress",
-      description: "Quantum-resistant cybersecurity with AI-powered threat detection and autonomous response",
-      icon: Shield,
-      color: "from-red-600 to-pink-700",
-      price: "$3,999/month",
-      features: ["Quantum encryption", "AI threat detection", "Autonomous response"]
-    },
-    {
-      title: "Autonomous DevOps Orchestrator",
-      description: "AI-powered autonomous DevOps with self-healing infrastructure and predictive optimization",
-      icon: Cpu,
-      color: "from-emerald-600 to-teal-700",
-      price: "$2,499/month",
-      features: ["Self-healing systems", "Predictive optimization", "Autonomous management"]
-=======
       title: "AI Content Marketing Automation Pro",
       description: "Automate your entire content marketing strategy with AI-powered intelligence",
       icon: Brain,
@@ -157,7 +105,6 @@ const EnhancedHomepage2026: React.FC = () => {
       color: "from-yellow-600 to-orange-700",
       price: "$2,499/month",
       features: ["Quantum algorithms", "Risk modeling", "Portfolio optimization"]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-33fe
     }
   ];
 
@@ -369,12 +316,6 @@ const EnhancedHomepage2026: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Enhanced CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-=======
         {/* Advertising & Marketing Services Showcase */}
         <motion.section 
           className="py-24 px-4 bg-gradient-to-b from-gray-900/80 via-green-900/40 to-gray-800/80 relative overflow-hidden"
@@ -517,34 +458,11 @@ const EnhancedHomepage2026: React.FC = () => {
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <motion.h2 
               className="text-5xl md:text-6xl font-black mb-10 text-white"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-33fe
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join the future of technology with Zion Tech Group's cutting-edge solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Start Your Journey
-                </button>
-                <button 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
-                  onClick={() => window.location.href = '/demo'}
-                >
-                  Book a Demo
-                </button>
-              </div>
-=======
               Ready to Transform Your Business?
             </motion.h2>
             <motion.p 
@@ -576,7 +494,6 @@ const EnhancedHomepage2026: React.FC = () => {
               >
                 <span className="group-hover:scale-105 transition-transform inline-block">Explore Services</span>
               </button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-33fe
             </motion.div>
           </div>
         </section>

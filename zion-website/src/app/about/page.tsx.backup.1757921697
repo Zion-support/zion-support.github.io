@@ -1,10 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-import { UserGroupIcon, LightBulbIcon, GlobeAltIcon, ShieldCheckIcon, AcademicCapIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
-
-const values = [
-  { name: 'Innovation First', description: We
-=======
 
 export default function AboutPage() {
   return (
@@ -68,4 +62,3 @@ export default function AboutPage() {
   )
 }
 
->>>>>>> origin/cursor/create-and-deploy-new-content-a279

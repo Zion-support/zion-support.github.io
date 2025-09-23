@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
   name: string;
   description: string;
   technicalSpecs: string[];
@@ -22,4 +9,3 @@
   features: string[];
   integration: string[];
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

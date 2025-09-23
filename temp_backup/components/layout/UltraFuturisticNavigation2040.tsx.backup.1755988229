@@ -4,18 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, ChevronDown, X, Phone, Mail, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
-<<<<<<< HEAD
-  DollarSign, BarChart3, Globe, Grid, Heart, Database,
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
-  Search, User, Lock, Zap, Sparkles, Star, Award, Clock, Users
-=======
   DollarSign, BarChart3, Globe, Star, Sparkles, 
   Grid, List, TrendingUp, 
   Calendar, Calculator, GraduationCap,
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
   Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
   BookOpen, FileText, Handshake, Users, Wrench, Dna, Car
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-512d
 } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -146,37 +140,6 @@ const navigationItems: NavigationItem[] = [
         color: 'from-red-500 to-orange-500'
       },
       { 
-<<<<<<< HEAD
-        name: 'Quantum Computing', 
-        href: '/quantum-computing-platform', 
-        description: 'Advanced quantum computing',
-        icon: <Cpu className="w-4 h-4" />,
-        color: 'from-indigo-500 to-purple-500'
-      }
-    ]
-  },
-  {
-    name: 'Space Technology',
-    href: '/space-tech',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'AI-powered space solutions',
-    badge: 'Trending',
-    category: 'space',
-    color: 'from-indigo-500 to-purple-500',
-    children: [
-      { 
-        name: 'Space Resource Intelligence', 
-        href: '/space-resource-intelligence-2043', 
-        description: 'AI-powered space resource management',
-        icon: <Rocket className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Space Mining Platform', 
-        href: '/space-mining-platform', 
-        description: 'Automated space resource extraction',
-        icon: <Target className="w-4 h-4" />,
-=======
         name: 'Brain-Computer Interface', 
         href: '/brain-computer-interface-2040', 
         description: 'Neural interface technology',
@@ -272,7 +235,6 @@ const navigationItems: NavigationItem[] = [
         href: '/quantum-financial-intelligence-2040', 
         description: 'Quantum financial intelligence',
         icon: <DollarSign className="w-4 h-4" />,
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-512d
         color: 'from-yellow-500 to-orange-500'
       }
     ]

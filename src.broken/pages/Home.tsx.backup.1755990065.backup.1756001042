@@ -1,7 +1,5 @@
 import React from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useTranslation } from 'react-i18next';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
@@ -191,15 +189,11 @@ export default function Home() {
         </div>
       </section>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export function Home() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

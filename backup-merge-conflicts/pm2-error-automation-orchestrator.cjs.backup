@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -55,7 +53,6 @@ class PM2ErrorAutomationOrchestrator {
       return}
     this.log('Starting PM2 Error Automation Orchestrator...', 'info');
     this.isRunning = true;
->>>>>>> main
 #!/usr/bin/env node
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -90,14 +87,6 @@ class PM2ErrorAutomationOrchestrator {
       "logLevel": process.env.LOG_LEVEL || 'info'
     }}
   async start() {
-<<<<<<< HEAD
-    
-    
-    try {
-      // Initialize PM2 if not already running
-      await this.initializePM2();
-      
-=======
     console.log('🚀 Starting PM2 Error Automation Orchestrator...');
     try {
       // Initialize PM2 if not already running
@@ -112,28 +101,18 @@ class PM2ErrorAutomationOrchestrator {
       this.log(`Error starting "orchestrator": ${error.message}`, 'error');
       this.isRunning = false;
       process.exit(1);
->>>>>>> main
       // Start all automation processes
       await this.startAllAutomations();
       // Set up monitoring
       await this.setupMonitoring();
       // Start the main orchestration loop
       await this.startOrchestrationLoop();
-<<<<<<< HEAD
-      
-      } catch (error) {
-=======
       console.log('✅ PM2 Error Automation Orchestrator started successfully')} catch (error) {
->>>>>>> main
       console.error('❌ Failed to start PM2 Error Automation "Orchestrator": ', error.message);
       throw error;
     }
   }
   async initializePM2() {
-<<<<<<< HEAD
-    
-    
-=======
     this.log('Initializing PM2...', 'info');
     try {
       // Check if PM2 is installed
@@ -373,41 +352,24 @@ class PM2ErrorAutomationOrchestrator {
     this.log('PM2 Error Automation Orchestrator stopped', 'info');
     process.exit(0);
     console.log('🔧 Initializing PM2...');
->>>>>>> main
     try {
       // Check if PM2 is installed and running
       execSync('pm2 --version', { "stdio": 'pipe' });
       // Install PM2 logrotate if not already installed
       try {
         execSync('pm2 install pm2-logrotate', { "stdio": 'pipe' });
-<<<<<<< HEAD
-        } catch (error) {
-        }
-      
-=======
         console.log('✅ PM2 logrotate installed')} catch (error) {
         console.log('⚠️ PM2 logrotate already installed or failed to install')}
->>>>>>> main
       // Configure PM2 logrotate
       execSync('pm2 set pm2-"logrotate": max_size 10M', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": retain 30', { "stdio": 'pipe' });
       execSync('pm2 set pm2-"logrotate": compress true', { "stdio": 'pipe' });
-<<<<<<< HEAD
-      
-      } catch (error) {
-=======
       console.log('✅ PM2 initialized successfully')} catch (error) {
->>>>>>> main
       console.error('❌ Failed to initialize "PM2": ', error.message);
       throw error}
   }
   async startAllAutomations() {
-<<<<<<< HEAD
-    
-    
-=======
     console.log('🔧 Starting all automation processes...');
->>>>>>> main
     const automationScripts = [{
         "name": 'error-analyzer',
         "script": './scripts/automation/error-analyzer.cjs',
@@ -488,12 +450,7 @@ class PM2ErrorAutomationOrchestrator {
     }
   }
   async startAutomation(automation) {
-<<<<<<< HEAD
-    
-    
-=======
     console.log(`🚀 Starting ${automation.name}...`);
->>>>>>> main
     try {
       // Create PM2 ecosystem config for this automation
       const ecosystemConfig = {
@@ -503,13 +460,7 @@ class PM2ErrorAutomationOrchestrator {
       fs.writeFileSync(configPath, `module.exports = ${JSON.stringify(ecosystemConfig, null, 2)};`);
       // Start the automation with PM2
       execSync(`pm2 start ${configPath}`, { "stdio": 'pipe' });
-<<<<<<< HEAD
-      
-      
-      
-=======
       console.log(`✅ ${automation.name} started successfully`);
->>>>>>> main
       // Store reference to the automation
       this.automations[automation.name.replace(/-/g, '')] = {
         "name": automation.name,
@@ -521,12 +472,7 @@ class PM2ErrorAutomationOrchestrator {
       throw error}
   }
   async setupMonitoring() {
-<<<<<<< HEAD
-    
-    
-=======
     console.log('📊 Setting up monitoring...');
->>>>>>> main
     // Start monitoring process
     this.automations.monitor = {
       "name": 'automation-monitor',
@@ -536,18 +482,9 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic status checks
     setInterval(async () => {
       await this.checkAutomationStatus()}, 60000); // Check every minute
-<<<<<<< HEAD
-    
-    }
-
-  async startOrchestrationLoop() {
-    
-    
-=======
     console.log('✅ Monitoring setup completed')}
   async startOrchestrationLoop() {
     console.log('🔄 Starting orchestration loop...');
->>>>>>> main
     this.status.isRunning = true;
     this.status.lastRun = new Date();
     this.status.nextRun = new Date(Date.now() + this.config.checkInterval);
@@ -556,18 +493,9 @@ class PM2ErrorAutomationOrchestrator {
     // Set up periodic execution
     setInterval(async () => {
       await this.runErrorAnalysisAndFixing()}, this.config.checkInterval);
-<<<<<<< HEAD
-    
-    }
-
-  async runErrorAnalysisAndFixing() {
-    .toISOString()}`);
-    
-=======
     console.log(`✅ Orchestration loop started. Next run in ${this.config.checkInterval / 1000 / 60} minutes`)}
   async runErrorAnalysisAndFixing() {
     console.log(`🔍 Running error analysis and fixing at ${new Date().toISOString()}`);
->>>>>>> main
     this.status.totalRuns++;
     this.status.lastRun = new Date();
     this.status.nextRun = new Date(Date.now() + this.config.checkInterval);
@@ -638,15 +566,8 @@ class PM2ErrorAutomationOrchestrator {
     };
     const reportPath = path.join(process.cwd(), 'automation-summary-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(summary, null, 2));
-<<<<<<< HEAD
-    
-    
-    }
-
-=======
     console.log(`📄 Summary report saved "to": ${reportPath}`);
     console.log(`📊 Fix success "rate": ${summary.fixSuccessRate}%`)}
->>>>>>> main
   async saveStatus() {
     const statusPath = path.join(process.cwd(), 'automation-status.json');
     fs.writeFileSync(statusPath, JSON.stringify({
@@ -656,12 +577,7 @@ class PM2ErrorAutomationOrchestrator {
       "timestamp": new Date().toISOString()
     }, null, 2))}
   async stop() {
-<<<<<<< HEAD
-    
-    
-=======
     console.log('🛑 Stopping PM2 Error Automation Orchestrator...');
->>>>>>> main
     this.status.isRunning = false;
     try {
       // Stop all automation processes
@@ -678,20 +594,13 @@ class PM2ErrorAutomationOrchestrator {
       console.error('❌ Error stopping "orchestrator": ', error.message)}
   }
   async restart() {
-<<<<<<< HEAD
-    
-    
-=======
     console.log('🔄 Restarting PM2 Error Automation Orchestrator...');
->>>>>>> main
     await this.stop();
     await new Promise(resolve => setTimeout(resolve, 5000)); // Wait 5 seconds
     await this.start();
   }
   getStatus() {
     return {
-<<<<<<< HEAD
-=======
       "isRunning": this.isRunning,
       "scheduledJobs": this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
       "config": this.config
@@ -1281,7 +1190,6 @@ module.exports = {
   runErrorAutomationOrchestrator,
   startContinuousMonitoring
 };
->>>>>>> main
       "status": this.status,
       "automations": this.automations,
       "config": this.config
@@ -1304,12 +1212,7 @@ async function main() {
     // Keep the process running
     setInterval(() => {
       // Heartbeat
-<<<<<<< HEAD
-      .toISOString()}`)}, 300000); // Every 5 minutes
-    
-=======
       console.log(`💓 Orchestrator "heartbeat": ${new Date().toISOString()}`)}, 300000); // Every 5 minutes
->>>>>>> main
   } catch (error) {
     console.error('❌ Orchestrator "failed": ', error.message);
     process.exit(1)}

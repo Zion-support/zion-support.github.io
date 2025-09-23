@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-name: Workflow Auto-Healer
-=======
 ---
 name: Workflow Auto Healer
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
 
 on:
   workflow_run:
@@ -44,26 +40,6 @@ jobs:
         id: validate
         run: |
           echo "Validating all workflow files..."
-<<<<<<< HEAD
-          invalid_files=()
-
-          while IFS= read -r workflow_file; do
-            if ! python3 - << 'PY' "$workflow_file" 2>/dev/null; then
-import sys, yaml
-with open(sys.argv[1], 'r') as f:
-    yaml.safe_load(f)
-PY
-            then
-              invalid_files+=("$workflow_file")
-              echo "Invalid workflow: $workflow_file"
-            fi
-          done < <(find .github/workflows -name "*.yml" -o -name "*.yaml")
-
-          if [ ${#invalid_files[@]} -gt 0 ]; then
-            echo "needs_fix=true" >> "$GITHUB_OUTPUT"
-            echo "invalid_count=${#invalid_files[@]}" >> "$GITHUB_OUTPUT"
-            echo "Found ${#invalid_files[@]} invalid workflows"
-=======
 
           invalid_files=()
 
@@ -79,7 +55,6 @@ PY
             echo "needs_fix=true" >> "$GITHUB_OUTPUT"
             echo "invalid_count=$invalid_count" >> "$GITHUB_OUTPUT"
             echo "Found $invalid_count invalid workflows"
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
           else
             echo "needs_fix=false" >> "$GITHUB_OUTPUT"
             echo "All workflows are valid"

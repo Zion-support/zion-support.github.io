@@ -1,9 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/InteractiveElements.dynamic.test.js.backup
-<<<<<<< HEAD:__tests__/InteractiveElements.dynamic.test.js
-=======
-<<<<<<< HEAD:backup-merge-conflicts/InteractiveElements.dynamic.test.js.backup
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/InteractiveElements.dynamic.test.js.backup
 =======
 >>>>>>> pr-11913:__tests__/InteractiveElements.dynamic.test.js
 import React from 'react';
@@ -28,13 +24,8 @@ describe('InteractiveElementsdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import InteractiveElementsdynamic from "./components/InteractiveElements.dynamic"; describe("InteractiveElementsdynamic",() => { test("renders without crashing",() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId("interactiveelements.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<InteractiveElementsdynamic />)}); test("handles user interactions",() => { render(<InteractiveElementsdynamic />)}); test("applies correct styling",() => { render(<InteractiveElementsdynamic />)})});''"
-<<<<<<< HEAD:backup-merge-conflicts/InteractiveElements.dynamic.test.js.backup
-<<<<<<< HEAD:__tests__/InteractiveElements.dynamic.test.js
-import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
-=======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});
->>>>>>> main
 >>>>>>> main
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import InteractiveElementsdynamic from '../components/InteractiveElements.dynamic'; describe('InteractiveElementsdynamic',() => { test('renders without crashing',() => { render(<InteractiveElementsdynamic />); expect( screen.getByTestId('interactiveelements.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<InteractiveElementsdynamic />)}); test('handles user interactions',() => { render(<InteractiveElementsdynamic />)}); test('applies correct styling',() => { render(<InteractiveElementsdynamic />)})});

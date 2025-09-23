@@ -7,10 +7,6 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-<<<<<<< HEAD
-    timeout-minutes: 10
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     steps:
       - uses: actions/checkout@v4
         with:

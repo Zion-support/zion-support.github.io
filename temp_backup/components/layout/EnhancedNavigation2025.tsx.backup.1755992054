@@ -31,10 +31,6 @@ const navigationItems: NavigationItem[] = [
     featured: true
   },
   {
-<<<<<<< HEAD
-    name: 'Services',
-    href: '/services',
-=======
     name: 'AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
@@ -96,23 +92,12 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-113b
     icon: <Rocket className="w-5 h-5" />,
     description: 'Our comprehensive technology solutions',
     badge: 'Featured',
     category: 'services',
     color: 'from-emerald-500 to-cyan-500',
     children: [
-<<<<<<< HEAD
-      { label: 'Innovative 2025 Showcase', href: '/innovative-2025-services-showcase', icon: Rocket, badge: 'New' },
-      { label: 'AI & Machine Learning', href: '/ai-services', icon: Brain, badge: 'Hot' },
-      { label: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, badge: 'New' },
-      { label: 'Cybersecurity', href: '/cybersecurity', icon: Shield, badge: 'Popular' },
-      { label: 'Cloud Infrastructure', href: '/cloud-platform', icon: Globe },
-      { label: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
-      { label: 'Process Automation', href: '/process-automation', icon: Zap },
-      { label: 'Micro SAAS Solutions', href: '/micro-saas', icon: Zap, badge: 'Trending' }
-=======
       { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Churn prediction and retention' },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', description: 'AI-powered logistics' },
       { name: 'Financial Planning AI', href: '/ai-financial-planning-platform', description: 'Intelligent financial analysis' },
@@ -148,7 +133,6 @@ const navigationItems: NavigationItem[] = [
       { name: 'Satellite Technology', href: '/satellite-technology-platform', description: 'Satellite solutions' },
       { name: 'Space Research', href: '/space-research-platform', description: 'Space exploration tools' },
       { name: 'Space Mining Analytics', href: '/space-mining-analytics', description: 'Mining data analysis' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-113b
     ]
   },
   {
@@ -231,8 +215,6 @@ const EnhancedNavigation2025: React.FC = () => {
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
-
-
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

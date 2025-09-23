@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -326,13 +324,9 @@ export function useWebhooks() {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useWebhooks;
 export const useUseWebhooks: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

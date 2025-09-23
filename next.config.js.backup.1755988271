@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-  // Enhanced performance and SEO settings
-  experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    optimizeCss: true,
-=======
   // Enhanced performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
     turbo: {
       rules: {
         '*.svg': {
@@ -19,22 +12,13 @@ const nextConfig = {
       },
     },
   },
-<<<<<<< HEAD
-
-  // Image optimization configuration
-=======
   
   // Enhanced image optimization
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-<<<<<<< HEAD
-    minimumCacheTTL: 60,
-=======
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
@@ -43,21 +27,6 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle size
     if (!dev && !isServer) {
-<<<<<<< HEAD
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-          priority: 10,
-        },
-        common: {
-          name: 'common',
-          minChunks: 2,
-          chunks: 'all',
-          priority: 5,
-=======
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
@@ -74,7 +43,6 @@ const nextConfig = {
             priority: 5,
             reuseExistingChunk: true,
           },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
         },
       };
     }
@@ -84,15 +52,6 @@ const nextConfig = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-<<<<<<< HEAD
-
-    // Handle SVG files
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    });
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 
     return config;
   },
@@ -126,11 +85,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-<<<<<<< HEAD
-            value: 'public, max-age=3600, s-maxage=3600',
-=======
             value: 'public, max-age=3600, s-maxage=86400',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
           },
         ],
       },
@@ -146,11 +101,7 @@ const nextConfig = {
     ];
   },
 
-<<<<<<< HEAD
-  // Enhanced redirects for better SEO
-=======
   // Enhanced redirects
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   async redirects() {
     return [
       {
@@ -159,11 +110,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-<<<<<<< HEAD
-        source: '/index',
-        destination: '/',
-        permanent: true,
-=======
         source: '/services/ai',
         destination: '/services?category=ai-ml',
         permanent: false,
@@ -172,7 +118,6 @@ const nextConfig = {
         source: '/services/quantum',
         destination: '/services?category=quantum',
         permanent: false,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
       },
     ];
   },
@@ -181,26 +126,13 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-<<<<<<< HEAD
-        source: '/sitemap.xml',
-        destination: '/api/sitemap',
-      },
-      {
-        source: '/robots.txt',
-        destination: '/api/robots',
-=======
         source: '/api/health',
         destination: '/api/health-check',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
       },
     ];
   },
 
-<<<<<<< HEAD
-  // Compiler optimization
-=======
   // Enhanced compiler options
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
     styledComponents: true,
@@ -208,13 +140,6 @@ const nextConfig = {
 
   // Enhanced output configuration
   output: 'standalone',
-<<<<<<< HEAD
-  poweredByHeader: false,
-  generateEtags: false,
-  compress: true,
-  reactStrictMode: true,
-  swcMinify: true,
-=======
   
   // Enhanced powered by header
   poweredByHeader: false,
@@ -268,7 +193,6 @@ const nextConfig = {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase}}',
     },
   },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 };
 
 module.exports = nextConfig;

@@ -128,11 +128,6 @@
     "switch_to_detected": "التبديل إلى {{language}}؟"
   },
 <<<<<<< HEAD
-  "error_boundary": {
-    "message": "حدث خطأ ما.",
-    "retry": "إعادة المحاولة"
-=======
-<<<<<<< HEAD
   "features": {
     "ai_talent_matching": "مطابقة مواهب الذكاء الاصطناعي",
     "ai_talent_matching_desc": "خوارزمية تربطك بالمواهب أو الوظائف المثالية",
@@ -231,7 +226,6 @@
   "error_boundary": {
     "message": "حدث خطأ ما.",
     "retry": "إعادة المحاولة"
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }

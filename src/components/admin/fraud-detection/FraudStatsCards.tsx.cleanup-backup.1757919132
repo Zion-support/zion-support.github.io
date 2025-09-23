@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
-import { FraudStats } from "@/types/fraud",
-
-interface FraudStatsCardsProps {
-  stats: FraudStats
-=======
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
@@ -15,7 +6,6 @@ import { FraudStats } from "@/types/fraud";
 
 interface FraudStatsCardsProps {
   stats: FraudStats;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
@@ -72,10 +62,5 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
         </CardHeader>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

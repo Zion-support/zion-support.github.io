@@ -3,15 +3,11 @@ import Link from 'next/link';
 
 export default function OrderConfirmation() {
 <<<<<<< HEAD
-  const { orderId } = useParams() as { orderId?: string };
-=======
-<<<<<<< HEAD
   const router = useRouter();
   const { orderId } = router.query as { orderId?: string };
   if (!orderId) return null;
 =======
   const { orderId } = useParams() as { orderId?: string };
->>>>>>> origin/87zh7m-codex/fix-netlify-build-failures-due-to-typescript-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div className="container max-w-2xl py-10 text-center">

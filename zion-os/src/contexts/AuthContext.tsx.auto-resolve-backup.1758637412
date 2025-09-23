@@ -52,11 +52,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [session, status]);
 
   const login = async (email: string, password: string) => {
-<<<<<<< HEAD
-    const result = await signIn("credentials", { email, password, redirect: false });
-    if ((result as any)?.error) throw new Error((result as any).error);
-    router.push("/dashboard");
-=======
     try {
       const result = await signIn("credentials", {
         email,
@@ -72,7 +67,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch (error) {
       throw error as Error;
     }
->>>>>>> cursor/check-fix-push-and-merge-to-main-9b75
   };
 
   const logout = async () => {
@@ -81,16 +75,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const register = async (name: string, email: string, password: string) => {
-<<<<<<< HEAD
-    const response = await fetch("/api/auth/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message);
-=======
     try {
       const response = await fetch("/api/auth/register", {
         method: "POST",
@@ -108,20 +92,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       await login(email, password);
     } catch (error) {
       throw error as Error;
->>>>>>> cursor/check-fix-push-and-merge-to-main-9b75
     }
     await login(email, password);
   };
 
   const completeOnboarding = async () => {
-<<<<<<< HEAD
-    const response = await fetch("/api/user/onboarding", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-    });
-    if (!response.ok) throw new Error("Failed to complete onboarding");
-    if (user) setUser({ ...user, onboardingCompleted: true });
-=======
     try {
       const response = await fetch("/api/user/onboarding", {
         method: "POST",
@@ -140,7 +115,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch (error) {
       throw error as Error;
     }
->>>>>>> cursor/check-fix-push-and-merge-to-main-9b75
   };
 
   const value: AuthContextType = {
@@ -161,7 +135,3 @@ export function useAuth() {
   if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
   return context;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-9b75

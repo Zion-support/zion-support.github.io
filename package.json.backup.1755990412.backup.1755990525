@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "bolt.new.zion.app",
-  "version": "0.1.0",
-  "private": true,
-=======
   "name": "project",
   "version": "0.0.0",
   "private": true,
@@ -112,7 +107,6 @@
     "doc": "docs",
     "test": "tests"
   },
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"
@@ -122,9 +116,6 @@
   },
   "homepage": "https://github.com/Zion-Holdings/zion.app#readme",
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   "engines": {
     "node": ">=20.18.1",
     "npm": ">=10.0.0"
@@ -135,10 +126,7 @@
     "pm2:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env)",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 200",
-<<<<<<< HEAD
-=======
     "sitemap": "node scripts/generate-sitemap.js",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -151,20 +139,13 @@
     "front:advertise": "node automation/front-index-advertiser.cjs",
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-<<<<<<< HEAD
-    "sitemap": "node scripts/generate-sitemap.js",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "netlify:manifest": "node scripts/generate-netlify-functions-manifest.cjs",
     "netlify:trigger": "node scripts/trigger-netlify-automations.cjs",
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-<<<<<<< HEAD
-=======
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
@@ -479,73 +460,6 @@
     "redundancy:ultimate:master:stop": "node automation/ultimate-redundancy-master.cjs stop",
     "redundancy:ultimate:master:restart": "node automation/ultimate-redundancy-master.cjs restart",
     "redundancy:ultimate:master:status": "node automation/ultimate-redundancy-master.cjs status",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "redundancy:ultimate:master:health": "node automation/ultimate-redundancy-master.cjs health",
-    "redundancy:ultimate:v2:start": "bash automation/start-ultimate-redundancy-v2.sh start",
-    "redundancy:ultimate:v2:stop": "bash automation/start-ultimate-redundancy-v2.sh stop",
-    "redundancy:ultimate:v2:restart": "bash automation/start-ultimate-redundancy-v2.sh restart",
-    "redundancy:ultimate:v2:status": "bash automation/start-ultimate-redundancy-v2.sh status",
-    "redundancy:ultimate:v2:health": "bash automation/start-ultimate-redundancy-v2.sh health",
-    "redundancy:ultimate:v2:logs": "bash automation/start-ultimate-redundancy-v2.sh logs",
-    "redundancy:ultimate:v2:system": "node automation/ultimate-redundancy-system-v2.cjs start",
-    "redundancy:ultimate:v2:system:stop": "node automation/ultimate-redundancy-system-v2.cjs stop",
-    "redundancy:ultimate:v2:system:status": "node automation/ultimate-redundancy-system-v2.cjs status",
-    "redundancy:ultimate:v2:system:health": "node automation/ultimate-redundancy-system-v2.cjs health",
-    "redundancy:github:backup": "node automation/github-actions-backup-manager.cjs backup",
-    "redundancy:github:restore": "node automation/github-actions-backup-manager.cjs restore",
-    "redundancy:github:validate": "node automation/github-actions-backup-manager.cjs validate",
-    "redundancy:github:sync": "node automation/github-actions-backup-manager.cjs sync",
-    "redundancy:github:status": "node automation/github-actions-backup-manager.cjs status",
-    "redundancy:github:cleanup": "node automation/github-actions-backup-manager.cjs cleanup",
-    "redundancy:github:cycle": "node automation/github-actions-backup-manager.cjs cycle",
-    "redundancy:netlify:scan": "node automation/netlify-functions-redundancy-manager.cjs scan",
-    "redundancy:ultimate:v2:system:health": "node automation/ultimate-redundancy-system-v2.cjs health",
-    "redundancy:netlify:validate": "node automation/netlify-functions-redundancy-manager.cjs validate",
-    "redundancy:netlify:manifest": "node automation/netlify-functions-redundancy-manager.cjs manifest",
-    "redundancy:netlify:deploy": "node automation/netlify-functions-redundancy-manager.cjs deploy",
-    "redundancy:netlify:status": "node automation/netlify-functions-redundancy-manager.cjs status",
-    "redundancy:netlify:health": "node automation/netlify-functions-redundancy-manager.cjs health",
-    "redundancy:netlify:recover": "node automation/netlify-functions-redundancy-manager.cjs recover",
-    "redundancy:netlify:maintenance": "node automation/netlify-functions-redundancy-manager.cjs maintenance",
-    "redundancy:ultimate:automation:start": "bash automation/start-ultimate-redundancy-automation.sh start",
-    "redundancy:ultimate:automation:stop": "bash automation/start-ultimate-redundancy-automation.sh stop",
-    "redundancy:ultimate:automation:restart": "bash automation/start-ultimate-redundancy-automation.sh restart",
-    "redundancy:ultimate:automation:status": "bash automation/start-ultimate-redundancy-automation.sh status",
-    "redundancy:ultimate:automation:logs": "bash automation/start-ultimate-redundancy-automation.sh logs",
-    "redundancy:ultimate:automation:health": "bash automation/start-ultimate-redundancy-automation.sh health",
-    "redundancy:ultimate:automation:once": "bash automation/start-ultimate-redundancy-automation.sh once",
-    "redundancy:ultimate:automation:test": "bash automation/start-ultimate-redundancy-automation.sh test",
-    "redundancy:ultimate:automation:node": "node automation/ultimate-redundancy-automation-system.cjs",
-    "redundancy:ultimate:pm2:start": "pm2 start ecosystem.ultimate-redundancy-automation.cjs --update-env",
-    "redundancy:ultimate:pm2:stop": "pm2 stop ecosystem.ultimate-redundancy-automation.cjs || true",
-    "redundancy:ultimate:pm2:restart": "pm2 restart ecosystem.ultimate-redundancy-automation.cjs || pm2 start ecosystem.ultimate-redundancy-automation.cjs --update-env",
-    "redundancy:ultimate:pm2:status": "pm2 status",
-    "redundancy:ultimate:pm2:logs": "pm2 logs --lines 200",
-    "redundancy:ultimate:pm2:reload": "pm2 reload ecosystem.ultimate-redundancy-automation.cjs",
-    "redundancy:ultimate:pm2:delete": "pm2 delete ecosystem.ultimate-redundancy-automation.cjs || true",
-    "redundancy:ultimate:netlify:check": "node automation/ultimate-netlify-functions-redundancy.cjs check",
-    "redundancy:ultimate:netlify:health": "node automation/ultimate-netlify-functions-redundancy.cjs health",
-    "redundancy:ultimate:netlify:recover": "node automation/ultimate-netlify-functions-redundancy.cjs recover",
-    "redundancy:ultimate:netlify:backup": "node automation/ultimate-netlify-functions-redundancy.cjs backup",
-    "redundancy:ultimate:netlify:regenerate": "node automation/ultimate-netlify-functions-redundancy.cjs regenerate",
-    "redundancy:ultimate:netlify:status": "node automation/ultimate-netlify-functions-redundancy.cjs status",
-    "redundancy:ultimate:netlify:once": "node automation/ultimate-netlify-functions-redundancy.cjs once",
-    "redundancy:ultimate:github:check": "node automation/ultimate-github-actions-redundancy.cjs check",
-    "redundancy:ultimate:github:health": "node automation/ultimate-github-actions-redundancy.cjs health",
-    "redundancy:ultimate:github:recover": "node automation/ultimate-github-actions-redundancy.cjs recover",
-    "redundancy:ultimate:github:backup": "node automation/ultimate-github-actions-redundancy.cjs backup",
-    "redundancy:ultimate:github:validate": "node automation/ultimate-github-actions-redundancy.cjs validate",
-    "redundancy:ultimate:github:status": "node automation/ultimate-github-actions-redundancy.cjs status",
-    "redundancy:ultimate:github:once": "node automation/ultimate-github-actions-redundancy.cjs once",
-    "redundancy:ultimate:pm2:check": "node automation/ultimate-pm2-redundancy.cjs check",
-    "redundancy:ultimate:pm2:health": "node automation/ultimate-pm2-redundancy.cjs health",
-    "redundancy:ultimate:pm2:recover": "node automation/ultimate-pm2-redundancy.cjs recover",
-    "redundancy:ultimate:pm2:processes": "node automation/ultimate-pm2-redundancy.cjs processes",
-    "redundancy:ultimate:pm2:system": "node automation/ultimate-pm2-redundancy.cjs system",
-    "redundancy:ultimate:pm2:status": "node automation/ultimate-pm2-redundancy.cjs status",
-    "redundancy:ultimate:pm2:once": "node automation/ultimate-pm2-redundancy.cjs once"
-=======
     "redundancy:ultimate:master:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:master:monitor": "node automation/ultimate-redundancy-master.cjs monitor",
     "redundancy:complete:start": "./automation/start-complete-redundancy.sh start",
@@ -559,7 +473,6 @@
     "redundancy:complete:pm2:stop": "pm2 stop ecosystem.complete-redundancy.pm2.cjs",
     "redundancy:complete:pm2:restart": "pm2 restart ecosystem.complete-redundancy.pm2.cjs",
     "redundancy:complete:pm2:status": "pm2 status ecosystem.complete-redundancy.pm2.cjs"
->>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-9138
 =======
     "redundancy:ultimate:master:report": "node automation/ultimate-redundancy-master.cjs report",
     "redundancy:ultimate:master:monitor": "node automation/ultimate-redundancy-master.cjs monitor",
@@ -592,11 +505,7 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@supabase/ssr": "^0.6.1",
-<<<<<<< HEAD
-    "@supabase/supabase-js": "^2.56.0",
-=======
     "@supabase/supabase-js": "^2.39.0",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "@tailwindcss/postcss": "^4.1.12",
     "@types/react-datepicker": "^6.2.0",
     "axios": "^1.11.0",
@@ -607,11 +516,7 @@
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
-    "cssnano": "^7.1.1",
-=======
     "dotenv": "^17.2.1",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "events": "^3.3.0",
     "framer-motion": "^12.23.12",
     "fs": "^0.0.1-security",
@@ -644,11 +549,6 @@
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
-<<<<<<< HEAD
-    "autoprefixer": "^10.4.21",
-    "dotenv": "^17.2.1",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",
@@ -665,12 +565,9 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-<<<<<<< HEAD
-=======
 =======
   "resolutions": {
     "postcss": "8.5.6"
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 >>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   }
 }

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function EnhancedHome() { return <div className="py-10">Enhanced Home</div> }
-=======
 import Head from 'next/head';
 
 export default function EnhancedHomePage() {
@@ -14,4 +11,3 @@ export default function EnhancedHomePage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

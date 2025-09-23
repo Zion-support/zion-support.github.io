@@ -3,11 +3,6 @@ import React from 'react';
 const AI2026AutonomousEnterpriseBanner = () => {
   return (
 <<<<<<< HEAD
-    <div>
-      <h1>AI 2026 Autonomous Enterprise Banner</h1>
-    </div>
-=======
-<<<<<<< HEAD
     <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -104,41 +99,10 @@ const AI2026AutonomousEnterpriseBanner = () => {
             <div className="text-3xl font-bold text-emerald-300 mb-2">340%</div>
             <div className="text-lg opacity-90">Productivity Increase</div>
             <div className="text-sm opacity-75 mt-2">Across all functions</div>
->>>>>>> origin/main
           </div>
         </div>
 
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 border border-white border-opacity-20 mb-8">
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Industry Transformations</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
-                  <span className="text-gray-200">Manufacturing: 45% reduction in downtime</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full"></div>
-                  <span className="text-gray-200">Banking: 60% faster loan processing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                  <span className="text-gray-200">Healthcare: 50% reduction in diagnostic errors</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-emerald-300 rounded-full"></div>
-                  <span className="text-gray-200">Retail: 40% improvement in supply chain efficiency</span>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-6xl mb-4">🏭</div>
-              <div className="text-sm text-gray-300">
-                Autonomous Enterprise<br />
-                Systems 2026
-              </div>
-=======
           <h3 className="text-2xl font-bold mb-6 text-center">Revolutionary Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white bg-opacity-5 rounded-lg p-4">
@@ -150,7 +114,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
               <h4 className="font-bold text-lg mb-2">Manufacturing Conglomerate</h4>
               <p className="text-sm opacity-90 mb-2">99.9% autonomous production with zero quality defects</p>
               <div className="text-green-300 font-bold">$8.7B in cost savings achieved</div>
->>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -158,29 +121,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
-<<<<<<< HEAD
-              href="/blog/ai-2026-autonomous-enterprise-systems"
-              className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Explore Autonomous Systems
-            </Link>
-            <Link
-              href="/resources/ai-2026-enterprise-tools-suite"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
-            >
-              Access Tools Suite
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
-            >
-              Get Implementation Guide
-            </Link>
-          </div>
-          <p className="text-gray-300 text-sm">
-            Transform your operations with autonomous AI • 
-            <span className="text-emerald-400 font-semibold"> Free implementation roadmap available</span>
-=======
               href="/blog/ai-2026-autonomous-enterprise-revolution"
               className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
@@ -195,7 +135,6 @@ const AI2026AutonomousEnterpriseBanner = () => {
           </div>
           <p className="text-sm opacity-75">
             Join 1,000+ enterprises already operating autonomously
->>>>>>> origin/main
           </p>
         </div>
       </div>

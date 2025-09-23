@@ -24,10 +24,7 @@ export interface AIBreakthroughService2029 {
   useCases: string[];
   aiCapabilities: string[];
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
   {
     id: "ai-consciousness-evolution-platform",

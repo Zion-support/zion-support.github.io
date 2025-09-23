@@ -621,15 +621,12 @@ button,
   }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   /* Improved placeholder contrast */
   input::placeholder,
   textarea::placeholder {
     color: #b3b3b3;
     opacity: 1;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 /* Basic fallback styles to ensure content renders */
 * {
   box-sizing: border-box;
@@ -693,9 +690,6 @@ button:hover {
 
   .container {
     padding: 0 0.5rem;
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }
@@ -705,14 +699,11 @@ button:hover {
   }
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   .animate-slide-up {
     animation: slide-up 0.3s ease-out;
   }
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 /* Ensure text is visible */
 h1,
 h2,
@@ -872,7 +863,4 @@ p {
 .bg-background {
   background-color: hsl(var(--background));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

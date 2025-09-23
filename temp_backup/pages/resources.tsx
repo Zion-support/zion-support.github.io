@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Link from 'next/link',
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
->>>>>>> origin/auto/autonomy-17186719616
 
 export default function ResourcesPage() {
   return (
@@ -38,12 +31,6 @@ export default function ResourcesPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-  ),
-},
-
-export default ResourcesPage,
-=======
   );
 };
 
@@ -301,4 +288,3 @@ export default ResourcesPage,
     </>
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

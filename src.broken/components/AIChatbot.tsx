@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React{ useStateuseRefuseEffectDispatchSetStateAction } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
-MessageCircleXSendBotUserSparklesChevronUpChevronDown
-=======
 import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
->>>>>>> origin/auto/autonomy-17186719616
 
 interface ChatMessage {
   id: string;
@@ -21,20 +15,6 @@ interface AIChatbotProps {
 }
 
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
-<<<<<<< HEAD
-  const [isOpensetIsOpen] = useState(false);
-  const [isMinimizedsetIsMinimized] = useState(false);
-  const [messagesetMessages] = useState<ChatMessage[]>([
-    {
-      id: '1',
-      type: 'bot',
-      content: 'Hello! I\'m Zion AIyour intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',
-      timestamp: new Date()
-    }
-  ]);
-  const [inputValuesetInputValue] = useState('');
-  const [isTypingsetIsTyping] = useState(false);
-=======
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -47,7 +27,6 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -57,30 +36,18 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 
   useEffect(() => {
     scrollToBottom();
-<<<<<<< HEAD
-  }[messages]);
-=======
   }, [messages]);
->>>>>>> origin/auto/autonomy-17186719616
 
   // AI response simulation
   const generateAIResponse = async (userMessage: string): Promise<string> => {
     setIsTyping(true);
     
     // Simulate AI processing time
-<<<<<<< HEAD
-    await new Promise(resolve => setTimeout(resolve1000 + Math.random() * 2000));
-    
-    const responses = [
-      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
-      "I understand you're interested in our services. We offer cutting-edge AIquantum computingand autonomous solutions that can revolutionize your business.",
-=======
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
     
     const responses = [
       "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
       "I understand you're interested in our services. We offer cutting-edge AI, quantum computing, and autonomous solutions that can revolutionize your business.",
->>>>>>> origin/auto/autonomy-17186719616
       "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",
       "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.",
       "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
@@ -94,15 +61,9 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     if (userMessage.toLowerCase().includes('price') || userMessage.toLowerCase().includes('cost')) {
       finalResponse = "Our pricing varies based on your specific needs. We offer flexible plans starting from $799/month. Would you like me to connect you with our pricing specialist?";
     } else if (userMessage.toLowerCase().includes('ai') || userMessage.toLowerCase().includes('artificial intelligence')) {
-<<<<<<< HEAD
-      finalResponse = "Our AI services include consciousness evolutionemotional intelligenceautonomous researchand predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?";
-    } else if (userMessage.toLowerCase().includes('quantum')) {
-      finalResponse = "Our quantum computing solutions cover neural networkscybersecuritymaterials discoveryand financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";
-=======
       finalResponse = "Our AI services include consciousness evolution, emotional intelligence, autonomous research, and predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?";
     } else if (userMessage.toLowerCase().includes('quantum')) {
       finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";
->>>>>>> origin/auto/autonomy-17186719616
     }
     
     return finalResponse!;
@@ -118,11 +79,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       timestamp: new Date()
     };
 
-<<<<<<< HEAD
-    setMessages([...messagesuserMessage]);
-=======
     setMessages([...messages, userMessage]);
->>>>>>> origin/auto/autonomy-17186719616
     setInputValue('');
     
     // Generate AI response
@@ -131,19 +88,11 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     const botMessage: ChatMessage = {
       id: (Date.now() + 1).toString(),
       type: 'bot',
-<<<<<<< HEAD
-      content: aiResponse || 'I apologize, but I encountered an error. Please try again.',
-      timestamp: new Date()
-    };
-
-    setMessages([...messagesbotMessage]);
-=======
       content: aiResponse,
       timestamp: new Date()
     };
 
     setMessages([...messages, botMessage]);
->>>>>>> origin/auto/autonomy-17186719616
     setIsTyping(false);
   };
 
@@ -164,11 +113,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 
   const handleQuickReply = (reply: string) => {
     setInputValue(reply);
-<<<<<<< HEAD
-    setTimeout(() => handleSendMessage()100);
-=======
     setTimeout(() => handleSendMessage(), 100);
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   return (
@@ -191,15 +136,9 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0scale: 0.8y: 20 }}
-            animate={{ opacity: 1scale: 1y: 0 }}
-            exit={{ opacity: 0scale: 0.8y: 20 }}
-=======
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
->>>>>>> origin/auto/autonomy-17186719616
             className="absolute bottom-16 right-0 w-96 bg-gray-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Chat Header */}
@@ -241,13 +180,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
-<<<<<<< HEAD
-                      initial={{ opacity: 0y: 10 }}
-                      animate={{ opacity: 1y: 0 }}
-=======
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
                       className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       {message.type === 'bot' && (
@@ -267,11 +201,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                         <div className={`text-xs mt-2 ${
                           message.type === 'user' ? 'text-cyan-100' : 'text-gray-400'
                         }`}>
-<<<<<<< HEAD
-                          {message.timestamp.toLocaleTimeString([]{ hour: '2-digit'minute: '2-digit' })}
-=======
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
->>>>>>> origin/auto/autonomy-17186719616
                         </div>
                       </div>
 
@@ -286,13 +216,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                   {/* Typing Indicator */}
                   {isTyping && (
                     <motion.div
-<<<<<<< HEAD
-                      initial={{ opacity: 0y: 10 }}
-                      animate={{ opacity: 1y: 0 }}
-=======
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
->>>>>>> origin/auto/autonomy-17186719616
                       className="flex gap-3 justify-start"
                     >
                       <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
@@ -319,11 +244,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                       <span className="text-xs text-cyan-400 font-medium">Quick Questions</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-                      {quickReplies.map((replyindex) => (
-=======
                       {quickReplies.map((reply, index) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <button
                           key={index}
                           onClick={() => handleQuickReply(reply)}

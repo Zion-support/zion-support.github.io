@@ -2,8 +2,6 @@
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-=======
   "version": "0.0.0",
   "type": "module",
   "bin": {
@@ -428,7 +426,6 @@
     "doc": "docs",
     "test": "tests"
   },
->>>>>>> origin/cursor/check-logs-and-improve-project-quality-a28f
   "repository": {
     "type": "git",
     "url": "https://github.com/Zion-Holdings/zion.app.git"

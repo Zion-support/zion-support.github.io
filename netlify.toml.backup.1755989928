@@ -6,41 +6,15 @@
   NODE_VERSION = "20"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # When triggering chained builds via build hook, set NETLIFY_RERUN_CHAIN=1 in the hook payload/env
-<<<<<<< HEAD
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-# Next.js plugin is not needed for static export
-# [[plugins]]
-#   package = "@netlify/plugin-nextjs"
-=======
-
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
 [[plugins]]
-<<<<<<< HEAD
-  package = "netlify-plugin-cloudinary"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "0"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://plausible.io; connect-src 'self' https://plausible.io; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data: https:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
-=======
   package = "./netlify/plugins/run-functions-and-rerun"
   [plugins.inputs]
     # Optional: comma-separated includes/excludes
@@ -318,4 +292,3 @@
 [[scheduled.functions]]
   name = "intelligent-meta-orchestrator"
   schedule = "*/3 * * * *"
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

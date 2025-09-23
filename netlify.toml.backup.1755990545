@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -199,9 +198,6 @@
   name = "netlify-auto-healer-runner"
   schedule = "*/20 * * * *"
 
-<<<<<<< HEAD
-# Intelligent cloud automations
-=======
 [[scheduled.functions]]
   name = "unused-exports-runner"
   schedule = "17 */12 * * *" # twice daily
@@ -211,7 +207,6 @@
   schedule = "13 */6 * * *" # every 6 hours
 
 # New intelligent cloud automations
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-f41c
 [[scheduled.functions]]
   name = "innovation-lab"
   schedule = "*/10 * * * *"

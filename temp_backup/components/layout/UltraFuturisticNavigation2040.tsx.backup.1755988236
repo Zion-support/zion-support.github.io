@@ -229,15 +229,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-<<<<<<< HEAD
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-=======
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
 
   useEffect(() => {
     let ticking = false;
@@ -306,70 +298,6 @@ const UltraFuturisticNavigation2040: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl' 
-          : 'bg-transparent'
-      }`}
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <motion.div
-            className="flex-shrink-0"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link 
-              href="/" 
-              className="flex items-center space-x-3 group"
-              onClick={closeAllDropdowns}
-              aria-label="Zion Tech Group - Home"
-            >
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-sm"></div>
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  Zion Tech Group
-                </div>
-                <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors duration-300">
-                  Revolutionary Technology 2043
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <motion.div
-                key={item.name}
-                className="relative"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                ref={setDropdownRef(item.name)}
-              >
-                <button
-                  onClick={() => handleDropdownToggle(item.name)}
-                  className={`group flex items-center space-x-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:bg-gray-800/50 hover:text-cyan-400 ${
-                    activeDropdown === item.name 
-                      ? 'text-cyan-400 bg-gray-800/50' 
-                      : 'text-gray-300 hover:text-white'
-                  }`}
-                  aria-expanded={activeDropdown === item.name}
-                  aria-haspopup="true"
-                  aria-label={`${item.name} menu`}
-=======
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
       {/* Enhanced Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border-b border-cyan-400/20">
@@ -425,192 +353,10 @@ const UltraFuturisticNavigation2040: React.FC = () => {
                     flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
                     ${item.badge ? 'bg-gradient-to-r ' + item.color + ' text-white' : 'text-gray-300 hover:text-white hover:bg-white/5'}
                   `}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   {item.badge && (
-<<<<<<< HEAD
-                    <span className="px-2 py-1 text-xs font-semibold bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full">
-                      {item.badge}
-                    </span>
-                  )}
-                  <ChevronDown 
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} 
-                  />
-                </button>
-
-                {/* Enhanced Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2, ease: "easeOut" }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
-                      role="menu"
-                      aria-label={`${item.name} submenu`}
-                    >
-                      {/* Dropdown Header */}
-                      <div className="p-4 border-b border-gray-700/50 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
-                        <div className="flex items-center space-x-3">
-                          <div className={`p-2 rounded-xl bg-gradient-to-br ${item.color || 'from-gray-600 to-gray-700'}`}>
-                            {item.icon}
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-white">{item.name}</h3>
-                            <p className="text-sm text-gray-400">{item.description}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Dropdown Items */}
-                      <div className="p-2">
-                        {item.children?.map((child, childIndex) => (
-                          <motion.div
-                            key={child.name}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.2, delay: childIndex * 0.05 }}
-                          >
-                            <Link
-                              href={child.href}
-                              className={`group flex items-center space-x-3 p-3 rounded-xl transition-all duration-300 hover:bg-gray-800/50 ${
-                                child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20' : ''
-                              }`}
-                              onClick={closeAllDropdowns}
-                              role="menuitem"
-                            >
-                              <div className={`p-2 rounded-lg bg-gradient-to-br ${child.color || 'from-gray-600 to-gray-700'} group-hover:scale-110 transition-transform duration-300`}>
-                                {child.icon}
-                              </div>
-                              <div className="flex-1">
-                                <div className="flex items-center space-x-2">
-                                  <span className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
-                                    {child.name}
-                                  </span>
-                                  {child.featured && (
-                                    <Star className="w-4 h-4 text-yellow-400" />
-                                  )}
-                                </div>
-                                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                                  {child.description}
-                                </p>
-                              </div>
-                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300" />
-                            </Link>
-                          </motion.div>
-                        ))}
-                      </div>
-
-                      {/* Dropdown Footer */}
-                      <div className="p-3 border-t border-gray-700/50 bg-gradient-to-r from-gray-800/30 to-gray-900/30">
-                        <Link
-                          href={item.href}
-                          className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                          onClick={closeAllDropdowns}
-                        >
-                          View All {item.name}
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Enhanced Search */}
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              ref={searchRef}
-            >
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-xl transition-all duration-300"
-                aria-label="Search"
-                aria-expanded={isSearchOpen}
-              >
-                <Search className="w-5 h-5" />
-              </button>
-
-              <AnimatePresence>
-                {isSearchOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full right-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 p-4"
-                  >
-                    <div className="relative">
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      <input
-                        type="text"
-                        placeholder="Search revolutionary services..."
-                        value={searchQuery}
-                        onChange={(e) => handleSearch(e.target.value)}
-                        onKeyDown={handleKeyDown}
-                        className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300"
-                        autoFocus
-                      />
-                    </div>
-                    
-                    {searchQuery.length > 2 && (
-                      <div className="mt-4 p-3 bg-gray-800/30 rounded-xl border border-gray-600/30">
-                        <div className="text-sm text-gray-400 mb-2">Quick results for "{searchQuery}"</div>
-                        <div className="space-y-2">
-                          <div className="text-sm text-gray-300">AI Consciousness Evolution</div>
-                          <div className="text-sm text-gray-300">Quantum Neural Networks</div>
-                          <div className="text-sm text-gray-300">Space Resource Intelligence</div>
-                        </div>
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-
-            {/* Contact Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Link
-                href="/contact"
-                className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-                onClick={closeAllDropdowns}
-                aria-label="Contact us"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Contact</span>
-              </Link>
-            </motion.div>
-
-            {/* Mobile Menu Button */}
-            <motion.button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-xl transition-all duration-300"
-              aria-label="Toggle mobile menu"
-              aria-expanded={isOpen}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-=======
                     <span className="px-2 py-1 text-xs bg-white/20 rounded-full">
                       {item.badge}
                     </span>
@@ -693,17 +439,12 @@ const UltraFuturisticNavigation2040: React.FC = () => {
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
         </div>
       </div>
 
       {/* Enhanced Mobile Menu */}
       <AnimatePresence>
-<<<<<<< HEAD
-        {isSearchOpen && (
-=======
         {isMobileMenuOpen && (
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d425
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-"use client";
-import React{ useEffectuseMemouseState } from 'react';
-import { LineChartBarChartDonutChart } from '../components/salary/InsightCharts';
-=======
 import React, { useEffect, useMemo, useState } from 'react';
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
->>>>>>> origin/auto/autonomy-17186719616
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -21,18 +15,6 @@ type InsightResponse = {
 };
 
 export default function SalaryInsightsPage() {
-<<<<<<< HEAD
-  const [roleTitlesetRoleTitle] = useState('Senior AI Engineer');
-  const [skillsetSkills] = useState('OpenAIRAGTypeScript');
-  const [regionsetRegion] = useState('RemoteGlobal');
-  const [experienceLevelsetExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
-  const [remotesetRemote] = useState(true);
-  const [employmentTypesetEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
-  const [loadingsetLoading] = useState(false);
-  const [datasetData] = useState<InsightResponse | null>(null);
-  const [errorsetError] = useState<string | null>(null);
-  const [isLoggedInsetIsLoggedIn] = useState(false);
-=======
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -43,7 +25,6 @@ export default function SalaryInsightsPage() {
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     // Lightweight login check via Supabase client if available; otherwise public mode
@@ -56,21 +37,13 @@ export default function SalaryInsightsPage() {
         setIsLoggedIn(false);
       }
     })();
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   async function fetchInsights() {
     setLoading(true);
     setError(null);
     try {
-<<<<<<< HEAD
-      const res = await fetch('/api/salary-insights'{
-=======
       const res = await fetch('/api/salary-insights', {
->>>>>>> origin/auto/autonomy-17186719616
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -79,13 +52,9 @@ export default function SalaryInsightsPage() {
           region,
           experienceLevel,
           remote,
-<<<<<<< HEAD
-          employmentType})});
-=======
           employmentType,
         }),
       });
->>>>>>> origin/auto/autonomy-17186719616
       if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json);
@@ -99,17 +68,10 @@ export default function SalaryInsightsPage() {
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-<<<<<<< HEAD
-  }[]);
-
-  function saveInsight() {
-    const payload = { createdAt: new Date().toISOString()input: { roleTitleskillsregionexperienceLevelremotemploymentType }output: data };
-=======
   }, []);
 
   function saveInsight() {
     const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data };
->>>>>>> origin/auto/autonomy-17186719616
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -118,12 +80,8 @@ export default function SalaryInsightsPage() {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
             user_id: user.data.user.id,
-<<<<<<< HEAD
-            payload});
-=======
             payload,
           });
->>>>>>> origin/auto/autonomy-17186719616
           alert('Insight saved to your profile');
           return;
         }
@@ -134,11 +92,7 @@ export default function SalaryInsightsPage() {
         const key = 'zion.salary-insights.history';
         const history = JSON.parse(localStorage.getItem(key) || '[]');
         history.unshift(payload);
-<<<<<<< HEAD
-        localStorage.setItem(keyJSON.stringify(history.slice(050)));
-=======
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
->>>>>>> origin/auto/autonomy-17186719616
         alert('Insight saved locally');
       } catch {}
     })();
@@ -149,15 +103,6 @@ export default function SalaryInsightsPage() {
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
-<<<<<<< HEAD
-    const lower = Math.max(0median - min);
-    const upper = Math.max(0max - median);
-    return [
-      { label: 'Below 'Median', 'value: lower || 1 },
-      { label: ''Median', 'value: median || 1 },
-      { label: 'Above 'Median', 'value: upper || 1 }];
-  }[data]);
-=======
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
@@ -166,7 +111,6 @@ export default function SalaryInsightsPage() {
       { label: 'Above Median', value: upper || 1 },
     ];
   }, [data]);
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div>
@@ -183,21 +127,13 @@ export default function SalaryInsightsPage() {
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h2 className="font-medium mb-3">Filters</h2>
             <label className="block text-sm mb-2">Role title</label>
-<<<<<<< HEAD
-            <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g.Senior AI Engineer" />
-=======
             <input value={roleTitle} onChange={(e) => setRoleTitle(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e.g., Senior AI Engineer" />
->>>>>>> origin/auto/autonomy-17186719616
 
             <label className="block text-sm mt-3 mb-2">Skills</label>
             <input value={skills} onChange={(e) => setSkills(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />
 
             <label className="block text-sm mt-3 mb-2">Region</label>
-<<<<<<< HEAD
-            <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="CityCountry" />
-=======
             <input value={region} onChange={(e) => setRegion(e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />
->>>>>>> origin/auto/autonomy-17186719616
 
             <div className="grid grid-cols-2 gap-3 mt-3">
               <div>
@@ -278,11 +214,7 @@ export default function SalaryInsightsPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Regional comparison</h3>
               {data ? (
-<<<<<<< HEAD
-                <BarChart data={data.regionalComparison.map((r) => ({ label: r.regionvalue: r.medianHourlyUsd }))} />
-=======
                 <BarChart data={data.regionalComparison.map((r) => ({ label: r.region, value: r.medianHourlyUsd }))} />
->>>>>>> origin/auto/autonomy-17186719616
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
@@ -310,11 +242,7 @@ export default function SalaryInsightsPage() {
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
                 <div className="flex flex-col items-center gap-3">
-<<<<<<< HEAD
-                  <DonutChart slices={donutData.map((di) => ({ label: d.labelvalue: d.value })) as any} />
-=======
                   <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
->>>>>>> origin/auto/autonomy-17186719616
                   <div className="flex gap-2 flex-wrap justify-center text-xs">
                     {donutData.map((d) => (
                       <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>

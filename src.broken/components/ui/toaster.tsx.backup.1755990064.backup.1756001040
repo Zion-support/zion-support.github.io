@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import * as React from "react";
 import { Toaster as HotToaster } from "react-hot-toast";
 
@@ -8,7 +6,6 @@ export function Toaster() {
   return (
     <HotToaster position="top-right" />
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function toaster() {
   return (
@@ -16,9 +13,6 @@ export function toaster() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

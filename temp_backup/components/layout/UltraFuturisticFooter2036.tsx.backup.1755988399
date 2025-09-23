@@ -59,18 +59,6 @@ const footerSections = [
     description: 'Advanced AI platforms and solutions',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
     links: [
-<<<<<<< HEAD
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' },
-      { name: 'AI Assistant Platform', href: '/ai-assistant' },
-      { name: 'Sales Copilot AI', href: '/sales-copilot' },
-      { name: 'Incident Copilot AI', href: '/incident-copilot' },
-      { name: 'AI Content Automation', href: '/intelligent-content-automation-platform' },
-      { name: 'AI HR Analytics', href: '/intelligent-hr-analytics-platform' },
-      { name: 'AI Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
-      { name: 'LLM Gateway Platform', href: '/llm-gateway' },
-      { name: 'MLOps Starter Platform', href: '/mlops-starter' },
-      { name: 'AI Business Solutions', href: '/innovative-business-solutions' }
-=======
       { name: 'AI Services', href: '/ai-services' },
       { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
       { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' },
@@ -79,7 +67,6 @@ const footerSections = [
       { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' },
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
     ]
   },
   {
@@ -87,18 +74,6 @@ const footerSections = [
     description: 'Breakthrough quantum and space technologies',
     icon: <Atom className="w-5 h-5 text-blue-400" />,
     links: [
-<<<<<<< HEAD
-      { name: 'Quantum AI Cognitive Platform', href: '/quantum-ai-cognitive' },
-      { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' },
-      { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform' },
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
-      { name: 'Space Technology Solutions', href: '/space-technology' },
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform' },
-      { name: 'Quantum Advanced Services', href: '/quantum-advanced-services' },
-      { name: 'Quantum AI Services 2025', href: '/quantum-ai-services-2025' },
-      { name: 'Quantum Space Services', href: '/quantum-space-services' },
-      { name: 'Quantum Computing Solutions', href: '/quantum-computing' }
-=======
       { name: 'Quantum Services', href: '/quantum-services' },
       { name: 'Space Technology', href: '/space-technology' },
       { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
@@ -107,7 +82,6 @@ const footerSections = [
       { name: 'Quantum Robotics', href: '/quantum-robotics' },
       { name: 'Quantum Metaverse', href: '/quantum-metaverse' },
       { name: 'Quantum IoT Platform', href: '/quantum-iot' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
     ]
   },
   {
@@ -115,18 +89,6 @@ const footerSections = [
     description: 'Advanced enterprise infrastructure solutions',
     icon: <Shield className="w-5 h-5 text-purple-400" />,
     links: [
-<<<<<<< HEAD
-      { name: 'IT Services Overview', href: '/it-services' },
-      { name: 'Mobile Device Management', href: '/mobile-device-management' },
-      { name: 'Multi-Cloud Disaster Recovery', href: '/multi-cloud-disaster-recovery' },
-      { name: 'Infrastructure Drift Detection', href: '/infrastructure-drift-detector' },
-      { name: 'Managed PostgreSQL HA', href: '/managed-postgres-ha' },
-      { name: 'Kubernetes RBAC Auditor', href: '/kubernetes-rbac-auditor' },
-      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent' },
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture' },
-      { name: 'Vulnerability Assessment & Penetration Testing', href: '/vulnerability-assessment-penetration-testing' }
-=======
       { name: 'IT Services', href: '/it-services' },
       { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center' },
       { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform' },
@@ -135,43 +97,10 @@ const footerSections = [
       { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
       { name: 'AI-Powered Cybersecurity Platform', href: '/ai-powered-cybersecurity' },
       { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
     ]
   },
   {
     title: 'Industry Solutions',
-<<<<<<< HEAD
-    description: 'Specialized solutions for key industries',
-    icon: <Target className="w-5 h-5 text-emerald-400" />,
-    links: [
-      { name: 'Healthcare AI Solutions', href: '/healthcare-ai-solutions' },
-      { name: 'Healthcare Technology', href: '/healthcare-solutions' },
-      { name: 'Manufacturing AI Solutions', href: '/manufacturing-ai-solutions' },
-      { name: 'Retail Technology Solutions', href: '/retail-technology-solutions' },
-      { name: 'Government Technology', href: '/government-technology-solutions' },
-      { name: 'Financial Technology', href: '/fintech-solutions' },
-      { name: 'Education Technology', href: '/education-solutions' },
-      { name: 'Energy Technology', href: '/energy-solutions' },
-      { name: 'Transportation Technology', href: '/transportation-solutions' },
-      { name: 'Supply Chain AI', href: '/supply-chain-ai' }
-    ]
-  },
-  {
-    title: 'Business Solutions',
-    description: 'Innovative business solutions for modern enterprises',
-    icon: <Rocket className="w-5 h-5 text-orange-400" />,
-    links: [
-      { name: 'Micro SAAS Platform', href: '/micro-saas' },
-      { name: 'Business Intelligence Suite', href: '/ai-business-intelligence' },
-      { name: 'Smart CRM Intelligence', href: '/smart-crm-intelligence-suite' },
-      { name: 'SEO Automation Suite', href: '/seo-automation-suite' },
-      { name: 'Incident Automation Suite', href: '/incident-automation-suite' },
-      { name: 'Incident Response Retainer', href: '/incident-response-retainer' },
-      { name: 'Status Pages & SLO Monitoring', href: '/status-pages-slo' },
-      { name: 'Uptime SLO Monitor', href: '/uptime-slo-monitor' },
-      { name: 'TLS Certificate Monitor', href: '/tls-certificate-monitor' },
-      { name: 'Synthetic Monitor Recorder', href: '/synthetic-monitor-recorder' }
-=======
     description: 'Tailored solutions for specific industries',
     icon: <Target className="w-5 h-5 text-emerald-400" />,
     links: [
@@ -183,7 +112,6 @@ const footerSections = [
       { name: 'Government Technology Solutions', href: '/government-technology-solutions' },
       { name: 'Education Technology Solutions', href: '/education-technology-solutions' },
       { name: 'Energy & Utilities Solutions', href: '/energy-utilities-solutions' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-05bf
     ]
   }
 ];

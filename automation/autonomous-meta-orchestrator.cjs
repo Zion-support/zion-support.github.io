@@ -1,17 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-/**
- * Autonomous Meta Orchestrator
- * Placeholder script to prevent workflow failures
- */
-
-console.log('Autonomous meta orchestrator placeholder - no actual meta processing implemented');
-console.log('This script is a placeholder to prevent workflow failures');
-
-// Exit successfully
-process.exit(0);
-=======
 const { spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -60,4 +48,3 @@ function start(mode = 'continuous') {
 if (require.main === module) start(process.argv[2] || 'continuous');
 
 module.exports = { start };
->>>>>>> origin/auto/autonomy-17186719616

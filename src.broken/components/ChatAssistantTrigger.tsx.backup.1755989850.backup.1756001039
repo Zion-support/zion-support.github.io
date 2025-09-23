@@ -5,13 +5,9 @@ import { MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
 <<<<<<< HEAD
-import api from '@/lib/api';
-=======
-<<<<<<< HEAD
 import {logErrorToProduction} from '@/utils/productionLogger';
 =======
 import api from '@/lib/api';
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export function ChatAssistantTrigger() {

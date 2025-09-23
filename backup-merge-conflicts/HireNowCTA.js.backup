@@ -1,10 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
-<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
-:src/components/profile/HireNowCTA.jsx
-=======
-<<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
 <<<<<<< HEAD:src/components/profile/HireNowCTA.jsx
->>>>>>> pr-11914:backup-merge-conflicts/HireNowCTA.js.backup
 =======
 >>>>>>> pr-11913:src.broken/components/profile/HireNowCTA.js
 import React, {useState} from 'react';
@@ -98,15 +93,11 @@ export function HireNowCTA("props": "any) {;
       </CardContent>;
     </Card>)}
 ;
-<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
-export default HireNowCTA;        e.preventDefault();        if (onHire) {
-=======
 
 export default HireNowCTA;
 <<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.broken/components/profile/HireNowCTA.js
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -130,16 +121,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
-<<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js
-:src/components/profile/HireNowCTA.jsx
-            message: ''}
-    );
-        setIsFormOpen(false)};
-            message: ''
-        });
-        setIsFormOpen(false);
-    };
-=======
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -209,7 +190,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     </Card>);
 }
 <<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
->>>>>>> main:src.broken/components/profile/HireNowCTA.js
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.broken/components/profile/HireNowCTA.js
 >>>>>>> pr-11914:backup-merge-conflicts/HireNowCTA.js.backup

@@ -1,12 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-<<<<<<< HEAD
-export default class MyDocument extends Document {
-	static async getInitialProps(ctx: any) {
-		const initialProps = await Document.getInitialProps(ctx);
-		return { ...initialProps };
-	}
-=======
 export default function Document() {
   // Simple theme script without complex polyfills
   // CRITICAL: Process and Buffer polyfill script - inline fallback
@@ -171,7 +164,6 @@ export default function Document() {
     const el = document.getElementById('initial-loader');
     if (el) el.style.display = 'none';
   }, 10000);`;
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 
   // Detect blank screen after hydration
   const blankScreenDetectScript = `window.addEventListener('load', function () {

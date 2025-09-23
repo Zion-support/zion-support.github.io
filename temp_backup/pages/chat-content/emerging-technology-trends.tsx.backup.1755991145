@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Page() { return <div className="py-10">Emerging technology trends</div> }
-=======
 import Head from 'next/head';
 
 export default function EmergingTechnologyTrendsPage() {
@@ -11,4 +8,3 @@ export default function EmergingTechnologyTrendsPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

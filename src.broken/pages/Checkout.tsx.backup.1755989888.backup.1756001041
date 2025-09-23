@@ -4,11 +4,6 @@ import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 <<<<<<< HEAD
-import { useNavigate } from 'react-router-dom';
-import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
-=======
-<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
@@ -32,7 +27,6 @@ import { logDev, logDevError } from '@/utils/developmentLogger';
 import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
 import { apiClient } from '@/utils/apiClient';
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface CartItem {
@@ -87,15 +81,11 @@ export default function CheckoutPage() {
     
     try {
 <<<<<<< HEAD
-      const response = await apiClient('/api/checkout_sessions', {
-=======
-<<<<<<< HEAD
       logDev('Starting checkout with data:', { ...data, items: items.length });
       
       const response = await fetch('/api/checkout-session', {
 =======
       const response = await apiClient('/api/checkout_sessions', {
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

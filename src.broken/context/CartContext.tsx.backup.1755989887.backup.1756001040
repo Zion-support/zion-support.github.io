@@ -1,13 +1,9 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { CartContextType, CartItem, CartAction } from '@/types/cart';
 <<<<<<< HEAD
-import { safeStorage } from '@/utils/safeStorage';
-=======
-<<<<<<< HEAD
 import { saveCart, getCart } from '@/lib/db';
 =======
 import { safeStorage } from '@/utils/safeStorage';
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 interface CartState { items: CartItem[]; }
@@ -35,12 +31,9 @@ function cartReducer(state: CartState, action: CartAction): CartState {
     case 'CLEAR_CART':
       return { items: [] };
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     case 'SET_ITEMS':
       return { items: action.payload };
 =======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     default:
       return state;
@@ -56,8 +49,6 @@ export function useCart(): CartContextType {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
@@ -97,7 +88,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [items]); // Dependency array ensures this runs when `items` from Redux changes.
 
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const [state, dispatch] = useReducer(
     cartReducer,
     initialState,
@@ -120,9 +110,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     dispatch,
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

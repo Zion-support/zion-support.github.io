@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { TALENT_PROFILES } from "@/data/talentData";
@@ -73,13 +71,9 @@ export function useAISearch() {
   return { results, loading, search };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useAISearch;
 export const useUseAISearch: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

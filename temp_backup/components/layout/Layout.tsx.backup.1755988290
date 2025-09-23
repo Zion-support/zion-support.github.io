@@ -20,14 +20,12 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -114,16 +112,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2025 />
         </div>
 
-<<<<<<< HEAD
-        {/* Accessibility and Performance Tools */}
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        
-        {/* Cookie Consent Banner */}
-        <CookieConsentBanner />
-      </div>
-    </PerformanceOptimizer>
-=======
       {/* Accessibility and Performance Tools */}
       <AccessibilityEnhancer />
       <PerformanceMonitor />
@@ -131,6 +119,5 @@ export default function Layout({ children }: LayoutProps) {
       {/* Cookie Consent Banner */}
       <CookieConsentBanner />
     </div>
->>>>>>> origin/cursor/add-and-advertise-new-services-then-build-e1f5
   );
 }

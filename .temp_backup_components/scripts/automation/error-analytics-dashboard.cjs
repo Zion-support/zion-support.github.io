@@ -976,8 +976,4 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

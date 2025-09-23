@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// @ts-nocheck
-=======
 import React from 'react';
->>>>>>> origin/chore/add-blog-content-and-promote
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -158,18 +154,6 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
-              <FeatureCard
-                key={String(index)}
-                icon={<span>{feature.icon}</span>}
-                title={feature.title}
-                description={feature.description}
-                color={feature.gradient}
-                href="#"
-                isActive={false}
-                onClick={() => {}}
-              />
-=======
               <div key={index}>
                 <FeatureCard
                   icon={feature.icon}
@@ -179,7 +163,6 @@ export default function HomePage() {
                   gradient={feature.gradient}
                 />
               </div>
->>>>>>> origin/chore/add-blog-content-and-promote
             ))}
           </div>
         </div>
@@ -200,13 +183,8 @@ export default function HomePage() {
               <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📊 Explore Examples
               </a>
-<<<<<<< HEAD
-              <a href="/blog/agentic-supply-chains-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: Agentic Supply Chains 2025
-=======
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
->>>>>>> origin/chore/add-blog-content-and-promote
               </a>
             </div>
           </div>

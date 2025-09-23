@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { useRouter } from 'next/router';
@@ -162,7 +160,6 @@ export function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function LoginForm() {
   return (
@@ -170,9 +167,6 @@ export function LoginForm() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

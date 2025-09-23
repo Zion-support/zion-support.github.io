@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import Link from 'next/link';
-
-export default function Placeholder() {
-  return (
-    <main className="min-h-screen p-8">
-      <Head>
-        <title>Services • Price-intelligence-service - Placeholder</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      
-      <main>
-        <h1>PriceIntelligenceService</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
-  );
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -43,4 +22,3 @@ const PriceIntelligenceService: NextPage = () => {
 };
 
 export default PriceIntelligenceService;
->>>>>>> origin/auto/autonomy-17186719616

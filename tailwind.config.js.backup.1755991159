@@ -5,9 +5,6 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-<<<<<<< HEAD
-    extend: {},
-=======
     extend: {
       colors: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
@@ -757,7 +754,6 @@ module.exports = {
         '5xl': '2560px',
       },
     },
->>>>>>> 9217eb539de6fa8036add5893c6c743c598379bc
   },
   plugins: [],
 }

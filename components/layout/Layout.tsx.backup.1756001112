@@ -147,10 +147,6 @@ export default function Layout({ children }: LayoutProps) {
       {/* Skip to content link for accessibility */}
       <a href="#main" className="skip-link">Skip to main content</a>
       {/* Futuristic Background */}
-<<<<<<< HEAD
-      <UltraAdvancedFuturisticBackground2035 />
-      
-=======
       {/* Skip to content link for accessibility */}
       <a 
         href="#main" 
@@ -268,7 +264,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2035 />
         </div>
       </UltraFuturisticBackground2035>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
     </div>
   );
 }

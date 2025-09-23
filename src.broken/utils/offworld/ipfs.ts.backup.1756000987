@@ -1,14 +1,3 @@
-<<<<<<< HEAD:src.broken/utils/offworld/ipfs.ts
-// Stub offworld IPFS utility - placeholder for missing functionality
-export const uploadToIPFS = async (data: any) => {
-  // Placeholder implementation
-  return { hash: 'placeholder-hash', success: true };
-};
-
-export const getFromIPFS = async (hash: string) => {
-  // Placeholder implementation
-  return { data: 'placeholder-data', success: true };
-=======
 import fs from 'fs';
 import path from 'path';
 import { Readable } from 'stream';
@@ -178,5 +167,4 @@ export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes',
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/offworld/ipfs.ts
 };

@@ -79,16 +79,6 @@ const UltraFuturisticFooter2036: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> }
-  ];
-=======
 const footerSections = [
   {
     title: '2038 Featured Services',
@@ -193,7 +183,6 @@ const footerSections = [
     ]
   }
 ];
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
 
   const contactInfo = {
     email: 'kleber@ziontechgroup.com',

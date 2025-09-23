@@ -1,12 +1,9 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { ArrowUp, Filter, SortAsc, Star, ShoppingCart } from 'lucide-react';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
@@ -18,18 +15,7 @@ import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
 import apiClient from "@/services/apiClient";
 import retry from "@/utils/retry";
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
-
-
-
-
-
-
-
 
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import type { ProductListing } from '@/types/listings';
@@ -54,8 +40,6 @@ interface Stats {
   averageAIScore: number;
 }
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const ServicesMarketInsights = ({ stats }: { stats: Stats }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
     <CardContent className="p-6">
@@ -76,7 +60,6 @@ const ServicesMarketInsights = ({ stats }: { stats: Stats }) => (
           <div className="text-2xl font-bold text-orange-400">{stats.availableServices}</div>
           <div className="text-sm text-muted-foreground">Available Now</div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 function generateRandomService(idNum: number): ProductListing {
   const templates = [
@@ -213,9 +196,6 @@ export default function ServicesPage() {
               </Button>
             </Link>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         </div>
       </div>

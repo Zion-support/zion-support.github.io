@@ -1,19 +1,4 @@
 
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Crown, Medal, Trophy } from 'lucide-react'
-
-interface LeaderboardEntry {
-  id: string,
-  rank: number,
-  name: string,
-  avatar?: string,
-  referrals: number,
-  earnings: number,
-  badges: string[]
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +12,6 @@ interface LeaderboardEntry {
   referrals: number;
   earnings: number;
   badges: string[];
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function PartnerLeaderboard() {
@@ -78,27 +62,12 @@ export function PartnerLeaderboard() {
       earnings: 2175,
       badges: ["newcomer"]
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
   
   // Function to render rank badge
   const renderRankBadge = (rank: number) => {
     switch(rank) {
       case 1:
-<<<<<<< HEAD
-        return <Trophy className="h-5 w-5 text-yellow-500" />,
-      case 2:
-        return <Medal className="h-5 w-5 text-gray-400" />,
-      case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />,
-      default:
-        return <span className="text-sm font-semibold">{rank}</span>,
-    }
-  },
-=======
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:
         return <Medal className="h-5 w-5 text-gray-400" />;
@@ -108,7 +77,6 @@ export function PartnerLeaderboard() {
         return <span className="text-sm font-semibold">{rank}</span>;
     }
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <div className="space-y-6">
@@ -233,9 +201,5 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

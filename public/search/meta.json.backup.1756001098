@@ -411,11 +411,7 @@
   },
   {
     "route": "/",
-<<<<<<< HEAD
-    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
-=======
     "title": "Zion Tech Group — AI-Powered Cloud Automation & Autonomous Deployment Platform",
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
     "h1": "Zion Tech Group"
   },
   {
@@ -901,11 +897,7 @@
   {
     "route": "/reports",
     "title": "",
-<<<<<<< HEAD
-    "h1": "Autonomous Content Hub"
-=======
     "h1": "Reports"
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
   },
   {
     "route": "/reports/links",

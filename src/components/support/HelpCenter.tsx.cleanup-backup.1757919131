@@ -1,38 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { HelpCategoryList } from "./HelpCategoryList",
-import { HelpArticleList } from "./HelpArticleList",
-import { HelpArticleView } from "./HelpArticleView",
-import { HELP_CATEGORIES } from "./help-content",
-import { Search } from 'lucide-react'
-
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState(""),
-  
-  const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId),
-    setSelectedArticle(null)
-  },
-  
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId)
-  },
-  
-  const handleBackToCategories = () => {
-    setSelectedCategory(null),
-    setSelectedArticle(null),
-  },
-  
-  const handleBackToArticles = () => {
-    setSelectedArticle(null),
-  },
-=======
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -65,7 +31,6 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null);
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <>
@@ -172,11 +137,7 @@ export default function HelpCenter() {
             </TabsContent>
             
             <TabsContent value="contact">
-<<<<<<< HEAD
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> origin/auto/autonomy-17186719616
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Contact Support</h2>
                   <p className="text-zion-slate-light mb-4">
@@ -195,18 +156,6 @@ export default function HelpCenter() {
                         support@ziontechgroup.com
                       </a>
                     </div>
-<<<<<<< HEAD
-                    <div className='flex items-center'>
-                      <div className='bg-zion-purple/10 p-2 rounded-full mr-3'>
-                        <svg
-                          xmlns='http://www && www.w3.org/2000/svg'
-                          className='h-5 w-5 text-zion-purple'
-                          viewBox='0 0 20 20'
-                          fill='currentColor'
-                        >
-                          <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -217,43 +166,16 @@ export default function HelpCenter() {
                       <span className="text-zion-slate-light">+1 302 464 0950</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <Button className='w-full mt-6 bg-zion-purple hover:bg-zion-purple-light'>
-
-                    Open Live Chat
-                  </Button>
-                </div>
-                <div className='bg-zion-blue-light/20 rounded-lg p-6'>
-                  <h2 className='text-xl font-semibold mb-4'>
-                    Feedback & Suggestions
-                  </h2>
-                  <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve
-                    our platform.
-                  </p>
-                  <form className='space-y-4'>
-=======
->>>>>>> origin/auto/autonomy-17186719616
                   
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
-<<<<<<< HEAD
-                <div className='bg-zion-blue-light/20 rounded-lg p-6'>
-                  <h2 className='text-xl font-semibold mb-4'>
-                    Feedback & Suggestions
-                  </h2>
-                  <p className='text-zion-slate-light mb-4'>
-                    We value your input and are constantly looking to improve
-                    our platform.
-=======
                 
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>
                   <p className="text-zion-slate-light mb-4">
                     We value your input and are constantly looking to improve our platform.
->>>>>>> origin/auto/autonomy-17186719616
                   </p>
                   
                   <form className="space-y-4">
@@ -273,10 +195,6 @@ export default function HelpCenter() {
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
-<<<<<<< HEAD
-                    <Button className='w-full bg-zion-cyan hover:bg-zion-cyan/80'>
-=======
->>>>>>> origin/auto/autonomy-17186719616
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
@@ -289,9 +207,5 @@ export default function HelpCenter() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

@@ -24,10 +24,6 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-<<<<<<< HEAD
-  // Component implementation temporarily disabled
-  return <>{children}</>;
-=======
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -185,8 +181,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
     }, 5000);
   }, []);
-
-
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -566,7 +560,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {children}
     </>
   );
->>>>>>> origin/cursor/website-audit-and-enhancement-bb45
 };
 
 export default AccessibilityEnhancer;

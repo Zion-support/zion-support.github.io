@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 // Remove direct import of sonnerToast, rely on globalToastManager
 import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
@@ -146,7 +144,6 @@ export const useToast = () => ({
 
 export const toast = toastAdapter;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { toast as hotToast, type ToastOptions as HotToastOptions } from 'react-hot-toast';
 
 export type ToastOptions = HotToastOptions & {
@@ -174,7 +171,4 @@ toast.error = (error: string) => hotToast.error(error);
 toast.success = (message: string) => hotToast.success(message);
 
 export { toast };
-<<<<<<< HEAD
-=======
->>>>>>> origin/4o9pcp-codex/add-test-for-failed-login-toast
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

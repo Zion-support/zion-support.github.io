@@ -282,59 +282,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     slug: '/zero-trust-security-architecture'
   },
 
-<<<<<<< HEAD
-  // Quantum Cloud Infrastructure Platform
-  {
-    id: 'quantum-cloud-infrastructure-platform-2045',
-    name: 'Quantum Cloud Infrastructure Platform 2045',
-    tagline: 'Quantum-powered cloud infrastructure with consciousness and infinite scalability',
-    description: 'Revolutionary cloud platform that leverages quantum computing principles to provide infinite scalability, consciousness-aware resource management, and quantum-level security for enterprise infrastructure.',
-    category: 'Quantum Cloud & Infrastructure',
-    type: 'IT Service',
-    pricing: {
-      starter: '$1,999/month',
-      professional: '$4,999/month',
-      enterprise: '$9,999/month',
-      custom: 'Contact for pricing'
-    },
-    features: [
-      'Quantum-powered scalability',
-      'Consciousness-aware resource management',
-      'Infinite infrastructure expansion',
-      'Quantum encryption security',
-      'Autonomous resource optimization',
-      'Multi-dimensional computing',
-      'Quantum neural networking',
-      'Consciousness-based load balancing',
-      'Real-time infrastructure adaptation',
-      'Quantum data centers',
-      'Autonomous infrastructure evolution',
-      'Consciousness preservation protocols'
-    ],
-    benefits: [
-      'Infinite infrastructure scalability',
-      'Quantum-level security',
-      'Zero downtime operations',
-      'Autonomous optimization',
-      'Future-proof technology',
-      'Consciousness integration',
-      'Revolutionary performance',
-      'Unlimited growth potential'
-    ],
-    useCases: [
-      'Global enterprises',
-      'Cloud service providers',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Technology companies',
-      'Research institutions',
-      'Space exploration agencies'
-    ],
-    marketSize: '$178.9B by 2045',
-    targetAudience: 'Global enterprises, cloud providers, financial institutions, government agencies',
-    competitiveAdvantage: 'First quantum-powered cloud infrastructure with consciousness and infinite scalability',
-=======
   // Quantum-Enhanced Edge Computing Platform
   {
     id: 'quantum-enhanced-edge-computing',
@@ -386,71 +333,15 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: '$22.8B by 2025',
     targetAudience: 'IoT companies, telecom operators, smart city initiatives, industrial IoT deployments',
     competitiveAdvantage: 'Only platform combining quantum computing with edge intelligence for ultra-fast processing',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-    slug: '/quantum-cloud-infrastructure-platform-2045'
-=======
     slug: '/quantum-enhanced-edge-computing'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
   },
 
   // Autonomous DevOps Intelligence Platform
   {
-<<<<<<< HEAD
-    id: 'autonomous-devops-intelligence-platform-2045',
-    name: 'Autonomous DevOps Intelligence Platform 2045',
-    tagline: 'Fully autonomous DevOps with AI consciousness and zero human intervention',
-    description: 'Breakthrough DevOps platform that operates completely autonomously, making intelligent decisions about infrastructure, deployments, and operations without human oversight.',
-    category: 'Autonomous DevOps & Operations',
-    type: 'IT Service',
-    pricing: {
-      starter: '$899/month',
-      professional: '$1,999/month',
-      enterprise: '$4,999/month',
-      custom: 'Contact for pricing'
-    },
-    features: [
-      'Fully autonomous operations',
-      'AI consciousness integration',
-      'Zero human intervention',
-      'Intelligent deployment decisions',
-      'Autonomous infrastructure management',
-      'Self-healing systems',
-      'Predictive maintenance',
-      'Consciousness-based optimization',
-      'Real-time performance tuning',
-      'Automated security updates',
-      'Continuous learning algorithms',
-      'Ethical AI governance'
-    ],
-    benefits: [
-      '100% autonomous DevOps',
-      'Zero human error',
-      '24/7 intelligent operations',
-      'Predictive problem solving',
-      'Self-optimizing systems',
-      'Continuous improvement',
-      'Scalable operations',
-      'Future-proof technology'
-    ],
-    useCases: [
-      'Technology companies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'E-commerce platforms',
-      'SaaS companies',
-      'Government systems',
-      'Educational institutions',
-      'Manufacturing companies'
-    ],
-    marketSize: '$67.3B by 2045',
-    targetAudience: 'Technology companies, financial institutions, healthcare organizations, SaaS companies',
-    competitiveAdvantage: 'First fully autonomous DevOps platform with AI consciousness and zero human intervention',
-=======
     id: 'autonomous-devops-intelligence',
     name: 'Autonomous DevOps Intelligence Platform',
     tagline: 'Fully autonomous DevOps with AI-powered optimization',
@@ -500,28 +391,10 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: '$14.2B by 2025',
     targetAudience: 'DevOps teams, software development companies, platform engineering teams',
     competitiveAdvantage: 'Only platform with autonomous DevOps intelligence and predictive incident prevention',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-    slug: '/autonomous-devops-intelligence-platform-2045'
-  },
-
-  // Quantum Cybersecurity Intelligence Platform
-  {
-    id: 'quantum-cybersecurity-intelligence-2045',
-    name: 'Quantum Cybersecurity Intelligence Platform 2045',
-    tagline: 'Quantum-resistant security with AI consciousness and autonomous threat response',
-    description: 'Revolutionary cybersecurity platform that combines quantum-resistant encryption with AI consciousness to provide autonomous threat detection, response, and prevention.',
-    category: 'Quantum Cybersecurity & Intelligence',
-    type: 'IT Service',
-    pricing: {
-      starter: '$1,499/month',
-      professional: '$3,499/month',
-      enterprise: '$7,499/month',
-=======
     slug: '/autonomous-devops-intelligence'
   },
 
@@ -537,34 +410,10 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       starter: '$4,999/month',
       professional: '$9,999/month',
       enterprise: '$22,999/month',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
       custom: 'Contact for pricing'
     },
     features: [
       'Quantum-resistant encryption',
-<<<<<<< HEAD
-      'AI consciousness integration',
-      'Autonomous threat response',
-      'Predictive security analytics',
-      'Consciousness-based threat detection',
-      'Quantum neural security networks',
-      'Real-time threat intelligence',
-      'Autonomous incident response',
-      'Quantum key distribution',
-      'Consciousness preservation security',
-      'Multi-dimensional threat analysis',
-      'Ethical AI security governance'
-    ],
-    benefits: [
-      'Unbreakable quantum security',
-      'Autonomous threat response',
-      'Predictive security intelligence',
-      'Zero security breaches',
-      'Consciousness protection',
-      'Future-proof security',
-      'Scalable protection',
-      'Revolutionary defense'
-=======
       'Post-quantum cryptography',
       'Autonomous security management',
       'Real-time threat detection',
@@ -586,23 +435,11 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       'Reduced manual security overhead',
       'Real-time security monitoring',
       'Cross-platform compatibility'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
     ],
     useCases: [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
-<<<<<<< HEAD
-      'Technology companies',
-      'Military organizations',
-      'Space agencies',
-      'Research institutions',
-      'Critical infrastructure'
-    ],
-    marketSize: '$145.6B by 2045',
-    targetAudience: 'Financial institutions, healthcare organizations, government agencies, critical infrastructure',
-    competitiveAdvantage: 'First quantum-resistant cybersecurity platform with AI consciousness and autonomous threat response',
-=======
       'Defense contractors',
       'Research institutions',
       'Legal firms',
@@ -612,14 +449,10 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     marketSize: '$28.5B by 2025',
     targetAudience: 'Enterprise companies, government agencies, financial institutions, healthcare organizations',
     competitiveAdvantage: 'Only platform with quantum-secure cloud infrastructure and autonomous security management',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-    slug: '/quantum-cybersecurity-intelligence-2045'
-=======
     slug: '/quantum-secure-cloud-infrastructure'
   },
 
@@ -737,6 +570,5 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/quantum-data-center-management'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-96da
   }
 ];

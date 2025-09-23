@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-  };
-}};
-,
-// Run all fixes,
-fixFooter(),
-fixAccessibility(),
-fixAiServices(),
-fixApiDocs(),
-fixCareers(),
-,
-console.log('🎉 Syntax error fixes completed'),
-=======
 
 const fs = require('fs');
 const path = require('path');
@@ -103,4 +90,3 @@ try {
 } catch (error) {
   console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');
 } 
->>>>>>> origin/auto/autonomy-17186719616

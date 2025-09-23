@@ -1,13 +1,7 @@
 <<<<<<< HEAD
-import React from 'react'
-;
-export export export default function input-otp()   {;
-=======
-<<<<<<< HEAD
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react';
-
 
 import { cn } from "@/lib/utils"
 
@@ -46,7 +40,6 @@ const InputOTPSlot = React.forwardRef<
 import React from 'react'
 ;
 export export export default function input-otp()   {;
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

@@ -28,10 +28,6 @@ export const useDeleteMilestone = () => {
       console.error("Error deleting milestone:", err);
       toast.error("Failed to delete milestone: " + err.message);
       return false;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsSubmitting(false);
     }

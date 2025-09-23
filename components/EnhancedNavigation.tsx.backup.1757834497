@@ -1,59 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-
-const EnhancedNavigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
-    {
-      title: 'AI 2025',
-      href: '#',
-      submenu: [
-        { title: 'Ultimate Breakthrough Revolution', href: '/ai-2025-ultimate-breakthrough-revolution' },
-        { title: 'Enterprise Automation', href: '/blog/ai-2025-enterprise-automation-revolution' },
-        { title: 'Implementation Master Guide', href: '/resources/ai-2025-implementation-master-guide' },
-        { title: 'Synthetic Intelligence Guide', href: '/resources/ai-2025-synthetic-intelligence-implementation-guide' }
-      ]
-    },
-    {
-      title: 'AI 2026',
-      href: '#',
-      submenu: [
-        { title: 'Quantum-Neural Fusion', href: '/ai-2026-quantum-neural-fusion-revolutionary-breakthrough' },
-        { title: 'Future Predictions', href: '/ai-2026-2030-future-predictions-breakthrough' },
-        { title: 'Advanced Automation', href: '/ai-2026-advanced-automation-mastery' }
-      ]
-    },
-    {
-      title: 'Case Studies',
-      href: '/case-studies',
-      submenu: [
-        { title: 'Global Manufacturing ($2.4B ROI)', href: '/case-studies/ai-2025-global-manufacturing-transformation-breakthrough' },
-        { title: 'Fortune 500 Success', href: '/case-studies/ai-2025-fortune-500-transformation-breakthrough' },
-        { title: 'Financial Services', href: '/case-studies/ai-2025-global-finance-transformation-breakthrough' }
-      ]
-    },
-    {
-      title: 'Resources',
-      href: '/resources',
-      submenu: [
-        { title: 'Implementation Guides', href: '/resources' },
-        { title: 'ROI Calculator', href: '/tools/ai-2025-roi-calculator' },
-        { title: 'Best Practices', href: '/blog' }
-      ]
-    }
-=======
 import { motion } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
@@ -89,7 +35,6 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' },
     { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' },
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
->>>>>>> origin/backup-main-final-20250913-063409
   ];
 
   const toggleDropdown = (dropdown: string) => {
@@ -103,20 +48,6 @@ const EnhancedNavigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className={`font-bold text-lg transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-=======
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
         : 'bg-transparent'
@@ -129,45 +60,11 @@ const EnhancedNavigation: React.FC = () => {
               <Brain className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
->>>>>>> origin/backup-main-final-20250913-063409
               Zion Tech Group
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item, index) => (
-              <div key={index} className="relative group">
-                <Link
-                  href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isScrolled 
-                      ? 'text-gray-700 hover:text-blue-600' 
-                      : 'text-white hover:text-blue-200'
-                  }`}
-                >
-                  {item.title}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <div className="py-2">
-                    {item.submenu.map((subItem, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        {subItem.title}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-=======
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative">
@@ -214,7 +111,6 @@ const EnhancedNavigation: React.FC = () => {
                 </div>
               )}
             </div>
->>>>>>> origin/backup-main-final-20250913-063409
 
             {/* Company Dropdown */}
             <div className="relative">
@@ -261,13 +157,8 @@ const EnhancedNavigation: React.FC = () => {
 
             {/* Contact Button */}
             <Link
-<<<<<<< HEAD
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-=======
               href="mailto:kleber@ziontechgroup.com"
               className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
->>>>>>> origin/backup-main-final-20250913-063409
             >
               Get Started
             </Link>
@@ -275,59 +166,14 @@ const EnhancedNavigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-<<<<<<< HEAD
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-md ${
-              isScrolled ? 'text-gray-700' : 'text-white'
-            }`}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-=======
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> origin/backup-main-final-20250913-063409
           </button>
         </div>
 
         {/* Mobile Menu */}
-<<<<<<< HEAD
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-white rounded-lg shadow-lg mt-2 p-4">
-            {navigationItems.map((item, index) => (
-              <div key={index} className="mb-4">
-                <Link
-                  href={item.href}
-                  className="block text-lg font-semibold text-gray-900 mb-2"
-                >
-                  {item.title}
-                </Link>
-                <div className="pl-4 space-y-2">
-                  {item.submenu.map((subItem, subIndex) => (
-                    <Link
-                      key={subIndex}
-                      href={subItem.href}
-                      className="block text-sm text-gray-600 hover:text-blue-600 transition-colors"
-                    >
-                      {subItem.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <div className="pt-4 border-t border-gray-200">
-              <Link
-                href="/contact"
-                className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-=======
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -375,7 +221,6 @@ const EnhancedNavigation: React.FC = () => {
               </div>
             </div>
           </motion.div>
->>>>>>> origin/backup-main-final-20250913-063409
         )}
       </div>
     </nav>

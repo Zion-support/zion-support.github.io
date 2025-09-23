@@ -1,15 +1,9 @@
 
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Loader2EditTrashStarOff } from "lucide-react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { CardContent } from "@/components/ui/card";
-=======
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { Card, CardContent } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Separator } from "@/components/ui/separator";
 import {
   AlertDialog,
@@ -19,12 +13,8 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-  AlertDialogTitle} from "@/components/ui/alert-dialog";
-=======
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
->>>>>>> origin/auto/autonomy-17186719616
 import { useState } from "react";
 
 interface TemplateListProps {
@@ -40,13 +30,8 @@ export function TemplateList({
   onSelect,
   onEdit
 }: TemplateListProps) {
-<<<<<<< HEAD
-  const [templateToDeletesetTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplatesetDefaultTemplate } = useContractTemplates();
-=======
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId);

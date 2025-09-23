@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react",
-import Link from "next/link",
-import { ArrowRight, Phone } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons",
-
-export const MobileAppHero: React.FC = () => {
-  // These would come from environment variables or a config
-  const appStoreUrl = "#", // Replace with actual App Store URL when available
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available
-=======
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone } from 'lucide-react'
@@ -21,7 +9,6 @@ export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
   const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">
@@ -60,10 +47,5 @@ export const MobileAppHero: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

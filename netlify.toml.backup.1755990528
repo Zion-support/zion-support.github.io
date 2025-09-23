@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -235,11 +234,7 @@
 
 [[scheduled.functions]]
   name = "deps-auto-upgrade-runner"
-<<<<<<< HEAD
-  schedule = "0 3 * * *"
-=======
   schedule = "7 */12 * * *" # every 12 hours
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c0c9
 
 # New autonomous cloud scanners
 [[scheduled.functions]]
@@ -291,20 +286,6 @@
   name = "internal-link-graph-runner"
   schedule = "*/5 * * * *"
 
-<<<<<<< HEAD
-# Autonomous additions
-[[scheduled.functions]]
-  name = "smart-redirects-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "qa-knowledge-runner"
-  schedule = "0 */6 * * *"
-
-[[scheduled.functions]]
-  name = "seo-schema-runner"
-  schedule = "*/15 * * * *"
-=======
 # New: Invented automations
 [[scheduled.functions]]
   name = "llm-content-curator-runner"
@@ -321,4 +302,3 @@
 [[scheduled.functions]]
   name = "auto-discovery-orchestrator"
   schedule = "*/30 * * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-c0c9

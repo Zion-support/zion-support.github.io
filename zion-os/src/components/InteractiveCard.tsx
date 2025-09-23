@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
   description: string;
   icon: string;
   href: string;
@@ -88,4 +42,3 @@
         <div className="text-purple-400 text-sm">{company}</div>
       </div>
     </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

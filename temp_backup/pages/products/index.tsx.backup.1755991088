@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Products() { return <div className="py-10">Products</div> }
-=======
 import Head from 'next/head';
 
 export default function ProductsPage() {
@@ -14,4 +11,3 @@ export default function ProductsPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

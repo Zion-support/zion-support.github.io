@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import NationBuilderPage from '../nation-builder';
-export default NationBuilderPage;
-=======
 import { useEffect } from 'react';
 
 export default function RedirectCreateNation() {
@@ -12,4 +8,3 @@ export default function RedirectCreateNation() {
   }, []);
   return null;
 }
->>>>>>> origin/cursor/build-digital-nation-creation-module-57e8

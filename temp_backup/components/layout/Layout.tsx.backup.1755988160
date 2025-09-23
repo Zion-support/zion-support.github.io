@@ -7,11 +7,7 @@ import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackgro
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import EnhancedAccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
-<<<<<<< HEAD
-import PerformanceOptimizer from '../PerformanceOptimizer';
-=======
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
 
 interface LayoutProps {
 	children: React.ReactNode;
@@ -23,14 +19,12 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -110,16 +104,6 @@ export default function Layout({ children }: LayoutProps) {
           <UltraFuturisticFooter2025 />
         </div>
 
-<<<<<<< HEAD
-        {/* Accessibility and Performance Tools */}
-        <AccessibilityEnhancer />
-        <PerformanceMonitor />
-        
-        {/* Cookie Consent Banner */}
-        <CookieConsentBanner />
-      </div>
-    </PerformanceOptimizer>
-=======
       {/* Accessibility and Performance Tools */}
       <AccessibilityEnhancer />
       <PerformanceMonitor />
@@ -130,6 +114,5 @@ export default function Layout({ children }: LayoutProps) {
       {/* Service Worker Registration */}
       <ServiceWorkerRegistration />
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-960d
   );
 }

@@ -1,9 +1,5 @@
 [build]
-<<<<<<< HEAD
-  command = "chmod +x scripts/pre-build-check.sh && ./scripts/pre-build-check.sh && npm ci && npm run export"
-=======
   command = "npm ci && npm run export"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   publish = "out"
 
 [build.environment]
@@ -14,19 +10,6 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
-
-<<<<<<< HEAD
-# New autonomous functions schedules
-[[scheduled.functions]]
-  name = "auto-redirect-mapper"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "asset-size-guardian"
-  schedule = "*/30 * * * *"
-
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
@@ -43,24 +26,6 @@
 # Scheduled Functions (new automations replacing some GitHub Actions cadence)
 [[scheduled.functions]]
   name = "homepage_advertiser"
-<<<<<<< HEAD
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "cloud_orchestrator"
-  schedule = "0 */4 * * *"
-
-[[scheduled.functions]]
-  name = "front-enhancer"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "front-index-orchestrator"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "front-index-directory-builder"
-=======
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
@@ -73,86 +38,10 @@
 
 [[scheduled.functions]]
   name = "front-index-orchestrator"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
   name = "frontpage-enhancer"
-<<<<<<< HEAD
-  schedule = "*/20 * * * *"
-
-[[scheduled.functions]]
-  name = "marketing-and-features-promo"
-  schedule = "0 */2 * * *"
-
-[[scheduled.functions]]
-  name = "link-and-health-scheduler"
-  schedule = "0 */6 * * *"
-
-[[scheduled.functions]]
-  name = "sitemap_runner"
-  schedule = "0 */12 * * *"
-
-[[scheduled.functions]]
-  name = "fast-front-promoter"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "fast-orchestrator"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "continuous-orchestrator"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "front-visionary-expander"
-  schedule = "*/3 * * * *"
-
-[[scheduled.functions]]
-  name = "home-visionary-expander"
-  schedule = "*/4 * * * *"
-
-[[scheduled.functions]]
-  name = "ultrafast-orchestrator"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "orchestrator-swarm"
-  schedule = "*/3 * * * *" # every 3 minutes
-
-[[scheduled.functions]]
-  name = "cloud-swarm-committer"
-  schedule = "*/2 * * * *" # every 2 minutes
-
-[[scheduled.functions]]
-  name = "trigger-all-and-commit"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "front-maximizer"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "continuous-front-runner"
-  schedule = "*/3 * * * *"
-
-[[scheduled.functions]]
-  name = "readme-advertiser"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "front-ads-promoter"
-  schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-  name = "ultrafast-front-orchestrator"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "accelerated-sync-orchestrator"
-  schedule = "*/1 * * * *" # every minute
-=======
   schedule = "*/20 * * * *" # every 20 minutes
 
 [[scheduled.functions]]
@@ -214,35 +103,14 @@
 [[scheduled.functions]]
   name = "ultrafast-front-orchestrator"
   schedule = "*/5 * * * *" # every 5 minutes
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
 # New ultra-fast tools
 [[scheduled.functions]]
   name = "features-capabilities-benefits-advertiser"
-<<<<<<< HEAD
-  schedule = "*/2 * * * *"
-
-[[scheduled.functions]]
-  name = "hyper-front-index-accelerator"
-  schedule = "*/1 * * * *"
-
-# Autonomous meta orchestrators
-[[scheduled.functions]]
-  name = "autonomous-meta-orchestrator"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "cloud-trigger-hub"
-  schedule = "*/2 * * * *"
-
-[[scheduled.functions]]
-  name = "supreme-orchestrator"
-=======
   schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
   name = "hyper-front-index-accelerator"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
@@ -297,42 +165,11 @@
   name = "docs-search-index-runner"
   schedule = "53 */6 * * *"
 
-<<<<<<< HEAD
-# Resolved conflict: include all relevant scheduled functions
-[[scheduled.functions]]
-  name = "redirect-healer"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "sitemap-prioritizer"
-  schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-  name = "redirect-manager"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"
-
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 [[scheduled.functions]]
   name = "todo-summary-runner"
   schedule = "*/30 * * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-  name = "component-catalog-runner"
-  schedule = "13 */6 * * *"
-
-[[scheduled.functions]]
-  name = "automation-atlas-runner"
-  schedule = "*/30 * * * *"
-
-[[scheduled.functions]]
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   name = "netlify-auto-healer-runner"
   schedule = "*/20 * * * *"
 
@@ -342,17 +179,6 @@
   schedule = "*/10 * * * *" # every 10 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-  name = "revenue-optimizer"
-  schedule = "7 * * * *" # hourly
-
-[[scheduled.functions]]
-  name = "seo-content-gap"
-  schedule = "17 */3 * * *" # every 3 hours
-
-[[scheduled.functions]]
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
   name = "broken-image-scanner"
   schedule = "0 */6 * * *" # every 6 hours
 
@@ -361,23 +187,6 @@
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-<<<<<<< HEAD
-  name = "autonomous-ad-factory"
-  schedule = "*/10 * * * *" # every 10 minutes
-
-[[scheduled.functions]]
-  name = "knowledge-radar-orchestrator"
-  schedule = "17 */6 * * *" # every 6 hours
-
-[[scheduled.functions]]
-  name = "innovation-researcher"
-  schedule = "9 */2 * * *" # every 2 hours
-
-[[scheduled.functions]]
-  name = "continuous-cloud-refiner"
-  schedule = "*/5 * * * *" # every 5 minutes
-=======
   name = "seo-audit-runner"
   schedule = "17 */12 * * *"
 
@@ -392,16 +201,11 @@
 [[scheduled.functions]]
   name = "revenue-ideas-promoter"
   schedule = "41 */4 * * *"
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-0980
 =======
   name = "autonomous-innovation-generator"
   schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-  name = "autonomous-cloud-inventions"
-  schedule = "*/2 * * * *" # every 2 minutes
-=======
   name = "metadata-optimizer-runner"
   schedule = "*/15 * * * *" # every 15 minutes
 
@@ -520,5 +324,4 @@
 [[scheduled.functions]]
   name = "cron-heartbeat"
   schedule = "*/1 * * * *"
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
 >>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

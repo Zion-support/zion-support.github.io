@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
 import React from 'react';
 import FeatureCard from './components/FeatureCard';
 
@@ -220,67 +215,4 @@ export default function HomePage() {
   );
 }
 import FeatureCard from './components/FeatureCard';
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

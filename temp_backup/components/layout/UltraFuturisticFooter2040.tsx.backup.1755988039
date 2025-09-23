@@ -59,11 +59,6 @@ const footerData = {
   ]
 };
 
-<<<<<<< HEAD
-const UltraFuturisticFooter2040: React.FC = () => {
-  // Memoized current year
-  const currentYear = useMemo(() => new Date().getFullYear(), []);
-=======
   const socialLinks = [
     { 
       name: 'LinkedIn', 
@@ -188,7 +183,6 @@ const UltraFuturisticFooter2040: React.FC = () => {
     { number: '24/7', label: 'AI Support Available', icon: Clock },
     { number: '250+', label: 'Countries Served', icon: Globe }
   ];
->>>>>>> origin/cursor/website-audit-and-enhancement-9311
 
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-cyan-400/20" role="contentinfo">
