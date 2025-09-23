@@ -1,5 +1,4 @@
 "use client";
-<<<<<<< HEAD
 import React from 'react';
 
 export default function AI2026UltimateShowcaseBanner() {
@@ -11,9 +10,4 @@ export default function AI2026UltimateShowcaseBanner() {
 			</div>
 		</section>
 	);
-=======
-
-export default function AI2026UltimateShowcaseBanner() {
-	return null;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 }
