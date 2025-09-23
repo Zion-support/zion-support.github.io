@@ -1,11 +1,13 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
-  description:
-    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'
 }
 
 export default function HomePage() {
@@ -30,4 +32,7 @@ export default function HomePage() {
     </main>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
