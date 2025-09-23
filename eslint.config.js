@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
   {
     // Limit linting to main app sources; ignore backups/other projects
     ignores: [
@@ -33,12 +33,8 @@ export default [
     ]
   },
   {
-    files: [
-      'app/**/*.{js,jsx,ts,tsx}',
-      'components/**/*.{js,jsx,ts,tsx}',
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}'
-    ],
+    files: ['**/*.{ts,tsx}'],
+    extends: [tseslint.configs.recommended],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -54,6 +50,21 @@ export default [
         { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }
       ]
     }
+  },
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: { ...globals.browser, ...globals.node }
+    },
+    plugins: { react, 'react-hooks': reactHooks },
+    settings: { react: { version: 'detect' } },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'warn'
+    }
   }
-];
+);
 

@@ -1,5 +1,3 @@
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
