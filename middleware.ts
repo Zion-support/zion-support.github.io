@@ -3,6 +3,7 @@ import type { NextRequest } from 'next/server';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Public, protected, and admin paths (deduplicated)
 const publicPaths: string[] = [
 	'/',
@@ -227,6 +228,34 @@ export function middleware(request: NextRequest) {
 <<<<<<< HEAD
 	// Skip for static assets and API routes
 	if (
+=======
+const publicRoutes: string[] = [
+	"/",
+	"/about",
+	"/contact",
+	"/services",
+	"/blog",
+	"/resources",
+	"/privacy",
+	"/terms",
+	"/sitemap",
+	"/api",
+	"/api/health",
+	"/api/status",
+	"/_next",
+	"/favicon.ico",
+	"/robots.txt",
+	"/sitemap.xml",
+	"/manifest.json"
+];
+
+export function middleware(request: NextRequest) {
+	const { pathname } = request.nextUrl;
+
+	// Allow public routes and static assets
+	if (
+		publicRoutes.includes(pathname) ||
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 		pathname.startsWith('/_next/') ||
 		pathname.startsWith('/api/') ||
 		pathname.startsWith('/static/') ||
@@ -235,6 +264,7 @@ export function middleware(request: NextRequest) {
 		return NextResponse.next();
 	}
 
+<<<<<<< HEAD
 	// Always allow public paths
 	if (publicPaths.includes(pathname)) {
 		return NextResponse.next();
@@ -297,4 +327,12 @@ export const config = {
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+	// Default allow
+	return NextResponse.next();
+}
+
+export const config = {
+	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 };

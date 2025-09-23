@@ -2,6 +2,7 @@
 
 import React from 'react';
 
-export default function TechnologyStack() {
+export default function LatestBlogContent2026() {
 	return null;
 }
+

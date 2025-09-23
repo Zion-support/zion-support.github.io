@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
 type ScrollRevealProps = {
@@ -36,3 +37,16 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
   return <div ref={containerRef}>{children}</div>;
 }
 
+=======
+import React from 'react';
+
+type ScrollRevealProps = {
+	children: React.ReactNode;
+	origin?: 'bottom' | 'top' | 'left' | 'right';
+	delay?: number;
+};
+
+export default function ScrollReveal({ children }: ScrollRevealProps) {
+	return <>{children}</>;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
