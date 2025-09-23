@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
+  title: 'Zion Tech Group - Advanced Technology Solutions',
+  description: 'Leading provider of innovative technology solutions, AI services, and digital transformation solutions.',
 }
 
 export default function RootLayout({
