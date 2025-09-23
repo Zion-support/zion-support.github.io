@@ -58,6 +58,11 @@
     "backup/**",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "src/pages_backup/**",
+    "src/pages.broken/**",
+    "src.broken/**",
+    "src.disabled/**",
+    "src.pages.disabled/**"
   ]
 }
