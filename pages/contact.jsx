@@ -155,6 +155,12 @@ const Contact = () => {
                   </div>
                 )}
                 
+                {formErrors.submit && (
+                  <div className="bg-red-600/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-lg">
+                    {formErrors.submit}
+                  </div>
+                )}
+                
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
