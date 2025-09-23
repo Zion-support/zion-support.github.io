@@ -58,6 +58,7 @@
     "backup/**",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*"
+    "**/*temp*",
+    "app/components/**"
   ]
 }
