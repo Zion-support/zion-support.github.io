@@ -7,7 +7,7 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat: NextPage = () => {
     <div>
       <Head>
         <title>ApiFirstDevelopmentBuildingScalableSystemsChat - Zion Tech Solutions</title>
-        <meta name="description" content="ApiFirstDevelopmentBuildingScalableSystemsChat blog post" />
+        <meta name="description" content="ApiFirstDevelopmentBuildingScalableSystemsChat blog post"  />
       </Head>
       
       <main>

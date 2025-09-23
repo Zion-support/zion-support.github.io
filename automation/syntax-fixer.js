@@ -50,13 +50,13 @@ if ( {) {$2;
         if (modified) {fs.writeFileSync(file, content)this.fixesApplied++;
           this.log(`Fixed import issues in ${file}`)}
       } catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}
-    })}},,async fixExportIssues() {,const files = this.getSourceFiles(),files.forEach(file => {,try {,let content = fs.readFileSync(file, "utf8"),let modified = false,,// Fix export statements,content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),modified = true;
-        },,if (modified) {,fs.writeFileSync(file, content),this.fixesApplied++,this.log(`Fixed export issues in ${file}`)}
+    })}},async fixExportIssues() {,const files = this.getSourceFiles(),files.forEach(file => {,try {,let content = fs.readFileSync(file, "utf8"),let modified = false,// Fix export statements,content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),modified = true;
+        },if (modified) {,fs.writeFileSync(file, content),this.fixesApplied++,this.log(`Fixed export issues in ${file}`)}
       }
     })}
   getSourceFiles() {const files = [];
     const srcDir = path.join(process.cwd(), &quot;src&quot;)if (fs.existsSync(srcDir)) {const walkDir = (dir) => {const items = fs.readdirSync(dir)items.forEach(item => {const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {walkDir(fullPath)}
-    })},,getSourceFiles() {,,if (fs.existsSync(srcDir)) {,const walkDir = (dir) => {,const items = fs.readdirSync(dir),items.forEach(item => {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),,if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,files.push(fullPath)}
+    })},getSourceFiles() {,if (fs.existsSync(srcDir)) {,const walkDir = (dir) => {,const items = fs.readdirSync(dir),items.forEach(item => {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,files.push(fullPath)}
         })}
       walkDir(srcDir)}
     return files;
@@ -86,9 +86,9 @@ if ( {) {$2;
 if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer()fixer.run().catch(console.error)}
 export default SyntaxFixer;
     })modified = true;
-        },,if (modified) {,fs.writeFileSync(file, content),this.fixesApplied++,this.log(`Fixed export issues in ${file}`)}
+        },if (modified) {,fs.writeFileSync(file, content),this.fixesApplied++,this.log(`Fixed export issues in ${file}`)}
       } catch (error) {}
-    })},,getSourceFiles() {,,if (fs.existsSync(srcDir)) {,const walkDir = (dir) => {,const items = fs.readdirSync(dir),items.forEach(item => {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),,if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,files.push(fullPath)}
+    })},getSourceFiles() {,if (fs.existsSync(srcDir)) {,const walkDir = (dir) => {,const items = fs.readdirSync(dir),items.forEach(item => {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,files.push(fullPath)}
         })}
       walkDir(srcDir)}
 ;
@@ -139,7 +139,6 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
           modified = true
         },
-,
         if (modified) {,
           fs.writeFileSync(file, content),
           this.fixesApplied++,
@@ -151,30 +150,23 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       }
     })
   },
-,
   getSourceFiles() {,
     const files = [];
     const srcDir = path.join(process.cwd(), &quot;src&quot;),
-,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
         const items = fs.readdirSync(dir),
         items.forEach(item => {,
           const fullPath = path.join(dir, item),
           const stat = fs.statSync(fullPath),
-,
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
             files.push(fullPath)
           }
         })
-      };
-,
-      walkDir(srcDir)
-    };
-,
-    return files
+      };, walkDir(srcDir)
+    };, return files
   }
   async run() {
     this.log(&quot;🚀 Starting Syntax Fixer&quot;)
@@ -275,4 +267,4 @@ ursor/fix-lint-push-and-merge-to-main-28da
       }
     }
   }
-},,// Main execution,if (import.meta.url === `fil: e: //${process.argv[1]}`) {,const fixer = new SyntaxFixer(),fixer.run().catch(console.error)},export default SyntaxFixer;
+},// Main execution,if (import.meta.url === `fil: e: //${process.argv[1]}`) {,const fixer = new SyntaxFixer(),fixer.run().catch(console.error)},export default SyntaxFixer;

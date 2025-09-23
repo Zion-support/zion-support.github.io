@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
 import { Button } from './button';
 import { Badge } from './badge';
-export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
+export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 10o00, onAlert, className = "" }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
@@ -21,7 +21,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         fps: 30,
         memory: 80,
         renderTime: 16,
-        networkLatency: 100,
+        networkLatency: 10o0,
         cpuUsage: 70,
         diskUsage: 85
     });
@@ -32,12 +32,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         const countFrame = () => {
             frameCount++;
             const currentTime = performance.now();
-            if (currentTime - lastTime >= 1000) {
-                const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            if (currentTime - lastTime >= 10o00) {
+                const fps = Math.round((frameCount * 10o00) / (currentTime - lastTime));
                 setMetrics(prev => ({ ...prev, fps }));
                 // Check for performance alerts
                 if (fps < thresholds.fps) {
-                    const alert = {
+                    const alert ={
                         id: `fps-${Date.now()}`,
                         metric: 'FPS',
                         message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`,
@@ -57,15 +57,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     const measureMemory = useCallback(() => {
         if ('memory' in performance) {
             const memoryInfo = performance.memory;
-            const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
-            const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
-            const percentage = Math.round((used / total) * 100);
+            const used = Math.round(memoryInfo.usedJSHeapSize / 10o24 / 10o24);
+            const total = Math.round(memoryInfo.totalJSHeapSize / 10o24 / 10o24);
+            const percentage = Math.round((used / total) * 10o0);
             setMetrics(prev => ({
                 ...prev,
                 memory: { used, total, percentage }
             }));
             if (percentage > thresholds.memory) {
-                const alert = {
+                const alert ={
                     id: `memory-${Date.now()}`,
                     metric: 'Memory',
                     message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`,
@@ -85,7 +85,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const renderTime = Math.round(end - start);
             setMetrics(prev => ({ ...prev, renderTime }));
             if (renderTime > thresholds.renderTime) {
-                const alert = {
+                const alert ={
                     id: `render-${Date.now()}`,
                     metric: 'Render Time',
                     message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`,
@@ -108,7 +108,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const latency = Math.round(end - start);
             setMetrics(prev => ({ ...prev, networkLatency: latency }));
             if (latency > thresholds.networkLatency) {
-                const alert = {
+                const alert ={
                     id: `network-${Date.now()}`,
                     metric: 'Network',
                     message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`,
@@ -126,7 +126,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
-        const cpuUsage = Math.round(Math.random() * 100);
+        const cpuUsage = Math.round(Math.random() * 10o0);
         const diskUsage = Math.round(60 + Math.random() * 30);
         setMetrics(prev => ({
             ...prev,
@@ -135,7 +135,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             timestamp: Date.now()
         }));
         if (cpuUsage > thresholds.cpuUsage) {
-            const alert = {
+            const alert ={
                 id: `cpu-${Date.now()}`,
                 metric: 'CPU',
                 message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`,
@@ -146,7 +146,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
         }
         if (diskUsage > thresholds.diskUsage) {
-            const alert = {
+            const alert ={
                 id: `disk-${Date.now()}`,
                 metric: 'Disk',
                 message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`,
@@ -179,15 +179,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     useEffect(() => {
         const interval = setInterval(() => {
             const now = Date.now();
-            setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
-        }, 5000);
+            setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30o000)); // Keep alerts for 30 seconds
+        }, 50o00);
         return () => clearInterval(interval);
     }, []);
     const getMetricColor = (metric, value, threshold) => {
         if (metric === 'FPS') {
-            return value >= threshold ? 'text-green-400' : 'text-red-400';
+            return value >= threshold ? 'text-green-40o0' : 'text-red-40o0';
         }
-        return value <= threshold ? 'text-green-400' : 'text-red-400';
+        return value <= threshold ? 'text-green-40o0' : 'text-red-40o0';
     };
     const getMetricIcon = (metric) => {
         switch (metric) {
@@ -202,18 +202,18 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
-            case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
-            case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
-            case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
-            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
+            case 'error': return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0';
+            case 'warning': return 'border-yellow-50o0/50 bg-yellow-50o0/10 text-yellow-40o0';
+            case 'info': return 'border-blue-50o0/50 bg-blue-50o0/10 text-blue-40o0';
+            default: return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0';
         }
     };
     if (!enabled)
         return null;
     if (isMinimized) {
         return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-        <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">
-          <Activity className="w-4 h-4 mr-2"/>
+        <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+          <Activity className="w-4 h-4 mr-2" />
           {alerts.length > 0 && (<Badge variant="outline" className="ml-2 text-xs">
               {alerts.length}
             </Badge>)}
@@ -226,25 +226,25 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-              <Activity className="w-5 h-5 text-white"/>
+              <Activity className="w-5 h-5 text-white" />
             </div>
             <div>
               <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
-              <p className="text-zinc-400 text-xs">Real-time metrics</p>
+              <p className="text-zinc-40o0 text-xs">Real-time metrics</p>
             </div>
           </div>
           
           <div className="flex items-center gap-2">
-            <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
-              <Settings className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-40o0 hover:text-white p-2">
+              <Settings className="w-4 h-4" />
             </Button>
             
-            <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
-              <Minimize2 className="w-4 h-4"/>
+            <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-40o0 hover:text-white p-2">
+              <Minimize2 className="w-4 h-4" />
             </Button>
             
-            <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
-              {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+            <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-40o0 hover:text-white p-2">
+              {isExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
             </Button>
           </div>
         </div>
@@ -256,10 +256,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>
                 <div className="grid grid-cols-2 gap-3">
                   {Object.entries(thresholds).map(([key, value]) => (<div key={key}>
-                      <label className="text-zinc-300 text-xs font-medium capitalize">
+                      <label className="text-zinc-30o0 text-xs font-medium capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </label>
-                      <input type="number" value={value} onChange={(e) => setThresholds(prev => ({ ...prev, [key]: Number(e.target.value) }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"/>
+                      <input type="number" value={value} onChange={(e) => setThresholds(prev => ({ ...prev, [key]: Number(e.target.value) }))} className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-30o0 text-xs focus:border-zion-cyan focus:outline-none"/>
                     </div>))}
                 </div>
               </div>
@@ -272,8 +272,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* FPS */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
-                <span className="text-zinc-300 text-xs">FPS</span>
+                <Activity className="w-4 h-4 text-zinc-40o0" />
+                <span className="text-zinc-30o0 text-xs">FPS</span>
               </div>
               <div className={`text-lg font-bold ${getMetricColor('FPS', metrics.fps, thresholds.fps)}`}>
                 {metrics.fps}
@@ -283,8 +283,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Memory */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
-                <span className="text-zinc-300 text-xs">Memory</span>
+                <Activity className="w-4 h-4 text-zinc-40o0" />
+                <span className="text-zinc-30o0 text-xs">Memory</span>
               </div>
               <div className={`text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage, thresholds.memory)}`}>
                 {metrics.memory.percentage}%
@@ -294,8 +294,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Render Time */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Cpu className="w-4 h-4 text-zinc-400"/>
-                <span className="text-zinc-300 text-xs">Render</span>
+                <Cpu className="w-4 h-4 text-zinc-40o0" />
+                <span className="text-zinc-30o0 text-xs">Render</span>
               </div>
               <div className={`text-lg font-bold ${getMetricColor('Render Time', metrics.renderTime, thresholds.renderTime)}`}>
                 {metrics.renderTime}ms
@@ -305,8 +305,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Network */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Wifi className="w-4 h-4 text-zinc-400"/>
-                <span className="text-zinc-300 text-xs">Network</span>
+                <Wifi className="w-4 h-4 text-zinc-40o0" />
+                <span className="text-zinc-30o0 text-xs">Network</span>
               </div>
               <div className={`text-lg font-bold ${getMetricColor('Network', metrics.networkLatency, thresholds.networkLatency)}`}>
                 {metrics.networkLatency}ms
@@ -319,10 +319,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className="space-y-3">
                 {/* CPU Usage */}
                 <div className="flex items-center justify-between">
-                  <span className="text-zinc-300 text-xs">CPU Usage</span>
+                  <span className="text-zinc-30o0 text-xs">CPU Usage</span>
                   <div className="flex items-center gap-2">
-                    <div className="w-20 bg-zinc-700 rounded-full h-2">
-                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.cpuUsage}%` }}/>
+                    <div className="w-20 bg-zinc-70o0 rounded-full h-2">
+                      <div className={`h-2 rounded-full transition-all duration-30o0 ${metrics.cpuUsage > thresholds.cpuUsage ? 'bg-red-40o0' : 'bg-zion-cyan'}`} style={{ width: `${metrics.cpuUsage}%` }}/>
                     </div>
                     <span className={`text-xs font-medium ${getMetricColor('CPU', metrics.cpuUsage, thresholds.cpuUsage)}`}>
                       {metrics.cpuUsage}%
@@ -332,10 +332,10 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
                 {/* Disk Usage */}
                 <div className="flex items-center justify-between">
-                  <span className="text-zinc-300 text-xs">Disk Usage</span>
+                  <span className="text-zinc-30o0 text-xs">Disk Usage</span>
                   <div className="flex items-center gap-2">
-                    <div className="w-20 bg-zinc-700 rounded-full h-2">
-                      <div className={`h-2 rounded-full transition-all duration-300 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-400' : 'bg-zion-cyan'}`} style={{ width: `${metrics.diskUsage}%` }}/>
+                    <div className="w-20 bg-zinc-70o0 rounded-full h-2">
+                      <div className={`h-2 rounded-full transition-all duration-30o0 ${metrics.diskUsage > thresholds.diskUsage ? 'bg-red-40o0' : 'bg-zion-cyan'}`} style={{ width: `${metrics.diskUsage}%` }}/>
                     </div>
                     <span className={`text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage, thresholds.diskUsage)}`}>
                       {metrics.diskUsage}%
@@ -345,16 +345,16 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
                 {/* Memory Details */}
                 <div className="flex items-center justify-between">
-                  <span className="text-zinc-300 text-xs">Memory Details</span>
-                  <span className="text-zinc-400 text-xs">
+                  <span className="text-zinc-30o0 text-xs">Memory Details</span>
+                  <span className="text-zinc-40o0 text-xs">
                     {metrics.memory.used}MB / {metrics.memory.total}MB
                   </span>
                 </div>
 
                 {/* Last Updated */}
                 <div className="flex items-center justify-between">
-                  <span className="text-zinc-300 text-xs">Last Updated</span>
-                  <span className="text-zinc-400 text-xs">
+                  <span className="text-zinc-30o0 text-xs">Last Updated</span>
+                  <span className="text-zinc-40o0 text-xs">
                     {new Date(metrics.timestamp).toLocaleTimeString()}
                   </span>
                 </div>
@@ -365,8 +365,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           {alerts.length > 0 && (<div className="mt-4 pt-4 border-t border-zion-blue-light/30">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-white font-medium text-sm">Alerts</h4>
-                <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-400 hover:text-white p-1">
-                  <X className="w-3 h-3"/>
+                <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-40o0 hover:text-white p-1">
+                  <X className="w-3 h-3" />
                 </Button>
               </div>
               
@@ -375,7 +375,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 const Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}>
                       <div className="flex items-center gap-2">
-                        <Icon className="w-3 h-3"/>
+                        <Icon className="w-3 h-3" />
                         <span className="font-medium">{alert.metric}</span>
                         <span className="text-xs opacity-75">
                           {new Date(alert.timestamp).toLocaleTimeString()}
@@ -395,13 +395,13 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             measureRenderTime();
             measureNetworkLatency();
             simulateMetrics();
-        }} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <RefreshCw className="w-3 h-3 mr-2"/>
+        }} className="flex-1 border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+                <RefreshCw className="w-3 h-3 mr-2" />
                 Refresh
               </Button>
               
-              <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <Settings className="w-3 h-3"/>
+              <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-30o0 hover:text-white">
+                <Settings className="w-3 h-3" />
               </Button>
             </div>
           </div>

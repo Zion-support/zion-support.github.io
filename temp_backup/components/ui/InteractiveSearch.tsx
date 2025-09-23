@@ -1,8 +1,6 @@
-import React from 'react';
+export type CategoryOption ={ label: string; value: string };
 
-export type CategoryOption = { label: string; value: string };
-
-export type FilterState = {
+export type FilterState ={
   keyword: string;
   category: string;
   minPrice?: number;
@@ -10,7 +8,7 @@ export type FilterState = {
   minRating?: number;
 };
 
-export type InteractiveSearchProps = {
+export type InteractiveSearchProps ={
   categories: CategoryOption[];
   value: FilterState;
   onChange: (next: FilterState) => void;
@@ -20,20 +18,20 @@ export type InteractiveSearchProps = {
 
 export default function InteractiveSearch({ categories, value, onChange, priceEnabled = true, ratingEnabled = true }: InteractiveSearchProps) {
   return (
-    <div className="w-full mb-4 p-3 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-zinc-900">
+    <div className="w-full mb-4 p-3 rounded-lg border border-gray-20o0 dark:border-gray-80o0 bg-white dark:bg-zinc-90o0">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
         <input
           type="text"
           value={value.keyword}
           onChange={(e) => onChange({ ...value, keyword: e.target.value })}
           placeholder="Search by keyword..."
-          className="col-span-2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+          className="col-span-2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm"
         />
 
         <select
           value={value.category}
           onChange={(e) => onChange({ ...value, category: e.target.value })}
-          className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+          className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm"
         >
           <option value="">All Categories</option>
           {categories.map((c) => (
@@ -50,7 +48,7 @@ export default function InteractiveSearch({ categories, value, onChange, priceEn
               value={value.minPrice ?? ''}
               onChange={(e) => onChange({ ...value, minPrice: e.target.value ? Number(e.target.value) : undefined })}
               placeholder="Min $"
-              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm"
             />
             <input
               type="number"
@@ -59,7 +57,7 @@ export default function InteractiveSearch({ categories, value, onChange, priceEn
               value={value.maxPrice ?? ''}
               onChange={(e) => onChange({ ...value, maxPrice: e.target.value ? Number(e.target.value) : undefined })}
               placeholder="Max $"
-              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+              className="w-1/2 px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm"
             />
           </div>
         )}
@@ -68,7 +66,7 @@ export default function InteractiveSearch({ categories, value, onChange, priceEn
           <select
             value={String(value.minRating ?? '')}
             onChange={(e) => onChange({ ...value, minRating: e.target.value ? Number(e.target.value) : undefined })}
-            className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 text-sm"
+            className="px-3 py-2 rounded-md bg-gray-50 dark:bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm"
           >
             <option value="">Any Rating</option>
             <option value="4">4+ stars</option>

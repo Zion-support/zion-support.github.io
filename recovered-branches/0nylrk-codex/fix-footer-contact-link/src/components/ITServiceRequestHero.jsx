@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Shield, Cloud } from 'lucide-react';
 import { GradientHeading } from '../ui/GradientHeading';
@@ -6,17 +5,17 @@ import { NeonGlow } from '../ui/NeonGlow';
 export function ITServiceRequestHero() {
     const features = [
         {
-            icon: <Brain className="w-6 h-6"/>,
+            icon: <Brain className="w-6 h-6" />,
             title: "AI-Powered Solutions",
             description: "Cutting-edge artificial intelligence that learns and adapts to your business needs."
         },
         {
-            icon: <Shield className="w-6 h-6"/>,
+            icon: <Shield className="w-6 h-6" />,
             title: "Cybersecurity",
             description: "Advanced security solutions protecting your digital assets and infrastructure."
         },
         {
-            icon: <Cloud className="w-6 h-6"/>,
+            icon: <Cloud className="w-6 h-6" />,
             title: "Cloud Computing",
             description: "Scalable cloud solutions that optimize performance and reduce costs."
         }
@@ -40,19 +39,19 @@ export function ITServiceRequestHero() {
         </NeonGlow>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Link to="/micro-saas-services" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300">
+          <Link to="/micro-saas-services" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-30o0">
             Explore Services
-            <ArrowRight className="w-5 h-5"/>
+            <ArrowRight className="w-5 h-5" />
           </Link>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
+          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-30o0">
             Get Started
-            <Zap className="w-5 h-5"/>
+            <Zap className="w-5 h-5" />
           </Link>
         </div>
         
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (<div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">
+          {features.map((feature, index) => (<div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-30o0 hover:transform hover:scale-10o5">
               <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                 <div className="text-white">
                   {feature.icon}

@@ -28,13 +28,13 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
       case "Strongly Recommended":
-        return "bg-green-100 text-green-800";
+        return "bg-green-10o0 text-green-80o0";
       case "Recommended for Review":
-        return "bg-blue-100 text-blue-800";
+        return "bg-blue-10o0 text-blue-80o0";
       case "Low Match":
-        return "bg-orange-100 text-orange-800";
+        return "bg-orange-10o0 text-orange-80o0";
       default:
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-10o0 text-gray-80o0";
     }
   };
 
@@ -80,14 +80,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         }
         
         if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000);
+          setTimeout(checkScore, 30o00);
         } else {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       };
       
-      setTimeout(checkScore, 3000);
+      setTimeout(checkScore, 30o00);
       
     } catch (error: any) {
       setIsScoring(false);
@@ -113,18 +113,18 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             {/* Score */}
             <div className="flex items-center mb-4">
               <div className="p-2 bg-primary/10 rounded-full mr-3">
-                <Star className="h-5 w-5 text-primary" />
+                <Star className="h-5 w-5 text-primary"  />
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Match Score</div>
-                <div className="font-semibold text-xl">{application.match_score}/100</div>
+                <div className="font-semibold text-xl">{application.match_score}/10o0</div>
               </div>
             </div>
             
             {/* Summary */}
             <div className="flex items-start mb-4">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <BarChart2 className="h-5 w-5 text-primary" />
+                <BarChart2 className="h-5 w-5 text-primary"  />
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Summary</div>
@@ -135,7 +135,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             {/* Suggestion */}
             <div className="flex items-start">
               <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <Lightbulb className="h-5 w-5 text-primary" />
+                <Lightbulb className="h-5 w-5 text-primary"  />
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Suggestion</div>
@@ -160,7 +160,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                   <div className="mt-2 space-y-2 text-muted-foreground">
                     {application.match_breakdown.skills_match && (
                       <div>
-                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>
+                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/10o0</p>
                         {application.match_breakdown.skills_match.matching && (
                           <p>Matching skills: {application.match_breakdown.skills_match.matching.join(", ")}</p>
                         )}
@@ -172,14 +172,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                     
                     {application.match_breakdown.experience_match && (
                       <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
+                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/10o0</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
 
                     {application.match_breakdown.certifications_match && (
                       <div>
-                        <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
+                        <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/10o0</p>
                         {application.match_breakdown.certifications_match.matching && (
                           <p>Matching certs: {application.match_breakdown.certifications_match.matching.join(", ")}</p>
                         )}
@@ -191,7 +191,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                     
                     {application.match_breakdown.education_match && (
                       <div>
-                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
+                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/10o0</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
                     )}
@@ -212,7 +212,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             >
               {isScoring ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin"  />
                   Scoring Resume...
                 </>
               ) : (

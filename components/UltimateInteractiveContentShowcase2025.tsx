@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const UltimateInteractiveContentShowcase2025: React.FC = () => {
+const UltimateInteractiveContentShowcase20o25: React.FC = () => {
   const [activeTabsetActiveTab] = useState('ai-solutions');
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -76,14 +76,14 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
   const activeContent = contentSections.find(section => section.id === activeTab);
 
   return (
-    <div className={`py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <div className={`py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-            Ultimate Interactive Content Showcase 2025
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 bg-clip-text text-transparent mb-4">
+            Ultimate Interactive Content Showcase 20o25
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
             Discover the most advanced technologies and solutions that are reshaping our world. 
             Interactive exploration of cutting-edge innovations.
           </p>
@@ -95,10 +95,10 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
             <button
               key={section.id}
               onClick={() => setActiveTab(section.id)}
-              className={`p-6 rounded-xl transition-all duration-300 transform hover:scale-105 ${
+              className={`p-6 rounded-xl transition-all duration-30o0 transform hover:scale-10o5 ${
                 activeTab === section.id
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-xl'
-                  : 'bg-white text-gray-700 shadow-lg hover:shadow-xl border border-gray-200'
+                  ? 'bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white shadow-xl'
+                  : 'bg-white text-gray-70o0 shadow-lg hover:shadow-xl border border-gray-20o0'
               }`}
             >
               <div className="text-4xl mb-4">{section.icon}</div>
@@ -116,10 +116,10 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <span className="text-5xl mr-4">{activeContent.icon}</span>
                   <div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-3xl font-bold text-gray-90o0 mb-2">
                       {activeContent.title}
                     </h3>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-gray-60o0">
                       {activeContent.description}
                     </p>
                   </div>
@@ -128,39 +128,39 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
                 <div className="space-y-4 mb-8">
                   {activeContent.features.map((featureindex) => (
                     <div key={index} className="flex items-center">
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mr-3"></div>
-                      <span className="text-gray-700">{feature}</span>
+                      <div className="w-2 h-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-full mr-3"></div>
+                      <span className="text-gray-70o0">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <Link
                   href={activeContent.link}
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl"
                 >
                   {activeContent.cta}
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                   </svg>
                 </Link>
               </div>
 
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+                <div className="bg-gradient-to-br from-blue-10o0 to-purple-10o0 rounded-2xl p-8 h-80 flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-8xl mb-4 opacity-50">{activeContent.icon}</div>
-                    <div className="text-2xl font-bold text-gray-700 mb-2">
+                    <div className="text-2xl font-bold text-gray-70o0 mb-2">
                       Interactive Demo
                     </div>
-                    <p className="text-gray-600">
+                    <p className="text-gray-60o0">
                       Experience {activeContent.title.toLowerCase()} in action
                     </p>
                   </div>
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full animate-pulse delay-300"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-40o0 rounded-full animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-40o0 rounded-full animate-pulse delay-30o0"></div>
               </div>
             </div>
           </div>
@@ -169,22 +169,22 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
         {/* Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-            <div className="text-gray-600">Active Projects</div>
+            <div className="text-4xl font-bold text-blue-60o0 mb-2">50o0+</div>
+            <div className="text-gray-60o0">Active Projects</div>
           </div>
           <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="text-4xl font-bold text-purple-600 mb-2">50K+</div>
-            <div className="text-gray-600">Happy Clients</div>
+            <div className="text-4xl font-bold text-purple-60o0 mb-2">50K+</div>
+            <div className="text-gray-60o0">Happy Clients</div>
           </div>
           <div className="text-center p-6 bg-white rounded-xl shadow-lg">
-            <div className="text-4xl font-bold text-indigo-600 mb-2">99.9%</div>
-            <div className="text-gray-600">Success Rate</div>
+            <div className="text-4xl font-bold text-indigo-60o0 mb-2">99.9%</div>
+            <div className="text-gray-60o0">Success Rate</div>
           </div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -194,13 +194,13 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-white text-blue-60o0 font-semibold rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/demo"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-blue-60o0 transition-all duration-30o0"
               >
                 Schedule Demo
               </Link>
@@ -212,4 +212,4 @@ const UltimateInteractiveContentShowcase2025: React.FC = () => {
   );
 };
 
-export default UltimateInteractiveContentShowcase2025;
+export default UltimateInteractiveContentShowcase20o25;

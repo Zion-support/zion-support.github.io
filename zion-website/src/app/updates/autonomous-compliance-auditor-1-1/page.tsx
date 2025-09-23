@@ -5,7 +5,7 @@ export default function Page() {
       <article className="max-w-3xl mx-auto px-6 py-24">
         <header>
           <h1 className="text-4xl font-bold text-white">Launch: Autonomous Compliance Auditor v1.1</h1>
-          <p className="mt-2 text-gray-300">Continuous policy checks, evidence bundles, and SOC2-ready exports integrated into CI/CD.</p>
+          <p className="mt-2 text-gray-30o0">Continuous policy checks, evidence bundles, and SOC2-ready exports integrated into CI/CD.</p>
         </header>
         <section className="prose prose-lg prose-invert mt-8">
           <h2>What’s new</h2>

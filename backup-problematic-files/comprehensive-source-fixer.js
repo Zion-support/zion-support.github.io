@@ -30,8 +30,6 @@ class ComprehensiveSourceFixer {
     if (!fs.existsSync(dir)) return;
     const items = fs.readdirSync(dir);
 
-
-
         await this.fixFile(fullPath)}
     }
   }

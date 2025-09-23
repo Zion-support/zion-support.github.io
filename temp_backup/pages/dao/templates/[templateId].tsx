@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
-
 function TextArea(props: any) {
-  return <textarea {...props} className={`w-full border rounded px-3 py-2 min-h-[120px] ${props.className || ''}`} />;
+  return <textarea {...props} className={`w-full border rounded px-3 py-2 min-h-[120px] ${props.className || ''}`}  />;
 }
 
 export default function ZgpDraftPage() {
@@ -85,8 +83,7 @@ export default function ZgpDraftPage() {
           specificationImpact,
           codeModuleAffected,
           votingOptions,
-          fundingNeeded,
-        })
+          fundingNeeded})
       });
       const data = await r.json();
       if (data.proposal) {
@@ -113,10 +110,10 @@ export default function ZgpDraftPage() {
         <div>
           <h1 className="text-2xl font-semibold">Draft Proposal</h1>
           {template && (
-            <p className="text-gray-600 text-sm">Template: {template.code} — {template.title} ({template.category})</p>
+            <p className="text-gray-60o0 text-sm">Template: {template.code} — {template.title} ({template.category})</p>
           )}
         </div>
-        <button onClick={() => router.push('/dao/templates')} className="text-blue-600 underline">Back to Library</button>
+        <button onClick={() => router.push('/dao/templates')} className="text-blue-60o0 underline">Back to Library</button>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -174,10 +171,10 @@ export default function ZgpDraftPage() {
           </div>
 
           <div className="flex gap-3 pt-2">
-            <button onClick={() => handleSubmit('draft')} disabled={saving} className="px-4 py-2 rounded bg-gray-900 text-white disabled:opacity-50">
+            <button onClick={() => handleSubmit('draft')} disabled={saving} className="px-4 py-2 rounded bg-gray-90o0 text-white disabled:opacity-50">
               Save Draft
             </button>
-            <button onClick={() => handleSubmit('submitted')} disabled={saving} className="px-4 py-2 rounded bg-blue-600 text-white disabled:opacity-50">
+            <button onClick={() => handleSubmit('submitted')} disabled={saving} className="px-4 py-2 rounded bg-blue-60o0 text-white disabled:opacity-50">
               Submit to DAO
             </button>
             {proposal && (
@@ -195,16 +192,16 @@ export default function ZgpDraftPage() {
               <button onClick={handleReview} className="px-3 py-2 rounded border">AI Review</button>
             </div>
             {review && (
-              <div className="mt-3 text-sm text-gray-700 whitespace-pre-wrap">{review}</div>
+              <div className="mt-3 text-sm text-gray-70o0 whitespace-pre-wrap">{review}</div>
             )}
           </div>
 
           {proposal && (
             <div className="border rounded p-3">
               <div className="font-medium">Submission Preview</div>
-              <div className="text-xs text-gray-500">{proposal.proposalNumber}</div>
+              <div className="text-xs text-gray-50o0">{proposal.proposalNumber}</div>
               <div className="text-sm mt-2">Latest Version: v{proposal.latestVersion}</div>
-              <button onClick={() => router.push(`/dao/templates`)} className="text-blue-600 underline mt-2">Draft another</button>
+              <button onClick={() => router.push(`/dao/templates`)} className="text-blue-60o0 underline mt-2">Draft another</button>
             </div>
           )}
         </aside>

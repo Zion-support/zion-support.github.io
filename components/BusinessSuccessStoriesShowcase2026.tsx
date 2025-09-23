@@ -32,7 +32,7 @@ import {
   Heart
 } from 'lucide-react';
 
-const BusinessSuccessStoriesShowcase2026 = () => {
+const BusinessSuccessStoriesShowcase20o26 = () => {
   const [activeStorysetActiveStory] = useState(0);
   const [hoveredCardsetHoveredCard] = useState(null);
 
@@ -41,18 +41,18 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       id: 1,
       company: 'TechCorp Global',
       industry: 'Technology',
-      size: 'Fortune 500',
+      size: 'Fortune 50o0',
       logo: '/api/placeholder/80/80',
       challenge: 'Manual processes causing 40% efficiency loss and high operational costs',
       solution: 'Implemented AI-powered automation system with neural consensus technology',
       results: {
-        efficiency: '+300%',
+        efficiency: '+30o0%',
         costReduction: '-65%',
-        timeSaved: '2,500 hours/month',
+        timeSaved: '2,50o0 hours/month',
         roi: '450%'
       },
       testimonial: {
-        text: 'The AI automation system transformed our entire operation. We achieved 300% efficiency improvement and saved millions in operational costs.',
+        text: 'The AI automation system transformed our entire operation. We achieved 30o0% efficiency improvement and saved millions in operational costs.',
         author: 'Sarah Johnson',
         position: 'CEOTechCorp Global',
         avatar: '/api/placeholder/60/60'
@@ -61,7 +61,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '6 months',
       featured: true,
       rating: 5.0,
-      views: 15600,
+      views: 1560o0,
       likes: 892
     },
     {
@@ -74,12 +74,12 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       solution: 'Deployed quantum-safe encryption and AI-powered threat detection system',
       results: {
         security: 'Zero breaches',
-        compliance: '100%',
+        compliance: '10o0%',
         customerTrust: '+85%',
         roi: '320%'
       },
       testimonial: {
-        text: 'Our security posture improved dramatically. Zero breaches since implementation and 100% compliance achievement.',
+        text: 'Our security posture improved dramatically. Zero breaches since implementation and 10o0% compliance achievement.',
         author: 'Michael Chen',
         position: 'CISOFinanceFirst Bank',
         avatar: '/api/placeholder/60/60'
@@ -88,7 +88,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '4 months',
       featured: false,
       rating: 4.9,
-      views: 12300,
+      views: 1230o0,
       likes: 654
     },
     {
@@ -115,7 +115,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '5 months',
       featured: true,
       rating: 4.8,
-      views: 9800,
+      views: 980o0,
       likes: 456
     },
     {
@@ -142,7 +142,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '3 months',
       featured: false,
       rating: 4.9,
-      views: 11200,
+      views: 1120o0,
       likes: 723
     },
     {
@@ -169,8 +169,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '7 months',
       featured: true,
       rating: 5.0,
-      views: 18900,
-      likes: 1203
+      views: 1890o0,
+      likes: 120o3
     },
     {
       id: 6,
@@ -196,7 +196,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
       duration: '4 months',
       featured: false,
       rating: 4.7,
-      views: 8700,
+      views: 870o0,
       likes: 389
     }
   ];
@@ -218,13 +218,13 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
   const getIndustryColor = (industry) => {
     switch (industry) {
-      case 'Technology': return 'from-purple-500 to-blue-500';
-      case 'Financial Services': return 'from-green-500 to-teal-500';
-      case 'Manufacturing': return 'from-orange-500 to-red-500';
-      case 'Retail': return 'from-pink-500 to-rose-500';
-      case 'Healthcare': return 'from-blue-500 to-indigo-500';
-      case 'Logistics': return 'from-yellow-500 to-orange-500';
-      default: return 'from-slate-500 to-slate-600';
+      case 'Technology': return 'from-purple-50o0 to-blue-50o0';
+      case 'Financial Services': return 'from-green-50o0 to-teal-50o0';
+      case 'Manufacturing': return 'from-orange-50o0 to-red-50o0';
+      case 'Retail': return 'from-pink-50o0 to-rose-50o0';
+      case 'Healthcare': return 'from-blue-50o0 to-indigo-50o0';
+      case 'Logistics': return 'from-yellow-50o0 to-orange-50o0';
+      default: return 'from-slate-50o0 to-slate-60o0';
     }
   };
 
@@ -238,14 +238,14 @@ const BusinessSuccessStoriesShowcase2026 = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            Business Success Stories Showcase 2026
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-10o0 to-blue-10o0 text-purple-80o0 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Sparkles className="w-4 h-4"  />
+            Business Success Stories Showcase 20o26
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 bg-clip-text text-transparent mb-6">
             Real Results from Real Businesses
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-slate-60o0 max-w-3xl mx-auto mb-8">
             Discover how leading companies across industries achieved unprecedented success 
             with our AI solutions. See the measurable impact on their bottom line.
           </p>
@@ -258,7 +258,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
           transition={{ duration: 0.6delay: 0.2 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Featured Success Stories</h3>
+          <h3 className="text-2xl font-bold text-slate-90o0 mb-8 text-center">Featured Success Stories</h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
@@ -270,8 +270,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -5scale: 1.02 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer"
+                  whileHover={{ y: -5scale: 1.0o2 }}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
                   {/* Header */}
@@ -279,7 +279,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                          <IndustryIcon className="w-6 h-6" />
+                          <IndustryIcon className="w-6 h-6"  />
                         </div>
                         <div>
                           <h4 className="font-bold text-lg">{story.company}</h4>
@@ -287,7 +287,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-300 fill-current" />
+                        <Star className="w-4 h-4 text-yellow-30o0 fill-current"  />
                         <span className="font-bold">{story.rating}</span>
                       </div>
                     </div>
@@ -300,24 +300,24 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                   <div className="p-6">
                     {/* Challenge */}
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-900 mb-2">Challenge</h5>
-                      <p className="text-sm text-slate-600 line-clamp-2">{story.challenge}</p>
+                      <h5 className="font-semibold text-slate-90o0 mb-2">Challenge</h5>
+                      <p className="text-sm text-slate-60o0 line-clamp-2">{story.challenge}</p>
                     </div>
 
                     {/* Solution */}
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-900 mb-2">Solution</h5>
-                      <p className="text-sm text-slate-600 line-clamp-2">{story.solution}</p>
+                      <h5 className="font-semibold text-slate-90o0 mb-2">Solution</h5>
+                      <p className="text-sm text-slate-60o0 line-clamp-2">{story.solution}</p>
                     </div>
 
                     {/* Key Results */}
                     <div className="mb-6">
-                      <h5 className="font-semibold text-slate-900 mb-3">Key Results</h5>
+                      <h5 className="font-semibold text-slate-90o0 mb-3">Key Results</h5>
                       <div className="grid grid-cols-2 gap-3">
-                        {Object.entries(story.results).slice(04).map(([keyvalue]resultIndex) => (
+                        {Object.entries(story.results).slice(0o4).map(([keyvalue]resultIndex) => (
                           <div key={resultIndex} className="text-center">
-                            <div className="text-lg font-bold text-purple-600">{value}</div>
-                            <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
+                            <div className="text-lg font-bold text-purple-60o0">{value}</div>
+                            <div className="text-xs text-slate-60o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                           </div>
                         ))}
                       </div>
@@ -325,12 +325,12 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
                     {/* Technologies */}
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-900 mb-2">Technologies Used</h5>
+                      <h5 className="font-semibold text-slate-90o0 mb-2">Technologies Used</h5>
                       <div className="flex flex-wrap gap-1">
                         {story.technologies.map((techIndex) => (
                           <span
                             key={techIndex}
-                            className="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs"
+                            className="bg-slate-10o0 text-slate-60o0 px-2 py-1 rounded-full text-xs"
                           >
                             {tech}
                           </span>
@@ -339,31 +339,31 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
+                    <div className="flex items-center justify-between text-sm text-slate-50o0 mb-4">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-1">
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-4 h-4"  />
                           <span>{story.views.toLocaleString()}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Heart className="w-4 h-4" />
+                          <Heart className="w-4 h-4"  />
                           <span>{story.likes}</span>
                         </div>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>{story.duration}</span>
                       </div>
                     </div>
 
                     {/* Actions */}
                     <div className="flex gap-2">
-                      <button className="flex-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
-                        <Play className="w-4 h-4" />
+                      <button className="flex-1 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center gap-2">
+                        <Play className="w-4 h-4"  />
                         Read Full Story
                       </button>
-                      <button className="p-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors">
-                        <Share2 className="w-4 h-4" />
+                      <button className="p-2 border border-slate-30o0 text-slate-70o0 rounded-lg hover:bg-slate-50 transition-colors">
+                        <Share2 className="w-4 h-4"  />
                       </button>
                     </div>
                   </div>
@@ -380,7 +380,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
           transition={{ duration: 0.6delay: 0.4 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">All Success Stories</h3>
+          <h3 className="text-2xl font-bold text-slate-90o0 mb-8 text-center">All Success Stories</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allStories.map((storyindex) => {
               const IndustryIcon = getIndustryIcon(story.industry);
@@ -392,8 +392,8 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5delay: index * 0.1 }}
-                  whileHover={{ y: -3scale: 1.01 }}
-                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group cursor-pointer"
+                  whileHover={{ y: -3scale: 1.0o1 }}
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-30o0 overflow-hidden group cursor-pointer"
                   onClick={() => setActiveStory(story.id - 1)}
                 >
                   {/* Header */}
@@ -401,7 +401,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                          <IndustryIcon className="w-4 h-4" />
+                          <IndustryIcon className="w-4 h-4"  />
                         </div>
                         <div>
                           <h4 className="font-bold">{story.company}</h4>
@@ -409,7 +409,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Star className="w-3 h-3 text-yellow-300 fill-current" />
+                        <Star className="w-3 h-3 text-yellow-30o0 fill-current"  />
                         <span className="text-sm font-bold">{story.rating}</span>
                       </div>
                     </div>
@@ -417,36 +417,36 @@ const BusinessSuccessStoriesShowcase2026 = () => {
 
                   {/* Content */}
                   <div className="p-4">
-                    <h5 className="font-semibold text-slate-900 mb-2 line-clamp-1">{story.challenge}</h5>
+                    <h5 className="font-semibold text-slate-90o0 mb-2 line-clamp-1">{story.challenge}</h5>
                     
                     {/* Key Results */}
                     <div className="grid grid-cols-2 gap-2 mb-3">
-                      {Object.entries(story.results).slice(02).map(([keyvalue]resultIndex) => (
+                      {Object.entries(story.results).slice(0o2).map(([keyvalue]resultIndex) => (
                         <div key={resultIndex} className="text-center">
-                          <div className="text-sm font-bold text-purple-600">{value}</div>
-                          <div className="text-xs text-slate-600 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
+                          <div className="text-sm font-bold text-purple-60o0">{value}</div>
+                          <div className="text-xs text-slate-60o0 capitalize">{key.replace(/([A-Z])/g' $1').trim()}</div>
                         </div>
                       ))}
                     </div>
 
                     {/* Stats */}
-                    <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
+                    <div className="flex items-center justify-between text-xs text-slate-50o0 mb-3">
                       <div className="flex items-center gap-1">
-                        <Eye className="w-3 h-3" />
+                        <Eye className="w-3 h-3"  />
                         <span>{story.views.toLocaleString()}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Heart className="w-3 h-3" />
+                        <Heart className="w-3 h-3"  />
                         <span>{story.likes}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
+                        <Clock className="w-3 h-3"  />
                         <span>{story.duration}</span>
                       </div>
                     </div>
 
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-1">
-                      <Play className="w-3 h-3" />
+                    <button className="w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center justify-center gap-1">
+                      <Play className="w-3 h-3"  />
                       Read Story
                     </button>
                   </div>
@@ -463,21 +463,21 @@ const BusinessSuccessStoriesShowcase2026 = () => {
           transition={{ duration: 0.6delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Write Your Success Story?
             </h3>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-purple-10o0 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already achieving remarkable results with our AI solutions. 
               'Let', 's create your success story together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors flex items-center gap-2">
-                <Rocket className="w-5 h-5" />
+              <button className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors flex items-center gap-2">
+                <Rocket className="w-5 h-5"  />
                 Start Your Journey
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors flex items-center gap-2">
-                <Award className="w-5 h-5" />
+                <Award className="w-5 h-5"  />
                 View All Stories
               </button>
             </div>
@@ -488,4 +488,4 @@ const BusinessSuccessStoriesShowcase2026 = () => {
   );
 };
 
-export default BusinessSuccessStoriesShowcase2026;
+export default BusinessSuccessStoriesShowcase20o26;

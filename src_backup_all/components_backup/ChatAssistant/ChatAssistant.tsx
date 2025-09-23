@@ -3,8 +3,7 @@ import React, {
   useEffect,
   useRef,
   ReactNode,
-  useContext,
-} from 'react';
+  useContext} from 'react';
 import { AuthContext } from '../../context/auth/AuthContext';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -47,8 +46,7 @@ export function ChatAssistant({
   initialMessages = [],
   onSendMessage,
   contextHeader,
-  starterQuestions = [],
-}: ChatAssistantProps) {
+  starterQuestions = []}: ChatAssistantProps) {
   const auth = useContext(AuthContext);
   const isGuest = !auth?.isAuthenticated;
 
@@ -58,11 +56,9 @@ export function ChatAssistant({
     Message[]
   >(
     isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
-    [],
-  );
+    []);
   const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>(
-    [],
-  );
+    []);
   const [loggedInMessages, setLoggedInMessages] =
     useState<Message[]>(initialMessages);
 
@@ -104,8 +100,7 @@ export function ChatAssistant({
   // Determine currentMessages and setCurrentMessages based on isGuest
   const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
   const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[]) => Message[]),
-  ) => {
+    valueOrFn: Message[] | ((val: Message[]) => Message[])) => {
     if (isGuest) {
       const newMessages =
         valueOrFn instanceof Function
@@ -120,14 +115,13 @@ export function ChatAssistant({
     }
   };
 
-  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
+  const debouncedApiCallParams = useDebounce(pendingApiCallParams, 30o00);
 
   useEffect(() => {
     if (debouncedApiCallParams) {
       onSendMessage(
         debouncedApiCallParams.message,
-        debouncedApiCallParams.conversationId,
-      );
+        debouncedApiCallParams.conversationId);
     }
   }, [debouncedApiCallParams, onSendMessage]);
 
@@ -144,12 +138,11 @@ export function ChatAssistant({
 
     if (!isGuest) {
       // Logged-in user
-      const newMessage: Message = {
+      const newMessage: Message ={
         id: Date.now().toString(),
         role: 'user',
         message: messageContent,
-        timestamp: new Date(),
-      };
+        timestamp: new Date()};
       setCurrentMessages((prev: Message[]) => [...prev, newMessage]);
       setPendingApiCallParams({ message: messageContent, conversationId });
     } else {
@@ -162,12 +155,11 @@ export function ChatAssistant({
   const handleModalSendConfirm = () => {
     if (!guestMessage) return;
 
-    const newMessage: Message = {
+    const newMessage: Message ={
       id: Date.now().toString(),
       role: 'user',
       message: guestMessage,
-      timestamp: new Date(),
-    };
+      timestamp: new Date()};
     setCurrentMessages((prev: Message[]) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
     setPendingApiCallParams({ message: guestMessage, conversationId });
 
@@ -206,7 +198,7 @@ export function ChatAssistant({
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
             <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name} />
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}  />
               <AvatarFallback className="bg-zion-purple/20 text-white">
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>
@@ -227,7 +219,7 @@ export function ChatAssistant({
             onClick={onClose}
             aria-label="Close chat"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5"  />
           </Button>
         </div>
 
@@ -263,21 +255,21 @@ export function ChatAssistant({
             </div>
           ) : (
             currentMessages.map((msg) => (
-              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
+              <ChatMessage key={msg.id} role={msg.role} message={msg.message}  />
             ))
           )}
-          <div ref={messagesEndRef} />
+          <div ref={messagesEndRef}  />
         </div>
 
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
+          <ChatInput onSend={handleSendMessage}  />
         </div>
       </div>
 
       {showGuestModal && guestMessage && (
         <div
-          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-[10o0] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="confirm-message-title"

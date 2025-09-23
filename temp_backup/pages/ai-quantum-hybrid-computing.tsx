@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -7,8 +6,8 @@ export default function AIQuantumHybridPage() {
 		<>
 			<Head>
 				<title>AI + Quantum Hybrid Computing | Zion Tech Group</title>
-				<meta name="description" content="Hybrid orchestration for optimization and simulation workloads with quantum backends." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-quantum-hybrid-computing" />
+				<meta name="description" content="Hybrid orchestration for optimization and simulation workloads with quantum backends."  />
+				<link rel="canonical" href="https://ziontechgroup.com/ai-quantum-hybrid-computing"  />
 			</Head>
 			<ServiceLanding
 				title="AI + Quantum Hybrid Computing"
@@ -20,7 +19,7 @@ export default function AIQuantumHybridPage() {
 				features={["Hybrid pipelines with classical + quantum steps","QAOA/annealing templates for routing and scheduling","Domain-specific kernels for finance and logistics","Batch and real-time APIs","Simulator fallbacks and cost controls","Observability and result verification"]}
 				industries={["Finance", "Logistics", "Energy", "Research"]}
 				url="https://ziontechgroup.com/ai-quantum-hybrid-computing"
-			/>
+			 />
 		</>
 	);
 }

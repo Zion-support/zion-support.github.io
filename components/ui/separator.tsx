@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface SeparatorProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -15,7 +14,7 @@ const Separator = React.forwardRef<HTMLDivElementSeparatorProps>(
         className
       )}
       {...props}
-    />
+     />
   )
 );
 Separator.displayName = 'Separator';

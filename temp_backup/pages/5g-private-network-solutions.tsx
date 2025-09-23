@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -7,7 +6,7 @@ export default function FiveGPrivateNetworkPage() {
 		<>
 			<Head>
 				<title>5G Private Network Solutions | Zion Tech Group</title>
-				<meta name="description" content="Design and operate private 5G with SIM/eSIM lifecycle, QoS, MEC, and security." />
+				<meta name="description" content="Design and operate private 5G with SIM/eSIM lifecycle, QoS, MEC, and security."  />
 
 			</Head>
 			<ServiceLanding
@@ -28,7 +27,7 @@ export default function FiveGPrivateNetworkPage() {
 					"SLA dashboards and multi-site federation"
 				]}
 				industries={["Manufacturing", "Healthcare", "Logistics", "Energy"]}
-			/>
+			 />
 		</>
 	);
 }

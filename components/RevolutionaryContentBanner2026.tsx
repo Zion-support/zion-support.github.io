@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Star
@@ -13,25 +12,25 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const RevolutionaryContentBanner2026 = () => {
+const RevolutionaryContentBanner20o26 = () => {
   const features = [
-    "300% ROI Guaranteed",
+    "30o0% ROI Guaranteed",
     "Zero Implementation Risk",
     "24/7 Expert Support",
     "Future-Proof Technology"
   ];
 
   const stats = [
-    { number: "500+"label: "Companies Transformed" },
+    { number: "50o0+"label: "Companies Transformed" },
     { number: "99.9%"label: "Uptime Guarantee" },
     { number: "24/7"label: "Expert Support" },
-    { number: "300%"label: "Average ROI" }
+    { number: "30o0%"label: "Average ROI" }
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"  />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -44,22 +43,22 @@ const RevolutionaryContentBanner2026 = () => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.6delay: 0.2 }}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-6 py-3 rounded-full font-bold text-lg mb-8"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-6 py-3 rounded-full font-bold text-lg mb-8"
           >
-            <Sparkles className="w-5 h-5" />
-            <span>Revolutionary 2026 Technology</span>
+            <Sparkles className="w-5 h-5"  />
+            <span>Revolutionary 20o26 Technology</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Transform Your Business with
-            <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-yellow-40o0 via-pink-40o0 to-purple-40o0 bg-clip-text text-transparent">
               Revolutionary AI
             </span>
           </h1>
           
-          <p className="text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8 leading-relaxed">
             Experience the future of business automation with our cutting-edge AI solutions. 
-            Join 500+ companies already achieving unprecedented growth and efficiency.
+            Join 50o0+ companies already achieving unprecedented growth and efficiency.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -71,7 +70,7 @@ const RevolutionaryContentBanner2026 = () => {
                 transition={{ duration: 0.5delay: index * 0.1 }}
                 className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg px-4 py-2 rounded-full border border-white/20"
               >
-                <CheckCircle className="w-5 h-5 text-green-400" />
+                <CheckCircle className="w-5 h-5 text-green-40o0"  />
                 <span className="text-white font-medium">{feature}</span>
               </motion.div>
             ))}
@@ -96,7 +95,7 @@ const RevolutionaryContentBanner2026 = () => {
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-300 text-lg">
+              <div className="text-gray-30o0 text-lg">
                 {stat.label}
               </div>
             </motion.div>
@@ -115,47 +114,47 @@ const RevolutionaryContentBanner2026 = () => {
               Ready to Lead the Revolution?
             </h3>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join the elite group of forward-thinking companies transforming their operations 
-              with our revolutionary AI technology. Limited spots available for 2026.
+              with our revolutionary AI technology. Limited spots available for 20o26.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-yellow-300 hover:to-orange-300 transition-all duration-300 shadow-2xl"
+                className="group bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black px-10 py-5 rounded-2xl font-bold text-xl hover:from-yellow-30o0 hover:to-orange-30o0 transition-all duration-30o0 shadow-2xl"
               >
                 <span className="flex items-center space-x-3">
                   <span>Get Started Now</span>
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform"  />
                 </span>
               </motion.button>
 
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="group border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="group border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-purple-60o0 transition-all duration-30o0"
               >
                 <span className="flex items-center space-x-3">
                   <span>Watch Demo</span>
-                  <Zap className="w-6 h-6 group-hover:animate-pulse" />
+                  <Zap className="w-6 h-6 group-hover:animate-pulse"  />
                 </span>
               </motion.button>
             </div>
 
-            <div className="mt-8 flex items-center justify-center space-x-6 text-gray-400">
+            <div className="mt-8 flex items-center justify-center space-x-6 text-gray-40o0">
               <div className="flex items-center space-x-2">
-                <Award className="w-5 h-5" />
-                <span>Trusted by Fortune 500</span>
+                <Award className="w-5 h-5"  />
+                <span>Trusted by Fortune 50o0</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5" />
-                <span>500+ Happy Clients</span>
+                <Users className="w-5 h-5"  />
+                <span>50o0+ Happy Clients</span>
               </div>
               <div className="flex items-center space-x-2">
-                <TrendingUp className="w-5 h-5" />
-                <span>300% Average ROI</span>
+                <TrendingUp className="w-5 h-5"  />
+                <span>30o0% Average ROI</span>
               </div>
             </div>
           </div>
@@ -166,19 +165,19 @@ const RevolutionaryContentBanner2026 = () => {
       <motion.div
         animate={{ 
           y: [0-20],
-          rotate: [050]
+          rotate: [0o50]
         }}
         transition={{ 
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-20 blur-xl"
-      />
+        className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full opacity-20 blur-xl"
+       />
       
       <motion.div
         animate={{ 
-          y: [020],
+          y: [0o20],
           rotate: [0-50]
         }}
         transition={{ 
@@ -186,8 +185,8 @@ const RevolutionaryContentBanner2026 = () => {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-xl"
-      />
+        className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-40o0 to-pink-40o0 rounded-full opacity-20 blur-xl"
+       />
     </section>
   );
 }

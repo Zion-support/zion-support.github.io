@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import TalentCard from "./TalentCard";
 import type { CandidateStatus, JobApplication } from "../../utils/types/hiring";
 
-type BoardColumn = {
+type BoardColumn ={
   key: CandidateStatus;
   title: string;
 };
@@ -15,7 +15,7 @@ const DEFAULT_COLUMNS: BoardColumn[] = [
   { key: "hired", title: "Hired" },
 ];
 
-type Props = {
+type Props ={
   applications: JobApplication[];
   onMove: (applicationId: string, newStatus: CandidateStatus) => void;
   columns?: BoardColumn[];
@@ -23,14 +23,13 @@ type Props = {
 
 export default function HiringBoard({ applications, onMove, columns = DEFAULT_COLUMNS }: Props) {
   const appsByStatus = useMemo(() => {
-    const map: Record<CandidateStatus, JobApplication[]> = {
+    const map: Record<CandidateStatus, JobApplication[]> ={
       applied: [],
       shortlisted: [],
       interview: [],
       offer: [],
       hired: [],
-      rejected: [],
-    } as any;
+      rejected: []} as any;
     for (const app of applications) {
       if (!map[app.status]) map[app.status as CandidateStatus] = [] as any;
       map[app.status as CandidateStatus].push(app);
@@ -39,7 +38,7 @@ export default function HiringBoard({ applications, onMove, columns = DEFAULT_CO
   }, [applications]);
 
   const counts = useMemo(() => {
-    const c: Record<string, number> = {};
+    const c: Record<string, number> ={};
     for (const col of columns) {
       c[col.key] = appsByStatus[col.key]?.length || 0;
     }
@@ -49,13 +48,13 @@ export default function HiringBoard({ applications, onMove, columns = DEFAULT_CO
   return (
     <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
       {columns.map((col) => (
-        <div key={col.key} className="flex flex-col rounded-xl bg-gray-50/60 dark:bg-gray-800/40 border border-gray-200 overflow-hidden">
-          <div className="flex items-center justify-between px-3 py-2 bg-gray-100 dark:bg-gray-800">
+        <div key={col.key} className="flex flex-col rounded-xl bg-gray-50/60 dark:bg-gray-80o0/40 border border-gray-20o0 overflow-hidden">
+          <div className="flex items-center justify-between px-3 py-2 bg-gray-10o0 dark:bg-gray-80o0">
             <h3 className="text-sm font-semibold">{col.title}</h3>
-            <span className="text-xs text-gray-500">{counts[col.key] || 0}</span>
+            <span className="text-xs text-gray-50o0">{counts[col.key] || 0}</span>
           </div>
           <div
-            className="flex-1 p-3 min-h-[200px] space-y-3"
+            className="flex-1 p-3 min-h-[20o0px] space-y-3"
             onDragOver={(e) => {
               e.preventDefault();
               e.dataTransfer.dropEffect = "move";

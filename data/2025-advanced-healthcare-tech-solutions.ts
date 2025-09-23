@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface AdvancedHealthcareTechSolution2025 {
+export interface AdvancedHealthcareTechSolution20o25 {
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +41,7 @@ export interface AdvancedHealthcareTechSolution2025 {
   reviews: number;
 }
 
-export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution2025[] = [
+export const advancedHealthcareTechSolutions20o25: AdvancedHealthcareTechSolution20o25[] = [
   {
     id: 'ai-powered-medical-imaging-analysis',
     name: 'AI-Powered Medical Imaging Analysis',
@@ -63,8 +63,8 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     ],
     popular: true,
     icon: '🩻',
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    textColor: 'text-blue-400',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/ai-powered-medical-imaging-analysis',
     marketPosition: 'Leading AI medical imaging platform with advanced diagnostic capabilities',
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Healthcare systems, Research institutions',
@@ -81,14 +81,14 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     growthRate: '35% annual growth',
     variant: 'ai-healthcare',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI medical imaging platform with FDA-cleared algorithms and comprehensive clinical integration.',
-    launchDate: '2025-01-24',
+    launchDate: '20o25-0o1-24',
     customers: 56,
     rating: 4.9,
     reviews: 34
@@ -114,8 +114,8 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     ],
     popular: false,
     icon: '🧬',
-    color: 'from-purple-600 via-violet-600 to-indigo-600',
-    textColor: 'text-purple-400',
+    color: 'from-purple-60o0 via-violet-60o0 to-indigo-60o0',
+    textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/quantum-drug-discovery-platform',
     marketPosition: 'Leading quantum drug discovery platform with advanced molecular modeling',
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions, Universities, Drug discovery labs',
@@ -132,14 +132,14 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     growthRate: '70% annual growth',
     variant: 'quantum-bio-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready quantum drug discovery platform with advanced algorithms and research collaboration tools.',
-    launchDate: '2025-02-01',
+    launchDate: '20o25-0o2-0o1',
     customers: 18,
     rating: 4.9,
     reviews: 12
@@ -165,8 +165,8 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     ],
     popular: true,
     icon: '📊',
-    color: 'from-green-600 via-emerald-600 to-teal-600',
-    textColor: 'text-green-400',
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+    textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/ai-powered-patient-monitoring-system',
     marketPosition: 'Leading AI patient monitoring system with predictive analytics',
     targetAudience: 'Hospitals, ICUs, Nursing homes, Home healthcare, Telemedicine providers',
@@ -183,14 +183,14 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     growthRate: '28% annual growth',
     variant: 'ai-healthcare',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI patient monitoring system with comprehensive clinical integration and compliance features.',
-    launchDate: '2025-02-05',
+    launchDate: '20o25-0o2-0o5',
     customers: 123,
     rating: 4.7,
     reviews: 78
@@ -216,8 +216,8 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     ],
     popular: false,
     icon: '⛓️',
-    color: 'from-indigo-600 via-purple-600 to-pink-600',
-    textColor: 'text-indigo-400',
+    color: 'from-indigo-60o0 via-purple-60o0 to-pink-60o0',
+    textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/blockchain-healthcare-data-platform',
     marketPosition: 'Leading blockchain healthcare data platform with secure interoperability',
     targetAudience: 'Healthcare systems, Hospitals, Insurance companies, Research institutions, Government agencies',
@@ -234,14 +234,14 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     growthRate: '50% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain healthcare platform with comprehensive security and compliance features.',
-    launchDate: '2025-02-10',
+    launchDate: '20o25-0o2-10',
     customers: 67,
     rating: 4.6,
     reviews: 45
@@ -267,8 +267,8 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     ],
     popular: true,
     icon: '🔬',
-    color: 'from-orange-600 via-amber-600 to-yellow-600',
-    textColor: 'text-orange-400',
+    color: 'from-orange-60o0 via-amber-60o0 to-yellow-60o0',
+    textColor: 'text-orange-40o0',
     link: 'https://ziontechgroup.com/ai-powered-clinical-trial-optimization',
     marketPosition: 'Leading AI clinical trial optimization platform with advanced analytics',
     targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Universities, Clinical trial sites',
@@ -285,14 +285,14 @@ export const advancedHealthcareTechSolutions2025: AdvancedHealthcareTechSolution
     growthRate: '32% annual growth',
     variant: 'ai-healthcare',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI clinical trial platform with comprehensive optimization and analytics capabilities.',
-    launchDate: '2025-02-15',
+    launchDate: '20o25-0o2-15',
     customers: 89,
     rating: 4.8,
     reviews: 56

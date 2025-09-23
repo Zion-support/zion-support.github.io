@@ -1,17 +1,14 @@
 
 
-
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
 
-
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
-
 
   return [setNode, entry] as const;
 }
@@ -27,7 +24,7 @@ export function useIntersectionObserver({;
   root = null,;
   rootMargin = '0%',;
   freezeOnceVisible = false;
-}: UseIntersectionObserverProps = {}) {;
+}: UseIntersectionObserverProps ={}) {;
   const [entry, setEntry] = useState<IntersectionObserverEntry>(),;
   const [node, setNode] = useState<Element | null>(null),;
   const observer = useRef<IntersectionObserver | null>(null),;
@@ -38,7 +35,7 @@ export function useIntersectionObserver({;
   useEffect(() => {;
     const hasIOSupport = !!window.IntersectionObserver,;
     if (!hasIOSupport || frozen || !node) return,;
-    const observerParams = { threshold, root, rootMargin },;
+    const observerParams ={ threshold, root, rootMargin },;
     const currentObserver = new IntersectionObserver(updateEntry, observerParams),;
     observer.current = currentObserver,;
     currentObserver.observe(node),;
@@ -67,7 +64,4 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

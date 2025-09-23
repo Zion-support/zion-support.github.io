@@ -42,7 +42,7 @@ export function PartnerReferralLinks() {
         url.searchParams.append("source", customParam);
       }
       
-      const newLink = {
+      const newLink ={
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       };
@@ -87,7 +87,7 @@ export function PartnerReferralLinks() {
               onClick={handleDownloadLinks}
               className="flex items-center gap-2"
             >
-              <Download className="h-4 w-4" />
+              <Download className="h-4 w-4"  />
               Export Links
             </Button>
           </CardTitle>
@@ -99,9 +99,9 @@ export function PartnerReferralLinks() {
               value={baseLink}
               readOnly
               className="font-mono text-sm"
-            />
+             />
             <Button variant="outline" onClick={() => handleCopyLink(baseLink)}>
-              <Copy className="h-4 w-4" />
+              <Copy className="h-4 w-4"  />
               <span className="sr-only">Copy</span>
             </Button>
           </div>
@@ -113,7 +113,7 @@ export function PartnerReferralLinks() {
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
-              <Plus className="h-4 w-4" />
+              <Plus className="h-4 w-4"  />
               Create New Link
             </Button>
           </DialogTrigger>
@@ -132,7 +132,7 @@ export function PartnerReferralLinks() {
                   onValueChange={setSelectedCampaign}
                 >
                   <SelectTrigger id="campaign">
-                    <SelectValue placeholder="Select campaign type" />
+                    <SelectValue placeholder="Select campaign type"  />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -181,7 +181,7 @@ export function PartnerReferralLinks() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-base flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Link className="h-4 w-4 text-zion-purple" />
+                    <Link className="h-4 w-4 text-zion-purple"  />
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
                 </CardTitle>
@@ -192,13 +192,13 @@ export function PartnerReferralLinks() {
                     value={item.link}
                     readOnly
                     className="font-mono text-xs"
-                  />
+                   />
                   <Button 
                     variant="outline" 
                     size="sm" 
                     onClick={() => handleCopyLink(item.link)}
                   >
-                    <Copy className="h-4 w-4" />
+                    <Copy className="h-4 w-4"  />
                     <span className="sr-only">Copy</span>
                   </Button>
                 </div>
@@ -216,7 +216,7 @@ export function PartnerReferralLinks() {
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2"
               >
-                <Plus className="h-4 w-4" />
+                <Plus className="h-4 w-4"  />
                 Create First Link
               </Button>
             </CardContent>

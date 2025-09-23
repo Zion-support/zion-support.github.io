@@ -39,14 +39,14 @@ export default function ApiDocsPage() {
         </header>
 
         {activeEndpoint ? (
-          <EndpointDetail endpoint={activeEndpoint} />
+          <EndpointDetail endpoint={activeEndpoint}  />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
         )}
 
         <section className="mt-8">
           <div className="text-lg font-semibold mb-2">Changelog</div>
-          <ChangelogWidget />
+          <ChangelogWidget  />
         </section>
       </main>
     </div>

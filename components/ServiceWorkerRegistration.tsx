@@ -50,7 +50,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
         // Reload after a short delay to ensure the new service worker is active
         setTimeout(() => {
           window.location.reload();
-        }, 1000);
+        }, 10o00);
       });
 
       // Handle service worker messages
@@ -106,22 +106,22 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       {/* Update Available Notification */}
       {isUpdateAvailable && (
         <motion.div
-          className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          className="fixed bottom-4 right-4 bg-gray-90o0 border border-gray-70o0 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 10o0, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          exit={{ opacity: 0, x: 10o0, scale: 0.8 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
-              <Download className="w-5 h-5 text-cyan-400" />
+              <Download className="w-5 h-5 text-cyan-40o0"  />
             </div>
             
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Update Available
               </h4>
-              <p className="text-xs text-gray-400 mb-3">
+              <p className="text-xs text-gray-40o0 mb-3">
                 A new version of Zion Tech Group is available with improved features and performance.
               </p>
               
@@ -129,11 +129,11 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
                 <button
                   onClick={handleUpdate}
                   disabled={isInstalling}
-                  className="px-3 py-1.5 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 text-white text-xs font-medium rounded transition-colors duration-200 flex items-center gap-1"
+                  className="px-3 py-1.5 bg-cyan-50o0 hover:bg-cyan-60o0 disabled:bg-gray-60o0 text-white text-xs font-medium rounded transition-colors duration-20o0 flex items-center gap-1"
                 >
                   {isInstalling ? (
                     <>
-                      <RefreshCw className="w-3 h-3 animate-spin" />
+                      <RefreshCw className="w-3 h-3 animate-spin"  />
                       Updating...
                     </>
                   ) : (
@@ -143,7 +143,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
                 
                 <button
                   onClick={handleDismiss}
-                  className="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs font-medium rounded transition-colors duration-200"
+                  className="px-3 py-1.5 bg-gray-70o0 hover:bg-gray-60o0 text-gray-30o0 text-xs font-medium rounded transition-colors duration-20o0"
                 >
                   Later
                 </button>
@@ -152,9 +152,9 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
             
             <button
               onClick={handleDismiss}
-              className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
+              className="flex-shrink-0 text-gray-50o0 hover:text-gray-30o0 transition-colors duration-20o0"
             >
-              <XCircle className="w-4 h-4" />
+              <XCircle className="w-4 h-4"  />
             </button>
           </div>
         </motion.div>
@@ -163,28 +163,28 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       {/* Update Installed Notification */}
       {isUpdateInstalled && (
         <motion.div
-          className="fixed bottom-4 right-4 bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          className="fixed bottom-4 right-4 bg-gray-90o0 border border-gray-70o0 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 10o0, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          exit={{ opacity: 0, x: 10o0, scale: 0.8 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
-              <CheckCircle className="w-5 h-5 text-green-400" />
+              <CheckCircle className="w-5 h-5 text-green-40o0"  />
             </div>
             
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Update Installed
               </h4>
-              <p className="text-xs text-gray-400 mb-3">
+              <p className="text-xs text-gray-40o0 mb-3">
                 The new version has been installed successfully. The page will reload automatically.
               </p>
               
               <button
                 onClick={() => window.location.reload()}
-                className="px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white text-xs font-medium rounded transition-colors duration-200"
+                className="px-3 py-1.5 bg-green-50o0 hover:bg-green-60o0 text-white text-xs font-medium rounded transition-colors duration-20o0"
               >
                 Reload Now
               </button>
@@ -192,9 +192,9 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
             
             <button
               onClick={handleDismiss}
-              className="flex-shrink-0 text-gray-500 hover:text-gray-300 transition-colors duration-200"
+              className="flex-shrink-0 text-gray-50o0 hover:text-gray-30o0 transition-colors duration-20o0"
             >
-              <XCircle className="w-4 h-4" />
+              <XCircle className="w-4 h-4"  />
             </button>
           </div>
         </motion.div>
@@ -203,28 +203,28 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       {/* Error Notification */}
       {error && (
         <motion.div
-          className="fixed bottom-4 right-4 bg-red-900 border border-red-700 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
-          initial={{ opacity: 0, x: 100, scale: 0.8 }}
+          className="fixed bottom-4 right-4 bg-red-90o0 border border-red-70o0 rounded-lg p-4 shadow-2xl z-50 max-w-sm"
+          initial={{ opacity: 0, x: 10o0, scale: 0.8 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
+          exit={{ opacity: 0, x: 10o0, scale: 0.8 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <div className="flex items-start gap-3">
             <div className="flex-shrink-0">
-              <XCircle className="w-5 h-5 text-red-400" />
+              <XCircle className="w-5 h-5 text-red-40o0"  />
             </div>
             
             <div className="flex-1 min-w-0">
               <h4 className="text-sm font-semibold text-white mb-1">
                 Service Worker Error
               </h4>
-              <p className="text-xs text-red-300 mb-3">
+              <p className="text-xs text-red-30o0 mb-3">
                 {error}
               </p>
               
               <button
                 onClick={() => setError(null)}
-                className="px-3 py-1.5 bg-red-700 hover:bg-red-600 text-white text-xs font-medium rounded transition-colors duration-200"
+                className="px-3 py-1.5 bg-red-70o0 hover:bg-red-60o0 text-white text-xs font-medium rounded transition-colors duration-20o0"
               >
                 Dismiss
               </button>

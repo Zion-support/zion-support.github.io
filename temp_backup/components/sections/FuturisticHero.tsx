@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Star, Zap, Shield, Users, Globe } from 'lucide-react';
@@ -11,25 +10,25 @@ const FuturisticHero: React.FC = () => {
       icon: Zap,
       title: 'Lightning Fast',
       description: 'Get started in minutes with our streamlined onboarding process',
-      color: 'from-yellow-500 to-orange-600'
+      color: 'from-yellow-50o0 to-orange-60o0'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with SOC 2 compliance and 99.9% uptime',
-      color: 'from-blue-500 to-indigo-600'
+      color: 'from-blue-50o0 to-indigo-60o0'
     },
     {
       icon: Users,
       title: '24/7 Support',
       description: 'Round-the-clock expert support for all your business needs',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-50o0 to-emerald-60o0'
     },
     {
       icon: Globe,
       title: 'Global Infrastructure',
       description: 'Worldwide CDN distribution for optimal performance',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-50o0 to-pink-60o0'
     }
   ];
 
@@ -43,18 +42,18 @@ const FuturisticHero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <AnimatedBackground variant="cyber" intensity="high" />
+      <AnimatedBackground variant="cyber" intensity="high"  />
       
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 futuristic-bg">
-        <div className="absolute inset-0 cyber-grid opacity-20" />
-        <div className="absolute inset-0 data-stream-bg opacity-10" />
+        <div className="absolute inset-0 cyber-grid opacity-20"  />
+        <div className="absolute inset-0 data-stream-bg opacity-10"  />
         
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-20 w-32 h-32 border border-neon-blue/30 rounded-lg transform rotate-45 float" />
-        <div className="absolute top-40 right-32 w-24 h-24 border border-neon-purple/30 rounded-full float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-32 w-20 h-20 border border-neon-cyan/30 transform rotate-12 float" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 right-20 w-28 h-28 border border-neon-green/30 rounded-lg float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-20 left-20 w-32 h-32 border border-neon-blue/30 rounded-lg transform rotate-45 float"  />
+        <div className="absolute top-40 right-32 w-24 h-24 border border-neon-purple/30 rounded-full float" style={{ animationDelay: '1s' }}  />
+        <div className="absolute bottom-32 left-32 w-20 h-20 border border-neon-cyan/30 transform rotate-12 float" style={{ animationDelay: '2s' }}  />
+        <div className="absolute bottom-20 right-20 w-28 h-28 border border-neon-green/30 rounded-lg float" style={{ animationDelay: '3s' }}  />
       </div>
 
         {/* Content */}
@@ -71,7 +70,7 @@ const FuturisticHero: React.FC = () => {
             <span className="text-white">Tech</span>
             <span className="neon-text-purple">Group</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">
             The future of <span className="neon-text-cyan">micro SaaS</span> is here. 
             Discover <span className="neon-text-green">35+ real services</span> that solve 
             actual business problems with <span className="neon-text-pink">AI-powered intelligence</span>.
@@ -91,13 +90,13 @@ const FuturisticHero: React.FC = () => {
               className="btn-futuristic text-lg px-8 py-4 text-white font-semibold"
             >
               Explore Services
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5"  />
             </Button>
           </Link>
           <Link href="/contact">
             <Button
               variant="outline"
-              className="border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-black text-lg px-8 py-4 font-semibold transition-all duration-300"
+              className="border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-black text-lg px-8 py-4 font-semibold transition-all duration-30o0"
             >
               Get Started
             </Button>
@@ -114,35 +113,35 @@ const FuturisticHero: React.FC = () => {
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="text-4xl opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="text-4xl opacity-60 hover:opacity-10o0 transition-opacity duration-30o0"
           >
             🤖
           </motion.div>
           <motion.div
             animate={{ y: [10, -10, 10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="text-4xl opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="text-4xl opacity-60 hover:opacity-10o0 transition-opacity duration-30o0"
           >
             🔗
           </motion.div>
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="text-4xl opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="text-4xl opacity-60 hover:opacity-10o0 transition-opacity duration-30o0"
           >
             ⚛️
           </motion.div>
           <motion.div
             animate={{ y: [10, -10, 10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="text-4xl opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="text-4xl opacity-60 hover:opacity-10o0 transition-opacity duration-30o0"
           >
             🌐
           </motion.div>
           <motion.div
             animate={{ y: [-10, 10, -10] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="text-4xl opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="text-4xl opacity-60 hover:opacity-10o0 transition-opacity duration-30o0"
           >
             🚗
           </motion.div>
@@ -166,7 +165,7 @@ const FuturisticHero: React.FC = () => {
               <div className="text-4xl md:text-5xl font-bold neon-text-blue mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-400 text-sm md:text-base">
+              <div className="text-gray-40o0 text-sm md:text-base">
                 {stat.label}
               </div>
             </motion.div>
@@ -188,28 +187,28 @@ const FuturisticHero: React.FC = () => {
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
               className="group"
             >
-              <div className="relative p-6 rounded-xl bg-gray-900/50 border border-gray-700/50 hover:border-neon-blue/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="relative p-6 rounded-xl bg-gray-90o0/50 border border-gray-70o0/50 hover:border-neon-blue/50 transition-all duration-30o0 hover:transform hover:scale-10o5">
                 {/* Glow effect */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-neon-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-neon-blue/5 to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
                 
                 {/* Icon */}
-                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.color} mb-4 group-hover:scale-110 transition-transform duration-30o0`}>
+                  <feature.icon className="h-6 w-6 text-white"  />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-neon-blue transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-neon-blue transition-colors duration-30o0">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-40o0 text-sm leading-relaxed">
                   {feature.description}
                 </p>
                 
                 {/* Corner accents */}
-                <div className="absolute top-0 left-0 w-2 h-2 border-l-2 border-t-2 border-neon-blue/50 rounded-tl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 border-r-2 border-t-2 border-neon-blue/50 rounded-tr-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 w-2 h-2 border-l-2 border-b-2 border-neon-blue/50 rounded-bl-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 right-0 w-2 h-2 border-r-2 border-b-2 border-neon-blue/50 rounded-br-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 left-0 w-2 h-2 border-l-2 border-t-2 border-neon-blue/50 rounded-tl-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
+                <div className="absolute top-0 right-0 w-2 h-2 border-r-2 border-t-2 border-neon-blue/50 rounded-tr-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
+                <div className="absolute bottom-0 left-0 w-2 h-2 border-l-2 border-b-2 border-neon-blue/50 rounded-bl-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
+                <div className="absolute bottom-0 right-0 w-2 h-2 border-r-2 border-b-2 border-neon-blue/50 rounded-br-xl opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"  />
               </div>
             </motion.div>
           ))}
@@ -222,7 +221,7 @@ const FuturisticHero: React.FC = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-400 text-sm mb-4">Trusted by innovative companies worldwide</p>
+          <p className="text-gray-40o0 text-sm mb-4">Trusted by innovative companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             <div className="text-2xl font-bold text-white">🚀</div>
             <div className="text-2xl font-bold text-white">⚡</div>
@@ -234,10 +233,10 @@ const FuturisticHero: React.FC = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-neon-blue rounded-full opacity-60 animate-pulse" />
-      <div className="absolute top-40 right-20 w-3 h-3 bg-neon-purple rounded-full opacity-60 animate-pulse delay-1000" />
-      <div className="absolute bottom-40 left-20 w-2 h-2 bg-neon-green rounded-full opacity-60 animate-pulse delay-2000" />
-      <div className="absolute bottom-20 right-10 w-3 h-3 bg-neon-pink rounded-full opacity-60 animate-pulse delay-3000" />
+      <div className="absolute top-20 left-10 w-4 h-4 bg-neon-blue rounded-full opacity-60 animate-pulse"  />
+      <div className="absolute top-40 right-20 w-3 h-3 bg-neon-purple rounded-full opacity-60 animate-pulse delay-10o00"  />
+      <div className="absolute bottom-40 left-20 w-2 h-2 bg-neon-green rounded-full opacity-60 animate-pulse delay-20o00"  />
+      <div className="absolute bottom-20 right-10 w-3 h-3 bg-neon-pink rounded-full opacity-60 animate-pulse delay-30o00"  />
 
       {/* Scroll Indicator */}
       <motion.div
@@ -246,18 +245,18 @@ const FuturisticHero: React.FC = () => {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <div className="flex flex-col items-center text-gray-400">
+        <div className="flex flex-col items-center text-gray-40o0">
           <span className="text-sm mb-2">Scroll to explore</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+            className="w-6 h-10 border-2 border-gray-40o0 rounded-full flex justify-center"
           >
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-gray-400 rounded-full mt-2"
-            />
+              className="w-1 h-3 bg-gray-40o0 rounded-full mt-2"
+             />
           </motion.div>
         </div>
       </motion.div>

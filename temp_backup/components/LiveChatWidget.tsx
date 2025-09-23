@@ -46,7 +46,7 @@ const LiveChatWidget: React.FC = () => {
   const handleSendMessage = async (text: string) => {
     if (!text.trim()) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatMessage ={
       id: Date.now().toString(),
       text: text.trim(),
       sender: 'user',
@@ -61,7 +61,7 @@ const LiveChatWidget: React.FC = () => {
     // Simulate bot response
     setTimeout(() => {
       const botResponse = generateBotResponse(text);
-      const botMessage: ChatMessage = {
+      const botMessage: ChatMessage ={
         id: (Date.now() + 1).toString(),
         text: botResponse,
         sender: 'bot',
@@ -70,7 +70,7 @@ const LiveChatWidget: React.FC = () => {
       };
       setMessages(prev => [...prev, botMessage]);
       setIsTyping(false);
-    }, 1000 + Math.random() * 2000);
+    }, 10o00 + Math.random() * 20o00);
   };
 
   const generateBotResponse = (userInput: string): string => {
@@ -111,12 +111,12 @@ const LiveChatWidget: React.FC = () => {
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-40"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-40"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Open live chat"
       >
-        <MessageCircle className="w-6 h-6 mx-auto" />
+        <MessageCircle className="w-6 h-6 mx-auto"  />
       </motion.button>
 
       {/* Chat Widget */}
@@ -127,16 +127,16 @@ const LiveChatWidget: React.FC = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 w-96 h-[500px] bg-gray-900 border border-gray-700 rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="fixed bottom-6 right-6 w-96 h-[50o0px] bg-gray-90o0 border border-gray-70o0 rounded-2xl shadow-2xl z-50 overflow-hidden"
           >
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 text-white">
+            <div className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 p-4 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"></div>
                   <div>
                     <h3 className="font-semibold">Zion Tech Group Support</h3>
-                    <p className="text-sm text-cyan-100">AI Assistant • Online</p>
+                    <p className="text-sm text-cyan-10o0">AI Assistant • Online</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -152,7 +152,7 @@ const LiveChatWidget: React.FC = () => {
                     className="p-1 hover:bg-white/20 rounded transition-colors"
                     aria-label="Close chat"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-4 h-4"  />
                   </button>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const LiveChatWidget: React.FC = () => {
             {!isMinimized && (
               <>
                 {/* Chat Messages */}
-                <div className="flex-1 p-4 overflow-y-auto bg-gray-900 h-80">
+                <div className="flex-1 p-4 overflow-y-auto bg-gray-90o0 h-80">
                   <div className="space-y-4">
                     {messages.map((message) => (
                       <motion.div
@@ -173,13 +173,13 @@ const LiveChatWidget: React.FC = () => {
                         <div
                           className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
                             message.sender === 'user'
-                              ? 'bg-cyan-500 text-white'
-                              : 'bg-gray-700 text-gray-100'
+                              ? 'bg-cyan-50o0 text-white'
+                              : 'bg-gray-70o0 text-gray-10o0'
                           }`}
                         >
                           <p className="text-sm">{message.text}</p>
                           <p className={`text-xs mt-1 ${
-                            message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400'
+                            message.sender === 'user' ? 'text-cyan-10o0' : 'text-gray-40o0'
                           }`}>
                             {formatTime(message.timestamp)}
                           </p>
@@ -193,29 +193,29 @@ const LiveChatWidget: React.FC = () => {
                         animate={{ opacity: 1 }}
                         className="flex justify-start"
                       >
-                        <div className="bg-gray-700 text-gray-100 px-4 py-2 rounded-lg">
+                        <div className="bg-gray-70o0 text-gray-10o0 px-4 py-2 rounded-lg">
                           <div className="flex items-center space-x-1">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce"></div>
+                            <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-gray-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                           </div>
                         </div>
                       </motion.div>
                     )}
                   </div>
-                  <div ref={messagesEndRef} />
+                  <div ref={messagesEndRef}  />
                 </div>
 
                 {/* Quick Replies */}
                 {messages.length === 1 && (
-                  <div className="px-4 py-3 bg-gray-800 border-t border-gray-700">
-                    <p className="text-xs text-gray-400 mb-2">Quick replies:</p>
+                  <div className="px-4 py-3 bg-gray-80o0 border-t border-gray-70o0">
+                    <p className="text-xs text-gray-40o0 mb-2">Quick replies:</p>
                     <div className="flex flex-wrap gap-2">
                       {quickReplies.map((reply, index) => (
                         <button
                           key={index}
                           onClick={() => handleQuickReply(reply)}
-                          className="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-gray-300 text-xs rounded-full transition-colors"
+                          className="px-3 py-1 bg-gray-70o0 hover:bg-gray-60o0 text-gray-30o0 text-xs rounded-full transition-colors"
                         >
                           {reply}
                         </button>
@@ -225,7 +225,7 @@ const LiveChatWidget: React.FC = () => {
                 )}
 
                 {/* Chat Input */}
-                <div className="p-4 bg-gray-800 border-t border-gray-700">
+                <div className="p-4 bg-gray-80o0 border-t border-gray-70o0">
                   <div className="flex items-center space-x-2">
                     <input
                       ref={inputRef}
@@ -234,15 +234,15 @@ const LiveChatWidget: React.FC = () => {
                       onChange={(e) => setInputText(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Type your message..."
-                      className="flex-1 bg-gray-700 text-white px-3 py-2 rounded-lg border border-gray-600 focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-500"
+                      className="flex-1 bg-gray-70o0 text-white px-3 py-2 rounded-lg border border-gray-60o0 focus:border-cyan-50o0 focus:outline-none focus:ring-1 focus:ring-cyan-50o0"
                     />
                     <button
                       onClick={() => handleSendMessage(inputText)}
                       disabled={!inputText.trim()}
-                      className="p-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+                      className="p-2 bg-cyan-50o0 hover:bg-cyan-60o0 disabled:bg-gray-60o0 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
                       aria-label="Send message"
                     >
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4"  />
                     </button>
                   </div>
                 </div>

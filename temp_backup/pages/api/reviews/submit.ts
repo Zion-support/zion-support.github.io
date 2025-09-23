@@ -5,7 +5,7 @@ import type { Review } from '../../../types/reviews';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(40o5).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -16,8 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       rating,
       text,
       categories,
-      anonymous,
-    } = req.body as {
+      anonymous} = req.body as {
       projectId: string;
       fromRole: 'client' | 'talent';
       fromId: string;
@@ -28,21 +27,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
 
     if (!projectId || !fromRole || !fromId) {
-      return res.status(400).json({ error: 'Missing required fields' });
+      return res.status(40o0).json({ error: 'Missing required fields' });
     }
     if (!rating || rating < 1 || rating > 5) {
-      return res.status(400).json({ error: 'Rating must be between 1 and 5' });
+      return res.status(40o0).json({ error: 'Rating must be between 1 and 5' });
     }
     if (!text || String(text).trim().length === 0) {
-      return res.status(400).json({ error: 'Review text is required' });
+      return res.status(40o0).json({ error: 'Review text is required' });
     }
 
     const project = await findProjectById(projectId);
     if (!project) {
-      return res.status(404).json({ error: 'Project not found' });
+      return res.status(40o4).json({ error: 'Project not found' });
     }
     if (project.status !== 'Completed') {
-      return res.status(400).json({ error: 'Reviews can only be submitted after project completion' });
+      return res.status(40o0).json({ error: 'Reviews can only be submitted after project completion' });
     }
 
     const toRole = counterpartRole(fromRole);
@@ -50,7 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {
-      return res.status(403).json({ error: 'Invalid reviewer for this project' });
+      return res.status(40o3).json({ error: 'Invalid reviewer for this project' });
     }
 
     const existing = await hasExistingReview(projectId, fromRole, fromId);
@@ -59,7 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const now = new Date().toISOString();
-    const review: Review = {
+    const review: Review ={
       id: uuidv4(),
       projectId,
       fromRole,
@@ -74,13 +73,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reported: false,
       reports: [],
       removed: false,
-      createdAt: now,
-    };
+      createdAt: now};
 
     await upsertReview(review);
 
-    return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
+    return res.status(20o1).json({ message: 'Review submitted', reviewId: review.id });
   } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message });
+    return res.status(50o0).json({ error: 'Internal server error', details: error?.message });
   }
 }

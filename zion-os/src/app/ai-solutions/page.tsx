@@ -184,9 +184,9 @@ export default function AISolutionsPage() {
         {/* Hero Section */}
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Solutions</span>
+            AI <span className="bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             Comprehensive AI solutions that transform businesses and drive innovation. 
             From autonomous systems to business intelligence, we provide the technology you need to succeed.
           </p>
@@ -198,19 +198,19 @@ export default function AISolutionsPage() {
             <div key={categoryIndex} className="bg-black/20 p-8 rounded-2xl border border-white/10">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4">{category.category}</h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">{category.description}</p>
+                <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">{category.description}</p>
               </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {category.solutions.map((solution, solutionIndex) => (
-                  <div key={solutionIndex} className="bg-black/40 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200">
+                  <div key={solutionIndex} className="bg-black/40 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-20o0">
                     <div className="text-4xl mb-4">{solution.icon}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{solution.name}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{solution.description}</p>
+                    <p className="text-gray-30o0 mb-4 leading-relaxed">{solution.description}</p>
                     
                     <Link
                       href={solution.href}
-                      className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
+                      className="inline-block bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-4 py-2 rounded-lg font-medium transition-all duration-20o0 transform hover:scale-10o5"
                     >
                       Learn More
                     </Link>
@@ -226,14 +226,14 @@ export default function AISolutionsPage() {
           <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200">
+              <div key={index} className="bg-gradient-to-r from-purple-90o0/20 to-blue-90o0/20 p-6 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-20o0">
                 <div className="text-4xl mb-4">{industry.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{industry.description}</p>
+                <p className="text-gray-30o0 text-sm mb-4">{industry.description}</p>
                 <ul className="space-y-2">
                   {industry.solutions.map((solution, solutionIndex) => (
-                    <li key={solutionIndex} className="text-gray-300 text-sm flex items-center">
-                      <span className="text-purple-400 mr-2">•</span>
+                    <li key={solutionIndex} className="text-gray-30o0 text-sm flex items-center">
+                      <span className="text-purple-40o0 mr-2">•</span>
                       {solution}
                     </li>
                   ))}
@@ -251,11 +251,11 @@ export default function AISolutionsPage() {
               <div key={index} className="bg-black/20 p-6 rounded-xl border border-white/10">
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 mb-4">{benefit.description}</p>
+                <p className="text-gray-30o0 mb-4">{benefit.description}</p>
                 <ul className="space-y-2">
                   {benefit.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="text-gray-300 text-sm flex items-center">
-                      <span className="text-purple-400 mr-2">✓</span>
+                    <li key={metricIndex} className="text-gray-30o0 text-sm flex items-center">
+                      <span className="text-purple-40o0 mr-2">✓</span>
                       {metric}
                     </li>
                   ))}
@@ -266,36 +266,36 @@ export default function AISolutionsPage() {
         </div>
 
         {/* Implementation Process */}
-        <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-8 rounded-2xl border border-white/10 mb-20">
+        <div className="bg-gradient-to-r from-purple-90o0/20 to-blue-90o0/20 p-8 rounded-2xl border border-white/10 mb-20">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Implementation Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-gray-300 text-sm">Understand your business needs and AI opportunities</p>
+              <p className="text-gray-30o0 text-sm">Understand your business needs and AI opportunities</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Strategy</h3>
-              <p className="text-gray-300 text-sm">Develop comprehensive AI implementation strategy</p>
+              <p className="text-gray-30o0 text-sm">Develop comprehensive AI implementation strategy</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
-              <p className="text-gray-300 text-sm">Build and train AI models for your specific use case</p>
+              <p className="text-gray-30o0 text-sm">Build and train AI models for your specific use case</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
-              <p className="text-gray-300 text-sm">Deploy AI solutions and provide ongoing support</p>
+              <p className="text-gray-30o0 text-sm">Deploy AI solutions and provide ongoing support</p>
             </div>
           </div>
         </div>
@@ -303,19 +303,19 @@ export default function AISolutionsPage() {
         {/* CTA */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Discover how our AI solutions can drive innovation, efficiency, and growth for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-20o0 transform hover:scale-10o5"
             >
               Schedule a Consultation
             </Link>
             <Link
               href="/case-studies"
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-200"
+              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-20o0"
             >
               View Case Studies
             </Link>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Globe, Zap, Target, Users, ArrowRight, Atom } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -6,7 +5,7 @@ import Layout from '../components/layout/Layout';
 export default function QuantumInternetSecurity() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -16,10 +15,10 @@ export default function QuantumInternetSecurity() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent mb-6">
                 Quantum Internet Security
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
                 Next-generation cybersecurity powered by quantum mechanics. Unbreakable encryption, 
                 instant threat detection, and future-proof protection for the digital age.
               </p>
@@ -37,15 +36,15 @@ export default function QuantumInternetSecurity() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <Shield className="w-8 h-8 text-cyan-400" />
+                  <Shield className="w-8 h-8 text-cyan-40o0"  />
                   <h2 className="text-3xl font-bold text-white">What is Quantum Internet Security?</h2>
                 </div>
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                <p className="text-lg text-gray-30o0 leading-relaxed mb-6">
                   Quantum Internet Security leverages the fundamental principles of quantum mechanics to create 
                   unbreakable encryption and instant threat detection systems. By harnessing quantum entanglement, 
                   superposition, and uncertainty, we create security protocols that are mathematically impossible to breach.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-30o0 leading-relaxed">
                   Our quantum security infrastructure provides protection against both current and future threats, 
                   including attacks from quantum computers that could break traditional encryption.
                 </p>
@@ -57,10 +56,10 @@ export default function QuantumInternetSecurity() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="relative"
               >
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 rounded-2xl border border-blue-50o0/30 flex items-center justify-center">
                   <div className="text-center">
-                    <Atom className="w-24 h-24 text-blue-400 mx-auto mb-4" />
-                    <p className="text-blue-400 text-lg font-semibold">Quantum Security Matrix</p>
+                    <Atom className="w-24 h-24 text-blue-40o0 mx-auto mb-4"  />
+                    <p className="text-blue-40o0 text-lg font-semibold">Quantum Security Matrix</p>
                   </div>
                 </div>
               </motion.div>
@@ -78,38 +77,38 @@ export default function QuantumInternetSecurity() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Revolutionary quantum security capabilities</p>
+              <p className="text-xl text-gray-30o0">Revolutionary quantum security capabilities</p>
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Lock className="w-12 h-12 text-cyan-400" />,
+                  icon: <Lock className="w-12 h-12 text-cyan-40o0"  />,
                   title: "Quantum Key Distribution",
                   description: "Unbreakable encryption keys generated through quantum entanglement, ensuring perfect secrecy."
                 },
                 {
-                  icon: <Zap className="w-12 h-12 text-blue-400" />,
+                  icon: <Zap className="w-12 h-12 text-blue-40o0"  />,
                   title: "Instant Threat Detection",
                   description: "Real-time monitoring using quantum sensors that detect anomalies at the quantum level."
                 },
                 {
-                  icon: <Target className="w-12 h-12 text-purple-400" />,
+                  icon: <Target className="w-12 h-12 text-purple-40o0"  />,
                   title: "Quantum-Resistant Algorithms",
                   description: "Advanced cryptographic protocols designed to withstand attacks from quantum computers."
                 },
                 {
-                  icon: <Globe className="w-12 h-12 text-green-400" />,
+                  icon: <Globe className="w-12 h-12 text-green-40o0"  />,
                   title: "Global Quantum Network",
                   description: "Worldwide quantum-secured communication infrastructure with instant connectivity."
                 },
                 {
-                  icon: <Shield className="w-12 h-12 text-yellow-400" />,
+                  icon: <Shield className="w-12 h-12 text-yellow-40o0"  />,
                   title: "Zero-Trust Architecture",
                   description: "Quantum-verified identity and access management with continuous authentication."
                 },
                 {
-                  icon: <Atom className="w-12 h-12 text-pink-400" />,
+                  icon: <Atom className="w-12 h-12 text-pink-40o0"  />,
                   title: "Quantum Machine Learning",
                   description: "AI-powered threat detection using quantum computing for pattern recognition."
                 }
@@ -119,11 +118,11 @@ export default function QuantumInternetSecurity() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
-                  className="p-8 bg-black/40 border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300"
+                  className="p-8 bg-black/40 border border-gray-80o0 rounded-2xl hover:border-cyan-50o0/50 transition-all duration-30o0"
                 >
                   <div className="flex justify-center mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <p className="text-gray-30o0 leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -140,7 +139,7 @@ export default function QuantumInternetSecurity() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Applications</h2>
-              <p className="text-xl text-gray-300">Transformative security solutions for critical infrastructure</p>
+              <p className="text-xl text-gray-30o0">Transformative security solutions for critical infrastructure</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -171,14 +170,14 @@ export default function QuantumInternetSecurity() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
-                  className="p-8 bg-black/40 border border-gray-800 rounded-2xl hover:border-cyan-500/50 transition-all duration-300"
+                  className="p-8 bg-black/40 border border-gray-80o0 rounded-2xl hover:border-cyan-50o0/50 transition-all duration-30o0"
                 >
                   <h3 className="text-2xl font-bold text-white mb-3">{app.title}</h3>
-                  <p className="text-gray-300 mb-4">{app.description}</p>
+                  <p className="text-gray-30o0 mb-4">{app.description}</p>
                   <ul className="space-y-2">
                     {app.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-cyan-400">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                      <li key={idx} className="flex items-center gap-2 text-cyan-40o0">
+                        <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>
                         {benefit}
                       </li>
                     ))}
@@ -199,7 +198,7 @@ export default function QuantumInternetSecurity() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Technology Stack</h2>
-              <p className="text-xl text-gray-300">Cutting-edge quantum technologies powering our security platform</p>
+              <p className="text-xl text-gray-30o0">Cutting-edge quantum technologies powering our security platform</p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -209,17 +208,17 @@ export default function QuantumInternetSecurity() {
                 transition={{ duration: 0.8, delay: 1.8 }}
                 className="space-y-6"
               >
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-cyan-400 mb-3">Quantum Key Distribution (QKD)</h3>
-                  <p className="text-gray-300">BB84 and E91 protocols for secure key generation using quantum entanglement.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-cyan-40o0 mb-3">Quantum Key Distribution (QKD)</h3>
+                  <p className="text-gray-30o0">BB84 and E91 protocols for secure key generation using quantum entanglement.</p>
                 </div>
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">Post-Quantum Cryptography</h3>
-                  <p className="text-gray-300">Lattice-based, hash-based, and multivariate polynomial cryptography.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-blue-40o0 mb-3">Post-Quantum Cryptography</h3>
+                  <p className="text-gray-30o0">Lattice-based, hash-based, and multivariate polynomial cryptography.</p>
                 </div>
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-purple-400 mb-3">Quantum Random Number Generation</h3>
-                  <p className="text-gray-300">True randomness from quantum mechanical processes for cryptographic keys.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-purple-40o0 mb-3">Quantum Random Number Generation</h3>
+                  <p className="text-gray-30o0">True randomness from quantum mechanical processes for cryptographic keys.</p>
                 </div>
               </motion.div>
 
@@ -229,17 +228,17 @@ export default function QuantumInternetSecurity() {
                 transition={{ duration: 0.8, delay: 2.0 }}
                 className="space-y-6"
               >
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">Quantum Machine Learning</h3>
-                  <p className="text-gray-300">AI-powered threat detection using quantum algorithms for pattern recognition.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-green-40o0 mb-3">Quantum Machine Learning</h3>
+                  <p className="text-gray-30o0">AI-powered threat detection using quantum algorithms for pattern recognition.</p>
                 </div>
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-3">Quantum Network Protocols</h3>
-                  <p className="text-gray-300">Advanced networking protocols optimized for quantum-secured communications.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-yellow-40o0 mb-3">Quantum Network Protocols</h3>
+                  <p className="text-gray-30o0">Advanced networking protocols optimized for quantum-secured communications.</p>
                 </div>
-                <div className="p-6 bg-black/40 border border-gray-800 rounded-xl">
-                  <h3 className="text-xl font-bold text-pink-400 mb-3">Quantum Sensors</h3>
-                  <p className="text-gray-300">Ultra-sensitive detection systems for identifying security threats.</p>
+                <div className="p-6 bg-black/40 border border-gray-80o0 rounded-xl">
+                  <h3 className="text-xl font-bold text-pink-40o0 mb-3">Quantum Sensors</h3>
+                  <p className="text-gray-30o0">Ultra-sensitive detection systems for identifying security threats.</p>
                 </div>
               </motion.div>
             </div>
@@ -255,19 +254,19 @@ export default function QuantumInternetSecurity() {
               transition={{ duration: 0.8, delay: 2.2 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">Ready for Quantum-Secure Future?</h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-30o0 mb-8">
                 Protect your digital assets with the most advanced security technology ever created.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2"
                 >
-                  Get Started <ArrowRight className="w-5 h-5" />
+                  Get Started <ArrowRight className="w-5 h-5"  />
                 </a>
                 <a
                   href="/quantum-services"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
+                  className="px-8 py-4 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-full hover:bg-cyan-50o0 hover:text-black transition-all duration-30o0"
                 >
                   Learn More
                 </a>

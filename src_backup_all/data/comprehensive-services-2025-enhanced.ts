@@ -32,14 +32,14 @@ export interface EnhancedService {
     };
 }
 
-const CONTACT = {
-    mobile: '+1 302 464 0950',
+const CONTACT ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
 
-export const comprehensiveServices2025Enhanced: EnhancedService[] = [
+export const comprehensiveServices20o25Enhanced: EnhancedService[] = [
     // NEW MICRO SAAS SERVICES - FINANCIAL TECHNOLOGY
     {
         id: 'ai-powered-invoice-factoring-platform',
@@ -66,7 +66,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 14,
         setupTime: '24 hours',
         icon: '💰',
-        color: 'from-green-600 to-emerald-700',
+        color: 'from-green-60o0 to-emerald-70o0',
         link: '/services/ai-invoice-factoring',
         technology: ['AI/ML', 'Blockchain', 'API Integration'],
         integrations: ['QuickBooks', 'Xero', 'Sage', 'Stripe', 'PayPal'],
@@ -79,12 +79,12 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
     {
         id: 'crypto-payment-gateway-saas',
         name: 'Crypto Payment Gateway SaaS',
-        tagline: 'Accept 100+ cryptocurrencies with zero volatility risk',
+        tagline: 'Accept 10o0+ cryptocurrencies with zero volatility risk',
         description: 'Enterprise-grade crypto payment gateway that automatically converts crypto to fiat, handles compliance, and provides real-time settlement with fraud protection.',
         category: 'fintech',
         pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' },
         features: [
-            '100+ cryptocurrency support',
+            '10o0+ cryptocurrency support',
             'Instant fiat conversion',
             'Regulatory compliance tools',
             'Fraud detection system',
@@ -101,7 +101,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 7,
         setupTime: '48 hours',
         icon: '₿',
-        color: 'from-orange-600 to-yellow-700',
+        color: 'from-orange-60o0 to-yellow-70o0',
         link: '/services/crypto-payment-gateway',
         technology: ['Blockchain', 'Cryptography', 'API Gateway'],
         integrations: ['Shopify', 'WooCommerce', 'Magento', 'Stripe', 'PayPal'],
@@ -136,7 +136,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 30,
         setupTime: '1 week',
         icon: '📱',
-        color: 'from-blue-600 to-indigo-700',
+        color: 'from-blue-60o0 to-indigo-70o0',
         link: '/services/ai-expense-management',
         technology: ['AI/ML', 'OCR', 'Workflow Automation'],
         integrations: ['QuickBooks', 'Xero', 'SAP', 'Slack', 'Microsoft Teams'],
@@ -173,7 +173,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 14,
         setupTime: '2 weeks',
         icon: '🏥',
-        color: 'from-red-600 to-pink-700',
+        color: 'from-red-60o0 to-pink-70o0',
         link: '/services/ai-telemedicine',
         technology: ['AI/ML', 'Video Streaming', 'HIPAA Compliance'],
         integrations: ['Epic', 'Cerner', 'Practice Fusion', 'Stripe', 'Zoom'],
@@ -208,7 +208,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 21,
         setupTime: '3 weeks',
         icon: '⚕️',
-        color: 'from-emerald-600 to-teal-700',
+        color: 'from-emerald-60o0 to-teal-70o0',
         link: '/services/healthcare-workflow-automation',
         technology: ['Workflow Automation', 'AI/ML', 'HIPAA Compliance'],
         integrations: ['Epic', 'Cerner', 'Practice Fusion', 'Stripe', 'Slack'],
@@ -245,7 +245,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 30,
         setupTime: '1 week',
         icon: '🎓',
-        color: 'from-purple-600 to-violet-700',
+        color: 'from-purple-60o0 to-violet-70o0',
         link: '/services/ai-personalized-learning',
         technology: ['AI/ML', 'Adaptive Learning', 'Analytics'],
         integrations: ['Canvas', 'Blackboard', 'Google Classroom', 'Microsoft Teams'],
@@ -280,7 +280,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 14,
         setupTime: '1 week',
         icon: '🏫',
-        color: 'from-cyan-600 to-blue-700',
+        color: 'from-cyan-60o0 to-blue-70o0',
         link: '/services/virtual-classroom-saas',
         technology: ['3D Graphics', 'WebRTC', 'Real-time Collaboration'],
         integrations: ['LMS platforms', 'Google Workspace', 'Microsoft 365'],
@@ -317,7 +317,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 21,
         setupTime: '1 week',
         icon: '📝',
-        color: 'from-pink-600 to-rose-700',
+        color: 'from-pink-60o0 to-rose-70o0',
         link: '/services/ai-content-optimization',
         technology: ['AI/ML', 'Analytics', 'A/B Testing'],
         integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Social platforms'],
@@ -352,7 +352,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 14,
         setupTime: '2 weeks',
         icon: '🎯',
-        color: 'from-indigo-600 to-purple-700',
+        color: 'from-indigo-60o0 to-purple-70o0',
         link: '/services/predictive-customer-segmentation',
         technology: ['AI/ML', 'Predictive Analytics', 'Big Data'],
         integrations: ['CRM systems', 'Email platforms', 'Advertising platforms', 'Analytics tools'],
@@ -389,7 +389,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 21,
         setupTime: '2 weeks',
         icon: '⚙️',
-        color: 'from-slate-600 to-gray-700',
+        color: 'from-slate-60o0 to-gray-70o0',
         link: '/services/ai-project-resource-optimizer',
         technology: ['AI/ML', 'Optimization Algorithms', 'Predictive Analytics'],
         integrations: ['Jira', 'Asana', 'Monday.com', 'Microsoft Project', 'Slack'],
@@ -424,7 +424,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 30,
         setupTime: '1 week',
         icon: '📦',
-        color: 'from-amber-600 to-yellow-700',
+        color: 'from-amber-60o0 to-yellow-70o0',
         link: '/services/intelligent-inventory-management',
         technology: ['AI/ML', 'IoT', 'Predictive Analytics'],
         integrations: ['QuickBooks', 'Xero', 'Shopify', 'WooCommerce', 'ERP systems'],
@@ -461,7 +461,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 14,
         setupTime: '2 weeks',
         icon: '🛡️',
-        color: 'from-red-600 to-orange-700',
+        color: 'from-red-60o0 to-orange-70o0',
         link: '/services/ai-threat-intelligence',
         technology: ['AI/ML', 'Machine Learning', 'Threat Intelligence'],
         integrations: ['SIEM systems', 'EDR solutions', 'Firewalls', 'Security tools'],
@@ -496,7 +496,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         trialDays: 21,
         setupTime: '3 weeks',
         icon: '📋',
-        color: 'from-blue-600 to-indigo-700',
+        color: 'from-blue-60o0 to-indigo-70o0',
         link: '/services/automated-compliance-monitoring',
         technology: ['Automation', 'Compliance Management', 'Reporting'],
         integrations: ['Security tools', 'GRC platforms', 'Audit systems', 'Document management'],
@@ -508,4 +508,4 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
     }
 ];
 
-export default comprehensiveServices2025Enhanced;
+export default comprehensiveServices20o25Enhanced;

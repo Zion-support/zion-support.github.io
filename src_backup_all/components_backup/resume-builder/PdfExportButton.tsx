@@ -10,8 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem,
-} from '@/components/ui/dropdown-menu';
+  DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from 'lucide-react'
 import { Resume } from '@/types/resume';
@@ -35,7 +34,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     setIsExporting(true);
     
     try {
-      const options: ExportOptions = {
+      const options: ExportOptions ={
         theme,
         includePortfolio,
         maxProjects: 3,
@@ -58,8 +57,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       
       toast({
         title: "Success!",
-        description: "Your resume has been downloaded as a PDF.",
-      });
+        description: "Your resume has been downloaded as a PDF."});
     } catch (error) {
       logErrorToProduction('Error exporting PDF:', { data: error });
       toast({
@@ -81,17 +79,17 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
           disabled={isExporting}
         >
           {isExporting ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
+            <Loader2 className="h-4 w-4 animate-spin"  />
           ) : (
-            <FileText className="h-4 w-4" />
+            <FileText className="h-4 w-4"  />
           )}
           Export PDF
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown className="h-4 w-4"  />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
@@ -99,7 +97,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
           <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
         <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
           <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
@@ -108,7 +106,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
           <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         <DropdownMenuCheckboxItem 
           checked={includePortfolio}
           onCheckedChange={setIncludePortfolio}
@@ -116,9 +114,9 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
           Include Portfolio Projects
         </DropdownMenuCheckboxItem>
         
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator  />
         <DropdownMenuItem onClick={handleExport}>
-          <Download className="h-4 w-4 mr-2" />
+          <Download className="h-4 w-4 mr-2"  />
           Download PDF
         </DropdownMenuItem>
       </DropdownMenuContent>

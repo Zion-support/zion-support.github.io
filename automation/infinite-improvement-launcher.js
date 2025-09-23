@@ -13,13 +13,13 @@ const path = require('path');
 const fs = require('fs');
 
 class InfiniteImprovementLauncher {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       enableInfiniteLoop: true,
       enableOrchestrator: true,
       enableIntegration: true,
-      dashboardPort: 3001,
-      improvementPort: 3002,
+      dashboardPort: 30o01,
+      improvementPort: 30o02,
       logLevel: 'info',
       ...config
     };
@@ -43,10 +43,10 @@ class InfiniteImprovementLauncher {
       // Initialize infinite improvement loop
       if (this.config.enableInfiniteLoop) {
         this.improvementLoop = new InfiniteImprovementLoop({
-          analysisInterval: 30000,
-          optimizationInterval: 120000,
-          learningInterval: 300000,
-          improvementInterval: 600000,
+          analysisInterval: 30o000,
+          optimizationInterval: 120o000,
+          learningInterval: 30o0000,
+          improvementInterval: 60o0000,
           logLevel: this.config.logLevel
         });
 
@@ -275,59 +275,46 @@ class InfiniteImprovementLauncher {
         enabled: true,
         selfHealing: true,
         learning: true,
-        adaptiveScheduling: true,
-      },
+        adaptiveScheduling: true},
       monitoring: {
         enabled: true,
-        interval: 60000,
-        healthCheckInterval: 300000,
-      },
+        interval: 60o000,
+        healthCheckInterval: 30o0000},
       reporting: {
         enabled: true,
         daily: true,
         weekly: true,
-        monthly: false,
-      },
+        monthly: false},
       dashboard: {
         enabled: true,
-        port: this.config.dashboardPort,
-      },
+        port: this.config.dashboardPort},
       tasks: {
         dependencyUpdater: {
           enabled: true,
-          interval: 24 * 60 * 60 * 1000,
-        },
+          interval: 24 * 60 * 60 * 10o00},
         securityScanner: {
           enabled: true,
-          interval: 6 * 60 * 60 * 1000,
-        },
+          interval: 6 * 60 * 60 * 10o00},
         codeQualityEnforcer: {
           enabled: true,
-          interval: 2 * 60 * 60 * 1000,
-        },
+          interval: 2 * 60 * 60 * 10o00},
         staleCleaner: {
           enabled: true,
-          interval: 12 * 60 * 60 * 1000,
-        },
-      },
+          interval: 12 * 60 * 60 * 10o00}},
       notifications: {
         slack: {
           enabled: !!process.env.SLACK_WEBHOOK_URL,
           webhookUrl: process.env.SLACK_WEBHOOK_URL,
-          channel: process.env.SLACK_CHANNEL || '#automation',
-        },
+          channel: process.env.SLACK_CHANNEL || '#automation'},
         email: {
-          enabled: false,
-        },
-      },
-    };
+          enabled: false}}};
   }
 
   /**
    * Get system statistics
    */
   getStats() {
-    const stats = {
+    const stats ={
       isRunning: this.isRunning,
       startTime: this.startTime,
       uptime: this.startTime ? Date.now() - this.startTime.getTime() : 0,
@@ -359,7 +346,7 @@ class InfiniteImprovementLauncher {
 // Command line interface
 function parseArguments() {
   const args = process.argv.slice(2);
-  const parsed = {
+  const parsed ={
     help: false,
     start: false,
     stop: false,
@@ -489,4 +476,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { InfiniteImprovementLauncher }; 
+module.exports ={ InfiniteImprovementLauncher }; 

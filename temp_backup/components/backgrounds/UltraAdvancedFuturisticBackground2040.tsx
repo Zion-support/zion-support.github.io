@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedFuturisticBackground2040Props {
+interface UltraAdvancedFuturisticBackground20o40Props {
   intensity?: 'low' | 'medium' | 'high';
   theme?: 'quantum-neon' | 'holographic-cyberpunk' | 'neural-quantum' | 'space-time' | 'consciousness-ai';
   children?: React.ReactNode;
 }
 
-export default function UltraAdvancedFuturisticBackground2040({ 
+export default function UltraAdvancedFuturisticBackground20o40({ 
   intensity = 'medium', 
   theme = 'quantum-neon',
   children
-}: UltraAdvancedFuturisticBackground2040Props) {
+}: UltraAdvancedFuturisticBackground20o40Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number | undefined>(undefined);
@@ -44,47 +44,47 @@ export default function UltraAdvancedFuturisticBackground2040({
     switch (theme) {
       case 'holographic-cyberpunk':
         return {
-          primary: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80'],
-          secondary: ['#8000ff', '#00ff80', '#ff8000', '#0080ff', '#ff4080', '#40ffff'],
+          primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'],
+          secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],
           accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff6b6b', '#4ecdc4'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'],
           holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
-          cyberpunk: ['#ff0055', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80']
+          cyberpunk: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80']
         };
       case 'neural-quantum':
         return {
-          primary: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'],
-          neural: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
-          quantum: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'],
+          primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4'],
+          neural: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+          quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'],
           consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3']
         };
       case 'space-time':
         return {
-          primary: ['#1e40af', '#7c3aed', '#059669', '#dc2626', '#ea580c', '#d97706'],
-          secondary: ['#d97706', '#ea580c', '#dc2626', '#059669', '#7c3aed', '#1e40af'],
-          accent: ['#7c3aed', '#1e40af', '#d97706', '#ea580c', '#dc2626', '#059669'],
+          primary: ['#1e40af', '#7c3aed', '#0o59669', '#dc2626', '#ea580c', '#d9770o6'],
+          secondary: ['#d9770o6', '#ea580c', '#dc2626', '#0o59669', '#7c3aed', '#1e40af'],
+          accent: ['#7c3aed', '#1e40af', '#d9770o6', '#ea580c', '#dc2626', '#0o59669'],
           space: ['#0f172a', '#1e293b', '#334155', '#475569', '#64748b', '#94a3b8'],
-          time: ['#fbbf24', '#f59e0b', '#d97706', '#ea580c', '#dc2626', '#b91c1c'],
-          cosmic: ['#8b5cf6', '#06b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444']
+          time: ['#fbbf24', '#f59e0b', '#d9770o6', '#ea580c', '#dc2626', '#b91c1c'],
+          cosmic: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444']
         };
       case 'consciousness-ai':
         return {
-          primary: ['#ec4899', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b', '#ef4444'],
-          secondary: ['#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#06b6d4', '#10b981'],
-          accent: ['#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#06b6d4'],
+          primary: ['#ec4899', '#8b5cf6', '#0o6b6d4', '#10b981', '#f59e0b', '#ef4444'],
+          secondary: ['#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#0o6b6d4', '#10b981'],
+          accent: ['#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#0o6b6d4'],
           consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
-          ai: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
-          neural: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80']
+          ai: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+          neural: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80']
         };
       default: // quantum-neon
         return {
-          primary: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#10b981'],
-          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#00d4ff', '#8b5cf6'],
-          neon: ['#ff0080', '#00ffff', '#ffff00', '#ff00ff', '#8000ff', '#00ff80'],
-          quantum: ['#00d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+          primary: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
+          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'],
+          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#0o0d4ff', '#8b5cf6'],
+          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'],
+          quantum: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'],
           consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3']
         };
     }
@@ -117,13 +117,13 @@ export default function UltraAdvancedFuturisticBackground2040({
         size: Math.random() * 4 + 1,
         opacity: Math.random() * 0.8 + 0.2,
         color: baseColor,
-        life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50,
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50,
         type: particleType as any,
         rotation: Math.random() * Math.PI * 2,
         rotationSpeed: (Math.random() - 0.5) * 0.1,
         pulse: Math.random() * Math.PI * 2,
-        pulseSpeed: Math.random() * 0.05 + 0.02,
+        pulseSpeed: Math.random() * 0.0o5 + 0.0o2,
         hue: Math.random() * 360,
         trail: [],
         quantumState: Math.random() * Math.PI * 2,
@@ -167,8 +167,8 @@ export default function UltraAdvancedFuturisticBackground2040({
     
     const colors = getThemeColors();
     gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
-    gradient.addColorStop(0.3, 'rgba(0, 0, 0, 0.05)');
-    gradient.addColorStop(0.7, 'rgba(0, 0, 0, 0.02)');
+    gradient.addColorStop(0.3, 'rgba(0, 0, 0, 0.0o5)');
+    gradient.addColorStop(0.7, 'rgba(0, 0, 0, 0.0o2)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
     ctx.fillStyle = gradient;
@@ -181,7 +181,7 @@ export default function UltraAdvancedFuturisticBackground2040({
       particle.y += particle.vy;
       
       // Update quantum state and consciousness
-      particle.quantumState += 0.02;
+      particle.quantumState += 0.0o2;
       particle.consciousness = Math.sin(particle.quantumState) * 0.5 + 0.5;
       
       // Update rotation and pulse
@@ -284,7 +284,7 @@ export default function UltraAdvancedFuturisticBackground2040({
               Math.pow(particle.y - targetParticle.y, 2)
             );
             
-            if (distance < 200) {
+            if (distance < 20o0) {
               ctx.strokeStyle = particle.color + Math.floor(connection.strength * 255).toString(16).padStart(2, '0');
               ctx.lineWidth = connection.strength * 2;
               ctx.globalAlpha = particle.opacity * connection.strength * 0.3;
@@ -400,9 +400,8 @@ export default function UltraAdvancedFuturisticBackground2040({
         className="w-full h-full"
         style={{
           background: 'transparent',
-          filter: 'blur(0.5px)',
-        }}
-      />
+          filter: 'blur(0.5px)'}}
+       />
       
       {/* Additional visual effects */}
       <div className="absolute inset-0">
@@ -411,22 +410,19 @@ export default function UltraAdvancedFuturisticBackground2040({
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-px h-32 bg-gradient-to-b from-cyan-400/0 via-cyan-400/50 to-cyan-400/0"
+              className="absolute w-px h-32 bg-gradient-to-b from-cyan-40o0/0 via-cyan-40o0/50 to-cyan-40o0/0"
               style={{
-                left: `${(i * 5) % 100}%`,
-                top: `${Math.random() * 100}%`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-              }}
+                left: `${(i * 5) % 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
+                transform: `rotate(${Math.random() * 360}deg)`}}
               animate={{
                 opacity: [0, 1, 0],
-                scaleY: [0, 1, 0],
-              }}
+                scaleY: [0, 1, 0]}}
               transition={{
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
+                delay: Math.random() * 2}}
+             />
           ))}
         </div>
         
@@ -436,23 +432,20 @@ export default function UltraAdvancedFuturisticBackground2040({
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-4 h-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-400"
+                className="absolute w-4 h-4 rounded-full bg-gradient-to-r from-purple-40o0 to-pink-40o0"
                 style={{
                   left: `${20 + i * 15}%`,
-                  top: `${30 + i * 10}%`,
-                }}
+                  top: `${30 + i * 10}%`}}
                 animate={{
                   scale: [1, 1.5, 1],
                   opacity: [0.3, 0.8, 0.3],
                   x: [0, 20, 0],
-                  y: [0, -20, 0],
-                }}
+                  y: [0, -20, 0]}}
                 transition={{
                   duration: 4 + i,
                   repeat: Infinity,
-                  delay: i * 0.5,
-                }}
-              />
+                  delay: i * 0.5}}
+               />
             ))}
           </div>
         )}
@@ -463,21 +456,18 @@ export default function UltraAdvancedFuturisticBackground2040({
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-1 h-1 bg-green-400 rounded-full"
+                className="absolute w-1 h-1 bg-green-40o0 rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
+                  left: `${Math.random() * 10o0}%`,
+                  top: `${Math.random() * 10o0}%`}}
                 animate={{
                   scale: [0, 1, 0],
-                  opacity: [0, 1, 0],
-                }}
+                  opacity: [0, 1, 0]}}
                 transition={{
                   duration: 2 + Math.random() * 2,
                   repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-              />
+                  delay: Math.random() * 2}}
+               />
             ))}
           </div>
         )}

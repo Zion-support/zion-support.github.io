@@ -1,5 +1,4 @@
 
-import React from "react";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from 'lucide-react'
 
@@ -14,15 +13,13 @@ export function Step({
   status,
   label,
   description,
-  className,
-}: StepProps) {
+  className}: StepProps) {
   return (
     <li
       className={cn(
         "relative flex items-center",
         {
-          "opacity-60": status === "incomplete",
-        },
+          "opacity-60": status === "incomplete"},
         className
       )}
     >
@@ -35,12 +32,11 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
-              status === "complete",
-          }
+              status === "complete"}
         )}
       >
         {status === "complete" ? (
-          <CheckIcon className="h-5 w-5" />
+          <CheckIcon className="h-5 w-5"  />
         ) : (
           <span>
             {/* Step number would go here */}
@@ -52,8 +48,7 @@ export function Step({
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete",
-            "text-white": status === "current" || status === "complete",
-          })}
+            "text-white": status === "current" || status === "complete"})}
         >
           {label}
         </h3>
@@ -85,19 +80,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current";
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status,
-          });
+            status});
         })}
       </ol>
       
       <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
+        <div className="ml-[18px] w-[calc(10o0%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`,
-            }}
-          />
+              width: `${(currentStep / (childrenArray.length - 1)) * 10o0}%`}}
+           />
         </div>
       </div>
     </div>

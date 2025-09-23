@@ -5,21 +5,17 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-script' },
   transports: [
     new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  );
+      format: winston.format.simple()}));
 }
 
 /**
@@ -38,19 +34,18 @@ const chokidar = require('chokidar');
 const EventEmitter = require('events');
 
 class CursorChatMonitor extends EventEmitter {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super();
-    this.config = {
+    this.config ={
       cursorDataDir:
         config.cursorDataDir || path.join(process.env.HOME, '.cursor'),
       chatLogDir:
         config.chatLogDir ||
         path.join(process.env.HOME, '.cursor', 'chat-logs'),
       outputDir: config.outputDir || './data/cursor-chats',
-      watchInterval: config.watchInterval || 5000,
-      maxHistorySize: config.maxHistorySize || 1000,
-      ...config,
-    };
+      watchInterval: config.watchInterval || 50o00,
+      maxHistorySize: config.maxHistorySize || 10o00,
+      ...config};
 
     this.isRunning = false;
     this.watcher = null;
@@ -106,8 +101,7 @@ class CursorChatMonitor extends EventEmitter {
     this.watcher = chokidar.watch(this.config.cursorDataDir, {
       ignored: /(^|[\/\\])\../, // ignore dotfiles
       persistent: true,
-      depth: 3,
-    });
+      depth: 3});
 
     this.watcher
       .on('add', (filePath) => this.handleNewFile(filePath))
@@ -223,15 +217,14 @@ class CursorChatMonitor extends EventEmitter {
   }
 
   extractChatFromJson(data, filePath) {
-    const chat = {
+    const chat ={
       id: this.generateChatId(filePath),
       source: 'cursor_json',
       filePath: filePath,
       timestamp: new Date().toISOString(),
       content: '',
       messages: [],
-      metadata: {},
-    };
+      metadata: {}};
 
     // Extract chat content from various JSON structures
     if (data.messages) {
@@ -273,9 +266,7 @@ class CursorChatMonitor extends EventEmitter {
       messages: [],
       metadata: {
         contentType: 'text',
-        fileSize: content.length,
-      },
-    };
+        fileSize: content.length}};
   }
 
   extractTextFromMessages(messages) {
@@ -348,8 +339,7 @@ class CursorChatMonitor extends EventEmitter {
     return this.chatHistory.filter(
       (chat) =>
         chat.content.toLowerCase().includes(lowerQuery) ||
-        chat.filePath.toLowerCase().includes(lowerQuery),
-    );
+        chat.filePath.toLowerCase().includes(lowerQuery));
   }
 
   getStatus() {
@@ -361,8 +351,7 @@ class CursorChatMonitor extends EventEmitter {
         this.chatHistory.length > 0
           ? this.chatHistory[this.chatHistory.length - 1].timestamp
           : null,
-      watcherActive: this.watcher !== null,
-    };
+      watcherActive: this.watcher !== null};
   }
 
   stop() {

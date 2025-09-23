@@ -10,8 +10,7 @@ export default function Footer() {
         { name: 'Careers', href: '/careers' },
         { name: 'News', href: '/news' },
         { name: 'Contact', href: '/contact' },
-      ],
-    },
+      ]},
     {
       title: 'Services',
       links: [
@@ -20,8 +19,7 @@ export default function Footer() {
         { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
         { name: 'Research & Development', href: '/research-development' },
         { name: 'Consulting', href: '/consulting' },
-      ],
-    },
+      ]},
     {
       title: 'AI Platforms',
       links: [
@@ -30,8 +28,7 @@ export default function Footer() {
         { name: 'Content Generation', href: '/ai-content-generator' },
         { name: 'Research Assistant', href: '/ai-autonomous-research-assistant' },
         { name: 'Neural Networks', href: '/quantum-neural-network-platform' },
-      ],
-    },
+      ]},
     {
       title: 'Resources',
       links: [
@@ -40,8 +37,7 @@ export default function Footer() {
         { name: 'Documentation', href: '/docs' },
         { name: 'Webinars', href: '/webinars' },
         { name: 'Events', href: '/events' },
-      ],
-    },
+      ]},
   ];
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'LinkedIn' },
@@ -58,14 +54,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-lg font-bold bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            <p className="text-gray-40o0 text-sm leading-relaxed mb-4">
               Leading provider of AI-powered technology solutions, autonomous systems, and quantum computing innovations.
             </p>
             <div className="flex space-x-4">
@@ -75,7 +71,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
+                  className="text-gray-40o0 hover:text-white transition-colors duration-20o0"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -92,7 +88,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                      className="text-gray-40o0 hover:text-white transition-colors duration-20o0 text-sm"
                     >
                       {link.name}
                     </Link>
@@ -105,20 +101,20 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-gray-40o0 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/privacy" className="text-gray-40o0 hover:text-white transition-colors duration-20o0">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/terms" className="text-gray-40o0 hover:text-white transition-colors duration-20o0">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/cookies" className="text-gray-40o0 hover:text-white transition-colors duration-20o0">
                 Cookie Policy
               </Link>
-              <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <Link href="/accessibility" className="text-gray-40o0 hover:text-white transition-colors duration-20o0">
                 Accessibility
               </Link>
             </div>

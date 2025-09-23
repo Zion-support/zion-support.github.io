@@ -18,7 +18,7 @@ interface State {
 class AdvancedErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state ={ hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -52,22 +52,17 @@ class AdvancedErrorBoundary extends Component<PropsState> {
       fetch('/api/log-error'{
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json'},
         body: JSON.stringify({
           error: {
             message: error.message,
             stack: error.stack,
-            name: error.name,
-          },
+            name: error.name},
           errorInfo: {
-            componentStack: errorInfo.componentStack,
-          },
+            componentStack: errorInfo.componentStack},
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent,
-          url: window.location.href,
-        }),
-      }).catch(console.error);
+          url: window.location.href})}).catch(console.error);
     } catch (e) {
       console.error('Failed to log error:'e);
     }
@@ -92,7 +87,7 @@ class AdvancedErrorBoundary extends Component<PropsState> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
             <div className="mb-4">
               <svg
-                className="mx-auto h-12 w-12 text-red-500"
+                className="mx-auto h-12 w-12 text-red-50o0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -101,31 +96,31 @@ class AdvancedErrorBoundary extends Component<PropsState> {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
-                />
+                  d="M12 9v2m0 4h.0o1m-6.938 4h13.856c1.54 0 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
+                 />
               </svg>
             </div>
             
-            <h1 className="text-xl font-semibold text-gray-900 mb-2">
+            <h1 className="text-xl font-semibold text-gray-90o0 mb-2">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-60o0 mb-6">
               'We', 're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md text-left">
-                <h3 className="text-sm font-medium text-red-800 mb-2">Error Details:</h3>
-                <pre className="text-xs text-red-700 whitespace-pre-wrap overflow-auto max-h-32">
+              <div className="mb-6 p-4 bg-red-50 border border-red-20o0 rounded-md text-left">
+                <h3 className="text-sm font-medium text-red-80o0 mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-70o0 whitespace-pre-wrap overflow-auto max-h-32">
                   {this.state.error.toString()}
                 </pre>
                 {this.state.errorInfo && (
                   <details className="mt-2">
-                    <summary className="text-xs text-red-600 cursor-pointer">
+                    <summary className="text-xs text-red-60o0 cursor-pointer">
                       Component Stack
                     </summary>
-                    <pre className="text-xs text-red-700 whitespace-pre-wrap mt-1">
+                    <pre className="text-xs text-red-70o0 whitespace-pre-wrap mt-1">
                       {this.state.errorInfo.componentStack}
                     </pre>
                   </details>
@@ -136,27 +131,27 @@ class AdvancedErrorBoundary extends Component<PropsState> {
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                className="w-full bg-blue-60o0 text-white px-4 py-2 rounded-md hover:bg-blue-70o0 transition-colors"
               >
                 Try Again
               </button>
               
               <button
                 onClick={this.handleReload}
-                className="w-full bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors"
+                className="w-full bg-gray-60o0 text-white px-4 py-2 rounded-md hover:bg-gray-70o0 transition-colors"
               >
                 Reload Page
               </button>
               
               <a
                 href="/"
-                className="block w-full bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 transition-colors"
+                className="block w-full bg-gray-10o0 text-gray-70o0 px-4 py-2 rounded-md hover:bg-gray-20o0 transition-colors"
               >
                 Go Home
               </a>
             </div>
 
-            <div className="mt-6 text-xs text-gray-500">
+            <div className="mt-6 text-xs text-gray-50o0">
               <p>If this problem persistsplease contact our support team.</p>
               <p className="mt-1">
                 Error ID: {this.state.error?.name || 'Unknown'} - {Date.now()}
@@ -199,7 +194,7 @@ export const withErrorBoundary = <P extends object>(
 ) => {
   const WrappedComponent = (props: P) => (
     <AdvancedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
+      <Component {...props}  />
     </AdvancedErrorBoundary>
   );
 

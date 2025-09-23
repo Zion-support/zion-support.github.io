@@ -4,32 +4,31 @@ let filteredTalents = allTalents
 }
 ;
 
-
-  <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
+  <Card className="bg-gradient-to-r from-green-90o0/20 to-blue-90o0/20 border-green-70o0/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
-        <TrendingUp className="h-5 w-5 text-green-400" />
+        <TrendingUp className="h-5 w-5 text-green-40o0"  />
         <h3 className="text-lg font-semibold">Talent Market Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">${Math.round(stats.averageHourlyRate)}/hr</div>
+          <div className="text-2xl font-bold text-green-40o0">${Math.round(stats.averageHourlyRate)}/hr</div>
           <div className="text-sm text-muted-foreground">Avg Hourly Rate</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averageMonthlySalary / 1000)}k/mo</div>
+          <div className="text-2xl font-bold text-blue-40o0">${Math.round(stats.averageMonthlySalary / 10o00)}k/mo</div>
           <div className="text-sm text-muted-foreground">Avg Monthly</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-yellow-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-2xl font-bold text-yellow-40o0">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{Math.round(stats.averageExperience)}yr</div>
+          <div className="text-2xl font-bold text-purple-40o0">{Math.round(stats.averageExperience)}yr</div>
           <div className="text-sm text-muted-foreground">Avg Experience</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.totalTalents}</div>
+          <div className="text-2xl font-bold text-orange-40o0">{stats.totalTalents}</div>
           <div className="text-sm text-muted-foreground">Total Talents</div>
         </div>
       </div>
@@ -62,9 +61,9 @@ const TalentFilterControls: React.FC<{
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary"  />}
     <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
+      <Filter className="h-4 w-4 text-muted-foreground"  />
       <select
         value={filterSpecialization}
         onChange={(e) => setFilterSpecialization(e.target.value)}
@@ -77,7 +76,7 @@ const TalentFilterControls: React.FC<{
       </select>;
     </div>;
     <div className="flex items-center gap-2">;
-      <Users className="h-4 w-4 text-muted-foreground" />;
+      <Users className="h-4 w-4 text-muted-foreground"  />;
       <select;
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
@@ -92,7 +91,7 @@ const TalentFilterControls: React.FC<{
     </div>
     
     <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <SortAsc className="h-4 w-4 text-muted-foreground"  />
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
@@ -113,7 +112,7 @@ const TalentFilterControls: React.FC<{
       onClick={() => setShowRecommended(!showRecommended)}
       className="flex items-center gap-2"
     >
-      <Star className="h-4 w-4" />
+      <Star className="h-4 w-4"  />
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
@@ -130,25 +129,25 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
             alt={talent.full_name}
             className="w-12 h-12 rounded-full object-cover"
             loading="lazy"
-          />
+           />
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2">
               <h3 className="font-semibold text-lg truncate">{talent.full_name}</h3>
               {talent.is_verified && (
-                <Verified className="h-4 w-4 text-blue-500 flex-shrink-0" />
+                <Verified className="h-4 w-4 text-blue-50o0 flex-shrink-0"  />
               )}
             </div>
             <p className="text-sm text-muted-foreground truncate">{talent.professional_title}</p>
             <div className="flex items-center gap-1 mt-1">
-              <MapPin className="h-3 w-3 text-muted-foreground" />
+              <MapPin className="h-3 w-3 text-muted-foreground"  />
               <span className="text-xs text-muted-foreground">{talent.location}</span>
             </div>
           </div>
         </div>
         <div className="text-right flex-shrink-0">
-          <div className="text-lg font-bold text-green-600">${talent.hourly_rate}/hr</div>
+          <div className="text-lg font-bold text-green-60o0">${talent.hourly_rate}/hr</div>
           <div className="text-xs text-muted-foreground">
-            ~${talent.hourly_rate ? Math.round(talent.hourly_rate * 160 / 1000) : 0}k/month
+            ~${talent.hourly_rate ? Math.round(talent.hourly_rate * 160 / 10o00) : 0}k/month
           </div>
         </div>
       </div>
@@ -157,7 +156,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
     <CardContent className="pt-0">
       <div className="flex items-center gap-4 mb-3">
         <div className="flex items-center gap-1">
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />
+          <Star className="h-4 w-4 text-yellow-50o0 fill-current"  />
           <span className="text-sm font-medium">{talent.average_rating?.toFixed(1)}</span>
           <span className="text-xs text-muted-foreground">({talent.rating_count} reviews)</span>
         </div>
@@ -183,7 +182,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       </select>;
     </div>;
     <div className="flex items-center gap-2">;
-      <SortAsc className="h-4 w-4 text-muted-foreground" />;
+      <SortAsc className="h-4 w-4 text-muted-foreground"  />;
       <select;
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
@@ -203,7 +202,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       onClick={() => setShowRecommended(!showRecommended)}
       className="flex items-center gap-2";
     >;
-      <Star className="h-4 w-4" />;
+      <Star className="h-4 w-4"  />;
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>;
   </div>;
@@ -219,25 +218,25 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
             alt={talent.full_name}
             className="w-12 h-12 rounded-full object-cover";
             loading="lazy";
-          />;
+           />;
           <div className="flex-1 min-w-0">;
             <div className="flex items-center gap-2">;
               <h3 className="font-semibold text-lg truncate">{talent.full_name}</h3>;
               {talent.is_verified && (;
-                <Verified className="h-4 w-4 text-blue-500 flex-shrink-0" />;
+                <Verified className="h-4 w-4 text-blue-50o0 flex-shrink-0"  />;
               )}
             </div>;
             <p className="text-sm text-muted-foreground truncate">{talent.professional_title}</p>;
             <div className="flex items-center gap-1 mt-1">;
-              <MapPin className="h-3 w-3 text-muted-foreground" />;
+              <MapPin className="h-3 w-3 text-muted-foreground"  />;
               <span className="text-xs text-muted-foreground">{talent.location}</span>;
             </div>;
           </div>;
         </div>;
         <div className="text-right flex-shrink-0">;
-          <div className="text-lg font-bold text-green-600">${talent.hourly_rate}/hr</div>;
+          <div className="text-lg font-bold text-green-60o0">${talent.hourly_rate}/hr</div>;
           <div className="text-xs text-muted-foreground">;
-            ~${talent.hourly_rate ? Math.round(talent.hourly_rate * 160 / 1000) : 0}k/month;
+            ~${talent.hourly_rate ? Math.round(talent.hourly_rate * 160 / 10o00) : 0}k/month;
           </div>;
         </div>;
       </div>;
@@ -245,7 +244,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
     <CardContent className="pt-0">;
       <div className="flex items-center gap-4 mb-3">;
         <div className="flex items-center gap-1">;
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />;
+          <Star className="h-4 w-4 text-yellow-50o0 fill-current"  />;
           <span className="text-sm font-medium">{talent.average_rating?.toFixed(1)}</span>;
           <span className="text-xs text-muted-foreground">({talent.rating_count} reviews)</span>;
         </div>;
@@ -285,7 +284,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i) => (
-      <SkeletonCard key={i} />
+      <SkeletonCard key={i}  />
         {talent.skills && talent.skills.length > 4 && (;
           <Badge variant="outline" className="text-xs">;
             +{talent.skills.length - 4} more;
@@ -307,7 +306,7 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (;
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
     {Array.from({ length: count }).map((_, i) => (;
-      <SkeletonCard key={i} />;
+      <SkeletonCard key={i}  />;
     ))}
   </div>;
 ),;
@@ -322,7 +321,7 @@ export default function TalentsPage() {;
   // Fetch function for infinite scroll with AI talent generation;
   const fetchTalents = useCallback(async (page: number, limit: number) => {;
     // Add realistic loading delay;
-    await new Promise(resolve => setTimeout(resolve, 300)),;
+    await new Promise(resolve => setTimeout(resolve, 30o0)),;
     let allTalents: TalentProfile[] = [],;
     // Start with existing talent profiles;
     if (page === 1) {;
@@ -413,7 +412,7 @@ export default function TalentsPage() {;
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800)
+      setShowScrollTop(window.scrollY > 80o0)
     },
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
@@ -428,24 +427,20 @@ export default function TalentsPage() {;
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-60o0 to-blue-60o0 bg-clip-text text-transparent">
             AI & IT Talent Directory
           </h1>
           <p className="text-muted-foreground text-lg">
             Connect with world-class AI and technology professionals
           </p>
         </motion.div>
-        <TalentLoadingGrid />
+        <TalentLoadingGrid  />
       </div>
     )
   }
 
-
-
     }
 }
-
-
 
 ;
       {/* Filter Controls */}
@@ -465,7 +460,7 @@ export default function TalentsPage() {;
           showRecommended={showRecommended}
           setShowRecommended={setShowRecommended}
           loading={isFetching}
-        />;
+         />;
       </motion.div>;
       {/* Talent Grid */}
       <motion.div
@@ -482,8 +477,8 @@ export default function TalentsPage() {;
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
+              transition={{ delay: Math.min(index * 0.0o3, 0.5) }}
+              whileHover={{ scale: 1.0o2 }}
             >;
               <TalentCard;
                 talent={talent}
@@ -500,14 +495,14 @@ export default function TalentsPage() {;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >;
-          <TalentLoadingGrid count={4} />;
+          <TalentLoadingGrid count={4}  />;
         </motion.div>;
       )}
 
       {hasMore && (
         <div className="text-center mt-8">
           {isFetching ? (
-            <Spinner className="mx-auto h-6 w-6" />
+            <Spinner className="mx-auto h-6 w-6"  />
           ) : (
             <Button onClick={loadMore}>Load More</Button>
           )}
@@ -547,7 +542,7 @@ export default function TalentsPage() {;
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            <ArrowUp className="h-5 w-5 text-primary-foreground"  />
           </motion.button>
         )}
       </AnimatePresence>;
@@ -577,7 +572,7 @@ export default function TalentsPage() {;
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-60o0 to-blue-60o0 bg-clip-text text-transparent">
           AI & IT Talent Directory
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -592,7 +587,7 @@ export default function TalentsPage() {;
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >;
-          <TalentMarketInsights stats={marketStats} />;
+          <TalentMarketInsights stats={marketStats}  />;
         </motion.div>;
       )}
 ;
@@ -613,7 +608,7 @@ export default function TalentsPage() {;
           showRecommended={showRecommended}
           setShowRecommended={setShowRecommended}
           loading={isFetching}
-        />;
+         />;
       </motion.div>;
       {/* Talent Grid */}
       <motion.div
@@ -630,8 +625,8 @@ export default function TalentsPage() {;
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
+              transition={{ delay: Math.min(index * 0.0o3, 0.5) }}
+              whileHover={{ scale: 1.0o2 }}
             >;
               <TalentCard;
                 talent={talent}
@@ -648,14 +643,14 @@ export default function TalentsPage() {;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >;
-          <TalentLoadingGrid count={4} />;
+          <TalentLoadingGrid count={4}  />;
         </motion.div>;
       )}
 
       {hasMore && (
         <div className="text-center mt-8">
           {isFetching ? (
-            <Spinner className="mx-auto h-6 w-6" />
+            <Spinner className="mx-auto h-6 w-6"  />
           ) : (
             <Button onClick={loadMore}>Load More</Button>
           )}
@@ -695,7 +690,7 @@ export default function TalentsPage() {;
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            <ArrowUp className="h-5 w-5 text-primary-foreground"  />
           </motion.button>
         )}
       </AnimatePresence>;

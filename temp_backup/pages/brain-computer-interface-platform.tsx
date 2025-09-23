@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function BrainComputerInterfacePlatform() {
@@ -21,6 +20,6 @@ export default function BrainComputerInterfacePlatform() {
 			industries={["Healthcare R&D", "Neurotech", "Academia", "Defense"]}
 			ctaHref="/contact"
 			canonical="https://ziontechgroup.com/brain-computer-interface-platform"
-		/>
+		 />
 	);
 }

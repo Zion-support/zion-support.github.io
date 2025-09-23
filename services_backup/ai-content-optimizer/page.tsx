@@ -1,12 +1,12 @@
-export const metadata = {
+export const metadata ={
   title: "AI Content Optimizer | Zion Tech Group",
   description:
-    "Revolutionary AI-powered content optimization platform that increases engagement by 400% and boosts SEO rankings automatically."};
+    "Revolutionary AI-powered content optimization platform that increases engagement by 40o0% and boosts SEO rankings automatically."};
 
 export default function AIContentOptimizerPage() {
   return (
     <section>
-      <h1 style={{ fontSize: 26, fontWeight: 800 }}>AI Content Optimizer</h1>
+      <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>AI Content Optimizer</h1>
       <p style={{ marginTop: 8, color: "#374151" }}>
         Transform your content marketing with AI that writes, optimizes, and
         distributes content that converts at scale.
@@ -20,7 +20,7 @@ export default function AIContentOptimizerPage() {
             "Multi-language content creation in 50+ languages",
             "Brand voice consistency across all content",
             "SEO-optimized content with keyword integration"]}
-        />
+         />
         <Item
           title="Content Performance Analytics"
           details={[
@@ -28,7 +28,7 @@ export default function AIContentOptimizerPage() {
             "AI-powered content performance predictions",
             "A/B testing automation for headlines and CTAs",
             "ROI tracking for content marketing campaigns"]}
-        />
+         />
         <Item
           title="SEO & Distribution Automation"
           details={[
@@ -36,7 +36,7 @@ export default function AIContentOptimizerPage() {
             "Social media scheduling and posting automation",
             "Email newsletter content generation",
             "Content repurposing across multiple platforms"]}
-        />
+         />
         <Item
           title="Advanced AI Features"
           details={[
@@ -44,10 +44,10 @@ export default function AIContentOptimizerPage() {
             "Competitor content analysis and gap identification",
             "Trending topic detection and content suggestions",
             "Plagiarism detection and originality scoring"]}
-        />
+         />
       </div>
 
-      <Pricing />
+      <Pricing  />
 
       <div
         style={{
@@ -57,12 +57,12 @@ export default function AIContentOptimizerPage() {
           borderRadius: 12,
           border: "1px solid #22c55e"}}
       >
-        <h3 style={{ fontWeight: 700, color: "#14532d", marginBottom: 8 }}>
+        <h3 style={{ fontWeight: 70o0, color: "#14532d", marginBottom: 8 }}>
           Proven Results
         </h3>
         <ul style={{ color: "#14532d", paddingLeft: 18 }}>
           <li>
-            • <strong>400% increase</strong> in content engagement rates
+            • <strong>40o0% increase</strong> in content engagement rates
           </li>
           <li>
             • <strong>250% boost</strong> in organic search traffic
@@ -82,7 +82,7 @@ export default function AIContentOptimizerPage() {
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h3 style={{ fontWeight: 700 }}>{title}</h3>
+      <h3 style={{ fontWeight: 70o0 }}>{title}</h3>
       <ul style={{ paddingLeft: 18, color: "#4b5563" }}>
         {details.map((d) => (
           <li key={d} style={{ listStyle: "disc" }}>
@@ -105,28 +105,28 @@ function Pricing() {
     >
       <Plan
         name="Content Creator"
-        price="$1,200/month"
+        price="$1,20o0/month"
         features={[
           "Up to 50 articles/month",
           "Basic SEO optimization",
           "Social media content",
           "Email templates",
           "Standard analytics"]}
-      />
+       />
       <Plan
         name="Content Pro"
-        price="$2,800/month"
+        price="$2,80o0/month"
         features={[
-          "Up to 200 articles/month",
+          "Up to 20o0 articles/month",
           "Advanced SEO & keyword research",
           "Multi-language support",
           "A/B testing automation",
           "Advanced analytics",
           "Priority support"]}
-      />
+       />
       <Plan
         name="Content Enterprise"
-        price="$6,500/month"
+        price="$6,50o0/month"
         features={[
           "Unlimited content generation",
           "Custom AI model training",
@@ -135,7 +135,7 @@ function Pricing() {
           "Dedicated account manager",
           "Custom integrations",
           "SLA guarantee"]}
-      />
+       />
     </div>
   );
 }
@@ -150,11 +150,11 @@ function Plan({
 }) {
   return (
     <div style={{ border: "1px solid #e5e7eb", borderRadius: 12, padding: 16 }}>
-      <h4 style={{ fontWeight: 700 }}>{name}</h4>
+      <h4 style={{ fontWeight: 70o0 }}>{name}</h4>
       <div
         style={{
           color: "#111827",
-          fontWeight: 800,
+          fontWeight: 80o0,
           marginTop: 4,
           fontSize: 18}}
       >

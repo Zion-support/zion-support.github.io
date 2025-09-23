@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
-
 interface AIMatchmakerProps {
   serviceType?: string;
   onMatchSelect?: (match: any) => void;
@@ -26,8 +25,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -49,15 +47,13 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       
       toast({
         title: "Matches Found",
-        description: `Found ${results.length} matches based on your description.`,
-      });
+        description: `Found ${results.length} matches based on your description.`});
     } catch (error) {
       logErrorToProduction('Error during AI matching:', { data: error });
       toast({
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       // Set empty matches to show no results found UI
       setMatches([]);
     } finally {
@@ -82,7 +78,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
-          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan"  />
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -107,7 +103,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
                 <>Analyzing your needs...</>
               ) : (
                 <>
-                  <Search className="h-4 w-4 mr-2" />
+                  <Search className="h-4 w-4 mr-2"  />
                   Find Matches
                 </>
               )}
@@ -121,7 +117,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
               isLoading={isMatchmaking}
               serviceType={serviceType}
               projectDescription={query}
-            />
+             />
           )}
         </div>
       </CardContent>

@@ -1,4 +1,4 @@
-export interface SpecializedInnovativeService2027 {
+export interface SpecializedInnovativeService20o27 {
   id: string;
   name: string;
   tagline: string;
@@ -38,7 +38,7 @@ export interface SpecializedInnovativeService2027 {
   reviews: number;
 }
 
-export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [
+export const specializedInnovativeServices20o27: SpecializedInnovativeService20o27[] = [
   // SPACE TECHNOLOGY SERVICES
   {
     id: 'satellite-ai-monitoring-platform',
@@ -61,10 +61,10 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '🛰️',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-300',
+    color: 'from-indigo-60o0 to-purple-70o0',
+    textColor: 'text-indigo-30o0',
     link: 'https://ziontechgroup.com/satellite-ai-monitoring-platform',
-    marketPosition: 'Leading satellite AI platform with access to 100+ satellite constellations',
+    marketPosition: 'Leading satellite AI platform with access to 10o0+ satellite constellations',
     targetAudience: 'Government agencies, environmental organizations, agricultural companies, urban planners',
     trialDays: 45,
     setupTime: '6-8 weeks',
@@ -73,19 +73,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AI/ML', 'Satellite Imagery', 'Computer Vision', 'Geospatial Analysis', 'Cloud Computing'],
     integrations: ['Satellite APIs', 'GIS Systems', 'Weather Services', 'Agricultural Platforms'],
     useCases: ['Environmental monitoring', 'Precision agriculture', 'Urban planning', 'Disaster response'],
-    roi: '500% ROI through improved decision-making and resource optimization',
+    roi: '50o0% ROI through improved decision-making and resource optimization',
     competitors: ['Planet Labs', 'Maxar Technologies', 'Airbus Defence and Space'],
     marketSize: '$12B satellite monitoring market',
     growthRate: '35% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Satellite data integration, AI model training, and monitoring system setup',
-    launchDate: '2027-02-15',
+    launchDate: '20o27-0o2-15',
     customers: 6,
     rating: 4.9,
     reviews: 12
@@ -113,10 +113,10 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: true,
     icon: '🥽',
-    color: 'from-pink-600 to-rose-700',
-    textColor: 'text-pink-300',
+    color: 'from-pink-60o0 to-rose-70o0',
+    textColor: 'text-pink-30o0',
     link: 'https://ziontechgroup.com/ar-vr-enterprise-solutions-platform',
-    marketPosition: 'Leading enterprise AR/VR platform with 1000+ enterprise deployments',
+    marketPosition: 'Leading enterprise AR/VR platform with 10o00+ enterprise deployments',
     targetAudience: 'Manufacturing companies, training organizations, design firms, healthcare providers',
     trialDays: 30,
     setupTime: '3-4 weeks',
@@ -125,19 +125,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AR/VR', 'Unity3D', 'Unreal Engine', 'Computer Vision', '3D Modeling'],
     integrations: ['Enterprise Systems', 'CAD Software', 'Training Platforms', 'Communication Tools'],
     useCases: ['Employee training', 'Design collaboration', 'Remote assistance', 'Customer engagement'],
-    roi: '300% ROI through improved training efficiency and reduced travel costs',
+    roi: '30o0% ROI through improved training efficiency and reduced travel costs',
     competitors: ['Microsoft HoloLens', 'Magic Leap', 'PTC Vuforia'],
     marketSize: '$45B AR/VR market',
     growthRate: '28% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Hardware setup, content development, and user training',
-    launchDate: '2027-01-28',
+    launchDate: '20o27-0o1-28',
     customers: 45,
     rating: 4.7,
     reviews: 89
@@ -165,10 +165,10 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '🤖',
-    color: 'from-gray-600 to-slate-700',
-    textColor: 'text-gray-300',
+    color: 'from-gray-60o0 to-slate-70o0',
+    textColor: 'text-gray-30o0',
     link: 'https://ziontechgroup.com/ai-powered-robotics-automation-platform',
-    marketPosition: 'Leading robotics automation platform with 500+ robot deployments',
+    marketPosition: 'Leading robotics automation platform with 50o0+ robot deployments',
     targetAudience: 'Manufacturing companies, logistics providers, warehouse operators, automotive industry',
     trialDays: 60,
     setupTime: '8-12 weeks',
@@ -177,19 +177,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AI/ML', 'Robotics', 'Computer Vision', 'IoT', 'Edge Computing'],
     integrations: ['Robot Controllers', 'Manufacturing Systems', 'Warehouse Management', 'Quality Control Systems'],
     useCases: ['Manufacturing automation', 'Warehouse optimization', 'Quality control', 'Logistics automation'],
-    roi: '400% ROI through increased productivity and reduced operational costs',
+    roi: '40o0% ROI through increased productivity and reduced operational costs',
     competitors: ['ABB Robotics', 'KUKA Robotics', 'FANUC'],
     marketSize: '$75B robotics market',
     growthRate: '20% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Robot integration, AI model deployment, and workflow optimization',
-    launchDate: '2027-02-05',
+    launchDate: '20o27-0o2-0o5',
     customers: 23,
     rating: 4.8,
     reviews: 34
@@ -217,8 +217,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: true,
     icon: '🌱',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-emerald-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/sustainable-energy-optimization-platform',
     marketPosition: 'Leading sustainable energy platform with 30% average energy savings',
     targetAudience: 'Energy companies, manufacturing facilities, commercial buildings, government agencies',
@@ -234,14 +234,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     marketSize: '$35B energy management market',
     growthRate: '18% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Energy audit, system integration, and optimization strategy development',
-    launchDate: '2027-01-18',
+    launchDate: '20o27-0o1-18',
     customers: 78,
     rating: 4.7,
     reviews: 145
@@ -269,8 +269,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '📦',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-300',
+    color: 'from-blue-60o0 to-indigo-70o0',
+    textColor: 'text-blue-30o0',
     link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization',
     marketPosition: 'Leading supply chain platform with 25% average cost reduction',
     targetAudience: 'Manufacturing companies, retailers, logistics providers, e-commerce businesses',
@@ -281,19 +281,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AI/ML', 'Supply Chain Analytics', 'Predictive Modeling', 'IoT', 'Blockchain'],
     integrations: ['ERP Systems', 'WMS Platforms', 'Transportation Management', 'Supplier Portals'],
     useCases: ['Demand forecasting', 'Inventory optimization', 'Cost reduction', 'Risk management'],
-    roi: '300% ROI through cost reduction and operational efficiency improvements',
+    roi: '30o0% ROI through cost reduction and operational efficiency improvements',
     competitors: ['SAP Ariba', 'Oracle SCM', 'JDA Software'],
     marketSize: '$28B supply chain management market',
     growthRate: '16% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Supply chain assessment, system integration, and optimization strategy development',
-    launchDate: '2027-02-10',
+    launchDate: '20o27-0o2-10',
     customers: 56,
     rating: 4.6,
     reviews: 98
@@ -321,8 +321,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: true,
     icon: '👥',
-    color: 'from-purple-600 to-violet-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-violet-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/ai-powered-hr-talent-platform',
     marketPosition: 'Leading AI HR platform with 40% improvement in hiring efficiency',
     targetAudience: 'HR departments, recruitment agencies, talent management firms, large enterprises',
@@ -338,14 +338,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     marketSize: '$22B HR technology market',
     growthRate: '12% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'HR process assessment, system integration, and user training',
-    launchDate: '2027-01-25',
+    launchDate: '20o27-0o1-25',
     customers: 134,
     rating: 4.7,
     reviews: 267
@@ -373,8 +373,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '⚖️',
-    color: 'from-slate-600 to-gray-700',
-    textColor: 'text-slate-300',
+    color: 'from-slate-60o0 to-gray-70o0',
+    textColor: 'text-slate-30o0',
     link: 'https://ziontechgroup.com/ai-powered-legal-tech-platform',
     marketPosition: 'Leading legal tech platform with 60% time savings in legal research',
     targetAudience: 'Law firms, corporate legal departments, compliance officers, legal consultants',
@@ -385,19 +385,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AI/ML', 'Natural Language Processing', 'Document Analysis', 'Machine Learning'],
     integrations: ['Legal Research Databases', 'Document Management Systems', 'Case Management Tools', 'Compliance Platforms'],
     useCases: ['Legal research', 'Contract analysis', 'Compliance management', 'Risk assessment'],
-    roi: '300% ROI through time savings and improved legal outcomes',
+    roi: '30o0% ROI through time savings and improved legal outcomes',
     competitors: ['LexisNexis', 'Westlaw', 'Thomson Reuters'],
     marketSize: '$18B legal technology market',
     growthRate: '15% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Legal process assessment, system integration, and user training',
-    launchDate: '2027-02-20',
+    launchDate: '20o27-0o2-20',
     customers: 45,
     rating: 4.8,
     reviews: 78
@@ -425,8 +425,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '🏢',
-    color: 'from-amber-600 to-orange-700',
-    textColor: 'text-amber-300',
+    color: 'from-amber-60o0 to-orange-70o0',
+    textColor: 'text-amber-30o0',
     link: 'https://ziontechgroup.com/ai-powered-proptech-platform',
     marketPosition: 'Leading PropTech platform with 25% increase in property value',
     targetAudience: 'Property management companies, real estate investors, building owners, facility managers',
@@ -442,14 +442,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     marketSize: '$25B PropTech market',
     growthRate: '20% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Property assessment, system integration, and optimization strategy development',
-    launchDate: '2027-02-25',
+    launchDate: '20o27-0o2-25',
     customers: 67,
     rating: 4.6,
     reviews: 123
@@ -477,8 +477,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: false,
     icon: '⚽',
-    color: 'from-green-600 to-blue-700',
-    textColor: 'text-green-300',
+    color: 'from-green-60o0 to-blue-70o0',
+    textColor: 'text-green-30o0',
     link: 'https://ziontechgroup.com/ai-powered-sports-analytics-platform',
     marketPosition: 'Leading sports analytics platform with 30% improvement in team performance',
     targetAudience: 'Sports teams, athletic organizations, training facilities, sports media',
@@ -489,19 +489,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     technology: ['AI/ML', 'Computer Vision', 'Wearable Technology', 'Predictive Analytics', 'IoT'],
     integrations: ['Wearable Devices', 'Video Systems', 'Training Platforms', 'Performance Tracking Tools'],
     useCases: ['Performance analysis', 'Training optimization', 'Injury prevention', 'Strategy development'],
-    roi: '300% ROI through improved performance and reduced injuries',
+    roi: '30o0% ROI through improved performance and reduced injuries',
     competitors: ['Catapult Sports', 'STATS Perform', 'Second Spectrum'],
     marketSize: '$15B sports analytics market',
     growthRate: '25% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'System setup, data integration, and performance optimization',
-    launchDate: '2027-03-01',
+    launchDate: '20o27-0o3-0o1',
     customers: 34,
     rating: 4.7,
     reviews: 56
@@ -529,8 +529,8 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     ],
     popular: true,
     icon: '🎬',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-300',
+    color: 'from-purple-60o0 to-pink-70o0',
+    textColor: 'text-purple-30o0',
     link: 'https://ziontechgroup.com/ai-powered-entertainment-platform',
     marketPosition: 'Leading entertainment platform with 40% increase in user engagement',
     targetAudience: 'Streaming platforms, content creators, media companies, entertainment brands',
@@ -546,14 +546,14 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     marketSize: '$30B entertainment technology market',
     growthRate: '18% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Content analysis, recommendation engine setup, and performance optimization',
-    launchDate: '2027-02-28',
+    launchDate: '20o27-0o2-28',
     customers: 89,
     rating: 4.8,
     reviews: 167
@@ -562,19 +562,19 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 
 // Helper functions for service management
 export const getSpecializedServiceById = (id: string) => {
-  return specializedInnovativeServices2027.find(service => service.id === id);
+  return specializedInnovativeServices20o27.find(service => service.id === id);
 };
 
 export const getSpecializedServicesByCategory = (category: string) => {
-  return specializedInnovativeServices2027.filter(service => service.category === category);
+  return specializedInnovativeServices20o27.filter(service => service.category === category);
 };
 
 export const getSpecializedPopularServices = () => {
-  return specializedInnovativeServices2027.filter(service => service.popular);
+  return specializedInnovativeServices20o27.filter(service => service.popular);
 };
 
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return specializedInnovativeServices2027.filter(service => {
+  return specializedInnovativeServices20o27.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
@@ -582,11 +582,11 @@ export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: n
 
 export const searchSpecializedServices = (query: string) => {
   const lowercaseQuery = query.toLowerCase();
-  return specializedInnovativeServices2027.filter(service => 
+  return specializedInnovativeServices20o27.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery)
   );
 };
 
-export default specializedInnovativeServices2027;
+export default specializedInnovativeServices20o27;

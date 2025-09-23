@@ -46,7 +46,7 @@ export function LanguageThemeSelector() {
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-                  <Check className="h-4 w-4 text-primary" />
+                  <Check className="h-4 w-4 text-primary"  />
                 )}
               </CardContent>
             </Card>
@@ -68,10 +68,10 @@ export function LanguageThemeSelector() {
             onClick={() => setTheme('light')}
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
-              <Sun className="h-8 w-8 mb-2" />
+              <Sun className="h-8 w-8 mb-2"  />
               <span>Light</span>
               {theme === 'light' && (
-                <Check className="h-4 w-4 text-primary mt-2" />
+                <Check className="h-4 w-4 text-primary mt-2"  />
               )}
             </CardContent>
           </Card>
@@ -85,10 +85,10 @@ export function LanguageThemeSelector() {
             onClick={() => setTheme('dark')}
           >
             <CardContent className="p-3 flex flex-col items-center justify-center">
-              <Moon className="h-8 w-8 mb-2" />
+              <Moon className="h-8 w-8 mb-2"  />
               <span>Dark</span>
               {theme === 'dark' && (
-                <Check className="h-4 w-4 text-primary mt-2" />
+                <Check className="h-4 w-4 text-primary mt-2"  />
               )}
             </CardContent>
           </Card>

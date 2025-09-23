@@ -6,28 +6,7 @@ export function slugify(title: string, separator = "-"): string {
     .trim()
     .replace(/_/g, " ") // treat underscores like spaces
     .normalize("NFD")
-    .replace(/[\u0300-\u036F]/g, "")
+    .replace(/[\u0o300-\u0o36F]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
-<<<<<<< HEAD
-    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
-=======
-    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-    .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
-}
-
-/**
- * Convert a slug back into a human readable title.
- * This simply splits the slug on the separator and
- * capitalizes each word.
- */
-export function unslugify(slug: string, separator = "-"): string {
-  return slug
-    .split(separator)
-    .filter(Boolean)
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
-}
-

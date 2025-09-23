@@ -21,7 +21,7 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
       <div className="grid gap-3">
         {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
         {requests.map((r) => (
-          <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
+          <div key={r.id} className="rounded-lg border border-gray-20o0 dark:border-gray-80o0 p-4 flex items-center justify-between">
             <div className="text-sm">
               <div className="font-medium">{r.id}</div>
               <div className="opacity-80">Session: {r.sessionId}</div>

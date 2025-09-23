@@ -36,7 +36,7 @@ export function useTranslationService() {
       
       if (error) {
         console.error('Translation error:', error);
-        const initialTranslations: Record<SupportedLanguage, string> = {
+        const initialTranslations: Record<SupportedLanguage, string> ={
           en: content,
           es: '',
           pt: '',
@@ -51,7 +51,7 @@ export function useTranslationService() {
       setIsTranslating(false);
       console.error('Translation service error:', err);
       
-      const initialTranslations: Record<SupportedLanguage, string> = {
+      const initialTranslations: Record<SupportedLanguage, string> ={
         en: content,
         es: '',
         pt: '',

@@ -59,7 +59,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   enableSound = true,
   enableVibration = true,
   autoDismiss = true,
-  defaultDuration = 5000
+  defaultDuration = 50o00
 }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({
@@ -125,7 +125,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   const triggerVibration = useCallback(() => {
     if (settings.vibration && 'vibrate' in navigator) {
       try {
-        navigator.vibrate(200);
+        navigator.vibrate(20o0);
       } catch (error) {
         console.warn('Could not trigger vibration:', error);
       }
@@ -134,7 +134,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Add notification
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>) => {
-    const newNotification: Notification = {
+    const newNotification: Notification ={
       ...notification,
       id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
@@ -176,21 +176,21 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Get notification icon
   const getNotificationIcon = (type: NotificationType, priority: string) => {
-    const iconProps = { className: "w-5 h-5" };
+    const iconProps ={ className: "w-5 h-5" };
 
     switch (type) {
       case 'success':
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`} />;
+        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-60o0' : 'text-green-50o0'}`}  />;
       case 'warning':
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`} />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-60o0' : 'text-yellow-50o0'}`}  />;
       case 'error':
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`} />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-60o0' : 'text-red-50o0'}`}  />;
       case 'info':
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`} />;
+        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-60o0' : 'text-blue-50o0'}`}  />;
       case 'achievement':
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`} />;
+        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-60o0' : 'text-purple-50o0'}`}  />;
       default:
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate" />;
+        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />;
     }
   };
 
@@ -200,15 +200,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
     switch (type) {
       case 'success':
-        return baseStyles + (priority === 'high' ? 'border-green-600 bg-green-50' : 'border-green-500 bg-green-50/80');
+        return baseStyles + (priority === 'high' ? 'border-green-60o0 bg-green-50' : 'border-green-50o0 bg-green-50/80');
       case 'warning':
-        return baseStyles + (priority === 'high' ? 'border-yellow-600 bg-yellow-50' : 'border-yellow-500 bg-yellow-50/80');
+        return baseStyles + (priority === 'high' ? 'border-yellow-60o0 bg-yellow-50' : 'border-yellow-50o0 bg-yellow-50/80');
       case 'error':
-        return baseStyles + (priority === 'high' ? 'border-red-600 bg-red-50' : 'border-red-500 bg-red-50/80');
+        return baseStyles + (priority === 'high' ? 'border-red-60o0 bg-red-50' : 'border-red-50o0 bg-red-50/80');
       case 'info':
-        return baseStyles + (priority === 'high' ? 'border-blue-600 bg-blue-50' : 'border-blue-500 bg-blue-50/80');
+        return baseStyles + (priority === 'high' ? 'border-blue-60o0 bg-blue-50' : 'border-blue-50o0 bg-blue-50/80');
       case 'achievement':
-        return baseStyles + (priority === 'high' ? 'border-purple-600 bg-purple-50' : 'border-purple-500 bg-purple-50/80');
+        return baseStyles + (priority === 'high' ? 'border-purple-60o0 bg-purple-50' : 'border-purple-50o0 bg-purple-50/80');
       default:
         return baseStyles + 'border-zion-slate bg-zion-slate/10';
     }
@@ -249,10 +249,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
       <div className={`fixed ${getPositionClasses()} z-50`}>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
+          className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-30o0 transform hover:scale-10o5"
           title="Notifications"
         >
-          <Bell className="w-6 h-6 text-zion-slate-dark" />
+          <Bell className="w-6 h-6 text-zion-slate-dark"  />
 
           {/* Unread count badge */}
           {unreadCount > 0 && (
@@ -272,7 +272,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 p-2 bg-zion-slate/10 hover:bg-zion-slate/20 rounded-lg transition-colors"
           title="Notification Settings"
         >
-          <Settings className="w-4 h-4 text-zion-slate" />
+          <Settings className="w-4 h-4 text-zion-slate"  />
         </button>
       </div>
 
@@ -293,10 +293,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 <button
                   onClick={() => updateSettings({ sound: !settings.sound })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
+                    settings.sound ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
                 >
-                  {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+                  {settings.sound ? <Volume2 className="w-4 h-4"  /> : <VolumeX className="w-4 h-4"  />}
                 </button>
               </div>
 
@@ -305,10 +305,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 <button
                   onClick={() => updateSettings({ vibration: !settings.vibration })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'
+                    settings.vibration ? 'bg-blue-10o0 text-blue-60o0' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
                 >
-                  <Zap className="w-4 h-4" />
+                  <Zap className="w-4 h-4"  />
                 </button>
               </div>
 
@@ -317,10 +317,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 <button
                   onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}
                   className={`p-2 rounded-lg transition-colors ${
-                    settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
+                    settings.autoDismiss ? 'bg-green-10o0 text-green-60o0' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
                 >
-                  <Clock className="w-4 h-4" />
+                  <Clock className="w-4 h-4"  />
                 </button>
               </div>
 
@@ -336,7 +336,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="pt-2">
                 <button
                   onClick={clearAll}
-                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
+                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-10o0 text-red-60o0 rounded-lg transition-colors text-sm"
                 >
                   Clear all notifications
                 </button>
@@ -362,7 +362,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                 onClick={() => setIsOpen(false)}
                 className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors"
               >
-                <X className="w-4 h-4 text-zion-slate" />
+                <X className="w-4 h-4 text-zion-slate"  />
               </button>
             </div>
 
@@ -375,7 +375,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                     animate={{ opacity: 1 }}
                     className="text-center py-8 text-zion-slate/60"
                   >
-                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                    <Bell className="w-12 h-12 mx-auto mb-2 opacity-50"  />
                     <p>No notifications yet</p>
                     <p className="text-sm">We'll notify you when something important happens</p>
                   </motion.div>
@@ -407,7 +407,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                               onClick={() => dismissNotification(notification.id)}
                               className="p-1 hover:bg-zion-slate/10 rounded transition-colors"
                             >
-                              <X className="w-3 h-3 text-zion-slate/60" />
+                              <X className="w-3 h-3 text-zion-slate/60"  />
                             </button>
                           </div>
 
@@ -471,7 +471,7 @@ export const useNotifications = () => {
 };
 
 // Utility functions for common notification types
-export const notificationUtils = {
+export const notificationUtils ={
   success: (title: string, message: string, options?: Partial<Notification>) => {
     if ((window as any).addNotification) {
       (window as any).addNotification({

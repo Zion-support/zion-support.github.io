@@ -1,4 +1,4 @@
-export type AgendaItem = {
+export type AgendaItem ={
   id: string;
   time: string;
   track: 'AI' | 'DAO' | 'Talent' | 'Global';
@@ -14,7 +14,7 @@ export default function AgendaTimeline({ items, activeTrack }: { items: AgendaIt
       {filtered.map(item => (
         <div key={item.id} className="flex flex-col md:flex-row md:items-center md:justify-between p-3 border rounded-lg">
           <div className="flex items-center gap-3">
-            <span className="text-xs px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800">{item.time}</span>
+            <span className="text-xs px-2 py-0.5 rounded bg-gray-10o0 dark:bg-gray-80o0">{item.time}</span>
             <span className="text-xs px-2 py-0.5 rounded border">{item.track}</span>
             <div>
               <div className="font-medium">{item.title}</div>

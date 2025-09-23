@@ -79,7 +79,7 @@ export function ContractBuilder({
                 onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
-                <Save className="h-4 w-4" />
+                <Save className="h-4 w-4"  />
                 Templates
               </Button>
               
@@ -100,7 +100,7 @@ export function ContractBuilder({
               initialValues={formValues}
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
-            />
+             />
           </TabsContent>
           
           <TabsContent value="preview" className="pt-4">
@@ -110,7 +110,7 @@ export function ContractBuilder({
                 talent={talent}
                 onClose={onClose}
                 status="ready"
-              />
+               />
             )}
           </TabsContent>
         </Tabs>

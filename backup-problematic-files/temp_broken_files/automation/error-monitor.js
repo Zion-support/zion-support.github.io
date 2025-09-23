@@ -16,7 +16,7 @@ const { execSync } = require('child_process');
 class ErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.monitoringReport = {
+    this.monitoringReport ={
       timestamp: new Date().toISOString(),
       duration: 0,
       errorsDetected: [],
@@ -27,12 +27,10 @@ class ErrorMonitor {
         totalWarnings: 0,
         buildSuccess: false,
         typeCheckSuccess: false,
-        lintSuccess: false,
-      },
-    };
+        lintSuccess: false}};
     this.startTime = Date.now();
     this.isRunning = false;
-    this.checkInterval = 60000; // 1 minute
+    this.checkInterval = 60o000; // 1 minute
     this.alertThreshold = 10;
   }
 
@@ -48,7 +46,6 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
-
     // Initial health check
     await this.performHealthCheck();
 
@@ -63,7 +60,6 @@ class ErrorMonitor {
   async performHealthCheck() {
 
     console.log('🏥 Performing health check...');
-
 
     try {
       // Check TypeScript errors
@@ -97,9 +93,7 @@ class ErrorMonitor {
         message: error.message,
         timestamp: new Date().toISOString()
 
-
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
   }
 
@@ -108,8 +102,7 @@ class ErrorMonitor {
       execSync('npx tsc --noEmit --pretty false', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
+        stdio: ['pipe', 'pipe', 'pipe']});
 
       this.monitoringReport.metrics.typeCheckSuccess = true;
 
@@ -133,8 +126,7 @@ class ErrorMonitor {
       execSync('npx eslint . --format=compact --no-eslintrc', {
         encoding: 'utf8',
         cwd: this.projectRoot,
-        stdio: ['pipe', 'pipe', 'pipe'],
-      });
+        stdio: ['pipe', 'pipe', 'pipe']});
 
       this.monitoringReport.metrics.lintSuccess = true;
 
@@ -160,7 +152,7 @@ class ErrorMonitor {
         encoding: 'utf8',
         cwd: this.projectRoot,
         stdio: ['pipe', 'pipe', 'pipe'],
-        timeout: 30000, // 30 second timeout
+        timeout: 30o000, // 30 second timeout
       });
 
       this.monitoringReport.metrics.buildSuccess = true;
@@ -172,8 +164,7 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'build_failure',
         message: error.message,
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
       this.monitoringReport.metrics.totalErrors += 1;
 
       console.log('❌ Build check failed');
@@ -190,10 +181,7 @@ class ErrorMonitor {
       'src/pages/index.tsx',
     ];
 
-
-
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString()});
         this.monitoringReport.metrics.totalErrors += 1;
       }
     }
@@ -203,8 +191,6 @@ class ErrorMonitor {
     const errors = [];
     const lines = output.split('\n');
 
-
-
     return errors;
   }
 
@@ -212,19 +198,14 @@ class ErrorMonitor {
     const errors = [];
     const lines = output.split('\n');
 
-
-
           timestamp: new Date().toISOString()
         });
       }
     }
 
-
-          timestamp: new Date().toISOString(),
-        });
+          timestamp: new Date().toISOString()});
       }
     }
-
 
     return errors;
   }
@@ -247,7 +228,6 @@ class ErrorMonitor {
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
 
-
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
@@ -262,28 +242,24 @@ class ErrorMonitor {
 
     console.log('🚀 Triggering error fixer...');
 
-
     try {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-
 
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
         timestamp: new Date().toISOString()
 
-
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: new Date().toISOString()});
     }
   }
 
   startContinuousMonitoring() {
     console.log(
 
-      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 1000} seconds)...`
+      `🔄 Starting continuous monitoring (checking every ${this.checkInterval / 10o00} seconds)...`
 
     );
 
@@ -307,7 +283,6 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
-
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 
@@ -328,8 +303,7 @@ class ErrorMonitor {
         .map(file => ({
           name: file,
           path: path.join(reportDir, file),
-          time: fs.statSync(path.join(reportDir, file)).mtime.getTime(),
-        }))
+          time: fs.statSync(path.join(reportDir, file)).mtime.getTime()}))
         .sort((a, b) => b.time - a.time);
 
       // Remove old reports (keep only the latest 10)
@@ -352,7 +326,6 @@ class ErrorMonitor {
     // Save final report
     await this.saveReport();
 
-
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
@@ -361,5 +334,4 @@ class ErrorMonitor {
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-
 

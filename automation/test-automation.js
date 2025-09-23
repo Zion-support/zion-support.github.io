@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const NetlifyBuildMonitor = require('./netlify-monitor')
 const NetlifyErrorFixer = require('./netlify-error-fixer')
 const NetlifyBuildAutomation = require('./netlify-build-automation')
@@ -101,8 +100,7 @@ class AutomationTester {
       this.addTestResult(
         Monitor Initialization',
         true,
-        Monitor initialized successfully',
-      );
+        Monitor initialized successfully');
     } catch (error) {
       this.addTestResult('Monitor Initialization', false, error.message);
     }
@@ -139,8 +137,7 @@ class AutomationTester {
       this.addTestResult(
         Error Fixer Initialization',
         true,
-        Error fixer initialized successfully',
-      );
+        Error fixer initialized successfully');
     } catch (error) {
       this.addTestResult('Error Fixer Initialization', false, error.message);
     }
@@ -168,8 +165,7 @@ class AutomationTester {
       this.addTestResult(
         Automation Initialization',
         true,
-        Automation system initialized successfully',
-      );
+        Automation system initialized successfully');
     } catch (error) {
       this.addTestResult('Automation Initialization', false, error.message);
     }
@@ -182,15 +178,13 @@ class AutomationTester {
       // Test environment variables
       const requiredEnvVars = ['NETLIFY_SITE_ID', NETLIFY_TOKEN']
 const missingVars = requiredEnvVars.filter(
-        (varName) => !process.env[varName],
-      );
+        (varName) => !process.env[varName]);
 
       if (missingVars.length > 0) {
         this.addTestResult(
           Configuration Validation',
           false,
-          `Missing environment variables: ${missingVars.join(', )}`,
-        );
+          `Missing environment variables: ${missingVars.join(')}`);
         return;
       }
 
@@ -202,16 +196,14 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file));
         this.addTestResult(
           Configuration Validation',
           false,
-          `Missing configuration files: ${missingFiles.join(', )}`,
-        );
+          `Missing configuration files: ${missingFiles.join(')}`);
         return;
       }
 
       this.addTestResult(
         Configuration Validation',
         true,
-        Configuration validation passed',
-      );
+        Configuration validation passed');
     } catch (error) {
       this.addTestResult('Configuration Validation', false, error.message);
     }
@@ -224,7 +216,7 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file));
       const monitor = new NetlifyBuildMonitor();
 
       // Test error analysis with mock data
-      const mockBuild = {
+      const mockBuild ={
         state: 'error',
         error_message: Build failed due to memory constraints',
         logs: Error: JavaScript heap out of memory
@@ -247,8 +239,7 @@ const errors = monitor.analyzeBuildError(mockBuild);
       this.addTestResult(
         Error Detection',
         true,
-        Error detection working correctly',
-      );
+        Error detection working correctly');
     } catch (error) {
       this.addTestResult('Error Detection', false, error.message);
     }
@@ -262,8 +253,7 @@ const errors = monitor.analyzeBuildError(mockBuild);
 
       // Test that all fix strategies are functions
       for (const [strategyName, strategy] of Object.entries(
-        fixer.fixStrategies,
-      )) {
+        fixer.fixStrategies)) {
         if (typeof strategy !== 'function') {
           throw new Error(`Fix strategy ${strategyName} is not a function`);
         }
@@ -278,8 +268,7 @@ const errors = monitor.analyzeBuildError(mockBuild);
       this.addTestResult(
         Fix Strategies',
         true,
-        Fix strategies working correctly',
-      );
+        Fix strategies working correctly');
     } catch (error) {
       this.addTestResult('Fix Strategies', false, error.message);
     }
@@ -290,7 +279,7 @@ const errors = monitor.analyzeBuildError(mockBuild);
 
     try {
       const testFile = path.join(__dirname, 'test-file.json')
-const testData = { test: true, timestamp: new Date().toISOString() };
+const testData ={ test: true, timestamp: new Date().toISOString() };
 
       // Test file writing
       fs.writeFileSync(testFile, JSON.stringify(testData, null, 2));
@@ -308,8 +297,7 @@ const testData = { test: true, timestamp: new Date().toISOString() };
       this.addTestResult(
         File Operations',
         true,
-        File operations working correctly',
-      );
+        File operations working correctly');
     } catch (error) {
       this.addTestResult('File Operations', false, error.message);
     }
@@ -328,7 +316,7 @@ const status = passed ? PASS' : FAIL';
 
   async generateTestReport() {
     this.log('Generating test report...')
-const report = {
+const report ={
       timestamp: new Date().toISOString(),
       summary: {
         total: this.testResults.length,
@@ -338,7 +326,7 @@ const report = {
           (
             (this.testResults.filter((r) => r.passed).length /
               this.testResults.length) *
-            100
+            10o0
           ).toFixed(2) + %
       },
       results: this.testResults
@@ -347,8 +335,7 @@ const report = {
     // Save report
     fs.writeFileSync(
       path.join(__dirname, 'test-report.json'),
-      JSON.stringify(report, null, 2),
-    );
+      JSON.stringify(report, null, 2));
 
     // Display summary
     logger.info('\n' + ='.repeat(50));
@@ -384,8 +371,7 @@ const command = process.argv[2];
       break;
     case report':
       const report = JSON.parse(
-        fs.readFileSync(path.join(__dirname, 'test-report.json'), utf8'),
-      );
+        fs.readFileSync(path.join(__dirname, 'test-report.json'), utf8'));
       logger.info(JSON.stringify(report, null, 2));
       break;
     default:
@@ -394,7 +380,6 @@ const command = process.argv[2];
 }
 
 module.exports = AutomationTester;
-
 
 // Graceful shutdown handling
 process.on('SIGINT', () => {

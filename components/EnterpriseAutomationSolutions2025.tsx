@@ -67,7 +67,7 @@ interface AutomationSolution {
   isNew?: boolean;
 }
 
-const EnterpriseAutomationSolutions2025: React.FC = () => {
+const EnterpriseAutomationSolutions20o25: React.FC = () => {
   const [selectedSolutionsetSelectedSolution] = useState<string | null>(null);
   const [activeCategorysetActiveCategory] = useState<string>('all');
   const [isDemoRunningsetIsDemoRunning] = useState(false);
@@ -87,7 +87,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'Workflow Orchestrator Pro',
       description: 'End-to-end business process automation with AI-powered decision making',
       category: 'workflow',
-      icon: <Workflow className="w-8 h-8" />,
+      icon: <Workflow className="w-8 h-8"  />,
       features: [
         'Visual workflow designer',
         'AI-powered decision trees',
@@ -103,11 +103,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Accelerate time-to-market by 70%'
       ],
       pricing: {
-        starter: '$500/month',
-        professional: '$1,500/month',
+        starter: '$50o0/month',
+        professional: '$1,50o0/month',
         enterprise: 'Custom'
       },
-      roi: '300% ROI in 6 months',
+      roi: '30o0% ROI in 6 months',
       implementation: '4-6 weeks',
       isPopular: true
     },
@@ -116,7 +116,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'Data Pipeline Automation',
       description: 'Automated data collectionprocessingand analysis across all systems',
       category: 'data',
-      icon: <Database className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8"  />,
       features: [
         'Real-time data ingestion',
         'Automated data cleaning',
@@ -132,8 +132,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Ensure compliance automatically'
       ],
       pricing: {
-        starter: '$800/month',
-        professional: '$2,000/month',
+        starter: '$80o0/month',
+        professional: '$2,0o00/month',
         enterprise: 'Custom'
       },
       roi: '250% ROI in 4 months',
@@ -144,7 +144,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'Customer Service Automation',
       description: 'AI-powered customer support with intelligent routing and response',
       category: 'communication',
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <MessageSquare className="w-8 h-8"  />,
       features: [
         'Intelligent ticket routing',
         'AI-powered responses',
@@ -160,11 +160,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Reduce support costs by 50%'
       ],
       pricing: {
-        starter: '$300/month',
-        professional: '$800/month',
+        starter: '$30o0/month',
+        professional: '$80o0/month',
         enterprise: 'Custom'
       },
-      roi: '400% ROI in 3 months',
+      roi: '40o0% ROI in 3 months',
       implementation: '2-4 weeks',
       isNew: true
     },
@@ -173,7 +173,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'Financial Process Automation',
       description: 'Automated accountinginvoicingand financial reporting',
       category: 'workflow',
-      icon: <CreditCard className="w-8 h-8" />,
+      icon: <CreditCard className="w-8 h-8"  />,
       features: [
         'Automated invoicing',
         'Expense management',
@@ -189,8 +189,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Ensure regulatory compliance'
       ],
       pricing: {
-        starter: '$400/month',
-        professional: '$1,200/month',
+        starter: '$40o0/month',
+        professional: '$1,20o0/month',
         enterprise: 'Custom'
       },
       roi: '350% ROI in 5 months',
@@ -201,7 +201,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'HR Process Automation',
       description: 'Streamlined human resources with automated workflows and AI insights',
       category: 'workflow',
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8"  />,
       features: [
         'Automated recruitment',
         'Employee onboarding',
@@ -217,8 +217,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Reduce HR administrative costs'
       ],
       pricing: {
-        starter: '$600/month',
-        professional: '$1,800/month',
+        starter: '$60o0/month',
+        professional: '$1,80o0/month',
         enterprise: 'Custom'
       },
       roi: '280% ROI in 6 months',
@@ -229,7 +229,7 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
       name: 'Business Intelligence Automation',
       description: 'Automated reporting and analytics with real-time insights',
       category: 'analytics',
-      icon: <PieChart className="w-8 h-8" />,
+      icon: <PieChart className="w-8 h-8"  />,
       features: [
         'Automated report generation',
         'Real-time dashboards',
@@ -245,8 +245,8 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         'Reduce reporting errors by 90%'
       ],
       pricing: {
-        starter: '$500/month',
-        professional: '$1,500/month',
+        starter: '$50o0/month',
+        professional: '$1,50o0/month',
         enterprise: 'Custom'
       },
       roi: '320% ROI in 4 months',
@@ -284,13 +284,13 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         setTimeout(() => {
           setIsDemoRunning(false);
           setDemoStep(0);
-        }2000);
+        }20o00);
       }
-    }1500);
+    }150o0);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -301,11 +301,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Enterprise Automation
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Solutions 2025
+            <span className="block bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">
+              Solutions 20o25
             </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto mb-8">
             Transform your enterprise with AI-powered automation solutions. 
             Streamline processesreduce costsand accelerate growth.
           </p>
@@ -322,10 +322,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 activeCategory === category.id
-                  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  ? 'bg-blue-50o0 text-white shadow-lg shadow-blue-50o0/25'
+                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20'
               }`}
             >
               {category.name} ({category.count})
@@ -348,40 +348,40 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
-                  className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group ${
-                    selectedSolution === solution.id ? 'ring-2 ring-blue-500' : ''
+                  className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-30o0 cursor-pointer group ${
+                    selectedSolution === solution.id ? 'ring-2 ring-blue-50o0' : ''
                   }`}
                   onClick={() => setSelectedSolution(solution.id)}
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-blue-500/20 rounded-lg text-blue-400">
+                      <div className="p-3 bg-blue-50o0/20 rounded-lg text-blue-40o0">
                         {solution.icon}
                       </div>
                       <div>
                         <div className="flex items-center space-x-2 mb-2">
-                          <h3 className="text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                          <h3 className="text-2xl font-semibold text-white group-hover:text-blue-40o0 transition-colors">
                             {solution.name}
                           </h3>
                           {solution.isNew && (
-                            <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                            <span className="px-2 py-1 bg-green-50o0/20 text-green-40o0 text-xs rounded-full">
                               New
                             </span>
                           )}
                           {solution.isPopular && (
-                            <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
+                            <span className="px-2 py-1 bg-purple-50o0/20 text-purple-40o0 text-xs rounded-full">
                               Popular
                             </span>
                           )}
                         </div>
-                        <p className="text-gray-300 mb-3">{solution.description}</p>
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <p className="text-gray-30o0 mb-3">{solution.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-40o0">
                           <div className="flex items-center space-x-1">
-                            <TrendingUp className="w-4 h-4" />
+                            <TrendingUp className="w-4 h-4"  />
                             <span>{solution.roi}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-4 h-4"  />
                             <span>{solution.implementation}</span>
                           </div>
                         </div>
@@ -393,14 +393,14 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <div>
                       <h4 className="text-white font-medium mb-3">Key Features</h4>
                       <div className="space-y-2">
-                        {solution.features.slice(03).map((featureidx) => (
+                        {solution.features.slice(0o3).map((featureidx) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
+                            <CheckCircle className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
+                            <span className="text-gray-30o0 text-sm">{feature}</span>
                           </div>
                         ))}
                         {solution.features.length > 3 && (
-                          <div className="text-gray-400 text-sm">
+                          <div className="text-gray-40o0 text-sm">
                             +{solution.features.length - 3} more features
                           </div>
                         )}
@@ -410,10 +410,10 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     <div>
                       <h4 className="text-white font-medium mb-3">Benefits</h4>
                       <div className="space-y-2">
-                        {solution.benefits.slice(02).map((benefitidx) => (
+                        {solution.benefits.slice(0o2).map((benefitidx) => (
                           <div key={idx} className="flex items-center space-x-2">
-                            <Target className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{benefit}</span>
+                            <Target className="w-4 h-4 text-blue-40o0 flex-shrink-0"  />
+                            <span className="text-gray-30o0 text-sm">{benefit}</span>
                           </div>
                         ))}
                       </div>
@@ -425,13 +425,13 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       <div className="flex space-x-4">
                         {Object.entries(solution.pricing).map(([tierprice]) => (
                           <div key={tier} className="text-center">
-                            <div className="text-xs text-gray-400 capitalize">{tier}</div>
+                            <div className="text-xs text-gray-40o0 capitalize">{tier}</div>
                             <div className="text-white font-medium">{price}</div>
                           </div>
                         ))}
                       </div>
-                      <button className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors flex items-center space-x-2">
-                        <Play className="w-4 h-4" />
+                      <button className="px-6 py-2 bg-blue-50o0 hover:bg-blue-60o0 text-white rounded-lg transition-colors flex items-center space-x-2">
+                        <Play className="w-4 h-4"  />
                         <span>Demo</span>
                       </button>
                     </div>
@@ -461,13 +461,13 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     transition={{ duration: 0.3 }}
                   >
                     <div className="text-center mb-6">
-                      <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
+                      <div className="p-4 bg-blue-50o0/20 rounded-lg text-blue-40o0 mb-4 inline-block">
                         {selectedSolutionData.icon}
                       </div>
                       <h4 className="text-xl font-semibold text-white mb-2">
                         {selectedSolutionData.name}
                       </h4>
-                      <p className="text-gray-300 text-sm">
+                      <p className="text-gray-30o0 text-sm">
                         {selectedSolutionData.description}
                       </p>
                     </div>
@@ -476,14 +476,14 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                       <div className="space-y-4">
                         <div className="text-center">
                           <div className="w-16 h-16 mx-auto mb-4 relative">
-                            <div className="w-full h-full border-4 border-blue-500/20 rounded-full"></div>
+                            <div className="w-full h-full border-4 border-blue-50o0/20 rounded-full"></div>
                             <div 
-                              className="absolute top-0 left-0 w-full h-full border-4 border-blue-500 rounded-full border-t-transparent animate-spin"
+                              className="absolute top-0 left-0 w-full h-full border-4 border-blue-50o0 rounded-full border-t-transparent animate-spin"
                               style={{ animationDuration: '1s' }}
                             ></div>
                           </div>
                           <p className="text-white font-medium">Running Demo...</p>
-                          <p className="text-gray-400 text-sm">
+                          <p className="text-gray-40o0 text-sm">
                             {demoStep < 7 ? `Step ${demoStep + 1} of 7` : 'Complete'}
                           </p>
                         </div>
@@ -499,11 +499,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                             'Demo completed successfully!'
                           ].map((stepindex) => (
                             <div key={index} className={`flex items-center space-x-2 text-sm ${
-                              index <= demoStep ? 'text-green-400' : 'text-gray-500'
+                              index <= demoStep ? 'text-green-40o0' : 'text-gray-50o0'
                             }`}>
                               <CheckCircle className={`w-4 h-4 ${
-                                index <= demoStep ? 'text-green-400' : 'text-gray-500'
-                              }`} />
+                                index <= demoStep ? 'text-green-40o0' : 'text-gray-50o0'
+                              }`}  />
                               <span>{step}</span>
                             </div>
                           ))}
@@ -512,9 +512,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     ) : (
                       <div className="space-y-4">
                         <div className="text-center">
-                          <Brain className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+                          <Brain className="w-16 h-16 text-blue-40o0 mx-auto mb-4"  />
                           <p className="text-white font-medium">Ready to Demo</p>
-                          <p className="text-gray-400 text-sm">
+                          <p className="text-gray-40o0 text-sm">
                             Experience {selectedSolutionData.name} in action
                           </p>
                         </div>
@@ -523,18 +523,18 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                           <h5 className="text-white font-medium">Key Benefits:</h5>
                           {selectedSolutionData.benefits.map((benefitindex) => (
                             <div key={index} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span className="text-gray-300 text-sm">{benefit}</span>
+                              <CheckCircle className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
+                              <span className="text-gray-30o0 text-sm">{benefit}</span>
                             </div>
                           ))}
                         </div>
 
                         <div className="pt-4 border-t border-white/10">
-                          <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
+                          <div className="flex items-center justify-between text-sm text-gray-40o0 mb-2">
                             <span>ROI</span>
-                            <span className="text-green-400 font-medium">{selectedSolutionData.roi}</span>
+                            <span className="text-green-40o0 font-medium">{selectedSolutionData.roi}</span>
                           </div>
-                          <div className="flex items-center justify-between text-sm text-gray-400">
+                          <div className="flex items-center justify-between text-sm text-gray-40o0">
                             <span>Implementation</span>
                             <span>{selectedSolutionData.implementation}</span>
                           </div>
@@ -542,9 +542,9 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
 
                         <button 
                           onClick={runDemo}
-                          className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                          className="w-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-60o0 hover:to-purple-60o0 text-white font-medium py-3 rounded-lg transition-all duration-30o0 flex items-center justify-center space-x-2"
                         >
-                          <Play className="w-4 h-4" />
+                          <Play className="w-4 h-4"  />
                           <span>Start Demo</span>
                         </button>
                       </div>
@@ -556,11 +556,11 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
                     animate={{ opacity: 1 }}
                     className="text-center py-12"
                   >
-                    <Building2 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                    <Building2 className="w-16 h-16 text-gray-40o0 mx-auto mb-4"  />
                     <h4 className="text-xl font-semibold text-white mb-2">
                       Select a Solution
                     </h4>
-                    <p className="text-gray-400">
+                    <p className="text-gray-40o0">
                       Choose an automation solution to see it in action
                     </p>
                   </motion.div>
@@ -578,17 +578,17 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { icon: <Building2 className="w-8 h-8" />label: 'Enterprise 'Clients', 'value: '500+' },
-            { icon: <TrendingUp className="w-8 h-8" />label: 'Average 'ROI', 'value: '300%' },
-            { icon: <Clock className="w-8 h-8" />label: 'Time 'Saved', 'value: '80%' },
-            { icon: <Shield className="w-8 h-8" />label: ''Uptime', 'value: '99.9%' }
+            { icon: <Building2 className="w-8 h-8"  />label: 'Enterprise 'Clients', 'value: '50o0+' },
+            { icon: <TrendingUp className="w-8 h-8"  />label: 'Average 'ROI', 'value: '30o0%' },
+            { icon: <Clock className="w-8 h-8"  />label: 'Time 'Saved', 'value: '80%' },
+            { icon: <Shield className="w-8 h-8"  />label: ''Uptime', 'value: '99.9%' }
           ].map((statindex) => (
             <div key={index} className="text-center">
-              <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">
+              <div className="p-4 bg-blue-50o0/20 rounded-lg text-blue-40o0 mb-4 inline-block">
                 {stat.icon}
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
+              <div className="text-gray-40o0">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -597,4 +597,4 @@ const EnterpriseAutomationSolutions2025: React.FC = () => {
   );
 };
 
-export default EnterpriseAutomationSolutions2025;
+export default EnterpriseAutomationSolutions20o25;

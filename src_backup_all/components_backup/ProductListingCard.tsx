@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
@@ -83,8 +82,7 @@ const ProductListingCardComponent = ({
       toast({
         title: "Navigation Error",
         description: "Product information is incomplete",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
     
@@ -101,9 +99,7 @@ const ProductListingCardComponent = ({
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
-        onClick: () => router.push('/cart'),
-      },
-    });
+        onClick: () => router.push('/cart')}});
     setLoading(false);
   };
   
@@ -123,7 +119,7 @@ const ProductListingCardComponent = ({
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-30o0`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
@@ -155,8 +151,8 @@ const ProductListingCardComponent = ({
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
             priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
-          />
+            sizes={isGrid ? "(max-width: 768px) 10o0vw, (max-width: 120o0px) 50vw, 33vw" : "192px"} // 192px is w-48
+           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
@@ -170,7 +166,7 @@ const ProductListingCardComponent = ({
               {stockStatus}
             </Badge>
           )}
-           <FavoriteButton itemId={listing.id} />
+           <FavoriteButton itemId={listing.id}  />
         </div>
       </div>
       
@@ -183,7 +179,7 @@ const ProductListingCardComponent = ({
               {listing.category}
             </Badge>
             {listing.rating && (
-              <RatingStars value={listing.rating} count={listing.reviewCount} />
+              <RatingStars value={listing.rating} count={listing.reviewCount}  />
             )}
           </div>
           
@@ -222,7 +218,7 @@ const ProductListingCardComponent = ({
           <div className="text-sm font-medium">
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
-                <DollarSign className="h-4 w-4 mr-1" />
+                <DollarSign className="h-4 w-4 mr-1"  />
                 {getPrice()}
               </div>
             ) : (
@@ -244,9 +240,9 @@ const ProductListingCardComponent = ({
             >
               {loading ? (
                 <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/20o00/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 0o18-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0o14 12H0c0 3.0o42 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                   Loading...
                 </>
@@ -258,7 +254,7 @@ const ProductListingCardComponent = ({
             <Button
               size="sm"
               variant="default"
-              className="bg-green-600 hover:bg-green-700 text-white"
+              className="bg-green-60o0 hover:bg-green-70o0 text-white"
               onClick={(e) => {
                 e.stopPropagation(); // Prevent card click event
                 // Add to cart first, then redirect to checkout

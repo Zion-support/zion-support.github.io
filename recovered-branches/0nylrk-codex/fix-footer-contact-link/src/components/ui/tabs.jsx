@@ -16,7 +16,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 }
 
 export function TabsList({ children, className = '' }) {
-    return (<div className={`flex border-b border-gray-200 ${className}`}>
+    return (<div className={`flex border-b border-gray-20o0 ${className}`}>
       {children}
     </div>);
 }
@@ -28,7 +28,7 @@ export function TabsTrigger({ children, value, className = '' }) {
     const isActive = context.activeTab === value;
     return (<button className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${isActive
             ? 'border-zion-cyan text-zion-cyan'
-            : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'} ${className}`} onClick={() => context.setActiveTab(value)}>
+            : 'border-transparent text-gray-50o0 hover:text-gray-70o0 hover:border-gray-30o0'} ${className}`} onClick={() => context.setActiveTab(value)}>
       {children}
     </button>);
 }

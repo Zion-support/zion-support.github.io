@@ -42,7 +42,7 @@ const PerformanceAnalytics: React.FC = () => {
     const metrics: PerformanceMetric[] = [
       {
         name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,
+        value: Math.random() * 20o00 + 50o0,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
@@ -66,7 +66,7 @@ const PerformanceAnalytics: React.FC = () => {
       },
       {
         name: 'Network Latency',
-        value: Math.random() * 100 + 20,
+        value: Math.random() * 10o0 + 20,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',
@@ -82,7 +82,7 @@ const PerformanceAnalytics: React.FC = () => {
       },
       {
         name: 'Response Time',
-        value: Math.random() * 500 + 100,
+        value: Math.random() * 50o0 + 10o0,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
@@ -115,7 +115,7 @@ const PerformanceAnalytics: React.FC = () => {
     if (isMonitoring) {
       const interval = setInterval(() => {
         setPerformanceData(generatePerformanceData());
-      }, 5000);
+      }, 50o00);
 
       return () => clearInterval(interval);
     }
@@ -123,27 +123,27 @@ const PerformanceAnalytics: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'good': return 'text-green-40o0';
+      case 'warning': return 'text-yellow-40o0';
+      case 'critical': return 'text-red-40o0';
+      default: return 'text-gray-40o0';
     }
   };
 
   const getStatusBgColor = (status: string) => {
     switch (status) {
-      case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20';
-      case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20';
+      case 'good': return 'bg-green-50o0/20';
+      case 'warning': return 'bg-yellow-50o0/20';
+      case 'critical': return 'bg-red-50o0/20';
+      default: return 'bg-gray-50o0/20';
     }
   };
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
-      default: return <Activity className="w-4 h-4 text-blue-400" />;
+      case 'up': return <TrendingUp className="w-4 h-4 text-green-40o0"  />;
+      case 'down': return <TrendingDown className="w-4 h-4 text-red-40o0"  />;
+      default: return <Activity className="w-4 h-4 text-blue-40o0"  />;
     }
   };
 
@@ -154,7 +154,7 @@ const PerformanceAnalytics: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
       {/* Header */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -163,18 +163,18 @@ const PerformanceAnalytics: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Monitor className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-purple-60o0/20 text-purple-40o0 rounded-full text-sm font-medium mb-6">
+              <Monitor className="w-4 h-4 mr-2"  />
               Performance Analytics
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Real-Time
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
                 {' '}Performance
               </span>
               {' '}Monitoring
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto mb-8">
               Monitor your application's performance in real-time with advanced analytics, 
               automated alerts, and intelligent recommendations.
             </p>
@@ -189,20 +189,20 @@ const PerformanceAnalytics: React.FC = () => {
           >
             <button
               onClick={() => setIsMonitoring(!isMonitoring)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 flex items-center ${
                 isMonitoring
-                  ? 'bg-red-600 hover:bg-red-700 text-white'
-                  : 'bg-green-600 hover:bg-green-700 text-white'
+                  ? 'bg-red-60o0 hover:bg-red-70o0 text-white'
+                  : 'bg-green-60o0 hover:bg-green-70o0 text-white'
               }`}
             >
               {isMonitoring ? (
                 <>
-                  <AlertTriangle className="w-4 h-4 mr-2" />
+                  <AlertTriangle className="w-4 h-4 mr-2"  />
                   Stop Monitoring
                 </>
               ) : (
                 <>
-                  <Activity className="w-4 h-4 mr-2" />
+                  <Activity className="w-4 h-4 mr-2"  />
                   Start Monitoring
                 </>
               )}
@@ -211,12 +211,12 @@ const PerformanceAnalytics: React.FC = () => {
             <select
               value={selectedTimeframe}
               onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0"
             >
-              <option value="1h" className="bg-slate-800 text-white">Last Hour</option>
-              <option value="24h" className="bg-slate-800 text-white">Last 24 Hours</option>
-              <option value="7d" className="bg-slate-800 text-white">Last 7 Days</option>
-              <option value="30d" className="bg-slate-800 text-white">Last 30 Days</option>
+              <option value="1h" className="bg-slate-80o0 text-white">Last Hour</option>
+              <option value="24h" className="bg-slate-80o0 text-white">Last 24 Hours</option>
+              <option value="7d" className="bg-slate-80o0 text-white">Last 7 Days</option>
+              <option value="30d" className="bg-slate-80o0 text-white">Last 30 Days</option>
             </select>
           </motion.div>
         </div>
@@ -238,11 +238,11 @@ const PerformanceAnalytics: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-50o0/50 transition-all duration-30o0"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${getStatusBgColor(metric.status)}`}>
-                      <metric.icon className="w-6 h-6 text-purple-400" />
+                      <metric.icon className="w-6 h-6 text-purple-40o0"  />
                     </div>
                     <div className="flex items-center gap-2">
                       {getTrendIcon(metric.trend)}
@@ -258,17 +258,17 @@ const PerformanceAnalytics: React.FC = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">
+                    <span className="text-sm text-gray-40o0">
                       {metric.trend === 'up' ? 'Increasing' : metric.trend === 'down' ? 'Decreasing' : 'Stable'}
                     </span>
-                    <div className="w-16 h-2 bg-gray-700 rounded-full overflow-hidden">
+                    <div className="w-16 h-2 bg-gray-70o0 rounded-full overflow-hidden">
                       <div 
-                        className={`h-full transition-all duration-300 ${
-                          metric.status === 'good' ? 'bg-green-500' : 
-                          metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
+                        className={`h-full transition-all duration-30o0 ${
+                          metric.status === 'good' ? 'bg-green-50o0' : 
+                          metric.status === 'warning' ? 'bg-yellow-50o0' : 'bg-red-50o0'
                         }`}
-                        style={{ width: `${Math.min(metric.value, 100)}%` }}
-                      />
+                        style={{ width: `${Math.min(metric.value, 10o0)}%` }}
+                       />
                     </div>
                   </div>
                 </motion.div>
@@ -285,22 +285,22 @@ const PerformanceAnalytics: React.FC = () => {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2" />
+                  <AlertTriangle className="w-5 h-5 text-yellow-40o0 mr-2"  />
                   Active Alerts
                 </h3>
                 {performanceData.alerts.length > 0 ? (
                   <div className="space-y-3">
                     {performanceData.alerts.map((alert, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
-                        <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-yellow-200">{alert}</span>
+                      <div key={index} className="flex items-start gap-3 p-3 bg-yellow-50o0/10 border border-yellow-50o0/20 rounded-lg">
+                        <AlertTriangle className="w-4 h-4 text-yellow-40o0 mt-0.5 flex-shrink-0"  />
+                        <span className="text-sm text-yellow-20o0">{alert}</span>
                       </div>
                     ))}
                   </div>
                 ) : (
                   <div className="text-center py-8">
-                    <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-3" />
-                    <p className="text-gray-400">No active alerts</p>
+                    <CheckCircle className="w-12 h-12 text-green-40o0 mx-auto mb-3"  />
+                    <p className="text-gray-40o0">No active alerts</p>
                   </div>
                 )}
               </motion.div>
@@ -313,22 +313,22 @@ const PerformanceAnalytics: React.FC = () => {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <BarChart3 className="w-5 h-5 text-blue-400 mr-2" />
+                  <BarChart3 className="w-5 h-5 text-blue-40o0 mr-2"  />
                   Recommendations
                 </h3>
                 {performanceData.recommendations.length > 0 ? (
                   <div className="space-y-3">
                     {performanceData.recommendations.map((recommendation, index) => (
-                      <div key={index} className="flex items-start gap-3 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-blue-200">{recommendation}</span>
+                      <div key={index} className="flex items-start gap-3 p-3 bg-blue-50o0/10 border border-blue-50o0/20 rounded-lg">
+                        <CheckCircle className="w-4 h-4 text-blue-40o0 mt-0.5 flex-shrink-0"  />
+                        <span className="text-sm text-blue-20o0">{recommendation}</span>
                       </div>
                     ))}
                   </div>
                 ) : (
                   <div className="text-center py-8">
-                    <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-3" />
-                    <p className="text-gray-400">No recommendations at this time</p>
+                    <CheckCircle className="w-12 h-12 text-green-40o0 mx-auto mb-3"  />
+                    <p className="text-gray-40o0">No recommendations at this time</p>
                   </div>
                 )}
               </motion.div>
@@ -349,13 +349,13 @@ const PerformanceAnalytics: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Optimize Your Application Performance
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-30o0 mb-8">
               Get real-time insights into your application's performance and receive 
               intelligent recommendations for optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center mx-auto">
-                <Zap className="w-5 h-5 mr-2" />
+              <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 text-lg flex items-center justify-center mx-auto">
+                <Zap className="w-5 h-5 mr-2"  />
                 Start Performance Monitoring
               </button>
             </div>

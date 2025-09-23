@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {
@@ -7,7 +6,7 @@ export function TestimonialsSection() {
             name: "Sarah Johnson",
             role: "CTO",
             company: "TechFlow Solutions",
-            content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.",
+            content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 30o0% and reduced costs significantly.",
             rating: 5,
             avatar: "SJ"
         },
@@ -36,7 +35,7 @@ export function TestimonialsSection() {
             avatar: "DT"
         }
     ];
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -45,7 +44,7 @@ export function TestimonialsSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 20, opacity: 0 },
         visible: {
             y: 0,
@@ -76,10 +75,10 @@ export function TestimonialsSection() {
         {/* Testimonials Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (<motion.div key={index} variants={itemVariants} className="group">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-30o0 hover:scale-10o5">
                 {/* Rating */}
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (<StarIcon key={i} className="w-5 h-5 text-yellow-400"/>))}
+                  {[...Array(testimonial.rating)].map((_, i) => (<StarIcon key={i} className="w-5 h-5 text-yellow-40o0" />))}
                 </div>
                 
                 {/* Content */}

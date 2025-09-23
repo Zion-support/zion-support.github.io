@@ -15,7 +15,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
             onClick={onCreateClick}
             className="gap-2"
           >
-            <FilePlus className="h-4 w-4" />
+            <FilePlus className="h-4 w-4"  />
             Create Resume
           </Button>
         </div>

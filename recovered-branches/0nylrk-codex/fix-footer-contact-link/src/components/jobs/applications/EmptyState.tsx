@@ -1,24 +1,2 @@
 
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card";
-=======
-import { CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-import { Link } from "react-router-dom";
-
-export function EmptyState() {
-  return (
-    <Card className="bg-muted/30">
-      <CardContent className="pt-6 text-center">
-        <h3 className="text-lg font-medium mb-2">No Applications Yet</h3>
-        <p className="text-muted-foreground mb-4">
-          You haven't submitted any applications yet. Browse available jobs to get started!
-        </p>
-        <Button className="mt-4" asChild>
-          <Link to="/jobs">Browse Jobs</Link>
-        </Button>
-      </CardContent>
-    </Card>
-  );
-}

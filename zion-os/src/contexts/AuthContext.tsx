@@ -2,7 +2,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-type User = {
+type User ={
   id: string;
   name: string;
   email: string;
@@ -41,13 +41,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const mockUser: User = {
+    const mockUser: User ={
       id: "local-user",
       name: email.split("@")[0],
       email,
       role: "user",
-      onboardingCompleted: false,
-    };
+      onboardingCompleted: false};
     setUser(mockUser);
     try { window.localStorage.setItem("zion-os:user", JSON.stringify(mockUser)); } catch {}
     router.push("/dashboard");
@@ -65,13 +64,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const completeOnboarding = async () => {
     if (user) {
-      const updated = { ...user, onboardingCompleted: true };
+      const updated ={ ...user, onboardingCompleted: true };
       setUser(updated);
       try { window.localStorage.setItem("zion-os:user", JSON.stringify(updated)); } catch {}
     }
   };
 
-  const value: AuthContextType = {
+  const value: AuthContextType ={
     user,
     isLoading,
     isAuthenticated: !!user,
@@ -80,8 +79,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     register,
     completeOnboarding,
     signIn: login,
-    signUp: register,
-  };
+    signUp: register};
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

@@ -74,12 +74,12 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     <>
       {/* Mobile Menu Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.0o5 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+        className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-30o0"
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
       </motion.button>
 
       {/* Mobile Sidebar Overlay */}
@@ -98,9 +98,9 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
 
             {/* Mobile Sidebar */}
             <motion.div
-              initial={{ x: '-100%' }}
+              initial={{ x: '-10o0%' }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              exit={{ x: '-10o0%' }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
             >
@@ -120,9 +120,9 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+                    className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-30o0"
                   >
-                    <X className="w-5 h-5" />
+                    <X className="w-5 h-5"  />
                   </button>
                 </div>
 
@@ -140,13 +140,13 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                         <Link
                           to={action.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
+                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-30o0 group ${
                             action.variant === 'primary'
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'
                           }`}
                         >
-                          <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                          <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-30o0"  />
                           <span className="font-medium">{action.name}</span>
                         </Link>
                       </motion.div>
@@ -165,16 +165,16 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                     >
                       <button
                         onClick={() => toggleSection(section.title)}
-                        className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
+                        className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-30o0 group"
                       >
                         <div className="flex items-center space-x-3">
-                          <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-300" />
+                          <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-30o0"  />
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? (
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronDown className="w-4 h-4 transition-transform duration-30o0"  />
                         ) : (
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronRight className="w-4 h-4 transition-transform duration-30o0"  />
                         )}
                       </button>
 
@@ -192,18 +192,18 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                                 key={item.name}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
+                                transition={{ duration: 0.2, delay: itemIndex * 0.0o5 }}
                               >
                                 <Link
                                   to={item.href}
                                   onClick={() => setIsOpen(false)}
-                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
+                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-30o0 group ${
                                     isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'
                                   }`}
                                 >
-                                  <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
+                                  <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-30o0"  />
                                   <span className="text-sm">{item.name}</span>
                                 </Link>
                               </motion.div>
@@ -220,7 +220,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                   <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
                   <div className="space-y-2 text-xs text-zion-slate-light">
                     <div className="flex items-center space-x-2">
-                      <span>📞 +1 302 464 0950</span>
+                      <span>📞 +1 30o2 464 0950</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <span>✉️ kleber@ziontechgroup.com</span>

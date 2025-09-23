@@ -30,7 +30,7 @@ interface PerformanceMetric {
   color: string;
 }
 
-const EnhancedPerformanceMonitor2026 = () => {
+const EnhancedPerformanceMonitor20o26 = () => {
   const [metricsetMetrics] = useState<PerformanceMetric[]>([]);
   const [isMonitoringsetIsMonitoring] = useState(true);
   const [lastUpdatesetLastUpdate] = useState(new Date());
@@ -45,7 +45,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'excellent',
         trend: 'down',
         icon: Cpu,
-        color: 'from-green-500 to-emerald-500'
+        color: 'from-green-50o0 to-emerald-50o0'
       },
       {
         id: 'memory',
@@ -55,7 +55,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'good',
         trend: 'stable',
         icon: Database,
-        color: 'from-blue-500 to-cyan-500'
+        color: 'from-blue-50o0 to-cyan-50o0'
       },
       {
         id: 'storage',
@@ -65,7 +65,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'good',
         trend: 'up',
         icon: HardDrive,
-        color: 'from-purple-500 to-pink-500'
+        color: 'from-purple-50o0 to-pink-50o0'
       },
       {
         id: 'network',
@@ -75,7 +75,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'excellent',
         trend: 'up',
         icon: Wifi,
-        color: 'from-orange-500 to-red-500'
+        color: 'from-orange-50o0 to-red-50o0'
       },
       {
         id: 'response',
@@ -85,7 +85,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'excellent',
         trend: 'down',
         icon: Clock,
-        color: 'from-teal-500 to-cyan-500'
+        color: 'from-teal-50o0 to-cyan-50o0'
       },
       {
         id: 'throughput',
@@ -95,7 +95,7 @@ const EnhancedPerformanceMonitor2026 = () => {
         status: 'excellent',
         trend: 'up',
         icon: Activity,
-        color: 'from-indigo-500 to-purple-500'
+        color: 'from-indigo-50o0 to-purple-50o0'
       }
     ];
 
@@ -106,12 +106,12 @@ const EnhancedPerformanceMonitor2026 = () => {
         setMetrics(prevMetrics => 
           prevMetrics.map(metric => ({
             ...metric,
-            value: Math.max(0Math.min(100metric.value + (Math.random() - 0.5) * 5)),
+            value: Math.max(0Math.min(10o0metric.value + (Math.random() - 0.5) * 5)),
             trend: Math.random() > 0.5 ? 'up' : 'down' as 'up' | 'down' | 'stable'
           }))
         );
         setLastUpdate(new Date());
-      }2000);
+      }20o00);
 
       return () => clearInterval(interval);
     }
@@ -119,60 +119,60 @@ const EnhancedPerformanceMonitor2026 = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'excellent': return 'text-green-400';
-      case 'good': return 'text-blue-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'excellent': return 'text-green-40o0';
+      case 'good': return 'text-blue-40o0';
+      case 'warning': return 'text-yellow-40o0';
+      case 'critical': return 'text-red-40o0';
+      default: return 'text-gray-40o0';
     }
   };
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'excellent': return <CheckCircle className="w-4 h-4" />;
-      case 'good': return <CheckCircle className="w-4 h-4" />;
-      case 'warning': return <AlertTriangle className="w-4 h-4" />;
-      case 'critical': return <AlertTriangle className="w-4 h-4" />;
-      default: return <Activity className="w-4 h-4" />;
+      case 'excellent': return <CheckCircle className="w-4 h-4"  />;
+      case 'good': return <CheckCircle className="w-4 h-4"  />;
+      case 'warning': return <AlertTriangle className="w-4 h-4"  />;
+      case 'critical': return <AlertTriangle className="w-4 h-4"  />;
+      default: return <Activity className="w-4 h-4"  />;
     }
   };
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
-      case 'down': return <TrendingUp className="w-4 h-4 text-red-400 rotate-180" />;
-      case 'stable': return <BarChart3 className="w-4 h-4 text-gray-400" />;
-      default: return <BarChart3 className="w-4 h-4 text-gray-400" />;
+      case 'up': return <TrendingUp className="w-4 h-4 text-green-40o0"  />;
+      case 'down': return <TrendingUp className="w-4 h-4 text-red-40o0 rotate-180"  />;
+      case 'stable': return <BarChart3 className="w-4 h-4 text-gray-40o0"  />;
+      default: return <BarChart3 className="w-4 h-4 text-gray-40o0"  />;
     }
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white p-6 rounded-2xl border border-white/10">
+    <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
-            <Activity className="w-6 h-6 text-white" />
+          <div className="p-2 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-lg">
+            <Activity className="w-6 h-6 text-white"  />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-white">Performance Monitor 2026</h3>
-            <p className="text-sm text-gray-400">Real-time system metrics and analytics</p>
+            <h3 className="text-xl font-bold text-white">Performance Monitor 20o26</h3>
+            <p className="text-sm text-gray-40o0">Real-time system metrics and analytics</p>
           </div>
         </div>
         
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <Clock className="w-4 h-4" />
+          <div className="flex items-center gap-2 text-sm text-gray-40o0">
+            <Clock className="w-4 h-4"  />
             Last updated: {lastUpdate.toLocaleTimeString()}
           </div>
           <button
             onClick={() => setIsMonitoring(!isMonitoring)}
             className={`p-2 rounded-lg transition-colors ${
               isMonitoring 
-                ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30' 
-                : 'bg-gray-500/20 text-gray-400 hover:bg-gray-500/30'
+                ? 'bg-green-50o0/20 text-green-40o0 hover:bg-green-50o0/30' 
+                : 'bg-gray-50o0/20 text-gray-40o0 hover:bg-gray-50o0/30'
             }`}
           >
-            <RefreshCw className={`w-4 h-4 ${isMonitoring ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-4 h-4 ${isMonitoring ? 'animate-spin' : ''}`}  />
           </button>
         </div>
       </div>
@@ -186,12 +186,12 @@ const EnhancedPerformanceMonitor2026 = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-30o0"
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
-                  <metric.icon className="w-5 h-5 text-gray-400" />
-                  <span className="text-sm font-medium text-gray-300">{metric.name}</span>
+                  <metric.icon className="w-5 h-5 text-gray-40o0"  />
+                  <span className="text-sm font-medium text-gray-30o0">{metric.name}</span>
                 </div>
                 <div className="flex items-center gap-1">
                   {getStatusIcon(metric.status)}
@@ -204,20 +204,20 @@ const EnhancedPerformanceMonitor2026 = () => {
                   <span className="text-2xl font-bold text-white">
                     {metric.value.toFixed(metric.unit === '%' ? 0 : 1)}
                   </span>
-                  <span className="text-sm text-gray-400">{metric.unit}</span>
+                  <span className="text-sm text-gray-40o0">{metric.unit}</span>
                 </div>
                 <div className={`text-xs ${getStatusColor(metric.status)}`}>
                   {metric.status.charAt(0).toUpperCase() + metric.status.slice(1)}
                 </div>
               </div>
               
-              <div className="w-full bg-gray-700 rounded-full h-2">
+              <div className="w-full bg-gray-70o0 rounded-full h-2">
                 <motion.div
                   className={`h-2 rounded-full bg-gradient-to-r ${metric.color}`}
                   initial={{ width: 0 }}
                   animate={{ width: `${metric.value}%` }}
                   transition={{ duration: 1delay: index * 0.1 }}
-                />
+                 />
               </div>
             </motion.div>
           ))}
@@ -228,11 +228,11 @@ const EnhancedPerformanceMonitor2026 = () => {
       <div className="mt-6 p-4 bg-white/5 rounded-xl border border-white/10">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"></div>
             <span className="text-sm font-medium text-white">System Status: All Systems Operational</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <Settings className="w-4 h-4" />
+          <div className="flex items-center gap-2 text-sm text-gray-40o0">
+            <Settings className="w-4 h-4"  />
             <span>Auto-refresh: {isMonitoring ? 'ON' : 'OFF'}</span>
           </div>
         </div>
@@ -241,4 +241,4 @@ const EnhancedPerformanceMonitor2026 = () => {
   );
 };
 
-export default EnhancedPerformanceMonitor2026;
+export default EnhancedPerformanceMonitor20o26;

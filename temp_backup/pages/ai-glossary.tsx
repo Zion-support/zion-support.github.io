@@ -6,7 +6,7 @@ export default function AIGlossaryPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const glossaryData = {
+  const glossaryData ={
     'AI Fundamentals': [
       {
         term: 'Artificial Intelligence (AI)',
@@ -157,23 +157,23 @@ export default function AIGlossaryPage() {
     <>
       <Head>
         <title>AI & Automation Glossary | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive glossary of AI, machine learning, automation, and technology terms. Understand key concepts and definitions in the world of artificial intelligence." />
-        <meta property="og:title" content="AI & Automation Glossary - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive glossary of AI and automation terms and definitions." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Comprehensive glossary of AI, machine learning, automation, and technology terms. Understand key concepts and definitions in the world of artificial intelligence."  />
+        <meta property="og:title" content="AI & Automation Glossary - Zion Tech Group"  />
+        <meta property="og:description" content="Comprehensive glossary of AI and automation terms and definitions."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-7xl mx-auto">
             <nav className="mb-8">
-              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/" className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
                 ← Back to Home
               </Link>
             </nav>
             
             <header className="text-center mb-16">
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 bg-clip-text text-transparent">
                 AI & Automation Glossary
               </h1>
               <p className="text-xl text-white/80 max-w-4xl mx-auto">
@@ -191,14 +191,14 @@ export default function AIGlossaryPage() {
                     placeholder="Search terms and definitions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 transition-colors"
+                    className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0/50 transition-colors"
                   />
                 </div>
                 <div className="md:w-64">
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/50 transition-colors"
+                    className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-cyan-40o0/50 transition-colors"
                   >
                     <option value="all">All Categories</option>
                     {Object.keys(glossaryData).map(category => (
@@ -222,10 +222,10 @@ export default function AIGlossaryPage() {
             <div className="space-y-6">
               {filteredTerms.map((term, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">{term.term}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-cyan-40o0">{term.term}</h3>
                   <p className="text-white/80 mb-4 text-lg leading-relaxed">{term.definition}</p>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <h4 className="text-sm font-semibold text-cyan-300 mb-2">Examples:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-30o0 mb-2">Examples:</h4>
                     <p className="text-white/70 text-sm">{term.examples}</p>
                   </div>
                 </div>
@@ -245,7 +245,7 @@ export default function AIGlossaryPage() {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  className="px-6 py-3 bg-cyan-400 text-white rounded-lg hover:bg-cyan-500 transition-colors"
+                  className="px-6 py-3 bg-cyan-40o0 text-white rounded-lg hover:bg-cyan-50o0 transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -257,8 +257,8 @@ export default function AIGlossaryPage() {
               <h2 className="text-3xl font-bold mb-12 text-center text-white">Browse by Category</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {Object.entries(glossaryData).map(([category, terms]) => (
-                  <div key={category} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                    <h3 className="text-xl font-bold mb-4 text-cyan-400">{category}</h3>
+                  <div key={category} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0">
+                    <h3 className="text-xl font-bold mb-4 text-cyan-40o0">{category}</h3>
                     <p className="text-white/70 mb-4">
                       {terms.length} term{terms.length !== 1 ? 's' : ''} in this category
                     </p>
@@ -267,7 +267,7 @@ export default function AIGlossaryPage() {
                         <li key={index}>• {term.term}</li>
                       ))}
                       {terms.length > 3 && (
-                        <li className="text-cyan-400">... and {terms.length - 3} more</li>
+                        <li className="text-cyan-40o0">... and {terms.length - 3} more</li>
                       )}
                     </ul>
                     <button
@@ -275,7 +275,7 @@ export default function AIGlossaryPage() {
                         setSelectedCategory(category);
                         setSearchTerm('');
                       }}
-                      className="mt-4 px-4 py-2 bg-cyan-400/20 text-cyan-400 rounded-lg hover:bg-cyan-400/30 transition-colors text-sm"
+                      className="mt-4 px-4 py-2 bg-cyan-40o0/20 text-cyan-40o0 rounded-lg hover:bg-cyan-40o0/30 transition-colors text-sm"
                     >
                       View All Terms
                     </button>
@@ -286,7 +286,7 @@ export default function AIGlossaryPage() {
 
             {/* Call to Action */}
             <section className="mt-20 text-center">
-              <div className="bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 rounded-2xl p-12 border border-cyan-400/30">
+              <div className="bg-gradient-to-r from-cyan-40o0/20 to-fuchsia-40o0/20 rounded-2xl p-12 border border-cyan-40o0/30">
                 <h2 className="text-3xl font-bold mb-6 text-white">Ready to Learn More?</h2>
                 <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
                   Explore our comprehensive resources to deepen your understanding of AI and automation, 
@@ -295,13 +295,13 @@ export default function AIGlossaryPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     href="/ai-insights" 
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-40o0 to-fuchsia-40o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-50o0 hover:to-fuchsia-50o0 transition-all duration-30o0"
                   >
                     Explore AI Insights
                   </Link>
                   <Link 
                     href="/contact" 
-                    className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    className="border border-cyan-40o0 text-cyan-40o0 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-40o0 hover:text-white transition-all duration-30o0"
                   >
                     Contact Our Experts
                   </Link>

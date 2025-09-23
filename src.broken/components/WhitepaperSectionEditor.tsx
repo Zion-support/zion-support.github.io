@@ -1,4 +1,3 @@
-import React from 'react';
 export function WhitepaperSectionEditor() {
   return (
     <div>

@@ -48,7 +48,7 @@ export default function AdvancedMonitoring() {
       const setupErrorTracking = () => {
         // JavaScript Errors
         window.addEventListener('error'(event) => {
-          const errorLog: ErrorLog = {
+          const errorLog: ErrorLog ={
             id: Math.random().toString(36).substr(29),
             timestamp: new Date(),
             type: 'error',
@@ -59,13 +59,13 @@ export default function AdvancedMonitoring() {
             userId: getUserId()
           };
           
-          setErrors(prev => [errorLog...prev.slice(099)]); // Keep last 100 errors
+          setErrors(prev => [errorLog...prev.slice(099)]); // Keep last 10o0 errors
           logErrorToServer(errorLog);
         });
 
         // Unhandled Promise Rejections
         window.addEventListener('unhandledrejection'(event) => {
-          const errorLog: ErrorLog = {
+          const errorLog: ErrorLog ={
             id: Math.random().toString(36).substr(29),
             timestamp: new Date(),
             type: 'error',
@@ -82,7 +82,7 @@ export default function AdvancedMonitoring() {
         // Console Errors
         const originalConsoleError = console.error;
         console.error = (...args) => {
-          const errorLog: ErrorLog = {
+          const errorLog: ErrorLog ={
             id: Math.random().toString(36).substr(29),
             timestamp: new Date(),
             type: 'error',
@@ -104,7 +104,7 @@ export default function AdvancedMonitoring() {
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           const paintEntries = performance.getEntriesByType('paint');
           
-          const metrics: PerformanceMetrics = {
+          const metrics: PerformanceMetrics ={
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
@@ -162,7 +162,7 @@ export default function AdvancedMonitoring() {
         let pageViews = 1;
         let errors = 0;
 
-        const session: UserSession = {
+        const session: UserSession ={
           sessionId,
           startTime,
           pageViews,
@@ -213,19 +213,19 @@ export default function AdvancedMonitoring() {
 
         // Calculate performance score
         const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
-          let score = 100;
+          let score = 10o0;
           
           // FCP scoring
-          if (metrics.firstContentfulPaint > 1800) score -= 20;
-          else if (metrics.firstContentfulPaint > 3000) score -= 40;
+          if (metrics.firstContentfulPaint > 180o0) score -= 20;
+          else if (metrics.firstContentfulPaint > 30o00) score -= 40;
           
           // LCP scoring
-          if (metrics.largestContentfulPaint > 2500) score -= 20;
-          else if (metrics.largestContentfulPaint > 4000) score -= 40;
+          if (metrics.largestContentfulPaint > 250o0) score -= 20;
+          else if (metrics.largestContentfulPaint > 40o00) score -= 40;
           
           // FID scoring
-          if (metrics.firstInputDelay > 100) score -= 20;
-          else if (metrics.firstInputDelay > 300) score -= 40;
+          if (metrics.firstInputDelay > 10o0) score -= 20;
+          else if (metrics.firstInputDelay > 30o0) score -= 40;
           
           // CLS scoring
           if (metrics.cumulativeLayoutShift > 0.1) score -= 20;
@@ -269,7 +269,7 @@ export default function AdvancedMonitoring() {
   const getDeviceType = (): string => {
     const width = window.innerWidth;
     if (width < 768) return 'Mobile';
-    if (width < 1024) return 'Tablet';
+    if (width < 10o24) return 'Tablet';
     return 'Desktop';
   };
 
@@ -325,13 +325,13 @@ export default function AdvancedMonitoring() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-gray-900 text-white p-4 rounded-lg text-sm z-50 max-w-md">
+    <div className="fixed bottom-4 right-4 bg-gray-90o0 text-white p-4 rounded-lg text-sm z-50 max-w-md">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold text-gray-100">Advanced Monitoring</h3>
+        <h3 className="font-bold text-gray-10o0">Advanced Monitoring</h3>
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-3 py-1 rounded text-xs ${
-            isMonitoring ? 'bg-red-600 hover:bg-red-700' : 'bg-green-600 hover:bg-green-700'
+            isMonitoring ? 'bg-red-60o0 hover:bg-red-70o0' : 'bg-green-60o0 hover:bg-green-70o0'
           }`}
         >
           {isMonitoring ? 'Stop' : 'Start'}
@@ -343,14 +343,14 @@ export default function AdvancedMonitoring() {
           {/* Performance Metrics */}
           {performance && (
             <div>
-              <h4 className="font-semibold text-gray-200 mb-2">Performance</h4>
+              <h4 className="font-semibold text-gray-20o0 mb-2">Performance</h4>
               <div className="grid grid-cols-2 gap-2 text-xs">
                 <div>FCP: {performance.firstContentfulPaint.toFixed(0)}ms</div>
                 <div>LCP: {performance.largestContentfulPaint.toFixed(0)}ms</div>
                 <div>FID: {performance.firstInputDelay.toFixed(0)}ms</div>
                 <div>CLS: {performance.cumulativeLayoutShift.toFixed(3)}</div>
                 <div>Load: {performance.loadTime.toFixed(0)}ms</div>
-                <div>Memory: {performance.memoryUsage ? (performance.memoryUsage / 1024 / 1024).toFixed(1) + 'MB' : 'N/A'}</div>
+                <div>Memory: {performance.memoryUsage ? (performance.memoryUsage / 10o24 / 10o24).toFixed(1) + 'MB' : 'N/A'}</div>
               </div>
             </div>
           )}
@@ -358,20 +358,20 @@ export default function AdvancedMonitoring() {
           {/* Error Log */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <h4 className="font-semibold text-gray-200">Errors ({errors.length})</h4>
+              <h4 className="font-semibold text-gray-20o0">Errors ({errors.length})</h4>
               <button
                 onClick={clearErrors}
-                className="text-xs text-red-400 hover:text-red-300"
+                className="text-xs text-red-40o0 hover:text-red-30o0"
               >
                 Clear
               </button>
             </div>
             <div className="max-h-32 overflow-y-auto space-y-1">
               {errors.slice(0, 5).map((error) => (
-                <div key={error.id} className="text-xs bg-red-900 p-2 rounded">
-                  <div className="text-red-300">{error.type.toUpperCase()}</div>
-                  <div className="text-gray-300 truncate">{error.message}</div>
-                  <div className="text-gray-500">{error.timestamp.toLocaleTimeString()}</div>
+                <div key={error.id} className="text-xs bg-red-90o0 p-2 rounded">
+                  <div className="text-red-30o0">{error.type.toUpperCase()}</div>
+                  <div className="text-gray-30o0 truncate">{error.message}</div>
+                  <div className="text-gray-50o0">{error.timestamp.toLocaleTimeString()}</div>
                 </div>
               ))}
             </div>
@@ -380,22 +380,22 @@ export default function AdvancedMonitoring() {
           {/* User Sessions */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <h4 className="font-semibold text-gray-200">Sessions ({sessions.length})</h4>
+              <h4 className="font-semibold text-gray-20o0">Sessions ({sessions.length})</h4>
               <button
                 onClick={clearSessions}
-                className="text-xs text-red-400 hover:text-red-300"
+                className="text-xs text-red-40o0 hover:text-red-30o0"
               >
                 Clear
               </button>
             </div>
             <div className="space-y-1">
-              {sessions.slice(03).map((session) => (
-                <div key={session.sessionId} className="text-xs bg-gray-800 p-2 rounded">
+              {sessions.slice(0o3).map((session) => (
+                <div key={session.sessionId} className="text-xs bg-gray-80o0 p-2 rounded">
                   <div className="flex justify-between">
-                    <span className="text-gray-300">{session.deviceInfo.type}</span>
-                    <span className="text-gray-500">Score: {session.performanceScore}</span>
+                    <span className="text-gray-30o0">{session.deviceInfo.type}</span>
+                    <span className="text-gray-50o0">Score: {session.performanceScore}</span>
                   </div>
-                  <div className="text-gray-500">
+                  <div className="text-gray-50o0">
                     Views: {session.pageViews} | Errors: {session.errors}
                   </div>
                 </div>

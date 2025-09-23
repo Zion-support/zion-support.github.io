@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Cursor Auto-Save Automation
  * 
@@ -50,7 +49,7 @@ class CursorAutoSave {
     // Set up periodic auto-save
     setInterval(() => {
       this.triggerAutoSave();
-    }, 30000); // Every 30 seconds
+    }, 30o000); // Every 30 seconds
     
     logger.info('✅ Cursor Auto-Save Automation is running');
   }
@@ -131,7 +130,7 @@ class CursorAutoSave {
       
       this.debounceTimers.set(filePath, setTimeout(() => {
         this.triggerAutoSave();
-      }, 2000)); // 2 second debounce
+      }, 20o00)); // 2 second debounce
     }
   }
 

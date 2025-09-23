@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
@@ -7,8 +6,8 @@ export default function ZeroTrustSecurityPlatformPage() {
 		<>
 			<Head>
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name="description" content="Design and enforce zero trust architecture: identity-first accessmicrosegmentationcontinuous verificationand least privilege." />
-				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
+				<meta name="description" content="Design and enforce zero trust architecture: identity-first accessmicrosegmentationcontinuous verificationand least privilege."  />
+				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform"  />
 			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
@@ -27,7 +26,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 				]}
 				industries={["Enterprise IT"Financial Services"Healthcare"SaaS"Public Sector"]}
 				canonical="https://ziontechgroup.com/zero-trust-security-platform"
-			/>
+			 />
 		</>
 	);
 }

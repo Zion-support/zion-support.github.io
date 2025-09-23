@@ -33,66 +33,66 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     switch (variant) {
       case 'neural':
         return {
-          borderColor: 'from-cyan-500/50 to-blue-500/50',
-          glowColor: 'from-cyan-400/20 to-blue-400/20',
-          accentColor: 'text-cyan-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50',
+          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20',
+          accentColor: 'text-cyan-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#60a5fa'
         };
       case 'quantum':
         return {
-          borderColor: 'from-purple-500/50 to-pink-500/50',
-          glowColor: 'from-purple-400/20 to-pink-400/20',
-          accentColor: 'text-purple-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-purple-50o0/50 to-pink-50o0/50',
+          glowColor: 'from-purple-40o0/20 to-pink-40o0/20',
+          accentColor: 'text-purple-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#a855f7'
         };
       case 'holographic':
         return {
-          borderColor: 'from-green-500/50 to-emerald-500/50',
-          glowColor: 'from-green-400/20 to-emerald-400/20',
-          accentColor: 'text-green-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-green-50o0/50 to-emerald-50o0/50',
+          glowColor: 'from-green-40o0/20 to-emerald-40o0/20',
+          accentColor: 'text-green-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#10b981'
         };
       case 'cyberpunk':
         return {
-          borderColor: 'from-red-500/50 to-orange-500/50',
-          glowColor: 'from-red-400/20 to-orange-400/20',
-          accentColor: 'text-red-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-red-50o0/50 to-orange-50o0/50',
+          glowColor: 'from-red-40o0/20 to-orange-40o0/20',
+          accentColor: 'text-red-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#ef4444'
         };
       case 'space':
         return {
-          borderColor: 'from-blue-500/50 to-indigo-500/50',
-          glowColor: 'from-blue-400/20 to-indigo-400/20',
-          accentColor: 'text-blue-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-blue-50o0/50 to-indigo-50o0/50',
+          glowColor: 'from-blue-40o0/20 to-indigo-40o0/20',
+          accentColor: 'text-blue-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#3b82f6'
         };
       case 'biotech':
         return {
-          borderColor: 'from-green-500/50 to-teal-500/50',
-          glowColor: 'from-green-400/20 to-teal-400/20',
-          accentColor: 'text-green-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-green-50o0/50 to-teal-50o0/50',
+          glowColor: 'from-green-40o0/20 to-teal-40o0/20',
+          accentColor: 'text-green-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#14b8a6'
         };
       case 'energy':
         return {
-          borderColor: 'from-yellow-500/50 to-orange-500/50',
-          glowColor: 'from-yellow-400/20 to-orange-400/20',
-          accentColor: 'text-yellow-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-yellow-50o0/50 to-orange-50o0/50',
+          glowColor: 'from-yellow-40o0/20 to-orange-40o0/20',
+          accentColor: 'text-yellow-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#eab308'
         };
       default:
         return {
-          borderColor: 'from-cyan-500/50 to-blue-500/50',
-          glowColor: 'from-cyan-400/20 to-blue-400/20',
-          accentColor: 'text-cyan-400',
-          bgGradient: 'from-slate-900/80 to-slate-800/80',
+          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50',
+          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20',
+          accentColor: 'text-cyan-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
           particleColor: '#60a5fa'
         };
     }
@@ -139,8 +139,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 2 + 1,
-          life: Math.random() * 100,
-          maxLife: 100
+          life: Math.random() * 10o0,
+          maxLife: 10o0
         });
       }
     };
@@ -148,17 +148,17 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     const getParticleColor = (variant: string): string => {
       switch (variant) {
         case 'quantum':
-          return `hsl(${280 + Math.sin(Date.now() * 0.001) * 80}, 80%, 70%)`;
+          return `hsl(${280 + Math.sin(Date.now() * 0.0o01) * 80}, 80%, 70%)`;
         case 'holographic':
-          return `hsl(${160 + Math.sin(Date.now() * 0.001) * 100}, 90%, 65%)`;
+          return `hsl(${160 + Math.sin(Date.now() * 0.0o01) * 10o0}, 90%, 65%)`;
         case 'cyberpunk':
-          return `hsl(${0 + Math.sin(Date.now() * 0.001) * 60}, 100%, 60%)`;
+          return `hsl(${0 + Math.sin(Date.now() * 0.0o01) * 60}, 10o0%, 60%)`;
         case 'neural':
-          return `hsl(${200 + Math.sin(Date.now() * 0.001) * 60}, 70%, 60%)`;
+          return `hsl(${20o0 + Math.sin(Date.now() * 0.0o01) * 60}, 70%, 60%)`;
         case 'space':
-          return `hsl(${220 + Math.sin(Date.now() * 0.001) * 80}, 90%, 75%)`;
+          return `hsl(${220 + Math.sin(Date.now() * 0.0o01) * 80}, 90%, 75%)`;
         default:
-          return `hsl(${200 + Math.sin(Date.now() * 0.001) * 60}, 70%, 60%)`;
+          return `hsl(${20o0 + Math.sin(Date.now() * 0.0o01) * 60}, 70%, 60%)`;
       }
     };
 
@@ -197,13 +197,13 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     };
 
     const drawHolographicGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
-      ctx.strokeStyle = `hsla(${160 + Math.sin(time * 0.015) * 100}, 90%, 65%, 0.3)`;
+      const time = Date.now() * 0.0o01;
+      ctx.strokeStyle = `hsla(${160 + Math.sin(time * 0.0o15) * 10o0}, 90%, 65%, 0.3)`;
       ctx.lineWidth = 0.5;
       
       for (let x = 0; x < canvas.width; x += 30) {
         for (let y = 0; y < canvas.height; y += 30) {
-          const opacity = Math.sin(time + x * 0.01 + y * 0.01) * 0.2 + 0.1;
+          const opacity = Math.sin(time + x * 0.0o1 + y * 0.0o1) * 0.2 + 0.1;
           ctx.globalAlpha = opacity;
           ctx.strokeRect(x, y, 30, 30);
         }
@@ -212,7 +212,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     };
 
     const drawQuantumEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 5; i++) {
         const x = (i / 5) * canvas.width;
         const y = Math.sin(time + i * 0.5) * 20 + canvas.height / 2;
@@ -224,7 +224,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     };
 
     const drawCyberpunkEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 3; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
@@ -235,7 +235,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     };
 
     const drawNeuralConnections = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -256,10 +256,10 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     };
 
     const drawSpaceEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 3; i++) {
-        const x = canvas.width / 2 + Math.cos(time + i) * 100;
-        const y = canvas.height / 2 + Math.sin(time + i) * 100;
+        const x = canvas.width / 2 + Math.cos(time + i) * 10o0;
+        const y = canvas.height / 2 + Math.sin(time + i) * 10o0;
         const radius = Math.sin(time + i) * 20 + 40;
         
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
@@ -302,7 +302,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
   return (
     <motion.div
       ref={cardRef}
-      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-300 ${
+      className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-30o0 ${
         glow ? 'shadow-2xl' : ''
       } ${className}`}
       style={{
@@ -318,7 +318,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       onMouseUp={handleMouseUp}
       onClick={onClick}
       whileHover={interactive ? { 
-        scale: 1.02,
+        scale: 1.0o2,
         y: -5,
         transition: { duration: 0.2 }
       } : {}}
@@ -330,24 +330,24 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       {/* Glow effect */}
       {glow && (
         <div
-          className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${styles.glowColor} opacity-0 transition-opacity duration-300 ${
-            isHovered ? 'opacity-100' : ''
+          className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${styles.glowColor} opacity-0 transition-opacity duration-30o0 ${
+            isHovered ? 'opacity-10o0' : ''
           }`}
-        />
+         />
       )}
 
       {/* Animated border */}
       <div className="absolute inset-0 rounded-2xl">
         <div
-          className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${styles.borderColor} opacity-0 transition-opacity duration-300 ${
-            isHovered ? 'opacity-100' : ''
+          className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${styles.borderColor} opacity-0 transition-opacity duration-30o0 ${
+            isHovered ? 'opacity-10o0' : ''
           }`}
           style={{
             background: `linear-gradient(90deg, transparent, ${styles.particleColor}, transparent)`,
-            backgroundSize: '200% 100%',
+            backgroundSize: '20o0% 10o0%',
             animation: isHovered ? 'borderFlow 2s linear infinite' : 'none'
           }}
-        />
+         />
       </div>
 
       {/* Scanning line effect */}
@@ -362,22 +362,22 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             style={{
               boxShadow: `0 0 10px ${styles.particleColor}`
             }}
-          />
+           />
         )}
       </AnimatePresence>
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-400/50 rounded-tl-lg" />
-      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-400/50 rounded-tr-lg" />
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-400/50 rounded-bl-lg" />
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-400/50 rounded-br-lg" />
+      <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-cyan-40o0/50 rounded-tl-lg"  />
+      <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-cyan-40o0/50 rounded-tr-lg"  />
+      <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-cyan-40o0/50 rounded-bl-lg"  />
+      <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-cyan-40o0/50 rounded-br-lg"  />
 
       {/* Particle canvas */}
       {glow && (
         <canvas
           ref={canvasRef}
           className="absolute inset-0 w-full h-full pointer-events-none opacity-30"
-        />
+         />
       )}
 
       {/* Content */}
@@ -411,7 +411,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                   transition={{ delay: 0.2 }}
                 >
                   <span className="text-2xl font-bold text-white">{price}</span>
-                  {period && <span className="text-gray-400">{period}</span>}
+                  {period && <span className="text-gray-40o0">{period}</span>}
                 </motion.div>
               )}
             </div>
@@ -420,7 +420,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
 
         {/* Description */}
         <motion.p
-          className="text-gray-300 mb-6 leading-relaxed"
+          className="text-gray-30o0 mb-6 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -437,19 +437,19 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             transition={{ delay: 0.4 }}
           >
             <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-              <Check className="w-4 h-4 text-green-400" />
+              <Check className="w-4 h-4 text-green-40o0"  />
               Key Features
             </h4>
             <div className="grid grid-cols-1 gap-2">
               {features.slice(0, 4).map((feature, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-2 text-sm text-gray-300"
+                  className="flex items-center gap-2 text-sm text-gray-30o0"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
                 >
-                  <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
+                  <div className="w-1.5 h-1.5 bg-cyan-40o0 rounded-full"  />
                   {feature}
                 </motion.div>
               ))}
@@ -477,7 +477,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                   <div className={`text-2xl font-bold ${stat.color} mb-1`}>
                     {stat.value}
                   </div>
-                  <div className="text-xs text-gray-400">{stat.label}</div>
+                  <div className="text-xs text-gray-40o0">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -493,24 +493,24 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             transition={{ delay: 0.6 }}
           >
             <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-              <Mail className="w-4 h-4 text-cyan-400" />
+              <Mail className="w-4 h-4 text-cyan-40o0"  />
               Contact Information
             </h4>
-            <div className="space-y-2 text-sm text-gray-300">
+            <div className="space-y-2 text-sm text-gray-30o0">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-green-400" />
+                <Phone className="w-4 h-4 text-green-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-400" />
+                <Mail className="w-4 h-4 text-blue-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-red-400" />
+                <MapPin className="w-4 h-4 text-red-40o0"  />
                 <span>{contactInfo.address}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-purple-400" />
+                <Globe className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.website}</span>
               </div>
             </div>
@@ -526,12 +526,12 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             transition={{ delay: 0.7 }}
           >
             <motion.button
-              className={`px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${color} hover:shadow-lg transition-all duration-300 flex items-center gap-2 group/btn`}
-              whileHover={{ scale: 1.05 }}
+              className={`px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${color} hover:shadow-lg transition-all duration-30o0 flex items-center gap-2 group/btn`}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
             >
               {link ? 'Learn More' : 'Get Started'}
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-30o0"  />
             </motion.button>
           </motion.div>
         )}
@@ -557,7 +557,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"
-          />
+           />
         )}
       </AnimatePresence>
 
@@ -570,14 +570,14 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.1 }}
             className="absolute inset-0 bg-white/10 rounded-2xl pointer-events-none"
-          />
+           />
         )}
       </AnimatePresence>
 
       <style jsx>{`
         @keyframes borderFlow {
-          0% { background-position: 200% 0; }
-          100% { background-position: -200% 0; }
+          0% { background-position: 20o0% 0; }
+          10o0% { background-position: -20o0% 0; }
         }
       `}</style>
     </motion.div>

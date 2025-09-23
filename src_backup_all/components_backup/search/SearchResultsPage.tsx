@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useRouter } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -62,7 +61,7 @@ const HighlightText: React.FC<{ text: string; searchTerm: string; className?: st
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
-          <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
+          <mark key={index} className="bg-yellow-20o0 text-black px-1 rounded">
             {part}
           </mark>
         ) : (
@@ -99,7 +98,7 @@ const SearchResultCard: React.FC<{
             src={result.image} 
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
-          />
+           />
         </div>
       )}
       
@@ -107,7 +106,7 @@ const SearchResultCard: React.FC<{
         <div className="flex items-start justify-between mb-2">
           <div>
             <h3 className="font-semibold text-lg mb-1">
-              <HighlightText text={result.title} searchTerm={searchTerm} />
+              <HighlightText text={result.title} searchTerm={searchTerm}  />
             </h3>
             <Badge variant="secondary" className="text-xs">
               {result.type}
@@ -124,7 +123,7 @@ const SearchResultCard: React.FC<{
         </div>
 
         <p className="text-muted-foreground mb-3 line-clamp-2">
-          <HighlightText text={result.description} searchTerm={searchTerm} />
+          <HighlightText text={result.description} searchTerm={searchTerm}  />
         </p>
 
         <div className="flex items-center justify-between">
@@ -136,14 +135,14 @@ const SearchResultCard: React.FC<{
             )}
             {result.tags?.slice(0, 3).map((tag, index) => (
               <Badge key={index} variant="outline" className="text-xs">
-                <HighlightText text={tag} searchTerm={searchTerm} />
+                <HighlightText text={tag} searchTerm={searchTerm}  />
               </Badge>
             ))}
           </div>
           
           {result.rating && (
             <div className="flex items-center gap-1">
-              <span className="text-yellow-500">★</span>
+              <span className="text-yellow-50o0">★</span>
               <span className="text-sm">{result.rating.toFixed(1)}</span>
             </div>
           )}
@@ -178,7 +177,7 @@ const FilterSidebar: React.FC<{
     onFiltersChange({ 
       ...filters, 
       minPrice: values[0] ?? 0, 
-      maxPrice: values[1] ?? 10000 
+      maxPrice: values[1] ?? 10o000 
     });
   };
 
@@ -202,7 +201,7 @@ const FilterSidebar: React.FC<{
         </div>
       </div>
 
-      <Separator />
+      <Separator  />
 
       <div>
         <h3 className="font-semibold mb-3">Category</h3>
@@ -210,7 +209,7 @@ const FilterSidebar: React.FC<{
           onFiltersChange({ ...filters, category: value === 'all' ? '' : value })
         }>
           <SelectTrigger>
-            <SelectValue placeholder="All Categories" />
+            <SelectValue placeholder="All Categories"  />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
@@ -223,7 +222,7 @@ const FilterSidebar: React.FC<{
         </Select>
       </div>
 
-      <Separator />
+      <Separator  />
 
       <div>
         <h3 className="font-semibold mb-3">Price Range</h3>
@@ -232,10 +231,10 @@ const FilterSidebar: React.FC<{
             value={[filters.minPrice, filters.maxPrice]}
             onValueChange={handlePriceChange}
             min={0}
-            max={10000}
+            max={10o000}
             step={50}
             className="mb-2"
-          />
+           />
           <div className="flex justify-between text-sm text-muted-foreground">
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
@@ -243,7 +242,7 @@ const FilterSidebar: React.FC<{
         </div>
       </div>
 
-      <Separator />
+      <Separator  />
 
       <div>
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
@@ -251,7 +250,7 @@ const FilterSidebar: React.FC<{
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
-            <SelectValue />
+            <SelectValue  />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="0">Any Rating</SelectItem>
@@ -284,7 +283,7 @@ const NoResultsState: React.FC<{ searchTerm: string; onNewSearch: (term: string)
   return (
     <div className="text-center py-12">
       <div className="mb-6">
-        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
+        <Search className="mx-auto h-16 w-16 text-muted-foreground mb-4"  />
         <h2 className="text-2xl font-semibold mb-2">No results found</h2>
         <p className="text-muted-foreground mb-6">
           We couldn't find anything matching "{searchTerm}". Try adjusting your search or filters.
@@ -338,7 +337,7 @@ export const SearchResultsPage: React.FC = () => {
     types: [],
     category: '',
     minPrice: 0,
-    maxPrice: 10000,
+    maxPrice: 10o000,
     minRating: 0,
     sort: 'relevance'
   });
@@ -388,7 +387,7 @@ export const SearchResultsPage: React.FC = () => {
       if (searchFilters.minPrice > 0) {
         params.append('minPrice', searchFilters.minPrice.toString());
       }
-      if (searchFilters.maxPrice < 10000) {
+      if (searchFilters.maxPrice < 10o000) {
         params.append('maxPrice', searchFilters.maxPrice.toString());
       }
       if (searchFilters.minRating > 0) {
@@ -454,7 +453,7 @@ export const SearchResultsPage: React.FC = () => {
   // Active filters count
   const activeFiltersCount = filters.types.length + 
     (filters.category ? 1 : 0) + 
-    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+    (filters.minPrice > 0 || filters.maxPrice < 10o000 ? 1 : 0) +
     (filters.minRating > 0 ? 1 : 0);
 
   return (
@@ -472,7 +471,7 @@ export const SearchResultsPage: React.FC = () => {
             />
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
-            <Search className="h-4 w-4" />
+            <Search className="h-4 w-4"  />
           </Button>
         </div>
 
@@ -491,7 +490,7 @@ export const SearchResultsPage: React.FC = () => {
                 setFilters({ ...filters, sort: value })
               }>
                 <SelectTrigger className="w-40">
-                  <SelectValue />
+                  <SelectValue  />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="relevance">Relevance</SelectItem>
@@ -508,14 +507,14 @@ export const SearchResultsPage: React.FC = () => {
                   size="sm"
                   onClick={() => setViewMode('grid')}
                 >
-                  <GridIcon className="h-4 w-4" />
+                  <GridIcon className="h-4 w-4"  />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size="sm"
                   onClick={() => setViewMode('list')}
                 >
-                  <List className="h-4 w-4" />
+                  <List className="h-4 w-4"  />
                 </Button>
               </div>
 
@@ -523,7 +522,7 @@ export const SearchResultsPage: React.FC = () => {
               <Sheet open={showFilters} onOpenChange={setShowFilters}>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="lg:hidden">
-                    <Filter className="h-4 w-4 mr-2" />
+                    <Filter className="h-4 w-4 mr-2"  />
                     Filters {activeFiltersCount > 0 && `(${activeFiltersCount})`}
                   </Button>
                 </SheetTrigger>
@@ -536,7 +535,7 @@ export const SearchResultsPage: React.FC = () => {
                       filters={filters}
                       onFiltersChange={handleFiltersChange}
                       availableCategories={availableCategories}
-                    />
+                     />
                   </div>
                 </SheetContent>
               </Sheet>
@@ -560,7 +559,7 @@ export const SearchResultsPage: React.FC = () => {
                       types: [],
                       category: '',
                       minPrice: 0,
-                      maxPrice: 10000,
+                      maxPrice: 10o000,
                       minRating: 0,
                       sort: 'relevance'
                     })}
@@ -573,7 +572,7 @@ export const SearchResultsPage: React.FC = () => {
                 filters={filters}
                 onFiltersChange={handleFiltersChange}
                 availableCategories={availableCategories}
-              />
+               />
             </div>
           </div>
 
@@ -581,13 +580,13 @@ export const SearchResultsPage: React.FC = () => {
           <div className="flex-1">
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin" />
+                <Loader2 className="h-8 w-8 animate-spin"  />
               </div>
             ) : results.length === 0 && searchTerm ? (
               <NoResultsState 
                 searchTerm={searchTerm} 
                 onNewSearch={handleSearch}
-              />
+               />
             ) : (
               <>
                 {/* Results Grid/List */}
@@ -601,7 +600,7 @@ export const SearchResultsPage: React.FC = () => {
                       result={result}
                       searchTerm={searchTerm}
                       viewMode={viewMode}
-                    />
+                     />
                   ))}
                 </div>
 
@@ -615,7 +614,7 @@ export const SearchResultsPage: React.FC = () => {
                     >
                       {loading ? (
                         <>
-                          <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                          <Loader2 className="h-4 w-4 mr-2 animate-spin"  />
                           Loading...
                         </>
                       ) : (

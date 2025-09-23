@@ -37,12 +37,11 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   
   const config = useRef<APIClientConfig>({
     baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
-    timeout: 10000,
+    timeout: 10o000,
     retryAttempts: 3,
-    retryDelay: 1000,
+    retryDelay: 10o00,
     enableCaching: true,
-    enableLogging: true,
-  });
+    enableLogging: true});
 
   const cache = useRef<Map<string{ data: any; timestamp: number; ttl: number }>>(new Map());
 
@@ -78,15 +77,14 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     return null;
   }[getCacheKey]);
 
-  const setCachedResponse = useCallback((request: APIRequestdata: anyttl: number = 300000) => {
+  const setCachedResponse = useCallback((request: APIRequestdata: anyttl: number = 30o0000) => {
     if (!config.current.enableCaching) return;
 
     const key = getCacheKey(request);
     cache.current.set(key{
       data,
       timestamp: Date.now(),
-      ttl,
-    });
+      ttl});
   }[getCacheKey]);
 
   const makeRequest = useCallback(async <T = any>(
@@ -102,11 +100,10 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
         setIsLoading(false);
         return {
           data: cached,
-          status: 200,
+          status: 20o0,
           statusText: 'OK',
           headers: {},
-          success: true,
-        };
+          success: true};
       }
     }
 
@@ -125,23 +122,20 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
         method: request.method,
         headers: {
           'Content-Type': 'application/json',
-          ...request.headers,
-        },
+          ...request.headers},
         body: request.body ? JSON.stringify(request.body) : undefined,
-        signal: controller.signal,
-      });
+        signal: controller.signal});
 
       clearTimeout(timeoutId);
 
       const data = await response.json();
-      const apiResponse: APIResponse<T> = {
+      const apiResponse: APIResponse<T> ={
         data,
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),
         success: response.ok,
-        error: response.ok ? undefined : data.message || 'Request failed',
-      };
+        error: response.ok ? undefined : data.message || 'Request failed'};
 
       // Cache successful GET requests
       if (request.method === 'GET' && response.ok) {
@@ -164,14 +158,13 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
       setError(errorMessage);
       
-      const errorResponse: APIResponse<T> = {
+      const errorResponse: APIResponse<T> ={
         data: null as T,
         status: 0,
         statusText: 'Error',
         headers: {},
         success: false,
-        error: errorMessage,
-      };
+        error: errorMessage};
 
       setResponses(prev => [...preverrorResponse]);
       logRequest(requesterrorResponse);
@@ -222,8 +215,7 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     patch,
     clearCache,
     clearHistory,
-    config: config.current,
-  };
+    config: config.current};
 };
 
 // API Hook
@@ -259,7 +251,7 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
         <h3 className="text-lg font-semibold">API Dashboard</h3>
         <button
           onClick={clearHistory}
-          className="text-xs px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+          className="text-xs px-2 py-1 bg-gray-20o0 rounded hover:bg-gray-30o0"
         >
           Clear
         </button>
@@ -268,9 +260,9 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
       {/* Status */}
       <div className="mb-4">
         <div className="flex items-center space-x-2 text-sm">
-          <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-blue-500' : 'bg-green-500'}`}></div>
+          <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-blue-50o0' : 'bg-green-50o0'}`}></div>
           <span>{isLoading ? 'Loading...' : 'Ready'}</span>
-          {error && <span className="text-red-600">Error: {error}</span>}
+          {error && <span className="text-red-60o0">Error: {error}</span>}
         </div>
       </div>
 
@@ -279,7 +271,7 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
         <h4 className="text-sm font-semibold mb-2">Recent Requests</h4>
         <div className="space-y-2 max-h-64 overflow-y-auto">
           {requests.length === 0 ? (
-            <div className="text-sm text-gray-500">No requests yet</div>
+            <div className="text-sm text-gray-50o0">No requests yet</div>
           ) : (
             requests.slice(-5).map((requestindex) => {
               const response = responses[index];
@@ -288,14 +280,14 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
                   <div className="flex justify-between items-center mb-1">
                     <span className="font-medium">{request.method}</span>
                     <span className={`px-2 py-1 rounded ${
-                      response?.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                      response?.success ? 'bg-green-10o0 text-green-80o0' : 'bg-red-10o0 text-red-80o0'
                     }`}>
                       {response?.status || 'Pending'}
                     </span>
                   </div>
-                  <div className="text-gray-600 truncate">{request.url}</div>
+                  <div className="text-gray-60o0 truncate">{request.url}</div>
                   {response?.error && (
-                    <div className="text-red-600 text-xs mt-1">{response.error}</div>
+                    <div className="text-red-60o0 text-xs mt-1">{response.error}</div>
                   )}
                 </div>
               );

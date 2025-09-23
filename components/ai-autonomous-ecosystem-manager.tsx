@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIAutonomousEcosystemManager() {
@@ -21,6 +20,6 @@ export default function AIAutonomousEcosystemManager() {
 			]}
 			industries={["Platform Teams"R&D"Operations"Security"]}
 			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
+		 />
 	);
 }

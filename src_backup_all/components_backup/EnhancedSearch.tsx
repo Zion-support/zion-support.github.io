@@ -134,7 +134,7 @@ export function EnhancedSearch({
     setIsLoading(true);
     
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 50o0));
     
     // Filter results based on query
     const filteredResults = mockSearchResults.filter(result =>
@@ -178,29 +178,29 @@ export function EnhancedSearch({
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         >
-          <Search className="w-5 h-5" />
+          <Search className="w-5 h-5"  />
         </motion.div>
       );
     }
-    return <Search className="w-5 h-5" />;
+    return <Search className="w-5 h-5"  />;
   };
 
   const getVariantClasses = () => {
     switch (variant) {
       case 'futuristic':
-        return 'bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:border-cyan-400/50 focus-within:border-cyan-400 focus-within:ring-2 focus-within:ring-cyan-400/20';
+        return 'bg-white/10 backdrop-blur-sm border border-cyan-40o0/30 hover:border-cyan-40o0/50 focus-within:border-cyan-40o0 focus-within:ring-2 focus-within:ring-cyan-40o0/20';
       case 'minimal':
-        return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+        return 'bg-gray-10o0 border border-gray-20o0 hover:border-gray-30o0 focus-within:border-blue-50o0 focus-within:ring-2 focus-within:ring-blue-50o0/20';
       default:
-        return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
+        return 'bg-white border border-gray-30o0 hover:border-gray-40o0 focus-within:border-blue-50o0 focus-within:ring-2 focus-within:ring-blue-50o0/20';
     }
   };
 
   return (
     <div ref={searchRef} className={`relative ${className}`}>
       {/* Search Input */}
-      <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>
-        <div className="pl-4 pr-3 text-gray-400">
+      <div className={`relative flex items-center rounded-xl transition-all duration-30o0 ${getVariantClasses()}`}>
+        <div className="pl-4 pr-3 text-gray-40o0">
           {getSearchIcon()}
         </div>
         
@@ -212,7 +212,7 @@ export function EnhancedSearch({
           onFocus={() => setIsOpen(true)}
           onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
           placeholder={placeholder}
-          className="flex-1 px-3 py-3 bg-transparent outline-none text-gray-900 placeholder-gray-500"
+          className="flex-1 px-3 py-3 bg-transparent outline-none text-gray-90o0 placeholder-gray-50o0"
         />
         
         {query && (
@@ -220,18 +220,18 @@ export function EnhancedSearch({
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             onClick={clearSearch}
-            className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+            className="p-2 text-gray-40o0 hover:text-gray-60o0 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4"  />
           </motion.button>
         )}
         
         <button
           onClick={handleSearch}
-          className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
-          whileHover={{ scale: 1.02 }}
+          className="px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-r-xl hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-30o0 font-medium"
+          whileHover={{ scale: 1.0o2 }}
           whileTap={{ scale: 0.98 }}
         >
           Search
@@ -246,13 +246,13 @@ export function EnhancedSearch({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50"
+            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-80o0 rounded-xl shadow-2xl border border-gray-20o0 dark:border-gray-70o0 max-h-96 overflow-y-auto z-50"
           >
             {/* Search Results */}
             {results.length > 0 && (
               <div className="p-4">
-                <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 flex items-center">
-                  <Sparkles className="w-4 h-4 mr-2" />
+                <h3 className="text-sm font-semibold text-gray-50o0 dark:text-gray-40o0 mb-3 flex items-center">
+                  <Sparkles className="w-4 h-4 mr-2"  />
                   Search Results
                 </h3>
                 <div className="space-y-2">
@@ -262,28 +262,28 @@ export function EnhancedSearch({
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
+                      className={`p-3 rounded-lg cursor-pointer transition-all duration-20o0 ${
                         selectedIndex === index
-                          ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
-                          : 'hover:bg-gray-50 dark:hover:bg-gray-700'
+                          ? 'bg-blue-50 dark:bg-blue-90o0/20 border border-blue-20o0 dark:border-blue-70o0'
+                          : 'hover:bg-gray-50 dark:hover:bg-gray-70o0'
                       }`}
                       onClick={() => handleResultClick(result)}
                     >
                       <div className="flex items-start space-x-3">
                         {result.icon && (
-                          <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
-                            <result.icon className="w-4 h-4 text-cyan-500" />
+                          <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-lg flex items-center justify-center">
+                            <result.icon className="w-4 h-4 text-cyan-50o0"  />
                           </div>
                         )}
                         <div className="flex-1 min-w-0">
-                          <h4 className="text-sm font-medium text-gray-900 dark:text-white truncate">
+                          <h4 className="text-sm font-medium text-gray-90o0 dark:text-white truncate">
                             {result.title}
                           </h4>
-                          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-2">
+                          <p className="text-xs text-gray-50o0 dark:text-gray-40o0 mt-1 line-clamp-2">
                             {result.description}
                           </p>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                        <ArrowRight className="w-4 h-4 text-gray-40o0 flex-shrink-0"  />
                       </div>
                     </motion.div>
                   ))}
@@ -293,9 +293,9 @@ export function EnhancedSearch({
 
             {/* Search Suggestions */}
             {suggestions.length > 0 && (
-              <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-                <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 flex items-center">
-                  <Brain className="w-4 h-4 mr-2" />
+              <div className="p-4 border-t border-gray-20o0 dark:border-gray-70o0">
+                <h3 className="text-sm font-semibold text-gray-50o0 dark:text-gray-40o0 mb-3 flex items-center">
+                  <Brain className="w-4 h-4 mr-2"  />
                   AI Suggestions
                 </h3>
                 <div className="space-y-2">
@@ -306,12 +306,12 @@ export function EnhancedSearch({
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: (index + results.length) * 0.1 }}
                       onClick={() => handleSuggestionClick(suggestion)}
-                      className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2"
+                      className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-70o0 transition-colors flex items-center space-x-2"
                     >
-                      {suggestion.type === 'ai' && <Sparkles className="w-3 h-3 text-cyan-500" />}
-                      {suggestion.type === 'trending' && <TrendingUp className="w-3 h-3 text-green-500" />}
-                      {suggestion.type === 'recent' && <Clock className="w-3 h-3 text-gray-500" />}
-                      <span className="text-sm text-gray-700 dark:text-gray-300">
+                      {suggestion.type === 'ai' && <Sparkles className="w-3 h-3 text-cyan-50o0"  />}
+                      {suggestion.type === 'trending' && <TrendingUp className="w-3 h-3 text-green-50o0"  />}
+                      {suggestion.type === 'recent' && <Clock className="w-3 h-3 text-gray-50o0"  />}
+                      <span className="text-sm text-gray-70o0 dark:text-gray-30o0">
                         {suggestion.text}
                       </span>
                     </motion.button>
@@ -323,11 +323,11 @@ export function EnhancedSearch({
             {/* No Results */}
             {results.length === 0 && query && !isLoading && (
               <div className="p-8 text-center">
-                <Brain className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                <Brain className="w-12 h-12 text-gray-40o0 mx-auto mb-4"  />
+                <h3 className="text-lg font-medium text-gray-90o0 dark:text-white mb-2">
                   No results found
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400">
+                <p className="text-gray-50o0 dark:text-gray-40o0">
                   Try adjusting your search terms or browse our services
                 </p>
               </div>

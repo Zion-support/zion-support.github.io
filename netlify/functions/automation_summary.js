@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN;
     const branch = process.env.GITHUB_BRANCH || 'main';
 
-    if (!token) return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
 
     const files = [
       'data/link-health.json',
@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
       'data/osv-audit.json'
     ];
 
-    const summary = { generatedAt: new Date().toISOString(), sections: {} };
+    const summary ={ generatedAt: new Date().toISOString(), sections: {} };
     for (const f of files) {
       summary.sections[f] = await readJson(repo, f, branch, token);
     }
@@ -49,8 +49,8 @@ exports.handler = async function(event, context) {
     const jsonCommit = await resCommit.json();
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

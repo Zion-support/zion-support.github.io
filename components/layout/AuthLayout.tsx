@@ -1,6 +1,4 @@
-import React from 'react';
-
-type AuthLayoutProps = {
+type AuthLayoutProps ={
   children?: React.ReactNode;
 };
 

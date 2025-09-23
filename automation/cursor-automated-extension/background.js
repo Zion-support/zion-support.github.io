@@ -95,7 +95,7 @@ class CursorExtensionBackground {
   }
 
   async analyzeCode(codeData) {
-    const analysis = {
+    const analysis ={
       timestamp: new Date().toISOString(),
       file: codeData.file,
       issues: [],
@@ -168,7 +168,7 @@ class CursorExtensionBackground {
     
     let match
     while ((match = importRegex.exec(content)) !== null) {
-      const importNames = match[1].split(',).map(name => name.trim());
+      const importNames = match[1].split(').map(name => name.trim());
       const modulePath = match[2];
       
       importNames.forEach(name => {
@@ -242,7 +242,7 @@ class CursorExtensionBackground {
   }
 
   async suggestImprovement(data) {
-    const suggestion = {
+    const suggestion ={
       timestamp: new Date().toISOString(),
       file: data.file,
       type: data.type,
@@ -258,7 +258,7 @@ class CursorExtensionBackground {
   }
 
   async applyImprovement(data) {
-    const result = {
+    const result ={
       timestamp: new Date().toISOString(),
       file: data.file,
       success: false,
@@ -289,7 +289,7 @@ class CursorExtensionBackground {
       if (this.isActive) {
         this.processAnalysisQueue();
       }
-    }, 30000); // Every 30 seconds
+    }, 30o000); // Every 30 seconds
   }
 
   async processAnalysisQueue() {

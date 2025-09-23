@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { 
@@ -7,15 +6,15 @@ import {
   Twitter, Linkedin, Github, Youtube, Facebook, Instagram
 } from 'lucide-react';
 
-const EnhancedFooter2045: React.FC = () => {
+const EnhancedFooter20o45: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const contactInfo = {
-    mobile: "+1 302 464 0950",
+  const contactInfo ={
+    mobile: "+1 30o2 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
     website: "https://ziontechgroup.com"
   };
 
@@ -65,20 +64,20 @@ const EnhancedFooter2045: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/ziontechgroup", color: "hover:text-blue-400" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com/ziontechgroup", color: "hover:text-blue-400" },
-    { name: "GitHub", icon: Github, href: "https://github.com/ziontechgroup", color: "hover:text-gray-400" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com/@ziontechgroup", color: "hover:text-red-400" },
-    { name: "Facebook", icon: Facebook, href: "https://facebook.com/ziontechgroup", color: "hover:text-blue-600" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com/ziontechgroup", color: "hover:text-pink-400" }
+    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/ziontechgroup", color: "hover:text-blue-40o0" },
+    { name: "Twitter", icon: Twitter, href: "https://twitter.com/ziontechgroup", color: "hover:text-blue-40o0" },
+    { name: "GitHub", icon: Github, href: "https://github.com/ziontechgroup", color: "hover:text-gray-40o0" },
+    { name: "YouTube", icon: Youtube, href: "https://youtube.com/@ziontechgroup", color: "hover:text-red-40o0" },
+    { name: "Facebook", icon: Facebook, href: "https://facebook.com/ziontechgroup", color: "hover:text-blue-60o0" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com/ziontechgroup", color: "hover:text-pink-40o0" }
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-t border-white/10">
+    <footer className="relative bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 border-t border-white/10">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-50o0/5 rounded-full blur-3xl animate-pulse"  />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-50o0/5 rounded-full blur-3xl animate-pulse delay-10o00"  />
       </div>
 
       <div className="relative z-10">
@@ -94,40 +93,40 @@ const EnhancedFooter2045: React.FC = () => {
                 className="mb-6"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center">
-                    <Atom className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-xl flex items-center justify-center">
+                    <Atom className="w-6 h-6 text-white"  />
                   </div>
-                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                     Zion Tech Group
                   </span>
                 </div>
                 
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                <p className="text-gray-30o0 text-sm leading-relaxed mb-6">
                   Pioneering the future of technology with revolutionary AI consciousness, 
                   quantum computing, and autonomous solutions that transform businesses worldwide.
                 </p>
 
                 {/* Contact Info */}
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                    <Phone className="w-4 h-4 text-cyan-400" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
+                  <div className="flex items-center space-x-3 text-gray-30o0 text-sm">
+                    <Phone className="w-4 h-4 text-cyan-40o0"  />
+                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-40o0 transition-colors">
                       {contactInfo.mobile}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                    <Mail className="w-4 h-4 text-cyan-400" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors">
+                  <div className="flex items-center space-x-3 text-gray-30o0 text-sm">
+                    <Mail className="w-4 h-4 text-cyan-40o0"  />
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-40o0 transition-colors">
                       {contactInfo.email}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
+                  <div className="flex items-center space-x-3 text-gray-30o0 text-sm">
+                    <MapPin className="w-4 h-4 text-cyan-40o0"  />
                     <span>{contactInfo.address}</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-300 text-sm">
-                    <Globe className="w-4 h-4 text-cyan-400" />
-                    <a href={contactInfo.website} className="hover:text-cyan-400 transition-colors">
+                  <div className="flex items-center space-x-3 text-gray-30o0 text-sm">
+                    <Globe className="w-4 h-4 text-cyan-40o0"  />
+                    <a href={contactInfo.website} className="hover:text-cyan-40o0 transition-colors">
                       {contactInfo.website}
                     </a>
                   </div>
@@ -145,8 +144,8 @@ const EnhancedFooter2045: React.FC = () => {
                 className="lg:col-span-1"
               >
                 <div className="flex items-center space-x-2 mb-6">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <category.icon className="w-4 h-4 text-white" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-lg flex items-center justify-center">
+                    <category.icon className="w-4 h-4 text-white"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{category.title}</h3>
                 </div>
@@ -156,9 +155,9 @@ const EnhancedFooter2045: React.FC = () => {
                     <li key={service.name}>
                       <Link
                         href={service.href}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center group"
+                        className="text-gray-30o0 hover:text-cyan-40o0 transition-colors text-sm flex items-center group"
                       >
-                        <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform"  />
                         {service.name}
                       </Link>
                     </li>
@@ -180,7 +179,7 @@ const EnhancedFooter2045: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                  className="text-gray-30o0 hover:text-cyan-40o0 transition-colors text-sm"
                 >
                   {link.name}
                 </Link>
@@ -204,20 +203,20 @@ const EnhancedFooter2045: React.FC = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-gray-400 hover:text-white transition-colors ${social.color}`}
+                    className={`text-gray-40o0 hover:text-white transition-colors ${social.color}`}
                     aria-label={social.name}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-5 h-5"  />
                   </a>
                 ))}
               </div>
 
               {/* Copyright */}
               <div className="text-center md:text-right">
-                <p className="text-gray-400 text-sm">
+                <p className="text-gray-40o0 text-sm">
                   © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
                 </p>
-                <p className="text-gray-500 text-xs mt-1">
+                <p className="text-gray-50o0 text-xs mt-1">
                   Revolutionary Technology Solutions for the Future
                 </p>
               </div>
@@ -233,14 +232,14 @@ const EnhancedFooter2045: React.FC = () => {
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.3 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 z-50 flex items-center justify-center"
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white rounded-full shadow-lg hover:shadow-cyan-50o0/25 transition-all duration-30o0 z-50 flex items-center justify-center"
           aria-label="Back to top"
         >
-          <ArrowUp className="w-5 h-5" />
+          <ArrowUp className="w-5 h-5"  />
         </motion.button>
       </div>
     </footer>
   );
 };
 
-export default EnhancedFooter2045;
+export default EnhancedFooter20o45;

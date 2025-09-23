@@ -1,4 +1,3 @@
-import React from 'react';
 export function UNBridge() {
   return (
     <div>

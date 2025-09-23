@@ -7,7 +7,7 @@ const PerformanceOptimizationChat: NextPage = () => {
     <div>
       <Head>
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
-        <meta name="description" content="PerformanceOptimizationChat service" />
+        <meta name="description" content="PerformanceOptimizationChat service"  />
       </Head>
       
       <main>

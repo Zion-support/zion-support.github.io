@@ -10,11 +10,6 @@ import {;
   CardHeader,;
   CardTitle;
 
-
-
-
-
-
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -31,10 +26,6 @@ import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
-
-
-
-
 export default function Partners() {;
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
@@ -42,8 +33,6 @@ export default function Partners() {;
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-
-
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -66,10 +55,8 @@ import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
-import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {;
-
 
   logInfo('PartnersPage rendering')
   const [activeTab, setActiveTab] = useState("overview")
@@ -77,7 +64,7 @@ export default function Partners() {;
   const { user, isAuthenticated } = useAuth()
   const router = useRouter()
   const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
-  useEffect((,) => {
+  useEffect(() => {
     async function checkHealth() {
       try {
         const res = await fetch('/api/auth/health');
@@ -94,8 +81,6 @@ export default function Partners() {;
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
 
   logInfo('PartnersPage rendering'),
   const [activeTab, setActiveTab] = useState("overview"),

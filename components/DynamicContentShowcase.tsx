@@ -9,75 +9,75 @@ export default function DynamicContentShowcase() {
   const showcaseItems = [
     {
       id: 1,
-      title: 'AI 2025 Ultimate Breakthrough Revolution',
-      subtitle: '10,000% ROI Guaranteed',
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
+      subtitle: '10,0o00% ROI Guaranteed',
       description: 'Revolutionary synthetic intelligence delivering unprecedented returns through quantum-enhanced automation and transcendent business transformation.',
       image: '🚀',
-      link: '/ai-2025-ultimate-breakthrough-revolution',
-      category: 'AI 2025',
-      roi: '10,000%',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'AI 20o25',
+      roi: '10,0o00%',
       badge: 'BREAKTHROUGH',
-      gradient: 'from-red-900 via-purple-900 to-pink-900'
+      gradient: 'from-red-90o0 via-purple-90o0 to-pink-90o0'
     },
     {
       id: 2,
-      title: 'Quantum Computing Solutions 2025 Ultimate',
+      title: 'Quantum Computing Solutions 20o25 Ultimate',
       subtitle: 'Infinite Computational Power',
       description: 'Revolutionary quantum computing breakthrough delivering infinite computational power and quantum supremacy for unprecedented business transformation.',
       image: '⚛️',
-      link: '/quantum-computing-solutions-2025-ultimate',
+      link: '/quantum-computing-solutions-20o25-ultimate',
       category: 'Quantum Computing',
       roi: '∞',
       badge: 'REVOLUTIONARY',
-      gradient: 'from-indigo-900 via-purple-900 to-pink-900'
+      gradient: 'from-indigo-90o0 via-purple-90o0 to-pink-90o0'
     },
     {
       id: 3,
-      title: 'Advanced Automation Solutions 2025 Ultimate',
-      subtitle: '15,000% ROI Guaranteed',
+      title: 'Advanced Automation Solutions 20o25 Ultimate',
+      subtitle: '15,0o00% ROI Guaranteed',
       description: 'Revolutionary automation breakthrough delivering unprecedented returns through intelligent process automation and autonomous decision systems.',
       image: '🤖',
-      link: '/advanced-automation-solutions-2025-ultimate',
+      link: '/advanced-automation-solutions-20o25-ultimate',
       category: 'Automation',
-      roi: '15,000%',
+      roi: '15,0o00%',
       badge: 'ULTIMATE',
-      gradient: 'from-green-900 via-blue-900 to-purple-900'
+      gradient: 'from-green-90o0 via-blue-90o0 to-purple-90o0'
     },
     {
       id: 4,
-      title: 'AI 2026 Quantum-Neural Fusion',
-      subtitle: '15,000% ROI Breakthrough',
+      title: 'AI 20o26 Quantum-Neural Fusion',
+      subtitle: '15,0o00% ROI Breakthrough',
       description: 'Revolutionary quantum-neural integration delivering unprecedented computational power and business transformation through advanced AI systems.',
       image: '🧠',
-      link: '/ai-2026-quantum-neural-fusion-breakthrough',
-      category: 'AI 2026',
-      roi: '15,000%',
+      link: '/ai-20o26-quantum-neural-fusion-breakthrough',
+      category: 'AI 20o26',
+      roi: '15,0o00%',
       badge: 'BREAKTHROUGH',
-      gradient: 'from-cyan-900 via-blue-900 to-purple-900'
+      gradient: 'from-cyan-90o0 via-blue-90o0 to-purple-90o0'
     },
     {
       id: 5,
-      title: 'AI 2027 Future Predictions Revolutionary',
-      subtitle: '8,000% ROI Future Tech',
+      title: 'AI 20o27 Future Predictions Revolutionary',
+      subtitle: '8,0o00% ROI Future Tech',
       description: 'Advanced AI predictions and neural synthesis delivering revolutionary insights and business optimization with 99.7% accuracy.',
       image: '🔮',
-      link: '/ai-2027-future-predictions-revolutionary',
-      category: 'AI 2027',
-      roi: '8,000%',
+      link: '/ai-20o27-future-predictions-revolutionary',
+      category: 'AI 20o27',
+      roi: '8,0o00%',
       badge: 'FUTURE',
-      gradient: 'from-purple-900 via-pink-900 to-red-900'
+      gradient: 'from-purple-90o0 via-pink-90o0 to-red-90o0'
     },
     {
       id: 6,
-      title: 'AI 2028 Future Predictions Breakthrough',
-      subtitle: '3,000% ROI Automotive Revolution',
-      description: 'Revolutionary AI predictions for 2028 with breakthrough automotive transformation and advanced neural interface technologies.',
+      title: 'AI 20o28 Future Predictions Breakthrough',
+      subtitle: '3,0o00% ROI Automotive Revolution',
+      description: 'Revolutionary AI predictions for 20o28 with breakthrough automotive transformation and advanced neural interface technologies.',
       image: '🚗',
-      link: '/ai-2028-future-predictions-breakthrough',
-      category: 'AI 2028',
-      roi: '3,000%',
+      link: '/ai-20o28-future-predictions-breakthrough',
+      category: 'AI 20o28',
+      roi: '3,0o00%',
       badge: 'REVOLUTIONARY',
-      gradient: 'from-blue-900 via-indigo-900 to-purple-900'
+      gradient: 'from-blue-90o0 via-indigo-90o0 to-purple-90o0'
     }
   ];
 
@@ -85,7 +85,7 @@ export default function DynamicContentShowcase() {
     if (isAutoPlaying) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % showcaseItems.length);
-      }5000);
+      }50o00);
       return () => clearInterval(interval);
     }
   }[isAutoPlayingshowcaseItems.length]);
@@ -104,24 +104,24 @@ export default function DynamicContentShowcase() {
 
   const getBadgeColor = (badge: string) => {
     switch (badge) {
-      case 'BREAKTHROUGH': return 'bg-gradient-to-r from-red-500 to-pink-500';
-      case 'REVOLUTIONARY': return 'bg-gradient-to-r from-purple-500 to-indigo-500';
-      case 'ULTIMATE': return 'bg-gradient-to-r from-green-500 to-blue-500';
-      case 'FUTURE': return 'bg-gradient-to-r from-cyan-500 to-blue-500';
-      default: return 'bg-gradient-to-r from-gray-500 to-gray-600';
+      case 'BREAKTHROUGH': return 'bg-gradient-to-r from-red-50o0 to-pink-50o0';
+      case 'REVOLUTIONARY': return 'bg-gradient-to-r from-purple-50o0 to-indigo-50o0';
+      case 'ULTIMATE': return 'bg-gradient-to-r from-green-50o0 to-blue-50o0';
+      case 'FUTURE': return 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0';
+      default: return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0';
     }
   };
 
   const currentItem = showcaseItems[currentSlide];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20 px-4">
+    <div className="bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">
             Dynamic Content Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover the most revolutionary AI breakthroughs and solutions. 
             Our dynamic showcase features the latest innovations delivering unprecedented ROI.
           </p>
@@ -150,24 +150,24 @@ export default function DynamicContentShowcase() {
                   {currentItem.title}
                 </h3>
                 
-                <div className="text-2xl md:text-3xl font-bold mb-6 text-yellow-400">
+                <div className="text-2xl md:text-3xl font-bold mb-6 text-yellow-40o0">
                   {currentItem.subtitle}
                 </div>
                 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-30o0 mb-8 leading-relaxed">
                   {currentItem.description}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     href={currentItem.link}
-                    className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
+                    className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg text-xl font-bold hover:scale-10o5 transition-transform text-center"
                   >
                     Explore Solution
                   </Link>
                   <Link 
                     href="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg text-xl font-bold hover:scale-105 transition-transform text-center"
+                    className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg text-xl font-bold hover:scale-10o5 transition-transform text-center"
                   >
                     Get Started
                   </Link>
@@ -177,11 +177,11 @@ export default function DynamicContentShowcase() {
               <div className="text-center">
                 <div className="text-9xl mb-8">{currentItem.image}</div>
                 <div className="bg-white/20 p-8 rounded-2xl">
-                  <div className="text-sm text-gray-300 mb-2">Projected ROI</div>
-                  <div className="text-5xl font-bold text-yellow-400 mb-4">
+                  <div className="text-sm text-gray-30o0 mb-2">Projected ROI</div>
+                  <div className="text-5xl font-bold text-yellow-40o0 mb-4">
                     {currentItem.roi}
                   </div>
-                  <div className="text-sm text-gray-300">
+                  <div className="text-sm text-gray-30o0">
                     Guaranteed within 12 months
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export default function DynamicContentShowcase() {
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-4 rounded-full transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"  />
             </svg>
           </button>
           <button 
@@ -203,7 +203,7 @@ export default function DynamicContentShowcase() {
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 p-4 rounded-full transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"  />
             </svg>
           </button>
 
@@ -214,11 +214,11 @@ export default function DynamicContentShowcase() {
           >
             {isAutoPlaying ? (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
               </svg>
             ) : (
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
+                <path d="M8 5v14l11-7z" />
               </svg>
             )}
           </button>
@@ -231,7 +231,7 @@ export default function DynamicContentShowcase() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
+                index === currentSlide ? 'bg-yellow-40o0' : 'bg-white/30'
               }`}
             />
           ))}
@@ -245,7 +245,7 @@ export default function DynamicContentShowcase() {
               onClick={() => goToSlide(index)}
               className={`p-4 rounded-lg text-center transition-all ${
                 index === currentSlide 
-                  ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-black' 
+                  ? 'bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black' 
                   : 'bg-white/10 hover:bg-white/20 text-white'
               }`}
             >
@@ -261,19 +261,19 @@ export default function DynamicContentShowcase() {
           <h3 className="text-3xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
           </h3>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already experiencing unprecedented ROI with our revolutionary AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link 
               href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
+              className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-black px-12 py-6 rounded-lg text-2xl font-bold hover:scale-10o5 transition-transform"
             >
               Get Started Today
             </Link>
             <Link 
               href="/case-studies" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-6 rounded-lg text-2xl font-bold hover:scale-105 transition-transform"
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-12 py-6 rounded-lg text-2xl font-bold hover:scale-10o5 transition-transform"
             >
               View Success Stories
             </Link>

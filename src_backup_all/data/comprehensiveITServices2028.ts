@@ -1,4 +1,4 @@
-export interface ComprehensiveITService2028 {
+export interface ComprehensiveITService20o28 {
   id: string;
   title: string;
   description: string;
@@ -38,11 +38,11 @@ export interface ComprehensiveITService2028 {
   customers: number;
 }
 
-export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
+export const COMPREHENSIVE_IT_SERVICES_20o28: ComprehensiveITService20o28[] = [
   // Cloud Infrastructure & DevOps
   {
-    id: "cloud-infrastructure-devops-2028",
-    title: "Cloud Infrastructure & DevOps 2028",
+    id: "cloud-infrastructure-devops-20o28",
+    title: "Cloud Infrastructure & DevOps 20o28",
     description: "Enterprise-grade cloud infrastructure with automated DevOps pipelines, infrastructure as code, and multi-cloud management for scalable, reliable, and secure applications.",
     category: "Cloud & DevOps",
     subcategory: "Infrastructure",
@@ -85,21 +85,21 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     tags: ["Cloud", "DevOps", "Infrastructure", "Automation", "Scalability"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$4,999 - $15,000/month",
-    roi: "300-500%",
+    marketPrice: "$4,999 - $15,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI"],
       integrations: ["GitHub", "GitLab", "Jira", "Confluence", "Slack", "Teams", "PagerDuty"],
-      apiEndpoints: 400,
+      apiEndpoints: 40o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Zero-trust architecture"]
+      security: ["SOC 2", "ISO 270o01", "GDPR", "HIPAA", "Zero-trust architecture"]
     },
     competitors: ["AWS Professional Services", "Azure Consulting", "Google Cloud Professional Services", "Accenture", "Deloitte"],
     marketSize: "$832.1 billion",
@@ -111,8 +111,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Data Analytics & Business Intelligence
   {
-    id: "data-analytics-business-intelligence-2028",
-    title: "Data Analytics & Business Intelligence 2028",
+    id: "data-analytics-business-intelligence-20o28",
+    title: "Data Analytics & Business Intelligence 20o28",
     description: "Comprehensive data analytics and business intelligence solutions that transform raw data into actionable insights, predictive analytics, and real-time dashboards.",
     category: "Data & Analytics",
     subcategory: "Business Intelligence",
@@ -156,18 +156,18 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$3,799 - $9,999/month",
-    roi: "400-600%",
+    roi: "40o0-60o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Python", "R", "SQL", "Apache Spark", "Hadoop", "Tableau", "Power BI", "Looker"],
       integrations: ["Salesforce", "HubSpot", "SAP", "Oracle", "Microsoft Dynamics", "Google Analytics"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
       security: ["SOC 2", "GDPR", "CCPA", "Data encryption", "Access control"]
     },
@@ -181,8 +181,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Cybersecurity & Compliance
   {
-    id: "cybersecurity-compliance-2028",
-    title: "Cybersecurity & Compliance 2028",
+    id: "cybersecurity-compliance-20o28",
+    title: "Cybersecurity & Compliance 20o28",
     description: "Comprehensive cybersecurity services including threat detection, vulnerability assessment, compliance management, and security training for enterprise protection.",
     category: "Cybersecurity",
     subcategory: "Enterprise Security",
@@ -226,20 +226,20 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,299 - $12,999/month",
-    roi: "350-500%",
+    roi: "350-50o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners", "Penetration testing tools"],
       integrations: ["Active Directory", "LDAP", "SSO", "MFA", "VPN", "Cloud security platforms"],
       apiEndpoints: 250,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
+      security: ["SOC 2", "ISO 270o01", "NIST", "GDPR", "HIPAA"]
     },
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Palo Alto Networks", "Cisco"],
     marketSize: "$182.3 billion",
@@ -251,8 +251,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Digital Transformation Consulting
   {
-    id: "digital-transformation-consulting-2028",
-    title: "Digital Transformation Consulting 2028",
+    id: "digital-transformation-consulting-20o28",
+    title: "Digital Transformation Consulting 20o28",
     description: "Strategic digital transformation consulting services that help organizations modernize their technology, processes, and culture to thrive in the digital age.",
     category: "Digital Transformation",
     subcategory: "Strategic Consulting",
@@ -295,19 +295,19 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     tags: ["Digital Transformation", "Strategic Consulting", "Process Optimization", "Change Management", "Innovation"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,999 - $20,000/month",
-    roi: "500-800%",
+    marketPrice: "$5,999 - $20,0o00/month",
+    roi: "50o0-80o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Strategic frameworks", "Change management tools", "Project management", "Analytics platforms", "Collaboration tools"],
       integrations: ["ERP systems", "CRM platforms", "HR systems", "Financial systems", "Legacy applications"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["Data protection", "Access control", "Audit trails", "Compliance monitoring"]
     },
@@ -321,8 +321,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Enterprise Software Development
   {
-    id: "enterprise-software-development-2028",
-    title: "Enterprise Software Development 2028",
+    id: "enterprise-software-development-20o28",
+    title: "Enterprise Software Development 20o28",
     description: "Custom enterprise software development services that build scalable, secure, and maintainable applications tailored to specific business needs and requirements.",
     category: "Software Development",
     subcategory: "Enterprise Applications",
@@ -365,14 +365,14 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     tags: ["Software Development", "Custom Applications", "Enterprise", "Web Development", "Mobile Apps"],
     estimatedDelivery: "12-20 weeks",
     supportLevel: "premium",
-    marketPrice: "$4,499 - $15,000/month",
-    roi: "400-600%",
+    marketPrice: "$4,499 - $15,0o00/month",
+    roi: "40o0-60o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["React", "Node.js", "Python", "Java", "C#", "PostgreSQL", "MongoDB", "Redis"],
@@ -382,7 +382,7 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
       security: ["OWASP compliance", "Data encryption", "Access control", "Audit logging", "Penetration testing"]
     },
     competitors: ["Thoughtworks", "Slalom", "West Monroe", "Point B", "Credera"],
-    marketSize: "$507.2 billion",
+    marketSize: "$50o7.2 billion",
     growthRate: "22.3% annually",
     rating: 4.9,
     reviews: 378,
@@ -391,8 +391,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // IT Infrastructure Management
   {
-    id: "it-infrastructure-management-2028",
-    title: "IT Infrastructure Management 2028",
+    id: "it-infrastructure-management-20o28",
+    title: "IT Infrastructure Management 20o28",
     description: "Comprehensive IT infrastructure management services including network administration, server management, storage solutions, and disaster recovery planning.",
     category: "IT Infrastructure",
     subcategory: "Infrastructure Management",
@@ -436,18 +436,18 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     estimatedDelivery: "4-8 weeks",
     supportLevel: "premium",
     marketPrice: "$3,299 - $8,999/month",
-    roi: "300-500%",
+    roi: "30o0-50o0%",
     innovationLevel: "Professional",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Windows Server", "Linux", "VMware", "Hyper-V", "Cisco", "Juniper", "NetApp", "EMC"],
       integrations: ["Active Directory", "LDAP", "DNS", "DHCP", "Backup systems", "Monitoring tools"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["Firewall management", "VPN access", "Intrusion detection", "Access control", "Audit logging"]
     },
@@ -461,8 +461,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Managed IT Services
   {
-    id: "managed-it-services-2028",
-    title: "Managed IT Services 2028",
+    id: "managed-it-services-20o28",
+    title: "Managed IT Services 20o28",
     description: "Comprehensive managed IT services that provide proactive monitoring, maintenance, and support for all IT systems and infrastructure on a subscription basis.",
     category: "Managed Services",
     subcategory: "IT Management",
@@ -506,13 +506,13 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     estimatedDelivery: "2-4 weeks",
     supportLevel: "premium",
     marketPrice: "$2,799 - $6,999/month",
-    roi: "250-400%",
+    roi: "250-40o0%",
     innovationLevel: "Professional",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["RMM tools", "PSA systems", "Monitoring platforms", "Backup solutions", "Security tools"],
@@ -531,8 +531,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // Cloud Migration Services
   {
-    id: "cloud-migration-services-2028",
-    title: "Cloud Migration Services 2028",
+    id: "cloud-migration-services-20o28",
+    title: "Cloud Migration Services 20o28",
     description: "Expert cloud migration services that help organizations smoothly transition from on-premises infrastructure to cloud platforms with minimal disruption.",
     category: "Cloud Services",
     subcategory: "Migration",
@@ -575,19 +575,19 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     tags: ["Cloud Migration", "Application Modernization", "Data Migration", "Strategy Planning", "Performance Optimization"],
     estimatedDelivery: "16-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,499 - $18,000/month",
-    roi: "400-700%",
+    marketPrice: "$5,499 - $18,0o00/month",
+    roi: "40o0-70o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate", "VMware", "Docker", "Kubernetes"],
       integrations: ["Cloud platforms", "Monitoring tools", "Backup solutions", "Security platforms", "Management tools"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
       security: ["Identity management", "Data encryption", "Network security", "Compliance monitoring", "Audit logging"]
     },
@@ -601,8 +601,8 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
 
   // IT Project Management
   {
-    id: "it-project-management-2028",
-    title: "IT Project Management 2028",
+    id: "it-project-management-20o28",
+    title: "IT Project Management 20o28",
     description: "Professional IT project management services that ensure successful delivery of technology projects on time, within budget, and meeting all requirements.",
     category: "Project Management",
     subcategory: "IT Projects",
@@ -645,19 +645,19 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
     tags: ["Project Management", "IT Projects", "Risk Management", "Quality Assurance", "Stakeholder Management"],
     estimatedDelivery: "Project-based",
     supportLevel: "premium",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "300-500%",
+    marketPrice: "$3,999 - $12,0o00/month",
+    roi: "30o0-50o0%",
     innovationLevel: "Professional",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 10o08 Middletown DE 19709"
     },
     technicalSpecs: {
       technology: ["Project management tools", "Collaboration platforms", "Reporting systems", "Risk management tools", "Quality assurance tools"],
       integrations: ["Project management software", "Communication tools", "Documentation systems", "Time tracking", "Resource management"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["Access control", "Data protection", "Audit trails", "Secure communication", "Document security"]
     },
@@ -670,4 +670,4 @@ export const COMPREHENSIVE_IT_SERVICES_2028: ComprehensiveITService2028[] = [
   }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2028;
+export default COMPREHENSIVE_IT_SERVICES_20o28;

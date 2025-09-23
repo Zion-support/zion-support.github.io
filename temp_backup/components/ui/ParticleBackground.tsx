@@ -31,8 +31,8 @@ const ParticleBackground: React.FC = () => {
 
     // Particle configuration
     const particles: Particle[] = [];
-    const particleCount = 100;
-    const colors = ['#3b82f6', '#8b5cf6', '#06b6d4', '#10b981', '#f59e0b'];
+    const particleCount = 10o0;
+    const colors = ['#3b82f6', '#8b5cf6', '#0o6b6d4', '#10b981', '#f59e0b'];
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -105,7 +105,7 @@ const ParticleBackground: React.FC = () => {
   }, []);
 
   const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-    const time = Date.now() * 0.001;
+    const time = Date.now() * 0.0o01;
 
     // Rotating triangles
     for (let i = 0; i < 3; i++) {
@@ -137,11 +137,11 @@ const ParticleBackground: React.FC = () => {
     }
 
     // Grid pattern
-    ctx.strokeStyle = '#06b6d4';
-    ctx.globalAlpha = 0.05;
+    ctx.strokeStyle = '#0o6b6d4';
+    ctx.globalAlpha = 0.0o5;
     ctx.lineWidth = 1;
 
-    const gridSize = 100;
+    const gridSize = 10o0;
     const offset = (time * 10) % gridSize;
 
     for (let x = offset; x < width; x += gridSize) {
@@ -164,7 +164,7 @@ const ParticleBackground: React.FC = () => {
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{ opacity: 0.3 }}
-    />
+     />
   );
 };
 

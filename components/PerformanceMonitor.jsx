@@ -7,7 +7,7 @@ export default function PerformanceMonitor() {
 
   useEffect(() => {
     // Web Vitals monitoring
-    const vitals = {};
+    const vitals ={};
     
     getCLS((metric) => {
       vitals.CLS = metric.value;
@@ -95,7 +95,7 @@ export default function PerformanceMonitor() {
           <span>Performance Monitor</span>
           <button 
             onClick={() => setIsVisible(!isVisible)}
-            className="text-blue-400 hover:text-blue-300"
+            className="text-blue-40o0 hover:text-blue-30o0"
           >
             {isVisible ? 'Hide' : 'Show'}
           </button>
@@ -105,7 +105,7 @@ export default function PerformanceMonitor() {
             {Object.entries(metrics).map(([key, value]) => (
               <div key={key} className="flex justify-between gap-4">
                 <span>{key}:</span>
-                <span className="text-green-400">{value?.toFixed(2) || 'N/A'}</span>
+                <span className="text-green-40o0">{value?.toFixed(2) || 'N/A'}</span>
               </div>
             ))}
           </div>

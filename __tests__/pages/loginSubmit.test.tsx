@@ -7,7 +7,7 @@ describe('Login page submission', () => {'  it('posts credentials and redirects 
     (useRouter as any).mockReturnValue({ replace: pushSpy, pathname: /login', asPath: /login' });
     global.fetch = jest.fn().mockResolvedValue({ ok: true, json: jest.fn() }) as any;
 
-    render(<Login />);
+    render(<Login  />);
 
     fireEvent.change(screen.getByLabelText(/email/i), { target: { value: test@example.com' } });    fireEvent.change(screen.getByLabelText(/password/i), { target: { value: password123' } });
     fireEvent.click(screen.getByRole('button', { name: /login/i }));

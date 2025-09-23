@@ -32,9 +32,9 @@ export default function BlogPage() {
       category: 'ai',
       author: 'Dr. Sarah Chen',
       authorRole: 'CTO',
-      publishDate: '2025-01-15',
+      publishDate: '20o25-0o1-15',
       readTime: '8 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: true,
       tags: ['AI', 'Autonomous Systems', 'Future of Work', 'Human-AI Collaboration']
     },
@@ -45,9 +45,9 @@ export default function BlogPage() {
       category: 'quantum',
       author: 'Dr. Elena Petrova',
       authorRole: 'Lead Quantum Researcher',
-      publishDate: '2025-01-12',
+      publishDate: '20o25-0o1-12',
       readTime: '12 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: true,
       tags: ['Quantum Computing', 'Enterprise', 'Innovation', 'Technology Trends']
     },
@@ -58,9 +58,9 @@ export default function BlogPage() {
       category: 'cybersecurity',
       author: 'Marcus Rodriguez',
       authorRole: 'Head of Cybersecurity',
-      publishDate: '2025-01-10',
+      publishDate: '20o25-0o1-10',
       readTime: '10 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['Cybersecurity', 'Quantum Threats', 'Encryption', 'Security']
     },
@@ -71,9 +71,9 @@ export default function BlogPage() {
       category: 'edge',
       author: 'Alex Thompson',
       authorRole: 'VP of Engineering',
-      publishDate: '2025-01-08',
+      publishDate: '20o25-0o1-08',
       readTime: '7 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['Edge Computing', 'Digital Transformation', 'IoT', 'Real-time Processing']
     },
@@ -84,9 +84,9 @@ export default function BlogPage() {
       category: 'space',
       author: 'Dr. James Kim',
       authorRole: 'Head of AI Research',
-      publishDate: '2025-01-05',
+      publishDate: '20o25-0o1-0o5',
       readTime: '9 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['Space Technology', 'Satellites', 'Innovation', 'Space Exploration']
     },
@@ -97,9 +97,9 @@ export default function BlogPage() {
       category: 'ai',
       author: 'Dr. Sarah Chen',
       authorRole: 'CTO',
-      publishDate: '2025-01-03',
+      publishDate: '20o25-0o1-0o3',
       readTime: '11 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['Neural Interfaces', 'BCI', 'Healthcare', 'Technology Innovation']
     },
@@ -110,9 +110,9 @@ export default function BlogPage() {
       category: 'insights',
       author: 'Kleber Oliveira',
       authorRole: 'Founder & CEO',
-      publishDate: '2024-12-30',
+      publishDate: '20o24-12-30',
       readTime: '6 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['AI Ethics', 'Responsible Innovation', 'Technology Policy', 'Future of AI']
     },
@@ -123,9 +123,9 @@ export default function BlogPage() {
       category: 'insights',
       author: 'Alex Thompson',
       authorRole: 'VP of Engineering',
-      publishDate: '2024-12-28',
+      publishDate: '20o24-12-28',
       readTime: '8 min read',
-      image: '/api/placeholder/600/400',
+      image: '/api/placeholder/60o0/40o0',
       featured: false,
       tags: ['Micro SaaS', 'Business Solutions', 'Entrepreneurship', 'Digital Business']
     }
@@ -152,17 +152,17 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white">
       <Head>
         <title>Blog - Zion Tech Group | Latest Insights on AI, Quantum Computing & Technology</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and technology innovation from Zion Tech Group experts." />
-        <meta name="keywords" content="Zion Tech Group blog, AI insights, quantum computing articles, cybersecurity trends, technology innovation, industry insights" />
-        <meta property="og:title" content="Blog - Zion Tech Group" />
-        <meta property="og:description" content="Latest insights on AI, quantum computing, and technology innovation." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+        <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and technology innovation from Zion Tech Group experts."  />
+        <meta name="keywords" content="Zion Tech Group blog, AI insights, quantum computing articles, cybersecurity trends, technology innovation, industry insights"  />
+        <meta property="og:title" content="Blog - Zion Tech Group"  />
+        <meta property="og:description" content="Latest insights on AI, quantum computing, and technology innovation."  />
+        <link rel="canonical" href="https://ziontechgroup.com/blog"  />
       </Head>
 
-      <EnhancedNavigation />
+      <EnhancedNavigation  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6">
@@ -172,7 +172,7 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-10o0 to-cyan-10o0 bg-clip-text text-transparent mb-6">
               Our Blog
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
@@ -199,16 +199,16 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300"
+                  className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-30o0"
                 >
                   {/* Featured Badge */}
                   <div className="relative">
-                    <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                        <BookOpen className="w-8 h-8 text-white" />
+                    <div className="h-48 bg-gradient-to-br from-slate-70o0 to-slate-80o0 flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-60o0 to-cyan-60o0 flex items-center justify-center">
+                        <BookOpen className="w-8 h-8 text-white"  />
                       </div>
                     </div>
-                    <div className="absolute top-4 left-4 px-3 py-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-medium rounded-full">
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white text-xs font-medium rounded-full">
                       Featured
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function BlogPage() {
                   {/* Content */}
                   <div className="p-6">
                     <div className="mb-4">
-                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-cyan-400 font-medium mb-3">
+                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-cyan-40o0 font-medium mb-3">
                         {categories.find(cat => cat.id === post.category)?.name}
                       </span>
                       <h3 className="text-xl font-bold text-white mb-3">{post.title}</h3>
@@ -227,16 +227,16 @@ export default function BlogPage() {
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center space-x-1">
-                          <User className="w-3 h-3" />
+                          <User className="w-3 h-3"  />
                           <span>{post.author}</span>
                         </span>
                         <span className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
+                          <Calendar className="w-3 h-3"  />
                           <span>{formatDate(post.publishDate)}</span>
                         </span>
                       </div>
                       <span className="flex items-center space-x-1">
-                        <Clock className="w-3 h-3" />
+                        <Clock className="w-3 h-3"  />
                         <span>{post.readTime}</span>
                       </span>
                     </div>
@@ -256,10 +256,10 @@ export default function BlogPage() {
                     {/* Read More */}
                     <a
                       href={`/blog/${post.id}`}
-                      className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      className="inline-flex items-center space-x-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0 font-medium"
                     >
                       <span>Read Article</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </a>
                   </div>
                 </motion.article>
@@ -279,13 +279,13 @@ export default function BlogPage() {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-30o0 ${
                     selectedCategory === category.id
-                      ? 'bg-blue-600 border-blue-500 text-white'
+                      ? 'bg-blue-60o0 border-blue-50o0 text-white'
                       : 'border-white/20 text-white/70 hover:border-white/40 hover:text-white'
                   }`}
                 >
-                  <category.icon className="w-4 h-4" />
+                  <category.icon className="w-4 h-4"  />
                   <span>{category.name}</span>
                 </button>
               ))}
@@ -293,13 +293,13 @@ export default function BlogPage() {
 
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/50"  />
               <input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/50 focus:outline-none focus:border-blue-50o0 transition-colors duration-30o0"
               />
             </div>
           </div>
@@ -329,19 +329,19 @@ export default function BlogPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-300"
+                  className="bg-slate-80o0/50 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition-all duration-30o0"
                 >
                   {/* Post Image */}
-                  <div className="h-48 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-                      <FileText className="w-8 h-8 text-white" />
+                  <div className="h-48 bg-gradient-to-br from-slate-70o0 to-slate-80o0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-60o0 to-cyan-60o0 flex items-center justify-center">
+                      <FileText className="w-8 h-8 text-white"  />
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
                     <div className="mb-4">
-                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-cyan-400 font-medium mb-3">
+                      <span className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-cyan-40o0 font-medium mb-3">
                         {categories.find(cat => cat.id === post.category)?.name}
                       </span>
                       <h3 className="text-lg font-bold text-white mb-3">{post.title}</h3>
@@ -352,16 +352,16 @@ export default function BlogPage() {
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <div className="flex items-center space-x-4">
                         <span className="flex items-center space-x-1">
-                          <User className="w-3 h-3" />
+                          <User className="w-3 h-3"  />
                           <span>{post.author}</span>
                         </span>
                         <span className="flex items-center space-x-1">
-                          <Calendar className="w-3 h-3" />
+                          <Calendar className="w-3 h-3"  />
                           <span>{formatDate(post.publishDate)}</span>
                         </span>
                       </div>
                       <span className="flex items-center space-x-1">
-                        <Clock className="w-3 h-3" />
+                        <Clock className="w-3 h-3"  />
                         <span>{post.readTime}</span>
                       </span>
                     </div>
@@ -381,10 +381,10 @@ export default function BlogPage() {
                     {/* Read More */}
                     <a
                       href={`/blog/${post.id}`}
-                      className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      className="inline-flex items-center space-x-2 text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0 font-medium"
                     >
                       <span>Read Article</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </a>
                   </div>
                 </motion.article>
@@ -399,7 +399,7 @@ export default function BlogPage() {
               className="text-center py-16"
             >
               <div className="w-16 h-16 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">
-                <Search className="w-8 h-8 text-white/50" />
+                <Search className="w-8 h-8 text-white/50"  />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
               <p className="text-white/70">Try adjusting your search criteria or category selection.</p>
@@ -415,7 +415,7 @@ export default function BlogPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl rounded-3xl border border-blue-500/30 p-12"
+            className="bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20 backdrop-blur-xl rounded-3xl border border-blue-50o0/30 p-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated
@@ -428,9 +428,9 @@ export default function BlogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors duration-300"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                className="flex-1 px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0 transition-colors duration-30o0"
+               />
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 hover:from-blue-70o0 hover:to-cyan-70o0 rounded-lg font-semibold text-white transition-all duration-30o0 transform hover:scale-10o5">
                 Subscribe
               </button>
             </div>
@@ -438,7 +438,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <EnhancedFooter />
+      <EnhancedFooter  />
     </div>
   );
 }

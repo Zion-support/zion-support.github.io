@@ -3,11 +3,6 @@ project_name: string, goals: string,
   tech_stack?: string[];
   talent_filters?: { verified_only?: boolean; regions?: string[] }
 
-
-
-
-
-
 export interface ProjectBrief {
 
 }

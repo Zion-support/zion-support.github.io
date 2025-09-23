@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
 import { cn } from "@/lib/utils";
-import { useRouter } from 'next/router';
 import { toast } from "sonner";
 
 interface Message {
@@ -78,12 +77,12 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             onClick={onBack}
             aria-label="Go back"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-5 w-5"  />
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
             <Avatar>
-              <AvatarImage src={contact.avatar} alt={contact.name} />
+              <AvatarImage src={contact.avatar} alt={contact.name}  />
               <AvatarFallback>{contact.name.charAt(0).toUpperCase()}</AvatarFallback>
             </Avatar>
             <div>
@@ -101,7 +100,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               onClick={startAudioCall}
               aria-label="Start audio call"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-5 w-5"  />
             </Button>
             
             <Button
@@ -110,11 +109,11 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               onClick={startVideoCall}
               aria-label="Start video call"
             >
-              <Video className="h-5 w-5" />
+              <Video className="h-5 w-5"  />
             </Button>
             
             <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
+              <MoreVertical className="h-5 w-5"  />
             </Button>
           </div>
         </div>
@@ -157,7 +156,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
-            <PaperclipIcon className="h-5 w-5" />
+            <PaperclipIcon className="h-5 w-5"  />
           </Button>
           
           <Input
@@ -175,7 +174,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             className={!newMessage.trim() ? "opacity-50" : ""}
             aria-label="Send message"
           >
-            <Send className="h-5 w-5" />
+            <Send className="h-5 w-5"  />
           </Button>
         </div>
       </div>

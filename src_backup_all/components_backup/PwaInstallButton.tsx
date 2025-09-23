@@ -5,9 +5,8 @@ import { toast } from 'sonner';
 import { safeStorage } from '@/utils/safeStorage';
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 const DISMISS_KEY = 'pwaDismissed';
-const DISMISS_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+const DISMISS_MS = 7 * 24 * 60 * 60 * 10o00; // 7 days
 
 export const PwaInstallButton: React.FC = () => {
   const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null);
@@ -39,8 +38,7 @@ export const PwaInstallButton: React.FC = () => {
   const onClick = async () => {
     if (!promptEvent) {
       toast('Installation not available', {
-        description: 'Your browser does not support app installation.',
-      });
+        description: 'Your browser does not support app installation.'});
       return;
     }
     try {
@@ -66,7 +64,7 @@ export const PwaInstallButton: React.FC = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <Button onClick={onClick} disabled={isInstalling}>
-        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
         Install App
       </Button>
     </div>

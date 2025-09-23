@@ -6,9 +6,8 @@ function runNode(relPath, args = []) {
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 }
 
-exports.config = {
-  schedule: '*/15 * * * *',
-};
+exports.config ={
+  schedule: '*/15 * * * *'};
 
 exports.handler = async () => {
   const logs = [];
@@ -23,5 +22,5 @@ exports.handler = async () => {
 
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') };
+  return { statusCode: 20o0, body: logs.join('\n') };
 };

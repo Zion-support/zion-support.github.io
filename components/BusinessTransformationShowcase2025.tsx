@@ -18,7 +18,7 @@ import {
   Globe
 } from 'lucide-react';
 
-const BusinessTransformationShowcase2025 = () => {
+const BusinessTransformationShowcase20o25 = () => {
   const [activeMetricsetActiveMetric] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -32,7 +32,7 @@ const BusinessTransformationShowcase2025 = () => {
       title: 'Revenue Growth',
       value: '+340%',
       description: 'Average revenue increase',
-      color: 'from-green-500 to-emerald-600',
+      color: 'from-green-50o0 to-emerald-60o0',
       details: [
         'AI-powered sales optimization',
         'Predictive customer analytics',
@@ -45,7 +45,7 @@ const BusinessTransformationShowcase2025 = () => {
       title: 'Customer Acquisition',
       value: '+280%',
       description: 'New customer growth',
-      color: 'from-blue-500 to-cyan-600',
+      color: 'from-blue-50o0 to-cyan-60o0',
       details: [
         'Intelligent lead scoring',
         'Automated marketing campaigns',
@@ -58,7 +58,7 @@ const BusinessTransformationShowcase2025 = () => {
       title: 'Cost Reduction',
       value: '-65%',
       description: 'Operational cost savings',
-      color: 'from-purple-500 to-pink-600',
+      color: 'from-purple-50o0 to-pink-60o0',
       details: [
         'Process automation',
         'Resource optimization',
@@ -71,7 +71,7 @@ const BusinessTransformationShowcase2025 = () => {
       title: 'Efficiency Gain',
       value: '+420%',
       description: 'Overall productivity boost',
-      color: 'from-orange-500 to-red-600',
+      color: 'from-orange-50o0 to-red-60o0',
       details: [
         'Workflow automation',
         'AI-assisted decision making',
@@ -108,7 +108,7 @@ const BusinessTransformationShowcase2025 = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -119,15 +119,15 @@ const BusinessTransformationShowcase2025 = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234F46E5" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.046-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234F46E5" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <motion.div
         className="container mx-auto px-4 py-16 relative z-10"
@@ -138,17 +138,17 @@ const BusinessTransformationShowcase2025 = () => {
         {/* Header */}
         <motion.div className="text-center mb-16" variants={itemVariants}>
           <motion.div 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6"
-            whileHover={{ scale: 1.05 }}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6"
+            whileHover={{ scale: 1.0o5 }}
           >
-            <Zap className="w-4 h-4" />
-            BUSINESS TRANSFORMATION 2025
+            <Zap className="w-4 h-4"  />
+            BUSINESS TRANSFORMATION 20o25
           </motion.div>
           
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent mb-6">
             Transform Your Business
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             Join thousands of companies achieving unprecedented growth with our 
             AI-powered business transformation solutions.
           </p>
@@ -161,7 +161,7 @@ const BusinessTransformationShowcase2025 = () => {
             return (
               <motion.div
                 key={index}
-                className={`bg-gradient-to-br ${metric.color} p-6 rounded-2xl text-white cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                className={`bg-gradient-to-br ${metric.color} p-6 rounded-2xl text-white cursor-pointer transition-all duration-30o0 hover:scale-10o5 hover:shadow-2xl ${
                   activeMetric === index ? 'ring-4 ring-white/30' : ''
                 }`}
                 onClick={() => setActiveMetric(index)}
@@ -169,8 +169,8 @@ const BusinessTransformationShowcase2025 = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <Icon className="w-8 h-8" />
-                  <Star className="w-5 h-5 text-yellow-300" />
+                  <Icon className="w-8 h-8"  />
+                  <Star className="w-5 h-5 text-yellow-30o0"  />
                 </div>
                 <div className="text-3xl font-bold mb-2">{metric.value}</div>
                 <div className="text-lg font-semibold mb-1">{metric.title}</div>
@@ -200,7 +200,7 @@ const BusinessTransformationShowcase2025 = () => {
                     <h2 className="text-4xl font-bold text-white mb-2">
                       {metrics[activeMetric].title}
                     </h2>
-                    <p className="text-xl text-gray-300">
+                    <p className="text-xl text-gray-30o0">
                       {metrics[activeMetric].description}
                     </p>
                   </div>
@@ -215,29 +215,29 @@ const BusinessTransformationShowcase2025 = () => {
                       animate={{ opacity: 1x: 0 }}
                       transition={{ delay: index * 0.1 }}
                     >
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{detail}</span>
+                      <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />
+                      <span className="text-gray-30o0">{detail}</span>
                     </motion.div>
                   ))}
                 </div>
               </div>
 
               <div className="relative">
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10">
+                <div className="bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 rounded-2xl p-8 border border-white/10">
                   <div className="text-center">
                     <div className="text-6xl font-bold text-white mb-4">
                       {metrics[activeMetric].value}
                     </div>
-                    <div className="text-xl text-gray-300 mb-6">
+                    <div className="text-xl text-gray-30o0 mb-6">
                       {metrics[activeMetric].title}
                     </div>
                     <motion.button
-                      className="group flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300 mx-auto"
-                      whileHover={{ scale: 1.05 }}
+                      className="group flex items-center gap-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-30o0 mx-auto"
+                      whileHover={{ scale: 1.0o5 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       Learn More
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
                     </motion.button>
                   </div>
                 </div>
@@ -255,7 +255,7 @@ const BusinessTransformationShowcase2025 = () => {
             {successStories.map((storyindex) => (
               <motion.div
                 key={index}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-30o0"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
@@ -263,20 +263,20 @@ const BusinessTransformationShowcase2025 = () => {
               >
                 <div className="text-4xl mb-4">{story.logo}</div>
                 <h3 className="text-xl font-bold text-white mb-2">{story.company}</h3>
-                <p className="text-blue-300 text-sm mb-4">{story.industry}</p>
+                <p className="text-blue-30o0 text-sm mb-4">{story.industry}</p>
                 
                 <div className="space-y-3">
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-1">Challenge:</h4>
-                    <p className="text-gray-300 text-sm">{story.challenge}</p>
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-1">Challenge:</h4>
+                    <p className="text-gray-30o0 text-sm">{story.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-1">Solution:</h4>
-                    <p className="text-gray-300 text-sm">{story.solution}</p>
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-1">Solution:</h4>
+                    <p className="text-gray-30o0 text-sm">{story.solution}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-400 mb-1">Results:</h4>
-                    <p className="text-green-300 text-sm font-semibold">{story.results}</p>
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-1">Results:</h4>
+                    <p className="text-green-30o0 text-sm font-semibold">{story.results}</p>
                   </div>
                 </div>
               </motion.div>
@@ -289,25 +289,25 @@ const BusinessTransformationShowcase2025 = () => {
           className="text-center"
           variants={itemVariants}
         >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-xl rounded-3xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join industry leaders who have already achieved remarkable results 
               with our AI-powered transformation solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all duration-30o0"
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Start Your Transformation
               </motion.button>
               <motion.button
-                className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
+                className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-30o0"
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
                 View Case Studies
@@ -320,4 +320,4 @@ const BusinessTransformationShowcase2025 = () => {
   );
 };
 
-export default BusinessTransformationShowcase2025;
+export default BusinessTransformationShowcase20o25;

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-export default function UltraAdvancedFuturisticBackground2036() {
+export default function UltraAdvancedFuturisticBackground20o36() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
 
@@ -52,20 +52,19 @@ export default function UltraAdvancedFuturisticBackground2036() {
         size: Math.random() * 2 + 1,
         color: colors[Math.floor(Math.random() * colors.length)],
         opacity: Math.random() * 0.5 + 0.3,
-        life: Math.random() * 100 + 50,
-        maxLife: Math.random() * 100 + 50,
-      };
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50};
     };
 
     // Initialize particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10o0; i++) {
       particles.push(createParticle());
     }
 
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -112,8 +111,8 @@ export default function UltraAdvancedFuturisticBackground2036() {
           const dy = particle1.y - particle2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 100) {
-            const alpha = Math.max(0, 1 - distance / 100) * 0.3;
+          if (distance < 10o0) {
+            const alpha = Math.max(0, 1 - distance / 10o0) * 0.3;
             ctx.globalAlpha = alpha;
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
@@ -145,19 +144,19 @@ export default function UltraAdvancedFuturisticBackground2036() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
-      />
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10o0%)' }}
+       />
 
       {/* Gradient Overlays */}
       <div className="absolute inset-0">
         {/* Radial gradients for depth */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,212,255,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(236,72,153,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,212,255,0.1),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(236,72,153,0.0o5),transparent_50%)]"  />
         
         {/* Additional depth layers */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,rgba(16,185,129,0.05),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(245,158,11,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_60%,rgba(16,185,129,0.0o5),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_10%,rgba(245,158,11,0.0o5),transparent_50%)]"  />
       </div>
 
       {/* Animated Grid Pattern */}
@@ -169,7 +168,7 @@ export default function UltraAdvancedFuturisticBackground2036() {
           `,
           backgroundSize: '50px 50px',
           animation: 'gridMove 20s linear infinite'
-        }} />
+        }}  />
       </div>
 
       {/* Floating Geometric Shapes */}
@@ -181,20 +180,18 @@ export default function UltraAdvancedFuturisticBackground2036() {
             className="absolute"
             style={{
               left: `${10 + (i * 10) % 80}%`,
-              top: `${20 + (i * 15) % 60}%`,
-            }}
+              top: `${20 + (i * 15) % 60}%`}}
             animate={{
               rotate: [0, 360],
               scale: [0.8, 1.2, 0.8],
-              opacity: [0.1, 0.3, 0.1],
-            }}
+              opacity: [0.1, 0.3, 0.1]}}
             transition={{
               duration: Math.random() * 10 + 15,
               repeat: Infinity,
               ease: "linear"
             }}
           >
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 clip-path-hexagon" />
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 clip-path-hexagon"  />
           </motion.div>
         ))}
 
@@ -205,20 +202,18 @@ export default function UltraAdvancedFuturisticBackground2036() {
             className="absolute"
             style={{
               left: `${15 + (i * 12) % 70}%`,
-              top: `${30 + (i * 20) % 50}%`,
-            }}
+              top: `${30 + (i * 20) % 50}%`}}
             animate={{
               rotate: [0, -360],
               scale: [0.6, 1.4, 0.6],
-              opacity: [0.05, 0.2, 0.05],
-            }}
+              opacity: [0.0o5, 0.2, 0.0o5]}}
             transition={{
               duration: Math.random() * 12 + 18,
               repeat: Infinity,
               ease: "linear"
             }}
           >
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 clip-path-triangle" />
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 clip-path-triangle"  />
           </motion.div>
         ))}
 
@@ -229,19 +224,17 @@ export default function UltraAdvancedFuturisticBackground2036() {
             className="absolute"
             style={{
               left: `${5 + (i * 8) % 85}%`,
-              top: `${10 + (i * 18) % 70}%`,
-            }}
+              top: `${10 + (i * 18) % 70}%`}}
             animate={{
               scale: [0.5, 1.5, 0.5],
-              opacity: [0.1, 0.4, 0.1],
-            }}
+              opacity: [0.1, 0.4, 0.1]}}
             transition={{
               duration: Math.random() * 8 + 12,
               repeat: Infinity,
               ease: "easeInOut"
             }}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full" />
+            <div className="w-8 h-8 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full"  />
           </motion.div>
         ))}
       </div>
@@ -253,45 +246,43 @@ export default function UltraAdvancedFuturisticBackground2036() {
             key={`wave-${i}`}
             className="absolute inset-0"
             style={{
-              background: `conic-gradient(from ${i * 120}deg, transparent, rgba(0,212,255,0.1), transparent)`,
-            }}
+              background: `conic-gradient(from ${i * 120}deg, transparent, rgba(0,212,255,0.1), transparent)`}}
             animate={{
-              rotate: [0, 360],
-            }}
+              rotate: [0, 360]}}
             transition={{
               duration: 30 + i * 10,
               repeat: Infinity,
               ease: "linear"
             }}
-          />
+           />
         ))}
       </div>
 
       {/* Neon Glow Effects */}
       <div className="absolute inset-0">
         {/* Corner glows */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-pink-500/10 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-emerald-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-cyan-50o0/10 to-transparent rounded-full blur-3xl"  />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-purple-50o0/10 to-transparent rounded-full blur-3xl"  />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-pink-50o0/10 to-transparent rounded-full blur-3xl"  />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-emerald-50o0/10 to-transparent rounded-full blur-3xl"  />
         
         {/* Center glow */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80o0px] h-[80o0px] bg-gradient-to-r from-cyan-50o0/5 via-purple-50o0/5 to-pink-50o0/5 rounded-full blur-3xl"  />
       </div>
 
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes gridMove {
           0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
+          10o0% { transform: translate(50px, 50px); }
         }
         
         .clip-path-hexagon {
-          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 10o0% 25%, 10o0% 75%, 50% 10o0%, 0% 75%, 0% 25%);
         }
         
         .clip-path-triangle {
-          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 10o0%, 10o0% 10o0%);
         }
       `}</style>
     </div>

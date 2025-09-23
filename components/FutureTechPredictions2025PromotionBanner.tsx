@@ -251,7 +251,7 @@ import {
   Honeybee10
 } from 'lucide-react';
 
-const FutureTechPredictions2025PromotionBanner = () => {
+const FutureTechPredictions20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentPredictionsetCurrentPrediction] = useState(0);
 
@@ -261,7 +261,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
     // Rotate predictions every 4 seconds
     const interval = setInterval(() => {
       setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }4000);
+    }40o00);
 
     return () => clearInterval(interval);
   }[]);
@@ -275,7 +275,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
     'Singularity Arrival'
   ];
 
-  const years = ['2025'2026'2027'2028'2029'2030'];
+  const years = ['20o25'20o26'20o27'20o28'20o29'20o30'];
 
   const stats = [
     { label: ''Predictions', 'value: '50+' },
@@ -285,22 +285,22 @@ const FutureTechPredictions2025PromotionBanner = () => {
   ];
 
   const technologies = [
-    { name: 'AI 'Consciousness', 'progress: 85color: 'from-purple-500 to-pink-500' },
-    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-500 to-cyan-500' },
-    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-500 to-emerald-500' },
-    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-500 to-rose-500' }
+    { name: 'AI 'Consciousness', 'progress: 85color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-50o0 to-rose-50o0' }
   ];
 
   return (
-    <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 py-16 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-50o0/10 via-purple-50o0/10 to-pink-50o0/10"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-indigo-500/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-indigo-50o0/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-10o00"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-50o0/20 rounded-full blur-xl animate-pulse delay-50o0"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -315,10 +315,10 @@ const FutureTechPredictions2025PromotionBanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 20 }}
               transition={{ duration: 0.6delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6"
+              className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 border border-indigo-50o0/30 mb-6"
             >
-              <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
-              <span className="text-indigo-300 font-medium">Future Tech Predictions 2025-2030</span>
+              <Rocket className="w-5 h-5 text-indigo-40o0 mr-2"  />
+              <span className="text-indigo-30o0 font-medium">Future Tech Predictions 20o25-20o30</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -329,7 +329,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
               className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
             >
               The Future is
-              <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-indigo-40o0 to-purple-40o0 bg-clip-text text-transparent">
                 Closer Than You Think
               </span>
             </motion.h1>
@@ -339,7 +339,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0y: isVisible ? 0 : 30 }}
               transition={{ duration: 0.8delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
+              className="text-xl text-gray-30o0 mb-8 leading-relaxed"
             >
               Explore our predictions for the next 5 years of technological advancement and prepare for the revolutionary changes that will reshape our world.
             </motion.p>
@@ -351,7 +351,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
               transition={{ duration: 0.8delay: 0.5 }}
               className="mb-8"
             >
-              <div className="flex items-center text-lg text-gray-300">
+              <div className="flex items-center text-lg text-gray-30o0">
                 <span className="mr-3">Coming in {years[currentPrediction]}:</span>
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -360,7 +360,7 @@ const FutureTechPredictions2025PromotionBanner = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="text-indigo-400 font-semibold"
+                    className="text-indigo-40o0 font-semibold"
                   >
                     {predictions[currentPrediction]}
                   </motion.span>
@@ -375,12 +375,12 @@ const FutureTechPredictions2025PromotionBanner = () => {
               transition={{ duration: 0.8delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center group">
+              <button className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-indigo-50o0/25 transition-all duration-30o0 flex items-center justify-center group">
                 Explore Predictions
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
               </button>
-              <button className="bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 border border-white/20 transition-all duration-300 flex items-center justify-center">
-                <Calendar className="w-5 h-5 mr-2" />
+              <button className="bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 border border-white/20 transition-all duration-30o0 flex items-center justify-center">
+                <Calendar className="w-5 h-5 mr-2"  />
                 View Timeline
               </button>
             </motion.div>
@@ -394,15 +394,15 @@ const FutureTechPredictions2025PromotionBanner = () => {
             className="relative"
           >
             {/* Main Visual */}
-            <div className="relative bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-3xl p-8 border border-indigo-500/30 backdrop-blur-lg">
+            <div className="relative bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20 rounded-3xl p-8 border border-indigo-50o0/30 backdrop-blur-lg">
               {/* Central Icon */}
               <div className="flex justify-center mb-8">
                 <div className="relative">
-                  <div className="w-24 h-24 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <Rocket className="w-12 h-12 text-white" />
+                  <div className="w-24 h-24 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-full flex items-center justify-center">
+                    <Rocket className="w-12 h-12 text-white"  />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <Zap className="w-4 h-4 text-white" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center">
+                    <Zap className="w-4 h-4 text-white"  />
                   </div>
                 </div>
               </div>
@@ -418,19 +418,19 @@ const FutureTechPredictions2025PromotionBanner = () => {
                     className="text-center"
                   >
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-gray-300">{stat.label}</div>
+                    <div className="text-sm text-gray-30o0">{stat.label}</div>
                   </motion.div>
                 ))}
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-indigo-400/30 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-pink-400/30 rounded-full animate-pulse delay-1000"></div>
-              <div className="absolute top-1/2 -right-6 w-6 h-6 bg-purple-400/30 rounded-full animate-pulse delay-500"></div>
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-indigo-40o0/30 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-pink-40o0/30 rounded-full animate-pulse delay-10o00"></div>
+              <div className="absolute top-1/2 -right-6 w-6 h-6 bg-purple-40o0/30 rounded-full animate-pulse delay-50o0"></div>
             </div>
 
             {/* Background Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl blur-3xl -z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-50o0/10 to-purple-50o0/10 rounded-3xl blur-3xl -z-10"></div>
           </motion.div>
         </div>
 
@@ -453,15 +453,15 @@ const FutureTechPredictions2025PromotionBanner = () => {
               >
                 <div className="flex justify-between items-center">
                   <span className="text-white font-medium">{tech.name}</span>
-                  <span className="text-gray-400">{tech.progress}%</span>
+                  <span className="text-gray-40o0">{tech.progress}%</span>
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-70o0 rounded-full h-2">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${tech.progress}%` }}
                     transition={{ duration: 1delay: 1.4 + index * 0.1 }}
                     className={`h-2 rounded-full bg-gradient-to-r ${tech.color}`}
-                  />
+                   />
                 </div>
               </motion.div>
             ))}
@@ -488,11 +488,11 @@ const FutureTechPredictions2025PromotionBanner = () => {
               transition={{ duration: 0.6delay: 1.6 + index * 0.1 }}
               className="text-center"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <item.icon className="w-6 h-6 text-indigo-400" />
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-50o0/20 to-purple-50o0/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <item.icon className="w-6 h-6 text-indigo-40o0"  />
               </div>
               <div className="text-2xl font-bold text-white mb-1">{item.value}</div>
-              <div className="text-sm text-gray-400">{item.label}</div>
+              <div className="text-sm text-gray-40o0">{item.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -501,4 +501,4 @@ const FutureTechPredictions2025PromotionBanner = () => {
   );
 };
 
-export default FutureTechPredictions2025PromotionBanner;
+export default FutureTechPredictions20o25PromotionBanner;

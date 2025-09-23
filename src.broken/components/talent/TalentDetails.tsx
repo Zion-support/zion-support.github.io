@@ -1,4 +1,3 @@
-import React from 'react';
 export function TalentDetails() {
   return (
     <div>

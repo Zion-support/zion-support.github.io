@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -42,15 +41,15 @@ const Footer = () => {
               <h3 className="text-white font-semibold mb-4 text-lg">Contact Us</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-zion-slate-light">
-                  <Mail className="w-4 h-4 text-zion-cyan"/>
+                  <Mail className="w-4 h-4 text-zion-cyan" />
                   <span className="text-sm">hello@zion.app</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-slate-light">
-                  <Phone className="w-4 h-4 text-zion-cyan"/>
+                  <Phone className="w-4 h-4 text-zion-cyan" />
                   <span className="text-sm">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center gap-3 text-zion-slate-light">
-                  <MapPin className="w-4 h-4 text-zion-cyan"/>
+                  <MapPin className="w-4 h-4 text-zion-cyan" />
                   <span className="text-sm">Global • Remote First</span>
                 </div>
               </div>
@@ -68,7 +67,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Twitter className="h-5 w-5" aria-label="Twitter"/>
+                <Twitter className="h-5 w-5" aria-label="Twitter" />
               </motion.a>
               <motion.a 
                 href="https://www.linkedin.com/company/zion-marketplace" 
@@ -80,7 +79,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Linkedin className="h-5 w-5" aria-label="LinkedIn"/>
+                <Linkedin className="h-5 w-5" aria-label="LinkedIn" />
               </motion.a>
               <motion.a 
                 href="https://www.facebook.com/zionmarketplace" 
@@ -92,7 +91,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Facebook className="h-5 w-5" aria-label="Facebook"/>
+                <Facebook className="h-5 w-5" aria-label="Facebook" />
               </motion.a>
               <motion.a 
                 href="https://instagram.com" 
@@ -104,7 +103,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Instagram className="h-5 w-5" aria-label="Instagram"/>
+                <Instagram className="h-5 w-5" aria-label="Instagram" />
               </motion.a>
               <motion.a 
                 href="https://github.com" 
@@ -116,7 +115,7 @@ const Footer = () => {
                 whileHover={{ scale: 1.1 }} 
                 whileTap={{ scale: 0.95 }}
               >
-                <Github className="h-5 w-5" aria-label="GitHub"/>
+                <Github className="h-5 w-5" aria-label="GitHub" />
               </motion.a>
             </div>
           </div>
@@ -169,7 +168,7 @@ const Footer = () => {
             <p className="text-zion-slate-light mb-4 text-sm leading-relaxed">
               Get the latest news on tech, AI, and marketplace opportunities delivered to your inbox.
             </p>
-            <FooterNewsletter />
+            <FooterNewsletter  />
           </div>
         </div>
       </div>
@@ -197,10 +196,10 @@ const Footer = () => {
             
             <motion.div 
               className="flex items-center space-x-2 text-zion-slate-light text-sm" 
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
             >
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-400 animate-pulse"/>
+              <Heart className="w-4 h-4 text-red-40o0 animate-pulse" />
               <span>for the future of technology</span>
             </motion.div>
           </div>
@@ -210,14 +209,14 @@ const Footer = () => {
       {/* Scroll to top button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40"
+        className="fixed bottom-6 left-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-30o0 z-40"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
       >
-        <ArrowUp className="w-5 h-5"/>
+        <ArrowUp className="w-5 h-5" />
       </motion.button>
     </footer>
   );

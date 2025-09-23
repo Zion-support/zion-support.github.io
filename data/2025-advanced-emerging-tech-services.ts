@@ -1,4 +1,4 @@
-export const advancedEmergingTechServices2025 = [
+export const advancedEmergingTechServices20o25 = [
   {
     id: 'space-mining-operations-platform',
     name: 'SpaceMining Operations',
@@ -22,7 +22,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Space Mining', 'Asteroid Mining', 'Lunar Resources', 'Space Operations'],
     website: 'https://ziontechgroup.com/space-mining-operations',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$3.8B',
@@ -52,7 +52,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Biological Computing', 'DNA Computing', 'Hybrid Processing'],
     website: 'https://ziontechgroup.com/quantum-bio-computing',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$2.1B',
@@ -82,7 +82,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Neural Interface', 'Cognitive Enhancement', 'Neurological Research', 'Medical Technology'],
     website: 'https://ziontechgroup.com/brain-interface-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$1.9B',
@@ -112,7 +112,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Fusion Power', 'Quantum Energy', 'Sustainable Energy', 'Energy Optimization'],
     website: 'https://ziontechgroup.com/quantum-energy-fusion',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$4.7B',
@@ -135,14 +135,14 @@ export const advancedEmergingTechServices2025 = [
     ],
     pricing: {
       starter: { price: 399, period: 'month', features: ['Up to 10 vehicles', 'Basic AI navigation', 'Standard monitoring'] },
-      professional: { price: 999, period: 'month', features: ['Up to 100 vehicles', 'Advanced AI', 'Custom algorithms', 'Priority support'] },
+      professional: { price: 999, period: 'month', features: ['Up to 10o0 vehicles', 'Advanced AI', 'Custom algorithms', 'Priority support'] },
       enterprise: { price: 2499, period: 'month', features: ['Unlimited vehicles', 'Custom AI training', 'White-label platform', 'Dedicated support team'] }
     },
     category: 'Autonomous Vehicles',
     tags: ['Autonomous Vehicles', 'AI Navigation', 'Fleet Management', 'Transportation'],
     website: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$54.2B',
@@ -172,7 +172,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Materials Science', 'AI Discovery', 'Research Platform'],
     website: 'https://ziontechgroup.com/quantum-materials-discovery',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$2.8B',
@@ -202,7 +202,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Robotics', 'Automation', 'Intelligent Systems'],
     website: 'https://ziontechgroup.com/quantum-robotics-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$3.2B',
@@ -232,7 +232,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Quantum Internet', 'Cybersecurity', 'Encryption', 'Secure Communication'],
     website: 'https://ziontechgroup.com/quantum-internet-security',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$8.9B',
@@ -255,14 +255,14 @@ export const advancedEmergingTechServices2025 = [
     ],
     pricing: {
       starter: { price: 199, period: 'month', features: ['Up to 10 routes', 'Basic optimization', 'Standard monitoring'] },
-      professional: { price: 599, period: 'month', features: ['Up to 100 routes', 'Advanced quantum features', 'Custom models', 'Priority support'] },
+      professional: { price: 599, period: 'month', features: ['Up to 10o0 routes', 'Advanced quantum features', 'Custom models', 'Priority support'] },
       enterprise: { price: 1499, period: 'month', features: ['Unlimited routes', 'Custom quantum solutions', 'White-label platform', 'Dedicated support team'] }
     },
     category: 'Quantum Logistics',
     tags: ['Quantum Computing', 'Logistics', 'Supply Chain', 'Route Optimization'],
     website: 'https://ziontechgroup.com/quantum-logistics-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$12.4B',
@@ -292,7 +292,7 @@ export const advancedEmergingTechServices2025 = [
     tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
     website: 'https://ziontechgroup.com/quantum-metaverse-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$6.8B',

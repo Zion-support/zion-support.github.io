@@ -10,8 +10,8 @@ import {
   Phone, Mail, MapPin, ExternalLink, Award,
   Target, Sparkles, Crown, Infinity, Zap as ZapIcon
 } from 'lucide-react';
-import { revolutionary2025Services } from '../data/revolutionary-2025-services';
-import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+import { revolutionary20o25Services } from '../data/revolutionary-20o25-services';
+import { nextGenInnovations20o25 } from '../data/next-gen-innovations-20o25';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 
@@ -22,8 +22,8 @@ export default function RevolutionaryServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name');
 
   const allServices = [
-    ...revolutionary2025Services,
-    ...nextGenInnovations2025
+    ...revolutionary20o25Services,
+    ...nextGenInnovations20o25
   ];
 
   // Enhanced category mapping
@@ -76,9 +76,9 @@ export default function RevolutionaryServicesShowcase() {
                              (selectedCategory === 'industry' && (service.category.includes('Manufacturing') || service.category.includes('Industry')));
 
       const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 10000) ||
-                          (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 10000 && parsePriceToNumber(service.price) <= 25000) ||
-                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 25000);
+                          (selectedPriceRange === 'low' && parsePriceToNumber(service.price) < 10o000) ||
+                          (selectedPriceRange === 'medium' && parsePriceToNumber(service.price) >= 10o000 && parsePriceToNumber(service.price) <= 250o00) ||
+                          (selectedPriceRange === 'high' && parsePriceToNumber(service.price) > 250o00);
 
       return matchesSearch && matchesCategory && matchesPrice;
     });
@@ -104,24 +104,24 @@ export default function RevolutionaryServicesShowcase() {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
-        <title>Revolutionary 2025 Services Showcase | Zion Tech Group - 1000+ Cutting-Edge Solutions</title>
-        <meta name="description" content="Discover 1000+ revolutionary AI, quantum computing, and emerging technology services for 2025. Achieve 1000% ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
-        <meta name="keywords" content="revolutionary AI services, quantum computing 2025, emerging technology, Industry 4.0, autonomous systems, bioinformatics, cybersecurity, energy optimization" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta property="og:title" content="Revolutionary 2025 Services Showcase | Zion Tech Group" />
-        <meta property="og:description" content="1000+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
-        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services-showcase" />
-        <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services-showcase" />
+        <title>Revolutionary 20o25 Services Showcase | Zion Tech Group - 10o00+ Cutting-Edge Solutions</title>
+        <meta name="description" content="Discover 10o00+ revolutionary AI, quantum computing, and emerging technology services for 20o25. Achieve 10o00% ROI with our cutting-edge solutions. Contact: +1 30o2 464 0950"  />
+        <meta name="keywords" content="revolutionary AI services, quantum computing 20o25, emerging technology, Industry 4.0, autonomous systems, bioinformatics, cybersecurity, energy optimization"  />
+        <meta name="author" content="Zion Tech Group"  />
+        <meta property="og:title" content="Revolutionary 20o25 Services Showcase | Zion Tech Group"  />
+        <meta property="og:description" content="10o00+ cutting-edge services with 10o00% ROI guarantee. Contact: +1 30o2 464 0950"  />
+        <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services-showcase"  />
+        <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services-showcase"  />
       </Head>
 
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -133,49 +133,49 @@ export default function RevolutionaryServicesShowcase() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
-              Revolutionary 2025 Services
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent mb-6">
+              Revolutionary 20o25 Services
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-6">
-              1000+ Cutting-Edge AI, Quantum & Emerging Technology Solutions
+            <p className="text-2xl md:text-3xl text-gray-30o0 mb-6">
+              10o00+ Cutting-Edge AI, Quantum & Emerging Technology Solutions
             </p>
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-4xl mx-auto">
-              Experience the future of technology with our revolutionary services that deliver 1000% ROI. 
+            <p className="text-lg md:text-xl text-gray-40o0 mb-8 max-w-4xl mx-auto">
+              Experience the future of technology with our revolutionary services that deliver 10o00% ROI. 
               From AI consciousness simulation to quantum bioinformatics, we're redefining what's possible.
             </p>
             
             {/* Contact Information */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <div className="flex items-center gap-2 text-gray-300">
-                <Phone className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center gap-2 text-gray-30o0">
+                <Phone className="w-5 h-5 text-cyan-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-300">
-                <Mail className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center gap-2 text-gray-30o0">
+                <Mail className="w-5 h-5 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
-              <div className="flex items-center gap-2 text-gray-300">
-                <MapPin className="w-5 h-5 text-pink-400" />
+              <div className="flex items-center gap-2 text-gray-30o0">
+                <MapPin className="w-5 h-5 text-pink-40o0"  />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-2xl border border-cyan-500/30">
+              <div className="bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 p-6 rounded-2xl border border-cyan-50o0/30">
                 <div className="text-4xl mb-2">🚀</div>
                 <h3 className="text-xl font-semibold text-white mb-2">First-to-Market</h3>
-                <p className="text-gray-300 text-sm">Pioneering solutions that don't exist elsewhere</p>
+                <p className="text-gray-30o0 text-sm">Pioneering solutions that don't exist elsewhere</p>
               </div>
-              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-2xl border border-purple-500/30">
+              <div className="bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 p-6 rounded-2xl border border-purple-50o0/30">
                 <div className="text-4xl mb-2">💰</div>
-                <h3 className="text-xl font-semibold text-white mb-2">1000% ROI</h3>
-                <p className="text-gray-300 text-sm">Proven returns on investment across all services</p>
+                <h3 className="text-xl font-semibold text-white mb-2">10o00% ROI</h3>
+                <p className="text-gray-30o0 text-sm">Proven returns on investment across all services</p>
               </div>
-              <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-6 rounded-2xl border border-green-500/30">
+              <div className="bg-gradient-to-r from-green-50o0/20 to-emerald-50o0/20 p-6 rounded-2xl border border-green-50o0/30">
                 <div className="text-4xl mb-2">⚡</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Quantum Speed</h3>
-                <p className="text-gray-300 text-sm">Leveraging quantum computing for unmatched performance</p>
+                <p className="text-gray-30o0 text-sm">Leveraging quantum computing for unmatched performance</p>
               </div>
             </div>
           </motion.div>
@@ -187,17 +187,17 @@ export default function RevolutionaryServicesShowcase() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700 p-6">
+            <div className="bg-gray-90o0/50 backdrop-blur-sm rounded-2xl border border-gray-70o0 p-6">
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {/* Search */}
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search revolutionary services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:border-cyan-50o0 focus:ring-1 focus:ring-cyan-50o0"
                   />
                 </div>
 
@@ -205,7 +205,7 @@ export default function RevolutionaryServicesShowcase() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus:outline-none focus:border-purple-50o0 focus:ring-1 focus:ring-purple-50o0"
                 >
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -218,7 +218,7 @@ export default function RevolutionaryServicesShowcase() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500"
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus:outline-none focus:border-pink-50o0 focus:ring-1 focus:ring-pink-50o0"
                 >
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -231,7 +231,7 @@ export default function RevolutionaryServicesShowcase() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+                  className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0 rounded-xl text-white focus:outline-none focus:border-green-50o0 focus:ring-1 focus:ring-green-50o0"
                 >
                   {sortOptions.map((option) => (
                     <option key={option.id} value={option.id}>
@@ -261,37 +261,37 @@ export default function RevolutionaryServicesShowcase() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <Card
-                      className="h-full group hover:scale-105 transition-transform duration-300 bg-gray-800/50 border border-gray-700 hover:border-cyan-500/50"
+                      className="h-full group hover:scale-10o5 transition-transform duration-30o0 bg-gray-80o0/50 border border-gray-70o0 hover:border-cyan-50o0/50"
                     >
                       <div className="p-6">
                         {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">
                           <div className="text-4xl">{service.icon}</div>
                           {service.popular && (
-                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                            <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white text-xs px-3 py-1 rounded-full font-semibold">
                               POPULAR
                             </div>
                           )}
                         </div>
 
                         {/* Service Name and Tagline */}
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors">
                           {service.name}
                         </h3>
-                        <p className="text-gray-300 text-sm mb-4">
+                        <p className="text-gray-30o0 text-sm mb-4">
                           {service.tagline}
                         </p>
 
                         {/* Price */}
                         <div className="flex items-baseline gap-2 mb-4">
-                          <span className="text-3xl font-bold text-cyan-400">
+                          <span className="text-3xl font-bold text-cyan-40o0">
                             {service.price}
                           </span>
-                          <span className="text-gray-400">{service.period}</span>
+                          <span className="text-gray-40o0">{service.period}</span>
                         </div>
 
                         {/* Description */}
-                        <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                        <p className="text-gray-30o0 text-sm mb-4 line-clamp-3">
                           {service.description}
                         </p>
 
@@ -300,8 +300,8 @@ export default function RevolutionaryServicesShowcase() {
                           <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                           <ul className="space-y-1">
                             {service.features.slice(0, 3).map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-2 text-xs text-gray-400">
-                                <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+                              <li key={idx} className="flex items-center gap-2 text-xs text-gray-40o0">
+                                <CheckCircle className="w-3 h-3 text-green-40o0 flex-shrink-0"  />
                                 {feature}
                               </li>
                             ))}
@@ -309,21 +309,21 @@ export default function RevolutionaryServicesShowcase() {
                         </div>
 
                         {/* Market Info */}
-                        <div className="bg-gray-800/30 rounded-lg p-3 mb-4">
+                        <div className="bg-gray-80o0/30 rounded-lg p-3 mb-4">
                           <div className="flex items-center justify-between text-xs">
-                            <span className="text-gray-400">Market Size:</span>
-                            <span className="text-green-400 font-semibold">{service.marketSize}</span>
+                            <span className="text-gray-40o0">Market Size:</span>
+                            <span className="text-green-40o0 font-semibold">{service.marketSize}</span>
                           </div>
                           <div className="flex items-center justify-between text-xs mt-1">
-                            <span className="text-gray-400">Growth Rate:</span>
-                            <span className="text-purple-400 font-semibold">{service.growthRate}</span>
+                            <span className="text-gray-40o0">Growth Rate:</span>
+                            <span className="text-purple-40o0 font-semibold">{service.growthRate}</span>
                           </div>
                         </div>
 
                         {/* ROI and Contact */}
                         <div className="space-y-3">
-                          <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-3 rounded-lg border border-green-500/30">
-                            <p className="text-xs text-green-400 font-semibold text-center">
+                          <div className="bg-gradient-to-r from-green-50o0/20 to-emerald-50o0/20 p-3 rounded-lg border border-green-50o0/30">
+                            <p className="text-xs text-green-40o0 font-semibold text-center">
                               {service.roi}
                             </p>
                           </div>
@@ -331,29 +331,29 @@ export default function RevolutionaryServicesShowcase() {
                           <div className="flex gap-2">
                             <a
                               href={service.link}
-                              className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2"
+                              className="flex-1 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2"
                             >
                               Learn More
-                              <ArrowRight className="w-4 h-4" />
+                              <ArrowRight className="w-4 h-4"  />
                             </a>
                             <a
                               href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                              className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center"
+                              className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center"
                             >
-                              <Mail className="w-4 h-4" />
+                              <Mail className="w-4 h-4"  />
                             </a>
                           </div>
                         </div>
 
                         {/* Contact Information */}
-                        <div className="mt-4 pt-4 border-t border-gray-700">
-                          <div className="text-xs text-gray-400 space-y-1">
+                        <div className="mt-4 pt-4 border-t border-gray-70o0">
+                          <div className="text-xs text-gray-40o0 space-y-1">
                             <div className="flex items-center gap-2">
-                              <Phone className="w-3 h-3 text-cyan-400" />
+                              <Phone className="w-3 h-3 text-cyan-40o0"  />
                               <span>{contactInfo.mobile}</span>
                             </div>
                             <div className="flex items-center gap-2">
-                              <Mail className="w-3 h-3 text-purple-400" />
+                              <Mail className="w-3 h-3 text-purple-40o0"  />
                               <span>{contactInfo.email}</span>
                             </div>
                           </div>
@@ -374,27 +374,27 @@ export default function RevolutionaryServicesShowcase() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl border border-cyan-500/30 p-8">
+            <div className="bg-gradient-to-r from-cyan-50o0/20 via-purple-50o0/20 to-pink-50o0/20 rounded-2xl border border-cyan-50o0/30 p-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Revolutionize Your Business?
               </h2>
-              <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
+              <p className="text-gray-30o0 text-lg mb-6 max-w-2xl mx-auto">
                 Join the future of technology with our revolutionary services. 
-                Get started today and achieve 1000% ROI with cutting-edge AI, quantum computing, and emerging technologies.
+                Get started today and achieve 10o00% ROI with cutting-edge AI, quantum computing, and emerging technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href={`tel:${contactInfo.mobile}`}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold py-3 px-8 rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 flex items-center justify-center gap-2"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-5 h-5"  />
                   Call {contactInfo.mobile}
                 </a>
                 <a
                   href={`mailto:${contactInfo.email}?subject=Revolutionary Services Inquiry`}
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-20o0 flex items-center justify-center gap-2"
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className="w-5 h-5"  />
                   Email Us
                 </a>
               </div>

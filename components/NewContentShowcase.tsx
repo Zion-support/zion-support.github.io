@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 
 interface ContentItem {
@@ -17,42 +16,42 @@ interface ContentItem {
 export default function NewContentShowcase() {
   const newContent: ContentItem[] = [
     {
-      title: "AI 2025 Ultimate Revolutionary Breakthrough",
-      description: "Experience the most revolutionary AI breakthrough of 2025 with unprecedented capabilities and infinite possibilities.",
-      link: "/ai-2025-ultimate-revolutionary-breakthrough",
+      title: "AI 20o25 Ultimate Revolutionary Breakthrough",
+      description: "Experience the most revolutionary AI breakthrough of 20o25 with unprecedented capabilities and infinite possibilities.",
+      link: "/ai-20o25-ultimate-revolutionary-breakthrough",
       badge: "🚀 BREAKTHROUGH",
       icon: "⚡",
-      gradient: "from-purple-600 to-blue-600",
-      roi: "10,000% ROI",
+      gradient: "from-purple-60o0 to-blue-60o0",
+      roi: "10,0o00% ROI",
       category: "Revolutionary AI"
     },
     {
-      title: "AI 2026 Ultimate Future Predictions",
-      description: "Discover the most accurate and revolutionary AI predictions for 2026based on quantum computing analysis.",
-      link: "/blog/ai-2026-ultimate-future-predictions",
+      title: "AI 20o26 Ultimate Future Predictions",
+      description: "Discover the most accurate and revolutionary AI predictions for 20o26based on quantum computing analysis.",
+      link: "/blog/ai-20o26-ultimate-future-predictions",
       badge: "🔮 PREDICTIONS",
       icon: "🔮",
-      gradient: "from-blue-600 to-purple-600",
+      gradient: "from-blue-60o0 to-purple-60o0",
       roi: "∞ ROI",
       category: "Future Technology"
     },
     {
       title: "Quantum-AI Fusion Revolution",
-      description: "Complete integration of quantum computing with AI systemsachieving 100,000x processing speed improvements.",
-      link: "/quantum-ai-fusion-2026",
+      description: "Complete integration of quantum computing with AI systemsachieving 10o0,0o00x processing speed improvements.",
+      link: "/quantum-ai-fusion-20o26",
       badge: "⚛️ REVOLUTIONARY",
       icon: "⚛️",
-      gradient: "from-indigo-600 to-cyan-600",
-      roi: "15,000% ROI",
+      gradient: "from-indigo-60o0 to-cyan-60o0",
+      roi: "15,0o00% ROI",
       category: "Quantum Computing"
     },
     {
       title: "Transcendent Intelligence Systems",
       description: "AI systems achieving consciousness-level intelligence with infinite learning capabilities and self-awareness.",
-      link: "/transcendent-intelligence-2026",
+      link: "/transcendent-intelligence-20o26",
       badge: "🧠 TRANSCENDENT",
       icon: "🧠",
-      gradient: "from-purple-600 to-pink-600",
+      gradient: "from-purple-60o0 to-pink-60o0",
       roi: "∞ ROI",
       category: "Advanced AI"
     },
@@ -62,8 +61,8 @@ export default function NewContentShowcase() {
       link: "/universal-integration-platform",
       badge: "🌌 UNIVERSAL",
       icon: "🌌",
-      gradient: "from-green-600 to-teal-600",
-      roi: "5,000% ROI",
+      gradient: "from-green-60o0 to-teal-60o0",
+      roi: "5,0o00% ROI",
       category: "Integration"
     },
     {
@@ -72,27 +71,27 @@ export default function NewContentShowcase() {
       link: "/autonomous-operations-mastery",
       badge: "🤖 AUTONOMOUS",
       icon: "🤖",
-      gradient: "from-orange-600 to-red-600",
-      roi: "8,000% ROI",
+      gradient: "from-orange-60o0 to-red-60o0",
+      roi: "8,0o00% ROI",
       category: "Automation"
     }
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">
+    <div className="py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-semibold mb-6 animate-pulse">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-sm font-semibold mb-6 animate-pulse">
             🚀 NEW REVOLUTIONARY CONTENT
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ultimate Content
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent">
               {' '}Revolution
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             Discover the most revolutionary AI content ever created. Experience breakthrough technologies
             transcendent intelligenceand infinite possibilities that will reshape the future of humanity.
           </p>
@@ -103,7 +102,7 @@ export default function NewContentShowcase() {
           {newContent.map((itemindex) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              className="group bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-70o0/50 hover:border-purple-50o0/50 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl"
             >
               {/* Badge */}
               <div className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${item.gradient} text-white text-xs font-bold mb-4`}>
@@ -111,34 +110,34 @@ export default function NewContentShowcase() {
               </div>
 
               {/* Icon */}
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-30o0">
                 {item.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-400 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-yellow-40o0 transition-colors duration-30o0">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-30o0 mb-6 leading-relaxed">
                 {item.description}
               </p>
 
               {/* ROI */}
               <div className="mb-6">
-                <div className="text-2xl font-bold text-green-400 mb-1">{item.roi}</div>
-                <div className="text-sm text-gray-400">{item.category}</div>
+                <div className="text-2xl font-bold text-green-40o0 mb-1">{item.roi}</div>
+                <div className="text-sm text-gray-40o0">{item.category}</div>
               </div>
 
               {/* CTA */}
               <Link
                 href={item.link}
-                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${item.gradient} text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 w-full justify-center`}
+                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${item.gradient} text-white font-bold rounded-lg hover:shadow-lg transition-all duration-30o0 transform hover:scale-10o5 w-full justify-center`}
               >
                 Discover Now
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                 </svg>
               </Link>
             </div>
@@ -147,27 +146,27 @@ export default function NewContentShowcase() {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
+          <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-50o0/30">
             <h3 className="text-3xl font-bold text-white mb-4">
               Ready for the Ultimate Revolution?
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
               Join thousands of forward-thinking organizations already experiencing the revolutionary 
               power of our ultimate AI solutions and breakthrough technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/revolutionary-content-showcase"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-bold rounded-lg hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Explore All Content
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                 </svg>
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-gray-90o0 transition-all duration-30o0"
               >
                 Get Started Today
               </Link>

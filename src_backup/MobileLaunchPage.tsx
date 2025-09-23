@@ -1,5 +1,4 @@
 
-import React from "react";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout";
 import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero";
@@ -18,21 +17,21 @@ const MobileLaunchPage: React.FC = () => {
         description="Download the Zion mobile app for iOS and Android. Hire AI talentfind tech jobsand manage projects on the go."
         keywords="Zion mobile appAI talent apptech job approject management appiOS appAndroid app"
         canonical="/mobile-launch"
-      />
+       />
       
-      <MobileLaunchHero />
+      <MobileLaunchHero  />
       
-      <MobileFeatureShowcase />
+      <MobileFeatureShowcase  />
       
-      <QrCodeDownload />
+      <QrCodeDownload  />
       
-      <CommunityTrust />
+      <CommunityTrust  />
       
-      <AppTestimonials />
+      <AppTestimonials  />
       
-      <MobileEmailCapture />
+      <MobileEmailCapture  />
       
-      <AppStoreBanner />
+      <AppStoreBanner  />
     </AppLayout>
   );
 };

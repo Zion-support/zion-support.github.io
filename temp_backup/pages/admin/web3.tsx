@@ -14,13 +14,12 @@ export default function AdminWeb3Page() {
     setUsers(list);
   };
 
-  const metrics = {
+  const metrics ={
     total: users.length,
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
-    disabled: users.filter(u => !u.enabled).length,
-  };
+    disabled: users.filter(u => !u.enabled).length};
 
   return (
     <>
@@ -29,11 +28,11 @@ export default function AdminWeb3Page() {
         <h1 className="text-xl font-semibold">Web3 Admin</h1>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Usage Metrics</div>
-          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+          <div className="text-sm text-gray-60o0">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
         </div>
         <div className="rounded-md border p-4">
           <div className="font-medium mb-2">Users</div>
-          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          {users.length === 0 && <div className="text-sm text-gray-50o0">No data yet</div>}
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">

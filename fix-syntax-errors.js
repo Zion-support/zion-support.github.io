@@ -12,7 +12,7 @@ function fixSyntaxErrors(content, filePath) {
   fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
   
   // Fix export statements
-  fixed = fixed.replace(/export\s*;/g, );
+  fixed = fixed.replace(/export\s*;/g);
   fixed = fixed.replace(/export\s+default\s+function\s+(\w+)/g, export default function $1');
   
   // Fix React imports specifically
@@ -85,7 +85,7 @@ console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`);
 // Run ESLint to check if issues are resolved
 console.log('🔍 Running ESLint to verify fixes...');
 try {
-  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 100', { stdio: 'inherit' });
+  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 10o0', { stdio: 'inherit' });
   console.log('✅ ESLint passed!');
 } catch (error) {
   console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');

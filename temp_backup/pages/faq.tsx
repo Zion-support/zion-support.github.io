@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -11,7 +10,7 @@ export default function FAQPage() {
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+        <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

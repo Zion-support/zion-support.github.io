@@ -22,7 +22,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-const InteractiveTechDemo2027PromotionBanner = () => {
+const InteractiveTechDemo20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
   const [currentDemosetCurrentDemo] = useState(0);
@@ -36,19 +36,19 @@ const InteractiveTechDemo2027PromotionBanner = () => {
       icon: Brain,
       title: 'AI Quantum Processing',
       description: '1.2M ops/sec',
-      color: 'from-purple-500 to-blue-500'
+      color: 'from-purple-50o0 to-blue-50o0'
     },
     {
       icon: Zap,
       title: 'Autonomous Automation',
       description: '847 tasks automated',
-      color: 'from-green-500 to-teal-500'
+      color: 'from-green-50o0 to-teal-50o0'
     },
     {
       icon: Rocket,
       title: 'Neural Interface',
       description: '12ms response time',
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-50o0 to-red-50o0'
     }
   ];
 
@@ -62,14 +62,14 @@ const InteractiveTechDemo2027PromotionBanner = () => {
   const stats = [
     { value: '99.97%'label: 'Accuracy' },
     { value: '2.3k 'hrs', 'label: 'Time Saved' },
-    { value: '0.02%'label: 'Error Rate' },
+    { value: '0.0o2%'label: 'Error Rate' },
     { value: '$1.2'M', 'label: 'Cost Saved' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDemo((prev) => (prev + 1) % demos.length);
-    }2500);
+    }250o0);
     return () => clearInterval(interval);
   }[]);
 
@@ -79,11 +79,11 @@ const InteractiveTechDemo2027PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -10o0 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -10o0 }}
           transition={{ duration: 0.6ease: "easeOut" }}
-          className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/30"
+          className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border-b border-purple-50o0/30"
         >
           {/* Animated Background */}
           <div className="absolute inset-0">
@@ -91,14 +91,14 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               className="absolute inset-0 opacity-30"
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)',
                   'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
-                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
-                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)',
                 ]
               }}
               transition={{ duration: 6repeat: Infinity }}
-            />
+             />
           </div>
 
           <div className="relative z-10 container mx-auto px-4 py-6">
@@ -106,23 +106,23 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               {/* Left Content */}
               <div className="flex-1 text-center lg:text-left">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30">
-                    <Play className="w-4 h-4 text-purple-400" />
-                    <span className="text-purple-300 text-sm font-medium">INTERACTIVE DEMO</span>
+                  <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 border border-purple-50o0/30">
+                    <Play className="w-4 h-4 text-purple-40o0"  />
+                    <span className="text-purple-30o0 text-sm font-medium">INTERACTIVE DEMO</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-400 text-xs font-medium">LIVE</span>
+                    <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"  />
+                    <span className="text-green-40o0 text-xs font-medium">LIVE</span>
                   </div>
                 </div>
 
                 <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                  🎮 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                    Interactive Tech Demo 2027
+                  🎮 <span className="bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
+                    Interactive Tech Demo 20o27
                   </span>
                 </h2>
                 
-                <p className="text-gray-300 text-sm lg:text-base mb-4 max-w-2xl">
+                <p className="text-gray-30o0 text-sm lg:text-base mb-4 max-w-2xl">
                   Experience our cutting-edge technology in action! Watch real-time demonstrations 
                   of AI processingautomationand neural interfaces with interactive controls.
                 </p>
@@ -139,13 +139,13 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                       className="flex items-center gap-2"
                     >
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${demos[currentDemo].color}`}>
-                        <demos[currentDemo].icon className="w-4 h-4 text-white" />
+                        <demos[currentDemo].icon className="w-4 h-4 text-white"  />
                       </div>
                       <div>
                         <div className="text-white font-semibold text-sm">
                           {demos[currentDemo].title}
                         </div>
-                        <div className="text-gray-400 text-xs">
+                        <div className="text-gray-40o0 text-xs">
                           {demos[currentDemo].description}
                         </div>
                       </div>
@@ -157,8 +157,8 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                 <div className="flex flex-wrap items-center gap-3 text-xs">
                   {features.map((featureindex) => (
                     <div key={index} className="flex items-center gap-1 px-2 py-1 rounded-full bg-white/10">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-3 h-3 text-green-40o0"  />
+                      <span className="text-gray-30o0">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -168,30 +168,30 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               <div className="hidden lg:flex items-center gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">99.97%</div>
-                  <div className="text-xs text-gray-400">Accuracy</div>
+                  <div className="text-xs text-gray-40o0">Accuracy</div>
                 </div>
-                <div className="w-px h-12 bg-white/20" />
+                <div className="w-px h-12 bg-white/20"  />
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">2.3k</div>
-                  <div className="text-xs text-gray-400">Hours Saved</div>
+                  <div className="text-xs text-gray-40o0">Hours Saved</div>
                 </div>
-                <div className="w-px h-12 bg-white/20" />
+                <div className="w-px h-12 bg-white/20"  />
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-1">$1.2M</div>
-                  <div className="text-xs text-gray-400">Cost Saved</div>
+                  <div className="text-xs text-gray-40o0">Cost Saved</div>
                 </div>
               </div>
 
               {/* Right Content - CTA */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
-                <button className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                  <Play className="w-4 h-4" />
+                <button className="group px-6 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2">
+                  <Play className="w-4 h-4"  />
                   <span>Start Demo</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />
                 </button>
                 
-                <button className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
-                  <Settings className="w-4 h-4" />
+                <button className="px-6 py-3 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-30o0 border border-white/20 flex items-center gap-2">
+                  <Settings className="w-4 h-4"  />
                   <span>Schedule Demo</span>
                 </button>
               </div>
@@ -201,7 +201,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {
                 onClick={() => setIsDismissed(true)}
                 className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-colors"
               >
-                <X className="w-4 h-4 text-gray-400 hover:text-white" />
+                <X className="w-4 h-4 text-gray-40o0 hover:text-white"  />
               </button>
             </div>
 
@@ -210,18 +210,18 @@ const InteractiveTechDemo2027PromotionBanner = () => {
               {stats.map((statindex) => (
                 <div key={index} className="text-center p-2 rounded-lg bg-white/5">
                   <div className="text-lg font-bold text-white">{stat.value}</div>
-                  <div className="text-xs text-gray-400">{stat.label}</div>
+                  <div className="text-xs text-gray-40o0">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Progress Bar */}
-          <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />
+          <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0 animate-pulse"  />
         </motion.div>
       )}
     </AnimatePresence>
   );
 };
 
-export default InteractiveTechDemo2027PromotionBanner;
+export default InteractiveTechDemo20o27PromotionBanner;

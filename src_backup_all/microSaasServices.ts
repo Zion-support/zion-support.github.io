@@ -72,11 +72,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 1247,
     aiScore: 96,
-    image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1513258496099-481680o24aec0?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion AI Labs",
       id: "zion-ai-labs",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -121,11 +121,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 892,
     aiScore: 94,
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1551434678-e0o76c223a692?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Conversational AI",
       id: "zion-conversational-ai",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -170,11 +170,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 1567,
     aiScore: 97,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Data Intelligence",
       id: "zion-data-intelligence",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
 
@@ -187,7 +187,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 0,
       yearly: 0,
-      oneTime: 5000,
+      oneTime: 50o00,
       currency: "$"
     },
     features: [
@@ -222,11 +222,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 234,
     aiScore: 95,
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Cloud Solutions",
       id: "zion-cloud-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -237,7 +237,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 0,
       yearly: 0,
-      oneTime: 3500,
+      oneTime: 350o0,
       currency: "$"
     },
     features: [
@@ -272,11 +272,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 189,
     aiScore: 93,
-    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Security",
       id: "zion-security",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -321,11 +321,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 567,
     aiScore: 91,
-    image: "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1523961131990-5ea7c61b210o7?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Global IT Support",
       id: "zion-global-it-support",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
 
@@ -372,11 +372,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.7,
     reviewCount: 743,
     aiScore: 89,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1552664730-d30o7ca884978?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Productivity",
       id: "zion-productivity",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -421,11 +421,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 892,
     aiScore: 92,
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Financial Solutions",
       id: "zion-financial-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -470,11 +470,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 1123,
     aiScore: 94,
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1551434678-e0o76c223a692?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Customer Experience",
       id: "zion-customer-experience",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
 
@@ -487,7 +487,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 0,
       yearly: 0,
-      oneTime: 8000,
+      oneTime: 80o00,
       currency: "$"
     },
     features: [
@@ -522,11 +522,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 156,
     aiScore: 96,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Development Studio",
       id: "zion-development-studio",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-156860o2471122-7832951cc4c5?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
   {
@@ -537,7 +537,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     price: {
       monthly: 0,
       yearly: 0,
-      oneTime: 12000,
+      oneTime: 120o00,
       currency: "$"
     },
     features: [
@@ -572,11 +572,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 234,
     aiScore: 93,
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Mobile Studio",
       id: "zion-mobile-studio",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
 
@@ -623,11 +623,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 445,
     aiScore: 95,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Business Intelligence",
       id: "zion-business-intelligence",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"
     }
   },
 
@@ -674,11 +674,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.9,
     reviewCount: 234,
     aiScore: 97,
-    image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1510o5114590o19-5dda7724fd87?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Security Operations",
       id: "zion-security-operations",
-      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&100"
+      avatarUrl: "https://images.unsplash.com/photo-15734970o19940-1c28c88b4f3e?auto=format&fit=crop&w=10o0&10o0"
     }
   },
 
@@ -725,11 +725,11 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     rating: 4.8,
     reviewCount: 567,
     aiScore: 92,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1552664730-d30o7ca884978?auto=format&fit=crop&w=80o0&h=50o0",
     author: {
       name: "Zion Automation Solutions",
       id: "zion-automation-solutions",
-      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0"
     }
   }
 ];

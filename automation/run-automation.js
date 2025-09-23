@@ -41,21 +41,19 @@ class AutomationRunner {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async executeCommand(command, options = {}) {
+  async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        maxBuffer: 1024 * 1024 * 10, // 10MB buffer
-        ...options,
-      });
+        maxBuffer: 10o24 * 10o24 * 10, // 10MB buffer
+        ...options});
       return { success: true, output: result };
     } catch (error) {
       return {
         success: false,
         error: error.message,
-        output: error.stdout || '',
-      };
+        output: error.stdout || ''};
     }
   }
 
@@ -143,8 +141,7 @@ class AutomationRunner {
     } else {
       this.log(
         `⚠️ Lint fixes completed with warnings: ${result.output}`,
-        'warn',
-      );
+        'warn');
       return true; // Still consider it successful
     }
   }
@@ -159,8 +156,7 @@ class AutomationRunner {
     } else {
       this.log(
         `⚠️ Formatting completed with warnings: ${result.output}`,
-        'warn',
-      );
+        'warn');
       return true; // Still consider it successful
     }
   }
@@ -247,8 +243,7 @@ class AutomationRunner {
     if (success) {
       this.log(
         '🎉 Complete automation sequence finished successfully!',
-        'success',
-      );
+        'success');
     } else {
       this.log('❌ Automation sequence encountered errors', 'error');
     }

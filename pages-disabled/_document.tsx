@@ -4,13 +4,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#2563eb" />
+        <link rel="icon" href="/favicon.ico"  />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"  />
+        <meta name="theme-color" content="#2563eb"  />
       </Head>
       <body>
-        <Main />
-        <NextScript />
+        <Main  />
+        <NextScript  />
       </body>
     </Html>
   );

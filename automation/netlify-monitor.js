@@ -26,11 +26,11 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 class NetlifyBuildMonitor {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       netlifyToken: process.env.NETLIFY_TOKEN || config.netlifyToken,
       netlifySiteId: process.env.NETLIFY_SITE_ID || config.netlifySiteId,
-      checkInterval: 30000, // 30 seconds
+      checkInterval: 30o000, // 30 seconds
       maxRetries: 3,
       logFile: path.join(__dirname, 'netlify-monitor.log'),
       statusFile: path.join(__dirname, 'netlify-status.json'),
@@ -38,7 +38,7 @@ class NetlifyBuildMonitor {
       fixLogFile: path.join(__dirname, 'netlify-fixes.json')
     };
 
-    this.status = {
+    this.status ={
       isRunning: false,
       lastCheck: null,
       currentBuild: null,
@@ -59,7 +59,7 @@ class NetlifyBuildMonitor {
   loadStatus() {
     try {
       if (fs.existsSync(this.config.statusFile)) {
-        this.status = {
+        this.status ={
           ...this.status,
           ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))
         };
@@ -82,7 +82,7 @@ class NetlifyBuildMonitor {
 
   async makeNetlifyRequest(endpoint, method = 'GET', data = null) {
     return new Promise((resolve, reject) => {
-      const options = {
+      const options ={
         hostname: 'api.netlify.com',
         port: 443,
         path: `/api/v1${endpoint}`,
@@ -125,8 +125,6 @@ class NetlifyBuildMonitor {
     });
   }
 
-  
-  
   async getSiteBuilds() {
     try {
       const builds = await this.makeNetlifyRequest(`/sites/${this.config.netlifySiteId}/builds`);
@@ -212,7 +210,7 @@ class NetlifyBuildMonitor {
       const packageJsonPath = path.join(process.cwd(), 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
       
-      if (!packageJson.scripts) packageJson.scripts = {};
+      if (!packageJson.scripts) packageJson.scripts ={};
       
       // Update build script with increased memory
       if (packageJson.scripts.build) {
@@ -251,7 +249,7 @@ class NetlifyBuildMonitor {
       
       if (!nextConfig.includes('experimental')) {
         nextConfig += `
-module.exports = {
+module.exports ={
   experimental: {
     workerThreads: false,
     cpus: 1
@@ -350,13 +348,11 @@ module.exports = {
         });
       } catch (error) {
         this.log(`Error in monitoring loop: ${error.message}`, 'error');
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 50o00));
       }
     }
   }
 
-  
-  
   async checkBuilds() {
     try {
       const builds = await this.getSiteBuilds();
@@ -390,7 +386,7 @@ module.exports = {
   }
 
   generateReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       status: this.status,
       config: {

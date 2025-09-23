@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function AiConsultingChatPage() {
@@ -6,7 +5,7 @@ export default function AiConsultingChatPage() {
     <>
       <Head>
         <title>Ai Consulting Chat - Zion Tech Group</title>
-        <meta name="description" content="ai consulting chat page" />
+        <meta name="description" content="ai consulting chat page"  />
       </Head>
       
       <main>

@@ -9,10 +9,10 @@ import {
   Car, Factory, Leaf, Heart, Building2, Gauge
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -130,7 +130,7 @@ export default function UltraAdvancedNavigationV2() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
         ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
         : 'bg-transparent'
@@ -144,8 +144,8 @@ export default function UltraAdvancedNavigationV2() {
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
-              <Rocket className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-40o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+              <Rocket className="w-6 h-6 text-white"  />
             </div>
             <div className="text-2xl font-bold text-white">
               Zion Tech Group
@@ -158,13 +158,13 @@ export default function UltraAdvancedNavigationV2() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/10"
+                className="flex items-center space-x-2 text-white hover:text-cyan-40o0 transition-colors duration-20o0 py-2 px-4 rounded-lg hover:bg-white/10"
               >
-                <Sparkles className="w-5 h-5" />
+                <Sparkles className="w-5 h-5"  />
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                   activeDropdown === 'services' ? 'rotate-180' : ''
-                }`} />
+                }`}  />
               </button>
 
               <AnimatePresence>
@@ -181,12 +181,12 @@ export default function UltraAdvancedNavigationV2() {
                       {serviceCategories.map((category) => (
                         <div key={category.title} className="space-y-3">
                           <div className="flex items-center space-x-3 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                              <category.icon className="w-5 h-5 text-white" />
+                            <div className="w-10 h-10 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-xl flex items-center justify-center">
+                              <category.icon className="w-5 h-5 text-white"  />
                             </div>
                             <div>
                               <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                              <p className="text-sm text-gray-400">{category.description}</p>
+                              <p className="text-sm text-gray-40o0">{category.description}</p>
                             </div>
                           </div>
                           
@@ -195,25 +195,25 @@ export default function UltraAdvancedNavigationV2() {
                               <Link
                                 key={service.name}
                                 href={service.href}
-                                className="block p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group"
+                                className="block p-3 rounded-lg hover:bg-white/5 transition-all duration-20o0 group"
                                 onClick={closeDropdown}
                               >
                                 <div className="flex items-center justify-between">
                                   <div className="flex-1">
                                     <div className="flex items-center space-x-2">
-                                      <span className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                      <span className="text-white font-medium group-hover:text-cyan-40o0 transition-colors">
                                         {service.name}
                                       </span>
                                       {service.popular && (
-                                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold">
+                                        <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs px-2 py-1 rounded-full font-bold">
                                           POPULAR
                                         </span>
                                       )}
                                     </div>
-                                    <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                                    <p className="text-sm text-gray-40o0 mt-1">{service.description}</p>
                                   </div>
                                   <div className="text-right">
-                                    <div className="text-cyan-400 font-semibold">{service.price}</div>
+                                    <div className="text-cyan-40o0 font-semibold">{service.price}</div>
                                   </div>
                                 </div>
                               </Link>
@@ -226,10 +226,10 @@ export default function UltraAdvancedNavigationV2() {
                     <div className="mt-6 pt-6 border-t border-white/10 text-center">
                       <Link
                         href="/services"
-                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
+                        className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-30o0"
                         onClick={closeDropdown}
                       >
-                        <Rocket className="w-5 h-5" />
+                        <Rocket className="w-5 h-5"  />
                         <span>View All Services</span>
                       </Link>
                     </div>
@@ -242,13 +242,13 @@ export default function UltraAdvancedNavigationV2() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2 px-4 rounded-lg hover:bg-white/10"
+                className="flex items-center space-x-2 text-white hover:text-cyan-40o0 transition-colors duration-20o0 py-2 px-4 rounded-lg hover:bg-white/10"
               >
-                <Building2 className="w-5 h-5" />
+                <Building2 className="w-5 h-5"  />
                 <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                   activeDropdown === 'company' ? 'rotate-180' : ''
-                }`} />
+                }`}  />
               </button>
 
               <AnimatePresence>
@@ -266,7 +266,7 @@ export default function UltraAdvancedNavigationV2() {
                         <Link
                           key={link.name}
                           href={link.href}
-                          className="block px-4 py-3 text-white hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-200"
+                          className="block px-4 py-3 text-white hover:text-cyan-40o0 hover:bg-white/5 rounded-lg transition-all duration-20o0"
                           onClick={closeDropdown}
                         >
                           {link.name}
@@ -279,10 +279,10 @@ export default function UltraAdvancedNavigationV2() {
             </div>
 
             {/* Direct Links */}
-            <Link href="/pricing" className="text-white hover:text-cyan-400 transition-colors duration-200">
+            <Link href="/pricing" className="text-white hover:text-cyan-40o0 transition-colors duration-20o0">
               Pricing
             </Link>
-            <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors duration-200">
+            <Link href="/contact" className="text-white hover:text-cyan-40o0 transition-colors duration-20o0">
               Contact
             </Link>
           </div>
@@ -290,17 +290,17 @@ export default function UltraAdvancedNavigationV2() {
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-white/80 text-sm">
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4"  />
               <span>{contactInfo.mobile}</span>
             </div>
             
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
             >
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-2 px-6 rounded-xl transition-all duration-30o0 shadow-lg hover:shadow-cyan-50o0/25"
               >
                 Get Started
               </Link>
@@ -311,9 +311,9 @@ export default function UltraAdvancedNavigationV2() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-cyan-400 transition-colors duration-200 p-2"
+              className="text-white hover:text-cyan-40o0 transition-colors duration-20o0 p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
           </div>
         </div>
@@ -333,19 +333,19 @@ export default function UltraAdvancedNavigationV2() {
               {/* Mobile Services */}
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-                  <Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5"  />
                   <span>Services</span>
                 </h3>
                 <div className="space-y-3">
                   {serviceCategories.slice(0, 3).map((category) => (
                     <div key={category.title} className="pl-4">
-                      <h4 className="text-cyan-400 font-medium mb-2">{category.title}</h4>
+                      <h4 className="text-cyan-40o0 font-medium mb-2">{category.title}</h4>
                       <div className="space-y-2">
                         {category.services.slice(0, 2).map((service) => (
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="block text-white/80 hover:text-white transition-colors duration-200"
+                            className="block text-white/80 hover:text-white transition-colors duration-20o0"
                             onClick={() => setIsOpen(false)}
                           >
                             {service.name}
@@ -356,7 +356,7 @@ export default function UltraAdvancedNavigationV2() {
                   ))}
                   <Link
                     href="/services"
-                    className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
+                    className="block text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-20o0 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     View All Services →
@@ -372,7 +372,7 @@ export default function UltraAdvancedNavigationV2() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className="block text-white/80 hover:text-white transition-colors duration-200"
+                      className="block text-white/80 hover:text-white transition-colors duration-20o0"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.name}
@@ -385,23 +385,23 @@ export default function UltraAdvancedNavigationV2() {
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-3 text-white/80">
                   <div className="flex items-center space-x-2">
-                    <Phone className="w-4 h-4" />
+                    <Phone className="w-4 h-4"  />
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Mail className="w-4 h-4" />
+                    <Mail className="w-4 h-4"  />
                     <span>{contactInfo.email}</span>
                   </div>
                 </div>
                 
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
                   className="mt-4"
                 >
                   <Link
                     href="/contact"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300"
+                    className="block w-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-30o0"
                     onClick={() => setIsOpen(false)}
                   >
                     Get Started

@@ -15,7 +15,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0;
-    return (count / totalReviews) * 100;
+    return (count / totalReviews) * 10o0;
   };
   
   return (
@@ -29,9 +29,9 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
-                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+                    i <= Math.round(averageRating) ? "fill-yellow-40o0 text-yellow-40o0" : "text-gray-30o0"
                   }`}
-                />
+                 />
               ))}
             </div>
             <span className="text-sm text-muted-foreground">
@@ -46,11 +46,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
           {[5, 4, 3, 2, 1].map((rating) => (
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
-              <Star className="h-3 w-3 text-yellow-400" />
+              <Star className="h-3 w-3 text-yellow-40o0"  />
               <Progress 
                 value={getPercentage(ratingDistribution[rating] || 0)} 
                 className="h-2" 
-              />
+               />
               <div className="w-8 text-xs text-muted-foreground">
                 {ratingDistribution[rating] || 0}
               </div>

@@ -1,42 +1,41 @@
-import React from 'react';
 import Link from 'next/link';
 
-const SuccessMetricsShowcase2025 = () => {
+const SuccessMetricsShowcase20o25 = () => {
   const metrics = [
     {
-      number: '500+',
+      number: '50o0+',
       label: 'Projects Delivered',
       description: 'Successfully completed projects across various industries',
       icon: '🎯',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       number: '98%',
       label: 'Client Satisfaction',
       description: 'Average client satisfaction rating across all projects',
       icon: '⭐',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-50o0 to-orange-50o0'
     },
     {
       number: '340%',
       label: 'Average ROI',
       description: 'Average return on investment for our clients',
       icon: '📈',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-50o0 to-emerald-50o0'
     },
     {
       number: '24/7',
       label: 'Support Available',
       description: 'Round-the-clock support and monitoring',
       icon: '🛡️',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-50o0 to-pink-50o0'
     }
   ];
 
   const achievements = [
     {
-      title: 'Fortune 500 Client',
-      description: 'Successfully implemented AI solutions for multiple Fortune 500 companies',
+      title: 'Fortune 50o0 Client',
+      description: 'Successfully implemented AI solutions for multiple Fortune 50o0 companies',
       impact: '+$50M in revenue increase'
     },
     {
@@ -58,7 +57,7 @@ const SuccessMetricsShowcase2025 = () => {
 
   const testimonials = [
     {
-      quote: "Zion Tech Group transformed our business operations with their AI solutions. We saw a 400% increase in efficiency within the first quarter.",
+      quote: "Zion Tech Group transformed our business operations with their AI solutions. We saw a 40o0% increase in efficiency within the first quarter.",
       author: "Sarah Johnson",
       role: "CEO, TechCorp",
       avatar: "SJ"
@@ -78,7 +77,7 @@ const SuccessMetricsShowcase2025 = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6 backdrop-blur-sm">
@@ -98,7 +97,7 @@ const SuccessMetricsShowcase2025 = () => {
           {metrics.map((metric, index) => (
             <div
               key={index}
-              className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+              className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-30o0"
             >
               <div className={`text-4xl mb-4 bg-gradient-to-r ${metric.color} bg-clip-text text-transparent`}>
                 {metric.icon}
@@ -119,11 +118,11 @@ const SuccessMetricsShowcase2025 = () => {
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+                className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-30o0"
               >
                 <h4 className="text-2xl font-bold mb-4">{achievement.title}</h4>
-                <p className="text-gray-200 mb-4 leading-relaxed">{achievement.description}</p>
-                <div className="inline-flex items-center bg-green-500 bg-opacity-20 text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
+                <p className="text-gray-20o0 mb-4 leading-relaxed">{achievement.description}</p>
+                <div className="inline-flex items-center bg-green-50o0 bg-opacity-20 text-green-30o0 px-4 py-2 rounded-full text-sm font-semibold">
                   Impact: {achievement.impact}
                 </div>
               </div>
@@ -138,10 +137,10 @@ const SuccessMetricsShowcase2025 = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+                className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-30o0"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -149,7 +148,7 @@ const SuccessMetricsShowcase2025 = () => {
                     <div className="text-sm opacity-80">{testimonial.role}</div>
                   </div>
                 </div>
-                <blockquote className="text-gray-200 leading-relaxed">
+                <blockquote className="text-gray-20o0 leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
               </div>
@@ -168,19 +167,19 @@ const SuccessMetricsShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/services"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-lg shadow-lg"
               >
                 Explore Our Solutions
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg"
               >
                 Schedule Consultation
               </Link>
               <Link
                 href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-lg"
               >
                 View Case Studies
               </Link>
@@ -192,4 +191,4 @@ const SuccessMetricsShowcase2025 = () => {
   );
 };
 
-export default SuccessMetricsShowcase2025;
+export default SuccessMetricsShowcase20o25;

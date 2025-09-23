@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -88,7 +88,7 @@ function executeCriticalFunctions() {
     "seo-audit-runner"
   ];
   
-  const results = {};
+  const results ={};
   
   for (const funcName of criticalFunctions) {
     results[funcName] = executeFunctionLocally(funcName);
@@ -106,7 +106,7 @@ function executeScheduledFunctions() {
     "homepage-updater-scheduler"
   ];
   
-  const results = {};
+  const results ={};
   
   for (const funcName of scheduledFunctions) {
     results[funcName] = executeFunctionLocally(funcName);
@@ -124,7 +124,7 @@ function executeContentFunctions() {
     "og-image-update-runner"
   ];
   
-  const results = {};
+  const results ={};
   
   for (const funcName of contentFunctions) {
     results[funcName] = executeFunctionLocally(funcName);
@@ -135,7 +135,7 @@ function executeContentFunctions() {
 
 function generateExecutionReport(criticalResults, scheduledResults, contentResults) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -259,7 +259,7 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { 
+module.exports ={ 
   main, 
   executeFunctionLocally, 
   executeCriticalFunctions, 

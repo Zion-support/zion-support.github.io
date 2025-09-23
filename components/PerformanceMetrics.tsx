@@ -1,7 +1,5 @@
 "use client";
 
-import React from 'react';
-
 export default function PerformanceMetrics() {
   return (
     <div className="bg-white/10 rounded-xl p-6 border border-white/20 text-white">

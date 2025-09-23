@@ -35,7 +35,7 @@ contactInfo: {;
   marketSize?: string;
 }
 
-export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
+export const INNOVATIVE_IT_INFRASTRUCTURE_20o25: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure
   {
     id: "next-gen-cloud-infrastructure",
@@ -83,22 +83,22 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $9,999/month",
-    roi: "300-500%",
+    roi: "30o0-50o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Kubernetes", "Docker", "Terraform", "Python", "React"],
       integrations: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],
-      apiEndpoints: 400,
+      apiEndpoints: 40o0,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"]
+      security: ["SOC 2", "ISO 270o01", "Zero Trust", "End-to-end encryption"]
     },
     competitors: ["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],
-    marketSize: "$832.1 billion by 2025"
+    marketSize: "$832.1 billion by 20o25"
   },
 
   // Edge Computing & IoT Platform
@@ -148,22 +148,22 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $6,799/month",
-    roi: "250-400%",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],
       integrations: ["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],
-      apiEndpoints: 300,
+      apiEndpoints: 30o0,
       uptime: "99.9%",
       security: ["Edge security", "Data encryption", "Device authentication", "Network isolation"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],
-    marketSize: "$43.4 billion by 2025"
+    marketSize: "$43.4 billion by 20o25"
   },
 
   // Quantum-Ready Network Infrastructure
@@ -213,10 +213,10 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,499 - $12,999/month",
-    roi: "400-800%",
+    roi: "40o0-80o0%",
     innovationLevel: "Revolutionary",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -228,7 +228,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       security: ["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"]
     },
     competitors: ["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],
-    marketSize: "$89.2 billion by 2025"
+    marketSize: "$89.2 billion by 20o25"
   },
 
   // AI-Powered Data Center Management
@@ -278,22 +278,22 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,299 - $5,299/month",
-    roi: "200-350%",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],
       integrations: ["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],
-      apiEndpoints: 200,
+      apiEndpoints: 20o0,
       uptime: "99.9%",
       security: ["SOC 2", "Data encryption", "Access controls", "Audit logging"]
     },
     competitors: ["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],
-    marketSize: "$59.7 billion by 2025"
+    marketSize: "$59.7 billion by 20o25"
   },
 
   // 5G & 6G Network Infrastructure
@@ -343,21 +343,21 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $8,499/month",
-    roi: "300-600%",
+    roi: "30o0-60o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: ["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],
       integrations: ["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],
-      apiEndpoints: 500,
+      apiEndpoints: 50o0,
       uptime: "99.99%",
       security: ["Network security", "Encryption", "Authentication", "Privacy protection"]
     },
     competitors: ["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
-    marketSize: "$667.9 billion by 2025"
+    marketSize: "$667.9 billion by 20o25"
   }
 ];

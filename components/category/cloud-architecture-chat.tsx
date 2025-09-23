@@ -7,20 +7,9 @@ const CloudArchitectureChat: NextPage = () => {
     <div>
       <Head>
         <title>CloudArchitectureChat - Zion Tech Solutions</title>
-        <meta name="description" content="CloudArchitectureChat blog post" />
+        <meta name="description" content="CloudArchitectureChat blog post"  />
       </Head>
       
       <main>
         <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>
-<<<<<<< HEAD
-        <a href="/blog">Back to Blog</a>
-=======
-        <Link href="/blog">Back to Blog</Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-      </main>
-    </div>
-  );
-};
-
-export default CloudArchitectureChat;

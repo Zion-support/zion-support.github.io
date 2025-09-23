@@ -60,7 +60,7 @@ export function ConversationDetailView() {
   if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
+        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"  />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.
@@ -98,7 +98,7 @@ export function ConversationDetailView() {
             <AvatarImage 
               src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
-            />
+             />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
@@ -128,7 +128,7 @@ export function ConversationDetailView() {
                     alt={activeConversation.context_data.title || "Context"}
                     className="object-cover"
                     loading="lazy"
-                  />
+                   />
                 </AspectRatio>
               </div>
             )}
@@ -160,20 +160,20 @@ export function ConversationDetailView() {
         ) : (
           groupedMessages.map((group, groupIndex) => (
             <div key={group.date}>
-              <DateDivider date={new Date(group.date)} />
+              <DateDivider date={new Date(group.date)}  />
               <div className="space-y-3">
                 {group.messages.map((message) => (
                   <MessageBubble
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-                  />
+                   />
                 ))}
               </div>
             </div>
           ))
         )}
-        <div ref={messagesEndRef} />
+        <div ref={messagesEndRef}  />
       </div>
       
       {/* Input */}

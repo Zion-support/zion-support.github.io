@@ -22,7 +22,7 @@ import {
   Lock
 } from 'lucide-react';
 
-const NextGenAIInnovationShowcase2025 = () => {
+const NextGenAIInnovationShowcase20o25 = () => {
   const [activeFeaturesetActiveFeature] = useState(0);
   const [isPlayingsetIsPlaying] = useState(false);
 
@@ -32,9 +32,9 @@ const NextGenAIInnovationShowcase2025 = () => {
       title: 'Quantum-AI Fusion Technology',
       description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',
       icon: Brain,
-      features: ['1000x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],
+      features: ['10o00x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'],
       impact: 'Transform entire industries',
-      color: 'from-purple-600 to-blue-600'
+      color: 'from-purple-60o0 to-blue-60o0'
     },
     {
       id: 'neural-interfaces',
@@ -43,7 +43,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       icon: Network,
       features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'],
       impact: 'Redefine human potential',
-      color: 'from-blue-600 to-cyan-600'
+      color: 'from-blue-60o0 to-cyan-60o0'
     },
     {
       id: 'autonomous-systems',
@@ -52,7 +52,7 @@ const NextGenAIInnovationShowcase2025 = () => {
       icon: Cpu,
       features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'],
       impact: 'Revolutionize business operations',
-      color: 'from-green-600 to-emerald-600'
+      color: 'from-green-60o0 to-emerald-60o0'
     },
     {
       id: 'consciousness-ai',
@@ -61,12 +61,12 @@ const NextGenAIInnovationShowcase2025 = () => {
       icon: Lightbulb,
       features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'],
       impact: 'Create truly intelligent systems',
-      color: 'from-orange-600 to-red-600'
+      color: 'from-orange-60o0 to-red-60o0'
     }
   ];
 
   const stats = [
-    { number: '500%'label: 'Performance 'Increase', 'icon: TrendingUp },
+    { number: '50o0%'label: 'Performance 'Increase', 'icon: TrendingUp },
     { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target },
     { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket },
     { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
@@ -96,15 +96,15 @@ const NextGenAIInnovationShowcase2025 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % innovations.length);
-    }4000);
+    }40o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20 opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-90o0/20 to-purple-90o0/20 opacity-20"></div>
         
         <div className="relative z-10 container mx-auto px-6 py-20">
           <motion.div
@@ -113,42 +113,42 @@ const NextGenAIInnovationShowcase2025 = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center bg-gradient-to-r from-blue-50o0 to-purple-60o0 px-6 py-2 rounded-full text-sm font-medium mb-6">
+              <Star className="w-4 h-4 mr-2"  />
               Next-Generation AI Innovation
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent">
               The Future of AI
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <br  />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-purple-40o0">
                 Starts Here
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 leading-relaxed">
               Experience groundbreaking AI technologies that will reshape industries
               enhance human capabilitiesand unlock unlimited potential for the next decade.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsPlaying(!isPlaying)}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"  />
                 {isPlaying ? 'Pause Demo' : 'Watch Demo'}
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0"
               >
                 Explore Innovations
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"  />
               </motion.button>
             </div>
           </motion.div>
@@ -167,11 +167,11 @@ const NextGenAIInnovationShowcase2025 = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white"  />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-gray-30o0">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -189,7 +189,7 @@ const NextGenAIInnovationShowcase2025 = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Revolutionary AI Innovations
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Discover the cutting-edge technologies that are defining the future of artificial intelligence
             </p>
           </motion.div>
@@ -203,20 +203,20 @@ const NextGenAIInnovationShowcase2025 = () => {
                   initial={{ opacity: 0x: -30 }}
                   whileInView={{ opacity: 1x: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
-                  className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
+                  className={`p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer ${
                     activeFeature === index
-                      ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/50 shadow-2xl'
+                      ? 'bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 border-blue-50o0/50 shadow-2xl'
                       : 'bg-white/5 border-white/10 hover:bg-white/10'
                   }`}
                   onClick={() => setActiveFeature(index)}
                 >
                   <div className="flex items-start gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${innovation.color}`}>
-                      <innovation.icon className="w-6 h-6 text-white" />
+                      <innovation.icon className="w-6 h-6 text-white"  />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{innovation.title}</h3>
-                      <p className="text-gray-300 mb-4">{innovation.description}</p>
+                      <p className="text-gray-30o0 mb-4">{innovation.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {innovation.features.map((featureidx) => (
                           <span key={idx} className="bg-white/10 px-3 py-1 rounded-full text-sm">
@@ -224,7 +224,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                           </span>
                         ))}
                       </div>
-                      <div className="mt-4 text-sm font-semibold text-blue-400">
+                      <div className="mt-4 text-sm font-semibold text-blue-40o0">
                         Impact: {innovation.impact}
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                             transition={{ delay: idx * 0.2 }}
                             className="flex items-center gap-3 text-left"
                           >
-                            <CheckCircle className="w-5 h-5 text-green-400" />
+                            <CheckCircle className="w-5 h-5 text-green-40o0"  />
                             <span>{feature}</span>
                           </motion.div>
                         ))}
@@ -274,7 +274,7 @@ const NextGenAIInnovationShowcase2025 = () => {
                   
                   {/* Animated Background Elements */}
                   <div className="absolute top-4 right-4 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-1000"></div>
+                  <div className="absolute bottom-4 left-4 w-24 h-24 border border-white/20 rounded-full animate-pulse delay-10o00"></div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -291,7 +291,7 @@ const NextGenAIInnovationShowcase2025 = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">What Industry Leaders Say</h2>
-            <p className="text-xl text-gray-300">Hear from the visionaries already using our technology</p>
+            <p className="text-xl text-gray-30o0">Hear from the visionaries already using our technology</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -305,13 +305,13 @@ const NextGenAIInnovationShowcase2025 = () => {
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-30o0 mb-6 italic">"{testimonial.quote}"</p>
                 <div>
                   <div className="font-semibold">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+                  <div className="text-sm text-gray-40o0">{testimonial.role}</div>
                 </div>
               </motion.div>
             ))}
@@ -330,41 +330,41 @@ const NextGenAIInnovationShowcase2025 = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Transform Your Future?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-30o0 mb-8">
               Join thousands of forward-thinking organizations already leveraging next-generation AI technologies
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0"
               >
-                <Rocket className="w-5 h-5" />
+                <Rocket className="w-5 h-5"  />
                 Start Your Transformation
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+                className="border-2 border-white/30 hover:border-white/60 px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 transition-all duration-30o0"
               >
-                <Users className="w-5 h-5" />
+                <Users className="w-5 h-5"  />
                 Schedule Consultation
               </motion.button>
             </div>
 
-            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-400">
+            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-gray-40o0">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"  />
                 Enterprise Security
               </div>
               <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4" />
+                <Lock className="w-4 h-4"  />
                 Data Privacy
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4" />
+                <CheckCircle className="w-4 h-4"  />
                 24/7 Support
               </div>
             </div>
@@ -375,4 +375,4 @@ const NextGenAIInnovationShowcase2025 = () => {
   );
 };
 
-export default NextGenAIInnovationShowcase2025;
+export default NextGenAIInnovationShowcase20o25;

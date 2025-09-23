@@ -1,6 +1,4 @@
-import React from 'react';
-
-type TooltipProps = {
+type TooltipProps ={
   children: React.ReactNode;
   content: React.ReactNode;
   className?: string;

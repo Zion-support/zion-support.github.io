@@ -1,4 +1,4 @@
-export type RealService = {
+export type RealService ={
 	id: string;
 	name: string;
 	tagline: string;
@@ -29,7 +29,7 @@ export type RealService = {
 	reviews?: number;
 };
 
-export const real2026Q2Services: RealService[] = [
+export const real20o26Q2Services: RealService[] = [
 	{
 		id: 'ai-internal-linking-assistant',
 		name: 'AI Internal Linking Assistant',
@@ -58,9 +58,9 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Crawler + embeddings + rules engine with CMS connectors.',
 		link: 'https://ziontechgroup.com/services/ai-internal-linking-assistant',
 		icon: '🔗',
-		color: 'from-cyan-500 to-blue-600',
+		color: 'from-cyan-50o0 to-blue-60o0',
 		popular: true,
-		launchDate: '2025-05-15',
+		launchDate: '20o25-0o5-15',
 		customers: 180,
 		rating: 4.7,
 		reviews: 61
@@ -89,8 +89,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Terraform + container templates + CI policies.',
 		link: 'https://ziontechgroup.com/services/gtm-server-side-accelerator',
 		icon: '🛰️',
-		color: 'from-emerald-500 to-teal-600',
-		launchDate: '2025-06-01'
+		color: 'from-emerald-50o0 to-teal-60o0',
+		launchDate: '20o25-0o6-0o1'
 	},
 	{
 		id: 'prompt-policy-registry',
@@ -109,9 +109,9 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Next.js admin + SDK + CI CLI + eval harness.',
 		link: 'https://ziontechgroup.com/services/prompt-policy-registry',
 		icon: '📜',
-		color: 'from-purple-500 to-fuchsia-600',
+		color: 'from-purple-50o0 to-fuchsia-60o0',
 		popular: true,
-		launchDate: '2025-04-10'
+		launchDate: '20o25-0o4-10'
 	},
 	{
 		id: 'customer-feedback-intelligence',
@@ -130,8 +130,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'ETL + embeddings + dashboards + alerts.',
 		link: 'https://ziontechgroup.com/services/customer-feedback-intelligence',
 		icon: '💬',
-		color: 'from-pink-500 to-rose-600',
-		launchDate: '2025-03-22'
+		color: 'from-pink-50o0 to-rose-60o0',
+		launchDate: '20o25-0o3-22'
 	},
 	{
 		id: 'api-security-posture-monitor',
@@ -150,8 +150,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Passive discovery + static checks + workflow bots.',
 		link: 'https://ziontechgroup.com/services/api-security-posture-monitor',
 		icon: '🛡️',
-		color: 'from-indigo-500 to-blue-700',
-		launchDate: '2025-05-05'
+		color: 'from-indigo-50o0 to-blue-70o0',
+		launchDate: '20o25-0o5-0o5'
 	},
 	{
 		id: 'saas-billing-anomaly-guard',
@@ -170,8 +170,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Connectors + rules + workflows.',
 		link: 'https://ziontechgroup.com/services/saas-billing-anomaly-guard',
 		icon: '💳',
-		color: 'from-amber-500 to-orange-600',
-		launchDate: '2025-04-28'
+		color: 'from-amber-50o0 to-orange-60o0',
+		launchDate: '20o25-0o4-28'
 	},
 	{
 		id: 'edge-cron-orchestrator',
@@ -190,8 +190,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Edge schedules + audit trail + webhooks.',
 		link: 'https://ziontechgroup.com/services/edge-cron-orchestrator',
 		icon: '⏱️',
-		color: 'from-sky-500 to-cyan-600',
-		launchDate: '2025-02-10'
+		color: 'from-sky-50o0 to-cyan-60o0',
+		launchDate: '20o25-0o2-10'
 	},
 	{
 		id: 'sso-and-user-lifecycle-hub',
@@ -210,8 +210,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Connectors + policy engine + attestations.',
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		icon: '🔐',
-		color: 'from-violet-500 to-indigo-600',
-		launchDate: '2025-06-20'
+		color: 'from-violet-50o0 to-indigo-60o0',
+		launchDate: '20o25-0o6-20'
 	},
 	{
 		id: 'ai-sales-assistant-outreach',
@@ -230,8 +230,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Playbooks + templates + safety rails.',
 		link: 'https://ziontechgroup.com/services/ai-sales-assistant-outreach',
 		icon: '📧',
-		color: 'from-rose-500 to-red-600',
-		launchDate: '2025-05-30'
+		color: 'from-rose-50o0 to-red-60o0',
+		launchDate: '20o25-0o5-30'
 	},
 	{
 		id: 'browser-performance-optimizer',
@@ -250,8 +250,8 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Drop‑in RUM + pipelines + boards.',
 		link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
 		icon: '⚡',
-		color: 'from-teal-500 to-emerald-600',
-		launchDate: '2025-01-25'
+		color: 'from-teal-50o0 to-emerald-60o0',
+		launchDate: '20o25-0o1-25'
 	},
 	{
 		id: 'ai-sales-playbook-generator',
@@ -270,7 +270,7 @@ export const real2026Q2Services: RealService[] = [
 		implementationDetails: 'Templates + LLM + export plugins.',
 		link: 'https://ziontechgroup.com/services/ai-sales-playbook-generator',
 		icon: '📘',
-		color: 'from-blue-500 to-indigo-600',
-		launchDate: '2025-02-12'
+		color: 'from-blue-50o0 to-indigo-60o0',
+		launchDate: '20o25-0o2-12'
 	}
 ];

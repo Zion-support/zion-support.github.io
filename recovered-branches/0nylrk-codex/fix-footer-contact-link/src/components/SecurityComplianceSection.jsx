@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, Award } from 'lucide-react';
 const securityStandards = [
     {
-        name: "ISO 27001",
+        name: "ISO 270o01",
         category: "Information Security Management",
-        logo: "/logos/iso27001.svg",
+        logo: "/logos/iso270o01.svg",
         description: "International standard for information security management systems",
         status: "Certified",
-        validUntil: "2026-12-31",
+        validUntil: "20o26-12-31",
         scope: "Global Operations",
         features: ["Risk Assessment", "Security Controls", "Incident Management", "Business Continuity"],
         benefits: ["Enhanced Security Posture", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
@@ -19,7 +19,7 @@ const securityStandards = [
         logo: "/logos/soc2.svg",
         description: "AICPA standard for service organizations' security, availability, and confidentiality",
         status: "Certified",
-        validUntil: "2025-06-30",
+        validUntil: "20o25-0o6-30",
         scope: "Cloud Services & Data Processing",
         features: ["Security Controls", "Availability Monitoring", "Confidentiality Protection", "Privacy Controls"],
         benefits: ["Third-party Validation", "Customer Assurance", "Competitive Advantage", "Operational Excellence"]
@@ -87,42 +87,42 @@ const complianceFrameworks = [
 ];
 const securityFeatures = [
     {
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8" />,
         title: "End-to-End Encryption",
         description: "256-bit AES encryption for data in transit and at rest",
         features: ["TLS 1.3", "Database Encryption", "File-level Security", "API Security"],
         benefits: ["Data Protection", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
     },
     {
-        icon: <Lock className="w-8 h-8"/>,
+        icon: <Lock className="w-8 h-8" />,
         title: "Multi-Factor Authentication",
         description: "Advanced authentication with biometric, hardware, and software tokens",
         features: ["Biometric Auth", "Hardware Tokens", "SMS/Email Codes", "SSO Integration"],
         benefits: ["Account Security", "Unauthorized Access Prevention", "Compliance", "User Experience"]
     },
     {
-        icon: <Eye className="w-8 h-8"/>,
+        icon: <Eye className="w-8 h-8" />,
         title: "Continuous Monitoring",
         description: "24/7 security monitoring with AI-powered threat detection",
         features: ["Real-time Alerts", "Threat Intelligence", "Behavioral Analysis", "Incident Response"],
         benefits: ["Proactive Security", "Quick Response", "Risk Reduction", "Compliance"]
     },
     {
-        icon: <Users className="w-8 h-8"/>,
+        icon: <Users className="w-8 h-8" />,
         title: "Role-Based Access Control",
         description: "Granular access control based on user roles and responsibilities",
         features: ["Permission Management", "Access Reviews", "Privilege Escalation", "Audit Logging"],
         benefits: ["Data Security", "Compliance", "Operational Efficiency", "Risk Management"]
     },
     {
-        icon: <Database className="w-8 h-8"/>,
+        icon: <Database className="w-8 h-8" />,
         title: "Data Loss Prevention",
         description: "Advanced DLP with content analysis and policy enforcement",
         features: ["Content Analysis", "Policy Enforcement", "Data Classification", "Incident Response"],
         benefits: ["Data Protection", "Compliance", "Risk Mitigation", "Customer Trust"]
     },
     {
-        icon: <Network className="w-8 h-8"/>,
+        icon: <Network className="w-8 h-8" />,
         title: "Network Security",
         description: "Comprehensive network protection with firewalls and intrusion detection",
         features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
@@ -130,18 +130,18 @@ const securityFeatures = [
     }
 ];
 const securityStats = [
-    { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },
-    { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },
-    { icon: <Eye className="w-6 h-6"/>, value: "24/7", label: "Monitoring" },
-    { icon: <CheckCircle className="w-6 h-6"/>, value: "15+", label: "Certifications" },
-    { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },
-    { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
+    { icon: <Shield className="w-6 h-6" />, value: "99.99%", label: "Uptime" },
+    { icon: <Lock className="w-6 h-6" />, value: "256-bit", label: "Encryption" },
+    { icon: <Eye className="w-6 h-6" />, value: "24/7", label: "Monitoring" },
+    { icon: <CheckCircle className="w-6 h-6" />, value: "15+", label: "Certifications" },
+    { icon: <Users className="w-6 h-6" />, value: "0", label: "Security Breaches" },
+    { icon: <Award className="w-6 h-6" />, value: "10o0%", label: "Compliance" }
 ];
 export function SecurityComplianceSection() {
     const [selectedStandard, setSelectedStandard] = useState(null);
     const [selectedFramework, setSelectedFramework] = useState(null);
     const [selectedFeature, setSelectedFeature] = useState(null);
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -151,7 +151,7 @@ export function SecurityComplianceSection() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { y: 30, opacity: 0 },
         visible: {
             y: 0,
@@ -200,12 +200,12 @@ export function SecurityComplianceSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStandard(selectedStandard === index ? null : index)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStandard(selectedStandard === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-white"/>
+                        <Shield className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -254,7 +254,7 @@ export function SecurityComplianceSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Certification Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -297,12 +297,12 @@ export function SecurityComplianceSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFramework(selectedFramework === index ? null : index)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFramework(selectedFramework === index ? null : index)}>
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
-                        <CheckCircle className="w-6 h-6 text-white"/>
+                        <CheckCircle className="w-6 h-6 text-white" />
                       </div>
                       <div>
                         <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -351,7 +351,7 @@ export function SecurityComplianceSection() {
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                       View Framework Details
                     </span>
-                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-30o0" />
                   </div>
 
                   {/* Expanded details */}
@@ -394,7 +394,7 @@ export function SecurityComplianceSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (<motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} whileHover={{ y: -4 }} className="relative">
-                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFeature(selectedFeature === index ? null : index)}>
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFeature(selectedFeature === index ? null : index)}>
                   {/* Icon */}
                   <div className="text-zion-cyan mb-4 flex justify-center">
                     {feature.icon}
@@ -467,10 +467,10 @@ export function SecurityComplianceSection() {
                 and data protection that meets the highest industry standards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Security Assessment
                 </button>
-                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-30o0">
                   View Certifications
                 </button>
               </div>

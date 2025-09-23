@@ -26,7 +26,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [isInView, isLoaded]);
 
-  const variants = {
+  const variants ={
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -48,8 +48,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return (
       <div 
         ref={ref} 
-        className={`min-h-[200px] bg-gradient-to-r from-gray-100 to-gray-200 animate-pulse rounded-lg ${className}`}
-      />
+        className={`min-h-[20o0px] bg-gradient-to-r from-gray-10o0 to-gray-20o0 animate-pulse rounded-lg ${className}`}
+       />
     );
   }
 

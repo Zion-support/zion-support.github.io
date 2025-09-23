@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
@@ -27,8 +26,7 @@ const talentSchema = z.object({
   basicInfo: z.object({
     fullName: z.string().min(2, "Full Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
-    profilePicture: z.any().optional(),
-  }),
+    profilePicture: z.any().optional()}),
   
   // Step 2: Experience
   experience: z.object({
@@ -36,17 +34,14 @@ const talentSchema = z.object({
     keyProjects: z.array(
       z.object({
         title: z.string().min(2, "Project title is required"),
-        description: z.string().min(10, "Project description is required"),
-      })
+        description: z.string().min(10, "Project description is required")})
     ).min(1, "Add at least one key project"),
-    yearsOfExperience: z.string().min(1, "Years of experience is required"),
-  }),
+    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill"),
-    toolsUsed: z.string().optional(),
-  }),
+    toolsUsed: z.string().optional()}),
   
   // Step 4: Availability & Preferences
   availability: z.object({
@@ -55,12 +50,9 @@ const talentSchema = z.object({
     hourlyRate: z.string().optional(),
     portfolioLinks: z.array(
       z.object({
-        url: z.string().url("Must be a valid URL").min(5, "URL is required"),
-      })
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
     ).optional().default([]),
-    cv: z.any().optional(),
-  }),
-});
+    cv: z.any().optional()})});
 
 type TalentFormValues = z.infer<typeof talentSchema>;
 
@@ -83,39 +75,31 @@ export function TalentOnboardingForm() {
       basicInfo: {
         fullName: user?.displayName || "",
         professionalTitle: "",
-        profilePicture: undefined,
-      },
+        profilePicture: undefined},
       experience: {
         bio: "",
         keyProjects: [{ title: "", description: "" }],
-        yearsOfExperience: "",
-      },
+        yearsOfExperience: ""},
       skills: {
         skillsList: "",
-        toolsUsed: "",
-      },
+        toolsUsed: ""},
       availability: {
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
         portfolioLinks: [{ url: "" }],
-        cv: undefined,
-      },
-    },
-    mode: "onChange",
-  });
+        cv: undefined}},
+    mode: "onChange"});
   
   const { fields: projectFields, append: appendProject, remove: removeProject } = 
     useFieldArray({
       name: "experience.keyProjects",
-      control: form.control,
-    });
+      control: form.control});
     
   const { fields: linkFields, append: appendLink, remove: removeLink } = 
     useFieldArray({
       name: "availability.portfolioLinks",
-      control: form.control,
-    });
+      control: form.control});
 
   // Handle profile picture upload
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {

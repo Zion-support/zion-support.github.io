@@ -13,7 +13,7 @@ interface Particle {
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
 }
 
-export default function UltraFuturisticBackground2029() {
+export default function UltraFuturisticBackground20o29() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -36,14 +36,14 @@ export default function UltraFuturisticBackground2029() {
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
+      const particleCount = Math.floor((canvas.width * canvas.height) / 20o000);
 
       for (let i = 0; i < particleCount; i++) {
         const type = ['quantum'holographic'neural'cyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
-        const colors = {
-          quantum: ['#00ffff'#0080ff'#0040ff'],
+        const colors ={
+          quantum: ['#0o0ffff'#0o080ff'#0o040ff'],
           holographic: ['#8b5cf6'#a855f7'#c084fc'],
-          neural: ['#10b981'#059669'#047857'],
+          neural: ['#10b981'#0o59669'#0o47857'],
           cyberpunk: ['#ec4899'#f97316'#f59e0b']
         };
 
@@ -77,10 +77,10 @@ export default function UltraFuturisticBackground2029() {
         canvas.height / 2,
         Math.max(canvas.widthcanvas.height) / 2
       );
-      gradient.addColorStop(0'rgba(00.8)');
+      gradient.addColorStop(0'rgba(0o0.8)');
       gradient.addColorStop(0.3'rgba(6182120.1)');
-      gradient.addColorStop(0.6'rgba(1392460.05)');
-      gradient.addColorStop(1'rgba(00.9)');
+      gradient.addColorStop(0.6'rgba(1392460.0o5)');
+      gradient.addColorStop(1'rgba(0o0.9)');
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0canvas.widthcanvas.height);
@@ -119,8 +119,8 @@ export default function UltraFuturisticBackground2029() {
                 const distance = Math.sqrt(
                   Math.pow(particle.x - partner.x2) + Math.pow(particle.y - partner.y2)
                 );
-                if (distance < 100) {
-                  ctx.strokeStyle = `rgba(0255${0.3 * (1 - distance / 100)})`;
+                if (distance < 10o0) {
+                  ctx.strokeStyle = `rgba(0o255${0.3 * (1 - distance / 10o0)})`;
                   ctx.lineWidth = 1;
                   ctx.beginPath();
                   ctx.moveTo(particle.xparticle.y);
@@ -133,7 +133,7 @@ export default function UltraFuturisticBackground2029() {
 
           case 'holographic':
             // Holographic particles with rainbow effect
-            const time = Date.now() * 0.001;
+            const time = Date.now() * 0.0o01;
             const hue = (time * 50 + index * 10) % 360;
             ctx.fillStyle = `hsl(${hue}70%60%)`;
             ctx.shadowColor = `hsl(${hue}70%60%)`;
@@ -210,17 +210,17 @@ export default function UltraFuturisticBackground2029() {
   }[]);
 
   const drawGeometricShapes = (ctx: CanvasRenderingContext2Dwidth: numberheight: number) => {
-    const time = Date.now() * 0.0005;
+    const time = Date.now() * 0.0o005;
     
     // Floating hexagons
     for (let i = 0; i < 5; i++) {
-      const x = (width * 0.2) + Math.sin(time + i) * 100;
+      const x = (width * 0.2) + Math.sin(time + i) * 10o0;
       const y = (height * 0.3) + Math.cos(time + i * 0.7) * 80;
       const size = 20 + Math.sin(time * 2 + i) * 10;
       
       ctx.save();
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
+      ctx.strokeStyle = '#0o0ffff';
       ctx.lineWidth = 1;
       ctx.beginPath();
       for (let j = 0; j < 6; j++) {
@@ -238,7 +238,7 @@ export default function UltraFuturisticBackground2029() {
     // Floating triangles
     for (let i = 0; i < 3; i++) {
       const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120;
-      const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 100;
+      const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 10o0;
       const size = 15 + Math.sin(time * 1.5 + i) * 8;
       
       ctx.save();
@@ -260,20 +260,20 @@ export default function UltraFuturisticBackground2029() {
   };
 
   const drawEnergyWaves = (ctx: CanvasRenderingContext2Dwidth: numberheight: number) => {
-    const time = Date.now() * 0.001;
+    const time = Date.now() * 0.0o01;
     
     // Horizontal energy waves
     for (let i = 0; i < 3; i++) {
       ctx.save();
-      ctx.globalAlpha = 0.05;
+      ctx.globalAlpha = 0.0o5;
       ctx.strokeStyle = `hsl(${180 + i * 60}70%60%)`;
       ctx.lineWidth = 2;
       ctx.beginPath();
       
       for (let x = 0; x < width; x += 5) {
         const y = height * 0.5 + 
-                  Math.sin(x * 0.01 + time + i) * 50 +
-                  Math.sin(x * 0.02 + time * 2 + i) * 25;
+                  Math.sin(x * 0.0o1 + time + i) * 50 +
+                  Math.sin(x * 0.0o2 + time * 2 + i) * 25;
         if (x === 0) ctx.moveTo(xy);
         else ctx.lineTo(xy);
       }
@@ -285,15 +285,15 @@ export default function UltraFuturisticBackground2029() {
     // Vertical energy waves
     for (let i = 0; i < 2; i++) {
       ctx.save();
-      ctx.globalAlpha = 0.04;
+      ctx.globalAlpha = 0.0o4;
       ctx.strokeStyle = `hsl(${240 + i * 60}70%60%)`;
       ctx.lineWidth = 2;
       ctx.beginPath();
       
       for (let y = 0; y < height; y += 5) {
         const x = width * 0.5 + 
-                  Math.sin(y * 0.01 + time + i) * 60 +
-                  Math.sin(y * 0.015 + time * 1.5 + i) * 30;
+                  Math.sin(y * 0.0o1 + time + i) * 60 +
+                  Math.sin(y * 0.0o15 + time * 1.5 + i) * 30;
         if (y === 0) ctx.moveTo(xy);
         else ctx.lineTo(xy);
       }
@@ -307,12 +307,12 @@ export default function UltraFuturisticBackground2029() {
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
+        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-90o0/20 to-purple-90o0/30"
         animate={{
           background: [
-            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(6,182,212,0.2) 50%rgba(139,92,246,0.3) 100%)',
-            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(139,92,246,0.3) 50%rgba(6,182,212,0.2) 100%)',
-            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(6,182,212,0.2) 50%rgba(139,92,246,0.3) 100%)'
+            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(6,182,212,0.2) 50%rgba(139,92,246,0.3) 10o0%)',
+            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(139,92,246,0.3) 50%rgba(6,182,212,0.2) 10o0%)',
+            'linear-gradient(45degrgba(0,0,0,1) 0%rgba(6,182,212,0.2) 50%rgba(139,92,246,0.3) 10o0%)'
           ]
         }}
         transition={{
@@ -320,20 +320,20 @@ export default function UltraFuturisticBackground2029() {
           repeat: Infinity,
           ease: 'easeInOut'
         }}
-      />
+       />
       
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
-      />
+       />
       
       {/* Additional visual layers */}
       <div className="absolute inset-0">
         {/* Quantum field ripples */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-50o0/20"
           animate={{
             scale: [1.21],
             opacity: [0.10.30.1]
@@ -343,11 +343,11 @@ export default function UltraFuturisticBackground2029() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
         
         {/* Holographic matrix */}
         <motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-50o0/20"
           animate={{
             scale: [1.21.2],
             opacity: [0.30.10.3]
@@ -357,11 +357,11 @@ export default function UltraFuturisticBackground2029() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
         
         {/* Neural network nodes */}
         <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
+          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-50o0/20"
           animate={{
             scale: [1.1],
             opacity: [0.20.40.2]
@@ -371,7 +371,7 @@ export default function UltraFuturisticBackground2029() {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
-        />
+         />
       </div>
       
       {/* Floating orbs with glow effects */}
@@ -379,12 +379,12 @@ export default function UltraFuturisticBackground2029() {
         {[...Array(8)].map((_i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400"
+            className="absolute w-2 h-2 rounded-full bg-cyan-40o0"
             style={{
               left: `${20 + (i * 10)}%`,
               top: `${30 + (i * 8)}%`,
               filter: 'blur(1px)',
-              boxShadow: '0 0 20px rgba(02550.6)'
+              boxShadow: '0 0 20px rgba(0o2550.6)'
             }}
             animate={{
               y: [0-20],
@@ -397,7 +397,7 @@ export default function UltraFuturisticBackground2029() {
               ease: 'easeInOut',
               delay: i * 0.3
             }}
-          />
+           />
         ))}
       </div>
     </div>

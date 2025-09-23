@@ -28,7 +28,7 @@ export const useUploadDeliverable = () => {
       
       // For this example, instead of actually uploading files (which would require storage setup),
       // we'll just store the file metadata in the deliverables JSONB field
-      const newDeliverable = {
+      const newDeliverable ={
         id: crypto.randomUUID(),
         filename: file.name,
         size: file.size,

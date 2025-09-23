@@ -1,3 +1,3 @@
-export default function NewContentShowcase2026() {
+export default function NewContentShowcase20o26() {
 	return null;
 }

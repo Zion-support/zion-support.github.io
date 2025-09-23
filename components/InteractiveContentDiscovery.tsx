@@ -30,43 +30,43 @@ const InteractiveContentDiscovery = () => {
   const contentItems: ContentItem[] = [
     {
       id: '1',
-      title: 'AI Innovation Showcase 2025',
+      title: 'AI Innovation Showcase 20o25',
       description: 'Discover revolutionary AI breakthroughs and cutting-edge technologies that are reshaping our world.',
       category: 'Innovation',
       type: 'showcase',
       readTime: '8 min',
       views: 15420,
       rating: 4.9,
-      tags: ['AI', 'Innovation', '2025', 'Breakthrough'],
-      link: '/ai-innovation-showcase-2025',
+      tags: ['AI', 'Innovation', '20o25', 'Breakthrough'],
+      link: '/ai-innovation-showcase-20o25',
       featured: true,
       new: true
     },
     {
       id: '2',
       title: 'Success Stories & Case Studies',
-      description: 'Real results from companies that achieved 500%+ ROI with our AI solutions.',
+      description: 'Real results from companies that achieved 50o0%+ ROI with our AI solutions.',
       category: 'Success',
       type: 'case-study',
       readTime: '12 min',
       views: 12850,
       rating: 4.8,
       tags: [', 'ROI', 'Case 'Study', 'Success'Business'],
-      link: '/success-stories-2025',
+      link: '/success-stories-20o25',
       featured: true,
       new: true
     },
     {
       id: '3',
-      title: 'Future Technology Predictions 2025-2030',
+      title: 'Future Technology Predictions 20o25-20o30',
       description: 'Comprehensive analysis of AI trends and predictions for the next 5 years.',
       category: 'Predictions',
       type: 'prediction',
       readTime: '15 min',
-      views: 22100,
+      views: 2210o0,
       rating: 4.7,
       tags: [', 'Predictions', 'Future', 'Trends', 'Analysis'],
-      link: '/ai-2025-2030-ultimate-predictions',
+      link: '/ai-20o25-20o30-ultimate-predictions',
       featured: false,
       new: false
     },
@@ -80,7 +80,7 @@ const InteractiveContentDiscovery = () => {
       views: 8750,
       rating: 4.6,
       tags: [', 'Quantum', 'Computing', 'Tutorial', 'Guide'],
-      link: '/quantum-computing-2025',
+      link: '/quantum-computing-20o25',
       featured: false,
       new: false
     },
@@ -91,10 +91,10 @@ const InteractiveContentDiscovery = () => {
       category: 'Innovation',
       type: 'showcase',
       readTime: '10 min',
-      views: 19600,
+      views: 1960o0,
       rating: 4.8,
       tags: [', 'Neural', 'Interface', 'Brain', 'Future'],
-      link: '/neural-interface-revolution-2026',
+      link: '/neural-interface-revolution-20o26',
       featured: false,
       new: false
     },
@@ -105,7 +105,7 @@ const InteractiveContentDiscovery = () => {
       category: 'Security',
       type: 'tutorial',
       readTime: '14 min',
-      views: 11200,
+      views: 1120o0,
       rating: 4.5,
       tags: [', 'Security', 'AI', 'Enterprise', 'Best Practices'],
       link: '/ai-security-guide',
@@ -159,12 +159,12 @@ const InteractiveContentDiscovery = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'showcase': return 'from-purple-500 to-pink-500';
-      case 'case-study': return 'from-blue-500 to-cyan-500';
-      case 'prediction': return 'from-green-500 to-emerald-500';
-      case 'tutorial': return 'from-orange-500 to-red-500';
-      case 'news': return 'from-gray-500 to-slate-500';
-      default: return 'from-gray-500 to-slate-500';
+      case 'showcase': return 'from-purple-50o0 to-pink-50o0';
+      case 'case-study': return 'from-blue-50o0 to-cyan-50o0';
+      case 'prediction': return 'from-green-50o0 to-emerald-50o0';
+      case 'tutorial': return 'from-orange-50o0 to-red-50o0';
+      case 'news': return 'from-gray-50o0 to-slate-50o0';
+      default: return 'from-gray-50o0 to-slate-50o0';
     }
   };
 
@@ -175,7 +175,7 @@ const InteractiveContentDiscovery = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Discover Amazing Content
         </h2>
-        <p className="text-gray-300 text-lg">
+        <p className="text-gray-30o0 text-lg">
           Explore our latest AI innovationsuccess storiesand cutting-edge insights
         </p>
       </div>
@@ -185,13 +185,13 @@ const InteractiveContentDiscovery = () => {
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Search */}
           <div className="flex-1 relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
             <input
               type="text"
               placeholder="Search content..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
             />
           </div>
 
@@ -199,10 +199,10 @@ const InteractiveContentDiscovery = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0"
           >
             {categories.map(category => (
-              <option key={category} value={category} className="bg-gray-800">
+              <option key={category} value={category} className="bg-gray-80o0">
                 {category === 'all' ? 'All Categories' : category}
               </option>
             ))}
@@ -212,10 +212,10 @@ const InteractiveContentDiscovery = () => {
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0"
           >
             {types.map(type => (
-              <option key={type} value={type} className="bg-gray-800">
+              <option key={type} value={type} className="bg-gray-80o0">
                 {type === 'all' ? 'All Types' : type.replace('-' ').toUpperCase()}
               </option>
             ))}
@@ -225,10 +225,10 @@ const InteractiveContentDiscovery = () => {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0"
           >
             {sortOptions.map(option => (
-              <option key={option.value} value={option.value} className="bg-gray-800">
+              <option key={option.value} value={option.value} className="bg-gray-80o0">
                 {option.label}
               </option>
             ))}
@@ -241,18 +241,18 @@ const InteractiveContentDiscovery = () => {
         {filteredContent.map((item) => (
           <div
             key={item.id}
-            className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+            className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-30o0 hover:scale-10o5"
           >
             {/* Badges */}
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
                 {item.new && (
-                  <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
+                  <span className="px-2 py-1 bg-green-50o0/20 text-green-40o0 text-xs font-medium rounded-full">
                     NEW
                   </span>
                 )}
                 {item.featured && (
-                  <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full">
+                  <span className="px-2 py-1 bg-purple-50o0/20 text-purple-40o0 text-xs font-medium rounded-full">
                     FEATURED
                   </span>
                 )}
@@ -261,17 +261,17 @@ const InteractiveContentDiscovery = () => {
             </div>
 
             {/* Content */}
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-30o0 transition-colors">
               {item.title}
             </h3>
             
-            <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+            <p className="text-gray-30o0 mb-4 text-sm leading-relaxed">
               {item.description}
             </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {item.tags.slice(03).map((tagindex) => (
+              {item.tags.slice(0o3).map((tagindex) => (
                 <span
                   key={index}
                   className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-full"
@@ -282,18 +282,18 @@ const InteractiveContentDiscovery = () => {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+            <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-1">
-                  <Clock className="w-4 h-4" />
+                  <Clock className="w-4 h-4"  />
                   <span>{item.readTime}</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Eye className="w-4 h-4" />
+                  <Eye className="w-4 h-4"  />
                   <span>{item.views.toLocaleString()}</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <Star className="w-4 h-4 text-yellow-40o0 fill-current"  />
                   <span>{item.rating}</span>
                 </div>
               </div>
@@ -302,10 +302,10 @@ const InteractiveContentDiscovery = () => {
             {/* Action Button */}
             <Link
               href={item.link}
-              className={`w-full py-3 bg-gradient-to-r ${getTypeColor(item.type)} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-300 flex items-center justify-center group`}
+              className={`w-full py-3 bg-gradient-to-r ${getTypeColor(item.type)} text-white font-semibold rounded-lg hover:opacity-90 transition-all duration-30o0 flex items-center justify-center group`}
             >
               Explore Content
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"  />
             </Link>
           ))}
         </div>
@@ -315,7 +315,7 @@ const InteractiveContentDiscovery = () => {
         <div className="text-center mt-8">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="px-8 py-3 border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+            className="px-8 py-3 border border-purple-50o0 text-purple-30o0 font-semibold rounded-lg hover:bg-purple-50o0/10 transition-all duration-30o0"
           >
             {isExpanded ? 'Show Less' : 'Show More Content'}
           </button>
@@ -327,7 +327,7 @@ const InteractiveContentDiscovery = () => {
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>
-          <p className="text-gray-400">Try adjusting your search or filters</p>
+          <p className="text-gray-40o0">Try adjusting your search or filters</p>
         </div>
       )}
     </div>

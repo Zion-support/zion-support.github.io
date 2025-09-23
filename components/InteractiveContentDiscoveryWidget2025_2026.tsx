@@ -32,7 +32,7 @@ import {
   X
 } from 'lucide-react';
 
-const InteractiveContentDiscoveryWidget2025_2026 = () => {
+const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
   const [searchQuerysetSearchQuery] = useState('');
   const [selectedCategorysetSelectedCategory] = useState('all');
   const [viewModesetViewMode] = useState('grid');
@@ -47,8 +47,8 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 
   const categories = [
     { id: ''all', 'name: 'All 'Content', 'icon: Gridcount: 156 },
-    { id: 'ai-2025'name: 'AI 2025'icon: Braincount: 42 },
-    { id: 'ai-2026'name: 'AI 2026'icon: Cpucount: 38 },
+    { id: 'ai-20o25'name: 'AI 20o25'icon: Braincount: 42 },
+    { id: 'ai-20o26'name: 'AI 20o26'icon: Cpucount: 38 },
     { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Zapcount: 24 },
     { id: ''automation', 'name: ''Automation', 'icon: Targetcount: 32 },
     { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcount: 20 }
@@ -59,17 +59,17 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       id: 1,
       title: 'Neural Consciousness AI: The Future is Here',
       description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.',
-      category: 'ai-2025',
+      category: 'ai-20o25',
       type: 'article',
       readTime: '8 min read',
-      views: 12500,
+      views: 1250o0,
       likes: 892,
       comments: 156,
       trending: true,
       featured: true,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'Dr. Sarah Chen',
-      publishedAt: '2025-01-15',
+      publishedAt: '20o25-0o1-15',
       tags: [', 'AI', 'Consciousness'Neural 'Networks', 'Future Tech']
     },
     {
@@ -79,48 +79,48 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       category: 'quantum',
       type: 'video',
       readTime: '15 min watch',
-      views: 8900,
+      views: 890o0,
       likes: 654,
       comments: 89,
       trending: true,
       featured: false,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'Prof. Michael Rodriguez',
-      publishedAt: '2025-01-12',
+      publishedAt: '20o25-0o1-12',
       tags: ['Quantum 'Computing', 'Neural 'Networks', 'AI'Technology']
     },
     {
       id: 3,
-      title: 'AI 2026: Global Ecosystem Vision',
+      title: 'AI 20o26: Global Ecosystem Vision',
       description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.',
-      category: 'ai-2026',
+      category: 'ai-20o26',
       type: 'interactive',
       readTime: '12 min explore',
-      views: 15600,
-      likes: 1200,
+      views: 1560o0,
+      likes: 120o0,
       comments: 234,
       trending: false,
       featured: true,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'AI Research Team',
-      publishedAt: '2025-01-10',
-      tags: ['AI 2026'Global 'Ecosystem', 'Future 'Vision', 'Technology']
+      publishedAt: '20o25-0o1-10',
+      tags: ['AI 20o26'Global 'Ecosystem', 'Future 'Vision', 'Technology']
     },
     {
       id: 4,
-      title: 'Autonomous Business Operations 2025',
+      title: 'Autonomous Business Operations 20o25',
       description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.',
       category: 'automation',
       type: 'guide',
       readTime: '20 min read',
-      views: 7800,
+      views: 780o0,
       likes: 567,
       comments: 123,
       trending: false,
       featured: false,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'Business AI Team',
-      publishedAt: '2025-01-08',
+      publishedAt: '20o25-0o1-08',
       tags: [', 'Automation', 'Business', 'AI', 'Operations']
     },
     {
@@ -130,31 +130,31 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
       category: 'future-tech',
       type: 'article',
       readTime: '10 min read',
-      views: 11200,
+      views: 1120o0,
       likes: 789,
       comments: 145,
       trending: true,
       featured: false,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'Space Tech Division',
-      publishedAt: '2025-01-05',
+      publishedAt: '20o25-0o1-0o5',
       tags: [', 'Space', 'AI', 'Computing', 'Future Tech']
     },
     {
       id: 6,
       title: 'Conscious AI Beings: The Next Frontier',
       description: 'Understanding AI entities with full consciousness and creative capabilities.',
-      category: 'ai-2026',
+      category: 'ai-20o26',
       type: 'video',
       readTime: '18 min watch',
-      views: 9800,
+      views: 980o0,
       likes: 723,
       comments: 167,
       trending: false,
       featured: true,
-      image: '/api/placeholder/400/250',
+      image: '/api/placeholder/40o0/250',
       author: 'Consciousness Research Lab',
-      publishedAt: '2025-01-03',
+      publishedAt: '20o25-0o1-0o3',
       tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy']
     }
   ];
@@ -206,7 +206,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Discover Revolutionary Content
         </h2>
-        <p className="text-gray-300 text-lg">
+        <p className="text-gray-30o0 text-lg">
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations
         </p>
       </motion.div>
@@ -216,18 +216,18 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isVisible ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6delay: 0.2 }}
-        className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
+        className="bg-slate-80o0/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20"
       >
         <div className="flex flex-col lg:flex-row gap-4">
           {/* Search */}
           <div className="flex-1 relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
             <input
               type="text"
               placeholder="Search contentagsor authors..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-slate-700/50 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+              className="w-full pl-12 pr-4 py-3 bg-slate-70o0/50 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
             />
           </div>
 
@@ -236,15 +236,15 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="appearance-none bg-slate-700/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
             >
               {categories.map(category => (
-                <option key={category.id} value={category.id} className="bg-slate-800">
+                <option key={category.id} value={category.id} className="bg-slate-80o0">
                   {category.name} ({category.count})
                 </option>
               ))}
             </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />
           </div>
 
           {/* Sort */}
@@ -252,32 +252,32 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="appearance-none bg-slate-700/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
+              className="appearance-none bg-slate-70o0/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-purple-40o0 focus:ring-2 focus:ring-purple-40o0/20"
             >
-              <option value="trending" className="bg-slate-800">Trending</option>
-              <option value="newest" className="bg-slate-800">Newest</option>
-              <option value="popular" className="bg-slate-800">Most Popular</option>
+              <option value="trending" className="bg-slate-80o0">Trending</option>
+              <option value="newest" className="bg-slate-80o0">Newest</option>
+              <option value="popular" className="bg-slate-80o0">Most Popular</option>
             </select>
-            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+            <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5 pointer-events-none"  />
           </div>
 
           {/* View Mode */}
-          <div className="flex bg-slate-700/50 rounded-xl p-1">
+          <div className="flex bg-slate-70o0/50 rounded-xl p-1">
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                viewMode === 'grid' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover:text-white'
               }`}
             >
-              <Grid className="w-5 h-5" />
+              <Grid className="w-5 h-5"  />
             </button>
             <button
               onClick={() => setViewMode('list')}
               className={`p-2 rounded-lg transition-colors ${
-                viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'
+                viewMode === 'list' ? 'bg-purple-60o0 text-white' : 'text-gray-40o0 hover:text-white'
               }`}
             >
-              <List className="w-5 h-5" />
+              <List className="w-5 h-5"  />
             </button>
           </div>
         </div>
@@ -306,7 +306,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 group cursor-pointer ${
+                className={`bg-slate-80o0/50 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-40o0/50 transition-all duration-30o0 group cursor-pointer ${
                   viewMode === 'list' ? 'flex' : ''
                 }`}
                 onClick={() => setSelectedContent(item)}
@@ -318,21 +318,21 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        className="w-full h-full object-cover group-hover:scale-10o5 transition-transform duration-30o0"
+                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"  />
                       
                       {/* Badges */}
                       <div className="absolute top-4 left-4 flex gap-2">
                         {item.featured && (
-                          <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                            <Star className="w-3 h-3" />
+                          <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                            <Star className="w-3 h-3"  />
                             Featured
                           </span>
                         )}
                         {item.trending && (
-                          <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
-                            <TrendingUp className="w-3 h-3" />
+                          <span className="bg-red-50o0 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                            <TrendingUp className="w-3 h-3"  />
                             Trending
                           </span>
                         )}
@@ -341,14 +341,14 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                       {/* Type Icon */}
                       <div className="absolute top-4 right-4">
                         <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">
-                          <TypeIcon className="w-5 h-5 text-white" />
+                          <TypeIcon className="w-5 h-5 text-white"  />
                         </div>
                       </div>
 
                       {/* Category */}
                       <div className="absolute bottom-4 left-4">
                         <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 flex items-center gap-2">
-                          <CategoryIcon className="w-4 h-4 text-white" />
+                          <CategoryIcon className="w-4 h-4 text-white"  />
                           <span className="text-white text-sm font-medium">
                             {categories.find(cat => cat.id === item.category)?.name}
                           </span>
@@ -358,22 +358,22 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
 
                     {/* Content */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-40o0 transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                      <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">
                         {item.description}
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center justify-between text-sm text-gray-40o0 mb-4">
                         <div className="flex items-center gap-4">
                           <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-4 h-4"  />
                             {item.readTime}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Eye className="w-4 h-4" />
+                            <Eye className="w-4 h-4"  />
                             {item.views.toLocaleString()}
                           </span>
                         </div>
@@ -383,16 +383,16 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                       {/* Stats */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
-                          <span className="flex items-center gap-1 text-gray-400">
-                            <Heart className="w-4 h-4" />
+                          <span className="flex items-center gap-1 text-gray-40o0">
+                            <Heart className="w-4 h-4"  />
                             {item.likes}
                           </span>
-                          <span className="flex items-center gap-1 text-gray-400">
-                            <MessageCircle className="w-4 h-4" />
+                          <span className="flex items-center gap-1 text-gray-40o0">
+                            <MessageCircle className="w-4 h-4"  />
                             {item.comments}
                           </span>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover:translate-x-1 transition-transform"  />
                       </div>
                     </div>
                   </>
@@ -404,45 +404,45 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover"
-                      />
+                       />
                     </div>
                     <div className="flex-1 p-6">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-purple-40o0 transition-colors">
                           {item.title}
                         </h3>
                         <div className="flex gap-2">
                           {item.featured && (
-                            <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">
+                            <span className="bg-yellow-50o0 text-black px-2 py-1 rounded-full text-xs font-semibold">
                               Featured
                             </span>
                           )}
                           <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">
-                            <TypeIcon className="w-4 h-4 text-white" />
+                            <TypeIcon className="w-4 h-4 text-white"  />
                           </div>
                         </div>
                       </div>
-                      <p className="text-gray-300 mb-4">{item.description}</p>
+                      <p className="text-gray-30o0 mb-4">{item.description}</p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-6 text-sm text-gray-400">
+                        <div className="flex items-center gap-6 text-sm text-gray-40o0">
                           <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-4 h-4"  />
                             {item.readTime}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Eye className="w-4 h-4" />
+                            <Eye className="w-4 h-4"  />
                             {item.views.toLocaleString()}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Heart className="w-4 h-4" />
+                            <Heart className="w-4 h-4"  />
                             {item.likes}
                           </span>
                           <span className="flex items-center gap-1">
-                            <MessageCircle className="w-4 h-4" />
+                            <MessageCircle className="w-4 h-4"  />
                             {item.comments}
                           </span>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-5 h-5 text-purple-40o0 group-hover:translate-x-1 transition-transform"  />
                       </div>
                     </div>
                   </>
@@ -467,7 +467,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
               initial={{ scale: 0.8opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8opacity: 0 }}
-              className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-slate-80o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative">
@@ -475,12 +475,12 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   src={selectedContent.image}
                   alt={selectedContent.title}
                   className="w-full h-64 object-cover rounded-t-2xl"
-                />
+                 />
                 <button
                   onClick={() => setSelectedContent(null)}
                   className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/70 transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5"  />
                 </button>
               </div>
               
@@ -488,22 +488,22 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">
                   {selectedContent.title}
                 </h2>
-                <p className="text-gray-300 text-lg mb-6">
+                <p className="text-gray-30o0 text-lg mb-6">
                   {selectedContent.description}
                 </p>
                 
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-400">{selectedContent.readTime}</span>
+                    <Clock className="w-5 h-5 text-gray-40o0"  />
+                    <span className="text-gray-40o0">{selectedContent.readTime}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Eye className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-400">{selectedContent.views.toLocaleString()} views</span>
+                    <Eye className="w-5 h-5 text-gray-40o0"  />
+                    <span className="text-gray-40o0">{selectedContent.views.toLocaleString()} views</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Heart className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-400">{selectedContent.likes} likes</span>
+                    <Heart className="w-5 h-5 text-gray-40o0"  />
+                    <span className="text-gray-40o0">{selectedContent.likes} likes</span>
                   </div>
                 </div>
 
@@ -511,7 +511,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                   {selectedContent.tags.map((tagindex) => (
                     <span
                       key={index}
-                      className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
+                      className="bg-purple-60o0/20 text-purple-30o0 px-3 py-1 rounded-full text-sm"
                     >
                       {tag}
                     </span>
@@ -519,16 +519,16 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <button className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-colors flex items-center gap-2">
-                    <Play className="w-5 h-5" />
+                  <button className="bg-purple-60o0 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-70o0 transition-colors flex items-center gap-2">
+                    <Play className="w-5 h-5"  />
                     {selectedContent.type === 'video' ? 'Watch Now' : 'Read More'}
                   </button>
                   <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
-                    <Bookmark className="w-5 h-5" />
+                    <Bookmark className="w-5 h-5"  />
                     Save
                   </button>
                   <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
-                    <Share2 className="w-5 h-5" />
+                    <Share2 className="w-5 h-5"  />
                     Share
                   </button>
                 </div>
@@ -541,4 +541,4 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {
   );
 };
 
-export default InteractiveContentDiscoveryWidget2025_2026;
+export default InteractiveContentDiscoveryWidget20o25_20o26;

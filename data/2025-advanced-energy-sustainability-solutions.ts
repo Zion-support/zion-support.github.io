@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface AdvancedEnergySustainabilitySolution2025 {
+export interface AdvancedEnergySustainabilitySolution20o25 {
   id: string;
   name: string;
   tagline: string;
@@ -41,7 +41,7 @@ export interface AdvancedEnergySustainabilitySolution2025 {
   reviews: number;
 }
 
-export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabilitySolution2025[] = [
+export const advancedEnergySustainabilitySolutions20o25: AdvancedEnergySustainabilitySolution20o25[] = [
   {
     id: 'ai-powered-energy-grid-optimization',
     name: 'AI-Powered Energy Grid Optimization',
@@ -63,8 +63,8 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     ],
     popular: true,
     icon: '⚡',
-    color: 'from-yellow-600 via-orange-600 to-red-600',
-    textColor: 'text-yellow-400',
+    color: 'from-yellow-60o0 via-orange-60o0 to-red-60o0',
+    textColor: 'text-yellow-40o0',
     link: 'https://ziontechgroup.com/ai-powered-energy-grid-optimization',
     marketPosition: 'Leading AI energy grid optimization platform with advanced analytics',
     targetAudience: 'Utility companies, Energy providers, Grid operators, Government agencies, Smart cities',
@@ -81,14 +81,14 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     growthRate: '32% annual growth',
     variant: 'ai-sustainability-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI energy grid platform with comprehensive optimization and monitoring capabilities.',
-    launchDate: '2025-01-28',
+    launchDate: '20o25-0o1-28',
     customers: 89,
     rating: 4.8,
     reviews: 67
@@ -114,8 +114,8 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     ],
     popular: false,
     icon: '⚛️',
-    color: 'from-purple-600 via-violet-600 to-indigo-600',
-    textColor: 'text-purple-400',
+    color: 'from-purple-60o0 via-violet-60o0 to-indigo-60o0',
+    textColor: 'text-purple-40o0',
     link: 'https://ziontechgroup.com/quantum-energy-storage-optimization',
     marketPosition: 'Leading quantum energy storage platform with advanced optimization capabilities',
     targetAudience: 'Energy storage companies, Battery manufacturers, Utility companies, Research institutions, Government agencies',
@@ -126,20 +126,20 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     technology: ['Quantum Computing, Energy Storage, Battery Management, Grid Integration, Quantum Algorithms'],
     integrations: ['Energy management systems, Battery monitoring, Grid systems, Analytics tools, Research platforms'],
     useCases: ['Energy storage optimization, Battery management, Grid integration, Research, Energy trading'],
-    roi: 'Improve storage efficiency by 40%. Reduce energy costs by 25%. Speed up optimization by 1000x.',
+    roi: 'Improve storage efficiency by 40%. Reduce energy costs by 25%. Speed up optimization by 10o00x.',
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'],
     marketSize: '$8B quantum computing market',
     growthRate: '65% annual growth',
     variant: 'quantum-energy',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready quantum energy platform with advanced algorithms and enterprise integration.',
-    launchDate: '2025-02-03',
+    launchDate: '20o25-0o2-0o3',
     customers: 23,
     rating: 4.9,
     reviews: 18
@@ -165,8 +165,8 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     ],
     popular: true,
     icon: '🌱',
-    color: 'from-green-600 via-emerald-600 to-teal-600',
-    textColor: 'text-green-400',
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+    textColor: 'text-green-40o0',
     link: 'https://ziontechgroup.com/iot-renewable-energy-monitoring',
     marketPosition: 'Leading IoT renewable energy platform with comprehensive monitoring',
     targetAudience: 'Solar companies, Wind farms, Renewable energy providers, Utility companies, Energy consultants',
@@ -183,14 +183,14 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     growthRate: '28% annual growth',
     variant: 'iot-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready IoT renewable energy platform with comprehensive monitoring and optimization capabilities.',
-    launchDate: '2025-02-08',
+    launchDate: '20o25-0o2-08',
     customers: 156,
     rating: 4.7,
     reviews: 98
@@ -216,8 +216,8 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     ],
     popular: false,
     icon: '🌍',
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    textColor: 'text-blue-400',
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    textColor: 'text-blue-40o0',
     link: 'https://ziontechgroup.com/blockchain-carbon-credit-trading',
     marketPosition: 'Leading blockchain carbon credit platform with transparent trading',
     targetAudience: 'Carbon credit brokers, Environmental companies, Corporations, Government agencies, NGOs',
@@ -228,20 +228,20 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     technology: ['Blockchain, Carbon Trading, Smart Contracts, Environmental Assets, Distributed Ledger'],
     integrations: ['Carbon registries, Environmental databases, Trading platforms, Compliance tools, Analytics platforms'],
     useCases: ['Carbon credit trading, Environmental compliance, Sustainability reporting, Asset tracking, Research'],
-    roi: 'Improve trading efficiency by 60%. Reduce transaction costs by 40%. Enhance transparency by 100%.',
+    roi: 'Improve trading efficiency by 60%. Reduce transaction costs by 40%. Enhance transparency by 10o0%.',
     competitors: ['Verra, Gold Standard, Climate Action Reserve, American Carbon Registry, Plan Vivo'],
     marketSize: '$20B carbon credit market',
     growthRate: '55% annual growth',
     variant: 'blockchain-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready blockchain carbon credit platform with comprehensive trading and compliance features.',
-    launchDate: '2025-02-13',
+    launchDate: '20o25-0o2-13',
     customers: 67,
     rating: 4.6,
     reviews: 45
@@ -267,8 +267,8 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     ],
     popular: true,
     icon: '📊',
-    color: 'from-indigo-600 via-purple-600 to-pink-600',
-    textColor: 'text-indigo-400',
+    color: 'from-indigo-60o0 via-purple-60o0 to-pink-60o0',
+    textColor: 'text-indigo-40o0',
     link: 'https://ziontechgroup.com/ai-powered-sustainability-reporting',
     marketPosition: 'Leading AI sustainability reporting platform with comprehensive ESG analytics',
     targetAudience: 'Corporations, ESG consultants, Investment firms, Government agencies, NGOs',
@@ -285,14 +285,14 @@ export const advancedEnergySustainabilitySolutions2025: AdvancedEnergySustainabi
     growthRate: '35% annual growth',
     variant: 'ai-sustainability-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI sustainability platform with comprehensive ESG reporting and analytics capabilities.',
-    launchDate: '2025-02-18',
+    launchDate: '20o25-0o2-18',
     customers: 134,
     rating: 4.8,
     reviews: 89

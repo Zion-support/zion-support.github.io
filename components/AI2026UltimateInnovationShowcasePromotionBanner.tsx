@@ -1,9 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function AI2026UltimateInnovationShowcasePromotionBanner() {
+export default function AI20o26UltimateInnovationShowcasePromotionBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 text-white py-12">
+    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-cyan-60o0 text-white py-12">
       <div className="absolute inset-0 bg-black/10"></div>
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -13,14 +12,14 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
                 🚀 NEW
               </span>
               <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
-                AI 2026
+                AI 20o26
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
-              AI 2026 Ultimate Innovation Showcase
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-10o0 bg-clip-text text-transparent">
+              AI 20o26 Ultimate Innovation Showcase
             </h2>
-            <p className="text-lg md:text-xl text-cyan-100 mb-6 max-w-2xl">
-              Discover the most advanced AI innovationsbreakthrough technologiesand revolutionary solutions that will define the future of business in 2026
+            <p className="text-lg md:text-xl text-cyan-10o0 mb-6 max-w-2xl">
+              Discover the most advanced AI innovationsbreakthrough technologiesand revolutionary solutions that will define the future of business in 20o26
             </p>
             <div className="flex flex-wrap gap-4 mb-6">
               <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold">
@@ -38,8 +37,8 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
             </div>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/ai-2026-ultimate-innovation-showcase"
-                className="px-6 py-3 bg-white text-indigo-600 font-bold rounded-lg hover:bg-cyan-50 transition-colors shadow-lg"
+                href="/ai-20o26-ultimate-innovation-showcase"
+                className="px-6 py-3 bg-white text-indigo-60o0 font-bold rounded-lg hover:bg-cyan-50 transition-colors shadow-lg"
               >
                 Explore Innovations →
               </Link>
@@ -57,7 +56,7 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">⚛️</span>
-                  <span className="text-sm">Quantum AI Fusion - 10,000x faster processing</span>
+                  <span className="text-sm">Quantum AI Fusion - 10,0o00x faster processing</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">🧠</span>
@@ -65,7 +64,7 @@ export default function AI2026UltimateInnovationShowcasePromotionBanner() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">🤖</span>
-                  <span className="text-sm">Autonomous Business Systems - 100% automated operations</span>
+                  <span className="text-sm">Autonomous Business Systems - 10o0% automated operations</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">🔮</span>

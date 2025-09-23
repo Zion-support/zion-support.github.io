@@ -3,7 +3,7 @@ const fs = require('fs');
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
+const nextConfig ={reactStrictMode: true;
   eslint: { ignoreDuringBuilds: true }
   typescript: { ignoreBuildErrors: true }
   pageExtensions: ['tsxtsjsxjs'];
@@ -32,7 +32,7 @@ const fs = require('fs');
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
-const nextConfig = {;
+const nextConfig ={;
 
   reactStrictMode: true;
   reactStrictMode: true,;
@@ -69,5 +69,4 @@ emptyFiles.forEach(file => {;
   }
 }),;
 console.log('🎉 Site fixes completed!'),;
-
 

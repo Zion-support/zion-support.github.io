@@ -1,7 +1,5 @@
-import React from 'react';
-
 const AdvancedSEOOptimizer = () => {
-  const seoData = {
+  const seoData ={
     title: "Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation",
     description: "Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase. Get started today!",
     keywords: [
@@ -33,8 +31,8 @@ const AdvancedSEOOptimizer = () => {
       "description": "Leading AI and technology consulting firm specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions",
       "url": "https://zion.app",
       "logo": "https://zion.app/images/zion-tech-group-logo.png",
-      "foundingDate": "2016",
-      "numberOfEmployees": "50-100",
+      "foundingDate": "20o16",
+      "numberOfEmployees": "50-10o0",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
@@ -94,33 +92,33 @@ const AdvancedSEOOptimizer = () => {
   return (
     <>
       {/* Enhanced Meta Tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en-US" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="distribution" content="global" />
-      <meta name="rating" content="general" />
-      <meta name="theme-color" content="#7c3aed" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"  />
+      <meta name="googlebot" content="index, follow"  />
+      <meta name="bingbot" content="index, follow"  />
+      <meta name="author" content="Zion Tech Group"  />
+      <meta name="publisher" content="Zion Tech Group"  />
+      <meta name="copyright" content="Zion Tech Group"  />
+      <meta name="language" content="en-US"  />
+      <meta name="revisit-after" content="7 days"  />
+      <meta name="distribution" content="global"  />
+      <meta name="rating" content="general"  />
+      <meta name="theme-color" content="#7c3aed"  />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://zion.app" />
+      <link rel="canonical" href="https://zion.app"  />
       
       {/* Alternate Language Versions */}
-      <link rel="alternate" hrefLang="en" href="https://zion.app" />
-      <link rel="alternate" hrefLang="x-default" href="https://zion.app" />
+      <link rel="alternate" hrefLang="en" href="https://zion.app"  />
+      <link rel="alternate" hrefLang="x-default" href="https://zion.app"  />
       
       {/* Preconnect to External Domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"  />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
+      <link rel="preconnect" href="https://www.google-analytics.com"  />
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
+      <link rel="dns-prefetch" href="//www.google-analytics.com"  />
       
       {/* Structured Data */}
       <script
@@ -128,7 +126,7 @@ const AdvancedSEOOptimizer = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(seoData.structuredData)
         }}
-      />
+       />
       
       {/* Additional Structured Data for Services */}
       <script
@@ -173,7 +171,7 @@ const AdvancedSEOOptimizer = () => {
             ]
           })
         }}
-      />
+       />
       
       {/* FAQ Structured Data */}
       <script
@@ -210,7 +208,7 @@ const AdvancedSEOOptimizer = () => {
             ]
           })
         }}
-      />
+       />
       
       {/* Breadcrumb Structured Data */}
       <script
@@ -241,7 +239,7 @@ const AdvancedSEOOptimizer = () => {
             ]
           })
         }}
-      />
+       />
     </>
   );
 };

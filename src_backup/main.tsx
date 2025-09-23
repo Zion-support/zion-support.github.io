@@ -7,10 +7,9 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <App  />
     </HelmetProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>)
 
 // Register service worker for PWA capabilities
 if ('serviceWorker' in navigator) {

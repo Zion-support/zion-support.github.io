@@ -37,7 +37,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
               onClick={() => onEdit(education)}
               aria-label="Edit education";
             >;
-              <Edit className="h-4 w-4" />;
+              <Edit className="h-4 w-4"  />;
             </Button>;
             <Button;
               variant="ghost";
@@ -45,7 +45,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
               onClick={() => onDelete(education.id!)}
               aria-label="Delete education";
             >;
-              <Trash2 className="h-4 w-4" />;
+              <Trash2 className="h-4 w-4"  />;
             </Button>;
           </div>;
         </div>;
@@ -59,6 +59,5 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
 }- {';
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') ;
 }</p>) ;
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) ;
-
+}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4"  /> </Button> <Button > <Trash2 className="h-4 w-4"  /> </Button> </div> </div>) ;
 

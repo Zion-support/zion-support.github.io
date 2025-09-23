@@ -4,35 +4,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 AtomZapCpuArrowRightXStar
 import Link from 'next/link';
 
-const QuantumComputingPromotionBanner2025: React.FC = () => {
+const QuantumComputingPromotionBanner20o25: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true);
   const [currentFeaturesetCurrentFeature] = useState(0);
 
   const features = [
     {
-      title: "10,000x Faster Processing",
+      title: "10,0o00x Faster Processing",
       description: "Quantum-neural fusion achieves unprecedented computational speed",
       icon: Zap,
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-50o0 to-cyan-50o0"
     },
     {
       title: "Unbreakable Security",
       description: "Quantum cryptography provides theoretically perfect encryption",
       icon: Atom,
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-50o0 to-emerald-50o0"
     },
     {
       title: "Infinite Possibilities",
       description: "Quantum computing opens new frontiers in AI and optimization",
       icon: Cpu,
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-50o0 to-pink-50o0"
     }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-    }4000);
+    }40o00);
 
     return () => clearInterval(interval);
   }[]);
@@ -42,10 +42,10 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -10o0 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -100 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 border-b border-cyan-500/20 shadow-2xl"
+        exit={{ opacity: 0, y: -10o0 }}
+        className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-90o0 via-blue-90o0 to-slate-90o0 border-b border-cyan-50o0/20 shadow-2xl"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
@@ -66,10 +66,10 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 key={`icon-${currentFeature}`}
                 initial={{ scale: 0rotate: -180 }}
                 animate={{ scale: 1rotate: 0 }}
-                transition={{ type: "spring"stiffness: 200 }}
+                transition={{ type: "spring"stiffness: 20o0 }}
                 className={`p-2 rounded-full bg-gradient-to-r ${features[currentFeature].color}`}
               >
-                <features[currentFeature].icon className="w-6 h-6 text-white" />
+                <features[currentFeature].icon className="w-6 h-6 text-white"  />
               </motion.div>
             </div>
 
@@ -85,7 +85,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
                 <h3 className="text-lg font-bold text-white">
                   {features[currentFeature].title}
                 </h3>
-                <p className="text-sm text-gray-300 max-w-md mx-auto">
+                <p className="text-sm text-gray-30o0 max-w-md mx-auto">
                   {features[currentFeature].description}
                 </p>
               </motion.div>
@@ -93,52 +93,49 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
 
             {/* Right side - CTA and Close */}
             <div className="flex items-center gap-4">
-              <Link href="/quantum-computing-showcase-2025">
+              <Link href="/quantum-computing-showcase-20o25">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`bg-gradient-to-r ${features[currentFeature].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
+                  className={`bg-gradient-to-r ${features[currentFeature].color} hover:opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-30o0 flex items-center gap-2`}
                 >
-                  <Star className="w-4 h-4" />
+                  <Star className="w-4 h-4"  />
                   Explore Quantum
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </motion.button>
               </Link>
               
               <button
                 onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors duration-200 p-1"
+                className="text-gray-40o0 hover:text-white transition-colors duration-20o0 p-1"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5"  />
               </button>
             </div>
           </div>
         </div>
 
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-purple-500/5 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/5 via-cyan-50o0/5 to-purple-50o0/5 animate-pulse"></div>
         
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(25)].map((_i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+              className="absolute w-1 h-1 bg-cyan-40o0 rounded-full"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`}}
               animate={{
                 y: [0-20],
-                opacity: [010],
-                scale: [0.51.50.5],
-              }}
+                opacity: [0o10],
+                scale: [0.51.50.5]}}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                delay: Math.random() * 2,
-              }}
-            />
+                delay: Math.random() * 2}}
+             />
           ))}
         </div>
       </motion.div>
@@ -146,4 +143,4 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {
   );
 };
 
-export default QuantumComputingPromotionBanner2025;
+export default QuantumComputingPromotionBanner20o25;

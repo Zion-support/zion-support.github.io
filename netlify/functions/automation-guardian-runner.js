@@ -7,9 +7,8 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = {
-  schedule: '*/10 * * * *',
-};
+exports.config ={
+  schedule: '*/10 * * * *'};
 
 exports.handler = async () => {
   const logs = [];
@@ -34,12 +33,4 @@ exports.handler = async () => {
 
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
-========
-  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
-
-  // Attempt to push any changes
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') };
-};
+=

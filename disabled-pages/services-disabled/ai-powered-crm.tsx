@@ -1,4 +1,3 @@
-import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -40,7 +39,7 @@ const AIPoweredCRMPage: NextPage = () => {
       description: 'Perfect for small sales teams',
       features: [
         'Up to 5 users',
-        '1,000 contacts',
+        '1,0o00 contacts',
         'Basic AI features',
         'Email integration',
         'Mobile app',
@@ -54,7 +53,7 @@ const AIPoweredCRMPage: NextPage = () => {
       description: 'Ideal for growing businesses',
       features: [
         'Up to 15 users',
-        '10,000 contacts',
+        '10,0o00 contacts',
         'Advanced AI features',
         'Custom workflows',
         'Advanced analytics',
@@ -100,37 +99,37 @@ const AIPoweredCRMPage: NextPage = () => {
     <>
       <Head>
         <title>AI-Powered CRM - Zion Tech Group</title>
-        <meta name="description" content="Intelligent CRM with AI-powered lead scoring, automated follow-ups, and predictive analytics. Increase sales conversion rates by 35%." />
-        <meta name="keywords" content="AI CRM, customer relationship management, sales automation, lead scoring, sales pipeline, CRM software" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-powered-crm" />
+        <meta name="description" content="Intelligent CRM with AI-powered lead scoring, automated follow-ups, and predictive analytics. Increase sales conversion rates by 35%."  />
+        <meta name="keywords" content="AI CRM, customer relationship management, sales automation, lead scoring, sales pipeline, CRM software"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-powered-crm"  />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white py-20">
+        <section className="bg-gradient-to-br from-indigo-90o0 via-blue-90o0 to-purple-90o0 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="bg-indigo-600 p-4 rounded-full">
-                  <Users className="w-12 h-12" />
+                <div className="bg-indigo-60o0 p-4 rounded-full">
+                  <Users className="w-12 h-12"  />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 AI-Powered CRM
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto">
                 Transform your sales process with intelligent CRM that automates lead scoring, follow-ups, and provides 
                 predictive insights. Increase conversion rates by 35% with AI-driven customer relationship management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <span className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                  <span className="bg-indigo-60o0 hover:bg-indigo-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                     Start Free Trial
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-5 h-5"  />
                   </span>
                 </Link>
                 <Link href="#demo">
-                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
                     Watch Demo
                   </span>
                 </Link>
@@ -143,10 +142,10 @@ const AIPoweredCRMPage: NextPage = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Intelligent CRM Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Advanced AI technology that understands your sales process and optimizes every interaction
               </p>
             </div>
@@ -154,8 +153,8 @@ const AIPoweredCRMPage: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">
-                  <CheckCircle className="w-8 h-8 text-green-500 mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
+                  <CheckCircle className="w-8 h-8 text-green-50o0 mb-4"  />
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{feature}</h3>
                 </div>
               ))}
             </div>
@@ -166,10 +165,10 @@ const AIPoweredCRMPage: NextPage = () => {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Proven Sales Results
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Join thousands of sales teams achieving better results with AI-powered CRM
               </p>
             </div>
@@ -177,10 +176,10 @@ const AIPoweredCRMPage: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-indigo-600" />
+                  <div className="bg-indigo-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-indigo-60o0"  />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit}</h3>
                 </div>
               ))}
             </div>
@@ -191,19 +190,19 @@ const AIPoweredCRMPage: NextPage = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Perfect for Every Sales Team
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 From startups to enterprises, optimize your sales process at any scale
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg border border-indigo-100">
-                  <Target className="w-8 h-8 text-indigo-600 mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
+                <div key={index} className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg border border-indigo-10o0">
+                  <Target className="w-8 h-8 text-indigo-60o0 mb-4"  />
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{useCase}</h3>
                 </div>
               ))}
             </div>
@@ -214,41 +213,41 @@ const AIPoweredCRMPage: NextPage = () => {
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Flexible Pricing Plans
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
                 Choose the plan that fits your team size and sales volume
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-indigo-500 transform scale-105' : ''}`}>
+                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-indigo-50o0 transform scale-10o5' : ''}`}>
                   {index === 1 && (
-                    <div className="bg-indigo-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
+                    <div className="bg-indigo-50o0 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
                       Most Popular
                     </div>
                   )}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-6">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{plan.name}</h3>
+                  <p className="text-gray-60o0 mb-6">{plan.description}</p>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
-                    <span className="text-gray-600">/{plan.period}</span>
+                    <span className="text-4xl font-bold text-gray-90o0">${plan.price}</span>
+                    <span className="text-gray-60o0">/{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                        <span className="text-gray-700">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                        <span className="text-gray-70o0">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Link href="/contact">
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1 
-                        ? 'bg-indigo-600 hover:bg-indigo-700 text-white' 
-                        : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
+                        ? 'bg-indigo-60o0 hover:bg-indigo-70o0 text-white' 
+                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0'
                     }`}>
                       Get Started
                     </span>
@@ -263,7 +262,7 @@ const AIPoweredCRMPage: NextPage = () => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Trusted by Sales Leaders
               </h2>
             </div>
@@ -273,13 +272,13 @@ const AIPoweredCRMPage: NextPage = () => {
                 <div key={index} className="bg-gray-50 p-6 rounded-lg">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4">"{testimonial.content}"</p>
+                  <p className="text-gray-70o0 mb-4">"{testimonial.content}"</p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                    <p className="text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                    <p className="font-semibold text-gray-90o0">{testimonial.name}</p>
+                    <p className="text-gray-60o0">{testimonial.role}, {testimonial.company}</p>
                   </div>
                 </div>
               ))}
@@ -288,28 +287,28 @@ const AIPoweredCRMPage: NextPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 text-white">
+        <section className="py-20 bg-gradient-to-br from-indigo-90o0 via-blue-90o0 to-purple-90o0 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Transform Your Sales Process Today
             </h2>
-            <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl mb-8 text-gray-20o0 max-w-3xl mx-auto">
               Join thousands of sales teams using AI to close more deals and build stronger customer relationships.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <span className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                <span className="bg-indigo-60o0 hover:bg-indigo-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Start Free Trial
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </span>
               </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                Call +1 302 464 0950
+              <a href="tel:+130o24640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                Call +1 30o2 464 0950
               </a>
             </div>
-            <div className="mt-8 text-sm text-gray-300">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-indigo-300">kleber@ziontechgroup.com</a></p>
-              <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+            <div className="mt-8 text-sm text-gray-30o0">
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-indigo-30o0">kleber@ziontechgroup.com</a></p>
+              <p>Address: 364 E Main St STE 10o08, Middletown, DE 19709</p>
             </div>
           </div>
         </section>

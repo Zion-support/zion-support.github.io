@@ -6,7 +6,7 @@ export default function AutonomousSupportCopilot12Page() {
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-3xl px-6 pt-24 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Autonomous Support Copilot v1.2</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">
+        <p className="mt-4 text-lg leading-8 text-gray-30o0">
           Faster triage, safer tool use, and improved retrieval observability with new eval gates.
         </p>
         <div className="mt-8 prose prose-invert">

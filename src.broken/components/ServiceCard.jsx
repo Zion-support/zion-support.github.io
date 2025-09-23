@@ -1,4 +1,3 @@
-import React from "react";
 import { Heart } from "lucide-react";
 import { toast } from "sonner";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -44,7 +43,7 @@ export default function ServiceCard({ service, onSelect }) {
         aria-label="save-to-wishlist"
         className="absolute top-2 right-2 text-zion-slate-light hover:text-zion-cyan"
       >
-        <Heart className="w-4 h-4" />
+        <Heart className="w-4 h-4"  />
       </button>
       <h3 className="text-white font-medium">{service.title}</h3>
     </div>

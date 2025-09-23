@@ -69,8 +69,7 @@ export function useWallet() {
         amount,
         transaction_type: 'earn',
         reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
+        created_at: new Date().toISOString()},
       ...prev,
     ]);
   }
@@ -88,8 +87,7 @@ export function useWallet() {
         amount,
         transaction_type: 'burn',
         reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
+        created_at: new Date().toISOString()},
       ...prev,
     ]);
   }
@@ -107,6 +105,5 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-    spendTokens,
-  };
+    spendTokens};
 }

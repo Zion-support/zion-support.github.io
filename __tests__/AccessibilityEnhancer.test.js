@@ -1,31 +1,29 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
   test('renders without crashing', () => {
-    render(<AccessibilityEnhancer />);
+    render(<AccessibilityEnhancer  />);
     expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();
   });
   
   test('displays correct content', () => {
-    render(<AccessibilityEnhancer />);
+    render(<AccessibilityEnhancer  />);
   });
   
   test('handles user interactions', () => {
-    render(<AccessibilityEnhancer />);
+    render(<AccessibilityEnhancer  />);
   });
   
   test('applies correct styling', () => {
-    render(<AccessibilityEnhancer />);
+    render(<AccessibilityEnhancer  />);
   });
 });
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe("AccessibilityEnhancer",() => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling",() => { render(<AccessibilityEnhancer />)})});''"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe("AccessibilityEnhancer",() => { test("renders without crashing",() => { render(<AccessibilityEnhancer  />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer  />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer  />)}); test("applies correct styling",() => { render(<AccessibilityEnhancer  />)})});''"
 
-ursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0o462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
 
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -37,7 +35,7 @@ describe('AccessibilityEnhancer'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer  />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer  />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer  />)}); test("applies correct styling"
 
 });
 });

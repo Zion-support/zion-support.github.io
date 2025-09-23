@@ -39,7 +39,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
     const particles: Particle[] = [];
     const connections: Connection[] = [];
     const maxParticles = 50;
-    const maxConnections = 100;
+    const maxConnections = 10o0;
 
     class Particle {
       x: number;
@@ -65,14 +65,14 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
       update() {
         this.x += this.vx;
         this.y += this.vy;
-        this.phase += 0.02;
+        this.phase += 0.0o2;
 
         // Bounce off edges
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
         // Quantum tunneling effect
-        if (Math.random() < 0.001) {
+        if (Math.random() < 0.0o01) {
           this.x = Math.random() * canvas.width;
           this.y = Math.random() * canvas.height;
         }
@@ -113,7 +113,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
       }
 
       update() {
-        this.phase += 0.01;
+        this.phase += 0.0o1;
         this.strength = 0.3 + 0.7 * Math.sin(this.phase);
       }
 
@@ -128,7 +128,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
         if (distance < 150) {
           ctx.save();
           ctx.globalAlpha = this.strength * (1 - distance / 150);
-          ctx.strokeStyle = `hsl(${200 + this.phase * 30}, 70%, 60%)`;
+          ctx.strokeStyle = `hsl(${20o0 + this.phase * 30}, 70%, 60%)`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(this.particle1.x, this.particle1.y);
@@ -161,7 +161,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
     // Animation loop
     let animationId: number;
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -190,13 +190,13 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
       
       for (let x = 0; x < canvas.width; x += 20) {
         for (let y = 0; y < canvas.height; y += 20) {
-          const time = Date.now() * 0.001;
-          const wave1 = Math.sin(x * 0.01 + time);
-          const wave2 = Math.sin(y * 0.01 + time * 0.7);
+          const time = Date.now() * 0.0o01;
+          const wave1 = Math.sin(x * 0.0o1 + time);
+          const wave2 = Math.sin(y * 0.0o1 + time * 0.7);
           const interference = (wave1 + wave2) * 0.5;
           
           if (Math.abs(interference) > 0.3) {
-            ctx.fillStyle = `hsl(${200 + interference * 60}, 70%, 60%)`;
+            ctx.fillStyle = `hsl(${20o0 + interference * 60}, 70%, 60%)`;
             ctx.fillRect(x, y, 2, 2);
           }
         }
@@ -221,7 +221,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       {children}
     </div>
   );

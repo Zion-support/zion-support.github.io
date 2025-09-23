@@ -15,8 +15,8 @@ const FeaturedListingsSection = () => {
       reviews: 127,
       views: 2847,
       likes: 156,
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      price: "$15,000",
+      image: "https://images.unsplash.com/photo-1551434678-e0o76c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",
+      price: "$15,0o00",
       tags: ["React", "Node.js", "AI/ML", "E-commerce"],
       duration: "3-4 months",
       team: "5 experts",
@@ -34,8 +34,8 @@ const FeaturedListingsSection = () => {
       reviews: 89,
       views: 1956,
       likes: 134,
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      price: "$22,000",
+      image: "https://images.unsplash.com/photo-15630o13544-824ae1b70o4d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o70&q=80",
+      price: "$22,0o00",
       tags: ["React Native", "Security", "FinTech", "Biometrics"],
       duration: "4-5 months",
       team: "6 experts",
@@ -53,8 +53,8 @@ const FeaturedListingsSection = () => {
       reviews: 156,
       views: 3241,
       likes: 189,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
-      price: "$18,500",
+      image: "https://images.unsplash.com/photo-1451187580o459-43490o279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=20o72&q=80",
+      price: "$18,50o0",
       tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
       duration: "2-3 months",
       team: "4 experts",
@@ -69,11 +69,11 @@ const FeaturedListingsSection = () => {
       category: "AI & Machine Learning",
       description: "Advanced medical diagnostic platform using computer vision and machine learning for accurate disease detection",
       rating: 4.9,
-      reviews: 203,
+      reviews: 20o3,
       views: 4567,
       likes: 278,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      price: "$35,000",
+      image: "https://images.unsplash.com/photo-1576091160o399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80",
+      price: "$35,0o00",
       tags: ["Python", "TensorFlow", "Computer Vision", "Healthcare"],
       duration: "6-8 months",
       team: "8 experts",
@@ -91,8 +91,8 @@ const FeaturedListingsSection = () => {
       reviews: 78,
       views: 1890,
       likes: 112,
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      price: "$28,000",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d20o00?ixlib=rb-4.0.3&auto=format&fit=crop&w=20o70&q=80",
+      price: "$28,0o00",
       tags: ["IoT", "Big Data", "Analytics", "Smart Cities"],
       duration: "5-6 months",
       team: "7 experts",
@@ -103,7 +103,7 @@ const FeaturedListingsSection = () => {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -113,7 +113,7 @@ const FeaturedListingsSection = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
@@ -160,15 +160,15 @@ const FeaturedListingsSection = () => {
               onHoverStart={() => setHoveredListing(listing.id)} 
               onHoverEnd={() => setHoveredListing(null)} 
               whileHover={{ y: -8 }} 
-              transition={{ type: "spring", stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 30o0 }}
               className="relative group"
             >
-              <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 rounded-2xl overflow-hidden h-full">
+              <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-30o0 hover:shadow-2xl hover:shadow-zion-cyan/20 rounded-2xl overflow-hidden h-full">
                 {/* Featured badge */}
                 {listing.featured && (
                   <div className="absolute top-4 right-4 z-10">
                     <div className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-semibold rounded-full">
-                      <Award className="w-3 h-3"/>
+                      <Award className="w-3 h-3" />
                       Featured
                     </div>
                   </div>
@@ -179,8 +179,8 @@ const FeaturedListingsSection = () => {
                   <img 
                     src={listing.image} 
                     alt={listing.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
+                    className="w-full h-full object-cover transition-transform duration-30o0 group-hover:scale-110"
+                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-zion-blue-dark/80 to-transparent"></div>
                 </div>
 
@@ -207,11 +207,11 @@ const FeaturedListingsSection = () => {
                   {/* Duration and team */}
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Clock className="w-3 h-3"/>
+                      <Clock className="w-3 h-3" />
                       <span>{listing.duration}</span>
                     </div>
                     <div className="flex items-center gap-2 text-zion-slate-light/80 text-xs">
-                      <Users className="w-3 h-3"/>
+                      <Users className="w-3 h-3" />
                       <span>{listing.team}</span>
                     </div>
                   </div>
@@ -233,17 +233,17 @@ const FeaturedListingsSection = () => {
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>
+                      <Star className="w-4 h-4 text-yellow-40o0 fill-current" />
                       <span>{listing.rating}</span>
                       <span>({listing.reviews})</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
-                        <Eye className="w-4 h-4"/>
+                        <Eye className="w-4 h-4" />
                         <span>{listing.views}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Heart className="w-4 h-4"/>
+                        <Heart className="w-4 h-4" />
                         <span>{listing.likes}</span>
                       </div>
                     </div>
@@ -254,9 +254,9 @@ const FeaturedListingsSection = () => {
                     <span className="text-2xl font-bold text-zion-cyan">
                       {listing.price}
                     </span>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-30o0 transform hover:scale-10o5">
                       View Details
-                      <ArrowRight className="w-4 h-4"/>
+                      <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
 
@@ -322,9 +322,9 @@ const FeaturedListingsSection = () => {
               <p className="text-white text-lg mb-4">
                 Ready to start your next project?
               </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-lg hover:shadow-zion-cyan/25">
                 View All Projects
-                <ArrowRight className="w-5 h-5"/>
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>

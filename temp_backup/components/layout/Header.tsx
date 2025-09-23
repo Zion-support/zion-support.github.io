@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Menu, X, ChevronDown, Zap, Globe, Shield } from 'lucide-react';
 
 export default function Header() {
@@ -40,7 +39,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
         isScrolled
           ? 'bg-black/90 backdrop-blur-2xl border-b border-white/20 shadow-2xl shadow-black/50'
           : 'bg-transparent'
@@ -48,7 +47,7 @@ export default function Header() {
     >
       {/* Futuristic Background Glow */}
       {isScrolled && (
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-cyan-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/5 via-purple-50o0/5 to-cyan-50o0/5"  />
       )}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,18 +55,18 @@ export default function Header() {
           {/* Enhanced Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-500/25">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 via-purple-50o0 to-cyan-50o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-30o0 shadow-lg group-hover:shadow-2xl group-hover:shadow-blue-50o0/25">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300 -z-10" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-50o0 via-purple-50o0 to-cyan-50o0 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-30o0 -z-10"  />
               {/* Animated border */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-50o0 via-purple-50o0 to-cyan-50o0 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 blur-sm"  />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+              <span className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-40o0 group-hover:to-purple-40o0 transition-all duration-30o0">
                 Zion Tech
               </span>
-              <span className="text-xs text-gray-400 group-hover:text-blue-400 transition-colors duration-300">
+              <span className="text-xs text-gray-40o0 group-hover:text-blue-40o0 transition-colors duration-30o0">
                 Group
               </span>
             </div>
@@ -77,9 +76,9 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-1">
             {/* Contact Info */}
             <div className="flex items-center space-x-4 mr-6">
-              <a href="tel:+13024640950" className="flex items-center space-x-2 text-sm text-gray-300 hover:text-neon-blue transition-colors duration-200">
+              <a href="tel:+130o24640950" className="flex items-center space-x-2 text-sm text-gray-30o0 hover:text-neon-blue transition-colors duration-20o0">
                 <span className="w-2 h-2 bg-neon-blue rounded-full animate-pulse"></span>
-                <span>+1 302 464 0950</span>
+                <span>+1 30o2 464 0950</span>
               </a>
             </div>
             {navigation.map((item) => (
@@ -96,13 +95,13 @@ export default function Header() {
                           setIsProductDropdownOpen(false);
                         }
                       }}
-                      className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/5"
+                      className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-30o0 hover:text-white transition-colors duration-20o0 rounded-lg hover:bg-white/5"
                     >
                       {item.name}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                         (item.name === 'Product' && isProductDropdownOpen) || 
                         (item.name === 'Solutions' && isSolutionsDropdownOpen) ? 'rotate-180' : ''
-                      }`} />
+                      }`}  />
                     </button>
                     
                     {item.name === 'Product' && isProductDropdownOpen && (
@@ -112,17 +111,17 @@ export default function Header() {
                             <Link
                               key={product.name}
                               href={product.href}
-                              className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300 group hover:scale-105"
+                              className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-blue-50o0/10 hover:to-purple-50o0/10 transition-all duration-30o0 group hover:scale-10o5"
                               onClick={() => setIsProductDropdownOpen(false)}
                             >
-                              <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-300">
+                              <div className="text-2xl mr-3 group-hover:scale-110 transition-transform duration-30o0">
                                 {product.icon}
                               </div>
                               <div className="flex-1">
-                                <div className="font-medium text-white mb-1 group-hover:text-blue-400 transition-colors duration-300">
+                                <div className="font-medium text-white mb-1 group-hover:text-blue-40o0 transition-colors duration-30o0">
                                   {product.name}
                                 </div>
-                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                                <div className="text-sm text-gray-40o0 group-hover:text-gray-30o0 transition-colors duration-30o0">
                                   {product.description}
                                 </div>
                               </div>
@@ -139,11 +138,11 @@ export default function Header() {
                             <Link
                               key={tool.name}
                               href={tool.href}
-                              className="flex flex-col p-3 rounded-lg hover:bg-white/5 transition-colors duration-200"
+                              className="flex flex-col p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0"
                               onClick={() => setIsSaasToolsDropdownOpen(false)}
                             >
                               <div className="font-medium text-white mb-1">{tool.name}</div>
-                              <div className="text-sm text-gray-400">{tool.description}</div>
+                              <div className="text-sm text-gray-40o0">{tool.description}</div>
                             </Link>
                           ))}
                         </div>
@@ -157,11 +156,11 @@ export default function Header() {
                             <Link
                               key={solution.name}
                               href={solution.href}
-                              className="flex flex-col p-3 rounded-lg hover:bg-white/5 transition-colors duration-200"
+                              className="flex flex-col p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0"
                               onClick={() => setIsSolutionsDropdownOpen(false)}
                             >
                               <div className="font-medium text-white mb-1">{solution.name}</div>
-                              <div className="text-sm text-gray-400">{solution.description}</div>
+                              <div className="text-sm text-gray-40o0">{solution.description}</div>
                             </Link>
                           ))}
                         </div>
@@ -171,15 +170,15 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg relative group ${
+                    className={`px-4 py-2 text-sm font-medium transition-all duration-30o0 rounded-lg relative group ${
                       isActive(item.href)
-                        ? 'text-blue-400 bg-gradient-to-r from-blue-500/20 to-purple-500/20'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'text-blue-40o0 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20'
+                        : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                     }`}
                   >
                     {item.name}
                     {/* Hover glow effect */}
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0 blur-sm"  />
                   </Link>
                 )}
               </div>
@@ -190,7 +189,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-semibold rounded-lg hover:from-neon-cyan hover:to-neon-blue transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-neon-blue/25"
+              className="px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-cyan text-black font-semibold rounded-lg hover:from-neon-cyan hover:to-neon-blue transition-all duration-30o0 hover:scale-10o5 shadow-lg hover:shadow-neon-blue/25"
             >
               Contact Us
             </Link>
@@ -200,13 +199,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3">
             <Link
               href="/contact"
-              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-300 rounded-lg hover:bg-white/10"
+              className="px-4 py-2 text-sm font-medium text-gray-30o0 hover:text-white transition-colors duration-30o0 rounded-lg hover:bg-white/10"
             >
               Contact
             </Link>
             <Link
               href="/micro-saas"
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+              className="px-6 py-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover:from-blue-70o0 hover:to-purple-70o0 text-white font-medium rounded-lg transition-all duration-30o0 hover:scale-10o5 hover:shadow-lg hover:shadow-blue-50o0/25"
             >
               Get Started
             </Link>
@@ -215,7 +214,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-200"
+            className="lg:hidden p-2 rounded-lg text-gray-30o0 hover:text-white hover:bg-white/10 transition-colors duration-20o0"
           >
             <svg
               className="w-6 h-6"
@@ -229,14 +228,14 @@ export default function Header() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M6 18L18 6M6 6l12 12"
-                />
+                 />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M4 6h16M4 12h16M4 18h16"
-                />
+                 />
               )}
             </svg>
           </button>
@@ -259,22 +258,22 @@ export default function Header() {
                           <Link
                             key={product.name}
                             href={product.href}
-                            className="block px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                            className="block px-4 py-2 rounded-lg text-sm text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors duration-20o0"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             <div className="font-medium">{product.name}</div>
-                            <div className="text-xs text-gray-500">{product.description}</div>
+                            <div className="text-xs text-gray-50o0">{product.description}</div>
                           </Link>
                         ))}
                         {item.name === 'Solutions' && solutionsDropdown.map((solution) => (
                           <Link
                             key={solution.name}
                             href={solution.href}
-                            className="block px-4 py-2 rounded-lg text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
+                            className="block px-4 py-2 rounded-lg text-sm text-gray-30o0 hover:text-white hover:bg-white/5 transition-colors duration-20o0"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
                             <div className="font-medium">{solution.name}</div>
-                            <div className="text-xs text-gray-500">{solution.description}</div>
+                            <div className="text-xs text-gray-50o0">{solution.description}</div>
                           </Link>
                         ))}
                       </div>
@@ -283,10 +282,10 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block px-4 py-2 text-base font-medium rounded-lg transition-colors duration-200 ${
+                    className={`block px-4 py-2 text-base font-medium rounded-lg transition-colors duration-20o0 ${
                       isActive(item.href)
-                        ? 'text-blue-400 bg-blue-500/10'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ? 'text-blue-40o0 bg-blue-50o0/10'
+                        : 'text-gray-30o0 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -300,14 +299,14 @@ export default function Header() {
             <div className="pt-4 border-t border-white/20">
               <Link
                 href="/contact"
-                className="block px-4 py-3 text-center text-gray-300 hover:text-white transition-colors duration-200 rounded-lg hover:bg-white/10 mb-3"
+                className="block px-4 py-3 text-center text-gray-30o0 hover:text-white transition-colors duration-20o0 rounded-lg hover:bg-white/10 mb-3"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
               </Link>
               <Link
                 href="/micro-saas"
-                className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-300 hover:scale-105"
+                className="block px-4 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-medium rounded-lg text-center transition-all duration-30o0 hover:scale-10o5"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Get Started

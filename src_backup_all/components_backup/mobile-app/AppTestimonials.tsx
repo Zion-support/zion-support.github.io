@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
@@ -33,7 +32,7 @@ export const AppTestimonials: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-30o0 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
           </p>
         </div>
@@ -46,20 +45,20 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star 
                       key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />
+                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-40o0 fill-yellow-40o0" : "text-gray-40o0"}`}
+                     />
                   ))}
                 </div>
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
+                <p className="text-gray-20o0 mb-6">"{testimonial.text}"</p>
               </CardContent>
               <CardFooter className="border-t border-zion-purple/20 pt-4">
                 <div className="flex items-center">
                   <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
+                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy"  />
                   </div>
                   <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-gray-40o0">{testimonial.role}</p>
                   </div>
                 </div>
               </CardFooter>

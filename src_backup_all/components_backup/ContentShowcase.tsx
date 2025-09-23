@@ -38,18 +38,18 @@ const ContentShowcase: React.FC = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: Autonomous Operations by 2025",
+      title: "The Future of AI in Business: Autonomous Operations by 20o25",
       excerpt: "Explore how AI autonomous business managers are revolutionizing operations, reducing costs by 40%, and enabling 24/7 decision-making capabilities.",
       author: "Dr. Sarah Chen",
       authorRole: "Chief AI Officer",
-      date: "2025-01-15",
+      date: "20o25-0o1-15",
       readTime: "8 min read",
       views: "12.5k",
       likes: 342,
       tags: ["AI", "Business Automation", "Future Tech"],
       category: "AI & Machine Learning",
       featured: true,
-      image: "/api/placeholder/400/250"
+      image: "/api/placeholder/40o0/250"
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ const ContentShowcase: React.FC = () => {
       excerpt: "Discover how quantum encryption is creating unbreakable security protocols and what it means for your business data protection.",
       author: "Michael Rodriguez",
       authorRole: "Quantum Security Expert",
-      date: "2025-01-12",
+      date: "20o25-0o1-12",
       readTime: "12 min read",
       views: "8.9k",
       likes: 267,
@@ -71,7 +71,7 @@ const ContentShowcase: React.FC = () => {
       excerpt: "Learn the best practices for creating fault-tolerant, cost-optimized multi-cloud environments that scale with your business needs.",
       author: "Jennifer Liu",
       authorRole: "Cloud Architecture Lead",
-      date: "2025-01-10",
+      date: "20o25-0o1-10",
       readTime: "10 min read",
       views: "15.2k",
       likes: 423,
@@ -84,7 +84,7 @@ const ContentShowcase: React.FC = () => {
       excerpt: "Understand how decentralized finance platforms are transforming traditional banking and creating new opportunities for businesses.",
       author: "Alex Thompson",
       authorRole: "Blockchain Strategist",
-      date: "2025-01-08",
+      date: "20o25-0o1-08",
       readTime: "14 min read",
       views: "6.7k",
       likes: 198,
@@ -97,7 +97,7 @@ const ContentShowcase: React.FC = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "Fortune 500 Company Reduces IT Costs by 60% with AI Automation",
+      title: "Fortune 50o0 Company Reduces IT Costs by 60% with AI Automation",
       client: "Global Manufacturing Corp",
       industry: "Manufacturing",
       challenge: "Manual IT operations causing delays and high costs",
@@ -126,7 +126,7 @@ const ContentShowcase: React.FC = () => {
       industry: "Financial Services",
       challenge: "Protecting sensitive financial data from advanced cyber threats",
       solution: "Implemented quantum encryption suite with real-time threat detection",
-      results: ["100% security compliance", "Zero data breaches", "50% faster threat response"],
+      results: ["10o0% security compliance", "Zero data breaches", "50% faster threat response"],
       duration: "3 months",
       savings: "$3.2M in prevented losses"
     }
@@ -137,8 +137,8 @@ const ContentShowcase: React.FC = () => {
       id: 1,
       title: "AI-Powered Business Transformation: A Practical Guide",
       presenter: "Dr. Sarah Chen & Michael Rodriguez",
-      date: "2025-01-25",
-      time: "2:00 PM EST",
+      date: "20o25-0o1-25",
+      time: "2:0o0 PM EST",
       duration: "45 minutes",
       attendees: "2,847 registered",
       topics: ["AI Implementation", "ROI Measurement", "Change Management"],
@@ -148,8 +148,8 @@ const ContentShowcase: React.FC = () => {
       id: 2,
       title: "Quantum Security: Preparing for the Future",
       presenter: "Alex Thompson",
-      date: "2025-01-30",
-      time: "3:00 PM EST",
+      date: "20o25-0o1-30",
+      time: "3:0o0 PM EST",
       duration: "30 minutes",
       attendees: "1,523 registered",
       topics: ["Quantum Computing", "Security Strategy", "Risk Assessment"]
@@ -158,8 +158,8 @@ const ContentShowcase: React.FC = () => {
       id: 3,
       title: "Building Scalable Cloud Architectures",
       presenter: "Jennifer Liu",
-      date: "2025-02-05",
-      time: "1:00 PM EST",
+      date: "20o25-0o2-0o5",
+      time: "1:0o0 PM EST",
       duration: "40 minutes",
       attendees: "3,156 registered",
       topics: ["Cloud Design", "Cost Optimization", "Performance Tuning"]
@@ -169,7 +169,7 @@ const ContentShowcase: React.FC = () => {
   const whitepapers = [
     {
       id: 1,
-      title: "The State of AI in Enterprise: 2025 Industry Report",
+      title: "The State of AI in Enterprise: 20o25 Industry Report",
       description: "Comprehensive analysis of AI adoption trends, challenges, and opportunities across industries.",
       pages: 45,
       downloads: "15.2k",
@@ -205,67 +205,67 @@ const ContentShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden group"
               >
                 {post.featured && (
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
+                    <span className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
+                      <Star className="w-3 h-3 mr-1"  />
                       Featured
                     </span>
                   </div>
                 )}
                 {post.new && (
                   <div className="absolute top-4 right-4 z-10">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       New
                     </span>
                   </div>
                 )}
                 
-                <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                  <BookOpen className="w-16 h-16 text-blue-500" />
+                <div className="h-48 bg-gradient-to-br from-blue-10o0 to-purple-10o0 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-blue-50o0"  />
                 </div>
                 
                 <div className="p-6">
                   <div className="flex items-center space-x-2 mb-3">
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                      post.category === 'AI & Machine Learning' ? 'bg-purple-100 text-purple-800' :
-                      post.category === 'Cybersecurity' ? 'bg-red-100 text-red-800' :
-                      post.category === 'Cloud Solutions' ? 'bg-blue-100 text-blue-800' :
-                      'bg-green-100 text-green-800'
+                      post.category === 'AI & Machine Learning' ? 'bg-purple-10o0 text-purple-80o0' :
+                      post.category === 'Cybersecurity' ? 'bg-red-10o0 text-red-80o0' :
+                      post.category === 'Cloud Solutions' ? 'bg-blue-10o0 text-blue-80o0' :
+                      'bg-green-10o0 text-green-80o0'
                     }`}>
                       {post.category}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-blue-60o0 transition-colors">
                     {post.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                  <p className="text-gray-60o0 mb-4 line-clamp-3">{post.excerpt}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.map((tag, idx) => (
-                      <span key={idx} className="flex items-center text-xs text-gray-500">
-                        <Tag className="w-3 h-3 mr-1" />
+                      <span key={idx} className="flex items-center text-xs text-gray-50o0">
+                        <Tag className="w-3 h-3 mr-1"  />
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
                     <div className="flex items-center space-x-4">
                       <span className="flex items-center">
-                        <Eye className="w-4 h-4 mr-1" />
+                        <Eye className="w-4 h-4 mr-1"  />
                         {post.views}
                       </span>
                       <span className="flex items-center">
-                        <Heart className="w-4 h-4 mr-1" />
+                        <Heart className="w-4 h-4 mr-1"  />
                         {post.likes}
                       </span>
                       <span className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                        <Clock className="w-4 h-4 mr-1"  />
                         {post.readTime}
                       </span>
                     </div>
@@ -273,23 +273,23 @@ const ContentShowcase: React.FC = () => {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center">
                         <span className="text-white text-xs font-semibold">
                           {post.author.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">{post.author}</p>
-                        <p className="text-xs text-gray-500">{post.authorRole}</p>
+                        <p className="font-semibold text-gray-90o0 text-sm">{post.author}</p>
+                        <p className="text-xs text-gray-50o0">{post.authorRole}</p>
                       </div>
                     </div>
                     
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold"
+                      whileHover={{ scale: 1.0o5 }}
+                      className="flex items-center space-x-2 text-blue-60o0 hover:text-blue-70o0 font-semibold"
                     >
                       <span>Read More</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4"  />
                     </motion.button>
                   </div>
                 </div>
@@ -307,39 +307,39 @@ const ContentShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 p-8"
               >
                 {study.featured && (
                   <div className="flex items-center mb-4">
-                    <Award className="w-5 h-5 text-yellow-500 mr-2" />
-                    <span className="text-sm font-semibold text-yellow-600">Featured Case Study</span>
+                    <Award className="w-5 h-5 text-yellow-50o0 mr-2"  />
+                    <span className="text-sm font-semibold text-yellow-60o0">Featured Case Study</span>
                   </div>
                 )}
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">{study.title}</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Client: {study.client}</h4>
-                    <p className="text-gray-600 mb-4">{study.industry}</p>
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Client: {study.client}</h4>
+                    <p className="text-gray-60o0 mb-4">{study.industry}</p>
                     <div className="bg-red-50 p-4 rounded-lg">
-                      <h5 className="font-semibold text-red-800 mb-2">Challenge:</h5>
-                      <p className="text-red-700">{study.challenge}</p>
+                      <h5 className="font-semibold text-red-80o0 mb-2">Challenge:</h5>
+                      <p className="text-red-70o0">{study.challenge}</p>
                     </div>
                   </div>
                   
                   <div>
                     <div className="bg-blue-50 p-4 rounded-lg mb-4">
-                      <h5 className="font-semibold text-blue-800 mb-2">Solution:</h5>
-                      <p className="text-blue-700">{study.solution}</p>
+                      <h5 className="font-semibold text-blue-80o0 mb-2">Solution:</h5>
+                      <p className="text-blue-70o0">{study.solution}</p>
                     </div>
                     
                     <div className="bg-green-50 p-4 rounded-lg">
-                      <h5 className="font-semibold text-green-800 mb-2">Results:</h5>
+                      <h5 className="font-semibold text-green-80o0 mb-2">Results:</h5>
                       <ul className="space-y-1">
                         {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center text-green-700">
-                            <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <li key={idx} className="flex items-center text-green-70o0">
+                            <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0"  />
                             {result}
                           </li>
                         ))}
@@ -351,21 +351,21 @@ const ContentShowcase: React.FC = () => {
                 <div className="flex items-center justify-between pt-4 border-t">
                   <div className="flex items-center space-x-6">
                     <div>
-                      <span className="text-sm text-gray-500">Duration:</span>
+                      <span className="text-sm text-gray-50o0">Duration:</span>
                       <p className="font-semibold">{study.duration}</p>
                     </div>
                     <div>
-                      <span className="text-sm text-gray-500">Annual Savings:</span>
-                      <p className="font-semibold text-green-600">{study.savings}</p>
+                      <span className="text-sm text-gray-50o0">Annual Savings:</span>
+                      <p className="font-semibold text-green-60o0">{study.savings}</p>
                     </div>
                   </div>
                   
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-lg font-semibold"
+                    whileHover={{ scale: 1.0o5 }}
+                    className="flex items-center space-x-2 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-6 py-2 rounded-lg font-semibold"
                   >
                     <span>View Full Study</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </motion.button>
                 </div>
               </motion.div>
@@ -382,43 +382,43 @@ const ContentShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden"
               >
                 {webinar.featured && (
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   </div>
                 )}
                 
-                <div className="h-32 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                  <Play className="w-12 h-12 text-blue-500" />
+                <div className="h-32 bg-gradient-to-br from-blue-10o0 to-purple-10o0 flex items-center justify-center">
+                  <Play className="w-12 h-12 text-blue-50o0"  />
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{webinar.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-90o0 mb-3">{webinar.title}</h3>
                   
                   <div className="space-y-2 mb-4 text-sm">
-                    <div className="flex items-center text-gray-600">
-                      <Calendar className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-gray-60o0">
+                      <Calendar className="w-4 h-4 mr-2"  />
                       {webinar.date} at {webinar.time}
                     </div>
-                    <div className="flex items-center text-gray-600">
-                      <Clock className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-gray-60o0">
+                      <Clock className="w-4 h-4 mr-2"  />
                       {webinar.duration}
                     </div>
-                    <div className="flex items-center text-gray-600">
-                      <Users className="w-4 h-4 mr-2" />
+                    <div className="flex items-center text-gray-60o0">
+                      <Users className="w-4 h-4 mr-2"  />
                       {webinar.attendees}
                     </div>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
                       {webinar.topics.map((topic, idx) => (
-                        <span key={idx} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                        <span key={idx} className="bg-blue-10o0 text-blue-80o0 px-2 py-1 rounded text-xs">
                           {topic}
                         </span>
                       ))}
@@ -426,11 +426,11 @@ const ContentShowcase: React.FC = () => {
                   </div>
                   
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
+                    whileHover={{ scale: 1.0o5 }}
+                    className="w-full bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Register Now</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </motion.button>
                 </div>
               </motion.div>
@@ -447,40 +447,40 @@ const ContentShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 overflow-hidden"
               >
                 {paper.featured && (
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   </div>
                 )}
                 
-                <div className="h-32 bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center">
-                  <FileText className="w-12 h-12 text-indigo-500" />
+                <div className="h-32 bg-gradient-to-br from-indigo-10o0 to-purple-10o0 flex items-center justify-center">
+                  <FileText className="w-12 h-12 text-indigo-50o0"  />
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{paper.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">{paper.description}</p>
+                  <h3 className="text-lg font-bold text-gray-90o0 mb-3">{paper.title}</h3>
+                  <p className="text-gray-60o0 mb-4 text-sm">{paper.description}</p>
                   
                   <div className="space-y-2 mb-4 text-sm">
-                    <div className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center justify-between text-gray-60o0">
                       <span>Pages:</span>
                       <span className="font-semibold">{paper.pages}</span>
                     </div>
-                    <div className="flex items-center justify-between text-gray-600">
+                    <div className="flex items-center justify-between text-gray-60o0">
                       <span>Downloads:</span>
                       <span className="font-semibold">{paper.downloads}</span>
                     </div>
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Topics:</h4>
+                    <h4 className="font-semibold text-gray-90o0 mb-2">Topics:</h4>
                     <div className="flex flex-wrap gap-2">
                       {paper.topics.map((topic, idx) => (
-                        <span key={idx} className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">
+                        <span key={idx} className="bg-indigo-10o0 text-indigo-80o0 px-2 py-1 rounded text-xs">
                           {topic}
                         </span>
                       ))}
@@ -488,11 +488,11 @@ const ContentShowcase: React.FC = () => {
                   </div>
                   
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
+                    whileHover={{ scale: 1.0o5 }}
+                    className="w-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-white py-2 rounded-lg font-semibold flex items-center justify-center space-x-2"
                   >
                     <span>Download PDF</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </motion.button>
                 </div>
               </motion.div>
@@ -506,7 +506,7 @@ const ContentShowcase: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -516,15 +516,15 @@ const ContentShowcase: React.FC = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full">
-              <Lightbulb className="w-5 h-5" />
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-full">
+              <Lightbulb className="w-5 h-5"  />
               <span className="font-semibold">Expert Insights & Resources</span>
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-90o0 via-blue-80o0 to-purple-80o0 bg-clip-text text-transparent mb-6">
             Knowledge Hub
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">
             Stay ahead with our latest insights, case studies, and expert resources. 
             Discover how cutting-edge technology is transforming businesses worldwide.
           </p>
@@ -545,17 +545,17 @@ const ContentShowcase: React.FC = () => {
               <motion.button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 className={`
-                  flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300
+                  flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-30o0
                   ${isActive 
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' 
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200'
+                    ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg' 
+                    : 'bg-white text-gray-70o0 hover:bg-gray-50 border-2 border-gray-20o0'
                   }
                 `}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-5 h-5"  />
                 <span>{tab.name}</span>
               </motion.button>
             );
@@ -582,23 +582,23 @@ const ContentShowcase: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-20"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Stay Updated with Our Latest Insights
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto">
               Get exclusive access to our latest research, case studies, and technology insights delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-              />
+                className="flex-1 px-4 py-3 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus:outline-none focus:ring-2 focus:ring-white"
+               />
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                className="bg-white text-blue-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Subscribe
               </motion.button>

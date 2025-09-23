@@ -13,18 +13,18 @@ export default function StatusBadge({
 }: StatusBadgeProps) {
   const baseClasses = 'inline-flex items-center font-medium rounded-full';
   
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'px-2 py-1 text-xs',
     md: 'px-2.5 py-0.5 text-sm',
     lg: 'px-3 py-1 text-base'
   };
 
-  const variantClasses = {
-    default: 'bg-gray-100 text-gray-800',
-    success: 'bg-green-100 text-green-800',
-    warning: 'bg-yellow-100 text-yellow-800',
-    error: 'bg-red-100 text-red-800',
-    info: 'bg-blue-100 text-blue-800'
+  const variantClasses ={
+    default: 'bg-gray-10o0 text-gray-80o0',
+    success: 'bg-green-10o0 text-green-80o0',
+    warning: 'bg-yellow-10o0 text-yellow-80o0',
+    error: 'bg-red-10o0 text-red-80o0',
+    info: 'bg-blue-10o0 text-blue-80o0'
   };
 
   // Auto-detect variant based on status if not explicitly provided

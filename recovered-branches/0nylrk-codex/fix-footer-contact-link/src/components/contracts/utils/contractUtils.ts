@@ -40,21 +40,3 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-      milestones: milestoneData,
-    }
-=======
-      milestones: milestoneData}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-  });
-  
-  if (error) {
-    throw error;
-  }
-  
-  if (data.success && data.contract) {
-    return data.contract;
-  } else {
-    throw new Error("Failed to generate contract");
-  }
-}

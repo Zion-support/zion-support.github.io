@@ -1,36 +1,35 @@
-import React from 'react';
 import Layout from '../components/layout/Layout';
 import { Eye, Sparkles, Zap, Target, Shield, Clock, CheckCircle, Cpu, Database, Network, Brain, Smartphone } from 'lucide-react';
 
-export default function AIAugmentedReality2041() {
+export default function AIAugmentedReality20o41() {
   return (
     <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-emerald-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-50o0/10 via-teal-50o0/10 to-emerald-50o0/10"></div>
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <div className="mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full text-emerald-300 text-sm mb-6">
-                <Sparkles className="w-4 h-4" />
-                Revolutionary 2041 Technology
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 border border-emerald-50o0/30 rounded-full text-emerald-30o0 text-sm mb-6">
+                <Sparkles className="w-4 h-4"  />
+                Revolutionary 20o41 Technology
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-emerald-40o0 via-teal-40o0 to-emerald-40o0 bg-clip-text text-transparent">
                   AI Augmented Reality
                 </span>
-                <br />
-                <span className="text-white">2041</span>
+                <br  />
+                <span className="text-white">20o41</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8">
                 Experience the future of enhanced intelligence with AI systems that overlay, 
                 enhance, and augment the real world with intelligent digital information.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
+                <button className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-xl hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5">
                   Augment Reality
                 </button>
-                <button className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300">
+                <button className="px-8 py-4 border-2 border-emerald-40o0 text-emerald-40o0 font-semibold rounded-xl hover:bg-emerald-40o0 hover:text-black transition-all duration-30o0">
                   Learn More
                 </button>
               </div>
@@ -45,8 +44,8 @@ export default function AIAugmentedReality2041() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Features
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover the cutting-edge capabilities that make AI Augmented Reality 2041 the most 
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
+                Discover the cutting-edge capabilities that make AI Augmented Reality 20o41 the most 
                 advanced enhancement platform ever created.
               </p>
             </div>
@@ -54,48 +53,48 @@ export default function AIAugmentedReality2041() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Brain className="w-8 h-8" />,
+                  icon: <Brain className="w-8 h-8"  />,
                   title: "Intelligent Overlays",
                   description: "AI-powered digital overlays that provide context-aware information and insights.",
-                  color: "from-emerald-500 to-teal-500"
+                  color: "from-emerald-50o0 to-teal-50o0"
                 },
                 {
-                  icon: <Eye className="w-8 h-8" />,
+                  icon: <Eye className="w-8 h-8"  />,
                   title: "Computer Vision",
                   description: "Advanced visual recognition that understands and interprets the real world.",
-                  color: "from-blue-500 to-cyan-500"
+                  color: "from-blue-50o0 to-cyan-50o0"
                 },
                 {
-                  icon: <Smartphone className="w-8 h-8" />,
+                  icon: <Smartphone className="w-8 h-8"  />,
                   title: "Multi-Device Support",
                   description: "Seamless AR experiences across smartphones, tablets, and wearable devices.",
-                  color: "from-green-500 to-emerald-500"
+                  color: "from-green-50o0 to-emerald-50o0"
                 },
                 {
-                  icon: <Zap className="w-8 h-8" />,
+                  icon: <Zap className="w-8 h-8"  />,
                   title: "Real-time Processing",
                   description: "Instant AR rendering and updates based on real-world changes and user context.",
-                  color: "from-yellow-500 to-orange-500"
+                  color: "from-yellow-50o0 to-orange-50o0"
                 },
                 {
-                  icon: <Target className="w-8 h-8" />,
+                  icon: <Target className="w-8 h-8"  />,
                   title: "Context Awareness",
                   description: "AR systems that understand location, time, and user preferences for relevant content.",
-                  color: "from-purple-500 to-indigo-500"
+                  color: "from-purple-50o0 to-indigo-50o0"
                 },
                 {
-                  icon: <Network className="w-8 h-8" />,
+                  icon: <Network className="w-8 h-8"  />,
                   title: "Collaborative AR",
                   description: "Shared AR experiences that enable real-time collaboration and interaction.",
-                  color: "from-red-500 to-pink-500"
+                  color: "from-red-50o0 to-pink-50o0"
                 }
               ].map((feature, index) => (
-                <div key={index} className="group p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl hover:border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div key={index} className="group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover:border-emerald-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0`}>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                  <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -103,13 +102,13 @@ export default function AIAugmentedReality2041() {
         </section>
 
         {/* AR Capabilities */}
-        <section className="py-20 px-4 bg-gradient-to-r from-emerald-500/5 to-teal-500/5">
+        <section className="py-20 px-4 bg-gradient-to-r from-emerald-50o0/5 to-teal-50o0/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 AR Capabilities
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
                 Comprehensive augmented reality solutions that cover every aspect of enhancement technology.
               </p>
             </div>
@@ -125,9 +124,9 @@ export default function AIAugmentedReality2041() {
                 { name: "Performance Optimization", description: "Efficient rendering and battery optimization" },
                 { name: "Cross-Platform", description: "Unified AR experiences across different devices and platforms" }
               ].map((capability, index) => (
-                <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-emerald-500/30 transition-all duration-300">
+                <div key={index} className="p-6 bg-white/5 border border-white/10 rounded-xl hover:border-emerald-50o0/30 transition-all duration-30o0">
                   <h3 className="text-lg font-semibold text-white mb-2">{capability.name}</h3>
-                  <p className="text-gray-400 text-sm">{capability.description}</p>
+                  <p className="text-gray-40o0 text-sm">{capability.description}</p>
                 </div>
               ))}
             </div>
@@ -141,7 +140,7 @@ export default function AIAugmentedReality2041() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 AI AR Process
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
                 Understand how our AI systems create and enhance augmented reality experiences.
               </p>
             </div>
@@ -174,20 +173,20 @@ export default function AIAugmentedReality2041() {
                   features: ["Behavior analysis", "Preference learning", "Experience optimization"]
                 }
               ].map((phase, index) => (
-                <div key={index} className="flex flex-col lg:flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl">
+                <div key={index} className="flex flex-col lg:flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl">
                   <div className="lg:w-1/3 text-center lg:text-left">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-white text-2xl font-bold mb-4">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-emerald-50o0 to-teal-50o0 rounded-full text-white text-2xl font-bold mb-4">
                       {index + 1}
                     </div>
                     <h3 className="text-2xl font-semibold text-white mb-3">{phase.phase}</h3>
-                    <p className="text-gray-400">{phase.description}</p>
+                    <p className="text-gray-40o0">{phase.description}</p>
                   </div>
                   <div className="lg:w-2/3">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {phase.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg">
-                          <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-emerald-40o0 flex-shrink-0"  />
+                          <span className="text-gray-30o0 text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -199,13 +198,13 @@ export default function AIAugmentedReality2041() {
         </section>
 
         {/* AR Applications */}
-        <section className="py-20 px-4 bg-gradient-to-r from-emerald-500/5 to-teal-500/5">
+        <section className="py-20 px-4 bg-gradient-to-r from-emerald-50o0/5 to-teal-50o0/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 AR Applications
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
                 Specialized augmented reality solutions designed for specific industries and use cases.
               </p>
             </div>
@@ -243,14 +242,14 @@ export default function AIAugmentedReality2041() {
                   applications: ["Gaming", "Interactive stories", "Live events", "Social media", "Creative tools"]
                 }
               ].map((category, index) => (
-                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-50o0/30 transition-all duration-30o0">
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{category.description}</p>
+                  <p className="text-gray-40o0 mb-6 leading-relaxed">{category.description}</p>
                   <div className="space-y-2">
                     {category.applications.map((app, appIndex) => (
                       <div key={appIndex} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{app}</span>
+                        <CheckCircle className="w-4 h-4 text-emerald-40o0 flex-shrink-0"  />
+                        <span className="text-gray-30o0 text-sm">{app}</span>
                       </div>
                     ))}
                   </div>
@@ -267,8 +266,8 @@ export default function AIAugmentedReality2041() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Industry Transformations
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover how AI Augmented Reality 2041 transforms industries across the globe.
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
+                Discover how AI Augmented Reality 20o41 transforms industries across the globe.
               </p>
             </div>
 
@@ -305,14 +304,14 @@ export default function AIAugmentedReality2041() {
                   benefits: ["Better engagement", "Interactive content", "Social experiences"]
                 }
               ].map((industry, index) => (
-                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-50o0/30 transition-all duration-30o0">
                   <h3 className="text-xl font-semibold text-white mb-4">{industry.industry}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{industry.description}</p>
+                  <p className="text-gray-40o0 mb-6 leading-relaxed">{industry.description}</p>
                   <div className="space-y-2">
                     {industry.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{benefit}</span>
+                        <CheckCircle className="w-4 h-4 text-emerald-40o0 flex-shrink-0"  />
+                        <span className="text-gray-30o0 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -323,14 +322,14 @@ export default function AIAugmentedReality2041() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 px-4 bg-gradient-to-r from-emerald-500/5 to-teal-500/5">
+        <section className="py-20 px-4 bg-gradient-to-r from-emerald-50o0/5 to-teal-50o0/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business
               </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Discover the incredible benefits of implementing AI Augmented Reality 2041 in your organization.
+              <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
+                Discover the incredible benefits of implementing AI Augmented Reality 20o41 in your organization.
               </p>
             </div>
 
@@ -339,34 +338,34 @@ export default function AIAugmentedReality2041() {
                 {
                   title: "Enhanced User Experience",
                   description: "Create engaging, interactive experiences that blend digital and physical worlds seamlessly.",
-                  icon: <Eye className="w-8 h-8" />,
-                  color: "from-emerald-500 to-teal-500"
+                  icon: <Eye className="w-8 h-8"  />,
+                  color: "from-emerald-50o0 to-teal-50o0"
                 },
                 {
                   title: "Increased Engagement",
                   description: "Capture user attention with interactive AR content that provides real value and utility.",
-                  icon: <Target className="w-8 h-8" />,
-                  color: "from-green-500 to-emerald-500"
+                  icon: <Target className="w-8 h-8"  />,
+                  color: "from-green-50o0 to-emerald-50o0"
                 },
                 {
                   title: "Cost Reduction",
                   description: "Reduce physical prototyping, travel, and training costs through AR solutions.",
-                  icon: <Zap className="w-8 h-8" />,
-                  color: "from-blue-500 to-cyan-500"
+                  icon: <Zap className="w-8 h-8"  />,
+                  color: "from-blue-50o0 to-cyan-50o0"
                 },
                 {
                   title: "Competitive Advantage",
                   description: "Position your business as a technology leader with cutting-edge AR capabilities.",
-                  icon: <Brain className="w-8 h-8" />,
-                  color: "from-purple-500 to-indigo-500"
+                  icon: <Brain className="w-8 h-8"  />,
+                  color: "from-purple-50o0 to-indigo-50o0"
                 }
               ].map((benefit, index) => (
-                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
+                <div key={index} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-emerald-50o0/30 transition-all duration-30o0">
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}>
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+                  <p className="text-gray-40o0 leading-relaxed">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -379,15 +378,15 @@ export default function AIAugmentedReality2041() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Augment Reality?
             </h2>
-            <p className="text-xl text-gray-400 mb-8">
+            <p className="text-xl text-gray-40o0 mb-8">
               Transform your business with AI-powered augmented reality that delivers 
               enhanced user experiences, increased engagement, and competitive advantages.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-50o0 to-teal-60o0 text-white font-semibold rounded-xl hover:from-emerald-60o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-emerald-40o0 text-emerald-40o0 font-semibold rounded-xl hover:bg-emerald-40o0 hover:text-black transition-all duration-30o0">
                 Schedule Demo
               </button>
             </div>

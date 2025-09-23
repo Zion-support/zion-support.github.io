@@ -8,7 +8,6 @@ import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -17,8 +16,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+  AlertDialogTitle} from "@/components/ui/alert-dialog";
 import { useState } from "react";
 
 interface TemplateListProps {
@@ -62,7 +60,7 @@ export function TemplateList({
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
-        <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+        <Loader2 className="h-8 w-8 animate-spin text-zion-purple"  />
       </div>
     );
   }
@@ -101,7 +99,7 @@ export function TemplateList({
                   onClick={() => onEdit(template)}
                   aria-label="Edit template"
                 >
-                  <Edit className="h-4 w-4" />
+                  <Edit className="h-4 w-4"  />
                 </Button>
                 {!template.is_default ? (
                   <TooltipProvider>
@@ -113,7 +111,7 @@ export function TemplateList({
                           onClick={() => handleSetDefault(template.id)}
                           aria-label="Set as default"
                         >
-                          <Star className="h-4 w-4" />
+                          <Star className="h-4 w-4"  />
                         </Button>
                       </TooltipTrigger>
                       {!user && (
@@ -125,7 +123,7 @@ export function TemplateList({
                   </TooltipProvider>
                 ) : (
                   <Button variant="ghost" size="icon" disabled aria-label="Default template">
-                    <StarOff className="h-4 w-4" />
+                    <StarOff className="h-4 w-4"  />
                   </Button>
                 )}
                 <Button
@@ -134,12 +132,12 @@ export function TemplateList({
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
                 >
-                  <Trash className="h-4 w-4 text-destructive" />
+                  <Trash className="h-4 w-4 text-destructive"  />
                 </Button>
               </div>
             </div>
             
-            <Separator className="my-3" />
+            <Separator className="my-3"  />
             
             <Button 
               onClick={() => onSelect(template)} 

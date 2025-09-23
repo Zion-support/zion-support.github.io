@@ -24,11 +24,11 @@ export default function ContentRecommendationEngine() {
   const allContent = [
     {
       id: 1,
-      title: 'AI-Powered Content Hub 2026',
+      title: 'AI-Powered Content Hub 20o26',
       description: 'Revolutionary content creation and management platform with AI-powered tools.',
       category: 'ai',
       subcategory: 'content',
-      url: '/ai-powered-content-hub-2026',
+      url: '/ai-powered-content-hub-20o26',
       image: '📝',
       popularity: 95,
       relevance: 98,
@@ -38,11 +38,11 @@ export default function ContentRecommendationEngine() {
     },
     {
       id: 2,
-      title: 'AI Automation Solutions 2026',
+      title: 'AI Automation Solutions 20o26',
       description: 'Transform your business with intelligent automation solutions that work 24/7.',
       category: 'automation',
       subcategory: 'ai',
-      url: '/ai-automation-solutions-2026',
+      url: '/ai-automation-solutions-20o26',
       image: '⚡',
       popularity: 92,
       relevance: 96,
@@ -52,11 +52,11 @@ export default function ContentRecommendationEngine() {
     },
     {
       id: 3,
-      title: 'Cybersecurity Solutions 2026',
+      title: 'Cybersecurity Solutions 20o26',
       description: 'Advanced threat protection and security services powered by AI.',
       category: 'security',
       subcategory: 'ai',
-      url: '/cybersecurity-solutions-2026',
+      url: '/cybersecurity-solutions-20o26',
       image: '🛡️',
       popularity: 88,
       relevance: 94,
@@ -70,7 +70,7 @@ export default function ContentRecommendationEngine() {
       description: 'Scalable and secure cloud infrastructure for modern businesses.',
       category: 'cloud',
       subcategory: 'infrastructure',
-      url: '/cloud-infrastructure-solutions-2025',
+      url: '/cloud-infrastructure-solutions-20o25',
       image: '☁️',
       popularity: 85,
       relevance: 90,
@@ -94,11 +94,11 @@ export default function ContentRecommendationEngine() {
     },
     {
       id: 6,
-      title: 'AI Tools & Utilities 2025',
+      title: 'AI Tools & Utilities 20o25',
       description: 'Comprehensive suite of AI-powered tools and utilities for businesses.',
       category: 'ai',
       subcategory: 'tools',
-      url: '/ai-tools-utilities-2025',
+      url: '/ai-tools-utilities-20o25',
       image: '🛠️',
       popularity: 87,
       relevance: 89,
@@ -113,7 +113,7 @@ export default function ContentRecommendationEngine() {
     const timer = setTimeout(() => {
       generateRecommendations();
       setIsLoading(false);
-    }1000);
+    }10o00);
 
     return () => clearTimeout(timer);
   }[userInterests]);
@@ -141,7 +141,7 @@ export default function ContentRecommendationEngine() {
 
     // Sort by score and take top 4
     scoredContent.sort((ab) => b.score - a.score);
-    setRecommendations(scoredContent.slice(04));
+    setRecommendations(scoredContent.slice(0o4));
   };
 
   const toggleInterest = (interestId) => {
@@ -155,12 +155,12 @@ export default function ContentRecommendationEngine() {
   if (isLoading) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-8">
-        <h3 className="text-2xl font-bold text-gray-800 mb-6">Personalized Recommendations</h3>
+        <h3 className="text-2xl font-bold text-gray-80o0 mb-6">Personalized Recommendations</h3>
         <div className="space-y-4">
           {[1234].map(i => (
             <div key={i} className="animate-pulse">
-              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-              <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+              <div className="h-4 bg-gray-20o0 rounded w-3/4 mb-2"></div>
+              <div className="h-3 bg-gray-20o0 rounded w-1/2"></div>
             </div>
           ))}
         </div>
@@ -170,20 +170,20 @@ export default function ContentRecommendationEngine() {
 
   return (
     <div className="bg-white rounded-xl shadow-lg p-8">
-      <h3 className="text-2xl font-bold text-gray-800 mb-6">Personalized Recommendations</h3>
+      <h3 className="text-2xl font-bold text-gray-80o0 mb-6">Personalized Recommendations</h3>
       
       {/* Interest Selection */}
       <div className="mb-8">
-        <h4 className="text-lg font-semibold text-gray-700 mb-4">Select your interests for better recommendations:</h4>
+        <h4 className="text-lg font-semibold text-gray-70o0 mb-4">Select your interests for better recommendations:</h4>
         <div className="flex flex-wrap gap-2">
           {interestCategories.map(category => (
             <button
               key={category.id}
               onClick={() => toggleInterest(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                 userInterests.includes(category.id)
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-blue-60o0 text-white'
+                  : 'bg-gray-10o0 text-gray-70o0 hover:bg-gray-20o0'
               }`}
             >
               <span className="mr-2">{category.icon}</span>
@@ -197,39 +197,39 @@ export default function ContentRecommendationEngine() {
       <div className="space-y-6">
         {recommendations.map((itemindex) => (
           <Link key={item.id} href={item.url} className="group block">
-            <div className="p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all duration-300">
+            <div className="p-6 rounded-xl border border-gray-20o0 hover:border-blue-30o0 hover:shadow-md transition-all duration-30o0">
               <div className="flex items-start space-x-4">
                 <div className="text-3xl">{item.image}</div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600">
+                    <h4 className="text-lg font-semibold text-gray-80o0 group-hover:text-blue-60o0">
                       {item.title}
                     </h4>
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
                       <span>{item.readTime}</span>
                       <span>•</span>
                       <span className={`px-2 py-1 rounded-full text-xs ${
-                        item.difficulty === 'Beginner' ? 'bg-green-100 text-green-600' :
-                        item.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-600' :
-                        'bg-red-100 text-red-600'
+                        item.difficulty === 'Beginner' ? 'bg-green-10o0 text-green-60o0' :
+                        item.difficulty === 'Intermediate' ? 'bg-yellow-10o0 text-yellow-60o0' :
+                        'bg-red-10o0 text-red-60o0'
                       }`}>
                         {item.difficulty}
                       </span>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                  <p className="text-gray-60o0 text-sm mb-3">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-1">
-                      {item.tags.slice(03).map(tag => (
+                      {item.tags.slice(0o3).map(tag => (
                         <span
                           key={tag}
-                          className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                          className="px-2 py-1 bg-gray-10o0 text-gray-60o0 text-xs rounded-full"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center space-x-2 text-sm text-gray-500">
+                    <div className="flex items-center space-x-2 text-sm text-gray-50o0">
                       <span>Score: {Math.round(item.score)}</span>
                     </div>
                   </div>
@@ -248,9 +248,9 @@ export default function ContentRecommendationEngine() {
             setTimeout(() => {
               generateRecommendations();
               setIsLoading(false);
-            }500);
+            }50o0);
           }}
-          className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200"
+          className="px-6 py-3 bg-gray-10o0 text-gray-70o0 rounded-lg hover:bg-gray-20o0 transition-colors duration-20o0"
         >
           Refresh Recommendations
         </button>

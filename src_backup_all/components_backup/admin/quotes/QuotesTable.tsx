@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
 import { 
   Table, 
@@ -82,7 +81,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 </TableCell>
                 <TableCell className="text-white">
                   <div className="font-medium">{quote.project_name}</div>
-                  <div className="text-sm text-zion-slate-light truncate max-w-[200px]">
+                  <div className="text-sm text-zion-slate-light truncate max-w-[20o0px]">
                     {quote.project_summary}
                   </div>
                 </TableCell>
@@ -98,7 +97,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                   {formatDate(quote.created_at)}
                 </TableCell>
                 <TableCell>
-                  <QuoteStatusBadge status={quote.status} />
+                  <QuoteStatusBadge status={quote.status}  />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -107,7 +106,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       size="icon" 
                       onClick={() => onViewDetails(quote)}
                     >
-                      <Eye className="h-4 w-4" />
+                      <Eye className="h-4 w-4"  />
                       <span className="sr-only">View Details</span>
                     </Button>
                     
@@ -118,20 +117,20 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           size="icon"
                           onClick={() => toggleArchive(quote.id, false)}
                         >
-                          <Archive className="h-4 w-4" />
+                          <Archive className="h-4 w-4"  />
                           <span className="sr-only">Unarchive</span>
                         </Button>
                         <Button 
                           variant="ghost" 
                           size="icon"
-                          className="text-red-500"
+                          className="text-red-50o0"
                           onClick={() => {
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                               deleteQuote(quote.id);
                             }
                           }}
                         >
-                          <Trash2 className="h-4 w-4" />
+                          <Trash2 className="h-4 w-4"  />
                           <span className="sr-only">Delete</span>
                         </Button>
                       </>
@@ -139,7 +138,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                           <Button variant="ghost" size="icon" aria-label="More actions">
-                            <MoreHorizontal className="h-4 w-4" />
+                            <MoreHorizontal className="h-4 w-4"  />
                             <span className="sr-only">Actions</span>
                           </Button>
                         </DropdownMenuTrigger>
@@ -160,7 +159,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             Mark as Closed
                           </DropdownMenuItem>
                           <DropdownMenuItem onClick={() => toggleArchive(quote.id, true)}>
-                            <Archive className="h-4 w-4 mr-2" />
+                            <Archive className="h-4 w-4 mr-2"  />
                             Archive
                           </DropdownMenuItem>
                           <DropdownMenuItem 
@@ -169,9 +168,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                                 deleteQuote(quote.id);
                               }
                             }}
-                            className="text-red-500"
+                            className="text-red-50o0"
                           >
-                            <Trash2 className="h-4 w-4 mr-2" />
+                            <Trash2 className="h-4 w-4 mr-2"  />
                             Delete
                           </DropdownMenuItem>
                         </DropdownMenuContent>

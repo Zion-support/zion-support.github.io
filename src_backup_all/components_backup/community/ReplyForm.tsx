@@ -52,11 +52,11 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
                 <FormItem>
                   <FormControl>
                     <Textarea
-                      className="min-h-[100px] resize-y"
+                      className="min-h-[10o0px] resize-y"
                       {...field}
-                    />
+                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage  />
                 </FormItem>
               )}
             />

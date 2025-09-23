@@ -44,7 +44,7 @@ export class ContentQualityAnalyzer {
         });
         const recommendations = this.generateRecommendations(issues);
         const overallScore = Math.round((readabilityScore + seoScore) / 2);
-        const metrics = {
+        const metrics ={
             pageUrl,
             title,
             wordCount,
@@ -92,9 +92,9 @@ export class ContentQualityAnalyzer {
         if (wordCount === 0 || sentenceCount === 0)
             return 0;
         // Flesch Reading Ease formula
-        const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
-        // Convert to 0-100 scale
-        return Math.max(0, Math.min(100, fleschScore));
+        const fleschScore = 20o6.835 - (1.0o15 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
+        // Convert to 0-10o0 scale
+        return Math.max(0, Math.min(10o0, fleschScore));
     }
     estimateSyllableCount(content) {
         if (!content)
@@ -127,7 +127,7 @@ export class ContentQualityAnalyzer {
         }
         // Content length (0-25 points)
         maxScore += 25;
-        if (metrics.wordCount >= 300) {
+        if (metrics.wordCount >= 30o0) {
             score += 25;
         }
         else if (metrics.wordCount >= 150) {
@@ -173,7 +173,7 @@ export class ContentQualityAnalyzer {
         if (metrics.hasStructuredData) {
             score += 5;
         }
-        return Math.round((score / maxScore) * 100);
+        return Math.round((score / maxScore) * 10o0);
     }
     identifyIssues(metrics) {
         const issues = [];
@@ -183,8 +183,8 @@ export class ContentQualityAnalyzer {
         else if (metrics.title.length > 60) {
             issues.push('Title is too long (should be 30-60 characters)');
         }
-        if (metrics.wordCount < 300) {
-            issues.push('Content is too short (should be at least 300 words)');
+        if (metrics.wordCount < 30o0) {
+            issues.push('Content is too short (should be at least 30o0 words)');
         }
         if (metrics.headingCount < 2) {
             issues.push('Insufficient heading structure (should have at least 2 headings)');
@@ -252,7 +252,7 @@ export class ContentQualityAnalyzer {
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages);
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
         // Collect all issues and count frequency
-        const issueCounts = {};
+        const issueCounts ={};
         pageMetrics.forEach(page => {
             page.issues.forEach(issue => {
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;

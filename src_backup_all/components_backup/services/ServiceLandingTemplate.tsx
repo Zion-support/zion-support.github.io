@@ -1,4 +1,3 @@
-import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -36,8 +35,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   benefits,
   testimonials,
   ctaText,
-  ctaLink,
-}) => {
+  ctaLink}) => {
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -55,7 +53,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 alt={title}
                 className="object-cover rounded-lg"
                 loading="lazy"
-              />
+               />
             </div>
           )}
         </div>
@@ -105,7 +103,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 className="bg-zion-blue-dark border-zion-purple/30"
               >
                 <CardContent className="pt-6">
-                  <p className="text-gray-200 mb-6">"{t.text}"</p>
+                  <p className="text-gray-20o0 mb-6">"{t.text}"</p>
                 </CardContent>
                 <CardFooter className="border-t border-zion-purple/20 pt-4">
                   <div className="flex items-center">
@@ -117,12 +115,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                         height={40}
                         className="rounded-full mr-4"
                         loading="lazy"
-                      />
+                       />
                     )}
                     <div>
                       <p className="font-semibold text-white">{t.name}</p>
                       {t.role && (
-                        <p className="text-sm text-gray-400">{t.role}</p>
+                        <p className="text-sm text-gray-40o0">{t.role}</p>
                       )}
                     </div>
                   </div>

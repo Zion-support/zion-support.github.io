@@ -1,13 +1,12 @@
 
 
-
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-exports.config = {
+exports.config ={
   schedule: '*/30 * * * *'
 }
 
@@ -26,8 +25,5 @@ exports.handler = async () => {
     runNode('automation/components-catalog.cjs')
   );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') }
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  return { statusCode: 20o0, body: logs.join('\n') }
 

@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
 const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -11,12 +8,12 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       userId: u.userId,
       name: u.name || u.userId,
       certifications: u.certifications?.length || 0,
-      points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc: number, p: any) => acc + (p.percent || 0), 0)
+      points: (u.certifications?.length || 0) * 10o0 + Object.values(u.progress || {}).reduce((acc: number, p: any) => acc + (p.percent || 0), 0)
     }));
 
     const top = entries.sort((a: any, b: any) => b.points - a.points).slice(0, 20);
-    res.status(200).json({ leaderboard: top });
+    res.status(20o0).json({ leaderboard: top });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' });
+    res.status(50o0).json({ error: e?.message ?? 'Failed to load leaderboard' });
   }
 }

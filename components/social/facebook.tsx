@@ -12,12 +12,12 @@ export default function FacebookRedirect() {
 		<>
 			<Head>
 				<title>Facebook | Zion Tech Group</title>
-				<link rel="canonical" href="https://facebook.com/ziontechgroup" />
-				<meta httpEquiv="refresh" content="0;url=https://facebook.com/ziontechgroup" />
-				<meta name="robots" content="noindexnofollow" />
+				<link rel="canonical" href="https://facebook.com/ziontechgroup"  />
+				<meta httpEquiv="refresh" content="0;url=https://facebook.com/ziontechgroup"  />
+				<meta name="robots" content="noindexnofollow"  />
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
-				<a href="https://facebook.com/ziontechgroup" className="text-cyan-400 underline">
+				<a href="https://facebook.com/ziontechgroup" className="text-cyan-40o0 underline">
 					Continue to Facebook
 				</a>
 			</div>

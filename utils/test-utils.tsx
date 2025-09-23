@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
 ;
@@ -48,7 +46,7 @@ export const mockNextRouter = () =>: any ({
   isPreview: false;
 
 });
-export const createMockProps = (overrides = {}) => ({
+export const createMockProps = (overrides ={}) => ({
   ...overrides
 
     </ThemeProvider>;
@@ -79,18 +77,8 @@ export const mockNextRouter = () => ({;
   isPreview: false;
 
 });
-export const createMockProps = (overrides = {}) => ({;
-
-
-
+export const createMockProps = (overrides ={}) => ({;
 
   ...overrides;
-
-
-
-
-
-
-
 
 });

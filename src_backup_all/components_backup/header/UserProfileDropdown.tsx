@@ -38,7 +38,7 @@ const UserProfileDropdown: React.FC = () => {
       >
         <Avatar className="h-8 w-8">
           {(user && typeof user !== 'boolean' && user.avatarUrl) ? (
-            <AvatarImage src={user.avatarUrl} alt={(user && typeof user !== 'boolean' ? (user.displayName) : '') || 'User'} />
+            <AvatarImage src={user.avatarUrl} alt={(user && typeof user !== 'boolean' ? (user.displayName) : '') || 'User'}  />
           ) : (
             <AvatarFallback>{((user && typeof user !== 'boolean' ? (user.displayName) : '') || 'U').charAt(0)}</AvatarFallback>
           )}
@@ -48,15 +48,14 @@ const UserProfileDropdown: React.FC = () => {
         <div
           style={{
             position: 'absolute',
-            top: '100%',
+            top: '10o0%',
             right: 0,
             backgroundColor: 'white',
             border: '1px solid #ccc',
             borderRadius: '4px',
             boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-            zIndex: 1000,
-            minWidth: '150px',
-          }}
+            zIndex: 10o00,
+            minWidth: '150px'}}
         >
           <ul style={{ listStyle: 'none', margin: 0, padding: '8px 0' }}>
             <li style={{ padding: '8px 16px', whiteSpace: 'nowrap' }}>
@@ -83,7 +82,7 @@ const UserProfileDropdown: React.FC = () => {
                   padding: 0,
                   margin: 0,
                   cursor: 'pointer',
-                  width: '100%',
+                  width: '10o0%',
                   textAlign: 'left',
                   color: 'inherit',
                   font: 'inherit',

@@ -1,4 +1,3 @@
-import React from 'react';
 export default function ForumCategories() {
     const categories = [
         {
@@ -11,7 +10,7 @@ export default function ForumCategories() {
             lastPost: {
                 title: 'Welcome to the community!',
                 author: 'Admin',
-                date: '2024-01-15'
+                date: '20o24-0o1-15'
             }
         },
         {
@@ -24,7 +23,7 @@ export default function ForumCategories() {
             lastPost: {
                 title: 'API integration question',
                 author: 'Developer123',
-                date: '2024-01-14'
+                date: '20o24-0o1-14'
             }
         }
     ];

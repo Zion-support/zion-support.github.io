@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
-import fs from 'fs';
-import path from 'path';
-
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -22,7 +19,7 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
     userId?: string;
     role?: KycRole;
@@ -30,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName?: string;
     businessRegistrationNumber?: string;
   };
-  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
+  if (!userId || !role) return res.status(40o0).json({ error: 'Missing userId or role' });
 
   const db = load();
   const now = new Date().toISOString();
@@ -46,8 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     amlStatus: 'unknown',
     createdAt: now,
     lastUpdatedAt: now,
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }],
-  } as KycProfile;
+    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
 
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
@@ -57,10 +53,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   db[userId] = profile;
   save(db);
 
-  res.status(200).json({
+  res.status(20o0).json({
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
-    optionalDocuments: getOptionalDocuments(role),
-  });
+    optionalDocuments: getOptionalDocuments(role)});
 }

@@ -9,7 +9,7 @@ describe('ResetPassword Page', () => {'  // beforeEach(() => {
   //   authService.resetPassword.mockClear();
   // });
 
-  const renderWithRouter = (ui, { route = /reset-password/testuid/testtoken' } = {}) => {'    (useRouter as any).mockReturnValue({
+  const renderWithRouter = (ui, { route = /reset-password/testuid/testtoken' } ={}) => {'    (useRouter as any).mockReturnValue({
       push: jest.fn(),
       pathname: route,
       asPath: route,
@@ -21,19 +21,19 @@ describe('ResetPassword Page', () => {'  // beforeEach(() => {
     );
   };
 
-  test('renders password inputs and submit button', () => {'    renderWithRouter(<ResetPassword />);
+  test('renders password inputs and submit button', () => {'    renderWithRouter(<ResetPassword  />);
     expect(screen.getByLabelText(/new password/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/confirm new password/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /reset password/i })).toBeInTheDocument();  });
 
-  test('shows error if passwords do not match', async () => {'    renderWithRouter(<ResetPassword />);
+  test('shows error if passwords do not match', async () => {'    renderWithRouter(<ResetPassword  />);
     fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: password123' } });    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: password456' } });    fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
     await waitFor(() => {
       expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument();
     });
   });
 
-  test('calls resetPassword service and navigates on successful submission (mocked), async () => {'    // authService.resetPassword.mockResolvedValueOnce({ message: Password reset successfully' });    renderWithRouter(<ResetPassword />);
+  test('calls resetPassword service and navigates on successful submission (mocked), async () => {'    // authService.resetPassword.mockResolvedValueOnce({ message: Password reset successfully' });    renderWithRouter(<ResetPassword  />);
 
     fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: newpassword123' } });    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: newpassword123' } });    fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
     // await waitFor(() => {
@@ -43,7 +43,7 @@ describe('ResetPassword Page', () => {'  // beforeEach(() => {
     // });
     // await waitFor(() => expect(mockNavigate).toHaveBeenCalledWith('/login'));  });
 
-  test('shows error message on failed submission (mocked), async () => {'    // authService.resetPassword.mockRejectedValueOnce(new Error('Invalid token'));    renderWithRouter(<ResetPassword />);
+  test('shows error message on failed submission (mocked), async () => {'    // authService.resetPassword.mockRejectedValueOnce(new Error('Invalid token'));    renderWithRouter(<ResetPassword  />);
 
     fireEvent.change(screen.getByLabelText(/new password/i), { target: { value: newpassword123' } });    fireEvent.change(screen.getByLabelText(/confirm new password/i), { target: { value: newpassword123' } });    fireEvent.click(screen.getByRole('button', { name: /reset password/i }));
     // await waitFor(() => {

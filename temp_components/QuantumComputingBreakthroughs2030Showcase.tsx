@@ -25,25 +25,25 @@ import {
   Infinity
 } from 'lucide-react';
 
-const QuantumComputingBreakthroughs2030Showcase = () => {
+const QuantumComputingBreakthroughs20o30Showcase = () => {
   const [activeTabsetActiveTab] = useState('overview');
   const [currentBreakthroughsetCurrentBreakthrough] = useState(0);
 
   const breakthroughs = [
     {
-      id: 'quantum-supremacy-2030',
-      title: 'Quantum Supremacy 2030',
-      description: 'Achieving true quantum supremacy with 1000+ qubit systems that can solve problems impossible for classical computers.',
+      id: 'quantum-supremacy-20o30',
+      title: 'Quantum Supremacy 20o30',
+      description: 'Achieving true quantum supremacy with 10o00+ qubit systems that can solve problems impossible for classical computers.',
       features: [
-        '1000+ logical qubits',
+        '10o00+ logical qubits',
         '99.9% error correction',
         'Real-time quantum algorithms',
         'Exponential speedup'
       ],
       impact: 'Solve optimization problems in seconds that would take classical computers millennia',
       icon: Atom,
-      color: 'from-cyan-500 to-blue-500',
-      timeline: 'Q2 2030'
+      color: 'from-cyan-50o0 to-blue-50o0',
+      timeline: 'Q2 20o30'
     },
     {
       id: 'quantum-internet',
@@ -57,8 +57,8 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       ],
       impact: 'Revolutionize global communication with quantum-secure networks',
       icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-      timeline: 'Q4 2030'
+      color: 'from-green-50o0 to-emerald-50o0',
+      timeline: 'Q4 20o30'
     },
     {
       id: 'quantum-ai-fusion',
@@ -72,8 +72,8 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       ],
       impact: 'Enable AI systems with quantum-enhanced intelligence and processing power',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      timeline: 'Q3 2030'
+      color: 'from-purple-50o0 to-pink-50o0',
+      timeline: 'Q3 20o30'
     },
     {
       id: 'quantum-simulation',
@@ -87,16 +87,16 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
       ],
       impact: 'Accelerate scientific breakthroughs across all fields',
       icon: Activity,
-      color: 'from-orange-500 to-red-500',
-      timeline: 'Q1 2030'
+      color: 'from-orange-50o0 to-red-50o0',
+      timeline: 'Q1 20o30'
     }
   ];
 
   const quantumStats = [
-    { label: 'Qubit Count'value: '1,000+'icon: Cpudescription: 'Logical qubits' },
-    { label: 'Error Rate'value: '0.01%'icon: Shieldescription: 'Quantum error correction' },
+    { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' },
+    { label: 'Error Rate'value: '0.0o1%'icon: Shieldescription: 'Quantum error correction' },
     { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' },
-    { label: 'Global Coverage'value: '100%'icon: Globedescription: 'Quantum internet reach' }
+    { label: 'Global Coverage'value: '10o0%'icon: Globedescription: 'Quantum internet reach' }
   ];
 
   const applications = [
@@ -131,24 +131,24 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
   ];
 
   const timeline = [
-    { quarter: 'Q1 2030'milestone: 'Universal Quantum Simulator Launch'status: 'completed' },
-    { quarter: 'Q2 2030'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' },
-    { quarter: 'Q3 2030'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' },
-    { quarter: 'Q4 2030'milestone: 'Global Quantum Internet'status: 'upcoming' }
+    { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' },
+    { quarter: 'Q2 20o30'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' },
+    { quarter: 'Q3 20o30'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' },
+    { quarter: 'Q4 20o30'milestone: 'Global Quantum Internet'status: 'upcoming' }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBreakthrough((prev) => (prev + 1) % breakthroughs.length);
-    }6000);
+    }60o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-cyan-90o0 to-slate-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-60o0/20 to-blue-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -157,29 +157,29 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <Infinity className="w-8 h-8 text-cyan-400 mr-3" />
-              <span className="text-lg font-semibold text-cyan-400">Quantum Computing 2030</span>
+              <Infinity className="w-8 h-8 text-cyan-40o0 mr-3"  />
+              <span className="text-lg font-semibold text-cyan-40o0">Quantum Computing 20o30</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-20o0 to-blue-20o0 bg-clip-text text-transparent">
               Quantum Breakthroughs
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Experience the quantum revolution that will transform computingcommunicationand scientific discovery. 
               The future of quantum computing is here.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-60o0 to-blue-60o0 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
               >
                 Explore Quantum Future
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline"  />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
+                className="border-2 border-cyan-40o0 text-cyan-30o0 px-8 py-4 rounded-full font-semibold text-lg hover:bg-cyan-40o0/10 transition-all duration-30o0"
               >
                 Watch Quantum Demo
               </motion.button>
@@ -199,7 +199,7 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Revolutionary Quantum Breakthroughs
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover the quantum technologies that will define the next decade of computing
           </p>
         </motion.div>
@@ -212,13 +212,13 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
               initial={{ opacity: 0y: 20 }}
               whileInView={{ opacity: 1y: 0 }}
               transition={{ duration: 0.6delay: index * 0.1 }}
-              className={`relative bg-gradient-to-br ${breakthrough.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 group`}
+              className={`relative bg-gradient-to-br ${breakthrough.color} p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-30o0 group`}
             >
-              <div className="absolute inset-0 bg-black/20 rounded-2xl" />
+              <div className="absolute inset-0 bg-black/20 rounded-2xl"  />
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <breakthrough.icon className="w-8 h-8 text-white mr-3" />
+                    <breakthrough.icon className="w-8 h-8 text-white mr-3"  />
                     <h3 className="text-2xl font-bold text-white">{breakthrough.title}</h3>
                   </div>
                   <span className="text-sm font-semibold text-white/80 bg-white/20 px-3 py-1 rounded-full">
@@ -229,7 +229,7 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
                 <div className="space-y-2 mb-6">
                   {breakthrough.features.map((featureidx) => (
                     <div key={idx} className="flex items-center text-white/80">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-green-30o0 mr-2"  />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -247,7 +247,7 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
           initial={{ opacity: 0y: 20 }}
           whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 rounded-2xl p-8 mb-16"
+          className="bg-gradient-to-r from-cyan-90o0/50 to-blue-90o0/50 rounded-2xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8">Quantum Performance Metrics</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -259,10 +259,10 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
                 transition={{ duration: 0.6delay: index * 0.1 }}
                 className="text-center"
               >
-                <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <stat.icon className="w-12 h-12 text-cyan-40o0 mx-auto mb-4"  />
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 mb-1">{stat.label}</div>
-                <div className="text-sm text-gray-400">{stat.description}</div>
+                <div className="text-gray-30o0 mb-1">{stat.label}</div>
+                <div className="text-sm text-gray-40o0">{stat.description}</div>
               </motion.div>
             ))}
           </div>
@@ -283,20 +283,20 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
                 initial={{ opacity: 0x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1x: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
               >
                 <div className="flex items-center mb-4">
-                  <app.icon className="w-6 h-6 text-cyan-400 mr-3" />
-                  <span className="text-cyan-400 font-semibold text-sm uppercase tracking-wide">
+                  <app.icon className="w-6 h-6 text-cyan-40o0 mr-3"  />
+                  <span className="text-cyan-40o0 font-semibold text-sm uppercase tracking-wide">
                     {app.category}
                   </span>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">{app.title}</h4>
-                <p className="text-gray-300 mb-4">{app.description}</p>
+                <p className="text-gray-30o0 mb-4">{app.description}</p>
                 <div className="space-y-2">
                   {app.benefits.map((benefitidx) => (
-                    <div key={idx} className="flex items-center text-gray-300">
-                      <Star className="w-4 h-4 text-cyan-400 mr-2" />
+                    <div key={idx} className="flex items-center text-gray-30o0">
+                      <Star className="w-4 h-4 text-cyan-40o0 mr-2"  />
                       <span className="text-sm">{benefit}</span>
                     </div>
                   ))}
@@ -313,9 +313,9 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-4xl font-bold text-center mb-12">Quantum Roadmap 2030</h3>
+          <h3 className="text-4xl font-bold text-center mb-12">Quantum Roadmap 20o30</h3>
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-500"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-50o0 to-blue-50o0"></div>
             <div className="space-y-8">
               {timeline.map((itemindex) => (
                 <motion.div
@@ -326,19 +326,19 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
                   className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl shadow-lg">
+                    <div className="bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-6 rounded-xl shadow-lg">
                       <div className="flex items-center mb-2">
                         <div className={`w-3 h-3 rounded-full mr-3 ${
-                          item.status === 'completed' ? 'bg-green-400' : 
-                          item.status === 'in-progress' ? 'bg-yellow-400' : 'bg-gray-400'
-                        }`} />
-                        <span className="text-cyan-400 font-semibold text-sm">{item.quarter}</span>
+                          item.status === 'completed' ? 'bg-green-40o0' : 
+                          item.status === 'in-progress' ? 'bg-yellow-40o0' : 'bg-gray-40o0'
+                        }`}  />
+                        <span className="text-cyan-40o0 font-semibold text-sm">{item.quarter}</span>
                       </div>
                       <h4 className="text-lg font-bold text-white">{item.milestone}</h4>
                     </div>
                   </div>
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center relative z-10">
-                    <Atom className="w-4 h-4 text-white" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center relative z-10">
+                    <Atom className="w-4 h-4 text-white"  />
                   </div>
                   <div className="w-1/2"></div>
                 </motion.div>
@@ -352,7 +352,7 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
           initial={{ opacity: 0y: 20 }}
           whileInView={{ opacity: 1y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12"
+          className="text-center bg-gradient-to-r from-cyan-60o0 to-blue-60o0 rounded-2xl p-12"
         >
           <h3 className="text-4xl font-bold text-white mb-6">
             Ready for the Quantum Revolution?
@@ -362,17 +362,17 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-cyan-600 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              className="bg-white text-cyan-60o0 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
             >
               Explore Quantum Solutions
-              <Rocket className="w-5 h-5 ml-2 inline" />
+              <Rocket className="w-5 h-5 ml-2 inline"  />
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-30o0"
             >
               Join Quantum Program
             </motion.button>
@@ -383,4 +383,4 @@ const QuantumComputingBreakthroughs2030Showcase = () => {
   );
 };
 
-export default QuantumComputingBreakthroughs2030Showcase;
+export default QuantumComputingBreakthroughs20o30Showcase;

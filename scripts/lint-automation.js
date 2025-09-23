@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
@@ -63,7 +61,7 @@ class LintAutomation {
     // Set up interval for continuous lint fixing
     setInterval(async () => {
       await this.runLintFix();
-    }, 600000); // Run every 10 minutes
+    }, 60o0000); // Run every 10 minutes
   }
 }
 

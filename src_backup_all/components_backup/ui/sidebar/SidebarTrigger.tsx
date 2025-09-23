@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react'
 import { useSidebar } from "./sidebar-context";
@@ -20,7 +19,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       onClick={toggleSidebar}
       {...props}
     >
-      {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+      {open ? <X className="h-4 w-4"  /> : <Menu className="h-4 w-4"  />}
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

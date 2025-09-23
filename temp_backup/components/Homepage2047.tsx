@@ -11,16 +11,16 @@ import {
 } from 'lucide-react';
 
 // Import our new innovative services
-import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
-import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2';
+import { innovative20o25AIAutonomousEcosystemV2 } from '../data/20o25-innovative-ai-autonomous-ecosystem-v2';
+import { emergingTechBreakthroughs20o25V4 } from '../data/20o25-emerging-tech-breakthroughs-v4';
+import { innovative20o25ITInfrastructureV2 } from '../data/20o25-innovative-it-infrastructure-v2';
 
 // Import enhanced components
-import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
-import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
-import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
+import UltraFuturisticBackground20o47 from './backgrounds/UltraFuturisticBackground20o47';
+import UltraFuturisticNavigation20o47 from './layout/UltraFuturisticNavigation20o47';
+import UltraFuturisticFooter20o47 from './layout/UltraFuturisticFooter20o47';
 
-const Homepage2047: React.FC = () => {
+const Homepage20o47: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -35,7 +35,7 @@ const Homepage2047: React.FC = () => {
     // Auto-rotate featured services
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6);
-    }, 8000);
+    }, 80o00);
     
     // Track mouse movement for parallax effects
     const handleMouseMove = (e: MouseEvent) => {
@@ -44,8 +44,8 @@ const Homepage2047: React.FC = () => {
     
     // Animate consciousness level
     const consciousnessInterval = setInterval(() => {
-      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.001) * 0.3 + 0.7);
-    }, 100);
+      setConsciousnessLevel(prev => Math.sin(Date.now() * 0.0o01) * 0.3 + 0.7);
+    }, 10o0);
 
     // Track scroll position
     const handleScroll = () => {
@@ -65,9 +65,9 @@ const Homepage2047: React.FC = () => {
 
   // Combine all innovative services
   const allInnovativeServices = [
-    ...innovative2025AIAutonomousEcosystemV2,
-    ...emergingTechBreakthroughs2025V4,
-    ...innovative2025ITInfrastructureV2
+    ...innovative20o25AIAutonomousEcosystemV2,
+    ...emergingTechBreakthroughs20o25V4,
+    ...innovative20o25ITInfrastructureV2
   ];
 
   // Get featured services for rotation
@@ -83,35 +83,35 @@ const Homepage2047: React.FC = () => {
   };
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: innovative2025AIAutonomousEcosystemV2.length },
-    { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-500 to-indigo-500', count: emergingTechBreakthroughs2025V4.length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-500 to-teal-500', count: innovative2025ITInfrastructureV2.length }
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', count: allInnovativeServices.length },
+    { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', count: innovative20o25AIAutonomousEcosystemV2.length },
+    { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0', count: emergingTechBreakthroughs20o25V4.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-50o0 to-teal-50o0', count: innovative20o25ITInfrastructureV2.length }
   ];
 
   const features = [
-    { icon: Brain, title: "AI Autonomous Ecosystem 2025", description: "Revolutionary autonomous AI solutions", href: "/2025-innovative-services-showcase-v2", color: "from-purple-500 to-pink-500" },
-    { icon: Atom, title: "Quantum AI Neural Networks 2025", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-2025", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, title: "Quantum Cybersecurity Intelligence 2025", description: "Quantum-resistant security with AI", href: "/quantum-cybersecurity-intelligence-platform-2025", color: "from-red-500 to-orange-500" },
-    { icon: Rocket, title: "Space Resource Intelligence 2025", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-2025", color: "from-indigo-500 to-purple-500" },
-    { icon: Cpu, title: "Autonomous DevOps Intelligence 2025", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-2025", color: "from-emerald-500 to-teal-500" },
-    { icon: Database, title: "Edge Computing Orchestration 2025", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-2025", color: "from-yellow-500 to-orange-500" }
+    { icon: Brain, title: "AI Autonomous Ecosystem 20o25", description: "Revolutionary autonomous AI solutions", href: "/20o25-innovative-services-showcase-v2", color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Atom, title: "Quantum AI Neural Networks 20o25", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-20o25", color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Shield, title: "Quantum Cybersecurity Intelligence 20o25", description: "Quantum-resistant security with AI", href: "/quantum-cybersecurity-intelligence-platform-20o25", color: "from-red-50o0 to-orange-50o0" },
+    { icon: Rocket, title: "Space Resource Intelligence 20o25", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-20o25", color: "from-indigo-50o0 to-purple-50o0" },
+    { icon: Cpu, title: "Autonomous DevOps Intelligence 20o25", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-20o25", color: "from-emerald-50o0 to-teal-50o0" },
+    { icon: Database, title: "Edge Computing Orchestration 20o25", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-20o25", color: "from-yellow-50o0 to-orange-50o0" }
   ];
 
   const stats = [
     { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
     { number: "24/7", label: "AI Intelligence Available", icon: Brain },
-    { number: "300+", label: "Countries Served", icon: Globe }
+    { number: "30o0+", label: "Countries Served", icon: Globe }
   ];
 
-  const fadeInUp = {
+  const fadeInUp ={
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
   };
 
-  const staggerContainer = {
+  const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.1
@@ -120,12 +120,12 @@ const Homepage2047: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />
+      <UltraFuturisticBackground20o47  />
       
       {/* Navigation */}
-      <UltraFuturisticNavigation2047 />
+      <UltraFuturisticNavigation20o47  />
 
       {/* Hero Section */}
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
@@ -143,25 +143,25 @@ const Homepage2047: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium"
+                  className="inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30 rounded-full text-cyan-40o0 text-sm font-medium"
                 >
-                  <Sparkles className="w-4 h-4" />
-                  <span>Innovating the Future Since 2025</span>
+                  <Sparkles className="w-4 h-4"  />
+                  <span>Innovating the Future Since 20o25</span>
                 </motion.div>
 
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-cyan-40o0 via-blue-50o0 to-purple-60o0 bg-clip-text text-transparent">
                     Revolutionary
                   </span>
-                  <br />
+                  <br  />
                   <span className="text-white">Technology Solutions</span>
-                  <br />
-                  <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-                    for 2047 & Beyond
+                  <br  />
+                  <span className="bg-gradient-to-r from-purple-40o0 via-pink-50o0 to-red-50o0 bg-clip-text text-transparent">
+                    for 20o47 & Beyond
                   </span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                <p className="text-xl md:text-2xl text-gray-30o0 leading-relaxed max-w-2xl">
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
@@ -174,19 +174,19 @@ const Homepage2047: React.FC = () => {
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link
-                  href="/2025-innovative-services-showcase-v2"
-                  className="group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
+                  href="/20o25-innovative-services-showcase-v2"
+                  className="group bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center space-x-2"
                 >
                   <span>Explore Services</span>
-                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-20o0"  />
                 </Link>
                 
                 <Link
                   href="/contact"
-                  className="group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2"
+                  className="group border-2 border-cyan-50o0/50 text-cyan-40o0 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-50o0/10 hover:border-cyan-50o0 transition-all duration-20o0 flex items-center justify-center space-x-2"
                 >
                   <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-20o0"  />
                 </Link>
               </motion.div>
 
@@ -203,8 +203,8 @@ const Homepage2047: React.FC = () => {
                     variants={fadeInUp}
                     className="text-center"
                   >
-                    <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.number}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-2xl font-bold text-cyan-40o0 mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-40o0">{stat.label}</div>
                   </motion.div>
                 ))}
               </motion.div>
@@ -226,34 +226,34 @@ const Homepage2047: React.FC = () => {
                   transition={{ duration: 0.5 }}
                   className="relative"
                 >
-                  <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">
+                  <div className="bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 rounded-3xl p-8 border border-cyan-50o0/20 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
-                        <Brain className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-50o0 to-blue-50o0 flex items-center justify-center">
+                        <Brain className="w-8 h-8 text-white"  />
                       </div>
                       <div className="text-right">
-                        <div className="text-sm text-cyan-400 font-medium">Featured Service</div>
-                        <div className="text-xs text-gray-400">Auto-rotating</div>
+                        <div className="text-sm text-cyan-40o0 font-medium">Featured Service</div>
+                        <div className="text-xs text-gray-40o0">Auto-rotating</div>
                       </div>
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-3">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gray-30o0 mb-6 leading-relaxed">
                       {featuredServices[currentServiceIndex]?.description}
                     </p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">Starting at:</span>
-                        <span className="text-cyan-400 font-semibold">
+                        <span className="text-gray-40o0">Starting at:</span>
+                        <span className="text-cyan-40o0 font-semibold">
                           {featuredServices[currentServiceIndex]?.pricing.starter}
                         </span>
                       </div>
                       <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">Market Size:</span>
-                        <span className="text-blue-400 font-medium">
+                        <span className="text-gray-40o0">Market Size:</span>
+                        <span className="text-blue-40o0 font-medium">
                           {featuredServices[currentServiceIndex]?.marketSize}
                         </span>
                       </div>
@@ -261,7 +261,7 @@ const Homepage2047: React.FC = () => {
                     
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug || '#'}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
+                      className="w-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 block"
                     >
                       Learn More
                     </Link>
@@ -286,7 +286,7 @@ const Homepage2047: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
@@ -306,27 +306,27 @@ const Homepage2047: React.FC = () => {
                 className="group relative"
               >
                 <Link
-                  href={category.id === 'all' ? '/2025-innovative-services-showcase-v2' : `/2025-innovative-services-showcase-v2?category=${category.id}`}
+                  href={category.id === 'all' ? '/20o25-innovative-services-showcase-v2' : `/20o25-innovative-services-showcase-v2?category=${category.id}`}
                   className="block h-full"
                 >
-                  <div className="h-full bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/25">
+                  <div className="h-full bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 rounded-2xl p-8 border border-gray-70o0/30 hover:border-cyan-50o0/50 transition-all duration-30o0 hover:scale-10o5 group-hover:shadow-2xl group-hover:shadow-cyan-50o0/25">
                     <div className="flex items-center justify-between mb-6">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                        <category.icon className="w-8 h-8 text-white" />
+                        <category.icon className="w-8 h-8 text-white"  />
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-cyan-400">{category.count}</div>
-                        <div className="text-xs text-gray-400">Services</div>
+                        <div className="text-2xl font-bold text-cyan-40o0">{category.count}</div>
+                        <div className="text-xs text-gray-40o0">Services</div>
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                       {category.name}
                     </h3>
                     
-                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                    <div className="flex items-center text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">
                       <span className="text-sm font-medium">Explore Services</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-20o0"  />
                     </div>
                   </div>
                 </Link>
@@ -349,7 +349,7 @@ const Homepage2047: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
@@ -369,21 +369,21 @@ const Homepage2047: React.FC = () => {
                 className="group relative"
               >
                 <Link href={feature.href} className="block h-full">
-                  <div className="h-full bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl p-8 border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/25">
+                  <div className="h-full bg-gradient-to-br from-gray-80o0/30 to-gray-90o0/30 rounded-2xl p-8 border border-gray-70o0/30 hover:border-cyan-50o0/50 transition-all duration-30o0 hover:scale-10o5 group-hover:shadow-2xl group-hover:shadow-cyan-50o0/25">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
-                      <feature.icon className="w-8 h-8 text-white" />
+                      <feature.icon className="w-8 h-8 text-white"  />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gray-30o0 mb-6 leading-relaxed">
                       {feature.description}
                     </p>
                     
-                    <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                    <div className="flex items-center text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">
                       <span className="text-sm font-medium">Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-20o0"  />
                     </div>
                   </div>
                 </Link>
@@ -400,11 +400,11 @@ const Homepage2047: React.FC = () => {
             className="text-center mt-16"
           >
             <Link
-              href="/2025-innovative-services-showcase-v2"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+              href="/20o25-innovative-services-showcase-v2"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-purple-50o0/25"
             >
               <span>View All {allInnovativeServices.length}+ Services</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5"  />
             </Link>
           </motion.div>
         </div>
@@ -422,19 +422,19 @@ const Homepage2047: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
               Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25"
               >
                 Get Started Today
               </Link>
               <Link
-                href="/2025-innovative-services-showcase-v2"
-                className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200"
+                href="/20o25-innovative-services-showcase-v2"
+                className="border border-cyan-50o0/50 text-cyan-40o0 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-50o0/10 transition-all duration-20o0"
               >
                 Explore Services
               </Link>
@@ -444,9 +444,9 @@ const Homepage2047: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <UltraFuturisticFooter2047 />
+      <UltraFuturisticFooter20o47  />
     </div>
   );
 };
 
-export default Homepage2047;
+export default Homepage20o47;

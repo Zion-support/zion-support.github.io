@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -14,17 +13,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text,
   fullScreen = false
 }) => {
-  const sizeClasses = {
+  const sizeClasses ={
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
   };
 
-  const colorClasses = {
-    primary: 'border-cyan-500',
-    secondary: 'border-purple-500',
-    accent: 'border-emerald-500',
+  const colorClasses ={
+    primary: 'border-cyan-50o0',
+    secondary: 'border-purple-50o0',
+    accent: 'border-emerald-50o0',
     white: 'border-white'
   };
 
@@ -39,7 +38,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         <motion.div
           className={`${sizeClasses[size]} ${colorClasses[color]} border-4 border-b-transparent rounded-full absolute inset-0`}
           animate={{ rotate: -360 }}
@@ -48,12 +47,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
       </div>
       
       {text && (
         <motion.p
-          className="text-gray-400 text-center font-medium"
+          className="text-gray-40o0 text-center font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -78,7 +77,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
               delay: i * 0.2,
               ease: "easeInOut"
             }}
-          />
+           />
         ))}
       </div>
     </div>

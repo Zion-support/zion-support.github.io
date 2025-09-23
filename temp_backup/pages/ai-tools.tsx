@@ -20,7 +20,7 @@ import {
 export default function AiToolsPage() {
   const aiTools = [
     {
-      icon: <Brain className="w-8 h-8 text-white" />,
+      icon: <Brain className="w-8 h-8 text-white"  />,
       title: 'ChatGPT Plus',
       description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
       features: [
@@ -31,14 +31,14 @@ export default function AiToolsPage() {
       pricing: '$20/month',
       marketPrice: '$20/month',
       website: 'https://chat.openai.com',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      textColor: 'text-green-40o0',
+      gradient: 'from-green-40o0 to-emerald-50o0',
       popular: true,
       category: 'Conversational AI'
     },
     {
-      icon: <Image className="w-8 h-8 text-white" />,
+      icon: <Image className="w-8 h-8 text-white"  />,
       title: 'Midjourney',
       description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
       features: [
@@ -49,14 +49,14 @@ export default function AiToolsPage() {
       pricing: '$10-30/month',
       marketPrice: '$10-30/month',
       website: 'https://midjourney.com',
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      textColor: 'text-purple-400',
-      gradient: 'from-purple-400 to-pink-500',
+      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
+      textColor: 'text-purple-40o0',
+      gradient: 'from-purple-40o0 to-pink-50o0',
       popular: true,
       category: 'Image Generation'
     },
     {
-      icon: <Code className="w-8 h-8 text-white" />,
+      icon: <Code className="w-8 h-8 text-white"  />,
       title: 'GitHub Copilot',
       description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
@@ -67,14 +67,14 @@ export default function AiToolsPage() {
       pricing: '$10/month',
       marketPrice: '$10-20/month',
       website: 'https://github.com/features/copilot',
-      color: 'bg-gradient-to-br from-gray-500 to-black',
-      textColor: 'text-gray-400',
-      gradient: 'from-gray-400 to-black',
+      color: 'bg-gradient-to-br from-gray-50o0 to-black',
+      textColor: 'text-gray-40o0',
+      gradient: 'from-gray-40o0 to-black',
       popular: true,
       category: 'Code Generation'
     },
     {
-      icon: <Video className="w-8 h-8 text-white" />,
+      icon: <Video className="w-8 h-8 text-white"  />,
       title: 'Runway ML',
       description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
       features: [
@@ -83,16 +83,16 @@ export default function AiToolsPage() {
         'Professional workflows'
       ],
       pricing: '$12-76/month',
-      marketPrice: '$15-100/month',
+      marketPrice: '$15-10o0/month',
       website: 'https://runwayml.com',
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-indigo-500',
+      color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0',
+      textColor: 'text-blue-40o0',
+      gradient: 'from-blue-40o0 to-indigo-50o0',
       popular: false,
       category: 'Video Generation'
     },
     {
-      icon: <MessageSquare className="w-8 h-8 text-white" />,
+      icon: <MessageSquare className="w-8 h-8 text-white"  />,
       title: 'Claude Pro',
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.',
       features: [
@@ -103,14 +103,14 @@ export default function AiToolsPage() {
       pricing: '$20/month',
       marketPrice: '$20/month',
       website: 'https://claude.ai',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
+      textColor: 'text-orange-40o0',
+      gradient: 'from-orange-40o0 to-red-50o0',
       popular: false,
       category: 'Conversational AI'
     },
     {
-      icon: <FileText className="w-8 h-8 text-white" />,
+      icon: <FileText className="w-8 h-8 text-white"  />,
       title: 'Jasper AI',
       description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
       features: [
@@ -121,9 +121,9 @@ export default function AiToolsPage() {
       pricing: '$39-125/month',
       marketPrice: '$40-150/month',
       website: 'https://jasper.ai',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
+      color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0',
+      textColor: 'text-teal-40o0',
+      gradient: 'from-teal-40o0 to-cyan-50o0',
       popular: false,
       category: 'Content Creation'
     }
@@ -134,7 +134,7 @@ export default function AiToolsPage() {
       title: 'AI Market Size',
       value: '$136.6B',
       growth: '+37% YoY',
-      description: 'Global AI market value in 2024'
+      description: 'Global AI market value in 20o24'
     },
     {
       title: 'AI Adoption Rate',
@@ -146,7 +146,7 @@ export default function AiToolsPage() {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
-      description: 'Global AI investment in 2024'
+      description: 'Global AI investment in 20o24'
     },
     {
       title: 'AI Productivity Gain',
@@ -193,27 +193,27 @@ export default function AiToolsPage() {
     <>
       <Head>
         <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
-        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
-        <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
-        <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links."  />
+        <meta property="og:title" content="AI Tools & Services | Zion Tech Group"  />
+        <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,20o4,0.08),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,20o4,0.0o6),transparent_50%)]"  />
+        <div className="absolute inset-0 bg-grid opacity-10"  />
         
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
+            <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse"  />
             AI Tools & Services
           </div>
           <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
             Real AI Tools for Real Results
           </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed">
             Curated AI tools and services that actually work. Each tool has been tested and verified to provide 
             real value for professionals and businesses. No hype - just results.
           </p>
@@ -227,7 +227,7 @@ export default function AiToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               AI Market Insights
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Understanding the AI landscape helps you make informed decisions about which tools to invest in.
             </p>
           </div>
@@ -242,8 +242,8 @@ export default function AiToolsPage() {
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-white mb-3">{stat.title}</h3>
                   <div className="text-2xl font-bold text-cursor-blue mb-2">{stat.value}</div>
-                  <div className="text-sm text-green-400 mb-3">{stat.growth}</div>
-                  <p className="text-sm text-gray-400">{stat.description}</p>
+                  <div className="text-sm text-green-40o0 mb-3">{stat.growth}</div>
+                  <p className="text-sm text-gray-40o0">{stat.description}</p>
                 </div>
               </Card>
             ))}
@@ -258,7 +258,7 @@ export default function AiToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Curated AI Tools & Services
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function AiToolsPage() {
                 {tool.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
-                      <Star className="w-3 h-3 mr-1" />
+                      <Star className="w-3 h-3 mr-1"  />
                       Most Popular
                     </div>
                   </div>
@@ -283,10 +283,10 @@ export default function AiToolsPage() {
 
                 <div className="flex items-start space-x-6">
                   <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-30o0`}>
                       {tool.icon}
                     </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-30o0 blur-sm`}  />
                   </div>
                   
                   <div className="flex-1">
@@ -294,30 +294,30 @@ export default function AiToolsPage() {
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
                         {tool.title}
                       </h3>
-                      <span className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">
+                      <span className="text-xs bg-gray-80o0 text-gray-30o0 px-2 py-1 rounded-full">
                         {tool.category}
                       </span>
                     </div>
                     
-                    <p className="text-gray-400 leading-relaxed mb-6">
+                    <p className="text-gray-40o0 leading-relaxed mb-6">
                       {tool.description}
                     </p>
                     
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-gray-500">Service Price:</span>
+                        <span className="text-sm text-gray-50o0">Service Price:</span>
                         <span className="text-lg font-semibold text-cursor-blue">{tool.pricing}</span>
                       </div>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm text-gray-500">Market Average:</span>
-                        <span className="text-sm text-gray-400">{tool.marketPrice}</span>
+                        <span className="text-sm text-gray-50o0">Market Average:</span>
+                        <span className="text-sm text-gray-40o0">{tool.marketPrice}</span>
                       </div>
                     </div>
 
                     <ul className="space-y-2 mb-6">
                       {tool.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-gray-30o0">
+                          <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -331,10 +331,10 @@ export default function AiToolsPage() {
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
                       >
                         Try Tool
-                        <ExternalLink className="w-4 h-4 ml-2" />
+                        <ExternalLink className="w-4 h-4 ml-2"  />
                       </Button>
                       <div className="text-right">
-                        <div className="text-xs text-gray-500">Direct Link</div>
+                        <div className="text-xs text-gray-50o0">Direct Link</div>
                         <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
                       </div>
                     </div>
@@ -353,7 +353,7 @@ export default function AiToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               AI Tool Categories
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Understanding the different types of AI tools helps you build a comprehensive toolkit for your needs.
             </p>
           </div>
@@ -367,9 +367,9 @@ export default function AiToolsPage() {
               >
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
-                  <p className="text-gray-400 mb-4">{category.description}</p>
+                  <p className="text-gray-40o0 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">Tools Available: <span className="text-white">{category.tools}</span></span>
+                    <span className="text-gray-50o0">Tools Available: <span className="text-white">{category.tools}</span></span>
                     <span className="text-cursor-blue font-semibold">{category.avgPrice}</span>
                   </div>
                 </div>
@@ -386,7 +386,7 @@ export default function AiToolsPage() {
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
               Getting Started with AI Tools
             </h2>
-            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed">
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
           </div>
@@ -395,13 +395,13 @@ export default function AiToolsPage() {
             <Card className="card-hover border-gradient-blue">
               <div className="p-6">
                 <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-cursor-blue" />
+                  <TrendingUp className="w-8 h-8 text-cursor-blue"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Start Small</h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-40o0 mb-4">
                   Begin with one AI tool that addresses your most immediate need. Master it before adding more.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-30o0">
                   <li>• Choose based on your primary use case</li>
                   <li>• Start with free tiers when available</li>
                   <li>• Focus on one tool at a time</li>
@@ -412,13 +412,13 @@ export default function AiToolsPage() {
             <Card className="card-hover border-gradient-blue">
               <div className="p-6">
                 <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-cursor-blue" />
+                  <Shield className="w-8 h-8 text-cursor-blue"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
-                <p className="text-gray-400 mb-4">
+                <p className="text-gray-40o0 mb-4">
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
                 </p>
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-gray-30o0">
                   <li>• Always review and edit AI-generated content</li>
                   <li>• Use specific, detailed prompts</li>
                   <li>• Maintain human oversight and creativity</li>
@@ -435,7 +435,7 @@ export default function AiToolsPage() {
           <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
             Ready to Supercharge Your Workflow?
           </h2>
-          <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12">
+          <p className="text-responsive-md text-gray-40o0 max-w-4xl mx-auto leading-relaxed mb-12">
             Start with one AI tool or build a complete AI-powered toolkit. Each tool is designed to work independently 
             and integrate seamlessly with your existing processes.
           </p>

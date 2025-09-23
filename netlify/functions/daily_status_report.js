@@ -15,7 +15,7 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     const linkHealth = await fetchJsonFromRepo(repo, 'data/link-health.json', branch, token);
@@ -78,8 +78,8 @@ exports.handler = async function(event, context) {
     const jsonReport = await resReport.json();
     if (!resReport.ok) return { statusCode: resReport.status, body: JSON.stringify({ error: jsonReport }) };
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, report: reportPath, commit: jsonReport.commit && jsonReport.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, report: reportPath, commit: jsonReport.commit && jsonReport.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

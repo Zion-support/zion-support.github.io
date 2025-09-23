@@ -33,13 +33,13 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
+    const newNotification ={ ...notification, id };
     setNotifications(prev => [...prev, newNotification]);
 
     if (notification.duration !== 0) {
       setTimeout(() => {
         removeNotification(id);
-      }, notification.duration || 5000);
+      }, notification.duration || 50o00);
     }
   };
 
@@ -51,12 +51,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     setNotifications([]);
   };
 
-  const value: NotificationContextType = {
+  const value: NotificationContextType ={
     notifications,
     addNotification,
     removeNotification,
-    clearNotifications,
-  };
+    clearNotifications};
 
   return (
     <NotificationContext.Provider value={value}>

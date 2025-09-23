@@ -7,7 +7,7 @@ import {
   ChevronUp, ExternalLink, Download, Calendar, Users, Award
 } from 'lucide-react';
 
-const UltraFuturisticFooter2044: React.FC = () => {
+const UltraFuturisticFooter20o44: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [isClient, setIsClient] = useState(false);
@@ -17,15 +17,15 @@ const UltraFuturisticFooter2044: React.FC = () => {
   const footerSections = useMemo(() => [
     {
       id: 'services',
-      title: 'Revolutionary Services 2044',
+      title: 'Revolutionary Services 20o44',
       description: 'Future-defining technology solutions',
       links: [
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2044', featured: true },
-        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform-2044', featured: true },
-        { name: 'Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence-2044' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-2044' },
-        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-2044' },
-        { name: 'Autonomous Customer Success', href: '/autonomous-customer-success-2044' }
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44', featured: true },
+        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform-20o44', featured: true },
+        { name: 'Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence-20o44' },
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-20o44' },
+        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-20o44' },
+        { name: 'Autonomous Customer Success', href: '/autonomous-customer-success-20o44' }
       ]
     },
     {
@@ -33,12 +33,12 @@ const UltraFuturisticFooter2044: React.FC = () => {
       title: 'Technology Solutions',
       description: 'Cutting-edge infrastructure and platforms',
       links: [
-        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-2044' },
-        { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform-2044' },
-        { name: 'Quantum Data Center Management', href: '/quantum-data-center-management-2044' },
-        { name: 'Autonomous Network Management', href: '/autonomous-network-management-2044' },
-        { name: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-2044' },
-        { name: 'Autonomous IT Service Management', href: '/autonomous-it-service-management-2044' }
+        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-20o44' },
+        { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform-20o44' },
+        { name: 'Quantum Data Center Management', href: '/quantum-data-center-management-20o44' },
+        { name: 'Autonomous Network Management', href: '/autonomous-network-management-20o44' },
+        { name: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-20o44' },
+        { name: 'Autonomous IT Service Management', href: '/autonomous-it-service-management-20o44' }
       ]
     },
     {
@@ -46,12 +46,12 @@ const UltraFuturisticFooter2044: React.FC = () => {
       title: 'AI & Consciousness',
       description: 'Advanced AI and consciousness solutions',
       links: [
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2044' },
-        { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive-2044' },
-        { name: 'Autonomous AI Research', href: '/autonomous-ai-research-2044' },
-        { name: 'Emotional AI Intelligence', href: '/emotional-ai-intelligence-2044' },
-        { name: 'Quantum AI Metaverse', href: '/quantum-ai-metaverse-2044' },
-        { name: 'Autonomous AI Business Intelligence', href: '/autonomous-ai-business-intelligence-2044' }
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44' },
+        { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive-20o44' },
+        { name: 'Autonomous AI Research', href: '/autonomous-ai-research-20o44' },
+        { name: 'Emotional AI Intelligence', href: '/emotional-ai-intelligence-20o44' },
+        { name: 'Quantum AI Metaverse', href: '/quantum-ai-metaverse-20o44' },
+        { name: 'Autonomous AI Business Intelligence', href: '/autonomous-ai-business-intelligence-20o44' }
       ]
     },
     {
@@ -81,12 +81,12 @@ const UltraFuturisticFooter2044: React.FC = () => {
   ], []);
 
   const socialLinks = useMemo(() => [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600', ariaLabel: 'Follow us on Facebook' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500', ariaLabel: 'Follow us on Twitter' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700', ariaLabel: 'Follow us on LinkedIn' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500', ariaLabel: 'Follow us on Instagram' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600', ariaLabel: 'Subscribe to our YouTube channel' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700', ariaLabel: 'Check out our GitHub repositories' }
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-50o0 to-blue-60o0', ariaLabel: 'Follow us on Facebook' },
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-40o0 to-blue-50o0', ariaLabel: 'Follow us on Twitter' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-60o0 to-blue-70o0', ariaLabel: 'Follow us on LinkedIn' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-50o0 to-pink-50o0', ariaLabel: 'Follow us on Instagram' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-50o0 to-red-60o0', ariaLabel: 'Subscribe to our YouTube channel' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-60o0 to-gray-70o0', ariaLabel: 'Check out our GitHub repositories' }
   ], []);
 
   const quickActions = useMemo(() => [
@@ -124,7 +124,7 @@ const UltraFuturisticFooter2044: React.FC = () => {
     if (!isClient) return;
 
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 400);
+      setShowBackToTop(window.scrollY > 40o0);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -132,12 +132,12 @@ const UltraFuturisticFooter2044: React.FC = () => {
   }, [isClient]);
 
   return (
-    <footer className="relative bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50" role="contentinfo">
+    <footer className="relative bg-gray-90o0/95 backdrop-blur-xl border-t border-gray-80o0/50" role="contentinfo">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/5 to-blue-900/5"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-90o0/5 to-blue-90o0/5"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-50o0/5 to-blue-50o0/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-50o0/5 to-pink-50o0/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
@@ -146,43 +146,43 @@ const UltraFuturisticFooter2044: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]">
-                <Brain className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)]">
+                <Brain className="w-7 h-7 text-white"  />
               </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </div>
             </div>
             
-            <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
+            <p className="text-gray-40o0 mb-6 leading-relaxed max-w-md">
               Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
             </p>
             
             <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Phone className="w-4 h-4 text-cyan-40o0"  />
                 <a 
-                  href="tel:+1-800-ZION-TECH" 
-                  className="hover:text-cyan-400 transition-colors duration-300"
-                  aria-label="Call us at 1-800-ZION-TECH"
+                  href="tel:+1-80o0-ZION-TECH" 
+                  className="hover:text-cyan-40o0 transition-colors duration-30o0"
+                  aria-label="Call us at 1-80o0-ZION-TECH"
                 >
-                  1-800-ZION-TECH
+                  1-80o0-ZION-TECH
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <Mail className="w-4 h-4 text-cyan-40o0"  />
                 <a 
                   href="mailto:info@ziontechgroup.com" 
-                  className="hover:text-cyan-400 transition-colors duration-300"
+                  className="hover:text-cyan-40o0 transition-colors duration-30o0"
                   aria-label="Email us at info@ziontechgroup.com"
                 >
                   info@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+              <div className="flex items-start space-x-3 text-gray-30o0">
+                <MapPin className="w-4 h-4 text-cyan-40o0 mt-0.5"  />
                 <span>
-                  364 E Main St STE 1008<br />
+                  364 E Main St STE 10o08<br  />
                   Middletown DE 19709
                 </span>
               </div>
@@ -194,15 +194,15 @@ const UltraFuturisticFooter2044: React.FC = () => {
                 <Link
                   key={action.name}
                   href={action.href}
-                  className="group p-3 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700/50 hover:border-cyan-500/50 rounded-lg transition-all duration-300"
+                  className="group p-3 bg-gray-80o0/50 hover:bg-gray-70o0/50 border border-gray-70o0/50 hover:border-cyan-50o0/50 rounded-lg transition-all duration-30o0"
                 >
                   <div className="flex items-center space-x-2">
-                    <action.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
+                    <action.icon className="w-4 h-4 text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-30o0"  />
                     <div>
-                      <div className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors duration-300">
+                      <div className="text-sm font-medium text-white group-hover:text-cyan-30o0 transition-colors duration-30o0">
                         {action.name}
                       </div>
-                      <div className="text-xs text-gray-400">
+                      <div className="text-xs text-gray-40o0">
                         {action.description}
                       </div>
                     </div>
@@ -223,20 +223,20 @@ const UltraFuturisticFooter2044: React.FC = () => {
               >
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">{section.title}</h3>
-                  <p className="text-sm text-gray-400">{section.description}</p>
+                  <p className="text-sm text-gray-40o0">{section.description}</p>
                 </div>
-                <ChevronUp className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                <ChevronUp className={`w-5 h-5 text-gray-40o0 transition-transform duration-20o0 ${
                   expandedSections.has(section.id) ? 'rotate-180' : ''
-                }`} />
+                }`}  />
               </button>
               
               <div className="hidden lg:block">
                 <h3 className="text-lg font-semibold text-white mb-1">{section.title}</h3>
-                <p className="text-sm text-gray-400 mb-4">{section.description}</p>
+                <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>
               </div>
 
               <AnimatePresence>
-                {(expandedSections.has(section.id) || (isClient && window.innerWidth >= 1024)) && (
+                {(expandedSections.has(section.id) || (isClient && window.innerWidth >= 10o24)) && (
                   <motion.div
                     id={`footer-section-${section.id}`}
                     initial={{ opacity: 0, height: 0 }}
@@ -249,13 +249,13 @@ const UltraFuturisticFooter2044: React.FC = () => {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className={`block text-gray-400 hover:text-white transition-colors duration-200 text-sm ${
-                          link.featured ? 'font-medium text-cyan-300 hover:text-cyan-200' : ''
+                        className={`block text-gray-40o0 hover:text-white transition-colors duration-20o0 text-sm ${
+                          link.featured ? 'font-medium text-cyan-30o0 hover:text-cyan-20o0' : ''
                         }`}
                       >
                         {link.name}
                         {link.featured && (
-                          <span className="ml-2 inline-block w-2 h-2 bg-cyan-400 rounded-full"></span>
+                          <span className="ml-2 inline-block w-2 h-2 bg-cyan-40o0 rounded-full"></span>
                         )}
                       </Link>
                     ))}
@@ -267,47 +267,47 @@ const UltraFuturisticFooter2044: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800/50 pt-8 mb-8">
+        <div className="border-t border-gray-80o0/50 pt-8 mb-8">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-2">
               Stay Ahead of the Future
             </h3>
-            <p className="text-gray-400 mb-6">
-              Get the latest insights on revolutionary 2044 technology and AI consciousness evolution
+            <p className="text-gray-40o0 mb-6">
+              Get the latest insights on revolutionary 20o44 technology and AI consciousness evolution
             </p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 backdrop-blur-sm"
+                className="flex-1 px-4 py-3 bg-gray-80o0/50 border border-gray-60o0/50 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 backdrop-blur-sm"
                 aria-label="Email address for newsletter"
                 required
-              />
+               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
               >
                 Subscribe
-                <ArrowRight className="w-4 h-4 ml-2 inline" />
+                <ArrowRight className="w-4 h-4 ml-2 inline"  />
               </button>
             </form>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800/50 pt-8">
+        <div className="border-t border-gray-80o0/50 pt-8">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             {/* Copyright and Links */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-400">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-40o0">
               <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
               <div className="flex items-center space-x-4">
-                <Link href="/privacy" className="hover:text-white transition-colors duration-200">
+                <Link href="/privacy" className="hover:text-white transition-colors duration-20o0">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="hover:text-white transition-colors duration-200">
+                <Link href="/terms" className="hover:text-white transition-colors duration-20o0">
                   Terms of Service
                 </Link>
-                <Link href="/cookies" className="hover:text-white transition-colors duration-200">
+                <Link href="/cookies" className="hover:text-white transition-colors duration-20o0">
                   Cookie Policy
                 </Link>
               </div>
@@ -321,22 +321,22 @@ const UltraFuturisticFooter2044: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 bg-gradient-to-br ${social.color} rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl`}
+                  className={`w-10 h-10 bg-gradient-to-br ${social.color} rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-30o0 shadow-lg hover:shadow-xl`}
                   aria-label={social.ariaLabel}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5"  />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Additional Info */}
-          <div className="mt-6 text-center text-sm text-gray-500">
+          <div className="mt-6 text-center text-sm text-gray-50o0">
             <p>
-              Made with <Heart className="w-4 h-4 inline text-red-400" /> for the future of technology
+              Made with <Heart className="w-4 h-4 inline text-red-40o0"  /> for the future of technology
             </p>
             <p className="mt-1">
-              <Star className="w-4 h-4 inline text-yellow-400" /> Revolutionary 2044 Technology Solutions
+              <Star className="w-4 h-4 inline text-yellow-40o0"  /> Revolutionary 20o44 Technology Solutions
             </p>
           </div>
         </div>
@@ -350,10 +350,10 @@ const UltraFuturisticFooter2044: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 z-50"
+            className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 text-white rounded-full shadow-2xl hover:shadow-cyan-50o0/25 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 z-50"
             aria-label="Back to top"
           >
-            <ChevronUp className="w-6 h-6 mx-auto" />
+            <ChevronUp className="w-6 h-6 mx-auto"  />
           </motion.button>
         )}
       </AnimatePresence>
@@ -361,4 +361,4 @@ const UltraFuturisticFooter2044: React.FC = () => {
   );
 };
 
-export default UltraFuturisticFooter2044;
+export default UltraFuturisticFooter20o44;

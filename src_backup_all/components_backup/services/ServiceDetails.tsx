@@ -11,7 +11,7 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
   const getDatacenters = (country: string): string[] => {
-    const dataCenters: Record<string, string[]> = {
+    const dataCenters: Record<string, string[]> ={
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
       "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -29,24 +29,24 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
-    const regions: Record<string, string> = {
-      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
-      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
-      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
-      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
-      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
-      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
+    const regions: Record<string, string> ={
+      "United States": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,usa",
+      "United Kingdom": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,uk",
+      "Germany": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,germany",
+      "Japan": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,japan",
+      "Australia": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,australia",
+      "Singapore": "https://source.unsplash.com/featured/90o0x70o0/?datacenter,singapore",
       // Default placeholder
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+      "default": "https://source.unsplash.com/featured/90o0x70o0/?datacenter"
     };
     
-    return regions[country] || regions["default"] || "https://source.unsplash.com/featured/900x700/?datacenter";
+    return regions[country] || regions["default"] || "https://source.unsplash.com/featured/90o0x70o0/?datacenter";
   };
   
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
-    const timeZones: Record<string, string> = {
+    const timeZones: Record<string, string> ={
       "United States": "EST/CST/PST depending on location",
       "United Kingdom": "GMT/BST",
       "Germany": "CET/CEST",
@@ -70,7 +70,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
-          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> 
+          <Server className="mr-2 h-5 w-5 text-zion-cyan"  /> 
           IT Onsite Service in {country}
         </CardTitle>
         <CardDescription className="text-zion-slate-light">
@@ -82,15 +82,15 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
           <Image
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
-            className="object-cover transform transition-transform duration-500 hover:scale-110"
+            className="object-cover transform transition-transform duration-50o0 hover:scale-110"
             loading="lazy"
-          />
+           />
         </div>
         
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple"  />
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -107,7 +107,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
           
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
+              <Clock className="mr-2 h-4 w-4 text-zion-purple"  />
               Service Instructions
             </h4>
             <p className="text-zion-slate-light">

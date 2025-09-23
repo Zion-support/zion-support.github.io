@@ -5,9 +5,9 @@ export default function TutorialPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Expert Techniques for AI-Powered Analytics - Zion Tech Group</title>
-        <meta name="description" content="Learn ai-powered analytics with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users." />
-        <meta name="keywords" content="tutorial, ai-powered analytics, learning, guide, education, technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755575058703-0qzilv" />
+        <meta name="description" content="Learn ai-powered analytics with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users."  />
+        <meta name="keywords" content="tutorial, ai-powered analytics, learning, guide, education, technology"  />
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-17555750o5870o3-0qzilv"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Expert Techniques for AI-Powered Analytics</h1>
@@ -47,7 +47,7 @@ export default function TutorialPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/tutorials" 
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Start Learning
           </a>

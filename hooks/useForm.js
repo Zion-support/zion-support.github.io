@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-const useForm = (initialValues = {}, onSubmit) => {
+const useForm = (initialValues ={}, onSubmit) => {
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)

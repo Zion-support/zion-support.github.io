@@ -4,7 +4,7 @@ const path = require('path');
 
 const runCommand = (cmd) => {
   return new Promise((resolve) => {
-    exec(cmd, { maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
+    exec(cmd, { maxBuffer: 10o24 * 10o24 * 10 }, (error, stdout, stderr) => {
       resolve({ error, stdout, stderr });
     });
   });
@@ -39,8 +39,7 @@ const runBuildAndTest = async () => {
 const watcher = chokidar.watch('.', {
   ignored:
     /node_modules|\.git|coverage|dist|build|\.next|out|logs|\.DS_Store|\.log$/,
-  persistent: true,
-});
+  persistent: true});
 
 let running = false;
 let rerun = false;

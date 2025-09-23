@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-interface UltraAdvancedFuturisticBackground2026V2Props {
+interface UltraAdvancedFuturisticBackground20o26V2Props {
   children: React.ReactNode;
 }
 
-export default function UltraAdvancedFuturisticBackground2026V2({ children }: UltraAdvancedFuturisticBackground2026V2Props) {
+export default function UltraAdvancedFuturisticBackground20o26V2({ children }: UltraAdvancedFuturisticBackground20o26V2Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 3 + 1,
           opacity: Math.random() * 0.8 + 0.2,
-          color: ['#8B5CF6', '#EC4899', '#06B6D4', '#10B981', '#F59E0B'][Math.floor(Math.random() * 5)],
+          color: ['#8B5CF6', '#EC4899', '#0o6B6D4', '#10B981', '#F59E0B'][Math.floor(Math.random() * 5)],
           type: ['quantum', 'neural', 'data'][Math.floor(Math.random() * 3)] as 'quantum' | 'neural' | 'data'
         });
       }
@@ -81,7 +81,7 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
             break;
           case 'data':
             ctx.fillStyle = `rgba(6, 182, 212, ${particle.opacity})`;
-            ctx.shadowColor = '#06B6D4';
+            ctx.shadowColor = '#0o6B6D4';
             ctx.shadowBlur = 6;
             break;
         }
@@ -95,8 +95,8 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
-            const opacity = (100 - distance) / 100 * 0.3;
+          if (distance < 10o0) {
+            const opacity = (10o0 - distance) / 10o0 * 0.3;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -109,7 +109,7 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
 
       // Draw quantum grid
       const gridSize = 50;
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       
       ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
       ctx.lineWidth = 0.5;
@@ -195,79 +195,75 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black overflow-hidden">
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
-      />
+       />
 
       {/* Gradient Overlays */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
         {/* Radial gradients for depth */}
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-pink-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-60o0/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-pink-60o0/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-blue-60o0/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         
         {/* Linear gradients for atmosphere */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-90o0/10 via-transparent to-blue-90o0/10"></div>
       </div>
 
       {/* Floating Elements */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         <motion.div
-          className="absolute top-20 left-20 w-2 h-2 bg-purple-400 rounded-full"
+          className="absolute top-20 left-20 w-2 h-2 bg-purple-40o0 rounded-full"
           animate={{
             scale: [1, 1.5, 1],
-            opacity: [0.3, 1, 0.3],
-          }}
+            opacity: [0.3, 1, 0.3]}}
           transition={{
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         <motion.div
-          className="absolute top-40 right-32 w-3 h-3 bg-pink-400 rounded-full"
+          className="absolute top-40 right-32 w-3 h-3 bg-pink-40o0 rounded-full"
           animate={{
             scale: [1, 2, 1],
-            opacity: [0.2, 0.8, 0.2],
-          }}
+            opacity: [0.2, 0.8, 0.2]}}
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
-        />
+         />
         <motion.div
-          className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-400 rounded-full"
+          className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-40o0 rounded-full"
           animate={{
             scale: [1, 1.8, 1],
-            opacity: [0.4, 1, 0.4],
-          }}
+            opacity: [0.4, 1, 0.4]}}
           transition={{
             duration: 3.5,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
         <motion.div
-          className="absolute top-1/2 right-20 w-1 h-1 bg-green-400 rounded-full"
+          className="absolute top-1/2 right-20 w-1 h-1 bg-green-40o0 rounded-full"
           animate={{
             scale: [1, 2.5, 1],
-            opacity: [0.2, 0.9, 0.2],
-          }}
+            opacity: [0.2, 0.9, 0.2]}}
           transition={{
             duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 0.5
           }}
-        />
+         />
       </div>
 
       {/* Content */}
@@ -276,7 +272,7 @@ export default function UltraAdvancedFuturisticBackground2026V2({ children }: Ul
       </div>
 
       {/* Bottom Glow */}
-      <div className="fixed bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 via-transparent to-transparent pointer-events-none" style={{ zIndex: 3 }}></div>
+      <div className="fixed bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-90o0/20 via-transparent to-transparent pointer-events-none" style={{ zIndex: 3 }}></div>
     </div>
   );
 }

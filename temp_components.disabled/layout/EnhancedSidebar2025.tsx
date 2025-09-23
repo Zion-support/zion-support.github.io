@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, ChevronRight,
@@ -13,35 +12,35 @@ import {
   BarChart3, Layers, Code, Terminal, Cloud, Server, Network, DollarSign
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 10o08 Middletown DE 19709'
 };
 
 const mainNavigation = [
   {
     title: 'Home',
     href: '/',
-    icon: <Home className="w-5 h-5" />,
+    icon: <Home className="w-5 h-5"  />,
     description: 'Main landing page'
   },
   {
     title: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Layers className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Layers className="w-5 h-5"  />,
     description: 'Complete service catalog'
   },
   {
     title: 'Pricing',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5"  />,
     description: 'Service pricing plans'
   },
   {
     title: 'Contact',
     href: '/contact',
-    icon: <Mail className="w-5 h-5" />,
+    icon: <Mail className="w-5 h-5"  />,
     description: 'Get in touch with us'
   }
 ];
@@ -49,10 +48,10 @@ const mainNavigation = [
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
-    icon: <Brain className="w-5 h-5 text-cyan-400" />,
-    color: 'from-cyan-500/20 to-blue-600/20',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-cyan-50o0/20 to-blue-60o0/20',
     services: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', popular: true },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o29', popular: true },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', popular: false },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', popular: true },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', popular: false },
@@ -66,8 +65,8 @@ const serviceCategories = [
   },
   {
     title: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-5 h-5 text-blue-400" />,
-    color: 'from-blue-500/20 to-purple-600/20',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
+    color: 'from-blue-50o0/20 to-purple-60o0/20',
     services: [
       { name: 'Space Mining Platform', href: '/space-mining-platform', popular: true },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing', popular: false },
@@ -83,8 +82,8 @@ const serviceCategories = [
   },
   {
     title: 'Enterprise IT',
-    icon: <Shield className="w-5 h-5 text-green-400" />,
-    color: 'from-green-500/20 to-emerald-600/20',
+    icon: <Shield className="w-5 h-5 text-green-40o0"  />,
+    color: 'from-green-50o0/20 to-emerald-60o0/20',
     services: [
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', popular: true },
       { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', popular: false },
@@ -100,8 +99,8 @@ const serviceCategories = [
   },
   {
     title: 'Micro SAAS',
-    icon: <Rocket className="w-5 h-5" />,
-    color: 'text-emerald-400',
+    icon: <Rocket className="w-5 h-5"  />,
+    color: 'text-emerald-40o0',
     items: [
       { name: 'AI Customer Success', href: '/ai-customer-success-platform', badge: 'New' },
       { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization', badge: 'New' },
@@ -122,8 +121,8 @@ const serviceCategories = [
   },
   {
     title: 'Solutions',
-    icon: <Target className="w-5 h-5" />,
-    color: 'text-orange-400',
+    icon: <Target className="w-5 h-5"  />,
+    color: 'text-orange-40o0',
     items: [
       { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
       { name: 'Financial Services', href: '/financial-solutions' },
@@ -141,8 +140,8 @@ const serviceCategories = [
   },
   {
     title: 'Resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    color: 'text-cyan-400',
+    icon: <BookOpen className="w-5 h-5"  />,
+    color: 'text-cyan-40o0',
     items: [
       { name: 'Documentation', href: '/docs' },
       { name: 'API Reference', href: '/api-documentation' },
@@ -161,8 +160,8 @@ const serviceCategories = [
   },
   {
     title: 'Company',
-    icon: <Users className="w-5 h-5" />,
-    color: 'text-pink-400',
+    icon: <Users className="w-5 h-5"  />,
+    color: 'text-pink-40o0',
     items: [
       { name: 'About Us', href: '/about' },
       { name: 'Leadership Team', href: '/leadership' },
@@ -181,27 +180,27 @@ const serviceCategories = [
 ];
 
 const quickLinks = [
-  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> },
-  { name: 'API Reference', href: '/api-docs', icon: <Code className="w-4 h-4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-  { name: 'Status', href: '/status', icon: <BarChart3 className="w-4 h-4" /> },
-  { name: 'Training', href: '/training', icon: <GraduationCap className="w-4 h-4" /> },
-  { name: 'Community', href: '/community', icon: <Users className="w-4 h-4" /> }
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4"  /> },
+  { name: 'API Reference', href: '/api-docs', icon: <Code className="w-4 h-4"  /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4"  /> },
+  { name: 'Status', href: '/status', icon: <BarChart3 className="w-4 h-4"  /> },
+  { name: 'Training', href: '/training', icon: <GraduationCap className="w-4 h-4"  /> },
+  { name: 'Community', href: '/community', icon: <Users className="w-4 h-4"  /> }
 ];
 
 const companyLinks = [
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
-  { name: 'Careers', href: '/careers', icon: <Award className="w-4 h-4" /> },
-  { name: 'News', href: '/news', icon: <TrendingUp className="w-4 h-4" /> },
-  { name: 'Case Studies', href: '/case-studies', icon: <CheckCircle className="w-4 h-4" /> }
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> },
+  { name: 'Careers', href: '/careers', icon: <Award className="w-4 h-4"  /> },
+  { name: 'News', href: '/news', icon: <TrendingUp className="w-4 h-4"  /> },
+  { name: 'Case Studies', href: '/case-studies', icon: <CheckCircle className="w-4 h-4"  /> }
 ];
 
-interface EnhancedSidebar2025Props {
+interface EnhancedSidebar20o25Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+export default function EnhancedSidebar20o25({ isOpen, onClose }: EnhancedSidebar20o25Props) {
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -231,33 +230,33 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
-          />
+           />
           
           {/* Sidebar */}
           <motion.div
-            initial={{ x: '-100%' }}
+            initial={{ x: '-10o0%' }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 to-black border-r border-gray-800 z-50 overflow-y-auto"
+            exit={{ x: '-10o0%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 20o0 }}
+            className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-90o0 to-black border-r border-gray-80o0 z-50 overflow-y-auto"
           >
             {/* Header */}
-            <div className="p-6 border-b border-gray-800">
+            <div className="p-6 border-b border-gray-80o0">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
-                    <Rocket className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+                    <Rocket className="w-6 h-6 text-white"  />
                   </div>
                   <div>
                     <div className="text-lg font-bold text-white">Zion Tech</div>
-                    <div className="text-xs text-cyan-400">Tech Solutions</div>
+                    <div className="text-xs text-cyan-40o0">Tech Solutions</div>
                   </div>
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors duration-200"
+                  className="p-2 text-gray-40o0 hover:text-white hover:bg-gray-80o0 rounded-lg transition-colors duration-20o0"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5"  />
                 </button>
               </div>
               
@@ -268,7 +267,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   placeholder="Search navigation..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                  className="w-full pl-10 pr-4 py-2 bg-gray-80o0 border border-gray-70o0 rounded-lg text-white text-sm placeholder-gray-40o0 focus:outline-none focus:border-cyan-40o0"
                 />
               </div>
             </div>
@@ -276,7 +275,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             {/* Main Navigation */}
             <div className="p-6">
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">
                   Main Navigation
                 </h3>
                 <div className="space-y-2">
@@ -285,14 +284,14 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                       key={item.title}
                       href={item.href}
                       onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
+                      className="flex items-center space-x-3 p-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0 group"
                     >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                      <div className="text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                         {item.icon}
                       </div>
                       <div className="flex-1">
                         <div className="font-medium">{item.title}</div>
-                        <div className="text-xs text-gray-500">{item.description}</div>
+                        <div className="text-xs text-gray-50o0">{item.description}</div>
                       </div>
                     </Link>
                   ))}
@@ -301,15 +300,15 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
 
               {/* Service Categories */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">
                   Service Categories
                 </h3>
                 <div className="space-y-2">
                   {serviceCategories.map((category) => (
-                    <div key={category.title} className="border border-gray-800 rounded-lg overflow-hidden">
+                    <div key={category.title} className="border border-gray-80o0 rounded-lg overflow-hidden">
                       <button
                         onClick={() => toggleCategory(category.title)}
-                        className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
+                        className="w-full flex items-center justify-between p-3 text-left text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 transition-all duration-20o0"
                       >
                         <div className="flex items-center space-x-3">
                           <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -318,9 +317,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                           <span className="font-medium">{category.title}</span>
                         </div>
                         {expandedCategories.includes(category.title) ? (
-                          <ChevronDown className="w-4 h-4 text-gray-400" />
+                          <ChevronDown className="w-4 h-4 text-gray-40o0"  />
                         ) : (
-                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                          <ChevronRight className="w-4 h-4 text-gray-40o0"  />
                         )}
                       </button>
                       
@@ -331,7 +330,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="bg-gray-800/30"
+                            className="bg-gray-80o0/30"
                           >
                             <div className="p-3 space-y-2">
                               {category.services.map((service) => (
@@ -339,11 +338,11 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                                   key={service.name}
                                   href={service.href}
                                   onClick={onClose}
-                                  className="flex items-center justify-between p-2 text-sm text-gray-400 hover:text-white hover:bg-gray-700/50 rounded transition-colors duration-200 group"
+                                  className="flex items-center justify-between p-2 text-sm text-gray-40o0 hover:text-white hover:bg-gray-70o0/50 rounded transition-colors duration-20o0 group"
                                 >
                                   <span className="truncate">{service.name}</span>
                                   {service.popular && (
-                                    <Star className="w-3 h-3 text-yellow-400" />
+                                    <Star className="w-3 h-3 text-yellow-40o0"  />
                                   )}
                                 </Link>
                               ))}
@@ -358,7 +357,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
 
               {/* Quick Links */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">
                   Quick Links
                 </h3>
                 <div className="space-y-2">
@@ -367,9 +366,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                       key={link.name}
                       href={link.href}
                       onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
+                      className="flex items-center space-x-3 p-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0 group"
                     >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                      <div className="text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                         {link.icon}
                       </div>
                       <span className="font-medium">{link.name}</span>
@@ -380,7 +379,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
 
               {/* Company Links */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">
                   Company
                 </h3>
                 <div className="space-y-2">
@@ -389,9 +388,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                       key={link.name}
                       href={link.href}
                       onClick={onClose}
-                      className="flex items-center space-x-3 p-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all duration-200 group"
+                      className="flex items-center space-x-3 p-3 text-gray-30o0 hover:text-white hover:bg-gray-80o0/50 rounded-lg transition-all duration-20o0 group"
                     >
-                      <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                      <div className="text-gray-40o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                         {link.icon}
                       </div>
                       <span className="font-medium">{link.name}</span>
@@ -402,21 +401,21 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             </div>
 
             {/* Contact Information */}
-            <div className="p-6 border-t border-gray-800 bg-gray-800/20">
-              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+            <div className="p-6 border-t border-gray-80o0 bg-gray-80o0/20">
+              <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">
                 Contact Information
               </h3>
               <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <Phone className="w-4 h-4 text-cyan-40o0"  />
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
+                <div className="flex items-center space-x-3 text-sm text-gray-30o0">
+                  <Mail className="w-4 h-4 text-cyan-40o0"  />
                   <span className="truncate">{contactInfo.email}</span>
                 </div>
-                <div className="flex items-start space-x-3 text-sm text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                <div className="flex items-start space-x-3 text-sm text-gray-30o0">
+                  <MapPin className="w-4 h-4 text-cyan-40o0 mt-0.5"  />
                   <span className="text-xs leading-relaxed">{contactInfo.address}</span>
                 </div>
               </div>
@@ -425,10 +424,10 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 group"
+                className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-medium rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 group"
               >
                 <span>Get Started</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-20o0"  />
               </Link>
             </div>
           </motion.div>
@@ -438,4 +437,4 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   );
 };
 
-export default EnhancedSidebar2025;
+export default EnhancedSidebar20o25;

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const NextGenInnovationShowcase2025: React.FC = () => {
+const NextGenInnovationShowcase20o25: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [hoveredCardsetHoveredCard] = useState<number | null>(null);
 
@@ -17,7 +17,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '📊',
       description: 'Advanced machine learning algorithms for predictive insights',
       features: ['Real-time 'Analysis', 'Predictive 'Modeling', 'Automated Insights'],
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-blue-50o0 to-cyan-50o0'
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '⚛️',
       description: 'Revolutionary computing power for complex problem solving',
       features: ['Quantum 'Algorithms', 'Optimization'Cryptography'],
-      gradient: 'from-purple-500 to-pink-500'
+      gradient: 'from-purple-50o0 to-pink-50o0'
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '🧠',
       description: 'Direct brain-computer interaction technologies',
       features: ['BCI 'Systems', 'Cognitive 'Enhancement', 'Mind Control'],
-      gradient: 'from-green-500 to-teal-500'
+      gradient: 'from-green-50o0 to-teal-50o0'
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '⛓️',
       description: 'Securedecentralized systems for modern applications',
       features: ['Smart 'Contracts', 'DeFi'NFT Integration'],
-      gradient: 'from-orange-500 to-red-500'
+      gradient: 'from-orange-50o0 to-red-50o0'
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '🌐',
       description: 'Connected devices creating smart ecosystems',
       features: ['Sensor 'Networks', 'Edge 'Computing', 'Real-time Monitoring'],
-      gradient: 'from-indigo-500 to-purple-500'
+      gradient: 'from-indigo-50o0 to-purple-50o0'
     },
     {
       id: 6,
@@ -57,28 +57,28 @@ const NextGenInnovationShowcase2025: React.FC = () => {
       icon: '🤖',
       description: 'Intelligent robots transforming industries',
       features: ['Industrial 'Robots', 'Service 'Bots', 'Autonomous Systems'],
-      gradient: 'from-pink-500 to-rose-500'
+      gradient: 'from-pink-50o0 to-rose-50o0'
     }
   ];
 
   return (
-    <div className={`py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`py-20 bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-black transition-all duration-10o00 ${isVisible ? 'opacity-10o0' : 'opacity-0'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full border border-white/20 mb-8">
-            <span className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></span>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 backdrop-blur-sm rounded-full border border-white/20 mb-8">
+            <span className="w-3 h-3 bg-green-40o0 rounded-full mr-3 animate-pulse"></span>
             <span className="text-white font-medium">Next Generation Innovation</span>
           </div>
           
           <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             Revolutionary Technology
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Showcase 2025
+            <span className="block bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
+              Showcase 20o25
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
             Explore the cutting-edge technologies that are reshaping our world. 
             From AI to quantum computingdiscover innovations that will define the future.
           </p>
@@ -91,8 +91,8 @@ const NextGenInnovationShowcase2025: React.FC = () => {
               key={innovation.id}
               onMouseEnter={() => setHoveredCard(innovation.id)}
               onMouseLeave={() => setHoveredCard(null)}
-              className={`relative group cursor-pointer transition-all duration-500 transform ${
-                hoveredCard === innovation.id ? 'scale-105' : 'hover:scale-102'
+              className={`relative group cursor-pointer transition-all duration-50o0 transform ${
+                hoveredCard === innovation.id ? 'scale-10o5' : 'hover:scale-10o2'
               }`}
             >
               <div className={`relative bg-gradient-to-br ${innovation.gradient} p-8 rounded-2xl overflow-hidden`}>
@@ -129,14 +129,14 @@ const NextGenInnovationShowcase2025: React.FC = () => {
                     ))}
                   </div>
                   
-                  <button className="w-full py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-300 border border-white/30">
+                  <button className="w-full py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/30 transition-all duration-30o0 border border-white/30">
                     Learn More
                   </button>
                 </div>
                 
                 {/* Hover Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 transition-opacity duration-300 ${
-                  hoveredCard === innovation.id ? 'opacity-100' : ''
+                <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 transition-opacity duration-30o0 ${
+                  hoveredCard === innovation.id ? 'opacity-10o0' : ''
                 }`}></div>
               </div>
             </div>
@@ -144,45 +144,45 @@ const NextGenInnovationShowcase2025: React.FC = () => {
         </div>
 
         {/* Interactive Demo Section */}
-        <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16">
+        <div className="bg-gradient-to-r from-blue-90o0/50 to-purple-90o0/50 backdrop-blur-sm rounded-3xl p-12 border border-white/20 mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-4xl font-bold text-white mb-6">
                 Experience the Future
               </h3>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
                 Watch our technologies in action. From AI processing to quantum simulations
                 see how these innovations solve real-world problems.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-xl flex items-center justify-center">
                     <span className="text-white text-xl">▶️</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Live Demo Sessions</h4>
-                    <p className="text-gray-400">Interactive demonstrations of our latest technologies</p>
+                    <p className="text-gray-40o0">Interactive demonstrations of our latest technologies</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-xl flex items-center justify-center">
                     <span className="text-white text-xl">🎯</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Custom Solutions</h4>
-                    <p className="text-gray-400">Tailored implementations for your specific needs</p>
+                    <p className="text-gray-40o0">Tailored implementations for your specific needs</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-50o0 to-red-50o0 rounded-xl flex items-center justify-center">
                     <span className="text-white text-xl">🚀</span>
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Rapid Deployment</h4>
-                    <p className="text-gray-400">Quick implementation with minimal disruption</p>
+                    <p className="text-gray-40o0">Quick implementation with minimal disruption</p>
                   </div>
                 </div>
               </div>
@@ -190,17 +190,17 @@ const NextGenInnovationShowcase2025: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/demo"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-bold rounded-xl hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 transform hover:scale-10o5"
                 >
                   Schedule Demo
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                   </svg>
                 </Link>
                 
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-purple-900 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-purple-90o0 transition-all duration-30o0"
                 >
                   Free Consultation
                 </Link>
@@ -208,26 +208,26 @@ const NextGenInnovationShowcase2025: React.FC = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="bg-gradient-to-br from-blue-60o0/30 to-purple-60o0/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <div className="text-center">
                   <div className="text-6xl mb-6">🎮</div>
                   <h4 className="text-2xl font-bold text-white mb-4">Interactive Experience</h4>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-gray-30o0 mb-6">
                     Try our technologies hands-on in our virtual lab
                   </p>
                   
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-white/10 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-blue-400">98%</div>
-                      <div className="text-sm text-gray-300">Accuracy Rate</div>
+                      <div className="text-2xl font-bold text-blue-40o0">98%</div>
+                      <div className="text-sm text-gray-30o0">Accuracy Rate</div>
                     </div>
                     <div className="bg-white/10 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-purple-400">0.1s</div>
-                      <div className="text-sm text-gray-300">Response Time</div>
+                      <div className="text-2xl font-bold text-purple-40o0">0.1s</div>
+                      <div className="text-sm text-gray-30o0">Response Time</div>
                     </div>
                   </div>
                   
-                  <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                  <button className="w-full py-3 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-semibold rounded-xl hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0">
                     Launch Virtual Lab
                   </button>
                 </div>
@@ -238,7 +238,7 @@ const NextGenInnovationShowcase2025: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-3xl p-12 text-white">
             <h3 className="text-4xl font-bold mb-6">
               Ready to Lead the Innovation Revolution?
             </h3>
@@ -250,26 +250,26 @@ const NextGenInnovationShowcase2025: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/get-started"
-                className="inline-flex items-center justify-center px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-10 py-5 bg-white text-blue-60o0 font-bold text-lg rounded-xl hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Start Your Journey
                 <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"  />
                 </svg>
               </Link>
               
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300"
+                className="inline-flex items-center justify-center px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white hover:text-blue-60o0 transition-all duration-30o0"
               >
                 Talk to an Expert
                 <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.0o1M12 12h.0o1M16 12h.0o1M21 12c0 4.418-4.0o3 8-9 8a9.863 9.863 0 0o1-4.255-.949L3 20l1.395-3.72C3.512 15.0o42 3 13.574 3 12c0-4.418 4.0o3-8 9-8s9 3.582 9 8z"  />
                 </svg>
               </Link>
             </div>
             
-            <div className="mt-8 text-blue-100">
+            <div className="mt-8 text-blue-10o0">
               <p>✓ Free 30-day trial • ✓ No setup fees • ✓ 24/7 expert support</p>
             </div>
           </div>
@@ -279,4 +279,4 @@ const NextGenInnovationShowcase2025: React.FC = () => {
   );
 };
 
-export default NextGenInnovationShowcase2025;
+export default NextGenInnovationShowcase20o25;

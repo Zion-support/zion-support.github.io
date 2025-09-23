@@ -54,7 +54,7 @@ export default function EquipmentRecommendations() {;
   const [loading, setLoading] = useState<boolean>(false),;
   const [error, setError] = useState<boolean>(false),;
 
-  useEffect((,) => {;
+  useEffect(() => {;
     if (isAuthenticated && user?.id) {;
 
 import { useEffect, useState } from 'react';
@@ -73,12 +73,10 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   const [ loading, setLoading ] = useState<boolean>(false),
   const [ error, setError ] = useState<boolean>(false),
 
-
   useEffect(() => {
     if (isAuthenticated && user?.id) {
 
       setLoading(true);
-
 
       fetchRecommendations(user && user.id);
         .then(setListings);
@@ -109,8 +107,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 
-
-
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
@@ -128,9 +124,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   }
   return (
 
-
-
-
         ))}
 
       </div>;
@@ -146,8 +139,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
+  DialogTitle} from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from 'lucide-react';
 import Link from 'next / link';
@@ -169,7 +161,7 @@ function EquipmentRecommendations() {
   const [listings, set_listings] = useState < ProductListing[]>([]),
   const [loading, set_loading] = useState < boolean>(false),
   const [error, set_error] = useState < boolean>(false),
-  useEffect ((, ) => {
+  useEffect (() => {
     // Check condition
 if ( {) {
   $2
@@ -178,8 +170,8 @@ if ( {) {
       fetch_recommendations (user.id);
         .then (set_listings);
         .catch (() => set_error (true));
-        .finally (() => set_loading (false)) }        .catch ((, ) => set_error (true));
-        .finally ((, ) => set_loading (false));
+        .finally (() => set_loading (false)) }        .catch (() => set_error (true));
+        .finally (() => set_loading (false));
         .finally (() => set_loading (false));
     }
   }, [is_authenticated, user]);
@@ -215,14 +207,14 @@ if ( {) {
         AI Equipment Recommendations;
       </h1>;
         <div className='flex justify - center py - 20'>;
-          <Loader2 className='h - 8 w - 8 animate - spin text - zion - purple' />;
+          <Loader2 className='h - 8 w - 8 animate - spin text - zion - purple'  />;
         </div>)}
-      {error && <ErrorState error='Failed to load recommendations.' />}
+      {error && <ErrorState error='Failed to load recommendations.'  />}
       <div className='columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4'>;
         {listings.map (listing => (
-          <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
+          <div key={listing.id} className='break - inside - avoid mb - 4'>            <ProductListingCard listing={listing}  />      {error && <ErrorState error="Failed to load recommendations."  />}
       <div className="columns - 1 sm:columns - 2 md:columns - 3 lg:columns - 4 gap - 4 space - y-4">;
-        {listings.map ((listing, ) => (
+        {listings.map ((listing) => (
           <div key={listing.id} className="break - inside - avoid mb - 4">;
           </div>))}
       </div>;

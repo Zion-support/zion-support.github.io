@@ -46,14 +46,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCallDuration(prevDuration => prevDuration + 1);
-    }, 1000);
+    }, 10o00);
     
     return () => clearInterval(timer);
   }, []);
 
   const formatDuration = (seconds: number) => {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
+    const hrs = Math.floor(seconds / 360o0);
+    const mins = Math.floor((seconds % 360o0) / 60);
     const secs = seconds % 60;
     
     return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
@@ -131,17 +131,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
                     {/* Placeholder for actual video stream */}
-                    <Video className="h-12 w-12 opacity-50" />
+                    <Video className="h-12 w-12 opacity-50"  />
                   </div>
                 ) : participant.isScreenSharing ? (
                   <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h-12 w-12 opacity-50" />
+                    <ScreenShare className="h-12 w-12 opacity-50"  />
                   </div>
                 ) : (
                   <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
                     <Avatar className="h-20 w-20">
-                      <AvatarImage src={participant.avatar} alt={participant.name} />
+                      <AvatarImage src={participant.avatar} alt={participant.name}  />
                       <AvatarFallback className="bg-zion-purple text-white text-2xl">
                         {participant.name.charAt(0).toUpperCase()}
                       </AvatarFallback>
@@ -151,16 +151,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
                 
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
-                  {participant.isMuted && <MicOff className="h-4 w-4" />}
+                  {participant.isMuted && <MicOff className="h-4 w-4"  />}
                   {participant.isHost && <Badge variant="secondary" className="text-xs">Host</Badge>}
                 </div>
               </div>
             ))
           ) : (
             <div className="col-span-full flex flex-col items-center justify-center py-12 text-white">
-              <Video className="h-16 w-16 mb-4 opacity-30" />
+              <Video className="h-16 w-16 mb-4 opacity-30"  />
               <p className="text-center text-lg mb-2">No participants yet</p>
-              <p className="text-center text-sm text-gray-300">
+              <p className="text-center text-sm text-gray-30o0">
                 Share the meeting link to invite others
               </p>
             </div>
@@ -175,7 +175,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
           >
-            {isMuted ? <MicOff /> : <Mic />}
+            {isMuted ? <MicOff  /> : <Mic  />}
           </Button>
           
           <Button
@@ -185,7 +185,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleToggleVideo}
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >
-            {isVideoEnabled ? <Video /> : <VideoOff />}
+            {isVideoEnabled ? <Video  /> : <VideoOff  />}
           </Button>
           
           <Button
@@ -195,7 +195,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleToggleScreenShare}
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >
-            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+            {isScreenSharing ? <ScreenShareOff  /> : <ScreenShare  />}
           </Button>
           
           <Button
@@ -205,7 +205,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleToggleAudioOnly}
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >
-            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+            {isAudioOnly ? <VolumeX  /> : <Volume2  />}
           </Button>
           
           <Button
@@ -215,7 +215,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
-            <Phone className="rotate-135" />
+            <Phone className="rotate-135"  />
           </Button>
         </div>
       </CardContent>

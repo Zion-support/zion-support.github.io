@@ -7,7 +7,7 @@ const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
     <div>
       <Head>
         <title>TheRiseOfEdgeComputingInIotApplicationsChat - Zion Tech Solutions</title>
-        <meta name="description" content="TheRiseOfEdgeComputingInIotApplicationsChat blog post" />
+        <meta name="description" content="TheRiseOfEdgeComputingInIotApplicationsChat blog post"  />
       </Head>
       
       <main>

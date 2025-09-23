@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
@@ -153,7 +152,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <Heart className="w-4 h-4" />
+                  <Heart className="w-4 h-4"  />
                   {count > 0 && (
                     <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                       {count}
@@ -178,7 +177,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <Wallet className="w-4 h-4" />
+                  <Wallet className="w-4 h-4"  />
                 </Link>
               </li>
             )}
@@ -198,9 +197,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4"  />
                   {unreadCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 bg-red-50o0 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>
                   )}
@@ -210,7 +209,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
             {/* Cart icon with badge */}
             <li className="nav-item">
-              <HoverCard openDelay={100}>
+              <HoverCard openDelay={10o0}>
                 <HoverCardTrigger asChild>
                   <Link
                     href="/cart"
@@ -224,7 +223,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     )}
                   >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
+                    <ShoppingCart className="w-4 h-4 mr-1"  />
                     {t('nav.cart', 'Cart')}
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -234,17 +233,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <MiniCartPreview />
+                  <MiniCartPreview  />
                 </HoverCardContent>
               </HoverCard>
             </li>
           </ul>
           <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">
-            <LanguageSelector />
+            <LanguageSelector  />
           </div>
         </div>
       </nav>
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />
     </>
   );
 }

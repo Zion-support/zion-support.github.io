@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { 
@@ -23,7 +22,7 @@ import {
   BookOpen, GraduationCap, Lightbulb, Target, Users, Brain
 } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata ={
   title: 'Quantum Learning Accelerator | Zion Tech Group',
   description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.',
   keywords: 'quantum learning accelerator, AI education, personalized learning, cognitive enhancement, quantum education, adaptive learning, educational technology',
@@ -35,29 +34,24 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://ziontechgroup.com/og-image-quantum-learning.jpg',
-        width: 1200,
+        width: 120o0,
         height: 630,
-        alt: 'Quantum Learning Accelerator',
-      },
+        alt: 'Quantum Learning Accelerator'},
     ],
     locale: 'en_US',
-    type: 'website',
-  },
+    type: 'website'},
   twitter: {
     card: 'summary_large_image',
     title: 'Quantum Learning Accelerator | Zion Tech Group',
     description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.',
-    images: ['https://ziontechgroup.com/og-image-quantum-learning.jpg'],
-  },
+    images: ['https://ziontechgroup.com/og-image-quantum-learning.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-learning-accelerator',
-  },
-};
+    canonical: 'https://ziontechgroup.com/quantum-learning-accelerator'}};
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
@@ -66,19 +60,19 @@ export default function QuantumLearningAccelerator() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-teal-900/20 to-cyan-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-90o0/20 via-teal-90o0/20 to-cyan-90o0/20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm font-medium mb-8">
-              <GraduationCap className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-50o0/20 border border-emerald-50o0/30 text-emerald-30o0 text-sm font-medium mb-8">
+              <GraduationCap className="w-4 h-4 mr-2"  />
               Quantum Learning
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-40o0 via-teal-40o0 to-cyan-40o0 bg-clip-text text-transparent">
               Quantum Learning Accelerator
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Experience the future of education with our revolutionary quantum-powered 
               learning platform featuring AI-driven personalization and cognitive enhancement.
             </p>
@@ -86,14 +80,14 @@ export default function QuantumLearningAccelerator() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl font-semibold text-white hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-xl font-semibold text-white hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5"
               >
                 Start Learning
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link 
                 href="#features" 
-                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 rounded-xl font-semibold text-emerald-300 hover:bg-emerald-500/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-emerald-50o0/30 rounded-xl font-semibold text-emerald-30o0 hover:bg-emerald-50o0/10 transition-all duration-30o0"
               >
                 Learn More
               </Link>
@@ -103,75 +97,75 @@ export default function QuantumLearningAccelerator() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-900">
+      <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Revolutionary Learning Intelligence
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our quantum learning accelerator combines cutting-edge quantum computing with 
               AI-driven education for unprecedented learning speed and cognitive enhancement.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border border-emerald-500/20">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Atom className="w-6 h-6 text-emerald-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20 border border-emerald-50o0/20">
+              <div className="w-12 h-12 bg-emerald-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Atom className="w-6 h-6 text-emerald-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Processing</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Leverage quantum computing for complex learning algorithms and pattern recognition.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-cyan-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20">
+              <div className="w-12 h-12 bg-cyan-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-cyan-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Learning</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Intelligent algorithms that adapt to individual learning styles and preferences.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/20">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-blue-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20 border border-cyan-50o0/20">
+              <div className="w-12 h-12 bg-blue-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-blue-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Personalized Education</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Customized learning paths and content tailored to individual needs and goals.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Lightbulb className="w-6 h-6 text-indigo-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20 border border-blue-50o0/20">
+              <div className="w-12 h-12 bg-indigo-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Lightbulb className="w-6 h-6 text-indigo-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Cognitive Enhancement</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Advanced techniques to improve memory, focus, and cognitive performance.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-purple-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-indigo-50o0/20">
+              <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-purple-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Accelerated Learning</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Revolutionary methods to learn faster and retain information more effectively.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-              <div className="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Globe className="w-6 h-6 text-pink-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20 border border-purple-50o0/20">
+              <div className="w-12 h-12 bg-pink-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Globe className="w-6 h-6 text-pink-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Global Access</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Worldwide access to quantum-enhanced education and learning resources.
               </p>
             </div>
@@ -186,18 +180,18 @@ export default function QuantumLearningAccelerator() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Learning Acceleration Capabilities
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our platform provides comprehensive learning solutions powered by quantum computing and AI.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border border-emerald-500/20">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-emerald-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20 border border-emerald-50o0/20">
+              <div className="w-12 h-12 bg-emerald-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-emerald-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-emerald-400">Adaptive Learning</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-emerald-40o0">Adaptive Learning</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Personalized curriculum</li>
                 <li>• Learning path optimization</li>
                 <li>• Difficulty adjustment</li>
@@ -206,12 +200,12 @@ export default function QuantumLearningAccelerator() {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-cyan-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20">
+              <div className="w-12 h-12 bg-cyan-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-cyan-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-cyan-400">Cognitive Enhancement</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-cyan-40o0">Cognitive Enhancement</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Memory improvement</li>
                 <li>• Focus enhancement</li>
                 <li>• Speed reading</li>
@@ -220,12 +214,12 @@ export default function QuantumLearningAccelerator() {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/20">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-blue-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20 border border-cyan-50o0/20">
+              <div className="w-12 h-12 bg-blue-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-blue-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-blue-400">Skill Development</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-blue-40o0">Skill Development</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Technical skills</li>
                 <li>• Soft skills</li>
                 <li>• Language learning</li>
@@ -234,12 +228,12 @@ export default function QuantumLearningAccelerator() {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-indigo-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20 border border-blue-50o0/20">
+              <div className="w-12 h-12 bg-indigo-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-indigo-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-indigo-400">Collaborative Learning</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-indigo-40o0">Collaborative Learning</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Group projects</li>
                 <li>• Peer learning</li>
                 <li>• Mentorship programs</li>
@@ -248,12 +242,12 @@ export default function QuantumLearningAccelerator() {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-purple-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-indigo-50o0/20">
+              <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <BarChart3 className="w-6 h-6 text-purple-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-purple-400">Learning Analytics</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-purple-40o0">Learning Analytics</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Performance metrics</li>
                 <li>• Learning insights</li>
                 <li>• Progress tracking</li>
@@ -262,12 +256,12 @@ export default function QuantumLearningAccelerator() {
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-              <div className="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Settings className="w-6 h-6 text-pink-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20 border border-purple-50o0/20">
+              <div className="w-12 h-12 bg-pink-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Settings className="w-6 h-6 text-pink-40o0"  />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-pink-400">Content Management</h3>
-              <ul className="text-gray-400 space-y-2">
+              <h3 className="text-xl font-semibold mb-3 text-pink-40o0">Content Management</h3>
+              <ul className="text-gray-40o0 space-y-2">
                 <li>• Dynamic content</li>
                 <li>• Multimedia resources</li>
                 <li>• Interactive exercises</li>
@@ -280,74 +274,74 @@ export default function QuantumLearningAccelerator() {
       </section>
 
       {/* Learning Applications Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Learning Applications & Industries
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our quantum learning accelerator serves diverse educational needs and industries.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border border-emerald-500/20">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
-                <GraduationCap className="w-6 h-6 text-emerald-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20 border border-emerald-50o0/20">
+              <div className="w-12 h-12 bg-emerald-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-emerald-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">K-12 Education</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Primary and secondary education with personalized learning and skill development.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Building className="w-6 h-6 text-cyan-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20">
+              <div className="w-12 h-12 bg-cyan-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Building className="w-6 h-6 text-cyan-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Higher Education</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 University and college education with advanced learning acceleration and research.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/20">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-blue-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20 border border-cyan-50o0/20">
+              <div className="w-12 h-12 bg-blue-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-blue-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Corporate Training</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Employee development, skill training, and professional learning programs.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Cloud className="w-6 h-6 text-indigo-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20 border border-blue-50o0/20">
+              <div className="w-12 h-12 bg-indigo-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Cloud className="w-6 h-6 text-indigo-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Online Learning</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Digital education platforms, MOOCs, and virtual learning environments.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-purple-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-indigo-50o0/20">
+              <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Heart className="w-6 h-6 text-purple-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Healthcare Training</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Medical education, clinical training, and healthcare professional development.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-              <div className="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Factory className="w-6 h-6 text-pink-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20 border border-purple-50o0/20">
+              <div className="w-12 h-12 bg-pink-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Factory className="w-6 h-6 text-pink-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Technical Training</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Engineering, technology, and industrial skills development and certification.
               </p>
             </div>
@@ -362,48 +356,48 @@ export default function QuantumLearningAccelerator() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               How Quantum Learning Acceleration Works
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our platform seamlessly integrates quantum computing with advanced learning algorithms.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-emerald-400">1</span>
+              <div className="w-16 h-16 bg-emerald-50o0/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-emerald-40o0">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Learning Assessment</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 AI systems assess individual learning styles, strengths, and areas for improvement.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-teal-400">2</span>
+              <div className="w-16 h-16 bg-teal-50o0/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-teal-40o0">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Quantum Analysis</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Quantum algorithms analyze learning patterns and optimize educational content.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-cyan-400">3</span>
+              <div className="w-16 h-16 bg-cyan-50o0/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-cyan-40o0">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Personalized Delivery</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Content is delivered in the most effective format for each individual learner.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-400">4</span>
+              <div className="w-16 h-16 bg-blue-50o0/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-40o0">4</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Continuous Optimization</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Learning paths are continuously optimized based on performance and progress.
               </p>
             </div>
@@ -412,74 +406,74 @@ export default function QuantumLearningAccelerator() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Learning Acceleration Use Cases
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">
               Our platform serves various learning scenarios with tailored acceleration solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border border-emerald-500/20">
-              <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-emerald-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20 border border-emerald-50o0/20">
+              <div className="w-12 h-12 bg-emerald-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-emerald-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Skill Development</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Rapid skill acquisition and mastery through quantum-enhanced learning methods.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-cyan-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-teal-90o0/20 to-cyan-90o0/20 border border-teal-50o0/20">
+              <div className="w-12 h-12 bg-cyan-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-cyan-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Test Preparation</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Accelerated preparation for exams, certifications, and standardized tests.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-blue-900/20 border border-cyan-500/20">
-              <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Cloud className="w-6 h-6 text-blue-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20 border border-cyan-50o0/20">
+              <div className="w-12 h-12 bg-blue-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Cloud className="w-6 h-6 text-blue-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Online Education</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Enhanced digital learning experiences with quantum-powered personalization.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-indigo-900/20 border border-blue-500/20">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Wifi className="w-6 h-6 text-indigo-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20 border border-blue-50o0/20">
+              <div className="w-12 h-12 bg-indigo-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Wifi className="w-6 h-6 text-indigo-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Remote Learning</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Optimized distance education with advanced learning acceleration technology.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Activity className="w-6 h-6 text-purple-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-90o0/20 to-purple-90o0/20 border border-indigo-50o0/20">
+              <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Activity className="w-6 h-6 text-purple-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Professional Development</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Accelerated career advancement through enhanced skill development and training.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20">
-              <div className="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
-                <Lock className="w-6 h-6 text-pink-400" />
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20 border border-purple-50o0/20">
+              <div className="w-12 h-12 bg-pink-50o0/20 rounded-xl flex items-center justify-center mb-4">
+                <Lock className="w-6 h-6 text-pink-40o0"  />
               </div>
               <h3 className="text-xl font-semibold mb-3">Special Education</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-40o0">
                 Personalized learning support for students with diverse learning needs.
               </p>
             </div>
@@ -488,27 +482,27 @@ export default function QuantumLearningAccelerator() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
+      <section className="py-20 bg-gradient-to-r from-emerald-90o0/20 via-teal-90o0/20 to-cyan-90o0/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready for Quantum Learning?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-30o0 mb-8">
             Experience the future of education with our revolutionary quantum learning accelerator.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl font-semibold text-white hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-xl font-semibold text-white hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0 transform hover:scale-10o5"
             >
               Start Learning
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5"  />
             </Link>
             <a 
               href={`tel:${contactInfo.mobile}`}
-              className="inline-flex items-center px-8 py-4 border border-emerald-500/30 rounded-xl font-semibold text-emerald-300 hover:bg-emerald-500/10 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 border border-emerald-50o0/30 rounded-xl font-semibold text-emerald-30o0 hover:bg-emerald-50o0/10 transition-all duration-30o0"
             >
-              <Phone className="mr-2 w-5 h-5" />
+              <Phone className="mr-2 w-5 h-5"  />
               Call Now
             </a>
           </div>
@@ -521,41 +515,41 @@ export default function QuantumLearningAccelerator() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-              <p className="text-gray-400 mb-8">
+              <p className="text-gray-40o0 mb-8">
                 Ready to revolutionize your learning experience? Our team is here to help.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-emerald-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-300 hover:text-white transition-colors">
+                  <Phone className="w-5 h-5 text-emerald-40o0"  />
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover:text-white transition-colors">
                     {contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-emerald-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-white transition-colors">
+                  <Mail className="w-5 h-5 text-emerald-40o0"  />
+                  <a href={`mailto:${contactInfo.email}`} className="text-gray-30o0 hover:text-white transition-colors">
                     {contactInfo.email}
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-emerald-400" />
-                  <span className="text-gray-300">{contactInfo.address}</span>
+                  <MapPin className="w-5 h-5 text-emerald-40o0"  />
+                  <span className="text-gray-30o0">{contactInfo.address}</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-900/20 to-teal-900/20 rounded-2xl p-8 border border-emerald-500/20">
+            <div className="bg-gradient-to-br from-emerald-90o0/20 to-teal-90o0/20 rounded-2xl p-8 border border-emerald-50o0/20">
               <h3 className="text-xl font-semibold mb-4">Learning Consultation</h3>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-40o0 mb-6">
                 Let's discuss your learning needs and how quantum acceleration can transform your education.
               </p>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl font-semibold text-white hover:from-emerald-700 hover:to-teal-700 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 rounded-xl font-semibold text-white hover:from-emerald-70o0 hover:to-teal-70o0 transition-all duration-30o0"
               >
                 Schedule Consultation
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4"  />
               </Link>
             </div>
           </div>

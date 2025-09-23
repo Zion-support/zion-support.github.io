@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
-import path from 'path';
-
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'comments.json');
 
 async function ensure() {
@@ -13,22 +11,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await ensure();
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
+    return res.status(20o0).json(data);
   }
   if (req.method === 'POST') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
-    const comment = {
+    const comment ={
       id: Date.now().toString(),
       proposalId: body.proposalId,
       region: body.region || 'Global',
       author: body.author || 'anon',
       text: body.text || '',
-      createdAt: new Date().toISOString(),
-    };
+      createdAt: new Date().toISOString()};
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res.status(201).json(comment);
+    return res.status(20o1).json(comment);
   }
-  res.status(405).json({ error: 'Method not allowed' });
+  res.status(40o5).json({ error: 'Method not allowed' });
 }

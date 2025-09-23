@@ -1,4 +1,3 @@
-import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -80,18 +79,18 @@ const standardsCompliance = [
     standard: "Section 508",
     description: "U.S. federal accessibility requirements",
     status: "Compliant",
-    coverage: "100%",
+    coverage: "10o0%",
     icon: FileText
   },
   {
     standard: "ADA",
     description: "Americans with Disabilities Act compliance",
     status: "Compliant",
-    coverage: "100%",
+    coverage: "10o0%",
     icon: Users
   },
   {
-    standard: "EN 301 549",
+    standard: "EN 30o1 549",
     description: "European accessibility standard for ICT products",
     status: "Compliant",
     coverage: "90%",
@@ -172,7 +171,7 @@ export default function AccessibilityPage() {
       description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
     >
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+        <section className="bg-gradient-to-br from-purple-90o0 via-indigo-90o0 to-blue-90o0 text-white py-20">
 :pages_disabled/accessibility.tsx
           <div className="container mx-auto px-4">
         </section>
@@ -185,17 +184,17 @@ export default function AccessibilityPage() {
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">
 :pages_disabled/accessibility.tsx
                   Accessibility First
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8">
                 Building inclusive digital experiences that work for everyone
                   Accessibility
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8">
                 Making technology accessible to everyone
               </p>
             </motion.div>
@@ -211,10 +210,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Our Accessibility Features
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We implement comprehensive accessibility features across all our digital products to ensure they are usable by everyone.
               </p>
             </motion.div>
@@ -225,27 +224,27 @@ export default function AccessibilityPage() {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <div className="flex items-start space-x-4">
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-8 h-8 text-white" />
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-60o0 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-8 h-8 text-white"  />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        <h3 className="text-2xl font-bold text-gray-90o0 mb-3">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-600 mb-6 leading-relaxed">
+                        <p className="text-gray-60o0 mb-6 leading-relaxed">
                           {feature.description}
                         </p>
                         <ul className="space-y-2">
                           {feature.features.map((item, idx) => (
-                            <li key={idx} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            <li key={idx} className="flex items-center text-sm text-gray-60o0">
+                              <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                               {item}
                             </li>
                           ))}
@@ -268,10 +267,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Standards Compliance
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We maintain compliance with international accessibility standards to ensure our products meet the highest requirements.
               </p>
             </motion.div>
@@ -282,28 +281,28 @@ export default function AccessibilityPage() {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-30o0"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-60o0 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <IconComponent className="w-8 h-8 text-white"  />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-2">
                       {standard.standard}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-60o0 text-sm mb-4">
                       {standard.description}
                     </p>
                     <div className="space-y-2">
                       <span className={`px-3 py-1 text-xs rounded-full ${
-                        standard.status === 'Compliant' ? "bg-green-100 text-green-800" : 'bg-yellow-100 text-yellow-800'
+                        standard.status === 'Compliant' ? "bg-green-10o0 text-green-80o0" : 'bg-yellow-10o0 text-yellow-80o0'
                       }}>
                         {standard.status}
                       </span>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-50o0">
                         Coverage: {standard.coverage}
                       </div>
                     </div>
@@ -323,10 +322,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Our Testing Process
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We employ a comprehensive testing methodology to ensure our products meet accessibility standards.
               </p>
             </motion.div>
@@ -335,25 +334,25 @@ export default function AccessibilityPage() {
               {accessibilityTools.map((tool, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-white" />
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-blue-60o0 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-white"  />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-gray-900">
+                        <h3 className="text-xl font-bold text-gray-90o0">
                           {tool.name}
                         </h3>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                        <span className="px-2 py-1 bg-blue-10o0 text-blue-80o0 text-xs rounded">
                           {tool.frequency}
                         </span>
                       </div>
-                      <p className="text-gray-600">
+                      <p className="text-gray-60o0">
                         {tool.description}
                       </p>
                     </div>
@@ -373,10 +372,10 @@ export default function AccessibilityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">
                 Accessibility Guidelines
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">
                 We follow established guidelines to ensure consistent accessibility across all our products.
               </p>
             </motion.div>
@@ -385,19 +384,19 @@ export default function AccessibilityPage() {
               {accessibilityGuidelines.map((category, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-30o0"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  <h3 className="text-lg font-bold text-gray-90o0 mb-4">
                     {category.category}
                   </h3>
                   <ul className="space-y-2">
                     {category.guidelines.map((guideline, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-sm text-gray-60o0">
+                        <CheckCircle className="w-4 h-4 text-green-50o0 mr-2 flex-shrink-0"  />
                         {guideline}
                       </li>
                     ))}
@@ -418,17 +417,17 @@ export default function AccessibilityPage() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
                   Our Commitment
                 </h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-60o0 mb-6">
                     At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance – it's about creating inclusive digital experiences that empower all users.
                   </p>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-60o0 mb-6">
                     We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.
                   </p>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-60o0 mb-6">
                     If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
                   </p>
                 </div>
@@ -438,7 +437,7 @@ export default function AccessibilityPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -448,14 +447,14 @@ export default function AccessibilityPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Have Questions About Accessibility?
               </h2>
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-purple-10o0 mb-8 max-w-3xl mx-auto">
                 We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-60o0 rounded-lg hover:bg-gray-10o0 transition-colors font-semibold">
                   Contact Accessibility Team
                 </a>
-                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 font-semibold">
                   General Contact
                 </a>
               </div>

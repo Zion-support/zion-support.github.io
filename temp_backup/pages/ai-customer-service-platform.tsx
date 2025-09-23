@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiCustomerServicePlatform() {
@@ -22,6 +21,6 @@ export default function AiCustomerServicePlatform() {
 			]}
 			industries={["E-commerce", "SaaS", "Telecom", "Financial Services"]}
 			url="https://ziontechgroup.com/ai-customer-service-platform"
-		/>
+		 />
 	);
 }

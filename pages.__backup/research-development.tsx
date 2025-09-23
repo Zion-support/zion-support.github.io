@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function ResearchDevelopmentPage() {
@@ -6,8 +5,8 @@ export default function ResearchDevelopmentPage() {
 		<>
 			<Head>
 				<title>Research & Development | Zion Tech Group</title>
-				<meta name="description" content="Research & Development at Zion Tech Group" />
-				<link rel="canonical" href="https://ziontechgroup.com/research-development" />
+				<meta name="description" content="Research & Development at Zion Tech Group"  />
+				<link rel="canonical" href="https://ziontechgroup.com/research-development"  />
 			</Head>
 			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
 				<div className="container mx-auto px-6 py-16">

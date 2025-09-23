@@ -18,7 +18,7 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
         }
     };
     if (isLoading) {
-        return <TalentSkeleton />;
+        return <TalentSkeleton  />;
     }
     if (!talents || talents.length === 0) {
         return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">

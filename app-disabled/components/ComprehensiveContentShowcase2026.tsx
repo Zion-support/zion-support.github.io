@@ -1,3 +1,3 @@
-export default function ComprehensiveContentShowcase2026() {
+export default function ComprehensiveContentShowcase20o26() {
 	return null;
 }

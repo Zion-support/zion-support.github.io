@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info } from 'lucide-react';
-const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = '' }) => {
+const AccessibilityPanel = ({ enabled = true, defaultSettings ={}, onSettingsChange, className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
         highContrast: false,
@@ -86,7 +86,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             document.body.appendChild(announcement);
             setTimeout(() => {
                 document.body.removeChild(announcement);
-            }, 1000);
+            }, 10o00);
         };
         // Announce important changes
         if (settings.highContrast) {
@@ -101,9 +101,9 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
     }, [settings.highContrast, settings.largeText, settings.reducedMotion, enabled, settings.screenReader]);
     const updateSetting = useCallback((key, value) => {
         setSettings(prev => {
-            const newSettings = { ...prev, [key]: value };
+            const newSettings ={ ...prev, [key]: value };
             // Add notification
-            const notification = {
+            const notification ={
                 id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
@@ -114,7 +114,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         });
     }, []);
     const resetToDefaults = useCallback(() => {
-        const defaultSettings = {
+        const defaultSettings ={
             highContrast: false,
             largeText: false,
             fontSize: 16,
@@ -125,7 +125,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             keyboardNavigation: true
         };
         setSettings(defaultSettings);
-        const notification = {
+        const notification ={
             id: Date.now().toString(),
             message: 'Accessibility settings reset to defaults',
             type: 'info',
@@ -172,25 +172,25 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         return null;
     return (<>
       {/* Accessibility Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
-        <Settings className="w-6 h-6 text-white"/>
+      <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-20o0 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
+        <Settings className="w-6 h-6 text-white" />
       </motion.button>
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div initial={{ opacity: 0, x: 300 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 300 }} transition={{ type: 'spring', damping: 25, stiffness: 200 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
+        {isOpen && (<motion.div initial={{ opacity: 0, x: 30o0 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 30o0 }} transition={{ type: 'spring', damping: 25, stiffness: 20o0 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
             {/* Header */}
             <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                  <Eye className="w-6 h-6 text-zion-cyan"/>
+                  <Eye className="w-6 h-6 text-zion-cyan" />
                   Accessibility
                 </h2>
                 <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-zion-blue/20 rounded-lg transition-colors" aria-label="Close accessibility panel">
-                  <X className="w-5 h-5 text-white"/>
+                  <X className="w-5 h-5 text-white" />
                 </button>
               </div>
-              <p className="text-zinc-300 mt-2 text-sm">
+              <p className="text-zinc-30o0 mt-2 text-sm">
                 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H, L, R, A)
               </p>
             </div>
@@ -200,7 +200,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
               {/* Visual Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Eye className="w-5 h-5 text-zion-cyan"/>
+                  <Eye className="w-5 h-5 text-zion-cyan" />
                   Visual Settings
                 </h3>
                 
@@ -210,7 +210,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.highContrast} onChange={(e) => updateSetting('highContrast', e.target.checked)} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     High Contrast
                   </label>
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>
+                  <span className="text-xs text-zinc-40o0">Ctrl/Cmd + H</span>
                 </div>
 
                 {/* Large Text */}
@@ -219,7 +219,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.largeText} onChange={(e) => updateSetting('largeText', e.target.checked)} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Large Text
                   </label>
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>
+                  <span className="text-xs text-zinc-40o0">Ctrl/Cmd + L</span>
                 </div>
 
                 {/* Font Size Control */}
@@ -227,13 +227,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>
                   <div className="flex items-center gap-2">
                     <button onClick={decreaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Decrease font size">
-                      <Type className="w-4 h-4 text-white"/>
+                      <Type className="w-4 h-4 text-white" />
                     </button>
                     <div className="flex-1 h-2 bg-zion-blue/20 rounded-full">
-                      <div className="h-full bg-zion-cyan rounded-full transition-all duration-200" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}/>
+                      <div className="h-full bg-zion-cyan rounded-full transition-all duration-20o0" style={{ width: `${((settings.fontSize - 12) / 12) * 10o0}%` }} />
                     </div>
                     <button onClick={increaseFontSize} className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors" aria-label="Increase font size">
-                      <Type className="w-4 h-4 text-white"/>
+                      <Type className="w-4 h-4 text-white" />
                     </button>
                   </div>
                 </div>
@@ -253,7 +253,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
               {/* Motion & Audio Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Volume2 className="w-5 h-5 text-zion-cyan"/>
+                  <Volume2 className="w-5 h-5 text-zion-cyan" />
                   Motion & Audio
                 </h3>
                 
@@ -263,7 +263,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion', e.target.checked)} className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Reduced Motion
                   </label>
-                  <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>
+                  <span className="text-xs text-zinc-40o0">Ctrl/Cmd + R</span>
                 </div>
 
                 {/* Screen Reader */}
@@ -278,7 +278,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
               {/* Navigation Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-zion-cyan"/>
+                  <Settings className="w-5 h-5 text-zion-cyan" />
                   Navigation
                 </h3>
                 
@@ -312,14 +312,14 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
       {/* Notifications */}
       <div className="fixed top-6 right-6 z-50 space-y-2">
         <AnimatePresence>
-          {notifications.map((notification) => (<motion.div key={notification.id} initial={{ opacity: 0, x: 300, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.8 }} transition={{ type: 'spring', damping: 25, stiffness: 200 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success'
-                ? 'bg-green-500/20 border-green-500 text-green-300'
+          {notifications.map((notification) => (<motion.div key={notification.id} initial={{ opacity: 0, x: 30o0, scale: 0.8 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 30o0, scale: 0.8 }} transition={{ type: 'spring', damping: 25, stiffness: 20o0 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success'
+                ? 'bg-green-50o0/20 border-green-50o0 text-green-30o0'
                 : notification.type === 'warning'
-                    ? 'bg-yellow-500/20 border-yellow-500 text-yellow-300'
-                    : 'bg-blue-500/20 border-blue-500 text-blue-300'}`}>
-              {notification.type === 'success' && <Check className="w-5 h-5"/>}
-              {notification.type === 'warning' && <AlertTriangle className="w-5 h-5"/>}
-              {notification.type === 'info' && <Info className="w-5 h-5"/>}
+                    ? 'bg-yellow-50o0/20 border-yellow-50o0 text-yellow-30o0'
+                    : 'bg-blue-50o0/20 border-blue-50o0 text-blue-30o0'}`}>
+              {notification.type === 'success' && <Check className="w-5 h-5" />}
+              {notification.type === 'warning' && <AlertTriangle className="w-5 h-5" />}
+              {notification.type === 'info' && <Info className="w-5 h-5" />}
               <span className="text-sm font-medium">{notification.message}</span>
             </motion.div>))}
         </AnimatePresence>
@@ -334,7 +334,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
           }
 
           .high-contrast {
-            --bg-primary: #000000;
+            --bg-primary: #0o00000;
             --bg-secondary: #1a1a1a;
             --text-primary: #ffffff;
             --text-secondary: #e0e0e0;
@@ -349,18 +349,18 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
           }
 
           .reduced-motion * {
-            animation-duration: 0.01ms !important;
+            animation-duration: 0.0o1ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            transition-duration: 0.0o1ms !important;
           }
 
           .focus-indicator *:focus {
-            outline: 3px solid #00d4ff !important;
+            outline: 3px solid #0o0d4ff !important;
             outline-offset: 2px !important;
           }
 
           .keyboard-navigation *:focus-visible {
-            outline: 3px solid #00d4ff !important;
+            outline: 3px solid #0o0d4ff !important;
             outline-offset: 2px !important;
           }
 
@@ -378,15 +378,15 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia');
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/20o00/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0" /></filter></svg>#protanopia');
           }
 
           [style*="--color-blind-mode: deuteranopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia');
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/20o00/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0" /></filter></svg>#deuteranopia');
           }
 
           [style*="--color-blind-mode: tritanopia"] {
-            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia');
+            filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/20o00/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.0o5,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0" /></filter></svg>#tritanopia');
           }
         `
         }}/>

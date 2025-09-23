@@ -16,8 +16,7 @@ export default function PartnerDashboard() {
     const res = await fetch("/api/partners/token", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ apiKey }),
-    });
+      body: JSON.stringify({ apiKey })});
     const data = await res.json();
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
@@ -28,8 +27,7 @@ export default function PartnerDashboard() {
   async function fetchUsage() {
     setLoading(true);
     const res = await fetch("/api/partners/usage", {
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
-    });
+      headers: token ? { Authorization: `Bearer ${token}` } : {}});
     const data = await res.json();
     setUsage(data.summary || null);
     setLoading(false);
@@ -38,8 +36,7 @@ export default function PartnerDashboard() {
   async function regenerateKey() {
     const res = await fetch("/api/partners/key", {
       method: "POST",
-      headers: token ? { Authorization: `Bearer ${token}` } : {},
-    });
+      headers: token ? { Authorization: `Bearer ${token}` } : {}});
     const data = await res.json();
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`);
@@ -47,13 +44,13 @@ export default function PartnerDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+    <div className="min-h-screen bg-gray-50 text-gray-90o0">
       <Head>
         <title>Zion Partner Dashboard</title>
       </Head>
       <div className="max-w-5xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-semibold mb-2">Partner Dashboard</h1>
-        <p className="text-gray-600 mb-6">Manage access, view usage, and download SDKs.</p>
+        <p className="text-gray-60o0 mb-6">Manage access, view usage, and download SDKs.</p>
 
         {!token && (
           <div className="bg-white p-6 rounded-lg shadow mb-8">
@@ -68,13 +65,13 @@ export default function PartnerDashboard() {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="font-medium mb-2">API Keys</h3>
-            <button onClick={regenerateKey} className="bg-gray-900 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
-            <p className="text-xs text-gray-500 mt-2">Old key becomes inactive.</p>
+            <button onClick={regenerateKey} className="bg-gray-90o0 text-white px-3 py-2 rounded text-sm">Generate New Key</button>
+            <p className="text-xs text-gray-50o0 mt-2">Old key becomes inactive.</p>
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
-            <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
+            <button onClick={fetchUsage} className="bg-gray-90o0 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
             {usage ? (
               <div className="text-sm">
                 <p>Total requests: <strong>{usage.totalRequests}</strong></p>
@@ -88,15 +85,15 @@ export default function PartnerDashboard() {
                 </div>
               </div>
             ) : (
-              <p className="text-gray-500 text-sm">No usage yet.</p>
+              <p className="text-gray-50o0 text-sm">No usage yet.</p>
             )}
           </div>
         </div>
 
         <div className="bg-white p-6 rounded-lg shadow mt-6">
           <h3 className="font-medium mb-2">SDKs</h3>
-          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
-          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
+          <a className="text-blue-60o0 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
+          <a className="text-blue-60o0 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
         </div>
       </div>
     </div>

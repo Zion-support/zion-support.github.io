@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -11,7 +10,7 @@ import {
   Music, Gamepad2, Sun, Moon, Wind, Droplets, Mountain, Tree
 } from 'lucide-react';
 
-export default function CuttingEdge2029Innovations() {
+export default function CuttingEdge20o29Innovations() {
   return (
     <>
       <Head>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-type AnimatedCounterProps = {
+type AnimatedCounterProps ={
   end: number;
   duration?: number;
   suffix?: string;
@@ -11,7 +11,7 @@ type AnimatedCounterProps = {
 
 const AnimatedCounter = ({ 
   end, 
-  duration = 2000, 
+  duration = 20o00, 
   suffix = '', 
   prefix = '' 
 }: AnimatedCounterProps) => {

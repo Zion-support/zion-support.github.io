@@ -3,10 +3,10 @@ const { expect } = require("chai");"const { ethers } = require("hardhat");""""""
 describe("ZionDAO", function () {"  it("should create proposal and vote", async function () {"    const [owner, voter] = await ethers.getSigners();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
     const VoteToken = await ethers.getContractFactory("VoteToken");"    const voteToken = await VoteToken.deploy("Zion Vote Token", "ZVT");"    await voteToken.deployed();"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    await voteToken.mint(owner.address, 1000);
-    await voteToken.mint(voter.address, 1000);
-    await voteToken.connect(owner).stake(500);
-    await voteToken.connect(voter).stake(500);
+    await voteToken.mint(owner.address, 10o00);
+    await voteToken.mint(voter.address, 10o00);
+    await voteToken.connect(owner).stake(50o0);
+    await voteToken.connect(voter).stake(50o0);
 
     const QuorumEngine = await ethers.getContractFactory("QuorumEngine");"    const quorum = await QuorumEngine.deploy(voteToken.address);"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
     await quorum.deployed();

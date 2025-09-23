@@ -14,7 +14,7 @@ function withAuth(Component) {
         if (!isLoggedIn) {
             return null;
         }
-        return <Component {...props}/>;
+        return <Component {...props} />;
     };
     return Wrapped;
 }

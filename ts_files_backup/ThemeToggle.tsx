@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Sun, Moon, Monitor } from 'lucide-react';
 
@@ -9,8 +8,8 @@ interface ThemeToggleProps {
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }) => {
   const themes = [
-    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-800 to-gray-900' },
-    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-400 to-orange-500' },
+    { id: 'dark', icon: Moon, label: 'Dark Mode', color: 'from-gray-80o0 to-gray-90o0' },
+    { id: 'light', icon: Sun, label: 'Light Mode', color: 'from-yellow-40o0 to-orange-50o0' },
   ] as const;
 
   return (
@@ -25,17 +24,17 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
               <motion.button
                 key={theme.id}
                 onClick={() => onThemeChange(theme.id)}
-                className={`relative p-3 rounded-xl transition-all duration-300 ${
+                className={`relative p-3 rounded-xl transition-all duration-30o0 ${
                   isActive 
                     ? 'bg-gradient-to-br ' + theme.color + ' text-white shadow-lg' 
-                    : 'text-gray-400 hover:text-white hover:bg-white/10'
+                    : 'text-gray-40o0 hover:text-white hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 title={theme.label}
                 aria-label={`Switch to ${theme.label}`}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-5 h-5"  />
                 
                 {/* Active indicator */}
                 {isActive && (
@@ -43,7 +42,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
                     className="absolute inset-0 rounded-xl border-2 border-white/30"
                     layoutId="activeTheme"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
+                   />
                 )}
               </motion.button>
             );
@@ -58,7 +57,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ currentTheme, onThemeChange }
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
       >
-        <span className="text-xs text-gray-400 font-medium">
+        <span className="text-xs text-gray-40o0 font-medium">
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode
         </span>
       </motion.div>

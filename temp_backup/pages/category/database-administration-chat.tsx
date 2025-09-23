@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function DatabaseAdministrationChatPage() {
@@ -6,7 +5,7 @@ export default function DatabaseAdministrationChatPage() {
     <>
       <Head>
         <title>Database Administration Chat - Zion Tech Group</title>
-        <meta name="description" content="database administration chat page" />
+        <meta name="description" content="database administration chat page"  />
       </Head>
       
       <main>

@@ -7,8 +7,6 @@
  * Test: Syntax Error Fixer;
  * Fixes: common syntax errors in test files;
  */;
-import fs from 'fs';
-import path from 'path';
 import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 const __filename = fileURLToPath(import.meta.url);

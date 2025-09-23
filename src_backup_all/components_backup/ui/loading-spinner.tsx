@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
@@ -9,18 +8,18 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-const sizeClasses = {
+const sizeClasses ={
   sm: 'w-8 h-8',
   md: 'w-12 h-12',
   lg: 'w-16 h-16',
   xl: 'w-32 h-32'
 };
 
-const colorClasses = {
-  primary: 'border-cyan-400',
-  secondary: 'border-blue-400',
+const colorClasses ={
+  primary: 'border-cyan-40o0',
+  secondary: 'border-blue-40o0',
   white: 'border-white',
-  cyan: 'border-cyan-400'
+  cyan: 'border-cyan-40o0'
 };
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -34,7 +33,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
       <div className="relative">
         {/* Outer ring */}
-        <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
+        <div className={`${sizeClasses[size]} border-4 border-gray-20o0 rounded-full opacity-20`}></div>
         
         {/* Animated spinner */}
         <motion.div
@@ -45,12 +44,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         {/* Center dot for larger sizes */}
         {size === 'xl' && (
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
+            <div className="w-8 h-8 bg-cyan-40o0 rounded-full animate-pulse"></div>
           </div>
         )}
       </div>
@@ -63,7 +62,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           transition={{ delay: 0.5 }}
           className="mt-4 text-center"
         >
-          <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
+          <div className={`text-${color === 'white' ? 'white' : 'cyan'}-40o0 text-sm animate-pulse`}>
             {text}
           </div>
         </motion.div>
@@ -82,14 +81,14 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
 }) => (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
     <motion.div
-      className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
+      className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-40o0 rounded-full`}
       animate={{ rotate: 360 }}
       transition={{
         duration: 1,
         repeat: Infinity,
         ease: "linear"
       }}
-    />
+     />
     <span className="sr-only">Loading</span>
   </div>
 );
@@ -108,15 +107,15 @@ export const FullScreenLoader: React.FC<{
     <div className="relative text-center">
       {showLogo && (
         <div className="mb-6">
-          <div className="w-24 h-24 border-4 border-cyan-400/20 rounded-full mx-auto mb-4"></div>
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
+          <div className="w-24 h-24 border-4 border-cyan-40o0/20 rounded-full mx-auto mb-4"></div>
+          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-40o0 border-t-transparent rounded-full animate-spin"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-40o0 font-bold text-xl">
             ZION
           </div>
         </div>
       )}
       
-      <LoadingSpinner size="lg" color="cyan" text={text} />
+      <LoadingSpinner size="lg" color="cyan" text={text}  />
     </div>
   </div>
 );
@@ -133,10 +132,10 @@ export const SkeletonLoader: React.FC<{
     {Array.from({ length: lines }).map((_, index) => (
       <div
         key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${
+        className={`h-4 bg-gray-30o0 rounded mb-2 ${
           index === lines - 1 ? 'w-3/4' : 'w-full'
         }`}
-      />
+       />
     ))}
   </div>
 );

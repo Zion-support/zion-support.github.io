@@ -37,10 +37,10 @@ export function usePricingSuggestionAnalytics(days = 30) {
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 10o00));
 
         // Mock data for demonstration
-        const mockData = {
+        const mockData ={
           totalSuggestions: 256,
           acceptanceRate: 0.72,
           averagePriceGap: 12.5,
@@ -49,55 +49,3 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'design', count: 65, acceptanceRate: 0.82 },
             { category: 'marketing', count: 42, acceptanceRate: 0.64 },
             { category: 'content', count: 18, acceptanceRate: 0.56 },
-<<<<<<< HEAD
-            { category: 'data', count: 11, acceptanceRate: 0.78 },
-          ],
-=======
-            { category: 'data', count: 11, acceptanceRate: 0.78 }],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-          recentSuggestions: Array(10).fill(null).map((_, i) => ({
-            id: `suggestion-${i}`,
-            userId: `user-${Math.floor(Math.random() * 100)}`,
-            suggestedMin: 30 + Math.floor(Math.random() * 30),
-            suggestedMax: 60 + Math.floor(Math.random() * 40),
-            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
-            accepted: Math.random() > 0.25,
-            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-<<<<<<< HEAD
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
-          }))
-=======
-            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-        };
-
-        setAnalytics({
-          ...mockData,
-          isLoading: false,
-          error: null
-        });
-
-        // In a real implementation with Supabase, you might do:
-        // const { data, error } = await supabase
-        //   .from('pricing_suggestions')
-        //   .select(...)
-        //   .gte('created_at', `now() - interval '${days} days'`);
-        
-        // if (error) throw error;
-        // Process data and setAnalytics({...})
-
-      } catch (error) {
-        console.error("Error fetching pricing suggestion analytics:", error);
-        setAnalytics({
-          ...analytics,
-          isLoading: false,
-          error: "Failed to load pricing analytics data."
-        });
-      }
-    };
-
-    fetchAnalytics();
-  }, [days]);
-
-  return analytics;
-}

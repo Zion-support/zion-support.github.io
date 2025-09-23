@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function KeywordResearchEngine() {
@@ -22,6 +21,6 @@ export default function KeywordResearchEngine() {
 			]}
 			industries={["Content Publishers", "E-commerce", "Agencies", "SMBs"]}
 			canonical="https://ziontechgroup.com/keyword-research-engine"
-		/>
+		 />
 	);
 }

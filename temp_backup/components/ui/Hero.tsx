@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button';
 
 interface HeroProps {
@@ -30,13 +29,11 @@ export default function Hero({
   secondaryCTA,
   stats,
   background = 'gradient',
-  className = '',
-}: HeroProps) {
-  const backgroundClasses = {
-    gradient: 'bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-100',
+  className = ''}: HeroProps) {
+  const backgroundClasses ={
+    gradient: 'bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-10o0',
     solid: 'bg-white',
-    image: 'bg-gradient-to-br from-gray-900/90 via-blue-900/90 to-indigo-900/90 text-white',
-  };
+    image: 'bg-gradient-to-br from-gray-90o0/90 via-blue-90o0/90 to-indigo-90o0/90 text-white'};
 
   const classes = `py-20 sm:py-24 lg:py-32 ${backgroundClasses[background]} ${className}`;
 
@@ -46,19 +43,19 @@ export default function Hero({
         <div className="text-center">
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-lg sm:text-xl text-blue-600 font-medium mb-4">
+            <p className="text-lg sm:text-xl text-blue-60o0 font-medium mb-4">
               {subtitle}
             </p>
           )}
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-90o0 mb-6">
             {title}
           </h1>
 
           {/* Description */}
           {description && (
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8 leading-relaxed">
               {description}
             </p>
           )}
@@ -69,12 +66,12 @@ export default function Hero({
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl px-6 py-3 border border-gray-200/50 shadow-sm"
+                  className="bg-white/80 backdrop-blur-sm rounded-xl px-6 py-3 border border-gray-20o0/50 shadow-sm"
                 >
                   <span className={`text-2xl font-bold ${stat.color}`}>
                     {stat.value}
                   </span>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  <div className="text-sm text-gray-60o0">{stat.label}</div>
                 </div>
               ))}
             </div>

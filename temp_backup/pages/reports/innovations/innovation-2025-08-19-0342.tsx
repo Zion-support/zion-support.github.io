@@ -5,10 +5,10 @@ export default function InnovationPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Reference Architecture — Autonomous UIs</title>
-        <meta name="description" content="Autonomously generated innovations content." />
-        <meta property="og:title" content="Reference Architecture — Autonomous UIs" />
-        <meta property="og:description" content="Innovative, useful guidance to increase reliability and uptime." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="description" content="Autonomously generated innovations content."  />
+        <meta property="og:title" content="Reference Architecture — Autonomous UIs"  />
+        <meta property="og:description" content="Innovative, useful guidance to increase reliability and uptime."  />
+        <meta name="twitter:card" content="summary_large_image"  />
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-3xl font-extrabold">Reference Architecture — Autonomous UIs</h1>
@@ -20,7 +20,7 @@ export default function InnovationPage() {
           <li>Expected impact: increase reliability and uptime.</li>
           <li>Next steps: pilot, measure, and harden for production.</li>
         </ul>
-        <p className="mt-6">Learn more at <a className="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>
+        <p className="mt-6">Learn more at <a className="text-cyan-30o0 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a>.</p>
       </main>
     </div>
   );

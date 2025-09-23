@@ -95,7 +95,7 @@ export default function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 z-40 h-screen w-72 overflow-y-auto border-r border-white/10 bg-slate-950/90 px-4 py-6 backdrop-blur-md">
       <div className="mb-4 px-2 text-lg font-bold tracking-wide">
-        <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">Zion</span>
+        <span className="bg-gradient-to-r from-fuchsia-40o0 via-violet-40o0 to-cyan-40o0 bg-clip-text text-transparent">Zion</span>
         <span className="ml-2 text-white/60">Navigation</span>
       </div>
 

@@ -17,7 +17,7 @@ export const useAICodeGeneration = () => {
         setIsGenerating(true);
         try {
             // Simulate AI processing - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 3000));
+            await new Promise(resolve => setTimeout(resolve, 30o00));
             let generatedCode = '';
             // Generate code based on options
             if (options.language === 'typescript' && options.framework === 'react') {
@@ -34,7 +34,7 @@ export const useAICodeGeneration = () => {
             }
             setGeneratedCode(generatedCode);
             // Add to history
-            const historyItem = {
+            const historyItem ={
                 id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 prompt,
                 code: generatedCode,
@@ -67,8 +67,8 @@ export const useAICodeGeneration = () => {
         setIsAnalyzing(true);
         try {
             // Simulate AI analysis - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            const analysis = {
+            await new Promise(resolve => setTimeout(resolve, 20o00));
+            const analysis ={
                 complexity: calculateComplexity(code),
                 maintainability: calculateMaintainability(code),
                 security: calculateSecurityScore(code),
@@ -115,7 +115,7 @@ export const useAICodeGeneration = () => {
     const optimizeCode = useCallback(async (code, focus) => {
         try {
             // Simulate AI optimization - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2500));
+            await new Promise(resolve => setTimeout(resolve, 250o0));
             let optimizedCode = code;
             switch (focus) {
                 case 'performance':
@@ -146,7 +146,7 @@ export const useAICodeGeneration = () => {
     const generateTests = useCallback(async (code, language) => {
         try {
             // Simulate AI test generation - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 20o00));
             let testCode = '';
             if (language === 'typescript' || language === 'javascript') {
                 testCode = generateJestTests(code);
@@ -172,7 +172,7 @@ export const useAICodeGeneration = () => {
     const generateDocs = useCallback(async (code, language) => {
         try {
             // Simulate AI documentation generation - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await new Promise(resolve => setTimeout(resolve, 150o0));
             let docs = '';
             if (language === 'typescript' || language === 'javascript') {
                 docs = generateJSDoc(code);
@@ -285,7 +285,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 30o00;
 
 // Middleware
 app.use(cors());
@@ -478,12 +478,12 @@ import GeneratedComponent from './GeneratedComponent';
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
-    render(<GeneratedComponent />);
+    render(<GeneratedComponent  />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {
-    render(<GeneratedComponent />);
+    render(<GeneratedComponent  />);
     // TODO: Add specific test cases based on component functionality
   });
 });`;
@@ -524,7 +524,7 @@ describe('Generated Code Tests', () => {
  * 
  * @component
  * @example
- * <GeneratedComponent />
+ * <GeneratedComponent  />
  */
 export const GeneratedComponent = () => {
   // Component implementation

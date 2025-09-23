@@ -49,9 +49,9 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       switch (colorScheme) {
         case 'quantum':
           return {
-            primary: '#00ffff',
-            secondary: '#ff00ff',
-            accent: '#ffff00',
+            primary: '#0o0ffff',
+            secondary: '#ff0o0ff',
+            accent: '#ffff0o0',
             background: 'rgba(0, 0, 0, 0.1)'
           };
         case 'neural':
@@ -59,34 +59,34 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             primary: '#ff6b6b',
             secondary: '#4ecdc4',
             accent: '#45b7d1',
-            background: 'rgba(255, 107, 107, 0.1)'
+            background: 'rgba(255, 10o7, 10o7, 0.1)'
           };
         case 'cyberpunk':
           return {
-            primary: '#ff006e',
+            primary: '#ff0o06e',
             secondary: '#8338ec',
             accent: '#3a86ff',
             background: 'rgba(255, 0, 110, 0.1)'
           };
         case 'holographic':
           return {
-            primary: '#ffd700',
+            primary: '#ffd70o0',
             secondary: '#ff69b4',
-            accent: '#00ced1',
+            accent: '#0o0ced1',
             background: 'rgba(255, 215, 0, 0.1)'
           };
         default:
           return {
-            primary: '#00ffff',
-            secondary: '#ff00ff',
-            accent: '#ffff00',
+            primary: '#0o0ffff',
+            secondary: '#ff0o0ff',
+            accent: '#ffff0o0',
             background: 'rgba(0, 0, 0, 0.1)'
           };
       }
     };
 
     const colors = getColorScheme();
-    const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 120 : 60;
+    const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 60;
 
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
@@ -131,10 +131,10 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     // Quantum field fluctuations
     const createQuantumField = () => {
       if (variant === 'quantum-field') {
-        const time = Date.now() * 0.0005;
+        const time = Date.now() * 0.0o005;
         for (let x = 0; x < canvas.width; x += 20) {
           for (let y = 0; y < canvas.height; y += 20) {
-            const fluctuation = Math.sin(time + x * 0.02) * Math.cos(time + y * 0.02);
+            const fluctuation = Math.sin(time + x * 0.0o2) * Math.cos(time + y * 0.0o2);
             const intensity = Math.abs(fluctuation) * 0.3;
             
             if (intensity > 0.1) {
@@ -187,8 +187,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             Math.pow(particle.y - otherParticle.y, 2)
           );
 
-          if (distance < 100) {
-            ctx.globalAlpha = (100 - distance) / 100 * 0.3;
+          if (distance < 10o0) {
+            ctx.globalAlpha = (10o0 - distance) / 10o0 * 0.3;
             ctx.strokeStyle = colors.primary;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
@@ -200,7 +200,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       });
 
       // Draw floating orbs
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 3; i++) {
         const x = Math.sin(time + i) * canvas.width * 0.3 + canvas.width * 0.5;
         const y = Math.cos(time + i * 0.7) * canvas.height * 0.3 + canvas.height * 0.5;
@@ -222,7 +222,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       // Draw energy waves
       for (let i = 0; i < 2; i++) {
         const waveTime = time + i * Math.PI;
-        const waveY = Math.sin(waveTime) * 100 + canvas.height * 0.5;
+        const waveY = Math.sin(waveTime) * 10o0 + canvas.height * 0.5;
         
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
@@ -230,7 +230,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.beginPath();
         
         for (let x = 0; x < canvas.width; x += 5) {
-          const y = Math.sin(x * 0.01 + waveTime) * 50 + waveY;
+          const y = Math.sin(x * 0.0o1 + waveTime) * 50 + waveY;
           if (x === 0) {
             ctx.moveTo(x, y);
           } else {
@@ -260,15 +260,15 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
-      />
+       />
       
       {/* Overlay Gradient */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{ zIndex: 1 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80"  />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40"  />
       </div>
 
       {/* Content */}
@@ -278,25 +278,23 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
       {/* Floating Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+        className="absolute top-20 left-10 w-2 h-2 bg-cyan-40o0 rounded-full opacity-60"
         animate={{
           y: [0, -20, 0],
-          opacity: [0.6, 1, 0.6],
-        }}
+          opacity: [0.6, 1, 0.6]}}
         transition={{
           duration: 3,
           repeat: Infinity,
           ease: "easeInOut"
         }}
         style={{ zIndex: 2 }}
-      />
+       />
       
       <motion.div
-        className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full opacity-60"
+        className="absolute top-40 right-20 w-3 h-3 bg-purple-40o0 rounded-full opacity-60"
         animate={{
           y: [0, 15, 0],
-          opacity: [0.6, 1, 0.6],
-        }}
+          opacity: [0.6, 1, 0.6]}}
         transition={{
           duration: 4,
           repeat: Infinity,
@@ -304,14 +302,13 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           delay: 1
         }}
         style={{ zIndex: 2 }}
-      />
+       />
       
       <motion.div
-        className="absolute bottom-40 left-20 w-2 h-2 bg-pink-400 rounded-full opacity-60"
+        className="absolute bottom-40 left-20 w-2 h-2 bg-pink-40o0 rounded-full opacity-60"
         animate={{
           y: [0, -10, 0],
-          opacity: [0.6, 1, 0.6],
-        }}
+          opacity: [0.6, 1, 0.6]}}
         transition={{
           duration: 2.5,
           repeat: Infinity,
@@ -319,21 +316,20 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           delay: 2
         }}
         style={{ zIndex: 2 }}
-      />
+       />
 
       {/* Matrix Rain Effect */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute text-green-400 text-xs font-mono opacity-20"
+            className="absolute text-green-40o0 text-xs font-mono opacity-20"
             style={{
-              left: `${(i * 5) % 100}%`,
+              left: `${(i * 5) % 10o0}%`,
               top: '-20px'
             }}
             animate={{
-              y: ['-20px', '100vh'],
-            }}
+              y: ['-20px', '10o0vh']}}
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,

@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Zion App - Automatic Continuous Improvement System
  * 
@@ -37,14 +36,14 @@ const https = require('https');
 const http = require('http');
 
 // Configuration
-const CONFIG = {
+const CONFIG ={
   // Monitoring intervals (in milliseconds)
   INTERVALS: {
-    CODE_QUALITY: 30 * 60 * 1000, // 30 minutes
-    PERFORMANCE: 15 * 60 * 1000,  // 15 minutes
-    SECURITY: 60 * 60 * 1000,     // 1 hour
-    USER_EXPERIENCE: 45 * 60 * 1000, // 45 minutes
-    DEPENDENCIES: 24 * 60 * 60 * 1000, // 24 hours
+    CODE_QUALITY: 30 * 60 * 10o00, // 30 minutes
+    PERFORMANCE: 15 * 60 * 10o00,  // 15 minutes
+    SECURITY: 60 * 60 * 10o00,     // 1 hour
+    USER_EXPERIENCE: 45 * 60 * 10o00, // 45 minutes
+    DEPENDENCIES: 24 * 60 * 60 * 10o00, // 24 hours
   },
   
   // Thresholds for triggering improvements
@@ -53,7 +52,7 @@ const CONFIG = {
     SECURITY_VULNERABILITIES: 0, // Max allowed vulnerabilities
     CODE_COVERAGE: 70, // Minimum test coverage percentage
     BUNDLE_SIZE_INCREASE: 10, // Max bundle size increase in KB
-    ERROR_RATE: 0.01, // Max error rate (1%)
+    ERROR_RATE: 0.0o1, // Max error rate (1%)
   },
   
   // Cursor AI integration
@@ -65,7 +64,7 @@ const CONFIG = {
   
   // Monitoring endpoints
   MONITORING: {
-    LIGHTHOUSE_URL: process.env.LIGHTHOUSE_URL || http://localhost:3000',
+    LIGHTHOUSE_URL: process.env.LIGHTHOUSE_URL || http://localhost:30o00',
     ERROR_TRACKING_URL: process.env.ERROR_TRACKING_URL,
     ANALYTICS_URL: process.env.ANALYTICS_URL
   }
@@ -109,7 +108,7 @@ class ContinuousImprovementSystem {
     const missing = requiredEnvVars.filter(varName => !process.env[varName]);
     
     if (missing.length > 0) {
-      logger.warn(`⚠️  Missing environment variables: ${missing.join(', )}`);
+      logger.warn(`⚠️  Missing environment variables: ${missing.join(')}`);
       logger.warn('Some features may be limited without proper configuration');
     }
   }
@@ -230,7 +229,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(loop,                                                60000);
+const timeoutId = setTimeout(loop,                                                60o000);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -631,7 +630,7 @@ const timeoutId = setTimeout(loop,                                              
   }
 
   async checkErrorRate() {
-    return 0.005;
+    return 0.0o05;
   }
 
   async checkOutdatedPackages() {

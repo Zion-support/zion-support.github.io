@@ -31,7 +31,7 @@ export interface ExpandedInnovativeService {
   };
 }
 
-export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
+export const EXPANDED_INNOVATIVE_SERVICES_20o25: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: "ai-cybersecurity-threat-intelligence",
@@ -79,10 +79,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $7,999/month",
-    roi: "300-500%",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -91,7 +91,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["AWS", "Azure", "GCP", "Splunk", "QRadar"],
       apiEndpoints: 150,
       uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"]
+      security: ["SOC 2", "ISO 270o01", "GDPR", "HIPAA", "FedRAMP"]
     }
   },
 
@@ -136,10 +136,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "1–2 weeks",
     supportLevel: "professional",
     marketPrice: "$499 – $1,499/month",
-    roi: "200–350%",
+    roi: "20o0–350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -186,16 +186,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"],
     estimatedDelivery: "2–4 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,200 – $5,000/month",
-    roi: "200–500%",
+    marketPrice: "$1,20o0 – $5,0o00/month",
+    roi: "20o0–50o0%",
     innovationLevel: "Professional",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"],
       integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],
       apiEndpoints: 65,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "SSO"]
+      security: ["SOC 2", "ISO 270o01", "SSO"]
     }
   },
 
@@ -233,10 +233,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["MLOps", "Feature Store", "Monitoring", "Compliance"],
     estimatedDelivery: "4–8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,500 – $8,000/month",
-    roi: "250–400%",
+    marketPrice: "$2,50o0 – $8,0o00/month",
+    roi: "250–40o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"],
       integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"],
@@ -265,7 +265,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Shopify/BigCommerce/WooCommerce apps",
       "Headless SDK",
       "Attribution dashboards",
-      "Latency <100ms",
+      "Latency <10o0ms",
       "Multi‑region edge"
     ],
     benefits: [
@@ -281,9 +281,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3–7 days",
     supportLevel: "professional",
     marketPrice: "$299 – $1,999/month",
-    roi: "300–700%",
+    roi: "30o0–70o0%",
     innovationLevel: "Professional",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
 
   // SOC2-in-a-box compliance automation
@@ -315,15 +315,15 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Improved security posture",
       "Board‑ready reporting"
     ],
-    useCases: ["SOC 2", "ISO 27001", "HIPAA readiness"],
+    useCases: ["SOC 2", "ISO 270o01", "HIPAA readiness"],
     targetAudience: ["Startups", "Scaleups", "Security & GRC"],
     tags: ["Compliance", "Security", "Audit", "GRC"],
     estimatedDelivery: "2–3 weeks",
     supportLevel: "professional",
-    marketPrice: "$700 – $3,500/month",
-    roi: "200–400%",
+    marketPrice: "$70o0 – $3,50o0/month",
+    roi: "20o0–40o0%",
     innovationLevel: "Professional",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
 
   // Data platform in a week (modern stack)
@@ -360,10 +360,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Data", "dbt", "Snowflake", "BigQuery", "Metrics"],
     estimatedDelivery: "1 week",
     supportLevel: "professional",
-    marketPrice: "$15,000 – $45,000 one‑time",
-    roi: "150–300%",
+    marketPrice: "$15,0o00 – $45,0o00 one‑time",
+    roi: "150–30o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"],
       integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],
@@ -396,7 +396,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "API integration"
     ],
     benefits: [
-      "100% supply chain transparency",
+      "10o0% supply chain transparency",
       "Reduce counterfeit products by 99%",
       "Automated compliance verification",
       "Enhanced brand trust",
@@ -420,10 +420,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,899 - $5,999/month",
-    roi: "250-400%",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -476,10 +476,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $8,999/month",
-    roi: "300-450%",
+    roi: "30o0-450%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -532,10 +532,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,599 - $4,999/month",
-    roi: "200-350%",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -588,10 +588,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $12,999/month",
-    roi: "400-600%",
+    roi: "40o0-60o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -644,10 +644,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,299 - $9,999/month",
-    roi: "350-500%",
+    roi: "350-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -700,10 +700,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,199 - $6,999/month",
-    roi: "250-400%",
+    roi: "250-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -756,10 +756,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,899 - $8,999/month",
-    roi: "300-500%",
+    roi: "30o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -812,10 +812,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,499 - $14,999/month",
-    roi: "400-600%",
+    roi: "40o0-60o0%",
     innovationLevel: "Cutting-edge",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -844,7 +844,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Multi-language support"
     ],
     benefits: [
-      "Increase content production by 500%",
+      "Increase content production by 50o0%",
       "Reduce content costs by 70%",
       "Improve engagement rates",
       "Consistent brand voice",
@@ -868,10 +868,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,299 - $3,999/month",
-    roi: "200-400%",
+    roi: "20o0-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -915,10 +915,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["ITSM", "LLM", "RAG", "Automation", "Service Desk"],
     estimatedDelivery: "2–4 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,200 – $4,000/month",
-    roi: "200–400%",
+    marketPrice: "$1,20o0 – $4,0o00/month",
+    roi: "20o0–40o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"],
       integrations: ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"],
@@ -961,10 +961,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Data Governance", "Lineage", "Quality", "Observability"],
     estimatedDelivery: "4–8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,000 – $7,000/month",
-    roi: "200–350%",
+    marketPrice: "$2,0o00 – $7,0o00/month",
+    roi: "20o0–350%",
     innovationLevel: "Professional",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"],
       integrations: ["Snowflake", "BigQuery", "Redshift", "Looker"],
@@ -1007,10 +1007,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Landing Zone", "Security", "IaC", "Governance"],
     estimatedDelivery: "2 weeks",
     supportLevel: "professional",
-    marketPrice: "$20,000 – $60,000 one-time",
-    roi: "150–300%",
+    marketPrice: "$20,0o00 – $60,0o00 one-time",
+    roi: "150–30o0%",
     innovationLevel: "Professional",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"],
       integrations: ["Okta", "Datadog", "PagerDuty"],
@@ -1054,12 +1054,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "1–2 weeks",
     supportLevel: "professional",
     marketPrice: "$499 – $1,999/month",
-    roi: "250–500%",
+    roi: "250–50o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
-  }
-  ,
-  // Cloud Cost Optimization AI
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  }, // Cloud Cost Optimization AI
   {
     id: "cloud-cost-optimizer-ai",
     title: "Cloud Cost Optimizer AI",
@@ -1106,10 +1104,10 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "2-4 weeks",
     supportLevel: "professional",
     marketPrice: "$1,499 - $6,999/month",
-    roi: "200-500%",
+    roi: "20o0-50o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -1118,13 +1116,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"],
       apiEndpoints: 85,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001"]
+      security: ["SOC 2", "ISO 270o01"]
     }
   },
-  // SOC 2 & ISO 27001 Compliance Copilot
+  // SOC 2 & ISO 270o01 Compliance Copilot
   {
     id: "soc2-iso-compliance-copilot",
-    title: "Compliance Copilot for SOC 2 & ISO 27001",
+    title: "Compliance Copilot for SOC 2 & ISO 270o01",
     description: "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack.",
     category: "AI & Legal Tech",
     subcategory: "Compliance Automation",
@@ -1150,16 +1148,16 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       "Lower security risk",
       "Faster enterprise deals"
     ],
-    useCases: ["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"],
+    useCases: ["SOC 2 Type II", "ISO 270o01", "HIPAA", "GDPR", "Vendor DD"],
     targetAudience: ["Security", "GRC", "Legal", "Founders", "Ops"],
     tags: ["Compliance", "Security", "Audit", "GRC", "Automation"],
     estimatedDelivery: "3-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,999 - $7,999/month",
-    roi: "150-400%",
+    roi: "150-40o0%",
     innovationLevel: "Advanced",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -1168,7 +1166,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],
       apiEndpoints: 110,
       uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "SAML", "SCIM"]
+      security: ["SOC 2", "ISO 270o01", "SAML", "SCIM"]
     }
   },
   // Data Pipeline Observability Platform
@@ -1206,9 +1204,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3-5 weeks",
     supportLevel: "professional",
     marketPrice: "$1,290 - $5,999/month",
-    roi: "200-350%",
+    roi: "20o0-350%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Python", "Airflow", "dbt", "Spark"],
       integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],
@@ -1252,9 +1250,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "2-4 weeks",
     supportLevel: "professional",
     marketPrice: "$899 - $3,999/month",
-    roi: "200-600%",
+    roi: "20o0-60o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Typescript", "Vector DB", "LLM", "gRPC"],
       integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"],
@@ -1298,9 +1296,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3-6 weeks",
     supportLevel: "professional",
     marketPrice: "$1,090 - $4,999/month",
-    roi: "200-400%",
+    roi: "20o0-40o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   },
   // MLOps Continuous Delivery Platform
   {
@@ -1337,9 +1335,9 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "4-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,490 - $9,999/month",
-    roi: "200-500%",
+    roi: "20o0-50o0%",
     innovationLevel: "Advanced",
-    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    contactInfo: { phone: "+1 30o2 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
     technicalSpecs: {
       technology: ["Kubernetes", "Kafka", "Ray", "Feast"],
       integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"],
@@ -1350,4 +1348,4 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   }
 ];
 
-export default EXPANDED_INNOVATIVE_SERVICES_2025;
+export default EXPANDED_INNOVATIVE_SERVICES_20o25;

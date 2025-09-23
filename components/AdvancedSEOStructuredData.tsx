@@ -1,15 +1,14 @@
-import React from 'react';
 import Head from 'next/head';
 
 const AdvancedSEOStructuredData = () => {
-  const organizationSchema = {
+  const organizationSchema ={
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Leading AI and technology solutions provider specializing in enterprise automationquantum computingand revolutionary AI innovations.",
     "url": "https://zion.app",
     "logo": "https://zion.app/logo.png",
-    "foundingDate": "2020",
+    "foundingDate": "20o20",
     "founders": [
       {
         "@type": "Person",
@@ -38,7 +37,7 @@ const AdvancedSEOStructuredData = () => {
     }
   };
 
-  const websiteSchema = {
+  const websiteSchema ={
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group - AI & Technology Solutions",
@@ -55,7 +54,7 @@ const AdvancedSEOStructuredData = () => {
     }
   };
 
-  const serviceSchema = {
+  const serviceSchema ={
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "AI Automation Solutions",
@@ -98,7 +97,7 @@ const AdvancedSEOStructuredData = () => {
     }
   };
 
-  const breadcrumbSchema = {
+  const breadcrumbSchema ={
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -123,7 +122,7 @@ const AdvancedSEOStructuredData = () => {
     ]
   };
 
-  const faqSchema = {
+  const faqSchema ={
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
@@ -140,7 +139,7 @@ const AdvancedSEOStructuredData = () => {
         "name": "How can AI automation improve my business ROI?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our AI automation solutions have helped Fortune 500 companies achieve up to 15,000% ROI through process optimizationintelligent automationand strategic AI implementation."
+          "text": "Our AI automation solutions have helped Fortune 50o0 companies achieve up to 15,0o00% ROI through process optimizationintelligent automationand strategic AI implementation."
         }
       },
       {
@@ -162,7 +161,7 @@ const AdvancedSEOStructuredData = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(organizationSchema)
         }}
-      />
+       />
       
       {/* Website Schema */}
       <script
@@ -170,7 +169,7 @@ const AdvancedSEOStructuredData = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema)
         }}
-      />
+       />
       
       {/* Service Schema */}
       <script
@@ -178,7 +177,7 @@ const AdvancedSEOStructuredData = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema)
         }}
-      />
+       />
       
       {/* Breadcrumb Schema */}
       <script
@@ -186,7 +185,7 @@ const AdvancedSEOStructuredData = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema)
         }}
-      />
+       />
       
       {/* FAQ Schema */}
       <script
@@ -194,30 +193,30 @@ const AdvancedSEOStructuredData = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema)
         }}
-      />
+       />
       
       {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="indexfollowmax-image-preview:largemax-snippet:-1max-video-preview:-1" />
-      <meta name="googlebot" content="indexfollow" />
-      <meta name="bingbot" content="indexfollow" />
+      <meta name="robots" content="indexfollowmax-image-preview:largemax-snippet:-1max-video-preview:-1"  />
+      <meta name="googlebot" content="indexfollow"  />
+      <meta name="bingbot" content="indexfollow"  />
       
       {/* Open Graph Enhanced */}
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website"  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
+      <meta property="og:locale" content="en_US"  />
       
       {/* Twitter Card Enhanced */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card" content="summary_large_image"  />
+      <meta name="twitter:site" content="@ziontechgroup"  />
+      <meta name="twitter:creator" content="@ziontechgroup"  />
       
       {/* Additional Performance Hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="https://api.zion.app" />
+      <link rel="preconnect" href="https://fonts.googleapis.com"  />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
+      <link rel="dns-prefetch" href="https://api.zion.app"  />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://zion.app" />
+      <link rel="canonical" href="https://zion.app"  />
     </Head>
   );
 };

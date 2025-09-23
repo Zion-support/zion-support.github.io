@@ -42,7 +42,7 @@ import {
   SortAsc,
   SortDesc
 } from 'lucide-react';
-import { innovativeServices2029, serviceCategories2029, getServicesByCategory2029 } from '../data/innovativeServices2029';
+import { innovativeServices20o29, serviceCategories20o29, getServicesByCategory20o29 } from '../data/innovativeServices20o29';
 
 const pricingTiers = [
   {
@@ -50,7 +50,7 @@ const pricingTiers = [
     price: '$199',
     description: 'Perfect for small businesses and startups',
     features: ['Basic AI features', 'Email support', 'Standard integrations', 'Basic analytics'],
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-green-50o0 to-emerald-50o0',
     popular: false
   },
   {
@@ -58,7 +58,7 @@ const pricingTiers = [
     price: '$599',
     description: 'Ideal for growing businesses',
     features: ['Advanced AI capabilities', 'Priority support', 'Advanced integrations', 'Custom workflows', 'Performance analytics'],
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-50o0 to-cyan-50o0',
     popular: true
   },
   {
@@ -66,7 +66,7 @@ const pricingTiers = [
     price: '$1,999',
     description: 'For large organizations',
     features: ['Full AI suite', '24/7 dedicated support', 'Custom development', 'Advanced security', 'SLA guarantees', 'On-premise options'],
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-purple-50o0 to-pink-50o0',
     popular: false
   },
   {
@@ -74,12 +74,12 @@ const pricingTiers = [
     price: '$4,999',
     description: 'Cutting-edge quantum solutions',
     features: ['Quantum computing access', 'AI research collaboration', 'Custom algorithms', 'Dedicated infrastructure', 'White-label options'],
-    color: 'from-indigo-500 to-purple-500',
+    color: 'from-indigo-50o0 to-purple-50o0',
     popular: false
   }
 ];
 
-export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
+export const ComprehensivePricingGuide20o29: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating' | 'name'>('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
@@ -96,7 +96,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById('comprehensive-pricing-2029');
+    const element = document.getElementById('comprehensive-pricing-20o29');
     if (element) {
       observer.observe(element);
     }
@@ -105,8 +105,8 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
   }, []);
 
   const filteredServices = selectedCategory === 'All' 
-    ? innovativeServices2029 
-    : getServicesByCategory2029(selectedCategory);
+    ? innovativeServices20o29 
+    : getServicesByCategory20o29(selectedCategory);
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     let aValue: any, bValue: any;
@@ -140,22 +140,22 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
     }
   });
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo ={
+    phone: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   const getPriceColor = (price: string) => {
     const priceNum = parseInt(price.replace(/[^0-9]/g, ''));
-    if (priceNum < 500) return 'text-green-600';
-    if (priceNum < 1000) return 'text-blue-600';
-    if (priceNum < 3000) return 'text-orange-600';
-    return 'text-purple-600';
+    if (priceNum < 50o0) return 'text-green-60o0';
+    if (priceNum < 10o00) return 'text-blue-60o0';
+    if (priceNum < 30o00) return 'text-orange-60o0';
+    return 'text-purple-60o0';
   };
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+    const iconMap: { [key: string]: React.ComponentType<any> } ={
       'AI Development': Code,
       'AI Customer Service': Users,
       'AI Finance': BarChart3,
@@ -177,11 +177,11 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
   };
 
   return (
-    <section id="comprehensive-pricing-2029" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+    <section id="comprehensive-pricing-20o29" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-purple/20 to-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-10o00"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,7 +194,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Comprehensive Pricing Guide 2029
+              Comprehensive Pricing Guide 20o29
             </span>
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
@@ -214,15 +214,15 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
           >
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-zion-cyan" />
+                <Phone className="w-5 h-5 text-zion-cyan"  />
                 <span className="font-semibold">{contactInfo.phone}</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-zion-cyan" />
+                <Mail className="w-5 h-5 text-zion-cyan"  />
                 <span className="font-semibold">{contactInfo.email}</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-zion-cyan" />
+                <MapPin className="w-5 h-5 text-zion-cyan"  />
                 <span className="font-semibold">{contactInfo.address}</span>
               </div>
             </div>
@@ -233,7 +233,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-purple transition-colors font-semibold"
               >
-                Visit Our Website <ExternalLink className="w-4 h-4" />
+                Visit Our Website <ExternalLink className="w-4 h-4"  />
               </a>
             </div>
           </motion.div>
@@ -254,7 +254,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 transition-all duration-300 hover:scale-105 ${
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 transition-all duration-30o0 hover:scale-10o5 ${
                   tier.popular 
                     ? 'border-zion-cyan/50 shadow-2xl shadow-zion-cyan/20' 
                     : 'border-zion-cyan/20 hover:border-zion-cyan/40'
@@ -277,7 +277,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-sm text-zion-gray-light">
-                      <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -285,7 +285,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
 
                 <button
                   onClick={() => setSelectedPricingTier(tier.name)}
-                  className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
+                  className={`w-full py-3 px-4 rounded-lg font-medium transition-all duration-30o0 ${
                     tier.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-purple hover:to-zion-cyan'
                       : 'bg-white/10 text-zion-cyan border border-zion-cyan/30 hover:bg-white/20'
@@ -308,7 +308,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
-              {serviceCategories2029.map((category) => {
+              {serviceCategories20o29.map((category) => {
                 const Icon = getCategoryIcon(category);
                 const isSelected = selectedCategory === category;
                 
@@ -316,13 +316,13 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                       isSelected
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
                         : 'bg-white/10 backdrop-blur-sm text-zion-gray-light hover:bg-white/20 hover:text-white'
                     }`}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-4 h-4"  />
                     {category}
                   </button>
                 );
@@ -346,7 +346,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className="p-2 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-white/20 transition-colors"
               >
-                {sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />}
+                {sortOrder === 'asc' ? <SortAsc className="w-4 h-4"  /> : <SortDesc className="w-4 h-4"  />}
               </button>
             </div>
           </div>
@@ -370,12 +370,12 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.8, delay: 0.1 * index }}
                 className="group relative"
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-30o0 hover:bg-white/10 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="p-3 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple">
-                        <Icon className="w-6 h-6 text-white" />
+                        <Icon className="w-6 h-6 text-white"  />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
@@ -385,7 +385,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star className="w-5 h-5 text-yellow-40o0 fill-current"  />
                       <span className="text-white font-semibold">{service.rating}</span>
                     </div>
                   </div>
@@ -401,7 +401,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                       {service.price}
                     </div>
                     <div className="flex items-center gap-2">
-                      <Brain className="w-5 h-5 text-zion-cyan" />
+                      <Brain className="w-5 h-5 text-zion-cyan"  />
                       <span className="text-white font-semibold">AI Score: {service.aiScore}</span>
                     </div>
                   </div>
@@ -412,7 +412,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                     <div className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-gray-light">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <CheckCircle className="w-4 h-4 text-green-40o0"  />
                           {feature}
                         </div>
                       ))}
@@ -425,7 +425,7 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-zion-gray-light">
-                          <Zap className="w-4 h-4 text-yellow-400" />
+                          <Zap className="w-4 h-4 text-yellow-40o0"  />
                           {benefit}
                         </div>
                       ))}
@@ -438,16 +438,16 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
                       href={service.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-purple hover:to-zion-cyan transition-all duration-30o0 flex items-center justify-center gap-2"
                     >
-                      Learn More <ArrowRight className="w-4 h-4" />
+                      Learn More <ArrowRight className="w-4 h-4"  />
                     </a>
                     
                     <a
                       href={`tel:${contactInfo.phone}`}
-                      className="w-full px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 text-zion-cyan rounded-lg font-medium hover:bg-white/20 hover:border-zion-cyan/50 transition-all duration-300 flex items-center justify-center gap-2"
+                      className="w-full px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 text-zion-cyan rounded-lg font-medium hover:bg-white/20 hover:border-zion-cyan/50 transition-all duration-30o0 flex items-center justify-center gap-2"
                     >
-                      <Phone className="w-4 h-4" />
+                      <Phone className="w-4 h-4"  />
                       Contact Sales
                     </a>
                   </div>
@@ -476,34 +476,34 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href={`tel:${contactInfo.phone}`}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-bold text-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-bold text-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-30o0 flex items-center gap-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 Call Now
               </a>
               
               <a
                 href={`mailto:${contactInfo.email}`}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 text-zion-cyan rounded-xl font-bold text-lg hover:bg-white/20 hover:border-zion-cyan/50 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 text-zion-cyan rounded-xl font-bold text-lg hover:bg-white/20 hover:border-zion-cyan/50 transition-all duration-30o0 flex items-center gap-2"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 Email Us
               </a>
             </div>
 
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="flex flex-col items-center">
-                <Award className="w-12 h-12 text-zion-cyan mb-3" />
+                <Award className="w-12 h-12 text-zion-cyan mb-3"  />
                 <h4 className="text-white font-semibold mb-2">Proven Track Record</h4>
-                <p className="text-zion-gray-light text-sm">500+ successful implementations</p>
+                <p className="text-zion-gray-light text-sm">50o0+ successful implementations</p>
               </div>
               <div className="flex flex-col items-center">
-                <Clock className="w-12 h-12 text-zion-cyan mb-3" />
+                <Clock className="w-12 h-12 text-zion-cyan mb-3"  />
                 <h4 className="text-white font-semibold mb-2">Fast Implementation</h4>
                 <p className="text-zion-gray-light text-sm">Get started in as little as 24 hours</p>
               </div>
               <div className="flex flex-col items-center">
-                <Shield className="w-12 h-12 text-zion-cyan mb-3" />
+                <Shield className="w-12 h-12 text-zion-cyan mb-3"  />
                 <h4 className="text-white font-semibold mb-2">Enterprise Security</h4>
                 <p className="text-zion-gray-light text-sm">Bank-level security and compliance</p>
               </div>
@@ -515,4 +515,4 @@ export const ComprehensivePricingGuide2029: React.FC = (): JSX.Element => {
   );
 };
 
-export default ComprehensivePricingGuide2029;
+export default ComprehensivePricingGuide20o29;

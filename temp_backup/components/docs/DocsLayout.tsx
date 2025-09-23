@@ -1,12 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import Link from 'next/link';
 
-export type DocsNavItem = {
+export type DocsNavItem ={
   id: string;
   title: string;
 };
 
-export type DocsLayoutProps = {
+export type DocsLayoutProps ={
   title: string;
   nav: DocsNavItem[];
   children: React.ReactNode;
@@ -31,12 +31,12 @@ export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {
             placeholder="Search docs..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full border border-gray-300 dark:border-gray-700 rounded px-3 py-2 text-sm bg-white dark:bg-black"
+            className="w-full border border-gray-30o0 dark:border-gray-70o0 rounded px-3 py-2 text-sm bg-white dark:bg-black"
           />
         </div>
         <nav className="space-y-1 text-sm">
           {filteredNav.map((item) => (
-            <a key={item.id} href={`#${item.id}`} className="block px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800">
+            <a key={item.id} href={`#${item.id}`} className="block px-2 py-1 rounded hover:bg-gray-10o0 dark:hover:bg-gray-80o0">
               {item.title}
             </a>
           ))}
@@ -48,12 +48,12 @@ export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {
       </article>
 
       <aside className="hidden lg:block lg:sticky lg:top-20 self-start">
-        <div className="border-l pl-4 border-gray-200 dark:border-gray-800">
-          <p className="text-xs uppercase tracking-wide text-gray-500">On this page</p>
+        <div className="border-l pl-4 border-gray-20o0 dark:border-gray-80o0">
+          <p className="text-xs uppercase tracking-wide text-gray-50o0">On this page</p>
           <ul id="toc" className="mt-2 space-y-2 text-sm">
             {nav.map((item) => (
               <li key={item.id}>
-                <a href={`#${item.id}`} className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                <a href={`#${item.id}`} className="text-gray-60o0 dark:text-gray-30o0 hover:text-gray-90o0 dark:hover:text-white">
                   {item.title}
                 </a>
               </li>

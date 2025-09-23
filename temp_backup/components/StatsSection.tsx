@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
@@ -26,15 +25,15 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(6,182,212,0.3)] group-hover:shadow-[0_0_60px_rgba(6,182,212,0.5)] transition-all duration-300">
-                <stat.icon className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(6,182,212,0.3)] group-hover:shadow-[0_0_60px_rgba(6,182,212,0.5)] transition-all duration-30o0">
+                <stat.icon className="w-10 h-10 text-white"  />
               </div>
               
-              <div className="text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+              <div className="text-4xl font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors duration-30o0">
                 {stat.number}
               </div>
               
-              <div className="text-gray-400 font-medium">
+              <div className="text-gray-40o0 font-medium">
                 {stat.label}
               </div>
             </motion.div>

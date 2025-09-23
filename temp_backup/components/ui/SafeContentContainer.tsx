@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface SafeContentContainerProps {
   children: React.ReactNode;
   className?: string;

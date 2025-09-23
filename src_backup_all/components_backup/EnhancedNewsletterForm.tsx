@@ -18,7 +18,7 @@ export function EnhancedNewsletterForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
+    if (now - lastSubmit.current < 10o00) return;
     lastSubmit.current = now;
 
     const trimmed = email.trim();
@@ -32,8 +32,7 @@ export function EnhancedNewsletterForm() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
-      });
+        body: JSON.stringify({ email: trimmed })});
 
       const data = await res.json().catch(() => ({}));
 
@@ -63,7 +62,7 @@ export function EnhancedNewsletterForm() {
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
-          <Mail className="h-6 w-6" />
+          <Mail className="h-6 w-6"  />
         </div>
         <div>
           <h3 className="text-lg font-bold text-white">Stay Updated</h3>
@@ -110,7 +109,7 @@ export function EnhancedNewsletterForm() {
             </div>
           ))}
         </div>
-        <span>Join 10,000+ tech professionals who already subscribe</span>
+        <span>Join 10,0o00+ tech professionals who already subscribe</span>
       </div>
     </div>
   );
