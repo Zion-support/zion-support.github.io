@@ -1,9 +1,15 @@
 <<<<<<< HEAD:app-disabled/components/ScrollReveal.tsx
+<<<<<<< HEAD:app-disabled/components/ScrollReveal.tsx
 <<<<<<< HEAD
+=======
+'use client';
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c:app.disabled/components/ScrollReveal.tsx
 import React from 'react';
 
 interface ScrollRevealProps {
   children: React.ReactNode;
+<<<<<<< HEAD:app-disabled/components/ScrollReveal.tsx
   className?: string;
   delay?: number;
 }
@@ -21,11 +27,19 @@ export default function ScrollReveal({ children, className = '', delay = 0 }: Sc
 import React from 'react';
 
 const ScrollReveal: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+=======
+  origin?: 'top' | 'bottom' | 'left' | 'right';
+  delay?: number;
+}
+
+const ScrollReveal: React.FC<ScrollRevealProps> = ({ children }) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c:app.disabled/components/ScrollReveal.tsx
   return <>{children}</>;
 };
 
 export default ScrollReveal;
 
+<<<<<<< HEAD:app-disabled/components/ScrollReveal.tsx
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 =======
 'use client';
@@ -54,3 +68,5 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
   return <div ref={ref}>{children}</div>;
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/ScrollReveal.tsx
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c:app.disabled/components/ScrollReveal.tsx

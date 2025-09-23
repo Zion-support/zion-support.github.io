@@ -272,6 +272,7 @@ export default [
       'test-*.js',
       '**/static/**',
       '**/*.min.js',
+<<<<<<< HEAD
       // Additional problematic files
       'fix-*.js',
       'merge-*.js',
@@ -317,6 +318,40 @@ export default [
       'debug-*.js',
       'deployment/**',
       'deployments/**'
+=======
+      // Additional ignores to avoid linting non-root projects and backup/corrupted files
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'utils/**',
+      'utils.disabled/**',
+      // Exclude legacy src trees and backups
+      'src/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'src.broken/**',
+      'src-corrupted/**',
+      'src.corrupted/**',
+      'src/pages_backup/**',
+      'src.disabled/**',
+      'ts_files_backup/**',
+      'types/**',
+      'types.disabled/**',
+      'temp-*',
+      'temp_*',
+      'temp/**',
+      'temp-backup/**',
+      'temp_backup/**',
+      'temp_backup_build/**',
+      'temp_backup_runtime_fix/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_components.disabled/**',
+      'temp-disabled-pages/**',
+      'temp_exclude/**',
+      'temp-problematic-pages/**'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-966c
     ]
   }
 ];
