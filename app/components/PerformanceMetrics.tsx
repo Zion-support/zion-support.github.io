@@ -2,23 +2,24 @@
 import React from 'react';
 
 export default function PerformanceMetrics() {
+  const metrics = [
+    { label: 'System Uptime', value: '99.9%', color: 'text-green-600', icon: '⚡' },
+    { label: 'Response Time', value: '<100ms', color: 'text-blue-600', icon: '🚀' },
+    { label: 'Throughput', value: '10K req/s', color: 'text-purple-600', icon: '📊' },
+    { label: 'Error Rate', value: '0.01%', color: 'text-green-600', icon: '✅' },
+    { label: 'Load Time', value: '1.2s', color: 'text-orange-600', icon: '⏱️' },
+    { label: 'Availability', value: '24/7', color: 'text-indigo-600', icon: '🔄' }
+  ];
+
   return (
-    <div className="p-6 rounded-lg bg-white/10 text-white">
-      <h3 className="text-xl font-semibold mb-4">Performance Metrics</h3>
-      <div className="space-y-4">
-        <div className="flex justify-between">
-          <span>Uptime</span>
-          <span className="text-green-400">99.9%</span>
+    <div className="grid grid-cols-2 gap-4">
+      {metrics.map((metric, index) => (
+        <div key={index} className="text-center p-3 bg-white/5 rounded-lg">
+          <div className="text-2xl mb-1">{metric.icon}</div>
+          <div className={`text-lg font-bold ${metric.color}`}>{metric.value}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">{metric.label}</div>
         </div>
-        <div className="flex justify-between">
-          <span>Response Time</span>
-          <span className="text-blue-400">&lt;100ms</span>
-        </div>
-        <div className="flex justify-between">
-          <span>Throughput</span>
-          <span className="text-purple-400">10K req/s</span>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

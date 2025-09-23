@@ -1,4 +1,0 @@
-nodeLinker: node-modules
-enableGlobalCache: false
-enableTelemetry: false
-networkTimeout: 120000
