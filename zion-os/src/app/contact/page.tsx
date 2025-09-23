@@ -1,22 +1,6 @@
-<<<<<<< HEAD
 "use client";
 import Link from 'next/link';
 
-export default function ContactPage() {
-	return (
-		<div className="min-h-screen py-20 px-4">
-			<div className="max-w-5xl mx-auto">
-				<h1 className="text-3xl font-bold mb-4">Get in Touch</h1>
-				<p className="text-zinc-500">Reach out and we’ll respond shortly.</p>
-				<div className="mt-6 flex gap-4">
-					<Link className="text-blue-600 underline" href="mailto:info@ziontechgroup.com">info@ziontechgroup.com</Link>
-					<Link className="text-blue-600 underline" href="tel:+13024640950">+1 (302) 464-0950</Link>
-				</div>
-			</div>
-		</div>
-	);
-}
-=======
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -39,7 +23,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-xl">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
-              <form className="space-y-6">
+              <form className="space-y-6" id="contact-form">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -312,4 +296,3 @@ export default function ContactPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
