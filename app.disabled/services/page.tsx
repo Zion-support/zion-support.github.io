@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { ArrowRight, Cloud, Shield, Zap, Database, Brain, Globe } from 'lucide-react'
 
@@ -98,6 +97,4 @@ export default function ServicesPage() {
     </main>
   )
 }
-=======
 import React from "react"; import { Metadata } from "next"; export const metadata: Metadata ={ title: "services - Zion Tech Group", description: "Professional services solutions for your business needs.", keywords: "services, services, business, technology" }; export default function ServicesPage() { return ( <div className="min-h-screen bg-white"> <div className="container mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-gray-90o0 mb-8"> services </h1> <p className="text-lg text-gray-60o0 mb-8"> Professional services solutions for your business needs. </p> <div className="bg-blue-50 p-6 rounded-lg"> <h2 className="text-2xl font-semibold text-blue-90o0 mb-4">Coming Soon</h2> <p className="text-blue-80o0"> This service page is under development. Please contact us for more information. </p> </div> </div> </div> ); }
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

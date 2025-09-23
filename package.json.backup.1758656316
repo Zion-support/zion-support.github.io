@@ -81,10 +81,8 @@
     "jest-environment-jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.0",
-<<<<<<< HEAD
     "typescript": "5.9.2",
     "typescript-eslint": "^8.44.1"
-=======
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.1"
   },
@@ -197,7 +195,6 @@
       "<rootDir>/components/api/docs/",
       "<rootDir>/data/api-docs/"
     ]
->>>>>>> origin/cursor/bc-e3d4493c-9c67-4aab-b397-735d366d858b-6298
   },
   
   "packageManager": "npm@11.6.0"

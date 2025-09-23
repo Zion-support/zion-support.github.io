@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function TermsPage() {
 	return (
 		<div className="min-h-screen py-20 px-4">
@@ -9,5 +8,3 @@ export default function TermsPage() {
 		</div>
 	);
 }
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

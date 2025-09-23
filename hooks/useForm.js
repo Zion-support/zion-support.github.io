@@ -30,6 +30,7 @@ const useForm = (initialValues ={}, onSubmit) => {
         await onSubmit(values)
       }
     } catch (error) {
+      // eslint-disable-next-line no-undef
       console.error('Form submission error:', error)
     } finally {
       setIsSubmitting(false)

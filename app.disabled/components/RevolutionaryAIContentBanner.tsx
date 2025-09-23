@@ -5,8 +5,6 @@ import React from "react";
 export default function RevolutionaryAIContentBanner() {
   return null;
 }
-<<<<<<< HEAD
-=======
 
 const RevolutionaryAIContentBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -290,4 +288,3 @@ const RevolutionaryAIContentBanner: React.FC = () => {
 };
 
 export default RevolutionaryAIContentBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

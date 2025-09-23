@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function AnalyticsContentShowcase2025() {
   return null;
 }
-=======
 const AnalyticsContentShowcase20o25 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -262,4 +260,3 @@ const AnalyticsContentShowcase20o25 = () => {
 };
 
 export default AnalyticsContentShowcase20o25;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

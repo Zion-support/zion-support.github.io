@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function handler(req, res) {
-<<<<<<< HEAD
-  res.status(200).json({ message: "Checkout session created" })}
-=======
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
   res.status(200).json({ message: 'Checkout session created' });
 }
 =======
-<<<<<<< HEAD
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 >>>>>>> main

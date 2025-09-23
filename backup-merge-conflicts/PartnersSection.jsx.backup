@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-<<<<<<< HEAD:backup-merge-conflicts/PartnersSection.jsx.backup
-=======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 =======
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}

@@ -10,8 +10,6 @@ type SEOProps = {
 export default function SEO(_props: SEOProps) {
   return null;
 }
-<<<<<<< HEAD
-=======
 
 export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
   // This component is deprecated in Next.js 13+ app directory
@@ -38,4 +36,3 @@ export function generateMetadata({ title, description, keywords, canonical, url 
       title,
       description}}
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -13,3 +13,10 @@ const BusinessIntelligenceChat: NextPage = () => {
       <main>
         <h1>BusinessIntelligenceChat</h1>
         <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default BusinessIntelligenceChat;

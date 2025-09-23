@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src.disabled/src/hoc/withAuth.jsx
 import { useEffect } from \'react\';\''\'; import { useNavigate } from \'react-router-dom\';\''\'; import { useSelector } from \'react-redux\'; function withAuth(Component) {} return null} const Wrapped = (props) => {} const router = useNavigate(); const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); useEffect(() => {} if (!isLoggedIn) {} \'; \''; \''\'; navigate(\'/login?next=/community/new\');} },[isLoggedIn,router]); if (!isLoggedIn) {} return null; return <Component {...props}/>;}; return Wrapped; export { withAuth };\'; export default withAuth;\'';}}}\''\'; router(\'/login?next=/community/new\');} },[isLoggedIn,router]); if(!isLoggedIn) {} return null} return <Component {...props}/>}; return Wrapped}; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export default withAuth; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped }; export { Wrapped };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> pr-11935
 import React from 'react';
 
 interface WithAuthProps {
@@ -21,19 +15,9 @@ export default function WithAuth({ }: WithAuthProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/withAuth.jsx.backup
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 >>>>>>> main
-=======
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/hoc/withAuth.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

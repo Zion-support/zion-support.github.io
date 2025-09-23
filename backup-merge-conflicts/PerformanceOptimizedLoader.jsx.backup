@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizedLoader.jsx.backup
-<<<<<<< HEAD
-
-=======
 =======
 import {motion} from 'framer-motion';
-<<<<<<< HEAD
-=======
 =======
 import {motion} from 'framer-motion';
 =======
@@ -50,8 +43,6 @@ export function PerformanceOptimizedLoader("props": "any) {;
 
 ;
 export default PerformanceOptimizedLoader;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 export function PerformanceOptimizedLoader($1) {
     const sizeClasses = {
   "sm": 'w-6 h-6',
@@ -73,14 +64,9 @@ export function PerformanceOptimizedLoader($1) {
     };
     const pulseVariants = {
 export default PerformanceOptimizedLoader;';';
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizedLoader.jsx.backup
 import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';
 =======
 import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';
-=======
-import {motion} from 'framer-motion'; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: 'w-6 h-6',md: 'w-12 h-12',lg: 'w-16 h-16' };;';'; const colorClasses = {primary: 'text-zion-purple',secondary: 'text-zion-cyan',white: 'text-white'};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: "linear" } } };; const pulseVariants = { export default PerformanceOptimizedLoader;';';
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

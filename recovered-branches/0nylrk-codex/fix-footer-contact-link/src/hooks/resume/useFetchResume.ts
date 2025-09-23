@@ -103,3 +103,15 @@ export function useFetchResume() {
       console.error('Error fetching resume:', e);
       setError(e.message);
       return null;
+
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return {
+    isLoading,
+    error,
+    resume,
+    fetchResume};
+}

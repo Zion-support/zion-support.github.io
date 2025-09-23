@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD:__tests__/api/trust-score-user.test.ts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { describe, it, expect } from 'vitest';
 describe('Trust Score User API', () => {
   it('should work', () => {
@@ -11,26 +7,10 @@ describe('Trust Score User API', () => {
   });
 });
 const { describe,it,expect } from "vitest"; describe("Trust Score User API",() => { it("should work",() => { expect(true).toBe(true)})});''"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11935
 import { describe,it,expect } from 'vitest'; describe('Trust Score User API',() => { it('should work',() => { expect(true).toBe(true)})}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/trust-score-user.test.ts.backup
-=======
 });''
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 >>>>>>> main
-=======
 });''
 =======
-<<<<<<< HEAD
-=======
->>>>>>> pr-11913:__tests__/api/trust-score-user.test.ts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

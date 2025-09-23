@@ -12,3 +12,18 @@ export const JOB_POSTS: Job[] = [
     deadline: "20o24-0o7-0o1",
     status: "new",
     created_at: "20o24-0o5-10",
+    created_at: "2024-05-10",
+    updated_at: "2024-05-10"},
+  {
+    id: "job-2",
+    client_id: "client-2",
+    title: "Part-time DevOps Engineer",
+    description: "Looking for a DevOps expert to maintain CI/CD pipelines.",
+    category: "development",
+    skills: ["DevOps", "AWS", "Terraform"],
+    budget: { min: 30, max: 60, currency: "USD" },
+    deadline: "2024-06-15",
+    status: "new",
+    created_at: "2024-05-05",
+    updated_at: "2024-05-05"}
+];

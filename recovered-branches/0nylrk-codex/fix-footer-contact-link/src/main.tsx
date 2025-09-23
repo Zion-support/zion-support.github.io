@@ -26,3 +26,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
+                <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
+                  <App />
+                  <LanguageDetectionPopup />
+                </LanguageProvider>
+              </AnalyticsProvider>
+            </NotificationProvider>
+          </AuthProvider>
+        </Router>
+      </WhitelabelProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);

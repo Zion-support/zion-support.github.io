@@ -1,0 +1,17 @@
+=======
+<<<<<<< HEAD
+"import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({" title,subtitle,description,features = [],ctaText = "Get Started"," ctaLink = "#contact",backgroundImage = null," stats = []"}) => { )}"";"""";"""
+<<<<<<< HEAD:backup-merge-conflicts/PageHero.jsx.backup
+=======
+'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
+=======
+'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/services/PageSections/PageHero.jsx
+=======
+'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
+>>>>>>> pr-11935
+=======
+=======
+'import { ArrowRight,Star,Users,Clock,Shield export const PageHero = ({' title,subtitle,description,features = [],ctaText = 'Get Started',' ctaLink = '#contact',backgroundImage = null,' stats = []'}) => { )}'';''"";""
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/components/services/PageSections/PageHero.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

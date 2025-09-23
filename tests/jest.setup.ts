@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Polyfill fetch and enable fetch mocks;
 
 import 'whatwg - fetch',
@@ -435,7 +433,6 @@ if ( {) {
 }
 }
 
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 import 'whatwg-fetch'
 import '@testing-library/jest-dom'
 import fetchMock from 'jest-fetch-mock'

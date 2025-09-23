@@ -105,3 +105,5 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
+    fetchNotifications};
+};

@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-// Extend jest-dom matchers;
-require('@testing-library/jest-dom');
-
-=======
 / Extend jest-dom matchersrequire("@testing-library/jest-dom");''"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function NewContent2025AdvancedAutomationBanner() {
   return null;
 }
-=======
 const NewContent20o25AdvancedAutomationBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -194,4 +192,3 @@ const NewContent20o25AdvancedAutomationBanner = () => {
 };
 
 export default NewContent20o25AdvancedAutomationBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

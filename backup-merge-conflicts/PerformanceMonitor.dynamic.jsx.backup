@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:components.disabled/PerformanceMonitor.dynamic.jsx
 const PerformanceMonitor = dynamic(() => import(\"./PerformanceMonitor\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default PerformanceMonitor\' ,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> pr-11935
 const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceMonitor.dynamic.jsx.backup
-=======
 </p>'
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 >>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/PerformanceMonitor.dynamic.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

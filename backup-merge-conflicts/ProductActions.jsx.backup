@@ -1,30 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export: function ProductActions ({ onAddToCart }) { const [loading,setLoading] = useState (false) const [label,setLabel] = useState ("Add to Cart") "";"";";"""
 <<<<<<< HEAD:backup-merge-conflicts/ProductActions.jsx.backup
-=======
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/components/ProductActions.jsx
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-<<<<<<< HEAD
-"export\": function ProductActions ({ onAddToCart }) { const [loading,setLoading] = useState (false) const [label,setLabel] = useState (\'Add to Cart\') \'';\'";\";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main
-=======
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/ProductActions.jsx
-<<<<<<< HEAD
-=======
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 =======
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/ProductActions.jsx.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

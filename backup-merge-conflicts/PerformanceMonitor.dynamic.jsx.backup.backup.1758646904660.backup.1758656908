@@ -1,0 +1,13 @@
+=======
+<<<<<<< HEAD
+const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{"; loading: () => <p>Loading.</p,>}) export: "default PerformanceMonitor" ,"""
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11935
+const PerformanceMonitor = dynamic(() => import("./PerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default PerformanceMonitor' ,'
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

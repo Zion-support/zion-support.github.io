@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
-=======
 const AdvancedAnalyticsEngine: React.FC = () => {
   return (
     <div className="py-16 bg-gray-50">
@@ -19,7 +17,6 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 export default function AdvancedAnalyticsEngine() {
   return null;

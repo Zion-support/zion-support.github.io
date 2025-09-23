@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 @layer base {
   :root {
     --background: #0b0f14;
@@ -163,7 +162,6 @@
     scroll-behavior: auto !important;
   }
 }
-=======
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -232,7 +230,6 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6bfd
 
 /* Print styles */
 @media print {

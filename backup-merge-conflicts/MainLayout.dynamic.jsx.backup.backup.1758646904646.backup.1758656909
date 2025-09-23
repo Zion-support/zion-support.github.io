@@ -1,0 +1,13 @@
+=======
+<<<<<<< HEAD
+const MainLayout = dynamic(() => import("./MainLayout"),{"; loading: () => <p>Loading.</p,>}) export: "default MainLayout" ,"""
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> pr-11935
+const MainLayout = dynamic(() => import("./MainLayout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainLayout' ,'
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

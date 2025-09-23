@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD:backup-merge-conflicts/AppLayout.tsx.backup
 <<<<<<< HEAD:src/layout/AppLayout.tsx
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react';
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -22,15 +17,9 @@ export function AppLayout("props": "any) {;
 export default AppLayout;
 import React from &apos;react&apos;; import { Header } from &quot;../components/Header&quot;; import { Footer } from &quot;../components/Footer&quot;; export function AppLayout($1) { return ( <div className = &quot;min-h-screen bg-black text-white&quot;>; <main className=&quot;pt-20&quot;>; {children}; </main>; </div>; )} export default AppLayout;&apos;;&apos;;
 const React from "react"; import { Header } from "./components/Header"; import { Footer } from "./components/Footer"; export function AppLayout($1) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;";";'"'"
-<<<<<<< HEAD
-import _React from 'react'; import { Header } from "../components/Header"; import { Footer } from "../components/Footer"; export function AppLayout(_) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main:src_backup_temp/layout/AppLayout.tsx
 >>>>>>> main
 >>>>>>> main
-=======
 import _React from 'react'; import { Header } from "../components/Header"; import { Footer } from "../components/Footer"; export function AppLayout(_) { return ( <div className = "min-h-screen bg-black text-white">; <main className="pt-20">; {children}; </main>; </div>; )} export default AppLayout;';';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/layout/AppLayout.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/layout/AppLayout.tsx

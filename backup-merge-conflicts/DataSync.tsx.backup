@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 interface DataSyncProps {;
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
 <<<<<<< HEAD
 =======
-=======
 <<<<<<< HEAD:src/components/admin/pitch-generator/DataSync.tsx
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   "syncedData": "an y;
   "onNext": () => void;
   "onBack": () => void;
@@ -110,14 +104,10 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       
       <div className="flex justify-between">
         <button
-<<<<<<< HEAD
 =======
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "}
 =======
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 ;
 const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) => {;
   return (;
@@ -174,21 +164,15 @@ const "DataSync": "React.FC<DataSyncProps> = ({ syncedData", onNext, onBack }) =
   onNext: () => void;
   onBack: () => void;
 }
-<<<<<<< HEAD
 =======
-=======
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
 <<<<<<< HEAD
 
 const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const "DataSync": Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack };) => {
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
-=======
 
 const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
   return (
     <div className="min-h-screen bg-white">
       <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2>
@@ -249,10 +233,6 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
             <divclassName="text-2xl font-bold text-purple-600">';
               {syncedData?.marketplaceConversionFunnel?.completedTransactions?.toLocaleString() || 'N/A'}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>;
             <div className="text-sm text-gray-600">Transactions</div>;
           </div>;
@@ -279,12 +259,7 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       <div className="flex justify-between">;
         <button;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
           onClick={onBack}
@@ -319,10 +294,6 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
         </button>;
         <button;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           onClick={onNext"}
           className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 transition-colors";
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
@@ -332,13 +303,8 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
       </div>
     </div>
     );
-<<<<<<< HEAD
-=======
           onClick={onNext}
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="px-6 py-3 bg-blue-600 text-white rounded-lg "hover": b g-blue-700 transition-colors";
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
         >;
@@ -348,17 +314,11 @@ const DataSync: React.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
     </div>;
   );
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export default DataSync;';
 </DataSyncProps>;';;';
 "};
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 ;
 export default DataSync;
 </DataSyncProps>;
@@ -366,12 +326,6 @@ export default DataSync;
 export default DataSync;';
 </DataSyncProps>;';';
 import React from 'react'; ; interface DataSyncProps {; syncedData: an y; onNext: () => void; onBack: () => void} const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData,onNext,onBack };) => { return ( <div className="min-h-screen bg-white"> <h2 className="text-2xl font-bold mb-6">Data Synchronization</h2> <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-8"> <div className="bg-white p-6 rounded-lg border border-gray-200"> <h3 className="text-lg font-semibold mb-4">Key Metrics</h3> <div className="space-y-3"> <divclassName="flex justify-between"> <span className="text-gray-600">Active Users (30d)</span>'; <span className="font-semibold">{syncedData?.activeUsers30d || 'N/A'}</span> </div> <divclassName="flex justify-between"> <span className="text-gray-600">GMV</span>'; <span className="font-semibold">{syncedData?.gmv || 'N/A'}</span> </div> <divclassName="flex justify-between"> <span className="text-gray-600">MRR</span>'; <span className="font-semibold">{syncedData?.mrr || 'N/A'}</span> </div> <divclassName="flex justify-between"> <span className="text-gray-600">YoY Growth</span>'; <span className="font-semibold">{syncedData?.yoyGrowth || 'N/A'}</span> </div> </div> </div> <div className="bg-white p-6 rounded-lg border border-gray-200"> <h3 className="text-lg font-semibold mb-4">Project Stats</h3> <div className="space-y-3"> <divclassName="flex justify-between"> <span className="text-gray-600">Completed Projects</span>'; <span className="font-semibold">{syncedData?.totalCompletedProjects || 'N/A'}</span> </div> <divclassName="flex justify-between"> <span className="text-gray-600">Global Reach</span>'; <span className="font-semibold">{syncedData?.globalReach || 'N/A'}</span> </div> </div> </div> </div> <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8"> <h3 className="text-lg font-semibold mb-4">Conversion Funnel</h3> <div className="grid grid-cols-2 md: gri d-cols-4 gap-4"> <divclassName="text-center"> <divclassName="text-2xl font-bold text-blue-600">'; {syncedData?.marketplaceConversionFunnel?.visitors?.toLocaleString() || 'N/A'} </div> <div className="text-sm text-gray-600">Visitors</div> </div> <divclassName="text-center"> <divclassName="text-2xl font-bold text-green-600">'; {syncedData?.marketplaceConversionFunnel?.signups?.toLocaleString() || 'N/A'} </div> <div className="text-sm text-gray-600">Signups</div> </div> <divclassName="text-center"> <divclassName="text-2xl font-bold text-yellow-600">'; {syncedData?.marketplaceConversionFunnel?.activeListings?.toLocaleString() || 'N/A'} </div> <div className="text-sm text-gray-600">Active Listings</div> </div> <divclassName="text-center"> <divclassName="text-2xl font-bold text-purple-600">'; {syncedData?.marketplaceConversionFunnel?.completedTransactions?.toLocaleString() || 'N/A'} </div> <div className="text-sm text-gray-600">Transactions</div> </div> </div> </div> <div className="bg-white p-6 rounded-lg border border-gray-200 mb-8"> <h3 className="text-lg font-semibold mb-4">Notable Clients</h3> <div className="grid grid-cols-1 md: gri d-cols-2 gap-4"> {syncedData?.notableClients?.map((client: an y,index: number) => ( <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"> <span className="font-medium">{client.name}</span> <a href={client.caseStudyUrl} className="text-blue-600 hover: tex t-blue-800 text-sm" > View Case Study </a> </div> )) || ( <div className="text-gray-500">No client data available </div> )} </div> </div> <div className="flex justify-between"> <button onClick={onBack} className="px-6 py-3 border border-gray-300 rounded-lg hover: b g-gray-50 transition-colors"; >; Back; </button>; <button; onClick={onNext} className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"; >; Continue to Slide Editor; </button>; </div>; </div>; )}; export default DataSync;'; </DataSyncProps>;';';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/DataSync.tsx.backup
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx

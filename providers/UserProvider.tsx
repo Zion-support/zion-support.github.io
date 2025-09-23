@@ -47,17 +47,20 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user))
       else localStorage.removeItem('zion.user')
     } catch {
-      // Intentionally ignoring storage write errors (e.g., private mode)
-      // to avoid disrupting app state updates.
+      // ignore storage errors
     }
   }, [user])
 
-  const value = useMemo<UserContextValue>(() => ({
-    user,
-    setUser,
-    logout: () => setUser(null),
-    completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev),
-  }), [user])
+  const value = useMemo<UserContextValue>(
+    () => ({
+      user,
+      setUser,
+      logout: () => setUser(null),
+      completeOnboarding: () =>
+        setUser((prev) => (prev ? { ...prev, onboardingCompleted: true } : prev)),
+    }),
+    [user]
+  )
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }

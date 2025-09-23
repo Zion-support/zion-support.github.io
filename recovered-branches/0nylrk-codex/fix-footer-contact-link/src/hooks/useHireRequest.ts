@@ -43,3 +43,32 @@ export function useHireRequest() {
       // Show success message
       toast({
         title: "Request Submitted",
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
+      
+      return { success: true, requestId: response?.request_id };
+    } catch (error) {
+      console.error("Error submitting hire request:", error);
+      
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : "There was a problem submitting your request. Please try again.";
+      
+      setError(errorMessage);
+      
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"});
+      
+      return { success: false, error: errorMessage };
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  
+  return {
+    submitHireRequest,
+    isSubmitting,
+    error
+  };
+}

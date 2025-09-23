@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src.disabled/src/components/BackToTopButton.jsx
 import { ArrowUp import { useEffect,useState } from \'react\'; import { useTranslation } from \'react -i18next\'; from \'react\'; export function BackToTopButton () {}; return null} const { t } = useTranslation () ; useEffect(() => {}};},[]);,[]); const onScroll = () => {}}; useEffect(() => {}}; setVisible(window.scrollY > 400)};\"; window.addEventListener(\"scroll\",onScroll);\"; return () => window.removeEventListener(\"scroll\",onScroll)},[]);\"; const scrollToTop = () => window.scrollTo({ \"top\": \'0\',\"behavior\": \"smooth\" });\"; return (<button aria-label={t(\'general.back_to_top\')} onClick={scrollToTop} className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity \"md\": bottom-8 md:right-8 ${visible ? \"opacity-100\" : \"opacity-0 pointer-events-none\"}`}>\"; <ArrowUp aria-hidden=\"true\" className=\"h-5 w-5\"/> </button>)} \'"`}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> pr-11935
 import React from 'react';
 
 interface BackToTopButtonProps {
@@ -21,19 +15,9 @@ export default function BackToTopButton({ }: BackToTopButtonProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/BackToTopButton.jsx.backup
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 >>>>>>> main
-=======
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/BackToTopButton.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

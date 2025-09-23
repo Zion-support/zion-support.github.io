@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function NewContent2026UltimateShowcase() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 const NewContent20o26UltimateShowcase = () => {
@@ -176,4 +174,3 @@ const NewContent20o26UltimateShowcase = () => {
 };
 
 export default NewContent20o26UltimateShowcase;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -53,6 +53,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             </p>
             <div className="text-lg font-bold text-emerald-30o0">10o0% Aligned</div>
     <section className="bg-gradient-to-r from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 text-white py-16 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <div className="absolute top-0 left-0 w-full h-full">
@@ -140,6 +141,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
               <h4 className="font-bold text-lg mb-2">Manufacturing Conglomerate</h4>
               <p className="text-sm opacity-90 mb-2">99.9% autonomous production with zero quality defects</p>
               <div className="text-green-30o0 font-bold">$8.7B in cost savings achieved</div>
+              <div className="text-green-300 font-bold">$8.7B in cost savings achieved</div>
             </div>
           </div>
         </div>
@@ -170,6 +172,8 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             <span className="text-emerald-40o0 font-semibold"> Free implementation roadmap available</span>
               href="/blog/ai-20o26-autonomous-enterprise-revolution"
               className="bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
+              href="/blog/ai-2026-autonomous-enterprise-revolution"
+              className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Full Article →
             </Link>
@@ -182,6 +186,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
           </div>
           <p className="text-sm opacity-75">
             Join 1,0o00+ enterprises already operating autonomously
+            Join 1,000+ enterprises already operating autonomously
           </p>
         </div>
       </div>

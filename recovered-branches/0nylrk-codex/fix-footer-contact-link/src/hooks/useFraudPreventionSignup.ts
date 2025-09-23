@@ -57,3 +57,26 @@ export function useFraudPreventionSignup() {
           toast({
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
+            variant: "destructive"});
+          return false;
+        }
+        
+        // Otherwise, allow but flag for review
+        return true;
+      }
+      
+      // No suspicious patterns found
+      return true;
+    } catch (error) {
+      console.error('Error in fraud check:', error);
+      // On error, allow the signup but log the error
+      return true;
+    } finally {
+      setIsCheckingFraud(false);
+    }
+  }, []);
+  
+  return {
+    isCheckingFraud,
+    checkFraudBeforeSignup};
+}

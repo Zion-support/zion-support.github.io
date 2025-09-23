@@ -40,3 +40,16 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
+      milestones: milestoneData}
+  });
+  
+  if (error) {
+    throw error;
+  }
+  
+  if (data.success && data.contract) {
+    return data.contract;
+  } else {
+    throw new Error("Failed to generate contract");
+  }
+}

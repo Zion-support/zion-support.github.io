@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 "use client";
 
 import React from 'react';
-=======
 import TestimonialCard from './TestimonialCard';
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 const Testimonials = () => {
   const testimonials = [
@@ -32,7 +29,6 @@ const Testimonials = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <section className="py-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
@@ -58,7 +54,6 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
-=======
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -82,7 +77,6 @@ const Testimonials = () => {
              />
           ))}
         </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
       </div>
     </section>
   );

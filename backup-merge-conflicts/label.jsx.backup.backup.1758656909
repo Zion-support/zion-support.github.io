@@ -1,0 +1,28 @@
+<<<<<<< HEAD:backup-merge-conflicts/label.jsx.backup
+<<<<<<< HEAD
+module.exports = function Label($1) { return (<label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}> {children} </label>)} export default label;``
+<<<<<<< HEAD:backup-merge-conflicts/label.jsx.backup
+=======
+export function Label(_) { return (<label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}> {children} </label>)} export default label;
+=======
+<<<<<<< HEAD
+=======
+export function Label("props": "any) {;
+    return (<label htmlFor={htmlFor"} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}>;
+      {children}
+    </label>)}
+;
+
+export default label;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> main
+export function Label(_) { return (<label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}> {children} </label>)} export default label;
+export function Label(_) { return (<label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}> {children} </label>)} export default label;
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11935
+=======
+=======
+export function Label(_) { return (<label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 mb-1 ${className}`}> {children} </label>)} export default label;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src_backup_temp/components/ui/label.jsx
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

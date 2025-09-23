@@ -8,3 +8,13 @@ const config: DefaultSeoProps = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.netlify.app',
+    siteName: 'Zion Tech Solutions'},
+  twitter: {
+    handle: '@ziontech',
+    site: '@ziontech',
+    cardType: 'summary_large_image'},
+  additionalMetaTags: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#111827' }]};
+
+export default config;

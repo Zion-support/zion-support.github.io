@@ -5,8 +5,6 @@ import React from "react";
 export default function NewContent2025PromotionBanner() {
   return null;
 }
-<<<<<<< HEAD
-=======
 
 const NewContent20o25PromotionBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -258,4 +256,3 @@ const NewContent20o25PromotionBanner: React.FC = () => {
 };
 
 export default NewContent20o25PromotionBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

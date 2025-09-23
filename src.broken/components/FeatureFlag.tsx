@@ -5,3 +5,10 @@ interface FeatureFlagProps {
   children: React.ReactNode;
 }
 
+export function FeatureFlag({ namechildren }: FeatureFlagProps) {
+  const { isEnabled } = useFeatureFlags();
+  if (!isEnabled(name)) return null;
+  return <>{children}</>;
+}
+
+export default FeatureFlag;

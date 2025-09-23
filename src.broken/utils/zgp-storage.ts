@@ -108,3 +108,60 @@ export function createProposal(params: {
     codeModuleAffected: params.codeModuleAffected,
     votingOptions: params.votingOptions,
     fundingNeeded: params.fundingNeeded,
+    createdAt: new Date().toISOString()};
+  const proposal: ZgpProposal = {
+    id,
+    templateId: template.id,
+    templateCode: template.code,
+    title: params.title,
+    proposalNumber,
+    status: 'draft',
+    versions: [firstVersion],
+    latestVersion: 1};
+  proposals.push(proposal);
+  saveProposals(proposals);
+  return proposal;
+}
+
+export function getProposalById(id: string): ZgpProposal | undefined {
+  return listProposals().find(p => p.id === id);
+}
+
+export function updateProposal(id: string, update: {
+  title?: string;
+  summary?: string;
+  motivation?: string;
+  specificationImpact?: string;
+  codeModuleAffected?: string;
+  votingOptions?: string[];
+  fundingNeeded?: ZgpFunding;
+  status?: ZgpProposal['status'];
+  votingResultUrl?: string;
+}): ZgpProposal {
+  const proposals = listProposals();
+  const index = proposals.findIndex(p => p.id === id);
+  if (index === -1) throw new Error('Proposal not found');
+  const current = proposals[index];
+
+  const nextVersion: ZgpProposalVersion = {
+    version: current.latestVersion + 1,
+    summary: update.summary ?? current.versions[current.latestVersion - 1].summary,
+    motivation: update.motivation ?? current.versions[current.latestVersion - 1].motivation,
+    specificationImpact: update.specificationImpact ?? current.versions[current.latestVersion - 1].specificationImpact,
+    codeModuleAffected: update.codeModuleAffected ?? current.versions[current.latestVersion - 1].codeModuleAffected,
+    votingOptions: update.votingOptions ?? current.versions[current.latestVersion - 1].votingOptions,
+    fundingNeeded: update.fundingNeeded ?? current.versions[current.latestVersion - 1].fundingNeeded,
+    createdAt: new Date().toISOString()};
+
+  const next: ZgpProposal = {
+    ...current,
+    title: update.title ?? current.title,
+    status: update.status ?? current.status,
+    versions: [...current.versions, nextVersion],
+    latestVersion: nextVersion.version,
+    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl};
+
+  proposals[index] = next;
+  saveProposals(proposals);
+  return next;
+}

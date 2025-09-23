@@ -1,6 +1,5 @@
 "use client";
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 interface AnimatedCounterProps {
@@ -41,21 +40,16 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
-=======
 type Props ={ value?: number; label?: string };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
   return (
-<<<<<<< HEAD
     <span>
       {prefix}{count}{suffix}
     </span>
-=======
     <div className="text-center">
       <div className="text-3xl font-bold text-white">{value}</div>
       {label && <div className="text-sm text-gray-30o0">{label}</div>}
     </div>
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
   );
 };
 

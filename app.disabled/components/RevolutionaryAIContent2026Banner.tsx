@@ -17,7 +17,6 @@ export default function RevolutionaryAIContent2026Banner() {
       <p className="opacity-90">Showcase coming soon.</p>
     </section>
   );
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 }
 =======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from 'react';
@@ -7,7 +6,6 @@ const LoadingSpinner: React.FC = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400"></div>
-=======
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -29,7 +27,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-4 text-gray-60o0 text-sm">{text}</p>
       )}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
     </div>
   );
 };

@@ -64,3 +64,34 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
         talent: {
           id: talent.id || "",
           full_name: talent.full_name,
+          professional_title: talent.professional_title},
+        requester: {
+          name: values.requesterName,
+          email: values.requesterEmail,
+          id: userDetails?.id
+        },
+        project: {
+          overview: values.projectOverview,
+          timeline: values.timeline,
+          budgetMin: values.budgetMin,
+          budgetMax: values.budgetMax
+        }
+      };
+
+      const result = await submitHireRequest(requestData);
+      if (result.success) {
+        onClose();
+      }
+    } catch (error) {
+      console.error("Error submitting hire request:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return {
+    form,
+    isSubmitting,
+    onSubmit
+  };
+}

@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function UltimateContentShowcase2025() {
   return null;
 }
-=======
 const UltimateContentShowcase20o25 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -303,4 +301,3 @@ const UltimateContentShowcase20o25 = () => {
 };
 
 export default UltimateContentShowcase20o25;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

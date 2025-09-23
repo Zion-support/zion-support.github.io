@@ -1,0 +1,11 @@
+=======
+<<<<<<< HEAD
+const React from "react"; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}'"'"
+<<<<<<< HEAD:backup-merge-conflicts/InstallPrompt.js.jsx.backup
+import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
+=======
+import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/InstallPrompt.js.jsx
+=======
+import _React from 'react'; export const InstallPrompt = () => { const [deferred,setDeferred] = useState(null); useEffect(() => { const handler = e => { e.preventDefault(); setDeferred(e)}; window.addEventListener("beforeinstallprompt",handler); return () => window.removeEventListener("beforeinstallprompt",handler)},[]); if(!deferred) return null; const onClick = async () => { deferred.prompt(); const result = await deferred.userChoice; if(result.outcome !== "accepted") {}}}
+>>>>>>> pr-11935

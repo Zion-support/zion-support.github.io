@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function EnhancedContentPromotionBanner2026() {
   return null;
 }
-=======
 const EnhancedContentPromotionBanner20o26 = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -216,4 +214,3 @@ const EnhancedContentPromotionBanner20o26 = () => {
 };
 
 export default EnhancedContentPromotionBanner20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

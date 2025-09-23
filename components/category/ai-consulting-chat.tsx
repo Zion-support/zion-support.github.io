@@ -13,3 +13,10 @@ const AiConsultingChat: NextPage = () => {
       <main>
         <h1>AiConsultingChat</h1>
         <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default AiConsultingChat;

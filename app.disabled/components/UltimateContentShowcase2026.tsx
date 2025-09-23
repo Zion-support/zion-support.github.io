@@ -5,8 +5,6 @@ import React from "react";
 export default function UltimateContentShowcase2026() {
   return null;
 }
-<<<<<<< HEAD
-=======
 
 const UltimateContentShowcase20o26: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -289,4 +287,3 @@ const UltimateContentShowcase20o26: React.FC = () => {
 };
 
 export default UltimateContentShowcase20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

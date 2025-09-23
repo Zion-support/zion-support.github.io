@@ -483,3 +483,7 @@ export const getPopularInnovativeMicroSaasServices20o26 = () => {
 export const getInnovativeMicroSaasServices20o26ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices20o26.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
+
+    return price >= minPrice && price <= maxPrice;
+  });
+};

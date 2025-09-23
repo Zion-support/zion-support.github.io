@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
-=======
 import Link from 'next/link';
 import { WHATS_NEW_ITEMS } from '../../data/whatsNew';
 
@@ -39,7 +37,6 @@ const WhatsNewStrip: React.FC = () => {
 };
 
 export default WhatsNewStrip;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 export default function WhatsNewStrip() {
   return null;

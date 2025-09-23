@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function NewContentShowcase2026() {
   return null;
 }
-=======
 const NewContentShowcase20o26 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -278,4 +276,3 @@ const NewContentShowcase20o26 = () => {
 };
 
 export default NewContentShowcase20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

@@ -97,4 +97,3 @@ export const serviceSchema ={
   description: 'Comprehensive AI solutions, cloud computing, and digital transformation services to transform your business.',
   serviceType: 'Technology Services'
 };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
-=======
 const AdvancedSecurityMonitor: React.FC = () => {
   return (
     <div className="py-16 bg-gray-50">
@@ -19,7 +17,6 @@ const AdvancedSecurityMonitor: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 
 export default function AdvancedSecurityMonitor() {
   return null;

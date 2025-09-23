@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function NewContent2025UltimateShowcaseBanner() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 export default function NewContent20o25UltimateShowcaseBanner() {
@@ -83,4 +81,3 @@ export default function NewContent20o25UltimateShowcaseBanner() {
     </section>
   );
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

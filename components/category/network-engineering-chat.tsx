@@ -13,3 +13,10 @@ const NetworkEngineeringChat: NextPage = () => {
       <main>
         <h1>NetworkEngineeringChat</h1>
         <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default NetworkEngineeringChat;

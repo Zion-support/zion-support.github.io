@@ -113,3 +113,5 @@ export function useResumeActions() {
     error,
     createResume,
     updateBasicInfo,
+    setActiveResume};
+}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function NewServicesShowcase2025() {
   return null;
 }
-=======
 const NewServicesShowcase20o25: React.FC = () => {
   return (
     <div className="py-16 bg-gray-50">
@@ -25,4 +23,3 @@ const NewServicesShowcase20o25: React.FC = () => {
 };
 
 export default NewServicesShowcase20o25;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

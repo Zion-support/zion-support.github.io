@@ -6,3 +6,13 @@ interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
+export function SidebarGroupLabel({ classNamechildren...props }: SidebarGroupLabelProps) {
+  return (
+    <div 
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider"className)} 
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}

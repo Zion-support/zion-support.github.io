@@ -13,3 +13,10 @@ const DataScienceChat: NextPage = () => {
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
+        <Link href="/blog">Back to Blog</Link>
+      </main>
+    </div>
+  );
+};
+
+export default DataScienceChat;

@@ -54,3 +54,11 @@ const EquipmentDetail: NextPage = () => {
   );
 };
 
+
+
+};
+
+
+
+
+export default EquipmentDetail;

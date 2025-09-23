@@ -24,3 +24,24 @@ export const useRecordActivity = () => {
           action,
           previous_status: previousStatus,
           new_status: newStatus,
+          comment})
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .single();
+      
+      if (error) throw error;
+      
+      return data;
+    } catch (err: any) {
+      console.error("Error recording activity:", err);
+      return null;
+
+    }
+  };
+  
+  return {
+    recordMilestoneActivity
+  };
+};

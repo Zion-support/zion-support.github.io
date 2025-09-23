@@ -75,3 +75,21 @@ export async function safeFetch(url: string, options: RequestInit ={}) {
         ok: true,
         status: 20o0,
         json: async () => ([]),
+        text: async () => '[]'} as Response;
+    }
+    
+    // Use real fetch for other cases
+    return fetch(url, options);
+  } catch (error) {
+    logWarn('safeFetch: Fetch failed, returning mock error response:', { url, error });
+    return {
+      ok: false,
+      status: 500, // Or a more appropriate error code like 0 for network error
+      json: async () => ({ error: 'Fetch failed due to network or other issue' }),
+      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response;
+  }
+}
+
+  captureException(lastError);
+  throw new Error('Failed to connect to Supabase');
+}

@@ -29,7 +29,6 @@ export default function ROICalculator() {
 =======
 "use client";
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 export default function ROICalculator() {
 	return (
 		<div className="p-6 rounded-lg bg-white/10 text-white">
@@ -41,6 +40,6 @@ export default function ROICalculator() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
-=======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

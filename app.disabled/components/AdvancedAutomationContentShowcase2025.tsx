@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function AdvancedAutomationContentShowcase2025() {
   return null;
 }
-=======
 const AdvancedAutomationContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -266,4 +264,3 @@ const AdvancedAutomationContentShowcase20o25 = () => {
 };
 
 export default AdvancedAutomationContentShowcase20o25;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

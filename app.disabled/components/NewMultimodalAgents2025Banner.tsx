@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
 
 export default function NewMultimodalAgents2025Banner() {
   return null;
-=======
 import Link from 'next/link';
 
 export default function NewMultimodalAgents20o25Banner(): JSX.Element {
@@ -40,5 +38,4 @@ export default function NewMultimodalAgents20o25Banner(): JSX.Element {
 			</div>
 		</section>
 	);
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
 }

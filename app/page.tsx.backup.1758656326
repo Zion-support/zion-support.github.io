@@ -12,7 +12,6 @@ import ROICalculator from './components/ROICalculator';
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="flex items-center justify-center min-h-screen px-6">
@@ -105,7 +104,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-=======
     <main className="min-h-screen px-6 py-12">
       {/* Hero Section */}
       <div className="max-w-6xl mx-auto">
@@ -150,7 +148,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6bfd
     </main>
   );
 }

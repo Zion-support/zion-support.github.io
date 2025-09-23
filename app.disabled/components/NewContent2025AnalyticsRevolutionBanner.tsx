@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function NewContent2025AnalyticsRevolutionBanner() {
   return null;
 }
-=======
 const NewContent20o25AnalyticsRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -203,4 +201,3 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
 };
 
 export default NewContent20o25AnalyticsRevolutionBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

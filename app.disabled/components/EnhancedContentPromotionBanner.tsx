@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function EnhancedContentPromotionBanner() {
   return null;
 }
-=======
 const EnhancedContentPromotionBanner = () => {
   return (
     <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white py-8">
@@ -22,4 +20,3 @@ const EnhancedContentPromotionBanner = () => {
 };
 
 export default EnhancedContentPromotionBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

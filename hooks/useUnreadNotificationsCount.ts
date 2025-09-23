@@ -15,7 +15,7 @@ export function useUnreadNotificationsCount() {
     fetchUnreadCount();
     
     // Set up interval to simulate real-time updates
-    const interval = setInterval(fetchUnreadCount, 30o000); // Update every 30 seconds
+    const interval = setInterval(fetchUnreadCount, 30000); // Update every 30 seconds
 
     return () => clearInterval(interval);
   }, []);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -6,7 +5,6 @@ import React from "react";
 export default function UltimatePromotionBanner2026() {
   return null;
 }
-=======
 import Link from 'next/link';
 
 const UltimatePromotionBanner20o26 = () => {
@@ -137,4 +135,3 @@ const UltimatePromotionBanner20o26 = () => {
 };
 
 export default UltimatePromotionBanner20o26;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc

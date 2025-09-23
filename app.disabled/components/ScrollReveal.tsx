@@ -29,7 +29,6 @@ type ScrollRevealProps = {
 import React from 'react';
 
 type ScrollRevealProps = React.PropsWithChildren<{ origin?: 'bottom' | 'top' | 'left' | 'right'; delay?: number }>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
 
 export default function ScrollReveal({ children }: ScrollRevealProps) {
 	return <>{children}</>;
@@ -37,6 +36,6 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e382
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
-=======
 >>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
+=======
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

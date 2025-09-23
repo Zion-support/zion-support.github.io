@@ -1,6 +1,11 @@
 import './globals.css'
 import type { ReactNode } from 'react'
+<<<<<<< HEAD
 import ErrorBoundary from './components/ErrorBoundary'
+=======
+import Header from './components/Header'
+import Footer from './components/Footer'
+>>>>>>> 3acf1df8c42e480e27c08a54303afaf751b8e30c
 
 export const metadata = {
   title: {
@@ -60,11 +65,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#6366f1" />
       </head>
+<<<<<<< HEAD
           <body className="antialiased">
             <ErrorBoundary>
               {children}
             </ErrorBoundary>
           </body>
+=======
+      <body className="antialiased">
+        <Header />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
+      </body>
+>>>>>>> 3acf1df8c42e480e27c08a54303afaf751b8e30c
     </html>
   )
 }

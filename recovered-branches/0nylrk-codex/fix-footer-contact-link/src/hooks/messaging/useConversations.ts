@@ -182,3 +182,5 @@ export function useConversations(
 
   return {
     fetchConversations,
+    createConversation};
+}

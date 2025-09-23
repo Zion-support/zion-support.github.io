@@ -1,15 +1,8 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 =======
 =======
 <<<<<<< HEAD:src.disabled/src/services/auth.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
->>>>>>> pr-11913:src.disabled/src/services/auth.js
 // comment;
 export class authService {}}
 ;
@@ -27,14 +20,6 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
 export { API_BASE_URL };
-<<<<<<< HEAD
-export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
-<<<<<<< HEAD:backup-merge-conflicts/auth.js.backup
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> main
 >>>>>>> main
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth"),} return await response.json(),} } catch (error) {}} throw error,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 >>>>>>> main

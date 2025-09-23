@@ -12,3 +12,44 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+  children
+  adminOnly = false,
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+  const { userisLoading } = useAuth();
+  const { tenant } = useWhitelabel();
+  const { isAdmin: isTenantAdminisLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
+  
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
+
+  // Show loading state if auth or tenant admin status is still being checked
+  if (isCheckingPermissions) {
+    return <div className="flex h-screen w-full items-center justify-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
+    </div>;
+  }
+
+  // Redirect to login if not authenticated
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
+
+  // Check for admin access if required
+  if (adminOnly) {
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
+    
+    if (!hasAdminAccess) {
+      return <Navigate to="/unauthorized" />;
+    }
+  }
+  
+  // Check for specific user type if required
+  if (requiredUserType && user.userType !== requiredUserType) {
+    return <Navigate to="/unauthorized" />;
+  }
+
+  return <>{children}</>;
+};
+
+export default ProtectedRoute;

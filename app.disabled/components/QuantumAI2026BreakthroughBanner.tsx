@@ -2,11 +2,9 @@
 
 import React from "react";
 
-<<<<<<< HEAD
 export default function QuantumAI2026BreakthroughBanner() {
   return null;
 }
-=======
 const QuantumAI20o26BreakthroughBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentContent, setCurrentContent] = useState(0);
@@ -124,4 +122,3 @@ const QuantumAI20o26BreakthroughBanner: React.FC = () => {
 };
 
 export default QuantumAI20o26BreakthroughBanner;
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc
