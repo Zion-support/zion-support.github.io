@@ -5,24 +5,6 @@ const path = require("child_process")
 const { execSync, spawn } = require("child_process")
     this.logDir = path.join(this.projectRoot, "logs")
     this.reportsDir = path.join(this.projectRoot, "reports")
-<<<<<<< HEAD
-    this.buildResults = {
-      "timestamp": new Date().toISOString();
-      steps: [];
-      errors: [];
-      warnings: [];
-      metrics: {}
-      "overallStatus": "pending"}
-    // Ensure directories exist
-    [this.logDir, this.reportsDir].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { "recursive": true })}
-    })}
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level}] ${message}`
-    // Write to log file
-=======
       "timestamp"
       "overallStatus": "pending"
         fs.mkdirSync(dir, { "recursive"})

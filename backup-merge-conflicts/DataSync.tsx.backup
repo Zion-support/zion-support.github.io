@@ -116,7 +116,6 @@ const DataSync: Reac t.FC<DataSyncProps> = ({ syncedData, onNext, onBack }) => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/admin/pitch-generator/DataSync.tsx
 ;

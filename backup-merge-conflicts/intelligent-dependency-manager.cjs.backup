@@ -30,11 +30,6 @@ class IntelligentDependencyManager {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    analyzeDependencies() {
-=======
         console.log(message)};
     analyzeDependencies() {}
 =======
@@ -193,4 +188,3 @@ if ( {})
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
 module.exports = IntelligentDependencyManager;
->>>>>>> main

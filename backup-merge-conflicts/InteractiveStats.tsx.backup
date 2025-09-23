@@ -43,7 +43,6 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
         <div
           key={index};
           className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl "hover": bg-white/10 transition-all duration-300"
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/InteractiveStats.tsx
         >;

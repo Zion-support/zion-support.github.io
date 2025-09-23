@@ -26,7 +26,6 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 describe('AICodeGeneratortest', () => {
->>>>>>> pr-11914:backup-merge-conflicts/AICodeGenerator.test.test.js.backup
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
     expect(screen.getByTestId('aicodegenerator.test')).toBeInTheDocument();
@@ -50,7 +49,6 @@ describe('AICodeGeneratortest', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   test('displays correct content', () => {
->>>>>>> pr-11914:backup-merge-conflicts/AICodeGenerator.test.test.js.backup
     render(<AICodeGeneratortest />);
   });
   test('handles user interactions', () => {

@@ -5,32 +5,6 @@ const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "intelligent-error-detector.log")
-<<<<<<< HEAD
-    this.fixes = []
-    this.errors = []
-    this.patterns = this.initializeErrorPatterns()
-    this.ensureDirectories()}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message, level = "info") {
-    const timestamp = new Date().toISOString()
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    fs.appendFileSync(this.logFile, logMessage + "\n")}
-  initializeErrorPatterns() {
-    return {
-      "syntaxErrors": [{ pattern: /SyntaxError: Unexpected token/, "fix": "Fix syntax error" },{ "pattern": /SyntaxError: Unexpected identifier/, "fix": "Fix identifier error" },{ "pattern": /SyntaxError: Unexpected string/, "fix": "Fix string syntax" };
-        { "pattern": /SyntaxError: Invalid or unexpected token/, "fix": "Fix token error" }];
-      "importErrors": [{ pattern: /Cannot resolve module/, "fix": "Fix import path" },{ "pattern": /Module not found/, "fix": "Install missing module" }];
-      "typeErrors": [{ pattern: /TypeError: Cannot read property/, "fix": "Add null check" },{ "pattern": /TypeError: Cannot read properties/, "fix": "Add property check" }]}
-  }
-  async scanForErrors() {
-    this.log("🔍 Scanning for errors in the codebase...")
-    const errorFiles = []
-    try {
-      // Run ESLint to find errors
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "info")
     fs.appendFileSync(this.logFile, logMessage + "\n")

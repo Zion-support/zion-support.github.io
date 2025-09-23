@@ -63,13 +63,6 @@ module.exports = nextConfig;";
       
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
       
-<<<<<<< HEAD
-      } catch (error) {
-      console.error('Performance improvement "failed": ', error.message)}
-  }
-}
-
-=======
       console.log('Performance improvements completed')} catch (error) {}
       console.error('Performance improvement "failed": ', error.message)};
   };
@@ -79,4 +72,3 @@ const fs = require("fs")"const path = require("path")function improvePerformance
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 improvePerformance();
       
->>>>>>> main

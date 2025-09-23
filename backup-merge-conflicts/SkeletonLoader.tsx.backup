@@ -20,7 +20,6 @@ className={cn() baseClasses,variantClasses[variant],animationClasses[animation],
         variantClasses[variant],
         animationClasses[animation],
         className
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/SkeletonLoader.tsx
       )}

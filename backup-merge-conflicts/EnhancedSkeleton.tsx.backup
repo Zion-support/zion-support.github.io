@@ -53,7 +53,6 @@
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   ;
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/ui/EnhancedSkeleton.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
   );
@@ -234,7 +233,6 @@
   if (height) style.height = typeof height === 'number' ? "${height}px" : height;
   return ();
     <motion.div;
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/EnhancedSkeleton.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
@@ -299,7 +297,6 @@ export const TableSkeleton: Reac t.FC<{ rows?: number; columns?: number; classNa
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (;
 =======
 export const "CardSkeleton": "React.FC<{ className?: string "}> = { className }: "unknown (;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
   <div className = {;
@@ -354,7 +351,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedSkeleton.tsx.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const "CardSkeleton": Reac t.FC<{ className?: string }> = { className }: unknown (
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/EnhancedSkeleton.tsx
 =======
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
@@ -441,11 +437,6 @@ export const "ListSkeleton": "React.FC<{ items?: number; className?: string "}> 
           <Skeleton variant="rectangular" height={16} width="80%"   />;";
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-
-export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
-
-=======
 =======
 =======
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedSkeleton.tsx.backup
@@ -453,7 +444,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const "ListSkeleton": Reac t.FC<{ items?: number; className?: string }> = ({
->>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/EnhancedSkeleton.tsx
 =======
 
@@ -518,7 +508,6 @@ export default Skeleton}</motion.div></motion.div>}'"`
   itemHeight?: number}> = ({;
 =======
   itemHeight?: number"}> = ({;
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/EnhancedSkeleton.tsx
   rows = 3,;

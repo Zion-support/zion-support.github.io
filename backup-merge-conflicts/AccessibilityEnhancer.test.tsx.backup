@@ -66,9 +66,6 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-<<<<<<< HEAD:__tests__/AccessibilityEnhancer.test.tsx
-});
-=======
 });
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
 =======

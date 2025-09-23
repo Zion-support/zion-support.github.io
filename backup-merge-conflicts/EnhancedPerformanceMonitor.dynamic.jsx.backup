@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedPerformanceMonitor.dynamic.jsx.backup
-<<<<<<< HEAD
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedPerformanceMonitor" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/EnhancedPerformanceMonitor.dynamic.jsx
@@ -11,7 +7,6 @@ const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceM
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/EnhancedPerformanceMonitor.dynamic.jsx
 >>>>>>> pr-11935
 const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
 <<<<<<< HEAD

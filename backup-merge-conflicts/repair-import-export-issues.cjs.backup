@@ -56,18 +56,6 @@ function run() {}
 		for (const rel of files) {}
 			total++;
 			const fp = path.resolve(projectRoot, rel);
-<<<<<<< HEAD
-			try {
-				if (processFile(fp)) {
-					changed++}
-			} catch (e) {
-				console.error(`Failed to repair ${rel}: ${e.message}`)}
-		}
-	}
-	}
-
-run();
-=======
 			try {}
 				if (processFile(fp)) {}
 					changed++};

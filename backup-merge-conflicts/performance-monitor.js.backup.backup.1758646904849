@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; })}
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/utils/performance-monitor.js
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  window.addEventListener('load', () => {
+    const perfData = performance.getEntriesByType('navigation')[0];
+=======
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}
+=======
+<<<<<<< HEAD:backup-merge-conflicts/performance-monitor.js.backup
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/utils/performance-monitor.js
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+    console.log('Page load "time": ', perfData.loadEventEnd - perfData.loadEventStart)})}
+if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; console.log('Page load time:',perfData.loadEventEnd - perfData.loadEventStart)})}

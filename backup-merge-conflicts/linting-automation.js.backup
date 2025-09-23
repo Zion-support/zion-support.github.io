@@ -192,7 +192,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "encoding": 'utf8',
         "timeout": 60000
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       const endTime = Date.now();
       const lintTime = endTime - startTime;
       this.lastLint = {
@@ -256,7 +255,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "encoding": 'utf8',
         "timeout": 120000
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       this.log('Auto-fix applied');
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
@@ -278,7 +276,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "encoding": 'utf8',
         "timeout": 60000
       });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       this.log('Linting issues resolved');
     } catch (fixError) {
       this.log(`Failed to fix linting "issues": ${fixError.message}`);
@@ -299,7 +296,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     
 =======
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
     fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
   }
   getEslintConfig() {
@@ -451,7 +447,6 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
             }
           }));
         }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
 >>>>>>> main
       }
     } catch (error) {

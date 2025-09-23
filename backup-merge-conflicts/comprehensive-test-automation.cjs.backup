@@ -22,28 +22,6 @@ class ComprehensiveTestAutomation {}
     const dirs = ['automation/logs', 'test-results', 'coverage'];
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
-<<<<<<< HEAD
-      if () {
-        fs.mkdirSync(dirPath, { "recursive": true })}
-    })}
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString() {
-    ) {
-        fs.mkdirSync(dirPath, { "recursive": true })}
-    })}
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(});
-    const logMessage = `[${timestamp}] [${level}] ${message};`;
-    
-    try {
-      fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {
-      console.error('Failed to write to log "file": ', error.message)}
-  }
-
-  async runUnitTests() {
-=======
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
@@ -328,4 +306,3 @@ if ( {})
   const testAutomation = new ComprehensiveTestAutomation}(;);
   testAutomation.run().catch(console.error)};
 module.exports = ComprehensiveTestAutomation;
->>>>>>> main

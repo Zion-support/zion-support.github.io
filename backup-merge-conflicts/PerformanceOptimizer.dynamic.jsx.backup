@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/PerformanceOptimizer.dynamic.jsx.backup
-<<<<<<< HEAD
-const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{"; loading: () => <p>Loading.</p,>,}) export: "default PerformanceOptimizer" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/PerformanceOptimizer.dynamic.jsx
@@ -11,7 +7,6 @@ const PerformanceOptimizer = dynamic(() => import(\"./PerformanceOptimizer\"),{\
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/PerformanceOptimizer.dynamic.jsx
 >>>>>>> pr-11935
 const PerformanceOptimizer = dynamic(() => import("./PerformanceOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default PerformanceOptimizer' ,'
 <<<<<<< HEAD

@@ -118,7 +118,6 @@ class ESLintErrorFixer {
     this.log('info', 'Starting ESLint Error Fixer Service...');
     
     try {}
->>>>>>> main
       this.ensureDirectories();
       await this.performESLintFixes();
       this.startContinuousFixing();

@@ -4,20 +4,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-    this.errors = []
-    this.warnings = []
-    this.suggestions = []}
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString()
-    }
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  scanFile(filePath) {
-    try {
-=======
   log(message, level = "INFO")
       fs.mkdirSync(this.reportsDir, { "recursive"})
 =======
@@ -85,4 +71,3 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
     this.log("� Error detection completed!", "SUCCESS")
->>>>>>> main

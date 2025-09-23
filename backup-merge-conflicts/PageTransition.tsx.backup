@@ -23,7 +23,6 @@ const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "}
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/PageTransition.tsx
 ;

@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/TalentResults.jsx.backup
-<<<<<<< HEAD
-"export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {.activeFiltersProps} /> {} ";"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:src.disabled/components/talent/TalentResults.jsx
@@ -11,7 +7,6 @@
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/components/talent/TalentResults.jsx
 >>>>>>> pr-11935
 "export function TalentResults({" talents,totalCount,isLoading,viewProfile,handleBook,handleMessage,isAuthenticated,activeFiltersProps}) { return (); <div className="flex-1">" {}" <ActiveFilters {...activeFiltersProps} /> {} ";""
 <<<<<<< HEAD

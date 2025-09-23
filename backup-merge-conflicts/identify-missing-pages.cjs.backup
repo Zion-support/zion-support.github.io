@@ -5,46 +5,6 @@ const path = require("path")
     const routeMatches = appContent.match(/path=")
       ? routeMatches.map(match => match.replace("path= ").replace(", ")
     const pagesDir = "src/pages"
-<<<<<<< HEAD
-    const pageFiles = await getAllFiles(pagesDir)
-    // Extract page names from files
-    const existingPages = pageFiles.map(file => {
-      const fileName = path.basename(file, path.extname(file))
-      return fileName.toLowerCase()})
-    routes.forEach(route => )
-    existingPages.forEach(page => )
-const fs = require("fs").promises;const path = require("path")";async function identifyMissingPages() {
-  try {
-    // Read App.tsx to extract routes
-    const appContent = await fs.readFile("src/App.tsx", "utf8");";    // Extract routes from App.tsx
-    const routeMatches = appContent.match(/path="([^"]+)/g);    const routes = routeMatches;";      ? routeMatches.map(match => match.replace("path=" "").replace("", ""))";      : []
-    // Get all page files
-    const pagesDir = "src/pages";    const pageFiles = await getAllFiles(pagesDir)
-    // Extract page names from files
-    const existingPages = pageFiles.map(file => {),const fileName = path.basename(file, path.extname(file))
-      return fileName.toLowerCase()})
-        routes.forEach(route => )
-        existingPages.forEach(page => )
-    // Identify missing pages
-    const missingPages = []
-    for (const route of routes) {
-      if (route === "/" || route === "*") continue
-      const routeName = route.replace("/", ").replace("-", ").toLowerCase()
-      const hasPage = existingPages.some(
-        page =>
-          page.includes(routeName) ||
-          page.includes(route.replace("/", ").toLowerCase()))
-      if (!hasPage) {
-        missingPages.push(route)}
-    }
-    if (missingPages.length === 0) {
-      } else {
-      missingPages.forEach(page => )}
-    // Generate recommendations
-    if (missingPages.length > 0) {:`)
-      missingPages.forEach(page => {
-        const pageName = page
-=======
 // console.log("=== ROUTES FROM APP.TSX ===")
     console.log("\n=== EXISTING PAGE FILES ===")
 const fs = require("fs").promises;const path = require("path")"

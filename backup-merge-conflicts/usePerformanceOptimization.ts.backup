@@ -39,7 +39,6 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {};) => {;
->>>>>>> main
   const {;
 <<<<<<< HEAD
 =======

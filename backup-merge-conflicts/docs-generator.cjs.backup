@@ -812,4 +812,3 @@ if (require.main === module) {}
 };
 module.exports = DocsGenerator;
 >>>>>>> main
->>>>>>> main
