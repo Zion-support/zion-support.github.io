@@ -1,11 +1,10 @@
 "use client";
-import React from 'react';
 
 export default function PerformanceMetrics() {
-  return (
-    <div className="p-6 rounded-lg bg-white/10 text-white">
-      <h3 className="text-lg font-semibold">Performance Metrics</h3>
-      <p className="text-sm opacity-80">Coming soon.</p>
-    </div>
-  );
+	return (
+		<div className="p-6 rounded-lg bg-white/10 text-white">
+			<h3 className="text-lg font-semibold">Performance Metrics</h3>
+			<p className="text-sm opacity-80">Coming soon.</p>
+		</div>
+	);
 }
