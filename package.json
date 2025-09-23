@@ -10,13 +10,7 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-<<<<<<< HEAD
     "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint src pages app lib components hooks --fix",
-    "type-check": "tsc --noEmit",
-=======
-    "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
->>>>>>> cursor/check-fix-push-and-merge-to-main-3eef
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
@@ -28,11 +22,8 @@
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
     "postinstall": "echo 'Type-check skipped (non-blocking)'",
-<<<<<<< HEAD
-=======
     "lint:fix": "eslint src pages app lib components hooks --fix",
     "type-check": "tsc --noEmit",
->>>>>>> cursor/check-fix-push-and-merge-to-main-3eef
     "format": "prettier --write ."
   },
   "dependencies": {
