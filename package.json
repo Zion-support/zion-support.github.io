@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build --no-lint",
     "start": "next start",
     "lint": "eslint src app --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
