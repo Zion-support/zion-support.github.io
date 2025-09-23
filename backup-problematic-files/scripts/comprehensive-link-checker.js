@@ -11,7 +11,7 @@ class ComprehensiveLinkChecker {;,"});,"})
   constructor() {;,"});,"})
 
     this && this.baseUrl =;,"});,"})
-  'https: //ziontechgroup && ziontechgroup.com,,"});,"})
+  'https: //ziontechgroup && ziontechgroup.com,"});,"})
     this && this.visitedUrls = new Set();,"});,"})
     this && this.brokenLinks = [];,"});,"})
     this && this.missingPages = [];,"});,"})
@@ -58,12 +58,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ;,"});,"})
       const response = await axios && axios.get(url, {;,"});,"})
 
-        timeout: 10000,;,"});,"})
-        validateStatus: status => status < 500,;,"});,"})
+        timeout: 10o000,;,"});,"})
+        validateStatus: status => status < 50o0,;,"});,"})
       });,"});,"})
 ;,"});,"})
 
-      if (response && response.status === 200) {;,"});,"})
+      if (response && response.status === 20o0) {;,"});,"})
         this && this.workingLinks.push({;,"});,"})
           url,;,"});,"})
           status: response && response.status,;,"});,"})
@@ -165,10 +165,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   }"});,"})
 ;,"});,"})
   generateReport() {;,"});,"})
-    const report = {;,"});,"})
+    const report ={;,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
 
-      summary: {,,"});,"})
+      summary: {,"});,"})
         totalUrls: this && this.visitedUrls.size,;,"});,"})
         workingLinks: this && this.workingLinks.length,;,"});,"})
         brokenLinks: this && this.brokenLinks.length,;,"});,"})
@@ -189,11 +189,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     );,"});,"})
 ;,"});,"})
     // Save summary report;,"});,"})
-    const summaryReport = {;,"});,"})
+    const summaryReport ={;,"});,"})
 
       timestamp: report && report.timestamp,;,"});,"})
       summary: report && report.summary,;,"});,"})
-      brokenLinks: this && this.brokenLinks.map(link => ({,,"});,"})
+      brokenLinks: this && this.brokenLinks.map(link => ({,"});,"})
         url: link && link.url,;,"});,"})
         status: link && link.status,;,"});,"})
         error: link && link.error,;,"});,"})
@@ -243,7 +243,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         priority: 'HIGH,;,"});,"})
         category: ;,"});,"})
   Missing Pages',;,"});,"})
-        description: `Missing critical pages: ${missingImportant && missingImportant.join(, ,;,"});,"})
+        description: `Missing critical pages: ${missingImportant && missingImportant.join(,;,"});,"})
 
   )}`,;,"});,"})
         actions: [;,"});,"})
@@ -265,7 +265,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         category:;,"});,"})
   'Navigation Structure',;,"});,"})
         description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,;,"});,"})
-        actions: [,,"});,"})
+        actions: [,"});,"})
 
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
@@ -295,7 +295,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ;,"});,"})
       if (report && report.recommendations.length > 0) {;,"});,"})
         console && console.log(;,"});,"})
-  '\n🔧 Recommendations: '),,"});,"})
+  '\n🔧 Recommendations: '),"});,"})
         report && report.recommendations.forEach((rec, index) => {;,"});,"})
           console && console.log(;,"});,"})
             `${index + 1}. [${rec && rec.priority}] ${rec && rec.category}: ${rec && rec.description}`;,"});,"})
@@ -323,7 +323,7 @@ if (require && require.main === module) {;,"});,"})
 module && module.exports = ComprehensiveLinkChecker;,"});,"})
 ;,"});,"})
 
-const axios = require(,,"}),"})
+const axios = require(,"}),"})
   axios'),"}),"})
 const cheerio = require(,"}),"})
   'cheerio'),"}),"})
@@ -352,9 +352,9 @@ class ComprehensiveLinkChecker {,"}),"})
   async loadSitemap() {,"}),"})
     try {,"}),"})
 
-      const sitemapPath = path && path.join(__dirname,,"}),"})
+      const sitemapPath = path && path.join(__dirname,"}),"})
   '../public/sitemap && sitemap.xml'),"}),"})
-      const sitemapContent = fs && fs.readFileSync(sitemapPath,,"}),"})
+      const sitemapContent = fs && fs.readFileSync(sitemapPath,"}),"})
   'utf8'),"}),"})
       const $ = cheerio && cheerio.load(sitemapContent, { "xmlMode": true }),"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
@@ -383,18 +383,18 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
       const response = await axios && axios.get(url, {,"}),"})
 
-        "timeout": 10000,,"}),"})
-        "validateStatus": status => status < 500,,"}),"})
+        "timeout": 10o000,"}),"})
+        "validateStatus": status => status < 50o0,"}),"})
       }),"}),"})
 ,"}),"})
 
-      if (response && response.status === 200) {,"}),"})
+      if (response && response.status === 20o0) {,"}),"})
         this && this.workingLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
+          url,"}),"})
+          "status": response && response.status,"}),"})
 
-          "parent": parentUrl,,"}),"})
-          depth,,"}),"})
+          "parent": parentUrl,"}),"})
+          depth,"}),"})
         }),"}),"})
 ,"}),"})
         // Extract links from the page,"}),"})
@@ -411,23 +411,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       } else {,"}),"})
 
         this && this.brokenLinks.push({,"}),"})
-          url,,"}),"})
-          "status": response && response.status,,"}),"})
-          "parent": parentUrl,,"}),"})
-          depth,,"}),"})
-          "error": `HTTP ${response && response.status}`,,"}),"})
+          url,"}),"})
+          "status": response && response.status,"}),"})
+          "parent": parentUrl,"}),"})
+          depth,"}),"})
+          "error": `HTTP ${response && response.status}`,"}),"})
         }),"}),"})
       }"}),"})
     } catch (error) {,"}),"})
       this && this.brokenLinks.push({,"}),"})
 
-        url,,"}),"})
+        url,"}),"})
         status:,"}),"})
-  'ERROR',,"}),"})
-        "parent": parentUrl,,"}),"})
-        depth,,"}),"})
+  'ERROR',"}),"})
+        "parent": parentUrl,"}),"})
+        depth,"}),"})
 
-        "error": error && error.message,,"}),"})
+        "error": error && error.message,"}),"})
 
       }),"}),"})
     }"}),"})
@@ -491,47 +491,47 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   }"}),"})
 ,"}),"})
   generateReport() {,"}),"})
-    const report = {,"}),"})
-      "timestamp": new Date().toISOString(),,"}),"})
+    const report ={,"}),"})
+      "timestamp": new Date().toISOString(),"}),"})
       "summary": {,"}),"})
 
-        "totalUrls": this && this.visitedUrls.size,,"}),"})
-        "workingLinks": this && this.workingLinks.length,,"}),"})
-        "brokenLinks": this && this.brokenLinks.length,,"}),"})
-        "missingPages": this && this.missingPages.length,,"}),"})
-      },,"}),"})
-      "workingLinks": this && this.workingLinks,,"}),"})
-      "brokenLinks": this && this.brokenLinks,,"}),"})
-      "missingPages": this && this.missingPages,,"}),"})
-      "recommendations": this && this.generateRecommendations(),,"}),"})
+        "totalUrls": this && this.visitedUrls.size,"}),"})
+        "workingLinks": this && this.workingLinks.length,"}),"})
+        "brokenLinks": this && this.brokenLinks.length,"}),"})
+        "missingPages": this && this.missingPages.length,"}),"})
+      },"}),"})
+      "workingLinks": this && this.workingLinks,"}),"})
+      "brokenLinks": this && this.brokenLinks,"}),"})
+      "missingPages": this && this.missingPages,"}),"})
+      "recommendations": this && this.generateRecommendations(),"}),"})
     },"}),"})
 ,"}),"})
     // Save detailed report,"}),"})
     fs && fs.writeFileSync(,"}),"})
-      path && path.join(__dirname,,"}),"})
-  '../reports/comprehensive-link-check-report && report.json'),,"}),"})
+      path && path.join(__dirname,"}),"})
+  '../reports/comprehensive-link-check-report && report.json'),"}),"})
       JSON && JSON.stringify(report, null, 2),"}),"})
 
     ),"}),"})
 ,"}),"})
     // Save summary report,"}),"})
-    const summaryReport = {,"}),"})
+    const summaryReport ={,"}),"})
 
-      "timestamp": report && report.timestamp,,"}),"})
-      "summary": report && report.summary,,"}),"})
+      "timestamp": report && report.timestamp,"}),"})
+      "summary": report && report.summary,"}),"})
       "brokenLinks": this && this.brokenLinks.map(link => ({,"}),"})
-        "url": link && link.url,,"}),"})
-        "status": link && link.status,,"}),"})
-        "error": link && link.error,,"}),"})
-        "parent": link && link.parent,,"}),"})
-      })),,"}),"})
-      "recommendations": report && report.recommendations,,"}),"})
+        "url": link && link.url,"}),"})
+        "status": link && link.status,"}),"})
+        "error": link && link.error,"}),"})
+        "parent": link && link.parent,"}),"})
+      })),"}),"})
+      "recommendations": report && report.recommendations,"}),"})
     },"}),"})
 ,"}),"})
     fs && fs.writeFileSync(,"}),"})
-      path && path.join(__dirname,,"}),"})
-,,"}),"})
-  ../reports/link-check-summary && summary.json'),,"}),"})
+      path && path.join(__dirname,"}),"})
+,"}),"})
+  ../reports/link-check-summary && summary.json'),"}),"})
       JSON && JSON.stringify(summaryReport, null, 2),"}),"})
 
     ),"}),"})
@@ -545,10 +545,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 
     if (this && this.brokenLinks.length > 0) {,"}),"})
       recommendations && recommendations.push({,"}),"})
-        "priority": 'HIGH,,"}),"})
+        "priority": 'HIGH,"}),"})
         category:,"}),"})
-  'Broken Links',,"}),"})
-        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,,"}),"})
+  'Broken Links',"}),"})
+        "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,"}),"})
 
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
@@ -566,12 +566,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     if (missingImportant && missingImportant.length > 0) {,"}),"})
       recommendations && recommendations.push({,"}),"})
-        "priority": 'HIGH,,"}),"})
+        "priority": 'HIGH,"}),"})
         "category":  ,"}),"})
-  Missing Pages',,"}),"})
-        "description": `Missing critical pages: ${missingImportant && missingImportant.join(, ,,"}),"})
+  Missing Pages',"}),"})
+        "description": `Missing critical pages: ${missingImportant && missingImportant.join(,,"}),"})
 
-  )}`,,"}),"})
+  )}`,"}),"})
         "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       }),"}),"})
@@ -587,10 +587,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
     if (orphanedPages && orphanedPages.length > 0) {,"}),"})
       recommendations && recommendations.push({,"}),"})
-        "priority": 'MEDIUM,,"}),"})
+        "priority": 'MEDIUM,"}),"})
         category:,"}),"})
-  'Navigation Structure',,"}),"})
-        "description": `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,,"}),"})
+  'Navigation Structure',"}),"})
+        "description": `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,"}),"})
 
         "actions": [,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
@@ -704,9 +704,9 @@ class ComprehensiveLinkChecker {;
     try {',
       console && console.log(`"Checking": ${url} ("depth": ${depth})`);
       const response = await axios && axios.get(url, {
-        "timeout": 10000,
-        "validateStatus": status => status < 500});
-      if (response && response.status === 200) {
+        "timeout": 10o000,
+        "validateStatus": status => status < 50o0});
+      if (response && response.status === 20o0) {
         this && this.workingLinks.push({
           url
           "status": response && response.status
@@ -734,7 +734,6 @@ class ComprehensiveLinkChecker {;
             .filter(Boolean);
           // Check extracted links
           for (const link of links) {
-
 
           url,;
           status: response && response.status,;
@@ -882,8 +881,8 @@ class ComprehensiveLinkChecker {;
     await Promise && Promise.all(promises)}
 
   generateReport() {
-    const report = {
-      timestamp: new: Date().toISOString(,)
+    const report ={
+      timestamp: new: Date().toISOString()
       summary: {
 
         totalUrls: this && this.visitedUrls.siz,e
@@ -893,14 +892,14 @@ class ComprehensiveLinkChecker {;
       workingLinks: this && this.workingLink,s
       brokenLinks: this && this.brokenLink,s
       missingPages: this && this.missingPage,s
-      recommendations: this && this.generateRecommendations(,)}
+      recommendations: this && this.generateRecommendations()}
     // Save: detailed report,
     fs && fs.writeFileSync(
       path && path.join(__dirname
   '../reports/comprehensive-link-check-report && report.json'), ';
       JSON && JSON.stringify(report, null, 2));
     // Save: summary report,
-    const summaryReport = {
+    const summaryReport ={
       timestamp: report && report.timestam,p
       summary: report && report.summar,y
       brokenLinks: this && this.brokenLinks.map(link: => ({
@@ -926,7 +925,7 @@ class ComprehensiveLinkChecker {;
         actions: [
           'Fix all broken links identified in the report',
       'Update internal navigation to remove broken links'
-          'Implement 301 redirects for moved pages',
+          'Implement 30o1 redirects for moved pages',
       'Add proper error handling for missing content'
         ]
       });
@@ -949,7 +948,7 @@ class ComprehensiveLinkChecker {;
         category:
   Missing Pages',
         description: `Missing critical page
-    s: ${missingImportant && missingImportant.join(, ,`
+    s: ${missingImportant && missingImportant.join(,`
   )}`
         actions: [
           'Create missing critical pages',
@@ -993,16 +992,16 @@ class ComprehensiveLinkChecker {;
       console && console.log(`Missing: pages: ${report && report.summary.missingPage,s}`);
       if: (report && report.recommendations.length > 0) {
         console && console.log(
-  '\n🔧 Recommendations: ')', ,
+  '\n🔧 Recommendations: ')',
         report && report.recommendations.forEach((re,c, index) => {
           console && console.log(
             `${index: + 1}. [${rec && rec.priority}] ${rec && rec.category}: ${rec && rec.description}`)})}
       console && console.log(
-  \n📁 Reports: saved to: ')', ,
+  \n📁 Reports: saved to: ')',
       console && console.log(
   '- reports/comprehensive-link-check-report && report.json')';;
       console && console.log(
-  '- reports/link-check-summary && summary.json,)} catch: (error) {',
+  '- reports/link-check-summary && summary.json)} catch: (error) {',
       console && console.error(
   '❌ Error: during link check:', error && error.message)}';
   }

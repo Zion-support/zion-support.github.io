@@ -20,7 +20,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
 
   it('renders children when there is no error', () => {'    render(
       <MarketplaceErrorBoundary>
-        <ThrowError shouldThrow={false} />
+        <ThrowError shouldThrow={false}  />
       </MarketplaceErrorBoundary>
     );
 
@@ -28,14 +28,14 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
 
   it('renders error fallback when there is an error', () => {'    render(
       <MarketplaceErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError shouldThrow={true}  />
       </MarketplaceErrorBoundary>
     );
 
     expect(screen.getByText('Something went wrong in the marketplace')).toBeInTheDocument();    expect(screen.getByText('Test error')).toBeInTheDocument();    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument();    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument();  });
 
   it('logs error to Sentry when an error occurs', () => {'    const mockWithScope = jest.fn((callback) => {
-      const scope = {
+      const scope ={
         setTag: jest.fn(),
         setContext: jest.fn(),
         setLevel: jest.fn()
@@ -46,7 +46,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
 
     render(
       <MarketplaceErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError shouldThrow={true}  />
       </MarketplaceErrorBoundary>
     );
 
@@ -58,7 +58,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
 
     render(
       <MarketplaceErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError shouldThrow={true}  />
       </MarketplaceErrorBoundary>
     );
 
@@ -80,7 +80,7 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
 
     render(
       <MarketplaceErrorBoundary>
-        <ThrowError shouldThrow={true} />
+        <ThrowError shouldThrow={true}  />
       </MarketplaceErrorBoundary>
     );
 

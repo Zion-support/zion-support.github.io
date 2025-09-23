@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function CybersecurityChatPage() {
@@ -6,7 +5,7 @@ export default function CybersecurityChatPage() {
     <>
       <Head>
         <title>Cybersecurity Chat - Zion Tech Group</title>
-        <meta name="description" content="cybersecurity chat page" />
+        <meta name="description" content="cybersecurity chat page"  />
       </Head>
       
       <main>

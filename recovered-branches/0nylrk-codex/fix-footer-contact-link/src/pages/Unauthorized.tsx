@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ShieldAlert } from "lucide-react";
-=======
 
 
 
@@ -17,11 +10,9 @@ import {Footer} from "@/components/Footer";
 import {ShieldAlert} from "lucide-react";
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function Unauthorized() {
   return (
@@ -41,11 +32,7 @@ export default function Unauthorized() {
           <div className="flex flex-col gap-3">
             <Link
               to="/"
-<<<<<<< HEAD
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
-=======
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             >
               Return to Home
             </Link>
@@ -60,10 +47,6 @@ export default function Unauthorized() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 
@@ -151,4 +134,4 @@ function Unauthorized() {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

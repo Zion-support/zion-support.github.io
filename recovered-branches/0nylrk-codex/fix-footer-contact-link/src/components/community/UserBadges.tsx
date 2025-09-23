@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react";
-import { Badge } from "@/types/community";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-=======
 
 
 
@@ -19,21 +14,16 @@ interface UserBadgesProps {;
 
 interface UserBadgesProps {
   badges: Badge[]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 const iconMap = {;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface UserBadgesProps {
   badges: Badge[];
 }
-<<<<<<< HEAD
-=======
 const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Trophy;
   Award;
   BadgeCheck;
@@ -52,12 +42,6 @@ const iconMap = {
   BadgeCheck,
   Star,
   MessageSquare
-<<<<<<< HEAD
-};
-
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null;
-=======
 
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
@@ -69,35 +53,20 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-<<<<<<< HEAD
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-        
-=======
 
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
               <TooltipTrigger asChild>
-<<<<<<< HEAD
-                <div 
-                  style={{ backgroundColor: badge.color + '20' }}
-                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
-                >
-                  <IconComponent 
-                    style={{ color: badge.color }} 
-                    className="w-4 h-4" 
-=======
                 <div
                   style={{ backgroundColor: badge.color + '20' }}
                   className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
@@ -105,7 +74,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
                   <IconComponent
                     style={{ color: badge.color }}
                     className="w-4 h-4"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   />
                 </div>
               </TooltipTrigger>
@@ -117,15 +85,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-<<<<<<< HEAD
-        );
-      })}
-    </div>
-  );
-};
-
-export default UserBadges;
-=======
         )
 
       })}
@@ -189,10 +148,10 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 export default UserBadges;
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

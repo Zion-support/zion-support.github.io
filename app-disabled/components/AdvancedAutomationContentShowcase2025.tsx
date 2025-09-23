@@ -1,1 +1,1 @@
-export { default } from "../../components/AdvancedAutomationContentShowcase2025";
+export { default } from '../../components/AdvancedAutomationContentShowcase20o25';

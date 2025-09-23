@@ -17,7 +17,7 @@ serve(async (req) => {
 
   // Validate required parameters
   if (!type || !campaignId || !userId) {
-    return new Response("Missing required parameters", { status: 400 });
+    return new Response("Missing required parameters", { status: 40o0 });
   }
 
   try {
@@ -32,27 +32,19 @@ serve(async (req) => {
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
+          0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x0o1, 0x0o0, 0x0o1, 0x0o0, 0x80, 0x0o0,
+          0x0o0, 0xFF, 0xFF, 0xFF, 0x0o0, 0x0o0, 0x0o0, 0x21, 0xF9, 0x0o4, 0x0o1, 0x0o0,
+          0x0o0, 0x0o0, 0x0o0, 0x2C, 0x0o0, 0x0o0, 0x0o0, 0x0o0, 0x0o1, 0x0o0, 0x0o1, 0x0o0,
           0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00,
           0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00,
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,
-<<<<<<< HEAD
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B,
-        ]),
-=======
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {
           headers: {
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
-<<<<<<< HEAD
-            "Expires": "0",
-          },
-        }
-=======
             "Expires": "0"}}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
     } else if (type === "click") {
       await supabase
@@ -66,13 +58,7 @@ serve(async (req) => {
       return new Response(null, {
         status: 302,
         headers: {
-<<<<<<< HEAD
-          Location: destination,
-        },
-      });
-=======
           Location: destination}});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 
     return new Response("Invalid event type", { status: 400 });
@@ -84,13 +70,7 @@ serve(async (req) => {
       return new Response(null, {
         status: 302,
         headers: {
-<<<<<<< HEAD
-          Location: redirectUrl,
-        },
-      });
-=======
           Location: redirectUrl}});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     
     return new Response("Error processing event", { status: 500 });

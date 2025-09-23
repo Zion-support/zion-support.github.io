@@ -8,7 +8,12 @@ interface SendMessageParams {
   message: string;
 }
 
-export async function sendMessage({ productId, sellerId, subject, message }: SendMessageParams) {
+export async function sendMessage({
+  productId,
+  sellerId,
+  subject,
+  message,
+}: SendMessageParams) {
   return apiHelper(() =>
     apiClient.post('/messages', { productId, sellerId, subject, message })
   );

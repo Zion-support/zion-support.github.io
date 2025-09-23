@@ -25,23 +25,23 @@ exports.handler = async function(event, context) {
     const branch = process.env.GITHUB_BRANCH || 'main';
 
     const seeds = ['/', '/blog', '/automation/innovations'];
-    const pages = {};
+    const pages ={};
 
     for (const path of seeds) {
       const url = origin.replace(/\/$/, '') + path;
       try {
         const res = await fetch(url);
         const html = await res.text();
-        pages[path] = {
+        pages[path] ={
           status: res.status,
           links: extractLinks(html, origin)
         };
       } catch (e) {
-        pages[path] = { status: 0, error: String(e), links: [] };
+        pages[path] ={ status: 0, error: String(e), links: [] };
       }
     }
 
-    const index = {
+    const index ={
       generatedAt: new Date().toISOString(),
       origin,
       seeds,
@@ -49,7 +49,7 @@ exports.handler = async function(event, context) {
     };
 
     if (!token) {
-      return { statusCode: 200, body: JSON.stringify({ ok: true, index, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, index, note: 'No GITHUB_TOKEN set, skipping commit' }) };
     }
 
     const path = 'data/site-index.json';
@@ -88,8 +88,8 @@ exports.handler = async function(event, context) {
       return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, path, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
   }
 };

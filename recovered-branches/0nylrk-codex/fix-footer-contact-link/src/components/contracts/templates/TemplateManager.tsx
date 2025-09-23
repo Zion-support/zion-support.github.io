@@ -1,17 +1,12 @@
-
-import { useState } from "react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { ContractTemplate } from "@/types/contracts";
-<<<<<<< HEAD
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-=======
-import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-import { Button } from "@/components/ui/button";
-import { TemplateList } from "./TemplateList";
-import { TemplateSaveForm } from "./TemplateSaveForm";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from 'react';
+import { useContractTemplates } from '@/hooks/useContractTemplates';
+import { ContractTemplate } from '@/types/contracts';
+import { DialogContentDialogHeaderDialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { TemplateList } from './TemplateList';
+import { TemplateSaveForm } from './TemplateSaveForm';
+import { ContractFormValues } from '@/components/contracts/components/ContractForm';
+import { useToast } from '@/hooks/use-toast';
 
 interface TemplateManagerProps {
   isOpen: boolean;
@@ -24,17 +19,12 @@ export function TemplateManager({
   isOpen,
   onClose,
   onSelectTemplate,
-  currentValues
+  currentValues,
 }: TemplateManagerProps) {
-<<<<<<< HEAD
-  const [mode, setMode] = useState<"list" | "save">("list");
-  const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
-  const { templates, isLoading } = useContractTemplates();
-=======
-  const [modesetMode] = useState<"list" | "save">("list");
-  const [selectedTemplatesetSelectedTemplate] = useState<ContractTemplate | null>(null);
+  const [modesetMode] = useState<'list' | 'save'>('list');
+  const [selectedTemplatesetSelectedTemplate] =
+    useState<ContractTemplate | null>(null);
   const { templatesisLoading } = useContractTemplates();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { toast } = useToast();
 
   const handleSelectTemplate = (template: ContractTemplate) => {
@@ -42,56 +32,52 @@ export function TemplateManager({
       onSelectTemplate(template.template_data);
       onClose();
       toast({
-        title: "Template loaded",
-<<<<<<< HEAD
+        title: 'Template loaded',
         description: `Template "${template.title}" has been loaded.`,
       });
-=======
-        description: `Template "${template.title}" has been loaded.`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
   const handleSaveComplete = () => {
-    setMode("list");
+    setMode('list');
     setSelectedTemplate(null);
   };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+      <DialogContent className='sm:max-w-lg max-h-[90vh] overflow-y-auto'>
         <DialogHeader>
           <DialogTitle>
-            {mode === "list" ? "Contract Templates" : "Save Template"}
+            {mode === 'list' ? 'Contract Templates' : 'Save Template'}
           </DialogTitle>
         </DialogHeader>
 
-        {mode === "list" ? (
-          <div className="space-y-4">
-            <div className="flex justify-end">
-              <Button 
-                variant="outline" 
-                onClick={() => setMode("save")}
+        {mode === 'list' ? (
+          <div className='space-y-4'>
+            <div className='flex justify-end'>
+              <Button
+                variant='outline'
+                onClick={() => setMode('save')}
                 disabled={!currentValues}
               >
                 Save Current as Template
               </Button>
             </div>
-            
-            <TemplateList 
+
+            <TemplateList
               templates={templates}
               isLoading={isLoading}
               onSelect={handleSelectTemplate}
-              onEdit={(template) => {
+              onEdit={template => {
                 setSelectedTemplate(template);
-                setMode("save");
+                setMode('save');
               }}
             />
           </div>
         ) : (
-          <TemplateSaveForm 
+          <TemplateSaveForm
             onCancel={() => {
-              setMode("list");
+              setMode('list');
               setSelectedTemplate(null);
             }}
             onComplete={handleSaveComplete}

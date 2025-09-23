@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { listVendors } from '../../../utils/vendor-store';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const vendors = listVendors();
-  res.status(200).json({ vendors });
-}
-=======
 
 import { listVendors } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -20,7 +12,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
   res.status(200).json({ vendors })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -53,7 +44,6 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -64,3 +54,4 @@ function handler() {
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

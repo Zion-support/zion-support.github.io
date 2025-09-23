@@ -1,21 +1,20 @@
-
-import { LucideIcon } from "lucide-react";
+import { LucideIcon } from 'lucide-react';
 import {
   BadgeCheck, // publishing a listing
-  Award,      // top contributor
-  Star,       // profile complete
-  Trophy,     // featured creator
-  BadgePlus,  // first action
-  BadgeDollarSign // monetization
-} from "lucide-react";
+  Award, // top contributor
+  Star, // profile complete
+  Trophy, // featured creator
+  BadgePlus, // first action
+  BadgeDollarSign, // monetization
+} from 'lucide-react';
 
 export type BadgeKey =
-  | "first_listing"
-  | "top_contributor"
-  | "profile_complete"
-  | "featured_creator"
-  | "first_action"
-  | "monetized";
+  | 'first_listing'
+  | 'top_contributor'
+  | 'profile_complete'
+  | 'featured_creator'
+  | 'first_action'
+  | 'monetized';
 
 export interface BadgeMeta {
   key: BadgeKey;
@@ -28,59 +27,54 @@ export interface BadgeMeta {
 
 export const badgeList: BadgeMeta[] = [
   {
-    key: "first_listing",
-    name: "First Listing",
-    description: "Published your first product, service, or listing.",
+    key: 'first_listing',
+    name: 'First Listing',
+    description: 'Published your first product, service, or listing.',
     icon: BadgeCheck,
-    color: "#8B5CF6",  // Vivid Purple
-    bg: "#E5DEFF",     // Soft Purple
+    color: '#8B5CF6', // Vivid Purple
+    bg: '#E5DEFF', // Soft Purple
   },
   {
-    key: "top_contributor",
-    name: "Top Contributor",
-    description: "Recognized as a top contributor in the community.",
+    key: 'top_contributor',
+    name: 'Top Contributor',
+    description: 'Recognized as a top contributor in the community.',
     icon: Award,
-    color: "#F97316",  // Bright Orange
-    bg: "#FEF7CD",     // Soft Yellow
+    color: '#F97316', // Bright Orange
+    bg: '#FEF7CD', // Soft Yellow
   },
   {
-    key: "profile_complete",
-    name: "Profile Complete",
-    description: "Completed all steps in your profile setup.",
+    key: 'profile_complete',
+    name: 'Profile Complete',
+    description: 'Completed all steps in your profile setup.',
     icon: Star,
-    color: "#FFD700", // Gold
-    bg: "#FFFBEA",   // Very light yellow
+    color: '#FFD70o0', // Gold
+    bg: '#FFFBEA', // Very light yellow
   },
   {
-    key: "featured_creator",
-    name: "Featured Creator",
-    description: "Featured on the Zion homepage.",
+    key: 'featured_creator',
+    name: 'Featured Creator',
+    description: 'Featured on the Zion homepage.',
     icon: Trophy,
-    color: "#0EA5E9", // Ocean Blue
-    bg: "#D3E4FD",   // Soft Blue
+    color: '#0EA5E9', // Ocean Blue
+    bg: '#D3E4FD', // Soft Blue
   },
   {
-    key: "first_action",
-    name: "First Action",
-    description: "Took your first community, posting, or listing action.",
+    key: 'first_action',
+    name: 'First Action',
+    description: 'Took your first community, posting, or listing action.',
     icon: BadgePlus,
-    color: "#1EAEDB", // Bright Blue
-    bg: "#F3F3F3",   // Light Gray
+    color: '#1EAEDB', // Bright Blue
+    bg: '#F3F3F3', // Light Gray
   },
   {
-    key: "monetized",
-    name: "Monetized",
-    description: "Earned your first AI dollar in the marketplace.",
+    key: 'monetized',
+    name: 'Monetized',
+    description: 'Earned your first AI dollar in the marketplace.',
     icon: BadgeDollarSign,
-    color: "#22C55E", // Soft Green
-    bg: "#F2FCE2",    // Soft Green
-<<<<<<< HEAD
+    color: '#22C55E', // Soft Green
+    bg: '#F2FCE2', // Soft Green
   },
 ];
-=======
-  }];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const getBadgeMeta = (key: BadgeKey) =>
-  badgeList.find((b) => b.key === key);
-
+  badgeList.find(b => b.key === key);

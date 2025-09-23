@@ -1,16 +1,9 @@
-import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
-  Award, MessageCircle, Calculator
-=======
   DollarSignTrendingUpShieldZapTargetBarChart3
   CheckCircleStarGlobeLockSmartphoneMonitor
   AwardMessageCircleCalculator
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 
 export default function AIFinancialPlanningPlatform() {
@@ -28,11 +21,7 @@ export default function AIFinancialPlanningPlatform() {
     {
       icon: <Target className="w-6 h-6" />,
       title: 'Goal-Based Planning',
-<<<<<<< HEAD
-      description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-=======
       description: 'Personalized financial planning based on your specific goalstimelineand risk tolerance.'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       icon: <Zap className="w-6 h-6" />,
@@ -47,11 +36,7 @@ export default function AIFinancialPlanningPlatform() {
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Real-Time Financial Insights',
-<<<<<<< HEAD
-      description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
-=======
       description: 'Live financial datamarket analysisand personalized recommendations updated in real-time.'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ];
 
@@ -71,50 +56,29 @@ export default function AIFinancialPlanningPlatform() {
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
 							<div className="rounded-2xl border border-emerald-400/30 p-6">
 								<h3 className="text-xl font-bold">Starter</h3>
-<<<<<<< HEAD
-								<p className="mt-2 text-gray-300">Up to 5 users, core models, board pack.</p>
-=======
 								<p className="mt-2 text-gray-300">Up to 5 userscore modelsboard pack.</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 								<p className="mt-4 text-3xl font-bold">$390<span className="text-base font-normal text-gray-300">/mo</span></p>
 							</div>
 							<div className="rounded-2xl border border-cyan-400/30 p-6">
 								<h3 className="text-xl font-bold">Growth</h3>
-<<<<<<< HEAD
-								<p className="mt-2 text-gray-300">25 users, consolidation, Snowflake/NetSuite.</p>
-=======
 								<p className="mt-2 text-gray-300">25 usersconsolidationSnowflake/NetSuite.</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 								<p className="mt-4 text-3xl font-bold">$1,290<span className="text-base font-normal text-gray-300">/mo</span></p>
 							</div>
 							<div className="rounded-2xl border border-amber-400/30 p-6">
 								<h3 className="text-xl font-bold">Enterprise</h3>
-<<<<<<< HEAD
-								<p className="mt-2 text-gray-300">Advanced governance, custom models, SSO.</p>
-								<p className="mt-4 text-3xl font-bold">Custom</p>
-							</div>
-						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
-=======
 								<p className="mt-2 text-gray-300">Advanced governancecustom modelsSSO.</p>
 								<p className="mt-4 text-3xl font-bold">Custom</p>
 							</div>
 						</div>
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a><a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a><a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 					</div>
 
   return (
     <>
       <Head>
         <title>AI Financial Planning Platform | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management." />
-        <meta name="keywords" content="AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor" />
-=======
         <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plansportfolio optimizationand risk management." />
         <meta name="keywords" content="AI financial planningwealth managementportfolio optimizationinvestment planningfinancial advisor" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <meta property="og:title" content="AI Financial Planning Platform | Zion Tech Group" />
         <meta property="og:description" content="Intelligent financial planning and wealth management with AI." />
         <meta property="og:type" content="website" />
@@ -142,13 +106,8 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                Intelligent financial planning and wealth management with AI. Get personalized plans, 
-                portfolio optimization, and risk management that drives financial success.
-=======
                 Intelligent financial planning and wealth management with AI. Get personalized plans
                 portfolio optimizationand risk management that drives financial success.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -170,8 +129,6 @@ export default function AIFinancialPlanningPlatform() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
 
                 portfolio optimization, and risk management that drives financial success.
               </p>
@@ -194,7 +151,6 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
           </div>
         </section>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,20 +170,12 @@ export default function AIFinancialPlanningPlatform() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {features.map((feature, index) => (
-=======
               {features.map((featureindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -256,30 +204,18 @@ export default function AIFinancialPlanningPlatform() {
                 Transform Your Financial Future
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Experience dramatic improvements in financial planning efficiency, investment returns, and 
-=======
                 Experience dramatic improvements in financial planning efficiencyinvestment returnsand 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 goal achievement with our AI-powered financial planning platform.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-              {benefits.map((benefit, index) => (
-=======
               {benefits.map((benefitindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-center space-x-3">
@@ -305,31 +241,18 @@ export default function AIFinancialPlanningPlatform() {
                 Comprehensive Financial Planning Solutions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                From retirement planning to investment management, our platform provides AI-powered 
-=======
                 From retirement planning to investment managementour platform provides AI-powered 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 solutions for every aspect of your financial life.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-<<<<<<< HEAD
-              {useCases.map((useCase, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
               {useCases.map((useCaseindex) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0scale: 0.8 }}
                   whileInView={{ opacity: 1scale: 1 }}
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">

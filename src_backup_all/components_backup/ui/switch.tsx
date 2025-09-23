@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '../../utils/cn';
 
 interface SwitchProps {
@@ -27,8 +26,8 @@ export function Switch({
 
   return (
     <button
-      type="button"
-      role="switch"
+      type='button'
+      role='switch'
       aria-checked={checked}
       aria-label={ariaLabel}
       disabled={disabled}

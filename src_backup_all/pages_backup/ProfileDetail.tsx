@@ -23,11 +23,9 @@ export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
 
-
-
   useEffect(() => {
     const fetchProfile = async () => {
-  useEffect((,) => {;
+  useEffect(() => {;
     const fetchProfile = async () => {;
       setIsLoading(true);
       setError(null);
@@ -35,7 +33,6 @@ export default function ProfileDetail() {
         if (!profileId) {;
           setError("Profile ID is missing.");
           return;
-
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -96,7 +93,6 @@ export default function ProfileDetail() {
     fetchProfile()
   }, [profileId]),
 
-
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -117,24 +113,18 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>
 
-
-
-
-
   }, [profileId]);
 
     )
 
-
-
       />
-      <Header />
+      <Header  />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
-        description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
+        description ={profileData && profileData.bio || "Check out this talent's profile on Zion!"}
       />;
-      <Header />;
+      <Header  />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
           {/* Main Content */}
@@ -145,7 +135,7 @@ export default function ProfileDetail() {
                 <div className="flex items-center space-x-4">
                   <Avatar className="w-20 h-20">
                     {profileData.profile_picture_url ? (
-                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name}  />
                     ) : (
                       <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
@@ -154,7 +144,7 @@ export default function ProfileDetail() {
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
                       {profileData.full_name}
                       {profileData.is_verified && (
-                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />
                       )}
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
@@ -247,9 +237,9 @@ if ( {) {
     <>;
       <SEO;
         title={`${profile_data.full_name} | Zion AI Marketplace`}
-        description = {profile_data.bio || "Check out this talent's profile on Zion!", }
-      />;
-      <Header />;
+        description ={profile_data.bio || "Check out this talent's profile on Zion!"}
+       />;
+      <Header  />;
       <div className="container mx - auto px - 4 py - 8">;
         <div className="grid grid - cols - 12 gap - 6">;
           {/* Main Content */}
@@ -260,14 +250,14 @@ if ( {) {
                 <div className="flex items - center space - x-4">;
                   <Avatar className="w - 20 h - 20">;
                     {profile_data.profile_picture_url ? (
-                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
+                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name}  />) : (
                       <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
                   </Avatar>;
                   <div>;
                     <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;
                       {profile_data.full_name}
                       {profile_data.is_verified && (
-                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
+                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan"  />)}
                     </CardTitle>;
                     <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
                   </div>;
@@ -275,14 +265,9 @@ if ( {) {
               </CardHeader>;
               <CardContent>;
 
-
-
                 </div>;
               </CardContent>;
             </Card>;
-
-
-
 
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
@@ -301,7 +286,7 @@ if ( {) {
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
-                  {profileData && profileData.skills?.map((skill: string, index: number,) => (;
+                  {profileData && profileData.skills?.map((skill: string, index: number) => (;
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
@@ -345,7 +330,7 @@ if ( {) {
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
-                        <LinkIcon className="h-4 w-4" />
+                        <LinkIcon className="h-4 w-4"  />
 
                 </div>;
               </CardContent>;
@@ -368,7 +353,7 @@ if ( {) {
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
-                  {profileData && profileData.skills?.map((skill: string, index: number,) => (;
+                  {profileData && profileData.skills?.map((skill: string, index: number) => (;
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
@@ -383,7 +368,7 @@ if ( {) {
               </CardHeader>;
               <CardContent>;
                 {profileData && profileData.experience ? (;
-                  profileData && profileData.experience.map((exp: any, index: number,) => (;
+                  profileData && profileData.experience.map((exp: any, index: number) => (;
                     <div key={index} className="mb-4">;
                       <h4 className="font-bold text-white">{exp && exp.title}</h4>;
                       <p className="text-zion-cyan">{exp && exp.company}</p>;
@@ -413,14 +398,14 @@ if ( {) {
               <CardContent>;
                 {profileData && profileData.portfolio_links ? (;
                   <div className="flex flex-col gap-3">;
-                    {profileData && profileData.portfolio_links.map((link: any, index: number,) => (;
+                    {profileData && profileData.portfolio_links.map((link: any, index: number) => (;
                       <a
-                        key = {index,}
-                        href = {link && link.url,}
+                        key ={index}
+                        href ={link && link.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2">;
-                        <LinkIcon className="h-4 w-4" />;
+                        <LinkIcon className="h-4 w-4"  />;
                         {link && link.title || link && link.url}
                       </a>;
                     ))}
@@ -432,7 +417,6 @@ if ( {) {
               </CardContent>;
             </Card>;
           </div>;
-
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
@@ -452,26 +436,26 @@ if ( {) {
                 hourly_rate: profileData?.hourly_rate || 0
 
               }}
-            />;
+             />;
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <div className="flex flex-col space-y-3">
                 {profileData.email && (
                   <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-4 w-4"  />
                     <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
                   </div>
                 )}
                 {profileData && profileData.phone && (;
                   <div className="flex items-center gap-2 text-zion-slate-light">;
-                    <Phone className="h-4 w-4" />;
+                    <Phone className="h-4 w-4"  />;
                     <span>{profileData && profileData.phone}</span>;
                   </div>;
                 )}
                 {profileData.website && (
                   <div className="flex items-center gap-2 text-zion-slate-light">
-                    <Globe className="h-4 w-4" />
+                    <Globe className="h-4 w-4"  />
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
                     </Link>
@@ -482,8 +466,6 @@ if ( {) {
               </div>;
             </div>;
 
-
-
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -491,31 +473,27 @@ if ( {) {
                 {profileData && profileData.github_url && (;
                   <a
 
-
-                    href = {profileData && profileData.github_url,}
+                    href ={profileData && profileData.github_url}
 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
 
-                    href = {profileData && profileData.twitter_url,}
+                    href ={profileData && profileData.twitter_url}
 
                     title="GitHub"
                   >
-                    <Github className="h-4 w-4" />
+                    <Github className="h-4 w-4"  />
                     GitHub
                   </a>
                 )}
                 {profileData && profileData.twitter_url && (;
                   <a
-                    href = {profileData.twitter_url,}
+                    href ={profileData.twitter_url}
                   </Link>
                 )}
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
-
-
-
 

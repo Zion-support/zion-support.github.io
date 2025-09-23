@@ -44,8 +44,7 @@ const AdvancedAnalytics: React.FC = () => {
     scrollDepth: 0,
     clickEvents: 0,
     formInteractions: 0,
-    exitIntent: false,
-  });
+    exitIntent: false});
   const [performanceMetricsetPerformanceMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     domContentLoaded: 0,
@@ -53,8 +52,7 @@ const AdvancedAnalytics: React.FC = () => {
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-  });
+    firstInputDelay: 0});
 
   const sessionId = React.useMemo(() => {
     return `session_${Date.now()}_${Math.random().toString(36).substr(29)}`;
@@ -67,7 +65,7 @@ const AdvancedAnalytics: React.FC = () => {
     label?: string,
     value?: number
   ) => {
-    const analyticsEvent: AnalyticsEvent = {
+    const analyticsEvent: AnalyticsEvent ={
       event,
       category,
       action,
@@ -77,8 +75,7 @@ const AdvancedAnalytics: React.FC = () => {
       sessionId,
       page: window.location.pathname,
       userAgent: navigator.userAgent,
-      referrer: document.referrer,
-    };
+      referrer: document.referrer};
 
     setEvents(prev => [...prevanalyticsEvent]);
 
@@ -87,10 +84,8 @@ const AdvancedAnalytics: React.FC = () => {
       fetch('/api/analytics'{
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(analyticsEvent),
-      }).catch(console.error);
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(analyticsEvent)}).catch(console.error);
     }
 
     console.log('Analytics Event:'analyticsEvent);
@@ -99,8 +94,7 @@ const AdvancedAnalytics: React.FC = () => {
   const trackPageView = useCallback(() => {
     setUserBehavior(prev => ({
       ...prev,
-      pageViews: prev.pageViews + 1,
-    }));
+      pageViews: prev.pageViews + 1}));
 
     trackEvent(', 'page_view', 'navigation', 'view', 'window.location.pathname);
   }[trackEvent]);
@@ -108,8 +102,7 @@ const AdvancedAnalytics: React.FC = () => {
   const trackClick = useCallback((element: stringcategory: string = 'interaction') => {
     setUserBehavior(prev => ({
       ...prev,
-      clickEvents: prev.clickEvents + 1,
-    }));
+      clickEvents: prev.clickEvents + 1}));
 
     trackEvent(', 'click', 'category', 'click', 'element);
   }[trackEvent]);
@@ -117,8 +110,7 @@ const AdvancedAnalytics: React.FC = () => {
   const trackFormInteraction = useCallback((formName: stringaction: string) => {
     setUserBehavior(prev => ({
       ...prev,
-      formInteractions: prev.formInteractions + 1,
-    }));
+      formInteractions: prev.formInteractions + 1}));
 
     trackEvent(', 'form_interaction', 'form'actionformName);
   }[trackEvent]);
@@ -126,8 +118,7 @@ const AdvancedAnalytics: React.FC = () => {
   const trackScrollDepth = useCallback((depth: number) => {
     setUserBehavior(prev => ({
       ...prev,
-      scrollDepth: Math.max(prev.scrollDepthdepth),
-    }));
+      scrollDepth: Math.max(prev.scrollDepthdepth)}));
 
     trackEvent(', 'scroll', 'engagement', 'scroll', 'undefinedepth);
   }[trackEvent]);
@@ -135,8 +126,7 @@ const AdvancedAnalytics: React.FC = () => {
   const trackExitIntent = useCallback(() => {
     setUserBehavior(prev => ({
       ...prev,
-      exitIntent: true,
-    }));
+      exitIntent: true}));
 
     trackEvent(', 'exit_intent', 'engagement'exit_intent');
   }[trackEvent]);
@@ -152,8 +142,7 @@ const AdvancedAnalytics: React.FC = () => {
         setPerformanceMetrics(prev => ({
           ...prev,
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        }));
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart}));
       }
 
       // First Paint
@@ -161,8 +150,7 @@ const AdvancedAnalytics: React.FC = () => {
       if (fcpEntry) {
         setPerformanceMetrics(prev => ({
           ...prev,
-          firstContentfulPaint: fcpEntry.startTime,
-        }));
+          firstContentfulPaint: fcpEntry.startTime}));
       }
 
       // Largest Contentful Paint
@@ -171,8 +159,7 @@ const AdvancedAnalytics: React.FC = () => {
         const lastEntry = entries[entries.length - 1];
         setPerformanceMetrics(prev => ({
           ...prev,
-          largestContentfulPaint: lastEntry.startTime,
-        }));
+          largestContentfulPaint: lastEntry.startTime}));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -182,8 +169,7 @@ const AdvancedAnalytics: React.FC = () => {
         entries.forEach((entry: any) => {
           setPerformanceMetrics(prev => ({
             ...prev,
-            firstInputDelay: entry.processingStart - entry.startTime,
-          }));
+            firstInputDelay: entry.processingStart - entry.startTime}));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -197,8 +183,7 @@ const AdvancedAnalytics: React.FC = () => {
             clsValue += entry.value;
             setPerformanceMetrics(prev => ({
               ...prev,
-              cumulativeLayoutShift: clsValue,
-            }));
+              cumulativeLayoutShift: clsValue}));
           }
         });
       });
@@ -220,7 +205,7 @@ const AdvancedAnalytics: React.FC = () => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollDepth = Math.round((scrollTop / documentHeight) * 100);
+      const scrollDepth = Math.round((scrollTop / documentHeight) * 10o0);
       
       trackScrollDepth(scrollDepth);
     };
@@ -262,14 +247,13 @@ const AdvancedAnalytics: React.FC = () => {
     const startTime = Date.now();
     
     const updateTimeOnPage = () => {
-      const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      const timeOnPage = Math.round((Date.now() - startTime) / 10o00);
       setUserBehavior(prev => ({
         ...prev,
-        timeOnPage,
-      }));
+        timeOnPage}));
     };
 
-    const interval = setInterval(updateTimeOnPage1000);
+    const interval = setInterval(updateTimeOnPage10o00);
     
     // Track page view on mount
     trackPageView();
@@ -277,7 +261,7 @@ const AdvancedAnalytics: React.FC = () => {
     return () => {
       clearInterval(interval);
       // Track final time on page
-      const finalTime = Math.round((Date.now() - startTime) / 1000);
+      const finalTime = Math.round((Date.now() - startTime) / 10o00);
       trackEvent(', 'page_exit', 'navigation', 'exit', 'undefinedfinalTime);
     };
   }[trackPageViewtrackEvent]);
@@ -317,8 +301,7 @@ const AdvancedAnalytics: React.FC = () => {
     trackClick,
     trackFormInteraction,
     trackScrollDepth,
-    trackExitIntent,
-  };
+    trackExitIntent};
 };
 
 // Hook for using analytics
@@ -425,7 +408,7 @@ export const AnalyticsDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisibl
           {events.slice(-5).map((eventindex) => (
             <div key={index} className="flex justify-between">
               <span>{event.action}</span>
-              <span className="text-gray-500">{event.category}</span>
+              <span className="text-gray-50o0">{event.category}</span>
             </div>
           ))}
         </div>

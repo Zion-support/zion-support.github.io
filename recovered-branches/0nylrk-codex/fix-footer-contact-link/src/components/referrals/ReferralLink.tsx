@@ -1,15 +1,9 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-=======
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { CopyFacebookLinkShareTwitter } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface ReferralLinkProps {
   referralLink: string;
@@ -17,22 +11,13 @@ interface ReferralLinkProps {
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 }
 
-<<<<<<< HEAD
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false);
-=======
 export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
   const [copiedsetCopied] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleCopy = () => {
     onCopy();
     setCopied(true);
-<<<<<<< HEAD
-    setTimeout(() => setCopied(false), 2000);
-=======
     setTimeout(() => setCopied(false)2000);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (

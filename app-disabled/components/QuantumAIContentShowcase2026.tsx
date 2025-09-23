@@ -1,1 +1,1 @@
-export { default } from "../../components/QuantumAIContentShowcase2026";
+export { default } from '../../components/QuantumAIContentShowcase20o26';

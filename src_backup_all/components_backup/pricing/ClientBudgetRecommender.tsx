@@ -1,16 +1,15 @@
-
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getClientBudgetSuggestion, 
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import {
+  getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from 'lucide-react'
+  trackPricingSuggestion,
+} from '@/services/pricingSuggestionService';
+import { PricingSuggestionBox } from './PricingSuggestionBox';
+import { useAuth } from '@/hooks/useAuth';
+import { Sparkles } from 'lucide-react';
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
@@ -21,7 +20,9 @@ interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
 
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+export const ClientBudgetRecommender: React.FC<
+  ClientBudgetRecommenderProps
+> = ({
   jobTitle,
   category,
   timeline,
@@ -52,7 +53,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
     } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', { data: error });
+      logErrorToProduction('Error generating budget suggestion:', {
+        data: error,
+      });
     } finally {
       setIsLoading(false);
     }
@@ -61,39 +64,39 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
-      
+
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
           userId: user.id,
-          suggestionType: "client",
+          suggestionType: 'client',
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-          accepted: true
+          accepted: true,
         });
       }
     }
   };
 
   return (
-    <div className="space-y-4">
+    <div className='space-y-4'>
       <div>
         {!suggestion && !isLoading ? (
           <Button
-            type="button"
-            variant="outline"
+            type='button'
+            variant='outline'
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className="w-full"
+            className='w-full'
           >
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
           </Button>
         ) : (
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType="hourly"
+            rateType='hourly'
           />
         )}
       </div>

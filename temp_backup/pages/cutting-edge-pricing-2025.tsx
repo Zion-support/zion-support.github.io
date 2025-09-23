@@ -5,15 +5,15 @@ import {
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
+import { cuttingEdgeAIServices20o25 } from '../data/20o25-cutting-edge-ai-services',
+import { cuttingEdgeQuantumServices20o25 } from '../data/20o25-cutting-edge-quantum-services',
+import { cuttingEdgeEnterpriseITServices20o25 } from '../data/20o25-cutting-edge-enterprise-it',
+import { cuttingEdgeMicroSaasServices20o25 } from '../data/20o25-cutting-edge-micro-saas',
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
@@ -28,8 +28,8 @@ const pricingTiers = [
       'Standard supportCore integrations',
       'Basic analyticsEmail support'
     ],
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-blue-500 to-cyan-500',
+    icon: <Target className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
     cta: 'Start Free Trial',
     ctaLink: '/contact',
     popular: false
@@ -45,8 +45,8 @@ const pricingTiers = [
       'Advanced analyticsPhone & email support',
       'Custom brandingAPI access'
     ],
-    icon: <Zap className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
+    icon: <Zap className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     cta: 'Start Free Trial',
     ctaLink: '/contact',
     popular: true
@@ -63,8 +63,8 @@ const pricingTiers = [
       'Custom developmentSLA guarantees',
       'On-premise optionsCompliance certifications'
     ],
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-green-500 to-emerald-500',
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
     cta: 'Contact Sales',
     ctaLink: '/contact',
     popular: false
@@ -74,56 +74,56 @@ const pricingTiers = [
 const serviceCategories = [
   {
     name: 'AI & Consciousness Services',
-    icon: <Brain className="w-8 h-8" />,
-    color: 'from-cyan-500 to-blue-500',
-    services: cuttingEdgeAIServices2025.slice(0, 6),
+    icon: <Brain className="w-8 h-8"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    services: cuttingEdgeAIServices20o25.slice(0, 6),
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
   },
   {
     name: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-8 h-8" />,
-    color: 'from-purple-500 to-pink-500',
-    services: cuttingEdgeQuantumServices2025.slice(0, 6),
+    icon: <Atom className="w-8 h-8"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: cuttingEdgeQuantumServices20o25.slice(0, 6),
     description: 'Breakthrough quantum computing and space technology solutions'
   },
   {
     name: 'Enterprise IT Solutions',
-    icon: <Shield className="w-8 h-8" />,
-    color: 'from-blue-500 to-cyan-500',
-    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6),
+    icon: <Shield className="w-8 h-8"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: cuttingEdgeEnterpriseITServices20o25.slice(0, 6),
     description: 'Advanced enterprise infrastructure and security solutions'
   },
   {
     name: 'Micro SAAS Solutions',
-    icon: <Rocket className="w-8 h-8" />,
-    color: 'from-teal-500 to-emerald-500',
-    services: cuttingEdgeMicroSaasServices2025.slice(0, 6),
+    icon: <Rocket className="w-8 h-8"  />,
+    color: 'from-teal-50o0 to-emerald-50o0',
+    services: cuttingEdgeMicroSaasServices20o25.slice(0, 6),
     description: 'Innovative business solutions for modern enterprises'
   }
 ],
 
 const stats = [
-  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-400' },
-  { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' },
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
-  { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-40o0' },
+  { number: '$50o0B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-40o0' },
+  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-40o0' },
+  { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-40o0' }
 ],
 
-export default function CuttingEdgePricing2025() {
+export default function CuttingEdgePricing20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const allServices = [
-    ...cuttingEdgeAIServices2025,
-    ...cuttingEdgeQuantumServices2025,
-    ...cuttingEdgeEnterpriseITServices2025,
-    ...cuttingEdgeMicroSaasServices2025
+    ...cuttingEdgeAIServices20o25,
+    ...cuttingEdgeQuantumServices20o25,
+    ...cuttingEdgeEnterpriseITServices20o25,
+    ...cuttingEdgeMicroSaasServices20o25
   ],
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => service.category === selectedCategory),
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -133,7 +133,7 @@ export default function CuttingEdgePricing2025() {
     }
   },
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -147,17 +147,17 @@ export default function CuttingEdgePricing2025() {
   return (
     <>
       <Head>
-        <title>Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology Solutions</title>
-        <meta name="description" content="Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions." />
-        <meta name="keywords" content="cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Cutting-Edge Pricing 20o25 - Zion Tech Group | Future Technology Solutions</title>
+        <meta name="description" content="Discover competitive pricing for our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions."  />
+        <meta name="keywords" content="cutting-edge pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SAAS pricing"  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="icon" href="/favicon.ico"  />
       </Head>
 
       <Layout>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-90o0/20 to-black"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -166,14 +166,14 @@ export default function CuttingEdgePricing2025() {
               className="text-center"
             >
               <motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent mb-6"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
                 Cutting-Edge
                 <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-                  Pricing 2025
+                  Pricing 20o25
                 </span>
               </motion.h1>
               
@@ -197,8 +197,8 @@ export default function CuttingEdgePricing2025() {
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
-                        <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30">
+                        <stat.icon className={`w-5 h-5 ${stat.color}`}  />
                       </div>
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
@@ -211,7 +211,7 @@ export default function CuttingEdgePricing2025() {
         </section>
 
         {/* Pricing Tiers Section */}
-        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
+        <section className="py-20 bg-gradient-to-b from-black via-purple-90o0/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -221,7 +221,7 @@ export default function CuttingEdgePricing2025() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                   Flexible
                 </span>{' '}
                 Pricing Plans
@@ -241,19 +241,19 @@ export default function CuttingEdgePricing2025() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
-                    tier.popular ? 'scale-105' : ''
+                    tier.popular ? 'scale-10o5' : ''
                   }`}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
-                    tier.popular ? 'border-cyan-500/50 shadow-cyan-500/20' : ''
+                  <div className={`relative p-8 rounded-2xl border border-cyan-50o0/20 bg-gradient-to-br from-black/80 via-purple-90o0/10 to-black/80 backdrop-blur-sm hover:border-cyan-50o0/50 transition-all duration-50o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20 ${
+                    tier.popular ? 'border-cyan-50o0/50 shadow-cyan-50o0/20' : ''
                   }`}>
                     <div className="text-center mb-8">
                       <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}>
@@ -270,7 +270,7 @@ export default function CuttingEdgePricing2025() {
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
-                          <Check className="w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0" />
+                          <Check className="w-5 h-5 text-cyan-40o0 mt-0.5 mr-3 flex-shrink-0"  />
                           <span className="text-white/80">{feature}</span>
                         </li>
                       ))}
@@ -278,14 +278,14 @@ export default function CuttingEdgePricing2025() {
 
                     <a
                       href={tier.ctaLink}
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 ${
                         tier.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
-                          : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
+                          ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white hover:from-cyan-60o0 hover:to-purple-70o0 shadow-lg hover:shadow-cyan-50o0/25'
+                          : 'border-2 border-cyan-50o0/50 text-cyan-40o0 hover:bg-cyan-50o0/10'
                       }`}
                     >
                       {tier.cta}
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <ArrowRight className="ml-2 w-4 h-4"  />
                     </a>
                   </div>
                 </motion.div>
@@ -295,7 +295,7 @@ export default function CuttingEdgePricing2025() {
         </section>
 
         {/* Service Categories Section */}
-        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
+        <section className="py-20 bg-gradient-to-b from-black via-purple-90o0/10 to-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -305,7 +305,7 @@ export default function CuttingEdgePricing2025() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-40o0 to-purple-50o0 bg-clip-text text-transparent">
                   Service
                 </span>{' '}
                 Categories
@@ -320,10 +320,10 @@ export default function CuttingEdgePricing2025() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
                 onClick={() => setSelectedCategory('all')}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                   selectedCategory === 'all'
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                    : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+                    ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white'
+                    : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover:bg-cyan-50o0/10'
                 }`}
               >
                 All Categories ({allServices.length})
@@ -332,10 +332,10 @@ export default function CuttingEdgePricing2025() {
                 <button
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
-                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-30o0 ${
                     selectedCategory === category.name
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+                      ? 'bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white'
+                      : 'bg-black/50 border border-cyan-50o0/30 text-cyan-40o0 hover:bg-cyan-50o0/10'
                   }`}
                 >
                   {category.name} ({category.services.length})
@@ -355,12 +355,12 @@ export default function CuttingEdgePricing2025() {
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className="group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  className="group relative overflow-hidden rounded-2xl border border-cyan-50o0/20 bg-gradient-to-br from-black/80 via-purple-90o0/10 to-black/80 backdrop-blur-sm hover:border-cyan-50o0/50 transition-all duration-50o0 transform hover:scale-10o5 hover:shadow-2xl hover:shadow-cyan-50o0/20"
                 >
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-40o0 transition-colors duration-30o0">
                           {service.name}
                         </h3>
                         <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -368,8 +368,8 @@ export default function CuttingEdgePricing2025() {
                         </p>
                       </div>
                       <div className="ml-4">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">
-                          <Star className="w-6 h-6 text-cyan-400" />
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 flex items-center justify-center">
+                          <Star className="w-6 h-6 text-cyan-40o0"  />
                         </div>
                       </div>
                     </div>
@@ -379,7 +379,7 @@ export default function CuttingEdgePricing2025() {
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+                          className="px-2 py-1 text-xs font-medium bg-cyan-50o0/10 text-cyan-40o0 rounded-full border border-cyan-50o0/20"
                         >
                           {tag}
                         </span>
@@ -389,12 +389,12 @@ export default function CuttingEdgePricing2025() {
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
-                      <span className="text-cyan-400">{service.category}</span>
+                      <span className="text-cyan-40o0">{service.category}</span>
                     </div>
 
                     {/* Pricing */}
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider">
+                      <h4 className="text-sm font-semibold text-cyan-40o0 mb-2 uppercase tracking-wider">
                         Starting From
                       </h4>
                       <div className="text-2xl font-bold text-white">
@@ -407,23 +407,23 @@ export default function CuttingEdgePricing2025() {
                     <div className="flex items-center justify-between">
                       <a
                         href={service.website}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
+                        className="inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0 text-sm font-medium"
                       >
                         Learn More
-                        <ExternalLink className="ml-1 w-4 h-4" />
+                        <ExternalLink className="ml-1 w-4 h-4"  />
                       </a>
                       <a
                         href="/contact"
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white text-sm font-medium rounded-lg hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5"
                       >
                         Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        <ArrowRight className="ml-2 w-4 h-4"  />
                       </a>
                     </div>
                   </div>
 
                   {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-50o0/5 to-transparent opacity-0 group-hover:opacity-10o0 transition-opacity duration-50o0 pointer-events-none"  />
                 </motion.div>
               ))}
             </motion.div>
@@ -431,7 +431,7 @@ export default function CuttingEdgePricing2025() {
         </section>
 
         {/* Contact CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
+        <section className="py-20 bg-gradient-to-br from-black via-purple-90o0/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -450,16 +450,16 @@ export default function CuttingEdgePricing2025() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white font-semibold rounded-full hover:from-cyan-60o0 hover:to-purple-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25"
                 >
                   Start Your Journey
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </a>
                 <a
                   href={`tel:${contactInfo.mobile}`}
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-50o0/50 text-cyan-40o0 font-semibold rounded-full hover:bg-cyan-50o0/10 transition-all duration-30o0 transform hover:scale-10o5"
                 >
-                  <Phone className="mr-2 w-5 h-5" />
+                  <Phone className="mr-2 w-5 h-5"  />
                   Call Now
                 </a>
               </div>
@@ -467,26 +467,26 @@ export default function CuttingEdgePricing2025() {
               {/* Contact Info */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
-                    <Phone className="w-6 h-6 text-cyan-400" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 flex items-center justify-center mb-3">
+                    <Phone className="w-6 h-6 text-cyan-40o0"  />
                   </div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                  <a href={`tel:${contactInfo.mobile}`} className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0">
                     {contactInfo.mobile}
                   </a>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
-                    <Mail className="w-6 h-6 text-cyan-400" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 flex items-center justify-center mb-3">
+                    <Mail className="w-6 h-6 text-cyan-40o0"  />
                   </div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-40o0 hover:text-cyan-30o0 transition-colors duration-30o0">
                     {contactInfo.email}
                   </a>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">
-                    <MapPin className="w-6 h-6 text-cyan-400" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 border border-cyan-50o0/30 flex items-center justify-center mb-3">
+                    <MapPin className="w-6 h-6 text-cyan-40o0"  />
                   </div>
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-white/70 text-sm">{contactInfo.address}</div>
@@ -497,5 +497,4 @@ export default function CuttingEdgePricing2025() {
         </section>
       </Layout>
     </>
-  ),
-}
+  )}

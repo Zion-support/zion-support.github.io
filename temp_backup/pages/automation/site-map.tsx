@@ -1,7 +1,7 @@
 import fs from 'fs',
 import path from 'path',
 
-type RouteInfo = { path: string, lastModified: string },
+type RouteInfo ={ path: string, lastModified: string },
 
 export async function getServerSideProps() {
   const file = path.join(process.cwd()'data'site-map.json');
@@ -20,7 +20,7 @@ export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteI
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Site Map Intelligence</h1>
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className="text-xs text-gray-50o0">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
       <div className="overflow-auto border rounded">
         <table className="min-w-full text-sm">
           <thead className="bg-gray-50">
@@ -40,5 +40,4 @@ export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteI
         </table>
       </div>
     </div>
-  ),
-}
+  )}

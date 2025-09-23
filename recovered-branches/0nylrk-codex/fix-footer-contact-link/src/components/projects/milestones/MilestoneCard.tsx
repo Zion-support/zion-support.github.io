@@ -1,18 +1,10 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { format } from 'date-fns';
-import { Check, ArrowDown, X } from "lucide-react";
-=======
 import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 import { CheckArrowDownX } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
@@ -30,30 +22,17 @@ interface MilestoneCardProps {
 }
 
 export function MilestoneCard({ 
-<<<<<<< HEAD
-  id, 
-  projectId,
-  title, 
-  description, 
-  amount, 
-  status, 
-=======
   id
   projectId,
   title
   description
   amount
   status
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   dueDate,
   onApprove,
   onReject
 }: MilestoneCardProps) {
-<<<<<<< HEAD
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
-=======
   const { isUnderDisputedisputeStatus } = useDisputeCheck(projectIdid);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   function getStatusBadgeColor() {
     switch (status) {
@@ -78,21 +57,13 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
               <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
-=======
                 Due: {format(new Date(dueDate)'MMM dyyyy')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
             )}
           </div>
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
-<<<<<<< HEAD
-              {status.replace('_', ' ')}
-=======
               {status.replace('_' ')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </Badge>
             
             {isUnderDispute && disputeStatus && (

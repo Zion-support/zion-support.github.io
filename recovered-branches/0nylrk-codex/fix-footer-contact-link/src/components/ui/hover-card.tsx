@@ -10,11 +10,7 @@ const HoverCardTrigger = HoverCardPrimitive.Trigger
 const HoverCardContent = React.forwardRef<
   React.ElementRef<typeof HoverCardPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Content>
-<<<<<<< HEAD
->(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
-=======
 >(({ classNamealign = "center"sideOffset = 4...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <HoverCardPrimitive.Content
     ref={ref}
     align={align}
@@ -28,8 +24,4 @@ const HoverCardContent = React.forwardRef<
 ))
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName
 
-<<<<<<< HEAD
-export { HoverCard, HoverCardTrigger, HoverCardContent }
-=======
 export { HoverCardTriggerHoverCardContent }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

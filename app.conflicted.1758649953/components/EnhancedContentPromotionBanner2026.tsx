@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function EnhancedContentPromotionBanner2026() {
+export default function EnhancedContentPromotionBanner20o26() {
   return null;
 }

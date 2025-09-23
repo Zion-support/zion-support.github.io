@@ -1,24 +1,4 @@
 
-<<<<<<< HEAD
-import { MapPin } from "lucide-react";
-import { PaymentButton } from "@/components/transactions/PaymentButton";
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-
-interface PaymentSectionProps {
-  selectedCountry: CountryPricing;
-}
-
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
-  // Handle successful payment
-  const handlePaymentInitiated = () => {
-    toast({
-      title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily.",
-    });
-  };
-  
-=======
 
 import {MapPin} from "lucide-react";
 import {PaymentButton} from "@/components/transactions/PaymentButton";
@@ -53,7 +33,6 @@ interface PaymentSectionProps {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -62,15 +41,6 @@ interface PaymentSectionProps {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
-<<<<<<< HEAD
-        ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>
-      <PaymentButton 
-        amount={selectedCountry.pricePerIncident}
-        serviceId="it-onsite-service"
-        providerId="zion-tech-group"
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-=======
 
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
@@ -101,8 +71,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -152,9 +120,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         onPaymentInitiated={handlePaymentInitiated}
       />
       <p className="text-xs text-zion-slate-light mt-2">
-<<<<<<< HEAD
-
-=======
         Price includes transportation and first hour onsite. Additional hours billed separately.
       </p>
     </div>
@@ -185,4 +150,4 @@ function PaymentSection() {
     });
   }
 ;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

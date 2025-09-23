@@ -6,7 +6,7 @@ try {
   console.log('✅ React import successful', React.version);
   const { motion } = require('framer-motion');
   console.log('✅ Framer Motion import successful', typeof motion);
- try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
+ try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap} = require('lucide-react');   } catch (error) { console.error('❌ Import error:',error.message); process.exit(1)} 
 // Build Verification Script
 // This script checks if our components can be imported without syntax errors
 console.log('🔍 Starting build verification...');
@@ -27,8 +27,7 @@ try {
     Brain,
     Cloud,
     Shield,
-    Zap,
-  } = require('lucide-react');
+    Zap} = require('lucide-react');
 
   console.log('✅ Lucide React icons import successful', {
 
@@ -37,8 +36,7 @@ try {
     Brain: 'typeof Brain',
     Cloud: 'typeof Cloud',
     Shield: 'typeof Shield',
-    Zap: 'typeof Zap',
-  });
+    Zap: 'typeof Zap'});
 
   console.log('🎉 All core dependencies imported successfully!');
   console.log('📋 Components should be ready for build');

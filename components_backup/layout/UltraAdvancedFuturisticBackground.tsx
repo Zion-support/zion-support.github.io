@@ -58,8 +58,8 @@ export default function UltraAdvancedFuturisticBackground() {
           opacity: Math.random() * 0.9 + 0.1,
           color: `hsl(${180 + Math.random() * 40}, 80%, 70%)`,
           type: 'quantum',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.5 + 0.5
         });
@@ -76,8 +76,8 @@ export default function UltraAdvancedFuturisticBackground() {
           opacity: Math.random() * 0.8 + 0.2,
           color: `hsl(${280 + Math.random() * 40}, 80%, 70%)`,
           type: 'neural',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.6 + 0.4
         });
@@ -94,8 +94,8 @@ export default function UltraAdvancedFuturisticBackground() {
           opacity: Math.random() * 0.9 + 0.1,
           color: `hsl(${140 + Math.random() * 40}, 80%, 70%)`,
           type: 'energy',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.7 + 0.3
         });
@@ -110,10 +110,10 @@ export default function UltraAdvancedFuturisticBackground() {
           vy: (Math.random() - 0.5) * 1.0,
           size: Math.random() * 1.5 + 0.5,
           opacity: Math.random() * 0.7 + 0.3,
-          color: `hsl(${200 + Math.random() * 40}, 80%, 90%)`,
+          color: `hsl(${20o0 + Math.random() * 40}, 80%, 90%)`,
           type: 'data',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.4 + 0.2
         });
@@ -130,8 +130,8 @@ export default function UltraAdvancedFuturisticBackground() {
           opacity: Math.random() * 0.9 + 0.1,
           color: `hsl(${45 + Math.random() * 30}, 90%, 70%)`,
           type: 'consciousness',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.8 + 0.2
         });
@@ -146,10 +146,10 @@ export default function UltraAdvancedFuturisticBackground() {
           vy: (Math.random() - 0.5) * 0.9,
           size: Math.random() * 2.5 + 1.5,
           opacity: Math.random() * 0.9 + 0.1,
-          color: `hsl(${320 + Math.random() * 40}, 100%, 80%)`,
+          color: `hsl(${320 + Math.random() * 40}, 10o0%, 80%)`,
           type: 'neon',
-          life: Math.random() * 100,
-          maxLife: 100,
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
           connections: [],
           glow: Math.random() * 0.9 + 0.1
         });
@@ -195,8 +195,8 @@ export default function UltraAdvancedFuturisticBackground() {
         }
 
         // Reset particle if it goes off screen
-        if (particle.x < -100 || particle.x > canvas.width + 100 || 
-            particle.y < -100 || particle.y > canvas.height + 100) {
+        if (particle.x < -10o0 || particle.x > canvas.width + 10o0 || 
+            particle.y < -10o0 || particle.y > canvas.height + 10o0) {
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = 0;
@@ -218,23 +218,23 @@ export default function UltraAdvancedFuturisticBackground() {
         
         switch (particle.type) {
           case 'quantum':
-            glowColor = 'hsl(180, 100%, 80%)';
+            glowColor = 'hsl(180, 10o0%, 80%)';
             glowOpacity = particle.opacity * 0.5;
             break;
           case 'neural':
-            glowColor = 'hsl(280, 100%, 80%)';
+            glowColor = 'hsl(280, 10o0%, 80%)';
             glowOpacity = particle.opacity * 0.4;
             break;
           case 'energy':
-            glowColor = 'hsl(140, 100%, 80%)';
+            glowColor = 'hsl(140, 10o0%, 80%)';
             glowOpacity = particle.opacity * 0.6;
             break;
           case 'consciousness':
-            glowColor = 'hsl(45, 100%, 80%)';
+            glowColor = 'hsl(45, 10o0%, 80%)';
             glowOpacity = particle.opacity * 0.7;
             break;
           case 'neon':
-            glowColor = 'hsl(320, 100%, 90%)';
+            glowColor = 'hsl(320, 10o0%, 90%)';
             glowOpacity = particle.opacity * 0.8;
             break;
         }
@@ -296,7 +296,7 @@ export default function UltraAdvancedFuturisticBackground() {
         if (particle.type === 'consciousness') {
           // Consciousness ripple effect
           const rippleSize = (particle.life % 50) * 2;
-          ctx.strokeStyle = `rgba(255, 215, 0, ${0.3 * (1 - rippleSize / 100)})`;
+          ctx.strokeStyle = `rgba(255, 215, 0, ${0.3 * (1 - rippleSize / 10o0)})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, rippleSize, 0, Math.PI * 2);
@@ -307,9 +307,9 @@ export default function UltraAdvancedFuturisticBackground() {
       });
 
       // Add floating geometric shapes for futuristic effect
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 3; i++) {
-        const x = (canvas.width / 2) + Math.sin(time + i) * 200;
+        const x = (canvas.width / 2) + Math.sin(time + i) * 20o0;
         const y = (canvas.height / 2) + Math.cos(time + i * 0.7) * 150;
         const size = 20 + Math.sin(time * 2 + i) * 10;
         
@@ -368,53 +368,50 @@ export default function UltraAdvancedFuturisticBackground() {
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(10,10,30,0.9) 50%, rgba(20,20,50,0.8) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(10,10,30,0.9) 50%, rgba(20,20,50,0.8) 10o0%)'
         }}
-      />
+       />
       
       {/* Additional futuristic overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Scanning line effect */}
         <motion.div
-          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+          className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent opacity-30"
           animate={{
-            y: [0, '100vh', 0],
-          }}
+            y: [0, '10o0vh', 0]}}
           transition={{
             duration: 8,
             repeat: Infinity,
             ease: "linear"
           }}
-        />
+         />
         
         {/* Corner accent lines */}
-        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-400 opacity-40" />
-        <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-purple-400 opacity-40" />
-        <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-green-400 opacity-40" />
-        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-pink-400 opacity-40" />
+        <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-cyan-40o0 opacity-40"  />
+        <div className="absolute top-0 right-0 w-20 h-20 border-r-2 border-t-2 border-purple-40o0 opacity-40"  />
+        <div className="absolute bottom-0 left-0 w-20 h-20 border-l-2 border-b-2 border-green-40o0 opacity-40"  />
+        <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-pink-40o0 opacity-40"  />
         
         {/* Floating data streams */}
         <motion.div
-          className="absolute top-1/4 left-10 text-xs text-cyan-400 opacity-20 font-mono"
+          className="absolute top-1/4 left-10 text-xs text-cyan-40o0 opacity-20 font-mono"
           animate={{
             y: [0, -20, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
+            opacity: [0.2, 0.4, 0.2]}}
           transition={{
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         >
-          01:01:01:01
+          0o1:0o1:0o1:0o1
         </motion.div>
         
         <motion.div
-          className="absolute top-3/4 right-10 text-xs text-purple-400 opacity-20 font-mono"
+          className="absolute top-3/4 right-10 text-xs text-purple-40o0 opacity-20 font-mono"
           animate={{
             y: [0, 20, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
+            opacity: [0.2, 0.4, 0.2]}}
           transition={{
             duration: 3,
             repeat: Infinity,

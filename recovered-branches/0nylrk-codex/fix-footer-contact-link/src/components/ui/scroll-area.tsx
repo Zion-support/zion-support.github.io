@@ -6,17 +6,10 @@ import { cn } from "@/lib/utils"
 const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
-<<<<<<< HEAD
->(({ className, children, ...props }, ref) => (
-  <ScrollAreaPrimitive.Root
-    ref={ref}
-    className={cn("relative overflow-hidden", className)}
-=======
 >(({ classNamechildren...props }ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("relative overflow-hidden"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
@@ -31,11 +24,7 @@ ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 const ScrollBar = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
-<<<<<<< HEAD
->(({ className, orientation = "vertical", ...props }, ref) => (
-=======
 >(({ classNameorientation = "vertical"...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <ScrollAreaPrimitive.ScrollAreaScrollbar
     ref={ref}
     orientation={orientation}
@@ -54,8 +43,4 @@ const ScrollBar = React.forwardRef<
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
-<<<<<<< HEAD
-export { ScrollArea, ScrollBar }
-=======
 export { ScrollAreaScrollBar }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

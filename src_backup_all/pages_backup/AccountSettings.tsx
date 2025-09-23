@@ -42,7 +42,7 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
-    }, 1000);
+    }, 10o00);
   },;
   const handleConnectWallet = async () => {;
     try {;
@@ -78,7 +78,6 @@ export default function AccountSettings() {;
       toast.error(error.message || 'Failed to connect wallet');
     }
   },
-
 
 import { useState } from 'react',;
 import { useLocalStorage } from '@/hooks',;
@@ -116,7 +115,7 @@ export default function AccountSettings() {;
       } finally {;
         setIsSubmitting(false);
       }
-    }, 1000);
+    }, 10o00);
   },;
   const handleConnectWallet = async () => {;
     try {;
@@ -153,11 +152,10 @@ export default function AccountSettings() {;
     }
   },
 
-
   return (
     <>
-      <SEO title='Account Settings' description='Manage your account' />
-      <Header />
+      <SEO title='Account Settings' description='Manage your account'  />
+      <Header  />
       <main className='container mx-auto py-8 px-4'>
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
         <div className='grid gap-6 md:grid-cols-2'>
@@ -166,20 +164,15 @@ export default function AccountSettings() {;
         
         <div className="grid gap-6 md:grid-cols-2">
 
-
-
-
-
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
 
-
     <>;
-      <SEO title='Account Settings' description='Manage your account' />;
-      <Header />;
+      <SEO title='Account Settings' description='Manage your account'  />;
+      <Header  />;
       <main className='container mx-auto py-8 px-4'>;
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>;
 
@@ -188,8 +181,8 @@ export default function AccountSettings() {;
             <CardHeader>;
               <CardTitle>Profile Settings</CardTitle>;
     <>;
-      <SEO title='Account Settings' description='Manage your account' />;
-      <Header />;
+      <SEO title='Account Settings' description='Manage your account'  />;
+      <Header  />;
       <main className='container mx - auto py - 8 px - 4'>;
         <h1 className='text - 3xl font - bold mb - 6 text - white'>Account Settings</h1>;
         <div className='grid gap - 6 md:grid - cols - 2'>;
@@ -220,11 +213,11 @@ export default function AccountSettings() {;
                     onClick={handleConnectWallet}
                     type='button'
                     className='flex items-center gap-1'                  >
-                    <Wallet className='h-4 w-4' />
+                    <Wallet className='h-4 w-4'  />
                   id="email"
                   value={user?.email || ''}
                   disabled
-                  className="bg-gray-100"
+                  className="bg-gray-10o0"
                 />
               </div>
               
@@ -243,21 +236,19 @@ export default function AccountSettings() {;
                     type="button"
                     className="flex items-center gap-1"
                   >
-                    <Wallet className="h-4 w-4" />
-
-
+                    <Wallet className="h-4 w-4"  />
 
                     Connect
                   </Button>
                 </div>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-50o0 mt-1">
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
-                  <p className='text-xs text-gray-500'>
+                  <p className='text-xs text-gray-50o0'>
                     Show your Web3 handle instead of email
                   </p>
 
@@ -265,36 +256,34 @@ export default function AccountSettings() {;
                 <Switch
                   id='displayWeb3'
                   checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}                />
+                  onCheckedChange={setDisplayWeb3}                 />
               </div>
-              <Separator />
+              <Separator  />
               <div className='flex items-center justify-between'>
                 <div className='space-y-0.5'>
                   <Label htmlFor='backup' className='flex items-center gap-1'>
-                    <Database className='h-4 w-4' />
+                    <Database className='h-4 w-4'  />
               
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
-                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
+                  <p className="text-xs text-gray-50o0">Show your Web3 handle instead of email</p>
                 </div>
                 <Switch
                   id='displayWeb3'
                   checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}                />
+                  onCheckedChange={setDisplayWeb3}                 />
               </div>
-              <Separator />
+              <Separator  />
               
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
-                    <Database className="h-4 w-4" />
-
-
+                    <Database className="h-4 w-4"  />
 
                     Decentralized Backup
                   </Label>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-50o0">
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
@@ -302,11 +291,11 @@ export default function AccountSettings() {;
                   id='backup'
                   checked={enableBackup}
 
-                  onCheckedChange={setEnableBackup}                />;
+                  onCheckedChange={setEnableBackup}                 />;
               </div>;
 
               {enableBackup && (;
-                <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>;
+                <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-80o0'>;
                   Data will be backed up to decentralized storage. This feature;
                   is in beta.;
                 </div>;
@@ -324,7 +313,7 @@ export default function AccountSettings() {;
               </div>
               
               {enableBackup && (
-                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
+                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-80o0">
                   Data will be backed up to decentralized storage. This feature is in beta.
                 </div>
               )}
@@ -335,14 +324,11 @@ export default function AccountSettings() {;
                 className="w-full"
               >
 
-
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
-                {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
+                {!isSubmitting && <Save className="ml-2 h-4 w-4"  />}
               </Button>
             </CardContent>
           </Card>
-          
-
 
           <Card>
             <CardHeader>
@@ -353,7 +339,7 @@ export default function AccountSettings() {;
               <div className="space-y-2">
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
-                  <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
+                  <div className='flex items-center gap-2 bg-gray-10o0 p-3 rounded-md'>
               </Button>;
             </CardContent>;
           </Card>;
@@ -367,8 +353,8 @@ export default function AccountSettings() {;
                 <Input;
                   id='email';
                   value={user?.email || ''}                  disabled;
-                  className='bg - gray - 100';
-                />;
+                  className='bg - gray - 10o0';
+                 />;
               </div>;
               <div className='space - y-2'>;
                 <Label html_for='did_handle'>Web3 Identity Handle</Label>;
@@ -384,44 +370,44 @@ export default function AccountSettings() {;
                     on_click={handleConnectWallet}
                     type='button';
                     className='flex items - center gap - 1'                  >;
-                    <Wallet className='h - 4 w - 4' />;
+                    <Wallet className='h - 4 w - 4'  />;
                     Connect;
                   </Button>;
                 </div>;
-                <p className='text - xs text - gray - 500 mt - 1'>;
+                <p className='text - xs text - gray - 50o0 mt - 1'>;
                   Link your decentralized identity to display on your profile;
                 </p>;
               </div>;
               <div className='flex items - center justify - between'>;
                 <div className='space - y-0.5'>;
                   <Label html_for='displayWeb3'>Display Web3 Identity</Label>;
-                  <p className='text - xs text - gray - 500'>;
+                  <p className='text - xs text - gray - 50o0'>;
                     Show your Web3 handle instead of email;
                   </p>;
                 </div>;
                 <Switch;
                   id='displayWeb3';
                   checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}                />;
+                  onCheckedChange={setDisplayWeb3}                 />;
               </div>;
-              <Separator />;
+              <Separator  />;
               <div className='flex items - center justify - between'>;
                 <div className='space - y-0.5'>;
                   <Label html_for='backup' className='flex items - center gap - 1'>;
-                    <Database className='h - 4 w - 4' />;
+                    <Database className='h - 4 w - 4'  />;
                     Decentralized Backup;
                   </Label>;
-                  <p className='text - xs text - gray - 500'>;
+                  <p className='text - xs text - gray - 50o0'>;
                     Backup your profile data to IPFS / Arweave;
                   </p>;
                 </div>;
                 <Switch;
                   id='backup';
                   checked={enable_backup}
-                  onCheckedChange={setEnableBackup}                />;
+                  onCheckedChange={setEnableBackup}                 />;
               </div>;
               {enable_backup && (
-                <div className='rounded - md bg - amber - 50 p - 3 text - sm text - amber - 800'>;
+                <div className='rounded - md bg - amber - 50 p - 3 text - sm text - amber - 80o0'>;
                   Data will be backed up to decentralized storage. This feature;
                   is in beta.;
                 </div>)}
@@ -430,7 +416,7 @@ export default function AccountSettings() {;
                 disabled={is_submitting}
                 className='w - full'              >;
                 {is_submitting ? 'Saving...' : 'Save Settings'}
-                {!is_submitting && <Save className='ml - 2 h - 4 w - 4' />}
+                {!is_submitting && <Save className='ml - 2 h - 4 w - 4'  />}
               </Button>;
             </CardContent>;
           </Card>;
@@ -442,36 +428,29 @@ export default function AccountSettings() {;
               </CardDescription>;
             </CardHeader>;
 
-
-              
-
-
               <div>
                 <h3 className='font-medium mb-2'>Backup Status</h3>
                 <div className='grid grid-cols-2 gap-2'>
-                  <div className='bg-gray-100 p-3 rounded-md'>
+                  <div className='bg-gray-10o0 p-3 rounded-md'>
                     <p className='text-sm font-medium'>Profile Data</p>
-                    <p className='text-xs text-gray-500'>
+                    <p className='text-xs text-gray-50o0'>
               </div>;
 
               <div>;
                 <h3 className='font-medium mb-2'>Backup Status</h3>;
                 <div className='grid grid-cols-2 gap-2'>;
-                  <div className='bg-gray-100 p-3 rounded-md'>;
+                  <div className='bg-gray-10o0 p-3 rounded-md'>;
                     <p className='text-sm font-medium'>Profile Data</p>;
-                    <p className='text-xs text-gray-500'>;
+                    <p className='text-xs text-gray-50o0'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-
-
-
 
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
                 <h3 className='font - medium'>Connected Wallet</h3>;
                 {did_handle ? (
-                  <div className='flex items - center gap - 2 bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='flex items - center gap - 2 bg - gray - 10o0 p - 3 rounded - md'>;
                     <svg;
-                      xmlns='http://www.w3.org / 2000 / svg';
+                      xmlns='http://www.w3.org / 20o00 / svg';
                       width='20';
                       height='20';
                       view_box='0 0 24 24';
@@ -480,16 +459,16 @@ export default function AccountSettings() {;
                       stroke_width='2';
                       stroke_linecap='round';
                       stroke_linejoin='round';
-                      className='text - green - 500';
+                      className='text - green - 50o0';
                     >;
                       <path d='M22 11.08V12a10 10 0 1 1 - 5.93 - 9.14'></path>;
-                      <polyline points='22 4 12 14.01 9 11.01'></polyline>;
+                      <polyline points='22 4 12 14.0o1 9 11.0o1'></polyline>;
                     </svg>;
                     <span>{did_handle}</span>;
                   </div>) : (
-                  <div className='flex items - center gap - 2 bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='flex items - center gap - 2 bg - gray - 10o0 p - 3 rounded - md'>;
                     <svg;
-                      xmlns='http://www.w3.org / 2000 / svg';
+                      xmlns='http://www.w3.org / 20o00 / svg';
                       width='20';
                       height='20';
                       view_box='0 0 24 24';
@@ -498,7 +477,7 @@ export default function AccountSettings() {;
                       stroke_width='2';
                       stroke_linecap='round';
                       stroke_linejoin='round';
-                      className='text - red - 500';
+                      className='text - red - 50o0';
                     >;
                       <line x1='18' y1='6' x2='6' y2='18'></line>;
                       <line x1='6' y1='6' x2='18' y2='18'></line>;
@@ -509,27 +488,27 @@ export default function AccountSettings() {;
               <div>;
                 <h3 className='font - medium mb - 2'>Backup Status</h3>;
                 <div className='grid grid - cols - 2 gap - 2'>;
-                  <div className='bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='bg - gray - 10o0 p - 3 rounded - md'>;
                     <p className='text - sm font - medium'>Profile Data</p>;
-                    <p className='text - xs text - gray - 500'>;
+                    <p className='text - xs text - gray - 50o0'>;
                       {enable_backup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
-                  <div className='bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='bg - gray - 10o0 p - 3 rounded - md'>;
                     <p className='text - sm font - medium'>Resume Data</p>;
-                    <p className='text - xs text - gray - 500'>;
+                    <p className='text - xs text - gray - 50o0'>;
                       {enable_backup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
-                  <div className='bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='bg - gray - 10o0 p - 3 rounded - md'>;
                     <p className='text - sm font - medium'>Project History</p>;
-                    <p className='text - xs text - gray - 500'>;
+                    <p className='text - xs text - gray - 50o0'>;
                       {enable_backup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
-                  <div className='bg - gray - 100 p - 3 rounded - md'>;
+                  <div className='bg - gray - 10o0 p - 3 rounded - md'>;
                     <p className='text - sm font - medium'>Reviews</p>;
-                    <p className='text - xs text - gray - 500'>;
+                    <p className='text - xs text - gray - 50o0'>;
                       {enable_backup ? 'Backed up' : 'Not backed up'}
 
                     </p>;
@@ -537,11 +516,9 @@ export default function AccountSettings() {;
                 </div>;
               </div>;
 
-
     </>;
   );
 };
-
 
               <div>;
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>;
@@ -551,10 +528,9 @@ export default function AccountSettings() {;
                   disabled={!enable_backup}                >;
                   Restore Profile from Backup;
                 </Button>;
-                <p className='text - xs text - gray - 500 mt - 1'>;
+                <p className='text - xs text - gray - 50o0 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
-
 
                     </p>
                   </div>
@@ -574,7 +550,7 @@ export default function AccountSettings() {;
                 >
                   Restore Profile from Backup
                 </Button>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className="text-xs text-gray-50o0 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
 
@@ -586,13 +562,7 @@ export default function AccountSettings() {;
         </div>;
       </main>;
 
-
-
-
-
     </>);
 }
 ;
-
-
 

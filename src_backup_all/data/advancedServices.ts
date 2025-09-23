@@ -6,9 +6,24 @@ export type PricingTier = {
 };
 
 export const PRICING_TIERS: PricingTier[] = [
-  { id: 'basic', name: 'Basic', priceLabel: '$', features: ['Email support', 'Standard SLA'] },
-  { id: 'pro', name: 'Pro', priceLabel: '$$', features: ['Priority support', 'Enhanced SLA'] },
-  { id: 'enterprise', name: 'Enterprise', priceLabel: '$$$', features: ['Dedicated manager', 'Custom SLA'] },
+  {
+    id: 'basic',
+    name: 'Basic',
+    priceLabel: '$',
+    features: ['Email support', 'Standard SLA'],
+  },
+  {
+    id: 'pro',
+    name: 'Pro',
+    priceLabel: '$$',
+    features: ['Priority support', 'Enhanced SLA'],
+  },
+  {
+    id: 'enterprise',
+    name: 'Enterprise',
+    priceLabel: '$$$',
+    features: ['Dedicated manager', 'Custom SLA'],
+  },
 ];
 
 export type AdvancedService = {
@@ -26,7 +41,8 @@ export const ADVANCED_SERVICES: AdvancedService[] = [
     title: 'AI Business Intelligence',
     category: 'AI Services',
     pricingTier: 'pro',
-    description: 'On-brand AI content and analytics to empower decision-making.',
+    description:
+      'On-brand AI content and analytics to empower decision-making.',
     link: '/services/ai-business-intelligence',
   },
   {
@@ -34,7 +50,8 @@ export const ADVANCED_SERVICES: AdvancedService[] = [
     title: 'Cloud & DevOps',
     category: 'IT Services',
     pricingTier: 'enterprise',
-    description: 'Infrastructure automation and cloud strategy for scale and reliability.',
+    description:
+      'Infrastructure automation and cloud strategy for scale and reliability.',
     link: '/services/cloud-devops',
   },
   {
@@ -48,4 +65,3 @@ export const ADVANCED_SERVICES: AdvancedService[] = [
 ];
 
 export const SERVICE_CATEGORIES = ['AI Services', 'IT Services', 'Security'];
-

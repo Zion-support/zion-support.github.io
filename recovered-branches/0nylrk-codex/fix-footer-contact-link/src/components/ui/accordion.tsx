@@ -9,17 +9,10 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
-<<<<<<< HEAD
->(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn("border-b", className)}
-=======
 >(({ className...props }ref) => (
   <AccordionPrimitive.Item
     ref={ref}
     className={cn("border-b"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -28,11 +21,7 @@ AccordionItem.displayName = "AccordionItem"
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
-<<<<<<< HEAD
->(({ className, children, ...props }, ref) => (
-=======
 >(({ classNamechildren...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
@@ -52,28 +41,16 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
-<<<<<<< HEAD
->(({ className, children, ...props }, ref) => (
-=======
 >(({ classNamechildren...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <AccordionPrimitive.Content
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-<<<<<<< HEAD
-    <div className={cn("pb-4 pt-0", className)}>{children}</div>
-=======
     <div className={cn("pb-4 pt-0"className)}>{children}</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   </AccordionPrimitive.Content>
 ))
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-<<<<<<< HEAD
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-=======
 export { AccordionItemAccordionTriggerAccordionContent }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

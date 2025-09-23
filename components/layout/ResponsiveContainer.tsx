@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
 interface ResponsiveContainerProps {
@@ -14,13 +13,13 @@ export default function ResponsiveContainer({
   variant = 'default',
   padding = 'md',
   className = '',
-  animated = false
+  animated = false,
 }: ResponsiveContainerProps) {
   const variantClasses = {
     default: 'max-w-7xl mx-auto',
     wide: 'max-w-[90rem] mx-auto',
     narrow: 'max-w-4xl mx-auto',
-    full: 'w-full'
+    full: 'w-full',
   };
 
   const paddingClasses = {
@@ -28,7 +27,7 @@ export default function ResponsiveContainer({
     sm: 'px-4 py-2 sm:px-6 sm:py-4',
     md: 'px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-12',
     lg: 'px-6 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16',
-    xl: 'px-8 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20'
+    xl: 'px-8 py-12 sm:px-12 sm:py-16 lg:px-16 lg:py-20',
   };
 
   const containerClasses = `
@@ -50,9 +49,5 @@ export default function ResponsiveContainer({
     );
   }
 
-  return (
-    <div className={containerClasses}>
-      {children}
-    </div>
-  );
+  return <div className={containerClasses}>{children}</div>;
 }

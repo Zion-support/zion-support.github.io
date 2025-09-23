@@ -1,7 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/RevolutionaryAIContent2026Banner.tsx
-<<<<<<< HEAD
-export { default } from "../../components/RevolutionaryAIContent2026Banner";
-=======
 "use client";
 
 import React from 'react';
@@ -18,7 +14,6 @@ const RevolutionaryAIContent2026Banner: React.FC = () => {
 
 export default RevolutionaryAIContent2026Banner;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 =======
 'use client';
 
@@ -30,4 +25,4 @@ export default function RevolutionaryAIContent2026Banner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/RevolutionaryAIContent2026Banner.tsx
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

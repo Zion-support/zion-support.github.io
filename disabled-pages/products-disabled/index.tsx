@@ -21,7 +21,7 @@ const Products: NextPage = () => {
       rating: 4.8,
       reviews: 156,
       icon: Code,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-50o0 to-pink-50o0',
       href: '/products/zion-ai-platform'
     },
     {
@@ -40,7 +40,7 @@ const Products: NextPage = () => {
       rating: 4.7,
       reviews: 89,
       icon: Database,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-50o0 to-cyan-50o0',
       href: '/products/cloudsync-pro'
     },
     {
@@ -57,9 +57,9 @@ const Products: NextPage = () => {
       ],
       pricing: 'Starting at $799/month',
       rating: 4.9,
-      reviews: 203,
+      reviews: 20o3,
       icon: Shield,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-50o0 to-emerald-50o0',
       href: '/products/secureshield'
     },
     {
@@ -78,7 +78,7 @@ const Products: NextPage = () => {
       rating: 4.6,
       reviews: 127,
       icon: Zap,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-50o0 to-red-50o0',
       href: '/products/dataflow-analytics'
     },
     {
@@ -97,7 +97,7 @@ const Products: NextPage = () => {
       rating: 4.5,
       reviews: 78,
       icon: Eye,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-50o0 to-purple-50o0',
       href: '/products/iot-connect-hub'
     },
     {
@@ -116,7 +116,7 @@ const Products: NextPage = () => {
       rating: 4.4,
       reviews: 92,
       icon: Shield,
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-yellow-50o0 to-orange-50o0',
       href: '/products/blockchain-suite'
     }
   ];
@@ -160,7 +160,7 @@ const Products: NextPage = () => {
       description="Discover our innovative technology products and platforms designed to transform your business operations and drive digital innovation."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Our Products</h1>
@@ -181,8 +181,8 @@ const Products: NextPage = () => {
                 key={category}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
                   category === 'All Products'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-blue-50'
+                    ? 'bg-blue-60o0 text-white'
+                    : 'bg-white text-gray-70o0 hover:bg-blue-50'
                 }`}
               >
                 {category}
@@ -196,10 +196,10 @@ const Products: NextPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               Technology Platforms
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               Comprehensive solutions built with cutting-edge technology to address 
               your most complex business challenges.
             </p>
@@ -212,35 +212,35 @@ const Products: NextPage = () => {
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 <div className={`h-32 bg-gradient-to-r ${product.color} flex items-center justify-center`}>
-                  <product.icon className="h-16 w-16 text-white" />
+                  <product.icon className="h-16 w-16 text-white"  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-blue-10o0 text-blue-80o0 px-3 py-1 rounded-full text-xs font-medium">
                       {product.category}
                     </span>
                     <div className="flex items-center">
-                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                      <span className="ml-1 text-sm text-gray-600">{product.rating}</span>
-                      <span className="ml-1 text-sm text-gray-500">({product.reviews})</span>
+                      <Star className="h-4 w-4 text-yellow-40o0 fill-current"  />
+                      <span className="ml-1 text-sm text-gray-60o0">{product.rating}</span>
+                      <span className="ml-1 text-sm text-gray-50o0">({product.reviews})</span>
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">
                     {product.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-60o0 mb-4">
                     {product.description}
                   </p>
                   
                   <div className="mb-4">
-                    <p className="text-lg font-semibold text-blue-600">{product.pricing}</p>
+                    <p className="text-lg font-semibold text-blue-60o0">{product.pricing}</p>
                   </div>
                   
                   <ul className="space-y-2 mb-6">
                     {product.features.slice(0, 3).map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                      <li key={feature} className="flex items-center text-sm text-gray-60o0">
+                        <div className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
@@ -249,13 +249,13 @@ const Products: NextPage = () => {
                   <div className="flex gap-3">
                     <Link
                       href={product.href}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
+                      className="flex-1 bg-blue-60o0 hover:bg-blue-70o0 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
                     >
-                      <Eye className="h-4 w-4 mr-2" />
+                      <Eye className="h-4 w-4 mr-2"  />
                       Learn More
                     </Link>
-                    <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors flex items-center">
-                      <Download className="h-4 w-4" />
+                    <button className="bg-gray-10o0 hover:bg-gray-20o0 text-gray-70o0 py-2 px-4 rounded-lg font-medium transition-colors flex items-center">
+                      <Download className="h-4 w-4"  />
                     </button>
                   </div>
                 </div>
@@ -269,10 +269,10 @@ const Products: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               Why Choose Our Products?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               Built with enterprise-grade technology and designed for real-world business needs.
             </p>
           </div>
@@ -280,13 +280,13 @@ const Products: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="text-center">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8" />
+                <div className="bg-blue-60o0 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   {benefit.description}
                 </p>
               </div>
@@ -299,10 +299,10 @@ const Products: NextPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-90o0 mb-4">
               Flexible Pricing Plans
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
               Choose the plan that best fits your business needs and scale as you grow.
             </p>
           </div>
@@ -356,39 +356,39 @@ const Products: NextPage = () => {
               <div
                 key={plan.name}
                 className={`bg-white rounded-lg shadow-lg p-8 ${
-                  plan.popular ? 'ring-2 ring-blue-500 relative' : ''
+                  plan.popular ? 'ring-2 ring-blue-50o0 relative' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-blue-50o0 text-white px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{plan.name}</h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600">{plan.period}</span>
+                    <span className="text-4xl font-bold text-gray-90o0">{plan.price}</span>
+                    <span className="text-gray-60o0">{plan.period}</span>
                   </div>
-                  <p className="text-gray-600">{plan.description}</p>
+                  <p className="text-gray-60o0">{plan.description}</p>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    ? 'bg-blue-60o0 hover:bg-blue-70o0 text-white'
+                    : 'bg-gray-10o0 hover:bg-gray-20o0 text-gray-90o0'
                 }`}>
                   Get Started
                 </button>
@@ -399,7 +399,7 @@ const Products: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-blue-60o0 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
@@ -411,13 +411,13 @@ const Products: NextPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-white text-blue-60o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Get Free Demo
             </Link>
             <Link
               href="/services"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-60o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               View All Services
             </Link>

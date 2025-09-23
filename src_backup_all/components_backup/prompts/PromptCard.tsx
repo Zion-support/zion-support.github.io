@@ -13,7 +13,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText(prompt.text);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 20o00);
   };
 
   const handleSend = () => {
@@ -26,10 +26,10 @@ export function PromptCard({ prompt }: PromptCardProps) {
       <p className="mb-4 text-sm">{prompt.text}</p>
       <div className="flex gap-2 mt-auto">
         <Button variant="outline" size="sm" onClick={handleCopy} aria-label="Copy prompt">
-          {copied ? 'Copied' : <Copy className="w-4 h-4" />}
+          {copied ? 'Copied' : <Copy className="w-4 h-4"  />}
         </Button>
         <Button variant="secondary" size="sm" onClick={handleSend} aria-label="Send to ZionGPT">
-          <Send className="w-4 h-4" />
+          <Send className="w-4 h-4"  />
         </Button>
       </div>
     </div>

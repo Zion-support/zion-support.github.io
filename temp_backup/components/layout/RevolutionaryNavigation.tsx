@@ -29,25 +29,25 @@ const RevolutionaryNavigation: React.FC = () => {
         {
           name: 'AI Services',
           href: '/ai-services',
-          icon: <Brain className="w-4 h-4" />,
+          icon: <Brain className="w-4 h-4"  />,
           description: 'Advanced AI solutions for business'
         },
         {
           name: 'IT Services',
           href: '/it-services',
-          icon: <Zap className="w-4 h-4" />,
+          icon: <Zap className="w-4 h-4"  />,
           description: 'Enterprise IT infrastructure'
         },
         {
           name: 'Quantum Computing',
           href: '/quantum-ai-cognitive',
-          icon: <Shield className="w-4 h-4" />,
+          icon: <Shield className="w-4 h-4"  />,
           description: 'Next-generation quantum solutions'
         },
         {
           name: 'Micro SaaS',
           href: '/micro-saas',
-          icon: <Rocket className="w-4 h-4" />,
+          icon: <Rocket className="w-4 h-4"  />,
           description: 'Specialized business applications'
         }
       ]
@@ -59,25 +59,25 @@ const RevolutionaryNavigation: React.FC = () => {
         {
           name: 'Manufacturing',
           href: '/autonomous-manufacturing',
-          icon: <Zap className="w-4 h-4" />,
+          icon: <Zap className="w-4 h-4"  />,
           description: 'AI-powered manufacturing automation'
         },
         {
           name: 'Finance',
           href: '/quantum-blockchain',
-          icon: <Shield className="w-4 h-4" />,
+          icon: <Shield className="w-4 h-4"  />,
           description: 'Quantum blockchain financial solutions'
         },
         {
           name: 'Healthcare',
           href: '/biotech-ai',
-          icon: <Brain className="w-4 h-4" />,
+          icon: <Brain className="w-4 h-4"  />,
           description: 'AI biotech research platform'
         },
         {
           name: 'Space Tech',
           href: '/space-technology',
-          icon: <Rocket className="w-4 h-4" />,
+          icon: <Rocket className="w-4 h-4"  />,
           description: 'AI space technology solutions'
         }
       ]
@@ -89,19 +89,19 @@ const RevolutionaryNavigation: React.FC = () => {
         {
           name: 'About Us',
           href: '/about',
-          icon: <User className="w-4 h-4" />,
+          icon: <User className="w-4 h-4"  />,
           description: 'Learn about our mission'
         },
         {
           name: 'Careers',
           href: '/careers',
-          icon: <Zap className="w-4 h-4" />,
+          icon: <Zap className="w-4 h-4"  />,
           description: 'Join our revolutionary team'
         },
         {
           name: 'Contact',
           href: '/contact',
-          icon: <Mail className="w-4 h-4" />,
+          icon: <Mail className="w-4 h-4"  />,
           description: 'Get in touch with us'
         }
       ]
@@ -113,33 +113,33 @@ const RevolutionaryNavigation: React.FC = () => {
         {
           name: 'Documentation',
           href: '/docs',
-          icon: <Globe className="w-4 h-4" />,
+          icon: <Globe className="w-4 h-4"  />,
           description: 'Technical documentation'
         },
         {
           name: 'Blog',
           href: '/blog',
-          icon: <Brain className="w-4 h-4" />,
+          icon: <Brain className="w-4 h-4"  />,
           description: 'Latest insights and updates'
         },
         {
           name: 'Case Studies',
           href: '/case-studies',
-          icon: <Rocket className="w-4 h-4" />,
+          icon: <Rocket className="w-4 h-4"  />,
           description: 'Success stories and results'
         }
       ]
     }
   ];
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled 
         ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
         : 'bg-transparent'
@@ -154,8 +154,8 @@ const RevolutionaryNavigation: React.FC = () => {
             className="flex items-center"
           >
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-50o0 to-purple-60o0 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white"  />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </Link>
@@ -168,10 +168,10 @@ const RevolutionaryNavigation: React.FC = () => {
                 <button
                   onMouseEnter={() => setActiveDropdown(item.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  className="flex items-center space-x-1 text-gray-30o0 hover:text-white transition-colors duration-20o0 py-2"
                 >
                   <span>{item.name}</span>
-                  <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  <ChevronDown className="w-4 h-4 transition-transform duration-20o0 group-hover:rotate-180"  />
                 </button>
 
                 {/* Dropdown */}
@@ -191,16 +191,16 @@ const RevolutionaryNavigation: React.FC = () => {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-20o0 group"
                           >
-                            <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                            <div className="text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">
                               {dropdownItem.icon}
                             </div>
                             <div>
-                              <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                              <div className="text-white font-medium group-hover:text-cyan-30o0 transition-colors duration-20o0">
                                 {dropdownItem.name}
                               </div>
-                              <div className="text-gray-400 text-sm">
+                              <div className="text-gray-40o0 text-sm">
                                 {dropdownItem.description}
                               </div>
                             </div>
@@ -218,11 +218,11 @@ const RevolutionaryNavigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+              className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5"  />
             </motion.button>
 
             {/* Contact Info */}
@@ -232,12 +232,12 @@ const RevolutionaryNavigation: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex items-center space-x-4 text-sm"
             >
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                <Phone className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                <Phone className="w-4 h-4 text-cyan-40o0"  />
                 <span>{contactInfo.mobile}</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
-                <Mail className="w-4 h-4 text-purple-400" />
+              <div className="flex items-center space-x-2 text-gray-30o0 hover:text-white transition-colors duration-20o0">
+                <Mail className="w-4 h-4 text-purple-40o0"  />
                 <span>{contactInfo.email}</span>
               </div>
             </motion.div>
@@ -250,7 +250,7 @@ const RevolutionaryNavigation: React.FC = () => {
             >
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 hover:from-cyan-40o0 hover:to-purple-50o0 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-30o0 hover:shadow-lg hover:shadow-cyan-50o0/25"
               >
                 Get Started
               </Link>
@@ -262,9 +262,9 @@ const RevolutionaryNavigation: React.FC = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-30o0 hover:text-white transition-colors duration-20o0"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </motion.button>
           </div>
         </div>
@@ -285,7 +285,7 @@ const RevolutionaryNavigation: React.FC = () => {
                 <div key={item.name}>
                   <Link
                     href={item.href}
-                    className="block text-gray-300 hover:text-white py-2 text-lg font-medium"
+                    className="block text-gray-30o0 hover:text-white py-2 text-lg font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -296,7 +296,7 @@ const RevolutionaryNavigation: React.FC = () => {
                         <Link
                           key={dropdownItem.name}
                           href={dropdownItem.href}
-                          className="block text-gray-400 hover:text-white py-1 text-sm"
+                          className="block text-gray-40o0 hover:text-white py-1 text-sm"
                           onClick={() => setIsOpen(false)}
                         >
                           {dropdownItem.name}
@@ -309,16 +309,16 @@ const RevolutionaryNavigation: React.FC = () => {
               
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-white/10 space-y-3">
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
+                <div className="flex items-center space-x-2 text-gray-30o0">
+                  <Phone className="w-4 h-4 text-cyan-40o0"  />
                   <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
+                <div className="flex items-center space-x-2 text-gray-30o0">
+                  <Mail className="w-4 h-4 text-purple-40o0"  />
                   <span>{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-300">
-                  <MapPin className="w-4 h-4 text-green-400" />
+                <div className="flex items-center space-x-2 text-gray-30o0">
+                  <MapPin className="w-4 h-4 text-green-40o0"  />
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
@@ -327,7 +327,7 @@ const RevolutionaryNavigation: React.FC = () => {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-lg font-semibold"
+                  className="block w-full bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white text-center py-3 rounded-lg font-semibold"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import React, { forwardRef } from "react";
-=======
 import React{ forwardRef } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
@@ -16,13 +12,8 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   badge?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, className, ...props }, ref) => {
-=======
 const SidebarMenuItem = forwardRef<HTMLButtonElementSidebarMenuItemProps>(
   ({ iconactivechildrenhreftargetbadgeclassName...props }ref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (href) {
       return (
         <a
@@ -72,11 +63,7 @@ interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ...props }) => {
-=======
 const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ titlechildren...props }) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="space-y-1" {...props}>
       <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>
@@ -85,8 +72,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ titlechildren...pro
   );
 };
 
-<<<<<<< HEAD
-export { SidebarMenuItem, SidebarMenuGroup };
-=======
 export { SidebarMenuItemSidebarMenuGroup };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

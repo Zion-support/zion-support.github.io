@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
     }> = [];
 
     // Create particles
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10o0; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -66,7 +66,7 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `rgba(100, 100, 255, ${0.1 * (1 - distance / 150)})`;
+              ctx.strokeStyle = `rgba(10o0, 10o0, 255, ${0.1 * (1 - distance / 150)})`;
               ctx.lineWidth = 1;
               ctx.stroke();
             }
@@ -99,17 +99,17 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
-      />
+       />
 
       {/* Futuristic Grid Overlay */}
       <div className="fixed inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-900/10 to-purple-900/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-90o0/10 to-purple-90o0/10"  />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"  />
       </div>
 
       {/* Floating Geometric Shapes */}
       <motion.div
-        className="fixed top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg pointer-events-none"
+        className="fixed top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rounded-lg pointer-events-none"
         style={{ zIndex: 2 }}
         animate={{
           rotate: [0, 360],
@@ -121,10 +121,10 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
 
       <motion.div
-        className="fixed top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full pointer-events-none"
+        className="fixed top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full pointer-events-none"
         style={{ zIndex: 2 }}
         animate={{
           rotate: [360, 0],
@@ -136,11 +136,11 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
 
       <motion.div
-        className="fixed bottom-32 left-32 w-40 h-40 border border-green-400/30 pointer-events-none"
-        style={{ zIndex: 2, clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
+        className="fixed bottom-32 left-32 w-40 h-40 border border-green-40o0/30 pointer-events-none"
+        style={{ zIndex: 2, clipPath: 'polygon(50% 0%, 0% 10o0%, 10o0% 10o0%)' }}
         animate={{
           rotate: [0, 360],
           scale: [1, 1.1, 1],
@@ -151,13 +151,13 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
 
       {/* Neon Glow Effects */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 3 }}>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-50o0/5 rounded-full blur-3xl"  />
+        <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-purple-50o0/5 rounded-full blur-3xl"  />
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-cyan-50o0/5 rounded-full blur-3xl"  />
       </div>
 
       {/* Content */}
@@ -168,7 +168,7 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
       {/* Animated Border Lines */}
       <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 4 }}>
         <motion.div
-          className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+          className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent"
           animate={{
             opacity: [0, 1, 0]
           }}
@@ -177,9 +177,9 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
             repeat: Infinity,
             ease: "easeInOut"
           }}
-        />
+         />
         <motion.div
-          className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-purple-400 to-transparent"
+          className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-purple-40o0 to-transparent"
           animate={{
             opacity: [0, 1, 0]
           }}
@@ -189,9 +189,9 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
             ease: "easeInOut",
             delay: 1
           }}
-        />
+         />
         <motion.div
-          className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent"
+          className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-green-40o0 to-transparent"
           animate={{
             opacity: [0, 1, 0]
           }}
@@ -201,9 +201,9 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
             ease: "easeInOut",
             delay: 2
           }}
-        />
+         />
         <motion.div
-          className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-blue-400 to-transparent"
+          className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-blue-40o0 to-transparent"
           animate={{
             opacity: [0, 1, 0]
           }}
@@ -213,7 +213,7 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
             ease: "easeInOut",
             delay: 3
           }}
-        />
+         />
       </div>
 
       {/* Floating Data Streams */}
@@ -221,7 +221,7 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute text-xs text-cyan-400/40 font-mono"
+            className="absolute text-xs text-cyan-40o0/40 font-mono"
             style={{
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`
@@ -247,16 +247,16 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+            className="absolute w-2 h-2 bg-yellow-40o0 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`
             }}
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 1, 0],
-              x: [0, (Math.random() - 0.5) * 100],
-              y: [0, (Math.random() - 0.5) * 100]
+              x: [0, (Math.random() - 0.5) * 10o0],
+              y: [0, (Math.random() - 0.5) * 10o0]
             }}
             transition={{
               duration: 2 + Math.random() * 3,
@@ -264,11 +264,11 @@ const UltraFuturisticBackground2031: React.FC<{ children: React.ReactNode }> = (
               ease: "easeInOut",
               delay: Math.random() * 2
             }}
-          />
+           />
         ))}
       </div>
     </div>
   );
 };
 
-export default UltraFuturisticBackground2031;
+export default UltraFuturisticBackground20o31;

@@ -1,14 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/AI2026AutonomousSystemsBanner.tsx
-"use client";
-
-import React from 'react';
-
-<<<<<<< HEAD
-export default function AI2026AutonomousSystemsBanner() {
-  return null;
-}
-
-=======
 const AI2026AutonomousSystemsBanner: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-12 rounded-xl">
@@ -20,7 +9,6 @@ const AI2026AutonomousSystemsBanner: React.FC = () => {
 };
 
 export default AI2026AutonomousSystemsBanner;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 =======
 'use client';
 
@@ -32,4 +20,4 @@ export default function AI2026AutonomousSystemsBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026AutonomousSystemsBanner.tsx
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

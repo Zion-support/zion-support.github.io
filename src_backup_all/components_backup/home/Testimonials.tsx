@@ -82,7 +82,7 @@ const Testimonials: React.FC = () => {
           viewport={{ once: true }}
         >
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
-            <Quote className="w-4 h-4 text-zion-cyan mr-2" />
+            <Quote className="w-4 h-4 text-zion-cyan mr-2"  />
             <span className="text-zion-cyan text-sm font-medium">Client Success Stories</span>
           </div>
 
@@ -100,20 +100,20 @@ const Testimonials: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 10o0 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              exit={{ opacity: 0, x: -10o0 }}
               transition={{ duration: 0.5 }}
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
             >
               {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl"  />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl"  />
 
               {/* Rating */}
               <div className="flex justify-center mb-6">
                 {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  <Star key={i} className="w-6 h-6 text-yellow-40o0 fill-current"  />
                 ))}
               </div>
 
@@ -146,18 +146,18 @@ const Testimonials: React.FC = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-30o0 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-6 h-6"  />
           </button>
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-zion-slate-dark/80 backdrop-blur-xl border border-zion-cyan/20 rounded-full flex items-center justify-center text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-30o0 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-6 h-6"  />
           </button>
         </div>
 
@@ -167,7 +167,7 @@ const Testimonials: React.FC = () => {
             <button
               key={index}
               onClick={() => goToTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                 index === currentIndex
                   ? 'bg-zion-cyan scale-125'
                   : 'bg-zion-slate-light hover:bg-zion-cyan/50'
@@ -192,7 +192,7 @@ const Testimonials: React.FC = () => {
               <div className="text-zion-slate-light text-sm">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">500+</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">50o0+</div>
               <div className="text-zion-slate-light text-sm">Projects Delivered</div>
             </div>
             <div className="text-center">

@@ -53,7 +53,7 @@ export function AccessibilityMenu() {
         setSettings(prev => ({ ...prev, fontSize: size }));
     };
     const resetSettings = () => {
-        const defaultSettings = {
+        const defaultSettings ={
             fontSize: 'medium',
             highContrast: false,
             reducedMotion: false,
@@ -63,13 +63,13 @@ export function AccessibilityMenu() {
     };
     return (<>
       {/* Toggle Button */}
-      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
-        <Settings className="h-5 w-5"/>
+      <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
+        <Settings className="h-5 w-5" />
       </motion.button>
 
       {/* Menu Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: "spring", stiffness: 300, damping: 30 }}>
+        {isOpen && (<motion.div className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl" initial={{ opacity: 0, scale: 0.9, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9, y: 20 }} transition={{ type: "spring", stiffness: 30o0, damping: 30 }}>
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Accessibility</h3>
@@ -81,7 +81,7 @@ export function AccessibilityMenu() {
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <FileText className="h-4 w-4 text-zion-cyan"/>
+                  <FileText className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">Font Size</span>
                 </label>
                 <div className="flex gap-2">
@@ -96,7 +96,7 @@ export function AccessibilityMenu() {
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Eye className="h-4 w-4 text-zion-cyan"/>
+                  <Eye className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">High Contrast</span>
                 </label>
                 <Button variant={settings.highContrast ? "default" : "outline"} size="sm" onClick={() => toggleSetting('highContrast')} className={`w-full ${settings.highContrast
@@ -109,7 +109,7 @@ export function AccessibilityMenu() {
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Zap className="h-4 w-4 text-zion-cyan"/>
+                  <Zap className="h-4 w-4 text-zion-cyan" />
                   <span className="text-sm font-medium">Reduced Motion</span>
                 </label>
                 <Button variant={settings.reducedMotion ? "default" : "outline"} size="sm" onClick={() => toggleSetting('reducedMotion')} className={`w-full ${settings.reducedMotion
@@ -122,7 +122,7 @@ export function AccessibilityMenu() {
               {/* Sound Toggle */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  {settings.soundEnabled ? (<Volume2 className="h-4 w-4 text-zion-cyan"/>) : (<VolumeX className="h-4 w-4 text-zion-cyan"/>)}
+                  {settings.soundEnabled ? (<Volume2 className="h-4 w-4 text-zion-cyan" />) : (<VolumeX className="h-4 w-4 text-zion-cyan" />)}
                   <span className="text-sm font-medium">Sound Effects</span>
                 </label>
                 <Button variant={settings.soundEnabled ? "default" : "outline"} size="sm" onClick={() => toggleSetting('soundEnabled')} className={`w-full ${settings.soundEnabled

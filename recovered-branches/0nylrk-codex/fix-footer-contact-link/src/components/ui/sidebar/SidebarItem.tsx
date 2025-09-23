@@ -1,5 +1,4 @@
 
-import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -8,11 +7,7 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
   active?: boolean;
 }
 
-<<<<<<< HEAD
-export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
-=======
 export function SidebarItem({ classNamechildrenactive...props }: SidebarItemProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div
       className={cn(
@@ -26,7 +21,4 @@ export function SidebarItem({ classNamechildrenactive...props }: SidebarItemProp
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

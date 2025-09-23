@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Mail } from "lucide-react";
-
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-=======
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -48,43 +35,11 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage,
-} from "@/components/ui/form";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-
-// Form validation schema
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email"),
-});
-
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-  
-  // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema),
-    defaultValues: {
-      email: "",
-    },
-  }) as UseFormReturn<ForgotPasswordFormValues>;
-
-  // Form submission handler
-  const onSubmit = async (data: ForgotPasswordFormValues) => {
-    await resetPassword(data.email);
-    setSubmitted(true);
-  };
-=======
   FormMessage} from "@/components/ui/form",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -123,7 +78,6 @@ export default function ForgotPassword() {
   }
   },
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>
@@ -139,10 +93,6 @@ export default function ForgotPassword() {
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (
                 <div className="text-center py-8">
@@ -154,16 +104,11 @@ export default function ForgotPassword() {
                     We've sent a password reset link to your email address.
                   </p>
                   <div className="mt-6">
-<<<<<<< HEAD
-                    <Link
-                      to="/login"
-=======
 
 
                     <Link
                       to="/login"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
                     >
                       Back to login
@@ -193,10 +138,6 @@ export default function ForgotPassword() {
                         </FormItem>
                       )}
                     />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -204,10 +145,6 @@ export default function ForgotPassword() {
                     >
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div className="text-center">
                       <Link
                         to="/login"
@@ -218,8 +155,6 @@ export default function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -440,16 +375,11 @@ function ForgotPassword() {
                   </form>;
 
                 </Form>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               )}
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="hidden lg:block relative w-0 flex-1">
-=======
         <div className="hidden lg: block relative w-0 flex-1">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
             <div className="flex flex-col justify-center items-center h-full px-8">
               <div className="max-w-md text-center">
@@ -464,10 +394,6 @@ function ForgotPassword() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
 
@@ -588,4 +514,3 @@ export default function ForgotPassword() {;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

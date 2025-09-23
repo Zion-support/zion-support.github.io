@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Apple, GithubIcon } from "lucide-react";
-=======
 import { AppleGithubIcon } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 
 interface AppStoreButtonsProps {
@@ -16,11 +12,7 @@ interface AppStoreButtonsProps {
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
-<<<<<<< HEAD
-  className, 
-=======
   className
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
@@ -43,11 +35,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
-=======
     <div className={cn("flex flex-col sm:flex-row gap-4"className)}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <a 
         href={appStoreUrl} 
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"

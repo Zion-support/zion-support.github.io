@@ -34,15 +34,16 @@ const wishlistSlice = createSlice({
   reducers: {
     addToWishlist(state, action: PayloadAction<WishlistItem>) {
       const exists = state.items.some(
-        (item) => item.id === action.payload.id && item.type === action.payload.type
+        item =>
+          item.id === action.payload.id && item.type === action.payload.type
       );
       if (!exists) state.items.push(action.payload);
     },
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {
-      state.items = state.items.filter((item) => item.id !== action.payload.id);
+      state.items = state.items.filter(item => item.id !== action.payload.id);
     },
   },
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
       state.items = action.payload;
     });

@@ -1,5 +1,5 @@
 // Utility functions for db-optimizer;
-export const db-optimizer = {;
+export const db-optimizer ={;
   // TODO: Implement utility functions;
 };// Database optimization added;
 // Database optimization added;

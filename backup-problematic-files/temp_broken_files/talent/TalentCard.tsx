@@ -61,7 +61,7 @@ const TalentCardComponent = ({;
                   alt={talent.full_name}
                   className="w-full h-full object-cover";
                   loading="lazy";
-                />;
+                 />;
               ) :(;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
                   {talent.full_name?.charAt(0) || "T"}
@@ -70,7 +70,7 @@ const TalentCardComponent = ({;
             </div>;
             {talent.is_verified && (;
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan"  />;
               </div>;            )}
           </div>;
           ;
@@ -78,7 +78,7 @@ const TalentCardComponent = ({;
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
-              <FavoriteButton itemId={talent.id} className="-mt-1" />;
+              <FavoriteButton itemId={talent.id} className="-mt-1"  />;
             </div>;
             <p className="text-white font-medium">{talent.professional_title}</p>;
             ;
@@ -86,13 +86,13 @@ const TalentCardComponent = ({;
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
+                  <MapPin className="h-4 w-4 mr-1"  />;
                   <span>{talent.location}</span>;
                 </div>;
               )}
               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
+                  <Clock className="h-4 w-4 mr-1"  />;
                   <span>{talent.availability_type}</span>;
                 </div>;              )}
             </div>;
@@ -151,7 +151,7 @@ const TalentCardComponent = ({;
               }}
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
-              View <ArrowRight className="ml-1 h-4 w-4" />;
+              View <ArrowRight className="ml-1 h-4 w-4"  />;
             </Button>;
           </div>;
         </div>;
@@ -180,7 +180,7 @@ isAuthenticated ;
 }</div> <span >{;
   talent.availability type ;
 }</span> </div>) ;
-}</div> </div> </div> <span key= {;
+}</div> </div> </div> <span key={;
   index ;
 }className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" >{;
   skill ;
@@ -190,15 +190,13 @@ isAuthenticated ;
 }more </span>) ;
 }</div> </div>) ;
 
-
 }$ {;
   talent.hourly rate ";
 }<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
 }</div> <Button size="sm" variant="secondary" onClick={;
   handleRequestHire ";
 }className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
-}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+}<Button ml-1 h-4 w-4"  /> </Button> </div> </div> </div> </Card>) ;
 };
 "
-
 

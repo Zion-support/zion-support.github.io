@@ -9,17 +9,22 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Toronto, CA',
     timezone: 'America/Toronto',
     region: 'North America',
-    skills: ['LLM Ops', 'RAG', 'OpenAI', 'LangChain', 'Vector DBs', 'TypeScript'],
+    skills: [
+      'LLM Ops',
+      'RAG',
+      'OpenAI',
+      'LangChain',
+      'Vector DBs',
+      'TypeScript',
+    ],
     summary:
       'Senior LLM Engineer specializing in end-to-end GenAI systems with retrieval, evaluation, and safety guardrails. Proven track record shipping reliable AI products at scale.',
-    bio:
-      'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
+    bio: 'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',
     hourlyRateUsd: 140,
     availability: 'Open',
-    profileImageUrl: 'https://i.pravatar.cc/300?img=1',
+    profileImageUrl: 'https://i.pravatar.cc/30o0?img=1',
     portfolio: [
       { title: 'RAG Platform Template', url: 'https://example.com/rag' },
-<<<<<<< HEAD
       { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' },
     ],
     verified: true,
@@ -27,13 +32,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 28,
     createdAt: new Date().toISOString(),
   },
-=======
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
-    verified: true,
-    rating: 4.9,
-    reviewsCount: 28,
-    createdAt: new Date().toISOString()},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'marco-silva',
     name: 'Marco Silva',
@@ -50,21 +48,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
     availability: 'Part-time',
     profileImageUrl: 'https://i.pravatar.cc/300?img=2',
     portfolio: [
-<<<<<<< HEAD
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' },
+      {
+        title: 'Multi-Account AWS Landing Zone',
+        url: 'https://example.com/aws',
+      },
     ],
     verified: true,
     rating: 4.8,
     reviewsCount: 19,
     createdAt: new Date().toISOString(),
   },
-=======
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
-    verified: true,
-    rating: 4.8,
-    reviewsCount: 19,
-    createdAt: new Date().toISOString()},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'nina-patel',
     name: 'Nina Patel',
@@ -73,23 +66,28 @@ export const TALENT_PROFILES: TalentProfile[] = [
     location: 'Austin, US',
     timezone: 'America/Chicago',
     region: 'North America',
-    skills: ['Python', 'PyTorch', 'NLP', 'Evaluation', 'Prompting', 'Dashboards'],
+    skills: [
+      'Python',
+      'PyTorch',
+      'NLP',
+      'Evaluation',
+      'Prompting',
+      'Dashboards',
+    ],
     summary:
       'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',
     hourlyRateUsd: 110,
     availability: 'Open',
     profileImageUrl: 'https://i.pravatar.cc/300?img=3',
-    portfolio: [{ title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' }],
+    portfolio: [
+      { title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' },
+    ],
     verified: false,
     rating: 4.7,
     reviewsCount: 12,
-<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
-=======
-    createdAt: new Date().toISOString()},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'kenji-yamada',
     name: 'Kenji Yamada',
@@ -109,12 +107,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: true,
     rating: 4.6,
     reviewsCount: 34,
-<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
-=======
-    createdAt: new Date().toISOString()},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   {
     slug: 'lena-mueller',
     name: 'Lena Müller',
@@ -130,14 +124,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
     hourlyRateUsd: 130,
     availability: 'Open',
     profileImageUrl: 'https://i.pravatar.cc/300?img=5',
-    portfolio: [{ title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' }],
+    portfolio: [
+      { title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' },
+    ],
     verified: false,
     rating: 4.5,
     reviewsCount: 9,
-<<<<<<< HEAD
     createdAt: new Date().toISOString(),
   },
 ];
-=======
-    createdAt: new Date().toISOString()}];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

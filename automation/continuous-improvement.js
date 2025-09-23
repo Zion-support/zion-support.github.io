@@ -18,21 +18,19 @@ class ContinuousImprovementSystem {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async runCommand(command, options = {}) {
+  async runCommand(command, options ={}) {
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe',
-        ...options,
-      });
+        ...options});
       return { success: true, output: result };
     } catch (error) {
       return {
         success: false,
         error: error.message,
-        output: error.stdout || error.stderr,
-      };
+        output: error.stdout || error.stderr};
     }
   }
 
@@ -127,8 +125,7 @@ class ContinuousImprovementSystem {
         if (Object.keys(outdated).length > 0) {
           this.improvements.push({
             type: 'dependencies',
-            details: `Found ${Object.keys(outdated).length} outdated packages`,
-          });
+            details: `Found ${Object.keys(outdated).length} outdated packages`});
         }
       } catch (e) {
         // No outdated packages
@@ -146,8 +143,7 @@ class ContinuousImprovementSystem {
         ) {
           this.improvements.push({
             type: 'security',
-            details: `Found ${Object.keys(audit.vulnerabilities).length} security vulnerabilities`,
-          });
+            details: `Found ${Object.keys(audit.vulnerabilities).length} security vulnerabilities`});
         }
       } catch (e) {
         // No vulnerabilities found
@@ -219,8 +215,7 @@ class ContinuousImprovementSystem {
     // Commit changes
     const commitMessage = `🤖 Automated improvements: ${new Date().toISOString()}`;
     const commitResult = await this.runCommand(
-      `git commit -m "${commitMessage}"`,
-    );
+      `git commit -m "${commitMessage}"`);
     if (!commitResult.success) {
       this.log('Failed to commit changes', 'error');
       return false;
@@ -277,7 +272,7 @@ class ContinuousImprovementSystem {
     // Set up interval for continuous improvement
     setInterval(async () => {
       await this.runCycle();
-    }, 60000); // Run every minute
+    }, 60o000); // Run every minute
 
     this.log('⏰ Continuous improvement system is now running every minute');
   }

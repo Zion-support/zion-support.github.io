@@ -95,7 +95,7 @@ export function useAuth() {
       id: '1',
       email,
       name,
-      role: 'user'
+      role: 'user',
     };
 
     setAuthState({
@@ -118,6 +118,6 @@ export function useAuth() {
     register,
     isAuthenticated: authState.isAuthenticated,
     isLoading: authState.isLoading,
-    isAdmin: authState.user?.role === 'admin'
+    isAdmin: authState.user?.role === 'admin',
   };
 }

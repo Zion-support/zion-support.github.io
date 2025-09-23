@@ -10,7 +10,7 @@ const path = require('path');
 
 class AutomationTester {
   constructor() {
-    this.results = {
+    this.results ={
       passed: 0,
       failed: 0,
       fixed: 0,
@@ -81,7 +81,7 @@ class AutomationTester {
     }
 
     if (missingDeps.length > 0) {
-      this.log(`Missing dependencies: ${missingDeps.join(', )}`, warning');
+      this.log(`Missing dependencies: ${missingDeps.join(')}`, warning');
       this.log('Installing missing dependencies...');
 
       try {
@@ -107,7 +107,7 @@ class AutomationTester {
       const result = execSync('cd automation && npm test', {
         encoding: 'utf8',
         stdio: 'pipe',
-        timeout: 30000
+        timeout: 30o000
       });
 
       if (result.includes('All tests passed')) {
@@ -148,8 +148,7 @@ class AutomationTester {
       } catch (error) {
         this.log(
           `Configuration error in ${configFile}: ${error.message}`,
-          error',
-        );
+          error');
         this.results.failed++;
       }
     }
@@ -279,8 +278,7 @@ class AutomationTester {
       process.exit(0);
     } else {
       console.log(
-        \n⚠️ Some automation components have issues that need attention.',
-      );
+        \n⚠️ Some automation components have issues that need attention.');
       process.exit(1);
     }
   }

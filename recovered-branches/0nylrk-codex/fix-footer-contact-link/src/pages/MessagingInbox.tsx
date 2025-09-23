@@ -1,19 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-
-export default function MessagingInbox() {
-  const { 
-    conversations, 
-=======
 
 import React, { useEffect, useState } from 'react';
 
@@ -61,50 +46,21 @@ import { useNavigate } from 'react-router-dom',
 export default function MessagingInbox() {
   const { 
     conversations,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
     isLoading
-<<<<<<< HEAD
-  } = useMessaging();
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-=======
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
-<<<<<<< HEAD
-        await fetchConversations();
-      } catch (error) {
-        console.error("Failed to load conversations:", error);
-        toast.error("Failed to load messages. Please try again.");
-      }
-    };
-    
-    loadData();
-  }, [fetchConversations]);
-  
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return;
-    }
-    
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-=======
         await fetch_conversations ();
       } catch (error) {
         console.error("Failed to load conversations:", error),
@@ -139,25 +95,16 @@ export default function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
     });
-<<<<<<< HEAD
-    
-    // Navigate to video call page
-    navigate(`/call/${roomId}`);
-  };
-  
-=======
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   },
   
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -167,20 +114,6 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-<<<<<<< HEAD
-            
-            {activeConversation && (
-              <Button 
-                onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
-              >
-                <Video className="h-4 w-4" />
-                Start Call
-              </Button>
-            )}
-          </div>
-          
-=======
             {activeConversation && (
 
 
@@ -193,7 +126,6 @@ export default function MessagingInbox() {
               </Button>;
             )}
           </div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -203,20 +135,6 @@ export default function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD
-                  conversations={conversations}
-                  activeConversation={activeConversation}
-                  setActiveConversation={setActiveConversation}
-                  markAsRead={markAsRead}
-                />
-              )}
-              
-              {/* Conversation Detail */}
-              <ConversationDetailView />
-            </div>
-          </div>
-        </div>
-=======
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react',;
 import { useMessaging } from '@/context/MessagingContext',;
@@ -372,20 +290,14 @@ if ( {) {
             </div>;
           </div>;
         </div>;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 }
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

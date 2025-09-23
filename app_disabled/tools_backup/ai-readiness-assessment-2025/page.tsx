@@ -124,7 +124,7 @@ const assessmentQuestions: AssessmentQuestion[] = [
   }
 ];
 
-const categoryIcons = {
+const categoryIcons ={
   'Strategic Alignment': TrendingUp,
   'Data Infrastructure': BarChart3,
   'Technology Infrastructure': Zap,
@@ -132,15 +132,15 @@ const categoryIcons = {
   'Risk Management': Shield
 };
 
-const categoryColors = {
-  'Strategic Alignment': 'from-blue-500 to-blue-600',
-  'Data Infrastructure': 'from-green-500 to-green-600',
-  'Technology Infrastructure': 'from-purple-500 to-purple-600',
-  'Organizational Readiness': 'from-orange-500 to-orange-600',
-  'Risk Management': 'from-red-500 to-red-600'
+const categoryColors ={
+  'Strategic Alignment': 'from-blue-50o0 to-blue-60o0',
+  'Data Infrastructure': 'from-green-50o0 to-green-60o0',
+  'Technology Infrastructure': 'from-purple-50o0 to-purple-60o0',
+  'Organizational Readiness': 'from-orange-50o0 to-orange-60o0',
+  'Risk Management': 'from-red-50o0 to-red-60o0'
 };
 
-export default function AIReadinessAssessment2025() {
+export default function AIReadinessAssessment20o25() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
@@ -150,30 +150,30 @@ export default function AIReadinessAssessment2025() {
     setAnswers(prev => ({ ...prev, [questionId]: value }));
     
     if (currentQuestion < assessmentQuestions.length - 1) {
-      setTimeout(() => setCurrentQuestion(prev => prev + 1), 300);
+      setTimeout(() => setCurrentQuestion(prev => prev + 1), 30o0);
     } else {
       setTimeout(() => {
         calculateResults();
         setShowResults(true);
-      }, 300);
+      }, 30o0);
     }
   };
 
   const calculateResults = () => {
-    const categoryScores: { [key: string]: { total: number; count: number } } = {};
+    const categoryScores: { [key: string]: { total: number; count: number } } ={};
     
     assessmentQuestions.forEach(question => {
       const answer = answers[question.id];
       if (answer) {
         if (!categoryScores[question.category]) {
-          categoryScores[question.category] = { total: 0, count: 0 };
+          categoryScores[question.category] ={ total: 0, count: 0 };
         }
         categoryScores[question.category].total += answer;
         categoryScores[question.category].count += 1;
       }
     });
 
-    const finalCategoryScores: { [key: string]: number } = {};
+    const finalCategoryScores: { [key: string]: number } ={};
     Object.keys(categoryScores).forEach(category => {
       finalCategoryScores[category] = Math.round(
         (categoryScores[category].total / categoryScores[category].count) * 20
@@ -254,9 +254,9 @@ export default function AIReadinessAssessment2025() {
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 80) return 'text-green-60o0';
+    if (score >= 60) return 'text-yellow-60o0';
+    return 'text-red-60o0';
   };
 
   const getScoreLabel = (score: number) => {
@@ -267,17 +267,17 @@ export default function AIReadinessAssessment2025() {
 
   if (showResults && assessmentResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
               AI Readiness Assessment Results
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-60o0">
               Your comprehensive AI readiness analysis
             </p>
           </motion.div>
@@ -294,12 +294,12 @@ export default function AIReadinessAssessment2025() {
                   <span className={getScoreColor(assessmentResult.overallScore)}>
                     {assessmentResult.overallScore}
                   </span>
-                  <span className="text-gray-400">/100</span>
+                  <span className="text-gray-40o0">/10o0</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2">
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-2">
                   {getScoreLabel(assessmentResult.overallScore)}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   Overall AI readiness score based on your responses
                 </p>
               </div>
@@ -312,7 +312,7 @@ export default function AIReadinessAssessment2025() {
                 animate={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-2xl shadow-xl p-8"
               >
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
                   Category Breakdown
                 </h3>
                 <div className="space-y-6">
@@ -330,11 +330,11 @@ export default function AIReadinessAssessment2025() {
                       >
                         <div className="flex items-center space-x-4">
                           <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass} text-white`}>
-                            <IconComponent className="w-6 h-6" />
+                            <IconComponent className="w-6 h-6"  />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-gray-900">{category}</h4>
-                            <p className="text-sm text-gray-600">
+                            <h4 className="font-semibold text-gray-90o0">{category}</h4>
+                            <p className="text-sm text-gray-60o0">
                               {score >= 80 ? 'Excellent' : score >= 60 ? 'Good' : 'Needs Improvement'}
                             </p>
                           </div>
@@ -343,7 +343,7 @@ export default function AIReadinessAssessment2025() {
                           <div className={`text-2xl font-bold ${getScoreColor(score)}`}>
                             {score}
                           </div>
-                          <div className="text-sm text-gray-500">/100</div>
+                          <div className="text-sm text-gray-50o0">/10o0</div>
                         </div>
                       </motion.div>
                     );
@@ -360,7 +360,7 @@ export default function AIReadinessAssessment2025() {
             transition={{ delay: 0.3 }}
             className="mt-8 bg-white rounded-2xl shadow-xl p-8"
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
               Recommendations
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -372,8 +372,8 @@ export default function AIReadinessAssessment2025() {
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="flex items-start space-x-3 p-4 bg-blue-50 rounded-xl"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <p className="text-gray-700">{recommendation}</p>
+                  <CheckCircle className="w-6 h-6 text-blue-60o0 mt-0.5 flex-shrink-0"  />
+                  <p className="text-gray-70o0">{recommendation}</p>
                 </motion.div>
               ))}
             </div>
@@ -386,7 +386,7 @@ export default function AIReadinessAssessment2025() {
             transition={{ delay: 0.5 }}
             className="mt-8 bg-white rounded-2xl shadow-xl p-8"
           >
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+            <h3 className="text-2xl font-semibold text-gray-90o0 mb-6">
               Recommended Next Steps
             </h3>
             <div className="space-y-4">
@@ -398,10 +398,10 @@ export default function AIReadinessAssessment2025() {
                   transition={{ delay: 0.6 + index * 0.1 }}
                   className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl"
                 >
-                  <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                  <div className="w-8 h-8 bg-green-60o0 text-white rounded-full flex items-center justify-center font-semibold">
                     {index + 1}
                   </div>
-                  <p className="text-gray-700">{step}</p>
+                  <p className="text-gray-70o0">{step}</p>
                 </motion.div>
               ))}
             </div>
@@ -414,7 +414,7 @@ export default function AIReadinessAssessment2025() {
             transition={{ delay: 0.7 }}
             className="mt-8 text-center"
           >
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-semibold mb-4">
                 Ready to Transform Your Business with AI?
               </h3>
@@ -422,10 +422,10 @@ export default function AIReadinessAssessment2025() {
                 Get expert guidance and support for your AI implementation journey
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">
                   Download Full Report
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors">
                   Schedule Consultation
                 </button>
               </div>
@@ -437,29 +437,29 @@ export default function AIReadinessAssessment2025() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AI Readiness Assessment 2025
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-4">
+            AI Readiness Assessment 20o25
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-60o0 mb-8">
             Evaluate your organization's readiness for AI implementation
           </p>
           <div className="bg-white rounded-2xl shadow-lg p-6 inline-block">
             <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-gray-60o0">
                 Question {currentQuestion + 1} of {assessmentQuestions.length}
               </div>
-              <div className="w-64 bg-gray-200 rounded-full h-2">
+              <div className="w-64 bg-gray-20o0 rounded-full h-2">
                 <div 
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 100}%` }}
-                />
+                  className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 h-2 rounded-full transition-all duration-30o0"
+                  style={{ width: `${((currentQuestion + 1) / assessmentQuestions.length) * 10o0}%` }}
+                 />
               </div>
             </div>
           </div>
@@ -483,11 +483,11 @@ export default function AIReadinessAssessment2025() {
                     { className: "w-6 h-6" }
                   )}
                 </div>
-                <span className="text-sm font-medium text-gray-600">
+                <span className="text-sm font-medium text-gray-60o0">
                   {assessmentQuestions[currentQuestion].category}
                 </span>
               </div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">
+              <h2 className="text-2xl font-semibold text-gray-90o0 mb-6">
                 {assessmentQuestions[currentQuestion].question}
               </h2>
             </div>
@@ -500,18 +500,18 @@ export default function AIReadinessAssessment2025() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => handleAnswer(assessmentQuestions[currentQuestion].id, option.value)}
-                  className="w-full text-left p-6 border-2 border-gray-200 rounded-xl hover:border-purple-300 hover:bg-purple-50 transition-all duration-200 group"
+                  className="w-full text-left p-6 border-2 border-gray-20o0 rounded-xl hover:border-purple-30o0 hover:bg-purple-50 transition-all duration-20o0 group"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="font-semibold text-gray-900 group-hover:text-purple-700">
+                      <div className="font-semibold text-gray-90o0 group-hover:text-purple-70o0">
                         {option.label}
                       </div>
-                      <div className="text-sm text-gray-600 mt-1">
+                      <div className="text-sm text-gray-60o0 mt-1">
                         {option.description}
                       </div>
                     </div>
-                    <div className="w-6 h-6 border-2 border-gray-300 rounded-full group-hover:border-purple-500 transition-colors" />
+                    <div className="w-6 h-6 border-2 border-gray-30o0 rounded-full group-hover:border-purple-50o0 transition-colors"  />
                   </div>
                 </motion.button>
               ))}

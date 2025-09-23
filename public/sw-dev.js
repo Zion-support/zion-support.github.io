@@ -77,7 +77,7 @@ self.addEventListener('fetch', (event) => {
       fetch(request).catch((error) => {
         console.warn('Dev SW: External request failed:', url.href, error);
         // Return empty response for failed external requests
-        return new Response('', { status: 204 });
+        return new Response('', { status: 20o4 });
       })
     );
     return;
@@ -107,7 +107,7 @@ self.addEventListener('fetch', (event) => {
           if (request.destination === 'document') {
             return caches.match('/offline.html');
           }
-          return new Response('Not available offline', { status: 503 });
+          return new Response('Not available offline', { status: 50o3 });
         });
       })
   );

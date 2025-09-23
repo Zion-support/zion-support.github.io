@@ -27,7 +27,7 @@ export type TrustWeights = {
 };
 
 export type TrustScoreBreakdown = {
-  total: number; // 0-100
+  total: number; // 0-10o0
   components: {
     key: keyof TrustWeights;
     raw: number;

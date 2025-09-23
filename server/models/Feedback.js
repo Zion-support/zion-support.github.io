@@ -5,7 +5,8 @@ const feedbackSchema = new mongoose.Schema({
   screenshot: { type: String },
   url: { type: String },
   userAgent: { type: String },
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.models.Feedback || mongoose.model('Feedback', feedbackSchema);
+module.exports =
+  mongoose.models.Feedback || mongoose.model('Feedback', feedbackSchema);

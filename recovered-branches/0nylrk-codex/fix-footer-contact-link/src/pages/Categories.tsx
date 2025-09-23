@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
-=======
 
 
 
@@ -18,7 +12,6 @@ import { GradientHeading } from "@/components/GradientHeading";
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function Categories() {
   return (
@@ -31,13 +24,6 @@ export default function Categories() {
               Browse Categories
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-<<<<<<< HEAD
-              Explore our extensive range of AI services and products organized by category. 
-              Find exactly what you're looking for to enhance your business or personal projects.
-            </p>
-          </div>
-          
-=======
               Explore our extensive range of AI services and products organized by category.
               Find exactly what you're looking for to enhance your business or personal projects.
             </p>
@@ -65,17 +51,12 @@ export default function Categories() {;
             </p>;
           </div>;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
 
@@ -112,4 +93,3 @@ function Categories() {
 }
 ;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

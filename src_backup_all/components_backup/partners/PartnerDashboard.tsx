@@ -5,13 +5,13 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-  const stats = {
+  const stats ={
     totalReferrals: 42,
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-    totalRevenue: 850.00,
-    pendingRevenue: 200.00
+    totalRevenue: 850.0o0,
+    pendingRevenue: 20o0.0o0
   };
   
   return (
@@ -21,7 +21,7 @@ export function PartnerDashboard() {
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Referrals</CardTitle>
-            <Users className="h-4 w-4 text-zion-cyan" />
+            <Users className="h-4 w-4 text-zion-cyan"  />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
@@ -34,7 +34,7 @@ export function PartnerDashboard() {
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <TrendingUp className="h-4 w-4 text-zion-purple" />
+            <TrendingUp className="h-4 w-4 text-zion-purple"  />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
@@ -47,7 +47,7 @@ export function PartnerDashboard() {
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
-            <DollarSign className="h-4 w-4 text-green-500" />
+            <DollarSign className="h-4 w-4 text-green-50o0"  />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
@@ -66,7 +66,7 @@ export function PartnerDashboard() {
         </CardHeader>
         <CardContent className="flex justify-center items-center p-6">
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full">
-            <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4"  />
             <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
           </div>
         </CardContent>
@@ -83,7 +83,7 @@ export function PartnerDashboard() {
         </CardHeader>
         <CardContent>
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4"  />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
               Start sharing your referral links to earn rewards

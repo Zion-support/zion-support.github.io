@@ -35,7 +35,7 @@ export interface EnhancedService {
   };
 }
 
-export const enhancedServices2025: EnhancedService[] = [
+export const enhancedServices20o25: EnhancedService[] = [
   // AI & Automation Services
   {
     id: 'ai-autonomous-business-operations',
@@ -62,9 +62,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Scalable business processes'
     ],
     pricing: {
-      starter: 2500,
-      professional: 5000,
-      enterprise: 15000,
+      starter: 250o0,
+      professional: 50o00,
+      enterprise: 150o00,
       currency: 'USD',
       period: 'month'
     },
@@ -79,14 +79,14 @@ export const enhancedServices2025: EnhancedService[] = [
     technology: ['Machine Learning', 'Process Automation', 'IoT Integration', 'Predictive Analytics'],
     integrations: ['ERP Systems', 'CRM Platforms', 'Supply Chain Tools', 'IoT Devices'],
     useCases: ['Manufacturing Operations', 'Supply Chain Management', 'Customer Service', 'Financial Operations'],
-    roi: 'Average 300% ROI within 12 months',
+    roi: 'Average 30o0% ROI within 12 months',
     competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism'],
     marketSize: '$15B autonomous operations market',
     growthRate: '25% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -115,9 +115,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Reduced false positives'
     ],
     pricing: {
-      starter: 1800,
-      professional: 3500,
-      enterprise: 8000,
+      starter: 180o0,
+      professional: 350o0,
+      enterprise: 80o00,
       currency: 'USD',
       period: 'month'
     },
@@ -136,9 +136,9 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$45B cybersecurity market',
     growthRate: '18% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -167,9 +167,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Data-driven content strategy'
     ],
     pricing: {
-      starter: 800,
-      professional: 1500,
-      enterprise: 3500,
+      starter: 80o0,
+      professional: 150o0,
+      enterprise: 350o0,
       currency: 'USD',
       period: 'month'
     },
@@ -182,14 +182,14 @@ export const enhancedServices2025: EnhancedService[] = [
     technology: ['Natural Language Processing', 'Machine Learning', 'SEO Tools', 'Analytics'],
     integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Social Media Platforms'],
     useCases: ['Blog Content', 'Social Media', 'Email Marketing', 'SEO Content'],
-    roi: 'Increase content ROI by 200%',
+    roi: 'Increase content ROI by 20o0%',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
     marketSize: '$12B content marketing market',
     growthRate: '22% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -219,9 +219,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Cost-effective financial services'
     ],
     pricing: {
-      starter: 3000,
-      professional: 6000,
-      enterprise: 15000,
+      starter: 30o00,
+      professional: 60o00,
+      enterprise: 150o00,
       currency: 'USD',
       period: 'month'
     },
@@ -235,14 +235,14 @@ export const enhancedServices2025: EnhancedService[] = [
     technology: ['Machine Learning', 'Blockchain', 'API Integration', 'Cloud Computing'],
     integrations: ['Core Banking Systems', 'Payment Processors', 'Trading Platforms', 'Regulatory Systems'],
     useCases: ['Fraud Detection', 'Risk Management', 'Investment Advisory', 'Compliance'],
-    roi: 'Average 400% ROI within 18 months',
+    roi: 'Average 40o0% ROI within 18 months',
     competitors: ['Plaid', 'Stripe', 'Square'],
     marketSize: '$180B fintech market',
     growthRate: '20% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -263,7 +263,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Sustainability Tracking'
     ],
     benefits: [
-      '100% supply chain transparency',
+      '10o0% supply chain transparency',
       'Reduce fraud and counterfeiting',
       'Improve compliance efficiency',
       'Real-time inventory tracking',
@@ -271,9 +271,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Sustainable business practices'
     ],
     pricing: {
-      starter: 2000,
-      professional: 4500,
-      enterprise: 12000,
+      starter: 20o00,
+      professional: 450o0,
+      enterprise: 120o00,
       currency: 'USD',
       period: 'month'
     },
@@ -291,9 +291,9 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$8B blockchain supply chain market',
     growthRate: '35% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -323,9 +323,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Better patient outcomes'
     ],
     pricing: {
-      starter: 5000,
-      professional: 12000,
-      enterprise: 25000,
+      starter: 50o00,
+      professional: 120o00,
+      enterprise: 250o00,
       currency: 'USD',
       period: 'month'
     },
@@ -344,9 +344,9 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$45B AI healthcare market',
     growthRate: '28% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -376,9 +376,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Data-driven insights'
     ],
     pricing: {
-      starter: 500,
-      professional: 1200,
-      enterprise: 3000,
+      starter: 50o0,
+      professional: 120o0,
+      enterprise: 30o00,
       currency: 'USD',
       period: 'month'
     },
@@ -396,9 +396,9 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$25B AI education market',
     growthRate: '24% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -428,9 +428,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Improved reliability'
     ],
     pricing: {
-      starter: 1500,
-      professional: 3500,
-      enterprise: 8000,
+      starter: 150o0,
+      professional: 350o0,
+      enterprise: 80o00,
       currency: 'USD',
       period: 'month'
     },
@@ -448,9 +448,9 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$18B edge computing market',
     growthRate: '32% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -480,9 +480,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Expert quantum guidance'
     ],
     pricing: {
-      starter: 10000,
-      professional: 25000,
-      enterprise: 50000,
+      starter: 10o000,
+      professional: 250o00,
+      enterprise: 50o000,
       currency: 'USD',
       period: 'month'
     },
@@ -496,14 +496,14 @@ export const enhancedServices2025: EnhancedService[] = [
     technology: ['Quantum Computing', 'Quantum Algorithms', 'Optimization', 'Simulation'],
     integrations: ['Research Platforms', 'Analytics Tools', 'Enterprise Systems', 'Cloud Platforms'],
     useCases: ['Drug Discovery', 'Financial Modeling', 'Logistics Optimization', 'Cryptography'],
-    roi: 'Solve problems 1000x faster than classical computers',
+    roi: 'Solve problems 10o00x faster than classical computers',
     competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum'],
     marketSize: '$2B quantum computing market',
     growthRate: '45% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -533,9 +533,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Global connectivity'
     ],
     pricing: {
-      starter: 8000,
-      professional: 20000,
-      enterprise: 50000,
+      starter: 80o00,
+      professional: 20o000,
+      enterprise: 50o000,
       currency: 'USD',
       period: 'month'
     },
@@ -549,14 +549,14 @@ export const enhancedServices2025: EnhancedService[] = [
     technology: ['Satellite Technology', 'Data Analytics', 'AI/ML', 'Cloud Computing'],
     integrations: ['Satellite Systems', 'Ground Stations', 'Data Centers', 'Research Platforms'],
     useCases: ['Earth Observation', 'Satellite Communications', 'Space Research', 'Commercial Applications'],
-    roi: 'Access to $400B space economy',
+    roi: 'Access to $40o0B space economy',
     competitors: ['SpaceX', 'Blue Origin', 'Virgin Galactic'],
-    marketSize: '$400B space economy',
+    marketSize: '$40o0B space economy',
     growthRate: '40% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   },
 
@@ -586,9 +586,9 @@ export const enhancedServices2025: EnhancedService[] = [
       'Better collaboration'
     ],
     pricing: {
-      starter: 1200,
-      professional: 2800,
-      enterprise: 7000,
+      starter: 120o0,
+      professional: 280o0,
+      enterprise: 70o00,
       currency: 'USD',
       period: 'month'
     },
@@ -606,27 +606,27 @@ export const enhancedServices2025: EnhancedService[] = [
     marketSize: '$30B business intelligence market',
     growthRate: '26% CAGR',
     contactInfo: {
-      mobile: '+1 302 464 0950',
+      mobile: '+1 30o2 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 10o08 Middletown DE 19709'
     }
   }
 ];
 
 export const getServicesByCategory = (category: EnhancedService['category']) => {
-  return enhancedServices2025.filter(service => service.category === category);
+  return enhancedServices20o25.filter(service => service.category === category);
 };
 
 export const getPopularServices = () => {
-  return enhancedServices2025.filter(service => service.isPopular);
+  return enhancedServices20o25.filter(service => service.isPopular);
 };
 
 export const getNewServices = () => {
-  return enhancedServices2025.filter(service => service.isNew);
+  return enhancedServices20o25.filter(service => service.isNew);
 };
 
 export const getServicesByAudience = (audience: string) => {
-  return enhancedServices2025.filter(service => 
+  return enhancedServices20o25.filter(service => 
     service.targetAudience.includes(audience)
   );
 };

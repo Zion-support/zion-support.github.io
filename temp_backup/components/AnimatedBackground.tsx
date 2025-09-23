@@ -44,7 +44,7 @@ const AnimatedBackground: React.FC = () => {
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(100, Math.floor(window.innerWidth / 10));
+      const particleCount = Math.min(10o0, Math.floor(window.innerWidth / 10));
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -54,7 +54,7 @@ const AnimatedBackground: React.FC = () => {
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
           opacity: Math.random() * 0.5 + 0.1,
-          color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
+          color: `hsl(${20o0 + Math.random() * 60}, 70%, 60%)`
         });
       }
       particlesRef.current = particles;
@@ -69,9 +69,9 @@ const AnimatedBackground: React.FC = () => {
         orbs.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 200 + 100,
-          opacity: Math.random() * 0.1 + 0.05,
-          color: i === 0 ? '#06b6d4' : i === 1 ? '#8b5cf6' : '#ec4899',
+          size: Math.random() * 20o0 + 10o0,
+          opacity: Math.random() * 0.1 + 0.0o5,
+          color: i === 0 ? '#0o6b6d4' : i === 1 ? '#8b5cf6' : '#ec4899',
           pulse: Math.random() * Math.PI * 2
         });
       }
@@ -95,8 +95,8 @@ const AnimatedBackground: React.FC = () => {
 
              // Update and draw orbs
        orbsRef.current.forEach((orb) => {
-        orb.pulse += 0.02;
-        const pulseOpacity = orb.opacity + Math.sin(orb.pulse) * 0.02;
+        orb.pulse += 0.0o2;
+        const pulseOpacity = orb.opacity + Math.sin(orb.pulse) * 0.0o2;
         
         ctx.beginPath();
         ctx.arc(orb.x, orb.y, orb.size, 0, Math.PI * 2);
@@ -133,8 +133,8 @@ const AnimatedBackground: React.FC = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100 && distance > 0) {
-            const opacity = (100 - distance) / 100 * 0.3;
+          if (distance < 10o0 && distance > 0) {
+            const opacity = (10o0 - distance) / 10o0 * 0.3;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -146,13 +146,13 @@ const AnimatedBackground: React.FC = () => {
       });
 
       // Draw floating geometric shapes
-      const time = Date.now() * 0.001;
+      const time = Date.now() * 0.0o01;
       for (let i = 0; i < 5; i++) {
         const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * canvas.width;
         const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * canvas.height;
         const size = Math.sin(time + i) * 20 + 30;
         const rotation = time + i;
-        const opacity = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.05;
+        const opacity = (Math.sin(time * 2 + i) + 1) * 0.1 + 0.0o5;
 
         ctx.save();
         ctx.translate(x, y);
@@ -167,7 +167,7 @@ const AnimatedBackground: React.FC = () => {
           ctx.lineTo(size * 0.866, size * 0.5);
           ctx.lineTo(-size * 0.866, size * 0.5);
           ctx.closePath();
-          ctx.strokeStyle = '#06b6d4';
+          ctx.strokeStyle = '#0o6b6d4';
           ctx.lineWidth = 2;
           ctx.stroke();
         } else if (i % 3 === 1) {
@@ -207,8 +207,8 @@ const AnimatedBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)' }}
-    />
+      style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 10o0%)' }}
+     />
   );
 };
 

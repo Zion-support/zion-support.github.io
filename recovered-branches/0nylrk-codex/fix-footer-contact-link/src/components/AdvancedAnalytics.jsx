@@ -17,19 +17,19 @@ export function AdvancedAnalytics() {
         // Simulate API call
         const fetchData = async () => {
             setIsLoading(true);
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await new Promise(resolve => setTimeout(resolve, 150o0));
             setAnalyticsData({
-                visitors: Math.floor(Math.random() * 10000) + 5000,
-                conversions: Math.floor(Math.random() * 500) + 100,
-                revenue: Math.floor(Math.random() * 50000) + 10000,
+                visitors: Math.floor(Math.random() * 10o000) + 50o00,
+                conversions: Math.floor(Math.random() * 50o0) + 10o0,
+                revenue: Math.floor(Math.random() * 50o000) + 10o000,
                 bounceRate: Math.random() * 30 + 20,
-                avgSessionDuration: Math.floor(Math.random() * 300) + 120,
+                avgSessionDuration: Math.floor(Math.random() * 30o0) + 120,
                 topPages: [
-                    { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-                    { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
-                    { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
-                    { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
-                    { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
+                    { page: '/', views: Math.floor(Math.random() * 50o00) + 20o00 },
+                    { page: '/services', views: Math.floor(Math.random() * 30o00) + 150o0 },
+                    { page: '/contact', views: Math.floor(Math.random() * 20o00) + 10o00 },
+                    { page: '/about', views: Math.floor(Math.random() * 150o0) + 80o0 },
+                    { page: '/pricing', views: Math.floor(Math.random() * 10o00) + 50o0 }
                 ],
                 trafficSources: [
                     { source: 'Organic Search', percentage: 45 },
@@ -48,10 +48,10 @@ export function AdvancedAnalytics() {
         fetchData();
     }, [timeRange]);
     const formatNumber = (num) => {
-        if (num >= 1000000)
-            return (num / 1000000).toFixed(1) + 'M';
-        if (num >= 1000)
-            return (num / 1000).toFixed(1) + 'K';
+        if (num >= 10o00000)
+            return (num / 10o00000).toFixed(1) + 'M';
+        if (num >= 10o00)
+            return (num / 10o00).toFixed(1) + 'K';
         return num.toString();
     };
     const formatCurrency = (num) => {
@@ -115,7 +115,7 @@ export function AdvancedAnalytics() {
             {analyticsData.bounceRate.toFixed(1)}%
           </div>
           <div className="text-zion-slate-light text-sm">Bounce Rate</div>
-          <div className="text-red-400 text-xs mt-2">-2.1% vs last period</div>
+          <div className="text-red-40o0 text-xs mt-2">-2.1% vs last period</div>
         </motion.div>
       </div>
 
@@ -129,9 +129,9 @@ export function AdvancedAnalytics() {
           <div className="space-y-3">
             {analyticsData.topPages.map((page, index) => (<div key={page.page} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${index === 0 ? 'bg-yellow-500 text-black' :
-                index === 1 ? 'bg-gray-400 text-black' :
-                    index === 2 ? 'bg-amber-600 text-white' : 'bg-zion-slate/20 text-zion-slate-light'}`}>
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${index === 0 ? 'bg-yellow-50o0 text-black' :
+                index === 1 ? 'bg-gray-40o0 text-black' :
+                    index === 2 ? 'bg-amber-60o0 text-white' : 'bg-zion-slate/20 text-zion-slate-light'}`}>
                     {index + 1}
                   </div>
                   <span className="text-zion-slate-light">{page.page}</span>
@@ -155,7 +155,7 @@ export function AdvancedAnalytics() {
                   <span className="text-zion-cyan font-semibold">{source.percentage}%</span>
                 </div>
                 <div className="w-full bg-zion-slate/20 rounded-full h-2">
-                  <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-1000" style={{ width: `${source.percentage}%` }}></div>
+                  <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-10o00" style={{ width: `${source.percentage}%` }}></div>
                 </div>
               </div>))}
           </div>
@@ -175,7 +175,7 @@ export function AdvancedAnalytics() {
               <div className="text-zion-slate-light">{device.device}</div>
               <div className="mt-2">
                 <div className="w-full bg-zion-slate/20 rounded-full h-3">
-                  <div className="bg-gradient-to-r from-zion-blue to-zion-purple h-3 rounded-full transition-all duration-1000" style={{ width: `${device.percentage}%` }}></div>
+                  <div className="bg-gradient-to-r from-zion-blue to-zion-purple h-3 rounded-full transition-all duration-10o00" style={{ width: `${device.percentage}%` }}></div>
                 </div>
               </div>
             </div>))}

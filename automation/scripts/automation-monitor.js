@@ -27,8 +27,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/monitor.log' }),
     new winston.transports.File({ filename: 'logs/monitor-error.log', level: 'error' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -38,15 +37,14 @@ if (process.env.NODE_ENV !== 'production') {
 
 class AutomationMonitor {
   constructor() {
-    this.config = {
-      healthCheckInterval: 300000, // 5 minutes
-      fixCheckInterval: 900000,    // 15 minutes
+    this.config ={
+      healthCheckInterval: 30o0000, // 5 minutes
+      fixCheckInterval: 90o0000,    // 15 minutes
       maxConsecutiveFailures: 3,
       logsDir: path.join(__dirname, '../logs'),
-      statusFile: path.join(__dirname, '../logs/monitor-status.json'),
-    };
+      statusFile: path.join(__dirname, '../logs/monitor-status.json')};
     
-    this.status = {
+    this.status ={
       isRunning: false,
       startTime: null,
       lastHealthCheck: null,
@@ -187,7 +185,7 @@ class AutomationMonitor {
       await this.stopAutomationProcesses();
       
       // Wait a moment
-      await this.sleep(5000);
+      await this.sleep(50o00);
       
       // Run comprehensive fix
       const fixer = require('./fix-automation-errors.js');
@@ -302,7 +300,7 @@ class AutomationMonitor {
   loadStatus() {
     try {
       if (fs.existsSync(this.config.statusFile)) {
-        this.status = {
+        this.status ={
           ...this.status,
           ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))
         };

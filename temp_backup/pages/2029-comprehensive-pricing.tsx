@@ -7,35 +7,35 @@ import {
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
 } from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29';
+import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29';
+import FuturisticAnimatedBackground20o29 from '../components/ui/FuturisticAnimatedBackground20o29';
+import { aiAutonomousEcosystemServices20o29 } from '../data/20o29-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices20o29 } from '../data/20o29-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices20o29 } from '../data/20o29-practical-business-solutions';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export default function ComprehensivePricing2029() {
+export default function ComprehensivePricing20o29() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const allServices = [
-    ...aiAutonomousEcosystemServices2029,
-    ...emergingTechBreakthroughServices2029,
-    ...practicalBusinessSolutionServices2029
+    ...aiAutonomousEcosystemServices20o29,
+    ...emergingTechBreakthroughServices20o29,
+    ...practicalBusinessSolutionServices20o29
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
-    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices2029.length },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices2029.length },
-    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices20o29.length },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices20o29.length },
+    { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices20o29.length }
   ];
 
   const filteredServices = selectedCategory === 'all' 
@@ -67,16 +67,16 @@ export default function ComprehensivePricing2029() {
 
   return (
     <div className="min-h-screen bg-black text-white relative">
-      <FuturisticAnimatedBackground2029 />
+      <FuturisticAnimatedBackground20o29  />
       
       <Head>
-        <title>2029 Comprehensive Pricing - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive 2029 pricing for AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transparent pricing with flexible billing options." />
-        <meta name="keywords" content="2029 pricing, AI services pricing, quantum technology pricing, business solutions pricing, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/2029-comprehensive-pricing" />
+        <title>20o29 Comprehensive Pricing - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive 20o29 pricing for AI autonomous ecosystems, emerging tech breakthroughs, and practical business solutions. Transparent pricing with flexible billing options."  />
+        <meta name="keywords" content="20o29 pricing, AI services pricing, quantum technology pricing, business solutions pricing, Zion Tech Group"  />
+        <link rel="canonical" href="https://ziontechgroup.com/20o29-comprehensive-pricing"  />
       </Head>
 
-      <UltraFuturisticNavigation2029 />
+      <UltraFuturisticNavigation20o29  />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden py-32">
@@ -86,54 +86,54 @@ export default function ComprehensivePricing2029() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
-              2029 Comprehensive Pricing
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-blue-40o0 bg-clip-text text-transparent mb-8">
+              20o29 Comprehensive Pricing
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto">
+              Transparent pricing for our revolutionary 20o29 services. Choose the perfect plan 
               for your business transformation journey.
             </p>
 
             {/* Billing Toggle */}
             <div className="flex items-center justify-center gap-4 mb-12">
-              <span className="text-gray-400">Monthly</span>
+              <span className="text-gray-40o0">Monthly</span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
-                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
-                  billingCycle === 'annual' ? 'bg-purple-600' : ''
+                className={`relative w-16 h-8 bg-gray-70o0 rounded-full transition-colors duration-30o0 ${
+                  billingCycle === 'annual' ? 'bg-purple-60o0' : ''
                 }`}
               >
                 <div
-                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
+                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-30o0 ${
                     billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-                />
+                 />
               </button>
-              <span className="text-gray-400">Annual (20% off)</span>
+              <span className="text-gray-40o0">Annual (20% off)</span>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 bg-gradient-to-b from-black to-gray-90o0">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <motion.button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-300 ${
+                className={`flex items-center gap-3 px-6 py-3 rounded-full border-2 transition-all duration-30o0 ${
                   selectedCategory === category.id
-                    ? 'border-purple-500 bg-purple-500/20 text-purple-300'
-                    : 'border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300'
+                    ? 'border-purple-50o0 bg-purple-50o0/20 text-purple-30o0'
+                    : 'border-gray-60o0 text-gray-40o0 hover:border-gray-50o0 hover:text-gray-30o0'
                 }`}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <category.icon className="w-5 h-5" />
+                <category.icon className="w-5 h-5"  />
                 <span>{category.name}</span>
-                <span className="px-2 py-1 bg-gray-700 rounded-full text-xs">
+                <span className="px-2 py-1 bg-gray-70o0 rounded-full text-xs">
                   {category.count}
                 </span>
               </motion.button>
@@ -149,13 +149,9 @@ export default function ComprehensivePricing2029() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            viewport={{ once: true }} className="text-center mb-16">
-=======
             viewport={{ once: true }}
             className="text-center mb-16"
           >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
@@ -172,13 +168,9 @@ export default function ComprehensivePricing2029() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                viewport={{ once: true }} className="relative group">
-=======
                 viewport={{ once: true }}
                 className="relative group"
               >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">
                   {/* Service Header */}
@@ -206,13 +198,9 @@ export default function ComprehensivePricing2029() {
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
-<<<<<<< HEAD
-                        key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
-=======
                         key={catIndex}
                         className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600"
                       >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         {cat}
                       </span>
                     ))}
@@ -259,13 +247,6 @@ export default function ComprehensivePricing2029() {
                   {/* CTA Buttons */}
                   <div className="flex gap-3">
                     <Link
-<<<<<<< HEAD
-                      href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
-                      Learn More
-                    </Link>
-                    <Link
-                      href="/contact" className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm">
-=======
                       href={`/services/${service.id}`}
                       className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm"
                     >
@@ -275,7 +256,6 @@ export default function ComprehensivePricing2029() {
                       href="/contact"
                       className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm"
                     >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       Get Started
                     </Link>
                   </div>
@@ -314,13 +294,9 @@ export default function ComprehensivePricing2029() {
                 </p>
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
-<<<<<<< HEAD
-                  href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-=======
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   Contact Sales
                 </Link>
               </div>
@@ -335,13 +311,9 @@ export default function ComprehensivePricing2029() {
                 </p>
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
-<<<<<<< HEAD
-                  href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-=======
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   Contact Sales
                 </Link>
               </div>
@@ -356,13 +328,9 @@ export default function ComprehensivePricing2029() {
                 </p>
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
-<<<<<<< HEAD
-                  href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-=======
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   Contact Sales
                 </Link>
               </div>
@@ -409,13 +377,9 @@ export default function ComprehensivePricing2029() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-<<<<<<< HEAD
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
-=======
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   Contact Us Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -425,13 +389,9 @@ export default function ComprehensivePricing2029() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link
-<<<<<<< HEAD
-                  href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
-=======
                   href="/2029-innovative-services-showcase"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
                 >
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   View All Services
                 </Link>
               </motion.div>

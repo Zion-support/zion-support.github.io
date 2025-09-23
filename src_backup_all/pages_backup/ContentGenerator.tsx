@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ContentGenerator = () => {
   return (
     <div>
@@ -9,6 +7,4 @@ const ContentGenerator = () => {
   );
 };
 
-
 export default ContentGenerator;
-

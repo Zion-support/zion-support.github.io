@@ -1,24 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-  const { email, password, code } = req.body || {};
-  if (!email || !password || !code) {
-    return res.status(400).json({ error: 'Missing credentials' });
-  }
-  const result = validateCredentials(email, password, code);
-  if (!result.ok || !result.role) {
-    return res.status(401).json({ error: 'Invalid credentials' });
-  }
-  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true });
-}
-=======
 
 
 
@@ -75,11 +55,10 @@ if ( {) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

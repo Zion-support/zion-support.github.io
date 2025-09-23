@@ -1,5 +1,4 @@
 
-import React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -16,8 +15,6 @@ interface EmptyStateProps {
   secondaryAction?: {
     text: string;
     href?: string;
-<<<<<<< HEAD
-=======
 
     onClick?: () => void
   }
@@ -36,7 +33,6 @@ interface EmptyStateProps {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     onClick?: () => void;
   };
   className?: string;
@@ -48,13 +44,8 @@ export function EmptyState({
   description,
   action,
   secondaryAction,
-<<<<<<< HEAD
-  className,
-}: EmptyStateProps) {
-=======
   className}: EmptyStateProps) {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div
       className={cn(

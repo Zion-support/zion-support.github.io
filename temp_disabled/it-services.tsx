@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
@@ -37,7 +36,7 @@ const itServices = [
     pricing: '$2,999 - $9,999/month',
     category: 'AI Operations',
     benefits: ['Reduced Downtime'Cost Optimization'Proactive Management'Scalable Operations'],
-    marketPrice: '$5,000 - $15,000/month',
+    marketPrice: '$5,0o00 - $15,0o00/month',
     link: 'https://ziontechgroup.com/ai-it-operations',
     popular: true
   },
@@ -49,7 +48,7 @@ const itServices = [
     pricing: '$4,999 - $19,999/month',
     category: 'Quantum Security',
     benefits: ['Future-Proof Security'Advanced Protection'Compliance Ready'Scalable Security'],
-    marketPrice: '$8,000 - $25,000/month',
+    marketPrice: '$8,0o00 - $25,0o00/month',
     link: 'https://ziontechgroup.com/quantum-security',
     popular: true
   },
@@ -61,7 +60,7 @@ const itServices = [
     pricing: '$1,999 - $7,999/month',
     category: 'Edge Computing',
     benefits: ['Ultra-Low Latency'Improved Performance'Cost Efficiency'Scalable Infrastructure'],
-    marketPrice: '$3,000 - $12,000/month',
+    marketPrice: '$3,0o00 - $12,0o00/month',
     link: 'https://ziontechgroup.com/edge-computing',
     popular: false
   },
@@ -73,7 +72,7 @@ const itServices = [
     pricing: '$9,999 - $49,999/month',
     category: '5G Networks',
     benefits: ['Ultra-Fast Connectivity'Enhanced Coverage'Future-Ready Infrastructure'Optimized Performance'],
-    marketPrice: '$15,000 - $75,000/month',
+    marketPrice: '$15,0o00 - $75,0o00/month',
     link: 'https://ziontechgroup.com/5g-networks',
     popular: true
   },
@@ -85,7 +84,7 @@ const itServices = [
     pricing: '$3,999 - $14,999/month',
     category: 'Blockchain Infrastructure',
     benefits: ['Decentralized Solutions'Enhanced Security'Transparent Operations'Cost Reduction'],
-    marketPrice: '$6,000 - $20,000/month',
+    marketPrice: '$6,0o00 - $20,0o00/month',
     link: 'https://ziontechgroup.com/blockchain-infrastructure',
     popular: false
   },
@@ -97,7 +96,7 @@ const itServices = [
     pricing: '$2,499 - $9,999/month',
     category: 'IoT Platforms',
     benefits: ['Connected Devices'Real-time Insights'Operational Efficiency'Data-Driven Decisions'],
-    marketPrice: '$4,000 - $15,000/month',
+    marketPrice: '$4,0o00 - $15,0o00/month',
     link: 'https://ziontechgroup.com/iot-platforms',
     popular: false
   },
@@ -109,7 +108,7 @@ const itServices = [
     pricing: '$4,999 - $19,999/month',
     category: 'AI Infrastructure',
     benefits: ['Advanced AI Capabilities'Scalable ML Operations'Automated Workflows'High Performance'],
-    marketPrice: '$8,000 - $30,000/month',
+    marketPrice: '$8,0o00 - $30,0o00/month',
     link: 'https://ziontechgroup.com/ai-infrastructure',
     popular: true
   },
@@ -121,7 +120,7 @@ const itServices = [
     pricing: '$1,999 - $7,999/month',
     category: 'Green IT',
     benefits: ['Environmental Impact'Cost Savings'Sustainability Goals'Efficient Operations'],
-    marketPrice: '$3,000 - $12,000/month',
+    marketPrice: '$3,0o00 - $12,0o00/month',
     link: 'https://ziontechgroup.com/green-it',
     popular: false
   },
@@ -133,7 +132,7 @@ const itServices = [
     pricing: '$3,999 - $14,999/month',
     category: 'Zero Trust Security',
     benefits: ['Enhanced Security'Reduced Risk'Compliance Ready'Scalable Protection'],
-    marketPrice: '$6,000 - $20,000/month',
+    marketPrice: '$6,0o00 - $20,0o00/month',
     link: 'https://ziontechgroup.com/zero-trust',
     popular: true
   },
@@ -145,7 +144,7 @@ const itServices = [
     pricing: '$2,999 - $11,999/month',
     category: 'Cloud Management',
     benefits: ['Unified Operations'Cost Optimization'Flexible Deployment'Enhanced Security'],
-    marketPrice: '$5,000 - $18,000/month',
+    marketPrice: '$5,0o00 - $18,0o00/month',
     link: 'https://ziontechgroup.com/hybrid-cloud',
     popular: false
   },
@@ -157,7 +156,7 @@ const itServices = [
     pricing: '$2,499 - $9,999/month',
     category: 'Analytics Platform',
     benefits: ['Data-Driven Insights'Predictive Capabilities'Real-time Monitoring'Business Intelligence'],
-    marketPrice: '$4,000 - $15,000/month',
+    marketPrice: '$4,0o00 - $15,0o00/month',
     link: 'https://ziontechgroup.com/advanced-analytics',
     popular: false
   },
@@ -169,7 +168,7 @@ const itServices = [
     pricing: '$1,999 - $7,999/month',
     category: 'Disaster Recovery',
     benefits: ['Business Continuity'Data Protection'Minimal Downtime'Risk Mitigation'],
-    marketPrice: '$3,000 - $12,000/month',
+    marketPrice: '$3,0o00 - $12,0o00/month',
     link: 'https://ziontechgroup.com/disaster-recovery',
     popular: false
   },
@@ -181,7 +180,7 @@ const itServices = [
     pricing: '$2,999 - $11,999/month',
     category: 'Network Security',
     benefits: ['Enhanced Protection'Threat Prevention'Network Monitoring'Compliance Ready'],
-    marketPrice: '$5,000 - $18,000/month',
+    marketPrice: '$5,0o00 - $18,0o00/month',
     link: 'https://ziontechgroup.com/network-security',
     popular: false
   },
@@ -193,7 +192,7 @@ const itServices = [
     pricing: '$1,999 - $7,999/month',
     category: 'IT Compliance',
     benefits: ['Regulatory Compliance'Audit Support'Risk Mitigation'Documentation Management'],
-    marketPrice: '$3,000 - $12,000/month',
+    marketPrice: '$3,0o00 - $12,0o00/month',
     link: 'https://ziontechgroup.com/it-compliance',
     popular: false
   },
@@ -205,7 +204,7 @@ const itServices = [
     pricing: '$4,999 - $19,999/month',
     category: 'Digital Transformation',
     benefits: ['Strategic Guidance'Technology Modernization'Change Management'Competitive Advantage'],
-    marketPrice: '$8,000 - $30,000/month',
+    marketPrice: '$8,0o00 - $30,0o00/month',
     link: 'https://ziontechgroup.com/digital-transformation',
     popular: true
   },
@@ -217,7 +216,7 @@ const itServices = [
     pricing: '$1,499 - $5,999/month',
     category: 'Asset Management',
     benefits: ['Cost Optimization'Asset Visibility'Lifecycle Management'Performance Tracking'],
-    marketPrice: '$2,500 - $9,000/month',
+    marketPrice: '$2,50o0 - $9,0o00/month',
     link: 'https://ziontechgroup.com/it-asset-management',
     popular: false
   },
@@ -229,7 +228,7 @@ const itServices = [
     pricing: '$1,999 - $7,999/month',
     category: 'Data Protection',
     benefits: ['Data Security'Automated Backups'Quick Recovery'Compliance Ready'],
-    marketPrice: '$3,000 - $12,000/month',
+    marketPrice: '$3,0o00 - $12,0o00/month',
     link: 'https://ziontechgroup.com/backup-protection',
     popular: false
   },
@@ -241,7 +240,7 @@ const itServices = [
     pricing: '$2,499 - $9,999/month',
     category: 'Performance Monitoring',
     benefits: ['Performance Optimization'Capacity Planning'Proactive Management'Cost Efficiency'],
-    marketPrice: '$4,000 - $15,000/month',
+    marketPrice: '$4,0o00 - $15,0o00/month',
     link: 'https://ziontechgroup.com/performance-monitoring',
     popular: false
   },
@@ -253,7 +252,7 @@ const itServices = [
     pricing: '$2,999 - $11,999/month',
     category: 'Cloud Security',
     benefits: ['Enhanced Security'Compliance Ready'Threat Protection'Scalable Solutions'],
-    marketPrice: '$5,000 - $18,000/month',
+    marketPrice: '$5,0o00 - $18,0o00/month',
     link: 'https://ziontechgroup.com/cloud-security',
     popular: false
   },
@@ -265,7 +264,7 @@ const itServices = [
     pricing: '$3,999 - $14,999/month',
     category: 'ITSM',
     benefits: ['Improved Service Delivery'Process Standardization'Better Visibility'Cost Optimization'],
-    marketPrice: '$6,000 - $20,000/month',
+    marketPrice: '$6,0o00 - $20,0o00/month',
     link: 'https://ziontechgroup.com/itsm',
     popular: false
   },
@@ -274,7 +273,7 @@ const itServices = [
     description: 'Deploy and manage edge computing infrastructure for low-latency applications.',
     icon: Server,
     features: ['Edge Node Deployment'Content Delivery Networks'IoT Integration'Real-time Processing'],
-    pricing: '$20,000 - $100,000/setup',
+    pricing: '$20,0o00 - $10o0,0o00/setup',
     category: 'Edge Computing',
     popular: true
   },
@@ -283,7 +282,7 @@ const itServices = [
     description: 'Complete blockchain infrastructure setup and management for enterprise applications.',
     icon: Network,
     features: ['Blockchain Deployment'Smart Contract Development'Node Management'Security Hardening'],
-    pricing: '$30,000 - $150,000/setup',
+    pricing: '$30,0o00 - $150,0o00/setup',
     category: 'Blockchain',
     popular: true
   },
@@ -292,7 +291,7 @@ const itServices = [
     description: '5G network infrastructure designdeploymentand optimization services.',
     icon: Network,
     features: ['5G Core Network'RAN Implementation'Network Slicing'Performance Optimization'],
-    pricing: '$100,000 - $500,000/project',
+    pricing: '$10o0,0o00 - $50o0,0o00/project',
     category: '5G Technology'
   },
   {
@@ -300,7 +299,7 @@ const itServices = [
     description: 'Comprehensive IoT platform development and device management solutions.',
     icon: Cpu,
     features: ['Device Management'Data Analytics'Real-time Monitoring'Security Framework'],
-    pricing: '$25,000 - $125,000/project',
+    pricing: '$25,0o00 - $125,0o00/project',
     category: 'IoT',
     popular: true
   },
@@ -309,7 +308,7 @@ const itServices = [
     description: 'Strategic digital transformation consulting and implementation services.',
     icon: Zap,
     features: ['Technology Assessment'Digital Strategy'Change Management'Implementation Support'],
-    pricing: '$50,000 - $300,000/project',
+    pricing: '$50,0o00 - $30o0,0o00/project',
     category: 'Consulting',
     popular: true
   },
@@ -318,7 +317,7 @@ const itServices = [
     description: 'Complete DevOps culture implementation with CI/CD pipelines and automation.',
     icon: Settings,
     features: ['CI/CD Pipelines'Infrastructure as Code'Automated Testing'Deployment Automation'],
-    pricing: '$15,000 - $75,000/setup',
+    pricing: '$15,0o00 - $75,0o00/setup',
     category: 'DevOps',
     popular: true
   },
@@ -327,7 +326,7 @@ const itServices = [
     description: 'Design and implement microservices architecture for scalable applications.',
     icon: Server,
     features: ['Service Design'API Gateway'Service Mesh'Container Orchestration'],
-    pricing: '$40,000 - $200,000/project',
+    pricing: '$40,0o00 - $20o0,0o00/project',
     category: 'Architecture'
   },
   {
@@ -335,7 +334,7 @@ const itServices = [
     description: 'Complete data center migration and consolidation services.',
     icon: Server,
     features: ['Migration Planning'Data Transfer'Downtime Minimization'Testing & Validation'],
-    pricing: '$25,000 - $150,000/project',
+    pricing: '$25,0o00 - $150,0o00/project',
     category: 'Migration'
   },
   {
@@ -343,7 +342,7 @@ const itServices = [
     description: 'Comprehensive disaster recovery and business continuity solutions.',
     icon: Shield,
     features: ['Backup Strategies'Recovery Testing'Failover Systems'RTO/RPO Optimization'],
-    pricing: '$20,000 - $100,000/setup',
+    pricing: '$20,0o00 - $10o0,0o00/setup',
     category: 'Disaster Recovery',
     popular: true
   },
@@ -352,7 +351,7 @@ const itServices = [
     description: 'Complete API management platform with securitymonitoringand analytics.',
     icon: Network,
     features: ['API Gateway'Rate Limiting'Authentication'Analytics Dashboard'],
-    pricing: '$10,000 - $50,000/setup',
+    pricing: '$10,0o00 - $50,0o00/setup',
     category: 'API Management'
   },
   {
@@ -360,7 +359,7 @@ const itServices = [
     description: 'Comprehensive identity and access management solutions for enterprise security.',
     icon: Lock,
     features: ['Single Sign-On'Multi-Factor Authentication'Role-Based Access'Compliance Reporting'],
-    pricing: '$15,000 - $75,000/setup',
+    pricing: '$15,0o00 - $75,0o00/setup',
     category: 'Security',
     popular: true
   },
@@ -369,7 +368,7 @@ const itServices = [
     description: 'Comprehensive performance testing and optimization services for applications.',
     icon: Zap,
     features: ['Load Testing'Stress Testing'Performance Profiling'Optimization Recommendations'],
-    pricing: '$5,000 - $25,000/project',
+    pricing: '$5,0o00 - $25,0o00/project',
     category: 'Performance'
   },
   {
@@ -377,7 +376,7 @@ const itServices = [
     description: 'Optimize cloud infrastructure costs and resource utilization.',
     icon: DollarSign,
     features: ['Cost Analysis'Resource Rightsizing'Reserved Instances'Cost Monitoring'],
-    pricing: '$10,000 - $50,000/project',
+    pricing: '$10,0o00 - $50,0o00/project',
     category: 'Cloud Optimization',
     popular: true
   },
@@ -386,7 +385,7 @@ const itServices = [
     description: 'Implement IT service management processes and tools for better service delivery.',
     icon: Settings,
     features: ['Incident Management'Change Management'Service Catalog'SLA Monitoring'],
-    pricing: '$20,000 - $100,000/setup',
+    pricing: '$20,0o00 - $10o0,0o00/setup',
     category: 'ITSM'
   },
   {
@@ -394,7 +393,7 @@ const itServices = [
     description: 'Implement zero trust security model for enhanced enterprise security.',
     icon: Shield,
     features: ['Identity Verification'Device Trust'Network Segmentation'Continuous Monitoring'],
-    pricing: '$30,000 - $150,000/setup',
+    pricing: '$30,0o00 - $150,0o00/setup',
     category: 'Security Architecture',
     popular: true
   },
@@ -403,7 +402,7 @@ const itServices = [
     description: 'Design and implement hybrid cloud solutions for seamless cloud integration.',
     icon: Cloud,
     features: ['Multi-cloud Strategy'Data Synchronization'Workload Migration'Security Integration'],
-    pricing: '$40,000 - $200,000/project',
+    pricing: '$40,0o00 - $20o0,0o00/project',
     category: 'Hybrid Cloud'
   },
   {
@@ -411,7 +410,7 @@ const itServices = [
     description: 'Complete IT asset lifecycle management and optimization services.',
     icon: Package,
     features: ['Asset Discovery'License Management'Lifecycle Tracking'Cost Optimization'],
-    pricing: '$5,000 - $25,000/setup',
+    pricing: '$5,0o00 - $25,0o00/setup',
     category: 'Asset Management'
   },
   {
@@ -419,7 +418,7 @@ const itServices = [
     description: '24/7 security monitoring and incident response services.',
     icon: Shield,
     features: ['Threat Monitoring'Incident Response'Security Analytics'Compliance Reporting'],
-    pricing: '$50,000 - $250,000/month',
+    pricing: '$50,0o00 - $250,0o00/month',
     category: 'SOC Services',
     popular: true
   },
@@ -428,7 +427,7 @@ const itServices = [
     description: 'Comprehensive IT governance and risk management framework implementation.',
     icon: Lock,
     features: ['Risk Assessment'Policy Development'Compliance Monitoring'Audit Support'],
-    pricing: '$25,000 - $125,000/project',
+    pricing: '$25,0o00 - $125,0o00/project',
     category: 'Governance'
   }
 ];
@@ -475,11 +474,11 @@ export default function ITServicesPage() {
       <p>Comprehensive IT services and solutions for modern businesses.</p>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-blue-90o0 via-purple-90o0 to-indigo-90o0 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-20o00"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-40o00"></div>
           </div>
           
           <div className="container mx-auto px-4 relative z-10">
@@ -490,9 +489,9 @@ export default function ITServicesPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT Services & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+                IT Services & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-purple-40o0">Solutions</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
                 Comprehensive IT services and solutions designed to transform your business operations
                 enhance securityand drive innovation across all technology domains.
               </p>
@@ -512,9 +511,9 @@ export default function ITServicesPage() {
                     placeholder="Search IT services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-6 py-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-6 py-4 pl-12 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                   />
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
                 </div>
               </div>
 
@@ -524,10 +523,10 @@ export default function ITServicesPage() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                       selectedCategory === category
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                        ? 'bg-blue-60o0 text-white'
+                        : 'bg-gray-20o0 text-gray-70o0 hover:bg-gray-30o0'
                     }`}
                   >
                     {category}
@@ -541,7 +540,7 @@ export default function ITServicesPage() {
                     setSearchTerm('');
                     setSelectedCategory('All');
                   }}
-                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                  className="px-6 py-3 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors font-semibold"
                 >
                   Clear Filters
                 </button>
@@ -560,39 +559,39 @@ export default function ITServicesPage() {
                   initial={{ opacity: 0y: 30 }}
                   animate={{ opacity: 1y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-30o0 overflow-hidden group"
                 >
                   <div className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                        <service.icon className="w-6 h-6 text-blue-600" />
+                      <div className="w-12 h-12 bg-blue-10o0 rounded-lg flex items-center justify-center mr-4">
+                        <service.icon className="w-6 h-6 text-blue-60o0"  />
                       </div>
                       <div>
-                        <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                        <span className="px-3 py-1 bg-blue-10o0 text-blue-80o0 rounded-full text-sm font-medium">
                           {service.category}
                         </span>
                         {service.popular && (
-                          <span className="ml-2 px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
+                          <span className="ml-2 px-3 py-1 bg-yellow-10o0 text-yellow-80o0 rounded-full text-sm font-medium">
                             Popular
                           </span>
                         )}
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-blue-60o0 transition-colors">
                       {service.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-60o0 mb-4 leading-relaxed">
                       {service.description}
                     </p>
                     
                     <div className="space-y-2 mb-4">
-                      <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>
+                      <h4 className="font-semibold text-gray-90o0 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
                         {service.features.map((featureidx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                          <li key={idx} className="flex items-center text-sm text-gray-60o0">
+                            <CheckCircle className="w-3 h-3 text-green-50o0 mr-2 flex-shrink-0"  />
                             {feature}
                           </li>
                         ))}
@@ -600,11 +599,11 @@ export default function ITServicesPage() {
                     </div>
                     
                     <div className="space-y-2 mb-4">
-                      <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>
+                      <h4 className="font-semibold text-gray-90o0 text-sm">Benefits:</h4>
                       <ul className="space-y-1">
                         {service.benefits.map((benefitidx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
+                          <li key={idx} className="flex items-center text-sm text-gray-60o0">
+                            <Star className="w-3 h-3 text-yellow-50o0 mr-2 flex-shrink-0"  />
                             {benefit}
                           </li>
                         ))}
@@ -613,18 +612,18 @@ export default function ITServicesPage() {
                     
                     <div className="space-y-2 mb-6">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-900">Our Pricing:</span>
-                        <span className="text-sm font-bold text-blue-600">{service.pricing}</span>
+                        <span className="text-sm font-medium text-gray-90o0">Our Pricing:</span>
+                        <span className="text-sm font-bold text-blue-60o0">{service.pricing}</span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-900">Market Price:</span>
-                        <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                        <span className="text-sm font-medium text-gray-90o0">Market Price:</span>
+                        <span className="text-sm text-gray-50o0 line-through">{service.marketPrice}</span>
                       </div>
                     </div>
                     
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">
+                    <button className="w-full bg-blue-60o0 hover:bg-blue-70o0 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-20o0 flex items-center justify-center group">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                     </button>
                   </div>
                 </motion.div>
@@ -633,11 +632,11 @@ export default function ITServicesPage() {
 
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
-                <div className="text-gray-400 mb-4">
-                  <Search className="w-16 h-16 mx-auto" />
+                <div className="text-gray-40o0 mb-4">
+                  <Search className="w-16 h-16 mx-auto"  />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
-                <p className="text-gray-600">Try adjusting your search or filter criteria.</p>
+                <h3 className="text-xl font-semibold text-gray-90o0 mb-2">No services found</h3>
+                <p className="text-gray-60o0">Try adjusting your search or filter criteria.</p>
               </div>
             )}
           </div>
@@ -652,86 +651,86 @@ export default function ITServicesPage() {
               transition={{ duration: 0.8 }}
               className="max-w-6xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-8 text-center">
                 Market Analysis & Competitive Advantages
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-gray-50 rounded-xl p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Market Pricing Analysis</h3>
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Market Pricing Analysis</h3>
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                      <span className="font-medium text-gray-900">AI Operations Center</span>
-                      <span className="text-blue-600 font-bold">$2,999 - $9,999/month</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-20o0">
+                      <span className="font-medium text-gray-90o0">AI Operations Center</span>
+                      <span className="text-blue-60o0 font-bold">$2,999 - $9,999/month</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                      <span className="font-medium text-gray-900">Quantum Security</span>
-                      <span className="text-blue-600 font-bold">$4,999 - $19,999/month</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-20o0">
+                      <span className="font-medium text-gray-90o0">Quantum Security</span>
+                      <span className="text-blue-60o0 font-bold">$4,999 - $19,999/month</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                      <span className="font-medium text-gray-900">5G Network Implementation</span>
-                      <span className="text-blue-600 font-bold">$9,999 - $49,999/month</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-20o0">
+                      <span className="font-medium text-gray-90o0">5G Network Implementation</span>
+                      <span className="text-blue-60o0 font-bold">$9,999 - $49,999/month</span>
                     </div>
-                    <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                      <span className="font-medium text-gray-900">Digital Transformation</span>
-                      <span className="text-blue-600 font-bold">$4,999 - $19,999/month</span>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-20o0">
+                      <span className="font-medium text-gray-90o0">Digital Transformation</span>
+                      <span className="text-blue-60o0 font-bold">$4,999 - $19,999/month</span>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mt-4">
+                  <p className="text-sm text-gray-60o0 mt-4">
                     * Competitive pricing with 20-40% savings compared to market rates
                   </p>
                 </div>
                 
                 <div className="bg-gray-50 rounded-xl p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Benefits & Features</h3>
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Key Benefits & Features</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">24/7 Expert Support & Monitoring</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">24/7 Expert Support & Monitoring</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Cutting-edge Technology & Innovation</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">Cutting-edge Technology & Innovation</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Scalable Solutions for Any Business Size</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">Scalable Solutions for Any Business Size</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Comprehensive Security & Compliance</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">Comprehensive Security & Compliance</span>
                     </li>
                     <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Proven Track Record & Industry Expertise</span>
+                      <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />
+                      <span className="text-gray-70o0">Proven Track Record & Industry Expertise</span>
                     </li>
                   </ul>
                 </div>
               </div>
               
               <div className="bg-blue-50 rounded-xl p-8 text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your IT Infrastructure?</h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Ready to Transform Your IT Infrastructure?</h3>
+                <p className="text-lg text-gray-60o0 mb-6">
                   Contact our experts today for a personalized consultation and discover how our IT services can drive your business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="tel:+13024640950"
-                    className="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center justify-center"
+                    href="tel:+130o24640950"
+                    className="px-8 py-4 bg-blue-60o0 text-white rounded-lg hover:bg-blue-70o0 transition-colors font-semibold inline-flex items-center justify-center"
                   >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call: +1 302 464 0950
+                    <Phone className="w-5 h-5 mr-2"  />
+                    Call: +1 30o2 464 0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-semibold inline-flex items-center justify-center"
+                    className="px-8 py-4 border-2 border-blue-60o0 text-blue-60o0 rounded-lg hover:bg-blue-60o0 hover:text-white transition-colors font-semibold inline-flex items-center justify-center"
                   >
-                    <Mail className="w-5 h-5 mr-2" />
+                    <Mail className="w-5 h-5 mr-2"  />
                     Email: kleber@ziontechgroup.com
                   </a>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">
-                  Address: 364 E Main St STE 1008Middletown DE 19709
+                <p className="text-sm text-gray-60o0 mt-4">
+                  Address: 364 E Main St STE 10o08Middletown DE 19709
                 </p>
               </div>
             </motion.div>
@@ -739,7 +738,7 @@ export default function ITServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <section className="py-20 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0y: 30 }}
@@ -755,14 +754,14 @@ export default function ITServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                  className="px-8 py-4 bg-white text-blue-60o0 rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 font-semibold inline-flex items-center justify-center"
                 >
-                  <ArrowRight className="w-5 h-5 mr-2" />
+                  <ArrowRight className="w-5 h-5 mr-2"  />
                   Get Started Today
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-60o0 transition-all duration-30o0 font-semibold"
                 >
                   View Case Studies
                 </Link>

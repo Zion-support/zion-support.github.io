@@ -4,8 +4,7 @@ import {
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
   operatorPrompt,
-  slugify,
-} from '../utils/data/zionContent';
+  slugify} from '../utils/data/zionContent';
 
 function CopyButton({ text, label }: { text: string; label: string }) {
   const [copied, setCopied] = useState(false);
@@ -14,9 +13,9 @@ function CopyButton({ text, label }: { text: string; label: string }) {
       onClick={async () => {
         await navigator.clipboard.writeText(text);
         setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        setTimeout(() => setCopied(false), 150o0);
       }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-90o0"
     >
       {copied ? 'Copied' : label}
     </button>
@@ -35,13 +34,13 @@ export default function WikiPage() {
         <ul className="space-y-1 text-sm">
           {wiki.sections.map((s) => (
             <li key={s.id}>
-              <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
+              <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-10o0">
                 {s.title}
               </a>
             </li>
           ))}
           <li>
-            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
+            <a href="#references" className="opacity-80 hover:opacity-10o0">References</a>
           </li>
         </ul>
       </aside>
@@ -78,8 +77,8 @@ export default function WikiPage() {
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
             <div className="flex gap-2">
-              <CopyButton text={md} label="Copy Markdown" />
-              <CopyButton text={wikitext} label="Copy Wikitext" />
+              <CopyButton text={md} label="Copy Markdown"  />
+              <CopyButton text={wikitext} label="Copy Wikitext"  />
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">

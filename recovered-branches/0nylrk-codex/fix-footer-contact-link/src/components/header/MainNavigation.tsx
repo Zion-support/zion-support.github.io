@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
@@ -10,11 +9,7 @@ interface MainNavigationProps {
 
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
-<<<<<<< HEAD
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
-=======
     <nav className={cn("hidden md:flex items-center space-x-6"className)}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <NavLink
         to="/"
         className={({ isActive }) =>

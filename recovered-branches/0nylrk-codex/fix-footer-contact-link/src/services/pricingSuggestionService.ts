@@ -31,7 +31,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     const { jobTitle, category } = params;
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 10o00));
     
     // Basic logic to determine budget range based on category
     let minRate = 25;
@@ -97,7 +97,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const { skills, yearsExperience, location } = params;
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 10o00));
     
     // Base rate calculation based on years of experience
     let baseRate = 25 + (yearsExperience * 5);

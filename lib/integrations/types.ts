@@ -1,22 +1,5 @@
-<<<<<<< HEAD
 export type IntegrationCategory = 'crm' | 'ats';
 
-=======
-
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-export type IntegrationProviderId =;
-  | 'salesforce';
-  | 'hubspot';
-  | 'zoho';
-  | 'pipedrive';
-  | 'greenhouse';
-  | 'lever';
-
-export type IntegrationCategory = 'crm' | 'ats';
-export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export type IntegrationProviderId =
   | 'salesforce'
   | 'hubspot'
@@ -24,9 +7,10 @@ export type IntegrationProviderId =
   | 'pipedrive'
   | 'greenhouse'
   | 'lever'
-<<<<<<< HEAD
   | 'workable'
   | 'bamboohr';
+
+export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export interface IntegrationProviderMeta {
   id: IntegrationProviderId;
@@ -37,13 +21,9 @@ export interface IntegrationProviderMeta {
   icon?: string;
 }
 
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
 export interface SyncRules {
-  // CRM rules
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
-  // ATS rules
   autoSyncApplicants?: boolean;
   autoUploadResumes?: boolean;
 }
@@ -53,54 +33,10 @@ export interface ProviderConnection {
   status: SyncStatus;
   accessToken?: string;
   refreshToken?: string;
-=======
-
-  | 'workable';
-
-  | 'bamboohr';
-
-  | 'workable';
-  | 'bamboohr';
-export interface IntegrationProviderMeta {
-
-  id: IntegrationProviderId, name: string
-  id: IntegrationProviderId, name: string,;
-
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-
-
-
-
-;
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string,;
-  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
-  icon?: string
-
-}
-export interface SyncRules {
-  // CRM rules;
-  autoCreateContacts?: boolean;
-  pushNotesMode?: 'auto' | 'manual';
-  // ATS rules;
-  autoSyncApplicants?: boolean;
-
-  autoUploadResumes?: boolean;
-
-export interface ProviderConnection {
-
-export interface ProviderConnection {;
-
-  providerId: IntegrationProviderId;
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
   lastSyncAt?: number;
-<<<<<<< HEAD
   lastError?: string | null;
 }
 
@@ -110,7 +46,7 @@ export interface SyncLogEntry {
   providerId: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export interface ManualOverride {
@@ -120,71 +56,10 @@ export interface ManualOverride {
 }
 
 export interface ZapierEvent {
-=======
-
-
-export interface SyncLogEntry {
-
-  lastError?: string | null;
-export interface SyncLogEntry {;
-  id: string;
-  timestamp: number;
-  provider_id: IntegrationProviderId;
-  level: 'info' | 'warn' | 'error';
-  action: string;
-  details?: Record<string, any>;
-export interface ManualOverride {
-  job_id: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-
-
-
-export interface ZapierEvent {
-
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-export interface ZapierEvent {;
-
-  id: string;
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
-  timestamp: number;
-
-
-  payload: Record < string, any>;
-;
-
-export interface IntegrationsState {
-
-
-
-
-
-
-
-
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-export interface ZapierEvent {;
-
-
-
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
-  payload: Record<string, any>;
-<<<<<<< HEAD
+  payload: Record<string, unknown>;
 }
 
 export interface IntegrationsState {
@@ -193,39 +68,3 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];
 }
-=======
-
-export interface IntegrationsState {
-
-export interface IntegrationsState {;
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];  events: ZapierEvent[]
-}
-export interface SyncLogEntry {
-  id: string, timestamp: number,
-  providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
-  action: string,
-  details?: Record<string, any>
-}
-
-export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-}
-
-export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
-  timestamp: number,
-  payload: Record<string, any>
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-}
-}
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

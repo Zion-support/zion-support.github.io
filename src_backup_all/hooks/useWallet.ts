@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -61,7 +60,9 @@ export function useWallet() {
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     const currentUserId = user.id; // Added line
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    setWallet(prev =>
+      prev ? { ...prev, balance: prev.balance + amount } : prev
+    );
     setTransactions(prev => [
       {
         id: crypto.randomUUID(),

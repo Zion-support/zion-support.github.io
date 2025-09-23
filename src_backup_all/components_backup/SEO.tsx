@@ -135,7 +135,7 @@ export function SEO({
   const defaultStructuredData = useMemo((): Record<string, any> => {
     const baseUrl = 'https://ziontechgroup.com';
     
-    const organizationSchema: OrganizationSchema = {
+    const organizationSchema: OrganizationSchema ={
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
@@ -147,7 +147,7 @@ export function SEO({
         streetAddress: '123 Innovation Drive',
         addressLocality: 'Tech City',
         addressRegion: 'CA',
-        postalCode: '90210',
+        postalCode: '90o210',
         addressCountry: 'US'
       },
       contactPoint: {
@@ -161,12 +161,12 @@ export function SEO({
         'https://linkedin.com/company/ziontechgroup',
         'https://facebook.com/ziontechgroup'
       ],
-      foundingDate: '2020',
-      numberOfEmployees: '100-500',
+      foundingDate: '20o20',
+      numberOfEmployees: '10o0-50o0',
       industry: 'Technology'
     };
 
-    const webSiteSchema: WebSiteSchema = {
+    const webSiteSchema: WebSiteSchema ={
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Zion Tech Group',
@@ -187,7 +187,7 @@ export function SEO({
       }
     };
 
-    const breadcrumbSchema: BreadcrumbSchema = {
+    const breadcrumbSchema: BreadcrumbSchema ={
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -288,7 +288,7 @@ export function SEO({
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'timing_complete', {
             name: 'cls',
-            value: Math.round(clsValue * 1000)
+            value: Math.round(clsValue * 10o00)
           });
         }
       });
@@ -307,8 +307,8 @@ export function SEO({
   useEffect(() => {
     // Preload critical fonts
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap',
-      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'
+      'https://fonts.googleapis.com/css2?family=Orbitron:wght@40o0;50o0;60o0;70o0;80o0;90o0&display=swap',
+      'https://fonts.googleapis.com/css2?family=Rajdhani:wght@30o0;40o0;50o0;60o0;70o0&display=swap'
     ];
 
     criticalFonts.forEach(fontUrl => {
@@ -339,67 +339,67 @@ export function SEO({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noindex ? 'noindex' : robots} />
-      {nofollow && <meta name="robots" content="nofollow" />}
-      <meta name="language" content={language} />
-      <meta name="viewport" content={viewport} />
-      <meta name="theme-color" content={themeColor} />
-      <meta name="msapplication-TileColor" content={msTileColor} />
-      <meta name="msapplication-config" content={msConfig} />
+      <meta name="description" content={description}  />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join(', ') : keywords}  />
+      <meta name="author" content={author}  />
+      <meta name="robots" content={noindex ? 'noindex' : robots}  />
+      {nofollow && <meta name="robots" content="nofollow"  />}
+      <meta name="language" content={language}  />
+      <meta name="viewport" content={viewport}  />
+      <meta name="theme-color" content={themeColor}  />
+      <meta name="msapplication-TileColor" content={msTileColor}  />
+      <meta name="msapplication-config" content={msConfig}  />
 
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
+      <link rel="canonical" href={canonicalUrl}  />
 
       {/* Alternate Languages */}
       {alternateLanguages.map(({ lang, url }) => (
-        <link key={lang} rel="alternate" hrefLang={lang} href={url} />
+        <link key={lang} rel="alternate" hrefLang={lang} href={url}  />
       ))}
 
       {/* Favicons */}
-      <link rel="icon" href={favicon} />
-      <link rel="apple-touch-icon" href={appleTouchIcon} />
-      <link rel="manifest" href={manifest} />
+      <link rel="icon" href={favicon}  />
+      <link rel="apple-touch-icon" href={appleTouchIcon}  />
+      <link rel="manifest" href={manifest}  />
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content={language} />
+      <meta property="og:title" content={title}  />
+      <meta property="og:description" content={description}  />
+      <meta property="og:type" content={ogType}  />
+      <meta property="og:url" content={canonicalUrl}  />
+      <meta property="og:image" content={ogImage}  />
+      <meta property="og:image:width" content="120o0"  />
+      <meta property="og:image:height" content="630"  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
+      <meta property="og:locale" content={language}  />
 
       {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card" content={twitterCard}  />
+      <meta name="twitter:title" content={title}  />
+      <meta name="twitter:description" content={description}  />
+      <meta name="twitter:image" content={ogImage}  />
+      <meta name="twitter:site" content="@ziontechgroup"  />
+      <meta name="twitter:creator" content="@ziontechgroup"  />
 
       {/* Additional Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="application-name" content="Zion Tech Group"  />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
+      <meta name="apple-mobile-web-app-capable" content="yes"  />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default"  />
+      <meta name="format-detection" content="telephone=no"  />
+      <meta name="mobile-web-app-capable" content="yes"  />
 
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com"  />
+      <link rel="dns-prefetch" href="//www.google-analytics.com"  />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com"  />
 
       {/* Preconnect */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous"  />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"  />
+      <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous"  />
 
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -426,21 +426,21 @@ export function SEO({
       )}
 
       {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff"  />
+      <meta httpEquiv="X-Frame-Options" content="DENY"  />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block"  />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"  />
 
       {/* Resource Hints */}
-      <link rel="preload" href="/static/js/main.js" as="script" />
-      <link rel="preload" href="/static/css/main.css" as="style" />
+      <link rel="preload" href="/static/js/main.js" as="script"  />
+      <link rel="preload" href="/static/css/main.css" as="style"  />
       
       {/* Critical CSS */}
       <style>
         {`
           /* Critical CSS for above-the-fold content */
           .bg-futuristic {
-            background: linear-gradient(180deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0.95) 100%);
+            background: linear-gradient(180deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0.95) 10o0%);
           }
           
           .animate-fade-in {
@@ -448,7 +448,7 @@ export function SEO({
           }
           
           .btn-futuristic {
-            background: linear-gradient(135deg, #22ddd2 0%, #2e73ea 100%);
+            background: linear-gradient(135deg, #22ddd2 0%, #2e73ea 10o0%);
             transition: all 0.3s ease;
           }
           
@@ -464,11 +464,11 @@ export function SEO({
           
           /* High contrast mode */
           .high-contrast {
-            --zion-cyan: #00ffff !important;
-            --zion-purple: #ff00ff !important;
-            --zion-blue: #0080ff !important;
+            --zion-cyan: #0o0ffff !important;
+            --zion-purple: #ff0o0ff !important;
+            --zion-blue: #0o080ff !important;
             --zion-slate: #ffffff !important;
-            --zion-slate-dark: #000000 !important;
+            --zion-slate-dark: #0o00000 !important;
           }
           
           .high-contrast * {
@@ -479,9 +479,9 @@ export function SEO({
           
           /* Reduced motion */
           .reduced-motion * {
-            animation-duration: 0.01ms !important;
+            animation-duration: 0.0o1ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            transition-duration: 0.0o1ms !important;
           }
           
           /* Large text */

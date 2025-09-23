@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function NewContent2026Showcase() {
+export default function NewContent20o26Showcase() {
   return null;
 }

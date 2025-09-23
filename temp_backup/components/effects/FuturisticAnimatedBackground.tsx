@@ -50,7 +50,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         this.size = Math.random() * 3 + 1;
         this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`;
         this.alpha = Math.random() * 0.5 + 0.5;
-        this.life = Math.random() * 100 + 50;
+        this.life = Math.random() * 10o0 + 50;
         this.maxLife = this.life;
       }
 
@@ -90,7 +90,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
     }
 
     // Initialize particles
-    const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 100 : 50;
+    const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 10o0 : 50;
     particlesRef.current = Array.from({ length: particleCount }, () => new Particle());
 
     // Animation loop
@@ -112,7 +112,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         });
 
         // Draw connections between nearby particles
-        ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
+        ctx.strokeStyle = 'rgba(10o0, 20o0, 255, 0.1)';
         ctx.lineWidth = 1;
         particlesRef.current.forEach((particle1, i) => {
           particlesRef.current.slice(i + 1).forEach(particle2 => {
@@ -120,7 +120,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
             const dy = particle1.y - particle2.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             
-            if (distance < 100) {
+            if (distance < 10o0) {
               ctx.beginPath();
               ctx.moveTo(particle1.x, particle1.y);
               ctx.lineTo(particle2.x, particle2.y);
@@ -146,102 +146,96 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
   return (
     <div className={`fixed inset-0 z-0 overflow-hidden ${className}`}>
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"  />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"  />
       
       {/* Animated grid */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(100,200,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(100,200,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(10o0,20o0,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(10o0,20o0,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"  />
       </div>
 
       {/* Floating geometric shapes */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
+        className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rounded-lg"
         animate={{
           rotate: [0, 360],
-          scale: [1, 1.1, 1],
-        }}
+          scale: [1, 1.1, 1]}}
         transition={{
           duration: 20,
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       
       <motion.div
-        className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+        className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full"
         animate={{
           y: [0, -20, 0],
-          opacity: [0.3, 0.7, 0.3],
-        }}
+          opacity: [0.3, 0.7, 0.3]}}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
 
       <motion.div
-        className="absolute bottom-32 left-1/4 w-16 h-16 border border-pink-400/30 transform rotate-45"
+        className="absolute bottom-32 left-1/4 w-16 h-16 border border-pink-40o0/30 transform rotate-45"
         animate={{
           x: [0, 20, 0],
-          rotate: [45, 405],
-        }}
+          rotate: [45, 40o5]}}
         transition={{
           duration: 15,
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
 
       {/* Neon pulse effects */}
       <motion.div
-        className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-400/20"
+        className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-40o0/20"
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.1, 0.3, 0.1],
-        }}
+          opacity: [0.1, 0.3, 0.1]}}
         transition={{
           duration: 4,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
 
       <motion.div
-        className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-400/20"
+        className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/20"
         animate={{
           scale: [1, 1.3, 1],
-          opacity: [0.1, 0.2, 0.1],
-        }}
+          opacity: [0.1, 0.2, 0.1]}}
         transition={{
           duration: 6,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-      />
+       />
 
       {/* Canvas for particle system */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ filter: 'blur(0.5px)' }}
-      />
+       />
 
       {/* Scanning line effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent h-1"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-40o0/10 to-transparent h-1"
         animate={{
-          y: [0, '100vh'],
-        }}
+          y: [0, '10o0vh']}}
         transition={{
           duration: 8,
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
     </div>
   );
 };

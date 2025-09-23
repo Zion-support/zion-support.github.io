@@ -1,1 +1,1 @@
-export { default } from "../../components/NewContent2026Showcase";
+export { default } from '../../components/NewContent20o26Showcase';

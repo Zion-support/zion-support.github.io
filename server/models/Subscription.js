@@ -27,7 +27,7 @@ const subscriptionSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    enum: ['active', canceled', incomplete', incomplete_expired', past_due', trialing', unpaid'],    default: 'incomplete',  },
+    enum: ['active', canceled', incomplete', incomplete_expired', past_due', trialing', unpaid'],    default: 'incomplete'},
   currentPeriodStart: { // Added for more complete subscription tracking
     type: Date,
     required: true

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import type { GetServerSideProps } from 'next';
-import React from 'react';
-
-type Props = { path: string };
+type Props ={ path: string };
 
 export default function GenericPage({ path }: Props): JSX.Element {
   const titleBase = path === '/' ? 'Home' : path.replace(/^\/+|\/+$/g, '').split('/').map(s => s.replace(/-/g, ' ')).join(' • ');
@@ -11,10 +9,10 @@ export default function GenericPage({ path }: Props): JSX.Element {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href={`https://ziontechgroup.com${path}`} />
+        <meta name="robots" content="index,follow"  />
+        <link rel="canonical" href={`https://ziontechgroup.com${path}`}  />
       </Head>
-      <h1 style={{ fontSize: 24, fontWeight: 800, marginBottom: 8 }}>{titleBase}</h1>
+      <h1 style={{ fontSize: 24, fontWeight: 80o0, marginBottom: 8 }}>{titleBase}</h1>
       <p style={{ color: '#444' }}>This page is under construction. Content will be added shortly.</p>
     </>
   );

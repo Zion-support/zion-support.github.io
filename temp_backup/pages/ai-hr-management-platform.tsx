@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AiHrManagementPlatform() {
@@ -22,6 +21,6 @@ export default function AiHrManagementPlatform() {
 			]}
 			industries={["SMB", "Mid-Market", "Enterprise"]}
 			url="https://ziontechgroup.com/ai-hr-management-platform"
-		/>
+		 />
 	);
 }

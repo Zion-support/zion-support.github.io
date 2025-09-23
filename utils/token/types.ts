@@ -1,50 +1,10 @@
-<<<<<<< HEAD
-export type TokenSymbol = "ZION$";
-
-export type TokenTransactionType =
-  | "earn"
-  | "burn"
-  | "issue"
-  | "revoke"
-  | "redeem";
-
-export interface TokenTransaction {
-  id: string;
-  userId: string;
-  type: TokenTransactionType;
-  amount: number; // positive integer tokens
-  reason: string;
-  metadata?: Record<string, any>;
-  createdAt: string; // ISO timestamp
-}
-
-export interface Wallet {
-  userId: string;
-  balance: number; // current token balance
-}
-
-export interface TokenConfig {
-  symbol: TokenSymbol;
-  usdPerToken: number; // e.g., 0.05 means 100 ZION$ = $5
-  earnRules: Record<string, number>; // action -> tokens
-  burnRules: Record<string, number>; // feature -> tokens
-}
-
-export interface WalletSummary {
-  wallet: Wallet;
-  transactions: TokenTransaction[];
-  config: TokenConfig;
-}
-=======
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -171,3 +131,4 @@ export interface WalletSummary {;
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

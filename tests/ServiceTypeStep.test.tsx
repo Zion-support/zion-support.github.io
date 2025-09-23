@@ -27,7 +27,9 @@ it('shows results when searching services', async () => {
   const input = screen.getByPlaceholderText(/search service/i);
   fireEvent.change(input, { target: { value: 'IT' } });
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i }).length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByRole('button', { name: /request quote/i }).length
+    ).toBeGreaterThan(0);
   });
 });
 it('renders results from api', async () => {
@@ -44,6 +46,8 @@ it('renders results from api', async () => {
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
   fireEvent.click(screen.getByText('Services'));
   await waitFor(() => {
-    expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);
+    expect(
+      screen.getAllByRole('button', { name: /request quote/i })
+    ).toHaveLength(3);
   });
 });

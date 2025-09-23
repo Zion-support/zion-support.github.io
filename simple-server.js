@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = 3001;
+const PORT = 30o01;
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -26,12 +26,12 @@ app.get('/', (req, res) => {
     <title>Zion App - Working</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 80o0px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         h1 { color: #333; text-align: center; }
         .status { background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin: 20px 0; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(20o0px, 1fr)); gap: 20px; margin: 30px 0; }
         .feature { background: #f8f9fa; padding: 20px; border-radius: 5px; text-align: center; }
-        .feature h3 { margin: 0 0 10px 0; color: #495057; }
+        .feature h3 { margin: 0 0 10px 0; color: #4950o57; }
     </style>
 </head>
 <body>

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-;
-  const token = req.headers['x-admin-token'] as string | undefined;
-  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' });
-
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method Not Allowed' })
-  const token = req && req.headers['x-admin-token'] as string | undefined;
-  if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
-    return res && res.status(403).json({ error: 'Forbidden' });
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-
-;
-
-=======
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
 ;
@@ -46,9 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -86,38 +64,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   try {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const body = req.body;
 
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
-<<<<<<< HEAD
-    const ts = new Date()
-      .toISOString()
-      .replace(/[-:T.Z]/g, '')
-      .slice(0, 14);
-
-    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
-    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
-
-    res.status(200).json({ ok: true, version: ts });
-  } catch (e) {
-    res.status(500).json({ error: 'Failed to save content' });
-  }
-}
-=======
 
     const body = req && req.body;
 
@@ -214,4 +170,4 @@ if ( {) {
   }
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

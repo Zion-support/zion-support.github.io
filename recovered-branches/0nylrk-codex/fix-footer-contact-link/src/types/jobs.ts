@@ -1,13 +1,12 @@
-
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
-export type JobCategory = 
-  | 'development' 
-  | 'design' 
-  | 'marketing' 
-  | 'content' 
-  | 'data' 
-  | 'business' 
+export type JobCategory =
+  | 'development'
+  | 'design'
+  | 'marketing'
+  | 'content'
+  | 'data'
+  | 'business'
   | 'other';
 
 export interface JobBudget {
@@ -78,7 +77,13 @@ export interface ResumeAttachment {
   skills?: string[];
 }
 
-export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
+export type ApplicationStatus =
+  | 'new'
+  | 'viewed'
+  | 'shortlisted'
+  | 'interview'
+  | 'hired'
+  | 'rejected';
 
 export interface JobApplication {
   id: string;
@@ -121,5 +126,5 @@ export interface JobApplication {
   };
   match_suggestion?: string;
   scored_at?: string;
-  notes?: string;  // New field for client notes
+  notes?: string; // New field for client notes
 }

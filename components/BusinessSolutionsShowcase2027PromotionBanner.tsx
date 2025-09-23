@@ -21,7 +21,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2027PromotionBanner = () => {
+const BusinessSolutionsShowcase20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [currentStatsetCurrentStat] = useState(0);
 
@@ -29,15 +29,15 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentStat((prev) => (prev + 1) % 4);
-    }2000);
+    }20o00);
     return () => clearInterval(interval);
   }[]);
 
   const stats = [
-    { number: "500+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-500 to-emerald-500" },
-    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-500 to-orange-500" },
-    { number: "300%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-500 to-cyan-500" },
-    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-500 to-pink-500" }
+    { number: "50o0+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-50o0 to-emerald-50o0" },
+    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-50o0 to-orange-50o0" },
+    { number: "30o0%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-50o0 to-cyan-50o0" },
+    { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-50o0 to-pink-50o0" }
   ];
 
   const solutions = [
@@ -45,19 +45,19 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
       title: "Enterprise Solutions",
       description: "Comprehensive enterprise-grade solutions",
       icon: Building2,
-      color: "from-blue-600 to-indigo-600"
+      color: "from-blue-60o0 to-indigo-60o0"
     },
     {
       title: "Startup Solutions"
       description: "Rapid deployment for growing startups",
       icon: Rocket,
-      color: "from-green-600 to-emerald-600"
+      color: "from-green-60o0 to-emerald-60o0"
     },
     {
       title: "SMB Solutions",
       description: "Affordable yet powerful for SMBs",
       icon: Users,
-      color: "from-purple-600 to-pink-600"
+      color: "from-purple-60o0 to-pink-60o0"
     }
   ];
 
@@ -71,11 +71,11 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50o0/10 via-transparent to-purple-50o0/10"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
@@ -92,10 +92,10 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-400/30"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-40o0/30"
             >
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span className="text-blue-300 font-medium">Business Solutions 2027</span>
+              <Sparkles className="w-4 h-4 text-blue-40o0"  />
+              <span className="text-blue-30o0 font-medium">Business Solutions 20o27</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -103,9 +103,9 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.3 }}
-              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent"
+              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent"
             >
-              Business Solutions Showcase 2027
+              Business Solutions Showcase 20o27
             </motion.h1>
 
             {/* Subtitle */}
@@ -113,7 +113,7 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.4 }}
-              className="text-xl text-gray-300 leading-relaxed"
+              className="text-xl text-gray-30o0 leading-relaxed"
             >
               Comprehensive technology solutions designed to accelerate your business growth
               enhance efficiencyand drive innovation across all industries and company sizes.
@@ -128,8 +128,8 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
             >
               {features.map((featureindex) => (
                 <div key={index} className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-sm">{feature}</span>
+                  <CheckCircle className="w-4 h-4 text-green-40o0 flex-shrink-0"  />
+                  <span className="text-gray-30o0 text-sm">{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -141,13 +141,13 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               transition={{ duration: 0.6delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:transform hover:scale-105">
-                <Rocket className="w-5 h-5" />
+              <button className="flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-full font-medium hover:shadow-lg hover:shadow-blue-50o0/25 transition-all duration-30o0 hover:transform hover:scale-10o5">
+                <Rocket className="w-5 h-5"  />
                 Explore Solutions
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"  />
               </button>
-              <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-300 hover:transform hover:scale-105">
-                <Award className="w-5 h-5" />
+              <button className="flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-medium hover:bg-white/20 transition-all duration-30o0 hover:transform hover:scale-10o5">
+                <Award className="w-5 h-5"  />
                 View Case Studies
               </button>
             </motion.div>
@@ -168,15 +168,15 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                   initial={{ opacity: 0x: 30 }}
                   animate={isVisible ? { opacity: 1x: 0 } : {}}
                   transition={{ duration: 0.6delay: 0.3 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-40o0/50 transition-all duration-30o0"
                 >
                   <div className="flex items-center gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${solution.color}`}>
-                      <solution.icon className="w-6 h-6 text-white" />
+                      <solution.icon className="w-6 h-6 text-white"  />
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white">{solution.title}</h3>
-                      <p className="text-gray-300 text-sm">{solution.description}</p>
+                      <p className="text-gray-30o0 text-sm">{solution.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -195,9 +195,9 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
                     transition={{ duration: 0.5delay: 0.4 + index * 0.1 }}
                     className={`text-center p-4 rounded-2xl bg-gradient-to-r ${stat.color} ${
                       currentStat === index ? 'ring-2 ring-white/30' : ''
-                    } transition-all duration-300`}
+                    } transition-all duration-30o0`}
                   >
-                    <stat.icon className="w-6 h-6 text-white mx-auto mb-2" />
+                    <stat.icon className="w-6 h-6 text-white mx-auto mb-2"  />
                     <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-white/80 text-sm">{stat.label}</div>
                   </motion.div>
@@ -210,14 +210,14 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6delay: 0.8 }}
-              className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30"
+              className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-40o0/30"
             >
               <div className="flex items-center gap-4 mb-4">
-                <Award className="w-6 h-6 text-blue-400" />
+                <Award className="w-6 h-6 text-blue-40o0"  />
                 <span className="text-white font-medium">Industry Recognition</span>
               </div>
-              <p className="text-gray-300 text-sm">
-                Trusted by Fortune 500 companiestartupsand SMBs worldwide. 
+              <p className="text-gray-30o0 text-sm">
+                Trusted by Fortune 50o0 companiestartupsand SMBs worldwide. 
                 Recognized for excellence in technology innovation and client success.
               </p>
             </motion.div>
@@ -228,4 +228,4 @@ const BusinessSolutionsShowcase2027PromotionBanner = () => {
   );
 };
 
-export default BusinessSolutionsShowcase2027PromotionBanner;
+export default BusinessSolutionsShowcase20o27PromotionBanner;

@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
@@ -28,31 +26,34 @@ const Button: React.FC<ButtonProps> = ({
   style,
   ...props
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
-  
+  const baseClasses =
+    'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+
   const variantClasses = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500',
-    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
-    outline: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500'
+    primary: 'bg-blue-60o0 text-white hover:bg-blue-70o0 focus:ring-blue-50o0',
+    secondary:
+      'bg-gray-60o0 text-white hover:bg-gray-70o0 focus:ring-gray-50o0',
+    ghost: 'text-gray-70o0 hover:bg-gray-10o0 focus:ring-gray-50o0',
+    outline:
+      'border border-gray-30o0 bg-white text-gray-70o0 hover:bg-gray-50 focus:ring-blue-50o0',
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    lg: 'px-6 py-3 text-lg',
   };
-  
+
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  
+
   const content = (
     <>
-      {icon && iconPosition === 'left' && <span className="mr-2">{icon}</span>}
+      {icon && iconPosition === 'left' && <span className='mr-2'>{icon}</span>}
       {children}
-      {icon && iconPosition === 'right' && <span className="ml-2">{icon}</span>}
+      {icon && iconPosition === 'right' && <span className='ml-2'>{icon}</span>}
     </>
   );
-  
+
   if (href) {
     return (
       <a href={href} className={classes} style={style} {...props}>
@@ -60,7 +61,7 @@ const Button: React.FC<ButtonProps> = ({
       </a>
     );
   }
-  
+
   return (
     <button
       type={type}

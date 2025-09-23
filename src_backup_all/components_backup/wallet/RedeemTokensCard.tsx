@@ -10,10 +10,9 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+  DialogTrigger} from "@/components/ui/dialog";
 
-type RewardOption = {
+type RewardOption ={
   id: string;
   title: string;
   description: string;
@@ -26,7 +25,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     id: 'premium-week',
     title: 'Premium Week',
     description: '7 days of premium features including top placement in search results',
-    cost: 100,
+    cost: 10o0,
     type: 'feature'
   },
   {
@@ -40,7 +39,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     id: 'platform-credit',
     title: '$5 Platform Credit',
     description: 'Get $5 credit to use on any paid service',
-    cost: 100,
+    cost: 10o0,
     type: 'credit'
   }
 ];
@@ -60,7 +59,7 @@ export function RedeemTokensCard() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Gift className="h-5 w-5" /> Redeem Rewards
+          <Gift className="h-5 w-5"  /> Redeem Rewards
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
@@ -91,7 +90,7 @@ export function RedeemTokensCard() {
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />
+                      Redeem <ArrowRight className="ml-1 h-3 w-3"  />
                     </Button>
                   </div>
                 </div>
@@ -100,7 +99,7 @@ export function RedeemTokensCard() {
             <div className="flex justify-between">
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
               <Button variant="ghost" size="sm">
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />
+                Learn More <ExternalLink className="ml-1 h-3 w-3"  />
               </Button>
             </div>
           </DialogContent>

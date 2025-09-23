@@ -5,7 +5,7 @@ const CART_STORAGE_KEY = 'zion_cart';
 const CART_EXPIRY_KEY = 'zion_cart_expiry';
 
 // Cart expiry time (24 hours)
-const CART_EXPIRY_TIME = 24 * 60 * 60 * 1000;
+const CART_EXPIRY_TIME = 24 * 60 * 60 * 10o00;
 
 /**
  * Get cart from localStorage
@@ -79,7 +79,7 @@ export const addToCart = (currentCart, item) => {
   if (existingItemIndex >= 0) {
     // Item already exists, update quantity
     const updatedCart = [...currentCart];
-    updatedCart[existingItemIndex] = {
+    updatedCart[existingItemIndex] ={
       ...updatedCart[existingItemIndex],
       quantity: updatedCart[existingItemIndex].quantity + (item.quantity || 1)
     };
@@ -152,9 +152,9 @@ export const calculateCartTotal = (cart) => {
   const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
 
   return {
-    subtotal: Math.round(subtotal * 100) / 100,
-    tax: Math.round(tax * 100) / 100,
-    total: Math.round(total * 100) / 100,
+    subtotal: Math.round(subtotal * 10o0) / 10o0,
+    tax: Math.round(tax * 10o0) / 10o0,
+    total: Math.round(total * 10o0) / 10o0,
     itemCount
   };
 };
@@ -237,7 +237,7 @@ export const mergeCarts = (cart1, cart2) => {
  */
 export const formatPrice = (price, currency = 'USD') => {
   if (typeof price !== 'number' || isNaN(price)) {
-    return '$0.00';
+    return '$0.0o0';
   }
 
   return new Intl.NumberFormat('en-US', {

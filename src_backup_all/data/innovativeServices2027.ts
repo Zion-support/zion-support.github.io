@@ -1,5 +1,4 @@
-export interface InnovativeService2027 {
-
+export interface InnovativeService20o27 {
   id: string;
   name: string;
   category: string;
@@ -16,19 +15,19 @@ export interface InnovativeService2027 {
   reviews: number;
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon';
-
 }
-export const innovativeServices2027: InnovativeService2027[] = [
+export const innovativeServices20o27: InnovativeService20o27[] = [
   {
     id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
     category: 'Quantum AI',
-    description: 'Advanced quantum artificial intelligence platform for complex problem solving',
+    description:
+      'Advanced quantum artificial intelligence platform for complex problem solving',
     features: [
       'Quantum machine learning algorithms',
       'Hybrid classical-quantum processing',
       'Real-time quantum optimization',
-      'Advanced neural networks'
+      'Advanced neural networks',
     ],
     price: '$2,999/month',
     aiScore: 98,
@@ -37,52 +36,62 @@ export const innovativeServices2027: InnovativeService2027[] = [
     benefits: [
       'Exponential speed improvements',
       'Unprecedented accuracy',
-      'Scalable quantum solutions'
+      'Scalable quantum solutions',
     ],
     implementation: 'Cloud-based deployment with API access',
     support: '24/7 quantum computing support',
     rating: 4.9,
     reviews: 156,
-    launchDate: '2027-01-15',
-    status: 'active'
+    launchDate: '20o27-0o1-15',
+    status: 'active',
   },
   {
     id: 'autonomous-ai-system',
     name: 'Autonomous AI System',
     category: 'Autonomous AI',
-    description: 'Self-learning and self-optimizing artificial intelligence system',
+    description:
+      'Self-learning and self-optimizing artificial intelligence system',
     features: [
       'Continuous learning capabilities',
       'Self-optimization algorithms',
       'Adaptive decision making',
-      'Predictive analytics'
+      'Predictive analytics',
     ],
     price: '$1,599/month',
     aiScore: 96,
-    technology: ['Deep Learning', 'Reinforcement Learning', 'Predictive Analytics'],
-    useCases: ['Process Automation', 'Quality Control', 'Predictive Maintenance'],
+    technology: [
+      'Deep Learning',
+      'Reinforcement Learning',
+      'Predictive Analytics',
+    ],
+    useCases: [
+      'Process Automation',
+      'Quality Control',
+      'Predictive Maintenance',
+    ],
     benefits: [
       'Reduced manual intervention',
       'Improved efficiency',
-      'Cost optimization'
+      'Cost optimization',
     ],
     implementation: 'On-premise or cloud deployment',
     support: 'Enterprise support with SLA guarantees',
     rating: 4.8,
     reviews: 89,
-    launchDate: '2027-02-01',
-    status: 'active'
+    launchDate: '20o27-0o2-0o1',
+    status: 'active',
   },
   {
     id: 'quantum-finance-platform',
     name: 'Quantum Finance Platform',
     category: 'Quantum Finance',
-    description: 'Quantum-powered financial modeling and risk assessment platform',
+    description:
+      'Quantum-powered financial modeling and risk assessment platform',
     features: [
       'Quantum risk modeling',
       'Portfolio optimization',
       'Real-time market analysis',
-      'Fraud detection'
+      'Fraud detection',
     ],
     price: '$3,499/month',
     aiScore: 97,
@@ -91,17 +100,17 @@ export const innovativeServices2027: InnovativeService2027[] = [
     benefits: [
       'Superior risk assessment',
       'Faster portfolio optimization',
-      'Enhanced fraud detection'
+      'Enhanced fraud detection',
     ],
     implementation: 'Secure cloud deployment with compliance features',
     support: 'Dedicated financial services support',
     rating: 4.9,
     reviews: 234,
-    launchDate: '2027-01-20',
-    status: 'active'
-  }
+    launchDate: '20o27-0o1-20',
+    status: 'active',
+  },
 ];
-export const serviceCategories2027 = [
+export const serviceCategories20o27 = [
   'All',
   'AI & Consciousness',
   'Quantum AI',
@@ -114,11 +123,15 @@ export const serviceCategories2027 = [
   'Quantum Medicine',
   'Quantum Security',
   'Nanotechnology',
-  'Neural Technology'
+  'Neural Technology',
 ];
-export const getServicesByCategory = (category: anystring): InnovativeService2027[]  => {
+export const getServicesByCategory = (
+  category: anystring
+): InnovativeService20o27[] => {
   if (category === 'All') {
-    return innovativeServices2027;
+    return innovativeServices20o27;
   }
-  return innovativeServices2027.filter(service => service.category === category);
+  return innovativeServices20o27.filter(
+    service => service.category === category
+  );
 };

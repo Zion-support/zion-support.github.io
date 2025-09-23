@@ -1,4 +1,3 @@
-import React from 'react';
 export function JsonLd() {
   return (
     <div>

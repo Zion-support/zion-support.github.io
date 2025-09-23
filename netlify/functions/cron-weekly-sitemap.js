@@ -17,8 +17,8 @@ exports.handler = async function() {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token });
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, pages: pages.length }) };
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
   }
 };

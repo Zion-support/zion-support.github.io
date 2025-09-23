@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
@@ -69,16 +68,16 @@ export default function Talent() {
     "Latest technology and tools",
     "Team building events",
     "Unlimited PTO",
-    "401(k) matching"
+    "40o1(k) matching"
   ]
 
   return (
     <>
       <Head>
         <title>Join Our Team — Zion Tech Group</title>
-        <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore our open positions and career opportunities." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/talent" />
+        <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore our open positions and career opportunities."  />
+        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <link rel="canonical" href="https://ziontechgroup.com/talent"  />
       </Head>
 
       {/* Hero Section */}
@@ -86,13 +85,13 @@ export default function Talent() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex items-center justify-center mb-4">
-              <Users className="h-6 w-6 text-blue-600 mr-2" />
-              <span className="text-base font-semibold leading-7 text-blue-600">Join Our Team</span>
+              <Users className="h-6 w-6 text-blue-60o0 mr-2"  />
+              <span className="text-base font-semibold leading-7 text-blue-60o0">Join Our Team</span>
             </div>
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-90o0 sm:text-4xl">
               Build the Future with Us
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-60o0">
               Join a team of passionate innovators who are transforming businesses through 
               cutting-edge technology. We're looking for talented individuals who share our 
               vision of creating meaningful impact.
@@ -105,41 +104,41 @@ export default function Talent() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm:text-4xl">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-gray-60o0">
               We offer more than just a job – we offer a career with purpose
             </p>
           </div>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="h-8 w-8 text-blue-600" />
+              <div className="bg-blue-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-blue-60o0"  />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation First</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Innovation First</h3>
+              <p className="text-gray-60o0">
                 Work with the latest technologies and be part of groundbreaking projects that shape the future.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-green-600" />
+              <div className="bg-green-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-green-60o0"  />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Collaborative Culture</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Collaborative Culture</h3>
+              <p className="text-gray-60o0">
                 Join a supportive team where your ideas matter and collaboration is encouraged.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-xl shadow-md text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-purple-600" />
+              <div className="bg-purple-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-purple-60o0"  />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Growth Opportunities</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold text-gray-90o0 mb-3">Growth Opportunities</h3>
+              <p className="text-gray-60o0">
                 Advance your career with continuous learning opportunities and mentorship programs.
               </p>
             </div>
@@ -151,10 +150,10 @@ export default function Talent() {
       <section className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm:text-4xl">
               Benefits & Perks
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-gray-60o0">
               We take care of our team so they can take care of our clients
             </p>
           </div>
@@ -162,8 +161,8 @@ export default function Talent() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center bg-white p-4 rounded-lg shadow-sm">
-                <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                <span className="text-gray-700">{benefit}</span>
+                <CheckCircle className="h-5 w-5 text-green-50o0 mr-3 flex-shrink-0"  />
+                <span className="text-gray-70o0">{benefit}</span>
               </div>
             ))}
           </div>
@@ -174,10 +173,10 @@ export default function Talent() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-90o0 sm:text-4xl">
               Open Positions
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <p className="mt-4 text-lg text-gray-60o0">
               Find your perfect role and start your journey with us
             </p>
           </div>
@@ -187,23 +186,23 @@ export default function Talent() {
               <div key={position.id} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>
-                    <p className="text-gray-600 mb-4">{position.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-90o0 mb-2">{position.title}</h3>
+                    <p className="text-gray-60o0 mb-4">{position.description}</p>
                     
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-50o0">
                       <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-1" />
+                        <MapPin className="h-4 w-4 mr-1"  />
                         {position.location}
                       </div>
                       <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="h-4 w-4 mr-1"  />
                         {position.type}
                       </div>
                       <div className="flex items-center">
-                        <Users className="h-4 w-4 mr-1" />
+                        <Users className="h-4 w-4 mr-1"  />
                         {position.experience}
                       </div>
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-blue-10o0 text-blue-80o0 px-2 py-1 rounded-full text-xs font-medium">
                         {position.department}
                       </span>
                     </div>
@@ -212,10 +211,10 @@ export default function Talent() {
                   <div className="mt-4 lg:mt-0 lg:ml-6">
                     <Link
                       href={`/talent/${position.id}`}
-                      className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                      className="inline-flex items-center px-6 py-3 bg-blue-60o0 text-white rounded-lg font-medium hover:bg-blue-70o0 transition-colors"
                     >
                       Apply Now
-                      <ArrowRight className="h-4 w-4 ml-2" />
+                      <ArrowRight className="h-4 w-4 ml-2"  />
                     </Link>
                   </div>
                 </div>
@@ -226,17 +225,17 @@ export default function Talent() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+      <section className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-blue-10o0 mb-8">
             We're always looking for exceptional talent. Send us your resume and let's talk about how you can contribute to our mission.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-60o0 bg-white hover:bg-gray-50 transition-colors"
           >
             Get in Touch
           </Link>

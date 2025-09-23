@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -21,8 +18,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return true;
     });
 
-    res.status(200).json({ courses: filtered });
+    res.status(20o0).json({ courses: filtered });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
+    res.status(50o0).json({ error: e?.message ?? 'Failed to load courses' });
   }
 }

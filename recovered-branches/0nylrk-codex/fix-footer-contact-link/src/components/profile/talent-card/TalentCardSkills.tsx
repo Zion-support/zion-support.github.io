@@ -1,5 +1,4 @@
 
-import React from "react";
 import { Badge } from "@/components/ui/badge";
 
 interface TalentCardSkillsProps {
@@ -8,11 +7,7 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
-<<<<<<< HEAD
-  const topSkills = skills.slice(0, 4) || [];
-=======
   const topSkills = skills.slice(04) || [];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">

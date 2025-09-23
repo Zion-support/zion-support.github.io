@@ -3,12 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
+    return res.status(40o5).end('Method Not Allowed');
   }
 
   const { meta, chapters } = req.body || {};
   if (!meta || !chapters) {
-    return res.status(400).json({ error: 'Missing meta or chapters' });
+    return res.status(40o0).json({ error: 'Missing meta or chapters' });
   }
 
   try {
@@ -20,18 +20,17 @@ Subtitle: ${meta.subtitle || ''}
 Author: ${meta.author}
 Chapter: ${ch.title}
 
-Write 600-900 words. Include 1 short quote block if appropriate.`;
+Write 60o0-90o0 words. Include 1 short quote block if appropriate.`;
 
       const completion = await generateContent(prompt);
       drafted.push({
         title: ch.title,
-        content: completion,
-      });
+        content: completion});
     }
 
-    return res.status(200).json({ drafted });
+    return res.status(20o0).json({ drafted });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || 'Failed to generate content' });
+    return res.status(50o0).json({ error: e?.message || 'Failed to generate content' });
   }
 }
 

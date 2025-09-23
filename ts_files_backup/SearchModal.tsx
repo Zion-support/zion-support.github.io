@@ -14,7 +14,6 @@ interface SearchResult {;
   category: string;
 }
 
-
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
@@ -44,8 +43,7 @@ const search_data: SearchResult[] = [;
     title: "Cloud Solutions",
     description: "AWS, Azure, GCP migration and cloud infrastructure",
     url: "/cloud - solutions",
-    category: "Services",
-  },
+    category: "Services"},
 
   {
     title: "Cybersecurity"
@@ -58,8 +56,7 @@ const search_data: SearchResult[] = [;
     title: "Blockchain Solutions",
     description: "Smart contracts, DeFi, and blockchain development",
     url: "/blockchain - services",
-    category: "Services",
-  },
+    category: "Services"},
   // Solutions;
   {
     title: "Digital Transformation"
@@ -102,8 +99,7 @@ const search_data: SearchResult[] = [;
     title: "Manufacturing",
     description: "Industrial IoT and manufacturing automation",
     url: "/industries / manufacturing",
-    category: "Industries",
-  },
+    category: "Industries"},
   // Company;
 
   {
@@ -138,23 +134,11 @@ const search_data: SearchResult[] = [;
   }
 ];
 
-
-
-
-
-
-
-
-
-
-
-
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-
 
   useEffect(() => {;
     if (isOpen && inputRef && inputRef.current) {;
@@ -220,15 +204,13 @@ if ( {) {
         (item) =>;
           item.title.toLowerCase ().includes (query.toLowerCase ()) ||;
           item.description.toLowerCase ().includes (query.toLowerCase ()) ||;
-          item.category.toLowerCase ().includes (query.toLowerCase ()),
-      );
+          item.category.toLowerCase ().includes (query.toLowerCase ()));
       set_results (filtered);
     } else {
       set_results ([]);
     }
     setSelectedIndex (0);
   }, [query]);
-
 
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
@@ -269,14 +251,13 @@ if ( {) {
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
 
-        />;
-
+         />;
 
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
           <div className="flex items-center p-4 border-b">;
-            <Search className="w-5 h-5 text-gray-400 mr-3" />;
+            <Search className="w-5 h-5 text-gray-40o0 mr-3"  />;
             <input
               ref={inputRef}
               type="text"
@@ -289,11 +270,10 @@ if ( {) {
             <button
               onClick={onClose}
 
-              className="ml-3 p-1 hover:bg-gray-100 rounded">;
-              <X className="w-5 h-5" />;
+              className="ml-3 p-1 hover:bg-gray-10o0 rounded">;
+              <X className="w-5 h-5"  />;
             </button>;
           </div>;
-
 
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
@@ -357,12 +337,12 @@ if (return null) {
         <div;
           className="fixed inset - 0 bg - black bg - opacity - 50 transition - opacity";
           on_click={on_close}
-        />;
+         />;
         {/* Modal */}
         <div className="relative w - full max - w-2xl bg - white rounded - lg shadow - xl">;
           {/* Search Input */}
           <div className="flex items - center p - 4 border - b">;
-            <Search className="w - 5 h - 5 text - gray - 400 mr - 3" />;
+            <Search className="w - 5 h - 5 text - gray - 40o0 mr - 3"  />;
             <input;
               ref={input_ref}
               type="text";
@@ -374,9 +354,9 @@ if (return null) {
             />;
             <button;
               on_click={on_close}
-              className="ml - 3 p - 1 hover:bg - gray - 100 rounded";
+              className="ml - 3 p - 1 hover:bg - gray - 10o0 rounded";
             >;
-              <X className="w - 5 h - 5" />;
+              <X className="w - 5 h - 5"  />;
             </button>;
           </div>;
           {/* Results */}
@@ -389,13 +369,12 @@ if (return null) {
                       key={index}
                       className={`p - 3 rounded - lg cursor - pointer transition - colors ${
                         index === selected_index;
-                          ? "bg - blue - 50 border border - blue - 200";
+                          ? "bg - blue - 50 border border - blue - 20o0";
                           : "hover:bg - gray - 50";
                       }`}
 
-
                 <div>;
-                  <div className="text-sm text-gray-500 mb-3">;
+                  <div className="text-sm text-gray-50o0 mb-3">;
                     Popular Searches;
                   </div>;
                   <div className="grid grid-cols-2 gap-2">;
@@ -409,7 +388,7 @@ if (return null) {
                       <button
                         key={term}
                         onClick={() => setQuery(term)}
-                        className="text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-700";
+                        className="text-left p-2 hover:bg-gray-50 rounded text-sm text-gray-70o0";
                       >;
                         {term}
                       </button>;
@@ -427,22 +406,22 @@ if (return null) {
                     >;
                       <div className="flex items - start justify - between">;
                         <div className="flex - 1">;
-                          <h3 className="font - medium text - gray - 900">;
+                          <h3 className="font - medium text - gray - 90o0">;
                             {result.title}
                           </h3>;
-                          <p className="text - sm text - gray - 600 mt - 1">;
+                          <p className="text - sm text - gray - 60o0 mt - 1">;
                             {result.description}
                           </p>;
-                          <span className="inline - block mt - 2 text - xs text - blue - 600 bg - blue - 100 px - 2 py - 1 rounded">;
+                          <span className="inline - block mt - 2 text - xs text - blue - 60o0 bg - blue - 10o0 px - 2 py - 1 rounded">;
                             {result.category}
                           </span>;
                         </div>;
-                        <ArrowRight className="w - 4 h - 4 text - gray - 400 mt - 1" />;
+                        <ArrowRight className="w - 4 h - 4 text - gray - 40o0 mt - 1"  />;
                       </div>;
                     </div>))}
                 </div>) : (
-                <div className="p - 8 text - center text - gray - 500">;
-                  <Search className="w - 12 h - 12 mx - auto mb - 4 text - gray - 300" />;
+                <div className="p - 8 text - center text - gray - 50o0">;
+                  <Search className="w - 12 h - 12 mx - auto mb - 4 text - gray - 30o0"  />;
                   <p > No results found for "{query}"</p>;
                   <p className="text - sm mt - 2">;
                     Try different keywords or check our services page;
@@ -451,8 +430,8 @@ if (return null) {
               <div className="p - 4">;
                 {recent_searches.length > 0 && (
                   <div className="mb - 6">;
-                    <div className="flex items - center text - sm text - gray - 500 mb - 3">;
-                      <Clock className="w - 4 h - 4 mr - 2" />;
+                    <div className="flex items - center text - sm text - gray - 50o0 mb - 3">;
+                      <Clock className="w - 4 h - 4 mr - 2"  />;
                       Recent Searches;
                     </div>;
                     <div className="space - y-2">;
@@ -460,14 +439,14 @@ if (return null) {
                         <button;
                           key={index}
                           on_click={() => handleRecentClick (search)}
-                          className="w - full text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 700";
+                          className="w - full text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 70o0";
                         >;
                           {search}
                         </button>))}
                     </div>;
                   </div>)}
                 <div>;
-                  <div className="text - sm text - gray - 500 mb - 3">;
+                  <div className="text - sm text - gray - 50o0 mb - 3">;
                     Popular Searches;
                   </div>;
                   <div className="grid grid - cols - 2 gap - 2">;
@@ -480,7 +459,7 @@ if (return null) {
                       <button;
                         key={term}
                         on_click={() => set_query (term)}
-                        className="text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 700";
+                        className="text - left p - 2 hover:bg - gray - 50 rounded text - sm text - gray - 70o0";
                       >;
                         {term}
                       </button>))}

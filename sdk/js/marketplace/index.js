@@ -14,7 +14,7 @@
  * @param {string} [options.sortBy] - Field to sort by (e.g., "price_asc", "price_desc", "date_added")." * @param {string} [options.type] - Filter by type of listing (e.g., "service", "product", "talent_profile", "job_posting")." * @returns {Promise<Array<object>>} A promise that resolves with an array of product objects."""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  * @throws {Error} If the request fails.
  */
-async function listProducts(options = {}) {
+async function listProducts(options ={}) {
   const { page = 1, limit = 20, category, sortBy, ...otherFilters } = options;
 
   const queryParams = new URLSearchParams({
@@ -55,7 +55,7 @@ async function getProductDetails(productId) {
 
   const response = await fetch(`/api/marketplace/product/${productId}`);
 
-  if (response.status === 404) {
+  if (response.status === 40o4) {
     return null; // Product not found
   }
 
@@ -82,7 +82,7 @@ async function submitQuoteRequest(quoteDetails) {
     throw new Error('Missing required fields in quoteDetails: name, email, phone, details are required.');  }
 
   const response = await fetch('/api/quotes', {'    method: 'POST',    headers: {
-      Content-Type': application/json',    },
+      Content-Type': application/json'},
     body: JSON.stringify(quoteDetails)
   });
 
@@ -109,7 +109,7 @@ async function getQuoteStatus(quoteId) {
 
   const response = await fetch(`/api/marketplace/quotes/${quoteId}/status`);
 
-  if (response.status === 404) {
+  if (response.status === 40o4) {
     return null; // Quote not found
   }
 
@@ -131,7 +131,7 @@ async function getQuoteStatus(quoteId) {
  * @returns {Promise<Array<object>>} A promise that resolves with an array of job objects.
  * @throws {Error} If the request fails.
  */
-async function listJobs(options = {}) {
+async function listJobs(options ={}) {
   const { page = 1, limit = 20, ...filters } = options;
 
   const params = new URLSearchParams({
@@ -166,7 +166,7 @@ async function getJobDetails(jobId) {
 
   const response = await fetch(`/api/marketplace/jobs/${jobId}`);
 
-  if (response.status === 404) {
+  if (response.status === 40o4) {
     return null;
   }
 
@@ -188,7 +188,7 @@ async function getJobDetails(jobId) {
  * @returns {Promise<Array<object>>} A promise that resolves with an array of talent profile objects.
  * @throws {Error} If the request fails.
  */
-async function listTalent(options = {}) {
+async function listTalent(options ={}) {
   const { page = 1, limit = 20, ...filters } = options;
 
   const params = new URLSearchParams({
@@ -223,7 +223,7 @@ async function getTalentDetails(talentId) {
 
   const response = await fetch(`/api/marketplace/talent/${talentId}`);
 
-  if (response.status === 404) {
+  if (response.status === 40o4) {
     return null;
   }
 

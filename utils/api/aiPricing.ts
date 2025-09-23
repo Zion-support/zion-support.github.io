@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-// Stub AI pricing utility - placeholder for missing functionality
-export const getAIPricing = async (service: string) => {
-  // Placeholder implementation
-  return { price: 99, currency: 'USD', success: true };
-};
-
-export const calculateAICost = async (usage: any) => {
-  // Placeholder implementation
-  return { cost: 0, success: true };
-};
-=======
 // Stub AI pricing utility - placeholder for missing functionality;
 
 export const getAIPricing = async (service: string) => {
@@ -26,7 +14,6 @@ export const calculateAICost = async (usage: any) => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -59,9 +46,9 @@ export const calculateAICost = async (usage: any) => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

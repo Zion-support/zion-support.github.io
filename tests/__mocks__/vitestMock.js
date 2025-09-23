@@ -16,4 +16,4 @@ module.exports = {
   describe: jestGlobals.describe,
   beforeEach: jestGlobals.beforeEach,
   afterEach: jestGlobals.afterEach,
-}; 
+};

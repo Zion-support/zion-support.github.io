@@ -62,13 +62,19 @@ export interface AuthContextType {
   /**
    * Setter for `onboardingStep` to allow consumers to update the step.
    */
-  setOnboardingStep?: React.Dispatch<React.SetStateAction<string | number | null>>;
+  setOnboardingStep?: React.Dispatch<
+    React.SetStateAction<string | number | null>
+  >;
   signup: (
     email: string,
     password: string,
     userData?: any
   ) => Promise<{ error?: any; emailVerificationRequired?: boolean }>;
-  register?: (name: string, email: string, password: string) => Promise<{ error?: any }>; 
+  register?: (
+    name: string,
+    email: string,
+    password: string
+  ) => Promise<{ error?: any }>;
   logout: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserProfile>) => Promise<{ error?: any }>; // Changed from UserDetails

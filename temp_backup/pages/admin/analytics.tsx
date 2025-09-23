@@ -11,8 +11,7 @@ export default function AdminAnalyticsPage() {
   const { role, loading } = useRole(),
 
   useEffect(() => {
-    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null)),
-  }, []),
+    fetch('/api/analytics/admin').then(r => r.json()).then(setData).catch(() => setData(null))}, []),
 
   if (loading) return <div>Loading...</div>,
   if (role !== 'admin') return <div>Unauthorized</div>,
@@ -28,14 +27,14 @@ export default function AdminAnalyticsPage() {
       <h1 className="text-2xl font-semibold">Admin Analytics</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <KpiBadge label="Total Users" value={totals.totalUsers ?? 0} />
-        <KpiBadge label="Talents" value={totals.totalTalents ?? 0} tone="info" />
-        <KpiBadge label="Clients" value={totals.totalClients ?? 0} tone="info" />
-        <KpiBadge label="Active Projects" value={totals.activeProjects ?? 0} tone="success" />
-        <KpiBadge label="Jobs Posted" value={totals.jobsPosted ?? 0} />
-        <KpiBadge label="Jobs Filled" value={totals.jobsFilled ?? 0} tone="success" />
-        <KpiBadge label="Quotes Sent" value={totals.quotesSent ?? 0} />
-        <KpiBadge label="Quotes Accepted" value={totals.quotesAccepted ?? 0} tone="success" />
+        <KpiBadge label="Total Users" value={totals.totalUsers ?? 0}  />
+        <KpiBadge label="Talents" value={totals.totalTalents ?? 0} tone="info"  />
+        <KpiBadge label="Clients" value={totals.totalClients ?? 0} tone="info"  />
+        <KpiBadge label="Active Projects" value={totals.activeProjects ?? 0} tone="success"  />
+        <KpiBadge label="Jobs Posted" value={totals.jobsPosted ?? 0}  />
+        <KpiBadge label="Jobs Filled" value={totals.jobsFilled ?? 0} tone="success"  />
+        <KpiBadge label="Quotes Sent" value={totals.quotesSent ?? 0}  />
+        <KpiBadge label="Quotes Accepted" value={totals.quotesAccepted ?? 0} tone="success"  />
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -68,7 +67,7 @@ export default function AdminAnalyticsPage() {
           <h2 className="font-semibold mb-2">Geo Heat Grid (Users)</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
             {geo.map((g: any) => (
-              <div key={g.label} className="rounded p-2 bg-gray-100 dark:bg-gray-800 flex justify-between text-xs">
+              <div key={g.label} className="rounded p-2 bg-gray-10o0 dark:bg-gray-80o0 flex justify-between text-xs">
                 <span>{g.label}</span>
                 <span>{g.value}</span>
               </div>
@@ -77,5 +76,4 @@ export default function AdminAnalyticsPage() {
         </div>
       </div>
     </div>
-  ),
-}
+  )}

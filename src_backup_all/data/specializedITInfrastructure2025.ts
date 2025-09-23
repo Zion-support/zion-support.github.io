@@ -1,4 +1,4 @@
-export interface SpecializedITInfrastructureService2025 {
+export interface SpecializedITInfrastructureService20o25 {
   id: string;
   title: string;
   description: string;
@@ -25,7 +25,7 @@ export interface SpecializedITInfrastructureService2025 {
   documentationUrl?: string;
 }
 
-export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
+export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_20o25: SpecializedITInfrastructureService20o25[] = [
   // Edge Computing Infrastructure Platform
   {
     id: "edge-computing-infrastructure-platform",
@@ -33,7 +33,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Comprehensive edge computing platform that brings processing power closer to data sources, enabling real-time analytics, low-latency applications, and distributed computing capabilities.",
     category: "Edge Computing",
     subcategory: "Infrastructure Platform",
-    price: 2800,
+    price: 280o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -80,9 +80,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     tags: ["Edge Computing", "Infrastructure", "Real-time", "IoT", "Low Latency"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,800 - $12,000/month",
+    marketPrice: "$2,80o0 - $12,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -96,7 +96,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Next-generation quantum network infrastructure that enables quantum communications, quantum key distribution, and quantum internet protocols for ultra-secure data transmission.",
     category: "Quantum Networking",
     subcategory: "Network Infrastructure",
-    price: 4500,
+    price: 450o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -133,9 +133,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     tags: ["Quantum Networking", "Quantum Security", "Infrastructure", "Encryption", "Communications"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$4,500 - $20,000/month",
+    marketPrice: "$4,50o0 - $20,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -149,7 +149,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Comprehensive 5G enterprise infrastructure that provides ultra-fast connectivity, low latency, and massive IoT support for enterprise applications and digital transformation.",
     category: "5G Technology",
     subcategory: "Enterprise Infrastructure",
-    price: 3200,
+    price: 320o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -186,9 +186,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     tags: ["5G", "Enterprise", "Infrastructure", "IoT", "Connectivity"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,200 - $15,000/month",
+    marketPrice: "$3,20o0 - $15,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -202,7 +202,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Advanced hybrid cloud platform that seamlessly integrates on-premises, private cloud, and public cloud resources for optimal performance, cost, and security.",
     category: "Cloud Infrastructure",
     subcategory: "Hybrid Cloud",
-    price: 2500,
+    price: 250o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -239,9 +239,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     tags: ["Hybrid Cloud", "Cloud Infrastructure", "Multi-cloud", "Enterprise", "Scalability"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,500 - $12,000/month",
+    marketPrice: "$2,50o0 - $12,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
@@ -255,7 +255,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     description: "Intelligent infrastructure management platform that uses AI to optimize performance, predict failures, and automate infrastructure operations for maximum efficiency.",
     category: "AI Infrastructure",
     subcategory: "Management & Optimization",
-    price: 1800,
+    price: 180o0,
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -292,9 +292,9 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     tags: ["AI", "Infrastructure Management", "Automation", "Monitoring", "Optimization"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1,800 - $8,000/month",
+    marketPrice: "$1,80o0 - $8,0o00/month",
     contactInfo: {
-      phone: "+1 302 464 0950",
+      phone: "+1 30o2 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },

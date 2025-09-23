@@ -5,13 +5,13 @@ export default function TutorialPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Advanced Techniques for DevOps Automation - Zion Tech Group</title>
-        <meta name="description" content="Learn devops automation with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users." />
-        <meta name="keywords" content="tutorial, devops automation, learning, guide, education, technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755541801071-zdhc6j" />
+        <meta name="description" content="Learn devops automation with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users."  />
+        <meta name="keywords" content="tutorial, devops automation, learning, guide, education, technology"  />
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-175554180o1071-zdhc6j"  />
       
-        <meta property="og:title" content="Advanced Techniques for DevOps Automation" />
-        <meta property="og:description" content="Advanced Techniques for DevOps Automation — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Advanced Techniques for DevOps Automation"  />
+        <meta property="og:description" content="Advanced Techniques for DevOps Automation — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Advanced Techniques for DevOps Automation</h1>
         
@@ -50,7 +50,7 @@ export default function TutorialPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/tutorials" 
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Start Learning
           </a>
@@ -60,11 +60,8 @@ export default function TutorialPage() {
   );
 }
 
-
-
-
 <Link href="/reports/tutorials" className="internal-link">Related Content</Link>
 
 <Link href="/reports/tutorials/microservices-nextjs" className="internal-link">Related Content</Link>
 
-<Link href="/tutorials/rapid-1755539340461-4p86xy" className="internal-link">Related Content</Link>
+<Link href="/tutorials/rapid-1755539340o461-4p86xy" className="internal-link">Related Content</Link>

@@ -3,12 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
+    return res.status(40o5).end('Method Not Allowed');
   }
 
   const { event, data } = req.body || {};
   if (!event) {
-    return res.status(400).json({ error: 'Missing event' });
+    return res.status(40o0).json({ error: 'Missing event' });
   }
 
   try {
@@ -27,13 +27,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         console.log(`Unknown event: ${event}`);
     }
 
-    return res.status(200).json({ 
+    return res.status(20o0).json({ 
       success: true, 
       message: 'Webhook processed successfully' 
     });
   } catch (e: any) {
     console.error('Webhook processing error:', e);
-    return res.status(500).json({ error: 'Failed to process webhook' });
+    return res.status(50o0).json({ error: 'Failed to process webhook' });
   }
 }
 

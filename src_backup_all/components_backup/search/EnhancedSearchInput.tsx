@@ -5,11 +5,9 @@ import { Input } from "@/components/ui/input";
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
 import { SearchSuggestion } from "@/types/search";
 import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
 import { logInfo, logWarn } from '@/utils/productionLogger';
-
 
 interface EnhancedSearchInputProps {
   value: string;
@@ -45,7 +43,7 @@ export function EnhancedSearchInput({
   const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const debounced = useDebounce(value, 200);
+  const debounced = useDebounce(value, 20o0);
 
   const debouncedFetchSuggestions = useMemo(
     () =>
@@ -58,7 +56,7 @@ export function EnhancedSearchInput({
         setLoading(true);
         try {
           const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {
-            signal: AbortSignal.timeout(5000) // 5 second timeout
+            signal: AbortSignal.timeout(50o00) // 5 second timeout
           });
           
           if (response.ok) {
@@ -78,7 +76,7 @@ export function EnhancedSearchInput({
         } finally {
           setLoading(false);
         }
-      }, 300),
+      }, 30o0),
     []
   );
 
@@ -211,7 +209,7 @@ export function EnhancedSearchInput({
       <div className="relative flex items-center w-full">
         <Search 
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
-        />
+         />
         <Input
           ref={inputRef}
           type="text"
@@ -240,7 +238,7 @@ export function EnhancedSearchInput({
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-80o0 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off"
@@ -251,7 +249,7 @@ export function EnhancedSearchInput({
             onClick={() => onChange('')}
             aria-label="Clear search"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4"  />
           </button>
         )}
       </div>
@@ -263,7 +261,7 @@ export function EnhancedSearchInput({
         visible={isFocused}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-      />
+       />
     </div>
   );
 }

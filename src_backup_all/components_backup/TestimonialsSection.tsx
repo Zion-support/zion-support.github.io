@@ -24,15 +24,15 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Sarah Chen",
     position: "CTO",
-    company: "Fortune 500 Tech Corp",
-    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system performance by 300%. The team's expertise and dedication exceeded our expectations.",
+    company: "Fortune 50o0 Tech Corp",
+    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system performance by 30o0%. The team's expertise and dedication exceeded our expectations.",
     rating: 5,
     avatar: "/images/testimonials/sarah-chen.jpg",
-    logo: "/images/companies/fortune500-tech.png",
+    logo: "/images/companies/fortune50o0-tech.png",
     category: "enterprise",
     results: [
       { metric: "Cost Reduction", value: "40%", change: "decrease" },
-      { metric: "Performance", value: "300%", change: "increase" },
+      { metric: "Performance", value: "30o0%", change: "increase" },
       { metric: "Uptime", value: "99.99%", change: "improvement" }
     ]
   },
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     category: "startup",
     results: [
       { metric: "Time to Market", value: "-60%", change: "faster" },
-      { metric: "Scalability", value: "500%", change: "increase" },
+      { metric: "Scalability", value: "50o0%", change: "increase" },
       { metric: "User Growth", value: "250%", change: "increase" }
     ]
   },
@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
     category: "enterprise",
     results: [
       { metric: "Security Incidents", value: "0", change: "reduction" },
-      { metric: "Compliance Score", value: "100%", change: "achievement" },
+      { metric: "Compliance Score", value: "10o0%", change: "achievement" },
       { metric: "Response Time", value: "<5min", change: "improvement" }
     ]
   },
@@ -111,7 +111,7 @@ const testimonials: Testimonial[] = [
     logo: "/images/companies/fintech-solutions.png",
     category: "enterprise",
     results: [
-      { metric: "Transaction Speed", value: "1000%", change: "faster" },
+      { metric: "Transaction Speed", value: "10o00%", change: "faster" },
       { metric: "Security Score", value: "A+", change: "grade" },
       { metric: "Customer Trust", value: "99.9%", change: "score" }
     ]
@@ -142,7 +142,7 @@ export function TestimonialsSection() {
 
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
-    }, 8000);
+    }, 80o00);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, filteredTestimonials.length]);
@@ -163,16 +163,16 @@ export function TestimonialsSection() {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
-      />
+        className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`}
+       />
     ));
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%20o0%20o60%20o60%22%20xmlns%3D%22http%3A//www.w3.org/20o00/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -187,7 +187,7 @@ export function TestimonialsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             See how Zion Tech Group has transformed businesses across industries with our 
             cutting-edge technology solutions and exceptional service delivery.
           </p>
@@ -208,10 +208,10 @@ export function TestimonialsSection() {
                 setSelectedCategory(category.id);
                 setCurrentTestimonial(0);
               }}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                  ? 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-30o0 hover:bg-white/20 border border-white/20'
               }`}
             >
               {category.name} ({category.count})
@@ -229,19 +229,19 @@ export function TestimonialsSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 border border-cyan-50o0/30">
               <div className="aspect-video bg-black/50 flex items-center justify-center">
                 {!isVideoPlaying ? (
                   <button
                     onClick={() => setIsVideoPlaying(true)}
-                    className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300"
+                    className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-30o0"
                   >
-                    <Play className="w-8 h-8 text-white ml-1" />
+                    <Play className="w-8 h-8 text-white ml-1"  />
                   </button>
                 ) : (
                   <div className="text-center text-white">
                     <p className="text-lg font-medium mb-2">Client Success Story</p>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-gray-30o0">
                       Watch how Zion Tech Group transformed their business
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export function TestimonialsSection() {
                 <h3 className="text-xl font-bold text-white mb-2">
                   Success Stories from Our Clients
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-30o0">
                   Hear directly from our clients about the transformative impact 
                   of our technology solutions on their businesses.
                 </p>
@@ -269,17 +269,17 @@ export function TestimonialsSection() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               {/* Quote Icon */}
-              <Quote className="w-12 h-12 text-cyan-400 mb-6" />
+              <Quote className="w-12 h-12 text-cyan-40o0 mb-6"  />
 
               {/* Testimonial Content */}
-              <blockquote className="text-gray-300 text-lg leading-relaxed mb-8">
+              <blockquote className="text-gray-30o0 text-lg leading-relaxed mb-8">
                 "{currentTestimonialData.content}"
               </blockquote>
 
               {/* Author Info */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-50o0 to-blue-50o0 flex items-center justify-center">
                     <span className="text-white font-bold text-xl">
                       {currentTestimonialData.name.split(' ').map(n => n[0]).join('')}
                     </span>
@@ -288,7 +288,7 @@ export function TestimonialsSection() {
                     <h4 className="text-white font-semibold text-lg">
                       {currentTestimonialData.name}
                     </h4>
-                    <p className="text-gray-400">
+                    <p className="text-gray-40o0">
                       {currentTestimonialData.position} at {currentTestimonialData.company}
                     </p>
                   </div>
@@ -302,10 +302,10 @@ export function TestimonialsSection() {
               <div className="grid grid-cols-3 gap-4">
                 {currentTestimonialData.results.map((result, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">
+                    <div className="text-2xl font-bold text-cyan-40o0">
                       {result.value}
                     </div>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-40o0">
                       {result.metric}
                     </div>
                   </div>
@@ -318,23 +318,23 @@ export function TestimonialsSection() {
               <div className="flex items-center space-x-4">
                 <button
                   onClick={prevTestimonial}
-                  className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+                  className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-30o0"
                 >
-                  <ChevronLeft className="w-5 h-5" />
+                  <ChevronLeft className="w-5 h-5"  />
                 </button>
                 <button
                   onClick={nextTestimonial}
-                  className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+                  className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-30o0"
                 >
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5"  />
                 </button>
               </div>
 
               <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+                className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-30o0"
               >
-                {isAutoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                {isAutoPlaying ? <Pause className="w-5 h-5"  /> : <Play className="w-5 h-5"  />}
               </button>
             </div>
 
@@ -344,9 +344,9 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-30o0 ${
                     index === currentTestimonial
-                      ? 'bg-cyan-400 scale-125'
+                      ? 'bg-cyan-40o0 scale-125'
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                 />
@@ -365,20 +365,20 @@ export function TestimonialsSection() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-400">Projects Delivered</div>
+              <div className="text-4xl font-bold text-cyan-40o0 mb-2">50o0+</div>
+              <div className="text-gray-40o0">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-400">Enterprise Clients</div>
+              <div className="text-4xl font-bold text-cyan-40o0 mb-2">50+</div>
+              <div className="text-gray-40o0">Enterprise Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
+              <div className="text-4xl font-bold text-cyan-40o0 mb-2">99.9%</div>
+              <div className="text-gray-40o0">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-gray-400">Support Available</div>
+              <div className="text-4xl font-bold text-cyan-40o0 mb-2">24/7</div>
+              <div className="text-gray-40o0">Support Available</div>
             </div>
           </div>
         </motion.div>

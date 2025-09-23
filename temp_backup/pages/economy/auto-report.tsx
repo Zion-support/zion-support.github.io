@@ -13,8 +13,7 @@ export async function getStaticProps() {
     if (fs.existsSync(latestPath)) {
       try {
         const latestData = JSON.parse(fs.readFileSync(latestPath, 'utf8')),
-        latest = latestData.latest || null,
-      } catch {}
+        latest = latestData.latest || null} catch {}
     }
 
     const files = fs.readdirSync(reportsDir).filter((f) => f.endsWith('-summary.json')),
@@ -22,10 +21,8 @@ export async function getStaticProps() {
       .map((f) => {
         try {
           const data = JSON.parse(fs.readFileSync(path.join(reportsDir, f), 'utf8')),
-          return data,
-        } catch {
-          return null,
-        }
+          return data} catch {
+          return null}
       })
       .filter(Boolean)
       .sort((a: any, b: any) => (a.createdAt < b.createdAt ? 1 : -1))
@@ -36,13 +33,11 @@ export async function getStaticProps() {
     const p = path.join(reportsDir, `${latest}.json`),
     if (fs.existsSync(p)) {
       try {
-        latestReport = JSON.parse(fs.readFileSync(p, 'utf8')),
-      } catch {}
+        latestReport = JSON.parse(fs.readFileSync(p, 'utf8'))} catch {}
     }
   }
 
-  return { props: { latest, latestReport, summaries } },
-}
+  return { props: { latest, latestReport, summaries } }}
 
 export default function EconomyAutoReportPage({ latest, latestReport, summaries }: any) {
   return (
@@ -54,7 +49,7 @@ export default function EconomyAutoReportPage({ latest, latestReport, summaries 
         </div>
 
         {latestReport ? (
-          <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+          <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-20o0 dark:border-gray-80o0">
             <h2 className="font-semibold mb-2">Latest: {latestReport.runId}</h2>
             <p className="text-sm opacity-80">Created: {latestReport.createdAt}</p>
             <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -71,7 +66,7 @@ export default function EconomyAutoReportPage({ latest, latestReport, summaries 
           <div className="text-sm opacity-80">No reports available yet. The autopilot will populate this page after its first run.</div>
         )}
 
-        <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <div className="bg-white/70 dark:bg-black/40 rounded-lg p-4 border border-gray-20o0 dark:border-gray-80o0">
           <h3 className="font-semibold mb-3">Recent runs</h3>
           {summaries?.length ? (
             <ul className="text-sm space-y-1">
@@ -88,5 +83,4 @@ export default function EconomyAutoReportPage({ latest, latestReport, summaries 
         </div>
       </div>
     </EnhancedLayout>
-  ),
-}
+  )}

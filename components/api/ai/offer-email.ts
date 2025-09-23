@@ -1,18 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { authenticateRequest } from '@/utils/auth';
-import { generateText } from '@/utils/ai';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const method = (req.method || 'POST').toUpperCase();
-  if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  const auth = authenticateRequest(req, false);
-  if (!auth.ok) return res.status(401).json({ error: auth.error });
-
-  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
-  const prompt = `Draft a professional, friendly job offer email.\n` +
-=======
 
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
@@ -70,7 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const prompt = `Draft a professional, friendly job offer email.\n` +
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     `Candidate: ${candidateName || 'Candidate'}\n` +
     `Role: ${roleTitle || 'Software Engineer'}\n` +
     `Compensation: ${compensation || 'Competitive'}\n` +
@@ -78,12 +63,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Company: ${companyName || 'Your Company'}\n` +
     `Notes: ${notes || ''}\n` +
     `Include signature and next steps.`;
-<<<<<<< HEAD
-
-  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
-  return res.status(200).json({ email: text });
-}
-=======
   const text = await generateText(
     prompt
     'You are a recruiting ops specialist with excellent writing skills.'
@@ -97,13 +76,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -112,3 +89,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

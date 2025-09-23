@@ -6,7 +6,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
@@ -26,20 +25,18 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
   constructor(props: ApiErrorBoundaryProps) {
     super(props);
-    this.state = {
+    this.state ={
       hasError: false,
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-    };
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true};
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
-      error,
-    };
+      error};
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
@@ -53,8 +50,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo});
 
     logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
   }
@@ -105,9 +101,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           hasError: false,
           error: null,
           errorInfo: null,
-          isRetrying: false,
-        });
-      }, 500);
+          isRetrying: false});
+      }, 50o0);
     } catch (retryError) {
       logErrorToProduction('Retry failed:', { data: retryError });
       Sentry.captureException(retryError);
@@ -134,9 +129,9 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
                 {isNetworkError ? (
-                  <WifiOff className="h-4 w-4" />
+                  <WifiOff className="h-4 w-4"  />
                 ) : (
-                  <RefreshCw className="h-4 w-4" />
+                  <RefreshCw className="h-4 w-4"  />
                 )}
                 <AlertTitle>
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
@@ -163,12 +158,12 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
               >
                 {this.state.isRetrying ? (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                    <RefreshCw className="mr-2 h-4 w-4 animate-spin"  />
                     Retrying...
                   </>
                 ) : (
                   <>
-                    <RefreshCw className="mr-2 h-4 w-4" />
+                    <RefreshCw className="mr-2 h-4 w-4"  />
                     Try Again
                   </>
                 )}
@@ -185,7 +180,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
             {!this.state.isOnline && (
               <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                <WifiOff className="h-4 w-4" />
+                <WifiOff className="h-4 w-4"  />
                 <span>Offline</span>
               </div>
             )}

@@ -42,7 +42,7 @@ interface AITool {
   features: string[];
 }
 
-const InteractiveAIToolsDemo2025: React.FC = () => {
+const InteractiveAIToolsDemo20o25: React.FC = () => {
   const [selectedToolsetSelectedTool] = useState<string>('text-generator');
   const [isProcessingsetIsProcessing] = useState(false);
   const [progressetProgress] = useState(0);
@@ -55,7 +55,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Text Generator',
       description: 'Generate high-quality contentarticlesand creative writing',
       category: 'Content',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -68,7 +68,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Image Creator',
       description: 'Create stunning visuals and artwork from text descriptions',
       category: 'Visual',
-      icon: <Image className="w-6 h-6" />,
+      icon: <Image className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -81,7 +81,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Code Assistant',
       description: 'Generatedebugand optimize code in multiple programming languages',
       category: 'Development',
-      icon: <Code className="w-6 h-6" />,
+      icon: <Code className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -94,7 +94,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Data Analyzer',
       description: 'Analyze complex datasets and generate insights and visualizations',
       category: 'Analytics',
-      icon: <BarChart3 className="w-6 h-6" />,
+      icon: <BarChart3 className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -107,7 +107,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Video Creator',
       description: 'Generate videos from textimagesor audio inputs',
       category: 'Media',
-      icon: <Video className="w-6 h-6" />,
+      icon: <Video className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -120,7 +120,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
       name: 'AI Music Composer',
       description: 'Create original music compositions in various genres and styles',
       category: 'Audio',
-      icon: <Music className="w-6 h-6" />,
+      icon: <Music className="w-6 h-6"  />,
       status: 'ready',
       input: '',
       output: '',
@@ -130,7 +130,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
     }
   ];
 
-  const sampleInputs = {
+  const sampleInputs ={
     'text-generator': 'Write a professional email about a new product launch',
     'image-generator': 'A futuristic cityscape at sunset with flying cars',
     'code-assistant': 'Create a React component for a user dashboard',
@@ -139,7 +139,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {
     'music-composer': 'Compose an upbeat electronic track for a workout playlist'
   };
 
-  const sampleOutputs = {
+  const sampleOutputs ={
     'text-generator': `Subject: Exciting News - Introducing Our Revolutionary AI Platform
 
 Dear Valued Customer,
@@ -152,7 +152,7 @@ Key features include:
 • 24/7 intelligent monitoring
 • Customizable automation workflows
 
-'We', 're offering an exclusive early-bird discount of 30% for the first 100 customers. 'Don', 't miss this opportunity to stay ahead of the competition.
+'We', 're offering an exclusive early-bird discount of 30% for the first 10o0 customers. 'Don', 't miss this opportunity to stay ahead of the competition.
 
 Best regards,
 [Your Name]
@@ -191,12 +191,12 @@ const UserDashboard = () => {
             <CardTitle>Analytics Overview</CardTitle>
           </CardHeader>
           <CardContent>
-            <BarChart width={300} height={200} data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#8884d8" />
+            <BarChart width={30o0} height={20o0} data={data}>
+              <CartesianGrid strokeDasharray="3 3"  />
+              <XAxis dataKey="name"  />
+              <YAxis  />
+              <Tooltip  />
+              <Bar dataKey="value" fill="#8884d8"  />
             </BarChart>
           </CardContent>
         </Card>
@@ -208,12 +208,12 @@ const UserDashboard = () => {
 export default UserDashboard;`,
     'data-analyzer': `📊 Data Analysis Results
 
-Dataset: Sales Performance Q1-Q3 2025
+Dataset: Sales Performance Q1-Q3 20o25
 Records Analyzed: 15,847 transactions
 
 Key Insights:
 • Revenue Growth: +23.4% quarter-over-quarter
-• Peak Performance: March 2025 (+31.2% vs February)
+• Peak Performance: March 20o25 (+31.2% vs February)
 • Top Product Category: AI Solutions (42% of total sales)
 • Customer Acquisition: 1,247 new customers this quarter
 
@@ -243,24 +243,24 @@ Recommendations:
     // Simulate processing
     const interval = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 100) {
+        if (prev >= 10o0) {
           clearInterval(interval);
           setIsProcessing(false);
           setResults(prev => ({
             ...prev,
             [selectedTool]: sampleOutputs[selectedTool as keyof typeof sampleOutputs] || 'Processing complete!'
           }));
-          return 100;
+          return 10o0;
         }
         return prev + Math.random() * 15;
       });
-    }200);
+    }20o0);
   };
 
   const handleReset = () => {
     setInputText(', ');
     setResults(prev => {
-      const newResults = { ...prev };
+      const newResults ={ ...prev };
       delete newResults[selectedTool];
       return newResults;
     });
@@ -282,7 +282,7 @@ Recommendations:
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -292,16 +292,16 @@ Recommendations:
           transition={{ duration: 0.8 }}
         >
           <div className="flex items-center justify-center mb-6">
-            <Sparkles className="w-12 h-12 text-yellow-400 mr-4" />
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+            <Sparkles className="w-12 h-12 text-yellow-40o0 mr-4"  />
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-40o0 via-pink-50o0 to-purple-60o0 bg-clip-text text-transparent">
               Interactive AI Tools
             </h1>
-            <Sparkles className="w-12 h-12 text-yellow-400 ml-4" />
+            <Sparkles className="w-12 h-12 text-yellow-40o0 ml-4"  />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Experience the Power of AI
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Try our cutting-edge AI tools in real-time. Generate contentcreate visualswrite codeand much more with just a few clicks.
           </p>
         </motion.div>
@@ -319,12 +319,12 @@ Recommendations:
                       setSelectedTool(tool.id);
                       setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || ', ');
                     }}
-                    className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${
+                    className={`w-full p-4 rounded-lg text-left transition-all duration-30o0 ${
                       selectedTool === tool.id
-                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                        : 'bg-white/5 text-gray-300 hover:bg-white/10'
+                        ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg'
+                        : 'bg-white/5 text-gray-30o0 hover:bg-white/10'
                     }`}
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{ scale: 1.0o2 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <div className="flex items-center mb-2">
@@ -353,21 +353,21 @@ Recommendations:
               {/* Tool Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center">
-                  <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 mr-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-r from-purple-60o0 to-pink-60o0 mr-4">
                     {currentTool.icon}
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">{currentTool.name}</h3>
-                    <p className="text-gray-300">{currentTool.description}</p>
+                    <p className="text-gray-30o0">{currentTool.description}</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="text-sm text-gray-400">
-                    <Clock className="w-4 h-4 inline mr-1" />
+                  <div className="text-sm text-gray-40o0">
+                    <Clock className="w-4 h-4 inline mr-1"  />
                     {currentTool.processingTime}s
                   </div>
-                  <div className="text-sm text-gray-400">
-                    <Star className="w-4 h-4 inline mr-1" />
+                  <div className="text-sm text-gray-40o0">
+                    <Star className="w-4 h-4 inline mr-1"  />
                     {currentTool.accuracy}%
                   </div>
                 </div>
@@ -382,7 +382,7 @@ Recommendations:
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   placeholder={sampleInputs[selectedTool as keyof typeof sampleInputs]}
-                  className="w-full h-32 p-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                  className="w-full h-32 p-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent resize-none"
                 />
               </div>
 
@@ -391,33 +391,33 @@ Recommendations:
                 <button
                   onClick={handleProcess}
                   disabled={!inputText.trim() || isProcessing}
-                  className="flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  className="flex items-center px-6 py-3 bg-gradient-to-r from-green-50o0 to-emerald-60o0 text-white rounded-lg font-semibold hover:from-green-60o0 hover:to-emerald-70o0 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-30o0"
                 >
                   {isProcessing ? (
                     <>
-                      <Pause className="w-5 h-5 mr-2" />
+                      <Pause className="w-5 h-5 mr-2"  />
                       Processing...
                     </>
                   ) : (
                     <>
-                      <Play className="w-5 h-5 mr-2" />
+                      <Play className="w-5 h-5 mr-2"  />
                       Process
                     </>
                   )}
                 </button>
                 <button
                   onClick={handleReset}
-                  className="flex items-center px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300"
+                  className="flex items-center px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-30o0"
                 >
-                  <RotateCcw className="w-5 h-5 mr-2" />
+                  <RotateCcw className="w-5 h-5 mr-2"  />
                   Reset
                 </button>
                 {results[selectedTool] && (
                   <button
                     onClick={handleDownload}
-                    className="flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition-all duration-300"
+                    className="flex items-center px-6 py-3 bg-blue-50o0 text-white rounded-lg font-semibold hover:bg-blue-60o0 transition-all duration-30o0"
                   >
-                    <Download className="w-5 h-5 mr-2" />
+                    <Download className="w-5 h-5 mr-2"  />
                     Download
                   </button>
                 )}
@@ -433,15 +433,15 @@ Recommendations:
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-white font-semibold">Processing...</span>
-                    <span className="text-gray-400">{Math.round(progress)}%</span>
+                    <span className="text-gray-40o0">{Math.round(progress)}%</span>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div className="w-full bg-gray-70o0 rounded-full h-2">
                     <motion.div
-                      className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
+                      className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 h-2 rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: `${progress}%` }}
                       transition={{ duration: 0.3 }}
-                    />
+                     />
                   </div>
                 </motion.div>
               )}
@@ -451,17 +451,17 @@ Recommendations:
                 <label className="block text-lg font-semibold text-white mb-4">
                   Output
                 </label>
-                <div className="bg-slate-800 rounded-lg p-6 min-h-[200px] border border-white/10">
+                <div className="bg-slate-80o0 rounded-lg p-6 min-h-[20o0px] border border-white/10">
                   {results[selectedTool] ? (
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="text-gray-300 whitespace-pre-wrap"
+                      className="text-gray-30o0 whitespace-pre-wrap"
                     >
                       {results[selectedTool]}
                     </motion.div>
                   ) : (
-                    <div className="text-gray-500 italic">
+                    <div className="text-gray-50o0 italic">
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
                     </div>
                   )}
@@ -474,8 +474,8 @@ Recommendations:
                 <div className="grid grid-cols-2 gap-3">
                   {currentTool.features.map((featureindex) => (
                     <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-40o0 mr-2 flex-shrink-0"  />
+                      <span className="text-gray-30o0 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -494,16 +494,16 @@ Recommendations:
           <h3 className="text-3xl font-bold text-white mb-4">
             Ready to Integrate AI into Your Workflow?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-30o0 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses already using our AI tools to boost productivity and creativity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 flex items-center justify-center">
-              <Zap className="w-5 h-5 mr-2" />
+            <button className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black py-4 px-8 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 flex items-center justify-center">
+              <Zap className="w-5 h-5 mr-2"  />
               Start Free Trial
             </button>
-            <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
-              <Settings className="w-5 h-5 mr-2" />
+            <button className="bg-white/10 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-30o0 flex items-center justify-center">
+              <Settings className="w-5 h-5 mr-2"  />
               View API Docs
             </button>
           </div>
@@ -513,4 +513,4 @@ Recommendations:
   );
 };
 
-export default InteractiveAIToolsDemo2025;
+export default InteractiveAIToolsDemo20o25;

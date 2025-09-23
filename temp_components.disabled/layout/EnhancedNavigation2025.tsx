@@ -25,27 +25,27 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   {
     name: 'All Services',
-    href: '/comprehensive-services-showcase-2025',
-    icon: <Globe className="w-5 h-5" />,
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Cutting-Edge Services 2025', href: '/cutting-edge-services-showcase-2025', description: 'Latest revolutionary services' },
-      { name: 'Cutting-Edge Pricing 2025', href: '/cutting-edge-pricing-2025', description: 'Latest pricing for revolutionary services' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
+      { name: 'View All Services', href: '/comprehensive-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Cutting-Edge Services 20o25', href: '/cutting-edge-services-showcase-20o25', description: 'Latest revolutionary services' },
+      { name: 'Cutting-Edge Pricing 20o25', href: '/cutting-edge-pricing-20o25', description: 'Latest pricing for revolutionary services' },
+      { name: 'Service Categories', href: '/comprehensive-services-showcase-20o25#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-20o25#pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/comprehensive-services-showcase-20o25#search', description: 'Find specific services' }
     ]
   },
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     children: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25', description: 'Emotional intelligence and self-awareness' },
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed AI research' },
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', description: 'EQ training platform' },
       { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform', description: 'Equipment failure prediction' },
@@ -69,7 +69,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
-    icon: <Atom className="w-5 h-5" />,
+    icon: <Atom className="w-5 h-5"  />,
     description: 'Quantum computing and breakthrough technologies',
     badge: 'Hot',
     children: [
@@ -90,7 +90,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: 'Enterprise solutions and infrastructure',
     children: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
@@ -113,7 +113,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Innovative business solutions for modern enterprises',
     badge: 'Popular',
     children: [
@@ -142,7 +142,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Creative & Design',
     href: '/creative-services',
-    icon: <Palette className="w-5 h-5" />,
+    icon: <Palette className="w-5 h-5"  />,
     description: 'AI-powered creative and design solutions',
     children: [
       { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
@@ -156,7 +156,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Financial Technology',
     href: '/financial-technology',
-    icon: <TrendingUp className="w-5 h-5" />,
+    icon: <TrendingUp className="w-5 h-5"  />,
     description: 'Innovative fintech and financial services',
     badge: 'New',
     children: [
@@ -170,7 +170,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech',
-    icon: <Shield className="w-5 h-5" />,
+    icon: <Shield className="w-5 h-5"  />,
     description: 'AI-powered healthcare solutions',
     badge: 'Hot',
     children: [
@@ -184,7 +184,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Education Technology',
     href: '/education-technology',
-    icon: <Brain className="w-5 h-5" />,
+    icon: <Brain className="w-5 h-5"  />,
     description: 'AI-powered learning platforms',
     children: [
       { name: 'AI Learning Pro Platform', href: '/ai-learning-pro-platform', description: 'Personalized AI learning' },
@@ -197,7 +197,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Sustainability & Green Tech',
     href: '/sustainability-green-tech',
-    icon: <Globe className="w-5 h-5" />,
+    icon: <Globe className="w-5 h-5"  />,
     description: 'Environmental technology solutions',
     children: [
       { name: 'CarbonTrack Pro Platform', href: '/carbon-track-pro-platform', description: 'Carbon footprint tracking' },
@@ -210,7 +210,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Logistics & Supply Chain',
     href: '/logistics-supply-chain',
-    icon: <Rocket className="w-5 h-5" />,
+    icon: <Rocket className="w-5 h-5"  />,
     description: 'Autonomous logistics solutions',
     children: [
       { name: 'Space Mining Platform', href: '/space-resource-mining-platform', description: 'Asteroid mining operations' },
@@ -226,7 +226,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Research & Development',
     href: '/research-development',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Cutting-edge research and development services',
     children: [
       { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant', description: 'Self-directed research' },
@@ -240,7 +240,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
-    icon: <Truck className="w-5 h-5" />,
+    icon: <Truck className="w-5 h-5"  />,
     description: 'Specialized solutions for specific industries',
     children: [
       { name: 'Healthcare AI', href: '/healthcare-ai-solutions', description: 'Medical AI applications' },
@@ -254,11 +254,11 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing & Plans',
     href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
+    icon: <DollarSign className="w-5 h-5"  />,
     description: 'Flexible pricing options for all services',
     children: [
-      { name: '2025 Pricing', href: '/pricing-2025', description: 'Current year pricing' },
-      { name: '2026 Pricing', href: '/pricing-2026', description: 'Next year pricing' },
+      { name: '20o25 Pricing', href: '/pricing-20o25', description: 'Current year pricing' },
+      { name: '20o26 Pricing', href: '/pricing-20o26', description: 'Next year pricing' },
       { name: 'Enterprise Plans', href: '/enterprise-pricing', description: 'Large organization pricing' },
       { name: 'Startup Plans', href: '/startup-pricing', description: 'Small business pricing' },
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
@@ -268,7 +268,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Resources',
     href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
+    icon: <BookOpen className="w-5 h-5"  />,
     description: 'Educational resources and documentation',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
@@ -282,7 +282,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Support',
     href: '/support',
-    icon: <Settings className="w-5 h-5" />,
+    icon: <Settings className="w-5 h-5"  />,
     description: 'Technical support and customer service',
     children: [
       { name: 'Help Center', href: '/help', description: 'Self-service support' },
@@ -302,7 +302,7 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', description: 'Get in touch' }
 ];
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation20o25() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   // Removed unused isScrolled state and duplicate scroll handler
@@ -315,22 +315,20 @@ export default function EnhancedNavigation2025() {
     setActiveDropdown(null);
   };
 
-
-
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
+      isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-80o0' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Rocket className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
+              <Rocket className="w-6 h-6 text-white"  />
             </div>
             <div className="hidden sm:block">
               <div className="text-xl font-bold text-white">Zion Tech Group</div>
-              <div className="text-xs text-cyan-400">Future Technology Solutions</div>
+              <div className="text-xs text-cyan-40o0">Future Technology Solutions</div>
             </div>
           </Link>
 
@@ -340,18 +338,18 @@ export default function EnhancedNavigation2025() {
               <div key={item.name} className="relative group">
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 group-hover:text-cyan-40o0"
                 >
                   {item.icon}
                   <span>{item.name}</span>
                   {item.badge && (
-                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full">
+                    <span className="px-2 py-1 text-xs bg-gradient-to-r from-pink-50o0 to-purple-60o0 text-white rounded-full">
                       {item.badge}
                     </span>
                   )}
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                     activeDropdown === item.name ? 'rotate-180' : ''
-                  }`} />
+                  }`}  />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -362,29 +360,29 @@ export default function EnhancedNavigation2025() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
+                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-md border border-gray-70o0 rounded-2xl shadow-2xl overflow-hidden"
                       onMouseLeave={closeDropdown}
                     >
                       <div className="p-6">
                         <div className="mb-4">
                           <h3 className="text-lg font-semibold text-white mb-2">{item.title || item.name}</h3>
-                          <p className="text-sm text-gray-400">{item.description}</p>
+                          <p className="text-sm text-gray-40o0">{item.description}</p>
                         </div>
                         <div className="space-y-2">
                           {item.children?.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
-                              className="flex items-center p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                              className="flex items-center p-3 rounded-lg hover:bg-gray-80o0/50 transition-colors duration-20o0 group"
                               onClick={closeDropdown}
                             >
                               <div className="flex-1">
-                                <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                <div className="text-sm font-medium text-white group-hover:text-cyan-40o0 transition-colors duration-20o0">
                                   {child.name}
                                 </div>
-                                <div className="text-xs text-gray-400">{child.description}</div>
+                                <div className="text-xs text-gray-40o0">{child.description}</div>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                              <ArrowRight className="w-4 h-4 text-gray-50o0 group-hover:text-cyan-40o0 transition-colors duration-20o0"  />
                             </Link>
                           ))}
                         </div>
@@ -399,16 +397,16 @@ export default function EnhancedNavigation2025() {
           {/* Right Side */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
-            <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
-              <Search className="w-5 h-5" />
+            <button className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0">
+              <Search className="w-5 h-5"  />
             </button>
 
             {/* Contact Button */}
             <Link href="/contact">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+              <button className="bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white px-6 py-2 rounded-full font-semibold transition-all duration-30o0 hover:scale-10o5">
                 Get Started
               </Link>
-              <Link href="/support" className="hover:text-cyan-300 transition-colors">
+              <Link href="/support" className="hover:text-cyan-30o0 transition-colors">
                 Support
               </Link>
             </div>
@@ -417,9 +415,9 @@ export default function EnhancedNavigation2025() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
+            className="lg:hidden p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
       </div>
@@ -430,10 +428,10 @@ export default function EnhancedNavigation2025() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white"  />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-40o0 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </Link>
@@ -446,18 +444,18 @@ export default function EnhancedNavigation2025() {
                 {item.children ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 group"
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-30o0 hover:text-white transition-colors duration-20o0 group"
                   >
                     {item.icon}
                     <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                    }`}  />
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200"
+                    className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-30o0 hover:text-white transition-colors duration-20o0"
                   >
                     {item.icon}
                     <span>{item.name}</span>
@@ -473,7 +471,7 @@ export default function EnhancedNavigation2025() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl z-50"
+                        className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-cyan-50o0/20 rounded-lg shadow-2xl z-50"
                         onMouseLeave={closeDropdown}
                       >
                         <div className="p-4">
@@ -482,23 +480,23 @@ export default function EnhancedNavigation2025() {
                               <Link
                                 key={child.name}
                                 href={child.href}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-200 group"
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-50o0/10 transition-colors duration-20o0 group"
                               >
                                 <div className="flex-shrink-0">
                                   {child.icon}
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                  <p className="text-sm font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                  <p className="text-sm font-medium text-white group-hover:text-cyan-30o0 transition-colors">
                                     {child.name}
                                   </p>
                                   {child.description && (
-                                    <p className="text-xs text-gray-400 mt-1">
+                                    <p className="text-xs text-gray-40o0 mt-1">
                                       {child.description}
                                     </p>
                                   )}
                                 </div>
                                 {child.featured && (
-                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-500/20 text-cyan-300">
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50o0/20 text-cyan-30o0">
                                     Featured
                                   </span>
                                 )}
@@ -516,23 +514,23 @@ export default function EnhancedNavigation2025() {
             {/* Right Side Actions */}
             <div className="hidden lg:flex items-center gap-4">
               {/* Search Component */}
-              <SearchComponent />
+              <SearchComponent  />
 
               {/* Theme Toggle */}
-              <ThemeToggle />
+              <ThemeToggle  />
 
               {/* Action Buttons */}
               <div className="flex items-center gap-3">
                 <Link
                   href="/contact"
-                  className="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
+                  className="px-6 py-2 border border-cyan-40o0 text-cyan-40o0 rounded-xl hover:bg-cyan-40o0 hover:text-black transition-all duration-20o0 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-40o0/50"
                   aria-label="Get a quote for our services"
                 >
                   Get Quote
                 </Link>
                 <Link
                   href="/get-started"
-                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                  className="px-6 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-20o0 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50"
                   aria-label="Get started with Zion Tech Group"
                 >
                   Get Started
@@ -545,13 +543,13 @@ export default function EnhancedNavigation2025() {
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link
               href="/contact"
-              className="px-4 py-2 text-sm font-medium text-cyan-300 hover:text-white transition-colors duration-200"
+              className="px-4 py-2 text-sm font-medium text-cyan-30o0 hover:text-white transition-colors duration-20o0"
             >
               Contact Sales
             </Link>
             <Link
               href="/get-started"
-              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25"
+              className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-cyan-50o0 to-blue-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-blue-60o0 transition-all duration-20o0 shadow-lg hover:shadow-cyan-50o0/25"
             >
               Get Started
             </Link>
@@ -560,14 +558,14 @@ export default function EnhancedNavigation2025() {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 rounded-lg"
+              className="lg:hidden p-2 text-gray-30o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 rounded-lg"
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="p-2 rounded-md text-gray-40o0 hover:text-white hover:bg-gray-70o0 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               {isOpen ? (
-                <X className="block h-6 w-6" />
+                <X className="block h-6 w-6"  />
               ) : (
-                <Menu className="block h-6 w-6" />
+                <Menu className="block h-6 w-6"  />
               )}
             </button>
           </div>
@@ -585,41 +583,41 @@ export default function EnhancedNavigation2025() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden"
               onClick={closeMobileMenu}
-            />
+             />
             
             {/* Mobile Menu Panel */}
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: '10o0%' }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              exit={{ x: '10o0%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 lg:hidden"
+              className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-50o0/20 lg:hidden"
             >
               <div className="flex flex-col h-full">
                 {/* Mobile Menu Header */}
-                <div className="flex items-center justify-between p-6 border-b border-cyan-500/20">
+                <div className="flex items-center justify-between p-6 border-b border-cyan-50o0/20">
                   <h2 className="text-white font-semibold text-lg">Menu</h2>
                   <button
                     onClick={closeMobileMenu}
-                    className="p-2 text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg"
+                    className="p-2 text-gray-30o0 hover:text-white transition-colors duration-20o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 rounded-lg"
                     aria-label="Close mobile menu"
                   >
-                    <X className="w-6 h-6" />
+                    <X className="w-6 h-6"  />
                   </button>
                 </div>
 
                 {/* Mobile Search */}
-                <div className="p-6 border-b border-cyan-500/20">
+                <div className="p-6 border-b border-cyan-50o0/20">
                   <form onSubmit={handleSearch}>
                     <div className="relative">
                       <input
                         type="text"
                         name="search"
                         placeholder="Search solutions..."
-                        className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0/50 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-transparent"
                         aria-label="Search solutions"
-                      />
-                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                       />
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-40o0"  />
                     </div>
                   </form>
                 </div>
@@ -632,12 +630,12 @@ export default function EnhancedNavigation2025() {
                         <div>
                           <button
                             onClick={() => toggleDropdown(item.label)}
-                            className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
+                            className="flex items-center justify-between w-full text-left text-gray-30o0 hover:text-white transition-colors duration-20o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 rounded-lg px-3 py-2"
                             aria-expanded={activeDropdown === item.label}
                             aria-haspopup="true"
                           >
                             <span>{item.label}</span>
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-20o0 ${activeDropdown === item.label ? 'rotate-180' : ''}`}  />
                           </button>
                           
                           {activeDropdown === item.label && (
@@ -647,7 +645,7 @@ export default function EnhancedNavigation2025() {
                                   key={solution.label}
                                   href={solution.href}
                                   onClick={closeMobileMenu}
-                                  className="block text-gray-400 hover:text-cyan-300 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-cyan-500/10"
+                                  className="block text-gray-40o0 hover:text-cyan-30o0 transition-colors duration-20o0 py-2 px-3 rounded-lg hover:bg-cyan-50o0/10"
                                 >
                                   {solution.label}
                                 </Link>
@@ -657,7 +655,7 @@ export default function EnhancedNavigation2025() {
                                   key={service.label}
                                   href={service.href}
                                   onClick={closeMobileMenu}
-                                  className="block text-gray-400 hover:text-cyan-300 transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-cyan-500/10"
+                                  className="block text-gray-40o0 hover:text-cyan-30o0 transition-colors duration-20o0 py-2 px-3 rounded-lg hover:bg-cyan-50o0/10"
                                 >
                                   {service.label}
                                 </Link>
@@ -669,79 +667,7 @@ export default function EnhancedNavigation2025() {
                         <Link
                           href={item.href}
                           onClick={closeMobileMenu}
-                          className="block text-gray-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg px-3 py-2"
+                          className="block text-gray-30o0 hover:text-white transition-colors duration-20o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 rounded-lg px-3 py-2"
                         >
                           {item.label}
                         </Link>
-=======
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-black/95 backdrop-blur-md border-t border-gray-800"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200"
-                  >
-                    <div className="flex items-center space-x-3">
-                      {item.icon}
-                      <span>{item.name}</span>
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                    </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-
-                  {activeDropdown === item.name && item.children && (
-                    <div className="ml-6 mt-2 space-y-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.href}
-                          className="block p-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="flex items-center space-x-2 px-3 py-2 text-base font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.icon}
-                      <span>{item.name}</span>
-                    </Link>
-                  )}
-                </div>
-              ))}
-
-              {/* Mobile Contact Button */}
-              <div className="pt-4 border-t border-gray-800">
-                <Link href="/contact">
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300">
-                    Get Started
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
-  );
-};
-
-export default EnhancedNavigation2025;

@@ -1,4 +1,3 @@
-import React from 'react';
 export function InternationalProposals() {
   return (
     <div>

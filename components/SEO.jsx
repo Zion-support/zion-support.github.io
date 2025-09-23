@@ -1,17 +1,15 @@
-import React from 'react';
-
-export default function SEO({ 
+export default function SEO({
   title = 'Zion Tech Group - AI & Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 2025, breakthrough',
+  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 20o25, breakthrough',
   image = '/og-image.jpg',
   url = 'https://zion.app',
-  type = 'website'
+  type = 'website',
 }) {
   React.useEffect(() => {
     // Update document title
     document.title = title;
-    
+
     // Update meta tags
     const updateMetaTag = (name, content) => {
       let meta = document.querySelector(`meta[name="${name}"]`);
@@ -22,7 +20,7 @@ export default function SEO({
       }
       meta.content = content;
     };
-    
+
     const updatePropertyMetaTag = (property, content) => {
       let meta = document.querySelector(`meta[property="${property}"]`);
       if (!meta) {
@@ -32,9 +30,12 @@ export default function SEO({
       }
       meta.content = content;
     };
-    
+
     updateMetaTag('description', description);
-    updateMetaTag('keywords', Array.isArray(keywords) ? keywords.join(', ') : keywords);
+    updateMetaTag(
+      'keywords',
+      Array.isArray(keywords) ? keywords.join(', ') : keywords
+    );
     updatePropertyMetaTag('og:title', title);
     updatePropertyMetaTag('og:description', description);
     updatePropertyMetaTag('og:image', image);

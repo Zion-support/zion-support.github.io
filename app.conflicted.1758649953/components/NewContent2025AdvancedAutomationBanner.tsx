@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function NewContent2025AdvancedAutomationBanner() {
+export default function NewContent20o25AdvancedAutomationBanner() {
   return null;
 }

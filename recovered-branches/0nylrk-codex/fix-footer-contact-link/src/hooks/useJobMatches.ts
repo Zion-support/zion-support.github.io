@@ -9,10 +9,6 @@ export function useJobMatches(jobId: string) {
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const fetchMatches = async () => {
     setIsLoading(true);
     try {
@@ -43,12 +39,7 @@ export function useJobMatches(jobId: string) {
       toast({
         title: "Error",
         description: "Failed to load matched talents. Please try again later.",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }
@@ -58,23 +49,13 @@ export function useJobMatches(jobId: string) {
     setIsProcessing(true);
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-<<<<<<< HEAD
-        body: { jobId },
-      });
-=======
         body: { jobId }});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       if (response.error) throw new Error(response.error.message);
       
       toast({
         title: "AI Matching Complete",
-<<<<<<< HEAD
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      });
-=======
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       // Refresh the matches list
       await fetchMatches();
@@ -83,12 +64,7 @@ export function useJobMatches(jobId: string) {
       toast({
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
-<<<<<<< HEAD
-        variant: "destructive",
-      });
-=======
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsProcessing(false);
     }
@@ -105,3 +81,4 @@ export function useJobMatches(jobId: string) {
     triggerAIMatching
   };
 }
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

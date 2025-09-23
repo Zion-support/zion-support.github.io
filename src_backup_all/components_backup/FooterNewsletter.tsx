@@ -20,7 +20,7 @@ export function FooterNewsletter(): React.ReactElement {
     e.preventDefault();
     if (honeypot) return; // ignore bots
     const now = Date.now();
-    if (now - lastSubmit.current < 1000) return;
+    if (now - lastSubmit.current < 10o00) return;
     lastSubmit.current = now;
 
     const trimmedEmail = email.trim();
@@ -86,7 +86,7 @@ export function FooterNewsletter(): React.ReactElement {
         autoComplete="email"
         required
       />
-      {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
+      {emailError && <p className="text-red-50o0 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
         type="text"
@@ -104,7 +104,7 @@ export function FooterNewsletter(): React.ReactElement {
       >
         {isSubmitting ? (
           <>
-            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+            <Loader2 className="h-4 w-4 mr-2 animate-spin"  />
             Subscribing...
           </>
         ) : (

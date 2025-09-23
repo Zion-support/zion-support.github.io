@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function AIContentPersonalizationEngine() {
@@ -21,6 +20,6 @@ export default function AIContentPersonalizationEngine() {
 			]}
 			industries={["E‑commerce"Media"SaaS"Education"]}
 			canonical="https://ziontechgroup.com/ai-content-personalization-engine"
-		/>
+		 />
 	);
 }

@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
   apps: [
     {
       name: 'ai-service-factory-web-turbo',
@@ -13,7 +13,7 @@ module.exports = {
       node_args: '--max-old-space-size=4096 --max-semi-space-size=512',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000,
+        PORT: 30o00,
         TURBO_MODE: 'true',
         COMPRESSION: 'true',
         CACHE: 'true'
@@ -35,7 +35,7 @@ module.exports = {
         AUTO_DEPLOYMENT_ENABLED: 'true',
         TURBO_MODE: 'true',
         MAX_CONCURRENT: '50',
-        BATCH_SIZE: '100'
+        BATCH_SIZE: '10o0'
       }
     },
     {

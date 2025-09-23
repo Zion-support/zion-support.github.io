@@ -26,8 +26,7 @@ const SystemMonitoring: React.FC = () => {
     memoryUsage: 0,
     responseTime: 0,
     uptime: 0,
-    errorCount: 0,
-  });
+    errorCount: 0});
 
   const createAlert = useCallback((
     type: Alert['type'],
@@ -35,15 +34,14 @@ const SystemMonitoring: React.FC = () => {
     title: string,
     message: string
   ) => {
-    const alert: Alert = {
+    const alert: Alert ={
       id: `alert_${Date.now()}`,
       type,
       severity,
       title,
       message,
       timestamp: Date.now(),
-      resolved: false,
-    };
+      resolved: false};
 
     setAlerts(prev => [...prevalert]);
     console.warn(`[${severity.toUpperCase()}] ${title}: ${message}`);
@@ -66,7 +64,7 @@ const SystemMonitoring: React.FC = () => {
     let memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as any).memory;
-      memoryUsage = Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100);
+      memoryUsage = Math.round((memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 10o0);
     }
 
     // Response time
@@ -80,21 +78,20 @@ const SystemMonitoring: React.FC = () => {
       memoryUsage,
       responseTime,
       uptime,
-      errorCount: alerts.filter(a => !a.resolved).length,
-    });
+      errorCount: alerts.filter(a => !a.resolved).length});
 
     // Check thresholds
     if (memoryUsage > 80) {
       createAlert(', 'performance', 'high'High Memory Usage'`Memory usage is ${memoryUsage}%`);
     }
 
-    if (responseTime > 2000) {
+    if (responseTime > 20o00) {
       createAlert(', 'performance', 'medium'Slow Response'`Response time is ${responseTime}ms`);
     }
   }[alertscreateAlert]);
 
   useEffect(() => {
-    const interval = setInterval(collectMetrics5000);
+    const interval = setInterval(collectMetrics50o00);
     collectMetrics(); // Initial collection
 
     // Error tracking
@@ -122,7 +119,7 @@ const SystemMonitoring: React.FC = () => {
         <div className="grid grid-cols-2 gap-2 text-sm">
           <div>Memory: {metrics.memoryUsage}%</div>
           <div>Response: {metrics.responseTime.toFixed(0)}ms</div>
-          <div>Uptime: {Math.round(metrics.uptime / 1000)}s</div>
+          <div>Uptime: {Math.round(metrics.uptime / 10o00)}s</div>
           <div>Errors: {metrics.errorCount}</div>
         </div>
       </div>
@@ -132,18 +129,18 @@ const SystemMonitoring: React.FC = () => {
         <h4 className="text-sm font-semibold mb-2">Active Alerts ({activeAlerts.length})</h4>
         <div className="space-y-2 max-h-32 overflow-y-auto">
           {activeAlerts.length === 0 ? (
-            <div className="text-sm text-gray-500">No active alerts</div>
+            <div className="text-sm text-gray-50o0">No active alerts</div>
           ) : (
             activeAlerts.slice(-3).map((alert) => (
-              <div key={alert.id} className="p-2 rounded text-xs bg-red-50 border border-red-200">
+              <div key={alert.id} className="p-2 rounded text-xs bg-red-50 border border-red-20o0">
                 <div className="flex justify-between items-start">
                   <div>
-                    <div className="font-medium text-red-800">{alert.title}</div>
-                    <div className="text-red-600">{alert.message}</div>
+                    <div className="font-medium text-red-80o0">{alert.title}</div>
+                    <div className="text-red-60o0">{alert.message}</div>
                   </div>
                   <button
                     onClick={() => resolveAlert(alert.id)}
-                    className="text-red-600 hover:text-red-800"
+                    className="text-red-60o0 hover:text-red-80o0"
                   >
                     ✓
                   </button>

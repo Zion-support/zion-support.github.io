@@ -13,21 +13,21 @@ import {
 // Lazy load heavy components
 const LazyAnimatedBackground = dynamic(() => import('../effects/AnimatedBackground'), {
   ssr: false,
-  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+  loading: () => <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />
 });
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const heroStats = [
-  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" aria-hidden="true" />, color: 'text-purple-400' },
-  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" aria-hidden="true" />, color: 'text-green-400' },
-  { label: 'Micro SAAS', value: '100+', icon: <Rocket className="w-6 h-6" aria-hidden="true" />, color: 'text-orange-400' },
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-6 h-6" aria-hidden="true" />, color: 'text-cyan-400' }
+  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" aria-hidden="true"  />, color: 'text-purple-40o0' },
+  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" aria-hidden="true"  />, color: 'text-green-40o0' },
+  { label: 'Micro SAAS', value: '10o0+', icon: <Rocket className="w-6 h-6" aria-hidden="true"  />, color: 'text-orange-40o0' },
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-6 h-6" aria-hidden="true"  />, color: 'text-cyan-40o0' }
 ];
 
 const keyFeatures = [
@@ -39,7 +39,7 @@ const keyFeatures = [
   'Creative AI & Educational Technology Platforms'
 ];
 
-const UltraAdvancedHeroSection2025: React.FC = () => {
+const UltraAdvancedHeroSection20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -70,13 +70,13 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
     
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % keyFeatures.length);
-    }, 3000);
+    }, 30o00);
     
     return () => clearInterval(interval);
   }, [isIntersecting]);
 
   // Memoized animations
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -87,7 +87,7 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -113,12 +113,12 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden"
+      className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Performance-optimized background */}
-      <Suspense fallback={<div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />}>
-        <LazyAnimatedBackground />
+      <Suspense fallback={<div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />}>
+        <LazyAnimatedBackground  />
       </Suspense>
 
       {/* Main Content */}
@@ -135,11 +135,11 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
             id="hero-heading"
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-40o0 via-purple-50o0 to-pink-50o0 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
-            <br />
-            <span className="text-3xl md:text-5xl lg:text-6xl text-gray-200">
+            <br  />
+            <span className="text-3xl md:text-5xl lg:text-6xl text-gray-20o0">
               Future of Technology
             </span>
           </motion.h1>
@@ -147,7 +147,7 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed"
           >
             Pioneering the next generation of AI consciousness, quantum computing, and autonomous business solutions
           </motion.p>
@@ -159,21 +159,21 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
           >
             <Link href="/services" passHref>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center gap-2 group"
+                className="bg-gradient-to-r from-cyan-50o0 to-purple-60o0 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all duration-30o0 flex items-center gap-2 group"
                 aria-label="Explore our services"
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />
               </motion.button>
             </Link>
             
             <Link href="/contact" passHref>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                className="border-2 border-cyan-40o0 text-cyan-40o0 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-40o0 hover:text-black transition-all duration-30o0"
                 aria-label="Get in touch with us"
               >
                 Get Started
@@ -193,7 +193,7 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="text-xl text-cyan-300 font-medium"
+                className="text-xl text-cyan-30o0 font-medium"
                 aria-live="polite"
                 aria-label={`Current feature: ${keyFeatures[currentFeature]}`}
               >
@@ -219,7 +219,7 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-sm text-gray-40o0">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -240,11 +240,11 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={contact.action}
-                className="flex flex-col items-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                className="flex flex-col items-center p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-30o0 group"
                 aria-label={`${contact.label}: ${contact.value}`}
               >
-                <contact.icon className="w-6 h-6 text-cyan-400 mb-2 group-hover:scale-110 transition-transform" />
-                <span className="text-sm text-gray-400 mb-1">{contact.label}</span>
+                <contact.icon className="w-6 h-6 text-cyan-40o0 mb-2 group-hover:scale-110 transition-transform"  />
+                <span className="text-sm text-gray-40o0 mb-1">{contact.label}</span>
                 <span className="text-white font-medium text-center">{contact.value}</span>
               </motion.button>
             ))}
@@ -262,18 +262,18 @@ const UltraAdvancedHeroSection2025: React.FC = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-cyan-400 cursor-pointer"
+          className="text-cyan-40o0 cursor-pointer"
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
           role="button"
           tabIndex={0}
           aria-label="Scroll down to learn more"
           onKeyDown={(e) => e.key === 'Enter' && window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          <ChevronDown className="w-8 h-8" />
+          <ChevronDown className="w-8 h-8"  />
         </motion.div>
       </motion.div>
     </section>
   );
 };
 
-export default UltraAdvancedHeroSection2025;
+export default UltraAdvancedHeroSection20o25;

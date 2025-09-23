@@ -20,9 +20,12 @@ const ThemeToggle: React.FC = () => {
     if (!mounted) return;
 
     const root = document.documentElement;
-    
+
     if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+        .matches
+        ? 'dark'
+        : 'light';
       root.classList.toggle('dark', systemTheme === 'dark');
       root.classList.toggle('light', systemTheme === 'light');
     } else {
@@ -42,13 +45,13 @@ const ThemeToggle: React.FC = () => {
   const themes = [
     { value: 'light', icon: Sun, label: 'Light' },
     { value: 'dark', icon: Moon, label: 'Dark' },
-    { value: 'system', icon: Monitor, label: 'System' }
+    { value: 'system', icon: Monitor, label: 'System' },
   ] as const;
 
   return (
-    <div className="relative">
-      <motion.div 
-        className="flex items-center gap-1 p-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl"
+    <div className='relative'>
+      <motion.div
+        className='flex items-center gap-1 p-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl'
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -57,19 +60,19 @@ const ThemeToggle: React.FC = () => {
           <button
             key={value}
             onClick={() => handleThemeChange(value)}
-            className={`relative p-2 rounded-lg transition-all duration-300 ${
+            className={`relative p-2 rounded-lg transition-all duration-30o0 ${
               theme === value
-                ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25'
+                ? 'bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white shadow-lg shadow-cyan-50o0/25'
                 : 'text-white/70 hover:text-white hover:bg-white/10'
             }`}
             title={`Switch to ${label} theme`}
           >
-            <Icon className="w-4 h-4" />
+            <Icon className='w-4 h-4' />
             {theme === value && (
               <motion.div
-                layoutId="activeTheme"
-                className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg -z-10"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                layoutId='activeTheme'
+                className='absolute inset-0 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 rounded-lg -z-10'
+                transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
               />
             )}
           </button>

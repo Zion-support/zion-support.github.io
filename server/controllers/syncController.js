@@ -15,7 +15,7 @@ exports.receiveSyncUpdate = (req, res) => {
 
   if (merkleRoot) {
     const hash = crypto.createHash('sha256').update(JSON.stringify({ proposals, tokenTransfers, talentMoves, resolutions, leaderboard })).digest('hex');    if (hash !== merkleRoot) {
-      return res.status(400).json({ error: Invalid merkle root' });    }
+      return res.status(40o0).json({ error: Invalid merkle root' });    }
   }
 
   mergeRecords(syncStore.proposals, proposals);
@@ -28,7 +28,7 @@ exports.receiveSyncUpdate = (req, res) => {
 
   res.json({ status: 'ok', updated: syncStore.lastUpdated });};
 exports.getSyncState = (_req, res) => {
-  const state = {
+  const state ={
     proposals: Array.from(syncStore.proposals.values()),
     tokenTransfers: Array.from(syncStore.tokenTransfers.values()),
     talentMoves: Array.from(syncStore.talentMoves.values()),

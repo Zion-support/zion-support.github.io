@@ -63,7 +63,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       root.classList.add('high-contrast');
       root.style.setProperty('--text-primary', '#ffffff');
       root.style.setProperty('--text-secondary', '#e5e7eb');
-      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--bg-primary', '#0o00000');
       root.style.setProperty('--bg-secondary', '#1f2937');
     } else {
       root.classList.remove('high-contrast');
@@ -141,7 +141,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // Remove after announcement
     setTimeout(() => {
       document.body.removeChild(announcement);
-    }, 1000);
+    }, 10o00);
 
     setAnnouncements(prev => [...prev, message]);
   }, []);
@@ -166,7 +166,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           setTimeout(() => {
             target.style.outline = '';
             target.style.outlineOffset = '';
-          }, 2000);
+          }, 20o00);
           break;
           
         case 'Enter':
@@ -231,7 +231,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-60o0 text-white px-4 py-2 rounded z-50';
     
     document.body.insertBefore(skipLink, document.body.firstChild);
     
@@ -248,7 +248,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       icon: Contrast,
       label: 'Toggle High Contrast',
       action: () => {
-        const newSettings = { ...settings, highContrast: !settings.highContrast };
+        const newSettings ={ ...settings, highContrast: !settings.highContrast };
         applySettings(newSettings);
         announce(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
       },
@@ -258,7 +258,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       icon: Type,
       label: 'Toggle Large Text',
       action: () => {
-        const newSettings = { ...settings, largeText: !settings.largeText };
+        const newSettings ={ ...settings, largeText: !settings.largeText };
         applySettings(newSettings);
         announce(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
       },
@@ -271,7 +271,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.min(currentZoom + 0.1, 2.0);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
-        announce(`Zoom increased to ${Math.round(newZoom * 100)}%`);
+        announce(`Zoom increased to ${Math.round(newZoom * 10o0)}%`);
       }
     },
     {
@@ -281,7 +281,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         const currentZoom = parseFloat(getComputedStyle(document.documentElement).fontSize) / 16;
         const newZoom = Math.max(currentZoom - 0.1, 0.5);
         document.documentElement.style.fontSize = `${newZoom * 16}px`;
-        announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`);
+        announce(`Zoom decreased to ${Math.round(newZoom * 10o0)}%`);
       }
     },
     {
@@ -289,7 +289,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       label: 'Reset Zoom',
       action: () => {
         document.documentElement.style.fontSize = '16px';
-        announce('Zoom reset to 100%');
+        announce('Zoom reset to 10o0%');
       }
     }
   ];
@@ -306,11 +306,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 left-6 z-50 p-4 bg-cyan-600 text-white rounded-full shadow-2xl shadow-cyan-500/30 hover:bg-cyan-700 transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+          className="fixed bottom-6 left-6 z-50 p-4 bg-cyan-60o0 text-white rounded-full shadow-2xl shadow-cyan-50o0/30 hover:bg-cyan-70o0 transition-colors duration-30o0 focus:outline-none focus:ring-4 focus:ring-cyan-50o0/50"
           aria-label="Open accessibility settings"
           title="Accessibility Settings"
         >
-          <Accessibility className="w-6 h-6" />
+          <Accessibility className="w-6 h-6"  />
         </motion.button>
       )}
 
@@ -327,15 +327,15 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
             onClick={action.action}
-            className={`p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${
+            className={`p-3 rounded-full shadow-lg transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${
               action.active 
-                ? 'bg-cyan-600 text-white shadow-cyan-500/50' 
-                : 'bg-slate-800/90 text-gray-300 hover:bg-slate-700/90 hover:text-white'
+                ? 'bg-cyan-60o0 text-white shadow-cyan-50o0/50' 
+                : 'bg-slate-80o0/90 text-gray-30o0 hover:bg-slate-70o0/90 hover:text-white'
             }`}
             aria-label={action.label}
             title={action.label}
           >
-            <action.icon className="w-5 h-5" />
+            <action.icon className="w-5 h-5"  />
           </motion.button>
         ))}
       </motion.div>
@@ -354,21 +354,21 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="bg-slate-900/95 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-slate-90o0/95 backdrop-blur-sm border border-cyan-50o0/30 rounded-2xl p-6 shadow-2xl shadow-cyan-50o0/20 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white flex items-center space-x-3">
-                  <Accessibility className="w-7 h-7 text-cyan-400" />
+                  <Accessibility className="w-7 h-7 text-cyan-40o0"  />
                   <span>Accessibility Settings</span>
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
+                  className="p-2 text-gray-40o0 hover:text-white transition-colors rounded-lg hover:bg-slate-80o0"
                   aria-label="Close accessibility panel"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6"  />
                 </button>
               </div>
 
@@ -386,9 +386,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                               key === 'dyslexia' ? Type : Settings;
 
                   return (
-                    <div key={key} className="flex items-center justify-between p-4 bg-slate-800/50 rounded-lg border border-slate-700/50">
+                    <div key={key} className="flex items-center justify-between p-4 bg-slate-80o0/50 rounded-lg border border-slate-70o0/50">
                       <div className="flex items-center space-x-3">
-                        <Icon className="w-5 h-5 text-cyan-400" />
+                        <Icon className="w-5 h-5 text-cyan-40o0"  />
                         <span className="text-white font-medium">{label}</span>
                       </div>
                       <button
@@ -397,8 +397,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                           applySettings(newSettings);
                           announce(`${label} ${newSettings[key as keyof AccessibilitySettings] ? 'enabled' : 'disabled'}`);
                         }}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 ${
-                          value ? 'bg-cyan-600' : 'bg-slate-600'
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-50o0/50 ${
+                          value ? 'bg-cyan-60o0' : 'bg-slate-60o0'
                         }`}
                         role="switch"
                         aria-checked={value}
@@ -408,7 +408,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                           className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                             value ? 'translate-x-6' : 'translate-x-1'
                           }`}
-                        />
+                         />
                       </button>
                     </div>
                   );
@@ -416,12 +416,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
               </div>
 
               {/* Quick Tips */}
-              <div className="bg-cyan-500/10 border border-cyan-500/20 rounded-lg p-4 mb-6">
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3 flex items-center space-x-2">
-                  <Info className="w-5 h-5" />
+              <div className="bg-cyan-50o0/10 border border-cyan-50o0/20 rounded-lg p-4 mb-6">
+                <h3 className="text-lg font-semibold text-cyan-40o0 mb-3 flex items-center space-x-2">
+                  <Info className="w-5 h-5"  />
                   <span>Accessibility Tips</span>
                 </h3>
-                <ul className="text-sm text-gray-300 space-y-2">
+                <ul className="text-sm text-gray-30o0 space-y-2">
                   <li>• Use Tab key to navigate through interactive elements</li>
                   <li>• Press Enter or Space to activate buttons</li>
                   <li>• Use Escape key to close modals and menus</li>

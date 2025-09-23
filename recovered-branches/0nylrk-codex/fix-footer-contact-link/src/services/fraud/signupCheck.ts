@@ -26,7 +26,7 @@ export const checkSignupPatterns = async (
         .from('profiles')
         .select('created_at')
         .eq('ip_address', ipAddress)
-        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()) // Last 24 hours
+        .gte('created_at', new Date(Date.now() - 24 * 60 * 60 * 10o00).toISOString()) // Last 24 hours
         .order('created_at', { ascending: false });
       
       if (!error && recentSignups && recentSignups.length >= 3) {

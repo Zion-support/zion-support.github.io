@@ -1,90 +1,129 @@
-import React from 'react';
 import Link from 'next/link';
 import Navigation from '../../src/components/Navigation';
 import Footer from '../../src/components/Footer';
 import SEOHead from '../../src/components/SEOHead';
-import { Cloud, Server, Database, Zap, Shield, Users, Globe, CheckCircle, Award, Phone, Mail } from 'lucide-react';
+import {
+  Cloud,
+  Server,
+  Database,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+  Award,
+  Phone,
+  Mail,
+} from 'lucide-react';
 
 const CloudServices = () => {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Cloud Services",
-    "description": "Comprehensive cloud infrastructure and migration services for modern businesses",
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Cloud Services',
+    description:
+      'Comprehensive cloud infrastructure and migration services for modern businesses',
+    provider: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+    },
   };
 
   const services = [
     {
       title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime',
+      description:
+        'Seamless migration to cloud platforms with minimal downtime',
       icon: Cloud,
-      features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Hybrid Cloud Setup']
+      features: [
+        'AWS Migration',
+        'Azure Migration',
+        'Google Cloud Migration',
+        'Hybrid Cloud Setup',
+      ],
     },
     {
       title: 'Infrastructure as Code',
       description: 'Automated infrastructure deployment and management',
       icon: Server,
-      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes']
+      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes'],
     },
     {
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for cloud environments',
       icon: Shield,
-      features: ['Identity Management', 'Data Encryption', 'Network Security', 'Compliance']
+      features: [
+        'Identity Management',
+        'Data Encryption',
+        'Network Security',
+        'Compliance',
+      ],
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Automated development and deployment pipelines',
       icon: Zap,
-      features: ['Jenkins', 'GitLab CI', 'Docker', 'Monitoring']
-    }
+      features: ['Jenkins', 'GitLab CI', 'Docker', 'Monitoring'],
+    },
   ];
 
   const cloudProviders = [
-    { name: 'Amazon Web Services', description: 'Leading cloud platform with comprehensive services' },
-    { name: 'Microsoft Azure', description: 'Enterprise-grade cloud solutions' },
-    { name: 'Google Cloud Platform', description: 'Advanced analytics and AI capabilities' },
-    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' }
+    {
+      name: 'Amazon Web Services',
+      description: 'Leading cloud platform with comprehensive services',
+    },
+    {
+      name: 'Microsoft Azure',
+      description: 'Enterprise-grade cloud solutions',
+    },
+    {
+      name: 'Google Cloud Platform',
+      description: 'Advanced analytics and AI capabilities',
+    },
+    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' },
   ];
 
   return (
     <>
       <SEOHead
-        title="Cloud Services - Zion Tech Group"
-        description="Transform your infrastructure with our cloud services. Expert cloud migration, DevOps, and infrastructure management solutions."
-        keywords="cloud services, cloud migration, AWS, Azure, Google Cloud, DevOps, infrastructure as code"
+        title='Cloud Services - Zion Tech Group'
+        description='Transform your infrastructure with our cloud services. Expert cloud migration, DevOps, and infrastructure management solutions.'
+        keywords='cloud services, cloud migration, AWS, Azure, Google Cloud, DevOps, infrastructure as code'
         structuredData={structuredData}
       />
-      
+
       <Navigation />
-      
-      <main className="min-h-screen bg-white">
+
+      <main className='min-h-screen bg-white'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-cyan-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600">
-                  <Cloud className="w-12 h-12 text-white" />
+        <section className='bg-gradient-to-br from-blue-50 to-cyan-10o0 py-20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center'>
+              <div className='flex justify-center mb-6'>
+                <div className='p-4 rounded-full bg-gradient-to-r from-blue-50o0 to-cyan-60o0'>
+                  <Cloud className='w-12 h-12 text-white' />
                 </div>
               </div>
-              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              <h1 className='text-5xl font-bold text-gray-90o0 mb-6'>
                 Cloud Services
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Transform your infrastructure with our comprehensive cloud services. 
-                From migration to management, we help you leverage the power of cloud computing.
+              <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-8'>
+                Transform your infrastructure with our comprehensive cloud
+                services. From migration to management, we help you leverage the
+                power of cloud computing.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                <Link
+                  href='/contact'
+                  className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'
+                >
                   Start Cloud Migration
                 </Link>
-                <Link href="/solutions" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                <Link
+                  href='/solutions'
+                  className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'
+                >
                   View Solutions
                 </Link>
               </div>
@@ -93,29 +132,39 @@ const CloudServices = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cloud Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>
+                Our Cloud Services
+              </h2>
+              <p className='text-lg text-gray-60o0 max-w-2xl mx-auto'>
                 End-to-end cloud solutions to modernize your infrastructure
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {services.map((service, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
+                <div
+                  key={index}
+                  className='bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow'
+                >
+                  <div className='flex items-center mb-6'>
+                    <div className='p-3 rounded-lg bg-gradient-to-r from-blue-50o0 to-cyan-60o0 mr-4'>
+                      <service.icon className='w-8 h-8 text-white' />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                    <h3 className='text-2xl font-bold text-gray-90o0'>
+                      {service.title}
+                    </h3>
                   </div>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
+                  <p className='text-gray-60o0 mb-6'>{service.description}</p>
+                  <ul className='space-y-2'>
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li
+                        key={featureIndex}
+                        className='flex items-center text-gray-70o0'
+                      >
+                        <CheckCircle className='w-5 h-5 text-green-50o0 mr-3 flex-shrink-0' />
                         {feature}
                       </li>
                     ))}
@@ -127,23 +176,32 @@ const CloudServices = () => {
         </section>
 
         {/* Cloud Providers Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Cloud Providers We Work With</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <section className='py-20 bg-gray-50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>
+                Cloud Providers We Work With
+              </h2>
+              <p className='text-lg text-gray-60o0 max-w-2xl mx-auto'>
                 Certified experts across all major cloud platforms
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
               {cloudProviders.map((provider, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow">
-                  <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
-                    <Award className="w-6 h-6 text-white" />
+                <div
+                  key={index}
+                  className='bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow'
+                >
+                  <div className='p-3 rounded-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 w-fit mx-auto mb-4'>
+                    <Award className='w-6 h-6 text-white' />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{provider.name}</h3>
-                  <p className="text-sm text-gray-600">{provider.description}</p>
+                  <h3 className='font-semibold text-gray-90o0 mb-2'>
+                    {provider.name}
+                  </h3>
+                  <p className='text-sm text-gray-60o0'>
+                    {provider.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -151,64 +209,85 @@ const CloudServices = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Benefits of Cloud Services</h2>
-              <p className="text-lg text-gray-600">
+        <section className='py-20 bg-white'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center mb-16'>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-4'>
+                Benefits of Cloud Services
+              </h2>
+              <p className='text-lg text-gray-60o0'>
                 Transform your business with cloud technology
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Zap className="w-8 h-8 text-blue-600" />
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='text-center'>
+                <div className='bg-blue-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center'>
+                  <Zap className='w-8 h-8 text-blue-60o0' />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Scalability</h3>
-                <p className="text-gray-600">Scale your infrastructure up or down based on demand</p>
+                <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>
+                  Scalability
+                </h3>
+                <p className='text-gray-60o0'>
+                  Scale your infrastructure up or down based on demand
+                </p>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-blue-600" />
+
+              <div className='text-center'>
+                <div className='bg-blue-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center'>
+                  <Shield className='w-8 h-8 text-blue-60o0' />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Security</h3>
-                <p className="text-gray-600">Enterprise-grade security with built-in compliance</p>
+                <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>
+                  Security
+                </h3>
+                <p className='text-gray-60o0'>
+                  Enterprise-grade security with built-in compliance
+                </p>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-8 h-8 text-blue-600" />
+
+              <div className='text-center'>
+                <div className='bg-blue-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center'>
+                  <Users className='w-8 h-8 text-blue-60o0' />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Efficiency</h3>
-                <p className="text-gray-600">Reduce infrastructure costs with pay-as-you-use pricing</p>
+                <h3 className='text-xl font-semibold text-gray-90o0 mb-3'>
+                  Cost Efficiency
+                </h3>
+                <p className='text-gray-60o0'>
+                  Reduce infrastructure costs with pay-as-you-use pricing
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+        <section className='py-20 bg-gradient-to-r from-blue-60o0 to-cyan-60o0'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
               Ready to Move to the Cloud?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Get expert guidance for your cloud migration and infrastructure modernization.
+            <p className='text-xl text-blue-10o0 mb-8 max-w-2xl mx-auto'>
+              Get expert guidance for your cloud migration and infrastructure
+              modernization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/contact'
+                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
+              >
                 Start Cloud Migration
               </Link>
-              <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+              <Link
+                href='/about'
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors'
+              >
                 Learn More About Us
               </Link>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

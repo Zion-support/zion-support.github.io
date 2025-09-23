@@ -32,9 +32,9 @@ const InteractiveAIAssessmentTool = () => {
       options: [
         'Startup (1-10 employees)',
         'Small Business (11-50 employees)',
-        'Medium Business (51-200 employees)',
-        'Large Business (201-1000 employees)',
-        'Enterprise (1000+ employees)'
+        'Medium Business (51-20o0 employees)',
+        'Large Business (20o1-10o00 employees)',
+        'Enterprise (10o00+ employees)'
       ]
     },
     {
@@ -72,9 +72,9 @@ const InteractiveAIAssessmentTool = () => {
       type: 'select',
       options: [
         'Under $50K',
-        '$50K - $100K',
-        '$100K - $500K',
-        '$500K - $1M',
+        '$50K - $10o0K',
+        '$10o0K - $50o0K',
+        '$50o0K - $1M',
         '$1M - $5M',
         '$5M+',
         'Not sure yet'
@@ -119,7 +119,7 @@ const InteractiveAIAssessmentTool = () => {
   };
 
   const calculateResults = () => {
-    const results = {
+    const results ={
       aiReadiness: answers.ai_readiness || 'Not started',
       industry: answers.industry || 'Technology',
       companySize: answers.company_size || 'Medium Business',
@@ -131,7 +131,7 @@ const InteractiveAIAssessmentTool = () => {
 
     // Calculate AI maturity score
     let maturityScore = 0;
-    const readinessMap = {
+    const readinessMap ={
       'Not started - No AI initiatives': 0,
       'Exploring - Researching AI possibilities': 1,
       'Pilot phase - Testing AI solutions': 2,
@@ -192,28 +192,28 @@ const InteractiveAIAssessmentTool = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl p-8">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center bg-green-100 text-green-800 rounded-full px-6 py-2 mb-4">
+              <div className="inline-flex items-center bg-green-10o0 text-green-80o0 rounded-full px-6 py-2 mb-4">
                 <span className="text-sm font-medium">🎯 ASSESSMENT COMPLETE</span>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Your AI Transformation Roadmap</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Your AI Transformation Roadmap</h2>
+              <p className="text-lg text-gray-60o0">
                 Based on your responses, 'here', 's your personalized AI strategy and recommendations.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">AI Maturity Score</h3>
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">AI Maturity Score</h3>
                 <div className="flex items-center mb-4">
-                  <div className="flex-1 bg-gray-200 rounded-full h-4 mr-4">
+                  <div className="flex-1 bg-gray-20o0 rounded-full h-4 mr-4">
                     <div 
-                      className="bg-gradient-to-r from-purple-500 to-blue-500 h-4 rounded-full transition-all duration-1000"
-                      style={{ width: `${(results.maturityScore / 10) * 100}%` }}
+                      className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 h-4 rounded-full transition-all duration-10o00"
+                      style={{ width: `${(results.maturityScore / 10) * 10o0}%` }}
                     ></div>
                   </div>
-                  <span className="text-2xl font-bold text-purple-600">{results.maturityScore.toFixed(1)}/10</span>
+                  <span className="text-2xl font-bold text-purple-60o0">{results.maturityScore.toFixed(1)}/10</span>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-60o0">
                   {results.maturityScore < 3 ? 'Beginner - Great time to start your AI journey' :
                    results.maturityScore < 6 ? 'Intermediate - Ready for strategic AI implementation' :
                    results.maturityScore < 8 ? 'Advanced - Scale and optimize your AI initiatives' :
@@ -222,29 +222,29 @@ const InteractiveAIAssessmentTool = () => {
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Focus</h3>
-                <div className="text-2xl font-bold text-blue-600 mb-2">{results.industry}</div>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Industry Focus</h3>
+                <div className="text-2xl font-bold text-blue-60o0 mb-2">{results.industry}</div>
+                <p className="text-gray-60o0">
                   We have extensive experience in {results.industry.toLowerCase()} with proven solutions and case studies.
                 </p>
               </div>
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Recommended Next Steps</h3>
+              <h3 className="text-xl font-bold text-gray-90o0 mb-4">Recommended Next Steps</h3>
               <div className="space-y-3">
                 {results.recommendations.map((rec, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                    <div className="flex-shrink-0 w-6 h-6 bg-purple-10o0 text-purple-60o0 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
                       {index + 1}
                     </div>
-                    <p className="text-gray-700">{rec}</p>
+                    <p className="text-gray-70o0">{rec}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-6 text-white mb-6">
+            <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-xl p-6 text-white mb-6">
               <h3 className="text-xl font-bold mb-4">Personalized AI Solutions for You</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -270,13 +270,13 @@ const InteractiveAIAssessmentTool = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
                 >
                   Get Your Free Consultation
                 </Link>
                 <button
                   onClick={resetAssessment}
-                  className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+                  className="border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors"
                 >
                   Retake Assessment
                 </button>
@@ -294,13 +294,13 @@ const InteractiveAIAssessmentTool = () => {
     <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 rounded-full px-6 py-2 mb-6">
+          <div className="inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-6">
             <span className="text-sm font-medium">🤖 AI ASSESSMENT TOOL</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Discover Your AI Potential
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">
             Take our comprehensive assessment to get personalized AI transformation recommendations 
             and discover how AI can transform your business.
           </p>
@@ -309,35 +309,35 @@ const InteractiveAIAssessmentTool = () => {
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Progress Bar */}
           <div className="mb-8">
-            <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <div className="flex justify-between text-sm text-gray-60o0 mb-2">
               <span>Question {currentStep + 1} of {questions.length}</span>
-              <span>{Math.round(((currentStep + 1) / questions.length) * 100)}% Complete</span>
+              <span>{Math.round(((currentStep + 1) / questions.length) * 10o0)}% Complete</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="w-full bg-gray-20o0 rounded-full h-2">
               <div 
-                className="bg-gradient-to-r from-purple-500 to-blue-500 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
+                className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 h-2 rounded-full transition-all duration-30o0"
+                style={{ width: `${((currentStep + 1) / questions.length) * 10o0}%` }}
               ></div>
             </div>
           </div>
 
           {/* Question */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">{currentQuestion.question}</h3>
+            <h3 className="text-2xl font-bold text-gray-90o0 mb-6">{currentQuestion.question}</h3>
             
             {currentQuestion.type === 'select' && (
               <div className="space-y-3">
                 {currentQuestion.options.map((option) => (
-                  <label key={option} className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <label key={option} className="flex items-center p-4 border border-gray-20o0 rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input
                       type="radio"
                       name={currentQuestion.id}
                       value={option}
                       checked={answers[currentQuestion.id] === option}
                       onChange={(e) => handleAnswer(currentQuestion.id, e.target.value)}
-                      className="mr-3 text-purple-600"
+                      className="mr-3 text-purple-60o0"
                     />
-                    <span className="text-gray-700">{option}</span>
+                    <span className="text-gray-70o0">{option}</span>
                   </label>
                 ))}
               </div>
@@ -346,16 +346,16 @@ const InteractiveAIAssessmentTool = () => {
             {currentQuestion.type === 'radio' && (
               <div className="space-y-3">
                 {currentQuestion.options.map((option) => (
-                  <label key={option} className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <label key={option} className="flex items-center p-4 border border-gray-20o0 rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input
                       type="radio"
                       name={currentQuestion.id}
                       value={option}
                       checked={answers[currentQuestion.id] === option}
                       onChange={(e) => handleAnswer(currentQuestion.id, e.target.value)}
-                      className="mr-3 text-purple-600"
+                      className="mr-3 text-purple-60o0"
                     />
-                    <span className="text-gray-700">{option}</span>
+                    <span className="text-gray-70o0">{option}</span>
                   </label>
                 ))}
               </div>
@@ -364,7 +364,7 @@ const InteractiveAIAssessmentTool = () => {
             {currentQuestion.type === 'checkbox' && (
               <div className="space-y-3">
                 {currentQuestion.options.map((option) => (
-                  <label key={option} className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                  <label key={option} className="flex items-center p-4 border border-gray-20o0 rounded-lg hover:bg-gray-50 cursor-pointer">
                     <input
                       type="checkbox"
                       name={currentQuestion.id}
@@ -378,9 +378,9 @@ const InteractiveAIAssessmentTool = () => {
                           handleAnswer(currentQuestion.id, currentAnswers.filter(a => a !== option));
                         }
                       }}
-                      className="mr-3 text-purple-600"
+                      className="mr-3 text-purple-60o0"
                     />
-                    <span className="text-gray-700">{option}</span>
+                    <span className="text-gray-70o0">{option}</span>
                   </label>
                 ))}
               </div>
@@ -392,14 +392,14 @@ const InteractiveAIAssessmentTool = () => {
             <button
               onClick={prevStep}
               disabled={currentStep === 0}
-              className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-3 border border-gray-30o0 text-gray-70o0 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Previous
             </button>
             <button
               onClick={nextStep}
               disabled={!answers[currentQuestion.id]}
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-8 py-3 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-lg hover:from-purple-70o0 hover:to-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {currentStep === questions.length - 1 ? 'Get Results' : 'Next'}
             </button>

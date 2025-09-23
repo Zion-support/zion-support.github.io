@@ -1,5 +1,8 @@
 // Analytics and performance monitoring utilities
-export function trackEvent(eventName: string, properties?: Record<string, string | number | boolean>): void {
+export function trackEvent(
+  eventName: string,
+  properties?: Record<string, string | number | boolean>
+): void {
   if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
     window.gtag('event', eventName, properties);
   }
@@ -18,13 +21,27 @@ export function measurePerformance(): null | {
   firstContentfulPaint: number;
 } {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    const navigation = performance.getEntriesByType('navigation')[0] as
+      | PerformanceNavigationTiming
+      | undefined;
     if (!navigation) return null;
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      firstPaint: (performance.getEntriesByName('first-paint')[0] as PerformanceEntry | undefined)?.startTime || 0,
-      firstContentfulPaint: (performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry | undefined)?.startTime || 0,
+      domContentLoaded:
+        navigation.domContentLoadedEventEnd -
+        navigation.domContentLoadedEventStart,
+      firstPaint:
+        (
+          performance.getEntriesByName('first-paint')[0] as
+            | PerformanceEntry
+            | undefined
+        )?.startTime || 0,
+      firstContentfulPaint:
+        (
+          performance.getEntriesByName('first-contentful-paint')[0] as
+            | PerformanceEntry
+            | undefined
+        )?.startTime || 0,
     };
   }
   return null;
@@ -50,7 +67,11 @@ export function trackWebVitals(metric: WebVitalMetric): void {
 
 declare global {
   interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+    gtag?: (
+      command: string,
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
   }
 }
 // legacy duplicated junk removed

@@ -1,27 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:components.disabled/SEOOptimizer.dynamic.jsx
 const SEOOptimizer = dynamic(() => import(\"./SEOOptimizer\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOOptimizer\' ,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> pr-11935
 const SEOOptimizer = dynamic(() => import("./SEOOptimizer"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOOptimizer' ,'
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/SEOOptimizer.dynamic.jsx.backup
-=======
 </p>'
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
->>>>>>> main
-=======
 </p>'
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:components.disabled/SEOOptimizer.dynamic.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

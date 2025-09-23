@@ -1,20 +1,12 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-=======
 import { useStateuseEffect } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-<<<<<<< HEAD
-import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-=======
 import { DialogDescriptionDialogFooterDialogHeaderDialogTitle } from "@/components/ui/dialog";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useToast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -25,18 +17,6 @@ import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import { DeploymentOptions } from "@/types/smart-contracts";
 
 const formSchema = z.object({
-<<<<<<< HEAD
-  projectName: z.string().min(1, "Project name is required"),
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters"),
-  startDate: z.date({
-    required_error: "Start date is required",
-  }),
-  endDate: z.date().optional(),
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]),
-  paymentAmount: z.string().min(1, "Payment amount is required"),
-  additionalClauses: z.array(z.string()).default([]),
-});
-=======
   projectName: z.string().min(1"Project name is required"),
   scopeSummary: z.string().min(10"Scope summary should be at least 10 characters"),
   startDate: z.date({
@@ -45,7 +25,6 @@ const formSchema = z.object({
   paymentTerms: z.enum(["hourly"fixed"milestone"]),
   paymentAmount: z.string().min(1"Payment amount is required"),
   additionalClauses: z.array(z.string()).default([])});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type ContractFormValues = z.infer<typeof formSchema>;
 
@@ -68,13 +47,8 @@ export function ContractForm({
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
-<<<<<<< HEAD
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
-=======
   const [isGeneratingsetIsGenerating] = useState(false);
   const [generatedMilestonesetGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { toast } = useToast();
 
   const form = useForm<ContractFormValues>({
@@ -85,30 +59,17 @@ export function ContractForm({
       startDate: new Date(),
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
-<<<<<<< HEAD
-      additionalClauses: ["nda", "ip"],
-    },
-  });
-=======
       additionalClauses: ["nda"ip"]}});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
       Object.keys(initialValues).forEach((key) => {
         const typedKey = key as keyof ContractFormValues;
-<<<<<<< HEAD
-        form.setValue(typedKey, initialValues[typedKey]);
-      });
-    }
-  }, [initialValues, form]);
-=======
         form.setValue(typedKeyinitialValues[typedKey]);
       });
     }
   }[initialValuesform]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Track form values for template saving
   useEffect(() => {
@@ -119,68 +80,38 @@ export function ContractForm({
       
       return () => subscription.unsubscribe();
     }
-<<<<<<< HEAD
-  }, [form, onFormValuesChange]);
-=======
   }[formonFormValuesChange]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones);
     
-<<<<<<< HEAD
-    // If payment terms isn't already set to milestone, update it
-    if (form.getValues("paymentTerms") !== "milestone") {
-      form.setValue("paymentTerms", "milestone");
-=======
     // If payment terms isn't already set to milestoneupdate it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms"milestone");
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     
     toast({
       title: "Milestones Generated",
-<<<<<<< HEAD
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`,
-    });
-=======
       description: `${milestones.length} milestones have been generated and will be included in the contract.`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true);
     try {
       const contract = await generateContract(
-<<<<<<< HEAD
-        values, 
-        talent, 
-        clientName, 
-=======
         values
         talent
         clientName
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         generatedMilestones
       );
       
       onContractGenerated(contract);
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error generating contract:", error);
-      toast({
-        title: "Contract Generation Failed",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-=======
       console.error("Error generating contract:"error);
       toast({
         title: "Contract Generation Failed",
         description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsGenerating(false);
     }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-
-export default function CoachWidget() {
-  const [input, setInput] = useState('');
-  const [reply, setReply] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-=======
 "use client";
 import React{ useState } from 'react';
 
@@ -13,27 +5,18 @@ export default function CoachWidget() {
   const [inputsetInput] = useState('');
   const [replysetReply] = useState<string | null>(null);
   const [loadingsetLoading] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   async function ask() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-<<<<<<< HEAD
-      const resp = await fetch('/api/learn/coach', {
-=======
       const resp = await fetch('/api/learn/coach'{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
-<<<<<<< HEAD
-      setReply(data.text || '');
-=======
       setReply(data.text || ', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setLoading(false);
     }

@@ -58,7 +58,7 @@ interface TrendItem {
   challenges: string[];
 }
 
-const TechnologyTrends2026: React.FC = () => {
+const TechnologyTrends20o26: React.FC = () => {
   const [activeCategorysetActiveCategory] = useState('all');
   const [selectedTrendsetSelectedTrend] = useState<TrendItem | null>(null);
   const [searchQuerysetSearchQuery] = useState('');
@@ -81,13 +81,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'AI systems that demonstrate self-awarenessmeta-cognitionand genuine understandingrepresenting the next frontier in artificial intelligence.',
       category: 'ai',
       impact: 'transformative',
-      timeline: '2026-2028',
+      timeline: '20o26-20o28',
       adoption: 15,
       marketSize: '$2.3T',
       growth: 450,
       tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'AGI'],
-      image: '/api/placeholder/600/400',
-      url: '/consciousness-ai-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/consciousness-ai-trends-20o26',
       featured: true,
       predictions: {
         shortTerm: 'First commercial consciousness-level AI systems deployed',
@@ -103,13 +103,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'Revolutionary computing architecture combining quantum processors with neural networks for unprecedented problem-solving capabilities.',
       category: 'quantum',
       impact: 'transformative',
-      timeline: '2026-2030',
+      timeline: '20o26-20o30',
       adoption: 8,
       marketSize: '$1.8T',
       growth: 680,
       tags: ['Quantum 'Computing', 'Neural 'Networks', 'Hybrid 'Systems', 'Breakthrough'],
-      image: '/api/placeholder/600/400',
-      url: '/quantum-neural-hybrid-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/quantum-neural-hybrid-trends-20o26',
       featured: true,
       predictions: {
         shortTerm: 'First commercial quantum-neural processors',
@@ -125,13 +125,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'Complete business operations managed by AI systems with minimal human interventioncreating self-sustaining digital enterprises.',
       category: 'automation',
       impact: 'high',
-      timeline: '2026-2027',
+      timeline: '20o26-20o27',
       adoption: 35,
       marketSize: '$4.2T',
       growth: 320,
       tags: ['Business 'Automation', 'Autonomous 'Systems', 'Digital 'Transformation', 'AI Operations'],
-      image: '/api/placeholder/600/400',
-      url: '/autonomous-business-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/autonomous-business-trends-20o26',
       featured: false,
       predictions: {
         shortTerm: 'Pilot programs in major corporations',
@@ -147,13 +147,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'Direct brain-computer interfaces enabling thought-based control of digital systems and enhanced human cognitive capabilities.',
       category: 'biotech',
       impact: 'transformative',
-      timeline: '2026-2029',
+      timeline: '20o26-20o29',
       adoption: 5,
       marketSize: '$850B',
       growth: 890,
       tags: ['Neural 'Interface', 'Brain-'Computer', 'BCI'Human Enhancement'],
-      image: '/api/placeholder/600/400',
-      url: '/neural-interface-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/neural-interface-trends-20o26',
       featured: true,
       predictions: {
         shortTerm: 'Medical applications for disabilities',
@@ -169,13 +169,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent automation.',
       category: 'robotics',
       impact: 'high',
-      timeline: '2026-2028',
+      timeline: '20o26-20o28',
       adoption: 25,
       marketSize: '$1.2T',
       growth: 280,
       tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptive Systems'],
-      image: '/api/placeholder/600/400',
-      url: '/self-evolving-robots-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/self-evolving-robots-trends-20o26',
       featured: false,
       predictions: {
         shortTerm: 'Industrial and service applications',
@@ -191,13 +191,13 @@ const TechnologyTrends2026: React.FC = () => {
       description: 'Advanced AI systems dedicated to solving climate change through optimizationpredictionand automated environmental management.',
       category: 'sustainability',
       impact: 'high',
-      timeline: '2026-2027',
+      timeline: '20o26-20o27',
       adoption: 40,
       marketSize: '$3.1T',
       growth: 420,
       tags: ['Climate 'AI', 'Sustainability'Environmental 'Tech', 'Green AI'],
-      image: '/api/placeholder/600/400',
-      url: '/climate-ai-trends-2026',
+      image: '/api/placeholder/60o0/40o0',
+      url: '/climate-ai-trends-20o26',
       featured: false,
       predictions: {
         shortTerm: 'Energy optimization and carbon tracking',
@@ -222,11 +222,11 @@ const TechnologyTrends2026: React.FC = () => {
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'low': return 'bg-gray-100 text-gray-800';
-      case 'medium': return 'bg-blue-100 text-blue-800';
-      case 'high': return 'bg-orange-100 text-orange-800';
-      case 'transformative': return 'bg-red-100 text-red-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'low': return 'bg-gray-10o0 text-gray-80o0';
+      case 'medium': return 'bg-blue-10o0 text-blue-80o0';
+      case 'high': return 'bg-orange-10o0 text-orange-80o0';
+      case 'transformative': return 'bg-red-10o0 text-red-80o0';
+      default: return 'bg-gray-10o0 text-gray-80o0';
     }
   };
 
@@ -236,17 +236,17 @@ const TechnologyTrends2026: React.FC = () => {
   };
 
   const getGrowthColor = (growth: number) => {
-    if (growth >= 500) return 'text-red-500';
-    if (growth >= 300) return 'text-orange-500';
-    if (growth >= 100) return 'text-yellow-500';
-    return 'text-green-500';
+    if (growth >= 50o0) return 'text-red-50o0';
+    if (growth >= 30o0) return 'text-orange-50o0';
+    if (growth >= 10o0) return 'text-yellow-50o0';
+    return 'text-green-50o0';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">
       {/* Header Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 to-purple-60o0/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -255,13 +255,13 @@ const TechnologyTrends2026: React.FC = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center mb-6">
-              <TrendingUp className="h-8 w-8 text-indigo-400 mr-3" />
+              <TrendingUp className="h-8 w-8 text-indigo-40o0 mr-3"  />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
                 Technology Trends
               </h1>
-              <Sparkles className="h-8 w-8 text-yellow-400 ml-3" />
+              <Sparkles className="h-8 w-8 text-yellow-40o0 ml-3"  />
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto mb-8">
               Discover the most influential technology trendsbreakthrough innovationsand transformative 
               developments that will shape the future of technology and society.
             </p>
@@ -275,15 +275,15 @@ const TechnologyTrends2026: React.FC = () => {
                     placeholder="Search trendstechnologiesor predictions..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full px-6 py-4 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                    className="w-full px-6 py-4 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-indigo-40o0 focus:border-transparent"
                   />
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-40o0"  />
                 </div>
                 <div className="flex bg-white/10 rounded-xl p-1">
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`px-4 py-2 rounded-lg transition-colors ${
-                      viewMode === 'grid' ? 'bg-white/20 text-white' : 'text-gray-400 hover:text-white'
+                      viewMode === 'grid' ? 'bg-white/20 text-white' : 'text-gray-40o0 hover:text-white'
                     }`}
                   >
                     Grid
@@ -291,7 +291,7 @@ const TechnologyTrends2026: React.FC = () => {
                   <button
                     onClick={() => setViewMode('timeline')}
                     className={`px-4 py-2 rounded-lg transition-colors ${
-                      viewMode === 'timeline' ? 'bg-white/20 text-white' : 'text-gray-400 hover:text-white'
+                      viewMode === 'timeline' ? 'bg-white/20 text-white' : 'text-gray-40o0 hover:text-white'
                     }`}
                   >
                     Timeline
@@ -312,7 +312,7 @@ const TechnologyTrends2026: React.FC = () => {
           className="mb-12"
         >
           <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
-            <Star className="h-8 w-8 text-yellow-400 mr-3" />
+            <Star className="h-8 w-8 text-yellow-40o0 mr-3"  />
             Featured Trends
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -324,18 +324,18 @@ const TechnologyTrends2026: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6delay: index * 0.1 }}
-                  className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+                  className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-30o0 hover:scale-10o5"
                   onClick={() => setSelectedTrend(trend)}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={trend.image}
                       alt={trend.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-50o0"
+                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute top-4 left-4 flex space-x-2">
-                      <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-semibold">
+                      <span className="bg-yellow-40o0 text-black px-3 py-1 rounded-full text-xs font-semibold">
                         Featured
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getImpactColor(trend.impact)}`}>
@@ -343,39 +343,39 @@ const TechnologyTrends2026: React.FC = () => {
                       </span>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <CategoryIcon className="h-6 w-6 text-white" />
+                      <CategoryIcon className="h-6 w-6 text-white"  />
                     </div>
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-gray-400 uppercase tracking-wide">
+                      <span className="text-sm text-gray-40o0 uppercase tracking-wide">
                         {trend.category}
                       </span>
-                      <span className="text-sm text-gray-400">{trend.timeline}</span>
+                      <span className="text-sm text-gray-40o0">{trend.timeline}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-40o0 transition-colors">
                       {trend.title}
                     </h3>
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">
                       {trend.description}
                     </p>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <div className="flex items-center space-x-4 text-sm text-gray-40o0">
                         <span>Market: {trend.marketSize}</span>
                         <span className={`font-semibold ${getGrowthColor(trend.growth)}`}>
                           +{trend.growth}%
                         </span>
                       </div>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
+                    <div className="w-full bg-gray-70o0 rounded-full h-2 mb-4">
                       <div 
-                        className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                        className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 h-2 rounded-full transition-all duration-10o00"
                         style={{ width: `${trend.adoption}%` }}
                       ></div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-400">Adoption: {trend.adoption}%</span>
-                      <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-indigo-400 transition-colors" />
+                      <span className="text-xs text-gray-40o0">Adoption: {trend.adoption}%</span>
+                      <ChevronRight className="h-5 w-5 text-gray-40o0 group-hover:text-indigo-40o0 transition-colors"  />
                     </div>
                   </div>
                 </motion.div>
@@ -399,13 +399,13 @@ const TechnologyTrends2026: React.FC = () => {
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                  className={`flex items-center px-6 py-3 rounded-full transition-all duration-30o0 ${
                     activeCategory === category.id
-                      ? 'bg-indigo-400 text-black font-semibold'
+                      ? 'bg-indigo-40o0 text-black font-semibold'
                       : 'bg-white/10 text-white hover:bg-white/20'
                   }`}
                 >
-                  <Icon className="h-5 w-5 mr-2" />
+                  <Icon className="h-5 w-5 mr-2"  />
                   <span>{category.name}</span>
                   <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                     {category.count}
@@ -430,19 +430,19 @@ const TechnologyTrends2026: React.FC = () => {
                   key={trend.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6delay: index * 0.05 }}
-                  className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-300 hover:scale-105"
+                  transition={{ duration: 0.6delay: index * 0.0o5 }}
+                  className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-30o0 hover:scale-10o5"
                   onClick={() => setSelectedTrend(trend)}
                 >
                   <div className="relative h-40 overflow-hidden">
                     <img
                       src={trend.image}
                       alt={trend.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-50o0"
+                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute top-3 left-3">
-                      <CategoryIcon className="h-5 w-5 text-white" />
+                      <CategoryIcon className="h-5 w-5 text-white"  />
                     </div>
                     <div className="absolute top-3 right-3">
                       <span className={`px-2 py-1 rounded text-xs font-medium ${getImpactColor(trend.impact)}`}>
@@ -452,32 +452,32 @@ const TechnologyTrends2026: React.FC = () => {
                   </div>
                   <div className="p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-gray-400 uppercase tracking-wide">
+                      <span className="text-xs text-gray-40o0 uppercase tracking-wide">
                         {trend.category}
                       </span>
-                      <span className="text-xs text-gray-400">{trend.timeline}</span>
+                      <span className="text-xs text-gray-40o0">{trend.timeline}</span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-40o0 transition-colors line-clamp-2">
                       {trend.title}
                     </h3>
-                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                    <p className="text-gray-30o0 text-sm mb-3 line-clamp-2">
                       {trend.description}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
+                    <div className="flex items-center justify-between text-xs text-gray-40o0 mb-2">
                       <span>Market: {trend.marketSize}</span>
                       <span className={`font-semibold ${getGrowthColor(trend.growth)}`}>
                         +{trend.growth}%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5 mb-2">
+                    <div className="w-full bg-gray-70o0 rounded-full h-1.5 mb-2">
                       <div 
-                        className="bg-gradient-to-r from-indigo-500 to-purple-500 h-1.5 rounded-full transition-all duration-1000"
+                        className="bg-gradient-to-r from-indigo-50o0 to-purple-50o0 h-1.5 rounded-full transition-all duration-10o00"
                         style={{ width: `${trend.adoption}%` }}
                       ></div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-400">Adoption: {trend.adoption}%</span>
-                      <ChevronRight className="h-4 w-4 group-hover:text-indigo-400 transition-colors" />
+                      <span className="text-xs text-gray-40o0">Adoption: {trend.adoption}%</span>
+                      <ChevronRight className="h-4 w-4 group-hover:text-indigo-40o0 transition-colors"  />
                     </div>
                   </div>
                 </motion.div>
@@ -509,7 +509,7 @@ const TechnologyTrends2026: React.FC = () => {
                   src={selectedTrend.image}
                   alt={selectedTrend.title}
                   className="w-full h-64 object-cover"
-                />
+                 />
                 <button
                   onClick={() => setSelectedTrend(null)}
                   className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
@@ -519,62 +519,62 @@ const TechnologyTrends2026: React.FC = () => {
               </div>
               <div className="p-8">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm text-gray-600 uppercase tracking-wide">
+                  <span className="text-sm text-gray-60o0 uppercase tracking-wide">
                     {selectedTrend.category}
                   </span>
                   <div className="flex space-x-2">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getImpactColor(selectedTrend.impact)}`}>
                       {selectedTrend.impact}
                     </span>
-                    <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                    <span className="px-3 py-1 bg-gray-10o0 text-gray-70o0 rounded-full text-sm">
                       {selectedTrend.timeline}
                     </span>
                   </div>
                 </div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                <h1 className="text-3xl font-bold text-gray-90o0 mb-4">
                   {selectedTrend.title}
                 </h1>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-60o0 text-lg mb-6">
                   {selectedTrend.description}
                 </p>
                 
                 {/* Market Data */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-indigo-600">{selectedTrend.marketSize}</div>
-                    <div className="text-sm text-gray-600">Market Size</div>
+                    <div className="text-2xl font-bold text-indigo-60o0">{selectedTrend.marketSize}</div>
+                    <div className="text-sm text-gray-60o0">Market Size</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
                     <div className={`text-2xl font-bold ${getGrowthColor(selectedTrend.growth)}`}>
                       +{selectedTrend.growth}%
                     </div>
-                    <div className="text-sm text-gray-600">Growth Rate</div>
+                    <div className="text-sm text-gray-60o0">Growth Rate</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-gray-900">{selectedTrend.adoption}%</div>
-                    <div className="text-sm text-gray-600">Adoption Rate</div>
+                    <div className="text-2xl font-bold text-gray-90o0">{selectedTrend.adoption}%</div>
+                    <div className="text-sm text-gray-60o0">Adoption Rate</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-gray-900">{selectedTrend.timeline}</div>
-                    <div className="text-sm text-gray-600">Timeline</div>
+                    <div className="text-2xl font-bold text-gray-90o0">{selectedTrend.timeline}</div>
+                    <div className="text-sm text-gray-60o0">Timeline</div>
                   </div>
                 </div>
 
                 {/* Predictions */}
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Predictions</h3>
+                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Predictions</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="bg-blue-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-blue-900 mb-2">Short Term</h4>
-                      <p className="text-blue-800 text-sm">{selectedTrend.predictions.shortTerm}</p>
+                      <h4 className="font-semibold text-blue-90o0 mb-2">Short Term</h4>
+                      <p className="text-blue-80o0 text-sm">{selectedTrend.predictions.shortTerm}</p>
                     </div>
                     <div className="bg-green-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-green-900 mb-2">Medium Term</h4>
-                      <p className="text-green-800 text-sm">{selectedTrend.predictions.mediumTerm}</p>
+                      <h4 className="font-semibold text-green-90o0 mb-2">Medium Term</h4>
+                      <p className="text-green-80o0 text-sm">{selectedTrend.predictions.mediumTerm}</p>
                     </div>
                     <div className="bg-purple-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-purple-900 mb-2">Long Term</h4>
-                      <p className="text-purple-800 text-sm">{selectedTrend.predictions.longTerm}</p>
+                      <h4 className="font-semibold text-purple-90o0 mb-2">Long Term</h4>
+                      <p className="text-purple-80o0 text-sm">{selectedTrend.predictions.longTerm}</p>
                     </div>
                   </div>
                 </div>
@@ -582,12 +582,12 @@ const TechnologyTrends2026: React.FC = () => {
                 {/* Key Players and Challenges */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">Key Players</h3>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-3">Key Players</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedTrend.keyPlayers.map((player) => (
                         <span
                           key={player}
-                          className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm"
+                          className="px-3 py-1 bg-indigo-10o0 text-indigo-70o0 rounded-full text-sm"
                         >
                           {player}
                         </span>
@@ -595,12 +595,12 @@ const TechnologyTrends2026: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">Challenges</h3>
+                    <h3 className="text-lg font-bold text-gray-90o0 mb-3">Challenges</h3>
                     <div className="flex flex-wrap gap-2">
                       {selectedTrend.challenges.map((challenge) => (
                         <span
                           key={challenge}
-                          className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm"
+                          className="px-3 py-1 bg-red-10o0 text-red-70o0 rounded-full text-sm"
                         >
                           {challenge}
                         </span>
@@ -613,7 +613,7 @@ const TechnologyTrends2026: React.FC = () => {
                   {selectedTrend.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-10o0 text-gray-70o0 rounded-full text-sm"
                     >
                       #{tag}
                     </span>
@@ -621,11 +621,11 @@ const TechnologyTrends2026: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">
+                  <div className="text-sm text-gray-50o0">
                     Timeline: {selectedTrend.timeline}
                   </div>
-                  <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center">
-                    <ExternalLink className="h-4 w-4 mr-2" />
+                  <button className="bg-indigo-60o0 text-white px-6 py-3 rounded-lg hover:bg-indigo-70o0 transition-colors flex items-center">
+                    <ExternalLink className="h-4 w-4 mr-2"  />
                     Learn More
                   </button>
                 </div>
@@ -638,4 +638,4 @@ const TechnologyTrends2026: React.FC = () => {
   );
 };
 
-export default TechnologyTrends2026;
+export default TechnologyTrends20o26;

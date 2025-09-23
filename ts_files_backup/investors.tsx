@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function InvestorsPage() {
 	return (
@@ -28,3 +23,4 @@ export default function InvestorsPage() {
 		</div>
 	);
 }
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

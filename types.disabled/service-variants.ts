@@ -1,4 +1,4 @@
-export type ServiceVariant = 
+export type ServiceVariant =
   // Core variants
   | 'default'
   | 'holographic'
@@ -6,7 +6,7 @@ export type ServiceVariant =
   | 'cyberpunk'
   | 'neural'
   | 'standard'
-  
+
   // Quantum variants
   | 'quantum-holographic'
   | 'quantum-advanced'
@@ -21,10 +21,10 @@ export type ServiceVariant =
   | 'quantum-bio-enterprise'
   | 'quantum-biology'
   | 'quantum-climate'
-  | 'quantum-cloud-advanced-2033'
+  | 'quantum-cloud-advanced-20o33'
   | 'quantum-cloud-enterprise'
-  | 'quantum-communication-2032'
-  | 'quantum-communication-2033'
+  | 'quantum-communication-20o32'
+  | 'quantum-communication-20o33'
   | 'quantum-communication-enterprise'
   | 'quantum-compliance-automation'
   | 'quantum-consciousness'
@@ -77,7 +77,7 @@ export type ServiceVariant =
   | 'quantum-trading-enterprise'
   | 'quantum-reality-fusion'
   | 'quantum-reality'
-  
+
   // AI variants
   | 'ai-futuristic'
   | 'ai-autonomous'
@@ -120,7 +120,7 @@ export type ServiceVariant =
   | 'ai-hr-analytics-enterprise'
   | 'ai-hr-enterprise'
   | 'ai-it-operations'
-  | 'ai-it-ops-advanced-2033'
+  | 'ai-it-ops-advanced-20o33'
   | 'ai-legal'
   | 'ai-legal-document-enterprise'
   | 'ai-legal-enterprise'
@@ -169,11 +169,11 @@ export type ServiceVariant =
   | 'ai-industrial'
   | 'ai-creative-enterprise'
   | 'ai-education-enterprise'
-  
+
   // Holographic variants
   | 'holographic-advanced'
   | 'holographic-education'
-  | 'holographic-events-2032'
+  | 'holographic-events-20o32'
   | 'holographic-futuristic'
   | 'holographic-healthcare'
   | 'holographic-matrix'
@@ -181,7 +181,7 @@ export type ServiceVariant =
   | 'holographic-neural'
   | 'holographic-quantum'
   | 'holographic-retail'
-  
+
   // Neural variants
   | 'neural-cyberpunk'
   | 'neural-evolution-futuristic'
@@ -192,10 +192,10 @@ export type ServiceVariant =
   | 'neural-revolutionary'
   | 'neuromorphic-computing'
   | 'neuromorphic-enterprise'
-  
+
   // Cyberpunk variants
   | 'cyberpunk-holographic'
-  
+
   // Enterprise variants
   | 'enterprise-futuristic'
   | 'autonomous-it-enterprise'
@@ -210,11 +210,11 @@ export type ServiceVariant =
   | 'cloud-native-enterprise'
   | 'code-generation-enterprise'
   | 'content-automation-enterprise'
-  | 'content-generation-ai-2033'
+  | 'content-generation-ai-20o33'
   | 'crm-intelligence-enterprise'
   | 'customer-intelligence-ai'
-  | 'customer-success-2032'
-  | 'customer-success-ai-2033'
+  | 'customer-success-20o32'
+  | 'customer-success-ai-20o33'
   | 'cybersecurity-ai-enterprise'
   | 'database-optimization-enterprise'
   | 'data-center-enterprise'
@@ -229,15 +229,15 @@ export type ServiceVariant =
   | 'fraud-detection-ai'
   | 'hr-analytics-enterprise'
   | 'iac-enterprise'
-  | 'interplanetary-comm-2029'
-  | 'iot-edge-orchestration-2033'
+  | 'interplanetary-comm-20o29'
+  | 'iot-edge-orchestration-20o33'
   | 'itam-enterprise'
   | 'manufacturing-ai-enterprise'
   | 'marketing-ai-enterprise'
   | 'metaverse-ai-enterprise'
-  | 'metaverse-dev-2032'
+  | 'metaverse-dev-20o32'
   | 'metaverse-development'
-  | 'metaverse-development-advanced-2033'
+  | 'metaverse-development-advanced-20o33'
   | 'multimodal-ai-enterprise'
   | 'network-monitoring-enterprise'
   | 'personalization-enterprise'
@@ -250,16 +250,16 @@ export type ServiceVariant =
   | 'quantum-cybersecurity-enterprise'
   | 'quantum-internet-enterprise'
   | 'research-ai-enterprise'
-  | 'sales-automation-ai-2033'
+  | 'sales-automation-ai-20o33'
   | 'sales-intelligence-enterprise'
   | 'space-mining-enterprise'
   | 'space-tech-enterprise'
   | 'supply-chain-enterprise'
   | 'synthetic-biology-enterprise'
   | 'zero-trust-advanced'
-  | 'zero-trust-advanced-2033'
+  | 'zero-trust-advanced-20o33'
   | 'zero-trust-enterprise'
-  
+
   // Futuristic variants
   | 'ai-futuristic'
   | 'agriculture-futuristic'
@@ -320,7 +320,7 @@ export type ServiceVariant =
   | 'supply-chain-futuristic'
   | 'training-futuristic'
   | 'transportation-futuristic'
-  
+
   // Revolutionary variants
   | 'ai-revolutionary'
   | 'ai-quantum-revolutionary'
@@ -331,11 +331,11 @@ export type ServiceVariant =
   | 'quantum-logistics-revolutionary'
   | 'neural-revolutionary'
   | 'quantum-revolutionary'
-  
+
   // Advanced variants
   | 'autonomous-bpa-advanced'
-  | 'autonomous-cybersecurity-advanced-2033'
-  | 'edge-computing-advanced-2033'
+  | 'autonomous-cybersecurity-advanced-20o33'
+  | 'edge-computing-advanced-20o33'
   | 'neural-quantum-advanced'
   | 'quantum-ai-advanced'
   | 'quantum-iot-advanced'
@@ -343,8 +343,8 @@ export type ServiceVariant =
   | 'quantum-security-advanced'
   | 'quantum-trading-advanced'
   | 'zero-trust-advanced'
-  | 'zero-trust-advanced-2033'
-  
+  | 'zero-trust-advanced-20o33'
+
   // Specialized variants
   | '5g-futuristic'
   | 'ai-services'
@@ -355,11 +355,11 @@ export type ServiceVariant =
   | 'autonomous-supply-chain-enterprise'
   | 'bio-quantum'
   | 'blockchain-supply-chain'
-  | 'blockchain-transparency-2033'
+  | 'blockchain-transparency-20o33'
   | 'brand-management'
-  | 'business-intelligence-2032'
+  | 'business-intelligence-20o32'
   | 'commerce-futuristic'
-  | 'consciousness-advanced-2032'
+  | 'consciousness-advanced-20o32'
   | 'consciousness-ai'
   | 'content-marketing'
   | 'creativity-orchestration'
@@ -373,12 +373,12 @@ export type ServiceVariant =
   | 'emotional-ai-advanced'
   | 'energy-sustainability'
   | 'fintech'
-  | 'health-analytics-2032'
+  | 'health-analytics-20o32'
   | 'healthcare-biotech'
   | 'human-augmentation'
   | 'influencer-marketing'
   | 'logistics'
-  | 'mars-colonization-2029'
+  | 'mars-colonization-20o29'
   | 'metaverse'
   | 'metaverse-development'
   | 'mobility-futuristic'
@@ -388,8 +388,8 @@ export type ServiceVariant =
   | 'quantum-bio-enterprise'
   | 'quantum-biology'
   | 'quantum-climate'
-  | 'quantum-communication-2032'
-  | 'quantum-communication-2033'
+  | 'quantum-communication-20o32'
+  | 'quantum-communication-20o33'
   | 'quantum-communication-enterprise'
   | 'quantum-compliance-automation'
   | 'quantum-consciousness'
@@ -413,17 +413,17 @@ export type ServiceVariant =
   | 'quantum-threat-detection'
   | 'quantum-trading-enterprise'
   | 'research-ai-enterprise'
-  | 'sales-automation-ai-2033'
+  | 'sales-automation-ai-20o33'
   | 'seo'
   | 'social-media'
   | 'space-ai'
-  | 'space-energy-2029'
-  | 'space-habitat-2029'
-  | 'space-mining-2029'
-  | 'space-mining-2032'
+  | 'space-energy-20o29'
+  | 'space-habitat-20o29'
+  | 'space-mining-20o29'
+  | 'space-mining-20o32'
   | 'space-mining-automation'
   | 'space-tech'
-  | 'supply-chain-2032'
+  | 'supply-chain-20o32'
   | 'supply-chain-ai'
   | 'supply-chain-futuristic'
   | 'swarm-robotics'
@@ -436,7 +436,7 @@ export type ServiceVariant =
   | 'consciousness-quantum'
   | 'reality-engineering'
   | 'dimensional-tech'
-  
+
   // Legacy variants
   | 'digital-marketing'
   | 'email-marketing'

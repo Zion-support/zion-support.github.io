@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
-
-export type Milestone = {
-  id: string;
-  title: string;
-  dueDateIso?: string;
-  amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
-};
-
-export type PaymentTerms =
-  | { type: "hourly"; hourlyRateUsd: number }
-  | { type: "fixed"; fixedAmountUsd: number }
-  | { type: "milestone"; milestones: Milestone[] };
-
-export type OfferStatus =
-  | "SENT"
-  | "CONFIRMED"
-  | "CHANGES_REQUESTED"
-  | "DECLINED";
-
-export type Offer = {
-  id: string;
-  createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: OfferStatus;
-  changeRequestNote?: string;
-  projectId?: string;
-};
-
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
-
-export type ProjectDocument = {
-=======
 
 
 
@@ -46,10 +6,8 @@ export interface Offer {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -116,35 +74,6 @@ export interface ProjectDocument {
   name: string;
   url?: string;
   uploadedAtIso: string;
-<<<<<<< HEAD
-};
-
-export type ProjectNote = {
-  id: string;
-  authorId: string;
-  authorRole: "client" | "talent";
-  content: string;
-  createdAtIso: string;
-};
-
-export type Project = {
-  id: string;
-  title: string;
-  summary: string;
-  clientId: string;
-  talentSlug: string;
-  startDateIso: string;
-  status: ProjectStatus;
-  timeline: Milestone[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-};
-
-export type MarketplaceDb = {
-  offers: Offer[];
-  projects: Project[];
-};
-=======
 }
 
   id: string;
@@ -165,4 +94,4 @@ export interface ProjectNote {;
   createdAtIso: string;
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

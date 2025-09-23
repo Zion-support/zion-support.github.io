@@ -5,5 +5,5 @@ export async function getStaticProps() {
 }
 
 export default function AIAutonomousMarketingPlatform(props: any) {
-	return <ServicePage {...props} />;
+	return <ServicePage {...props}  />;
 }

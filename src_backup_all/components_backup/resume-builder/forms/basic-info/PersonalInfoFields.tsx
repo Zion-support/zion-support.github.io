@@ -1,8 +1,13 @@
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control, ControllerRenderProps } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Control, ControllerRenderProps } from 'react-hook-form';
+import { BasicInfoFormData } from './schema';
 
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
@@ -10,15 +15,19 @@ interface PersonalInfoFieldsProps {
 
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
       <FormField
         control={control}
-        name="fullName"
-        render={({ field }: { field: ControllerRenderProps<BasicInfoFormData, "fullName"> }) => (
+        name='fullName'
+        render={({
+          field,
+        }: {
+          field: ControllerRenderProps<BasicInfoFormData, 'fullName'>;
+        }) => (
           <FormItem>
             <FormLabel>Full Name</FormLabel>
             <FormControl>
-              <Input placeholder="John Doe" {...field} />
+              <Input placeholder='John Doe' {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -27,12 +36,16 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
 
       <FormField
         control={control}
-        name="title"
-        render={({ field }: { field: ControllerRenderProps<BasicInfoFormData, "title"> }) => (
+        name='title'
+        render={({
+          field,
+        }: {
+          field: ControllerRenderProps<BasicInfoFormData, 'title'>;
+        }) => (
           <FormItem>
             <FormLabel>Professional Title</FormLabel>
             <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
+              <Input placeholder='Senior Software Engineer' {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -41,12 +54,16 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
 
       <FormField
         control={control}
-        name="email"
-        render={({ field }: { field: ControllerRenderProps<BasicInfoFormData, "email"> }) => (
+        name='email'
+        render={({
+          field,
+        }: {
+          field: ControllerRenderProps<BasicInfoFormData, 'email'>;
+        }) => (
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
+              <Input type='email' placeholder='john@example.com' {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -55,12 +72,16 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
 
       <FormField
         control={control}
-        name="phone"
-        render={({ field }: { field: ControllerRenderProps<BasicInfoFormData, "phone"> }) => (
+        name='phone'
+        render={({
+          field,
+        }: {
+          field: ControllerRenderProps<BasicInfoFormData, 'phone'>;
+        }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
+              <Input placeholder='+1 234 567 890o0' {...field} />
             </FormControl>
             <FormMessage />
           </FormItem>

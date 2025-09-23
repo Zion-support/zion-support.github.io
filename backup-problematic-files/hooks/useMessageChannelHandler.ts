@@ -1,9 +1,6 @@
 
 import { useEffect, useCallback } from 'react';
 
-
-
-
 interface Event {
   type: string;
   target: EventTarget | null;
@@ -45,9 +42,8 @@ function useMessageChannelHandler() {
   const handle_message = useCallback (
     (event: MessageEvent < unknown>) => {
 
-
   onError
-}: MessageChannelHandlerProps = {}) {
+}: MessageChannelHandlerProps ={}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
 
@@ -66,14 +62,10 @@ if ( {) {
           on_error (error as Error);
         }
 
-
-
-
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-
 
       }
     }
@@ -87,11 +79,4 @@ if ( {) {
     };
 
   }, [handleMessage]);
-
-
->>>>>>> origin/automation-improvements-final
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

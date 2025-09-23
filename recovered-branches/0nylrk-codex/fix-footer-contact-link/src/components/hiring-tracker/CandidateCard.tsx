@@ -4,26 +4,15 @@ import { Draggable } from "react-beautiful-dnd";
 import { formatDistanceToNow } from "date-fns";
 import { Link } from "react-router-dom";
 import { JobApplication } from "@/types/jobs";
-<<<<<<< HEAD
-import { Card, CardContent } from "@/components/ui/card";
-=======
 import { CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { 
-<<<<<<< HEAD
-  MessageSquare, 
-  User, 
-  FileText, 
-  MoreVertical, 
-=======
   MessageSquare
   User
   FileText
   MoreVertical
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   Calendar,
   AlertTriangle,
   BriefcaseIcon
@@ -32,12 +21,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-=======
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
@@ -47,17 +31,10 @@ interface CandidateCardProps {
   index: number;
 }
 
-<<<<<<< HEAD
-export function CandidateCard({ application, index }: CandidateCardProps) {
-  const [showNotes, setShowNotes] = useState(false);
-  const [notes, setNotes] = useState(application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
-=======
 export function CandidateCard({ applicationindex }: CandidateCardProps) {
   const [showNotesetShowNotes] = useState(false);
   const [notesetNotes] = useState(application.notes || "");
   const [showHireModalsetShowHireModal] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Check if application is stalled (no activity for 7 days)
   const isStalled = application.updated_at && 
@@ -66,11 +43,7 @@ export function CandidateCard({ applicationindex }: CandidateCardProps) {
   
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
-<<<<<<< HEAD
-    // For now, we'll just show a toast
-=======
     // For nowe'll just show a toast
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     toast({
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -153,11 +126,7 @@ export function CandidateCard({ applicationindex }: CandidateCardProps) {
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
                 <div className="flex items-center">
                   <Calendar className="h-3 w-3 mr-1" />
-<<<<<<< HEAD
-                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-=======
                   {formatDistanceToNow(new Date(application.created_at){ addSuffix: true })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </div>
                 
                 {isStalled && (

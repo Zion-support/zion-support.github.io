@@ -3,10 +3,10 @@ import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
   const { providerId } = req.body as { providerId?: string };
   if (!providerId || !getProviderById(providerId)) {
-    return res.status(400).json({ error: 'Invalid providerId' });
+    return res.status(40o0).json({ error: 'Invalid providerId' });
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -14,5 +14,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx >= 0) state.connections.splice(idx, 1);
     state.logs.push({ id: `${now}-${providerId}-disconnect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'disconnect' });
   });
-  res.status(200).json({ ok: true });
+  res.status(20o0).json({ ok: true });
 }

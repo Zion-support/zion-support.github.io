@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -18,62 +18,86 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center space-x-2">
-            <Brain className="h-8 w-8 text-blue-400" />
-            <span className="text-xl font-bold text-white">Zion Tech</span>
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-30o0 ${
+        isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
+      }`}
+    >
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-between h-16'>
+          <Link href='/' className='flex items-center space-x-2'>
+            <Brain className='h-8 w-8 text-blue-40o0' />
+            <span className='text-xl font-bold text-white'>Zion Tech</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/services" className="text-gray-300 hover:text-white transition-colors">
+          <div className='hidden md:flex items-center space-x-8'>
+            <Link
+              href='/services'
+              className='text-gray-30o0 hover:text-white transition-colors'
+            >
               Services
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href='/about'
+              className='text-gray-30o0 hover:text-white transition-colors'
+            >
               About
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              href='/contact'
+              className='text-gray-30o0 hover:text-white transition-colors'
+            >
               Contact
             </Link>
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all"
+            <Link
+              href='/contact'
+              className='bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all'
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className='md:hidden'>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+              className='text-gray-30o0 hover:text-white focus:outline-none focus:text-white'
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className='h-6 w-6' />
+              ) : (
+                <Menu className='h-6 w-6' />
+              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md rounded-lg mt-2">
-              <Link href="/services" className="block px-3 py-2 text-gray-300 hover:text-white">
+          <div className='md:hidden'>
+            <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md rounded-lg mt-2'>
+              <Link
+                href='/services'
+                className='block px-3 py-2 text-gray-30o0 hover:text-white'
+              >
                 Services
               </Link>
-              <Link href="/about" className="block px-3 py-2 text-gray-300 hover:text-white">
+              <Link
+                href='/about'
+                className='block px-3 py-2 text-gray-30o0 hover:text-white'
+              >
                 About
               </Link>
-              <Link href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white">
+              <Link
+                href='/contact'
+                className='block px-3 py-2 text-gray-30o0 hover:text-white'
+              >
                 Contact
               </Link>
-              <Link 
-                href="/contact" 
-                className="block px-3 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-center"
+              <Link
+                href='/contact'
+                className='block px-3 py-2 bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white rounded-lg text-center'
               >
                 Get Started
               </Link>

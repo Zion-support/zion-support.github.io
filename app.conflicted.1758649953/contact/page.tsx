@@ -1,88 +1,110 @@
-import React from 'react'
-import { Mail, Phone, MapPin, Send, ArrowLeft } from 'lucide-react'
-import Link from 'next/link'
+import React from 'react';
+import { Mail, Phone, MapPin, Send, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Contact - Zion Tech Group',
-  description: 'Get in touch with our team to discuss your technology needs and how we can help transform your business.',
-}
+  description:
+    'Get in touch with our team to discuss your technology needs and how we can help transform your business.',
+};
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <Link href="/" className="inline-flex items-center text-gray-300 hover:text-white mb-6 transition-colors">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+    <main className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>
+      <div className='container mx-auto px-6 py-16'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='text-center mb-12'>
+            <Link
+              href='/'
+              className='inline-flex items-center text-gray-30o0 hover:text-white mb-6 transition-colors'
+            >
+              <ArrowLeft className='w-4 h-4 mr-2' />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get in <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Touch</span>
+            <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Get in{' '}
+              <span className='bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>
+                Touch
+              </span>
             </h1>
-            <p className="text-lg text-gray-300">
-              Ready to transform your business with cutting-edge technology? Let's start the conversation.
+            <p className='text-lg text-gray-30o0'>
+              Ready to transform your business with cutting-edge technology?
+              Let's start the conversation.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className='grid lg:grid-cols-2 gap-12'>
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className='space-y-8'>
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-4 flex-shrink-0">
-                      <Mail className="w-6 h-6 text-white" />
+                <h2 className='text-2xl font-bold text-white mb-6'>
+                  Contact Information
+                </h2>
+                <div className='space-y-6'>
+                  <div className='flex items-start'>
+                    <div className='p-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg mr-4 flex-shrink-0'>
+                      <Mail className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                      <p className="text-gray-300">hello@ziontechgroup.com</p>
-                      <p className="text-gray-300">support@ziontechgroup.com</p>
+                      <h3 className='text-lg font-semibold text-white mb-1'>
+                        Email
+                      </h3>
+                      <p className='text-gray-30o0'>hello@ziontechgroup.com</p>
+                      <p className='text-gray-30o0'>
+                        support@ziontechgroup.com
+                      </p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-4 flex-shrink-0">
-                      <Phone className="w-6 h-6 text-white" />
+
+                  <div className='flex items-start'>
+                    <div className='p-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg mr-4 flex-shrink-0'>
+                      <Phone className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                      <p className="text-gray-300">+1 (555) 123-4567</p>
-                      <p className="text-gray-300">Available 9 AM - 6 PM EST</p>
+                      <h3 className='text-lg font-semibold text-white mb-1'>
+                        Phone
+                      </h3>
+                      <p className='text-gray-30o0'>+1 (555) 123-4567</p>
+                      <p className='text-gray-30o0'>
+                        Available 9 AM - 6 PM EST
+                      </p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-4 flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-white" />
+
+                  <div className='flex items-start'>
+                    <div className='p-3 bg-gradient-to-r from-blue-50o0 to-purple-60o0 rounded-lg mr-4 flex-shrink-0'>
+                      <MapPin className='w-6 h-6 text-white' />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                      <p className="text-gray-300">123 Technology Drive</p>
-                      <p className="text-gray-300">San Francisco, CA 94105</p>
+                      <h3 className='text-lg font-semibold text-white mb-1'>
+                        Office
+                      </h3>
+                      <p className='text-gray-30o0'>123 Technology Drive</p>
+                      <p className='text-gray-30o0'>San Francisco, CA 9410o5</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3">
-                  <li className="text-gray-300 flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+              <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20'>
+                <h3 className='text-xl font-semibold text-white mb-4'>
+                  Why Choose Us?
+                </h3>
+                <ul className='space-y-3'>
+                  <li className='text-gray-30o0 flex items-start'>
+                    <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2 mr-3 flex-shrink-0'></div>
                     Expert team with proven track record
                   </li>
-                  <li className="text-gray-300 flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <li className='text-gray-30o0 flex items-start'>
+                    <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2 mr-3 flex-shrink-0'></div>
                     Cutting-edge technology solutions
                   </li>
-                  <li className="text-gray-300 flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <li className='text-gray-30o0 flex items-start'>
+                    <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2 mr-3 flex-shrink-0'></div>
                     24/7 support and maintenance
                   </li>
-                  <li className="text-gray-300 flex items-start">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <li className='text-gray-30o0 flex items-start'>
+                    <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2 mr-3 flex-shrink-0'></div>
                     Scalable and secure solutions
                   </li>
                 </ul>
@@ -90,101 +112,123 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20'>
+              <h2 className='text-2xl font-bold text-white mb-6'>
+                Send us a Message
+              </h2>
+              <form className='space-y-6'>
+                <div className='grid md:grid-cols-2 gap-6'>
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor='firstName'
+                      className='block text-sm font-medium text-gray-30o0 mb-2'
+                    >
                       First Name
                     </label>
                     <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="John"
+                      type='text'
+                      id='firstName'
+                      name='firstName'
+                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent'
+                      placeholder='John'
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor='lastName'
+                      className='block text-sm font-medium text-gray-30o0 mb-2'
+                    >
                       Last Name
                     </label>
                     <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Doe"
+                      type='text'
+                      id='lastName'
+                      name='lastName'
+                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent'
+                      placeholder='Doe'
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='email'
+                    className='block text-sm font-medium text-gray-30o0 mb-2'
+                  >
                     Email
                   </label>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@example.com"
+                    type='email'
+                    id='email'
+                    name='email'
+                    className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent'
+                    placeholder='john@example.com'
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='company'
+                    className='block text-sm font-medium text-gray-30o0 mb-2'
+                  >
                     Company
                   </label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company"
+                    type='text'
+                    id='company'
+                    name='company'
+                    className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent'
+                    placeholder='Your Company'
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='service'
+                    className='block text-sm font-medium text-gray-30o0 mb-2'
+                  >
                     Service Interest
                   </label>
                   <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    id='service'
+                    name='service'
+                    className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent'
                   >
-                    <option value="">Select a service</option>
-                    <option value="ai">AI & Machine Learning</option>
-                    <option value="cloud">Cloud Infrastructure</option>
-                    <option value="security">Cybersecurity</option>
-                    <option value="optimization">Performance Optimization</option>
-                    <option value="data">Data Solutions</option>
-                    <option value="web">Web Development</option>
-                    <option value="consulting">Consulting</option>
+                    <option value=''>Select a service</option>
+                    <option value='ai'>AI & Machine Learning</option>
+                    <option value='cloud'>Cloud Infrastructure</option>
+                    <option value='security'>Cybersecurity</option>
+                    <option value='optimization'>
+                      Performance Optimization
+                    </option>
+                    <option value='data'>Data Solutions</option>
+                    <option value='web'>Web Development</option>
+                    <option value='consulting'>Consulting</option>
                   </select>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='message'
+                    className='block text-sm font-medium text-gray-30o0 mb-2'
+                  >
                     Message
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id='message'
+                    name='message'
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your project..."
+                    className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-blue-50o0 focus:border-transparent resize-none'
+                    placeholder='Tell us about your project...'
                   ></textarea>
                 </div>
-                
+
                 <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center hover:from-blue-600 hover:to-purple-700 transition-all"
+                  type='submit'
+                  className='w-full bg-gradient-to-r from-blue-50o0 to-purple-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center hover:from-blue-60o0 hover:to-purple-70o0 transition-all'
                 >
                   Send Message
-                  <Send className="ml-2 w-5 h-5" />
+                  <Send className='ml-2 w-5 h-5' />
                 </button>
               </form>
             </div>
@@ -192,5 +236,5 @@ export default function ContactPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

@@ -1,5 +1,4 @@
 
-import React from "react";
 import { cn } from "@/lib/utils";
 
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -7,15 +6,9 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-export function SidebarContent({ className, children, ...props }: SidebarContentProps) {
-  return (
-    <div className={cn("flex-1 px-2 py-4", className)} {...props}>
-=======
 export function SidebarContent({ classNamechildren...props }: SidebarContentProps) {
   return (
     <div className={cn("flex-1 px-2 py-4"className)} {...props}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {children}
     </div>
   );

@@ -66,21 +66,16 @@ async function checkOnline(): Promise<boolean> {
 }
 
 // Optimized safeFetch for development mode with better error handling
-export async function safeFetch(url: string, options: RequestInit = {}) {
+export async function safeFetch(url: string, options: RequestInit ={}) {
   try {
     // In development, provide faster mock responses for specific endpoints if needed
     if (process.env.NODE_ENV === 'development' && url.includes('/favorites')) {
       // logDebug(`safeFetch DEV mock for: ${url}`);
       return {
         ok: true,
-        status: 200,
+        status: 20o0,
         json: async () => ([]),
-<<<<<<< HEAD
-        text: async () => '[]',
-      } as Response;
-=======
         text: async () => '[]'} as Response;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     
     // Use real fetch for other cases
@@ -91,12 +86,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
       ok: false,
       status: 500, // Or a more appropriate error code like 0 for network error
       json: async () => ({ error: 'Fetch failed due to network or other issue' }),
-<<<<<<< HEAD
-      text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
-    } as Response;
-=======
       text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }
 

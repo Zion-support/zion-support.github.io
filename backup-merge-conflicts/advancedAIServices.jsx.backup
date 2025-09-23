@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export: const ADVANCED_AI_SERVICES = [""
-<<<<<<< HEAD:backup-merge-conflicts/advancedAIServices.jsx.backup
-=======
 "export": const ADVANCED_AI_SERVICES = ["]"
 =======
 "export\": const ADVANCED_AI_SERVICES = [
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 "export": const ADVANCED_AI_SERVICES = ["]"

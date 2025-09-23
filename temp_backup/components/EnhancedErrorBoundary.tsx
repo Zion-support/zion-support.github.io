@@ -18,7 +18,7 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
+    this.state ={
       hasError: false,
       error: null,
       errorInfo: null,
@@ -90,7 +90,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleReportBug = () => {
-    const errorDetails = {
+    const errorDetails ={
       errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
@@ -119,7 +119,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 flex items-center justify-center p-4">
           <motion.div
             className="max-w-2xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -128,7 +128,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           >
             {/* Error Icon */}
             <motion.div
-              className="w-24 h-24 mx-auto mb-8 bg-red-500/20 rounded-full flex items-center justify-center"
+              className="w-24 h-24 mx-auto mb-8 bg-red-50o0/20 rounded-full flex items-center justify-center"
               animate={{ 
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0]
@@ -139,46 +139,46 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 ease: "easeInOut"
               }}
             >
-              <AlertTriangle className="w-12 h-12 text-red-400" />
+              <AlertTriangle className="w-12 h-12 text-red-40o0"  />
             </motion.div>
 
             {/* Error Message */}
-            <h1 className="text-4xl font-bold text-red-400 mb-4">
+            <h1 className="text-4xl font-bold text-red-40o0 mb-4">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-xl text-gray-300 mb-6">
+            <p className="text-xl text-gray-30o0 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 
             {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <motion.div
-                className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 mb-6 text-left"
+                className="bg-gray-90o0/50 border border-gray-70o0 rounded-lg p-4 mb-6 text-left"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 transition={{ delay: 0.3 }}
               >
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
-                <p className="text-sm text-gray-400 mb-2">
+                <h3 className="text-lg font-semibold text-red-40o0 mb-2">Error Details:</h3>
+                <p className="text-sm text-gray-40o0 mb-2">
                   <strong>Message:</strong> {this.state.error.message}
                 </p>
-                <p className="text-sm text-gray-400 mb-2">
+                <p className="text-sm text-gray-40o0 mb-2">
                   <strong>Error ID:</strong> {this.state.errorId}
                 </p>
                 {this.state.error.stack && (
-                  <details className="text-sm text-gray-400">
-                    <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
-                    <pre className="mt-2 text-xs bg-gray-800 p-2 rounded overflow-x-auto">
+                  <details className="text-sm text-gray-40o0">
+                    <summary className="cursor-pointer hover:text-gray-30o0">Stack Trace</summary>
+                    <pre className="mt-2 text-xs bg-gray-80o0 p-2 rounded overflow-x-auto">
                       {this.state.error.stack}
                     </pre>
                   </details>
                 )}
               </motion.div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h1 className="text-2xl font-bold text-gray-90o0 dark:text-white mb-2">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-60o0 dark:text-gray-40o0">
                 We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </div>
@@ -186,52 +186,52 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-cyan-50o0 hover:bg-cyan-60o0 text-white font-semibold rounded-lg transition-colors duration-20o0 flex items-center justify-center gap-2"
                 onClick={this.handleRetry}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <RefreshCw className="w-5 h-5" />
+                <RefreshCw className="w-5 h-5"  />
                 Try Again
               </motion.button>
 
               <motion.button
-                className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-gray-70o0 hover:bg-gray-60o0 text-white font-semibold rounded-lg transition-colors duration-20o0 flex items-center justify-center gap-2"
                 onClick={this.handleGoBack}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <ArrowLeft className="w-5 h-5" />
+                <ArrowLeft className="w-5 h-5"  />
                 Go Back
               </motion.button>
 
               <motion.button
-                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-purple-60o0 hover:bg-purple-70o0 text-white font-semibold rounded-lg transition-colors duration-20o0 flex items-center justify-center gap-2"
                 onClick={this.handleGoHome}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Home className="w-5 h-5" />
+                <Home className="w-5 h-5"  />
                 Go Home
               </motion.button>
 
               <motion.button
-                className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-red-60o0 hover:bg-red-70o0 text-white font-semibold rounded-lg transition-colors duration-20o0 flex items-center justify-center gap-2"
                 onClick={this.handleReportBug}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Bug className="w-5 h-5" />
+                <Bug className="w-5 h-5"  />
                 Report Bug
               </motion.button>
             </div>
 
             {/* Contact Information */}
-            <div className="mt-8 text-gray-400">
+            <div className="mt-8 text-gray-40o0">
               <p>Need help? Contact our support team at</p>
               <a 
                 href="mailto:support@ziontechgroup.com" 
-                className="text-cyan-400 hover:text-cyan-300 underline"
+                className="text-cyan-40o0 hover:text-cyan-30o0 underline"
               >
                 support@ziontechgroup.com
               </a>
@@ -239,7 +239,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
             {/* Footer */}
             <div className="mt-8 text-center">
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-50o0 text-sm">
                 Zion Tech Group - Revolutionary Technology Solutions
               </p>
             </div>

@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from "@/components/ui/card"; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };'"'"
-<<<<<<< HEAD:backup-merge-conflicts/ServiceDetails.jsx.backup
-=======
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/components/services/ServiceDetails.jsx
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-<<<<<<< HEAD
-import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from \'@/components/ui/card\'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} \"; \"" export { Page };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main
-=======
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/services/ServiceDetails.jsx
-<<<<<<< HEAD
-=======
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""
 =======
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/ServiceDetails.jsx.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 =======
 =======
 import { Card,CardContent,CardDescription,CardFooter,CardHeader,CardTitle } from '@/components/ui/card'; export {}; return null} ) {} const getDatacenters = (country) => {} const dataCenters = {} "; "" export { Page };""

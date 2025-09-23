@@ -41,16 +41,25 @@ const initialData: QuoteFormData = {
 
 export default function RequestQuotePage() {
   const steps = useMemo(
-    () => ['Select Services', 'Project Details', 'Timeline', 'Budget', 'Summary'],
+    () => [
+      'Select Services',
+      'Project Details',
+      'Timeline',
+      'Budget',
+      'Summary',
+    ],
     []
   );
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<QuoteFormData>(initialData);
   const [submitting, setSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<{ ok: boolean; message: string } | null>(null);
+  const [submitResult, setSubmitResult] = useState<{
+    ok: boolean;
+    message: string;
+  } | null>(null);
 
-  const goNext = () => setCurrentStep((s) => Math.min(s + 1, steps.length - 1));
-  const goBack = () => setCurrentStep((s) => Math.max(s - 1, 0));
+  const goNext = () => setCurrentStep(s => Math.min(s + 1, steps.length - 1));
+  const goBack = () => setCurrentStep(s => Math.max(s - 1, 0));
 
   const handleSubmit = async () => {
     setSubmitting(true);
@@ -65,7 +74,10 @@ export default function RequestQuotePage() {
       if (!res.ok) throw new Error(data?.message || 'Submission failed');
       setSubmitResult({ ok: true, message: 'Request submitted successfully.' });
     } catch (err: any) {
-      setSubmitResult({ ok: false, message: err?.message || 'Submission failed' });
+      setSubmitResult({
+        ok: false,
+        message: err?.message || 'Submission failed',
+      });
     } finally {
       setSubmitting(false);
     }
@@ -76,11 +88,11 @@ export default function RequestQuotePage() {
       <Head>
         <title>Request a Quote</title>
       </Head>
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-semibold mb-6">Request a Quote</h1>
+      <div className='max-w-4xl mx-auto'>
+        <h1 className='text-3xl font-semibold mb-6'>Request a Quote</h1>
         <StepIndicator steps={steps} currentStep={currentStep} />
 
-        <div className="mt-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm">
+        <div className='mt-6 bg-white dark:bg-gray-90o0 border border-gray-20o0 dark:border-gray-80o0 rounded-xl p-6 shadow-sm'>
           {currentStep === 0 && (
             <ServiceSelectionStep
               value={formData}

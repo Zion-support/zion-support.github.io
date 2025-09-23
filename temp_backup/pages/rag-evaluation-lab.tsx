@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function RAGEvaluationLabPage() {
 	return (
@@ -23,11 +17,7 @@ export default function RAGEvaluationLabPage() {
 							{ title: 'Grounding & Faithfulness', desc: 'Measure factual consistency, citation quality, and hallucination rate.' },
 							{ title: 'Golden Datasets', desc: 'Curate and run task-specific datasets for repeatable evaluation.' },
 							{ title: 'Scenario Evals', desc: 'Synthetic and real-world tests across intents, domains, and edge cases.' },
-<<<<<<< HEAD
-							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions; compare models and versions.' },
-=======
 							{ title: 'CI/CD Quality Gates', desc: 'Fail builds on regressions, compare models and versions.' },
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 							{ title: 'Offline & Canary', desc: 'Pre-release offline runs and live traffic canaries with alerts.' },
 							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
 						].map((f) => (
@@ -38,16 +28,6 @@ export default function RAGEvaluationLabPage() {
 						))}
 					</div>
 
-<<<<<<< HEAD
-  const useCases = [
-    'Enterprise Knowledge Management',
-    'Customer Support Systems',
-    'Research & Development',
-    'Content Generation Platforms',
-    'Educational Applications',
-    'Legal & Compliance Systems'
-  ];
-=======
 					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -69,7 +49,6 @@ export default function RAGEvaluationLabPage() {
 						</div>
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover: text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>
 					</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
@@ -79,9 +58,5 @@ export default function RAGEvaluationLabPage() {
 				</div>
 			</section>
 		</>
-<<<<<<< HEAD
-	);
-=======
 	)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

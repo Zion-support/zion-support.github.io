@@ -1,7 +1,3 @@
-<<<<<<< HEAD:app-disabled/components/AI2026UltimateShowcaseBanner.tsx
-<<<<<<< HEAD
-export { default } from "../../components/AI2026UltimateShowcaseBanner";
-=======
 "use client";
 
 import React from 'react';
@@ -18,7 +14,6 @@ const AI2026UltimateShowcaseBanner: React.FC = () => {
 
 export default AI2026UltimateShowcaseBanner;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
 =======
 'use client';
 
@@ -30,4 +25,4 @@ export default function AI2026UltimateShowcaseBanner() {
     </section>
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850:app/components/AI2026UltimateShowcaseBanner.tsx
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

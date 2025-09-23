@@ -5,5 +5,5 @@ export async function getStaticProps() {
 }
 
 export default function IntelligentProjectManagementSuite(props: any) {
-	return <ServicePage {...props} />;
+	return <ServicePage {...props}  />;
 }

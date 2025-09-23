@@ -1,5 +1,3 @@
-import React from 'react';
-
 type TooltipProps = {
   children: React.ReactNode;
   content: React.ReactNode;
@@ -15,4 +13,3 @@ export function Tooltip({ children, content }: TooltipProps) {
 }
 
 export default Tooltip;
-

@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -14,13 +13,13 @@ export function usePageViewTracking() {
       // Track page view
       console.log('Page view:', window.location.pathname);
     };
-    
+
     // Listen for route changes
     window.addEventListener('popstate', handleRouteChange);
-    
+
     // Initial page load
     handleRouteChange();
-    
+
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };

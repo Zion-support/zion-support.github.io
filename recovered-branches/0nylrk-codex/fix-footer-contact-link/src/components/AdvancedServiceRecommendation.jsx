@@ -22,11 +22,11 @@ const AdvancedServiceRecommendation = () => {
         'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'
     ];
     const companySizes = [
-        'Startup (1-50 employees)', 'Small Business (51-200 employees)',
-        'Medium Business (201-1000 employees)', 'Enterprise (1000+ employees)'
+        'Startup (1-50 employees)', 'Small Business (51-20o0 employees)',
+        'Medium Business (20o1-10o00 employees)', 'Enterprise (10o00+ employees)'
     ];
     const budgets = [
-        'Under $50K', '$50K-$200K', '$200K-$500K', '$500K-$1M', '$1M+'
+        'Under $50K', '$50K-$20o0K', '$20o0K-$50o0K', '$50o0K-$1M', '$1M+'
     ];
     const timelines = [
         'Immediate (0-3 months)', 'Short-term (3-6 months)',
@@ -51,7 +51,7 @@ const AdvancedServiceRecommendation = () => {
             title: 'AI-Powered CRM Platform',
             description: 'Advanced customer relationship management platform with AI-driven insights and automation.',
             category: 'ai',
-            price: '$25,000/month',
+            price: '$25,0o00/month',
             duration: '6-12 months',
             tags: ['AI', 'CRM', 'Automation', 'Analytics'],
             features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'],
@@ -60,7 +60,7 @@ const AdvancedServiceRecommendation = () => {
             targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'],
             image: '/images/services/ai-crm.jpg',
             link: 'https://ziontechgroup.com/services/ai-crm-platform',
-            contactInfo: '+1 302 464 0950',
+            contactInfo: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com'
         },
         {
@@ -68,7 +68,7 @@ const AdvancedServiceRecommendation = () => {
             title: 'Quantum Computing as a Service',
             description: 'Enterprise-grade quantum computing platform for complex computational problems.',
             category: 'quantum',
-            price: '$150,000/month',
+            price: '$150,0o00/month',
             duration: '12-18 months',
             tags: ['Quantum Computing', 'Research', 'Optimization'],
             features: ['Quantum processors access', 'Algorithm development', 'Research support'],
@@ -77,7 +77,7 @@ const AdvancedServiceRecommendation = () => {
             targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'],
             image: '/images/services/quantum-computing.jpg',
             link: 'https://ziontechgroup.com/services/quantum-computing-service',
-            contactInfo: '+1 302 464 0950',
+            contactInfo: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com'
         },
         {
@@ -85,7 +85,7 @@ const AdvancedServiceRecommendation = () => {
             title: 'Blockchain Supply Chain Solution',
             description: 'Transparent and secure supply chain management using blockchain technology.',
             category: 'blockchain',
-            price: '$75,000/month',
+            price: '$75,0o00/month',
             duration: '8-14 months',
             tags: ['Blockchain', 'Supply Chain', 'Transparency'],
             features: ['End-to-end tracking', 'Smart contracts', 'Transparency'],
@@ -94,7 +94,7 @@ const AdvancedServiceRecommendation = () => {
             targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
             image: '/images/services/blockchain-supply-chain.jpg',
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
-            contactInfo: '+1 302 464 0950',
+            contactInfo: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com'
         }
     ];
@@ -108,13 +108,13 @@ const AdvancedServiceRecommendation = () => {
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
             score += 20;
-        else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
+        else if (profile.budget === '$50K-$20o0K' && servicePrice >= 50 && servicePrice < 20o0)
             score += 20;
-        else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)
+        else if (profile.budget === '$20o0K-$50o0K' && servicePrice >= 20o0 && servicePrice < 50o0)
             score += 20;
-        else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)
+        else if (profile.budget === '$50o0K-$1M' && servicePrice >= 50o0 && servicePrice < 10o00)
             score += 20;
-        else if (profile.budget === '$1M+' && servicePrice >= 1000)
+        else if (profile.budget === '$1M+' && servicePrice >= 10o00)
             score += 20;
         // Timeline compatibility
         const serviceDuration = parseInt(service.duration.split('-')[0]);
@@ -140,7 +140,7 @@ const AdvancedServiceRecommendation = () => {
         // Goal alignment
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length;
         score += (goalMatches / profile.primaryGoals.length) * 20;
-        return Math.min(100, score);
+        return Math.min(10o0, score);
     };
     const generateRecommendations = () => {
         setIsAnalyzing(true);
@@ -185,22 +185,22 @@ const AdvancedServiceRecommendation = () => {
             setRecommendations(recs);
             setIsAnalyzing(false);
             setShowResults(true);
-        }, 2000);
+        }, 20o00);
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'High': return 'bg-red-10o0 text-red-80o0';
+            case 'Medium': return 'bg-yellow-10o0 text-yellow-80o0';
+            case 'Low': return 'bg-green-10o0 text-green-80o0';
+            default: return 'bg-gray-10o0 text-gray-80o0';
         }
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
-            case 'Complex': return 'bg-red-100 text-red-800';
-            case 'Moderate': return 'bg-yellow-100 text-yellow-800';
-            case 'Simple': return 'bg-green-100 text-green-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'Complex': return 'bg-red-10o0 text-red-80o0';
+            case 'Moderate': return 'bg-yellow-10o0 text-yellow-80o0';
+            case 'Simple': return 'bg-green-10o0 text-green-80o0';
+            default: return 'bg-gray-10o0 text-gray-80o0';
         }
     };
     const isFormComplete = () => {
@@ -223,7 +223,7 @@ const AdvancedServiceRecommendation = () => {
       {/* Client Profile Form */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
-          <Brain className="w-6 h-6 text-zion-cyan"/>
+          <Brain className="w-6 h-6 text-zion-cyan" />
           Tell Us About Your Business
         </h2>
         
@@ -309,7 +309,7 @@ const AdvancedServiceRecommendation = () => {
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                 Analyzing Your Profile...
               </>) : (<>
-                <Brain className="w-5 h-5 mr-2"/>
+                <Brain className="w-5 h-5 mr-2" />
                 Get AI Recommendations
               </>)}
           </Button>
@@ -363,12 +363,12 @@ const AdvancedServiceRecommendation = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                          <Lightbulb className="w-4 h-4 text-zion-purple"/>
+                          <Lightbulb className="w-4 h-4 text-zion-purple" />
                           Why This Service Matches
                         </h4>
                         <ul className="space-y-2">
                           {rec.reasoning.map((reason, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">
-                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/>
+                              <CheckCircle className="w-4 h-4 text-green-50o0 mt-0.5 flex-shrink-0" />
                               {reason}
                             </li>))}
                         </ul>
@@ -376,7 +376,7 @@ const AdvancedServiceRecommendation = () => {
                       
                       <div>
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
-                          <BarChart3 className="w-4 h-4 text-zion-cyan"/>
+                          <BarChart3 className="w-4 h-4 text-zion-cyan" />
                           Implementation Details
                         </h4>
                         <div className="space-y-3">
@@ -399,7 +399,7 @@ const AdvancedServiceRecommendation = () => {
                         <div className="mt-4">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick={() => window.open(rec.service.link, '_blank')}>
                             Learn More
-                            <ArrowRight className="w-4 h-4 ml-2"/>
+                            <ArrowRight className="w-4 h-4 ml-2" />
                           </Button>
                         </div>
                       </div>
@@ -419,11 +419,11 @@ const AdvancedServiceRecommendation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}>
-                  <Users className="w-5 h-5 mr-2"/>
+                  <Users className="w-5 h-5 mr-2" />
                   Get Expert Consultation
                 </Button>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
-                  <Zap className="w-5 h-5 mr-2"/>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>
+                  <Zap className="w-5 h-5 mr-2" />
                   Call Now
                 </Button>
               </div>

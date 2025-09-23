@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// Stub talent data - placeholder for missing functionality
-=======
 
 // Stub talent data - placeholder for missing functionality
 
@@ -29,7 +26,6 @@ export const TALENT_PROFILES = [
     createdAt: new Date().toISOString()
     originalLanguage: 'en'
 translations: {}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const TALENT_PROFILES = [
   {
     id: '1',
@@ -54,11 +50,6 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
-<<<<<<< HEAD
-    translations: {}
-  }
-];
-=======
 translations: {},
   },;
 ];
@@ -93,4 +84,3 @@ export const TALENT_PROFILES = [;
 ;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

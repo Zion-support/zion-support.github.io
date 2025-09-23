@@ -5,12 +5,11 @@
 };
 :backup-problematic-files/reviews/StarRating.tsx
 
-> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>)
+> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2"  /> </svg> </button>)
 })
 }</div>)
 }
 export const StarRating: React.FC<Props> = ({
-
 
   value,
   onChange,
@@ -18,18 +17,14 @@ export const StarRating: React.FC<Props> = ({
   readOnly,;
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
 
-
-type Props = {
+type Props ={
   value: number,
   onChange: (val: number) => void,
-
-
 
   size?: number;
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-
 
   const stars = [1, 2, 3, 4, 5];
   return (
@@ -42,16 +37,13 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
 
-
-
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >
             <svg
 
-
-              xmlns='http://www.w3.org/2000/svg'
+              xmlns='http://www.w3.org/20o00/svg'
               width={size}
               height={size}
               viewBox='0 0 24 24'
@@ -62,7 +54,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
               strokeLinejoin='round'
               className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}
             >
-              <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2' />
+              <polygon points='12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2'  />
             </svg>
           </button>
         );
@@ -73,7 +65,6 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 export default StarRating;              width={size}
               height={size}
 
-
               viewBox="0 0 24 24"
               fill={active ? 'gold' : 'none'}
               stroke={active ? 'gold' : 'currentColor'}
@@ -82,18 +73,14 @@ export default StarRating;              width={size}
               strokeLinejoin="round"
               className={`drop-shadow ${active ? 'animate-pulse-slow' : ''}`}
             >
-              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" />
+              <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2"  />
             </svg>
           </button>
         )
       })}
 
-
-
     </div>
   )
 }
 export default StarRating;
-
-
 

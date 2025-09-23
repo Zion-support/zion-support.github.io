@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -14,24 +13,28 @@ interface CategoryPageProps {
   category: string;
 }
 
-const CategoryPage: React.FC<CategoryPageProps> = ({ posts, hasSession, category }) => {
+const CategoryPage: React.FC<CategoryPageProps> = ({
+  posts,
+  hasSession,
+  category,
+}) => {
   return (
     <>
       <Head>
         <title>{`${category} Forum – ZionAI`}</title>
       </Head>
-      <main className="container py-8">
+      <main className='container py-8'>
         {posts && posts.length > 0 ? (
-          <div className="space-y-4">
-            {posts.map((post) => (
+          <div className='space-y-4'>
+            {posts.map(post => (
               <PostCard key={post.id} post={post} />
             ))}
           </div>
         ) : (
           <EmptyState
-            title="No discussions yet"
-            subtitle="Be the first to start a conversation."
-            cta="Create Post"
+            title='No discussions yet'
+            subtitle='Be the first to start a conversation.'
+            cta='Create Post'
             href={`/community/create?category=${category}`}
             hasSession={hasSession}
           />
@@ -41,7 +44,13 @@ const CategoryPage: React.FC<CategoryPageProps> = ({ posts, hasSession, category
   );
 };
 
-export const getServerSideProps = async ({ req, params }: { req: any; params?: { slug?: string } }) => {
+export const getServerSideProps = async ({
+  req,
+  params,
+}: {
+  req: any;
+  params?: { slug?: string };
+}) => {
   const category = params?.slug as string;
   const supabaseUrl =
     process.env.SUPABASE_URL ||
@@ -74,8 +83,8 @@ export const getServerSideProps = async ({ req, params }: { req: any; params?: {
     props: {
       posts: (data as ForumPost[]) || [],
       hasSession: Boolean(token),
-      category
-    }
+      category,
+    },
   };
 };
 

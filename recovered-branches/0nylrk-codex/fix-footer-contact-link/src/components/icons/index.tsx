@@ -1,12 +1,7 @@
-import React from 'react';
 import * as LucideIcons from 'lucide-react';
 
 // Alias for missing icons or for icons with different names
-<<<<<<< HEAD
-const iconAliases: Record<string, keyof typeof LucideIcons> = {
-=======
 const iconAliases: Record<stringkeyof typeof LucideIcons> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Grid views
   LayoutGrid: 'LayoutGrid',
   List: 'List',
@@ -105,21 +100,12 @@ const iconAliases: Record<stringkeyof typeof LucideIcons> = {
   BarChart: 'BarChart3',
   BookOpen: 'BookOpen',
   Key: 'Key',
-<<<<<<< HEAD
-  Tag: 'Tag' as keyof typeof LucideIcons,
-};
-=======
   Tag: 'Tag' as keyof typeof LucideIcons};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type IconProps = LucideIcons.LucideProps;
 
 // Create a type safe export for each icon
-<<<<<<< HEAD
-const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
-=======
 const createIconComponent = (aliasName: stringiconName: keyof typeof LucideIcons) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const IconComponent = (props: IconProps) => {
     // Fix: Use proper type casting to access the icon component
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>;
@@ -130,18 +116,6 @@ const createIconComponent = (aliasName: stringiconName: keyof typeof LucideIcons
 };
 
 // Export all of our icon components
-<<<<<<< HEAD
-const iconExports: Record<string, React.FC<IconProps>> = {};
-
-// Generate icon exports
-Object.entries(iconAliases).forEach(([alias, lucideName]) => {
-  if (LucideIcons[lucideName]) {
-    iconExports[alias] = createIconComponent(alias, lucideName);
-  } else {
-    console.warn(`Icon '${lucideName}' not found in lucide-react`);
-    // Use a fallback icon
-    iconExports[alias] = createIconComponent(alias, 'HelpCircle');
-=======
 const iconExports: Record<stringReact.FC<IconProps>> = {};
 
 // Generate icon exports
@@ -152,7 +126,6 @@ Object.entries(iconAliases).forEach(([aliaslucideName]) => {
     console.warn(`Icon '${lucideName}' not found in lucide-react`);
     // Use a fallback icon
     iconExports[alias] = createIconComponent(alias'HelpCircle');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });
 
@@ -221,12 +194,7 @@ export const {
   BarChart,
   BookOpen,
   Key,
-<<<<<<< HEAD
-  Tag,
-} = iconExports;
-=======
   Tag} = iconExports;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 // Also export all original icons from lucide-react
 export * from 'lucide-react';

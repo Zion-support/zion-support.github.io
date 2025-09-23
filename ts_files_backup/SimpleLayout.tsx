@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 interface SimpleLayoutProps {
@@ -7,12 +6,16 @@ interface SimpleLayoutProps {
   children: React.ReactNode;
 }
 
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
+export default function SimpleLayout({
+  title,
+  description,
+  children,
+}: SimpleLayoutProps) {
   return (
     <>
       <Head>
         <title>{title}</title>
-        {description && <meta name="description" content={description} />}
+        {description && <meta name='description' content={description} />}
       </Head>
       {children}
     </>

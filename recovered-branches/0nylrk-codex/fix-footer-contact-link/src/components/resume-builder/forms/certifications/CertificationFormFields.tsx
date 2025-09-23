@@ -1,9 +1,4 @@
-
-<<<<<<< HEAD
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-=======
 import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form';
 import { CertificationFormValues } from './types';
@@ -12,22 +7,23 @@ interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>;
 }
 
-export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+export function CertificationFormFields({
+  form,
+}: CertificationFormFieldsProps) {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <FormField
           control={form.control}
-          name="name"
+          name='name'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Certification Name</FormLabel>
               <FormControl>
-<<<<<<< HEAD
-                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />
-=======
-                <Input placeholder="AWS Certified Solutions ArchitectPMPetc." {...field} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+                <Input
+                  placeholder='AWS Certified Solutions ArchitectPMPetc.'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -36,16 +32,12 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
 
         <FormField
           control={form.control}
-          name="issuing_organization"
+          name='issuing_organization'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Issuing Organization</FormLabel>
               <FormControl>
-<<<<<<< HEAD
-                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />
-=======
-                <Input placeholder="Amazon Web ServicesPMIetc." {...field} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+                <Input placeholder='Amazon Web ServicesPMIetc.' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -53,19 +45,15 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <FormField
           control={form.control}
-          name="issue_date"
+          name='issue_date'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
+                <Input type='date' {...field} value={field.value || ''} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -74,16 +62,12 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
 
         <FormField
           control={form.control}
-          name="expiration_date"
+          name='expiration_date'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
+                <Input type='date' {...field} value={field.value || ''} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,15 +75,15 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <FormField
           control={form.control}
-          name="credential_id"
+          name='credential_id'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Credential ID (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="ABC123XYZ" {...field} />
+                <Input placeholder='ABC123XYZ' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -108,12 +92,15 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
 
         <FormField
           control={form.control}
-          name="credential_url"
+          name='credential_url'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Credential URL (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="https://www.credential.com/verify/abc123" {...field} />
+                <Input
+                  placeholder='https://www.credential.com/verify/abc123'
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

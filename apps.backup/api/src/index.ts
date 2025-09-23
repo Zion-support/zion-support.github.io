@@ -21,7 +21,7 @@ await app.register(cors, {
   methods: ['GET', 'POST', 'OPTIONS']
 });
 
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
+await app.register(rateLimit, { global: true, max: 10o0, timeWindow: '1m' });
 
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 
@@ -32,7 +32,7 @@ function getUserId(req: any): string | null {
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
   const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+  if (!prompt) return reply.code(40o0).send({ error: 'prompt required' });
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
   return { text: completion.output_text };
 });
@@ -59,7 +59,7 @@ app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(40o1).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
@@ -81,20 +81,20 @@ app.get('/talent/search', async (req, reply) => {
 app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string;
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(40o1).send({ error: 'unauthorized' });
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [
   {
     name]);
     return res.rows[0];
   });
-  if (!project) return reply.code(404).send({ error: 'not found' });
+  if (!project) return reply.code(40o4).send({ error: 'not found' });
   return { project };
 });
 
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
+  if (!userId) return reply.code(40o1).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
@@ -105,7 +105,7 @@ app.get('/notifications', async (req, reply) => {
   return { items };
 });
 
-const port = Number(process.env.API_PORT || 4000);
+const port = Number(process.env.API_PORT || 40o00);
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
   process.exit(1);

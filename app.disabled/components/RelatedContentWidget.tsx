@@ -7,4 +7,8 @@ export default function RelatedContentWidget() {
 			<p className="text-sm text-gray-600">More resources coming soon.</p>
 		</div>
 	);
+export type RelatedPost ={ title: string; slug: string; excerpt?: string; image?: string };
+
+export default function RelatedContentWidget(_props: { title?: string; posts?: RelatedPost[] }) {
+  return null;
 }

@@ -1,9 +1,10 @@
-import React from 'react';
 import type { QuoteFormData } from '../../../pages/request-quote';
 
 export type ServiceSelectionStepProps = {
   value: QuoteFormData;
-  onChange: (updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void;
+  onChange: (
+    updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)
+  ) => void;
   onNext: () => void;
 };
 
@@ -33,34 +34,45 @@ const EQUIPMENT_OPTIONS = [
   'Other Specialized Hardware',
 ];
 
-export default function ServiceSelectionStep({ value, onChange, onNext }: ServiceSelectionStepProps) {
+export default function ServiceSelectionStep({
+  value,
+  onChange,
+  onNext,
+}: ServiceSelectionStepProps) {
   function toggleItem(list: string[], item: string): string[] {
-    return list.includes(item) ? list.filter((i) => i !== item) : [...list, item];
+    return list.includes(item) ? list.filter(i => i !== item) : [...list, item];
   }
 
   const canContinue =
-    value.serviceTypes.length > 0 || value.talentRoles.length > 0 || value.equipmentNeeds.length > 0;
+    value.serviceTypes.length > 0 ||
+    value.talentRoles.length > 0 ||
+    value.equipmentNeeds.length > 0;
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-4">Select services, talent, and equipment</h2>
+      <h2 className='text-xl font-semibold mb-4'>
+        Select services, talent, and equipment
+      </h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className='grid md:grid-cols-3 gap-6'>
         <div>
-          <h3 className="font-medium mb-2">Services</h3>
-          <div className="flex flex-wrap gap-2">
-            {SERVICE_OPTIONS.map((opt) => (
+          <h3 className='font-medium mb-2'>Services</h3>
+          <div className='flex flex-wrap gap-2'>
+            {SERVICE_OPTIONS.map(opt => (
               <button
                 key={opt}
-                type="button"
+                type='button'
                 onClick={() =>
-                  onChange((prev) => ({ ...prev, serviceTypes: toggleItem(prev.serviceTypes, opt) }))
+                  onChange(prev => ({
+                    ...prev,
+                    serviceTypes: toggleItem(prev.serviceTypes, opt),
+                  }))
                 }
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.serviceTypes.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -70,20 +82,23 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
         </div>
 
         <div>
-          <h3 className="font-medium mb-2">Talent</h3>
-          <div className="flex flex-wrap gap-2">
-            {TALENT_OPTIONS.map((opt) => (
+          <h3 className='font-medium mb-2'>Talent</h3>
+          <div className='flex flex-wrap gap-2'>
+            {TALENT_OPTIONS.map(opt => (
               <button
                 key={opt}
-                type="button"
+                type='button'
                 onClick={() =>
-                  onChange((prev) => ({ ...prev, talentRoles: toggleItem(prev.talentRoles, opt) }))
+                  onChange(prev => ({
+                    ...prev,
+                    talentRoles: toggleItem(prev.talentRoles, opt),
+                  }))
                 }
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.talentRoles.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -93,20 +108,23 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
         </div>
 
         <div>
-          <h3 className="font-medium mb-2">Equipment</h3>
-          <div className="flex flex-wrap gap-2">
-            {EQUIPMENT_OPTIONS.map((opt) => (
+          <h3 className='font-medium mb-2'>Equipment</h3>
+          <div className='flex flex-wrap gap-2'>
+            {EQUIPMENT_OPTIONS.map(opt => (
               <button
                 key={opt}
-                type="button"
+                type='button'
                 onClick={() =>
-                  onChange((prev) => ({ ...prev, equipmentNeeds: toggleItem(prev.equipmentNeeds, opt) }))
+                  onChange(prev => ({
+                    ...prev,
+                    equipmentNeeds: toggleItem(prev.equipmentNeeds, opt),
+                  }))
                 }
                 className={[
                   'px-3 py-1 rounded-full border text-sm',
                   value.equipmentNeeds.includes(opt)
-                    ? 'bg-indigo-600 text-white border-indigo-600'
-                    : 'bg-transparent border-gray-300 dark:border-gray-700',
+                    ? 'bg-indigo-60o0 text-white border-indigo-60o0'
+                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0',
                 ].join(' ')}
               >
                 {opt}
@@ -116,12 +134,12 @@ export default function ServiceSelectionStep({ value, onChange, onNext }: Servic
         </div>
       </div>
 
-      <div className="mt-6 flex justify-end">
+      <div className='mt-6 flex justify-end'>
         <button
-          type="button"
+          type='button'
           onClick={onNext}
           disabled={!canContinue}
-          className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50"
+          className='px-4 py-2 rounded-md bg-indigo-60o0 text-white disabled:opacity-50'
         >
           Continue
         </button>

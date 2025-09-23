@@ -1,39 +1,23 @@
 
-import React from 'react';
 import { Milestone } from '@/hooks/useMilestones';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react';
-=======
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
 CreditCard
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface PaymentSummaryProps {
   milestones: Milestone[];
   paymentTerms: string | null;
 }
 
-<<<<<<< HEAD
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
-=======
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestonespaymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum) => sum + parseFloat(m.amount.toString())
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     0
   ).toFixed(2);
   
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
     .reduce(
-<<<<<<< HEAD
-      (sum, m) => sum + parseFloat(m.amount.toString()), 
-=======
       (sum) => sum + parseFloat(m.amount.toString())
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       0
     ).toFixed(2);
 

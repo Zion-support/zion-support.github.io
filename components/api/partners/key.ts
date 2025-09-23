@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
-=======
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -49,7 +39,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -62,8 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
-<<<<<<< HEAD
-=======
 
   const newKey = {
     id: uuidv4(), partnerId: auth.partner.id,
@@ -161,21 +148,12 @@ if (existing.active = false) {
   if (existing) existing.active = false,
   // Create new key
   const now = new Date().toISOString()
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const newKey = {
     id: uuidv4(),
     partnerId: auth.partner.id,
     key: uuidv4(),
     active: true,
     createdAt: now,
-<<<<<<< HEAD
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
-  };
-  keys.push(newKey as any);
-  await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key });
-}
-=======
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
   keys.push(newKey as any),
   await saveApiKeys(keys),
@@ -183,7 +161,6 @@ if (existing.active = false) {
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
@@ -191,4 +168,4 @@ if (existing.active = false) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

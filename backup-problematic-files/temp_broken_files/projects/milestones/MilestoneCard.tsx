@@ -37,14 +37,14 @@ export function MilestoneCard({ ;
   function getStatusBadgeColor() {;
     switch (status) {;
       case 'completed':;
-        return 'bg-green-500',;
+        return 'bg-green-50o0',;
       case 'in_progress':;
-        return 'bg-blue-500',;
+        return 'bg-blue-50o0',;
       case 'pending':;
-        return 'bg-yellow-500',;
+        return 'bg-yellow-50o0',;
       case 'rejected':;
-        return 'bg-red-500',;
-      default:return 'bg-gray-500';
+        return 'bg-red-50o0',;
+      default:return 'bg-gray-50o0';
     }
   }
   ;
@@ -66,7 +66,7 @@ export function MilestoneCard({ ;
             </Badge>;
             ;
             {isUnderDispute && disputeStatus && (;
-              <DisputeStatusBadge status={disputeStatus} />;
+              <DisputeStatusBadge status={disputeStatus}  />;
             )}
           </div>;
         </div>;
@@ -89,20 +89,20 @@ export function MilestoneCard({ ;
               milestoneId={id} ;
               variant="ghost";
               size="sm";
-            />;
+             />;
           )}
         </div>;
         ;
         <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
-              <X className="h-4 w-4 mr-1" /> Reject;
+              <X className="h-4 w-4 mr-1"  /> Reject;
             </Button>;
           )}
           ;
           {status === 'pending' && onApprove && !isUnderDispute && (;
             <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
-              <Check className="h-4 w-4 mr-1" /> Approve;
+              <Check className="h-4 w-4 mr-1"  /> Approve;
             </Button>;
           )}
           ;
@@ -160,15 +160,14 @@ onReject ;
   isUnderDispute, disputeStatus ;
  } = useDisputeCheck (projectId, id);
 switch (status) {';
-  case 'completed': return 'bg-green-500';';
-case 'in progress': return 'bg-blue-500';';
-case 'pending': return 'bg-yellow-500';';
+  case 'completed': return 'bg-green-50o0';';
+case 'in progress': return 'bg-blue-50o0';';
+case 'pending': return 'bg-yellow-50o0';';
 case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;
-}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;
-  disputeStatus ;"}/>) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';
-  status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
+}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status={;
+  disputeStatus ;"} />) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';
+  status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId={;
   projectId ;
-}/>) ;
+} />) ;
 }</div> Actions frozen due to dispute </Button>) ;
-
 

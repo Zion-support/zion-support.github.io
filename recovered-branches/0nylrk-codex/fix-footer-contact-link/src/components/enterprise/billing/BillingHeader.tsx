@@ -1,41 +1,33 @@
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";
-=======
-import { DownloadFileTextMailBarChart3 } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-import { Link } from "react-router-dom";
+import { Button } from '@/components/ui/button';
+import { DownloadFileTextMailBarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function BillingHeader() {
   return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold tracking-tight">Billing & Invoices</h1>
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm" className="gap-1">
-            <Download className="h-4 w-4" />
+    <div className='space-y-2'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-3xl font-bold tracking-tight'>
+          Billing & Invoices
+        </h1>
+        <div className='flex gap-2'>
+          <Button variant='outline' size='sm' className='gap-1'>
+            <Download className='h-4 w-4' />
             Export
           </Button>
-          <Button variant="outline" size="sm" className="gap-1">
-            <Mail className="h-4 w-4" />
+          <Button variant='outline' size='sm' className='gap-1'>
+            <Mail className='h-4 w-4' />
             Contact Billing Support
           </Button>
-          <Button variant="outline" size="sm" className="gap-1" asChild>
-            <Link to="/dashboard/client/analytics">
-              <BarChart3 className="h-4 w-4" />
+          <Button variant='outline' size='sm' className='gap-1' asChild>
+            <Link to='/dashboard/client/analytics'>
+              <BarChart3 className='h-4 w-4' />
               Analytics
             </Link>
           </Button>
         </div>
       </div>
-      <p className="text-muted-foreground">
-<<<<<<< HEAD
-        Manage your subscription, view invoice history, and update payment methods.
-=======
+      <p className='text-muted-foreground'>
         Manage your subscriptionview invoice historyand update payment methods.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </p>
     </div>
   );

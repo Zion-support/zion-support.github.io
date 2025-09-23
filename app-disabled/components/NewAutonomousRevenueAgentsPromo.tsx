@@ -1,3 +1,3 @@
 export default function NewAutonomousRevenueAgentsPromo() {
-	return null;
+  return null;
 }

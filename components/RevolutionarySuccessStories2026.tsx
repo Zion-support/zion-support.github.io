@@ -18,7 +18,7 @@ import {
   Zap
 } from 'lucide-react';
 
-const RevolutionarySuccessStories2026 = () => {
+const RevolutionarySuccessStories20o26 = () => {
   const [activeStorysetActiveStory] = useState(0);
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -35,21 +35,21 @@ const RevolutionarySuccessStories2026 = () => {
       challenge: 'Manual processes causing 40% efficiency loss',
       solution: 'Complete AI automation suite implementation',
       results: {
-        efficiency: '+300%',
+        efficiency: '+30o0%',
         costReduction: '-75%',
-        timeSaved: '2,000 hours/month',
-        roi: '500%'
+        timeSaved: '2,0o00 hours/month',
+        roi: '50o0%'
       },
       testimonial: {
-        text: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 300% efficiency gains in just 3 months.",
+        text: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 30o0% efficiency gains in just 3 months.",
         author: "Sarah Chen",
         position: "CEOTechCorp Global",
         avatar: "👩‍💼"
       },
       timeline: [
         { month: 'Month 1'achievement: 'AI system 'deployment', 'status: 'completed' },
-        { month: 'Month 2'achievement: '300% efficiency 'gain', 'status: 'completed' },
-        { month: 'Month 3'achievement: '500% ROI 'achieved', 'status: 'completed' },
+        { month: 'Month 2'achievement: '30o0% efficiency 'gain', 'status: 'completed' },
+        { month: 'Month 3'achievement: '50o0% ROI 'achieved', 'status: 'completed' },
         { month: 'Month 6'achievement: 'Global 'expansion', 'status: 'in-progress' }
       ]
     },
@@ -61,7 +61,7 @@ const RevolutionarySuccessStories2026 = () => {
       challenge: 'Patient data processing taking 8 hours daily',
       solution: 'AI-powered medical data analysis system',
       results: {
-        efficiency: '+400%',
+        efficiency: '+40o0%',
         costReduction: '-60%',
         timeSaved: '6 hours/day',
         roi: '350%'
@@ -75,7 +75,7 @@ const RevolutionarySuccessStories2026 = () => {
       timeline: [
         { month: 'Week 1'achievement: 'System 'integration', 'status: 'completed' },
         { month: 'Week 2'achievement: 'Staff 'training', 'status: 'completed' },
-        { month: 'Month 1'achievement: '400% efficiency 'gain', 'status: 'completed' },
+        { month: 'Month 1'achievement: '40o0% efficiency 'gain', 'status: 'completed' },
         { month: 'Month 2'achievement: 'FDA 'approval', 'status: 'completed' }
       ]
     },
@@ -89,8 +89,8 @@ const RevolutionarySuccessStories2026 = () => {
       results: {
         efficiency: '+250%',
         costReduction: '-80%',
-        timeSaved: '1,500 hours/month',
-        roi: '600%'
+        timeSaved: '1,50o0 hours/month',
+        roi: '60o0%'
       },
       testimonial: {
         text: "Our fraud detection accuracy increased to 99.9% while reducing processing time by 80%. Incredible results!",
@@ -102,7 +102,7 @@ const RevolutionarySuccessStories2026 = () => {
         { month: 'Week 1'achievement: 'AI model 'training', 'status: 'completed' },
         { month: 'Week 3'achievement: 'System 'deployment', 'status: 'completed' },
         { month: 'Month 1'achievement: '99.9% 'accuracy', 'status: 'completed' },
-        { month: 'Month 3'achievement: '600% 'ROI', 'status: 'completed' }
+        { month: 'Month 3'achievement: '60o0% 'ROI', 'status: 'completed' }
       ]
     },
     {
@@ -113,9 +113,9 @@ const RevolutionarySuccessStories2026 = () => {
       challenge: 'Inventory management inefficiencies',
       solution: 'AI-powered demand forecasting and automation',
       results: {
-        efficiency: '+200%',
+        efficiency: '+20o0%',
         costReduction: '-65%',
-        timeSaved: '3,000 hours/month',
+        timeSaved: '3,0o00 hours/month',
         roi: '450%'
       },
       testimonial: {
@@ -134,17 +134,17 @@ const RevolutionarySuccessStories2026 = () => {
   ];
 
   const overallStats = [
-    { label: 'Companies 'Transformed', 'value: '500+'icon: Users },
+    { label: 'Companies 'Transformed', 'value: '50o0+'icon: Users },
     { label: 'Average 'ROI', 'value: '475%'icon: TrendingUp },
     { label: 'Time 'Saved', 'value: '50K+ 'hours', 'icon: Clock },
     { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSign }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234F46E5" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234F46E5" fill-opacity="0.0o5"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -155,22 +155,22 @@ const RevolutionarySuccessStories2026 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <Award className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-blue-200 font-medium">Revolutionary Success Stories 2026</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-blue-50o0/30 mb-6">
+            <Award className="w-5 h-5 text-blue-40o0 mr-2"  />
+            <span className="text-blue-20o0 font-medium">Revolutionary Success Stories 20o26</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent">
               Real Results,
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <br  />
+            <span className="bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">
               Real Impact
             </span>
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             See how industry leaders are achieving unprecedented success with our AI and automation solutions. 
             These 'aren', 't just promises—'they', 're proven results.
           </p>
@@ -185,11 +185,11 @@ const RevolutionarySuccessStories2026 = () => {
         >
           {overallStats.map((statindex) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-4">
-                <stat.icon className="w-8 h-8 text-blue-400" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 border border-blue-50o0/30 mb-4">
+                <stat.icon className="w-8 h-8 text-blue-40o0"  />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
+              <div className="text-gray-40o0">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -206,10 +206,10 @@ const RevolutionarySuccessStories2026 = () => {
               <button
                 key={story.id}
                 onClick={() => setActiveStory(index)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-30o0 ${
                   activeStory === index
-                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                    ? 'bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white shadow-lg shadow-blue-50o0/25'
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                 }`}
               >
                 <div className="flex items-center space-x-2">
@@ -237,38 +237,38 @@ const RevolutionarySuccessStories2026 = () => {
                     <div className="text-4xl">{successStories[activeStory].logo}</div>
                     <div>
                       <h3 className="text-2xl font-bold text-white">{successStories[activeStory].company}</h3>
-                      <p className="text-blue-300">{successStories[activeStory].industry}</p>
+                      <p className="text-blue-30o0">{successStories[activeStory].industry}</p>
                     </div>
                   </div>
 
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2 flex items-center">
-                        <Target className="w-5 h-5 mr-2 text-red-400" />
+                        <Target className="w-5 h-5 mr-2 text-red-40o0"  />
                         Challenge
                       </h4>
-                      <p className="text-gray-300">{successStories[activeStory].challenge}</p>
+                      <p className="text-gray-30o0">{successStories[activeStory].challenge}</p>
                     </div>
 
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2 flex items-center">
-                        <Zap className="w-5 h-5 mr-2 text-yellow-400" />
+                        <Zap className="w-5 h-5 mr-2 text-yellow-40o0"  />
                         Solution
                       </h4>
-                      <p className="text-gray-300">{successStories[activeStory].solution}</p>
+                      <p className="text-gray-30o0">{successStories[activeStory].solution}</p>
                     </div>
 
                     {/* Results Grid */}
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                        <BarChart3 className="w-5 h-5 mr-2 text-green-400" />
+                        <BarChart3 className="w-5 h-5 mr-2 text-green-40o0"  />
                         Results
                       </h4>
                       <div className="grid grid-cols-2 gap-4">
                         {Object.entries(successStories[activeStory].results).map(([keyvalue]) => (
                           <div key={key} className="bg-white/5 rounded-lg p-4 text-center">
-                            <div className="text-2xl font-bold text-green-400 mb-1">{value}</div>
-                            <div className="text-sm text-gray-400 capitalize">
+                            <div className="text-2xl font-bold text-green-40o0 mb-1">{value}</div>
+                            <div className="text-sm text-gray-40o0 capitalize">
                               {key.replace(/([A-Z])/g' $1').trim()}
                             </div>
                           </div>
@@ -281,16 +281,16 @@ const RevolutionarySuccessStories2026 = () => {
                 {/* Right Column - Testimonial & Timeline */}
                 <div className="space-y-6">
                   {/* Testimonial */}
-                  <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
-                    <Quote className="w-8 h-8 text-blue-400 mb-4" />
-                    <p className="text-gray-200 italic mb-4 text-lg leading-relaxed">
+                  <div className="bg-gradient-to-br from-blue-50o0/10 to-purple-50o0/10 rounded-xl p-6 border border-blue-50o0/20">
+                    <Quote className="w-8 h-8 text-blue-40o0 mb-4"  />
+                    <p className="text-gray-20o0 italic mb-4 text-lg leading-relaxed">
                       "{successStories[activeStory].testimonial.text}"
                     </p>
                     <div className="flex items-center space-x-3">
                       <div className="text-2xl">{successStories[activeStory].testimonial.avatar}</div>
                       <div>
                         <div className="font-semibold text-white">{successStories[activeStory].testimonial.author}</div>
-                        <div className="text-blue-300 text-sm">{successStories[activeStory].testimonial.position}</div>
+                        <div className="text-blue-30o0 text-sm">{successStories[activeStory].testimonial.position}</div>
                       </div>
                     </div>
                   </div>
@@ -298,21 +298,21 @@ const RevolutionarySuccessStories2026 = () => {
                   {/* Timeline */}
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
-                      <Clock className="w-5 h-5 mr-2 text-purple-400" />
+                      <Clock className="w-5 h-5 mr-2 text-purple-40o0"  />
                       Implementation Timeline
                     </h4>
                     <div className="space-y-3">
                       {successStories[activeStory].timeline.map((itemindex) => (
                         <div key={index} className="flex items-center space-x-3">
                           <div className={`w-3 h-3 rounded-full ${
-                            item.status === 'completed' ? 'bg-green-400' : 'bg-yellow-400'
+                            item.status === 'completed' ? 'bg-green-40o0' : 'bg-yellow-40o0'
                           }`}></div>
                           <div className="flex-1">
                             <div className="text-white font-medium">{item.achievement}</div>
-                            <div className="text-gray-400 text-sm">{item.month}</div>
+                            <div className="text-gray-40o0 text-sm">{item.month}</div>
                           </div>
                           {item.status === 'completed' && (
-                            <CheckCircle className="w-5 h-5 text-green-400" />
+                            <CheckCircle className="w-5 h-5 text-green-40o0"  />
                           )}
                         </div>
                       ))}
@@ -331,26 +331,26 @@ const RevolutionarySuccessStories2026 = () => {
           transition={{ duration: 0.8delay: 0.6 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-blue-500/30">
+          <div className="bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-2xl p-8 border border-blue-50o0/30">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join hundreds of companies already achieving extraordinary results. 
               'Let', 's create your success story together.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-full hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40">
+              <button className="group px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white font-semibold rounded-full hover:from-blue-60o0 hover:to-purple-60o0 transition-all duration-30o0 shadow-lg shadow-blue-50o0/25 hover:shadow-blue-50o0/40">
                 <div className="flex items-center">
                   <span>Start Your Success Story</span>
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />
                 </div>
               </button>
               
-              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-30o0 border border-white/20">
                 <div className="flex items-center">
-                  <Star className="w-5 h-5 mr-2" />
+                  <Star className="w-5 h-5 mr-2"  />
                   <span>View All Case Studies</span>
                 </div>
               </button>
@@ -362,4 +362,4 @@ const RevolutionarySuccessStories2026 = () => {
   );
 };
 
-export default RevolutionarySuccessStories2026;
+export default RevolutionarySuccessStories20o26;

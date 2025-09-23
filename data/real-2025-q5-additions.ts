@@ -1,9 +1,10 @@
-export const real2025Q5Additions = [
+export const real20o25Q5Additions = [
   {
     id: 'ai-email-autoresponder',
     name: 'AI Email Autoresponder',
     category: 'AI & Data',
-    tagline: 'Automatically triage and answer routine emails with human‑like quality',
+    tagline:
+      'Automatically triage and answer routine emails with human‑like quality',
     description:
       'Deploy an AI agent that reads inbound email, drafts accurate responses, routes intents, and escalates edge cases with audit logs and allow‑lists.',
     price: '$79',
@@ -53,7 +54,8 @@ export const real2025Q5Additions = [
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     category: 'Developer Tools',
-    tagline: 'Partner, referral, and influencer tracking with automated payouts',
+    tagline:
+      'Partner, referral, and influencer tracking with automated payouts',
     description:
       'Spin up a branded affiliate portal with unique links, fraud checks, and automated payouts. Import orders from ecommerce and SaaS billing.',
     price: '$99',
@@ -114,7 +116,11 @@ export const real2025Q5Additions = [
     ],
     useCases: ['MSP helpdesk', 'Internal IT support'],
     integrations: ['Freshdesk', 'Zendesk', 'Jira Service Management'],
-    competitors: ['freshdesk.com', 'zendesk.com', 'atlassian.com/jira/service-management'],
+    competitors: [
+      'freshdesk.com',
+      'zendesk.com',
+      'atlassian.com/jira/service-management',
+    ],
     link: '/services/managed-it-helpdesk',
   },
   {
@@ -201,7 +207,11 @@ export const real2025Q5Additions = [
       'Core Web Vitals snapshots',
     ],
     useCases: ['Marketing sites', 'Content teams'],
-    integrations: ['Google Search Console', 'Screaming Frog (export)', 'Netlify'],
+    integrations: [
+      'Google Search Console',
+      'Screaming Frog (export)',
+      'Netlify',
+    ],
     competitors: ['ahrefs.com', 'semrush.com', 'sitebulb.com'],
     link: '/services/smb-seo-health-monitor',
   },

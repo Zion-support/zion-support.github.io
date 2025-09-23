@@ -82,19 +82,19 @@ const AdvancedContentOptimizer = () => {
   }[]);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 py-16">
+    <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-blue-90o0 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium mb-6">
-            <Target className="w-4 h-4 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white text-sm font-medium mb-6">
+            <Target className="w-4 h-4 mr-2"  />
             Advanced Content Optimization
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Content That
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Converts</span>
+            <span className="bg-gradient-to-r from-purple-40o0 to-blue-40o0 bg-clip-text text-transparent"> Converts</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Our advanced content optimization techniques ensure your content engages users
             drives conversionsand delivers measurable results.
           </p>
@@ -104,38 +104,38 @@ const AdvancedContentOptimizer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <Users className="w-8 h-8 text-purple-400" />
+              <Users className="w-8 h-8 text-purple-40o0"  />
               <span className="text-2xl font-bold text-white">{contentMetrics.engagement}%</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Engagement</h3>
-            <p className="text-gray-300 text-sm">User interaction rate</p>
+            <p className="text-gray-30o0 text-sm">User interaction rate</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <BarChart3 className="w-8 h-8 text-blue-400" />
+              <BarChart3 className="w-8 h-8 text-blue-40o0"  />
               <span className="text-2xl font-bold text-white">{contentMetrics.readability}</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Readability</h3>
-            <p className="text-gray-300 text-sm">Content clarity score</p>
+            <p className="text-gray-30o0 text-sm">Content clarity score</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <Search className="w-8 h-8 text-green-400" />
+              <Search className="w-8 h-8 text-green-40o0"  />
               <span className="text-2xl font-bold text-white">{contentMetrics.seoScore}</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">SEO Score</h3>
-            <p className="text-gray-300 text-sm">Search optimization</p>
+            <p className="text-gray-30o0 text-sm">Search optimization</p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-4">
-              <TrendingUp className="w-8 h-8 text-yellow-400" />
+              <TrendingUp className="w-8 h-8 text-yellow-40o0"  />
               <span className="text-2xl font-bold text-white">{contentMetrics.conversionRate}%</span>
             </div>
             <h3 className="text-lg font-semibold text-white mb-2">Conversion</h3>
-            <p className="text-gray-300 text-sm">Action completion rate</p>
+            <p className="text-gray-30o0 text-sm">Action completion rate</p>
           </div>
         </div>
 
@@ -145,39 +145,39 @@ const AdvancedContentOptimizer = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {optimizations.map((optimization) => (
-              <div key={optimization.id} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
+              <div key={optimization.id} className="group bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-40o0/50 transition-all duration-30o0">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl">
-                    <optimization.icon className="w-6 h-6 text-white" />
+                  <div className="p-3 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-xl">
+                    <optimization.icon className="w-6 h-6 text-white"  />
                   </div>
                   <span className={`px-3 py-1 rounded-full text-xs font-bold ${
-                    optimization.impact === 'High' ? 'bg-red-500' :
-                    optimization.impact === 'Medium' ? 'bg-yellow-500' :
-                    'bg-green-500'
+                    optimization.impact === 'High' ? 'bg-red-50o0' :
+                    optimization.impact === 'Medium' ? 'bg-yellow-50o0' :
+                    'bg-green-50o0'
                   } text-white`}>
                     {optimization.impact} Impact
                   </span>
                 </div>
                 
-                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-30o0 transition-colors">
                   {optimization.name}
                 </h4>
                 
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-gray-30o0 text-sm mb-4">
                   {optimization.description}
                 </p>
 
                 <div className="flex items-center justify-between text-sm">
-                  <div className="text-gray-400">
+                  <div className="text-gray-40o0">
                     Before: {optimization.metrics.before}{optimization.metrics.unit}
                   </div>
-                  <div className="text-green-400 font-semibold">
+                  <div className="text-green-40o0 font-semibold">
                     After: {optimization.metrics.after}{optimization.metrics.unit}
                   </div>
                 </div>
 
-                <div className="mt-2 flex items-center text-green-400 text-sm">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                <div className="mt-2 flex items-center text-green-40o0 text-sm">
+                  <div className="w-2 h-2 bg-green-40o0 rounded-full mr-2"></div>
                   {optimization.status === 'active' ? 'Active' : 'Inactive'}
                 </div>
               </div>
@@ -191,21 +191,21 @@ const AdvancedContentOptimizer = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">3.2x</div>
+              <div className="text-4xl font-bold text-purple-40o0 mb-2">3.2x</div>
               <div className="text-white font-semibold mb-2">Higher Engagement</div>
-              <div className="text-gray-300 text-sm">Compared to unoptimized content</div>
+              <div className="text-gray-30o0 text-sm">Compared to unoptimized content</div>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">2.1x</div>
+              <div className="text-4xl font-bold text-blue-40o0 mb-2">2.1x</div>
               <div className="text-white font-semibold mb-2">Better Conversion</div>
-              <div className="text-gray-300 text-sm">Optimized content performance</div>
+              <div className="text-gray-30o0 text-sm">Optimized content performance</div>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">45%</div>
+              <div className="text-4xl font-bold text-green-40o0 mb-2">45%</div>
               <div className="text-white font-semibold mb-2">Faster Loading</div>
-              <div className="text-gray-300 text-sm">Optimized content delivery</div>
+              <div className="text-gray-30o0 text-sm">Optimized content delivery</div>
             </div>
           </div>
         </div>

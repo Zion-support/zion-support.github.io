@@ -1,38 +1,22 @@
 
-import React from "react";
 import { format } from "date-fns";
 import { 
-<<<<<<< HEAD
-  Card, 
-  CardContent, 
-  CardHeader, 
-  CardTitle, 
-=======
   Card
   CardContent
   CardHeader
   CardTitle
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   CardDescription
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-<<<<<<< HEAD
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
-=======
 import { EyeMessageSquareArchiveIconRefreshCwCalendarIcon } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import type { QuoteRequest } from "@/types/quotes";
 
 type QuoteRequestCardProps = {
   quote: QuoteRequest;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded?: (id: string) => void;
-<<<<<<< HEAD
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-=======
   onToggleArchive: (id: stringisArchived: boolean) => void;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
@@ -44,11 +28,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   // Format date for display
   const formatDate = (dateString: string) => {
     try {
-<<<<<<< HEAD
-      return format(new Date(dateString), 'PP');
-=======
       return format(new Date(dateString)'PP');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } catch (e) {
       return dateString;
     }
@@ -107,11 +87,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             <Button
               variant="ghost"
               size="sm"
-<<<<<<< HEAD
-              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-=======
               onClick={() => onToggleArchive(quote.id!quote.is_archived)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="flex items-center gap-1"
             >
               {quote.is_archived ? (

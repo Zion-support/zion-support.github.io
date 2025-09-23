@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function NewContent2025AnalyticsRevolutionBanner() {
+export default function NewContent20o25AnalyticsRevolutionBanner() {
   return null;
 }

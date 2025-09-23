@@ -1,4 +1,3 @@
-import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -18,7 +17,12 @@ export type BarChartProps = {
   height?: number;
 };
 
-export default function BarChart({ labels, data, color = '#10b981', height = 160 }: BarChartProps) {
+export default function BarChart({
+  labels,
+  data,
+  color = '#10b981',
+  height = 160,
+}: BarChartProps) {
   return (
     <div style={{ height }}>
       <Bar

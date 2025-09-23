@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
 import {logErrorToProduction} from '@/utils/productionLogger';
 
-
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -36,7 +35,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   constructor(props: ErrorBoundaryProps) {
     super(props)
 
-    this.state = {
+    this.state ={
       hasError: false,
       error: null,
       errorInfo: null,
@@ -58,7 +57,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     const errorId = this.generateErrorId()
     
     // Enhanced error logging
-    const enhancedError = {
+    const enhancedError ={
       ...error,
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
@@ -180,7 +179,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       return
     }
 
-    const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
+    const retryDelay = Math.pow(2, this.state.retryCount) * 10o00 // Exponential backoff
 
     const timeout = setTimeout(() => {
       this.setState({
@@ -197,7 +196,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   }
 
   private copyErrorDetails = async () => {
-    const errorDetails = {
+    const errorDetails ={
       errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
@@ -272,12 +271,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
+            <Card className="w-full max-w-2xl border-red-20o0 bg-white dark:bg-gray-90o0">
               <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
-                  <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-10o0 dark:bg-red-90o0/20">
+                  <AlertTriangle className="h-8 w-8 text-red-60o0 dark:text-red-40o0"  />
                 </div>
-                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <CardTitle className="text-2xl font-bold text-gray-90o0 dark:text-gray-10o0">
                   Oops! Something went wrong
                 </CardTitle>
                 <div className="flex items-center justify-center gap-2 mt-2">
@@ -296,12 +295,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
               <CardContent className="space-y-6">
                 <div className="text-center">
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-gray-60o0 dark:text-gray-30o0 mb-4">
                     {suggestion}
                   </p>
                   
                   {this.state.retryCount > 0 && (
-                    <p className="text-sm text-orange-600 dark:text-orange-400">
+                    <p className="text-sm text-orange-60o0 dark:text-orange-40o0">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   )}
@@ -311,13 +310,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
-                      <RefreshCw className="h-4 w-4" />
+                      <RefreshCw className="h-4 w-4"  />
                       Try Again
                     </Button>
                   )}
                   
                   <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">
-                    <Home className="h-4 w-4" />
+                    <Home className="h-4 w-4"  />
                     Go Home
                   </Button>
 
@@ -327,7 +326,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                     size="sm"
                     className="flex items-center gap-2"
                   >
-                    <Bug className="h-4 w-4" />
+                    <Bug className="h-4 w-4"  />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
@@ -344,7 +343,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                       <div className="space-y-4">
                         <div>
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
-                          <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
+                          <code className="block p-3 bg-red-50 dark:bg-red-90o0/10 rounded text-sm text-red-80o0 dark:text-red-20o0 overflow-auto">
                             {this.state.error.message}
                           </code>
                         </div>
@@ -352,7 +351,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
-                            <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">
+                            <pre className="p-3 bg-gray-50 dark:bg-gray-80o0 rounded text-xs overflow-auto max-h-32">
                               {this.state.error.stack}
                             </pre>
                           </div>
@@ -360,13 +359,13 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
-                            <Clipboard className="h-4 w-4 mr-2" />
+                            <Clipboard className="h-4 w-4 mr-2"  />
                             Copy Details
                           </Button>
                           
                           {this.props.showReportButton !== false && (
                             <Button onClick={this.reportError} variant="outline" size="sm">
-                              <Send className="h-4 w-4 mr-2" />
+                              <Send className="h-4 w-4 mr-2"  />
                               Report Issue
                             </Button>
                           )}
@@ -410,7 +409,7 @@ export const withErrorBoundary = <P extends object>(
 ) => {
   const WrappedComponent = (props: P) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
+      <Component {...props}  />
     </GlobalErrorBoundary>
   )
 

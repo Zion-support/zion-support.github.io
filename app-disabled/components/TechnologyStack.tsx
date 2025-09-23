@@ -1,7 +1,5 @@
-"use client";
-
-import React from 'react';
+'use client';
 
 export default function TechnologyStack() {
-	return null;
+  return null;
 }

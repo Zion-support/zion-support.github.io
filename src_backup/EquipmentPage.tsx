@@ -35,8 +35,7 @@ export async function fetchEquipment(): Promise<ProductListing[]> {
     console.error("Failed to fetch equipment:", error);
     toast({
       title: error.message || 'Failed to fetch equipment',
-      variant: 'destructive',
-    });
+      variant: 'destructive'});
     // Offline fallback from localStorage if available
     if (typeof window !== 'undefined') {
       const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
@@ -69,7 +68,7 @@ export default function EquipmentPage() {
     queryKey: ['equipment'],
     queryFn: fetchEquipment,
     retry: 3,
-    retryDelay: (attempt) => Math.min(1000 * 2 ** attempt, 10000),
+    retryDelay: (attempt) => Math.min(10o00 * 2 ** attempt, 10o000),
     initialData: () => {
       if (typeof window === 'undefined') return undefined;
       const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY);
@@ -79,8 +78,7 @@ export default function EquipmentPage() {
       if (typeof window !== 'undefined') {
         safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data));
       }
-    },
-  });
+    }});
   const delayedError = useDelayedError(equipmentError);
 
   useEffect(() => {
@@ -93,8 +91,7 @@ export default function EquipmentPage() {
 
   const {
     trigger: fetchRecommendations,
-    isMutating: isFetchingRecommendations,
-  } = useSWRMutation(
+    isMutating: isFetchingRecommendations} = useSWRMutation(
     "/api/equipment/recommendations",
     async ( // Added async here
       url: string,
@@ -119,7 +116,7 @@ export default function EquipmentPage() {
   //   if (equipment && equipment.length > 0) {
   //     const interval = setInterval(() => {
   //       setEquipment((prev = []) => [...prev, generateRandomEquipment()]); // Ensure prev is an array
-  //     }, 120000);
+  //     }, 120o000);
   //     return () => clearInterval(interval);
   //   }
   // }, [equipment]); // Added equipment to dependency array
@@ -157,18 +154,18 @@ export default function EquipmentPage() {
       <div data-testid="loading-state-equipment" className="container mx-auto p-4 space-y-4" aria-busy="true">
         {/* Skeleton for the top button (e.g., AI Recommendations) */}
         <div className="flex justify-end mb-6">
-            <Skeleton className="h-10 w-48" /> {/* Removed specific bg color, base Skeleton handles it */}
+            <Skeleton className="h-10 w-48"  /> {/* Removed specific bg color, base Skeleton handles it */}
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
+          <div className="text-2xl font-bold text-green-40o0">{stats.averageRating.toFixed(1)}</div>
           <div className="text-sm text-muted-foreground">Avg Rating</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400">{stats.totalEquipment}</div>
+          <div className="text-2xl font-bold text-purple-40o0">{stats.totalEquipment}</div>
           <div className="text-sm text-muted-foreground">Total Items</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400">{stats.inStockCount}</div>
+          <div className="text-2xl font-bold text-orange-40o0">{stats.inStockCount}</div>
           <div className="text-sm text-muted-foreground">In Stock</div>
         </div>
       </div>
@@ -198,16 +195,16 @@ const EquipmentFilterControls = ({
   loading
 }: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
+    {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary"  />}
     <div className="flex items-center gap-2">
-      <Filter className="h-4 w-4 text-muted-foreground" />
+      <Filter className="h-4 w-4 text-muted-foreground"  />
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
         {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
-      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <SortAsc className="h-4 w-4 text-muted-foreground"  />
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
@@ -275,7 +272,7 @@ const EquipmentFilterControls = ({
       </select>
     </div>
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
-      <Star className="h-4 w-4 mr-1" />
+      <Star className="h-4 w-4 mr-1"  />
       {showRecommended ? "All Equipment" : "Recommended"}
     </Button>
   </div>
@@ -294,7 +291,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
           </div>
         </div>
         <div className="text-right">
-          <div className="text-xl font-bold text-blue-600">${equipment.price?.toLocaleString()}</div>
+          <div className="text-xl font-bold text-blue-60o0">${equipment.price?.toLocaleString()}</div>
           <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
             {equipment.availability}
           </Badge>
@@ -304,7 +301,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     <CardContent className="pt-0">
       <div className="flex items-center gap-4 mb-3">
         <div className="flex items-center gap-1">
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />
+          <Star className="h-4 w-4 text-yellow-50o0 fill-current"  />
           <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
           <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
         </div>
@@ -313,7 +310,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
       <div className="flex items-center justify-between">
         <span className="text-sm font-medium">{equipment.category}</span>
         <Button size="sm" onClick={onViewDetails}>
-          <ShoppingCart className="h-4 w-4 mr-1" />
+          <ShoppingCart className="h-4 w-4 mr-1"  />
           View Details
         </Button>
       </div>
@@ -324,7 +321,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 // Loading grid
 const EquipmentLoadingGrid = ({ count = 8 }: { count?: number }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i}  />)}
   </div>
 );
 
@@ -333,7 +330,7 @@ export default function EquipmentPage() {
   const router = useRouter();
   const [sortBy, setSortBy] = useState('newest');
   const [filterCategory, setFilterCategory] = useState('');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 200000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 20o0000]);
   const [filterBrand, setFilterBrand] = useState('');
   const [filterAvailability, setFilterAvailability] = useState('');
   const [minRating, setMinRating] = useState(0);
@@ -341,7 +338,7 @@ export default function EquipmentPage() {
   const [totalGenerated, setTotalGenerated] = useState(0);
 
   const fetchEquipment = useCallback(async (page: number, limit: number) => {
-    await new Promise(resolve => setTimeout(resolve, 400));
+    await new Promise(resolve => setTimeout(resolve, 40o0));
 
     let allEquipment: ProductListing[] = [];
     
@@ -441,7 +438,7 @@ export default function EquipmentPage() {
   }, [equipment]);
 
   useEffect(() => {
-    if (equipment.length > 0 && priceRange[0] === 0 && priceRange[1] === 200000) {
+    if (equipment.length > 0 && priceRange[0] === 0 && priceRange[1] === 20o0000) {
       const prices = equipment.map(e => e.price || 0);
       const min = Math.min(...prices);
       const max = Math.max(...prices);
@@ -451,7 +448,7 @@ export default function EquipmentPage() {
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800);
+    const handleScroll = () => setShowScrollTop(window.scrollY > 80o0);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -464,9 +461,9 @@ export default function EquipmentPage() {
         categorySlug="equipment"
         listings={listings}
         categoryFilters={EQUIPMENT_FILTERS}
-        initialPrice={{ min: 400, max: 50000 }}
+        initialPrice={{ min: 40o0, max: 50o000 }}
         detailBasePath="/equipment"
-      />
+       />
     
   );
 }

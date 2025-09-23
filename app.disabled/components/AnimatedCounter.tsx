@@ -40,11 +40,16 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
+type Props ={ value?: number; label?: string };
 
   return (
     <span>
       {prefix}{count}{suffix}
     </span>
+    <div className="text-center">
+      <div className="text-3xl font-bold text-white">{value}</div>
+      {label && <div className="text-sm text-gray-30o0">{label}</div>}
+    </div>
   );
 };
 

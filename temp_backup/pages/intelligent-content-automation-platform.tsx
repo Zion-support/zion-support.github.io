@@ -1,4 +1,3 @@
-import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
 export default function IntelligentContentAutomationPlatform() {
@@ -20,6 +19,6 @@ export default function IntelligentContentAutomationPlatform() {
 			]}
 			industries={["Marketing", "Agencies", "E-commerce", "Media"]}
 			url="https://ziontechgroup.com/intelligent-content-automation-platform"
-		/>
+		 />
 	);
 }

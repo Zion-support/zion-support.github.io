@@ -9,8 +9,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger} from "@/components/ui/accordion";
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -29,19 +28,17 @@ export function FraudDetectionSettings() {
     try {
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10o00));
       
       toast({
         title: "Settings saved",
-        description: "Your fraud detection preferences have been updated.",
-      });
+        description: "Your fraud detection preferences have been updated."});
     } catch (error) {
       logErrorToProduction('Error saving preferences:', { data: error });
       toast({
         title: "Error",
         description: "Failed to save your preferences. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"});
     } finally {
       setIsSaving(false);
     }
@@ -51,7 +48,7 @@ export function FraudDetectionSettings() {
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">
-          <ShieldAlert className="h-5 w-5 text-amber-500" />
+          <ShieldAlert className="h-5 w-5 text-amber-50o0"  />
           <CardTitle className="text-xl">Fraud & Abuse Protection</CardTitle>
         </div>
         <CardDescription>
@@ -75,7 +72,7 @@ export function FraudDetectionSettings() {
                 aria-label="Message scanning"
                 checked={messageScanningEnabled}
                 onCheckedChange={setMessageScanningEnabled}
-              />
+               />
             </div>
             
             <div className="flex items-center justify-between">
@@ -92,7 +89,7 @@ export function FraudDetectionSettings() {
                 aria-label="Activity monitoring"
                 checked={activityMonitoringEnabled}
                 onCheckedChange={setActivityMonitoringEnabled}
-              />
+               />
             </div>
             
             <div className="flex items-center justify-between">
@@ -109,7 +106,7 @@ export function FraudDetectionSettings() {
                 aria-label="AI analysis"
                 checked={aiAnalysisEnabled}
                 onCheckedChange={setAiAnalysisEnabled}
-              />
+               />
             </div>
           </div>
           
@@ -117,7 +114,7 @@ export function FraudDetectionSettings() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-sm font-medium">
                 <div className="flex items-center gap-2">
-                  <Info className="h-4 w-4" />
+                  <Info className="h-4 w-4"  />
                   About Fraud Detection
                 </div>
               </AccordionTrigger>

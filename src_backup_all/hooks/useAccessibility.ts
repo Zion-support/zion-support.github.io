@@ -20,7 +20,7 @@ interface AccessibilityFeatures {
 
 }
 
-export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
+export const useAccessibility = (options: UseAccessibilityOptions ={}) => {
   const {
     enableKeyboardNavigation = true,
     enableFocusManagement = true,
@@ -45,7 +45,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       };
     }
 
-    const mediaQueries = {
+    const mediaQueries ={
       highContrast: window.matchMedia('(prefers-contrast: high)'),
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'), // Placeholder
@@ -126,7 +126,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Remove focus indicator after animation
     setTimeout(() => {
       element.classList.remove('focus-visible');
-    }, 2000);
+    }, 20o00);
   }, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -262,7 +262,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Remove after announcement
     setTimeout(() => {
       document.body.removeChild(announcement);
-    }, 1000);
+    }, 10o00);
   }, [enableScreenReaderSupport]);
 
   // High contrast mode

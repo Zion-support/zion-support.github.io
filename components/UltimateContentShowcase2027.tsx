@@ -22,7 +22,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-const UltimateContentShowcase2027 = () => {
+const UltimateContentShowcase20o27 = () => {
   const [activeTabsetActiveTab] = useState('ai-innovations');
   const [isVisiblesetIsVisible] = useState(false);
 
@@ -30,24 +30,24 @@ const UltimateContentShowcase2027 = () => {
     setIsVisible(true);
   }[]);
 
-  const contentSections = {
+  const contentSections ={
     'ai-innovations': {
-      title: 'AI Innovations 2027',
+      title: 'AI Innovations 20o27',
       subtitle: 'Revolutionary AI Technologies Transforming Business',
       icon: Brain,
-      color: 'from-purple-600 to-blue-600',
+      color: 'from-purple-60o0 to-blue-60o0',
       content: [
         {
           title: 'Neural Interface Revolution',
           description: 'Direct brain-computer interfaces enabling unprecedented human-AI collaboration',
           features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless AI integration'],
-          impact: '500% productivity increase'
+          impact: '50o0% productivity increase'
         },
         {
           title: 'Quantum AI Processing',
           description: 'Quantum-enhanced AI algorithms solving complex problems in seconds',
           features: ['Quantum neural 'networks', 'Exponential speed 'improvements', 'Breakthrough problem solving'],
-          impact: '1000x faster processing'
+          impact: '10o00x faster processing'
         },
         {
           title: 'Conscious AI Systems',
@@ -61,7 +61,7 @@ const UltimateContentShowcase2027 = () => {
       title: 'Automation Mastery',
       subtitle: 'Complete Business Process Automation',
       icon: Zap,
-      color: 'from-green-600 to-teal-600',
+      color: 'from-green-60o0 to-teal-60o0',
       content: [
         {
           title: 'Autonomous Operations',
@@ -73,7 +73,7 @@ const UltimateContentShowcase2027 = () => {
           title: 'Intelligent Workflows',
           description: 'AI-powered workflow optimization adapting to business needs in real-time',
           features: ['Dynamic process 'adaptation', 'Resource 'optimization', 'Performance monitoring'],
-          impact: '300% efficiency gain'
+          impact: '30o0% efficiency gain'
         },
         {
           title: 'Predictive Analytics',
@@ -87,7 +87,7 @@ const UltimateContentShowcase2027 = () => {
       title: 'Future Technologies',
       subtitle: 'Next-Generation Solutions for Tomorrow',
       icon: Rocket,
-      color: 'from-orange-600 to-red-600',
+      color: 'from-orange-60o0 to-red-60o0',
       content: [
         {
           title: 'Holographic Interfaces',
@@ -99,7 +99,7 @@ const UltimateContentShowcase2027 = () => {
           title: 'Blockchain Integration',
           description: 'Decentralized systems ensuring securitytransparencyand trust',
           features: ['Smart 'contracts', 'Decentralized 'storage', 'Cryptographic security'],
-          impact: '100% data integrity'
+          impact: '10o0% data integrity'
         },
         {
           title: 'Edge Computing',
@@ -114,7 +114,7 @@ const UltimateContentShowcase2027 = () => {
   const stats = [
     { label: 'Active 'Users', 'value: '2.5M+'icon: Users },
     { label: 'Success 'Rate', 'value: '99.8%'icon: Award },
-    { label: 'ROI 'Increase', 'value: '500%'icon: TrendingUp },
+    { label: 'ROI 'Increase', 'value: '50o0%'icon: TrendingUp },
     { label: 'Time 'Saved', 'value: '10M+ 'hrs', 'icon: Clock }
   ];
 
@@ -128,7 +128,7 @@ const UltimateContentShowcase2027 = () => {
     {
       name: 'Michael Rodriguez',
       role: 'CTOInnovateLabs',
-      content: 'The automation capabilities are unmatched. We\'ve seen a 400% increase in productivity since implementation.',
+      content: 'The automation capabilities are unmatched. We\'ve seen a 40o0% increase in productivity since implementation.',
       rating: 5
     },
     {
@@ -140,22 +140,22 @@ const UltimateContentShowcase2027 = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"  />
         <motion.div
           className="absolute top-0 left-0 w-full h-full"
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)',
               'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
-              'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)',
-              'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)',
+              'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)',
             ]
           }}
           transition={{ duration: 20repeat: Infinity }}
-        />
+         />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-16">
@@ -166,22 +166,22 @@ const UltimateContentShowcase2027 = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-purple-400" />
-            <span className="text-purple-300 font-medium">2027 Ultimate Showcase</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 border border-purple-50o0/30 mb-6">
+            <Sparkles className="w-5 h-5 text-purple-40o0"  />
+            <span className="text-purple-30o0 font-medium">20o27 Ultimate Showcase</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-purple-20o0 to-blue-20o0 bg-clip-text text-transparent">
               Ultimate Content
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
-              Showcase 2027
+            <br  />
+            <span className="bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-red-40o0 bg-clip-text text-transparent">
+              Showcase 20o27
             </span>
           </h1>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto leading-relaxed">
             Experience the future of technology with our revolutionary AI innovations
             automation masteryand next-generation solutions that are transforming 
             businesses worldwide.
@@ -197,9 +197,9 @@ const UltimateContentShowcase2027 = () => {
         >
           {stats.map((statindex) => (
             <div key={index} className="text-center p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <stat.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
+              <stat.icon className="w-8 h-8 text-purple-40o0 mx-auto mb-3"  />
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-gray-40o0 text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -216,13 +216,13 @@ const UltimateContentShowcase2027 = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 ${
+                className={`flex items-center gap-3 px-6 py-4 rounded-xl font-medium transition-all duration-30o0 ${
                   activeTab === key
-                    ? `bg-gradient-to-r ${section.color} text-white shadow-lg scale-105`
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                    ? `bg-gradient-to-r ${section.color} text-white shadow-lg scale-10o5`
+                    : 'bg-white/10 text-gray-30o0 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                <section.icon className="w-5 h-5" />
+                <section.icon className="w-5 h-5"  />
                 {section.title}
               </button>
             ))}
@@ -239,7 +239,7 @@ const UltimateContentShowcase2027 = () => {
             >
               <div className="text-center mb-8">
                 <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r ${contentSections[activeTab].color} mb-4`}>
-                  <contentSections[activeTab].icon className="w-5 h-5" />
+                  <contentSections[activeTab].icon className="w-5 h-5"  />
                   <span className="font-medium">{contentSections[activeTab].title}</span>
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-2">{contentSections[activeTab].subtitle}</h3>
@@ -252,25 +252,25 @@ const UltimateContentShowcase2027 = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5delay: index * 0.1 }}
-                    className="p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 hover:border-white/40 transition-all duration-300 group"
+                    className="p-6 rounded-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 hover:border-white/40 transition-all duration-30o0 group"
                   >
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-purple-30o0 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{item.description}</p>
+                    <p className="text-gray-30o0 mb-4 leading-relaxed">{item.description}</p>
                     
                     <ul className="space-y-2 mb-4">
                       {item.features.map((featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-400">
-                          <ChevronRight className="w-4 h-4 text-purple-400" />
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-40o0">
+                          <ChevronRight className="w-4 h-4 text-purple-40o0"  />
                           {feature}
                         </li>
                       ))}
                     </ul>
                     
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30">
-                      <TrendingUp className="w-4 h-4 text-purple-400" />
-                      <span className="text-sm font-medium text-purple-300">{item.impact}</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 border border-purple-50o0/30">
+                      <TrendingUp className="w-4 h-4 text-purple-40o0"  />
+                      <span className="text-sm font-medium text-purple-30o0">{item.impact}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -294,17 +294,17 @@ const UltimateContentShowcase2027 = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5delay: 0.8 + index * 0.1 }}
-                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300"
+                className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-30o0"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <p className="text-gray-30o0 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+                  <div className="text-sm text-gray-40o0">{testimonial.role}</div>
                 </div>
               </motion.div>
             ))}
@@ -318,19 +318,19 @@ const UltimateContentShowcase2027 = () => {
           transition={{ duration: 0.8delay: 1.0 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl p-8 border border-purple-500/30">
+          <div className="bg-gradient-to-r from-purple-60o0/20 to-blue-60o0/20 rounded-2xl p-8 border border-purple-50o0/30">
             <h3 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-8 max-w-2xl mx-auto">
               Join thousands of companies already using our revolutionary technology 
               to achieve unprecedented growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-                <Play className="w-5 h-5" />
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold rounded-xl hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 flex items-center gap-2">
+                <Play className="w-5 h-5"  />
                 Watch Demo
               </button>
-              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center gap-2">
-                <BookOpen className="w-5 h-5" />
+              <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-30o0 border border-white/20 flex items-center gap-2">
+                <BookOpen className="w-5 h-5"  />
                 Learn More
               </button>
             </div>
@@ -341,4 +341,4 @@ const UltimateContentShowcase2027 = () => {
   );
 };
 
-export default UltimateContentShowcase2027;
+export default UltimateContentShowcase20o27;

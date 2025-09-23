@@ -12,7 +12,7 @@ const path = require('path');
 const { spawn, execSync } = require('child_process');
 
 // Simple logger
-const logger = {
+const logger ={
   info: (msg) => console.log(`[INFO] ${new Date().toISOString()} ${msg}`),
   error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`),
   warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`),
@@ -20,8 +20,8 @@ const logger = {
 };
 
 class AutomationRunner {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       tasks: [
         'SecurityScanner',
         'CodeQualityEnforcer',
@@ -32,8 +32,8 @@ class AutomationRunner {
       ],
       parallel: false,
       retryAttempts: 3,
-      retryDelay: 5000,
-      timeout: 300000, // 5 minutes per task
+      retryDelay: 50o00,
+      timeout: 30o0000, // 5 minutes per task
       ...config
     };
     
@@ -94,7 +94,7 @@ class AutomationRunner {
     // Check available disk space
     const stats = fs.statSync('.');
     const freeSpace = stats.size;
-    if (freeSpace < 1000000000) { // 1GB
+    if (freeSpace < 10o00000000) { // 1GB
       logger.warn('⚠️ Low disk space detected');
     }
     
@@ -191,14 +191,14 @@ class AutomationRunner {
   async generateReport() {
     logger.info('📊 Generating comprehensive report...');
     
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       duration: this.endTime - this.startTime,
       summary: {
         totalTasks: this.config.tasks.length,
         successfulTasks: this.getSuccessCount(),
         failedTasks: this.getFailedCount(),
-        successRate: (this.getSuccessCount() / this.config.tasks.length) * 100
+        successRate: (this.getSuccessCount() / this.config.tasks.length) * 10o0
       },
       tasks: Object.fromEntries(this.results),
       recommendations: this.generateRecommendations()
@@ -294,7 +294,7 @@ Examples:
   node run-all-automations.js
   node run-all-automations.js --parallel
   node run-all-automations.js --tasks SecurityScanner,CodeQualityEnforcer
-  node run-all-automations.js --timeout 600000 --retry 5
+  node run-all-automations.js --timeout 60o0000 --retry 5
 
 Available Tasks:
   - SecurityScanner
@@ -308,7 +308,7 @@ Available Tasks:
   }
   
   // Parse arguments
-  const config = {};
+  const config ={};
   
   if (args.includes('--parallel') || args.includes('-p')) {
     config.parallel = true;

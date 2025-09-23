@@ -10,7 +10,7 @@ import { ModeToggle } from @/components/ModeToggle';// Use the ThemeProvider fro
 import { ThemeProvider } from @/components/ThemeProvider';
 it('applies dark class when toggled', async () => { // Made test async'  render(
     <ThemeProvider>
-      <ModeToggle />
+      <ModeToggle  />
     </ThemeProvider>
   );
   const button = document.querySelector('button');  fireEvent.click(button!);

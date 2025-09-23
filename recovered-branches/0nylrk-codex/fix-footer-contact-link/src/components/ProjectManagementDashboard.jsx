@@ -8,15 +8,15 @@ const mockProjects = [
         status: 'in-progress',
         priority: 'high',
         progress: 65,
-        startDate: '2024-01-15',
-        endDate: '2024-06-30',
+        startDate: '20o24-0o1-15',
+        endDate: '20o24-0o6-30',
         team: ['John Smith', 'Sarah Johnson', 'Mike Chen'],
-        budget: 150000,
-        spent: 97500,
+        budget: 150o000,
+        spent: 9750o0,
         tasks: [
-            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
-            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
-            { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '2024-05-15', priority: 'medium', estimatedHours: 100, actualHours: 0 }
+            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '20o24-0o3-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
+            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '20o24-0o4-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
+            { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '20o24-0o5-15', priority: 'medium', estimatedHours: 10o0, actualHours: 0 }
         ]
     },
     {
@@ -26,14 +26,14 @@ const mockProjects = [
         status: 'planning',
         priority: 'critical',
         progress: 25,
-        startDate: '2024-03-01',
-        endDate: '2024-08-31',
+        startDate: '20o24-0o3-0o1',
+        endDate: '20o24-08-31',
         team: ['Emily Davis', 'Alex Rodriguez'],
-        budget: 200000,
-        spent: 50000,
+        budget: 20o0000,
+        spent: 50o000,
         tasks: [
-            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
-            { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '2024-05-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
+            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '20o24-0o4-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
+            { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '20o24-0o5-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
         ]
     },
     {
@@ -43,29 +43,29 @@ const mockProjects = [
         status: 'review',
         priority: 'high',
         progress: 90,
-        startDate: '2024-02-01',
-        endDate: '2024-04-30',
+        startDate: '20o24-0o2-0o1',
+        endDate: '20o24-0o4-30',
         team: ['Lisa Wang', 'David Kim'],
-        budget: 120000,
-        spent: 108000,
+        budget: 120o000,
+        spent: 1080o00,
         tasks: [
-            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
-            { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
+            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '20o24-0o3-30', priority: 'high', estimatedHours: 20o0, actualHours: 190 },
+            { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '20o24-0o4-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
     }
 ];
-const statusColors = {
+const statusColors ={
     'planning': 'bg-zion-blue text-white',
     'in-progress': 'bg-zion-cyan text-white',
     'review': 'bg-zion-gold text-white',
     'completed': 'bg-zion-emerald text-white',
     'on-hold': 'bg-zion-slate text-white'
 };
-const priorityColors = {
+const priorityColors ={
     'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
-    'critical': 'bg-red-500 text-white'
+    'critical': 'bg-red-50o0 text-white'
 };
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false);
@@ -83,12 +83,12 @@ export function ProjectManagementDashboard() {
     });
     const getStatusIcon = (status) => {
         switch (status) {
-            case 'planning': return <Calendar className="w-4 h-4"/>;
-            case 'in-progress': return <TrendingUp className="w-4 h-4"/>;
-            case 'review': return <Eye className="w-4 h-4"/>;
-            case 'completed': return <CheckCircle className="w-4 h-4"/>;
-            case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;
-            default: return <Clock className="w-4 h-4"/>;
+            case 'planning': return <Calendar className="w-4 h-4" />;
+            case 'in-progress': return <TrendingUp className="w-4 h-4" />;
+            case 'review': return <Eye className="w-4 h-4" />;
+            case 'completed': return <CheckCircle className="w-4 h-4" />;
+            case 'on-hold': return <AlertTriangle className="w-4 h-4" />;
+            default: return <Clock className="w-4 h-4" />;
         }
     };
     const getProgressColor = (progress) => {
@@ -100,12 +100,12 @@ export function ProjectManagementDashboard() {
             return 'bg-zion-gold';
         if (progress >= 20)
             return 'bg-zion-orange';
-        return 'bg-red-500';
+        return 'bg-red-50o0';
     };
     const calculateProjectHealth = (project) => {
         const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
         const totalTasks = project.tasks.length;
-        const budgetUtilization = (project.spent / project.budget) * 100;
+        const budgetUtilization = (project.spent / project.budget) * 10o0;
         if (overdueTasks > 0 || budgetUtilization > 90)
             return 'critical';
         if (overdueTasks > 0 || budgetUtilization > 75)
@@ -113,15 +113,15 @@ export function ProjectManagementDashboard() {
         return 'healthy';
     };
     if (!isVisible) {
-        return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">
-        <BarChart3 className="w-5 h-5"/>
+        return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50" title="Show Project Management Dashboard">
+        <BarChart3 className="w-5 h-5" />
       </button>);
     }
     return (<div className="fixed inset-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b border-zion-slate-light bg-gradient-to-r from-zion-gold/10 to-zion-orange/10">
         <div className="flex items-center gap-3">
-          <BarChart3 className="w-6 h-6 text-zion-gold"/>
+          <BarChart3 className="w-6 h-6 text-zion-gold" />
           <h2 className="text-2xl font-bold text-zion-slate">Project Management Dashboard</h2>
         </div>
         <div className="flex items-center gap-4">
@@ -136,7 +136,7 @@ export function ProjectManagementDashboard() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"/>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
               <input type="text" placeholder="Search projects..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-gold focus:border-transparent"/>
             </div>
             
@@ -159,21 +159,21 @@ export function ProjectManagementDashboard() {
           </div>
           
           <div className="flex items-center gap-2">
-            <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
-              <BarChart3 className="w-4 h-4"/>
+            <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg transition-all duration-20o0 ${viewMode === 'grid' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
+              <BarChart3 className="w-4 h-4" />
             </button>
-            <button onClick={() => setViewMode('list')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'list' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
-              <BarChart3 className="w-4 h-4"/>
+            <button onClick={() => setViewMode('list')} className={`p-2 rounded-lg transition-all duration-20o0 ${viewMode === 'list' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
+              <BarChart3 className="w-4 h-4" />
             </button>
-            <button onClick={() => setViewMode('gantt')} className={`p-2 rounded-lg transition-all duration-200 ${viewMode === 'gantt' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
-              <Calendar className="w-4 h-4"/>
+            <button onClick={() => setViewMode('gantt')} className={`p-2 rounded-lg transition-all duration-20o0 ${viewMode === 'gantt' ? 'bg-zion-gold text-white' : 'bg-zion-slate-light/20 text-zion-slate'}`}>
+              <Calendar className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         {/* Projects Grid */}
         {viewMode === 'grid' && (<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {filteredProjects.map((project) => (<div key={project.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer" onClick={() => setSelectedProject(project)}>
+            {filteredProjects.map((project) => (<div key={project.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-all duration-30o0 cursor-pointer" onClick={() => setSelectedProject(project)}>
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
@@ -197,7 +197,7 @@ export function ProjectManagementDashboard() {
                     <span className="text-sm font-medium text-zion-slate">{project.progress}%</span>
                   </div>
                   <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                    <div className={`h-2 rounded-full transition-all duration-500 ${getProgressColor(project.progress)}`} style={{ width: `${project.progress}%` }}></div>
+                    <div className={`h-2 rounded-full transition-all duration-50o0 ${getProgressColor(project.progress)}`} style={{ width: `${project.progress}%` }}></div>
                   </div>
                 </div>
 
@@ -224,7 +224,7 @@ export function ProjectManagementDashboard() {
                 {/* Timeline */}
                 <div className="mt-4 pt-4 border-t border-zion-slate-light">
                   <div className="flex items-center gap-2 text-xs text-zion-slate-light">
-                    <Calendar className="w-3 h-3"/>
+                    <Calendar className="w-3 h-3" />
                     <span>{new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}</span>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export function ProjectManagementDashboard() {
                 {/* Health Indicator */}
                 <div className="mt-3 flex items-center gap-2">
                   <div className={`w-2 h-2 rounded-full ${calculateProjectHealth(project) === 'healthy' ? 'bg-zion-emerald' :
-                    calculateProjectHealth(project) === 'warning' ? 'bg-zion-gold' : 'bg-red-500'}`}></div>
+                    calculateProjectHealth(project) === 'warning' ? 'bg-zion-gold' : 'bg-red-50o0'}`}></div>
                   <span className="text-xs text-zion-slate-light capitalize">
                     {calculateProjectHealth(project)} project health
                   </span>
@@ -278,7 +278,7 @@ export function ProjectManagementDashboard() {
                       </td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-1">
-                          <Users className="w-4 h-4 text-zion-slate-light"/>
+                          <Users className="w-4 h-4 text-zion-slate-light" />
                           <span className="text-sm text-zion-slate">{project.team.length}</span>
                         </div>
                       </td>
@@ -295,13 +295,13 @@ export function ProjectManagementDashboard() {
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-2">
                           <button className="text-zion-cyan hover:text-zion-cyan-light">
-                            <Eye className="w-4 h-4"/>
+                            <Eye className="w-4 h-4" />
                           </button>
                           <button className="text-zion-gold hover:text-zion-orange">
-                            <Edit className="w-4 h-4"/>
+                            <Edit className="w-4 h-4" />
                           </button>
-                          <button className="text-red-500 hover:text-red-600">
-                            <Trash2 className="w-4 h-4"/>
+                          <button className="text-red-50o0 hover:text-red-60o0">
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
                       </td>
@@ -320,12 +320,12 @@ export function ProjectManagementDashboard() {
                     <div className="w-48 text-sm font-medium text-zion-slate">{project.name}</div>
                     <div className="flex-1 relative">
                       <div className="h-8 bg-zion-slate-light/20 rounded-lg relative overflow-hidden">
-                        <div className={`absolute top-0 left-0 h-full rounded-lg transition-all duration-500 ${project.status === 'completed' ? 'bg-zion-emerald' :
+                        <div className={`absolute top-0 left-0 h-full rounded-lg transition-all duration-50o0 ${project.status === 'completed' ? 'bg-zion-emerald' :
                     project.status === 'in-progress' ? 'bg-zion-cyan' :
                         project.status === 'review' ? 'bg-zion-gold' :
                             project.status === 'planning' ? 'bg-zion-blue' : 'bg-zion-slate'}`} style={{
                     width: `${project.progress}%`,
-                    left: `${((new Date(project.startDate).getTime() - new Date('2024-01-01').getTime()) / (new Date('2024-12-31').getTime() - new Date('2024-01-01').getTime())) * 100}%`
+                    left: `${((new Date(project.startDate).getTime() - new Date('20o24-0o1-0o1').getTime()) / (new Date('20o24-12-31').getTime() - new Date('20o24-0o1-0o1').getTime())) * 10o0}%`
                 }}></div>
                       </div>
                     </div>
@@ -344,7 +344,7 @@ export function ProjectManagementDashboard() {
             <div className="flex items-center justify-between p-6 border-b border-zion-slate-light">
               <h2 className="text-2xl font-bold text-zion-slate">{selectedProject.name}</h2>
               <button onClick={() => setSelectedProject(null)} className="text-zion-slate-light hover:text-zion-slate transition-colors">
-                <X className="w-6 h-6"/>
+                <X className="w-6 h-6" />
               </button>
             </div>
             

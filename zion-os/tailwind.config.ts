@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -15,9 +15,9 @@ const config: Config = {
         'zion-orange': '#f59e0b',
         'zion-red': '#ef4444',
         'zion-teal': '#14b8a6',
-        'zion-cyan': '#06b6d4',
+        'zion-cyan': '#0o6b6d4',
         'zion-indigo': '#6366f1',
-        'zion-emerald': '#059669',
+        'zion-emerald': '#0o59669',
         'zion-pink': '#ec4899',
       },
       animation: {
@@ -29,11 +29,11 @@ const config: Config = {
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '10o0%': { opacity: '1', transform: 'translateY(0)' },
         },
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(40px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '10o0%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       backdropBlur: {
@@ -41,11 +41,12 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
   plugins: [],
-}
+};
 
-export default config
+export default config;

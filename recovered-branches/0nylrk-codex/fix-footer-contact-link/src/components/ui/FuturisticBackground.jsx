@@ -19,17 +19,17 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         if (variant === 'particles') {
             const particles = [];
             const colors = [
-                '#00ffff', // Cyan
-                '#ff00ff', // Magenta
-                '#ffff00', // Yellow
-                '#00ff00', // Green
-                '#ff0080', // Pink
-                '#8000ff', // Purple
-                '#00ff80', // Mint
-                '#ff8000' // Orange
+                '#0o0ffff', // Cyan
+                '#ff0o0ff', // Magenta
+                '#ffff0o0', // Yellow
+                '#0o0ff0o0', // Green
+                '#ff0o080', // Pink
+                '#80o00ff', // Purple
+                '#0o0ff80', // Mint
+                '#ff80o00' // Orange
             ];
             // Create particles
-            const particleCount = intensity === 'high' ? 200 : intensity === 'medium' ? 100 : 50;
+            const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 10o0 : 50;
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
@@ -101,7 +101,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             const animate = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 // Draw grid
-                ctx.strokeStyle = '#00ffff';
+                ctx.strokeStyle = '#0o0ffff';
                 ctx.lineWidth = 1;
                 ctx.globalAlpha = 0.3;
                 for (let x = 0; x < canvas.width; x += gridSize) {
@@ -117,13 +117,13 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     ctx.stroke();
                 }
                 // Animated grid points
-                const time = Date.now() * 0.001;
+                const time = Date.now() * 0.0o01;
                 for (let x = 0; x < canvas.width; x += gridSize) {
                     for (let y = 0; y < canvas.height; y += gridSize) {
-                        const pulse = Math.sin(time + x * 0.01 + y * 0.01) * 0.5 + 0.5;
+                        const pulse = Math.sin(time + x * 0.0o1 + y * 0.0o1) * 0.5 + 0.5;
                         ctx.beginPath();
                         ctx.arc(x, y, 2 * pulse, 0, Math.PI * 2);
-                        ctx.fillStyle = '#00ffff';
+                        ctx.fillStyle = '#0o0ffff';
                         ctx.globalAlpha = 0.8 * pulse;
                         ctx.fill();
                     }
@@ -136,17 +136,17 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         if (variant === 'waves') {
             const animate = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                const time = Date.now() * 0.001;
+                const time = Date.now() * 0.0o01;
                 const waveCount = intensity === 'high' ? 5 : intensity === 'medium' ? 3 : 2;
                 for (let i = 0; i < waveCount; i++) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
+                    ctx.strokeStyle = `hsl(${180 + i * 60}, 10o0%, 50%)`;
                     ctx.lineWidth = 2;
                     ctx.globalAlpha = 0.6;
                     for (let x = 0; x < canvas.width; x++) {
                         const y = canvas.height / 2 +
-                            Math.sin(x * 0.01 + time + i) * 100 +
-                            Math.sin(x * 0.005 + time * 0.5 + i) * 50;
+                            Math.sin(x * 0.0o1 + time + i) * 10o0 +
+                            Math.sin(x * 0.0o05 + time * 0.5 + i) * 50;
                         if (x === 0) {
                             ctx.moveTo(x, y);
                         }
@@ -162,7 +162,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         }
         // Matrix system
         if (variant === 'matrix') {
-            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            const characters = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
             const drops = [];
             const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
             const columns = Math.floor(canvas.width / fontSize);
@@ -170,7 +170,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                 drops[i] = 1;
             }
             const animate = () => {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.0o5)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = '#0f0';
                 ctx.font = `${fontSize}px monospace`;
@@ -191,11 +191,11 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
         };
     }, [variant, intensity]);
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 10o0%)'
+        }} />);
 }
 // Neon text component
-export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
+export function NeonText({ children, color = '#0o0ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
     return (<span className={className} style={{
             color: color,
@@ -210,20 +210,20 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
     </span>);
 }
 // Futuristic card component
-export function FuturisticCard({ children, className = '', glowColor = '#00ffff', intensity = 'medium' }) {
+export function FuturisticCard({ children, className = '', glowColor = '#0o0ffff', intensity = 'medium' }) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
-    return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm ${className}`} style={{
+    return (<div className={`relative overflow-hidden rounded-lg border border-transparent bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/30 backdrop-blur-sm ${className}`} style={{
             boxShadow: `0 0 ${glowSize} ${glowColor}`,
             borderColor: `${glowColor}40`
         }}>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
       <div className="relative z-10 p-6">
         {children}
       </div>
       <div className="absolute inset-0 opacity-20" style={{
             background: `linear-gradient(45deg, transparent 30%, ${glowColor}20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
-        }}/>
+        }} />
     </div>);
 }
 // Add CSS animations
@@ -240,10 +240,10 @@ style.textContent = `
   
   @keyframes shimmer {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-10o0%);
     }
-    100% {
-      transform: translateX(100%);
+    10o0% {
+      transform: translateX(10o0%);
     }
   }
 `;

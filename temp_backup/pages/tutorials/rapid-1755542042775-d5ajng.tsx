@@ -5,13 +5,13 @@ export default function TutorialPage() {
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Comprehensive Tutorial on Database Optimization - Zion Tech Group</title>
-        <meta name="description" content="Learn database optimization with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users." />
-        <meta name="keywords" content="tutorial, database optimization, learning, guide, education, technology" />
-        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-1755542042775-d5ajng" />
+        <meta name="description" content="Learn database optimization with our comprehensive tutorial. Step-by-step guidance for beginners and advanced users."  />
+        <meta name="keywords" content="tutorial, database optimization, learning, guide, education, technology"  />
+        <link rel="canonical" href="https://ziontechgroup.com/tutorials/rapid-17555420o42775-d5ajng"  />
       
-        <meta property="og:title" content="Comprehensive Tutorial on Database Optimization" />
-        <meta property="og:description" content="Comprehensive Tutorial on Database Optimization — automatically suggested description." />
-        <meta name="twitter:card" content="summary_large_image" /></Head>
+        <meta property="og:title" content="Comprehensive Tutorial on Database Optimization"  />
+        <meta property="og:description" content="Comprehensive Tutorial on Database Optimization — automatically suggested description."  />
+        <meta name="twitter:card" content="summary_large_image"  /></Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-4xl font-extrabold text-center mb-8">Comprehensive Tutorial on Database Optimization</h1>
         
@@ -50,7 +50,7 @@ export default function TutorialPage() {
           </p>
           <a 
             href="https://ziontechgroup.com/tutorials" 
-            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="inline-block bg-purple-60o0 hover:bg-purple-70o0 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Start Learning
           </a>
@@ -60,11 +60,8 @@ export default function TutorialPage() {
   );
 }
 
-
-
-
 <Link href="/reports/tutorials" className="internal-link">Related Content</Link>
 
 <Link href="/reports/tutorials/microservices-nextjs" className="internal-link">Related Content</Link>
 
-<Link href="/tutorials/rapid-1755539340461-4p86xy" className="internal-link">Related Content</Link>
+<Link href="/tutorials/rapid-1755539340o461-4p86xy" className="internal-link">Related Content</Link>

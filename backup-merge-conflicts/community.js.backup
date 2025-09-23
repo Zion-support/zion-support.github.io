@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-"export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "`
-export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'';
-';';
 =======
 =======
-=======
-<<<<<<< HEAD:backup-merge-conflicts/community.js.backup
-<<<<<<< HEAD:src/api/community.js
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'
-=======
-=======
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "`
 export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` '`;'';
 ';';
->>>>>>> pr-11913:src_backup_temp/api/community.js
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` &quot;` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)` &apos;`;&apos;
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)" ""
 export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)" '";'
 "export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug}/posts`).then(r => r.data.posts)` "` export const fetchPostsByCategory = slug => axios.get(`/api/v1/community/${slug};/posts`).then(r => r.data.posts)` '`;'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/community.js.backup
->>>>>>> main
->>>>>>> main
 >>>>>>> main:src_backup_temp/api/community.js
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/api/community.js

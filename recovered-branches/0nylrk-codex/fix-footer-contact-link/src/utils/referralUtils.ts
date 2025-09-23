@@ -23,10 +23,10 @@ export function formatDate(date: Date | string | undefined): string {
  */
 export function checkUrlForReferralCode(): string | null {
   if (typeof window === 'undefined') return null;
-  
+
   const url = new URL(window.location.href);
   const refCode = url.searchParams.get('ref');
-  
+
   if (refCode) {
     localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
@@ -34,7 +34,7 @@ export function checkUrlForReferralCode(): string | null {
     window.history.replaceState({}, document.title, url.toString());
     return refCode;
   }
-  
+
   return localStorage.getItem('referral_code');
 }
 
@@ -45,29 +45,21 @@ export async function trackReferral(userId: string, email: string) {
   try {
     const refCode = localStorage.getItem('referral_code');
     if (!refCode) return;
-    
+
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST',
       headers: {
-<<<<<<< HEAD
         'Content-Type': 'application/json',
       },
-=======
-        'Content-Type': 'application/json'},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         refCode,
         userId,
         email,
         ipAddress: '', // This will be captured by the server
-<<<<<<< HEAD
       }),
     });
-=======
-      })});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-    
+
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code');

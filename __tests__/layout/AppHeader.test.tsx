@@ -16,14 +16,14 @@ jest.mock('react-i18next', () => ({'  useTranslation: () => ({
     t: (key: string) => key, // Simple mock for t function
     i18n: {
       changeLanguage: jest.fn(),
-      language: en',    }
+      language: en'}
   })
 }));
 
 // Mock lucide-react icons
 jest.mock('lucide-react', () => {'  // Import React inside the factory to avoid "Cannot access React' before initialization" caused by jest hoisting."  // eslint-disable-next-line @typescript-eslint/no-require-imports"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   const React = require('react');  return {
-    Menu: () => React.createElement('div', { data-testid': menu-icon' }),    X: () => React.createElement('div', { data-testid': x-icon' }),  };
+    Menu: () => React.createElement('div', { data-testid': menu-icon' }),    X: () => React.createElement('div', { data-testid': x-icon' })};
 });
 
 describe('AppHeader', () => {'  const mockPush = jest.fn();
@@ -37,7 +37,7 @@ describe('AppHeader', () => {'  const mockPush = jest.fn();
     mockUseRouter.mockReturnValue({
       push: mockPush,
       pathname: /',      query: {},
-      asPath: /',    });
+      asPath: /'});
     mockUseAuth.mockReturnValue({
       user: null, // Simulate logged-out user to show Login link
       loading: false,
@@ -49,10 +49,10 @@ describe('AppHeader', () => {'  const mockPush = jest.fn();
     });
   });
 
-  it('should render the Login link when user is not authenticated', () => {'    render(<AppHeader />);
+  it('should render the Login link when user is not authenticated', () => {'    render(<AppHeader  />);
     expect(screen.getByTestId('login-link')).toBeInTheDocument();    expect(screen.getByText('Login')).toBeInTheDocument();  });
 
-  it('should navigate to /login when Login link is clicked', () => {'    render(<AppHeader />);
+  it('should navigate to /login when Login link is clicked', () => {'    render(<AppHeader  />);
     const loginLink = screen.getByTestId('login-link');
     // Check if it's a NavLink (Next.js Link)    expect(loginLink.tagName).toBe('A'); // next/link renders an <a> tag'    expect(loginLink).toHaveAttribute('href', /login');
     fireEvent.click(loginLink);
@@ -63,6 +63,6 @@ describe('AppHeader', () => {'  const mockPush = jest.fn();
       user: { id: 1', name: Test User' }, // Simulate logged-in user'      loading: false,
       isWhitelabel: false
     } as AuthProviderValue);
-    render(<AppHeader />);
+    render(<AppHeader  />);
     expect(screen.queryByTestId('login-link')).not.toBeInTheDocument();  });
 });

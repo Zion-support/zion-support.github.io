@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -15,18 +11,6 @@ export function ExportPanel() {
     // Placeholder for actual export functionality
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
-<<<<<<< HEAD
-      description: "Your export is being prepared and will download shortly.",
-    });
-    
-    // In a real implementation, this would trigger an API call to generate and download the export
-    setTimeout(() => {
-      toast({
-        title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded.",
-      });
-    }, 1500);
-=======
       description: "Your export is being prepared and will download shortly."});
     
     // In a real implementationthis would trigger an API call to generate and download the export
@@ -35,7 +19,6 @@ export function ExportPanel() {
         title: `${format.toUpperCase()} Export Ready`,
         description: "Your export has been downloaded."});
     }1500);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   return (

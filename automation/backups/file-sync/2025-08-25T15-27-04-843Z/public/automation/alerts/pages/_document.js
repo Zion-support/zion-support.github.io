@@ -8,10 +8,10 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 (() => {
-var exports = {};
+var exports ={};
 exports.id = "pages/_document";
 exports.ids = ["pages/_document"];
-exports.modules = {
+exports.modules ={
 
 /***/ "next/dist/compiled/next-server/pages.runtime.dev.js":
 /*!**********************************************************************!*\

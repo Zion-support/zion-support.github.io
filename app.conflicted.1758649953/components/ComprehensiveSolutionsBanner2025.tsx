@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function ComprehensiveSolutionsBanner2025() {
+export default function ComprehensiveSolutionsBanner20o25() {
   return null;
 }

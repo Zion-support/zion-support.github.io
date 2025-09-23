@@ -13,16 +13,6 @@ import {
 
 const jobOpenings = [
   {
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-import Layout from '../components/Layout';
-
-const jobOpenings = [{
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     id: 1,
     title: "Senior AI/ML Engineer",
     department: "AI Services",
@@ -49,15 +39,6 @@ const jobOpenings = [{
   },
   {
     id: 2,
-<<<<<<< HEAD
-    title: "Full-Stack Developer",
-    department: "Micro SaaS",
-    location: "New York, NY",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Build scalable web applications and microservices for our SaaS solutions.",
-    requirements: ["Bachelor's degree in Computer Science or related field",
-=======
     title: 'Full Stack Developer',
     department: 'Micro SaaS',
     location: 'Middletown, DE',
@@ -70,7 +51,6 @@ const jobOpenings = [{
       'Proficiency in React, Node.js, TypeScript',
       'Experience with databases (PostgreSQL, MongoDB)',
       'Knowledge of cloud platforms and DevOps'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "3+ years experience in full-stack development",
       "Proficiency in React, Node.js, TypeScript",
       "Experience with databases (PostgreSQL, MongoDB)",
@@ -88,15 +68,6 @@ const jobOpenings = [{
   },
   {
     id: 3,
-<<<<<<< HEAD
-    title: "Cloud Solutions Architect",
-    department: "IT Services",
-    location: "Remote",
-    type: "Full-time",
-    experience: "7+ years",
-    description: "Design and implement cloud infrastructure solutions for enterprise clients.",
-    requirements: ["Bachelor's degree in Computer Science or related field",
-=======
     title: 'DevOps Engineer',
     department: 'IT Services',
     location: 'Remote',
@@ -127,7 +98,6 @@ const benefits = [
     icon: CheckCircle,
     title: 'Competitive Compensation',
     description: 'We offer competitive salaries and comprehensive benefits packages'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "7+ years experience in cloud architecture",
       "AWS/Azure/GCP certifications preferred",
       "Experience with containerization (Docker, Kubernetes)",
@@ -164,13 +134,8 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
-const benefits = [{
-=======
-<<<<<<< HEAD
 const benefits = [
   {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     title: "Competitive Compensation",
     description: "We offer competitive salaries and performance-based bonuses",
     icon: Star
@@ -193,17 +158,6 @@ const benefits = [
   }
 ];
 
-<<<<<<< HEAD
-const values = ["Innovation and creativity",
-  "Collaboration and teamwork",
-  "Continuous learning",
-  "Work-life balance",
-  "Diversity and inclusion",
-  "Client success focus"
-];
-
-=======
-=======
 export default function TalentPage() {
   return (
     <Layout
@@ -311,7 +265,6 @@ export default function TalentPage() {
                         {job.requirements.map((req, reqIndex) => (
                           <li key={reqIndex} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export default function TalentPage() {
   return (
     <>
@@ -378,14 +331,6 @@ export default function TalentPage() {
                     </div>
                   </div>
                   </div>
-<<<<<<< HEAD
-                  <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits</h4>
-                  <ul className="space-y-1">
-                        {job.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start text-sm text-gray-600">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-=======
                   <Link
                       href={`/talent/${job.id}`}
                       className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
@@ -404,29 +349,10 @@ export default function TalentPage() {
                         {job.requirements.slice(0, 3).map((req, reqIndex) => (
                           <li key={reqIndex} className="flex items-start text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
->>>>>>> main
                             {req}
                           </li>
                         ))}
                       </ul>
-<<<<<<< HEAD
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                      <ul className="space-y-2">
-                        {job.benefits.map((benefit, benefitIndex) => (
-                          <li key={benefitIndex} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-<<<<<<< HEAD
-                  </div>
-                  </div>
-                  </motion.div>
-=======
                   <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
                     Apply Now
                   </button>
@@ -516,7 +442,6 @@ export default function TalentPage() {
               >
                 Send Your Resume
                 <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               ))}
             </div>
           </div>
@@ -570,44 +495,19 @@ export default function TalentPage() {
               <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
                 Apply now or contact us to learn more about opportunities.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-                <Link
-                  href="/careers"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-colors font-semibold"
-                >
-                  View All Jobs
-                </Link>
-              </div>
-=======
                   <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                 Send Your Resume
->>>>>>> main
               </Link>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
     </Layout>
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   );
 }
 >>>>>>> main
-=======
     </>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-9473:pages/talent.tsx

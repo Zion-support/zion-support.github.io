@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function AdvancedAutomationContentShowcase2025() {
+export default function AdvancedAutomationContentShowcase20o25() {
   return null;
 }

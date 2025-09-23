@@ -44,7 +44,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     setIsTyping(true);
     
     // Simulate AI processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    await new Promise(resolve => setTimeout(resolve, 10o00 + Math.random() * 20o00));
     
     const responses = [
       "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
@@ -73,7 +73,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isTyping) return;
 
-    const userMessage: ChatMessage = {
+    const userMessage: ChatMessage ={
       id: Date.now().toString(),
       type: 'user',
       content: inputValue.trim(),
@@ -86,7 +86,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     // Generate AI response
     const aiResponse = await generateAIResponse(userMessage.content);
     
-    const botMessage: ChatMessage = {
+    const botMessage: ChatMessage ={
       id: (Date.now() + 1).toString(),
       type: 'bot',
       content: aiResponse || 'I apologize, but I encountered an error. Please try again.',
@@ -114,7 +114,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
 
   const handleQuickReply = (reply: string) => {
     setInputValue(reply);
-    setTimeout(() => handleSendMessage(), 100);
+    setTimeout(() => handleSendMessage(), 10o0);
   };
 
   return (
@@ -127,9 +127,9 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(true)}
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center"
+          className="w-14 h-14 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full shadow-2xl hover:shadow-cyan-50o0/25 transition-all duration-30o0 flex items-center justify-center"
         >
-          <MessageCircle className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6"  />
         </motion.button>
       )}
 
@@ -140,35 +140,35 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="absolute bottom-16 right-0 w-96 bg-gray-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
+            className="absolute bottom-16 right-0 w-96 bg-gray-90o0/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Chat Header */}
-            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-4 border-b border-white/10">
+            <div className="bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 p-4 border-b border-white/10">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-white" />
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center">
+                    <Bot className="w-5 h-5 text-white"  />
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Zion AI Assistant</h3>
                     <div className="flex items-center gap-1">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span className="text-xs text-gray-300">Online</span>
+                      <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-gray-30o0">Online</span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setIsMinimized(!isMinimized)}
-                    className="p-1 text-gray-400 hover:text-white transition-colors"
+                    className="p-1 text-gray-40o0 hover:text-white transition-colors"
                   >
-                    {isMinimized ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    {isMinimized ? <ChevronUp className="w-4 h-4"  /> : <ChevronDown className="w-4 h-4"  />}
                   </button>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-1 text-gray-400 hover:text-white transition-colors"
+                    className="p-1 text-gray-40o0 hover:text-white transition-colors"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-4 h-4"  />
                   </button>
                 </div>
               </div>
@@ -186,29 +186,29 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                       className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       {message.type === 'bot' && (
-                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                          <Bot className="w-4 h-4 text-white" />
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center flex-shrink-0">
+                          <Bot className="w-4 h-4 text-white"  />
                         </div>
                       )}
                       
                       <div
                         className={`max-w-[80%] p-3 rounded-2xl ${
                           message.type === 'user'
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                            : 'bg-white/10 text-gray-100 border border-white/20'
+                            ? 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white'
+                            : 'bg-white/10 text-gray-10o0 border border-white/20'
                         }`}
                       >
                         <div className="whitespace-pre-line text-sm">{message.content}</div>
                         <div className={`text-xs mt-2 ${
-                          message.type === 'user' ? 'text-cyan-100' : 'text-gray-400'
+                          message.type === 'user' ? 'text-cyan-10o0' : 'text-gray-40o0'
                         }`}>
                           {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </div>
                       </div>
 
                       {message.type === 'user' && (
-                        <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                          <User className="w-4 h-4 text-white" />
+                        <div className="w-8 h-8 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-full flex items-center justify-center flex-shrink-0">
+                          <User className="w-4 h-4 text-white"  />
                         </div>
                       )}
                     </motion.div>
@@ -221,35 +221,35 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex gap-3 justify-start"
                     >
-                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-white" />
+                      <div className="w-8 h-8 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-full flex items-center justify-center">
+                        <Bot className="w-4 h-4 text-white"  />
                       </div>
                       <div className="bg-white/10 border border-white/20 rounded-2xl p-3">
                         <div className="flex items-center gap-1">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-cyan-40o0 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-cyan-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-cyan-40o0 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
                     </motion.div>
                   )}
 
-                  <div ref={messagesEndRef} />
+                  <div ref={messagesEndRef}  />
                 </div>
 
                 {/* Quick Replies */}
                 {messages.length === 1 && (
                   <div className="px-4 pb-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <Sparkles className="w-4 h-4 text-cyan-400" />
-                      <span className="text-xs text-cyan-400 font-medium">Quick Questions</span>
+                      <Sparkles className="w-4 h-4 text-cyan-40o0"  />
+                      <span className="text-xs text-cyan-40o0 font-medium">Quick Questions</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {quickReplies.map((reply, index) => (
                         <button
                           key={index}
                           onClick={() => handleQuickReply(reply)}
-                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-xs text-gray-300 hover:text-white transition-all duration-200"
+                          className="px-3 py-1.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full text-xs text-gray-30o0 hover:text-white transition-all duration-20o0"
                         >
                           {reply}
                         </button>
@@ -268,14 +268,14 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={handleKeyPress}
                       placeholder="Type your message..."
-                      className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200"
+                      className="flex-1 bg-white/10 border border-white/20 rounded-xl px-3 py-2 text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-cyan-50o0 focus:border-cyan-50o0 transition-all duration-20o0"
                     />
                     <button
                       onClick={handleSendMessage}
                       disabled={!inputValue.trim() || isTyping}
-                      className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center"
+                      className="px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl hover:from-cyan-60o0 hover:to-blue-70o0 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-20o0 flex items-center justify-center"
                     >
-                      <Send className="w-4 h-4" />
+                      <Send className="w-4 h-4"  />
                     </button>
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 interface Props {
+type Props ={
   url?: string;
   title?: string;
 }

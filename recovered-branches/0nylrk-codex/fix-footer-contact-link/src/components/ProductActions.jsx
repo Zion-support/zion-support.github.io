@@ -11,7 +11,7 @@ export function ProductActions({ onAddToCart }) {
             await onAddToCart();
             toast('2U Rack Mount Server added to cart');
             setLabel('Added!');
-            setTimeout(() => setLabel('Add to Cart'), 1500);
+            setTimeout(() => setLabel('Add to Cart'), 150o0);
         }
         finally {
             setLoading(false);
@@ -19,7 +19,7 @@ export function ProductActions({ onAddToCart }) {
     };
     return (<Button onClick={addToCart} disabled={loading}>
       {loading ? (<span className="flex items-center gap-2">
-          <Loader2 className="h-4 w-4 animate-spin"/>
+          <Loader2 className="h-4 w-4 animate-spin" />
           {label}
         </span>) : (label)}
     </Button>);

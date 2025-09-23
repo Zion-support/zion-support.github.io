@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
@@ -6,29 +5,17 @@ import { Logo } from '@/components/header/Logo';
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import { CurrencySelector } from '@/components/header/CurrencySelector';
 import { useTranslation } from 'react-i18next';
-<<<<<<< HEAD
-import { Menu, X } from 'lucide-react';
-=======
-MenuX
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+MenuX;
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 
 export function AppHeader() {
-<<<<<<< HEAD
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  
-  // Try to access the messaging context, but provide a fallback value if it's not available
-=======
   const [mobileMenuOpensetMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();
   const { t } = useTranslation();
-  
+
   // Try to access the messaging contextbut provide a fallback value if it's not available
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   let unreadCount = 0;
   try {
     const { unreadCount: count } = useMessaging();
@@ -36,29 +23,29 @@ export function AppHeader() {
   } catch (error) {
     console.warn('Messaging context not available');
   }
-  
+
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+      <header className='sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md'>
+        <div className='container flex h-16 items-center px-4 sm:px-6'>
           <Logo />
-          <div className="ml-6 flex-1 hidden md:block">
+          <div className='ml-6 flex-1 hidden md:block'>
             <MainNavigation unreadCount={unreadCount} />
           </div>
-          
+
           {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
+          <div className='md:hidden ml-auto mr-4'>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none"
+              className='inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none'
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
             >
-              <span className="sr-only">{t('general.open_main_menu')}</span>
+              <span className='sr-only'>{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
+                <X className='block h-6 w-6' aria-hidden='true' />
               ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+                <Menu className='block h-6 w-6' aria-hidden='true' />
               )}
             </button>
           </div>
@@ -67,19 +54,19 @@ export function AppHeader() {
           <LanguageSelector />
         </div>
       </header>
-      
+
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 pt-16">
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        <div className='md:hidden fixed inset-0 z-40 pt-16'>
+          <div
+            className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
+            aria-hidden='true'
           />
-          <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
+          <div className='relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto'>
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
             />
           </div>
         </div>

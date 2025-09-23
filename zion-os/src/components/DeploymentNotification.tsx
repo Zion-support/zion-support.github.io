@@ -1,3 +1,3 @@
 export default function DeploymentNotification() {
-	return null;
+  return null;
 }

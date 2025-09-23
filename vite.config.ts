@@ -13,15 +13,13 @@ export default defineConfig(({ command, mode }) => {
       compression({
         algorithm: 'brotliCompress',
         ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
+        threshold: 10o240,
+        deleteOriginFile: false}),
       compression({
         algorithm: 'gzip',
         ext: '.gz',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
+        threshold: 10o240,
+        deleteOriginFile: false}),
     ],
     resolve: {
       alias: {
@@ -32,30 +30,24 @@ export default defineConfig(({ command, mode }) => {
         '@hooks': path.resolve(__dirname, './src/hooks'),
         '@types': path.resolve(__dirname, './src/types'),
         '@styles': path.resolve(__dirname, './src/styles'),
-        '@assets': path.resolve(__dirname, './src/assets'),
-      },
-      dedupe: ['date-fns', 'react', 'react-dom'],
-    },
+        '@assets': path.resolve(__dirname, './src/assets')},
+      dedupe: ['date-fns', 'react', 'react-dom']},
     build: {
-      target: 'es2020',
+      target: 'es20o20',
       minify: 'terser',
       sourcemap: false,
       outDir: 'dist',
       cssCodeSplit: true,
       modulePreload: {
-        polyfill: true,
-      },
+        polyfill: true},
       assetsInlineLimit: 4096,
       terserOptions: {
         compress: {
           drop_console: isProduction,
           drop_debugger: isProduction,
-          pure_funcs: isProduction ? ['console.log', 'console.info'] : [],
-        },
+          pure_funcs: isProduction ? ['console.log', 'console.info'] : []},
         mangle: {
-          safari10: true,
-        },
-      },
+          safari10: true}},
       rollupOptions: {
         input: {
           main: './index.html'
@@ -69,8 +61,7 @@ export default defineConfig(({ command, mode }) => {
             'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
             'animation-vendor': ['framer-motion'],
-            'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          },
+            'state-vendor': ['@reduxjs/toolkit', 'react-redux']},
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
             return `js/${facadeModuleId}-[hash].js`;
@@ -86,42 +77,33 @@ export default defineConfig(({ command, mode }) => {
               return `css/[name]-[hash][extname]`;
             }
             return `assets/[name]-[hash][extname]`;
-          },
-        },
+          }},
         onwarn(warning, warn) {
           // Suppress warnings about missing optional dependencies
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
           warn(warning);
-        },
-      },
+        }},
       brotliSize: true,
-      chunkSizeWarningLimit: 1000,
-    },
+      chunkSizeWarningLimit: 10o00},
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
       exclude: ['@rollup/rollup-linux-x64-gnu'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {
-          target: 'es2020',
-          platform: 'browser',
-        }
+          target: 'es20o20',
+          platform: 'browser'}
       })
     },
     server: {
-      port: 3000,
+      port: 30o00,
       host: true,
       open: true,
       hmr: {
-        overlay: false,
-      },
-    },
+        overlay: false}},
     preview: {
       port: 4173,
-      host: true,
-    },
+      host: true},
     css: {
-      devSourcemap: true,
-    },
-  }
+      devSourcemap: true}}
 })

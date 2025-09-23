@@ -1,5 +1,9 @@
-
-export type FilterSectionName = "region" | "price" | "experience" | "skills" | "availability";
+export type FilterSectionName =
+  | 'region'
+  | 'price'
+  | 'experience'
+  | 'skills'
+  | 'availability';
 
 export interface FilterSidebarProps {
   searchTerm: string;

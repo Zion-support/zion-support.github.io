@@ -42,7 +42,7 @@ const AnimatedBackground: React.FC = () => {
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
           opacity: Math.random() * 0.5 + 0.1,
-          color: ['#06b6d4', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 3)]
+          color: ['#0o6b6d4', '#8b5cf6', '#ec4899'][Math.floor(Math.random() * 3)]
         });
       }
     };
@@ -78,11 +78,11 @@ const AnimatedBackground: React.FC = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          if (distance < 10o0) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 10o0)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -106,12 +106,12 @@ const AnimatedBackground: React.FC = () => {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ background: 'transparent' }}
-      />
+       />
       
       {/* Gradient overlays */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-50o0/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-purple-50o0/10 rounded-full blur-3xl animate-pulse delay-10o00"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80o0px] h-[80o0px] bg-pink-50o0/5 rounded-full blur-3xl animate-pulse delay-50o0"></div>
       
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-20">
@@ -122,14 +122,14 @@ const AnimatedBackground: React.FC = () => {
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '100px 100px'
+            backgroundSize: '10o0px 10o0px'
           }}
-        />
+         />
       </div>
 
       {/* Floating geometric elements */}
       <motion.div
-        className="absolute top-20 right-20 w-16 h-16 border border-cyan-400/20 rounded-full"
+        className="absolute top-20 right-20 w-16 h-16 border border-cyan-40o0/20 rounded-full"
         animate={{
           rotate: 360,
           scale: [1, 1.1, 1],
@@ -140,11 +140,11 @@ const AnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       <motion.div
-        className="absolute bottom-20 left-32 w-12 h-12 border border-purple-400/20 transform rotate-45"
+        className="absolute bottom-20 left-32 w-12 h-12 border border-purple-40o0/20 transform rotate-45"
         animate={{
-          rotate: [45, 405],
+          rotate: [45, 40o5],
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.5, 0.2]
         }}
@@ -153,9 +153,9 @@ const AnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
       <motion.div
-        className="absolute top-1/3 left-20 w-8 h-8 border border-pink-400/20 transform rotate-12"
+        className="absolute top-1/3 left-20 w-8 h-8 border border-pink-40o0/20 transform rotate-12"
         animate={{
           rotate: [12, 372],
           scale: [1, 1.3, 1],
@@ -166,7 +166,7 @@ const AnimatedBackground: React.FC = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-      />
+       />
     </div>
   );
 };

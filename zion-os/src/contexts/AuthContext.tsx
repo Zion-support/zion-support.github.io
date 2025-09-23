@@ -1,6 +1,6 @@
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+'use client';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 type User = {
   id: string;
@@ -32,7 +32,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     try {
-      const stored = typeof window !== "undefined" ? window.localStorage.getItem("zion-os:user") : null;
+      const stored =
+        typeof window !== 'undefined'
+          ? window.localStorage.getItem('zion-os:user')
+          : null;
       if (stored) {
         setUser(JSON.parse(stored) as User);
       }
@@ -42,21 +45,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = async (email: string, password: string) => {
     const mockUser: User = {
-      id: "local-user",
-      name: email.split("@")[0],
+      id: 'local-user',
+      name: email.split('@')[0],
       email,
-      role: "user",
+      role: 'user',
       onboardingCompleted: false,
     };
     setUser(mockUser);
-    try { window.localStorage.setItem("zion-os:user", JSON.stringify(mockUser)); } catch {}
-    router.push("/dashboard");
+    try {
+      window.localStorage.setItem('zion-os:user', JSON.stringify(mockUser));
+    } catch {}
+    router.push('/dashboard');
   };
 
   const logout = async () => {
     setUser(null);
-    try { window.localStorage.removeItem("zion-os:user"); } catch {}
-    router.push("/");
+    try {
+      window.localStorage.removeItem('zion-os:user');
+    } catch {}
+    router.push('/');
   };
 
   const register = async (_name: string, email: string, password: string) => {
@@ -67,7 +74,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (user) {
       const updated = { ...user, onboardingCompleted: true };
       setUser(updated);
-      try { window.localStorage.setItem("zion-os:user", JSON.stringify(updated)); } catch {}
+      try {
+        window.localStorage.setItem('zion-os:user', JSON.stringify(updated));
+      } catch {}
     }
   };
 
@@ -88,6 +97,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
+  if (context === undefined)
+    throw new Error('useAuth must be used within an AuthProvider');
   return context;
 }

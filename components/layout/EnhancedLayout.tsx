@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-=======
 "use client";
 
 import React, { useEffect } from 'react',
@@ -36,13 +31,10 @@ import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 export type EnhancedLayoutProps = {
-<<<<<<< HEAD
-=======
   children: React.ReactNode;}
 export type EnhancedLayoutProps = {
   children: React.ReactNode
@@ -60,21 +52,10 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 export type EnhancedLayoutProps = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   children: React.ReactNode;
 };
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-<<<<<<< HEAD
-  useEffect(() => {
-    const lng = i18n.resolvedLanguage || i18n.language;
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-  }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
-=======
   useEffect(() => {;
     const lng = i18n.resolvedLanguage || i18n.language;
 
@@ -118,20 +99,10 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   return (
 
     <div className=&quot;min-h-screen flex flex-col&quot;>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <header>
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-<<<<<<< HEAD
-      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer>
-        <EnhancedFooter />
-      </footer>
-    </div>
-  );
-}
-=======
       <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
 
 import React, { useEffect } from 'react';
@@ -172,4 +143,3 @@ import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

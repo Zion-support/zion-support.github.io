@@ -1,8 +1,12 @@
-export default function SaaSServicesPage() {
+export default function SAASServicesPage() {
   return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">SaaS Services</h1>
-      <p className="text-gray-600">SaaS product engineering and operations.</p>
-    </main>
+    <div className='min-h-screen bg-white'>
+      <section className='py-20 text-center'>
+        <h1 className='text-4xl font-bold'>SaaS Services</h1>
+        <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+          End‑to‑end SaaS design, development, and operations.
+        </p>
+      </section>
+    </div>
   );
 }

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -20,28 +19,31 @@ export interface GeneratedMilestone {
 
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const [generatedMilestones, setGeneratedMilestones] = useState<
+    GeneratedMilestone[]
+  >([]);
 
-  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
+  const generateMilestones = async (
+    input: MilestoneInput
+  ): Promise<GeneratedMilestone[]> => {
     try {
       setIsGenerating(true);
 
-      const { data, error } = await supabase.functions.invoke('generate-milestones', {
-        body: input
-      });
+      const { data, error } = await supabase.functions.invoke(
+        'generate-milestones',
+        {
+          body: input,
+        }
+      );
 
       if (error) throw error;
 
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
         ...milestone,
-<<<<<<< HEAD
+
         isAiGenerated: true,
       }));
-=======
-
-        isAiGenerated: true}));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
       setGeneratedMilestones(milestonesWithFlag);
       return milestonesWithFlag;
@@ -62,10 +64,6 @@ export function useMilestoneGenerator() {
     generateMilestones,
     generatedMilestones,
     isGenerating,
-<<<<<<< HEAD
     clearGeneratedMilestones,
   };
-=======
-    clearGeneratedMilestones};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

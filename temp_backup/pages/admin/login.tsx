@@ -16,15 +16,13 @@ export default function AdminLoginPage() {
       const res = await fetch('/api/admin/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
-      });
+        body: JSON.stringify({ username, password })});
       if (!res.ok) throw new Error('Invalid credentials');
       router.push('/admin');
     } catch (err: any) {
       setError(err.message || 'Login failed')
     } finally {
-      setLoading(false),
-    }
+      setLoading(false)}
   }
 
   return (
@@ -39,11 +37,10 @@ export default function AdminLoginPage() {
           <label className="block text-sm mb-1">Password</label>
           <input type="password" className="w-full border rounded px-3 py-2" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        {error && <p className="text-red-600 text-sm">{error}</p>}
-        <button type="submit" disabled={loading} className="w-full bg-indigo-600 text-white rounded px-3 py-2 hover:bg-indigo-700 disabled:opacity-50">
+        {error && <p className="text-red-60o0 text-sm">{error}</p>}
+        <button type="submit" disabled={loading} className="w-full bg-indigo-60o0 text-white rounded px-3 py-2 hover:bg-indigo-70o0 disabled:opacity-50">
           {loading ? 'Signing in…' : 'Sign in'}
         </button>
       </form>
     </div>
-  ),
-}
+  )}

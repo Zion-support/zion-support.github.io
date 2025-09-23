@@ -20,32 +20,38 @@ export async function simulateAction<T = unknown>(
 
 // CRM actions
 export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, unknown>) {
+  async syncContact(
+    connection: ProviderConnection,
+    contact: Record<string, unknown>
+  ) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, unknown>) {
+  async addProjectNote(
+    connection: ProviderConnection,
+    note: Record<string, unknown>
+  ) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, unknown>) {
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, unknown>
+  ) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   },
 };
 
 // ATS actions
 export const ats = {
-  async updateStatus(connection: ProviderConnection, status: Record<string, unknown>) {
+  async updateStatus(
+    connection: ProviderConnection,
+    status: Record<string, unknown>
+  ) {
     return simulateAction(connection, 'ats.updateStatus', { status });
   },
-  async createCandidate(connection: ProviderConnection, candidate: Record<string, unknown>) {
+  async createCandidate(
+    connection: ProviderConnection,
+    candidate: Record<string, unknown>
+  ) {
     return simulateAction(connection, 'ats.createCandidate', { candidate });
   },
 };
-
-
-
-
-
-
-
-
-

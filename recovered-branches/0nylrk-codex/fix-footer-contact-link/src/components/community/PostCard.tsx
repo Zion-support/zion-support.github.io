@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
-
-interface PostCardProps {
-  post: ForumPost;
-  compact?: boolean;
-}
-
-export const PostCard = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-
-  return (
-    <Card className={cn(
-      "transition-shadow hover:shadow-md",
-      post.isPinned && "border-zion-purple/50",
-=======
 
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
@@ -65,7 +40,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       "transition-shadow hover:shadow-md",
       post.isPinned && "border-zion-purple/50",
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -81,8 +55,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
             )}
-<<<<<<< HEAD
-=======
             {post && post.isPinned && (;
               <Pin className="h-4 w-4 text-amber-500 ml-2" />;
             )}
@@ -133,7 +105,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
             )}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             {post.isPinned && (
               <Pin className="h-4 w-4 text-amber-500 ml-2" />
             )}
@@ -143,13 +114,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           </div>
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
-<<<<<<< HEAD
-          </div>
-          
-          <div className="flex flex-wrap gap-2 mt-2">
-            {post.tags?.map(tag => (
-              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-=======
           </div>;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
@@ -160,8 +124,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -175,19 +137,11 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
           </div>
         </div>
       </CardHeader>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {!compact && (
         <CardContent>
           <div className="line-clamp-3">{post.content}</div>
         </CardContent>
       )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
@@ -205,23 +159,11 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <span className="text-sm">{post.replyCount} replies</span>
           </div>
         </div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {post.isFeatured && (
           <div>
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-  );
-};
-
-export default PostCard;
-=======
 
       </CardFooter>
     </Card>
@@ -239,10 +181,10 @@ export default PostCard;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 export default PostCard;
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

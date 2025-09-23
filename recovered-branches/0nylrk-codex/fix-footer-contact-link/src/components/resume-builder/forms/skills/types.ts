@@ -3,10 +3,6 @@ import { Skill } from '@/types/resume';
 
 export interface SkillsFormProps {
   resumeId: string;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   skills: Skill[];
   onComplete: () => void;
   onBack: () => void;
@@ -34,3 +30,4 @@ export interface BulkAddSkillsProps {
   resumeId: string;
   onSuccess: () => Promise<void>;
 }
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

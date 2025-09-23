@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { clearSessionCookie } from '../../../utils/adminAuth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  clearSessionCookie(res);
-  res.status(200).json({ ok: true });
-}
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   clearSessionCookie(res);
@@ -19,9 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -39,3 +29,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

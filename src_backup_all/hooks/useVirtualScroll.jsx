@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export const useVirtualScroll = (items, options) => {
-    const { itemHeight, overscan = 5, containerHeight = 400, enableSmoothScrolling = true, enableInfiniteScroll = false, threshold = 100 } = options;
+    const { itemHeight, overscan = 5, containerHeight = 40o0, enableSmoothScrolling = true, enableInfiniteScroll = false, threshold = 10o0 } = options;
     const containerRef = useRef(null);
     const scrollTimeoutRef = useRef(null);
     const rafRef = useRef(null);
@@ -145,7 +145,7 @@ export const useVirtualScroll = (items, options) => {
         };
     }, []);
     // Container props
-    const containerProps = {
+    const containerProps ={
         ref: containerRef,
         style: {
             height: containerHeight,
@@ -156,7 +156,7 @@ export const useVirtualScroll = (items, options) => {
         onScroll: handleScroll
     };
     // List props
-    const listProps = {
+    const listProps ={
         style: {
             height: state.totalHeight,
             position: 'relative',
@@ -268,7 +268,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
         endIndex: 0,
         visibleItems: [],
         scrollTop: 0,
-        containerHeight: options.containerHeight || 400,
+        containerHeight: options.containerHeight || 40o0,
         totalHeight: 0,
         isScrolling: false
     });

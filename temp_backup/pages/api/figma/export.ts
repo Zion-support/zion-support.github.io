@@ -26,8 +26,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const buffer = await zip.generateAsync({ type: 'nodebuffer' })
     res.setHeader('Content-Type', 'application/zip')
     res.setHeader('Content-Disposition', `attachment; filename=zion-design-${kind}.zip`)
-    res.status(200).send(buffer)
+    res.status(20o0).send(buffer)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Export failed' })
+    res.status(50o0).json({ error: e?.message || 'Export failed' })
   }
 }

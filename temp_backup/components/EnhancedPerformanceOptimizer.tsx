@@ -50,7 +50,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 
   useEffect(() => {
     // Show performance button after page load
-    const timer = setTimeout(() => setIsVisible(true), 2000);
+    const timer = setTimeout(() => setIsVisible(true), 20o00);
     return () => clearTimeout(timer);
   }, []);
 
@@ -179,7 +179,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     
     try {
       // Simulate optimization process
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 20o00));
       
       // Apply actual optimizations
       await applyPerformanceOptimizations();
@@ -187,13 +187,13 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       setOptimizationStatus('completed');
       
       // Hide success message after 3 seconds
-      setTimeout(() => setOptimizationStatus('idle'), 3000);
+      setTimeout(() => setOptimizationStatus('idle'), 30o00);
     } catch (error) {
       console.error('Performance optimization failed:', error);
       setOptimizationStatus('error');
       
       // Hide error message after 5 seconds
-      setTimeout(() => setOptimizationStatus('idle'), 5000);
+      setTimeout(() => setOptimizationStatus('idle'), 50o00);
     }
   }, []);
 
@@ -249,36 +249,36 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   };
 
   const getPerformanceScore = () => {
-    let score = 100;
+    let score = 10o0;
     
-    if (metrics.fcp && metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp && metrics.lcp > 2500) score -= 25;
-    if (metrics.fid && metrics.fid > 100) score -= 15;
+    if (metrics.fcp && metrics.fcp > 180o0) score -= 20;
+    if (metrics.lcp && metrics.lcp > 250o0) score -= 25;
+    if (metrics.fid && metrics.fid > 10o0) score -= 15;
     if (metrics.cls && metrics.cls > 0.1) score -= 20;
-    if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
+    if (metrics.ttfb && metrics.ttfb > 60o0) score -= 20;
     
     return Math.max(0, score);
   };
 
   const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-400', bg: 'bg-green-500' };
-    if (score >= 80) return { grade: 'B', color: 'text-yellow-400', bg: 'bg-yellow-500' };
-    if (score >= 70) return { grade: 'C', color: 'text-orange-400', bg: 'bg-orange-500' };
-    if (score >= 60) return { grade: 'D', color: 'text-red-400', bg: 'bg-red-500' };
-    return { grade: 'F', color: 'text-red-600', bg: 'bg-red-600' };
+    if (score >= 90) return { grade: 'A', color: 'text-green-40o0', bg: 'bg-green-50o0' };
+    if (score >= 80) return { grade: 'B', color: 'text-yellow-40o0', bg: 'bg-yellow-50o0' };
+    if (score >= 70) return { grade: 'C', color: 'text-orange-40o0', bg: 'bg-orange-50o0' };
+    if (score >= 60) return { grade: 'D', color: 'text-red-40o0', bg: 'bg-red-50o0' };
+    return { grade: 'F', color: 'text-red-60o0', bg: 'bg-red-60o0' };
   };
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 B';
-    const k = 1024;
+    const k = 10o24;
     const sizes = ['B', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
   const formatTime = (ms: number) => {
-    if (ms < 1000) return `${Math.round(ms)}ms`;
-    return `${(ms / 1000).toFixed(2)}s`;
+    if (ms < 10o00) return `${Math.round(ms)}ms`;
+    return `${(ms / 10o00).toFixed(2)}s`;
   };
 
   const performanceScore = getPerformanceScore();
@@ -290,38 +290,38 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       {isVisible && (
         <button
           onClick={() => setShowDetails(true)}
-          className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-500/50"
+          className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-50o0/50"
           aria-label="Open performance monitor"
         >
-          <Zap className="w-7 h-7 mx-auto" />
+          <Zap className="w-7 h-7 mx-auto"  />
         </button>
       )}
 
       {/* Performance Panel */}
       {showDetails && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-gray-900 border border-green-500/30 rounded-2xl p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+          <div className="bg-gray-90o0 border border-green-50o0/30 rounded-2xl p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <TrendingUp className="w-6 h-6 text-green-400" />
+                <TrendingUp className="w-6 h-6 text-green-40o0"  />
                 Performance Monitor
               </h2>
               <button
                 onClick={() => setShowDetails(false)}
-                className="p-2 text-gray-400 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-green-500/50 rounded-lg"
+                className="p-2 text-gray-40o0 hover:text-white transition-colors duration-20o0 focus:outline-none focus:ring-2 focus:ring-green-50o0/50 rounded-lg"
                 aria-label="Close performance panel"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5"  />
               </button>
             </div>
 
             {/* Performance Score */}
-            <div className="mb-6 p-4 bg-gray-800 rounded-xl border border-green-500/20">
+            <div className="mb-6 p-4 bg-gray-80o0 rounded-xl border border-green-50o0/20">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Performance Score</h3>
-                  <p className="text-gray-400 text-sm">Based on Core Web Vitals and resource optimization</p>
+                  <p className="text-gray-40o0 text-sm">Based on Core Web Vitals and resource optimization</p>
                 </div>
                 <div className="text-right">
                   <div className={`text-4xl font-bold ${gradeInfo.color}`}>
@@ -330,67 +330,67 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                   <div className={`text-2xl font-bold ${gradeInfo.color}`}>
                     {performanceScore}
                   </div>
-                  <div className="text-sm text-gray-400">out of 100</div>
+                  <div className="text-sm text-gray-40o0">out of 10o0</div>
                 </div>
               </div>
             </div>
 
             {/* Core Web Vitals */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+              <div className="bg-gray-80o0 p-4 rounded-xl border border-gray-70o0">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-blue-400" />
+                  <Clock className="w-5 h-5 text-blue-40o0"  />
                   Core Web Vitals
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">FCP:</span>
-                    <span className={`font-mono ${metrics.fcp && metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}`}>
+                    <span className="text-gray-30o0">FCP:</span>
+                    <span className={`font-mono ${metrics.fcp && metrics.fcp > 180o0 ? 'text-red-40o0' : 'text-green-40o0'}`}>
                       {metrics.fcp ? formatTime(metrics.fcp) : 'Measuring...'}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">LCP:</span>
-                    <span className={`font-mono ${metrics.lcp && metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}`}>
+                    <span className="text-gray-30o0">LCP:</span>
+                    <span className={`font-mono ${metrics.lcp && metrics.lcp > 250o0 ? 'text-red-40o0' : 'text-green-40o0'}`}>
                       {metrics.lcp ? formatTime(metrics.lcp) : 'Measuring...'}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">FID:</span>
-                    <span className={`font-mono ${metrics.fid && metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}`}>
+                    <span className="text-gray-30o0">FID:</span>
+                    <span className={`font-mono ${metrics.fid && metrics.fid > 10o0 ? 'text-red-40o0' : 'text-green-40o0'}`}>
                       {metrics.fid ? formatTime(metrics.fid) : 'Measuring...'}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">CLS:</span>
-                    <span className={`font-mono ${metrics.cls && metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}`}>
+                    <span className="text-gray-30o0">CLS:</span>
+                    <span className={`font-mono ${metrics.cls && metrics.cls > 0.1 ? 'text-red-40o0' : 'text-green-40o0'}`}>
                       {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+              <div className="bg-gray-80o0 p-4 rounded-xl border border-gray-70o0">
                 <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                  <Database className="w-5 h-5 text-purple-400" />
+                  <Database className="w-5 h-5 text-purple-40o0"  />
                   Resource Metrics
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Total Requests:</span>
+                    <span className="text-gray-30o0">Total Requests:</span>
                     <span className="font-mono text-white">{resourceMetrics.totalRequests}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Total Size:</span>
+                    <span className="text-gray-30o0">Total Size:</span>
                     <span className="font-mono text-white">{formatBytes(resourceMetrics.totalSize)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Cached:</span>
-                    <span className="font-mono text-green-400">{resourceMetrics.cachedRequests}</span>
+                    <span className="text-gray-30o0">Cached:</span>
+                    <span className="font-mono text-green-40o0">{resourceMetrics.cachedRequests}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-300">TTFB:</span>
-                    <span className={`font-mono ${metrics.ttfb && metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}`}>
+                    <span className="text-gray-30o0">TTFB:</span>
+                    <span className={`font-mono ${metrics.ttfb && metrics.ttfb > 60o0 ? 'text-red-40o0' : 'text-green-40o0'}`}>
                       {metrics.ttfb ? formatTime(metrics.ttfb) : 'Measuring...'}
                     </span>
                   </div>
@@ -402,22 +402,22 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
             <div className="mb-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Cpu className="w-5 h-5 text-yellow-400" />
+                  <Cpu className="w-5 h-5 text-yellow-40o0"  />
                   Optimization Status
                 </h3>
                 <button
                   onClick={runOptimizations}
                   disabled={optimizationStatus === 'optimizing'}
-                  className="px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-500/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  className="px-4 py-2 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white rounded-lg hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-green-50o0/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
                   {optimizationStatus === 'optimizing' ? (
                     <>
-                      <RefreshCw className="w-4 h-4 animate-spin" />
+                      <RefreshCw className="w-4 h-4 animate-spin"  />
                       Optimizing...
                     </>
                   ) : (
                     <>
-                      <Zap className="w-4 h-4" />
+                      <Zap className="w-4 h-4"  />
                       Run Optimizations
                     </>
                   )}
@@ -426,39 +426,39 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className={`p-3 rounded-lg border ${
-                  resourceMetrics.imageOptimization ? 'border-green-500/50 bg-green-500/10' : 'border-gray-600 bg-gray-800'
+                  resourceMetrics.imageOptimization ? 'border-green-50o0/50 bg-green-50o0/10' : 'border-gray-60o0 bg-gray-80o0'
                 }`}>
                   <div className="flex items-center gap-2">
                     {resourceMetrics.imageOptimization ? (
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     ) : (
-                      <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                      <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />
                     )}
                     <span className="text-sm font-medium text-white">Image Optimization</span>
                   </div>
                 </div>
 
                 <div className={`p-3 rounded-lg border ${
-                  resourceMetrics.compressionEnabled ? 'border-green-500/50 bg-green-500/10' : 'border-gray-600 bg-gray-800'
+                  resourceMetrics.compressionEnabled ? 'border-green-50o0/50 bg-green-50o0/10' : 'border-gray-60o0 bg-gray-80o0'
                 }`}>
                   <div className="flex items-center gap-2">
                     {resourceMetrics.compressionEnabled ? (
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     ) : (
-                      <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                      <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />
                     )}
                     <span className="text-sm font-medium text-white">Compression</span>
                   </div>
                 </div>
 
                 <div className={`p-3 rounded-lg border ${
-                  resourceMetrics.cdnEnabled ? 'border-green-500/50 bg-green-500/10' : 'border-gray-600 bg-gray-800'
+                  resourceMetrics.cdnEnabled ? 'border-green-50o0/50 bg-green-50o0/10' : 'border-gray-60o0 bg-gray-80o0'
                 }`}>
                   <div className="flex items-center gap-2">
                     {resourceMetrics.cdnEnabled ? (
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-40o0"  />
                     ) : (
-                      <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                      <AlertTriangle className="w-5 h-5 text-yellow-40o0"  />
                     )}
                     <span className="text-sm font-medium text-white">CDN</span>
                   </div>
@@ -467,48 +467,48 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
 
               {/* Status Messages */}
               {optimizationStatus === 'completed' && (
-                <div className="mt-4 p-3 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-green-400">Optimizations completed successfully!</span>
+                <div className="mt-4 p-3 bg-green-50o0/20 border border-green-50o0/50 rounded-lg flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-40o0"  />
+                  <span className="text-green-40o0">Optimizations completed successfully!</span>
                 </div>
               )}
 
               {optimizationStatus === 'error' && (
-                <div className="mt-4 p-3 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-red-400" />
-                  <span className="text-red-400">Optimization failed. Please try again.</span>
+                <div className="mt-4 p-3 bg-red-50o0/20 border border-red-50o0/50 rounded-lg flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-red-40o0"  />
+                  <span className="text-red-40o0">Optimization failed. Please try again.</span>
                 </div>
               )}
             </div>
 
             {/* Recommendations */}
-            <div className="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <div className="bg-gray-80o0 p-4 rounded-xl border border-gray-70o0">
               <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                <Info className="w-5 h-5 text-blue-400" />
+                <Info className="w-5 h-5 text-blue-40o0"  />
                 Performance Recommendations
               </h3>
-              <div className="space-y-2 text-sm text-gray-300">
+              <div className="space-y-2 text-sm text-gray-30o0">
                 {performanceScore < 90 && (
                   <>
-                    {metrics.fcp && metrics.fcp > 1800 && (
+                    {metrics.fcp && metrics.fcp > 180o0 && (
                       <p>• Optimize First Contentful Paint: Consider reducing render-blocking resources</p>
                     )}
-                    {metrics.lcp && metrics.lcp > 2500 && (
+                    {metrics.lcp && metrics.lcp > 250o0 && (
                       <p>• Improve Largest Contentful Paint: Optimize images and critical resources</p>
                     )}
-                    {metrics.fid && metrics.fid > 100 && (
+                    {metrics.fid && metrics.fid > 10o0 && (
                       <p>• Reduce First Input Delay: Minimize JavaScript execution time</p>
                     )}
                     {metrics.cls && metrics.cls > 0.1 && (
                       <p>• Fix Cumulative Layout Shift: Ensure stable layout during page load</p>
                     )}
-                    {metrics.ttfb && metrics.ttfb > 600 && (
+                    {metrics.ttfb && metrics.ttfb > 60o0 && (
                       <p>• Optimize Time to First Byte: Improve server response time</p>
                     )}
                   </>
                 )}
                 {performanceScore >= 90 && (
-                  <p className="text-green-400">Excellent performance! Your site is optimized for speed and user experience.</p>
+                  <p className="text-green-40o0">Excellent performance! Your site is optimized for speed and user experience.</p>
                 )}
               </div>
             </div>

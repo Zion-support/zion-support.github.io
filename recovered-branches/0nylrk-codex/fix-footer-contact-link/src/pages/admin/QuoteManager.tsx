@@ -1,21 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card,
-  CardContent
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-=======
 
 
 
@@ -63,21 +46,10 @@ import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-<<<<<<< HEAD
-} from "@/components/admin/quotes";
-
-export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
-=======
 } from "@/components/admin/quotes",
 
 export default function QuoteManager() {
@@ -87,7 +59,6 @@ export default function QuoteManager() {
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const {
     quotes,
@@ -104,25 +75,6 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
-<<<<<<< HEAD
-  } = useAdminQuotes();
-
-  // Count quotes by status
-  const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length,
-    in_review: quotes.filter(q => q.status === 'in_review').length,
-    accepted: quotes.filter(q => q.status === 'accepted').length,
-    responded: quotes.filter(q => q.status === 'responded').length,
-    closed: quotes.filter(q => q.status === 'closed').length
-  };
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true);
-  };
-
-  const handleResetFilters = () => {
-=======
 
   } = useAdminQuotes();
   } = useAdminQuotes(),
@@ -177,24 +129,16 @@ export default function QuoteManager() {
   };
 
   const handleResetFilters = () => {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined });
   };
 
-<<<<<<< HEAD
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
-  }
-
-=======
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
 
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <ProtectedRoute adminOnly>
       <div>
@@ -208,12 +152,6 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-<<<<<<< HEAD
-            
-            {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />
-            
-=======
 
             
 import React, { useState } from "react",;
@@ -308,7 +246,6 @@ export default function QuoteManager() {;
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -320,22 +257,6 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-<<<<<<< HEAD
-            />
-            
-            {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
-              </TabsList>
-              
-              <TabsContent value="active">
-                {/* Quotes Table */}
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable
-                    quotes={quotes.filter(quote => !quote.is_archived)}
-=======
 
             />;
 
@@ -352,23 +273,11 @@ export default function QuoteManager() {;
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => !quote && quote.is_archived)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-<<<<<<< HEAD
-                  />
-                </Card>
-              </TabsContent>
-              
-              <TabsContent value="archived">
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
-                  <QuotesTable
-                    quotes={quotes.filter(quote => quote.is_archived)}
-                    isArchived={true}
-=======
 
                   />;
                 </Card>;
@@ -383,7 +292,6 @@ export default function QuoteManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -395,9 +303,6 @@ export default function QuoteManager() {;
             </Tabs>
           </div>
         </div>
-<<<<<<< HEAD
-        
-=======
 
 
 
@@ -410,24 +315,10 @@ export default function QuoteManager() {;
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-<<<<<<< HEAD
-          onClose={() => {
-            setShowDetails(false);
-            setSelectedQuote(null);
-          }}
-        />
-        
-        <Footer />
-      </div>
-    </ProtectedRoute>
-  );
-}
-=======
 
           onClose={() => {
             setShowDetails(false);
@@ -571,4 +462,3 @@ if ( {) {
     </ProtectedRoute>);
 }
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

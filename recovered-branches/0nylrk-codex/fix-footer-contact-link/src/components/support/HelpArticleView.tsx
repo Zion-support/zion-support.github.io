@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
-import { HELP_CATEGORIES } from "./help-content";
-
-interface HelpArticleViewProps {
-=======
 
 
 
@@ -63,31 +53,10 @@ import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   articleId: string;
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-<<<<<<< HEAD
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-  
-  // Find the article in all categories
-  let article;
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId);
-    if (found) {
-      article = found;
-      break;
-    }
-  }
-  
-  if (!article) {
-    return <div>Article not found</div>;
-  }
-  
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type);
-=======
   const [feedbackGiven, setFeedbackGiven] = useState<
     "helpful" | "not-helpful" | null
   >(null);
@@ -120,8 +89,6 @@ interface HelpArticleViewProps {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -158,61 +125,35 @@ interface HelpArticleViewProps {;
       title: "Thank you for your feedback!",
       description: type === "helpful" 
         ? "We're glad this article was helpful." 
-<<<<<<< HEAD
-        : "We'll work on improving this article.",
-    });
-  };
-  
-=======
         : "We'll work on improving this article."})
   },
   
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
-<<<<<<< HEAD
-        
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-        
-=======
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
         </div>
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
             </div>
-<<<<<<< HEAD
-            
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <div className="flex items-center space-x-3">
               <Button
                 variant="outline"
                 size="sm"
-<<<<<<< HEAD
-                className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
-=======
 
   // Check condition
 if ( {) {
@@ -258,20 +199,12 @@ if ( {) {
                     : "";
 
                 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
               >
                 <ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
               </Button>
-<<<<<<< HEAD
-              
-              <Button
-                variant="outline"
-                size="sm"
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
-=======
               <Button
                 variant="outline"
                 size="sm"
@@ -280,7 +213,6 @@ if ( {) {
                     ? "bg-red-100 dark:bg-red-900/30"
                     : ""
                 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
               >
@@ -289,18 +221,6 @@ if ( {) {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-          
-          {feedbackGiven === "not-helpful" && (
-            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
-              <p className="text-sm text-zion-slate-light mb-2">
-                We're sorry this article wasn't helpful. Please contact our support team for further assistance.
-              </p>
-              <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">
-                Contact Support
-              </Button>
-            </div>
-=======
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
@@ -386,28 +306,14 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           )}
         </div>
       </Card>
     </div>
-<<<<<<< HEAD
-  );
-}
-
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
-}
-=======
 
   );
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -450,3 +356,4 @@ function formatDate(date: string): string {;
 ;
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

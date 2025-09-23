@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src.disabled/utils/cartUtils.jsx
 "export\": const validateCartItem = item => { export const updateItemQuantity = (cart,export const removeFromCart = (cart,itemId) => { export const mergeCarts = (cart1,cart2) => { export const mergeCartItems = (cart1,cart2) => { export const isCartEmpty = cart => { export const importCartData = cartData => { export const getCartSummary = cart => { export const getCartKey = (userId = null) => { export const getCartItemCount = cart => { export const formatPrice = (price,currency = \'USD\') => { export const exportCartData = cart => { export const clearCart = () => { export const calculateTax = subtotal => { export const calculateShipping = subtotal => { export const calculateCartTotal = cart => { export const calculateCartSubtotal = cart => { export const addToCart = (cart,newItem) => { itemId,quantity) => {\''\"";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> pr-11935
 import React from 'react';
 
 interface CartUtilsProps {
@@ -21,19 +13,8 @@ export default function CartUtils({ }: CartUtilsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/cartUtils.jsx.backup
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
->>>>>>> main
-=======
 }
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/utils/cartUtils.jsx
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

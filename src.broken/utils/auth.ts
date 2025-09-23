@@ -7,10 +7,17 @@ export interface AuthResult {
   tenantId?: string;
 }
 
-export function authenticateRequest(req: NextApiRequest, allowPublicGet: boolean = true): AuthResult {
+export function authenticateRequest(
+  req: NextApiRequest,
+  allowPublicGet: boolean = true
+): AuthResult {
   const method = (req.method || 'GET').toUpperCase();
-  const apiKey = (req.headers['x-api-key'] || req.headers['authorization']) as string | undefined;
-  const tenantIdHeader = (req.headers['x-tenant-id'] || req.query.tenantId) as string | undefined;
+  const apiKey = (req.headers['x-api-key'] || req.headers['authorization']) as
+    | string
+    | undefined;
+  const tenantIdHeader = (req.headers['x-tenant-id'] || req.query.tenantId) as
+    | string
+    | undefined;
 
   if (allowPublicGet && method === 'GET') {
     if (tenantIdHeader && getTenantById(tenantIdHeader)) {

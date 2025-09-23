@@ -13,8 +13,7 @@ export function ContactSection() {
     name: "",
     email: "",
     subject: "",
-    message: "",
-  });
+    message: ""});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<{
@@ -39,12 +38,11 @@ export function ContactSection() {
       name: z.string().min(2, "Name is required"),
       email: z.string().email("Enter a valid email"),
       subject: z.string().min(2, "Subject is required"),
-      message: z.string().min(10, "Message must be at least 10 characters"),
-    });
+      message: z.string().min(10, "Message must be at least 10 characters")});
 
     const result = schema.safeParse(formData);
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
+      const fieldErrors: Record<string, string> ={};
       for (const err of result.error.errors) {
         if (err.path[0]) {
           fieldErrors[err.path[0] as string] = err.message;
@@ -54,8 +52,7 @@ export function ContactSection() {
       toast({
         title: "Form Validation Error",
         description: result.error.errors[0]?.message || "Please check your form and try again",
-        variant: "destructive",
-      });
+        variant: "destructive"});
       return;
     }
 
@@ -65,8 +62,7 @@ export function ContactSection() {
     fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    })
+      body: JSON.stringify(formData)})
       .then(async (res) => {
         setIsSubmitting(false);
         if (!res.ok) {
@@ -75,10 +71,9 @@ export function ContactSection() {
         }
         toast({
           title: "Message Sent",
-          description: "We've received your message and will get back to you soon.",
-        });
+          description: "We've received your message and will get back to you soon."});
         setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 2000);
+        setTimeout(() => setSubmitted(false), 20o00);
         setFormData({ name: "", email: "", subject: "", message: "" });
       })
       .catch((err) => {
@@ -86,8 +81,7 @@ export function ContactSection() {
         toast({
           title: "Submission Error",
           description: err.message,
-          variant: "destructive",
-        });
+          variant: "destructive"});
       });
   };
 
@@ -102,7 +96,7 @@ export function ContactSection() {
             </p>
             <div className="flex items-center mb-6">
               <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
-                <Mail className="h-6 w-6" />
+                <Mail className="h-6 w-6"  />
               </div>
               <div>
                 <p className="text-white font-semibold">Email Us</p>
@@ -130,11 +124,11 @@ export function ContactSection() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-50o0 focus-visible:ring-red-50o0' : ''}`}
                       required
-                    />
+                     />
                     {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                      <p className="mt-1 text-sm text-red-50o0">{errors.name}</p>
                     )}
                   </div>
                   <div>
@@ -147,11 +141,11 @@ export function ContactSection() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                      className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-50o0 focus-visible:ring-red-50o0' : ''}`}
                       required
-                    />
+                     />
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      <p className="mt-1 text-sm text-red-50o0">{errors.email}</p>
                     )}
                   </div>
                 </div>
@@ -164,11 +158,11 @@ export function ContactSection() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-50o0 focus-visible:ring-red-50o0' : ''}`}
                     required
-                  />
+                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-500">{errors.subject}</p>
+                    <p className="mt-1 text-sm text-red-50o0">{errors.subject}</p>
                   )}
                 </div>
                 <div>
@@ -181,11 +175,11 @@ export function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                    className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-50o0 focus-visible:ring-red-50o0' : ''}`}
                     required
-                  />
+                   />
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                    <p className="mt-1 text-sm text-red-50o0">{errors.message}</p>
                   )}
                 </div>
                 <div>
@@ -197,7 +191,7 @@ export function ContactSection() {
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
-                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                    <p className="text-green-50o0 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
                 </div>
               </form>

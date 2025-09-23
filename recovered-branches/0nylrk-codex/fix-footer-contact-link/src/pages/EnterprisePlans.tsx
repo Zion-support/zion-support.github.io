@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";
-import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";
-import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";
-import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";
-import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";
-import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
-import { SEO } from "@/components/SEO";
-=======
 
 import React from "react";
 import {Header} from "@/components/Header";
@@ -34,16 +22,11 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function EnterprisePlans() {
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-=======
       <SEO
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         title="Enterprise Plans - Zion AI Marketplace"
         description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."
       />
@@ -58,10 +41,6 @@ export default function EnterprisePlans() {
       </main>
       <Footer />
     </>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 
@@ -107,8 +86,7 @@ import {SEO} from "@/components/SEO";
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

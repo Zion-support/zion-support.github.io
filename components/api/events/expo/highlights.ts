@@ -1,9 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-    return res.status(500).json({ error: e.message |'Failed to generate highlights' })
-}
-
-=======
 import { agendaItems } from '../../../../data/expo/agenda';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -104,5 +99,4 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-// Stub pricing analytics utility - placeholder for missing functionality
-export const trackPricingRequest = async (data: any) => {
-  // Placeholder implementation
-  return { success: true };
-};
-
-export const getPricingMetrics = async () => {
-  // Placeholder implementation
-  return { metrics: {}, success: true };
-};
-=======
 // Stub pricing analytics utility - placeholder for missing functionality;
 
 export const trackPricingRequest = async (data: any) => {
@@ -26,7 +14,6 @@ export const getPricingMetrics = async () => {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -59,9 +46,9 @@ export const getPricingMetrics = async () => {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

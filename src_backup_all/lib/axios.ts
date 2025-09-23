@@ -1,6 +1,4 @@
-
 import { safeStorage } from '@/utils/safeStorage';
-
 
 export interface AxiosResponse<T = any> {
   data: T;
@@ -42,8 +40,15 @@ export interface AxiosInstance {
     data?: any,
     config?: RequestConfig
   ): Promise<AxiosResponse<T>>;
-  patch<T = any>(url: string, data?: any, config?: RequestConfig): Promise<AxiosResponse<T>>;
-  delete<T = any>(url: string, config?: RequestConfig): Promise<AxiosResponse<T>>;
+  patch<T = any>(
+    url: string,
+    data?: any,
+    config?: RequestConfig
+  ): Promise<AxiosResponse<T>>;
+  delete<T = any>(
+    url: string,
+    config?: RequestConfig
+  ): Promise<AxiosResponse<T>>;
 }
 
 export interface CustomAxiosStatic {
@@ -71,13 +76,21 @@ const globalInterceptors = {
   response: new InterceptorManager(),
 };
 
-export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
+export function create(
+  config: { baseURL?: string; withCredentials?: boolean } = {}
+): AxiosInstance {
   const baseURL = config.baseURL || '';
   const defaultWithCreds = !!config.withCredentials;
 
   const instance: AxiosInstance = {
-    interceptors: { request: new InterceptorManager(), response: new InterceptorManager() },
-    async get<T = any>(url: string, init: { params?: Record<string, any> } & RequestConfig = {} as any) {
+    interceptors: {
+      request: new InterceptorManager(),
+      response: new InterceptorManager(),
+    },
+    async get<T = any>(
+      url: string,
+      init: { params?: Record<string, any> } & RequestConfig = {} as any
+    ) {
       const params = (init as any).params
         ? '?' + new URLSearchParams((init as any).params).toString()
         : '';
@@ -90,15 +103,27 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         'Content-Type': 'application/json',
         ...(init as any).headers,
       };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestConfig;
+      const opts = {
+        ...init,
+        body: JSON.stringify(data),
+        headers,
+      } as RequestConfig;
       return request<T>(baseURL + url, 'POST', opts);
     },
-    async patch<T = any>(url: string, data: any = {}, init: RequestConfig = {}) {
+    async patch<T = any>(
+      url: string,
+      data: any = {},
+      init: RequestConfig = {}
+    ) {
       const headers = {
         'Content-Type': 'application/json',
         ...(init as any).headers,
       };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestConfig;
+      const opts = {
+        ...init,
+        body: JSON.stringify(data),
+        headers,
+      } as RequestConfig;
       return request<T>(baseURL + url, 'PATCH', opts);
     },
     async delete<T = any>(url: string, init: RequestConfig = {} as any) {
@@ -114,18 +139,24 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     ...globalInterceptors.response.handlers
   );
 
-  async function request<T>(url: string, method: string, init: RequestConfig): Promise<AxiosResponse<T>> {
+  async function request<T>(
+    url: string,
+    method: string,
+    init: RequestConfig
+  ): Promise<AxiosResponse<T>> {
     let reqInit: RequestConfig = { ...init };
     // Run request interceptors
     for (const h of instance.interceptors.request.handlers) {
-      if (h) { // Added null check for h
+      if (h) {
+        // Added null check for h
         try {
           if (h.fulfilled) {
             const res = await h.fulfilled(reqInit);
             if (res) reqInit = res;
           }
         } catch (err) {
-          if (h.rejected) { // h is not null here
+          if (h.rejected) {
+            // h is not null here
             await h.rejected(err);
           }
         }
@@ -133,25 +164,34 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     }
 
     // Read authToken from cookies
-    const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
-      const [name, value] = cookie.split('=');
-      acc[name] = value;
-      return acc;
-    }, {} as Record<string, string>);
+    const cookies = document.cookie.split('; ').reduce(
+      (acc, cookie) => {
+        const [name, value] = cookie.split('=');
+        acc[name] = value;
+        return acc;
+      },
+      {} as Record<string, string>
+    );
     const authToken =
       cookies['authToken'] ||
       safeStorage.getItem('zion_token') ||
       safeStorage.getItem('token');
 
-    const headers: Record<string, string> = { ...globalDefaults.headers.common };
+    const headers: Record<string, string> = {
+      ...globalDefaults.headers.common,
+    };
     if (reqInit.headers) {
       if (reqInit.headers instanceof Headers) {
-        (reqInit.headers as Headers).forEach((value, key) => headers[key] = value);
-      } else if (Array.isArray(reqInit.headers)) { // string[][]
-        for (const [key, value] of (reqInit.headers as string[][])) {
+        (reqInit.headers as Headers).forEach(
+          (value, key) => (headers[key] = value)
+        );
+      } else if (Array.isArray(reqInit.headers)) {
+        // string[][]
+        for (const [key, value] of reqInit.headers as string[][]) {
           headers[key] = value;
         }
-      } else { // Record<string, string>
+      } else {
+        // Record<string, string>
         Object.assign(headers, reqInit.headers as Record<string, string>);
       }
     }
@@ -176,7 +216,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     if (response.ok) {
       let res: any = result;
       for (const h of instance.interceptors.response.handlers) {
-        if (h && h.fulfilled) { // Added null check for h
+        if (h && h.fulfilled) {
+          // Added null check for h
           res = await h.fulfilled(res);
         }
       }
@@ -187,7 +228,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         config: { url, method },
       });
       for (const h of instance.interceptors.response.handlers) {
-        if (h && h.rejected) { // Added null check for h
+        if (h && h.rejected) {
+          // Added null check for h
           await h.rejected(err);
         }
       }

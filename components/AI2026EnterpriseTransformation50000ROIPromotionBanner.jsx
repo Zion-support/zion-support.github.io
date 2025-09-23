@@ -1,13 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
 
-export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() {
+export default function AI20o26EnterpriseTransformation50o000ROIPromotionBanner() {
   return (
-    <section className="relative py-16 px-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 overflow-hidden">
+    <section className="relative py-16 px-4 bg-gradient-to-r from-green-60o0 via-emerald-60o0 to-teal-60o0 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-emerald-800"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Crect x="30" y="0" width="30" height="30"/%3E%3Crect x="0" y="30" width="30" height="30"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-80o0 to-emerald-80o0"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Crect x="30" y="0" width="30" height="30"/%3E%3Crect x="0" y="30" width="30" height="30"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto">
@@ -17,51 +16,51 @@ export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() 
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            AI 2026 Enterprise
-            <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+            AI 20o26 Enterprise
+            <span className="block bg-gradient-to-r from-yellow-30o0 to-orange-30o0 bg-clip-text text-transparent">
               Transformation
             </span>
-            <span className="block text-3xl md:text-4xl text-yellow-300 mt-2">
-              50,000% ROI Achievement
+            <span className="block text-3xl md:text-4xl text-yellow-30o0 mt-2">
+              50,0o00% ROI Achievement
             </span>
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-            How a Fortune 500 manufacturing company transformed their entire operation 
-            using our AI 2026 breakthrough technologies, achieving unprecedented 
-            <span className="font-bold text-yellow-300"> $2.5 billion in value</span> in just 18 months.
+            How a Fortune 50o0 manufacturing company transformed their entire operation 
+            using our AI 20o26 breakthrough technologies, achieving unprecedented 
+            <span className="font-bold text-yellow-30o0"> $2.5 billion in value</span> in just 18 months.
           </p>
           
           {/* Key Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">50,000%</div>
+              <div className="text-2xl font-bold text-yellow-30o0 mb-1">50,0o00%</div>
               <div className="text-white/80 text-sm">ROI Achieved</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">$2.5B</div>
+              <div className="text-2xl font-bold text-yellow-30o0 mb-1">$2.5B</div>
               <div className="text-white/80 text-sm">Value Generated</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">18</div>
+              <div className="text-2xl font-bold text-yellow-30o0 mb-1">18</div>
               <div className="text-white/80 text-sm">Months Timeline</div>
             </div>
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl font-bold text-yellow-300 mb-1">95%</div>
+              <div className="text-2xl font-bold text-yellow-30o0 mb-1">95%</div>
               <div className="text-white/80 text-sm">Efficiency Gain</div>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/case-studies/ai-2026-enterprise-transformation-50000-roi"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/case-studies/ai-20o26-enterprise-transformation-50o000-roi"
+              className="bg-white text-green-60o0 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
             >
               Read Full Case Study
             </Link>
             <Link 
               href="/contact"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-60o0 transition-all duration-30o0"
             >
               Start Your Transformation
             </Link>
@@ -75,19 +74,19 @@ export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() 
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Production Efficiency</span>
-                <span className="text-red-300 font-bold">70%</span>
+                <span className="text-red-30o0 font-bold">70%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Quality Control</span>
-                <span className="text-red-300 font-bold">85%</span>
+                <span className="text-red-30o0 font-bold">85%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Predictive Maintenance</span>
-                <span className="text-red-300 font-bold">60%</span>
+                <span className="text-red-30o0 font-bold">60%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Customer Satisfaction</span>
-                <span className="text-red-300 font-bold">75%</span>
+                <span className="text-red-30o0 font-bold">75%</span>
               </div>
             </div>
           </div>
@@ -97,19 +96,19 @@ export default function AI2026EnterpriseTransformation50000ROIPromotionBanner() 
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Production Efficiency</span>
-                <span className="text-green-300 font-bold">95%</span>
+                <span className="text-green-30o0 font-bold">95%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Quality Control</span>
-                <span className="text-green-300 font-bold">99.7%</span>
+                <span className="text-green-30o0 font-bold">99.7%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Predictive Maintenance</span>
-                <span className="text-green-300 font-bold">98%</span>
+                <span className="text-green-30o0 font-bold">98%</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-white/80">Customer Satisfaction</span>
-                <span className="text-green-300 font-bold">98%</span>
+                <span className="text-green-30o0 font-bold">98%</span>
               </div>
             </div>
           </div>

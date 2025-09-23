@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-=======
 "use client";
 import React{ useEffectuseRef } from 'react';
 import type { RemoteParticipantLocalParticipantTrackPublicationTrack } from 'livekit-client';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant;
@@ -13,20 +8,12 @@ type Props = {
   displayName?: string;
 };
 
-<<<<<<< HEAD
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
-=======
 export default function ParticipantTile({ participantisLocaldisplayName }: Props) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-<<<<<<< HEAD
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-=======
     const handleTrackSubscribed = (pub: TrackPublicationtrack: Track) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (track.kind === 'video' && videoRef.current) {
         track.attach(videoRef.current);
       }
@@ -34,11 +21,7 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
         track.attach(audioRef.current);
       }
     };
-<<<<<<< HEAD
-    const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
-=======
     const handleTrackUnsubscribed = (pub: TrackPublicationtrack: Track) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (track.kind === 'video' && videoRef.current) {
         track.detach(videoRef.current);
       }
@@ -49,19 +32,6 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
-<<<<<<< HEAD
-      if (track) handleTrackSubscribed(pub, track);
-    });
-
-    participant.on('trackSubscribed', handleTrackSubscribed);
-    participant.on('trackUnsubscribed', handleTrackUnsubscribed);
-
-    return () => {
-      participant.off('trackSubscribed', handleTrackSubscribed);
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    };
-  }, [participant]);
-=======
       if (track) handleTrackSubscribed(pubtrack);
     });
 
@@ -73,7 +43,6 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
       participant.off(', 'trackUnsubscribed', 'handleTrackUnsubscribed);
     };
   }[participant]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">

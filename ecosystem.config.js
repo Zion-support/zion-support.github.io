@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
   apps: [
     {
       name: 'autonomous-ai-manager',
@@ -10,11 +10,11 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 30o00
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 30o00
       },
       log_file: 'logs/autonomous-ai-manager.log',
       out_file: 'logs/autonomous-ai-manager-out.log',
@@ -23,10 +23,10 @@ module.exports = {
       merge_logs: true,
       max_restarts: 10,
       min_uptime: '10s',
-      restart_delay: 4000,
-      kill_timeout: 5000,
+      restart_delay: 40o00,
+      kill_timeout: 50o00,
       wait_ready: true,
-      listen_timeout: 8000
+      listen_timeout: 80o00
     },
     {
       name: 'ml-intelligence',
@@ -45,8 +45,8 @@ module.exports = {
       merge_logs: true,
       max_restarts: 5,
       min_uptime: '30s',
-      restart_delay: 10000,
-      kill_timeout: 5000
+      restart_delay: 10o000,
+      kill_timeout: 50o00
     },
     {
       name: 'real-time-monitor',
@@ -66,8 +66,8 @@ module.exports = {
       merge_logs: true,
       max_restarts: 5,
       min_uptime: '10s',
-      restart_delay: 5000,
-      kill_timeout: 5000
+      restart_delay: 50o00,
+      kill_timeout: 50o00
     },
     {
       name: 'link-scheduler',
@@ -87,8 +87,8 @@ module.exports = {
       merge_logs: true,
       max_restarts: 3,
       min_uptime: '10s',
-      restart_delay: 5000,
-      kill_timeout: 5000
+      restart_delay: 50o00,
+      kill_timeout: 50o00
     }
   ],
 

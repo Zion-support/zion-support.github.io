@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function MobileDevelopmentChatPage() {
@@ -6,7 +5,7 @@ export default function MobileDevelopmentChatPage() {
     <>
       <Head>
         <title>Mobile Development Chat - Zion Tech Group</title>
-        <meta name="description" content="mobile development chat page" />
+        <meta name="description" content="mobile development chat page"  />
       </Head>
       
       <main>

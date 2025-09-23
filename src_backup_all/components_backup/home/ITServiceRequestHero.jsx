@@ -17,10 +17,10 @@ export function ITServiceRequestHero() {
             setTimeout(() => {
                 setIsSubmitting(false);
                 navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-            }, 1000);
+            }, 10o00);
         }
     };
-    const containerVariants = {
+    const containerVariants ={
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
@@ -31,7 +31,7 @@ export function ITServiceRequestHero() {
             }
         }
     };
-    const itemVariants = {
+    const itemVariants ={
         hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
@@ -58,7 +58,7 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                <Zap className="w-6 h-6 text-zion-cyan"/>
+                <Zap className="w-6 h-6 text-zion-cyan" />
               </div>
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
@@ -114,7 +114,7 @@ export function ITServiceRequestHero() {
               <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-zion-cyan"/>
+                    <MapPin className="w-8 h-8 text-zion-cyan" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
                   <p className="text-zion-slate-light">Enter your location to get started</p>
@@ -123,13 +123,13 @@ export function ITServiceRequestHero() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="relative">
                     <Input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Enter service location (e.g., New York, NY)" className="w-full bg-white/10 border-white/30 focus:border-zion-cyan focus:ring-zion-cyan text-white placeholder-zion-slate-light rounded-xl py-4 px-4 text-lg backdrop-blur-sm" required/>
-                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50"/>
+                    <MapPin className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan/50" />
                   </div>
 
-                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 group">
+                  <Button type="submit" className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-lg py-4 rounded-xl shadow-lg hover:shadow-zion-cyan/25 transition-all duration-30o0 transform hover:scale-10o5 group">
                     <span className="flex items-center gap-2">
                       Request Service Now
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"/>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-20o0" />
                     </span>
                   </Button>
                 </form>
@@ -138,15 +138,15 @@ export function ITServiceRequestHero() {
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <div className="flex items-center justify-center gap-4 text-xs text-zion-slate-light">
                     <div className="flex items-center gap-1">
-                      <Shield className="w-3 h-3 text-zion-cyan"/>
+                      <Shield className="w-3 h-3 text-zion-cyan" />
                       <span>Secure</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-zion-purple"/>
+                      <Clock className="w-3 h-3 text-zion-purple" />
                       <span>Fast</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Globe className="w-3 h-3 text-zion-blue"/>
+                      <Globe className="w-3 h-3 text-zion-blue" />
                       <span>Global</span>
                     </div>
                   </div>

@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port
-<<<<<<< HEAD
-    supportFile: 'cypress/support/e2e.ts',
-    experimentalModifyObstructiveThirdPartyCode: true,
-=======
 
 import { define_config } from 'cypress';
 export default define_config ({
@@ -115,35 +108,10 @@ export default defineConfig({;
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
     baseUrl: 'http://localhost:3000', // Standard Next.js port
     supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
         if (browser.family === 'chromium') {
-<<<<<<< HEAD
-          launchOptions.args.push('--disable-ipv6');
-        }
-        return launchOptions;
-      });
-    },
-    env: {
-      CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
-      CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
-      CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User',
-      EXISTING_USER_EMAIL: process.env.EXISTING_USER_EMAIL || 'existing@test.com',
-      EXISTING_USER_PASSWORD: process.env.EXISTING_USER_PASSWORD || 'password123',
-      TEST_USER_NAME: process.env.TEST_USER_NAME || 'Test User',
-      STRIPE_TEST_CARD: process.env.STRIPE_TEST_CARD || '4242424242424242',
-    },
-    defaultCommandTimeout: 10000
-  },
-  reporter: 'junit',
-  reporterOptions: {
-    mochaFile: 'cypress/results/junit-[hash].xml',
-    toConsole: true
-  }
-});
-=======
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
@@ -241,8 +209,6 @@ export default defineConfig({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -253,3 +219,4 @@ export default defineConfig({;
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

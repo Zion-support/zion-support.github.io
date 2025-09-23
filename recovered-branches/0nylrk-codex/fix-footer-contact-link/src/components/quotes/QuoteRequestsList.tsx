@@ -1,5 +1,4 @@
 
-import React from "react";
 import { QuoteRequestCard } from "./QuoteRequestCard";
 import { EmptyStateCard } from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
@@ -10,11 +9,7 @@ type QuoteRequestsListProps = {
   isArchived: boolean;
   onViewDetails: (quote: QuoteRequest) => void;
   onMarkAsResponded: (id: string) => void;
-<<<<<<< HEAD
-  onToggleArchive: (id: string, isArchived: boolean) => void;
-=======
   onToggleArchive: (id: stringisArchived: boolean) => void;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({

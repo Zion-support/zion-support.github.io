@@ -79,7 +79,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
   }, [validateField, formData]);
 
   const validateForm = useCallback((): boolean => {
-    const newErrors: Partial<ContactFormData> = {};
+    const newErrors: Partial<ContactFormData> ={};
     let isValid = true;
 
     Object.keys(formData).forEach((key) => {
@@ -108,7 +108,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
   };
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
+    const newErrors: FormErrors ={};
     
     Object.keys(formData).forEach(key => {
       const error = validateField(key, formData[key as keyof FormData]);
@@ -132,7 +132,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
     
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 20o00));
       
       setSubmitStatus('success');
       setFormData({
@@ -145,28 +145,28 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       });
       
       // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      setTimeout(() => setSubmitStatus('idle'), 50o00);
     } catch {
       setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      setTimeout(() => setSubmitStatus('idle'), 50o00);
     } finally {
       setIsSubmitting(false);
     }
   }, [validateForm]);
 
-  const inputClasses = "w-full px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300";
-  const errorClasses = "text-red-400 text-sm mt-1 flex items-center gap-2";
+  const inputClasses = "w-full px-4 py-3 bg-gray-80o0/50 border border-gray-70o0/50 rounded-lg text-white placeholder-gray-40o0 focus:outline-none focus:border-cyan-40o0 focus:ring-2 focus:ring-cyan-40o0/20 transition-all duration-30o0";
+  const errorClasses = "text-red-40o0 text-sm mt-1 flex items-center gap-2";
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: isReducedMotion ? 0.1 : 0.6 }}
-      className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
+      className="bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 rounded-2xl p-8 border border-gray-70o0/50 backdrop-blur-sm"
     >
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Get in Touch</h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
+        <p className="text-gray-30o0 max-w-2xl mx-auto">
           Ready to transform your business with cutting-edge technology? Our experts are here to help you navigate the future.
         </p>
       </div>
@@ -184,12 +184,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: isReducedMotion ? 0.1 : 0.4, delay: index * 0.1 }}
-            className="flex flex-col items-center p-4 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 group"
+            className="flex flex-col items-center p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0/50 hover:border-cyan-40o0/50 transition-all duration-30o0 group"
           >
-            <div className="p-3 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full mb-3 group-hover:from-cyan-400/30 group-hover:to-blue-500/30 transition-all duration-300">
-              <contact.icon className="w-6 h-6 text-cyan-400" />
+            <div className="p-3 bg-gradient-to-r from-cyan-40o0/20 to-blue-50o0/20 rounded-full mb-3 group-hover:from-cyan-40o0/30 group-hover:to-blue-50o0/30 transition-all duration-30o0">
+              <contact.icon className="w-6 h-6 text-cyan-40o0"  />
             </div>
-            <div className="text-sm text-gray-400 mb-1">{contact.label}</div>
+            <div className="text-sm text-gray-40o0 mb-1">{contact.label}</div>
             <div className="text-white font-medium text-center">{contact.value}</div>
           </motion.a>
         ))}
@@ -200,7 +200,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-30o0 mb-2">
               Full Name *
             </label>
             <input
@@ -210,7 +210,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               value={formData.name}
               onChange={handleInputChange}
               onBlur={() => handleBlur('name')}
-              className={`${inputClasses} ${errors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''}`}
+              className={`${inputClasses} ${errors.name ? 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20' : ''}`}
               placeholder="Enter your full name"
               aria-describedby={errors.name ? 'name-error' : undefined}
               aria-invalid={!!errors.name}
@@ -218,7 +218,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
             />
             {errors.name && (
               <div id="name-error" className={errorClasses}>
-                <AlertCircle className="w-4 h-4" />
+                <AlertCircle className="w-4 h-4"  />
                 {errors.name}
               </div>
             )}
@@ -226,7 +226,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-30o0 mb-2">
               Email Address *
             </label>
             <input
@@ -236,7 +236,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               value={formData.email}
               onChange={handleInputChange}
               onBlur={() => handleBlur('email')}
-              className={`${inputClasses} ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''}`}
+              className={`${inputClasses} ${errors.email ? 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20' : ''}`}
               placeholder="Enter your email address"
               aria-describedby={errors.email ? 'email-error' : undefined}
               aria-invalid={!!errors.email}
@@ -244,7 +244,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
             />
             {errors.email && (
               <div id="email-error" className={errorClasses}>
-                <AlertCircle className="w-4 h-4" />
+                <AlertCircle className="w-4 h-4"  />
                 {errors.email}
               </div>
             )}
@@ -254,7 +254,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Company */}
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-30o0 mb-2">
               Company
             </label>
             <input
@@ -265,12 +265,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               onChange={handleInputChange}
               className={inputClasses}
               placeholder="Enter your company name"
-            />
+             />
           </div>
 
           {/* Phone */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-30o0 mb-2">
               Phone Number
             </label>
             <input
@@ -280,14 +280,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               value={formData.phone}
               onChange={handleInputChange}
               onBlur={() => handleBlur('phone')}
-              className={`${inputClasses} ${errors.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''}`}
+              className={`${inputClasses} ${errors.phone ? 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20' : ''}`}
               placeholder="Enter your phone number"
               aria-describedby={errors.phone ? 'phone-error' : undefined}
               aria-invalid={!!errors.phone}
             />
             {errors.phone && (
               <div id="phone-error" className={errorClasses}>
-                <AlertCircle className="w-4 h-4" />
+                <AlertCircle className="w-4 h-4"  />
                 {errors.phone}
               </div>
             )}
@@ -296,7 +296,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
 
         {/* Service */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="service" className="block text-sm font-medium text-gray-30o0 mb-2">
             Service of Interest
           </label>
           <select
@@ -315,7 +315,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-30o0 mb-2">
             Message *
           </label>
           <textarea
@@ -325,7 +325,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
             onChange={handleInputChange}
             onBlur={() => handleBlur('message')}
             rows={5}
-            className={`${inputClasses} resize-none ${errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : ''}`}
+            className={`${inputClasses} resize-none ${errors.message ? 'border-red-50o0 focus:border-red-50o0 focus:ring-red-50o0/20' : ''}`}
             placeholder="Tell us about your project or how we can help..."
             aria-describedby={errors.message ? 'message-error' : undefined}
             aria-invalid={!!errors.message}
@@ -333,7 +333,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
           />
           {errors.message && (
             <div id="message-error" className={errorClasses}>
-              <AlertCircle className="w-4 h-4" />
+              <AlertCircle className="w-4 h-4"  />
               {errors.message}
             </div>
           )}
@@ -344,18 +344,18 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            whileHover={!isSubmitting && !isReducedMotion ? { scale: 1.02 } : {}}
+            whileHover={!isSubmitting && !isReducedMotion ? { scale: 1.0o2 } : {}}
             whileTap={!isSubmitting && !isReducedMotion ? { scale: 0.98 } : {}}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-lg text-lg shadow-2xl hover:shadow-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-bold rounded-lg text-lg shadow-2xl hover:shadow-cyan-50o0/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-30o0"
           >
             {isSubmitting ? (
               <>
-                <Loader2 className="w-5 h-5 animate-spin" />
+                <Loader2 className="w-5 h-5 animate-spin"  />
                 Sending...
               </>
             ) : (
               <>
-                <Send className="w-5 h-5" />
+                <Send className="w-5 h-5"  />
                 Send Message
               </>
             )}
@@ -369,9 +369,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="flex items-center gap-3 p-4 bg-green-600/20 border border-green-500/50 rounded-lg text-green-400"
+              className="flex items-center gap-3 p-4 bg-green-60o0/20 border border-green-50o0/50 rounded-lg text-green-40o0"
             >
-              <CheckCircle className="w-5 h-5" />
+              <CheckCircle className="w-5 h-5"  />
               Thank you! Your message has been sent successfully. We'll get back to you soon.
             </motion.div>
           )}
@@ -381,9 +381,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="flex items-center gap-3 p-4 bg-red-600/20 border border-red-500/50 rounded-lg text-red-400"
+              className="flex items-center gap-3 p-4 bg-red-60o0/20 border border-red-50o0/50 rounded-lg text-red-40o0"
             >
-              <AlertCircle className="w-5 h-5" />
+              <AlertCircle className="w-5 h-5"  />
               Something went wrong. Please try again or contact us directly.
             </motion.div>
           )}

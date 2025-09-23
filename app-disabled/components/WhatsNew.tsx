@@ -1,3 +1,3 @@
 export default function WhatsNew() {
-	return null;
+  return null;
 }

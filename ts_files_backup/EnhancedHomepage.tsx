@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 
 
@@ -76,39 +74,16 @@ visible: {;
 };
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
-<<<<<<< HEAD
-  ArrowRight, 
-=======
   ArrowRight;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   TrendingUp, 
   Brain, 
   Shield, 
   Rocket, 
   Atom, 
-<<<<<<< HEAD
-  Sparkles,
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin,
-  ArrowUpRight
-} from 'lucide-react';
-import Head from 'next/head';
-
-// Import our enhanced components
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedServiceCard from './ui/EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-
-// Import service data
-=======
 Sparkles;
   Building, 
   Phone, 
@@ -125,15 +100,12 @@ import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
 // Import service data;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
 import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
 import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
 import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-<<<<<<< HEAD
-=======
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 
@@ -546,7 +518,6 @@ const EnhancedHomepage: React.FC = () => {
     if (category) {
       setColorScheme(category.scheme)
     }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <>
@@ -559,70 +530,34 @@ const EnhancedHomepage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com" />
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#00d4ff" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       </Head>
-<<<<<<< HEAD
-
-      {/* Enhanced Navigation */}
-      <EnhancedNavigation />
-
-      <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
-        {/* Hero Section */}
-        <motion.section 
-          className="relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20"
-=======
       {/* Enhanced Navigation */}
       <EnhancedNavigation />
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <motion.section
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           variants={heroVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="relative z-10 text-center max-w-6xl mx-auto">
             {/* Main Heading */}
-<<<<<<< HEAD
-            <motion.h1 
-=======
             <motion.h1
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               variants={itemVariants}
             >
               Zion Tech Group
             </motion.h1>
-<<<<<<< HEAD
-            
-            <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              variants={itemVariants}
-            >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness, 
-              Quantum Computing, and Autonomous Solutions
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div 
-=======
 
 
 
@@ -642,7 +577,6 @@ const EnhancedHomepage: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
               variants={itemVariants}
             >
@@ -656,10 +590,6 @@ const EnhancedHomepage: React.FC = () => {
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </motion.button>
               </Link>
-<<<<<<< HEAD
-              
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Link href="/quote">
                 <motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
@@ -671,14 +601,8 @@ const EnhancedHomepage: React.FC = () => {
                 </motion.button>
               </Link>
             </motion.div>
-<<<<<<< HEAD
-
-            {/* Contact Information */}
-            <motion.div 
-=======
             {/* Contact Information */}
             <motion.div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
               variants={itemVariants}
             >
@@ -696,10 +620,6 @@ const EnhancedHomepage: React.FC = () => {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           {/* Floating Elements */}
           <motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
@@ -708,10 +628,6 @@ const EnhancedHomepage: React.FC = () => {
           >
             <Atom className="w-8 h-8" />
           </motion.div>
-<<<<<<< HEAD
-          
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.div
             className="absolute top-40 right-20 text-blue-400/20"
             variants={floatingVariants}
@@ -720,10 +636,6 @@ const EnhancedHomepage: React.FC = () => {
           >
             <Brain className="w-6 h-6" />
           </motion.div>
-<<<<<<< HEAD
-          
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.div
             className="absolute bottom-40 left-20 text-purple-400/20"
             variants={floatingVariants}
@@ -733,10 +645,6 @@ const EnhancedHomepage: React.FC = () => {
             <Rocket className="w-7 h-7" />
           </motion.div>
         </motion.section>
-<<<<<<< HEAD
-
-        {/* Category Filter */}
-=======
         {/* Category Filter */}
 
         <motion&& motion.section 
@@ -804,17 +712,12 @@ const EnhancedHomepage: React.FC = () => {
         <motion.section
 
         {/* Services Grid */}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <motion.section 
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-<<<<<<< HEAD
-          <div className="max-w-6xl mx-auto">
-            <motion.h2 
-=======
           <div className="max-w-7xl mx-auto">
 
             </motion && motion.div>;
@@ -1078,35 +981,11 @@ if ( {) {
         >
           <div className="max-w-6xl mx-auto">
             <motion.h2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
               Explore Our Revolutionary Services
             </motion.h2>
-<<<<<<< HEAD
-            
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4 mb-12"
-              variants={itemVariants}
-            >
-              {categories.map((category) => (
-                <motion.button
-                  key={category.id}
-                  onClick={() => handleCategoryChange(category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <category.icon className="inline-block w-5 h-5 mr-2" />
-                  {category.name}
-                </motion.button>
-              ))}
-=======
 
 
             <motion.div 
@@ -1133,33 +1012,24 @@ if ( {) {
                 </motion && motion.button>;
               ))}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </motion.div>
           </div>
         </motion.section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-        <motion.section 
-=======
         <motion.section
 
         {/* Services Grid */}
         <motion.section 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <motion.div 
-=======
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
             >
@@ -1170,37 +1040,21 @@ if ( {) {
                   title={service.name}
                   description={service.description}
                   category={service.category}
-<<<<<<< HEAD
-                  type={(service as any).type || service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
-                  slug={(service as any).slug || service.id}
-=======
                   type={(service as any).type |service.category}
                   features={service.features?.map(f => ({ name: f, description: f }))}
                   slug={(service as any).slug |service.id}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   index={index}
                   isPopular={Math.random() > 0.7}
                   isNew={Math.random() > 0.8}
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
                   estimatedDelivery="2-4 weeks"
-<<<<<<< HEAD
-                  technologies={['AI', 'Cloud', 'Security', 'Automation']}
-                />
-              ))}
-            </motion.div>
-            
-            {getFilteredServices().length > 12 && (
-              <motion.div 
-=======
                   technologies={['AICloudSecurityAutomation']}
                 />
               ))}
             </motion.div>
             {getFilteredServices().length > 12 && (
               <motion.div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 className="text-center mt-12"
                 variants={itemVariants}
               >
@@ -1221,35 +1075,19 @@ if ( {) {
 
         {/* Featured Service Showcase */}
         <motion.section 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-            <motion.h2 
-=======
             <motion.h2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
               Featured Revolutionary Services
             </motion.h2>
-<<<<<<< HEAD
-            
-            <motion.div 
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-              variants={itemVariants}
-            >
-              <AnimatePresence mode="wait">
-                <motion.div
-=======
 
 
 
@@ -1257,28 +1095,10 @@ if ( {) {
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
                 <motion&& motion.div
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.5 }}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
-                >
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
-                        <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
-=======
                   transition={{ duration: 0 && 0.5 }}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">;
                   <div>;
@@ -1299,24 +1119,16 @@ if ( {) {
                         </span>;
                       ))}
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           {feature}
                         </span>
                       ))}
                     </div>
-<<<<<<< HEAD
-                    
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
-                      <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
@@ -1325,10 +1137,6 @@ if ( {) {
                       </motion.button>
                     </Link>
                   </div>
-<<<<<<< HEAD
-                  
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <div className="relative">
                     <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
                       <div className="text-center">
@@ -1344,59 +1152,20 @@ if ( {) {
             </motion.div>
           </div>
         </motion.section>
-<<<<<<< HEAD
-
-        {/* Call to Action */}
-        <motion.section 
-=======
         {/* Call to Action */}
         <motion.section
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <motion.h2 
-=======
             <motion.h2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="text-3xl md:text-4xl font-bold text-white mb-6"
               variants={itemVariants}
             >
               Ready to Transform Your Business?
             </motion.h2>
-<<<<<<< HEAD
-            
-            <motion.p 
-              className="text-xl text-gray-300 mb-8"
-              variants={itemVariants}
-            >
-              Join the future of technology with Zion Tech Group's revolutionary solutions. 
-              Get started today and experience the power of AI consciousness and quantum computing.
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              variants={itemVariants}
-            >
-              <Link href="/quote">
-                <motion.button
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started Today
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-              
-              <Link href="/contact">
-                <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-=======
 
             <motion.p
             <motion.p 
@@ -1492,7 +1261,6 @@ if ( {) {
                 <motion&& motion.button
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -1505,19 +1273,6 @@ if ( {) {
         </motion.section>
       </UltraFuturisticBackground>
 
-<<<<<<< HEAD
-      {/* Performance Monitor */}
-      <AnimatePresence>
-        {showPerformanceMonitor && (
-          <PerformanceMonitor />
-        )}
-      </AnimatePresence>
-    </>
-  );
-};
-
-export default EnhancedHomepage;
-=======
 
 
 
@@ -1545,4 +1300,3 @@ export default EnhancedHomepage;
 export default EnhancedHomepage;
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

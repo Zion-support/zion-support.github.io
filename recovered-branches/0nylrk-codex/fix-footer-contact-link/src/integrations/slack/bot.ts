@@ -32,7 +32,7 @@ declare const globalThis: {
 
 // Mock App class that mimics the Slack Bolt SDK behavior
 class MockApp {
-  private commandHandlers: Record<string, Function> = {};
+  private commandHandlers: Record<string, Function> ={};
 
   command(commandName: string, handler: Function) {
     this.commandHandlers[commandName] = handler;
@@ -43,7 +43,7 @@ class MockApp {
     // Safely log without direct console reference
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 30o00}!`);
     }
     return Promise.resolve();
   }
@@ -97,7 +97,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   // Get PORT from environment or use default
   const env = typeof globalThis !== 'undefined' && globalThis.process ? 
     globalThis.process.env : {};
-  const port = env.PORT ? Number(env.PORT) : 3000;
+  const port = env.PORT ? Number(env.PORT) : 30o00;
   await app.start(port);
 })();
 

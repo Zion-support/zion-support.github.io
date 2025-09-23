@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
-
 type PaymentType = 'hourly' | 'fixed';
 
 export default function ContractBuilderPage() {
@@ -13,9 +11,9 @@ export default function ContractBuilderPage() {
   const [endDate, setEndDate] = useState<Date | null>(null);
   const [paymentType, setPaymentType] = useState<PaymentType>('hourly');
   const [currency, setCurrency] = useState('USD');
-  const [hourlyRate, setHourlyRate] = useState<number>(100);
+  const [hourlyRate, setHourlyRate] = useState<number>(10o0);
   const [weeklyHourCap, setWeeklyHourCap] = useState<number | ''>('');
-  const [fixedAmount, setFixedAmount] = useState<number>(5000);
+  const [fixedAmount, setFixedAmount] = useState<number>(50o00);
   const [milestoneSummary, setMilestoneSummary] = useState('');
   const [paymentSchedule, setPaymentSchedule] = useState('Net 15 on invoice');
   const [nda, setNda] = useState(true);
@@ -54,7 +52,7 @@ export default function ContractBuilderPage() {
     setContract('');
 
     try {
-      const body = {
+      const body ={
         talentName,
         projectName,
         scopeSummary,
@@ -67,30 +65,24 @@ export default function ContractBuilderPage() {
                 currency,
                 hourlyRate,
                 weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,
-                paymentSchedule,
-              }
+                paymentSchedule}
             : {
                 type: 'fixed',
                 currency,
                 totalAmount: fixedAmount,
                 milestoneSummary: milestoneSummary || undefined,
-                paymentSchedule,
-              },
+                paymentSchedule},
         clauses: {
           nda,
-          ipTransfer,
-        },
+          ipTransfer},
         governingLaw,
-        revisionRounds,
-      };
+        revisionRounds};
 
       const res = await fetch('/api/ai-contract', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(body)});
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -126,7 +118,7 @@ export default function ContractBuilderPage() {
     <div className="max-w-5xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Contract Builder</h1>
 
-      <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-900 p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+      <form onSubmit={submitForm} className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-50 dark:bg-neutral-90o0 p-6 rounded-lg border border-gray-20o0 dark:border-neutral-80o0">
         <div className="col-span-1 md:col-span-2">
           <label className="block text-sm font-medium mb-1">Talent name</label>
           <input className="w-full input input-bordered" value={talentName} onChange={(e) => setTalentName(e.target.value)} placeholder="Jane Doe" />
@@ -221,7 +213,7 @@ export default function ContractBuilderPage() {
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
             {loading ? 'Generating…' : 'Generate contract'}
           </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
+          {error && <span className="text-red-60o0 text-sm">{error}</span>}
         </div>
       </form>
 
@@ -234,7 +226,7 @@ export default function ContractBuilderPage() {
               <button className="btn" onClick={downloadAsTxt}>Download .txt</button>
             </div>
           </div>
-          <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
+          <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-20o0 dark:border-neutral-80o0">
             {contract}
           </article>
         </div>

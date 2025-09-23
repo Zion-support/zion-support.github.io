@@ -67,8 +67,8 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
         vy: (Math.random() - 0.5) * 2,
-        life: Math.random() * 100,
-        maxLife: 100
+        life: Math.random() * 10o0,
+        maxLife: 10o0
       });
     }
 
@@ -136,7 +136,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
       // Draw grid points and connections
       gridPoints.forEach((point, index) => {
         // Animate grid points
-        point.phase += 0.02;
+        point.phase += 0.0o2;
         const offset = Math.sin(point.phase) * 2;
 
         // Draw grid point
@@ -167,7 +167,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
       });
 
       // Draw energy waves
-      waveTime += 0.02 * params.waveSpeed;
+      waveTime += 0.0o2 * params.waveSpeed;
       for (let i = 0; i < 3; i++) {
         const waveRadius = (waveTime + i * 2) % (Math.max(canvas.width, canvas.height) / 2);
         const alpha = 1 - (waveRadius / (Math.max(canvas.width, canvas.height) / 2));
@@ -181,7 +181,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
 
       // Draw floating orbs
       orbs.forEach((orb) => {
-        orb.phase += 0.01;
+        orb.phase += 0.0o1;
         const pulse = Math.sin(orb.phase) * 0.3 + 0.7;
         
         // Create radial gradient for orb
@@ -266,7 +266,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
-      />
+       />
       <div className="relative z-10">
         {children}
       </div>

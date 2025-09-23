@@ -18,26 +18,26 @@ import {
   Clock
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2025PromotionBanner = () => {
+const BusinessSolutionsShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false);
   const [isDismissedsetIsDismissed] = useState(false);
   const [currentMetricsetCurrentMetric] = useState(0);
 
   const metrics = [
-    { label: ''ROI', 'value: '300%'icon: TrendingUpcolor: 'text-green-500' },
-    { label: 'Cost 'Savings', 'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-500' },
-    { label: ''Companies', 'value: '10K+'icon: Building2color: 'text-purple-500' },
-    { label: ''Satisfaction', 'value: '98%'icon: Awardcolor: 'text-yellow-500' }
+    { label: ''ROI', 'value: '30o0%'icon: TrendingUpcolor: 'text-green-50o0' },
+    { label: 'Cost 'Savings', 'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-50o0' },
+    { label: ''Companies', 'value: '10K+'icon: Building2color: 'text-purple-50o0' },
+    { label: ''Satisfaction', 'value: '98%'icon: Awardcolor: 'text-yellow-50o0' }
   ];
 
   const solutions = [
-    { name: ''Automation', 'icon: Zapcolor: 'from-blue-500 to-cyan-500' },
-    { name: ''Analytics', 'icon: BarChart3color: 'from-purple-500 to-pink-500' },
-    { name: ''Security', 'icon: Shieldcolor: 'from-green-500 to-emerald-500' }
+    { name: ''Automation', 'icon: Zapcolor: 'from-blue-50o0 to-cyan-50o0' },
+    { name: ''Analytics', 'icon: BarChart3color: 'from-purple-50o0 to-pink-50o0' },
+    { name: ''Security', 'icon: Shieldcolor: 'from-green-50o0 to-emerald-50o0' }
   ];
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true)3000);
+    const timer = setTimeout(() => setIsVisible(true)30o00);
     return () => clearTimeout(timer);
   }[]);
 
@@ -45,7 +45,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     if (isVisible) {
       const interval = setInterval(() => {
         setCurrentMetric((prev) => (prev + 1) % metrics.length);
-      }2500);
+      }250o0);
       return () => clearInterval(interval);
     }
   }[isVisiblemetrics.length]);
@@ -54,10 +54,10 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     setIsDismissed(true);
   };
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { 
       opacity: 0
-      y: -100,
+      y: -10o0,
       scale: 0.9
     },
     visible: {
@@ -66,14 +66,14 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
       scale: 1,
       transition: {
         type: "spring",
-        stiffness: 100,
+        stiffness: 10o0,
         damping: 15,
         duration: 0.8
       }
     },
     exit: {
       opacity: 0,
-      y: -100,
+      y: -10o0,
       scale: 0.9,
       transition: {
         duration: 0.5
@@ -81,7 +81,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     }
   };
 
-  const textVariants = {
+  const textVariants ={
     hidden: { opacity: 0x: -20 },
     visible: {
       opacity: 1,
@@ -93,7 +93,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     }
   };
 
-  const buttonVariants = {
+  const buttonVariants ={
     hidden: { opacity: 0scale: 0.8 },
     visible: {
       opacity: 1,
@@ -111,7 +111,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white shadow-2xl"
+          className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white shadow-2xl"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -128,7 +128,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                   <motion.div
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
                     animate={{ 
-                      rotate: [0360],
+                      rotate: [0o360],
                       scale: [1.1]
                     }}
                     transition={{ 
@@ -137,11 +137,11 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                       ease: "easeInOut" 
                     }}
                   >
-                    <Building2 className="w-6 h-6 text-white" />
+                    <Building2 className="w-6 h-6 text-white"  />
                   </motion.div>
                   <div>
                     <h3 className="text-lg font-bold mb-1">
-                      🏢 Business Solutions 2025
+                      🏢 Business Solutions 20o25
                     </h3>
                     <p className="text-sm opacity-90 hidden sm:block">
                       Transform your operations with proven solutions
@@ -195,21 +195,21 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 className="flex items-center space-x-3"
                 variants={buttonVariants}
               >
-                <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-200 backdrop-blur-sm">
-                  <Users className="w-4 h-4" />
+                <button className="hidden sm:flex items-center space-x-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all duration-20o0 backdrop-blur-sm">
+                  <Users className="w-4 h-4"  />
                   <span className="text-sm font-medium">Case Studies</span>
                 </button>
                 
-                <button className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-semibold transition-all duration-200 flex items-center space-x-2 shadow-lg">
+                <button className="bg-white text-indigo-60o0 hover:bg-gray-10o0 px-6 py-2 rounded-lg font-semibold transition-all duration-20o0 flex items-center space-x-2 shadow-lg">
                   <span>Explore Solutions</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4"  />
                 </button>
                 
                 <button 
                   onClick={handleDismiss}
                   className="p-2 hover:bg-white/20 rounded-lg transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5"  />
                 </button>
               </motion.div>
             </div>
@@ -236,7 +236,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 </div>
                 <div className="w-px h-4 bg-white/30"></div>
                 <div className="flex items-center space-x-1">
-                  <Clock className="w-4 h-4" />
+                  <Clock className="w-4 h-4"  />
                   <span className="text-sm">30 Days to Value</span>
                 </div>
               </div>
@@ -266,7 +266,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-            />
+             />
             <motion.div
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full"
               animate={{
@@ -279,7 +279,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 ease: "easeInOut",
                 delay: 1
               }}
-            />
+             />
             <motion.div
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full"
               animate={{
@@ -292,7 +292,7 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
                 ease: "easeInOut",
                 delay: 0.5
               }}
-            />
+             />
           </div>
         </motion.div>
       )}
@@ -300,4 +300,4 @@ const BusinessSolutionsShowcase2025PromotionBanner = () => {
   );
 };
 
-export default BusinessSolutionsShowcase2025PromotionBanner;
+export default BusinessSolutionsShowcase20o25PromotionBanner;

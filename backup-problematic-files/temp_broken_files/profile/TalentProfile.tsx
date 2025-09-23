@@ -29,7 +29,7 @@ export function TalentProfile({ ;
   const { isAuthenticated } = useAuth(),;
   ;
   // Create proper availability object from talent profile;
-  const availability:Availability = {;
+  const availability:Availability ={;
     status:profile.availability_type === 'full_time' ? 'available' :;
             profile.availability_type === 'part_time' ? 'limited' :'unavailable',;
     message:`${profile.professional_title} with ${profile.years_experience} years of experience`;
@@ -59,19 +59,19 @@ export function TalentProfile({ ;
         profileType="talent";
         rating={profile.average_rating}
         reviewCount={profile.rating_count}
-      />;
+       />;
       ;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">;
-          <ProfileSkills skills={skillsArray} />;
-          <ProfileAvailability availability={availability} />;
+          <ProfileSkills skills={skillsArray}  />;
+          <ProfileAvailability availability={availability}  />;
           <ProfileContact ;
             email={profile.user_id}
             profileName={profile.full_name}
             profileType="talent";
-          />;
+           />;
         </div>;
         ;
         {/* Right Column - Bio & Projects */}
@@ -85,19 +85,19 @@ export function TalentProfile({ ;
           </div>;
           ;
           {/* Projects Section */}
-          <ProfileProjects projects={projectsArray} />;
+          <ProfileProjects projects={projectsArray}  />;
           ;
           {/* Ratings Section */}
           <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
             <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
+              <Star className="mr-2 h-5 w-5 text-yellow-40o0"  />;
               Reviews & Ratings;
             </h2>;
             <ProfileRatings ;
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
-            />;
+             />;
           </div>;
           ;
           {/* Hire Now CTA */}
@@ -116,7 +116,7 @@ export function TalentProfile({ ;
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark";
                     onClick={onRequestHire}
                   >;
-                    <Handshake className="mr-2 h-5 w-5" />;
+                    <Handshake className="mr-2 h-5 w-5"  />;
                     Hire Now;
                   </Button>;
                   ;
@@ -127,7 +127,7 @@ export function TalentProfile({ ;
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
                       onClick={onMessageTalent}
                     >;
-                      <MessageSquare className="mr-2 h-5 w-5" />;
+                      <MessageSquare className="mr-2 h-5 w-5"  />;
                       Message;
                     </Button>;                  )}
                 </div>;
@@ -150,7 +150,7 @@ onMessageTalent ;
   const { ;
   isAuthenticated ;
  } = useAuth ();
-//Create proper availability object from talent profile const availability: Availability = {;
+//Create proper availability object from talent profile const availability: Availability ={;
   status: profile.availability type === 'full time' ? 'available' : profile.availability type === 'part time' ? 'limited' : 'unavailable';
 message: `$ {;
   profile.professional title ;
@@ -171,21 +171,20 @@ date: new Date () .toISOString () //Default date since we don't have this data ;
 }) ) || [];
 return (</div> </div> {;
   /* Projects Section */ ;
-}<ProfileProjects projects= {;
+}<ProfileProjects projects={;
   projectsArray ;
-}/> Reviews & Ratings </h2> <ProfileRatings userId= {;
+} /> Reviews & Ratings </h2> <ProfileRatings userId={;
   profile.id ;
-}averageRating= {;
+}averageRating={;
   profile.average rating ;
-}ratingCount= {;
+}ratingCount={;
   profile.rating count ;
-}/> </div> Connect with {;
+} /> </div> Connect with {;
   profile.full name ;
 }for your next project and get started right away. {;
   profile.hourly rate && `Rate starts at $$ {;
   profile.hourly rate ;
 }/hour.` ;
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
+}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5"  /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5"  /> Message </Button>) ;
 }</div> </div> </div>) ;
-
 

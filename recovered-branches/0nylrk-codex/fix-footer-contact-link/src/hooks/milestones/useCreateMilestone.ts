@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -10,46 +9,53 @@ export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-  
-  const createMilestone = async (milestoneData: Omit<Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+
+  const createMilestone = async (
+    milestoneData: Omit<
+      Milestone,
+      'id' | 'created_at' | 'updated_at' | 'created_by'
+    >
+  ) => {
     if (!user || !projectId) return null;
-    
+
     try {
       setIsSubmitting(true);
-      
+
       const { data, error } = await supabase
         .from('project_milestones')
         .insert({
           ...milestoneData,
           project_id: projectId,
-<<<<<<< HEAD
           created_by: user.id,
         })
-=======
-          created_by: user.id})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         .select()
         .single();
-      
+
       if (error) throw error;
-      
+
       // Create activity record
-      await recordMilestoneActivity(data.id, 'created', null, 'pending', 'Milestone created');
-      
-      toast.success("Milestone created successfully");
-      
+      await recordMilestoneActivity(
+        data.id,
+        'created',
+        null,
+        'pending',
+        'Milestone created'
+      );
+
+      toast.success('Milestone created successfully');
+
       return data;
     } catch (err: any) {
-      console.error("Error creating milestone:", err);
-      toast.error("Failed to create milestone: " + err.message);
+      console.error('Error creating milestone:', err);
+      toast.error('Failed to create milestone: ' + err.message);
       return null;
     } finally {
       setIsSubmitting(false);
     }
   };
-  
+
   return {
     createMilestone,
-    isSubmitting
+    isSubmitting,
   };
 };

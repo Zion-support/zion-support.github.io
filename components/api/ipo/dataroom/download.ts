@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-=======
 
 
 
@@ -9,16 +5,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-=======
 
 
 
@@ -69,7 +60,6 @@ function handler() {
   fs && fs.createReadStream(fullPath).pipe(res);
 
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
@@ -77,12 +67,6 @@ function handler() {
   if (!fs.existsSync(fullPath)) return res.status(404).json({ error: 'Not found' });
   const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stream';
   res.setHeader('Content-Type', contentType);
-<<<<<<< HEAD
-  res.setHeader('Content-Disposition', `attachment; filename="${path.basename(fullPath)}"`);
-  appendAuditLog({ type: 'file_download', section, name: file });
-  fs.createReadStream(fullPath).pipe(res);
-}
-=======
   res.setHeader('Content-Disposition', `attachment, filename="${path.basename(fullPath)}"`);
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res)
@@ -192,9 +176,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!file) return res.status(400).json({ error: 'Missing file' });
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -203,3 +185,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

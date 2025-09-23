@@ -1,11 +1,7 @@
 "use client";
 'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-=======
 
 import React{ useStateuseEffectuseRef } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface SearchResult {
   id: string;

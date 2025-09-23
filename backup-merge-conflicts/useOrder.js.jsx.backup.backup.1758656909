@@ -1,0 +1,16 @@
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+=======
+<<<<<<< HEAD:src.disabled/src/hooks/useOrder.js.jsx
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+import { useQuery } from \'@tanstack/react-query\'; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey[\'order\',orderId],; \"queryFn\": async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error(\'Failed to fetch order\')}; return(await res.json())},; \"enabled\": \'!!orderId\'})};
+<<<<<<< HEAD:backup-merge-conflicts/useOrder.js.jsx.backup
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> pr-11935
+=======
+const { useQuery } from "@tanstack/react-query"; export function useGetOrderQuery(orderId) {; return useQuery({; queryKey["order",orderId],; queryFn: async () => {; if(!orderId); return null; const res = await fetch(`/api/orders/${orderId}`); if(!res.ok) {; throw new Error("Failed to fetch order")}; return(await res.json())},; enabled: "!orderId"})};'"`'"`
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

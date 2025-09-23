@@ -12,7 +12,9 @@ interface WhitelabelContextType {
   setSecondaryColor: (color: string) => void;
 }
 
-const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
+const WhitelabelContext = createContext<WhitelabelContextType | undefined>(
+  undefined
+);
 
 export const useWhitelabel = () => {
   const context = useContext(WhitelabelContext);
@@ -26,7 +28,9 @@ interface WhitelabelProviderProps {
   children: ReactNode;
 }
 
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
+export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({
+  children,
+}) => {
   const [brandName, setBrandName] = useState('Zion Tech Group');
   const [brandLogo, setBrandLogo] = useState('/logo.svg');
   const [primaryColor, setPrimaryColor] = useState('#3B82F6');

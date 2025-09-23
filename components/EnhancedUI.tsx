@@ -32,16 +32,16 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
   onClick,
   className = ', '
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-20o0 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
-  const variants = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
-    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
-    ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blue-500'
+  const variants ={
+    primary: 'bg-blue-60o0 hover:bg-blue-70o0 text-white focus:ring-blue-50o0',
+    secondary: 'bg-gray-60o0 hover:bg-gray-70o0 text-white focus:ring-gray-50o0',
+    outline: 'border-2 border-blue-60o0 text-blue-60o0 hover:bg-blue-60o0 hover:text-white focus:ring-blue-50o0',
+    ghost: 'text-blue-60o0 hover:bg-blue-50 focus:ring-blue-50o0'
   };
   
-  const sizes = {
+  const sizes ={
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
@@ -52,7 +52,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
       onClick={onClick}
       disabled={disabled || loading}
-      whileHover={{ scale: 1.02 }}
+      whileHover={{ scale: 1.0o2 }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export const EnhancedButton: React.FC<ButtonProps> = ({
             exit={{ opacity: 0 }}
             className="flex items-center"
           >
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2" />
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2"  />
             Loading...
           </motion.div>
         ) : (
@@ -98,11 +98,11 @@ export const EnhancedCard: React.FC<CardProps> = ({
 }) => {
   return (
     <motion.div
-      className={`bg-white rounded-xl shadow-lg border border-gray-200 p-6 ${className}`}
+      className={`bg-white rounded-xl shadow-lg border border-gray-20o0 p-6 ${className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      whileHover={hover ? { y: -5shadow: "0 20px 25px -5px rgba(00.1)" } : {}}
+      whileHover={hover ? { y: -5shadow: "0 20px 25px -5px rgba(0o0.1)" } : {}}
     >
       {children}
     </motion.div>
@@ -118,25 +118,25 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'blue'
 }) => {
-  const sizes = {
+  const sizes ={
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12'
   };
   
-  const colors = {
-    blue: 'border-blue-600',
+  const colors ={
+    blue: 'border-blue-60o0',
     white: 'border-white',
-    gray: 'border-gray-600'
+    gray: 'border-gray-60o0'
   };
   
   return (
     <motion.div
-      className={`animate-spin rounded-full border-2 border-gray-300 ${colors[color as keyof typeof colors]} ${sizes[size]}`}
+      className={`animate-spin rounded-full border-2 border-gray-30o0 ${colors[color as keyof typeof colors]} ${sizes[size]}`}
       style={{ borderTopColor: 'transparent' }}
       animate={{ rotate: 360 }}
       transition={{ duration: 1repeat: Infinityease: 'linear' }}
-    />
+     />
   );
 };
 
@@ -175,7 +175,7 @@ export const EnhancedModal: React.FC<ModalProps> = ({
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
-          <div className="fixed inset-0 bg-black bg-opacity-50" />
+          <div className="fixed inset-0 bg-black bg-opacity-50"  />
           <motion.div
             className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto"
             initial={{ scale: 0.9, opacity: 0 }}
@@ -183,14 +183,14 @@ export const EnhancedModal: React.FC<ModalProps> = ({
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+            <div className="flex items-center justify-between p-6 border-b border-gray-20o0">
+              <h2 className="text-xl font-semibold text-gray-90o0">{title}</h2>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-40o0 hover:text-gray-60o0 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />
                 </svg>
               </button>
             </div>
@@ -214,13 +214,13 @@ export const EnhancedProgressBar: React.FC<ProgressBarProps> = ({
   className = ', '
 }) => {
   return (
-    <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
+    <div className={`w-full bg-gray-20o0 rounded-full h-2 ${className}`}>
       <motion.div
-        className="bg-blue-600 h-2 rounded-full"
+        className="bg-blue-60o0 h-2 rounded-full"
         initial={{ width: 0 }}
-        animate={{ width: `${Math.min(progress100)}%` }}
+        animate={{ width: `${Math.min(progress10o0)}%` }}
         transition={{ duration: 0.5ease: 'easeOut' }}
-      />
+       />
     </div>
   );
 };
@@ -238,7 +238,7 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
 }) => {
   const [isVisiblesetIsVisible] = useState(false);
   
-  const positions = {
+  const positions ={
     top: 'bottom-full left-1/2 transform -translate-x-1/2 mb-2',
     bottom: 'top-full left-1/2 transform -translate-x-1/2 mt-2',
     left: 'right-full top-1/2 transform -translate-y-1/2 mr-2',
@@ -255,19 +255,19 @@ export const EnhancedTooltip: React.FC<TooltipProps> = ({
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            className={`absolute z-10 px-2 py-1 text-sm text-white bg-gray-900 rounded shadow-lg ${positions[position]}`}
+            className={`absolute z-10 px-2 py-1 text-sm text-white bg-gray-90o0 rounded shadow-lg ${positions[position]}`}
             initial={{ opacity: 0scale: 0.8 }}
             animate={{ opacity: 1scale: 1 }}
             exit={{ opacity: 0scale: 0.8 }}
             transition={{ duration: 0.2 }}
           >
             {content}
-            <div className={`absolute w-2 h-2 bg-gray-900 transform rotate-45 ${
+            <div className={`absolute w-2 h-2 bg-gray-90o0 transform rotate-45 ${
               position === 'top' ? 'top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2' :
               position === 'bottom' ? 'bottom-full left-1/2 transform -translate-x-1/2 translate-y-1/2' :
               position === 'left' ? 'left-full top-1/2 transform -translate-y-1/2 -translate-x-1/2' :
               'right-full top-1/2 transform -translate-y-1/2 translate-x-1/2'
-            }`} />
+            }`}  />
           </motion.div>
         )}
       </AnimatePresence>

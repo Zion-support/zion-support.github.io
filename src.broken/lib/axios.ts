@@ -14,11 +14,16 @@ class InterceptorManager {
 export interface AxiosInstance {
   defaults: { headers: { common: Record<string, string> } };
   interceptors: { response: InterceptorManager };
-  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>;
+  get(
+    url: string,
+    config?: { params?: Record<string, any> } & RequestInit
+  ): Promise<any>;
   post(url: string, data?: any, config?: RequestInit): Promise<any>;
 }
 
-export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
+export function create(
+  config: { baseURL?: string; withCredentials?: boolean } = {}
+): AxiosInstance {
   const baseURL = config.baseURL || '';
   const withCreds = !!config.withCredentials;
 
@@ -31,12 +36,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : '';
       const headers = {
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
         ...(init as any).headers,
       };
-=======
-        ...(init as any).headers};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       const opts = { ...init, headers } as RequestInit;
       delete (opts as any).params;
       return request(baseURL + url + params, 'GET', opts);
@@ -45,19 +46,16 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       const headers = {
         'Content-Type': 'application/json',
         ...instance.defaults.headers.common,
-<<<<<<< HEAD
         ...(init as any).headers,
       };
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
+      const opts = {
+        ...init,
+        body: JSON.stringify(data),
+        headers,
+      } as RequestInit;
       return request(baseURL + url, 'POST', opts);
     },
   };
-=======
-        ...(init as any).headers};
-      const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit;
-      return request(baseURL + url, 'POST', opts);
-    }};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Request interceptor
   instance.interceptors.request.use(
@@ -92,7 +90,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   );
 
   return instance;
-};
+}
 
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
 export default createAxiosInstance;

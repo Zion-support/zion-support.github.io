@@ -34,7 +34,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient;
   it('renders children when there is no error', () => {'    render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient}>
-          <ThrowError shouldError={false} />
+          <ThrowError shouldError={false}  />
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
@@ -44,7 +44,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient;
   it('displays error UI when an error occurs', () => {'    render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient}>
-          <ThrowError shouldError={true} />
+          <ThrowError shouldError={true}  />
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
@@ -57,7 +57,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient;
     render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient}>
-          <NetworkError />
+          <NetworkError  />
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
@@ -69,7 +69,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient;
     render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient}>
-          <ThrowError shouldError={true} />
+          <ThrowError shouldError={true}  />
         </ApiErrorBoundary>
       </QueryClientProvider>
     );
@@ -88,7 +88,7 @@ describe('ApiErrorBoundary', () => {'  let _queryClient: QueryClient;
     render(
       <QueryClientProvider client={queryClient}>
         <ApiErrorBoundary queryClient={queryClient} fallback={customFallback}>
-          <ThrowError shouldError={true} />
+          <ThrowError shouldError={true}  />
         </ApiErrorBoundary>
       </QueryClientProvider>
     );

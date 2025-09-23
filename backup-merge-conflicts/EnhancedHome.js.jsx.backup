@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const React from "react"; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };''"
-<<<<<<< HEAD:backup-merge-conflicts/EnhancedHome.js.jsx.backup
-=======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD:src.disabled/src/pages.disabled/EnhancedHome.js.jsx
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 =======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
-<<<<<<< HEAD
-import React from \'react\'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main
-=======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/pages.disabled/EnhancedHome.js.jsx
-<<<<<<< HEAD
-=======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };
 =======
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/EnhancedHome.js.jsx.backup
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 =======
 =======
 import _React from 'react'; export default EnhancedHome; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome }; export { EnhancedHome };

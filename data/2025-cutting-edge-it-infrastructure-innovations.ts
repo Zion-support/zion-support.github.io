@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -43,24 +39,22 @@ export interface CuttingEdgeITInfrastructureInnovation2025 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const cuttingEdgeITInfrastructureInnovations2025 = [
   // Quantum-Safe Cloud Infrastructure Platform
   {
     id: 'quantum-safe-cloud-infrastructure-platform',
     name: 'Quantum-Safe Cloud Infrastructure Platform',
-    tagline: 'Future-proof cloud infrastructure resistant to quantum computing attacks',
-    description: 'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.',
+    tagline:
+      'Future-proof cloud infrastructure resistant to quantum computing attacks',
+    description:
+      'Revolutionary cloud infrastructure platform built with quantum-resistant cryptography and advanced security protocols. Ensures data protection against both current and future quantum computing threats while maintaining exceptional performance.',
     category: 'IT Infrastructure & Security',
     type: 'Micro SAAS',
     pricing: {
       starter: '$899/month',
       professional: '$1,999/month',
       enterprise: '$4,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Quantum-resistant encryption algorithms',
@@ -74,7 +68,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Disaster recovery and backup',
       'Global edge computing network',
       'API-first infrastructure',
-      'Enterprise-grade SLA guarantees'
+      'Enterprise-grade SLA guarantees',
     ],
     benefits: [
       'Future-proof against quantum threats',
@@ -84,7 +78,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Competitive security advantage',
       'Long-term infrastructure investment',
       'Advanced threat protection',
-      'Global compliance readiness'
+      'Global compliance readiness',
     ],
     useCases: [
       'Financial services and banking',
@@ -92,34 +86,34 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Government and defense',
       'Critical infrastructure',
       'Research and development',
-      'Enterprise data centers'
+      'Enterprise data centers',
     ],
     marketSize: '$14.3B by 2025',
-    targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions',
-    competitiveAdvantage: 'First commercial quantum-safe cloud infrastructure with proven quantum resistance',
+    targetAudience:
+      'Enterprises requiring quantum-safe security, government agencies, financial institutions',
+    competitiveAdvantage:
+      'First commercial quantum-safe cloud infrastructure with proven quantum resistance',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-    slug: '/quantum-safe-cloud-infrastructure-platform'
+    slug: '/quantum-safe-cloud-infrastructure-platform',
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
     name: 'Autonomous Edge Computing Network',
-    tagline: 'Self-managing edge computing infrastructure with AI-driven optimization',
-    description: 'Intelligent edge computing network that autonomously manages, optimizes, and scales computing resources at the network edge. Uses AI to predict demand, optimize performance, and ensure seamless user experiences worldwide.',
+    tagline:
+      'Self-managing edge computing infrastructure with AI-driven optimization',
+    description:
+      'Intelligent edge computing network that autonomously manages, optimizes, and scales computing resources at the network edge. Uses AI to predict demand, optimize performance, and ensure seamless user experiences worldwide.',
     category: 'Edge Computing & AI',
     type: 'Micro SAAS',
     pricing: {
       starter: '$599/month',
       professional: '$1,299/month',
       enterprise: '$2,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'AI-powered edge resource management',
@@ -133,7 +127,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Dynamic resource allocation',
       'Multi-cloud edge orchestration',
       'Advanced analytics and insights',
-      'Custom edge application deployment'
+      'Custom edge application deployment',
     ],
     benefits: [
       'Reduce latency by 80%',
@@ -143,7 +137,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Scale edge computing automatically',
       'Optimize performance in real-time',
       'Reduce operational overhead',
-      'Global edge presence'
+      'Global edge presence',
     ],
     useCases: [
       'Content delivery networks',
@@ -151,34 +145,34 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Mobile applications',
       'Gaming and entertainment',
       'E-commerce platforms',
-      'Real-time applications'
+      'Real-time applications',
     ],
     marketSize: '$11.7B by 2025',
-    targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses',
-    competitiveAdvantage: 'Only autonomous edge computing network with AI-driven optimization',
+    targetAudience:
+      'CDN providers, IoT companies, mobile app developers, global businesses',
+    competitiveAdvantage:
+      'Only autonomous edge computing network with AI-driven optimization',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-    slug: '/autonomous-edge-computing-network'
+    slug: '/autonomous-edge-computing-network',
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Neuromorphic Computing Infrastructure
   {
     id: 'neuromorphic-computing-infrastructure',
     name: 'Neuromorphic Computing Infrastructure',
-    tagline: 'Brain-inspired computing infrastructure for next-generation AI applications',
-    description: 'Revolutionary computing infrastructure based on neuromorphic principles that mimics the human brain\'s neural structure. Enables ultra-efficient AI processing, real-time learning, and cognitive computing capabilities.',
+    tagline:
+      'Brain-inspired computing infrastructure for next-generation AI applications',
+    description:
+      "Revolutionary computing infrastructure based on neuromorphic principles that mimics the human brain's neural structure. Enables ultra-efficient AI processing, real-time learning, and cognitive computing capabilities.",
     category: 'Neuromorphic Computing & AI',
     type: 'Micro SAAS',
     pricing: {
       starter: '$2,999/month',
       professional: '$6,999/month',
       enterprise: '$14,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Neuromorphic chip architecture',
@@ -192,7 +186,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Custom neuromorphic designs',
       'Research and development tools',
       'Academic licensing options',
-      'Enterprise integration support'
+      'Enterprise integration support',
     ],
     benefits: [
       '1000x more energy efficient than traditional computing',
@@ -202,7 +196,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Breakthrough in computing architecture',
       'Future-proof technology investment',
       'Research and development platform',
-      'Competitive technological advantage'
+      'Competitive technological advantage',
     ],
     useCases: [
       'AI research and development',
@@ -210,34 +204,34 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Edge AI applications',
       'Cognitive computing systems',
       'Scientific research',
-      'Advanced AI applications'
+      'Advanced AI applications',
     ],
     marketSize: '$19.8B by 2025',
-    targetAudience: 'AI research institutions, autonomous vehicle companies, robotics manufacturers',
-    competitiveAdvantage: 'First commercial neuromorphic computing infrastructure with proven brain-inspired architecture',
+    targetAudience:
+      'AI research institutions, autonomous vehicle companies, robotics manufacturers',
+    competitiveAdvantage:
+      'First commercial neuromorphic computing infrastructure with proven brain-inspired architecture',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-    slug: '/neuromorphic-computing-infrastructure'
+    slug: '/neuromorphic-computing-infrastructure',
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Data Center Management Platform
   {
     id: 'autonomous-data-center-management-platform',
     name: 'Autonomous Data Center Management Platform',
-    tagline: 'Fully autonomous data center operations with AI-driven optimization',
-    description: 'Intelligent platform that autonomously manages entire data center operations including power management, cooling optimization, security monitoring, and resource allocation. Ensures maximum efficiency and uptime without human intervention.',
+    tagline:
+      'Fully autonomous data center operations with AI-driven optimization',
+    description:
+      'Intelligent platform that autonomously manages entire data center operations including power management, cooling optimization, security monitoring, and resource allocation. Ensures maximum efficiency and uptime without human intervention.',
     category: 'Data Center & Automation',
     type: 'Micro SAAS',
     pricing: {
       starter: '$1,499/month',
       professional: '$3,499/month',
       enterprise: '$7,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Autonomous power management',
@@ -251,7 +245,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Capacity planning and scaling',
       'Multi-data center orchestration',
       'Compliance and audit automation',
-      'Custom automation workflows'
+      'Custom automation workflows',
     ],
     benefits: [
       'Reduce energy costs by 40%',
@@ -261,7 +255,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Predict and prevent failures',
       'Optimize resource utilization',
       'Reduce carbon footprint',
-      'Scale operations automatically'
+      'Scale operations automatically',
     ],
     useCases: [
       'Enterprise data centers',
@@ -269,15 +263,17 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
       'Colocation facilities',
       'Edge computing locations',
       'Government data centers',
-      'Research and educational institutions'
+      'Research and educational institutions',
     ],
     marketSize: '$16.4B by 2025',
-    targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
-    competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',
+    targetAudience:
+      'Data center operators, cloud providers, enterprises with large IT infrastructure',
+    competitiveAdvantage:
+      'Only fully autonomous data center management platform with AI-driven optimization',
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
-    slug: '/autonomous-data-center-management-platform'
-  }
+    slug: '/autonomous-data-center-management-platform',
+  },
 ];

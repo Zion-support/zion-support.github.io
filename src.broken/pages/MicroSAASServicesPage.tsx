@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-  Zap, 
-=======
 import React from 'react',
 import { 
   Zap,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   Users, 
   FileText, 
   BarChart3, 
@@ -28,11 +22,7 @@ import {
   Globe,
   Smartphone,
   Database
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
 } from 'lucide-react',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
@@ -166,11 +156,7 @@ export default function MicroSAASServicesPage() {
     },
     {
       name: "Email Marketing Platform",
-<<<<<<< HEAD
-      description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign performance.",
-=======
       description: "Professional email marketing solution with automation, segmentation, and advanced analytics for better campaign window.window.window.performance.",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       icon: <Mail className="w-12 h-12 text-indigo-500" />,
       features: [
         "Drag-and-drop email builder",
@@ -232,11 +218,7 @@ export default function MicroSAASServicesPage() {
       freeTrial: "30 days",
       setupTime: "Under 3 hours"
     }
-<<<<<<< HEAD
-  ];
-=======
   ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const additionalMicroSAAS = [
     {
@@ -263,22 +245,14 @@ export default function MicroSAASServicesPage() {
       pricing: "$25/month",
       icon: <Calendar className="w-8 h-8 text-orange-400" />
     }
-<<<<<<< HEAD
-  ];
-=======
   ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const stats = [
     { label: "Active Users", value: "10,000+" },
     { label: "Cost Savings", value: "40-60%" },
     { label: "Setup Time", value: "< 2 hours" },
     { label: "Customer Satisfaction", value: "96%" }
-<<<<<<< HEAD
-  ];
-=======
   ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const whyChooseUs = [
     {
@@ -301,11 +275,7 @@ export default function MicroSAASServicesPage() {
       description: "Round-the-clock customer support to help you succeed with our platforms.",
       icon: <Users className="w-8 h-8 text-orange-400" />
     }
-<<<<<<< HEAD
-  ];
-=======
   ],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -636,11 +606,7 @@ export default function MicroSAASServicesPage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-white/20">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-=======
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Zion Tech Group</h3>
@@ -695,9 +661,5 @@ export default function MicroSAASServicesPage() {
         </div>
       </footer>
     </div>
-<<<<<<< HEAD
-  );
-=======
   )
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

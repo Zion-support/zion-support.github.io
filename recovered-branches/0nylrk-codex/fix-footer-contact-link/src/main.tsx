@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
@@ -27,11 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-<<<<<<< HEAD
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-=======
                 <LanguageProvider authState={{ isAuthenticated: falseuser: null }}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>

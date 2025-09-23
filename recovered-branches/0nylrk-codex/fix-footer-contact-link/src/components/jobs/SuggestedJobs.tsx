@@ -14,32 +14,15 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
   const { 
-<<<<<<< HEAD
-    isLoading, 
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
-=======
     isLoading
     updateJobMatchStatus
     categorizedMatches: { 
       newMatches
       viewedMatches
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId);
 
-<<<<<<< HEAD
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
-  };
-
-  const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
-=======
   const handleApply = (matchId: stringjobId: string) => {
     updateJobMatchStatus(matchId'applied');
     // In a real appthis might redirect to application form or open a modal
@@ -47,7 +30,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId'declined');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   if (isLoading) {

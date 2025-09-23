@@ -1,8 +1,11 @@
-
 import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
+import {
+  Interview,
+  InterviewRequest,
+  InterviewResponse,
+} from '@/types/interview';
 import { toast } from '@/components/ui/use-toast';
 
 export function useInterviews() {
@@ -12,12 +15,14 @@ export function useInterviews() {
   const { user } = useAuth();
 
   // Request an interview as a client
-  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+  const requestInterview = async (
+    interviewRequest: InterviewRequest
+  ): Promise<Interview | null> => {
     if (!user) {
       toast({
-        title: "Authentication required",
-        description: "You must be logged in to request interviews",
-        variant: "destructive"
+        title: 'Authentication required',
+        description: 'You must be logged in to request interviews',
+        variant: 'destructive',
       });
       return null;
     }
@@ -39,17 +44,13 @@ export function useInterviews() {
           meeting_platform: interviewRequest.meeting_platform,
           interview_type: interviewRequest.interview_type,
           title: interviewRequest.title,
-<<<<<<< HEAD
           status: 'requested',
         })
-=======
-          status: 'requested'})
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         .select('*')
         .single();
 
       if (insertError) {
-        console.error("Error requesting interview:", insertError);
+        console.error('Error requesting interview:', insertError);
         setError(insertError.message);
         return null;
       }
@@ -65,7 +66,7 @@ export function useInterviews() {
 
       return data;
     } catch (err: any) {
-      console.error("Error in requestInterview:", err);
+      console.error('Error in requestInterview:', err);
       setError(err.message);
       return null;
     } finally {
@@ -87,50 +88,50 @@ export function useInterviews() {
       // Get interviews where the user is either the client or the talent
       const { data, error: fetchError } = await supabase
         .from('interviews')
-        .select(`
+        .select(
+          `
           *,
           clients:client_id(id, display_name, avatar_url),
           talents:talent_id(id, full_name, profile_picture_url)
-        `)
+        `
+        )
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
         .order('scheduled_date', { ascending: true });
 
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError);
+        console.error('Error fetching interviews:', fetchError);
         setError(fetchError.message);
         return [];
       }
 
       // Transform the data to match Interview type
-      const formattedInterviews = data.map((interview: any): Interview => ({
-        id: interview.id,
-        client_id: interview.client_id,
-        talent_id: interview.talent_id,
-        scheduled_date: interview.scheduled_date,
-        end_time: interview.end_time || '',
-        duration_minutes: interview.duration_minutes,
-        status: interview.status,
-        notes: interview.notes,
-        meeting_link: interview.meeting_link,
-        meeting_platform: interview.meeting_platform,
-        created_at: interview.created_at,
-        updated_at: interview.updated_at,
-        title: interview.title,
-        interview_type: interview.interview_type,
-        client_name: interview.clients?.display_name,
-        talent_name: interview.talents?.full_name,
-        client_avatar: interview.clients?.avatar_url,
-<<<<<<< HEAD
-        talent_avatar: interview.talents?.profile_picture_url,
-      }));
-=======
-        talent_avatar: interview.talents?.profile_picture_url}));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+      const formattedInterviews = data.map(
+        (interview: any): Interview => ({
+          id: interview.id,
+          client_id: interview.client_id,
+          talent_id: interview.talent_id,
+          scheduled_date: interview.scheduled_date,
+          end_time: interview.end_time || '',
+          duration_minutes: interview.duration_minutes,
+          status: interview.status,
+          notes: interview.notes,
+          meeting_link: interview.meeting_link,
+          meeting_platform: interview.meeting_platform,
+          created_at: interview.created_at,
+          updated_at: interview.updated_at,
+          title: interview.title,
+          interview_type: interview.interview_type,
+          client_name: interview.clients?.display_name,
+          talent_name: interview.talents?.full_name,
+          client_avatar: interview.clients?.avatar_url,
+          talent_avatar: interview.talents?.profile_picture_url,
+        })
+      );
 
       setInterviews(formattedInterviews);
       return formattedInterviews;
     } catch (err: any) {
-      console.error("Error in fetchInterviews:", err);
+      console.error('Error in fetchInterviews:', err);
       setError(err.message);
       return [];
     } finally {
@@ -145,9 +146,9 @@ export function useInterviews() {
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
-        title: "Authentication required",
-        description: "You must be logged in to respond to interviews",
-        variant: "destructive"
+        title: 'Authentication required',
+        description: 'You must be logged in to respond to interviews',
+        variant: 'destructive',
       });
       return false;
     }
@@ -161,12 +162,12 @@ export function useInterviews() {
         .from('interviews')
         .update({
           status: response.status,
-          updated_at: new Date().toISOString()
+          updated_at: new Date().toISOString(),
         })
         .eq('id', interviewId);
 
       if (updateError) {
-        console.error("Error responding to interview:", updateError);
+        console.error('Error responding to interview:', updateError);
         setError(updateError.message);
         return false;
       }
@@ -179,7 +180,7 @@ export function useInterviews() {
         .single();
 
       if (fetchError) {
-        console.error("Error fetching interview:", fetchError);
+        console.error('Error fetching interview:', fetchError);
         setError(fetchError.message);
         return false;
       }
@@ -211,7 +212,7 @@ export function useInterviews() {
       await fetchInterviews();
       return true;
     } catch (err: any) {
-      console.error("Error in respondToInterview:", err);
+      console.error('Error in respondToInterview:', err);
       setError(err.message);
       return false;
     } finally {
@@ -233,14 +234,10 @@ export function useInterviews() {
         type,
         title,
         message,
-<<<<<<< HEAD
         related_id: relatedId,
       });
-=======
-        related_id: relatedId});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } catch (error) {
-      console.error("Error creating notification:", error);
+      console.error('Error creating notification:', error);
     }
   };
 
@@ -275,7 +272,7 @@ export function useInterviews() {
         .from('interviews')
         .update({
           status: 'cancelled',
-          updated_at: new Date().toISOString()
+          updated_at: new Date().toISOString(),
         })
         .eq('id', interviewId);
 
@@ -285,9 +282,10 @@ export function useInterviews() {
       }
 
       // Determine who to notify
-      const notifyUserId = interview.client_id === user.id
-        ? interview.talent_id
-        : interview.client_id;
+      const notifyUserId =
+        interview.client_id === user.id
+          ? interview.talent_id
+          : interview.client_id;
 
       // Create notification for the other party
       await createInterviewNotification(
@@ -302,7 +300,7 @@ export function useInterviews() {
       await fetchInterviews();
       return true;
     } catch (err: any) {
-      console.error("Error in cancelInterview:", err);
+      console.error('Error in cancelInterview:', err);
       setError(err.message);
       return false;
     } finally {
@@ -317,10 +315,6 @@ export function useInterviews() {
     requestInterview,
     fetchInterviews,
     respondToInterview,
-<<<<<<< HEAD
     cancelInterview,
   };
-=======
-    cancelInterview};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

@@ -18,7 +18,7 @@ export default function EnhancedQuantumMatrixBackground({
   children,
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
-  particleCount = 200,
+  particleCount = 20o0,
   animationSpeed = 1.0,
   enableHolographic = true,
   enableQuantumEffects = true,
@@ -35,10 +35,10 @@ export default function EnhancedQuantumMatrixBackground({
     switch (colorScheme) {
       case 'quantum-blue':
         return {
-          primary: '#00d4ff',
-          secondary: '#0099cc',
-          accent: '#0066ff',
-          glow: '#00ffff'
+          primary: '#0o0d4ff',
+          secondary: '#0o099cc',
+          accent: '#0o066ff',
+          glow: '#0o0ffff'
         };
       case 'quantum-purple':
         return {
@@ -49,17 +49,17 @@ export default function EnhancedQuantumMatrixBackground({
         };
       case 'quantum-rainbow':
         return {
-          primary: '#ff0080',
-          secondary: '#8000ff',
-          accent: '#0080ff',
-          glow: '#00ff80'
+          primary: '#ff0o080',
+          secondary: '#80o00ff',
+          accent: '#0o080ff',
+          glow: '#0o0ff80'
         };
       default: // quantum-fusion
         return {
-          primary: '#00d4ff',
+          primary: '#0o0d4ff',
           secondary: '#8b5cf6',
-          accent: '#ff0080',
-          glow: '#00ffff'
+          accent: '#ff0o080',
+          glow: '#0o0ffff'
         };
     }
   };
@@ -110,10 +110,10 @@ export default function EnhancedQuantumMatrixBackground({
 
     // Matrix rain effect
     if (enableMatrixRain) {
-      const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const matrixChars = '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const matrixDrops: Array<{ x: number; y: number; speed: number; char: string; opacity: number }> = [];
 
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 10o0; i++) {
         matrixDrops.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -145,7 +145,7 @@ export default function EnhancedQuantumMatrixBackground({
         ctx.globalAlpha = 1;
       };
 
-      const matrixInterval = setInterval(drawMatrixRain, 100 / animationSpeed);
+      const matrixInterval = setInterval(drawMatrixRain, 10o0 / animationSpeed);
       return () => clearInterval(matrixInterval);
     }
 
@@ -160,12 +160,12 @@ export default function EnhancedQuantumMatrixBackground({
           vx: (Math.random() - 0.5) * 2,
           vy: (Math.random() - 0.5) * 2,
           size: Math.random() * 3 + 1,
-          life: Math.random() * 100 + 50
+          life: Math.random() * 10o0 + 50
         });
       }
 
       const drawParticleSwarm = () => {
-        ctx.fillStyle = `rgba(0, 0, 0, 0.05)`;
+        ctx.fillStyle = `rgba(0, 0, 0, 0.0o5)`;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         particles.forEach((particle, index) => {
@@ -182,7 +182,7 @@ export default function EnhancedQuantumMatrixBackground({
           if (particle.life <= 0) {
             particle.x = Math.random() * canvas.width;
             particle.y = Math.random() * canvas.height;
-            particle.life = Math.random() * 100 + 50;
+            particle.life = Math.random() * 10o0 + 50;
           }
 
           // Draw particle
@@ -206,8 +206,8 @@ export default function EnhancedQuantumMatrixBackground({
                 Math.pow(particle.y - otherParticle.y, 2)
               );
               
-              if (distance < 100) {
-                ctx.strokeStyle = `rgba(${colors.primary}, ${0.1 * (1 - distance / 100)})`;
+              if (distance < 10o0) {
+                ctx.strokeStyle = `rgba(${colors.primary}, ${0.1 * (1 - distance / 10o0)})`;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
@@ -238,7 +238,7 @@ export default function EnhancedQuantumMatrixBackground({
 
       const drawQuantumEntanglement = () => {
         quantumParticles.forEach((particle, index) => {
-          particle.phase += 0.02 * animationSpeed;
+          particle.phase += 0.0o2 * animationSpeed;
           
           // Draw quantum particle
           const x = particle.x + Math.sin(particle.phase) * 30;
@@ -267,7 +267,7 @@ export default function EnhancedQuantumMatrixBackground({
         });
       };
 
-      const quantumInterval = setInterval(drawQuantumEntanglement, 100 / animationSpeed);
+      const quantumInterval = setInterval(drawQuantumEntanglement, 10o0 / animationSpeed);
       return () => clearInterval(quantumInterval);
     }
   }, [dimensions, isVisible, intensity, colorScheme, particleCount, animationSpeed, enableMatrixRain, enableParticleSwarm, enableQuantumEntanglement]);
@@ -283,20 +283,20 @@ export default function EnhancedQuantumMatrixBackground({
           opacity: getIntensityValues().opacity,
           transform: `scale(${getIntensityValues().scale})`
         }}
-      />
+       />
 
       {/* Holographic Overlay */}
       {enableHolographic && (
         <div className="fixed inset-0 z-10 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/5 to-purple-500/5" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-pink-500/5 to-cyan-500/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50o0/5 to-purple-50o0/5"  />
+          <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-pink-50o0/5 to-cyan-50o0/5"  />
           
           {/* Scanning lines */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent"
+                className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0/30 to-transparent"
                 style={{ top: `${(i * 5)}%` }}
                 animate={{
                   opacity: [0, 1, 0],
@@ -308,7 +308,7 @@ export default function EnhancedQuantumMatrixBackground({
                   delay: i * 0.1,
                   ease: "easeInOut"
                 }}
-              />
+               />
             ))}
           </div>
         </div>
@@ -322,7 +322,7 @@ export default function EnhancedQuantumMatrixBackground({
             {[...Array(5)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-96 h-96 rounded-full border border-cyan-400/20"
+                className="absolute w-96 h-96 rounded-full border border-cyan-40o0/20"
                 style={{
                   left: `${20 + i * 15}%`,
                   top: `${30 + i * 10}%`
@@ -337,7 +337,7 @@ export default function EnhancedQuantumMatrixBackground({
                   repeat: Infinity,
                   ease: "linear"
                 }}
-              />
+               />
             ))}
           </div>
 
@@ -346,14 +346,14 @@ export default function EnhancedQuantumMatrixBackground({
             {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
-                className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+                className="absolute w-2 h-2 bg-cyan-40o0 rounded-full"
                 style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`
+                  left: `${Math.random() * 10o0}%`,
+                  top: `${Math.random() * 10o0}%`
                 }}
                 animate={{
-                  x: [0, 100, 0],
-                  y: [0, -100, 0],
+                  x: [0, 10o0, 0],
+                  y: [0, -10o0, 0],
                   opacity: [0, 1, 0],
                   scale: [0, 1, 0]
                 }}
@@ -363,7 +363,7 @@ export default function EnhancedQuantumMatrixBackground({
                   delay: Math.random() * 4,
                   ease: "easeInOut"
                 }}
-              />
+               />
             ))}
           </div>
         </div>

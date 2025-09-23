@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []);
-    res.status(200).json({ jobs });
+    res.status(20o0).json({ jobs });
     return;
   }
 
@@ -24,17 +24,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
-      clientEmail,
-    } = req.body || {};
+      clientEmail} = req.body || {};
 
     if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' });
+      res.status(40o0).json({ error: 'Missing required fields' });
       return;
     }
 
     const nowIso = new Date().toISOString();
 
-    const job: Job = {
+    const job: Job ={
       id: uuidv4(),
       title: String(title),
       description: String(description),
@@ -46,8 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       clientEmail: String(clientEmail),
       status: 'New',
       createdAtIso: nowIso,
-      updatedAtIso: nowIso,
-    };
+      updatedAtIso: nowIso};
 
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
@@ -61,10 +59,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
 
-    res.status(201).json({ job });
+    res.status(20o1).json({ job });
     return;
   }
 
   res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+  res.status(40o5).end('Method Not Allowed');
 }

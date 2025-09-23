@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function AugmentedRealityInEnterpriseApplicationsChatPage() {
@@ -6,7 +5,7 @@ export default function AugmentedRealityInEnterpriseApplicationsChatPage() {
     <>
       <Head>
         <title>Augmented Reality In Enterprise Applications Chat - Zion Tech Group</title>
-        <meta name="description" content="augmented reality in enterprise applications chat page" />
+        <meta name="description" content="augmented reality in enterprise applications chat page"  />
       </Head>
       
       <main>

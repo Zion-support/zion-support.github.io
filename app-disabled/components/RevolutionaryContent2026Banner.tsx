@@ -1,1 +1,1 @@
-export { default } from "../../components/RevolutionaryContent2026Banner";
+export { default } from '../../components/RevolutionaryContent20o26Banner';

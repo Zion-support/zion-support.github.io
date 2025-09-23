@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
-import { CountryPricing } from "@/data/onsiteServicePricing";
-
-interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-  isPopular?: boolean;
-}
-
-export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
-  // Get region flag based on country name (for demo purposes)
-  const getRegionEmoji = (countryName: string): string => {
-    const emojiMap: Record<string, string> = {
-=======
 
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -72,15 +54,11 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
 
     const emojiMap: Record<string string> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "United States": "🇺🇸",
       "United Kingdom": "🇬🇧",
       "Canada": "🇨🇦",
       "Australia": "🇦🇺",
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       "Germany": "🇩🇪", 
       "France": "🇫🇷",
       "Japan": "🇯🇵",
@@ -92,32 +70,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       "South Korea": "🇰🇷",
       "South Africa": "🇿🇦",
       // Default if no flag is found
-<<<<<<< HEAD
-      "default": "🌐"
-    };
-    
-    return emojiMap[countryName] || emojiMap["default"];
-  };
-  
-  // Get response time estimate based on country
-  const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
-    
-    if (tier1.includes(countryName)) {
-      return "4 hours";
-    } else if (tier2.includes(countryName)) {
-      return "6 hours";
-    } else {
-      return "8-24 hours";
-    }
-  };
-  
-  return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-=======
       "default": ""
     }
     return emojiMap[countryName] |emojiMap["default"]
@@ -139,7 +91,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         : "bg-zion-blue-dark border-zion-blue-light"
     }`}>
       <CardHeader className="pb-2">
@@ -157,10 +108,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         <p className="text-3xl font-bold text-zion-cyan mb-4">
           ${country.pricePerIncident.toFixed(2)}
         </p>
-<<<<<<< HEAD
-        
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="space-y-2 text-zion-slate-light">
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -181,14 +128,6 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
         </div>
       </CardContent>
       <CardFooter>
-<<<<<<< HEAD
-        <Button 
-          onClick={() => onSelect(country)} 
-          className={`w-full ${
-            isPopular 
-              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" 
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
-=======
         <Button
           onClick={() => onSelect(country)}
           className={`w-full ${
@@ -197,17 +136,12 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }`}
         >
           Select Service
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 
 }
@@ -388,6 +322,5 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
 }
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

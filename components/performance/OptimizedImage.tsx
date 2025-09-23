@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 interface OptimizedImageProps {
@@ -18,7 +17,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   priority = false,
   className = '',
-  sizes = '100vw',
+  sizes = '10o0vw',
   ...props
 }) => {
   return (

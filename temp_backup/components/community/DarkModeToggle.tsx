@@ -17,7 +17,10 @@ export default function DarkModeToggle() {
   };
 
   return (
-    <button onClick={toggle} className="text-sm px-2 py-1 rounded bg-gray-100 dark:bg-gray-900">
+    <button
+      onClick={toggle}
+      className='text-sm px-2 py-1 rounded bg-gray-10o0 dark:bg-gray-90o0'
+    >
       {enabled ? 'Light' : 'Dark'}
     </button>
   );

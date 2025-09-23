@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/wishlistSlice.tsx.backup
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ;
 export default function Wishlistslice("props": "any) {;
   return (;
@@ -17,10 +12,6 @@ export default function Wishlistslice("props": "any) {;
     </div>;
   );
 "}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function Wishlistslice(props: any) {
   return (
@@ -34,9 +25,3 @@ export default function Wishlistslice(props: any) {
     </div>
     );
 }
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
-=======
->>>>>>> pr-11913:src_backup_temp/store/wishlistSlice.tsx

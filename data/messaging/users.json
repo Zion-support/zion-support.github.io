@@ -1,9 +1,4 @@
 [
-<<<<<<< HEAD
-  { "id": "client-demo", "name": "Acme Client", "role": "client" },
-  { "id": "talent-demo", "name": "John Talent", "role": "talent" },
-  { "id": "admin-demo", "name": "Admin", "role": "admin" }
-=======
   {
     "id": "client-demo",
     "name": "Acme Client",
@@ -19,5 +14,4 @@
     "name": "Admin",
     "role": "admin"
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ]

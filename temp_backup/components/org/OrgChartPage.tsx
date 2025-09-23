@@ -9,7 +9,12 @@ export default function OrgChartPage() {
   const [filters, setFilters] = useState<OrgFilters>({ view: 'all' });
   const [displayMode, setDisplayMode] = useState<DisplayMode>('tree');
   const [showPhotos, setShowPhotos] = useState<boolean>(true);
-  const [data, setData] = useState<OrgData>({ founders: [], coreTeam: [], contributors: [], delegates: [] });
+  const [data, setData] = useState<OrgData>({
+    founders: [],
+    coreTeam: [],
+    contributors: [],
+    delegates: [],
+  });
 
   useEffect(() => {
     const controller = new AbortController();
@@ -46,11 +51,13 @@ export default function OrgChartPage() {
   );
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-end justify-between gap-4 flex-wrap">
+    <div className='space-y-6'>
+      <div className='flex items-end justify-between gap-4 flex-wrap'>
         <div>
-          <h2 className="text-2xl font-bold">Zion Organization</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-300">Core team, contributors, and DAO delegates</p>
+          <h2 className='text-2xl font-bold'>Zion Organization</h2>
+          <p className='text-sm text-gray-60o0 dark:text-gray-30o0'>
+            Core team, contributors, and DAO delegates
+          </p>
         </div>
       </div>
 
@@ -64,14 +71,14 @@ export default function OrgChartPage() {
       />
 
       {gaps.length > 0 && (
-        <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-200 p-3 rounded-lg text-sm">
+        <div className='bg-amber-50 dark:bg-amber-90o0/30 border border-amber-20o0 dark:border-amber-80o0 text-amber-80o0 dark:text-amber-20o0 p-3 rounded-lg text-sm'>
           <strong>Gaps:</strong> {gaps.join(' • ')}
         </div>
       )}
 
       {displayMode === 'tree' ? (
-        <OrgTree data={data} showPhotos={showPhotos} />)
-        : (
+        <OrgTree data={data} showPhotos={showPhotos} />
+      ) : (
         <OrgGrid data={data} showPhotos={showPhotos} />
       )}
     </div>

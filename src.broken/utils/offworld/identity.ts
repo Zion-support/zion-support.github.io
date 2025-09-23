@@ -40,12 +40,16 @@ export async function resolveENS(address: string): Promise<string | null> {
   }
 }
 
-export async function resolveLens(handleOrAddress: string): Promise<string | null> {
+export async function resolveLens(
+  handleOrAddress: string
+): Promise<string | null> {
   // Placeholder: Lens API would be online; return null in offworld
   return null;
 }
 
-export async function buildIdentityProfile(address?: string): Promise<IdentityProfile> {
+export async function buildIdentityProfile(
+  address?: string
+): Promise<IdentityProfile> {
   const did = await generateDIDKey();
   const ens = address ? await resolveENS(address) : null;
   const lens = address ? await resolveLens(address) : null;

@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function UltimateContentPromotion2026() {
+export default function UltimateContentPromotion20o26() {
   return null;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   Phone,
@@ -31,7 +30,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-const UltraAdvancedFuturisticFooter2038: React.FC = () => {
+const UltraAdvancedFuturisticFooter20o38: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -40,7 +39,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
     {
       title: 'Featured Services',
       description: 'Our most popular and innovative solutions',
-      icon: <Star className="w-5 h-5 text-yellow-400" />,
+      icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
       links: [
         { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' },
         { name: 'Quantum Financial Forecasting', href: '/quantum-financial-forecasting', featured: true, price: 'From $1,499/month' },
@@ -57,7 +56,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
     {
       title: 'AI & Consciousness',
       description: 'Revolutionary AI platforms and solutions',
-      icon: <Brain className="w-5 h-5 text-cyan-400" />,
+      icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
       links: [
         { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', featured: true, price: 'From $8,999/month' },
         { name: 'AI Emotional Intelligence Trainer', href: '/ai-emotional-intelligence-trainer', featured: false, price: 'From $2,999/month' },
@@ -74,7 +73,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
     {
       title: 'Quantum & Emerging Tech',
       description: 'Breakthrough quantum and space technologies',
-      icon: <Atom className="w-5 h-5 text-blue-400" />,
+      icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
       links: [
         { name: 'Quantum Financial Forecasting Platform', href: '/quantum-financial-forecasting', featured: false, price: 'From $1,499/month' },
         { name: 'Quantum Supply Chain Optimizer', href: '/quantum-supply-chain-optimizer', featured: false, price: 'From $799/month' },
@@ -91,7 +90,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
     {
       title: 'Enterprise IT Solutions',
       description: 'Advanced enterprise infrastructure solutions',
-      icon: <Shield className="w-5 h-5 text-purple-400" />,
+      icon: <Shield className="w-5 h-5 text-purple-40o0"  />,
       links: [
         { name: 'Autonomous Cloud Orchestrator', href: '/autonomous-cloud-orchestrator', featured: false, price: 'From $799/month' },
         { name: 'AI-Powered DevOps Automation', href: '/ai-powered-devops-automation', featured: false, price: 'From $599/month' },
@@ -108,7 +107,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
     {
       title: 'Micro SAAS Solutions',
       description: 'Specialized business applications and tools',
-      icon: <Rocket className="w-5 h-5 text-green-400" />,
+      icon: <Rocket className="w-5 h-5 text-green-40o0"  />,
       links: [
         { name: 'AI Autonomous Marketing Platform', href: '/ai-autonomous-marketing-platform', featured: false, price: 'From $399/month' },
         { name: 'AI Autonomous Customer Success', href: '/ai-autonomous-customer-success', featured: false, price: 'From $299/month' },
@@ -125,29 +124,29 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about', icon: <Building className="w-4 h-4" /> },
-    { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4" /> },
-    { name: 'Investors', href: '/investors', icon: <TrendingUp className="w-4 h-4" /> },
-    { name: 'Careers', href: '/careers', icon: <Users className="w-4 h-4" /> },
-    { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4" /> },
-    { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4" /> },
-    { name: 'Research & Development', href: '/research-development', icon: <Lightbulb className="w-4 h-4" /> },
-    { name: 'Training', href: '/training', icon: <BookOpen className="w-4 h-4" /> }
+    { name: 'About Us', href: '/about', icon: <Building className="w-4 h-4"  /> },
+    { name: 'Partners', href: '/partners', icon: <Handshake className="w-4 h-4"  /> },
+    { name: 'Investors', href: '/investors', icon: <TrendingUp className="w-4 h-4"  /> },
+    { name: 'Careers', href: '/careers', icon: <Users className="w-4 h-4"  /> },
+    { name: 'White Papers', href: '/white-papers', icon: <FileText className="w-4 h-4"  /> },
+    { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4"  /> },
+    { name: 'Research & Development', href: '/research-development', icon: <Lightbulb className="w-4 h-4"  /> },
+    { name: 'Training', href: '/training', icon: <BookOpen className="w-4 h-4"  /> }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5" /> },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
-    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: <Github className="w-5 h-5" /> }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: <Linkedin className="w-5 h-5"  /> },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: <Github className="w-5 h-5"  /> }
   ];
 
   return (
-    <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-400/20 mt-20">
+    <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-40o0/20 mt-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50o0/5 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
@@ -155,38 +154,38 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center">
-                <Zap className="w-7 h-7 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-40o0 to-blue-60o0 rounded-xl flex items-center justify-center">
+                <Zap className="w-7 h-7 text-white"  />
               </div>
               <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-40o0 to-blue-60o0 bg-clip-text text-transparent">
                   Zion Tech Group
                 </h3>
-                <p className="text-sm text-gray-400">Innovation Leader 2038</p>
+                <p className="text-sm text-gray-40o0">Innovation Leader 20o38</p>
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-30o0 mb-6 leading-relaxed">
               Pioneering the future of technology with innovative AI, quantum computing, and autonomous solutions that drive business transformation and human progress.
             </p>
             
             {/* Contact Information */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors duration-200">
-                  +1 302 464 0950
+              <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0">
+                <Phone className="w-4 h-4"  />
+                <a href="tel:+130o24640950" className="hover:text-cyan-40o0 transition-colors duration-20o0">
+                  +1 30o2 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors duration-200">
+              <div className="flex items-center space-x-3 text-gray-30o0 hover:text-cyan-40o0 transition-colors duration-20o0">
+                <Mail className="w-4 h-4"  />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-40o0 transition-colors duration-20o0">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="flex items-center space-x-3 text-gray-30o0">
+                <MapPin className="w-4 h-4"  />
+                <span>364 E Main St STE 10o08, Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -198,7 +197,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
                 {section.icon}
                 <h4 className="text-lg font-semibold text-white">{section.title}</h4>
               </div>
-              <p className="text-sm text-gray-400 mb-4">{section.description}</p>
+              <p className="text-sm text-gray-40o0 mb-4">{section.description}</p>
               
               <div className="space-y-2">
                 {section.links.slice(0, 6).map((link) => (
@@ -207,16 +206,16 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
                     href={link.href}
                     className="group block"
                   >
-                    <div className="flex items-center justify-between p-2 rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-                      <span className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors duration-200">
+                    <div className="flex items-center justify-between p-2 rounded-lg hover:bg-cyan-40o0/10 transition-all duration-20o0">
+                      <span className="text-sm text-gray-30o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                         {link.name}
                       </span>
                       {link.featured && (
-                        <Star className="w-3 h-3 text-yellow-400" />
+                        <Star className="w-3 h-3 text-yellow-40o0"  />
                       )}
                     </div>
                     {link.price && (
-                      <p className="text-xs text-cyan-400 ml-2">{link.price}</p>
+                      <p className="text-xs text-cyan-40o0 ml-2">{link.price}</p>
                     )}
                   </Link>
                 ))}
@@ -226,11 +225,11 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
         </div>
 
         {/* Quick Links & Social */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 pt-8 border-t border-cyan-400/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 pt-8 border-t border-cyan-40o0/20">
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-              <Target className="w-5 h-5 text-cyan-400" />
+              <Target className="w-5 h-5 text-cyan-40o0"  />
               <span>Quick Links</span>
             </h4>
             <div className="grid grid-cols-2 gap-2">
@@ -238,10 +237,10 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-cyan-400/10 transition-all duration-200 group"
+                  className="flex items-center space-x-2 p-2 rounded-lg hover:bg-cyan-40o0/10 transition-all duration-20o0 group"
                 >
                   {link.icon}
-                  <span className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors duration-200">
+                  <span className="text-sm text-gray-30o0 group-hover:text-cyan-40o0 transition-colors duration-20o0">
                     {link.name}
                   </span>
                 </Link>
@@ -252,7 +251,7 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
           {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
-              <Globe className="w-5 h-5 text-cyan-400" />
+              <Globe className="w-5 h-5 text-cyan-40o0"  />
               <span>Connect With Us</span>
             </h4>
             <div className="grid grid-cols-3 gap-3">
@@ -262,9 +261,9 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-3 bg-cyan-400/10 rounded-lg hover:bg-cyan-400/20 transition-all duration-200 group"
+                  className="flex items-center justify-center p-3 bg-cyan-40o0/10 rounded-lg hover:bg-cyan-40o0/20 transition-all duration-20o0 group"
                 >
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                  <div className="text-cyan-40o0 group-hover:text-cyan-30o0 transition-colors duration-20o0">
                     {link.icon}
                   </div>
                 </a>
@@ -274,20 +273,20 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-cyan-400/20">
-          <div className="text-gray-400 text-sm text-center md:text-left mb-4 md:mb-0">
-            <p>&copy; 2028 Zion Tech Group. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-cyan-40o0/20">
+          <div className="text-gray-40o0 text-sm text-center md:text-left mb-4 md:mb-0">
+            <p>&copy; 20o28 Zion Tech Group. All rights reserved.</p>
             <p className="mt-1">Pioneering the future of technology</p>
           </div>
           
           <div className="flex items-center space-x-6">
-            <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+            <Link href="/privacy" className="text-sm text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+            <Link href="/terms" className="text-sm text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0">
               Terms of Service
             </Link>
-            <Link href="/support" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200">
+            <Link href="/support" className="text-sm text-gray-40o0 hover:text-cyan-40o0 transition-colors duration-20o0">
               Support
             </Link>
           </div>
@@ -300,22 +299,22 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300/50 group"
+        className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-full shadow-2xl hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-30o0/50 group"
         aria-label="Back to top"
       >
-        <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-200" />
+        <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-20o0"  />
       </motion.button>
 
       {/* Floating Contact Button */}
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0, x: 10o0 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.8 }}
         className="fixed bottom-8 left-8 z-40"
       >
         <Link href="/contact">
-          <button className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-full shadow-2xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300/50 group">
-            <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+          <button className="flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-60o0 text-white font-medium rounded-full shadow-2xl hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 focus:outline-none focus:ring-4 focus:ring-purple-30o0/50 group">
+            <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-20o0"  />
             <span>Get Started</span>
           </button>
         </Link>
@@ -324,4 +323,4 @@ const UltraAdvancedFuturisticFooter2038: React.FC = () => {
   );
 };
 
-export default UltraAdvancedFuturisticFooter2038;
+export default UltraAdvancedFuturisticFooter20o38;

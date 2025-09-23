@@ -1,5 +1,10 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, initializeFirestore, memoryLocalCache, Firestore } from 'firebase/firestore'; // Added Firestore
+import {
+  getFirestore,
+  initializeFirestore,
+  memoryLocalCache,
+  Firestore,
+} from 'firebase/firestore'; // Added Firestore
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,

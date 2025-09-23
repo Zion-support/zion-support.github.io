@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Shield, Globe, Zap, Atom, Microscope, Car, Leaf, Factory, Truck, FlaskConical, Dna, GraduationCap, ShieldCheck, Globe2, Bot, Crown, Infinity, Sparkles, Palette, Code, Database, Cloud, Smartphone, Palette as PaletteIcon, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code as CodeIcon, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon2, Dna as DnaIcon2, Car as CarIcon2, Leaf as LeafIcon2, Factory as FactoryIcon2, Truck as TruckIcon2, Microscope as MicroscopeIcon2, GraduationCap as GraduationCapIcon2, ShieldCheck as ShieldCheckIcon2, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon2, Bot as BotIcon2, ChevronRight as ChevronRightIcon } from 'lucide-react';
-import { innovative2026MicroSaasServicesV3 } from '../../data/innovative-2026-micro-saas-v3';
-import { emergingTech2026ServicesV3 } from '../../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../../data/enterprise-it-2026-services-v3';
-import { nextGenAI2026ServicesV3 } from '../../data/next-gen-ai-2026-services-v3';
+import { innovative20o26MicroSaasServicesV3 } from '../../data/innovative-20o26-micro-saas-v3';
+import { emergingTech20o26ServicesV3 } from '../../data/emerging-tech-20o26-services-v3';
+import { enterpriseIT20o26ServicesV3 } from '../../data/enterprise-it-20o26-services-v3';
+import { nextGenAI20o26ServicesV3 } from '../../data/next-gen-ai-20o26-services-v3';
 
 interface Service {
   id: string;
@@ -42,7 +42,7 @@ interface Service {
   reviews: number;
 }
 
-export default function Enhanced2026ServicesShowcaseV3() {
+export default function Enhanced20o26ServicesShowcaseV3() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -51,10 +51,10 @@ export default function Enhanced2026ServicesShowcaseV3() {
 
   // Combine all new services
   const allServices: Service[] = [
-    ...innovative2026MicroSaasServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3,
-    ...nextGenAI2026ServicesV3
+    ...innovative20o26MicroSaasServicesV3,
+    ...emergingTech20o26ServicesV3,
+    ...enterpriseIT20o26ServicesV3,
+    ...nextGenAI20o26ServicesV3
   ];
 
   // Dynamic category counts
@@ -95,8 +95,8 @@ export default function Enhanced2026ServicesShowcaseV3() {
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $500/month', range: 'Under $500' },
-    { id: 'medium', name: '$500 - $2K/month', range: '$500 - $2K' },
+    { id: 'low', name: 'Under $50o0/month', range: 'Under $50o0' },
+    { id: 'medium', name: '$50o0 - $2K/month', range: '$50o0 - $2K' },
     { id: 'high', name: '$2K - $10K/month', range: '$2K - $10K' },
     { id: 'enterprise', name: 'Over $10K/month', range: 'Over $10K' }
   ];
@@ -127,10 +127,10 @@ export default function Enhanced2026ServicesShowcaseV3() {
 
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       const matchesPrice = selectedPriceRange === 'all' ||
-                          (selectedPriceRange === 'low' && price < 500) ||
-                          (selectedPriceRange === 'medium' && price >= 500 && price < 2000) ||
-                          (selectedPriceRange === 'high' && price >= 2000 && price < 10000) ||
-                          (selectedPriceRange === 'enterprise' && price >= 10000);
+                          (selectedPriceRange === 'low' && price < 50o0) ||
+                          (selectedPriceRange === 'medium' && price >= 50o0 && price < 20o00) ||
+                          (selectedPriceRange === 'high' && price >= 20o00 && price < 10o000) ||
+                          (selectedPriceRange === 'enterprise' && price >= 10o000);
 
       return matchesSearch && matchesCategory && matchesPrice;
     });
@@ -159,7 +159,7 @@ export default function Enhanced2026ServicesShowcaseV3() {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-  const containerVariants = {
+  const containerVariants ={
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -169,7 +169,7 @@ export default function Enhanced2026ServicesShowcaseV3() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants ={
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
@@ -181,12 +181,12 @@ export default function Enhanced2026ServicesShowcaseV3() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-20o00"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-40o00"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -197,10 +197,10 @@ export default function Enhanced2026ServicesShowcaseV3() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Revolutionary 2026 Services
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-cyan-40o0 bg-clip-text text-transparent">
+            Revolutionary 20o26 Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
             Discover our cutting-edge micro SAAS, AI, and emerging technology solutions that are transforming industries and driving innovation forward.
           </p>
         </motion.div>
@@ -215,13 +215,13 @@ export default function Enhanced2026ServicesShowcaseV3() {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             {/* Search Bar */}
             <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search for services, technologies, or use cases..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent"
               />
             </div>
 
@@ -232,15 +232,15 @@ export default function Enhanced2026ServicesShowcaseV3() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent appearance-none cursor-pointer"
                 >
                   {categories.map((category) => (
-                    <option key={category.id} value={category.id} className="bg-gray-800 text-white">
+                    <option key={category.id} value={category.id} className="bg-gray-80o0 text-white">
                       {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* Price Range Filter */}
@@ -248,15 +248,15 @@ export default function Enhanced2026ServicesShowcaseV3() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent appearance-none cursor-pointer"
                 >
                   {priceRanges.map((range) => (
-                    <option key={range.id} value={range.id} className="bg-gray-800 text-white">
+                    <option key={range.id} value={range.id} className="bg-gray-80o0 text-white">
                       {range.name}
                     </option>
                   ))}
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* Sort By */}
@@ -264,15 +264,15 @@ export default function Enhanced2026ServicesShowcaseV3() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent appearance-none cursor-pointer"
                 >
-                  <option value="name" className="bg-gray-800 text-white">Sort by Name</option>
-                  <option value="price" className="bg-gray-800 text-white">Sort by Price</option>
-                  <option value="rating" className="bg-gray-800 text-white">Sort by Rating</option>
-                  <option value="customers" className="bg-gray-800 text-white">Sort by Customers</option>
-                  <option value="growth" className="bg-gray-800 text-white">Sort by Growth</option>
+                  <option value="name" className="bg-gray-80o0 text-white">Sort by Name</option>
+                  <option value="price" className="bg-gray-80o0 text-white">Sort by Price</option>
+                  <option value="rating" className="bg-gray-80o0 text-white">Sort by Rating</option>
+                  <option value="customers" className="bg-gray-80o0 text-white">Sort by Customers</option>
+                  <option value="growth" className="bg-gray-80o0 text-white">Sort by Growth</option>
                 </select>
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />
               </div>
 
               {/* View Mode Toggle */}
@@ -281,27 +281,27 @@ export default function Enhanced2026ServicesShowcaseV3() {
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-4 py-2 rounded-lg transition-all ${
                     viewMode === 'grid' 
-                      ? 'bg-purple-500 text-white' 
-                      : 'text-gray-400 hover:text-white'
+                      ? 'bg-purple-50o0 text-white' 
+                      : 'text-gray-40o0 hover:text-white'
                   }`}
                 >
-                  <Grid className="w-4 h-4 mx-auto" />
+                  <Grid className="w-4 h-4 mx-auto"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`flex-1 px-4 py-2 rounded-lg transition-all ${
                     viewMode === 'list' 
-                      ? 'bg-purple-500 text-white' 
-                      : 'text-gray-400 hover:text-white'
+                      ? 'bg-purple-50o0 text-white' 
+                      : 'text-gray-40o0 hover:text-white'
                   }`}
                 >
-                  <List className="w-4 h-4 mx-auto" />
+                  <List className="w-4 h-4 mx-auto"  />
                 </button>
               </div>
             </div>
 
             {/* Results Count */}
-            <div className="text-center text-gray-300">
+            <div className="text-center text-gray-30o0">
               Showing {filteredServices.length} of {allServices.length} services
             </div>
           </div>
@@ -322,22 +322,22 @@ export default function Enhanced2026ServicesShowcaseV3() {
                   variants={itemVariants}
                   className="group relative"
                 >
-                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5 hover:shadow-2xl hover:shadow-purple-50o0/25">
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
                       {service.popular && (
-                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                        <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full">
                           POPULAR
                         </span>
                       )}
                     </div>
 
                     {/* Service Info */}
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-40o0 transition-colors">
                       {service.name}
                     </h3>
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-30o0 text-sm mb-4 line-clamp-2">
                       {service.tagline}
                     </p>
 
@@ -345,26 +345,26 @@ export default function Enhanced2026ServicesShowcaseV3() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-white">
                         {service.price}
-                        <span className="text-sm text-gray-400 font-normal">{service.period}</span>
+                        <span className="text-sm text-gray-40o0 font-normal">{service.period}</span>
                       </div>
-                      <div className="flex items-center text-yellow-400">
-                        <Star className="w-4 h-4 fill-current" />
+                      <div className="flex items-center text-yellow-40o0">
+                        <Star className="w-4 h-4 fill-current"  />
                         <span className="ml-1 text-sm text-white">{service.rating}</span>
                       </div>
                     </div>
 
                     {/* Features Preview */}
                     <div className="mb-4">
-                      <div className="text-sm text-gray-400 mb-2">Key Features:</div>
+                      <div className="text-sm text-gray-40o0 mb-2">Key Features:</div>
                       <div className="space-y-1">
                         {service.features.slice(0, 3).map((feature, index) => (
-                          <div key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <div key={index} className="flex items-center text-sm text-gray-30o0">
+                            <CheckCircle className="w-3 h-3 text-green-40o0 mr-2 flex-shrink-0"  />
                             <span className="line-clamp-1">{feature}</span>
                           </div>
                         ))}
                         {service.features.length > 3 && (
-                          <div className="text-xs text-gray-500 text-center">
+                          <div className="text-xs text-gray-50o0 text-center">
                             +{service.features.length - 3} more features
                           </div>
                         )}
@@ -374,12 +374,12 @@ export default function Enhanced2026ServicesShowcaseV3() {
                     {/* Stats */}
                     <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
                       <div className="text-center">
-                        <div className="text-gray-400">Customers</div>
+                        <div className="text-gray-40o0">Customers</div>
                         <div className="text-white font-semibold">{service.customers.toLocaleString()}</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-gray-400">Growth</div>
-                        <div className="text-green-400 font-semibold">{service.growthRate}</div>
+                        <div className="text-gray-40o0">Growth</div>
+                        <div className="text-green-40o0 font-semibold">{service.growthRate}</div>
                       </div>
                     </div>
 
@@ -388,10 +388,10 @@ export default function Enhanced2026ServicesShowcaseV3() {
                       href={service.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-4 rounded-xl font-semibold text-center block hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white py-3 px-4 rounded-xl font-semibold text-center block hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 transform hover:scale-10o5"
                     >
                       Learn More
-                      <ArrowRight className="inline-block w-4 h-4 ml-2" />
+                      <ArrowRight className="inline-block w-4 h-4 ml-2"  />
                     </a>
                   </div>
                 </motion.div>
@@ -403,23 +403,23 @@ export default function Enhanced2026ServicesShowcaseV3() {
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-50o0/50 transition-all duration-30o0"
                 >
                   <div className="flex items-center space-x-6">
                     <div className="text-4xl flex-shrink-0">{service.icon}</div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                        <h3 className="text-xl font-bold text-white group-hover:text-purple-40o0 transition-colors">
                           {service.name}
                         </h3>
                         {service.popular && (
-                          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                          <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-300 text-sm mb-2">{service.tagline}</p>
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <p className="text-gray-30o0 text-sm mb-2">{service.tagline}</p>
+                      <div className="flex items-center space-x-4 text-sm text-gray-40o0">
                         <span>Category: {service.category}</span>
                         <span>•</span>
                         <span>Rating: {service.rating}/5</span>
@@ -430,16 +430,16 @@ export default function Enhanced2026ServicesShowcaseV3() {
                     <div className="text-right flex-shrink-0">
                       <div className="text-2xl font-bold text-white mb-2">
                         {service.price}
-                        <span className="text-sm text-gray-400 font-normal">{service.period}</span>
+                        <span className="text-sm text-gray-40o0 font-normal">{service.period}</span>
                       </div>
                       <a
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+                        className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white py-2 px-4 rounded-lg font-semibold text-sm hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 inline-flex items-center"
                       >
                         Learn More
-                        <ArrowRight className="w-3 h-3 ml-1" />
+                        <ArrowRight className="w-3 h-3 ml-1"  />
                       </a>
                     </div>
                   </div>
@@ -458,7 +458,7 @@ export default function Enhanced2026ServicesShowcaseV3() {
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-40o0 mb-6">
               Try adjusting your search criteria or filters to find what you're looking for.
             </p>
             <button
@@ -467,7 +467,7 @@ export default function Enhanced2026ServicesShowcaseV3() {
                 setSelectedCategory('all');
                 setSelectedPriceRange('all');
               }}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0"
             >
               Clear All Filters
             </button>
@@ -485,25 +485,25 @@ export default function Enhanced2026ServicesShowcaseV3() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
               Get in touch to discuss your specific needs and discover how our services can drive your success.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-purple-400 mb-2" />
-                <div className="text-white font-semibold">+1 302 464 0950</div>
-                <div className="text-gray-400 text-sm">Mobile</div>
+                <Phone className="w-8 h-8 text-purple-40o0 mb-2"  />
+                <div className="text-white font-semibold">+1 30o2 464 0950</div>
+                <div className="text-gray-40o0 text-sm">Mobile</div>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-purple-400 mb-2" />
+                <Mail className="w-8 h-8 text-purple-40o0 mb-2"  />
                 <div className="text-white font-semibold">kleber@ziontechgroup.com</div>
-                <div className="text-gray-400 text-sm">Email</div>
+                <div className="text-gray-40o0 text-sm">Email</div>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-purple-400 mb-2" />
-                <div className="text-white font-semibold">364 E Main St STE 1008</div>
-                <div className="text-gray-400 text-sm">Middletown DE 19709</div>
+                <MapPin className="w-8 h-8 text-purple-40o0 mb-2"  />
+                <div className="text-white font-semibold">364 E Main St STE 10o08</div>
+                <div className="text-gray-40o0 text-sm">Middletown DE 19709</div>
               </div>
             </div>
           </div>

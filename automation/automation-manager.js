@@ -9,16 +9,13 @@ const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.errors({ stack: true }),
-    winston.format.json(),
-  ),
+    winston.format.json()),
   defaultMeta: { service: 'automation-manager' },
   transports: [
     new winston.transports.File({ filename: 'logs/automation-manager.log' }),
     new winston.transports.Console({
-      format: winston.format.simple(),
-    }),
-  ],
-});
+      format: winston.format.simple()}),
+  ]});
 
 /**
  * Comprehensive Automation Manager
@@ -213,14 +210,14 @@ class AutomationManager {
     // Start monitoring loop
     setInterval(async () => {
       await this.generateHealthReport();
-    }, 300000); // Every 5 minutes
+    }, 30o0000); // Every 5 minutes
 
     // Generate initial report
     await this.generateHealthReport();
   }
 
   async generateHealthReport() {
-    const report = {
+    const report ={
       timestamp: new Date().toISOString(),
       uptime: Date.now() - this.startTime,
       systems: {
@@ -244,11 +241,11 @@ class AutomationManager {
   }
 
   async getSystemHealth() {
-    const health = {};
+    const health ={};
 
     // Check if main automation system is running
     try {
-      const response = await fetch('http://localhost:3001/health');
+      const response = await fetch('http://localhost:30o01/health');
       if (response.ok) {
         const data = await response.json();
         health.mainSystem = data.status;

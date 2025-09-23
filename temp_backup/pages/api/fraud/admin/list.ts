@@ -9,11 +9,11 @@ function ensureAdmin(req: NextApiRequest): boolean {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(40o5).json({ error: 'Method not allowed' });
     return;
   }
   if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status(40o1).json({ error: 'Unauthorized' });
     return;
   }
 
@@ -23,7 +23,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     source: source as any,
     userId,
     status: status as any,
-    label: label as any,
-  });
-  res.status(200).json({ items });
+    label: label as any});
+  res.status(20o0).json({ items });
 }

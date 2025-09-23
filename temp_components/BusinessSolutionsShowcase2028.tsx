@@ -27,16 +27,16 @@ import {
   PieChart
 } from 'lucide-react';
 
-const BusinessSolutionsShowcase2028 = () => {
+const BusinessSolutionsShowcase20o28 = () => {
   const [activeSolutionsetActiveSolution] = useState('automation');
   const [currentMetricsetCurrentMetric] = useState(0);
 
-  const solutions = {
+  const solutions ={
     automation: {
       title: 'AI-Powered Business Automation',
       subtitle: 'Transform your operations with intelligent automation',
       icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
+      color: 'from-blue-60o0 to-cyan-60o0',
       description: 'Complete business process automation using advanced AI algorithms that learn and adapt to your specific needs.',
       features: [
         'Automated workflow management',
@@ -46,7 +46,7 @@ const BusinessSolutionsShowcase2028 = () => {
         'Cost reduction up to 80%'
       ],
       metrics: [
-        { label: 'Efficiency Gain'value: '500%'icon: TrendingUp },
+        { label: 'Efficiency Gain'value: '50o0%'icon: TrendingUp },
         { label: 'Cost Savings'value: '$2.5M'icon: DollarSign },
         { label: 'Time Saved'value: '40hrs/week'icon: Clock },
         { label: 'Error Reduction'value: '99.9%'icon: Shield }
@@ -56,7 +56,7 @@ const BusinessSolutionsShowcase2028 = () => {
       title: 'Advanced Business Analytics',
       subtitle: 'Data-driven insights for strategic decisions',
       icon: BarChart3,
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-purple-60o0 to-pink-60o0',
       description: 'Comprehensive analytics platform that transforms raw data into actionable business intelligence.',
       features: [
         'Real-time data visualization',
@@ -67,7 +67,7 @@ const BusinessSolutionsShowcase2028 = () => {
       ],
       metrics: [
         { label: 'Data Processed'value: '10TB/day'icon: Database },
-        { label: 'Insights Generated'value: '1000+'icon: Target },
+        { label: 'Insights Generated'value: '10o00+'icon: Target },
         { label: 'Decision Speed'value: '90% faster'icon: Zap },
         { label: 'Accuracy Rate'value: '98.5%'icon: CheckCircle }
       ]
@@ -76,7 +76,7 @@ const BusinessSolutionsShowcase2028 = () => {
       title: 'Enterprise Security Solutions',
       subtitle: 'Protect your business with cutting-edge security',
       icon: Shield,
-      color: 'from-red-600 to-orange-600',
+      color: 'from-red-60o0 to-orange-60o0',
       description: 'Comprehensive security framework protecting your business from cyber threats and ensuring compliance.',
       features: [
         'AI-powered threat detection',
@@ -88,7 +88,7 @@ const BusinessSolutionsShowcase2028 = () => {
       metrics: [
         { label: 'Threats Blocked'value: '99.9%'icon: Shield },
         { label: 'Response Time'value: '<1min'icon: Clock },
-        { label: 'Compliance Score'value: '100%'icon: Award },
+        { label: 'Compliance Score'value: '10o0%'icon: Award },
         { label: 'Uptime'value: '99.99%'icon: CheckCircle }
       ]
     },
@@ -96,7 +96,7 @@ const BusinessSolutionsShowcase2028 = () => {
       title: 'Cloud Infrastructure Solutions',
       subtitle: 'Scalable and reliable cloud computing',
       icon: Cloud,
-      color: 'from-green-600 to-teal-600',
+      color: 'from-green-60o0 to-teal-60o0',
       description: 'Modern cloud infrastructure that scales with your business and provides unmatched reliability.',
       features: [
         'Auto-scaling infrastructure',
@@ -107,7 +107,7 @@ const BusinessSolutionsShowcase2028 = () => {
       ],
       metrics: [
         { label: 'Uptime'value: '99.99%'icon: CheckCircle },
-        { label: 'Global Reach'value: '200+'icon: Globe },
+        { label: 'Global Reach'value: '20o0+'icon: Globe },
         { label: 'Cost Reduction'value: '60%'icon: DollarSign },
         { label: 'Deployment Speed'value: '10x faster'icon: Zap }
       ]
@@ -121,7 +121,7 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Manual processes causing delays and errors',
       solution: 'AI-powered automation platform',
       results: [
-        '500% efficiency improvement',
+        '50o0% efficiency improvement',
         '$2.5M annual cost savings',
         '99.9% error reduction',
         '40 hours saved per week'
@@ -135,7 +135,7 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Compliance and security concerns',
       solution: 'Enterprise security framework',
       results: [
-        '100% compliance achievement',
+        '10o0% compliance achievement',
         'Zero security incidents',
         '50% faster audits',
         '99.99% uptime'
@@ -149,7 +149,7 @@ const BusinessSolutionsShowcase2028 = () => {
       challenge: 'Data analysis and customer insights',
       solution: 'Advanced analytics platform',
       results: [
-        '300% increase in insights',
+        '30o0% increase in insights',
         '25% boost in sales',
         '90% faster decisions',
         '98.5% accuracy rate'
@@ -184,7 +184,7 @@ const BusinessSolutionsShowcase2028 = () => {
         'Comprehensive analytics',
         'Priority support',
         'Up to 50 users',
-        '100GB storage',
+        '10o0GB storage',
         'Custom integrations'
       ],
       popular: true
@@ -209,15 +209,15 @@ const BusinessSolutionsShowcase2028 = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMetric((prev) => (prev + 1) % 4);
-    }2000);
+    }20o00);
     return () => clearInterval(interval);
   }[]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20"  />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0y: 20 }}
@@ -225,29 +225,29 @@ const BusinessSolutionsShowcase2028 = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Business Solutions 2028
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-cyan-40o0 bg-clip-text text-transparent">
+              Business Solutions 20o28
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
               Transform your business with cutting-edge AIautomationand cloud solutions 
               designed to drive growth and maximize efficiency.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
               >
-                <Play className="inline-block mr-2" />
+                <Play className="inline-block mr-2"  />
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-400 rounded-full text-blue-400 font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-blue-40o0 rounded-full text-blue-40o0 font-semibold text-lg hover:bg-blue-40o0 hover:text-white transition-all duration-30o0"
               >
                 Get Started
-                <ArrowRight className="inline-block ml-2" />
+                <ArrowRight className="inline-block ml-2"  />
               </motion.button>
             </div>
           </motion.div>
@@ -259,7 +259,7 @@ const BusinessSolutionsShowcase2028 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Solutions</h2>
-            <p className="text-xl text-gray-300">Choose the perfect solution for your business needs</p>
+            <p className="text-xl text-gray-30o0">Choose the perfect solution for your business needs</p>
           </div>
 
           {/* Solution Tabs */}
@@ -267,16 +267,16 @@ const BusinessSolutionsShowcase2028 = () => {
             {Object.entries(solutions).map(([keysolution]) => (
               <motion.button
                 key={key}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.0o5 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveSolution(key)}
-                className={`p-6 rounded-2xl transition-all duration-300 ${
+                className={`p-6 rounded-2xl transition-all duration-30o0 ${
                   activeSolution === key
-                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-800/70'
+                    ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white'
+                    : 'bg-gray-80o0/50 text-gray-30o0 hover:bg-gray-80o0/70'
                 }`}
               >
-                <solution.icon className="w-8 h-8 mx-auto mb-3" />
+                <solution.icon className="w-8 h-8 mx-auto mb-3"  />
                 <div className="text-sm font-semibold">{solution.title}</div>
               </motion.button>
             ))}
@@ -290,41 +290,41 @@ const BusinessSolutionsShowcase2028 = () => {
               animate={{ opacity: 1y: 0 }}
               exit={{ opacity: 0y: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-3xl p-8"
+              className="bg-gray-80o0/50 backdrop-blur-sm rounded-3xl p-8"
             >
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Solution Info */}
                 <div>
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-r ${solutions[activeSolution].color} rounded-2xl flex items-center justify-center`}>
-                      <solutions[activeSolution].icon className="w-8 h-8 text-white" />
+                      <solutions[activeSolution].icon className="w-8 h-8 text-white"  />
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold">{solutions[activeSolution].title}</h3>
-                      <p className="text-gray-400">{solutions[activeSolution].subtitle}</p>
+                      <p className="text-gray-40o0">{solutions[activeSolution].subtitle}</p>
                     </div>
                   </div>
                   
-                  <p className="text-lg text-gray-300 mb-6">
+                  <p className="text-lg text-gray-30o0 mb-6">
                     {solutions[activeSolution].description}
                   </p>
 
                   <ul className="space-y-3 mb-8">
                     {solutions[activeSolution].features.map((featureindex) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <li key={index} className="flex items-center text-gray-30o0">
+                        <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.0o5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-300"
+                    className="px-6 py-3 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-full text-white font-semibold hover:shadow-lg transition-all duration-30o0"
                   >
                     Learn More
-                    <ArrowRight className="inline-block ml-2" />
+                    <ArrowRight className="inline-block ml-2"  />
                   </motion.button>
                 </div>
 
@@ -338,11 +338,11 @@ const BusinessSolutionsShowcase2028 = () => {
                         initial={{ opacity: 0scale: 0.8 }}
                         animate={{ opacity: 1scale: 1 }}
                         transition={{ duration: 0.5delay: index * 0.1 }}
-                        className="bg-gray-700/50 rounded-xl p-4 text-center"
+                        className="bg-gray-70o0/50 rounded-xl p-4 text-center"
                       >
-                        <metric.icon className="w-8 h-8 mx-auto mb-2 text-blue-400" />
+                        <metric.icon className="w-8 h-8 mx-auto mb-2 text-blue-40o0"  />
                         <div className="text-2xl font-bold text-white">{metric.value}</div>
-                        <div className="text-sm text-gray-400">{metric.label}</div>
+                        <div className="text-sm text-gray-40o0">{metric.label}</div>
                       </motion.div>
                     ))}
                   </div>
@@ -358,7 +358,7 @@ const BusinessSolutionsShowcase2028 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-300">Real results from real businesses</p>
+            <p className="text-xl text-gray-30o0">Real results from real businesses</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -368,39 +368,39 @@ const BusinessSolutionsShowcase2028 = () => {
                 initial={{ opacity: 0y: 20 }}
                 animate={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6"
+                className="bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-6"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
                     {study.logo}
                   </div>
                   <div>
                     <h4 className="text-xl font-bold">{study.company}</h4>
-                    <p className="text-gray-400">{study.industry}</p>
+                    <p className="text-gray-40o0">{study.industry}</p>
                   </div>
                   <div className="ml-auto flex">
                     {[...Array(study.rating)].map((_i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-4 h-4 text-yellow-40o0 fill-current"  />
                     ))}
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <h5 className="font-semibold text-gray-300 mb-2">Challenge:</h5>
-                  <p className="text-gray-400 text-sm">{study.challenge}</p>
+                  <h5 className="font-semibold text-gray-30o0 mb-2">Challenge:</h5>
+                  <p className="text-gray-40o0 text-sm">{study.challenge}</p>
                 </div>
 
                 <div className="mb-4">
-                  <h5 className="font-semibold text-gray-300 mb-2">Solution:</h5>
-                  <p className="text-gray-400 text-sm">{study.solution}</p>
+                  <h5 className="font-semibold text-gray-30o0 mb-2">Solution:</h5>
+                  <p className="text-gray-40o0 text-sm">{study.solution}</p>
                 </div>
 
                 <div>
-                  <h5 className="font-semibold text-gray-300 mb-2">Results:</h5>
+                  <h5 className="font-semibold text-gray-30o0 mb-2">Results:</h5>
                   <ul className="space-y-1">
                     {study.results.map((resultIndex) => (
-                      <li key={resultIndex} className="text-sm text-gray-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
+                      <li key={resultIndex} className="text-sm text-gray-40o0 flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-40o0 mr-2"  />
                         {result}
                       </li>
                     ))}
@@ -417,7 +417,7 @@ const BusinessSolutionsShowcase2028 = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Pricing Plans</h2>
-            <p className="text-xl text-gray-300">Choose the perfect plan for your business</p>
+            <p className="text-xl text-gray-30o0">Choose the perfect plan for your business</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -427,13 +427,13 @@ const BusinessSolutionsShowcase2028 = () => {
                 initial={{ opacity: 0y: 20 }}
                 animate={{ opacity: 1y: 0 }}
                 transition={{ duration: 0.6delay: index * 0.1 }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 ${
-                  tier.popular ? 'ring-2 ring-blue-500' : ''
+                className={`relative bg-gray-80o0/50 backdrop-blur-sm rounded-2xl p-8 ${
+                  tier.popular ? 'ring-2 ring-blue-50o0' : ''
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -441,29 +441,29 @@ const BusinessSolutionsShowcase2028 = () => {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 mb-4">{tier.description}</p>
+                  <p className="text-gray-40o0 mb-4">{tier.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold">{tier.price}</span>
-                    <span className="text-gray-400 ml-1">{tier.period}</span>
+                    <span className="text-gray-40o0 ml-1">{tier.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                    <li key={featureIndex} className="flex items-center text-gray-30o0">
+                      <CheckCircle className="w-5 h-5 text-green-40o0 mr-3"  />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.0o5 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-full font-semibold transition-all duration-300 ${
+                  className={`w-full py-3 rounded-full font-semibold transition-all duration-30o0 ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg'
-                      : 'border-2 border-gray-600 text-gray-300 hover:border-blue-400 hover:text-blue-400'
+                      ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white hover:shadow-lg'
+                      : 'border-2 border-gray-60o0 text-gray-30o0 hover:border-blue-40o0 hover:text-blue-40o0'
                   }`}
                 >
                   Get Started
@@ -475,26 +475,26 @@ const BusinessSolutionsShowcase2028 = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+      <div className="py-20 bg-gradient-to-r from-blue-60o0/20 to-cyan-60o0/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-30o0 mb-8">
             Join thousands of companies already using our solutions to achieve unprecedented success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 rounded-full text-white font-semibold text-lg hover:shadow-lg transition-all duration-30o0"
             >
               Start Free Trial
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-blue-400 rounded-full text-blue-400 font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-blue-40o0 rounded-full text-blue-40o0 font-semibold text-lg hover:bg-blue-40o0 hover:text-white transition-all duration-30o0"
             >
               Schedule Demo
             </motion.button>
@@ -505,4 +505,4 @@ const BusinessSolutionsShowcase2028 = () => {
   );
 };
 
-export default BusinessSolutionsShowcase2028;
+export default BusinessSolutionsShowcase20o28;

@@ -1,6 +1,5 @@
-"use client";
+'use client';
 
-
-export default function SuccessStoriesShowcase2026() {
+export default function SuccessStoriesShowcase20o26() {
   return null;
 }

@@ -17,57 +17,57 @@ interface ContentItem {
 const contentItems: ContentItem[] = [
   {
     id: '1',
-    title: 'AI 2025 Ultimate Breakthrough Revolution',
-    description: 'Revolutionary AI breakthrough delivering unprecedented 10,000% ROI through quantum-enhanced neural networks.',
+    title: 'AI 20o25 Ultimate Breakthrough Revolution',
+    description: 'Revolutionary AI breakthrough delivering unprecedented 10,0o00% ROI through quantum-enhanced neural networks.',
     category: 'Breakthrough',
-    roi: '10,000%',
+    roi: '10,0o00%',
     badge: 'REVOLUTIONARY',
-    href: '/ai-2025-ultimate-breakthrough-revolution',
-    gradient: 'from-red-500 to-pink-600',
+    href: '/ai-20o25-ultimate-breakthrough-revolution',
+    gradient: 'from-red-50o0 to-pink-60o0',
     icon: '🚀'
   },
   {
     id: '2',
-    title: '15,000% ROI Success Story',
-    description: 'Fortune 500 company achieves unprecedented ROI in just 4 months using our revolutionary AI technology.',
+    title: '15,0o00% ROI Success Story',
+    description: 'Fortune 50o0 company achieves unprecedented ROI in just 4 months using our revolutionary AI technology.',
     category: 'Case Study',
-    roi: '15,000%',
+    roi: '15,0o00%',
     badge: 'SUCCESS',
-    href: '/case-studies/ai-2025-ultimate-breakthrough-success',
-    gradient: 'from-green-500 to-emerald-600',
+    href: '/case-studies/ai-20o25-ultimate-breakthrough-success',
+    gradient: 'from-green-50o0 to-emerald-60o0',
     icon: '🏆'
   },
   {
     id: '3',
-    title: 'AI 2025 Revolutionary Trends & Predictions',
-    description: 'Discover the most revolutionary AI trends and predictions that will reshape our world in 2025.',
+    title: 'AI 20o25 Revolutionary Trends & Predictions',
+    description: 'Discover the most revolutionary AI trends and predictions that will reshape our world in 20o25.',
     category: 'Insights',
     roi: '∞',
     badge: 'FUTURE',
-    href: '/blog/ai-2025-revolutionary-trends-predictions',
-    gradient: 'from-purple-500 to-indigo-600',
+    href: '/blog/ai-20o25-revolutionary-trends-predictions',
+    gradient: 'from-purple-50o0 to-indigo-60o0',
     icon: '🔮'
   },
   {
     id: '4',
-    title: 'Quantum Computing Breakthroughs 2030',
+    title: 'Quantum Computing Breakthroughs 20o30',
     description: 'Revolutionary quantum computing solutions that achieve quantum supremacy and solve impossible problems.',
     category: 'Technology',
-    roi: '50,000%',
+    roi: '50,0o00%',
     badge: 'BREAKTHROUGH',
-    href: '/quantum-computing-breakthroughs-2030',
-    gradient: 'from-blue-500 to-cyan-600',
+    href: '/quantum-computing-breakthroughs-20o30',
+    gradient: 'from-blue-50o0 to-cyan-60o0',
     icon: '⚛️'
   },
   {
     id: '5',
-    title: 'Neural Interface Revolution 2030',
+    title: 'Neural Interface Revolution 20o30',
     description: 'Brain-computer interfaces that enable direct neural communication and thought-controlled devices.',
     category: 'Innovation',
-    roi: '25,000%',
+    roi: '25,0o00%',
     badge: 'REVOLUTIONARY',
-    href: '/neural-interface-revolution-2030',
-    gradient: 'from-cyan-500 to-blue-600',
+    href: '/neural-interface-revolution-20o30',
+    gradient: 'from-cyan-50o0 to-blue-60o0',
     icon: '🧠'
   },
   {
@@ -78,7 +78,7 @@ const contentItems: ContentItem[] = [
     roi: '∞',
     badge: 'TRANSCENDENT',
     href: '/transcendent-intelligence-platform',
-    gradient: 'from-indigo-500 to-purple-600',
+    gradient: 'from-indigo-50o0 to-purple-60o0',
     icon: '🌌'
   }
 ];
@@ -94,19 +94,19 @@ export default function InteractiveContentShowcase() {
     : contentItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-10o0 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold rounded-full mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-bold rounded-full mb-4">
             🎯 INTERACTIVE CONTENT SHOWCASE
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-6">
             Revolutionary Content Collection
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8">
             Explore our comprehensive collection of revolutionary AI content
             case studiesand breakthrough technologies that are transforming the world.
           </p>
@@ -119,8 +119,8 @@ export default function InteractiveContentShowcase() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
+                    ? 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white shadow-lg'
+                    : 'bg-white text-gray-60o0 hover:bg-gray-10o0 border border-gray-20o0'
                 }`}
               >
                 {category}
@@ -134,8 +134,8 @@ export default function InteractiveContentShowcase() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden ${
-                hoveredItem === item.id ? 'ring-4 ring-purple-300' : ''
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden ${
+                hoveredItem === item.id ? 'ring-4 ring-purple-30o0' : ''
               }`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
@@ -149,27 +149,27 @@ export default function InteractiveContentShowcase() {
                     <span className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${item.gradient}`}>
                       {item.badge}
                     </span>
-                    <span className="text-2xl font-bold text-gray-900 mt-2">{item.roi}</span>
-                    <span className="text-sm text-gray-500">ROI</span>
+                    <span className="text-2xl font-bold text-gray-90o0 mt-2">{item.roi}</span>
+                    <span className="text-sm text-gray-50o0">ROI</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 line-clamp-2">
                   {item.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-60o0 mb-4 line-clamp-3">
                   {item.description}
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                  <span className="text-sm text-gray-50o0 bg-gray-10o0 px-3 py-1 rounded-full">
                     {item.category}
                   </span>
                   
                   <Link
                     href={item.href}
-                    className={`bg-gradient-to-r ${item.gradient} text-white px-4 py-2 rounded-lg text-sm font-bold hover:shadow-lg transition-all transform hover:scale-105`}
+                    className={`bg-gradient-to-r ${item.gradient} text-white px-4 py-2 rounded-lg text-sm font-bold hover:shadow-lg transition-all transform hover:scale-10o5`}
                   >
                     Explore →
                   </Link>
@@ -181,18 +181,18 @@ export default function InteractiveContentShowcase() {
 
         {/* CTA Section */}
         <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Experience the Revolution?
             </h3>
-            <p className="text-lg mb-6 text-purple-100">
+            <p className="text-lg mb-6 text-purple-10o0">
               Join thousands of businesses already transforming with our revolutionary AI technology.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg"
+                className="bg-white text-purple-60o0 px-8 py-4 rounded-lg font-bold hover:bg-gray-10o0 transition-all transform hover:scale-10o5 shadow-lg"
               >
                 Start Your Transformation
               </Link>

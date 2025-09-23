@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import {
-=======
 import React from "react";
 import {
 
@@ -12,19 +8,10 @@ import {
   DialogHeader
   DialogTitle
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-<<<<<<< HEAD
-  DialogTitle,
-} from '@/components/ui/dialog';
-import { ApplyForm } from './ApplyForm';
-import { ApplyToJobModalProps } from './types';
-
-export function ApplyToJobModal({ job, isOpen, onClose, onApplySuccess }: ApplyToJobModalProps) {
-=======
 DialogTitle,;
 
 
@@ -45,7 +32,6 @@ export function ApplyToJobModal({
   onApplySuccess
 }: ApplyToJobModalProps) {
 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[600px]">
@@ -55,22 +41,14 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-<<<<<<< HEAD
-        
-        <ApplyForm 
-=======
 
         <ApplyForm
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           job={job}
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
       </DialogContent>
     </Dialog>
-<<<<<<< HEAD
-  );
-=======
 
 
 
@@ -115,11 +93,9 @@ function ApplyToJobModal() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   );
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
@@ -127,3 +103,4 @@ function ApplyToJobModal() {
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
+>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))

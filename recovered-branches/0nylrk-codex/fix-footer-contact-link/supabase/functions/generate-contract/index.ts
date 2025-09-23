@@ -1,15 +1,11 @@
-
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  'Access-Control-Allow-Headers':
+    'authorization, x-client-info, apikey, content-type',
 };
-=======
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Milestone {
   title: string;
@@ -18,7 +14,7 @@ interface Milestone {
   estimatedHours: number;
 }
 
-serve(async (req) => {
+serve(async req => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -42,7 +38,7 @@ serve(async (req) => {
       paymentTerms,
       paymentAmount,
       additionalClauses,
-      milestones
+      milestones,
     } = await req.json();
 
     // Create the contract prompt for OpenAI
@@ -82,7 +78,7 @@ serve(async (req) => {
       
       The project will be divided into the following milestones:
       `;
-      
+
       milestones.forEach((milestone: Milestone, index: number) => {
         prompt += `
         Milestone ${index + 1}: ${milestone.title}
@@ -91,7 +87,7 @@ serve(async (req) => {
         - Estimated Work: ${milestone.estimatedHours} hours
         `;
       });
-      
+
       prompt += `
       
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
@@ -108,19 +104,15 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-<<<<<<< HEAD
-        'Authorization': `Bearer ${apiKey}`,
+        Authorization: `Bearer ${apiKey}`,
       },
-=======
-        'Authorization': `Bearer ${apiKey}`},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         model: 'gpt-4o',
         messages: [
           {
             role: 'system',
-<<<<<<< HEAD
-            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.',
+            content:
+              'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.',
           },
           {
             role: 'user',
@@ -130,47 +122,35 @@ serve(async (req) => {
         temperature: 0.7,
       }),
     });
-=======
-            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},
-          {
-            role: 'user',
-            content: prompt}],
-        temperature: 0.7})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const data = await response.json();
-    
+
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate contract');
     }
 
     const contract = data.choices[0].message.content.trim();
-    
-    return new Response(JSON.stringify({ 
-      success: true, 
-      contract 
-    }), {
-<<<<<<< HEAD
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-=======
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        contract,
+      }),
+      {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    );
   } catch (error) {
     console.error('Error generating contract:', error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error.message || 'Failed to generate contract' 
+      JSON.stringify({
+        success: false,
+        error: error.message || 'Failed to generate contract',
       }),
-      { 
-        status: 500, 
-<<<<<<< HEAD
+      {
+        status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
-=======
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 });

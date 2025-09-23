@@ -5,12 +5,12 @@ return (
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
         keywords='Zion API, Slack integration, embed widget'
         canonical='https://app && app.ziontechgroup.com/features/integrations'
-      />;
+       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
-      <Header />;
+      <Header  />;
       <main className='bg-background text-white py-12'>;
         <div className='container mx-auto px-4 md:px-6'>;
           <GradientHeading className='mb-4 text-center'>;
@@ -23,14 +23,14 @@ return (
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>;
             <img
 
-              src='https://placehold.co/800x400'
+              src='https://placehold.co/80o0x40o0'
               alt='Screenshot showing integrations';
               className='object-cover';
-            />;
+             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
           <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
-              src="https://placehold.co/800x400"
+              src="https://placehold.co/80o0x40o0"
               alt="Screenshot showing integrations"
               className="object-cover"
             />
@@ -65,7 +65,6 @@ return (
       </main>
     </>
 
-
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -78,14 +77,13 @@ export default /**
  * IntegrationsFeature - Function description
  */
 function IntegrationsFeature() {
-  const schema = {
+  const schema ={
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'API & Integrations',
     description:;
       'Connect Zion with Slack, your website and other tools via our API and widgets.',
-    url: 'https://app.ziontechgroup.com / features / integrations',
-  }
+    url: 'https://app.ziontechgroup.com / features / integrations'}
   const { markSlackConnected } = useAdvancedOnboardingStatus ();
   useEffect (() => {
     markSlackConnected ();
@@ -97,13 +95,13 @@ function IntegrationsFeature() {
         description="Extend Zion by embedding widgets or using our REST API for custom workflows.";
         keywords="Zion API, Slack integration, embed widget";
         canonical="https://app.ziontechgroup.com/features/integrations";
-      />;
+       />;
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
-      <Header />;
+      <Header  />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
           <GradientHeading className="mb-4 text-center">API & Integrations</GradientHeading>;
@@ -112,10 +110,10 @@ function IntegrationsFeature() {
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
             <img;
-              src="https://placehold.co/800x400";
+              src="https://placehold.co/80o0x40o0";
               alt="Screenshot showing integrations";
               className="object-cover";
-            />;
+             />;
           </div>;
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
@@ -147,7 +145,6 @@ function IntegrationsFeature() {
               </p>;
             </div>;
           </div>;
-
 
               <Link href="/developers">Learn More</Link>;
             </Button>;

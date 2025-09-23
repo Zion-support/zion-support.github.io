@@ -1,12 +1,12 @@
-
 import React from 'react';
-<<<<<<< HEAD
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-=======
 import { TabsListTabsTrigger } from '@/components/ui/tabs';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
-export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
+export type FilterType =
+  | 'all'
+  | 'unread'
+  | 'onboarding'
+  | 'messages'
+  | 'system';
 
 interface NotificationFilterProps {
   filter: FilterType;
@@ -15,20 +15,30 @@ interface NotificationFilterProps {
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
-  onFilterChange
+  onFilterChange,
 }) => {
   return (
-    <div className="border-b border-zion-blue-light">
-      <Tabs 
-        defaultValue={filter} 
-        onValueChange={(value) => onFilterChange(value as FilterType)}
+    <div className='border-b border-zion-blue-light'>
+      <Tabs
+        defaultValue={filter}
+        onValueChange={value => onFilterChange(value as FilterType)}
       >
-        <TabsList className="bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full">
-          <TabsTrigger value="all" className="text-xs">All</TabsTrigger>
-          <TabsTrigger value="unread" className="text-xs">Unread</TabsTrigger>
-          <TabsTrigger value="onboarding" className="text-xs">Onboarding</TabsTrigger>
-          <TabsTrigger value="messages" className="text-xs">Messages</TabsTrigger>
-          <TabsTrigger value="system" className="text-xs">System</TabsTrigger>
+        <TabsList className='bg-zion-blue-dark/30 grid grid-cols-5 h-9 w-full'>
+          <TabsTrigger value='all' className='text-xs'>
+            All
+          </TabsTrigger>
+          <TabsTrigger value='unread' className='text-xs'>
+            Unread
+          </TabsTrigger>
+          <TabsTrigger value='onboarding' className='text-xs'>
+            Onboarding
+          </TabsTrigger>
+          <TabsTrigger value='messages' className='text-xs'>
+            Messages
+          </TabsTrigger>
+          <TabsTrigger value='system' className='text-xs'>
+            System
+          </TabsTrigger>
         </TabsList>
       </Tabs>
     </div>

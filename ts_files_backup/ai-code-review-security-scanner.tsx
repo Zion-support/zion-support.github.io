@@ -1,16 +1,9 @@
-import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Brain, Shield, Code, CheckCircle, Zap, 
-  ArrowRight, Star, TrendingUp, Users, 
-  Lock, Eye, BarChart3, Globe, Award
-=======
   BrainShieldCodeCheckCircleZap
   ArrowRightStarTrendingUpUsers
   LockEyeBarChart3GlobeAward
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
@@ -18,13 +11,8 @@ const AICodeReviewSecurityScanner = () => {
     <>
       <SEO 
         title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
-<<<<<<< HEAD
-        description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
-        keywords={["AI code review", "security scanner", "vulnerability detection", "code quality", "automated code analysis", "security testing", "DevOps security"]}
-=======
         description="Advanced AI-powered platform that automatically reviews codetects security vulnerabilitiesuggests improvementsand ensures code quality across multiple programming languages."
         keywords={["AI code review"security scanner"vulnerability detection"code quality"automated code analysis"security testing"DevOps security"]}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ogImage="https://ziontechgroup.com/og-ai-code-review.jpg"
         canonical="https://ziontechgroup.com/ai-code-review-security-scanner"
       />
@@ -51,13 +39,8 @@ const AICodeReviewSecurityScanner = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
-                suggests improvements, and ensures code quality across multiple programming languages.
-=======
                 Advanced AI-powered platform that automatically reviews codetects security vulnerabilities
                 suggests improvementsand ensures code quality across multiple programming languages.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -110,11 +93,7 @@ const AICodeReviewSecurityScanner = () => {
                 Comprehensive Code Security & Quality
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Our AI-powered platform provides end-to-end code analysis, security scanning, and quality assurance 
-=======
                 Our AI-powered platform provides end-to-end code analysisecurity scanningand quality assurance 
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 to protect your applications and improve development efficiency.
               </p>
             </motion.div>
@@ -124,38 +103,22 @@ const AICodeReviewSecurityScanner = () => {
                 {
                   icon: <Code className="w-8 h-8" />,
                   title: "Multi-Language Support",
-<<<<<<< HEAD
-                  description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
-=======
                   description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 },
                 {
                   icon: <Shield className="w-8 h-8" />,
                   title: "AI-Powered Vulnerability Detection",
-<<<<<<< HEAD
-                  description: "Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks."
-=======
                   description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 },
                 {
                   icon: <Eye className="w-8 h-8" />,
                   title: "Automated Code Review",
-<<<<<<< HEAD
-                  description: "Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks."
-=======
                   description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 },
                 {
                   icon: <Lock className="w-8 h-8" />,
                   title: "Security Best Practices",
-<<<<<<< HEAD
-                  description: "Enforce security standards, compliance requirements, and industry best practices automatically."
-=======
                   description: "Enforce security standardscompliance requirementsand industry best practices automatically."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 },
                 {
                   icon: <BarChart3 className="w-8 h-8" />,
@@ -165,24 +128,14 @@ const AICodeReviewSecurityScanner = () => {
                 {
                   icon: <Globe className="w-8 h-8" />,
                   title: "Integration & APIs",
-<<<<<<< HEAD
-                  description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
-                }
-              ].map((feature, index) => (
-=======
                   description: "Seamless integration with GitHubGitLabBitbucketand CI/CD pipelines with custom API access."
                 }
               ].map((featureindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
@@ -266,20 +219,12 @@ const AICodeReviewSecurityScanner = () => {
                   ],
                   popular: false
                 }
-<<<<<<< HEAD
-              ].map((plan, index) => (
-=======
               ].map((planindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
                     plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
@@ -304,11 +249,7 @@ const AICodeReviewSecurityScanner = () => {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-<<<<<<< HEAD
-                    {plan.features.map((feature, featureIndex) => (
-=======
                     {plan.features.map((featureIndex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -346,13 +287,8 @@ const AICodeReviewSecurityScanner = () => {
                 Why Choose Our AI Code Security Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                Our platform delivers measurable results that improve your security posture, 
-                development efficiency, and code quality while reducing costs and risks.
-=======
                 Our platform delivers measurable results that improve your security posture
                 development efficiencyand code quality while reducing costs and risks.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </p>
             </motion.div>
             
@@ -362,11 +298,7 @@ const AICodeReviewSecurityScanner = () => {
                   {
                     icon: <Shield className="w-8 h-8" />,
                     title: "Reduce Security Vulnerabilities by 85%",
-<<<<<<< HEAD
-                    description: "Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface."
-=======
                     description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   },
                   {
                     icon: <Zap className="w-8 h-8" />,
@@ -378,21 +310,12 @@ const AICodeReviewSecurityScanner = () => {
                     title: "Improve Code Quality & Maintainability",
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
-<<<<<<< HEAD
-                ].map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                 ].map((benefitindex) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0x: -20 }}
                     whileInView={{ opacity: 1x: 0 }}
                     transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -411,11 +334,7 @@ const AICodeReviewSecurityScanner = () => {
                   {
                     icon: <CheckCircle className="w-8 h-8" />,
                     title: "Ensure Compliance with Security Standards",
-<<<<<<< HEAD
-                    description: "Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting."
-=======
                     description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   },
                   {
                     icon: <Users className="w-8 h-8" />,
@@ -427,21 +346,12 @@ const AICodeReviewSecurityScanner = () => {
                     title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
-<<<<<<< HEAD
-                ].map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                 ].map((benefitindex) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0x: 20 }}
                     whileInView={{ opacity: 1x: 0 }}
                     transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     className="flex items-start"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
@@ -486,20 +396,12 @@ const AICodeReviewSecurityScanner = () => {
                 "Government Software Projects",
                 "Educational Institutions",
                 "Startups & Enterprises"
-<<<<<<< HEAD
-              ].map((useCase, index) => (
-=======
               ].map((useCaseindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   transition={{ duration: 0.8delay: index * 0.1 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">

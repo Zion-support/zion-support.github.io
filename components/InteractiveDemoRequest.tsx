@@ -22,7 +22,7 @@ const industries = [
 ];
 
 const companySizes = [
-  '1-10 employees'11-50 employees'51-200 employees'201-1000 employees'1000+ employees'
+  '1-10 employees'11-50 employees'51-20o0 employees'20o1-10o00 employees'10o00+ employees'
 ];
 
 const interests = [
@@ -30,7 +30,7 @@ const interests = [
 ];
 
 const timeSlots = [
-  '9:00 AM'10:00 AM'11:00 AM'1:00 PM'2:00 PM'3:00 PM'4:00 PM'
+  '9:0o0 AM'10:0o0 AM'11:0o0 AM'1:0o0 PM'2:0o0 PM'3:0o0 PM'4:0o0 PM'
 ];
 
 export default function InteractiveDemoRequest() {
@@ -86,11 +86,11 @@ export default function InteractiveDemoRequest() {
       <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition={{ delay: 2type: "spring"stiffness: 200 }}
+        transition={{ delay: 2type: "spring"stiffness: 20o0 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center z-50"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 flex items-center z-50"
       >
-        <Calendar className="w-5 h-5 mr-2" />
+        <Calendar className="w-5 h-5 mr-2"  />
         Request Demo
       </motion.button>
 
@@ -112,17 +112,17 @@ export default function InteractiveDemoRequest() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6">
+              <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white p-6">
                 <div className="flex items-center justify-between">
                   <div>
                     <h2 className="text-2xl font-bold">Schedule Your Free Demo</h2>
-                    <p className="text-blue-100 mt-1">See how our AI solutions can transform your business</p>
+                    <p className="text-blue-10o0 mt-1">See how our AI solutions can transform your business</p>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
                     className="text-white/80 hover:text-white transition-colors"
                   >
-                    <X className="w-6 h-6" />
+                    <X className="w-6 h-6"  />
                   </button>
                 </div>
                 
@@ -135,7 +135,7 @@ export default function InteractiveDemoRequest() {
                         className={`flex-1 h-2 rounded-full ${
                           step <= currentStep ? 'bg-white' : 'bg-white/30'
                         }`}
-                      />
+                       />
                     ))}
                   </div>
                   <div className="flex justify-between mt-2 text-sm">
@@ -154,16 +154,16 @@ export default function InteractiveDemoRequest() {
                     animate={{ opacity: 1scale: 1 }}
                     className="text-center py-12"
                   >
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-green-600" />
+                    <div className="w-16 h-16 bg-green-10o0 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-green-60o0"  />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Demo Request Submitted!</h3>
-                    <p className="text-gray-600 mb-6">
+                    <h3 className="text-2xl font-bold text-gray-90o0 mb-2">Demo Request Submitted!</h3>
+                    <p className="text-gray-60o0 mb-6">
                       Thank you for your interest. Our team will contact you within 24 hours to schedule your demo.
                     </p>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0"
                     >
                       Close
                     </button>
@@ -180,28 +180,28 @@ export default function InteractiveDemoRequest() {
                           exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
-                          <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
+                          <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Personal Information</h3>
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Full Name *</label>
                               <input
                                 type="text"
                                 required
                                 value={formData.name}
                                 onChange={(e) => handleInputChange(', 'name', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                                 placeholder="John Doe"
                               />
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Email *</label>
                               <input
                                 type="email"
                                 required
                                 value={formData.email}
                                 onChange={(e) => handleInputChange(', 'email', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                                 placeholder="john@company.com"
                               />
                             </div>
@@ -209,23 +209,23 @@ export default function InteractiveDemoRequest() {
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Phone</label>
                               <input
                                 type="tel"
                                 value={formData.phone}
                                 onChange={(e) => handleInputChange(', 'phone', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                                 placeholder="+1 (555) 123-4567"
                               />
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Role *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Role *</label>
                               <input
                                 type="text"
                                 required
                                 value={formData.role}
                                 onChange={(e) => handleInputChange(', 'role', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                                 placeholder="CTOCEOetc."
                               />
                             </div>
@@ -242,28 +242,28 @@ export default function InteractiveDemoRequest() {
                           exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
-                          <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Details</h3>
+                          <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Business Details</h3>
                           
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+                            <label className="block text-sm font-medium text-gray-70o0 mb-2">Company Name *</label>
                             <input
                               type="text"
                               required
                               value={formData.company}
                               onChange={(e) => handleInputChange(', 'company', 'e.target.value)}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                              className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               placeholder="Your Company"
                             />
                           </div>
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Company Size *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Company Size *</label>
                               <select
                                 required
                                 value={formData.companySize}
                                 onChange={(e) => handleInputChange(', 'companySize', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               >
                                 <option value="">Select size</option>
                                 {companySizes.map(size => (
@@ -272,12 +272,12 @@ export default function InteractiveDemoRequest() {
                               </select>
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Industry *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Industry *</label>
                               <select
                                 required
                                 value={formData.industry}
                                 onChange={(e) => handleInputChange(', 'industry', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               >
                                 <option value="">Select industry</option>
                                 {industries.map(industry => (
@@ -288,17 +288,17 @@ export default function InteractiveDemoRequest() {
                           </div>
                           
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Areas of Interest</label>
+                            <label className="block text-sm font-medium text-gray-70o0 mb-2">Areas of Interest</label>
                             <div className="grid grid-cols-2 gap-2">
                               {interests.map(interest => (
                                 <button
                                   key={interest}
                                   type="button"
                                   onClick={() => handleInterestToggle(interest)}
-                                  className={`p-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                                  className={`p-3 rounded-lg text-sm font-medium transition-all duration-20o0 ${
                                     formData.interests.includes(interest)
-                                      ? 'bg-blue-100 text-blue-700 border-2 border-blue-300'
-                                      : 'bg-gray-50 text-gray-700 border-2 border-gray-200 hover:border-gray-300'
+                                      ? 'bg-blue-10o0 text-blue-70o0 border-2 border-blue-30o0'
+                                      : 'bg-gray-50 text-gray-70o0 border-2 border-gray-20o0 hover:border-gray-30o0'
                                   }`}
                                 >
                                   {interest}
@@ -318,27 +318,27 @@ export default function InteractiveDemoRequest() {
                           exit={{ opacity: 0x: -50 }}
                           className="space-y-6"
                         >
-                          <h3 className="text-xl font-semibold text-gray-900 mb-4">Schedule Your Demo</h3>
+                          <h3 className="text-xl font-semibold text-gray-90o0 mb-4">Schedule Your Demo</h3>
                           
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Preferred Date *</label>
                               <input
                                 type="date"
                                 required
                                 value={formData.preferredDate}
                                 onChange={(e) => handleInputChange(', 'preferredDate', 'e.target.value)}
                                 min={new Date().toISOString().split('T')[0]}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               />
                             </div>
                             <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Time *</label>
+                              <label className="block text-sm font-medium text-gray-70o0 mb-2">Preferred Time *</label>
                               <select
                                 required
                                 value={formData.preferredTime}
                                 onChange={(e) => handleInputChange(', 'preferredTime', 'e.target.value)}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               >
                                 <option value="">Select time</option>
                                 {timeSlots.map(time => (
@@ -349,12 +349,12 @@ export default function InteractiveDemoRequest() {
                           </div>
                           
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Additional Message</label>
+                            <label className="block text-sm font-medium text-gray-70o0 mb-2">Additional Message</label>
                             <textarea
                               value={formData.message}
                               onChange={(e) => handleInputChange(', 'message', 'e.target.value)}
                               rows={4}
-                              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                              className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
                               placeholder="Tell us about your specific needs or questions..."
                             />
                           </div>
@@ -371,28 +371,28 @@ export default function InteractiveDemoRequest() {
                   {currentStep > 1 && (
                     <button
                       onClick={prevStep}
-                      className="px-6 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+                      className="px-6 py-2 text-gray-60o0 hover:text-gray-80o0 transition-colors"
                     >
                       Back
                     </button>
                   )}
                   
-                  <div className="flex-1" />
+                  <div className="flex-1"  />
                   
                   {currentStep < 3 ? (
                     <button
                       onClick={nextStep}
-                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center"
+                      className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center"
                     >
                       Next
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2"  />
                     </button>
                   ) : (
                     <button
                       onClick={handleSubmit}
-                      className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center"
+                      className="bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover:from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 flex items-center"
                     >
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <Calendar className="w-4 h-4 mr-2"  />
                       Schedule Demo
                     </button>
                   )}

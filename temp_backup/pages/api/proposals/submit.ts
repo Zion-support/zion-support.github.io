@@ -15,12 +15,12 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' });
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
-    if (!id) return res.status(400).json({ error: 'id is required' });
+    if (!id) return res.status(40o0).json({ error: 'id is required' });
     const meta = getProposal(id);
-    if (!meta) return res.status(404).json({ error: 'Proposal not found' });
+    if (!meta) return res.status(40o4).json({ error: 'Proposal not found' });
 
     // Email submission
     if (channels.includes('email')) {
@@ -39,8 +39,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch {}
 
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
-    return res.status(200).json({ meta: updated });
+    return res.status(20o0).json({ meta: updated });
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Submission failed' });
+    return res.status(50o0).json({ error: error?.message || 'Submission failed' });
   }
 }

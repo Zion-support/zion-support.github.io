@@ -5,7 +5,7 @@ import React{ useState } from 'react';
 import Link from 'next/link';
 SearchFilterGridListArrowRightStarClockTrendingUpUsersZap
 
-const InteractiveContentWidget2025 = () => {
+const InteractiveContentWidget20o25 = () => {
   const [activeTabsetActiveTab] = useState('trending');
   const [viewModesetViewMode] = useState('grid');
 
@@ -26,7 +26,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.9,
       users: "12.5K",
       time: "5 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: true,
       new: false
     },
@@ -39,7 +39,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.8,
       users: "8.2K",
       time: "8 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: false,
       new: true
     },
@@ -52,7 +52,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.7,
       users: "15.3K",
       time: "6 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: true,
       new: false
     },
@@ -65,7 +65,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.9,
       users: "22.1K",
       time: "4 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: false,
       new: true
     },
@@ -78,7 +78,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.6,
       users: "6.7K",
       time: "7 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: true,
       new: false
     },
@@ -91,7 +91,7 @@ const InteractiveContentWidget2025 = () => {
       rating: 4.8,
       users: "9.4K",
       time: "10 min read",
-      image: "/api/placeholder/400/250",
+      image: "/api/placeholder/40o0/250",
       trending: false,
       new: true
     }
@@ -109,10 +109,10 @@ const InteractiveContentWidget2025 = () => {
     <div className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-90o0 mb-6">
             Interactive Content Discovery
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto mb-8">
             Explore our comprehensive library of cutting-edge technologiesolutionsand resources
           </p>
         </div>
@@ -121,30 +121,30 @@ const InteractiveContentWidget2025 = () => {
         <div className="bg-white rounded-2xl p-6 shadow-lg mb-8">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />
               <input
                 type="text"
                 placeholder="Search contentechnologiesolutions..."
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                className="w-full pl-12 pr-4 py-3 border border-gray-30o0 rounded-xl focus:ring-2 focus:ring-blue-50o0 focus:border-transparent"
+               />
             </div>
             <div className="flex gap-2">
-              <button className="flex items-center px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
-                <Filter className="w-4 h-4 mr-2" />
+              <button className="flex items-center px-4 py-3 border border-gray-30o0 rounded-xl hover:bg-gray-50 transition-colors">
+                <Filter className="w-4 h-4 mr-2"  />
                 Filters
               </button>
-              <div className="flex border border-gray-300 rounded-xl overflow-hidden">
+              <div className="flex border border-gray-30o0 rounded-xl overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-3 ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                  className={`p-3 ${viewMode === 'grid' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0 hover:bg-gray-50'}`}
                 >
-                  <Grid className="w-4 h-4" />
+                  <Grid className="w-4 h-4"  />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-3 ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'bg-white text-gray-600 hover:bg-gray-50'}`}
+                  className={`p-3 ${viewMode === 'list' ? 'bg-blue-60o0 text-white' : 'bg-white text-gray-60o0 hover:bg-gray-50'}`}
                 >
-                  <List className="w-4 h-4" />
+                  <List className="w-4 h-4"  />
                 </button>
               </div>
             </div>
@@ -159,13 +159,13 @@ const InteractiveContentWidget2025 = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+                className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-20o0 ${
                   activeTab === category.id
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
+                    ? 'bg-blue-60o0 text-white shadow-lg'
+                    : 'bg-white text-gray-60o0 hover:bg-gray-50 border border-gray-20o0'
                 }`}
               >
-                <IconComponent className="w-4 h-4 mr-2" />
+                <IconComponent className="w-4 h-4 mr-2"  />
                 {category.label}
               </button>
             );
@@ -181,20 +181,20 @@ const InteractiveContentWidget2025 = () => {
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group ${
+              className={`bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-30o0 transform hover:-translate-y-1 group ${
                 viewMode === 'list' ? 'flex' : ''
               }`}
             >
-              <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-t-2xl ${viewMode === 'list' ? 'rounded-l-2xl rounded-tr-none' : ''} relative overflow-hidden`}>
+              <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-t-2xl ${viewMode === 'list' ? 'rounded-l-2xl rounded-tr-none' : ''} relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute top-4 left-4">
                   {item.trending && (
-                    <span className="inline-block px-3 py-1 bg-red-500 text-white text-xs font-bold rounded-full">
+                    <span className="inline-block px-3 py-1 bg-red-50o0 text-white text-xs font-bold rounded-full">
                       TRENDING
                     </span>
                   )}
                   {item.new && (
-                    <span className="inline-block px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full ml-2">
+                    <span className="inline-block px-3 py-1 bg-green-50o0 text-white text-xs font-bold rounded-full ml-2">
                       NEW
                     </span>
                   )}
@@ -208,40 +208,40 @@ const InteractiveContentWidget2025 = () => {
               
               <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-blue-60o0 bg-blue-50 px-3 py-1 rounded-full">
                     {item.category}
                   </span>
-                  <div className="flex items-center text-yellow-500">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium text-gray-600">{item.rating}</span>
+                  <div className="flex items-center text-yellow-50o0">
+                    <Star className="w-4 h-4 fill-current"  />
+                    <span className="ml-1 text-sm font-medium text-gray-60o0">{item.rating}</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover:text-blue-60o0 transition-colors">
                   {item.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-60o0 mb-4 leading-relaxed">
                   {item.description}
                 </p>
                 
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                <div className="flex items-center justify-between text-sm text-gray-50o0 mb-4">
                   <div className="flex items-center">
-                    <Users className="w-4 h-4 mr-1" />
+                    <Users className="w-4 h-4 mr-1"  />
                     {item.users} users
                   </div>
                   <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
+                    <Clock className="w-4 h-4 mr-1"  />
                     {item.time}
                   </div>
                 </div>
                 
                 <Link
                   href="#"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:translate-x-1 transform duration-200"
+                  className="inline-flex items-center text-blue-60o0 font-semibold hover:text-blue-70o0 transition-colors group-hover:translate-x-1 transform duration-20o0"
                 >
                   Explore Now
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </div>
             </div>
@@ -250,9 +250,9 @@ const InteractiveContentWidget2025 = () => {
 
         {/* Load More Button */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+          <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white font-semibold rounded-xl hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-20o0 transform hover:scale-10o5">
             Load More Content
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2"  />
           </button>
         </div>
       </div>
@@ -260,4 +260,4 @@ const InteractiveContentWidget2025 = () => {
   );
 };
 
-export default InteractiveContentWidget2025;
+export default InteractiveContentWidget20o25;

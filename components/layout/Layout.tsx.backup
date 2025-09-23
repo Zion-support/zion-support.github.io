@@ -1,15 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main className="pt-20">
-        {children}
-      </main>
-      <Footer />
-=======
 
 interface LayoutProps {
 =======
@@ -19,24 +9,13 @@ interface LayoutProps {
     </div>
   );
 }interface LayoutProps {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
 }
 
-<<<<<<< HEAD
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group", 
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}: LayoutProps) {
-  return (
-=======
 export default function Layout({ children }: LayoutProps) {  return (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     <div className="min-h-screen bg-gray-50">
       {children}
     </div>

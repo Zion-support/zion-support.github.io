@@ -1,7 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import fs from 'fs/promises';
 import { createReadStream } from 'fs';
-import path from 'path';
 import FormData from 'form-data';
 import fetch from 'node-fetch';
 
@@ -34,11 +33,7 @@ function stripPii(text) {
   if (!text) return text;
   let result = text;
   // Emails
-<<<<<<< HEAD
-  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, '[email]');
-=======
   result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // US-style phone numbers
   result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]');
   // Naive full name removal (two capitalized words)

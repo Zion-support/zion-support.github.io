@@ -54,20 +54,25 @@ export class LinkChecker {
   // Extract all links from a page
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
     const links: LinkInfo[] = [];
-    
+
     // Extract href attributes from anchor tags
     const hrefRegex = /href=["']([^"']+)["']/g;
     let match;
-    
+
     while ((match = hrefRegex.exec(pageContent)) !== null) {
       const url = match[1];
-      if (url && !url.startsWith('javascript:') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+      if (
+        url &&
+        !url.startsWith('javascript:') &&
+        !url.startsWith('mailto:') &&
+        !url.startsWith('tel:')
+      ) {
         const normalizedUrl = this.normalizeUrl(url, pagePath);
         links.push({
           url: normalizedUrl,
           status: 'working',
           page: pagePath,
-          anchor: url.startsWith('#') ? url : undefined
+          anchor: url.startsWith('#') ? url : undefined,
         });
       }
     }
@@ -81,7 +86,7 @@ export class LinkChecker {
         links.push({
           url: normalizedUrl,
           status: 'working',
-          page: pagePath
+          page: pagePath,
         });
       }
     }
@@ -100,7 +105,10 @@ export class LinkChecker {
   }
 
   // Check all links on a page
-  async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {
+  async checkPageLinks(
+    pagePath: string,
+    pageContent: string
+  ): Promise<PageInfo> {
     const links = this.extractLinks(pageContent, pagePath);
     const checkedLinks: LinkInfo[] = [];
 
@@ -130,7 +138,7 @@ export class LinkChecker {
       path: pagePath,
       title: this.extractPageTitle(pageContent),
       links: checkedLinks,
-      exists: true
+      exists: true,
     };
   }
 
@@ -146,7 +154,9 @@ export class LinkChecker {
       totalLinks: this.visitedUrls.size,
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
-      externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length
+      externalLinks: Array.from(this.visitedUrls).filter(
+        url => !this.isInternalLink(url)
+      ).length,
     };
   }
 
