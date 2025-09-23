@@ -1,31 +1,17 @@
 export interface Service {
   id: string;
   name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
+  category: string;
   description: string;
-  features: string[];
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    custom?: string;
-  };
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
-  contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
 }
 
-export const services: Service[] = [];
+export const services: Service[] = [
+  {
+    id: 'ai-code-assistant',
+    name: 'ZionAI Code Assistant',
+    category: 'AI Services',
+    description: 'AI-powered code generation and review platform.',
+  },
+];
 
-export const getCategories = () => {
-  return Array.from(new Set(services.map((service) => service.category)));
-};
+export const getCategories = () => Array.from(new Set(services.map((s) => s.category)));

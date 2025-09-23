@@ -1,9 +1,3 @@
-// Minimal analytics placeholder to avoid build-time conflicts
-// Replace with real analytics integration as needed
-import React from 'react';
-
-export function Analytics(): React.ReactElement | null {
+export default function Analytics() {
   return null;
 }
-
-export default Analytics;

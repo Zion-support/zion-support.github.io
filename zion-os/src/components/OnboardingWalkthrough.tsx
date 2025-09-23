@@ -1,7 +1,3 @@
-import React from 'react';
-
-export function OnboardingWalkthrough(): React.ReactElement | null {
+export default function OnboardingWalkthrough() {
   return null;
 }
-
-export default OnboardingWalkthrough;

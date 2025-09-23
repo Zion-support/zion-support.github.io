@@ -1,9 +1,22 @@
 import React from 'react';
 
-export function LoadingSpinner() {
-  return (
-    <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-white/30 border-t-white" aria-label="Loading" />
-  );
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
 }
 
-export default LoadingSpinner;
+export default function LoadingSpinner({ size = 'md', text, className = '' }: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
+      <div className={`spinner ${sizeClasses[size]}`}></div>
+      {text && <span className="text-sm">{text}</span>}
+    </div>
+  );
+}

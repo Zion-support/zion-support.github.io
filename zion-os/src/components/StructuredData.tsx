@@ -1,7 +1,16 @@
-import React from 'react';
+import Head from 'next/head';
 
-export function StructuredData(): React.ReactElement | null {
-  return null;
+interface StructuredDataProps {
+  data: Record<string, unknown>;
 }
 
-export default StructuredData;
+export default function StructuredData({ data }: StructuredDataProps) {
+  return (
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      />
+    </Head>
+  );
+}
