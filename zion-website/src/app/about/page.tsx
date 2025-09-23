@@ -1,6 +1,13 @@
+import React from 'react'
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
-const values = [
+interface ValueItem {
+  name: string
+  description: string
+  icon: React.ElementType
+}
+
+const values: ValueItem[] = [
   { name: 'Innovation First', description: "We push the boundaries of what's possible in AI and technology.", icon: LightBulbIcon },
   { name: 'Security By Design', description: 'We build with security, privacy, and compliance at the core.', icon: ShieldCheckIcon },
   { name: 'Customer Obsession', description: 'We win when our customers win measurable outcomes.', icon: UserGroupIcon }
@@ -17,15 +24,18 @@ export default function AboutPage() {
 
         <div className="mx-auto mt-12 max-w-2xl sm:mt-16 lg:mt-20 lg:max-w-none">
           <dl className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-            {values.map((v) => (
-              <div key={v.name} className="rounded-2xl bg-white/5 p-6">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <v.icon className="h-5 w-5 text-blue-400" />
-                  {v.name}
-                </dt>
-                <dd className="mt-3 text-sm text-gray-300">{v.description}</dd>
-              </div>
-            ))}
+            {values.map((v) => {
+              const Icon = v.icon
+              return (
+                <div key={v.name} className="rounded-2xl bg-white/5 p-6">
+                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                    <Icon className="h-5 w-5 text-blue-400" />
+                    {v.name}
+                  </dt>
+                  <dd className="mt-3 text-sm text-gray-300">{v.description}</dd>
+                </div>
+              )
+            })}
           </dl>
         </div>
       </div>
