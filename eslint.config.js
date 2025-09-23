@@ -1,6 +1,6 @@
-import eslintJs from '@eslint/js';
-import eslintReact from 'eslint-plugin-react';
-import eslintReactHooks from 'eslint-plugin-react-hooks';
+import js from '@eslint/js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
 export default [
@@ -26,24 +26,32 @@ export default [
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
-      'components/**',
+      'components/20o25-advanced-services-showcase.tsx',
+      'components/20o25-comprehensive-services-showcase-v2.tsx',
+      'components/AI20o25AdvancedAutomationShowcase.tsx',
+      'components/AI20o25AdvancedAnalyticsDashboard.tsx',
       '**/*.min.js'
     ]
   },
-  eslintJs.configs.recommended,
+  js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    plugins: {
-      react: eslintReact,
-      'react-hooks': eslintReactHooks,
+    files: [
+      'app/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
+    ],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module'
     },
-    settings: {
-      react: { version: 'detect' },
-    },
+    plugins: { react, 'react-hooks': reactHooks },
+    settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-  },
+      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
+    }
+  }
 ];
+

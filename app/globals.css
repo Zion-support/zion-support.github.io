@@ -1,3 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* minimal global css */
+body { margin: 0; padding: 0; }

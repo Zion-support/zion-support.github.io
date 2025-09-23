@@ -16,7 +16,7 @@ export const defaultSEO ={
     images: [
       {
         url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 120o0,
+        width: 1200,
         height: 630,
         alt: 'Zion Tech Group - AI-Powered Business Solutions'},
     ]},
