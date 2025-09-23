@@ -123,8 +123,14 @@ export default [
       'pages_backup_before_cleanup/**',
       'pages_backup_conflict*/**',
       'pages_backup_conflicts/**',
+      // Ensure hyphenated disabled dirs are ignored
+      'pages-disabled/**',
       'pages_disabled/**',
       'pages.disabled*/**',
+      // Additional disabled/backup page dirs
+      'pages.__backup/**',
+      'pages._quarantine/**',
+      'pages.blog.disabled/**',
       // Disabled solution dirs
       'solutions.disabled/**',
       // Broad excludes for noisy or legacy dirs not part of active root app
