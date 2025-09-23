@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import ScrollToTop from './ScrollToTop'
 
 const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -155,10 +156,13 @@ const Layout = ({ children }) => {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </footer>
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   )
 }
