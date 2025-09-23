@@ -2,9 +2,7 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
 import tseslint from 'typescript-eslint';
-
 export default [
   {
     // Limit linting to main app sources; ignore backups/other projects
@@ -36,6 +34,8 @@ export default [
       '**/*.min.js'
     ]
   },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
@@ -45,19 +45,23 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      globals: { ...globals.browser, ...globals.node },
-      parser: tseslint.parser
+      parser: tseslint.parser,
+      parserOptions: { ecmaFeatures: { jsx: true } }
     },
-    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint.plugin },
-    settings: { react: { version: 'detect' } },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint.plugin
+    },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'no-console': 'warn',
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React)$', ignoreRestSiblings: true }
       ]
-    }
+    },
+    settings: { react: { version: 'detect' } }
   }
 ];
 
