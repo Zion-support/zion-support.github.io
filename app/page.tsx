@@ -1,15 +1,14 @@
 import React, { Suspense } from 'react';
 // import ErrorBoundary from '../components/ErrorBoundary';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import MobileResponsiveLayout from '../components/MobileResponsiveLayout';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import ContentManager from '../components/ContentManager';
-import InteractiveFeatures from '../components/InteractiveFeatures';
+import SEOOptimizer from './components/SEOOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import MobileResponsiveLayout from './components/MobileResponsiveLayout';
+import EnhancedNavigation from './components/EnhancedNavigation';
+import ContentManager from './components/ContentManager';
+import InteractiveFeatures from './components/InteractiveFeatures';
 
 // Lazy load heavy components
-const ROICalculator = React.lazy(() => import('../components/ROICalculator'));
-const StructuredData = React.lazy(() => import('../components/StructuredData'));
+const StructuredData = React.lazy(() => import('./components/StructuredData'));
 
 const HomePage: React.FC = () => {
   const seoData = {
@@ -324,7 +323,6 @@ const HomePage: React.FC = () => {
 
             {/* Lazy Loaded Components */}
             <Suspense fallback={<div>Loading...</div>}>
-              <ROICalculator />
               <StructuredData />
             </Suspense>
           </MobileResponsiveLayout>
