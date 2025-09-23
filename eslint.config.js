@@ -34,8 +34,8 @@ export default [
       '**/*.min.js'
     ]
   },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
+  eslintJs.configs.recommended,
+  ...tsEslintPlugin.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
