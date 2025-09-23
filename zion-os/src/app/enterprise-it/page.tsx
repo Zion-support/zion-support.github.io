@@ -1,3 +1,33 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
+  description:
+    "Transform your enterprise with comprehensive IT solutions: cloud migration, DevOps automation, and modern infrastructure.",
+  keywords:
+    "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions",
+};
+
+export default function EnterpriseITPage() {
+  return (
+    <div className="min-h-screen">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="gradient-text">Enterprise IT Solutions</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Modernize your technology stack with cloud, DevOps, and scalable architectures.
+          </p>
+          <Link href="/contact" className="btn-primary">
+            Talk to an Expert
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 <<<<<<< HEAD
 
 import Link from "next/link";

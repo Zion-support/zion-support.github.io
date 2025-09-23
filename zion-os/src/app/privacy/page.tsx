@@ -1,3 +1,25 @@
+export const metadata = {
+  title: "Privacy Policy - Zion Tech Group",
+  description: "Learn how Zion Tech Group collects, uses, and protects your data.",
+};
+
+export default function PrivacyPage() {
+  return (
+    <div className="min-h-screen bg-white text-zinc-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
+        <p className="mb-4">
+          We are committed to protecting your privacy. This policy explains what information we collect and how we use it.
+        </p>
+        <p className="mb-4">
+          We only collect the minimum data necessary to provide our services and never sell your personal information.
+        </p>
+        <p className="mb-4">For questions, contact privacy@zion.tech.</p>
+      </section>
+    </div>
+  );
+}
+
 <<<<<<< HEAD
 
 export default function PrivacyPage() {return (;

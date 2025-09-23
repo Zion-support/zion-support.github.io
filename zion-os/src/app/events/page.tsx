@@ -1,3 +1,29 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
+  description:
+    "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops.",
+  keywords:
+    "events, conferences, webinars, workshops, technology events, Zion Tech Group",
+};
+
+export default function EventsPage() {
+  return (
+    <div className="min-h-screen">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Events</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Explore our upcoming conferences, webinars, and community workshops.
+          </p>
+          <Link href="/contact" className="btn-primary">Get Notified</Link>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 <<<<<<< HEAD
 
 import Link from "next/link";
