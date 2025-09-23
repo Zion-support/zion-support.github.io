@@ -1,1 +1,7 @@
-import { describe, it, expect } from '@jest/globals';\ndescribe('smoke', () => { it('adds', () => { expect(1+1).toBe(2); }); });\n
+import { describe, it, expect } from '@jest/globals';
+
+describe('smoke', () => {
+  it('adds', () => {
+    expect(1 + 1).toBe(2);
+  });
+});
