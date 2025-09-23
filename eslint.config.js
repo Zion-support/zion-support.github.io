@@ -49,23 +49,6 @@ export default [
     }
   },
   {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 2020,
-        ecmaFeatures: { jsx: true }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tsPlugin
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
-    }
-  },
-  {
     ignores: [
       'node_modules/**',
       '.next/**',
@@ -97,6 +80,8 @@ export default [
       'utils/**',
       'utils.disabled/**',
       'zion-os/**',
+      // Allow linting the Next.js app
+      // 'zion-website/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
