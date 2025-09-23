@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD:app_disabled/ai-2026-roi-calculator/page.tsx
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
@@ -318,4 +319,14 @@ export default function AI2026ROICalculator() {
       </div>
     </div>
   );
+=======
+
+export default function Page() {
+	return (
+		<div className="max-w-3xl mx-auto py-16 px-4">
+			<h1 className="text-3xl font-bold">AI 2026 ROI Calculator</h1>
+			<p className="mt-4 text-gray-600">Temporarily disabled due to unresolved merge markers. Coming back soon.</p>
+		</div>
+	);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/tools/ai-2026-roi-calculator/page.tsx
 }

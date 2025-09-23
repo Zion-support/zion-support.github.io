@@ -84,12 +84,20 @@
     "@next/bundle-analyzer": "^14.2.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 =======
     "@next/swc-linux-x64-gnu": "^15.5.3",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",

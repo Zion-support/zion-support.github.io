@@ -74,6 +74,7 @@
     "**/*conflict*",
     "**/*temp*",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "zion-os/**",
     "server",
     "server/**",
@@ -113,5 +114,14 @@
 =======
     "zion-os/**"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+    "zion-os/**"
+    ,
+    "zion-ai-assistant/**",
+    "zion-os.disabled/**",
+    "utils/types/**",
+    "utils/wallet.ts",
+    "utils/validation.ts"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
   ]
 }

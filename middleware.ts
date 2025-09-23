@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Public, protected, and admin paths (deduplicated)
 const publicPaths: string[] = [
 	'/',
@@ -52,6 +53,7 @@ const protectedRoutes: string[] = [
 	'/industries/government',
 =======
 const publicRoutes = [
+<<<<<<< HEAD
   "/",
   "/about",
   "/contact",
@@ -335,4 +337,65 @@ export const config = {
 export const config = {
 	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+export function middleware(_request: NextRequest) {
+	return NextResponse.next();
+}
+
+export const config = {
+	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
+=======
+	"/",
+	"/about",
+	"/contact",
+	"/services",
+	"/ai-services",
+	"/it-services",
+	"/micro-saas",
+	"/api",
+	"/api-docs",
+	"/careers",
+	"/guides",
+	"/case-studies",
+	"/cookies",
+	"/industries",
+	"/blog",
+	"/solutions",
+	"/resources",
+	"/talent",
+	"/team",
+	"/partners",
+	"/news",
+	"/privacy",
+	"/terms",
+	"/sitemap",
+	"/auth/login",
+	"/auth/register",
+	"/auth/forgot-password",
+	"/auth/reset-password",
+	"/auth/verify",
+	"/api/auth",
+	"/api/health",
+	"/api/status",
+	"/_next",
+	"/favicon.ico",
+	"/robots.txt",
+	"/sitemap.xml",
+	"/manifest.json",
+];
+
+export function middleware(request: NextRequest) {
+	const { pathname } = request.nextUrl;
+	if (publicRoutes.includes(pathname)) {
+		return NextResponse.next();
+	}
+	return NextResponse.next();
+}
+
+export const config = {
+	matcher: [
+		'/((?!api|_next/static|_next/image|favicon.ico).*)',
+	],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 };
