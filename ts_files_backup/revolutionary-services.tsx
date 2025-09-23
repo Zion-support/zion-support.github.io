@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
@@ -30,6 +31,41 @@ export default function RevolutionaryServicesPage() {
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
+=======
+"use client";
+import React{ useState } from 'react';
+import Head from 'next/head';
+CheckStarZapShieldUsersGlobeArrowRightExternalLinkTrendingUpClockTargetBuildingRocketAwardDollarSignChartBarLockCpuDatabaseCloudSmartphonePaletteSearchMessageSquareFileTextCalendarCreditCardBarChart3SettingsZap as ZapIconCodeBookOpenActivityDatabase as DatabaseIconPlayMailPhoneMapPinFilterGridListChevronDownChevronUpSparklesFlaskConicalDnaCarLeafFactoryTruckMicroscopeGraduationCapShieldCheckBrainAtomGlobe2BotEyeTrophyFlaskConical as FlaskIconDna as DnaIconCar as CarIconLeaf as LeafIconFactory as FactoryIconTruck as TruckIconMicroscope as MicroscopeIconGraduationCap as GraduationCapIconShieldCheck as ShieldCheckIcon
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServicesrevolutionaryServiceCategoriesgetRevolutionaryServicesByCategorygetPopularRevolutionaryServicesgetRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';
+
+export default function RevolutionaryServicesPage() {
+  const [selectedCategorysetSelectedCategory] = useState('All');
+  const [viewModesetViewMode] = useState<'grid' | 'list'>('grid');
+  const [priceRangesetPriceRange] = useState('All');
+  const [searchQuerysetSearchQuery] = useState('');
+  const [sortBysetSortBy] = useState('name');
+  const [showFiltersetShowFilters] = useState(false);
+  const [selectedServicesetSelectedService] = useState<any>(null);
+
+  const priceRanges = [
+    { value: ''All', 'label: 'All Prices' },
+    { value: '0-1000'label: '$0 - $1,000' },
+    { value: '1001-2500'label: '$1,001 - $2,500' },
+    { value: '2501-5000'label: '$2,501 - $5,000' },
+    { value: '5001+'label: '$5,001+' }
+  ];
+
+  const sortOptions = [
+    { value: ''name', 'label: 'Name A-Z' },
+    { value: ''price', 'label: 'Price Low-High' },
+    { value: ''popularity', 'label: 'Most Popular' },
+    { value: ''category', 'label: 'Category' },
+    { value: ''roi', 'label: 'Highest ROI' }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   ];
 
   // Filter and sort services
@@ -42,8 +78,13 @@ export default function RevolutionaryServicesPage() {
 
   // Price range filter
   if (priceRange !== 'All') {
+<<<<<<< HEAD
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
+=======
+    const [minmax] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    filteredServices = getRevolutionaryServicesByPriceRange(minmax);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 
   // Search filter
@@ -57,10 +98,17 @@ export default function RevolutionaryServicesPage() {
   }
 
   // Sort services
+<<<<<<< HEAD
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+=======
+  filteredServices.sort((ab) => {
+    switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', '));
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -168,7 +216,11 @@ export default function RevolutionaryServicesPage() {
   };
 
   const itemVariants = {
+<<<<<<< HEAD
     hidden: { y: 20, opacity: 0 },
+=======
+    hidden: { y: 20opacity: 0 },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     visible: {
       y: 0,
       opacity: 1,
@@ -182,12 +234,21 @@ export default function RevolutionaryServicesPage() {
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
+<<<<<<< HEAD
           <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI, Autonomous Systems, Space Technology</title>
           <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today." />
           <meta name="keywords" content="revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy" />
           <meta name="author" content="Zion Tech Group" />
           <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
           <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions." />
+=======
+          <title>Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AIAutonomous SystemsSpace Technology</title>
+          <meta name="description" content="Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AIautonomous manufacturingspace technologybiomedical researchand cutting-edge solutions. Start your free trial today." />
+          <meta name="keywords" content="revolutionary micro SaaSquantum AIautonomous manufacturingspace technologybiomedical researchquantum cybersecurityblockchainautonomous vehiclesmart energy" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta property="og:title" content="Revolutionary Micro SaaS Services | Zion Tech Group" />
+          <meta property="og:description" content="Cutting-edge micro SaaS platform with quantum AIautonomous systemsand revolutionary technology solutions." />
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <meta property="og:url" content="https://ziontechgroup.com/revolutionary-services" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-services" />
@@ -213,10 +274,17 @@ export default function RevolutionaryServicesPage() {
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 Experience the future of technology with our revolutionary micro SaaS platform. 
                 Quantum AI, autonomous systems, space technology, and cutting-edge solutions that redefine what's possible.
+=======
+                transition={{ duration: 0.8delay: 0.2 }}
+              >
+                Experience the future of technology with our revolutionary micro SaaS platform. 
+                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine 'what', 's possible.
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </motion.p>
               
               {/* Service Count Stats */}
@@ -224,7 +292,11 @@ export default function RevolutionaryServicesPage() {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.4 }}
+=======
+                transition={{ duration: 0.8delay: 0.4 }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{revolutionaryMicroSaasServices.length}+</div>
@@ -249,7 +321,11 @@ export default function RevolutionaryServicesPage() {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: 0.6 }}
+=======
+                transition={{ duration: 0.8delay: 0.6 }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               >
                 <Button 
                   variant="primary" 
@@ -262,7 +338,11 @@ export default function RevolutionaryServicesPage() {
                 <Button 
                   variant="futuristic" 
                   size="lg"
+<<<<<<< HEAD
                   onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+=======
+                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -302,7 +382,11 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               {enhancedCategories.map((category, index) => (
+=======
+              {enhancedCategories.map((categoryindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={category.name}
                   variants={itemVariants}
@@ -358,7 +442,11 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               {popularServices.slice(0, 6).map((service, index) => (
+=======
+              {popularServices.slice(06).map((serviceindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -379,19 +467,31 @@ export default function RevolutionaryServicesPage() {
                     </div>
                     
                     <div className="space-y-3 mb-6">
+<<<<<<< HEAD
                       {service.features.slice(0, 4).map((feature, idx) => (
+=======
+                      {service.features.slice(04).map((featureidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         <div key={idx} className="flex items-center gap-2">
                           <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </div>
                       ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </div>
 
                     <div className="text-center">
                                                  <Button 
                              variant="primary" 
                              size="md"
+<<<<<<< HEAD
                              onClick={() => window.open(service.link, '_blank')}
+=======
+                             onClick={() => window.open(service.'link', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                              className="w-full"
                            >
                              Learn More
@@ -491,7 +591,11 @@ export default function RevolutionaryServicesPage() {
               whileInView="visible"
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               {filteredServices.map((service, index) => (
+=======
+              {filteredServices.map((serviceindex) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
@@ -513,7 +617,11 @@ export default function RevolutionaryServicesPage() {
                         <div className="text-sm text-gray-400 mb-4">{service.period}</div>
                         
                         <div className="space-y-2 mb-6">
+<<<<<<< HEAD
                           {service.features.slice(0, 3).map((feature, idx) => (
+=======
+                          {service.features.slice(03).map((featureidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             <div key={idx} className="flex items-center gap-2 text-sm">
                               <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                               <span className="text-gray-300">{feature}</span>
@@ -525,7 +633,11 @@ export default function RevolutionaryServicesPage() {
                           <Button 
                             variant="primary" 
                             size="sm"
+<<<<<<< HEAD
                             onClick={() => window.open(service.link, '_blank')}
+=======
+                            onClick={() => window.open(service.'link', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             className="w-full"
                           >
                             Learn More
@@ -553,7 +665,11 @@ export default function RevolutionaryServicesPage() {
                             <div>
                               <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
                               <div className="space-y-1">
+<<<<<<< HEAD
                                 {service.features.slice(0, 4).map((feature, idx) => (
+=======
+                                {service.features.slice(04).map((featureidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                                   <div key={idx} className="flex items-center gap-2 text-sm">
                                     <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                     <span className="text-gray-300">{feature}</span>
@@ -575,7 +691,11 @@ export default function RevolutionaryServicesPage() {
                                                          <Button 
                                variant="primary" 
                                size="sm"
+<<<<<<< HEAD
                                onClick={() => window.open(service.link, '_blank')}
+=======
+                               onClick={() => window.open(service.'link', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                              >
                                Learn More
                                <ExternalLink className="ml-2 w-4 h-4" />
@@ -610,7 +730,11 @@ export default function RevolutionaryServicesPage() {
                                          <Button 
                            variant="primary"
                            onClick={() => {
+<<<<<<< HEAD
                              setSearchQuery('');
+=======
+                             setSearchQuery(', ');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                              setSelectedCategory('All');
                              setPriceRange('All');
                            }}
@@ -686,7 +810,11 @@ export default function RevolutionaryServicesPage() {
                         <div>
                           <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>
                           <div className="space-y-2">
+<<<<<<< HEAD
                             {selectedService.features.map((feature, idx) => (
+=======
+                            {selectedService.features.map((featureidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
@@ -698,7 +826,11 @@ export default function RevolutionaryServicesPage() {
                         <div>
                           <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
                           <div className="space-y-2">
+<<<<<<< HEAD
                             {selectedService.benefits.map((benefit, idx) => (
+=======
+                            {selectedService.benefits.map((benefitidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                                 <span className="text-gray-300">{benefit}</span>
@@ -710,7 +842,11 @@ export default function RevolutionaryServicesPage() {
                         <div>
                           <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
                           <div className="space-y-2">
+<<<<<<< HEAD
                             {selectedService.capabilities.map((capability, idx) => (
+=======
+                            {selectedService.capabilities.map((capabilityidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                               <div key={idx} className="flex items-center gap-2 text-sm">
                                 <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
                                 <span className="text-gray-300">{capability}</span>
@@ -732,14 +868,22 @@ export default function RevolutionaryServicesPage() {
                       <div className="flex gap-4">
                                                  <Button 
                            variant="primary"
+<<<<<<< HEAD
                            onClick={() => window.open(selectedService.link, '_blank')}
+=======
+                           onClick={() => window.open(selectedService.'link', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                          >
                            Visit Service
                            <ExternalLink className="ml-2 w-4 h-4" />
                          </Button>
                          <Button 
                            variant="futuristic"
+<<<<<<< HEAD
                            onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+=======
+                           onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                          >
                            Contact Sales
                            <Mail className="ml-2 w-4 h-4" />
@@ -774,7 +918,11 @@ export default function RevolutionaryServicesPage() {
                                  <Button 
                    variant="primary" 
                    size="lg"
+<<<<<<< HEAD
                    onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+=======
+                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                  >
                    Start Free Trial
                    <Rocket className="ml-2 w-5 h-5" />
@@ -782,7 +930,11 @@ export default function RevolutionaryServicesPage() {
                  <Button 
                    variant="futuristic" 
                    size="lg"
+<<<<<<< HEAD
                    onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
+=======
+                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                  >
                    Schedule Demo
                    <Calendar className="ml-2 w-5 h-5" />

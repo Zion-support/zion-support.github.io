@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/Logo.jsx.backup
 <<<<<<< HEAD
@@ -5,10 +6,19 @@ const React from "react"; import { Link } from "react-router-dom"; import { Zap 
 <<<<<<< HEAD:backup-merge-conflicts/Logo.jsx.backup
 =======
 import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
+=======
+<<<<<<< HEAD:src.disabled/src/components/header/Logo.jsx
+import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
+import React from \'react\'; import { Link } from \'react-router-dom\'; import { Zap } from \'lucide-react\'; export function Logo({ customLogo,customColor,className = \'' }) {; if(customLogo) {; return(; <Link to=\"/\" className={`flex-shrink-0 group ${className}`}>;\";\" <img;\" src={customLogo} \";\" alt=\"Logo\";\" className=\"h-8 w-auto\"; / / / / / />; </Link>;\" );\";\" };\";\" const logoColor = customColor || \'#3b82f6\'}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/header/Logo.jsx
+<<<<<<< HEAD
 =======
 import _React from 'react'; import { Link } from 'react-router-dom'; import { Zap } from 'lucide-react'; export function Logo({ customLogo,customColor,className = '' }) {; if(customLogo) {; return(; <Link to="/" className={`flex-shrink-0 group ${className}`}>;";" <img;" src={customLogo} ";" alt="Logo";" className="h-8 w-auto"; / / / / / />; </Link>;" );";" };";" const logoColor = customColor || '#3b82f6'}
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/Logo.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

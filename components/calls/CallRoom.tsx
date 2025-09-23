@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
+=======
+"use client";
+import React{ useCallbackuseEffectuseMemouseState } from 'react';
+import { RoomEventRemoteParticipantLocalParticipantcreateLocalTracksVideoPresets } from 'livekit-client';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
@@ -16,23 +22,39 @@ type Props = {
   onLeave?: (durationSec: number) => void;
 };
 
+<<<<<<< HEAD
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
+=======
+export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltokenstartModeonLeave }: Props) {
+  const [roomsetRoom] = useState<Room | null>(null);
+  const [participantsetParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
+  const [connectedAtsetConnectedAt] = useState<number | null>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const connect = useCallback(async () => {
     const r = new Room();
 
+<<<<<<< HEAD
     r.on(RoomEvent.ParticipantConnected, () => rebuild());
     r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
     r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r.on(RoomEvent.LocalTrackPublished, () => rebuild());
     r.on(RoomEvent.TrackSubscribed, () => rebuild());
+=======
+    r.on(RoomEvent.ParticipantConnected() => rebuild());
+    r.on(RoomEvent.ParticipantDisconnected() => rebuild());
+    r.on(RoomEvent.ActiveSpeakersChanged() => rebuild());
+    r.on(RoomEvent.LocalTrackPublished() => rebuild());
+    r.on(RoomEvent.TrackSubscribed() => rebuild());
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
+<<<<<<< HEAD
       localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 });
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false });
@@ -41,6 +63,15 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     await r.connect(serverUrl, token, {
       autoSubscribe: true,
     });
+=======
+      localTracks = await createLocalTracks({ audio: truevideo: VideoPresets.h720 });
+    } else {
+      localTracks = await createLocalTracks({ audio: truevideo: false });
+    }
+
+    await r.connect(serverUrltoken{
+      autoSubscribe: true});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     // publish local tracks
     for (const t of localTracks) {
@@ -50,13 +81,22 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
+<<<<<<< HEAD
    
   }, [serverUrl, token, startMode]);
+=======
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }[serverUrltokenstartMode]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const rebuild = (current?: Room | null) => {
     const r = current || room;
     if (!r) return;
+<<<<<<< HEAD
     const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+=======
+    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant...Array.from(r.participants.values())];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setParticipants(list);
   };
 
@@ -67,7 +107,11 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         room.disconnect();
       }
     };
+<<<<<<< HEAD
   }, [connect]);
+=======
+  }[connect]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleLeave = () => {
     if (room) {
@@ -84,7 +128,11 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
+<<<<<<< HEAD
   }, [participants.length]);
+=======
+  }[participants.length]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
@@ -97,7 +145,11 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
+<<<<<<< HEAD
         {participants.map((p, idx) => (
+=======
+        {participants.map((pidx) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
         ))}
       </div>

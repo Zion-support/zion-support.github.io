@@ -1,7 +1,11 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Calendar, ArrowRight } from "lucide-react";
+=======
+import { CalendarArrowRight } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function EnterpriseCTA() {
   return (

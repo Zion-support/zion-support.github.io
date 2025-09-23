@@ -10,8 +10,13 @@ interface MobileFilterDrawerProps {
 }
 
 export function MobileFilterDrawer({ 
+<<<<<<< HEAD
   isMobileFilterOpen, 
   setIsMobileFilterOpen, 
+=======
+  isMobileFilterOpen
+  setIsMobileFilterOpen
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   filterProps
 }: MobileFilterDrawerProps) {
   return (

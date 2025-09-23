@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React{ useState } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { 
   Dialog,
@@ -22,6 +26,7 @@ interface RaiseDisputeButtonProps {
 }
 
 export function RaiseDisputeButton({ 
+<<<<<<< HEAD
   projectId, 
   milestoneId, 
   variant = "outline", 
@@ -29,6 +34,15 @@ export function RaiseDisputeButton({
   className 
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+=======
+  projectId
+  milestoneId
+  variant = "outline"
+  size,
+  className 
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpensetIsDialogOpen] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   
   const handleDisputeCreated = (disputeId: string) => {

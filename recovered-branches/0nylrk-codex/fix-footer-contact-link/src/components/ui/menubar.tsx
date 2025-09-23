@@ -1,6 +1,10 @@
 import * as React from "react"
 import * as MenubarPrimitive from "@radix-ui/react-menubar"
+<<<<<<< HEAD
 import { Check, ChevronRight, Circle } from "lucide-react"
+=======
+import { CheckChevronRightCircle } from "lucide-react"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 import { cn } from "@/lib/utils"
 
@@ -17,7 +21,11 @@ const MenubarRadioGroup = MenubarPrimitive.RadioGroup
 const Menubar = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.Root
     ref={ref}
     className={cn(
@@ -32,7 +40,11 @@ Menubar.displayName = MenubarPrimitive.Root.displayName
 const MenubarTrigger = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.Trigger
     ref={ref}
     className={cn(
@@ -49,7 +61,11 @@ const MenubarSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, children, ...props }, ref) => (
+=======
+>(({ classNameinsetchildren...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.SubTrigger
     ref={ref}
     className={cn(
@@ -68,7 +84,11 @@ MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
 const MenubarSubContent = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubContent>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
+=======
+>(({ className...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.SubContent
     ref={ref}
     className={cn(
@@ -85,7 +105,11 @@ const MenubarContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Content>
 >(
   (
+<<<<<<< HEAD
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+=======
+    { classNamealign = "start"alignOffset = -4sideOffset = 8...props },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ref
   ) => (
     <MenubarPrimitive.Portal>
@@ -110,7 +134,11 @@ const MenubarItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
+=======
+>(({ classNameinset...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.Item
     ref={ref}
     className={cn(
@@ -126,7 +154,11 @@ MenubarItem.displayName = MenubarPrimitive.Item.displayName
 const MenubarCheckboxItem = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>
+<<<<<<< HEAD
 >(({ className, children, checked, ...props }, ref) => (
+=======
+>(({ classNamechildrenchecked...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.CheckboxItem
     ref={ref}
     className={cn(
@@ -149,7 +181,11 @@ MenubarCheckboxItem.displayName = MenubarPrimitive.CheckboxItem.displayName
 const MenubarRadioItem = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>
+<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
+=======
+>(({ classNamechildren...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.RadioItem
     ref={ref}
     className={cn(
@@ -173,7 +209,11 @@ const MenubarLabel = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {
     inset?: boolean
   }
+<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
+=======
+>(({ classNameinset...props }ref) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <MenubarPrimitive.Label
     ref={ref}
     className={cn(
@@ -189,10 +229,17 @@ MenubarLabel.displayName = MenubarPrimitive.Label.displayName
 const MenubarSeparator = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>
+<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <MenubarPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
+=======
+>(({ className...props }ref) => (
+  <MenubarPrimitive.Separator
+    ref={ref}
+    className={cn("-mx-1 my-1 h-px bg-muted"className)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -230,5 +277,9 @@ export {
   MenubarSubTrigger,
   MenubarGroup,
   MenubarSub,
+<<<<<<< HEAD
   MenubarShortcut,
 }
+=======
+  MenubarShortcut}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

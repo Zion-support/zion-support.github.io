@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom";
+=======
+import { Routes } from "react-router-dom";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";

@@ -1,16 +1,29 @@
 
+<<<<<<< HEAD
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+=======
+import React{ useRef } from "react";
+import { ChevronLeftChevronRight } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 
 // These would be replaced with actual screenshots
 const mockScreenshots = [
+<<<<<<< HEAD
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ];
+=======
+  { id: 1alt: "Dashboard screen"src: "/placeholder.svg" },
+  { id: 2alt: "Talent matching screen"src: "/placeholder.svg" },
+  { id: 3alt: "Resume builder screen"src: "/placeholder.svg" },
+  { id: 4alt: "Messaging screen"src: "/placeholder.svg" },
+  { id: 5alt: "Profile screen"src: "/placeholder.svg" }];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -20,8 +33,12 @@ export const AppScreenshots: React.FC = () => {
       const scrollAmount = 300;
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
+<<<<<<< HEAD
         behavior: "smooth",
       });
+=======
+        behavior: "smooth"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
@@ -48,7 +65,11 @@ export const AppScreenshots: React.FC = () => {
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+<<<<<<< HEAD
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+=======
+            style={{ scrollbarWidth: "none"msOverflowStyle: "none" }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           >
             {mockScreenshots.map((screenshot) => (
               <div 
@@ -62,6 +83,10 @@ export const AppScreenshots: React.FC = () => {
                 />
               </div>
             ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </div>
           
           <Button 

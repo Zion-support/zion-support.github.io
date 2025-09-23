@@ -9,6 +9,7 @@ export default function services() {return (
           Professional services services to help your business grow.
         </p>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/services.ts.backup
 <<<<<<< HEAD
   );"}"
@@ -21,6 +22,15 @@ import React from "react" import { SEO } from "@/components/SEO" export default 
     );"}"
 =======
     );"}"
+=======
+  );"}"
+;;
+>>>>>>> pr-11935
+import React from "react" import { SEO } from "@/components/SEO" export default function services() {return ( <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">" <SEO title="services - Zion Tech Group" description="Professional services services by Zion Tech Group" />" <div className="container mx-auto px-4 py-20">" <h1 className="text-4xl font-bold text-white mb-8">services</h1>" <p className="text-gray-300 text-lg"> Professional services services to help your business grow. </p> </div> );"}"
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+    );"}"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/api/services.ts
 =======
     );"}"

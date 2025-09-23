@@ -1,7 +1,10 @@
 #!/bin/bash
 
+<<<<<<< HEAD
 set -e
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 echo "=== Checking Git Status ==="
 git status --porcelain
 
@@ -18,4 +21,8 @@ else
   echo "(Skipping build verification: node or script not available)"
 fi
 
+<<<<<<< HEAD
 echo -e "\n=== Done ==="
+=======
+echo -e "\n=== Build Complete ==="
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

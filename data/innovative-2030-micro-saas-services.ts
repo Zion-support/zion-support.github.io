@@ -1,5 +1,8 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface Innovative2030MicroSaasService {
   id: string;
   name: string;
@@ -40,7 +43,10 @@ export interface Innovative2030MicroSaasService {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [
   // AI-Powered Business Intelligence
   {
@@ -94,7 +100,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.9,
     reviews: 950
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum-Safe Cybersecurity Platform
   {
     id: 'quantum-safe-cybersecurity-platform',
@@ -147,7 +156,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.8,
     reviews: 680
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform',
@@ -200,7 +212,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.7,
     reviews: 1100
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Blockchain Supply Chain Transparency
   {
     id: 'blockchain-supply-chain-transparency',
@@ -253,7 +268,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.6,
     reviews: 420
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI-Powered HR Automation Suite
   {
     id: 'ai-hr-automation-suite',
@@ -306,7 +324,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.8,
     reviews: 820
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -359,7 +380,10 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     rating: 4.9,
     reviews: 280
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',

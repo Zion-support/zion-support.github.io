@@ -4,8 +4,12 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,
 } from '@/components/ui/dialog';
+=======
+  DialogTitle} from '@/components/ui/dialog';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { AIEnhancementPanel } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 

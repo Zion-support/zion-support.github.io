@@ -10,8 +10,12 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
+<<<<<<< HEAD
     "authorization, x-client-info, apikey, content-type",
 };
+=======
+    "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface ReminderPayload {
   user_id: string;
@@ -24,8 +28,12 @@ serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
+<<<<<<< HEAD
       headers: corsHeaders,
     });
+=======
+      headers: corsHeaders});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
   
   try {
@@ -42,8 +50,12 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Missing required fields" }),
         {
           status: 400,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
+=======
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
     }
     
@@ -59,8 +71,12 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "User not found", details: userError }),
         {
           status: 404,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
+=======
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
     }
     
@@ -69,6 +85,7 @@ serve(async (req: Request) => {
       talent: {
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
+<<<<<<< HEAD
         availability_set: "set your availability to help clients know when you can work",
       },
       client: {
@@ -77,6 +94,13 @@ serve(async (req: Request) => {
         talent_invited: "invite talent to speed up your hiring process",
       },
     };
+=======
+        availability_set: "set your availability to help clients know when you can work"},
+      client: {
+        job_posted: "post your first job to start finding talent",
+        match_viewed: "check out your AI-matched talent suggestions",
+        talent_invited: "invite talent to speed up your hiring process"}};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     const name = userData.display_name || "there";
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
@@ -101,16 +125,24 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
+<<<<<<< HEAD
       `,
     });
+=======
+      `});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
         {
           status: 500,
+<<<<<<< HEAD
           headers: { "Content-Type": "application/json", ...corsHeaders },
         }
+=======
+          headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       );
     }
     
@@ -121,8 +153,12 @@ serve(async (req: Request) => {
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
+<<<<<<< HEAD
         _type: "onboarding",
       }
+=======
+        _type: "onboarding"}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
     
     if (notificationError) {
@@ -132,12 +168,19 @@ serve(async (req: Request) => {
     return new Response(
       JSON.stringify({
         message: "Reminder sent successfully",
+<<<<<<< HEAD
         notification_id: notification,
       }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
+=======
+        notification_id: notification}),
+      {
+        status: 200,
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   } catch (error) {
     console.error(error);
@@ -145,8 +188,12 @@ serve(async (req: Request) => {
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
         status: 500,
+<<<<<<< HEAD
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
+=======
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   }
 });

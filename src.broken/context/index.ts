@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export { AuthProvider } from './auth';
 export { MessagingProvider } from './MessagingContext';
 export { NotificationProvider } from './notifications/NotificationContext';
@@ -9,3 +10,6 @@ export {
 export { ViewModeProvider, useViewMode } from './ViewModeContext';
 export { CartProvider, useCart } from './CartContext';
 export { UnitProvider, useUnitSystem } from './UnitContext';
+=======
+export { CartProvider, useCart } from './CartContext';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

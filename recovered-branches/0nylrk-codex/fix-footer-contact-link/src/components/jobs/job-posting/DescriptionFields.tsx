@@ -1,7 +1,11 @@
 
 import React from 'react';
 import { Control } from 'react-hook-form';
+<<<<<<< HEAD
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form";
+=======
+import { FormFieldFormItemFormLabelFormControlFormDescriptionFormMessage } from "@/components/ui/form";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
 
@@ -11,7 +15,11 @@ interface DescriptionFieldsProps {
   editorContent: string;
 }
 
+<<<<<<< HEAD
 export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
+=======
+export function DescriptionFields({ controlhandleEditorChangeditorContent }: DescriptionFieldsProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <>
       <FormField

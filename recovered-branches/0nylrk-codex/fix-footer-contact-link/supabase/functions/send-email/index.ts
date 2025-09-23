@@ -4,8 +4,12 @@ import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
+<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+=======
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
@@ -21,6 +25,7 @@ serve(async (req) => {
       from: "Lovable <onboarding@resend.dev>",
       to: [to],
       subject,
+<<<<<<< HEAD
       html,
     });
 
@@ -33,5 +38,16 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
+=======
+      html});
+
+    return new Response(JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200});
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });

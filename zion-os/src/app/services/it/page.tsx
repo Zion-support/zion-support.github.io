@@ -5,5 +5,8 @@ export default function ITServicesPage() {
       <p className="text-gray-600">Comprehensive IT services and support.</p>
     </main>
   );
+<<<<<<< HEAD
 }
-
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

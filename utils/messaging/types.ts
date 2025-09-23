@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UserRole = 'client' | 'talent' | 'admin';
 
 export interface UserSummary {
@@ -57,3 +58,19 @@ export interface NewMessageInput {
   attachmentName?: string; // optional filename
   context?: ConversationContext;
 }
+=======
+
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

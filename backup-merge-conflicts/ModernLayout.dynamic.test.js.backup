@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ModernLayout.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/ModernLayout.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/ModernLayout.dynamic.test.js
 import React from 'react';
@@ -22,7 +26,11 @@ describe('ModernLayoutdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ModernLayoutdynamic from "./components/ModernLayout.dynamic"; describe("ModernLayoutdynamic",() => { test("renders without crashing",() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId("modernlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ModernLayoutdynamic />)}); test("handles user interactions",() => { render(<ModernLayoutdynamic />)}); test("applies correct styling",() => { render(<ModernLayoutdynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/ModernLayout.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import ModernLayoutdynamic from '../components/ModernLayout.dynamic'; describe('ModernLayoutdynamic',() => { test('renders without crashing',() => { render(<ModernLayoutdynamic />); expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ModernLayoutdynamic />)}); test('handles user interactions',() => { render(<ModernLayoutdynamic />)}); test('applies correct styling',() => { render(<ModernLayoutdynamic />)})});
 >>>>>>> main
 =======

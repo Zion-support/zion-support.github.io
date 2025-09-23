@@ -1,35 +1,29 @@
 export interface SpecializedIndustrySolution2026 {
   id: string;
   name: string;
-  tagline: string;
+  description: string;
+  category: string;
   price: string;
   period: string;
-  description: string;
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
+  useCases: string[];
   targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  setupTime: string;
   roi: string;
+  marketPosition: string;
   competitors: string[];
   marketSize: string;
-  growthRate: string;
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
     website: string;
   };
+<<<<<<< HEAD
+}
+
+=======
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -49,10 +43,33 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
-  // Financial Technology Services
   {
+<<<<<<< HEAD
+    id: 'ai-healthcare-diagnostic',
+    name: 'AI Healthcare Diagnostic System',
+    description: 'Advanced AI-powered diagnostic system for healthcare providers.',
+    category: 'Healthcare',
+    price: '$18,999',
+    period: '/month',
+    features: ['AI diagnostics', 'Real-time analysis', 'HIPAA compliance'],
+    useCases: ['Medical diagnosis', 'Patient monitoring'],
+    targetAudience: 'Healthcare providers',
+    technology: ['AI/ML', 'Python', 'TensorFlow'],
+    integrations: ['EMR systems', 'Lab systems'],
+    setupTime: '2-4 weeks',
+    roi: '300% ROI within 6 months',
+    marketPosition: 'Leading provider',
+    competitors: ['Company A', 'Company B'],
+    marketSize: '$2.5B',
+    contactInfo: {
+      mobile: '+1-555-0123',
+      email: 'contact@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    }
+  }
+=======
     id: 'ai-financial-risk-management',
     name: 'AI Financial Risk Management Platform',
     tagline: 'Intelligent Risk Assessment and Portfolio Optimization for Financial Institutions',
@@ -554,4 +571,12 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Performance analytics'
     ]
   }
+];
+export const INDUSTRY_SOLUTION_CATEGORIES = [
+  'Healthcare Technology',
+  'FinTech Solutions',
+  'Manufacturing Technology',
+  'Retail Technology',
+  'Logistics Technology'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 ];

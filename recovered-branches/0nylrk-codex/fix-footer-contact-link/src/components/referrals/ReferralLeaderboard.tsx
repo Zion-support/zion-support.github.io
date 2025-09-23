@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Award } from "lucide-react";
 
 interface LeaderboardEntry {
@@ -10,6 +14,7 @@ interface LeaderboardEntry {
 
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
+<<<<<<< HEAD
   // For now, we'll use mock data
   const leaderboardData: LeaderboardEntry[] = [
     { rank: 1, name: "Alex Johnson", referrals: 24 },
@@ -18,6 +23,15 @@ export function ReferralLeaderboard() {
     { rank: 4, name: "Casey Brown", referrals: 12 },
     { rank: 5, name: "Jordan Lee", referrals: 10 },
   ];
+=======
+  // For nowe'll use mock data
+  const leaderboardData: LeaderboardEntry[] = [
+    { rank: 1name: "Alex Johnson"referrals: 24 },
+    { rank: 2name: "Jamie Smith"referrals: 18 },
+    { rank: 3name: "Taylor Wong"referrals: 15 },
+    { rank: 4name: "Casey Brown"referrals: 12 },
+    { rank: 5name: "Jordan Lee"referrals: 10 }];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <Card>

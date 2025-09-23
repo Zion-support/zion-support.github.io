@@ -1,64 +1,53 @@
-import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react'
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-gray-50">
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. 
-            Enterprise-grade technology that drives innovation and growth.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
-            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </section>
-
-        <section className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4">AI Solutions</h3>
-            <p className="text-gray-600">
-              Advanced artificial intelligence solutions to automate and optimize your business processes.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4">Cloud Infrastructure</h3>
-            <p className="text-gray-600">
-              Scalable and secure cloud infrastructure solutions for modern businesses.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4">Cybersecurity</h3>
-            <p className="text-gray-600">
-              Comprehensive cybersecurity solutions to protect your digital assets and data.
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-gray-900 text-white p-12 rounded-lg text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">
-            Contact us today to learn how our technology solutions can drive your success.
-          </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Contact Us
-          </button>
-        </section>
-      </div>
-
-      <Footer />
-    </main>
-  );
+export const metadata = {
+<<<<<<< HEAD
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'
+=======
+  title: 'Zion Tech Group',
+  description: 'Transform your business with cutting-edge AI solutions.'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 }
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-6">
+      <div className="max-w-3xl text-center">
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+<<<<<<< HEAD
+          Advanced AI and
+          <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
+=======
+          Zion Tech Group
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+        </h1>
+        <p className="text-lg text-gray-300 mb-8">Advanced AI, cloud, and cybersecurity solutions.</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center">
+            Explore Solutions
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+          <Link href="/contact" className="border border-gray-300 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center">
+            Get Started
+          </Link>
+        </div>
+      </div>
+    </main>
+  )
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa

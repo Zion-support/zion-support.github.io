@@ -1,0 +1,8 @@
+export default function AuthIndex() { return null; }
+      </main>
+    </div>
+  );
+};
+
+export default BlogIndex;
+>>>>>>> 84d173ee8a40495698da2560d91f786b60cbd3c9:temp_components/auth/index.tsx.backup.1755991399

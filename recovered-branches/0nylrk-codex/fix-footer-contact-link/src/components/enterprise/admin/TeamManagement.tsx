@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React{ useState } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow,
 } from "@/components/ui/table";
+=======
+  TableRow} from "@/components/ui/table";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import {
   Dialog,
   DialogContent,
@@ -15,18 +23,31 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger,
 } from "@/components/ui/dialog";
+=======
+  DialogTrigger} from "@/components/ui/dialog";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+=======
+import { PlusCircleTrashMailUserPlus } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+
+export function TeamManagement() {
+  const [isAddingMembersetIsAddingMember] = useState(false);
+  const [newMemberEmailsetNewMemberEmail] = useState("");
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Mock team members data
   const teamMembers = [
@@ -36,55 +57,83 @@ export function TeamManagement() {
       email: "alex@example.com",
       role: "Admin",
       status: "active",
+<<<<<<< HEAD
       lastActive: "2 hours ago",
     },
+=======
+      lastActive: "2 hours ago"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 2,
       name: "Jamie Smith",
       email: "jamie@example.com",
       role: "Recruiter",
       status: "active",
+<<<<<<< HEAD
       lastActive: "Yesterday",
     },
+=======
+      lastActive: "Yesterday"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 3,
       name: "Sam Williams",
       email: "sam@example.com",
       role: "Manager",
       status: "pending",
+<<<<<<< HEAD
       lastActive: "Never",
     },
+=======
+      lastActive: "Never"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {
       id: 4,
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
       status: "active",
+<<<<<<< HEAD
       lastActive: "3 days ago",
     },
   ];
 
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
+=======
+      lastActive: "3 days ago"}];
+
+  const handleAddMember = () => {
+    // In a real appthis would make an API call to add the member
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (!newMemberEmail) {
       toast({
         title: "Email required",
         description: "Please enter an email address for the new team member.",
+<<<<<<< HEAD
         variant: "destructive",
       });
+=======
+        variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       return;
     }
 
     toast({
       title: "Invitation sent",
+<<<<<<< HEAD
       description: `An invitation has been sent to ${newMemberEmail}`,
     });
+=======
+      description: `An invitation has been sent to ${newMemberEmail}`});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     setNewMemberEmail("");
     setIsAddingMember(false);
   };
 
   const handleRemoveMember = (memberId: number) => {
+<<<<<<< HEAD
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed",
@@ -98,6 +147,19 @@ export function TeamManagement() {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`,
     });
+=======
+    // In a real appthis would make an API call to remove the member
+    toast({
+      title: "Team member removed",
+      description: "The team member has been removed from your workspace."});
+  };
+
+  const handleResendInvite = (memberEmail: string) => {
+    // In a real appthis would make an API call to resend the invitation
+    toast({
+      title: "Invitation resent",
+      description: `A new invitation has been sent to ${memberEmail}`});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (

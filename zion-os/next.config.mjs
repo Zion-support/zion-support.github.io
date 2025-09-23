@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    // Temporarily ignore lint errors during builds to unblock CI
+    // Skip ESLint during production builds to avoid blocking on content quotes
     ignoreDuringBuilds: true,
   },
   // Performance optimizations

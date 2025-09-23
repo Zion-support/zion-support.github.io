@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 <<<<<<< HEAD
@@ -7,11 +8,17 @@ import globals from 'globals';
 <<<<<<< HEAD
 =======
 =======
+=======
+<<<<<<< HEAD:eslint.config.js
+import globals from 'globals';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 import react from 'eslint-plugin-react';
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
@@ -20,11 +27,22 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 =======
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+=======
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+=======
+>>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 
 export default [
   {
     ignores: [
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
 =======
 <<<<<<< HEAD
@@ -106,6 +124,8 @@ export default [
         Buffer: 'readonly',
         global: 'readonly'
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
 =======
 import react from 'eslint-plugin-react';
@@ -128,8 +148,12 @@ export default [{
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+=======
+<<<<<<< HEAD:eslint.config.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 <<<<<<< HEAD
       'fix-critical-files.js',
       'fix-*.js',
@@ -143,6 +167,7 @@ export default [{
       'analyze-*.cjs',
       'code-quality-*.js',
       'components',
+<<<<<<< HEAD
 =======
       'scripts/',
       'automation/',
@@ -237,6 +262,8 @@ export default [{
       '*.spec.tsx',
       '*.report.json',
       'temp_*/',
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
       'test_build/',
       'tests.disabled/',
@@ -248,7 +275,18 @@ export default [{
       'contracts.disabled/',
       'solutions.disabled/',
       'zion-os.disabled/',
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+=======
+      'cypress.disabled/',
+      'data/2024-*.ts',
+      'data/2025-*.ts',
+      'data/2026-*.ts',
+      'data/2026-*.js',
+      'data/',
+      'disabled-api/',
+      'fix_utils_files.ts',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'zion_academy/',
       'automation_backup/',
       'automation/backups/',
@@ -268,6 +306,7 @@ export default [{
       'security-reports/',
       'pages.__backup/',
       'pages-disabled/',
+<<<<<<< HEAD
       'pages.disabled_full/',
       'pages.old/',
       'pages_api.disabled/',
@@ -397,12 +436,28 @@ export default [{
       'analyze-missing-pages.js',
       'automation-improvement-suite.cjs',
       'automation-runner.js',
+=======
+      'pages.disabled_auto/',
+<<<<<<< HEAD
+      'pages.disabled.full/',
+      'pages._quarantine/',
+      'pages._archive_corrupted/',
+      'pages.blog.disabled/',
+      'pages.bak/',
+      'pages.broken/',
+      'pages.corrupted.*/',
+      'pages-disabled/',
+      'pages-quarantine/',
+      'pages.__backup/',
+      'pages-backup/',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       '*.test.js',
       '*.test.ts',
       '*.test.tsx',
       '*.spec.js',
       '*.spec.ts',
       '*.spec.tsx',
+<<<<<<< HEAD
       'test-*.js',
       'test-*.cjs',
       'ultimate-*.js',
@@ -411,6 +466,227 @@ export default [{
       'ux-enhancer.cjs',
       'vite.config-backup.ts',
       'vite.config.ts'
+=======
+      'src.corrupted/',
+      'src.disabled/',
+      'src.broken/',
+      'src.pages.disabled/',
+      'solutions.disabled/',
+      'components.disabled/',
+      'components.corrupted/',
+      'hooks.disabled/',
+      'lib.disabled/',
+      'lib.corrupted/',
+      'zion-os.disabled/',
+      'contracts.disabled/',
+      'corrupted-files-backup/',
+      'corrupted_files_backup_2/',
+      'cypress.disabled/',
+      'cypress_backup/',
+      'data/',
+      'e2e/',
+      'pages.disabled/',
+      'pages.disabled_backup/',
+      'pages_backup/',
+      'pages.disabled_full/',
+      'pages_backup_before_cleanup/',
+      'pages_backup_conflicts/',
+      'pages.bak/',
+      'pages.broken/',
+      'pages.corrupted.*/',
+      'pages._quarantine/',
+      'pages._archive_corrupted/',
+      'pages.disabled_auto/',
+      'pages.blog.disabled/',
+      'pages-quarantine/',
+      'pages.disabled.full/',
+      'pages_api.disabled/',
+      'pages_backup_conflict/',
+      'pages.disabled_auto/',
+      'pages.disabled.full/',
+      'temp_backup/',
+      'temp_broken_files/',
+      'temp_working/',
+      'tests.disabled/',
+      '__tests__/',
+      'components.disabled_full/',
+      'components.broken/',
+      'backup-corrupted-files/',
+      'lib.broken/',
+      'data.disabled/',
+      'test_build/',
+      'server/',
+      'types/',
+      'next-env.d.ts',
+      'jest.setup.jsx',
+      'middleware.ts',
+      'middleware.security.ts',
+      'temp-backup/',
+      'supabase/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'vite.config.*',
+      '**/*.cjs',
+      'next.config.*',
+      'playwright.config.ts',
+      'vite.config-backup.ts',
+      'public/',
+      '.venv/',
+      'api/',
+      'jest.config.*',
+      'fix-*.js',
+      'fix-*.jsx',
+      'deployments/',
+      'pages.__backup/',
+      'pages-disabled/',
+      'automation/',
+      'automation_backup/',
+      'scripts/',
+      'pm2-automation/',
+      'pm2/',
+      'data_backup/',
+      'api-backup/',
+      'netlify/',
+      'tests/',
+      '__tests__/',
+      '*.js',
+      '*.mjs',
+      'pages._archive_corrupted/',
+      'pages.disabled.full/',
+      'ai-optimization-backups/',
+      'fix_typescript_syntax_errors.jsx',
+      'src/',
+      'automation/',
+      'automation_backup/',
+      'data_backup/',
+      'pm2-automation/',
+      'scripts/',
+      'tests/',
+      'test-results/',
+      'test-reports/',
+      '*.test.js',
+      '*.test.jsx',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.jsx',
+      '*.spec.ts',
+      '*.spec.tsx',
+      '*.backup.js',
+      '*.backup.jsx',
+      '*.backup.ts',
+      '*.backup.tsx',
+      '*.broken.js',
+      '*.broken.jsx',
+      '*.broken.ts',
+      '*.broken.tsx',
+      '*.corrupted.js',
+      '*.corrupted.jsx',
+      '*.corrupted.ts',
+      '*.corrupted.tsx',
+      '*.disabled.js',
+      '*.disabled.jsx',
+      '*.disabled.ts',
+      '*.disabled.tsx',
+      '*.old.js',
+      '*.old.jsx',
+      '*.old.ts',
+      '*.old.tsx',
+      '*.temp.js',
+      '*.temp.jsx',
+      '*.temp.ts',
+      '*.temp.tsx',
+      '*.tmp.js',
+      '*.tmp.jsx',
+      '*.tmp.ts',
+      '*.tmp.tsx',
+      '*.bak.js',
+      '*.bak.jsx',
+      '*.bak.ts',
+      '*.bak.tsx',
+      '*.orig.js',
+      '*.orig.jsx',
+      '*.orig.ts',
+      '*.orig.tsx',
+      '*.rej.js',
+      '*.rej.jsx',
+      '*.rej.ts',
+      '*.rej.tsx',
+      '*.swp.js',
+      '*.swp.jsx',
+      '*.swp.ts',
+      '*.swp.tsx',
+      '*.swo.js',
+      '*.swo.jsx',
+      '*.swo.ts',
+      '*.swo.tsx',
+      '*.log',
+      '*.pid',
+      '*.seed',
+      '*.pid.lock',
+      'comprehensive-*.js',
+      'critical-fix.js',
+      'execute-automation.js',
+      'final-*.js',
+      'fix_*.js',
+      'health-endpoint.js',
+      'maintenance-scheduler.js',
+      'merge-*.js',
+      'monitoring-system.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'run-*.js',
+      'seo-*.js',
+      'services-broken.tsx',
+      'simple-*.js',
+      'test-*.js',
+      '*.tgz',
+      '*.tar.gz',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
       'pages.disabled_auto/'
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
@@ -447,6 +723,10 @@ export default [{
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ecmaVersion: 2020,
       globals: globals.browser,
       parser: tsparser,
@@ -468,14 +748,21 @@ export default [{
         'warn',
         { allowConstantExport: true },
       ],
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn',
+=======
+      'no-unused-vars': 'warn',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
     },
   },
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       '.prettierrc.js',
       '.eslintrc.*',
       '*.min.js',
@@ -497,6 +784,7 @@ export default [{
       'pages-quarantine/',
       'pages.__backup/',
       'pages-backup/',
+<<<<<<< HEAD
 <<<<<<< HEAD
     "ignores": ['node_modules/**',
       '.next/**',
@@ -629,6 +917,150 @@ export default [{
       'components.disabled_full/',
       'data.disabled/',
       'database/',
+=======
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.ts',
+      '*.spec.tsx'
+    ]
+  },
+  {
+    "files": ['**/*.{js,jsx}'],
+    "languageOptions": {
+      ecmaVersion: 2021,
+      "sourceType": 'module',
+      "globals": {
+        window: 'readonly',
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "require": 'readonly',
+        "module": 'readonly',
+        "__dirname": 'readonly',
+        "__filename": 'readonly',
+        "exports": 'readonly'
+      },
+      "parserOptions": {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    "plugins": {
+      react,
+      'react-hooks': reactHooks
+    },
+    "rules": {
+      ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    "files": ['**/*.{ts,tsx}'],
+    "languageOptions": {
+      parser: tsparser,
+      "ecmaVersion": 2021,
+      "sourceType": 'module',
+      "globals": {
+        window: 'readonly',
+        "document": 'readonly',
+        "navigator": 'readonly',
+        "localStorage": 'readonly',
+        "sessionStorage": 'readonly',
+        "console": 'readonly',
+        "setTimeout": 'readonly',
+        "setInterval": 'readonly',
+        "clearTimeout": 'readonly',
+        "clearInterval": 'readonly',
+        "requestAnimationFrame": 'readonly',
+        "cancelAnimationFrame": 'readonly',
+        "fetch": 'readonly',
+        "URL": 'readonly',
+        "URLSearchParams": 'readonly',
+        "Blob": 'readonly',
+        "CustomEvent": 'readonly',
+        "Intl": 'readonly',
+        "performance": 'readonly',
+        "caches": 'readonly',
+        "Notification": 'readonly',
+        "ServiceWorker": 'readonly',
+        "ServiceWorkerRegistration": 'readonly',
+        "PushSubscription": 'readonly',
+        "NotificationPermission": 'readonly',
+        "process": 'readonly',
+        "global": 'readonly',
+        "jest": 'readonly',
+        "describe": 'readonly',
+        "it": 'readonly',
+        "test": 'readonly',
+        "expect": 'readonly',
+        "vi": 'readonly',
+        "Deno": 'readonly',
+        "React": 'readonly',
+        "KeyboardEvent": 'readonly',
+        "HTMLElement": 'readonly',
+        "HTMLButtonElement": 'readonly',
+        "HTMLAnchorElement": 'readonly',
+        "MutationObserver": 'readonly',
+        "RequestInit": 'readonly',
+        "AbortController": 'readonly',
+        "fs": 'readonly',
+        "CodeQualityChecker": 'readonly'
+      }
+>>>>>>> main
+>>>>>>> main
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      react: react,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+  },
+  {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'lib.broken/',
       'lib.disabled/',
       'lib/',
@@ -638,6 +1070,7 @@ export default [{
       'next.config.*.js',
       'pages.disabled_auto/',
       'pages.old/',
+<<<<<<< HEAD
       'pages.broken/',
       'pages.corrupted.1756905863/',
       'pages.disabled.full/',
@@ -647,11 +1080,14 @@ export default [{
       'pages_backup_conflicts/',
       'pages_backup_before_cleanup/',
       'pages_backup_conflict/',
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'pages_backup/',
       'pages_api.disabled/',
       'pages.disabled_auto/',
       'pages.disabled_full/',
       'pages.old/',
+<<<<<<< HEAD
     files: ['**/*.test.{js,jsx,ts,tsx}', '**/__tests__/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
@@ -669,6 +1105,174 @@ export default [{
       'pages.broken/',
       'pages.corrupted.1756905863/',
       'pages.disabled.full/'
+=======
+>>>>>>> pr-11935
+      'public/',
+      'server/',
+      'temp-backup/',
+      'temp_broken_files/',
+      'temp_working/',
+      'temp_footer_start.tsx',
+      'temp_backup/',
+      'test_build/',
+      'tests/',
+      'tools/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'fix-*.cjs',
+      'fix-*.js',
+      'git-*.js',
+      'git-*.cjs',
+      'hooks.disabled/',
+      'hooks/',
+      'intelligent-*.cjs',
+      'jest.*',
+      'master-*.cjs',
+      'merge-*.cjs',
+      'middleware.*',
+      'optimized-*.cjs',
+      'quick-*.cjs',
+      'resolve-*.cjs',
+      'run-*.cjs',
+      'security-*.cjs',
+      'seo-*.cjs',
+      'simple-*.cjs',
+      'structural-*.js',
+      'supabase/',
+      'types/',
+      'utils/',
+      'data/',
+      'database/',
+      'deployment*/',
+      'e2e/',
+      'ecosystem.*.cjs',
+      'enhanced-*.cjs',
+      'final-*.cjs',
+      'lint-stub.js',
+      'playwright.config.ts',
+      'pr-manager.cjs',
+      'services/',
+      'src/',
+      'components.disabled/',
+      'components.disabled_full/',
+      'contracts.disabled/',
+      'corrupted-files-backup/',
+      'cypress_backup/',
+      'ai-optimization-backups/',
+      'api-backup/',
+      'backup/',
+      'cache/',
+      'clean-build/',
+      'cypress.config.ts',
+      'pages/404.jsx',
+      'pages/404.tsx',
+      'pages/about.tsx',
+      'pages/ai-services.tsx',
+      'pages/api-docs.tsx',
+      'pages/api.tsx',
+      'pages/careers.tsx',
+      'pages/it-services.tsx',
+      'pages/micro-saas.tsx',
+      'pages/resources.tsx',
+      'pages/services.tsx',
+      'pages/webinars.tsx',
+      'pages/white-papers.tsx',
+      'components/layout/',
+      'components/performance/',
+      'components/ui/',
+      '*.cjs',
+      '*.js',
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+      '*.test.js',
+      '*.test.ts',
+      '*.test.tsx',
+      '*.spec.js',
+      '*.spec.ts',
+      '*.spec.tsx',
+      '*.backup.*',
+      '*.broken.*',
+      '*.corrupted.*',
+      '*.disabled.*',
+      '*.old.*',
+      '*.temp.*',
+      '*.tmp.*',
+      '*.bak.*',
+      '*.orig.*',
+      '*.rej.*',
+      '*.swp.*',
+      '*.swo.*',
+      '*.log',
+      '*.pid',
+      '*.seed',
+      '*.pid.lock',
+      'comprehensive-*.js',
+      'critical-fix.js',
+      'execute-automation.js',
+      'final-*.js',
+      'fix_*.js',
+      'health-endpoint.js',
+      'improve-app.js',
+      'maintenance-scheduler.js',
+      'merge-*.js',
+      'monitoring-system.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'run-*.js',
+      'seo-*.js',
+      'services-broken.tsx',
+      'simple-*.js',
+      'test-*.js',
+<<<<<<< HEAD:backup-merge-conflicts/eslint.config.js.backup
+      '*.tgz',
+      '*.tar.gz',
+      '*.zip',
+      '*.rar',
+      '*.7z',
+      '*.tar',
+      '*.gz',
+      '*.bz2',
+      '*.xz',
+      '*.lzma',
+      '*.zst',
+      '*.lz4',
+      '*.lzop',
+      '*.lrz',
+      '*.lha',
+      '*.lzh',
+      '*.ace',
+      '*.arj',
+      '*.cab',
+      '*.deb',
+      '*.rpm',
+      '*.msi',
+      '*.dmg',
+      '*.iso',
+      '*.img',
+      '*.bin',
+      '*.exe',
+      '*.app',
+      '*.dll',
+      '*.so',
+      '*.dylib',
+      '*.a',
+      '*.lib',
+      '*.o',
+      '*.obj',
+      '*.pyc',
+      '*.pyo',
+      '*.pyd',
+      '*.class',
+      '*.jar',
+      '*.war',
+      '*.ear',
+      '*.sar',
+      '*.nar'
+>>>>>>> main
+    ]
+  }
+];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
     ]
   },
@@ -712,6 +1316,7 @@ export default [{
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+<<<<<<< HEAD
         vi: 'readonly',
         Deno: 'readonly',
         React: 'readonly',
@@ -720,6 +1325,16 @@ export default [{
         __dirname: 'readonly',
         __filename: 'readonly',
         exports: 'readonly'
+=======
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        jest: 'readonly',
+        fireEvent: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       },
       parserOptions: {
         ecmaFeatures: {
@@ -727,6 +1342,7 @@ export default [{
         }
       }
     },
+<<<<<<< HEAD
     plugins: {
       react,
       'react-hooks': reactHooks
@@ -740,6 +1356,13 @@ export default [{
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
     }
+=======
+    rules: {
+      'no-console': 'off',
+      'no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'warn',
+    },
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -798,12 +1421,18 @@ export default [{
     },
     plugins: {
       '@typescript-eslint': tseslint,
+<<<<<<< HEAD
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+=======
+      react: react,
+      'jsx-a11y': jsxA11y,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     rules: {
       'no-console': 'warn',
       'no-unused-vars': 'warn',
+<<<<<<< HEAD
       '@typescript-eslint/no-unused-vars': 'warn',
     }
   },
@@ -842,6 +1471,23 @@ export default [{
 <<<<<<< HEAD:eslint.config.js
 =======
   },
+=======
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+>>>>>>> main
+>>>>>>> main
+];
+>>>>>>> main
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 ];
 =======
 ];
@@ -849,4 +1495,8 @@ export default [{
 >>>>>>> pr-11914:backup-merge-conflicts/eslint.config.js.backup
 =======
 ];
+<<<<<<< HEAD
+=======
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:eslint.config.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

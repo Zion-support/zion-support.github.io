@@ -1,0 +1,183 @@
+import React from 'react';
+
+  const serviceCategories = [
+    {
+      category: 'AI Consciousness Services',
+      description: 'Advanced AI systems with consciousness and emotional intelligence capabilities',
+      features: ['Emotional intelligence', 'Self-awareness', 'Decision-making', 'Learning systems'],
+      restrictions: ['No malicious use', 'Compliance with AI ethics', 'Data privacy requirements'],
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      category: 'Quantum Computing Platform',
+      description: 'Quantum computing services for complex computational problems',
+      features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Optimization tools', 'Simulation capabilities'],
+      restrictions: ['No weapon development', 'Export control compliance', 'Security protocols'],
+      icon: <Rocket className="w-6 h-6" />
+    },
+    {
+      category: 'Space Technology Solutions',
+      description: 'Space resource intelligence and exploration technology services',
+      features: ['Resource mapping', 'Celestial analysis', 'Exploration data', 'Intelligence platforms'],
+      restrictions: ['No military applications', 'International space law compliance', 'Environmental protection'],
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
+      category: 'Enterprise Solutions',
+      description: 'Comprehensive enterprise technology and infrastructure services',
+      features: ['IT infrastructure', 'Cloud services', 'Security solutions', 'Consulting services'],
+      restrictions: ['Valid business use', 'Compliance requirements', 'Licensing terms'],
+      icon: <Building className="w-6 h-6" />
+    }
+  ];
+
+  const userObligations = [
+    {
+      obligation: 'Acceptable Use',
+      description: 'Use services only for lawful and authorized purposes',
+      details: [
+        'Comply with all applicable laws and regulations',
+        'Respect intellectual property rights',
+        'Maintain security and confidentiality',
+        'No unauthorized access or interference'
+      ],
+      icon: <CheckCircle className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      obligation: 'Account Security',
+      description: 'Maintain the security of your account and credentials',
+      details: [
+        'Use strong, unique passwords',
+        'Enable multi-factor authentication',
+        'Report security incidents immediately',
+        'No sharing of account credentials'
+      ],
+      icon: <Shield className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      obligation: 'Data Compliance',
+      description: 'Ensure compliance with data protection and privacy requirements',
+      details: [
+        'Obtain necessary consents',
+        'Implement appropriate safeguards',
+        'Respect user privacy rights',
+        'Report data breaches promptly'
+      ],
+      icon: <Lock className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      obligation: 'Payment Obligations',
+      description: 'Timely payment of all fees and charges for services',
+      details: [
+        'Pay invoices within specified terms',
+        'Maintain valid payment methods',
+        'Notify of billing disputes',
+        'Comply with pricing agreements'
+      ],
+      icon: <Zap className="w-6 h-6" />,
+      color: 'from-yellow-500 to-orange-500'
+    }
+  ];
+
+  const legalProvisions = [
+    {
+      title: 'Intellectual Property',
+      description: 'All services, software, and content remain our exclusive property',
+      details: [
+        'You retain ownership of your data and content',
+        'We retain rights to our technology and improvements',
+        'No reverse engineering or modification without permission',
+        'Licenses are non-transferable and revocable'
+      ]
+    },
+    {
+      title: 'Limitation of Liability',
+      description: 'Our liability is limited to the amount paid for services',
+      details: [
+        'No liability for indirect or consequential damages',
+        'Exclusions for force majeure events',
+        'Limitations on warranty claims',
+        'Mutual indemnification obligations'
+      ]
+    },
+    {
+      title: 'Termination',
+      description: 'Either party may terminate services with proper notice',
+      details: [
+        '30 days written notice for standard termination',
+        'Immediate termination for material breaches',
+        'Data return and deletion procedures',
+        'Surviving obligations after termination'
+      ]
+    },
+    {
+      title: 'Dispute Resolution',
+      description: 'Mandatory arbitration for all disputes',
+      details: [
+        'Binding arbitration in Delaware',
+        'Governing law is Delaware state law',
+        'Class action waivers',
+        'Appeal rights limited'
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Terms of Service
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Legal terms and conditions governing the use of Zion Tech Group services. 
+              Please read carefully before using our platforms.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#terms-sections"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Read Terms
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Contact Legal Team
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Terms Content */}
+      <section className="py-24 bg-gradient-to-b from-cursor-dark to-cursor-darker">
+        <div className="container-cursor">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <Card className="hover:border-cursor-blue/30">
+              <h2 className="text-3xl font-bold mb-6 text-cursor-blue">1. Acceptance of Terms</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                By accessing and using Zion Tech Group services, you accept and agree to be bound by the terms and provision of this agreement.
+              </p>
+              <div className="flex items-center justify-center gap-4 text-gray-400">
+                <Clock className="w-5 h-5" />
+                <span>Last updated: January 15, 2025</span>
+  );
+};
+
+export default Terms;

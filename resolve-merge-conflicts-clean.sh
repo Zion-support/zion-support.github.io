@@ -12,6 +12,7 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file..."
     
     # Check if file has merge conflicts
+<<<<<<< HEAD
     if grep -q "<<<<<<< HEAD" "$file"; then
         echo "⚠️  Found conflicts in $file, resolving..."
         
@@ -57,6 +58,26 @@ resolve_conflicts() {
             sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
             sed -i '/>>>>>>> /d' "$file"
         fi
+=======
+    if grep -q "        elif [[ "$file" == "package-lock.json" ]]; then
+            echo "📦 Package-lock.json detected, keeping main version..."
+            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
+            echo "⚙️  Config file detected, keeping main version..."
+            sed -i '/        elif [[ "$file" == "*.css" || "$file" == "*.scss" ]]; then
+            echo "🎨 CSS file detected, merging styles..."
+            sed -i '/        elif [[ "$file" == "*.tsx" || "$file" == "*.ts" || "$file" == "*.jsx" || "$file" == "*.js" ]]; then
+            echo "💻 Code file detected, attempting intelligent merge..."
+            # For code files, try to keep both versions where possible
+            sed -i '/        elif [[ "$file" == "*.yml" || "$file" == "*.yaml" ]]; then
+            echo "📋 YAML file detected, keeping main version..."
+            sed -i '/        elif [[ "$file" == "*.md" ]]; then
+            echo "📝 Markdown file detected, merging content..."
+            sed -i '/        elif [[ "$file" == "*.json" ]]; then
+            echo "📊 JSON file detected, keeping main version..."
+            sed -i '/        else
+            echo "📝 Regular file, removing conflict markers..."
+            sed -i '/        fi
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         
         echo "✅ Resolved conflicts in $file"
     fi

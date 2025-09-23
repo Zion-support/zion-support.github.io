@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/LoadingOverlay.js.jsx.backup
 =======
@@ -6,12 +7,26 @@ const React from "react"; "export const LoadingOverlay = ({ visible = false }) =
 <<<<<<< HEAD:backup-merge-conflicts/LoadingOverlay.js.jsx.backup
 =======
 import _React from 'react'; "export const LoadingOverlay = ({ visible = false }) => {"; if(!visible) return null; return ( <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" )}; export default LoadingOverlay; ";"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/src/components/LoadingOverlay.js.jsx
+import _React from 'react'; "export const LoadingOverlay = ({ visible = false }) => {"; if(!visible) return null; return ( <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" )}; export default LoadingOverlay; ";"
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+<<<<<<< HEAD
+import React from \'react\'; \"export const LoadingOverlay = ({ visible = false }) => {\"; if(!visible) return null; return ( <div className=\"fixed inset-0 z-50 flex items-center justify-center bg-black/50\">\" <Loader2 className=\"h-8 w-8 animate-spin text-white\" />\" </div>\" )}; export default LoadingOverlay; \";\"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> main
 =======
 import _React from 'react'; "export const LoadingOverlay = ({ visible = false }) => {"; if(!visible) return null; return ( <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" )}; export default LoadingOverlay; ";"
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/components/LoadingOverlay.js.jsx
+<<<<<<< HEAD
 =======
 import _React from 'react'; "export const LoadingOverlay = ({ visible = false }) => {"; if(!visible) return null; return ( <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" )}; export default LoadingOverlay; ";"
+=======
+<<<<<<< HEAD
+>>>>>>> pr-11914:backup-merge-conflicts/LoadingOverlay.js.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

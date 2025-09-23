@@ -15,8 +15,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "AI Solutions Inc.",
       id: "ai-solutions",
+<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100",
     },
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T12:30:00.000Z",
     rating: 4.9,
@@ -37,8 +41,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "DataMinds",
       id: "dataminds",
+<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
     },
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-15T10:45:00.000Z",
     rating: 4.8,
@@ -57,8 +65,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Hardware", "Deep Learning", "GPU"],
     author: {
       name: "TechGear Pro",
+<<<<<<< HEAD
       id: "techgear",
     },
+=======
+      id: "techgear"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-03-05T09:15:00.000Z",
     rating: 4.7,
@@ -79,8 +91,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "ContentGenius",
       id: "contentgenius",
+<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100",
     },
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-28T14:20:00.000Z",
     rating: 4.6,
@@ -99,8 +115,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     tags: ["Analytics", "Business Intelligence", "Dashboard"],
     author: {
       name: "InsightAnalytica",
+<<<<<<< HEAD
       id: "insightanalytica",
     },
+=======
+      id: "insightanalytica"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-02T11:30:00.000Z",
     rating: 4.5,
@@ -120,8 +140,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     author: {
       name: "VisionTech AI",
       id: "visiontech",
+<<<<<<< HEAD
       avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100",
     },
+=======
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"},
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2023-12-10T16:45:00.000Z",
     rating: 4.8,

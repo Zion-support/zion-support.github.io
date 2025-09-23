@@ -9,6 +9,37 @@ export const metadata = {
 export default function BlogPage() {
   const featuredPosts = [
     {
+
+      id: 'enterprise-agent-safety-2025',
+      title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+      excerpt: 'Deploy autonomous agents with executable policy guardrails, human-in-the-loop controls, and full auditability.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/enterprise-agent-safety.jpg',
+      featured: true
+    },
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+      excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg',
+=======
+      id: 'agent-safety-guardrails-2025',
+      title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
+      excerpt: 'Blueprints for policy engines, interventions, and auditable controls that keep AI agents safe and aligned.',
+      category: 'AI Solutions',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/agent-safety-guardrails.jpg',
+>>>>>>> cursor/create-and-deploy-new-content-4789
+=======
       id: 'ai-foundation-models-2025',
       title: 'Foundation Models in 2025: Practical Enterprise Patterns That Work',
       excerpt: 'Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.',
@@ -17,6 +48,7 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/foundation-models-2025.jpg',
+>>>>>>> origin/chore/add-blog-content-and-promote
       featured: true
     },
     {
@@ -73,24 +105,74 @@ export default function BlogPage() {
       readTime: '10 min read',
       image: '/blog/autonomous-ai.jpg',
       featured: true
+    },
+    {
+      id: 'agentic-supply-chains-2025',
+      title: 'Agentic Supply Chains 2025: Self-Orchestrating Logistics with AI Agents',
+      excerpt: 'Autonomous agents coordinating demand sensing, supplier negotiation, and dynamic routing with safety rails.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/agentic-supply-chains.jpg',
+      featured: true
     }
   ];
 
-  // Inject new featured post
-  featuredPosts.unshift({
-    id: 'agent-safety-red-teaming-2025',
-    title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-    excerpt: 'Scenarios and mitigations to probe and harden multi‑agent systems in production.',
-    category: 'AI Safety',
-    author: 'Dr. Emily Watson',
-    date: '2025-09-15',
-    readTime: '11 min read',
-    image: '/blog/agent-safety-red-teaming.jpg',
-    featured: true
-  });
-
   const recentPosts = [
     {
+
+<<<<<<< HEAD
+      id: 'genai-productivity-benchmarks-2025',
+      title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
+      excerpt: 'A benchmarking framework for time savings, quality lift, and ROI in GenAI workflows.',
+      category: 'Research & Development',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-13',
+      readTime: '8 min read',
+      image: '/blog/genai-productivity-benchmarks.jpg'
+=======
+      id: 'enterprise-agent-safety-2025',
+      title: 'Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale',
+      excerpt: 'A practical playbook for safe, scalable autonomous agent deployments in the enterprise.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/enterprise-agent-safety.jpg'
+>>>>>>> cursor/create-and-deploy-new-content-1633
+    },
+    {
+>>>>>>> 2445d7df832b351361c2d9a20e071d592355fcda
+      id: 'edge-ai-marketplaces',
+      title: 'Edge AI Marketplaces: Low-Latency Autonomous Commerce at the Edge',
+      excerpt: 'Architectures for edge-native agent marketplaces with local policy and cloud sync.',
+      category: 'AI Solutions',
+      author: 'Michael Rodriguez',
+      date: '2025-09-14',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-marketplaces.jpg'
+    },
+    {
+      id: 'multi-agent-supply-chains',
+      title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
+      excerpt: 'Agent-based orchestration to reduce latency and increase resilience across supply networks.',
+      category: 'AI Solutions',
+      author: 'Dr. Sarah Chen',
+      date: '2025-09-12',
+      readTime: '8 min read',
+      image: '/blog/multi-agent-supply-chains.jpg'
+=======
+      id: 'edge-ai-agents-2025',
+      title: 'Edge AI Agents: Real-Time Intelligence Across Devices and Locations',
+      excerpt: 'Deploy low-latency, bandwidth‑efficient agents at the edge for on‑site decisioning and resilience.',
+      category: 'IoT & Edge',
+      author: 'Michael Rodriguez',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/edge-ai-agents.jpg'
+>>>>>>> cursor/create-and-deploy-new-content-4789
+=======
       id: 'enterprise-agent-guardrails',
       title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
       excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
@@ -99,6 +181,7 @@ export default function BlogPage() {
       date: '2025-09-14',
       readTime: '8 min read',
       image: '/blog/enterprise-agent-guardrails.jpg'
+>>>>>>> origin/chore/add-blog-content-and-promote
     },
     {
       id: 'autonomous-it-operations',
@@ -139,46 +222,6 @@ export default function BlogPage() {
       date: '2024-01-12',
       readTime: '6 min read',
       image: '/blog/ai-cybersecurity.jpg'
-    },
-    {
-      id: 'edge-ai-on-device-inference',
-      title: 'Edge AI: On-Device Inference for Privacy and Speed',
-      excerpt: 'How to deploy efficient on-device models to reduce latency and protect user data.',
-      category: 'AI Solutions',
-      author: 'Priya Natarajan',
-      date: '2024-01-18',
-      readTime: '7 min read',
-      image: '/blog/edge-ai.jpg'
-    },
-    {
-      id: 'autonomous-agents-in-enterprise',
-      title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls',
-      excerpt: 'Design patterns for safe, measurable, and ROI-positive agent deployments across workflows.',
-      category: 'AI Solutions',
-      author: 'Dr. Kleber Santos',
-      date: '2024-01-16',
-      readTime: '9 min read',
-      image: '/blog/enterprise-agents.jpg'
-    },
-    {
-      id: 'post-quantum-cryptography-roadmap',
-      title: 'Post-Quantum Cryptography: A Practical Migration Roadmap',
-      excerpt: 'Assessing risk, selecting algorithms, and planning phased rollouts to PQC.',
-      category: 'Quantum Computing',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-14',
-      readTime: '8 min read',
-      image: '/blog/pqc-roadmap.jpg'
-    },
-    {
-      id: 'llm-evals-in-production',
-      title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics',
-      excerpt: 'Move beyond static benchmarks with continuous evals, guardrails, and feedback loops.',
-      category: 'Data Science',
-      author: 'Michael Rodriguez',
-      date: '2024-01-11',
-      readTime: '7 min read',
-      image: '/blog/llm-evals.jpg'
     },
     {
       id: 'data-science-business-intelligence',
@@ -232,37 +275,15 @@ export default function BlogPage() {
     }
   ];
 
-  // Add new recent posts
-  recentPosts.unshift(
-    {
-      id: 'agent-safety-red-teaming-2025',
-      title: 'Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems',
-      excerpt: 'Playbooks to systematically evaluate and improve multi‑agent safety.',
-      category: 'AI Safety',
-      author: 'Dr. Emily Watson',
-      date: '2025-09-15',
-      readTime: '11 min read',
-      image: '/blog/agent-safety-red-teaming.jpg'
-    },
-    {
-      id: 'ai-automation-case-studies-2025',
-      title: 'AI Automation Case Studies 2025: From MTTR to Margin Uplift',
-      excerpt: 'Five deployments with measurable KPIs and lessons learned.',
-      category: 'Case Studies',
-      author: 'Michael Rodriguez',
-      date: '2025-09-12',
-      readTime: '9 min read',
-      image: '/blog/ai-automation-case-studies.jpg'
-    }
-  );
-
   const categories = [
-    { name: 'All Posts', count: 16, active: true },
+    { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
-    { name: 'AI Solutions', count: 4, active: false },
-    { name: 'Quantum Computing', count: 3, active: false },
+    { name: 'AI Solutions', count: 3, active: false },
+
+    { name: 'Quantum Computing', count: 2, active: false },
     { name: 'Cybersecurity', count: 1, active: false },
-    { name: 'Data Science', count: 2, active: false },
+    { name: 'IoT & Edge', count: 1, active: false },
+    { name: 'Data Science', count: 1, active: false },
     { name: 'AI Ethics', count: 1, active: false },
     { name: 'Infrastructure', count: 1, active: false },
     { name: 'Content Marketing', count: 1, active: false }
@@ -271,7 +292,7 @@ export default function BlogPage() {
   const tags = [
     'AI Consciousness', 'Quantum Computing', 'Machine Learning', 'Cybersecurity',
     'Data Science', 'Autonomous Systems', 'Business Intelligence', 'Cloud Computing',
-    'AI Ethics', 'Research', 'Innovation', 'Technology Trends'
+    'AI Ethics', 'AI Safety', 'Supply Chain', 'Innovation', 'Technology Trends'
   ];
 
   return (
@@ -287,10 +308,20 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Promo Banner - New Article */}
+      {/* Promo Banner - New Article */
+      }
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
+
+            href="/blog/enterprise-agent-safety-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AS
+=======
             href="/blog/ai-foundation-models-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Foundation Models in 2025: Practical Enterprise Patterns That Work"
@@ -298,6 +329,7 @@ export default function BlogPage() {
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 FM
+>>>>>>> origin/chore/add-blog-content-and-promote
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
@@ -305,10 +337,17 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+
+                  Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A practical playbook for policy guardrails, escalation paths, and auditable autonomy.
+=======
                   Foundation Models in 2025: Practical Enterprise Patterns That Work
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   Battle-tested patterns for adapting, evaluating, and governing foundation models across core enterprise workflows.
+>>>>>>> origin/chore/add-blog-content-and-promote
                 </p>
               </div>
               <div className="text-blue-600 font-medium whitespace-nowrap">Read now →</div>

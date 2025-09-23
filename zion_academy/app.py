@@ -34,6 +34,7 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
+<<<<<<< HEAD
     """Homepage with featured and latest courses."""
     with app.app_context():
         latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
@@ -44,6 +45,12 @@ def index():
         latest_courses=latest_courses,
         featured_courses=featured_courses,
     )
+=======
+    """Homepage with hero, latest updates, and quick links."""
+    with app.app_context():
+        latest_updates = Update.query.filter_by(is_published=True).order_by(desc(Update.created_at)).limit(3).all()
+    return render_template('index.html', title='Welcome to Zion Academy', latest_updates=latest_updates)
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')

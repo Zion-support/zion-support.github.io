@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 function main() {
   const outDir = path.join(__dirname, '../abi');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
@@ -12,8 +16,12 @@ function main() {
     ['DelegateRegistry.sol', 'DelegateRegistry'],
     ['ConstitutionStorage.sol', 'ConstitutionStorage'],
     ['Treasure/Disbursements.sol', 'Disbursements'],
+<<<<<<< HEAD
     ['Treasure/EpochManager.sol', 'EpochManager'],
   ];
+=======
+    ['Treasure/EpochManager.sol', 'EpochManager']];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   for (const [rel, name] of abis) {
     const p = path.join(artifactsDir, rel, `${name}.json`);
     if (fs.existsSync(p)) {

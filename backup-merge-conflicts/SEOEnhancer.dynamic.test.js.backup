@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/SEOEnhancer.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/SEOEnhancer.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/SEOEnhancer.dynamic.test.js
 import React from 'react';
@@ -22,7 +26,11 @@ describe('SEOEnhancerdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOEnhancerdynamic from "./components/SEOEnhancer.dynamic"; describe("SEOEnhancerdynamic",() => { test("renders without crashing",() => { render(<SEOEnhancerdynamic />); expect(screen.getByTestId("seoenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOEnhancerdynamic />)}); test("handles user interactions",() => { render(<SEOEnhancerdynamic />)}); test("applies correct styling",() => { render(<SEOEnhancerdynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/SEOEnhancer.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic'; describe('SEOEnhancerdynamic',() => { test('renders without crashing',() => { render(<SEOEnhancerdynamic />); expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOEnhancerdynamic />)}); test('handles user interactions',() => { render(<SEOEnhancerdynamic />)}); test('applies correct styling',() => { render(<SEOEnhancerdynamic />)})});
 >>>>>>> main
 =======

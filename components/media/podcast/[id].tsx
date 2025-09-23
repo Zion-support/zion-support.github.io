@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+"use client";
+import React{ useEffectuseState } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useRouter } from 'next/router';
 
 export default function EpisodePage() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
+<<<<<<< HEAD
   const [episode, setEpisode] = useState<any>(null);
+=======
+  const [episodesetEpisode] = useState<any>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     if (!id) return;
@@ -13,7 +22,11 @@ export default function EpisodePage() {
       const data = await res.json();
       setEpisode(data.episode);
     })();
+<<<<<<< HEAD
   }, [id]);
+=======
+  }[id]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (!episode) return <div>Loading…</div>;
 

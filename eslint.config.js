@@ -1,70 +1,54 @@
+<<<<<<< HEAD
+// ESLint flat config for ESLint v9. Keep minimal to avoid crashes.
+=======
+// Flat ESLint config for ESLint v9+
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
 export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      parser: tsParser,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tsPlugin
-    },
-    rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      'no-console': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 2020,
-        ecmaFeatures: { jsx: true }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tsPlugin
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
-    }
-  },
+<<<<<<< HEAD
+	{
+		ignores: [
+			'node_modules/**',
+			'.next/**',
+			'automation/**',
+			'apps.backup/**',
+			'.temp_backup_components/**',
+			'backup-problematic-files/**',
+			'recovered-branches/**',
+			'server/**',
+			'zion-os/**',
+			'zion-os.broken/**',
+			'zion-os.disabled/**',
+			'zion-os.corrupted/**',
+			'ts_files_backup/**',
+			'temp_exclude/**',
+			'corrupted_backup/**',
+			'pages.disabled/**',
+			'pages.bak/**',
+			'components.disabled/**',
+			'components.disabled_full/**',
+			'pages.disabled_auto/**',
+			'pages.disabled_full/**',
+			'pages_backup_before_cleanup/**',
+			'pages.broken/**',
+			'pages.corrupted',
+			'pages.corrupted.*',
+			'dao/**',
+			'tests.disabled/**',
+			'src.disabled/**',
+			'src_backup_temp/**',
+			'src_backup/**',
+			'plugins/wallet-connector/cypress/**',
+			'components/api/docs/**',
+			'data/api-docs/**',
+			'e2e/**',
+		],
+	},
+=======
+  // Global ignores for this workspace
   {
     ignores: [
       'node_modules/**',
@@ -73,214 +57,114 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      '.scripts/**',
-      'automation/**',
+      'coverage/**',
       'public/**',
-      'netlify/**',
-      '.temp_backup_components/**',
-      'pages_backup/**',
-      'pages-disabled/**',
-      'pages.blog.disabled/**',
-      'pages.__backup/**',
-      'pages._archive_corrupted/**',
-      'pages._quarantine/**',
-      'pages*/**',
-      'ecosystem*.cjs',
-      '**/*.cjs',
-      'zion-os.disabled/**',
-      'zion-website/.next/**',
-      'zion-os/.next/**',
-      'zion.app/**',
-      'zion_academy/**',
-      // Problematic or legacy directories to exclude from linting
-      'pages.broken/**',
-      'pages_backup_before_cleanup/**',
-      'pages_backup_conflicts/**',
-      'pages_backup_conflict/**',
-      'pages.old/**',
-      'pages_api.disabled/**',
-      // Archived backups with intentionally broken snapshots
-      'pages.__backup/**',
-      'solutions.disabled/**',
-      'solutions/**',
-      'server/**',
-      'supabase/**',
-      'services/**',
-      // Additional ignores to avoid linting backups/alt projects
-      'ts_files_backup/**',
-      'src.broken/**',
-      'src-corrupted/**',
-      'src.corrupted/**',
-      'src.disabled/**',
-      // Broken/corrupted/legacy page directories
-      'pages.broken/**',
-      'pages.corrupted*/**',
-      'pages.old/**',
-      'pages_api.disabled/**',
-      'pages_backup_before_cleanup/**',
-      'pages_backup_conflict*/**',
-      'pages_backup_conflicts/**',
-      // Ensure hyphenated disabled dirs are ignored
-      'pages-disabled/**',
-      'pages_disabled/**',
-      'pages.disabled*/**',
-      // Additional disabled/backup page dirs
-      'pages.__backup/**',
-      'pages._quarantine/**',
-      'pages.blog.disabled/**',
-      // Disabled solution dirs
-      'solutions.disabled/**',
-      // Broad excludes for noisy or legacy dirs not part of active root app
-      'src/**',
-      'tests/**',
-      'test/**',
-      'test*/**',
-      'tests.disabled/**',
-      'test_*/**',
-      '**/*.spec.*',
-      '**/*.test.*',
-      'test-build/**',
-      'test_build/**',
-      '**/__tests__/**',
-      'src.pages.disabled/**',
-      'types/**',
-      'types.disabled/**',
-      'utils/**',
-      'utils.disabled/**',
-      // Legacy/unrelated backend and utilities
-      'server/**',
-      'services/**',
-      'solutions/**',
-      'solutions.disabled/**',
-      'sdk/**',
-      'supabase/**',
-      'token/**',
-      'remote/**',
-      'api/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion-ai-assistant/**',
-      'recovered-branches/**',
+      'automation/**',
+      'apps.backup/**',
       'backup/**',
       'backups/**',
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
-      'pages_backup/**',
-      'pages.__backup/**',
-      'pages._archive_corrupted/**',
-      'pages._quarantine/**',
-      'pages.blog.disabled/**',
-      'pages.disabled/**',
+<<<<<<< HEAD
+      'api/**',
+      'server/**',
+      'netlify/**',
+      'app_backup/**',
+      'app-disabled/**',
+      'app-minimal/**',
+      'apps.backup/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'pages-disabled/**',
       'pages.bak/**',
+      'pages_backup_before_cleanup/**',
       'pages.broken/**',
-      'pages.corrupted*/**',
+      'pages.corrupted*',
+      'recovered-branches/**',
+      'temp_backup/**',
+      'temp_exclude/**',
+      'tests.disabled/**',
+      'ts_files_backup/**',
+      'zion-os/**',
+      'zion-os.*',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'zion_academy/**',
+      'services/**',
       'solutions/**',
       'solutions.disabled/**',
-      'services/**',
-      'apps.backup/**',
-      'temp_*/**',
-      'temp-*/**',
-      'temp/**',
-      'temp_backup/**',
-      'temp_broken_files/**',
-      'temp_components/**',
-      'temp_components.disabled/**',
-      'temp_disabled/**',
-      'temp-disabled-pages/**',
-      'temp_exclude/**',
-      'temp-problematic-pages/**',
-      'temp_working/**',
       'src_backup/**',
       'src_backup_temp/**',
-      'services_backup/**',
+      'src/**/*.backup/**',
+      'src/**/*.bak/**',
+      'src/**/*.disabled/**',
       'styles_backup/**',
       'workflow_backups/**',
-      // Broadly ignore known noisy directories/files causing parse errors
-      'src/**',
-      'src.pages.disabled/**',
-      'src/pages_backup/**',
       'tests/**',
-      'tests.disabled/**',
-      'test_build/**',
       'test/**',
-      'recovered-branches/**',
-      'app.disabled/**',
-      'apps.backup/**',
-      'app_backup/**',
-      'app.disabled/**',
-      'supabase/**',
-      'token/**',
-      'talent/**',
-      'pages.bak/**',
-      'pages_backup_conflict/**',
-      'backup/**',
-      'backups/**',
-      'backup-merge-conflicts/**',
-      'corrupted-files-backup/**',
-      '**/*.backup.*',
-      '**/*.bak/**',
-      '**/*conflict*',
-      '**/*-backup.*',
-      'performance-optimization.js',
-      'performance-optimizations.js',
-      'postcss.config-backup.js',
-      'run-automation*.js',
-      'run-*.js',
-      'security-config.js',
-      'simple-*.js',
-      'seo-improvements.js',
-      'server.mjs',
-      'selective-merge.js',
-      'quantum-neural-network-platform.jsx',
-      'seed.js',
-      'start-*.js',
-      'test-*.js',
-      'structural-fix.js',
-      'syntax-fixer.js',
-      'run-automation.js',
-      'run-complete-automation.js',
-      'run-automation-safely.js',
-      'simple-merge.js',
-      'simple-test.js',
-      'performance-optimization.js',
-      'performance-optimizations.js',
-      'selective-merge.js',
-      'seo-improvements.js',
-      'security-config.js',
-      'server.mjs',
-      'simple-server.js',
-      'seed.js',
-      'quantum-neural-network-platform.jsx',
-      'test-utils.jsx',
-      'vite.config-backup.ts',
-      // Individual utility scripts that are not part of app linting
-      'workbox-config.js',
-      'verify-and-complete-merges.js',
-      'ultimate-fix.js',
-      'ultimate-merge-conflict-resolver.js',
-      'start-*.js',
-      'structural-fix.js',
-      'syntax-fixer.js',
-      'test-*.js',
-      // Broad patterns for maintenance/merge scripts and temporary utilities
-      '*merge*.js',
-      '*conflict*.js',
-      '*resolve*.js',
-      '*optimization*.js',
-      '*optimizations*.js',
-      'run-*.js',
-      'restore-*.js',
-      'simple-*.js',
-      'security-config.js',
-      'seed.js',
-      'script.js',
-      'server.mjs',
-      'test-utils.jsx',
-      '**/static/**',
+      'test_build/**',
+      '**/jest.setup.*',
       '**/*.min.js'
+=======
+      'recovered-branches/**',
+      'server/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'ts_files_backup/**',
+      'types/**',
+      'types.disabled/**',
+      'utils/**',
+      'utils.disabled/**',
+      'zion_academy/**',
+      'generated-services/**',
+      'token/**',
+      'workbox-config.js',
+      'ultimate-*.js',
+      'ultimate*.cjs',
+      'verify-and-complete-merges.js',
+      'ultimate_merge_and_improve.cjs',
+      'ultimate-merge-conflict-resolver.js'
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
     ]
+  },
+  js.configs.recommended,
+  {
+    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+<<<<<<< HEAD
+      parser: tsParser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: { ...globals.browser, ...globals.node }
+=======
+      parserOptions: { ecmaFeatures: { jsx: true } }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks
+    },
+    settings: { react: { version: 'detect' } },
+    rules: {
+<<<<<<< HEAD
+      'no-empty': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+      ],
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+=======
+      'react/react-in-jsx-scope': 'off'
+    },
+    settings: { react: { version: 'detect' } }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0efa
   }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
 ];

@@ -12,7 +12,10 @@ export interface AddedService {
   rating?: number;
   customerCount?: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',
@@ -169,4 +172,7 @@ export const added2025Services: AddedService[] = [
     customerCount: 640
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

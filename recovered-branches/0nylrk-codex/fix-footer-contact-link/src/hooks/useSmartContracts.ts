@@ -30,8 +30,12 @@ export function useSmartContracts() {
           endDate: values.endDate?.toISOString(),
           paymentTerms: values.paymentTerms,
           paymentAmount: values.paymentAmount,
+<<<<<<< HEAD
           additionalClauses: values.additionalClauses || [],
         }
+=======
+          additionalClauses: values.additionalClauses || []}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       });
       
       if (error) throw error;

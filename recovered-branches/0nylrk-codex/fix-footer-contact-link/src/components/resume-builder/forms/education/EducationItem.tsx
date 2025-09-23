@@ -1,5 +1,6 @@
 
 import { format } from 'date-fns';
+<<<<<<< HEAD
 import { Edit, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,6 +8,15 @@ import { Education } from '@/types/resume';
 import { EducationItemProps } from './types';
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+=======
+EditTrash2
+import { Button } from '@/components/ui/button';
+import { CardContent } from '@/components/ui/card';
+import { Education } from '@/types/resume';
+import { EducationItemProps } from './types';
+
+export function EducationItem({ educationEditonDelete }: EducationItemProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -20,11 +30,19 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             <p className="text-xs text-muted-foreground mt-1">
               {typeof education.start_date === 'string' 
                 ? education.start_date 
+<<<<<<< HEAD
                 : format(education.start_date, 'MMM yyyy')} - {education.is_current 
                 ? 'Present' 
                 : (education.end_date ? (typeof education.end_date === 'string' 
                   ? education.end_date 
                   : format(education.end_date, 'MMM yyyy')) : '')}
+=======
+                : format(education.start_date'MMM yyyy')} - {education.is_current 
+                ? 'Present' 
+                : (education.end_date ? (typeof education.end_date === 'string' 
+                  ? education.end_date 
+                  : format(education.end_date'MMM yyyy')) : '')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
             {education.location && (
               <p className="text-xs text-muted-foreground">{education.location}</p>

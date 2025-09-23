@@ -8,19 +8,33 @@ interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
   isSaved: boolean;
+<<<<<<< HEAD
   onToggleSave?: (id: string, isSaved: boolean) => void;
+=======
+  onToggleSave?: (id: stringisSaved: boolean) => void;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   isAuthenticated: boolean;
 }
 
 export function TalentCardSaveButton({ 
+<<<<<<< HEAD
   profileId, 
   profileName,
   isSaved, 
+=======
+  profileId
+  profileName,
+  isSaved
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast();
+<<<<<<< HEAD
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+=======
+  const [localIsSavedsetLocalIsSaved] = React.useState(isSaved);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -37,7 +51,11 @@ export function TalentCardSaveButton({
     
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {
+<<<<<<< HEAD
       onToggleSave(profileId, !localIsSaved);
+=======
+      onToggleSave(profileId!localIsSaved);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
     
     toast({
@@ -57,7 +75,11 @@ export function TalentCardSaveButton({
     >
       <Heart 
         className={cn(
+<<<<<<< HEAD
           "h-4 w-4 transition-colors", 
+=======
+          "h-4 w-4 transition-colors"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />

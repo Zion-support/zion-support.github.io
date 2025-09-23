@@ -3,7 +3,11 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+<<<<<<< HEAD
 import { User, Mail, AtSign, GraduationCap } from "lucide-react";
+=======
+import { UserMailAtSignGraduationCap } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,6 +17,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,
 } from "@/components/ui/form";
 
@@ -21,6 +26,14 @@ const profileSchema = z.object({
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
   headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters"),
 });
+=======
+  FormMessage} from "@/components/ui/form";
+
+const profileSchema = z.object({
+  displayName: z.string().min(2"Name must be at least 2 characters"),
+  bio: z.string().min(10"Bio must be at least 10 characters").max(500"Bio must be less than 500 characters"),
+  headline: z.string().min(5"Headline must be at least 5 characters").max(100"Headline must be less than 100 characters")});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
@@ -29,15 +42,23 @@ interface ProfileSetupProps {
   userType: string;
 }
 
+<<<<<<< HEAD
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
+=======
+export function ProfileSetup({ onCompleteuserType }: ProfileSetupProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema),
     defaultValues: {
       displayName: "",
       bio: "",
+<<<<<<< HEAD
       headline: "",
     },
   });
+=======
+      headline: ""}});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const getTypeLabel = () => {
     switch (userType) {
@@ -93,7 +114,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                 <FormControl>
                   <div className="relative">
                     <Input
+<<<<<<< HEAD
                       placeholder={`e.g., ${
+=======
+                      placeholder={`e.g.${
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
                         userType === "talent" ? "Senior Motion Designer specialized in 3D Animation" :
                         "Creative Director at XYZ Studios"
@@ -124,6 +149,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   />
                 </FormControl>
                 <FormMessage className="text-red-400" />

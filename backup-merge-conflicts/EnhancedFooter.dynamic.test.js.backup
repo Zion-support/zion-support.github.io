@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/EnhancedFooter.dynamic.test.js.backup
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:__tests__/EnhancedFooter.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:__tests__/EnhancedFooter.dynamic.test.js
 import React from 'react';
@@ -22,7 +26,11 @@ describe('EnhancedFooterdynamic', () => {
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic"; describe("EnhancedFooterdynamic",() => { test("renders without crashing",() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedFooterdynamic />)}); test("handles user interactions",() => { render(<EnhancedFooterdynamic />)}); test("applies correct styling",() => { render(<EnhancedFooterdynamic />)})});''"
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:__tests__/EnhancedFooter.dynamic.test.js
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic'; describe('EnhancedFooterdynamic',() => { test('renders without crashing',() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedFooterdynamic />)}); test('handles user interactions',() => { render(<EnhancedFooterdynamic />)}); test('applies correct styling',() => { render(<EnhancedFooterdynamic />)})});
 >>>>>>> main
 =======

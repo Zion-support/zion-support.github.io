@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+"use client";
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Link from 'next/link';
 
 const UltimateContentShowcase2025: React.FC = () => {

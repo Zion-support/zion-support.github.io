@@ -29,11 +29,16 @@ import { realServicesQ12025 } from '../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
 import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+<<<<<<< HEAD
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
+=======
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
@@ -46,8 +51,13 @@ import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+=======
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Combine all services
   const allServices = [
@@ -93,11 +103,16 @@ export default function ServicesPage() {
     ...emergingTech2025Services,
     ...realMarketAugmentations2025,
     ...innovative2026MicroSaasServicesV2,
+<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV2,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV2,
     ...enterpriseIT2026ServicesV4,
+=======
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ...aiAutonomousServices2026,
     ...quantumSpaceTechServices2026,
     ...metaverseDigitalRealityServices2026,
@@ -141,6 +156,7 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { advancedAIServices } from '../data/advanced-ai-services';
 import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
 
+<<<<<<< HEAD
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -294,6 +310,10 @@ import { useRouter } from 'next/router';
 export default function Services() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+=======
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
@@ -308,6 +328,7 @@ export default function Services() {
     ...blockchainEmergingTechServices
   ], []);
 
+<<<<<<< HEAD
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -398,6 +419,44 @@ export default function Services() {
         return <GraduationCap className="w-6 h-6 text-yellow-400" />;
       default:
         return <Shield className="w-6 h-6 text-gray-400" />;
+=======
+  // Get unique categories
+  const categories = useMemo(() => {
+    const cats = [...new Set(allServices.map(service => service.category))];
+    return ['all', ...cats.sort()];
+  }, [allServices]);
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
+  ];
+
+  // Get all categories
+  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
+    Array.isArray(s.category) ? s.category[0] : s.category
+  )))];
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 
     // Sort services
@@ -428,6 +487,7 @@ export default function Services() {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => service.category === activeCategory);
@@ -445,6 +505,8 @@ export default function Services() {
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -603,6 +665,7 @@ export default function Services() {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 
       <EnhancedFooter />
     </>
@@ -724,6 +787,8 @@ export default function Services() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
@@ -982,6 +1047,10 @@ export default function Services() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default ServicesPage;
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

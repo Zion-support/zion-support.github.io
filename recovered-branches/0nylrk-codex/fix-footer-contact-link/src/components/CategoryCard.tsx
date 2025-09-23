@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
+=======
+import React{ ReactNode } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { cn } from "@/lib/utils";
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
@@ -17,7 +21,11 @@ interface CategoryCardProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+=======
+export function CategoryCard({ titledescriptioniconcolorcountclassName }: CategoryCardProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Create a URL-friendly slug from the category title
   const slug = slugify(title);
 

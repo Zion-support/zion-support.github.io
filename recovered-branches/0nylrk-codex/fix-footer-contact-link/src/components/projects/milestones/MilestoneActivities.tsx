@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+=======
+import React{ useStateuseEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { CardContentCardHeaderCardTitle } from '@/components/ui/card';
+import { AvatarFallbackAvatarImage } from '@/components/ui/avatar';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { format } from 'date-fns';
 import { Skeleton } from '@/components/ui/skeleton';
 
@@ -29,29 +36,49 @@ interface Activity {
 }
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
+<<<<<<< HEAD
   const [activities, setActivities] = useState<Activity[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+=======
+  const [activitiesetActivities] = useState<Activity[]>([]);
+  const [isLoadingsetIsLoading] = useState(true);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     async function fetchActivities() {
       try {
         setIsLoading(true);
         
+<<<<<<< HEAD
         const { data, error } = await supabase
+=======
+        const { dataerror } = await supabase
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           .from('milestone_activities')
           .select(`
             *,
             milestone:milestone_id(title),
+<<<<<<< HEAD
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('project_id', projectId)
           .order('created_at', { ascending: false });
+=======
+            created_by_profile:profiles!user_id(display_nameavatar_url)
+          `)
+          .eq('project_id'projectId)
+          .order('created_at'{ ascending: false });
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
         if (error) throw error;
         
         setActivities(data || []);
       } catch (err) {
+<<<<<<< HEAD
         console.error('Error fetching milestone activities:', err);
+=======
+        console.error('Error fetching milestone activities:'err);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } finally {
         setIsLoading(false);
       }
@@ -60,7 +87,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
     if (projectId) {
       fetchActivities();
     }
+<<<<<<< HEAD
   }, [projectId]);
+=======
+  }[projectId]);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
@@ -73,14 +104,22 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       case 'deliverable_added':
         return 'added a deliverable';
       default:
+<<<<<<< HEAD
         return activity.action.replace(/_/g, ' ');
+=======
+        return activity.action.replace(/_/g' ');
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   }
 
   if (isLoading) {
     return (
       <div className="space-y-4">
+<<<<<<< HEAD
         {[1, 2, 3].map((i) => (
+=======
+        {[123].map((i) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Card key={i}>
             <CardContent className="p-6">
               <div className="flex items-center space-x-4">
@@ -130,7 +169,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
                       {getActivityDescription(activity)}
                     </span>
                     <span className="text-muted-foreground text-xs">
+<<<<<<< HEAD
                       {format(new Date(activity.created_at), 'MMM d, yyyy h:mm a')}
+=======
+                      {format(new Date(activity.created_at)'MMM dyyyy h:mm a')}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     </span>
                   </div>
                   <p className="text-sm">

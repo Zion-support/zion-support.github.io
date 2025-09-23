@@ -57,8 +57,12 @@ export function useFraudPreventionSignup() {
           toast({
             title: "Signup blocked",
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
+<<<<<<< HEAD
             variant: "destructive",
           });
+=======
+            variant: "destructive"});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           return false;
         }
         
@@ -79,6 +83,10 @@ export function useFraudPreventionSignup() {
   
   return {
     isCheckingFraud,
+<<<<<<< HEAD
     checkFraudBeforeSignup,
   };
+=======
+    checkFraudBeforeSignup};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

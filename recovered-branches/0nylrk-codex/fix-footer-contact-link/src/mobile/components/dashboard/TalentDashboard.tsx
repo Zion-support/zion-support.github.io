@@ -1,9 +1,16 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+=======
+import { CardContentCardHeaderCardTitleCardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ChevronRightFileTextImageClockZapBookOpen } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Link } from "react-router-dom";
 
 export function TalentDashboard() {

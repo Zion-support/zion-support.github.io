@@ -16,9 +16,15 @@ interface ResumeStepContentProps {
 }
 
 export const ResumeStepContent = ({ 
+<<<<<<< HEAD
   activeTab, 
   resume, 
   onNextStep, 
+=======
+  activeTab
+  resume
+  onNextStep
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onPrevStep 
 }: ResumeStepContentProps) => {
   return (
@@ -29,7 +35,11 @@ export const ResumeStepContent = ({
           initialData={resume?.basic_info}
           onSave={(data) => {
             // Here you would typically save the data to your backend
+<<<<<<< HEAD
             console.log("Saving basic info:", data);
+=======
+            console.log("Saving basic info:"data);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           onComplete={onNextStep} 
         />

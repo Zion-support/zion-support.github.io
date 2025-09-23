@@ -1,13 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:src/utils/productionLogger.ts
+<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> pr-11913:src_backup_temp/utils/productionLogger.ts
 export function logErrorToProduction(message: string, error?: unknown): void {
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env[&apos;NODE_ENV&apos;] === &apos;development&apos;) { } }
+<<<<<<< HEAD
 =======
 =======
 export function logErrorToProduction("message": 'string',error?: "unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message",error)} }
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function logErrorToProduction("message": string, error?: unknown): void {
 >>>>>>> main
 >>>>>>> pr-11935
@@ -15,12 +23,17 @@ export function logErrorToProduction("message": string, error?: unknown): void {
   // For now, just console.error in development
   if (process.env['NODE_ENV'] === 'development') {
     console.error(message, error)}
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
 <<<<<<< HEAD
   // TODO: Implement production error logging service';
 }';';
 =======
 =======
+=======
+  // TODO: Implement production error logging service';
+}';';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function logErrorToProduction(message: 'string',error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -28,5 +41,15 @@ export function logErrorToProduction(message: 'string',error?: unknown): void { 
   // "TODO": Implement production error logging service
 }
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main:src_backup_temp/utils/productionLogger.ts
+=======
+>>>>>>> pr-11913:src_backup_temp/utils/productionLogger.ts
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

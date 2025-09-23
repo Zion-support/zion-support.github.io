@@ -1,0 +1,107 @@
+import React, { useEffect, useRef } from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const lazyElementsRef = useRef<Set<Element>>(new Set());
+
+  useEffect(() => {
+    // Initialize Intersection Observer for lazy loading
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add('animate-fade-in');
+            element.classList.remove('opacity-0');
+            observerRef.current?.unobserve(element);
+            lazyElementsRef.current.delete(element);
+          }
+        });
+      },
+      {
+        rootMargin: '50px 0px',
+        threshold: 0.1,
+      }
+    );
+
+    // Observe all elements with lazy-load class
+    const lazyElements = document.querySelectorAll('.lazy-load');
+    lazyElements.forEach((element) => {
+      element.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+      observerRef.current?.observe(element);
+      lazyElementsRef.current.add(element);
+    });
+
+    // Performance monitoring
+    const performanceObserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime);
+        }
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+        if (entry.entryType === 'layout-shift') {
+          console.log('CLS:', entry.value);
+        }
+      });
+    });
+
+    performanceObserver.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/ai-showcase.jpg',
+        '/images/quantum-computing.jpg'
+      ];
+
+      criticalImages.forEach((src) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadCriticalResources();
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+      });
+    };
+
+    optimizeImages();
+
+    // Cleanup
+    return () => {
+      if (observerRef.current) {
+        lazyElementsRef.current.forEach((element) => {
+          observerRef.current?.unobserve(element);
+        });
+        observerRef.current.disconnect();
+      }
+      performanceObserver.disconnect();
+    };
+  }, []);
+
+  return (
+    <div className="performance-optimized">
+      {children}
+    </div>
+  );
+}

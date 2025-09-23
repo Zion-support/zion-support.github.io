@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import React{ useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Sparkles } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { AIListingForm } from "./AIListingForm";
@@ -28,10 +34,17 @@ interface AIListingGeneratorProps {
   };
 }
 
+<<<<<<< HEAD
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+=======
+export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {
+  const { toast } = useToast();
+  const [isLoadingsetIsLoading] = useState(false);
+  const [generatedContentsetGeneratedContent] = useState<GeneratedContent | null>(null);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleGenerate = async ({
     title,
@@ -47,8 +60,13 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     setIsLoading(true);
     
     try {
+<<<<<<< HEAD
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
+=======
+      const { dataerror } = await supabase.functions.invoke('ai-listing-generator'{
+        body: { titlecategorykeyFeaturestargetAudience }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       });
 
       if (error) {
@@ -65,7 +83,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "AI has created optimized listing content for you."
       });
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error generating content:", error);
+=======
+      console.error("Error generating content:"error);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       toast({
         title: "Generation Failed",
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
@@ -95,7 +117,11 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
             AI Listing Optimizer
           </CardTitle>
           <p className="text-sm text-zion-slate-light">
+<<<<<<< HEAD
             Provide basic information and let AI generate optimized, SEO-friendly content for your listing
+=======
+            Provide basic information and let AI generate optimizedSEO-friendly content for your listing
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </p>
         </CardHeader>
         <CardContent>

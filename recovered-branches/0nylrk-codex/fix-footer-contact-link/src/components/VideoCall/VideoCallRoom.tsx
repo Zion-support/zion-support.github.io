@@ -1,6 +1,10 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+=======
+import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 
 interface VideoCallRoomProps {
@@ -11,7 +15,11 @@ interface VideoCallRoomProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+=======
+export function VideoCallRoom({ roomtokenserverUrlonDisconnectclassName }: VideoCallRoomProps) {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Card className={className || "w-full max-w-3xl mx-auto"}>
       <CardHeader>

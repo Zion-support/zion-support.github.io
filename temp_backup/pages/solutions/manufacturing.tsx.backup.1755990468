@@ -1,0 +1,32 @@
+import React from 'react';
+import Layout from '../../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { 
+  Cpu, Brain, Shield, Zap, BarChart3, Settings, 
+  CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
+} from 'lucide-react';
+import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturisticBackground2045';
+
+const ManufacturingSolutionsPage: React.FC = () => {
+  const solutions = [
+    {
+            </motion.div>
+          </div>
+        </section>
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+};
+
+export default ManufacturingSolutionsPage;

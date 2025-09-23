@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React{ useState } from "react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
 
@@ -10,8 +14,13 @@ interface TalentCardContentProps {
   skills: string[] | undefined;
 }
 
+<<<<<<< HEAD
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
+=======
+export function TalentCardContent({ summarybiotimezoneskills }: TalentCardContentProps) {
+  const [isHoveringsetIsHovering] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div>

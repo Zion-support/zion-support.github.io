@@ -18,12 +18,25 @@ export function Checkbox(...args[]):  {
     </label>;
   );
 }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:backup-merge-conflicts/checkbox.tsx.backup
+<<<<<<< HEAD
+';
+export default checkbox;;';;';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import React from 'react'; interface CheckboxProps extends React.PropsWithChildren<{}> { checked: boolean; onChange: (checked: boolean) => void; label?: string; disabled?: boolean; className?: string} export function Checkbox(...args[]): { return ( <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}> <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} disabled={disabled}; className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus: rin g-zion-cyan focus: rin g-2"; /> {label && <span className="text-sm text-gray-700">{label}</span>}; ></div> )} export default checkbox;
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 export default checkbox;';';
 import React from 'react'; interface CheckboxProps extends React.PropsWithChildren<{}> { checked: boolean; onChange: (checked: boolean) => void; label?: string; disabled?: boolean; className?: string} export function Checkbox(...args[]): { return ('; <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : "} ${className}`}>; <input type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} disabled={disabled}; className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus: rin g-zion-cyan focus: rin g-2"; /> {label && <span className="text-sm text-gray-700">{label}</span>}; </label>; )} export default checkbox;';';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 ';
 export default checkbox;;';;';

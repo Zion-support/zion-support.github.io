@@ -31,6 +31,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     },
     body: JSON.stringify(body)
   });
+
   if (!resp.ok) return null;
   const data = await resp.json();
   const content = data.choices?.[0]?.message?.content;
@@ -42,7 +43,7 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
       ? parsed.milestones
       : [];
     if (!milestones.length) return null;
-    return milestones.map((m) => ({
+    return milestones.map((m: any) => ({
       title: String(m.title).slice(0, 120),
       description: String(m.description || "").slice(0, 2000),
       suggestedDueDateIso: String(m.suggestedDueDateIso),

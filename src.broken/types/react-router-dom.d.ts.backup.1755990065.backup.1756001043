@@ -1,0 +1,5 @@
+// Type definitions for react-router-dom.d;
+export interface react-router-dom.d {;
+  // TODO: Add proper type definitions;
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-63e3

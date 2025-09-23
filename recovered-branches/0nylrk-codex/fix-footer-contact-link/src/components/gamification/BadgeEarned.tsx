@@ -1,6 +1,10 @@
 
 import React from "react";
+<<<<<<< HEAD
 import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+=======
+import { getBadgeMetaBadgeKey } from "./badgeConfig";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface BadgeEarnedProps {
   badge: BadgeKey;
@@ -15,8 +19,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   size = 44,
   showName = true,
   showDesc = false,
+<<<<<<< HEAD
   earnedDate,
 }) => {
+=======
+  earnedDate}) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const meta = getBadgeMeta(badge);
   if (!meta) return null;
   const Icon = meta.icon;
@@ -31,8 +39,12 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
           height: size,
           display: "flex",
           alignItems: "center",
+<<<<<<< HEAD
           justifyContent: "center",
         }}
+=======
+          justifyContent: "center"}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         className="shadow hover-scale"
         title={meta.name}
       >

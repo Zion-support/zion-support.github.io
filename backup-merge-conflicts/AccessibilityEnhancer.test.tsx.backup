@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
@@ -70,6 +71,9 @@ describe('AccessibilityEnhancer', () => {
 =======
 });
 <<<<<<< HEAD:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/AccessibilityEnhancer.test.tsx
 >>>>>>> pr-11914:backup-merge-conflicts/AccessibilityEnhancer.test.tsx.backup

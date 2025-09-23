@@ -1,11 +1,19 @@
 
+<<<<<<< HEAD
 import { Facebook, Twitter } from "lucide-react";
+=======
+import { FacebookTwitter } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 
 export function SocialLogin() {
+<<<<<<< HEAD
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+=======
+  const { loginWithGoogleloginWithFacebookloginWithTwitterisLoading } = useAuth();
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="mt-6">

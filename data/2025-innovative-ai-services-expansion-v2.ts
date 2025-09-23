@@ -49,7 +49,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     rating: 4.9,
     reviews: 34
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum AI Neural Network Platform
   {
     id: 'quantum-ai-neural-network-platform',
@@ -100,7 +103,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     rating: 4.9,
     reviews: 52
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous AI Research Assistant
   {
     id: 'autonomous-ai-research-assistant',
@@ -151,7 +157,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     rating: 4.8,
     reviews: 67
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Emotional AI Intelligence Platform
   {
     id: 'emotional-ai-intelligence-platform',
@@ -202,7 +211,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     rating: 4.8,
     reviews: 123
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum AI Metaverse Platform
   {
     id: 'quantum-ai-metaverse-platform',
@@ -253,7 +265,10 @@ export const innovativeAIServices2025ExpansionV2 = [
     rating: 4.9,
     reviews: 189
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Autonomous Business Intelligence
   {
     id: 'ai-autonomous-business-intelligence',

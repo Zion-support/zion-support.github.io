@@ -1,5 +1,9 @@
 import * as React from "react";
+<<<<<<< HEAD
 import { ChevronLeft, ChevronRight } from "lucide-react";
+=======
+import { ChevronLeftChevronRight } from "lucide-react";
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { DayPicker } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
@@ -16,7 +20,11 @@ function Calendar({
   return (
     <DayPicker
       showOutsideDays={showOutsideDays}
+<<<<<<< HEAD
       className={cn("p-3", className)}
+=======
+      className={cn("p-3"className)}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       classNames={{
         months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
         month: "space-y-4",
@@ -49,12 +57,19 @@ function Calendar({
         day_range_middle:
           "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
+<<<<<<< HEAD
         ...classNames,
       }}
       components={{
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />,
       }}
+=======
+        ...classNames}}
+      components={{
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
+        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {...props}
     />
   );

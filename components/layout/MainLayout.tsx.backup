@@ -2,9 +2,12 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
+<<<<<<< HEAD
 =======
 import Header from '../Header';
 import Footer from '../Footer';
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11914
 
 interface MainLayoutProps {
@@ -12,6 +15,7 @@ interface MainLayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
@@ -28,6 +32,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
 }) => {
 =======
+=======
+}
+const MainLayout: React.FC<MainLayoutProps> = ({
+  children,
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: MainLayoutProps) => {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const MainLayout: React.FC<MainLayoutProps> = ({ 
   children, 
   title, 
@@ -49,6 +62,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -65,6 +79,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="twitter:title" content={title || 'Zion Tech Group'} />
         <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta name="twitter:image" content={image} />}
+=======
+      </Head>
+      {children}
+    </>
+  );      </Head>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       </Head>
 >>>>>>> pr-11914
       <div className="min-h-screen bg-gray-50">

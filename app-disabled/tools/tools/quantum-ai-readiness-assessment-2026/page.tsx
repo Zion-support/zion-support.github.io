@@ -1,6 +1,11 @@
 "use client";
+<<<<<<< HEAD:app-disabled/tools/tools/quantum-ai-readiness-assessment-2026/page.tsx
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD:app-disabled/tools/tools/quantum-ai-readiness-assessment-2026/page.tsx
+=======
+// Metadata moved to parent component
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 interface AssessmentResults {
   overallScore: number;
   readinessLevel: string;
@@ -643,4 +648,14 @@ export default function QuantumAIReadinessAssessment() {
       </div>
     </div>
   );
+=======
+
+export default function Page() {
+	return (
+		<div className="max-w-3xl mx-auto py-16 px-4">
+			<h1 className="text-3xl font-bold">Quantum AI Readiness Assessment 2026</h1>
+			<p className="mt-4 text-gray-600">Temporarily simplified while we resolve merge conflicts.</p>
+		</div>
+	);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1:app/tools/quantum-ai-readiness-assessment-2026/page.tsx
 }

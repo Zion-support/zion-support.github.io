@@ -1,6 +1,10 @@
 
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 import { ArrowLeft, FileText, Link } from 'lucide-react';
+=======
+ArrowLeftFileTextLink
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
@@ -11,8 +15,13 @@ interface PreviewHeaderProps {
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
+=======
+export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
+  const [isPrintingsetIsPrinting] = useState(false);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const isMobile = useIsMobile();
 
   const handleBrowserPrint = () => {
@@ -25,7 +34,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         body * {
           visibility: hidden;
         }
+<<<<<<< HEAD
         .print-section, .print-section * {
+=======
+        .print-section * {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           visibility: visible;
         }
         .print-section {
@@ -48,7 +61,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     setTimeout(() => {
       document.head.removeChild(style);
       setIsPrinting(false);
+<<<<<<< HEAD
     }, 1000);
+=======
+    }1000);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (

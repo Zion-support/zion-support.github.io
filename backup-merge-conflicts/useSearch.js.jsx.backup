@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:backup-merge-conflicts/useSearch.js.jsx.backup
 =======
@@ -7,6 +8,21 @@ const { useState,useEffect,useCallback,useMemo } from "react"; export const useS
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/hooks/useSearch.js.jsx
 =======
 const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD:src.disabled/src/hooks/useSearch.js.jsx
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
+<<<<<<< HEAD
+import { useState,useEffect,useCallback,useMemo } from \"react\"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; \"query\": filters: {},\"sortBy\": null sortOrder: \"asc\" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();\");} \"export default ComponentName;\"
+<<<<<<< HEAD:backup-merge-conflicts/useSearch.js.jsx.backup
+=======
+const { useState,useEffect,useCallback,useMemo } from "react"; export const useSearch = (data,options) => {; const { searchFields,debounceMs = 300,fuzzySearch = true,caseSensitive = false } = options; const [searchState,setSearchState] = useState({; query: filters: {},sortBy: null sortOrder: "asc" results: data isLoading: false totalResults: data.length}); const [debouncedQuery,setDebouncedQuery] = useState();");} "export default ComponentName;"""
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/src/hooks/useSearch.js.jsx
+<<<<<<< HEAD
+>>>>>>> pr-11914:backup-merge-conflicts/useSearch.js.jsx.backup
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
 =======
 =======

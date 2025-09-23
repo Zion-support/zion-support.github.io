@@ -108,8 +108,12 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
     confidence: 'Medium',
     rationale: `Estimated using heuristics. Baseline hourly ${hourly.toFixed(0)} derived from skills (${skills.join(', ')}) and experience (${exp}). ${hours} hours over ${weeks} weeks.`,
     modelUsed: 'heuristic-v1',
+<<<<<<< HEAD
     source: 'heuristic',
   };
+=======
+    source: 'heuristic'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {
@@ -130,8 +134,12 @@ function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggest
     confidence: 'Medium',
     rationale: `Heuristic estimate using skills (${skills.join(', ')}) baseline, experience (${expLevel}) and location index (${locality.toFixed(2)}).`,
     modelUsed: 'heuristic-v1',
+<<<<<<< HEAD
     source: 'heuristic',
   };
+=======
+    source: 'heuristic'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {
@@ -162,9 +170,13 @@ Constraints:
       temperature: 0.2,
       messages: [
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
+<<<<<<< HEAD
         { role: 'user', content: prompt },
       ],
     });
+=======
+        { role: 'user', content: prompt }]});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const content = response.choices?.[0]?.message?.content || '';
     const jsonStart = content.indexOf('{');
@@ -178,8 +190,12 @@ Constraints:
       confidence: (json.confidence as BudgetSuggestion['confidence']) || 'Medium',
       rationale: String(json.rationale || ''),
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
+<<<<<<< HEAD
       source: 'openai',
     };
+=======
+      source: 'openai'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const range = clampRange(suggestion.min, suggestion.max);
     suggestion.min = range.min;
@@ -215,9 +231,13 @@ Constraints:
       temperature: 0.2,
       messages: [
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
+<<<<<<< HEAD
         { role: 'user', content: prompt },
       ],
     });
+=======
+        { role: 'user', content: prompt }]});
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const content = response.choices?.[0]?.message?.content || '';
     const jsonStart = content.indexOf('{');
@@ -232,8 +252,12 @@ Constraints:
       confidence: (json.confidence as TalentRateSuggestion['confidence']) || 'Medium',
       rationale: String(json.rationale || ''),
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
+<<<<<<< HEAD
       source: 'openai',
     };
+=======
+      source: 'openai'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const range = clampRange(suggestion.min, suggestion.max);
     suggestion.min = range.min;
@@ -261,8 +285,12 @@ export async function generateClientBudgetSuggestion(input: ClientBudgetRequest)
     confidence,
     rationale: `${llm.rationale} Heuristic cross-check around $${roundMoney((heuristic.min + heuristic.max) / 2)} for sanity.`,
     modelUsed: llm.modelUsed,
+<<<<<<< HEAD
     source: 'hybrid',
   };
+=======
+    source: 'hybrid'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 
 export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {
@@ -282,6 +310,10 @@ export async function generateTalentRateSuggestion(input: TalentRateRequest): Pr
     confidence,
     rationale: `${llm.rationale} Heuristic cross-check for consistency with location and experience bands.`,
     modelUsed: llm.modelUsed,
+<<<<<<< HEAD
     source: 'hybrid',
   };
+=======
+    source: 'hybrid'};
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

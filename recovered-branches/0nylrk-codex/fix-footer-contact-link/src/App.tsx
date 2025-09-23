@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+=======
+import React{ Suspense } from 'react';
+import { RoutesRoute } from 'react-router-dom';
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -35,6 +40,7 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 
 const baseRoutes = [
+<<<<<<< HEAD
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
@@ -51,6 +57,23 @@ const baseRoutes = [
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
 ];
+=======
+  { path: '/'element: <Home /> },
+  { path: '/match'element: <AIMatcherPage /> },
+  { path: '/login'element: <Login /> },
+  { path: '/signup'element: <Signup /> },
+  { path: '/talent'element: <TalentDirectory /> },
+  { path: '/talents'element: <TalentsPage /> },
+  { path: '/services'element: <ServicesPage /> },
+  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> },
+  { path: '/categories'element: <Categories /> },
+  { path: '/equipment'element: <EquipmentPage /> },
+  { path: '/analytics'element: <Analytics /> },
+  { path: '/mobile-launch'element: <MobileLaunchPage /> },
+  { path: '/open-app'element: <OpenAppRedirect /> },
+  { path: '/community'element: <CommunityPage /> },
+  { path: '/contact'element: <ContactPage /> }];
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const App = () => {
   return (
@@ -58,7 +81,11 @@ const App = () => {
       <ThemeProvider defaultTheme="dark">
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
+<<<<<<< HEAD
             {baseRoutes.map(({ path, element }) => (
+=======
+            {baseRoutes.map(({ pathelement }) => (
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               <Route key={path} path={path} element={element} />
             ))}
             <Route path="/auth/*" element={<AuthRoutes />} />

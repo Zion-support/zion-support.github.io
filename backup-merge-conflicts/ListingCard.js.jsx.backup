@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-merge-conflicts/ListingCard.js.jsx.backup
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
 =======
@@ -5,4 +6,11 @@
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/ListingCard.js.jsx
 =======
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
+=======
+'\"export\": function ListingCard ({\' id,title,description,images,category,tags,author,className,profileType = \'service\'}) {\''\''\";\";
+<<<<<<< HEAD:backup-merge-conflicts/ListingCard.js.jsx.backup
+=======
+"export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
+>>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/ListingCard.js.jsx
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,19 +1,35 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
+<<<<<<< HEAD
 type SEOProps = {
-  title?: string;
-  description?: string;
-  keywords?: string | string[];
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noIndex?: boolean;
-  structuredData?: object;
-  url?: string; // backward compatibility
-};
+  title?: string
+  description?: string
+  keywords?: string[]
+}
 
-export default function SEO({
+export default function SEO({ title, description, keywords }: SEOProps) {
+  return (
+    <Head>
+      {title && <title>{title}</title>}
+      {description && <meta name="description" content={description} />}
+      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
+    </Head>
+  )
+}
+=======
+type SEOHeadProps = {
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  noIndex?: boolean
+  structuredData?: object
+}
+
+export default function SEOHead({
   title = 'Zion Tech Group - Advanced AI and Technology Solutions',
   description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
   keywords = ['AI', 'artificial intelligence', 'cloud services', 'cybersecurity', 'technology solutions', 'enterprise software', 'digital transformation'],
@@ -23,22 +39,19 @@ export default function SEO({
   twitterCard = 'summary_large_image',
   noIndex = false,
   structuredData,
-  url,
-}: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || url || (typeof window !== 'undefined' ? window.location.href : '');
-  const keywordsContent = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+}: SEOHeadProps) {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywordsContent && <meta name="keywords" content={keywordsContent} />}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/favicon.ico" />
-
+      <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />} 
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="icon" href="/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
@@ -58,6 +71,10 @@ export default function SEO({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Head>
-  );
+  )
 }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2af7
