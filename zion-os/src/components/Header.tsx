@@ -1,6 +1,19 @@
 "use client";
 
-import Link from "next/link";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Button from './Button';
+
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Careers', href: '/careers' },
+  ];
 
 export default function Header() {
   return (

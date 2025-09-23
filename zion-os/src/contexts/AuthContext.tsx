@@ -1,37 +1,24 @@
 "use client";
 
-import React, { createContext, useContext, useMemo, useState } from "react";
-
-type AuthUser = { id: string; email: string; name?: string } | null;
+import React, { createContext, useContext } from "react";
 
 type AuthContextValue = {
-  user: AuthUser;
-  signIn: (email: string, _password: string) => Promise<void>;
-  signOut: () => Promise<void>;
-  register: (name: string, email: string, _password: string) => Promise<void>;
+  signIn: (email: string, password: string) => Promise<void>;
+  signUp: (name: string, email: string, password: string) => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
-  const [user, setUser] = useState<AuthUser>(null);
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const signIn = async () => Promise.resolve();
+  const signUp = async () => Promise.resolve();
 
-  const signIn = async (email: string): Promise<void> => {
-    setUser({ id: "demo-user", email });
-  };
-
-  const signOut = async (): Promise<void> => {
-    setUser(null);
-  };
-
-  const register = async (name: string, email: string): Promise<void> => {
-    setUser({ id: "demo-user", email, name });
-  };
-
-  const value = useMemo<AuthContextValue>(() => ({ user, signIn, signOut, register }), [user]);
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
+  return (
+    <AuthContext.Provider value={{ signIn, signUp }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 export function useAuth(): AuthContextValue {
   const ctx = useContext(AuthContext);
