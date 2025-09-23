@@ -201,7 +201,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   // Clear chat
   const clearChat = () => {
     setMessages([]);
-    setChatHistory([]);
   };
 
   return (
