@@ -14,15 +14,9 @@
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-<<<<<<< HEAD
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint src pages app lib components hooks --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc -p tsconfig.app.json --noEmit",
     "test": "jest -c jest.config.smoke.cjs --runInBand --passWithNoTests --no-cache",
-=======
-    "lint:fix": "eslint src pages app lib components hooks --fix",
-    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
-    "test": "jest --runInBand --passWithNoTests --no-cache",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a02
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
@@ -171,11 +165,6 @@
       "<rootDir>/e2e/"
     ]
   },
-<<<<<<< HEAD
-  "packageManager": "npm@11.6.0"
-}
-=======
   "type": "module",
   "packageManager": "npm@11.6.0"
 }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-0a02
