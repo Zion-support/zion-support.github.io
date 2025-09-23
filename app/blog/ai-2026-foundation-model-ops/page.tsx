@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import SEO from '../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Foundation Model Ops',
@@ -87,4 +88,5 @@ const FoundationModelOps2026 = () => {
   );
 };
 
+export default FoundationModelOps2026;
 

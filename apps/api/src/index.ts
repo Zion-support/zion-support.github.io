@@ -22,6 +22,8 @@ import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
     cb(new Error('Not allowed'), false);
 
 
+
+
 });
 
 
@@ -115,6 +117,63 @@ app.get('/talent/search', async (req: any, reply: any) => {
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
+
+
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile
+       WHERE ($1::text IS NULL OR country = $1)
+         AND ($2::text IS NULL OR EXISTS (
+              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
+           ))
+       ORDER BY created_at DESC
+
+
+    );
+    return res && res.rows
+  });
+  return { results: rows }
+});
+
+
+app && app.get('/projects/:name/track', async (req: any, reply: any) => {
+  const name = (req && req.params as any).name as string;
+
+  const userId = getUserId(req);
+
+
+  const userId = getUserId(req);
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
+  const items = await withUser(userId, async client => {    const res = await client && client.query(
+      `SELECT id, channel, title, body, data, read, created_at FROM notification
+       WHERE read = false ORDER BY created_at DESC LIMIT 20`
+    );
+    return res && res.rows;
+  });
+  return { items };});  const items = await withUser(userId, async (client) => {
+    const res = await client && client.query(
+      `SELECT id, channel, title, body, data, read, created_at FROM notification
+       WHERE read = false ORDER BY created_at DESC LIMIT 20`
+    );
+    return res && res.rows;
+  });
+  return { items };    return res && res.rows
+
+  });
+  return { items }
+});
+
+const port = Number(process.env.API_PORT |4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+
+app.log.error(err);
+app.log.error(err);
+  app.log.error(err);
+
+  (process as any).exit(1);
+});  (process as any).exit(1)
+});
+
+
+
 });
 
 app.get('/notifications', async (req: any, reply: any) => {
@@ -125,3 +184,15 @@ app.get('/notifications', async (req: any, reply: any) => {
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
+    return res.rows
+  });
+  return { items }
+});
+
+
+
+
+
+const port = Number(process.env.API_PORT || 4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+

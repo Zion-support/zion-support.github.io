@@ -1,227 +1,62 @@
 
-
-import {GradientHeading} from "./GradientHeading";
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {FileText} from "lucide-react";
-const faqs = [;
-  {;"
-    question: "How do I publish my AI product or service on Zion?",;"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."};
-  {;"
-    question: "What types of AI jobs can I find or post on Zion?",;"
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."};
-  {;"
-    question: "What IT equipment is available for purchase or rental?",;"
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."};
-  {;"
-    question: "How does Zion ensure 24x7x365 global availability?",;"
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."};
-  {;'"
-    question: "What is Zion's Green IT and recycling program?",;'"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."};
-  {;"
-    question: "Are there any fees for listing my products or services?",;
-
-answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-import { GradientHeading } from "./GradientHeading",
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from "lucide-react",
-
-const faqs = [
-const faqs = [
-  {
-    question: "How do I publish my AI product or service on Zion?"
-
-const faqs = []
-  {"
-    question: "How do I publish my AI product or service on Zion?"'"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
-  {"
-    question: "What types of AI jobs can I find or post on Zion?""
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}
-{
-    question: "What IT equipment is available for purchase or rental?"
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."}
-  {
-    question: "How does Zion ensure 24x7x365 global availability?"
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."}
-  {
-    question: "What is Zion's Green IT and recycling program?"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}
-  {
-    question: "Are there any fees for listing my products or services?"
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-import {GradientHeading} from "./GradientHeading";
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
-import {FileText} from "lucide-react";
-import { GradientHeading } from "./GradientHeading",
-import { GradientHeading } from "./GradientHeading",;
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger} from "@/components/ui/accordion",
-import { FileText } from "lucide-react",
-
-
-
-const faqs = [
-  {
-    question: "How do I publish my AI product or service on Zion?"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
-  {
-    question: "What types of AI jobs can I find or post on Zion?"
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}
-  {const faqs = [
-  {
-    question: "How do I publish my AI product or service on Zion?",
-  {}
-const faqs = []
-  {"
-    question: "How do I publish my AI product or service on Zion?",'"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},
-  {"
-    question: "What types of AI jobs can I find or post on Zion?","
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."},
-  {"
-    question: "What IT equipment is available for purchase or rental?","
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."},
-  {"
-    question: "How does Zion ensure 24x7x365 global availability?","
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."},
-  {'"
-    question: "What is Zion's Green IT and recycling program?",'"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},
-  {"
-    question: "Are there any fees for listing my products or services?","
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
-
-export function FaqSection() { return null; }
-import { GradientHeading } from './GradientHeading';'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';'
-import { FileText } from './lucide-react';
-const faqs = [;
-  {"
-    question: "How do I publish my AI product or service on Zion?",'"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product / Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
-  {"
-    question: "What types of AI jobs can I find or post on Zion?","
-    answer: "Zion hosts a wide range of AI - related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI - related position, and job seekers can publish their CV with AI - specific skills highlighted for better matching."}
-  {"
-    question: "What IT equipment is available for purchase or rental?","
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."}
-  {"
-    question: "How does Zion ensure 24x7x365 global availability?","
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."}
-  {'"
-    question: "What is Zion's Green IT and recycling program?",'"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e - Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}
-  {"
-    question: "Are there any fees for listing my products or services?","
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-;
-export /**;
- * FaqSection - Function description;
- */
-function FaqSection() {}
-  return ("
-    <section className="py - 20 bg - zion - blue" id="faq">;"
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-        <div className="text - center mb - 12">;
-          <GradientHeading > Frequently Asked Questions</GradientHeading>;"
-          <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto">;
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
-          </p>;
-        </div>;"
-        <div className="max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6">;"
-          <div className="flex items - center mb - 6">;"
-            <FileText className="h - 6 w - 6 text - zion - cyan mr - 2" />;"
-            <h3 className="text - xl font - bold text - white">Common Questions</h3>;
-          </div>;"
-          <Accordion type="single" collapsible className="w - full">;
-            {faqs.map ((faq, index) => ("
-              <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;"
-                <AccordionTrigger className="text - white hover:text - zion - cyan">;
-
-                </AccordionTrigger>"
-                <AccordionContent className="text-zion-slate-light">
-
-};
-
-export function FaqSection() { return null; }
-                  {faq.question}
-}
-};
-
-};
-
-export function FaqSection() {;
-  return (
-"
-
-export function FaqSection() {;
-  return (
 import { GradientHeading } from "./GradientHeading";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+<<<<<<< HEAD
+  AccordionTrigger} from "@/components/ui/accordion";
+=======
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+>>>>>>> origin/auto/autonomy-17186719616
+import { FileText } from "lucide-react";
 
-answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-export function FaqSection() {;
-  return (
-import { GradientHeading } from './GradientHeading';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
-import { FileText } from './lucide-react';
-const faqs = [;
+const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product / Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}
+<<<<<<< HEAD
+    answer: "Publishing on Zion is completely free and straightforward. Simply create an accountclick on 'Post Your Product/Service for Free' buttonfill in the required details about your offeringadd imageset pricingand submit for review. Your listing will be live within 24 hours after passing our quality check."},
   {
     question: "What types of AI jobs can I find or post on Zion?",
-    answer: "Zion hosts a wide range of AI - related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI - related position, and job seekers can publish their CV with AI - specific skills highlighted for better matching."}
+    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineersdata scientistsAI researcherscomputer vision specialistsNLP expertsAI product managersand more. Employers can post any tech or AI-related positionand job seekers can publish their CV with AI-specific skills highlighted for better matching."},
   {
     question: "What IT equipment is available for purchase or rental?",
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."}
+    answer: "Zion offers a comprehensive range of IT equipment including servers (racktowerblade)storage solutions (SANASDAS)networking equipment (switchesroutersfirewalls)power suppliesand complete rack solutions. All equipment is available for purchase or flexible rental termswith options for newrefurbishedor certified used equipment."},
   {
     question: "How does Zion ensure 24x7x365 global availability?",
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."}
+    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zonesensuring seamless support and service availability at all timesregardless of your location."},
   {
     question: "What is Zion's Green IT and recycling program?",
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e - Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}
+    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipmentcomponent reuse where possibleand adherence to international environmental standards including WEEERoHSand e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},
   {
     question: "Are there any fees for listing my products or services?",
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-;
-export /**
- * FaqSection - Function description
- */
-function FaqSection() {
-  return (
-    <section className="py - 20 bg - zion - blue" id="faq">;
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="text - center mb - 12">;
-          <GradientHeading > Frequently Asked Questions</GradientHeading>;
-          <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto">;
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
-          </p>;
-        </div>;
-        <div className="max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6">;
-          <div className="flex items - center mb - 6">;
-            <FileText className="h - 6 w - 6 text - zion - cyan mr - 2" />;
-            <h3 className="text - xl font - bold text - white">Common Questions</h3>;
-          </div>;
-          <Accordion type="single" collapsible className="w - full">;
-            {faqs.map ((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
-                <AccordionTrigger className="text - white hover:text - zion - cyan">;
-
-                  {faq.question}
-
-                </AccordionTrigger>
-                <AccordionContent className="text-zion-slate-light">
-
-};
+    answer: "Nopublishing your productservicesjob listingsor CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibilitybut the basic listing service has no costs attached."}];
+=======
+    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check.",
+  },
+  {
+    question: "What types of AI jobs can I find or post on Zion?",
+    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching.",
+  },
+  {
+    question: "What IT equipment is available for purchase or rental?",
+    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment.",
+  },
+  {
+    question: "How does Zion ensure 24x7x365 global availability?",
+    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location.",
+  },
+  {
+    question: "What is Zion's Green IT and recycling program?",
+    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements.",
+  },
+  {
+    question: "Are there any fees for listing my products or services?",
+    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached.",
+  },
+];
+>>>>>>> origin/auto/autonomy-17186719616
 
 export function FaqSection() {
   return (
@@ -230,16 +65,26 @@ export function FaqSection() {
         <div className="text-center mb-12">
           <GradientHeading>Frequently Asked Questions</GradientHeading>
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+<<<<<<< HEAD
+            Find answers to common questions about AI product listingsIT equipment rentalsand datacenter maintenance services
+=======
             Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
+>>>>>>> origin/auto/autonomy-17186719616
           </p>
         </div>
+
         <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-zion-cyan mr-2" />
             <h3 className="text-xl font-bold text-white">Common Questions</h3>
           </div>
+          
           <Accordion type="single" collapsible className="w-full">
+<<<<<<< HEAD
+            {faqs.map((faqindex) => (
+=======
             {faqs.map((faq, index) => (
+>>>>>>> origin/auto/autonomy-17186719616
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
@@ -253,389 +98,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-};
-export function FaqSection() {;
-  return (
-                  {faq.question}
-}
-};
-
-};
-
-import { GradientHeading } from "./GradientHeading",;
-import {;
-  Accordion,;
-  AccordionContent,;
-  AccordionItem,;"
-  AccordionTrigger} from "@/components/ui/accordion",;"
-import { FileText } from "lucide-react",;
-const faqs = [;
-  {;"
-    question: "How do I publish my AI product or service on Zion?",;'"
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},;
-  {;"
-    question: "What types of AI jobs can I find or post on Zion?",;"
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."},;
-  {;"
-    question: "What IT equipment is available for purchase or rental?",;"
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."},;
-  {;"
-    question: "How does Zion ensure 24x7x365 global availability?",;"
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."},;
-  {;'"
-    question: "What is Zion's Green IT and recycling program?",;'"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},;
-  {;"
-    question: "Are there any fees for listing my products or services?",;"
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-export function FaqSection() {;
-  return (;
-
-{faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className="text - zion - slate - light">;
-                  {faq.answer}
-    <section className="py-20 bg-zion-blue" id="faq">;
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="text-center mb-12">;
-          <GradientHeading>Frequently Asked Questions</GradientHeading>;
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
-          </p>;
-        </div>;
-
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
-          <div className="flex items-center mb-6">;
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>;
-          </div>;
-
-          <Accordion type="single" collapsible className="w-full">;
-            {faqs && faqs.map((faq, index) => (;
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;
-                  {faq && faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className="text-zion-slate-light">;
-                  {faq && faq.answer}
-import { GradientHeading } from "./GradientHeading",;
-import {;
-  Accordion,;
-  AccordionContent,;
-  AccordionItem,;
-  AccordionTrigger} from "@/components/ui/accordion",;
-import { FileText } from "lucide-react",;
-;
-const faqs = [;
-  {;
-    question:"How do I publish my AI product or service on Zion?",;
-    answer:"Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},;
-  {;
-    question:"What types of AI jobs can I find or post on Zion?",;
-    answer:"Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."},;
-  {;
-    question:"What IT equipment is available for purchase or rental?",;
-    answer:"Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."},;
-  {;
-    question:"How does Zion ensure 24x7x365 global availability?",;
-    answer:"Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."},;
-  {;
-    question:"What is Zion's Green IT and recycling program?",;
-    answer:"Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},;
-  {;
-    question:"Are there any fees for listing my products or services?",;
-    answer:"No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],;
-;
-export function FaqSection() {;
-  return (;
-    <section className="py-20 bg-zion-blue" id="faq">;
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="text-center mb-12">;
-          <GradientHeading>Frequently Asked Questions</GradientHeading>;
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
-            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services;
-          </p>;
-        </div>;
-;
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;
-          <div className="flex items-center mb-6">;
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />;
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>;
-          </div>;
-          ;
-          <Accordion type="single" collapsible className="w-full">;
-            {faqs.map((faq, index) => (;
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;
-                  {faq.question}
-                </AccordionTrigger>;
-                <AccordionContent className="text-zion-slate-light">;
-                  {faq.answer}
-                </AccordionContent>;
-                  {faq && faq.answer}                </AccordionContent>;
-              </AccordionItem>;
-            ))}
-          </Accordion>;
-        </div>;
-      </div>;
-    </section>;
-);
-}
-;
-;
-
-
-                </AccordionContent>;
-              </AccordionItem>))}
-          </Accordion>;
-        </div>;
-      </div>;
-    </section>);
-}
-
-;
-  ),;}
- import {};
-  Accordion;
-AccordionContent;
-AccordionItem;
-const faqs = [ {"
-  question: "How do I publish my AI product or service on Zion?";'"
-answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check." 
-};
-{"
-  question: "What types of AI jobs can I find or post on Zion?";"
-answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching." 
-};
-{"
-  question: "What IT equipment is available for purchase or rental?";"
-answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment." 
-};
-{"
-  question: "How does Zion ensure 24x7x365 global availability?";"
-answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location." 
-};
-{'"
-  question: "What is Zion's Green IT and recycling program?";'"
-answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements." 
-};
-{}
-  export function FaqSection() { return null; }
-}</Accordion> </div> </div> </section>) 
-};
-            {faqs.map((faq, index) => (;"`
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;"
-
-;
-  ),;}
- import {
-  Accordion;
-AccordionContent;
-AccordionItem;
-const faqs = [ {
-  question: "How do I publish my AI product or service on Zion?";
-answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check." 
-};
-{
-  question: "What types of AI jobs can I find or post on Zion?";
-answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching." 
-};
-{
-  question: "What IT equipment is available for purchase or rental?";
-answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment." 
-};
-{
-  question: "How does Zion ensure 24x7x365 global availability?";
-answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location." 
-};
-{
-  question: "What is Zion's Green IT and recycling program?";
-answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements." 
-};
-{
-  export function FaqSection () {
-  return (<section className="py-20 bg-zion-blue" id="faq" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <GradientHeading>Frequently Asked Questions</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6"> <div className=" flex items-center mb-6"> <FileText className=" h-6 w-6 text-zion-cyan mr-2"/> <h3 className=" text-xl font-bold text-white" >Common Questions</h3> </div> </AccordionContent> </AccordionItem>) ) 
-}</Accordion> </div> </div> </section>) 
-}
-            {faqs.map((faq, index) => (;
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;
-
-ursor/fix-website-loading-errors-and-merge-6662
-
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];""
-import {GradientHeading} from "./GradientHeading";""
-import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";""
-import {FileText} from "lucide-react";"
-const faqs = [;
-  {;"
-    question: "How do I publish my AI product or service on Zion?",;""
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."};"
-    question: "What types of AI jobs can I find or post on Zion?",;""
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."};"
-    question: "What IT equipment is available for purchase or rental?",;""
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."};"
-    question: "How does Zion ensure 24x7x365 global availability?",;""
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."};"
-    question: "What is Zion's Green IT and recycling program?",;""
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."};"
-    question: "Are there any fees for listing my products or services?",;"]"
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];"
-const faqs = [
-  {"
-    question: "How do I publish my AI product or service on Zion?"","
-  answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}"
-    question: "What types of AI jobs can I find or post on Zion?"","
-  answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}"
-    question: "What IT equipment is available for purchase or rental?"","
-  answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."}"
-    question: "How does Zion ensure 24x7x365 global availability?"","
-  answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."}"
-    question: "What is Zion's Green IT and recycling program?"","
-  answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}"
-    question: "Are there any fees for listing my products or services?"",]"
-import {FileText} from "lucide-react";""
-import { GradientHeading } from "./GradientHeading","
-
-import {
-  // TODO: Implement
-}
-  Accordion,
-
-  AccordionContent,
-  AccordionItem,"
-  AccordionTrigger} from "@/components/ui/accordion",""
-import { FileText } from "lucide-react","
-    question: "How do I publish my AI product or service on Zion?",""
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product/Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."},"
-    question: "What types of AI jobs can I find or post on Zion?",""
-    answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."},"
-    question: "What IT equipment is available for purchase or rental?",""
-    answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."},"
-    question: "How does Zion ensure 24x7x365 global availability?",""
-    answer: "Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zones, ensuring seamless support and service availability at all times, regardless of your location."},"
-    question: "What is Zion's Green IT and recycling program?",""
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."},"
-    question: "Are there any fees for listing my products or services?","]"
-    answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],"
-export function FaqSection() {;
-  return (
-"
-import { GradientHeading } from './GradientHeading';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
-import { FileText } from './lucide-react';
-  {
-    answer: "Publishing on Zion is completely free and straightforward. Simply create an account, click on 'Post Your Product / Service for Free' button, fill in the required details about your offering, add images, set pricing, and submit for review. Your listing will be live within 24 hours after passing our quality check."}"
-    answer: "Zion hosts a wide range of AI - related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI - related position, and job seekers can publish their CV with AI - specific skills highlighted for better matching."}"
-    question: "What IT equipment is available for purchase or rental?",")"
-    answer: "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipment, component reuse where possible, and adherence to international environmental standards including WEEE, RoHS, and e - Stewards certification. We provide certificates of proper disposal for corporate compliance requirements."}"
-;
-;
-
-'"`
-export /**
- * FaqSection - Function description;
- */
-function FaqSection() {
-  return ("
-    <section className="py - 20 bg - zion - blue" id="faq">;"
-</section>"
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-</div>"
-        <div className="text - center mb - 12">;"
-</div>
-          <GradientHeading > Frequently Asked Questions;"
-          <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx - auto">;"
-</p>
-          </p>;
-        </div>;"
-        <div className="max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6">;"
-          <div className="flex items - center mb - 6">;"
-            <FileText className="h - 6 w - 6 text - zion - cyan mr - 2" />;"
-            <h3 className="text - xl font - bold text - white">Common Questions</h3>;"
-          <Accordion type="single" collapsible className="w - full">;"
-              <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;"
-                <AccordionTrigger className="text - white hover:text - zion - cyan">;"
-
-                <AccordionContent className="text-zion-slate-light">"
-    <section className="py-20 bg-zion-blue" id="faq">;"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
-        <div className="text-center mb-12">;"
-          <GradientHeading>Frequently Asked Questions;"
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;"
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;"
-          <div className="flex items-center mb-6">;"
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />;"
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>;"
-          <Accordion type="single" collapsible className="w-full">;"
-"`;
-</AccordionTrigger>
-                </AccordionTrigger>"
-                <AccordionContent className="text-zion-slate-light">"
-</AccordionContent>"
-    <section className="py-20 bg-zion-blue" id="faq">;"
-</section>"
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;"
-</div>"
-        <div className="text-center mb-12">;"
-</div>
-          <GradientHeading>Frequently Asked Questions</GradientHeading>;"
-          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;"
-</p>
-          </p>;
-        </div>;"
-        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">;"
-</div>"
-          <div className="flex items-center mb-6">;"
-</div>"
-            <FileText className="h-6 w-6 text-zion-cyan mr-2" />;"
-</FileText>"
-            <h3 className="text-xl font-bold text-white">Common Questions</h3>;"
-          </div>;"
-          <Accordion type="single" collapsible className="w-full">;"
-</Accordion>"
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;"
-</AccordionItem>"
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;"
-</AccordionTrigger>
-                </AccordionTrigger>;"
-                <AccordionContent className="text-zion-slate-light">;"
-</AccordionContent>
-                </AccordionContent>;
-
-              </AccordionItem>;
-          </Accordion>;
-        </div>;
-      </div>;
-    </section>;
-
-                </AccordionContent>;)
-
-              </AccordionItem>))}
-          </Accordion>;
-        </div>;
-      </div>;
-
-    </section>);"
-  return (<section className="py-20 bg-zion-blue" id="faq" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <GradientHeading>Frequently Asked Questions</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6"> <div className=" flex items-center mb-6"> <FileText className=" h-6 w-6 text-zion-cyan mr-2"/> <h3 className=" text-xl font-bold text-white" >Common Questions</h3> </div> </AccordionContent> </AccordionItem>) )"
-</section>
-}</Accordion> </div> </div> </section>) "
-              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;"
-                <AccordionTrigger className="text-white hover:text-zion-cyan">;"
-
-                ;"
-                <AccordionContent className="text-zion-slate-light">;"
-
-        </div>;
-    </section>;
-                ;)
-              ))}
-    </section>);"
-  return (<section className="py-20 bg-zion-blue" id="faq" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-12" > <GradientHeading>Frequently Asked Questions <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto" > Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6"> <div className=" flex items-center mb-6"> <FileText className=" h-6 w-6 text-zion-cyan mr-2"/> <h3 className=" text-xl font-bold text-white" >Common Questions</h3> </div>  ) )"
-</section>
-} </div> </div> </section>) "`;
-pr-12325
-</AccordionTrigger>"
-

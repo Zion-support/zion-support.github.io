@@ -8,6 +8,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -16,42 +17,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "types": [
-      "react",
-      "react-dom",
-      "node"
-    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "strictNullChecks": true,
-    "target": "es5",
-    "forceConsistentCasingInFileNames": true
+    "target": "ES2017"
   },
   "include": [
-    "__tests__/**/*",
-    "components/**/*",
-    "lib/**/*",
     "next-env.d.ts",
-    "pages/**/*",
-    "src/**/*",
-    "types/**/*",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
-    "dist",
-    // Temporarily exclude corrupted components until repaired
-    "components/vendors",
-    "components/wallet",
-    "components/zion",
-    "components/token",
-    "components/tokens",
-    // Common backup/conflict/temp dirs (merged from origin/main)
     "data_backup",
     "backup",
     "backups",
@@ -61,19 +42,6 @@
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
-    "**/*temp*",
-    // Disabled dirs in this repo
-    "components.disabled",
-    "components-disabled",
-    "pages-disabled",
-    "pages.disabled",
-    "pages.disabled_full",
-    "src.disabled",
-    "src_backup",
-    "src_backup_temp",
-    "temp_exclude",
-    "corrupted_backup",
-    "recovered-branches",
-    "tests"
+    "**/*temp*"
   ]
 }

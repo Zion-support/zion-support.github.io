@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import ErrorBoundary from './components/ErrorBoundary'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import ScrollToTop from './components/ScrollToTop'
 import { ThemeProvider } from './components/ThemeProvider'
@@ -52,11 +51,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider defaultTheme="dark" storageKey="zion-theme">
-          <ErrorBoundary>
-            {children}
-            <ScrollToTop />
-            <PerformanceMonitor />
-          </ErrorBoundary>
+          <PerformanceMonitor />
+          {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

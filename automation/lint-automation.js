@@ -16,18 +16,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 
 
 
-);
-    fs.appendFileSync(this.logFile, logMessage);,
-  }
-  async runLint() {}
-    try {}
-      this.log('Starting lint automation...');',
-      // Run ESLint;
-      this.log('Running ESLint...');';
-      execSync('npm run lint', { "stdio": 'pipe' });',
-      this.log('ESLint completed successfully');';,
-      // Run type checking;
-      this.log('Running TypeScript type check...');';
 }
 module.exports = LintAutomation;
 ;#!/usr/bin/env node

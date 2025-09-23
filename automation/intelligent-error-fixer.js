@@ -65,19 +65,6 @@ class IntelligentErrorFixer {
           return content
         }
         fix: (content) => {
-          // Remove merge conflict markers
-          return content
-        }
-      },
-      invalidJSX: {
-        pattern: /return\(\)\s*</gm,
-        fix: (content) => content.replace(/return\(\)\s*</gm, 'return (\n    <')
-      },
-      missingImports: {
-        pattern: /React\./g,
-        fix: (content) => {
-          if (!content.includes("import React")) {
-          if (!content.includes("import React")) {
             return `import React from 'react';\n${content}`;
           }
           return content;
@@ -144,55 +131,6 @@ class IntelligentErrorFixer {
       const errorMatch = line.match(/Error:|SyntaxError:|TypeError:/);
       
       
-      if (fileMatch && errorMatch) {
-        errors.push({
-          file: fileMatch[1],
-          line: line,
-          context: lines.slice(Math.max(0, index - 2), index + 3)
-        });
-      }
-    });
-    
-    return errors;
-  }
-
-  async fixFile(filePath) {
-    if (!fs.existsSync(filePath)) {
-      this.log(`File not found: ${filePath}`, 'ERROR');
-      return false;
-    }
-
-    try {
-      this.log(`Attempting to fix file: ${filePath}`);
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-
-      // Apply error pattern fixes
-      for (const [patternName, pattern] of Object.entries(this.errorPatterns)) {
-        const matches = content.match(pattern.pattern);
-        if (matches) {
-          this.log(`Found ${patternName} pattern in ${filePath}`);
-          const newContent = pattern.fix(content, matches);
-          if (newContent !== content) {
-            content = newContent;
-            modified = true;
-            this.log(`Applied ${patternName} fix to ${filePath}`);
-          }
-        }
-      }
-
-      // Specific fixes for common issues
-      if (content.includes('return()')) {
-        content = content.replace(/return\(\)/g, 'return (');
-        modified = true;
-      }
-
-      if (content.includes('};')) {
-        content = content.replace(/}\s*;\s*$/gm, '}');
-        modified = true;
-      }
-
-
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {
         content = `import React from 'react';\n${content}`;
@@ -205,13 +143,6 @@ class IntelligentErrorFixer {
         modified = true;
       }
 
-
-      if (modified) {
-        // Create backup
-        const backupPath = `${filePath}.backup.${Date.now()}`;
-        fs.copyFileSync(filePath, backupPath);
-        
-        
         // Write fixed content
         fs.writeFileSync(filePath, content);
         this.log(`Successfully fixed and saved: ${filePath}`);
@@ -239,29 +170,6 @@ class IntelligentErrorFixer {
     function scanDirectory(dir) {
       const files = fs.readdirSync(dir, { withFileTypes: true });
 
-
-  async cleanupDuplicateFiles() {
-    this.log('Checking for duplicate page files...');
-    const pagesDir = path.join(process.cwd(), 'pages');
-    
-    if (!fs.existsSync(pagesDir)) {
-      return;
-    }
-
-    const duplicates = [];
-    const seen = new Set();
-
-    function scanDirectory(dir) {
-      const files = fs.readdirSync(dir, { withFileTypes: true });
-      
-      files.forEach(file => {
-        if (file.isDirectory()) {
-          scanDirectory(path.join(dir, file.name));
-        } else if (file.name.endsWith('.js') || file.name.endsWith('.tsx')) {
-          const baseName = file.name.replace(/\.(js|tsx)$/, '');
-          const relativePath = path.relative(pagesDir, path.join(dir, baseName));
-          
-          
           if (seen.has(relativePath)) {
             duplicates.push(path.join(dir, file.name));
           } else {
@@ -270,69 +178,6 @@ class IntelligentErrorFixer {
         }
       });
     }
-
-
-    scanDirectory(pagesDir);
-
-    // Remove duplicate .js files if .tsx exists
-    for (const duplicate of duplicates) {
-      if (duplicate.endsWith('.js')) {
-        const tsxVersion = duplicate.replace('.js', '.tsx');
-        if (fs.existsSync(tsxVersion)) {
-          this.log(`Removing duplicate JS file: ${duplicate}`);
-          fs.unlinkSync(duplicate);
-        }
-      }
->:automation/intelligent-error-fixer.js;
-ursor/automate-test-improve-and-merge-code-646c;
-=;
->    scanDirectory(pagesDir)// Remove duplicate .js files if .tsx exists;
-    `)fs.unlinkSync(duplicate)}
-      }const fs = require('fs')const path = require('path')const {execSync} = // // require('child_process')/**;
-   * Intelligent Error Fixer - Automatically detects and fixes common project errors;
-   * Designed to run as a PM2 automation process;
-   */;
-  class IntelligentErrorFixer {constructor() {this.logFile = path.join(__dirname, 'logs', 'error-fixer.log')this.reportFile = path.join(__dirname,'reports','error-fixer-report.json';
-      )this.errorPatterns = this.initializeErrorPatterns()// Ensure directories exist;
-      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true })}
-    log(message, level = 'INFO') {const timestamp = new Date().toISOString()const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-      )fs.appendFileSync(this.logFile, logMessage)}
-    initializeErrorPatterns() {return {// Syntax errors;
-        "missingBraces": {pattern: /return\(\s*$/m,"fix": content => content.replace(/return\(\s*$/gm, 'return (')},"extraSemicolons": {pattern: /}\s*;\s*$/m,"fix": content => content.replace(/}\s*;\s*$/gm, '}')},"unterminatedStrings": {pattern: /["'][\w\s]*$/m,"fix": (content, match) => {// Simple fix for unterminated strings - add closing quote;
-            return content.replace(match[0], match[0] + match[0].charAt(0))}},"mergeConflicts": {<:automation/intelligent-error-fixer.js;
-ursor/automate-test-improve-and-merge-code-646c;
-          "fix": content => {// Remove merge conflict markers;
-            return content;
-=          "fix": content => {// Remove merge conflict markers;
-            return content;
-          "fix": content => {// Remove merge conflict markers;
-            return content;
-<:corrupted_backup/intelligent-error-fixer.js;
-          "fix": content => {// Remove merge conflict markers;
-            return content;
-=>:automation/intelligent-error-fixer.js;
-ursor/automate-test-improve-and-merge-code-646c;
-=;
-          "fix": content => {// Remove merge conflict markers;
-            return content;
-          pattern: /||;
-          "fix": content => {// Remove merge conflict markers;
-            return content;
-              .replace(/\n?/g, '').replace(/\n?/g, '').replace(/;
-          }},"invalidJSX": {pattern: /return\(\)\s*</gm,"fix": content =>;
-            content.replace(/return\(\)\s*</gm, 'return (\n    <')},"missingImports": {pattern: /React\./g,"fix": content => {if (!content.includes('import React')) {return `import React from 'react';\n${content}`;
-
-
-
-
-    scanDirectory(pagesDir);
-
-    // Remove duplicate .js files if .tsx exists
-    `);
-          fs.unlinkSync(duplicate);
-        }
-      }
-
 
 const fs = require('fs');
 const path = require('path');
@@ -716,3 +561,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 if (require.main === module) {
   const fixer = new IntelligentErrorFixer();
   fixer.run().catch(console.error);
+}
+module.exports = IntelligentErrorFixer;
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync,} = class IntelligentErrorFixer { constructor() { this.logFile = path.join(__dirname,'logs','error-fixer.log'); this.reportFile = path.join( __dirname,'reports','error-fixer-report.json' ); this.errorPatterns = this.initializeErrorPatterns(); fs.mkdirSync(path.dirname(this.logFile),{ recursive: true }); fs.mkdirSync(path.dirname(this.reportFile),{ recursive: true })} log(message,level = 'INFO') { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(logMessage.trim()); fs.appendFileSync(this.logFile,logMessage)} initializeErrorPatterns() { return { missingBraces: { pattern: /return\(\s*$/m,fix: content => content.replace(/return\(\s*$/gm,'return ('),},extraSemicolons: { pattern: /}\s*;\s*$/m,fix: content => content.replace(/}\s*;\s*$/gm,'}'),},unterminatedStrings: { pattern: /["'][\w\s]*$/m,fix: (content,match) => { return content.replace(match[0],match[0] + match[0].charAt(0))},},mergeConflicts: { pattern: /||

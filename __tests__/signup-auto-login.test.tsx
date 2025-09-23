@@ -8,3 +8,5 @@ describe('Signup Auto Login', () => {
 module.exports = {};
 module.exports = {};
 module.exports = {};
+  });
+});

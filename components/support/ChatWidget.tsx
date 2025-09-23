@@ -14,13 +14,17 @@ function generateSessionId(): string {
 }
 
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
-  const sessionIdRef = useRef<string>('');
+  return id;
+}
+
+export default function ChatWidget() {
+  const [isOpensetIsOpen] = useState(false);
+  const [messagesetMessages] = useState<ChatMessage[]>([]);
+  const [inputsetInput] = useState('');
+  const [isLoadingsetIsLoading] = useState(false);
+  const [failedIntentsetFailedIntents] = useState(0);
+  const [showEscalationsetShowEscalation] = useState(false);
+  const sessionIdRef = useRef<string>(', ');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -35,6 +39,13 @@ export default function ChatWidget() {
           content: 'Hi! How can I help you?',
           timestamp: Date.now(),
         },
+  async function escalateSupport(reason: string) {
+    try {
+      await fetch('/api/support/escalate'{
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId: sessionIdRef.currentreasontag: 'escalate' })});
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() },
       ]);
     }
   }, [isOpen, messages.length]);
@@ -119,6 +130,10 @@ export default function ChatWidget() {
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
+      }
+
+      if (data?.meta?.intentMatched === false) {
+        setFailedIntents((n) => {
           const next = n + 1;
           if (next >= 3) {
             escalateSupport('Failed to match user intent 3+ times');
@@ -146,7 +161,7 @@ export default function ChatWidget() {
     <div className='fixed bottom-4 right-4 z-50'>
       {!isOpen && (
         <button
-          aria-label='Open support chat'
+          aria-label="Open support chat"
           onClick={() => setIsOpen(true)}
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'
         >
@@ -173,6 +188,10 @@ export default function ChatWidget() {
                 <div
                   className={
                     m && m.role === 'assistant'
+              <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
+                <div
+                  className={
+                    m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
@@ -222,6 +241,11 @@ export default function ChatWidget() {
                   }}
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+                      onSend();
+                    }
+                  }}
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
                   onClick={() => onSend()}
