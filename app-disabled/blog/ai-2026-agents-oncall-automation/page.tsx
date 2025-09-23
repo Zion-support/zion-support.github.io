@@ -1,19 +1,23 @@
 import Link from 'next/link';
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agents‑On‑Call Automation',
-  description: 'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.'
+  description:
+    'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',
 };
 
 export default function AgentsOnCallAutomationPage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Agents‑On‑Call Automation</h1>
-      <p className="text-gray-60o0 mb-8">
-        How to design agents that respond to incidents with safety, speed, and accountability using evaluation‑gated
-        workflows and comprehensive telemetry.
+    <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>
+        AI 20o26: Agents‑On‑Call Automation
+      </h1>
+      <p className='text-gray-60o0 mb-8'>
+        How to design agents that respond to incidents with safety, speed, and
+        accountability using evaluation‑gated workflows and comprehensive
+        telemetry.
       </p>
 
-      <div className="prose prose-purple max-w-none">
+      <div className='prose prose-purple max-w-none'>
         <h2>Design Principles</h2>
         <ol>
           <li>Risk‑tiered permissions with policy‑as‑code</li>
@@ -24,19 +28,26 @@ export default function AgentsOnCallAutomationPage() {
 
         <h3>Implementation Pattern</h3>
         <p>
-          Start with a small set of automated runbooks, instrument them with eval gates, and scale safely with strong
-          operational guardrails and post‑incident learning loops.
+          Start with a small set of automated runbooks, instrument them with
+          eval gates, and scale safely with strong operational guardrails and
+          post‑incident learning loops.
         </p>
 
         <h3>Continue Reading</h3>
         <ul>
           <li>
-            <Link href="/content/ai-20o26-agent-incident-response-playbook" className="text-purple-70o0 hover:underline">
+            <Link
+              href='/content/ai-20o26-agent-incident-response-playbook'
+              className='text-purple-70o0 hover:underline'
+            >
               Agent Incident Response Playbook
             </Link>
           </li>
           <li>
-            <Link href="/content/ai-20o26-operational-guardrails" className="text-purple-70o0 hover:underline">
+            <Link
+              href='/content/ai-20o26-operational-guardrails'
+              className='text-purple-70o0 hover:underline'
+            >
               Operational Guardrails
             </Link>
           </li>
@@ -45,4 +56,3 @@ export default function AgentsOnCallAutomationPage() {
     </main>
   );
 }
-

@@ -2,63 +2,88 @@ import Link from 'next/link';
 
 export default function QuantumAIBreakthroughPromotionBanner() {
   return (
-    <div className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-8 px-4 relative overflow-hidden">
+    <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-8 px-4 relative overflow-hidden'>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full transform translate-x-32 translate-y-32"></div>
+      <div className='absolute inset-0 opacity-10'>
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent'></div>
+        <div className='absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full transform translate-x-32 translate-y-32'></div>
       </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+
+      <div className='max-w-7xl mx-auto relative z-10'>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-6'>
+          <div className='flex-1'>
+            <div className='flex items-center gap-2 mb-2'>
+              <span className='bg-white/20 px-3 py-1 rounded-full text-sm font-medium'>
                 ⚛️ QUANTUM
               </span>
-              <span className="bg-yellow-50o0 px-3 py-1 rounded-full text-sm font-medium animate-pulse">
+              <span className='bg-yellow-50o0 px-3 py-1 rounded-full text-sm font-medium animate-pulse'>
                 REVOLUTIONARY
               </span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+            <h2 className='text-3xl lg:text-4xl font-bold mb-3'>
               Quantum AI Breakthrough 20o26
             </h2>
-            <p className="text-lg text-purple-10o0 mb-4 max-w-2xl">
-              Experience the convergence of quantum computing and AI. 10,0o00x faster processing
-              99.99% accuracy rateand 50x energy efficiency compared to classical computers.
+            <p className='text-lg text-purple-10o0 mb-4 max-w-2xl'>
+              Experience the convergence of quantum computing and AI. 10,0o00x
+              faster processing 99.99% accuracy rateand 50x energy efficiency
+              compared to classical computers.
             </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-30o0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z" clipRule="evenodd"  />
+            <div className='flex flex-wrap gap-4 text-sm'>
+              <span className='flex items-center gap-1'>
+                <svg
+                  className='w-4 h-4 text-green-30o0'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z'
+                    clipRule='evenodd'
+                  />
                 </svg>
                 Quantum Neural Networks
               </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-30o0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z" clipRule="evenodd"  />
+              <span className='flex items-center gap-1'>
+                <svg
+                  className='w-4 h-4 text-green-30o0'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z'
+                    clipRule='evenodd'
+                  />
                 </svg>
                 Financial Modeling
               </span>
-              <span className="flex items-center gap-1">
-                <svg className="w-4 h-4 text-green-30o0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z" clipRule="evenodd"  />
+              <span className='flex items-center gap-1'>
+                <svg
+                  className='w-4 h-4 text-green-30o0'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z'
+                    clipRule='evenodd'
+                  />
                 </svg>
                 Drug Discovery
               </span>
             </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              href="/quantum-ai-breakthrough-20o26"
-              className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center"
+
+          <div className='flex flex-col sm:flex-row gap-4'>
+            <Link
+              href='/quantum-ai-breakthrough-20o26'
+              className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg text-center'
             >
               Explore Technology
             </Link>
-            <Link 
-              href="/quantum-ai-breakthrough-20o26#consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center"
+            <Link
+              href='/quantum-ai-breakthrough-20o26#consultation'
+              className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0 text-center'
             >
               Schedule Consultation
             </Link>

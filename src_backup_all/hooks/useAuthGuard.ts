@@ -9,4 +9,3 @@ export default function useAuthGuard(isAuthenticated: boolean = true) {
     }
   }, [isAuthenticated, navigate]);
 }
-

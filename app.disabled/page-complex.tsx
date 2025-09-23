@@ -18,7 +18,9 @@ import APIManagementSystem from '../components/APIManagementSystem';
 // Lazy load heavy components
 const ROICalculator = lazy(() => import('../components/ROICalculator'));
 const StructuredData = lazy(() => import('../components/StructuredData'));
-const PerformanceMetrics = lazy(() => import('../components/PerformanceMetrics'));
+const PerformanceMetrics = lazy(
+  () => import('../components/PerformanceMetrics')
+);
 const TechnologyStack = lazy(() => import('../components/TechnologyStack'));
 
 // Import key promotional components
@@ -54,76 +56,88 @@ import NewContent20o25ShowcaseSection from '../components/NewContent20o25Showcas
 import LatestContentShowcase20o25 from '../components/LatestContentShowcase20o25';
 import RevolutionaryAIContentBanner from '../components/RevolutionaryAIContentBanner';
 
-export const metadata ={
+export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI automation', 'cloud computing', 'micro SaaS', 'technology consulting', 'enterprise solutions', 'digital transformation']};
+  description:
+    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: [
+    'AI automation',
+    'cloud computing',
+    'micro SaaS',
+    'technology consulting',
+    'enterprise solutions',
+    'digital transformation',
+  ],
+};
 
 export default function HomePage() {
   return (
     <div>
       <SEO
-        title="Zion Tech Group - AI & Technology Solutions"
-        description="Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services."
-        keywords="AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation"
-        url="/"
-       />
-      
+        title='Zion Tech Group - AI & Technology Solutions'
+        description='Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.'
+        keywords='AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation'
+        url='/'
+      />
+
       <div className='min-h-screen bg-white'>
         {/* Ultimate Content 20o25 Promotion Banner - NEW FEATURED */}
-        <UltimateContent20o25PromotionBanner  />
-        
+        <UltimateContent20o25PromotionBanner />
+
         {/* Ultimate Content Showcase 20o25 - NEW FEATURED */}
-        <UltimateContentShowcase20o25  />
-        
+        <UltimateContentShowcase20o25 />
+
         {/* AI 20o26 Revolutionary Banner */}
-        <AI20o26RevolutionaryBanner  />
-        
+        <AI20o26RevolutionaryBanner />
+
         {/* New Content 20o26 Showcase Banner */}
-        <NewContent20o26ShowcaseBanner  />
-        
+        <NewContent20o26ShowcaseBanner />
+
         {/* Ultimate Promotion Banner */}
-        <UltimatePromotionBanner20o26  />
-        
+        <UltimatePromotionBanner20o26 />
+
         {/* Revolutionary Content 20o25 Banner */}
-        <RevolutionaryContent20o25Banner  />
-        
+        <RevolutionaryContent20o25Banner />
+
         {/* AI 20o25 Breakthrough Banner */}
-        <AI20o25BreakthroughBanner  />
-        
+        <AI20o25BreakthroughBanner />
+
         {/* New Content 20o25 Showcase Banner */}
-        <NewContent20o25ShowcaseBanner  />
-        
+        <NewContent20o25ShowcaseBanner />
+
         {/* Revolutionary AI Content Banner */}
-        <RevolutionaryAIContentBanner  />
-        
+        <RevolutionaryAIContentBanner />
+
         {/* Enhanced Content Promotion Banner */}
-        <EnhancedContentPromotionBanner  />
-        
+        <EnhancedContentPromotionBanner />
+
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">🚀 AI & TECHNOLOGY SOLUTIONS</span>
+        <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+                <span className='text-sm font-medium'>
+                  🚀 AI & TECHNOLOGY SOLUTIONS
+                </span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
                 Transform Your Business with AI
               </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Cutting-edge AI, cloud infrastructure, and micro SaaS solutions. 
-                Expert consulting and implementation services for enterprise success.
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
+                Cutting-edge AI, cloud infrastructure, and micro SaaS solutions.
+                Expert consulting and implementation services for enterprise
+                success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
-                  href="/services"
-                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+                  href='/services'
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
                 >
                   Explore Services
                 </Link>
                 <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
+                  href='/contact'
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
                 >
                   Get Started
                 </Link>
@@ -133,61 +147,89 @@ export default function HomePage() {
         </section>
 
         {/* Key Statistics */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-60o0 mb-2">50o0+</div>
-                <div className="text-gray-60o0">Projects Delivered</div>
+        <section className='py-16 bg-gray-50'>
+          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-purple-60o0 mb-2'>
+                  50o0+
+                </div>
+                <div className='text-gray-60o0'>Projects Delivered</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-60o0 mb-2">98%</div>
-                <div className="text-gray-60o0">Client Satisfaction</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-blue-60o0 mb-2'>
+                  98%
+                </div>
+                <div className='text-gray-60o0'>Client Satisfaction</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-60o0 mb-2">340%</div>
-                <div className="text-gray-60o0">Average ROI Increase</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-green-60o0 mb-2'>
+                  340%
+                </div>
+                <div className='text-gray-60o0'>Average ROI Increase</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-orange-60o0 mb-2">24/7</div>
-                <div className="text-gray-60o0">Support Available</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-orange-60o0 mb-2'>
+                  24/7
+                </div>
+                <div className='text-gray-60o0'>Support Available</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-bold text-gray-90o0 mb-4">AI Automation</h3>
-                <p className="text-gray-60o0 mb-4">
-                  Intelligent automation solutions that streamline operations and boost productivity across your organization.
+        <section className='py-16'>
+          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
+              Our Services
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+              <div className='bg-white p-8 rounded-xl shadow-lg'>
+                <div className='text-4xl mb-4'>🤖</div>
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                  AI Automation
+                </h3>
+                <p className='text-gray-60o0 mb-4'>
+                  Intelligent automation solutions that streamline operations
+                  and boost productivity across your organization.
                 </p>
-                <Link href="/services/ai-automation" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
+                <Link
+                  href='/services/ai-automation'
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'
+                >
                   Learn More →
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">☁️</div>
-                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-60o0 mb-4">
-                  Scalable, secure cloud solutions designed to support your business growth and digital transformation.
+              <div className='bg-white p-8 rounded-xl shadow-lg'>
+                <div className='text-4xl mb-4'>☁️</div>
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                  Cloud Infrastructure
+                </h3>
+                <p className='text-gray-60o0 mb-4'>
+                  Scalable, secure cloud solutions designed to support your
+                  business growth and digital transformation.
                 </p>
-                <Link href="/services/cloud-infrastructure" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
+                <Link
+                  href='/services/cloud-infrastructure'
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'
+                >
                   Learn More →
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
-                <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold text-gray-90o0 mb-4">Micro SaaS</h3>
-                <p className="text-gray-60o0 mb-4">
-                  Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.
+              <div className='bg-white p-8 rounded-xl shadow-lg'>
+                <div className='text-4xl mb-4'>💼</div>
+                <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                  Micro SaaS
+                </h3>
+                <p className='text-gray-60o0 mb-4'>
+                  Custom micro SaaS applications that solve specific business
+                  challenges with modern, scalable solutions.
                 </p>
-                <Link href="/services/micro-saas" className="text-purple-60o0 font-semibold hover:text-purple-80o0">
+                <Link
+                  href='/services/micro-saas'
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'
+                >
                   Learn More →
                 </Link>
               </div>
@@ -196,60 +238,61 @@ export default function HomePage() {
         </section>
 
         {/* Content Promotion Banners */}
-        <UltimateContentShowcase20o25  />
-        <NewContent20o25PromotionBanner  />
-        <NewContent20o25ShowcaseSection  />
-        <LatestContentShowcase20o25  />
-        <EnhancedContentPromotionBanner20o26  />
-        <ComprehensiveContentShowcase20o26  />
-        <RevolutionaryContent20o26Banner  />
-        <FeaturedContentShowcase20o26  />
-        <NewContent20o26PromotionBanner  />
-        <NewContentPromotionBanner  />
-        <ComprehensiveSolutionsBanner20o25  />
-        <NewServicesShowcase20o25  />
-        <NewContent20o26Showcase  />
-        <InteractiveContentDiscoveryWidget  />
+        <UltimateContentShowcase20o25 />
+        <NewContent20o25PromotionBanner />
+        <NewContent20o25ShowcaseSection />
+        <LatestContentShowcase20o25 />
+        <EnhancedContentPromotionBanner20o26 />
+        <ComprehensiveContentShowcase20o26 />
+        <RevolutionaryContent20o26Banner />
+        <FeaturedContentShowcase20o26 />
+        <NewContent20o26PromotionBanner />
+        <NewContentPromotionBanner />
+        <ComprehensiveSolutionsBanner20o25 />
+        <NewServicesShowcase20o25 />
+        <NewContent20o26Showcase />
+        <InteractiveContentDiscoveryWidget />
 
         {/* Advanced AI Components */}
-        <AdvancedContentRecommendationEngine  />
-        <RealTimePerformanceDashboard  />
-        <IntelligentSearchEngine  />
-        <AdvancedAIAssistant  />
-        <BusinessIntelligenceDashboard  />
-        <AdvancedSecurityMonitor  />
-        <AdvancedAnalyticsEngine  />
-        <AutomationWorkflowEngine  />
-        <EnterpriseDataManagement  />
-        <APIManagementSystem  />
+        <AdvancedContentRecommendationEngine />
+        <RealTimePerformanceDashboard />
+        <IntelligentSearchEngine />
+        <AdvancedAIAssistant />
+        <BusinessIntelligenceDashboard />
+        <AdvancedSecurityMonitor />
+        <AdvancedAnalyticsEngine />
+        <AutomationWorkflowEngine />
+        <EnterpriseDataManagement />
+        <APIManagementSystem />
 
         {/* Structured Data */}
-        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..."  />}>
-          <StructuredData 
-            type="Organization" 
+        <Suspense fallback={<LoadingSpinner size='lg' text='Loading...' />}>
+          <StructuredData
+            type='Organization'
             data={{
-              name: "Zion Tech Group",
-              description: "Transforming businesses through cutting-edge technology solutions",
-              url: "https://zion.app",
-              logo: "https://zion.app/images/zion-tech-group-logo.png",
+              name: 'Zion Tech Group',
+              description:
+                'Transforming businesses through cutting-edge technology solutions',
+              url: 'https://zion.app',
+              logo: 'https://zion.app/images/zion-tech-group-logo.png',
               sameAs: [
-                "https://twitter.com/ZionTechGroup",
-                "https://linkedin.com/company/zion-tech-group"
-              ]
-            }} 
-           />
-          <StructuredData 
-            type="WebSite" 
+                'https://twitter.com/ZionTechGroup',
+                'https://linkedin.com/company/zion-tech-group',
+              ],
+            }}
+          />
+          <StructuredData
+            type='WebSite'
             data={{
-              name: "Zion Tech Group",
-              url: "https://zion.app",
+              name: 'Zion Tech Group',
+              url: 'https://zion.app',
               potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://zion.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-           />
+                '@type': 'SearchAction',
+                target: 'https://zion.app/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }}
+          />
         </Suspense>
       </div>
     </div>

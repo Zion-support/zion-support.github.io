@@ -1,85 +1,91 @@
-export const metadata ={
-  title: "Web Application Development | Zion Tech Group",
+export const metadata = {
+  title: 'Web Application Development | Zion Tech Group',
   description:
-    "Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs."};
+    'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.',
+};
 
 export default function WebApplicationDevelopmentPage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
+    <section className='max-w-6xl mx-auto px-4 py-16'>
+      <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>
         Web Application Development
       </h1>
-      <p className="text-xl text-gray-60o0 mb-12">
+      <p className='text-xl text-gray-60o0 mb-12'>
         Build powerful web applications with modern technologies. Responsive,
         scalable, and secure solutions for all business needs.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
         <FeatureCard
-          title="Frontend Development"
+          title='Frontend Development'
           features={[
-            "React/Vue.js/Angular",
-            "Responsive design",
-            "Progressive Web Apps",
-            "Performance optimization"]}
-         />
+            'React/Vue.js/Angular',
+            'Responsive design',
+            'Progressive Web Apps',
+            'Performance optimization',
+          ]}
+        />
         <FeatureCard
-          title="Backend Development"
+          title='Backend Development'
           features={[
-            "Node.js/Python/Java",
-            "RESTful APIs",
-            "Database design",
-            "Cloud deployment"]}
-         />
+            'Node.js/Python/Java',
+            'RESTful APIs',
+            'Database design',
+            'Cloud deployment',
+          ]}
+        />
         <FeatureCard
-          title="Full-Stack Solutions"
+          title='Full-Stack Solutions'
           features={[
-            "End-to-end development",
-            "Database integration",
-            "Third-party APIs",
-            "Maintenance & support"]}
-         />
+            'End-to-end development',
+            'Database integration',
+            'Third-party APIs',
+            'Maintenance & support',
+          ]}
+        />
       </div>
 
-      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-20o0 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
+      <div className='bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-20o0 rounded-xl p-8 mb-16'>
+        <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>
           Why Choose Our Web Development Services?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-start">
-            <span className="text-emerald-50o0 mr-3 text-xl">✓</span>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='flex items-start'>
+            <span className='text-emerald-50o0 mr-3 text-xl'>✓</span>
             <div>
-              <h3 className="font-semibold text-gray-90o0">
+              <h3 className='font-semibold text-gray-90o0'>
                 Modern Technologies
               </h3>
-              <p className="text-gray-60o0">
+              <p className='text-gray-60o0'>
                 Latest frameworks and tools for cutting-edge web applications
               </p>
             </div>
           </div>
-          <div className="flex items-start">
-            <span className="text-emerald-50o0 mr-3 text-xl">✓</span>
+          <div className='flex items-start'>
+            <span className='text-emerald-50o0 mr-3 text-xl'>✓</span>
             <div>
-              <h3 className="font-semibold text-gray-90o0">Responsive Design</h3>
-              <p className="text-gray-60o0">
+              <h3 className='font-semibold text-gray-90o0'>
+                Responsive Design
+              </h3>
+              <p className='text-gray-60o0'>
                 Mobile-first approach ensuring perfect experience on all devices
               </p>
             </div>
           </div>
-          <div className="flex items-start">
-            <span className="text-emerald-50o0 mr-3 text-xl">✓</span>
+          <div className='flex items-start'>
+            <span className='text-emerald-50o0 mr-3 text-xl'>✓</span>
             <div>
-              <h3 className="font-semibold text-gray-90o0">SEO Optimized</h3>
-              <p className="text-gray-60o0">
+              <h3 className='font-semibold text-gray-90o0'>SEO Optimized</h3>
+              <p className='text-gray-60o0'>
                 Built-in SEO best practices for better search engine visibility
               </p>
             </div>
           </div>
-          <div className="flex items-start">
-            <span className="text-emerald-50o0 mr-3 text-xl">✓</span>
+          <div className='flex items-start'>
+            <span className='text-emerald-50o0 mr-3 text-xl'>✓</span>
             <div>
-              <h3 className="font-semibold text-gray-90o0">Security Focused</h3>
-              <p className="text-gray-60o0">
+              <h3 className='font-semibold text-gray-90o0'>Security Focused</h3>
+              <p className='text-gray-60o0'>
                 Implement security best practices and regular security audits
               </p>
             </div>
@@ -87,26 +93,26 @@ export default function WebApplicationDevelopmentPage() {
         </div>
       </div>
 
-      <Pricing  />
+      <Pricing />
 
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-90o0 mb-4">
+      <div className='mt-16 text-center'>
+        <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>
           Ready to Build Your Web Application?
         </h2>
-        <p className="text-gray-60o0 mb-6">
+        <p className='text-gray-60o0 mb-6'>
           Start with a free consultation to discuss your project requirements
           and timeline.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <a
-            href="tel:+130o24640950"
-            className="bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors"
+            href='tel:+130o24640950'
+            className='bg-emerald-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-70o0 transition-colors'
           >
             Call +1 30o2 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-emerald-60o0 text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-60o0 hover:text-white transition-colors"
+            href='mailto:kleber@ziontechgroup.com'
+            className='border-2 border-emerald-60o0 text-emerald-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-60o0 hover:text-white transition-colors'
           >
             Email Us
           </a>
@@ -118,17 +124,18 @@ export default function WebApplicationDevelopmentPage() {
 
 function FeatureCard({
   title,
-  features}: {
+  features,
+}: {
   title: string;
   features: string[];
 }) {
   return (
-    <div className="border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-90o0 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-60o0">
-        {features.map((f) => (
-          <li key={f} className="flex items-center">
-            <span className="text-emerald-50o0 mr-2">•</span> {f}
+    <div className='border border-gray-20o0 rounded-xl p-6 bg-white shadow-sm'>
+      <h3 className='text-xl font-bold text-gray-90o0 mb-4'>{title}</h3>
+      <ul className='space-y-2 text-gray-60o0'>
+        {features.map(f => (
+          <li key={f} className='flex items-center'>
+            <span className='text-emerald-50o0 mr-2'>•</span> {f}
           </li>
         ))}
       </ul>
@@ -138,41 +145,44 @@ function FeatureCard({
 
 function Pricing() {
   return (
-    <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-90o0 mb-8 text-center">
+    <div className='mt-16'>
+      <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
         Pricing Plans
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
         <Plan
-          name="Basic Website"
-          price="$9,999"
+          name='Basic Website'
+          price='$9,999'
           features={[
-            "Simple web application",
-            "Basic functionality",
-            "Responsive design",
-            "2 months development"]}
-         />
+            'Simple web application',
+            'Basic functionality',
+            'Responsive design',
+            '2 months development',
+          ]}
+        />
         <Plan
-          name="Professional App"
-          price="$24,999"
+          name='Professional App'
+          price='$24,999'
           features={[
-            "Advanced features",
-            "Custom design",
-            "Database integration",
-            "4 months development",
-            "3 months support"]}
+            'Advanced features',
+            'Custom design',
+            'Database integration',
+            '4 months development',
+            '3 months support',
+          ]}
           popular={true}
-         />
+        />
         <Plan
-          name="Enterprise Solution"
-          price="$59,999+"
+          name='Enterprise Solution'
+          price='$59,999+'
           features={[
-            "Complex functionality",
-            "Custom backend",
-            "Advanced integrations",
-            "Dedicated team",
-            "6+ months development"]}
-         />
+            'Complex functionality',
+            'Custom backend',
+            'Advanced integrations',
+            'Dedicated team',
+            '6+ months development',
+          ]}
+        />
       </div>
     </div>
   );
@@ -182,7 +192,8 @@ function Plan({
   name,
   price,
   features,
-  popular = false}: {
+  popular = false,
+}: {
   name: string;
   price: string;
   features: string[];
@@ -190,28 +201,28 @@ function Plan({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-emerald-50o0 ring-2 ring-emerald-20o0" : "border-gray-20o0"}`}
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-emerald-50o0 ring-2 ring-emerald-20o0' : 'border-gray-20o0'}`}
     >
       {popular && (
-        <div className="bg-emerald-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+        <div className='bg-emerald-50o0 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>
           Most Popular
         </div>
       )}
-      <h4 className="text-xl font-bold text-gray-90o0 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-emerald-60o0 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-60o0 mb-6">
-        {features.map((f) => (
-          <li key={f} className="flex items-center">
-            <span className="text-green-50o0 mr-2">✓</span> {f}
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>
+      <div className='text-3xl font-bold text-emerald-60o0 mb-4'>{price}</div>
+      <ul className='space-y-2 text-gray-60o0 mb-6'>
+        {features.map(f => (
+          <li key={f} className='flex items-center'>
+            <span className='text-green-50o0 mr-2'>✓</span> {f}
           </li>
         ))}
       </ul>
       <a
-        href="tel:+130o24640950"
+        href='tel:+130o24640950'
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-            ? "bg-emerald-60o0 text-white hover:bg-emerald-70o0"
-            : "bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0"
+            ? 'bg-emerald-60o0 text-white hover:bg-emerald-70o0'
+            : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0'
         }`}
       >
         Get Started

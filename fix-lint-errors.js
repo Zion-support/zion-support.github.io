@@ -46,9 +46,9 @@ function fixLintIssues(filePath) {
 
     // Fix common syntax issues
     content = content
-      .replace(/,\s*\)/g, ')')  // Remove trailing commas before closing parens
-      .replace(/,\s*}/g, '}')   // Remove trailing commas before closing braces
-      .replace(/,\s*,/g, ',')   // Remove double commas
+      .replace(/,\s*\)/g, ')') // Remove trailing commas before closing parens
+      .replace(/,\s*}/g, '}') // Remove trailing commas before closing braces
+      .replace(/,\s*,/g, ',') // Remove double commas
       .replace(/\s+,\s+/g, ', ') // Normalize comma spacing
       .replace(/=\s*{([^}]*)\s*}/g, '={$1}') // Fix object syntax
       .replace(/<([^>]*)\s*>/g, '<$1>') // Fix JSX syntax
@@ -64,7 +64,8 @@ function fixLintIssues(filePath) {
     content = content.replace(/<(\w+)([^>]*)\s*\/>/g, '<$1$2 />');
 
     // Remove unused destructured imports
-    const destructurePattern = /import\s*{\s*([^}]*)\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g;
+    const destructurePattern =
+      /import\s*{\s*([^}]*)\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g;
     content = content.replace(destructurePattern, (match, imports) => {
       // This is a basic attempt - in practice, you'd need more sophisticated parsing
       return match;
@@ -77,7 +78,7 @@ function fixLintIssues(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-  
+
   return false;
 }
 
@@ -85,14 +86,18 @@ function fixLintIssues(filePath) {
 function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   const items = fs.readdirSync(dir);
   let processedCount = 0;
-  
+
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory()) {
       // Skip node_modules, .next, and other build directories
-      if (!['node_modules', '.next', 'out', 'dist', 'build', '.git'].includes(item)) {
+      if (
+        !['node_modules', '.next', 'out', 'dist', 'build', '.git'].includes(
+          item
+        )
+      ) {
         processedCount += processFiles(fullPath, extensions);
       }
     } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -101,7 +106,7 @@ function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
       }
     }
   }
-  
+
   return processedCount;
 }
 

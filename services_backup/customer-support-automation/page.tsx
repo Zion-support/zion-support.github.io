@@ -1,145 +1,149 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export const metadata ={
-  title: "Customer Support Automation | Zion Tech Group",
+export const metadata = {
+  title: 'Customer Support Automation | Zion Tech Group',
   description:
-    "AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience."};
+    'AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.',
+};
 
 export default function CustomerSupportAutomationPage() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-90o0 mb-6">
+    <div className='animate-fade-in'>
+      <div className='text-center mb-16'>
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>
           Customer Support Automation
         </h1>
-        <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
+        <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>
           AI-powered customer support automation with intelligent chatbots,
           ticket routing, and sentiment analysis for exceptional customer
           experience.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16'>
         <div>
-          <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
+          <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>
             Features & Capabilities
           </h2>
-          <div className="space-y-6">
+          <div className='space-y-6'>
             <FeatureItem
-              title="Intelligent Chatbots"
-              description="Advanced AI chatbots with natural language processing, context awareness, and seamless human handoff capabilities."
-             />
+              title='Intelligent Chatbots'
+              description='Advanced AI chatbots with natural language processing, context awareness, and seamless human handoff capabilities.'
+            />
             <FeatureItem
-              title="Smart Ticket Routing"
-              description="AI-powered ticket classification and routing to the right agent based on expertise, workload, and customer priority."
-             />
+              title='Smart Ticket Routing'
+              description='AI-powered ticket classification and routing to the right agent based on expertise, workload, and customer priority.'
+            />
             <FeatureItem
-              title="Sentiment Analysis"
-              description="Real-time sentiment analysis to identify frustrated customers and prioritize urgent issues for immediate attention."
-             />
+              title='Sentiment Analysis'
+              description='Real-time sentiment analysis to identify frustrated customers and prioritize urgent issues for immediate attention.'
+            />
             <FeatureItem
-              title="Knowledge Base Integration"
-              description="Seamless integration with knowledge bases and documentation for instant access to relevant information and solutions."
-             />
+              title='Knowledge Base Integration'
+              description='Seamless integration with knowledge bases and documentation for instant access to relevant information and solutions.'
+            />
             <FeatureItem
-              title="Multi-Channel Support"
-              description="Unified support across email, chat, phone, social media, and messaging platforms with consistent experience."
-             />
+              title='Multi-Channel Support'
+              description='Unified support across email, chat, phone, social media, and messaging platforms with consistent experience.'
+            />
             <FeatureItem
-              title="Performance Analytics"
-              description="Comprehensive analytics and reporting on support metrics, customer satisfaction, and agent performance."
-             />
+              title='Performance Analytics'
+              description='Comprehensive analytics and reporting on support metrics, customer satisfaction, and agent performance.'
+            />
           </div>
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
+          <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>
             Pricing & Plans
           </h2>
-          <div className="space-y-4">
+          <div className='space-y-4'>
             <PricingCard
-              plan="Starter"
-              price="$49/month"
-              description="Perfect for small businesses and startups"
+              plan='Starter'
+              price='$49/month'
+              description='Perfect for small businesses and startups'
               features={[
-                "Up to 1,0o00 conversations/month",
-                "Basic chatbot functionality",
-                "Email support",
-                "Standard integrations",
-                "Basic analytics"]}
-             />
+                'Up to 1,0o00 conversations/month',
+                'Basic chatbot functionality',
+                'Email support',
+                'Standard integrations',
+                'Basic analytics',
+              ]}
+            />
             <PricingCard
-              plan="Professional"
-              price="$149/month"
-              description="Ideal for growing businesses"
+              plan='Professional'
+              price='$149/month'
+              description='Ideal for growing businesses'
               features={[
-                "Up to 10,0o00 conversations/month",
-                "Advanced AI features",
-                "Priority support",
-                "All integrations",
-                "Advanced analytics",
-                "Custom workflows"]}
-             />
+                'Up to 10,0o00 conversations/month',
+                'Advanced AI features',
+                'Priority support',
+                'All integrations',
+                'Advanced analytics',
+                'Custom workflows',
+              ]}
+            />
             <PricingCard
-              plan="Enterprise"
-              price="$399/month"
-              description="For large organizations with complex support needs"
+              plan='Enterprise'
+              price='$399/month'
+              description='For large organizations with complex support needs'
               features={[
-                "Unlimited conversations",
-                "Custom AI models",
-                "24/7 dedicated support",
-                "On-premise deployment",
-                "Custom integrations",
-                "SLA guarantees",
-                "Advanced security"]}
-             />
+                'Unlimited conversations',
+                'Custom AI models',
+                '24/7 dedicated support',
+                'On-premise deployment',
+                'Custom integrations',
+                'SLA guarantees',
+                'Advanced security',
+              ]}
+            />
           </div>
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-20o0 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-90o0 mb-6 text-center">
+      <div className='bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-20o0 rounded-xl p-8 mb-16'>
+        <h2 className='text-3xl font-bold text-gray-90o0 mb-6 text-center'>
           Why Choose Our Customer Support Automation?
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           <BenefitCard
-            title="80% Faster Resolution"
-            description="AI-powered automation and intelligent routing reduce average resolution time by 80% while improving customer satisfaction."
-           />
+            title='80% Faster Resolution'
+            description='AI-powered automation and intelligent routing reduce average resolution time by 80% while improving customer satisfaction.'
+          />
           <BenefitCard
-            title="24/7 Availability"
-            description="Round-the-clock customer support with intelligent chatbots that never sleep and always provide helpful responses."
-           />
+            title='24/7 Availability'
+            description='Round-the-clock customer support with intelligent chatbots that never sleep and always provide helpful responses.'
+          />
           <BenefitCard
-            title="Proactive Support"
-            description="Predictive analytics and sentiment analysis enable proactive support to prevent issues before they escalate."
-           />
+            title='Proactive Support'
+            description='Predictive analytics and sentiment analysis enable proactive support to prevent issues before they escalate.'
+          />
         </div>
       </div>
 
-      <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
+      <div className='text-center'>
+        <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>
           Ready to Transform Your Customer Support?
         </h2>
-        <p className="text-lg text-gray-60o0 mb-8 max-w-2xl mx-auto">
+        <p className='text-lg text-gray-60o0 mb-8 max-w-2xl mx-auto'>
           Elevate your customer experience with AI-powered support automation
           that provides instant, accurate, and personalized assistance.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
           <a
-            href="tel:+130o24640950"
-            className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors"
+            href='tel:+130o24640950'
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'
           >
             Call +1 30o2 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors"
+            href='mailto:kleber@ziontechgroup.com'
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'
           >
             Email Us
           </a>
         </div>
-        <div className="mt-4 text-sm text-gray-50o0">
+        <div className='mt-4 text-sm text-gray-50o0'>
           <p>📍 364 E Main St STE 10o08, Middletown DE 19709</p>
           <p>📧 kleber@ziontechgroup.com | 📞 +1 30o2 464 0950</p>
         </div>
@@ -150,28 +154,29 @@ export default function CustomerSupportAutomationPage() {
 
 function FeatureItem({
   title,
-  description}: {
+  description,
+}: {
   title: string;
   description: string;
 }) {
   return (
-    <div className="flex items-start space-x-4">
-      <div className="flex-shrink-0 w-6 h-6 bg-pink-50o0 rounded-full flex items-center justify-center mt-1">
+    <div className='flex items-start space-x-4'>
+      <div className='flex-shrink-0 w-6 h-6 bg-pink-50o0 rounded-full flex items-center justify-center mt-1'>
         <svg
-          className="w-4 h-4 text-white"
-          fill="currentColor"
-          viewBox="0 0 20 20"
+          className='w-4 h-4 text-white'
+          fill='currentColor'
+          viewBox='0 0 20 20'
         >
           <path
-            fillRule="evenodd"
-            d="M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z"
-            clipRule="evenodd"
-           />
+            fillRule='evenodd'
+            d='M16.70o7 5.293a1 1 0 0o10 1.414l-8 8a1 1 0 0o1-1.414 0l-4-4a1 1 0 0o11.414-1.414L8 12.586l7.293-7.293a1 1 0 0o11.414 0z'
+            clipRule='evenodd'
+          />
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{title}</h3>
-        <p className="text-gray-60o0">{description}</p>
+        <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>{title}</h3>
+        <p className='text-gray-60o0'>{description}</p>
       </div>
     </div>
   );
@@ -181,21 +186,22 @@ function PricingCard({
   plan,
   price,
   description,
-  features}: {
+  features,
+}: {
   plan: string;
   price: string;
   description: string;
   features: string[];
 }) {
   return (
-    <div className="border border-gray-20o0 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-90o0 mb-2">{plan}</h3>
-      <div className="text-3xl font-bold text-pink-60o0 mb-2">{price}</div>
-      <p className="text-gray-60o0 mb-4">{description}</p>
-      <ul className="space-y-2">
+    <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>
+      <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{plan}</h3>
+      <div className='text-3xl font-bold text-pink-60o0 mb-2'>{price}</div>
+      <p className='text-gray-60o0 mb-4'>{description}</p>
+      <ul className='space-y-2'>
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-sm text-gray-60o0">
-            <span className="text-pink-50o0 mr-2">•</span> {feature}
+          <li key={index} className='flex items-center text-sm text-gray-60o0'>
+            <span className='text-pink-50o0 mr-2'>•</span> {feature}
           </li>
         ))}
       </ul>
@@ -205,14 +211,15 @@ function PricingCard({
 
 function BenefitCard({
   title,
-  description}: {
+  description,
+}: {
   title: string;
   description: string;
 }) {
   return (
-    <div className="text-center">
-      <h3 className="text-lg font-semibold text-gray-90o0 mb-3">{title}</h3>
-      <p className="text-gray-60o0">{description}</p>
+    <div className='text-center'>
+      <h3 className='text-lg font-semibold text-gray-90o0 mb-3'>{title}</h3>
+      <p className='text-gray-60o0'>{description}</p>
     </div>
   );
 }

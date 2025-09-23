@@ -1,30 +1,39 @@
 import Link from 'next/link';
 import SEO from '../../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group',
   description:
-    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.'};
+    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.',
+};
 
 export default function AutonomousOpsPlaybook20o26() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className='min-h-screen bg-white'>
       <SEO
-        title="AI 20o26: Autonomous Ops Playbook"
-        description="Deploy autonomous operations with agentic workflows, signals mesh, and policy-as-code guardrails."
-        keywords="autonomous ops, playbook, AI agents, event-driven, guardrails"
-        url="/content/ai-20o26-autonomous-ops-playbook"
-       />
-      <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 20o26: Autonomous Ops Playbook</h1>
-          <p className="text-lg opacity-90">From automation to autonomy: patterns, controls, and rollout strategies.</p>
+        title='AI 20o26: Autonomous Ops Playbook'
+        description='Deploy autonomous operations with agentic workflows, signals mesh, and policy-as-code guardrails.'
+        keywords='autonomous ops, playbook, AI agents, event-driven, guardrails'
+        url='/content/ai-20o26-autonomous-ops-playbook'
+      />
+      <section className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-4xl md:text-5xl font-bold mb-4'>
+            AI 20o26: Autonomous Ops Playbook
+          </h1>
+          <p className='text-lg opacity-90'>
+            From automation to autonomy: patterns, controls, and rollout
+            strategies.
+          </p>
         </div>
       </section>
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg">
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg'>
           <h2>Outcomes First</h2>
-          <p>Define business outcomes and guardrails before wiring tools. Map KPIs to agent goals and feedback signals.</p>
+          <p>
+            Define business outcomes and guardrails before wiring tools. Map
+            KPIs to agent goals and feedback signals.
+          </p>
 
           <h3>Reference Architecture</h3>
           <ul>
@@ -40,13 +49,19 @@ export default function AutonomousOpsPlaybook20o26() {
             <li>Scale to portfolio with shared platform services</li>
           </ol>
 
-          <div className="mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl">
-            <p className="mb-2 font-semibold text-purple-80o0">Need expert help?</p>
-            <Link href="/blog/ai-20o26-real-time-retrieval-architectures" className="text-purple-70o0 font-semibold hover:text-purple-90o0">Read Real-Time RAG →</Link>
+          <div className='mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl'>
+            <p className='mb-2 font-semibold text-purple-80o0'>
+              Need expert help?
+            </p>
+            <Link
+              href='/blog/ai-20o26-real-time-retrieval-architectures'
+              className='text-purple-70o0 font-semibold hover:text-purple-90o0'
+            >
+              Read Real-Time RAG →
+            </Link>
           </div>
         </div>
       </section>
     </main>
   );
 }
-

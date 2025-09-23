@@ -7,18 +7,32 @@ import {
   LinearScale,
   Tooltip,
   Legend,
-  Filler} from 'chart.js';
+  Filler,
+} from 'chart.js';
 
-ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend, Filler);
+ChartJS.register(
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+  Filler
+);
 
-export type LineChartProps ={
+export type LineChartProps = {
   labels: string[];
   data: number[];
   color?: string; // css color
   height?: number;
 };
 
-export default function LineChart({ labels, data, color = '#3b82f6', height = 160 }: LineChartProps) {
+export default function LineChart({
+  labels,
+  data,
+  color = '#3b82f6',
+  height = 160,
+}: LineChartProps) {
   return (
     <div style={{ height }}>
       <Line
@@ -31,15 +45,22 @@ export default function LineChart({ labels, data, color = '#3b82f6', height = 16
               backgroundColor: color + '33',
               fill: true,
               tension: 0.35,
-              pointRadius: 0},
-          ]}}
+              pointRadius: 0,
+            },
+          ],
+        }}
         options={{
           maintainAspectRatio: false,
-          plugins: { legend: { display: false }, tooltip: { intersect: false, mode: 'index' } },
+          plugins: {
+            legend: { display: false },
+            tooltip: { intersect: false, mode: 'index' },
+          },
           scales: {
             x: { display: false },
-            y: { display: false }}}}
-       />
+            y: { display: false },
+          },
+        }}
+      />
     </div>
   );
 }

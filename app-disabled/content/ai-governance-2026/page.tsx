@@ -1,28 +1,35 @@
 import Link from 'next/link';
-export const metadata ={
+export const metadata = {
   title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework',
-  description: 'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.'};
+  description:
+    'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.',
+};
 
 export default function AIGovernance20o26Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI Governance 20o26</h1>
-          <p className="text-lg md:text-xl opacity-90">
-            Policy, risk, and compliance framework to operate AI safely and responsibly across the enterprise.
+    <main className='min-h-screen bg-white'>
+      <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-3xl md:text-5xl font-bold mb-4'>
+            AI Governance 20o26
+          </h1>
+          <p className='text-lg md:text-xl opacity-90'>
+            Policy, risk, and compliance framework to operate AI safely and
+            responsibly across the enterprise.
           </p>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <article className="prose prose-lg max-w-none">
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8'>
+          <article className='prose prose-lg max-w-none'>
             <h2>Why AI Governance Now</h2>
             <p>
-              With rapid adoption of foundation models and autonomous agents, organizations must institute policy,
-              control, and assurance mechanisms that keep pace with innovation. This guide outlines a pragmatic
-              approach to governance that accelerates delivery while reducing risk.
+              With rapid adoption of foundation models and autonomous agents,
+              organizations must institute policy, control, and assurance
+              mechanisms that keep pace with innovation. This guide outlines a
+              pragmatic approach to governance that accelerates delivery while
+              reducing risk.
             </p>
             <h3>Core Pillars</h3>
             <ul>
@@ -34,16 +41,22 @@ export default function AIGovernance20o26Page() {
             </ul>
             <h3>Outcomes</h3>
             <p>
-              Ship faster with built-in controls, strong assurance, and clear accountability across product, risk,
-              and engineering teams.
+              Ship faster with built-in controls, strong assurance, and clear
+              accountability across product, risk, and engineering teams.
             </p>
           </article>
 
-          <div className="flex gap-4">
-            <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
+          <div className='flex gap-4'>
+            <Link
+              href='/contact'
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
+            >
               Talk to an Expert
             </Link>
-            <Link href="/blog/ai-20o26-llm-evals-maturity-model" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link
+              href='/blog/ai-20o26-llm-evals-maturity-model'
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
+            >
               Explore Evals Maturity Model
             </Link>
           </div>
@@ -52,4 +65,3 @@ export default function AIGovernance20o26Page() {
     </main>
   );
 }
-

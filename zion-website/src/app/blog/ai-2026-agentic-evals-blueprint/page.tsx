@@ -1,35 +1,55 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function AgenticEvalsPost() {
   return (
-    <div className="min-h-screen bg-white">
-      <article className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <header className="mb-8">
-            <p className="text-sm text-gray-50o0">September 15, 20o25 · 12 min read</p>
-            <h1 className="mt-2 text-4xl font-bold tracking-tight text-gray-90o0">
+    <div className='min-h-screen bg-white'>
+      <article className='py-16'>
+        <div className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <header className='mb-8'>
+            <p className='text-sm text-gray-50o0'>
+              September 15, 20o25 · 12 min read
+            </p>
+            <h1 className='mt-2 text-4xl font-bold tracking-tight text-gray-90o0'>
               AI 20o26: Agentic Evals Blueprint
             </h1>
-            <p className="mt-4 text-lg text-gray-70o0">
-              An end-to-end blueprint to evaluate autonomous AI agents using goal-aligned tasks, rubrics, and guardrails—so you can ship reliable, measurable autonomy.
+            <p className='mt-4 text-lg text-gray-70o0'>
+              An end-to-end blueprint to evaluate autonomous AI agents using
+              goal-aligned tasks, rubrics, and guardrails—so you can ship
+              reliable, measurable autonomy.
             </p>
           </header>
 
-          <section className="prose prose-lg prose-slate max-w-none">
+          <section className='prose prose-lg prose-slate max-w-none'>
             <h2>Why Agentic Evals Now</h2>
             <p>
-              As organizations adopt autonomous agents across workflows, evaluation must move beyond static prompts to
-              measure goal completion, safety, and cost under real operating conditions. This blueprint defines practical
-              components you can implement today.
+              As organizations adopt autonomous agents across workflows,
+              evaluation must move beyond static prompts to measure goal
+              completion, safety, and cost under real operating conditions. This
+              blueprint defines practical components you can implement today.
             </p>
 
             <h3>Core Components</h3>
             <ul>
-              <li><strong>Task Suites:</strong> Representative, versioned tasks with realistic context and constraints.</li>
-              <li><strong>Rubrics:</strong> Policy-aligned scoring functions with pass/fail gates and severity levels.</li>
-              <li><strong>Harness:</strong> Deterministic runners that capture traces, artifacts, and telemetry.</li>
-              <li><strong>Guardrails:</strong> Safety, privacy, and budget checks enforced in runtime and eval loops.</li>
-              <li><strong>Reports:</strong> CI-friendly summaries, trends, and diff views for governance.</li>
+              <li>
+                <strong>Task Suites:</strong> Representative, versioned tasks
+                with realistic context and constraints.
+              </li>
+              <li>
+                <strong>Rubrics:</strong> Policy-aligned scoring functions with
+                pass/fail gates and severity levels.
+              </li>
+              <li>
+                <strong>Harness:</strong> Deterministic runners that capture
+                traces, artifacts, and telemetry.
+              </li>
+              <li>
+                <strong>Guardrails:</strong> Safety, privacy, and budget checks
+                enforced in runtime and eval loops.
+              </li>
+              <li>
+                <strong>Reports:</strong> CI-friendly summaries, trends, and
+                diff views for governance.
+              </li>
             </ul>
 
             <h3>Metrics That Matter</h3>
@@ -50,16 +70,24 @@ export default function AgenticEvalsPost() {
             </ol>
 
             <p>
-              For a hands-on framework and templates, see the update: <Link href="/updates/agentic-evals-blueprint" className="text-purple-60o0">Agentic Evals Blueprint (v1)</Link>.
+              For a hands-on framework and templates, see the update:{' '}
+              <Link
+                href='/updates/agentic-evals-blueprint'
+                className='text-purple-60o0'
+              >
+                Agentic Evals Blueprint (v1)
+              </Link>
+              .
             </p>
           </section>
 
-          <footer className="mt-12 border-t pt-6">
-            <Link href="/blog" className="text-purple-60o0 font-semibold">← Back to blog</Link>
+          <footer className='mt-12 border-t pt-6'>
+            <Link href='/blog' className='text-purple-60o0 font-semibold'>
+              ← Back to blog
+            </Link>
           </footer>
         </div>
       </article>
     </div>
-  )
+  );
 }
-

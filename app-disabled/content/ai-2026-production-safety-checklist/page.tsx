@@ -1,17 +1,19 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Production Safety Checklist',
-  description: 'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.'
-}
+  description:
+    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.',
+};
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-12 prose prose-purple">
+    <main className='max-w-3xl mx-auto px-6 py-12 prose prose-purple'>
       <h1>AI 20o26: Production Safety Checklist</h1>
       <p>
-        Ship safer agents with a pragmatic, eval-gated checklist covering policy-as-code, sandboxed tool
-        use, observability, and incident response.
+        Ship safer agents with a pragmatic, eval-gated checklist covering
+        policy-as-code, sandboxed tool use, observability, and incident
+        response.
       </p>
       <h2>Key Controls</h2>
       <ul>
@@ -24,11 +26,21 @@ export default function Page() {
       </ul>
       <p>
         See also the{' '}
-        <Link href="/blog/ai-20o26-safe-tool-use-blueprint" className="text-purple-60o0">Safe Tool Use Blueprint</Link>
-        {' '}and the{' '}
-        <Link href="/content/ai-20o26-evaluation-hub" className="text-purple-60o0">Evaluation Hub</Link>.
+        <Link
+          href='/blog/ai-20o26-safe-tool-use-blueprint'
+          className='text-purple-60o0'
+        >
+          Safe Tool Use Blueprint
+        </Link>{' '}
+        and the{' '}
+        <Link
+          href='/content/ai-20o26-evaluation-hub'
+          className='text-purple-60o0'
+        >
+          Evaluation Hub
+        </Link>
+        .
       </p>
     </main>
-  )
+  );
 }
-

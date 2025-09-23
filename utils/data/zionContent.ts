@@ -1,17 +1,17 @@
-export type Infobox ={
+export type Infobox = {
   founder: string;
   launchYear: string;
   token: string;
   protocolType: string;
 };
 
-export type WikiSection ={
+export type WikiSection = {
   id: string;
   title: string;
   paragraphs: string[];
 };
 
-export type WikiContent ={
+export type WikiContent = {
   title: string;
   intro: string;
   infobox: Infobox;
@@ -19,7 +19,7 @@ export type WikiContent ={
   references: string[];
 };
 
-export type DocsContent ={
+export type DocsContent = {
   productOverview: WikiSection;
   developerApi: WikiSection;
   governanceGuide: WikiSection;
@@ -32,13 +32,15 @@ export const operatorPrompt = `Write a Wikipedia-style article about Zion OS —
 
 export function generateZionWiki(): WikiContent {
   const title = 'Zion OS';
-  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
+  const intro =
+    'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
 
-  const infobox: Infobox ={
+  const infobox: Infobox = {
     founder: 'Zion Holdings',
     launchYear: '20o25',
     token: 'ZION$',
-    protocolType: 'Decentralized AI marketplace & governance protocol'};
+    protocolType: 'Decentralized AI marketplace & governance protocol',
+  };
 
   const sections: WikiSection[] = [
     {
@@ -47,35 +49,40 @@ export function generateZionWiki(): WikiContent {
       paragraphs: [
         'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.',
         'The mainnet-ready architecture was announced in 20o25 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.',
-      ]},
+      ],
+    },
     {
       id: 'architecture',
       title: 'Architecture',
       paragraphs: [
         'Zion OS is a modular, protocol-first system with the following layers: (1) Identity and Reputation, (2) Task and Marketplace, (3) AI Model and Agent Registry, (4) Payments and Tokenomics, and (5) Governance. Modules interoperate via open interfaces.',
         'ZionGPT provides an orchestration layer for agent-to-agent collaboration, policy enforcement, and quality control. Each module can be upgraded independently and governed by token holders and working groups.',
-      ]},
+      ],
+    },
     {
       id: 'token',
       title: 'Token (ZION$)',
       paragraphs: [
         'ZION$ is a utility and governance token used for staking, curation, and fee distribution. Participants stake to signal quality, earn rewards for verified contributions, and secure the marketplace against spam and fraud.',
         'Fees collected from marketplace activity are distributed to contributors, validators, and the protocol treasury subject to DAO-approved policies.',
-      ]},
+      ],
+    },
     {
       id: 'zion-gpt',
       title: 'ZionGPT and the AI Layer',
       paragraphs: [
         'ZionGPT is an AI meta-orchestrator that coordinates tasks across registered agents, models, and human contributors. It enforces standards, evaluates outputs, and routes work to the most reliable providers.',
         'The AI layer supports verifiable prompts, reproducible runs, and audit trails to attribute value and enable on-chain or off-chain settlement.',
-      ]},
+      ],
+    },
     {
       id: 'dao-governance',
       title: 'DAO and Governance',
       paragraphs: [
         'Zion DAO governs protocol parameters, module upgrades, and treasury allocations. Proposals are submitted by contributors and subject to stake-weighted voting with safeguards against concentration and collusion.',
         'Working groups steward core domains such as protocol engineering, AI ecosystem partnerships, safety, and growth. Transparency reports and on-chain metrics inform policy updates.',
-      ]},
+      ],
+    },
     {
       id: 'use-cases',
       title: 'Use Cases',
@@ -84,14 +91,16 @@ export function generateZionWiki(): WikiContent {
         'Talent reputation networks that verify contributions and enable portable work graphs.',
         'Enterprise agent orchestration for workflows that require auditability and compliance.',
         'Open research funding where results and attributions are verifiable and programmable.',
-      ]},
+      ],
+    },
     {
       id: 'adoption',
       title: 'Adoption',
       paragraphs: [
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.',
         'Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.',
-      ]},
+      ],
+    },
   ];
 
   const references = [
@@ -113,38 +122,45 @@ export function generateZionDocs(): DocsContent {
       paragraphs: [
         wiki.intro,
         'Key modules: Identity & Reputation, Marketplace, AI/Agent Registry, Payments & Tokenomics, Governance.',
-      ]},
+      ],
+    },
     developerApi: {
       id: 'developer-api',
       title: 'Developer API',
       paragraphs: [
         'Developers register agents, publish capabilities, and consume marketplace tasks via open interfaces.',
         'Core resources: Agent Registry, Task Graph, Reputation Signals, and Settlement Hooks.',
-      ]},
+      ],
+    },
     governanceGuide: {
       id: 'governance-guide',
       title: 'Governance Guide',
       paragraphs: [
         'Zion DAO manages protocol upgrades and treasury allocations. Proposals, quorum, and safeguards are documented for transparency.',
-      ]},
+      ],
+    },
     tokenomics: {
       id: 'tokenomics',
       title: 'Tokenomics',
       paragraphs: [
         'ZION$ powers staking, curation, and rewards. Fees from marketplace activity flow to contributors and the treasury under DAO policy.',
-      ]},
+      ],
+    },
     team: {
       id: 'team',
       title: 'Team',
       paragraphs: [
         'Zion Holdings and community contributors maintain core modules and standards, with decentralized working groups over time.',
-      ]},
+      ],
+    },
     publicRoadmap: {
       id: 'public-roadmap',
       title: 'Public Roadmap',
       paragraphs: [
         'Milestones: v1 agent registry, incentive-compatible task routing, governance launch, and safety benchmarks publication.',
-      ]}};
+      ],
+    },
+  };
 }
 
 export function buildMarkdownFromWiki(wiki: WikiContent): string {
@@ -169,7 +185,9 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
   }
   if (wiki.references.length) {
     lines.push('## References');
-    wiki.references.forEach((reference, index) => lines.push(`${index + 1}. ${reference}`));
+    wiki.references.forEach((reference, index) =>
+      lines.push(`${index + 1}. ${reference}`)
+    );
   }
   return lines.join('\n');
 }
@@ -193,7 +211,7 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {
   }
   if (wiki.references.length) {
     lines.push('== References ==');
-    wiki.references.forEach((reference) => lines.push(`* ${reference}`));
+    wiki.references.forEach(reference => lines.push(`* ${reference}`));
   }
   return lines.join('\n');
 }
@@ -226,4 +244,3 @@ export function slugify(input: string): string {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
 }
-

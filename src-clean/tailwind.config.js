@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -15,7 +12,12 @@ export default {
         'zion-purple': '#8b5cf6',
         'zion-purple-light': '#a78bfa',
         'zion-slate': '#475569',
-        'zion-slate-light': '#64748b'},
+        'zion-slate-light': '#64748b',
+      },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']}}},
-  plugins: []}
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+};

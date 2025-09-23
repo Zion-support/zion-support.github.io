@@ -9,58 +9,58 @@ interface LoadingSpinnerProps {
   progress?: number;
 }
 
-const iconVariants ={
+const iconVariants = {
   animate: {
     rotate: 360,
     scale: [1, 1.2, 1],
     transition: {
-      rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-      scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
-    }
-  }
+      rotate: { duration: 2, repeat: Infinity, ease: 'linear' },
+      scale: { duration: 1, repeat: Infinity, ease: 'easeInOut' },
+    },
+  },
 };
 
-const pulseVariants ={
+const pulseVariants = {
   animate: {
     scale: [1, 1.1, 1],
     opacity: [0.5, 1, 0.5],
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: 'easeInOut',
+    },
+  },
 };
 
-export function EnhancedLoadingSpinner({ 
-  size = 'md', 
+export function EnhancedLoadingSpinner({
+  size = 'md',
   variant = 'default',
   text = 'Loading...',
   showProgress = false,
-  progress = 0
+  progress = 0,
 }: LoadingSpinnerProps) {
-  const sizeClasses ={
+  const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
-    lg: 'w-16 h-16'
+    lg: 'w-16 h-16',
   };
 
-  const textSizes ={
+  const textSizes = {
     sm: 'text-sm',
     md: 'text-base',
-    lg: 'text-lg'
+    lg: 'text-lg',
   };
 
   const getIcon = () => {
     switch (variant) {
       case 'ai':
-        return <Brain className="w-full h-full text-cyan-40o0"  />;
+        return <Brain className='w-full h-full text-cyan-40o0' />;
       case 'quantum':
-        return <Atom className="w-full h-full text-purple-40o0"  />;
+        return <Atom className='w-full h-full text-purple-40o0' />;
       case 'futuristic':
-        return <Zap className="w-full h-full text-blue-40o0"  />;
+        return <Zap className='w-full h-full text-blue-40o0' />;
       default:
-        return <Loader2 className="w-full h-full text-gray-40o0"  />;
+        return <Loader2 className='w-full h-full text-gray-40o0' />;
     }
   };
 
@@ -78,51 +78,51 @@ export function EnhancedLoadingSpinner({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 p-6">
+    <div className='flex flex-col items-center justify-center space-y-4 p-6'>
       {/* Main Spinner */}
-      <div className="relative">
+      <div className='relative'>
         <motion.div
           className={`${sizeClasses[size]} ${getBackground()} border-2 rounded-full flex items-center justify-center`}
           variants={pulseVariants}
-          animate="animate"
+          animate='animate'
         >
           <motion.div
             variants={iconVariants}
-            animate="animate"
-            className="w-3/4 h-3/4"
+            animate='animate'
+            className='w-3/4 h-3/4'
           >
             {getIcon()}
           </motion.div>
         </motion.div>
-        
+
         {/* Orbiting particles for futuristic variants */}
         {variant !== 'default' && (
           <>
             <motion.div
-              className="absolute inset-0 w-full h-full"
+              className='absolute inset-0 w-full h-full'
               animate={{
-                rotate: 360
+                rotate: 360,
               }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
-                ease: "linear"
+                ease: 'linear',
               }}
             >
-              <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-40o0 rounded-full transform -translate-x-1/2 -translate-y-1/2"  />
+              <div className='absolute top-0 left-1/2 w-2 h-2 bg-cyan-40o0 rounded-full transform -translate-x-1/2 -translate-y-1/2' />
             </motion.div>
             <motion.div
-              className="absolute inset-0 w-full h-full"
+              className='absolute inset-0 w-full h-full'
               animate={{
-                rotate: -360
+                rotate: -360,
               }}
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: "linear"
+                ease: 'linear',
               }}
             >
-              <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-40o0 rounded-full transform -translate-x-1/2 translate-y-1/2"  />
+              <div className='absolute bottom-0 left-1/2 w-2 h-2 bg-blue-40o0 rounded-full transform -translate-x-1/2 translate-y-1/2' />
             </motion.div>
           </>
         )}
@@ -144,14 +144,14 @@ export function EnhancedLoadingSpinner({
           initial={{ opacity: 0, width: 0 }}
           animate={{ opacity: 1, width: '10o0%' }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="w-full max-w-xs bg-gray-20o0 rounded-full h-2 overflow-hidden"
+          className='w-full max-w-xs bg-gray-20o0 rounded-full h-2 overflow-hidden'
         >
           <motion.div
-            className="h-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0"
+            className='h-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0'
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
-           />
+            transition={{ duration: 1, ease: 'easeOut' }}
+          />
         </motion.div>
       )}
 
@@ -160,22 +160,22 @@ export function EnhancedLoadingSpinner({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="flex space-x-1"
+        className='flex space-x-1'
       >
-        {[0, 1, 2].map((i) => (
+        {[0, 1, 2].map(i => (
           <motion.div
             key={i}
-            className="w-2 h-2 bg-gray-40o0 rounded-full"
+            className='w-2 h-2 bg-gray-40o0 rounded-full'
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.5, 1, 0.5]
+              opacity: [0.5, 1, 0.5],
             }}
             transition={{
               duration: 1.5,
               repeat: Infinity,
-              delay: i * 0.2
+              delay: i * 0.2,
             }}
-           />
+          />
         ))}
       </motion.div>
     </div>

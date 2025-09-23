@@ -1,10 +1,22 @@
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Shield, Atom, Lock, CheckCircle, Zap, 
-  BarChart3, Target, Star, ArrowRight, 
-  Phone, Mail, Globe, AlertTriangle, 
-  FileText, Users, Settings
+import {
+  Shield,
+  Atom,
+  Lock,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Target,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  AlertTriangle,
+  FileText,
+  Users,
+  Settings,
 } from 'lucide-react';
 
 export default function QuantumCybersecurityCompliance() {
@@ -20,7 +32,7 @@ export default function QuantumCybersecurityCompliance() {
     'Automated remediation workflows',
     'Compliance dashboard',
     'Team training modules',
-    '24/7 security monitoring'
+    '24/7 security monitoring',
   ];
 
   const benefits = [
@@ -31,7 +43,7 @@ export default function QuantumCybersecurityCompliance() {
     'Reduce audit preparation time',
     'Improve security posture',
     'Streamlined compliance workflows',
-    'Competitive security advantage'
+    'Competitive security advantage',
   ];
 
   const useCases = [
@@ -42,7 +54,7 @@ export default function QuantumCybersecurityCompliance() {
     'E-commerce businesses',
     'SaaS providers',
     'Compliance officers',
-    'Security teams'
+    'Security teams',
   ];
 
   const complianceFrameworks = [
@@ -53,7 +65,7 @@ export default function QuantumCybersecurityCompliance() {
     'PCI DSS',
     'NIST Cybersecurity Framework',
     'FedRAMP',
-    'SOX'
+    'SOX',
   ];
 
   const pricing = [
@@ -65,8 +77,8 @@ export default function QuantumCybersecurityCompliance() {
         'Basic compliance monitoring',
         'Standard security assessments',
         'Email support',
-        'Core compliance frameworks'
-      ]
+        'Core compliance frameworks',
+      ],
     },
     {
       name: 'Professional',
@@ -77,8 +89,8 @@ export default function QuantumCybersecurityCompliance() {
         'Quantum-resistant encryption',
         'Priority support',
         'All compliance frameworks',
-        'Automated remediation'
-      ]
+        'Automated remediation',
+      ],
     },
     {
       name: 'Enterprise',
@@ -89,48 +101,49 @@ export default function QuantumCybersecurityCompliance() {
         'Custom compliance policies',
         'Dedicated security manager',
         '24/7 support',
-        'Custom integrations'
-      ]
-    }
+        'Custom integrations',
+      ],
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white">
-      <SEO 
-        title="Quantum Cybersecurity Compliance Platform | Zion Tech Group"
-        description="Future-proof your security posture with quantum-resistant compliance automation. Automate SOC2, ISO270o01, and GDPR compliance while preparing for quantum computing threats."
-        keywords="quantum cybersecurity, compliance automation, SOC2, ISO270o01, GDPR, quantum-resistant encryption, security compliance"
-       />
-      
+    <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white'>
+      <SEO
+        title='Quantum Cybersecurity Compliance Platform | Zion Tech Group'
+        description='Future-proof your security posture with quantum-resistant compliance automation. Automate SOC2, ISO270o01, and GDPR compliance while preparing for quantum computing threats.'
+        keywords='quantum cybersecurity, compliance automation, SOC2, ISO270o01, GDPR, quantum-resistant encryption, security compliance'
+      />
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className='text-center'
           >
-            <div className="inline-flex items-center px-4 py-2 bg-purple-50o0/20 text-purple-40o0 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2"  />
+            <div className='inline-flex items-center px-4 py-2 bg-purple-50o0/20 text-purple-40o0 rounded-full text-sm font-medium mb-6'>
+              <Shield className='w-4 h-4 mr-2' />
               Quantum Cybersecurity & Compliance
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-pink-50o0 bg-clip-text text-transparent">
+
+            <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-40o0 to-pink-50o0 bg-clip-text text-transparent'>
               Quantum Cybersecurity Compliance Platform
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
-              Future-proof your security posture with quantum-resistant compliance automation and advanced threat protection
+
+            <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>
+              Future-proof your security posture with quantum-resistant
+              compliance automation and advanced threat protection
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center justify-center">
-                <Star className="w-5 h-5 mr-2"  />
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0 flex items-center justify-center'>
+                <Star className='w-5 h-5 mr-2' />
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-purple-50o0/30 text-purple-40o0 rounded-lg font-semibold hover:bg-purple-50o0/10 transition-all duration-30o0 flex items-center justify-center">
-                <ArrowRight className="w-5 h-5 mr-2"  />
+              <button className='px-8 py-4 border border-purple-50o0/30 text-purple-40o0 rounded-lg font-semibold hover:bg-purple-50o0/10 transition-all duration-30o0 flex items-center justify-center'>
+                <ArrowRight className='w-5 h-5 mr-2' />
                 Schedule Demo
               </button>
             </div>
@@ -139,45 +152,51 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Secure Your Future with Quantum-Ready Security
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Our platform combines quantum-resistant encryption with automated compliance monitoring to protect your organization against current and future threats.
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Our platform combines quantum-resistant encryption with automated
+              compliance monitoring to protect your organization against current
+              and future threats.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {[
               {
-                icon: <Shield className="w-8 h-8"  />,
-                title: "Quantum-Resistant",
-                description: "Future-proof encryption that withstands quantum computing attacks"
+                icon: <Shield className='w-8 h-8' />,
+                title: 'Quantum-Resistant',
+                description:
+                  'Future-proof encryption that withstands quantum computing attacks',
               },
               {
-                icon: <Zap className="w-8 h-8"  />,
-                title: "60% Cost Reduction",
-                description: "Automate compliance tasks and reduce operational costs significantly"
+                icon: <Zap className='w-8 h-8' />,
+                title: '60% Cost Reduction',
+                description:
+                  'Automate compliance tasks and reduce operational costs significantly',
               },
               {
-                icon: <CheckCircle className="w-8 h-8"  />,
-                title: "Continuous Compliance",
-                description: "Maintain compliance 24/7 with automated monitoring and reporting"
+                icon: <CheckCircle className='w-8 h-8' />,
+                title: 'Continuous Compliance',
+                description:
+                  'Maintain compliance 24/7 with automated monitoring and reporting',
               },
               {
-                icon: <BarChart3 className="w-8 h-8"  />,
-                title: "Real-Time Security",
-                description: "Monitor threats and vulnerabilities in real-time with AI-powered detection"
-              }
+                icon: <BarChart3 className='w-8 h-8' />,
+                title: 'Real-Time Security',
+                description:
+                  'Monitor threats and vulnerabilities in real-time with AI-powered detection',
+              },
             ].map((benefit, index) => (
               <motion.div
                 key={index}
@@ -185,13 +204,13 @@ export default function QuantumCybersecurityCompliance() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gray-80o0/50 rounded-xl border border-gray-70o0/30"
+                className='text-center p-6 bg-gray-80o0/50 rounded-xl border border-gray-70o0/30'
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-50o0 to-pink-60o0 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-50o0 to-pink-60o0 rounded-xl flex items-center justify-center mx-auto mb-4'>
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-40o0">{benefit.description}</p>
+                <h3 className='text-xl font-semibold mb-2'>{benefit.title}</h3>
+                <p className='text-gray-40o0'>{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -199,24 +218,25 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Compliance Frameworks */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Comprehensive Compliance Coverage
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Support for all major compliance frameworks with automated monitoring and reporting
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Support for all major compliance frameworks with automated
+              monitoring and reporting
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={index}
@@ -224,10 +244,10 @@ export default function QuantumCybersecurityCompliance() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover:border-purple-50o0/50 transition-all duration-30o0"
+                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover:border-purple-50o0/50 transition-all duration-30o0'
               >
-                <FileText className="w-12 h-12 text-purple-40o0 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold mb-2">{framework}</h3>
+                <FileText className='w-12 h-12 text-purple-40o0 mx-auto mb-4' />
+                <h3 className='text-lg font-semibold mb-2'>{framework}</h3>
               </motion.div>
             ))}
           </div>
@@ -235,24 +255,25 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Advanced Security Features
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Everything you need to protect your organization and maintain compliance in the quantum era
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Everything you need to protect your organization and maintain
+              compliance in the quantum era
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -260,10 +281,10 @@ export default function QuantumCybersecurityCompliance() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start space-x-3 p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0/30"
+                className='flex items-start space-x-3 p-4 bg-gray-80o0/30 rounded-lg border border-gray-70o0/30'
               >
-                <CheckCircle className="w-5 h-5 text-purple-40o0 mt-0.5 flex-shrink-0"  />
-                <span className="text-gray-30o0">{feature}</span>
+                <CheckCircle className='w-5 h-5 text-purple-40o0 mt-0.5 flex-shrink-0' />
+                <span className='text-gray-30o0'>{feature}</span>
               </motion.div>
             ))}
           </div>
@@ -271,24 +292,25 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Enterprise-Grade Security Pricing
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Choose the security level that matches your organization's needs and compliance requirements
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Choose the security level that matches your organization's needs
+              and compliance requirements
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className='grid md:grid-cols-3 gap-8'>
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
@@ -297,31 +319,38 @@ export default function QuantumCybersecurityCompliance() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`p-8 rounded-2xl border ${
-                  index === 1 
-                    ? 'bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 border-purple-50o0/50' 
+                  index === 1
+                    ? 'bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 border-purple-50o0/50'
                     : 'bg-gray-80o0/30 border-gray-70o0/30'
                 }`}
               >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-purple-40o0 mb-2">{plan.price}</div>
-                  <p className="text-gray-40o0">per month</p>
+                <div className='text-center mb-6'>
+                  <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>
+                  <div className='text-4xl font-bold text-purple-40o0 mb-2'>
+                    {plan.price}
+                  </div>
+                  <p className='text-gray-40o0'>per month</p>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
+
+                <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-40o0 flex-shrink-0"  />
-                      <span className="text-gray-30o0">{feature}</span>
+                    <li
+                      key={featureIndex}
+                      className='flex items-center space-x-3'
+                    >
+                      <CheckCircle className='w-5 h-5 text-purple-40o0 flex-shrink-0' />
+                      <span className='text-gray-30o0'>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
-                  index === 1
-                    ? 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0'
-                    : 'bg-gray-70o0 hover:bg-gray-60o0 border border-gray-60o0'
-                }`}>
+
+                <button
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
+                    index === 1
+                      ? 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0'
+                      : 'bg-gray-70o0 hover:bg-gray-60o0 border border-gray-60o0'
+                  }`}
+                >
                   {index === 1 ? 'Start Free Trial' : 'Get Started'}
                 </button>
               </motion.div>
@@ -331,24 +360,25 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Trusted by Industry Leaders
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Our platform is designed for organizations that demand the highest level of security and compliance
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Our platform is designed for organizations that demand the highest
+              level of security and compliance
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -356,10 +386,10 @@ export default function QuantumCybersecurityCompliance() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover:border-purple-50o0/50 transition-all duration-30o0"
+                className='text-center p-6 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30 hover:border-purple-50o0/50 transition-all duration-30o0'
               >
-                <Users className="w-12 h-12 text-purple-40o0 mx-auto mb-4"  />
-                <h3 className="text-lg font-semibold mb-2">{useCase}</h3>
+                <Users className='w-12 h-12 text-purple-40o0 mx-auto mb-4' />
+                <h3 className='text-lg font-semibold mb-2'>{useCase}</h3>
               </motion.div>
             ))}
           </div>
@@ -367,50 +397,56 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Security Features Highlight */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className='text-center mb-16'
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className='text-3xl md:text-4xl font-bold mb-4'>
               Quantum-Ready Security Architecture
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Built for the future with quantum-resistant encryption and advanced threat protection
+            <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>
+              Built for the future with quantum-resistant encryption and
+              advanced threat protection
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className='grid md:grid-cols-2 gap-8'>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30"
+              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30'
             >
-              <div className="flex items-center mb-4">
-                <Atom className="w-8 h-8 text-purple-40o0 mr-3"  />
-                <h3 className="text-2xl font-bold">Quantum-Resistant Encryption</h3>
+              <div className='flex items-center mb-4'>
+                <Atom className='w-8 h-8 text-purple-40o0 mr-3' />
+                <h3 className='text-2xl font-bold'>
+                  Quantum-Resistant Encryption
+                </h3>
               </div>
-              <p className="text-gray-30o0 mb-4">
-                Our platform uses post-quantum cryptographic algorithms that remain secure even when quantum computers become available.
+              <p className='text-gray-30o0 mb-4'>
+                Our platform uses post-quantum cryptographic algorithms that
+                remain secure even when quantum computers become available.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Lattice-based cryptography</span>
+              <ul className='space-y-2'>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>
+                    Lattice-based cryptography
+                  </span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Hash-based signatures</span>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>Hash-based signatures</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Code-based encryption</span>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>Code-based encryption</span>
                 </li>
               </ul>
             </motion.div>
@@ -420,27 +456,28 @@ export default function QuantumCybersecurityCompliance() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30"
+              className='p-8 bg-gray-80o0/30 rounded-xl border border-gray-70o0/30'
             >
-              <div className="flex items-center mb-4">
-                <Settings className="w-8 h-8 text-purple-40o0 mr-3"  />
-                <h3 className="text-2xl font-bold">Automated Compliance</h3>
+              <div className='flex items-center mb-4'>
+                <Settings className='w-8 h-8 text-purple-40o0 mr-3' />
+                <h3 className='text-2xl font-bold'>Automated Compliance</h3>
               </div>
-              <p className="text-gray-30o0 mb-4">
-                Streamline your compliance processes with AI-powered automation and real-time monitoring.
+              <p className='text-gray-30o0 mb-4'>
+                Streamline your compliance processes with AI-powered automation
+                and real-time monitoring.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Continuous monitoring</span>
+              <ul className='space-y-2'>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>Continuous monitoring</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Automated reporting</span>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>Automated reporting</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-purple-40o0"  />
-                  <span className="text-gray-30o0">Policy enforcement</span>
+                <li className='flex items-center space-x-2'>
+                  <CheckCircle className='w-4 h-4 text-purple-40o0' />
+                  <span className='text-gray-30o0'>Policy enforcement</span>
                 </li>
               </ul>
             </motion.div>
@@ -449,58 +486,59 @@ export default function QuantumCybersecurityCompliance() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-80o0/50'>
+        <div className='max-w-4xl mx-auto text-center'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Ready to Secure Your Future?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Get in touch with our security experts to learn how quantum-ready cybersecurity can protect your organization
+            <p className='text-xl text-gray-30o0 mb-8'>
+              Get in touch with our security experts to learn how quantum-ready
+              cybersecurity can protect your organization
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-purple-40o0"  />
+
+            <div className='grid md:grid-cols-3 gap-8 mb-8'>
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center'>
+                  <Phone className='w-6 h-6 text-purple-40o0' />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-purple-40o0">+1 30o2 464 0950</p>
+                  <h3 className='font-semibold'>Phone</h3>
+                  <p className='text-purple-40o0'>+1 30o2 464 0950</p>
                 </div>
               </div>
-              
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-purple-40o0"  />
+
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center'>
+                  <Mail className='w-6 h-6 text-purple-40o0' />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-purple-40o0">kleber@ziontechgroup.com</p>
+                  <h3 className='font-semibold'>Email</h3>
+                  <p className='text-purple-40o0'>kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
-              <div className="flex flex-col items-center space-y-3">
-                <div className="w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-purple-40o0"  />
+
+              <div className='flex flex-col items-center space-y-3'>
+                <div className='w-12 h-12 bg-purple-50o0/20 rounded-xl flex items-center justify-center'>
+                  <Globe className='w-6 h-6 text-purple-40o0' />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Website</h3>
-                  <p className="text-purple-40o0">ziontechgroup.com</p>
+                  <h3 className='font-semibold'>Website</h3>
+                  <p className='text-purple-40o0'>ziontechgroup.com</p>
                 </div>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0">
+
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-50o0 to-pink-60o0 rounded-lg font-semibold hover:from-purple-60o0 hover:to-pink-70o0 transition-all duration-30o0'>
                 Schedule Security Review
               </button>
-              <button className="px-8 py-4 border border-purple-50o0/30 text-purple-40o0 rounded-lg font-semibold hover:bg-purple-50o0/10 transition-all duration-30o0">
+              <button className='px-8 py-4 border border-purple-50o0/30 text-purple-40o0 rounded-lg font-semibold hover:bg-purple-50o0/10 transition-all duration-30o0'>
                 Contact Security Team
               </button>
             </div>

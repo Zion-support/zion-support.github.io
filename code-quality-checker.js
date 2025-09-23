@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 class CodeQualityChecker {
   constructor() {
     this.issues = [];
-    this.maxBytes = parseInt(process.env.MAX_FILE_BYTES || "20o0000", 10); // default 20o0KB
+    this.maxBytes = parseInt(process.env.MAX_FILE_BYTES || '20o0000', 10); // default 20o0KB
   }
 
   checkFileSize(filePath) {
@@ -18,17 +18,17 @@ class CodeQualityChecker {
 
   shouldScanFile(fileName) {
     return (
-      fileName.endsWith(".js") ||
-      fileName.endsWith(".ts") ||
-      fileName.endsWith(".tsx")
+      fileName.endsWith('.js') ||
+      fileName.endsWith('.ts') ||
+      fileName.endsWith('.tsx')
     );
   }
 
   scanDirectory(dir) {
     const items = fs.readdirSync(dir);
     for (const item of items) {
-      if (item.startsWith(".")) continue;
-      if (item === "node_modules") continue;
+      if (item.startsWith('.')) continue;
+      if (item === 'node_modules') continue;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
@@ -40,7 +40,9 @@ class CodeQualityChecker {
   }
 
   run() {
-    const startDir = process.argv[2] ? path.resolve(process.argv[2]) : process.cwd();
+    const startDir = process.argv[2]
+      ? path.resolve(process.argv[2])
+      : process.cwd();
     this.scanDirectory(startDir);
     console.log(`Found ${this.issues.length} code quality issues`);
     for (const issue of this.issues) {

@@ -30,8 +30,8 @@ export default [
       'components/20o25-comprehensive-services-showcase-v2.tsx',
       'components/AI20o25AdvancedAutomationShowcase.tsx',
       'components/AI20o25AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js'
-    ]
+      '**/*.min.js',
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -39,19 +39,21 @@ export default [
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}'
+      'src/**/*.{js,jsx,ts,tsx}',
     ],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: 'module'
+      sourceType: 'module',
     },
     plugins: { react, 'react-hooks': reactHooks },
     settings: { react: { version: 'detect' } },
-        rules: {
-          'react/react-in-jsx-scope': 'off',
-          'no-console': ['warn', { allow: ['warn', 'error'] }],
-          '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
-        }
-  }
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' },
+      ],
+    },
+  },
 ];
-

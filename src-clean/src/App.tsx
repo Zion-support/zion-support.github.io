@@ -10,20 +10,20 @@ const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 // Loading Component
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-60o0"></div>
+  <div className='flex items-center justify-center min-h-screen'>
+    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-60o0'></div>
   </div>
 );
 
 function App() {
   return (
-    <div className="App">
-      <Suspense fallback={<LoadingSpinner  />}>
+    <div className='App'>
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
-          <Route path="/" element={<Home  />} />
-          <Route path="/services" element={<Services  />} />
-          <Route path="/contact" element={<Contact  />} />
-          <Route path="*" element={<NotFound  />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Suspense>
     </div>

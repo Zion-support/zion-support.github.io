@@ -10,16 +10,16 @@ export default function AIEthicsAutomation() {
         <meta
           name='description'
           content='Exploring the ethical implications and responsible development of autonomous technology.'
-         />
+        />
         <meta
           property='og:title'
           content='Ethical Considerations in Autonomous AI Systems'
-         />
+        />
         <meta
           property='og:description'
           content='Exploring the ethical implications and responsible development of autonomous technology.'
-         />
-        <meta name='twitter:card' content='summary_large_image'  />
+        />
+        <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
