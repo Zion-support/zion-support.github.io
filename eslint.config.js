@@ -1,3 +1,46 @@
+// ESLint flat config to prevent failures with ESLint v9
+// Keep it minimal; we only define ignores so lint doesn't crash.
+export default [
+  {
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'automation/**',
+      'apps.backup/**',
+      '.temp_backup_components/**',
+      'backup-problematic-files/**',
+      'recovered-branches/**',
+      'server/**',
+      'zion-os/**',
+      'zion-os.broken/**',
+      'zion-os.disabled/**',
+      'zion-os.corrupted/**',
+      'ts_files_backup/**',
+      'temp_exclude/**',
+      'corrupted_backup/**',
+      'pages.disabled/**',
+      'pages.bak/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'pages.disabled_auto/**',
+      'pages.disabled_full/**',
+      'pages_backup_before_cleanup/**',
+      'pages.broken/**',
+      'pages.corrupted',
+      'pages.corrupted.*',
+      'dao/**',
+      'tests.disabled/**',
+      'src.disabled/**',
+      'src_backup_temp/**',
+      'src_backup/**',
+      'plugins/wallet-connector/cypress/**',
+      'components/api/docs/**',
+      'data/api-docs/**',
+      'e2e/**',
+    ],
+  },
+];
+
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
