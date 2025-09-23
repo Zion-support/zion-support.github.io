@@ -1,0 +1,64 @@
+# Ignore build artifacts and dependencies
+node_modules/
+.next/
+dist/
+out/
+coverage/
+build/
+public/build/
+
+# Ignore large legacy or non-active source trees (match tsconfig and jest ignores)
+app/
+pages/
+components/
+lib/
+types/
+utils/
+server/
+automation/
+recovered-branches/
+apps.backup/
+backup/
+backups/
+backup-merge-conflicts/
+backup-problematic-files/
+.temp_backup_components/
+corrupted_backup/
+
+# Ignore various src variants and disabled/corrupted trees
+src/
+src.*
+src_*
+src-*/
+src_backup/
+src_backup_temp/
+src.broken/
+src.corrupted/
+src.disabled/
+src.pages.disabled/
+
+# Ignore zion-os and assistant variants
+zion-os/
+zion-os.broken/
+zion-os.disabled/
+zion-os.corrupted/
+zion-ai-assistant/
+
+# Ignore pages variants
+pages-disabled/
+pages.bak/
+pages_backup_before_cleanup/
+pages.broken/
+pages.corrupted/
+pages.corrupted.*
+
+# Ignore tests and e2e not part of current lint
+__tests__/
+test/
+tests/
+tests.disabled/
+e2e/
+
+# Misc temp
+.temp_exclude/
+ts_files_backup/
