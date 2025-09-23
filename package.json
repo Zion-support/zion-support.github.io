@@ -84,63 +84,8 @@
     "typescript-eslint": "^8.44.1"
   },
   "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testMatch": [
-      "**/?(*.)+(spec|test).+(ts|tsx|js|jsx)"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "testEnvironment": "jest-environment-jsdom",
-    "setupFilesAfterEnv": [
-      "<rootDir>/jest.setup.js"
-    ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/$1"
-    },
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup/",
-      "<rootDir>/backups/",
-      "<rootDir>/backup-merge-conflicts/",
-      "<rootDir>/backup-problematic-files/",
-      "<rootDir>/server/",
-      "<rootDir>/zion-os/"
-    ],
-    "watchPathIgnorePatterns": [
-      "<rootDir>/automation/",
-      "<rootDir>/automation/backups/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/backup/",
-      "<rootDir>/backups/",
-      "<rootDir>/backup-merge-conflicts/",
-      "<rootDir>/recovered-branches/",
-      "<rootDir>/zion-os/"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": [
-        "babel-jest",
-        {
-          "presets": [
-            "next/babel"
-          ]
-        }
-      ]
-    },
-    "testPathIgnorePatterns": [
-      "<rootDir>/.next/",
-      "<rootDir>/node_modules/"
-    ]
+    "preset": "ts-jest",
+    "testEnvironment": "jest-environment-jsdom"
   },
   "packageManager": "npm@11.6.0"
 }
