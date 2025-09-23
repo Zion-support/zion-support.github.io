@@ -4,30 +4,38 @@ export const metadata = {
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs',
 };
 
-<<<<<<< HEAD
-export default function CareersPage() {
-	const openPositions = [
-		{
-			title: 'Senior AI Research Engineer',
-			department: 'Research & Development',
-			location: 'Remote / Global',
-			type: 'Full-time',
-			description:
-				'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
-			requirements: [
-				'PhD in Computer Science, AI, or related field',
-				'5+ years experience in AI research',
-				'Expertise in machine learning and neural networks',
-				'Familiarity with quantum computing concepts',
-			],
-		},
-	];
-
-	const benefits = [
-		{ title: 'Remote First', description: 'Work from anywhere in the world with our distributed team.', icon: '🌍' },
-		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
-		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
-	];
+  const benefits = [
+    {
+      title: 'Remote First',
+      description: 'Work from anywhere in the world with our distributed team.',
+      icon: '🌍',
+    },
+    {
+      title: 'Cutting-Edge Technology',
+      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
+      icon: '🚀',
+    },
+    {
+      title: 'Flexible Hours',
+      description: "Work when you're most productive with flexible scheduling.",
+      icon: '⏰',
+    },
+    {
+      title: 'Learning & Development',
+      description: 'Continuous learning opportunities and professional development.',
+      icon: '📚',
+    },
+    {
+      title: 'Competitive Compensation',
+      description: 'Attractive salary packages with equity options.',
+      icon: '💰',
+    },
+    {
+      title: 'Health & Wellness',
+      description: 'Comprehensive health coverage and wellness programs.',
+      icon: '🏥',
+    },
+  ];
 
   return (
     <div className="space-y-16">
@@ -113,7 +121,6 @@ export default function CareersPage() {
 		</div>
 	);
 }
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
 
       {/* Open Positions */}
       <section className="py-16">
