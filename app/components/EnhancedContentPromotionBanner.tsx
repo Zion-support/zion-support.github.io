@@ -1,1 +1,3 @@
-export { default } from "../../components/EnhancedContentPromotionBanner";
+export default function EnhancedContentPromotionBanner() {
+	return null;
+}

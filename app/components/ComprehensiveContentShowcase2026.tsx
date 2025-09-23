@@ -1,1 +1,3 @@
-export { default } from "../../components/ComprehensiveContentShowcase2026";
+export default function ComprehensiveContentShowcase2026() {
+	return null;
+}
