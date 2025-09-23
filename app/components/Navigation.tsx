@@ -26,8 +26,8 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const pathname = usePathname()
-  const menuRef = useRef<HTMLDivElement>(null)
-  const dropdownTimeoutRef = useRef<NodeJS.Timeout>()
+  const menuRef = useRef<any>(null)
+  const dropdownTimeoutRef = useRef<any>()
 
   // Optimized scroll handler
   const handleScroll = useCallback(() => {
@@ -55,8 +55,8 @@ export default function Navigation() {
 
   // Close mobile menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: any) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as any)) {
         setIsMenuOpen(false)
       }
     }
@@ -76,7 +76,7 @@ export default function Navigation() {
 
   // Close menu on escape key
   useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
+    const handleEscape = (event: any) => {
       if (event.key === 'Escape') {
         setIsMenuOpen(false)
         setActiveDropdown(null)
