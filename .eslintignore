@@ -72,6 +72,22 @@ utils/
 types/
 zion-os/
 zion-website/
+
+# Broadly exclude most of src; re-include core clean directories
+src/**
+!src/app/**
+!src/components/**
+!src/lib/**
+!src/hooks/**
+!src/styles/**
+
+# Explicitly ignore noisy/problematic subtrees
+src/pages_backup/
+src/data/
+src/expandedServices.ts
+src/enhancedServices.ts
+src/utils/**
+src/types/**
 zion-ai-assistant/
 
 # Misc backups
