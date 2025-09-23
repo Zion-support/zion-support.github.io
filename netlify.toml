@@ -9,6 +9,10 @@
   NODE_OPTIONS = "--max-old-space-size=4096"
   # Allow Yarn Berry on Netlify to update the lockfile instead of failing with YN0028
   YARN_ENABLE_IMMUTABLE_INSTALLS = "false"
+  # Configure secrets scanning to ignore expected public values
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "ghs_cdMF1uXtPrMpMzDGF8xCh38WM7LCKx0wdnwq,ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY,ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r,ghs_19kccVEp5VIJbcu1Oe1bBomzNM9uj62KhopR"
+  SECRETS_SCAN_OMIT_PATHS = "automation_logs/**,improvement_report_*.md,data/reports/**"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

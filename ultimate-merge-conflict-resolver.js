@@ -189,7 +189,7 @@ function createGitHubPRAutomation() {
 
 import { execSync } from 'child_process';
 
-const GITHUB_TOKEN = 'ghs_RaIz6EzClIazu7IMfvK2ESTzdSHbLB1WEehY';
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO_OWNER = 'Zion-Holdings';
 const REPO_NAME = 'zion.app';
 

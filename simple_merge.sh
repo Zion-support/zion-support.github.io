@@ -12,7 +12,7 @@ for pr_number in "${PR_NUMBERS[@]}"; do
   echo "  🔄 Attempting API merge..."
   response=$(curl -s -X PUT \
     -H "Accept: application/vnd.github.v3+json" \
-    -H "Authorization: token ghs_mVwAd3X7sGrxLk26IqwlW3En74KQgQ1MJu5r" \
+    -H "Authorization: token ${GITHUB_TOKEN}" \
     -d '{"commit_title":"Merge PR '$pr_number'","merge_method":"merge"}' \
     "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number/merge")
   
