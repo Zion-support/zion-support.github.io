@@ -30,11 +30,6 @@ class PM2SyncAutomation {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-        }
-
-    checkPM2Status() {
-=======
         console.log(message)};
     checkPM2Status() {}
 =======
@@ -190,4 +185,3 @@ if ( {})
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
 module.exports = PM2SyncAutomation;
->>>>>>> main

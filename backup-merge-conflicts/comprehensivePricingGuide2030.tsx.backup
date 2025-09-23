@@ -702,7 +702,6 @@ export const PRICING_ANALYSIS_2030 = {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   "max": Mat h.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
->>>>>>> main
 >>>>>>> main:src_backup_temp/data/comprehensivePricingGuide2030.tsx
 =======
   max: Mat h.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))

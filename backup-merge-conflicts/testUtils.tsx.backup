@@ -76,7 +76,6 @@ export const renderWithProviders = (props: any) => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const renderWithProviders = ("ui": React.ReactElement) => {
   return render(ui, { "wrapper": TestWrapper })};
->>>>>>> main
 >>>>>>> main:src_backup_temp/test/testUtils.tsx
 =======
 >>>>>>> pr-11913:src_backup_temp/test/testUtils.tsx

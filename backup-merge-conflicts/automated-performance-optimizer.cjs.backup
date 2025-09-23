@@ -4,18 +4,6 @@ const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-    this.ensureDirectories()}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message) {
-    const timestamp = new Date().toISOString()
-    }
-  analyzeBundleSize() {
-    this.log("🔍 Analyzing bundle size...")
-=======
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
 =======

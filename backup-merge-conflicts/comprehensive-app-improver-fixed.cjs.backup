@@ -14,11 +14,6 @@ class ComprehensiveAppImprover {}
   };
   log(message, type = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    
-    // Append to log file
-=======
     const logMessage = `[${timestamp}] [${type}] ${message}`;`
     console.log(logMessage);
     // Append to log file;
@@ -273,4 +268,3 @@ if (require.main === module) {}
   improver.run().catch(console.error);
 };
 module.exports = ComprehensiveAppImprover;
->>>>>>> main

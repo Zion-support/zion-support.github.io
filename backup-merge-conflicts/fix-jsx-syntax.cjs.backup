@@ -6,14 +6,6 @@ const path = require('path');
 class JSXSyntaxFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')}
-
-  log(message) {
-    .toISOString()}] ${message}`)}
-
-  fixJSXSyntax() {
-=======
     this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')};
   log(message) {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
@@ -91,4 +83,3 @@ if (require.main === module) {}
       console.error('JSX Syntax Fixer "failed": ', error);
       process.exit(1)})};
 module.exports = JSXSyntaxFixer;
->>>>>>> main

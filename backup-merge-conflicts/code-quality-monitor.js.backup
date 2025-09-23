@@ -11,12 +11,6 @@ class CodeQualityMonitor {
     this.logFile = path.join(__dirname, 'logs', 'code-quality-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'code-quality.json');
     // Ensure directories exist
-<<<<<<< HEAD
-    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
-    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
-  }
-
-=======
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
     fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }

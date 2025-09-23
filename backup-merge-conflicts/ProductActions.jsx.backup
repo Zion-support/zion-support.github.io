@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/ProductActions.jsx.backup
-=======
 <<<<<<< HEAD
 export: function ProductActions ({ onAddToCart }) { const [loading,setLoading] = useState (false) const [label,setLabel] = useState ("Add to Cart") "";"";";"""
 <<<<<<< HEAD:backup-merge-conflicts/ProductActions.jsx.backup

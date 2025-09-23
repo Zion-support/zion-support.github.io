@@ -25,7 +25,6 @@ import { EQUIPMENT_DETAILS, EquipmentDetails } from "@/data/equipmentDetails";
 =======
 import { motion } from 'framer-motion';
 import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
->>>>>>> origin/cursor/build-and-fix-errors-e276
 
   return (
     <>

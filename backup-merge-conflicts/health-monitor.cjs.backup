@@ -504,4 +504,3 @@ monitor.run().catch(error => {
   process.exit(1);
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 });
->>>>>>> main

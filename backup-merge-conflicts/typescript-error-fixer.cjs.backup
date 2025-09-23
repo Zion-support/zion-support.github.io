@@ -113,7 +113,6 @@ class TypeScriptErrorFixer {
     this.log('info', 'Starting TypeScript Error Fixer Service...');
     
     try {}
->>>>>>> main
       this.ensureDirectories();
       await this.performTypeScriptFixes();
       this.startContinuousFixing();

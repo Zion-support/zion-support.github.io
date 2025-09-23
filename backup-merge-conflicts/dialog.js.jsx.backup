@@ -9,7 +9,6 @@ import React,{useState} from &apos;react&apos;; const Dialog({children,open,onOp
 =======
 }}>
       <div className="relative">
->>>>>>> main
 =======
 
 =======

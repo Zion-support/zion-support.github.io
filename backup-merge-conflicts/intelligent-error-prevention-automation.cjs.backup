@@ -251,4 +251,3 @@ class $1 {
   if (args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
->>>>>>> main

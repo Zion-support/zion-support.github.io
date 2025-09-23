@@ -91,4 +91,3 @@ const nextConfig = {}
 };
 
 export default nextConfig;
->>>>>>> main

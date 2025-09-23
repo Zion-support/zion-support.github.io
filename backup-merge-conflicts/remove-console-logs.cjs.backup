@@ -61,9 +61,6 @@ function processFile(filePath) {
     return 0}
 }
 
-<<<<<<< HEAD
-async function main() {
-=======
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -151,7 +148,6 @@ function main() {
     
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
 }
 
 if (require.main === module) {

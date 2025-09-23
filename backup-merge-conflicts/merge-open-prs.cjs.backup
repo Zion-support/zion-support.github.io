@@ -86,21 +86,6 @@ async function main() {}
   const { owner, repo } = getRepoFromGit();
   
   const prs = await listOpenPRs(owner, repo);
-<<<<<<< HEAD
-  if (!prs.length) {
-    
-    return}
-  
-  const results = [];
-  for (const pr of prs) {
-    
-    // If draft, try to ready it
-    if (pr.draft) {
-      const ok = await readyForReview(owner, repo, pr.number);
-      
-      await sleep(500)}
-    // Try initial merge
-=======
   if (!prs.length) {}
     console.log('No open PRs');
     return};
@@ -158,4 +143,3 @@ main().catch(err => {
   process.exit(1)}
 });
 
->>>>>>> main

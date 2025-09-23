@@ -3,17 +3,14 @@ import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tseslint from 'typescript-eslint';
 
 export default [
-  // Global ignores (flat config)
   {
     // Limit linting to main app sources; ignore backups/other projects
     ignores: [
       'node_modules/**',
       '.next/**',
-      '**/.next/**',
       'out/**',
       'dist/**',
       'build/**',
@@ -23,7 +20,6 @@ export default [
       'backup/**',
       'backups/**',
       'backup-merge-conflicts/**',
-      '.temp_backup_components/**',
       'backup-problematic-files/**',
       'recovered-branches/**',
       'server/**',
@@ -64,45 +60,25 @@ export default [
       'e2e/**',
     ],
   },
-  js.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       sourceType: 'module',
-      parser: tsParser,
-      globals: { ...globals.browser, ...globals.node }
+      globals: { ...globals.browser, ...globals.node },
+      parser: tseslint.parser
     },
-    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tsPlugin },
+    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint.plugin },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
-  },
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      parser: tsParser,
-      parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 2020,
-        ecmaFeatures: { jsx: true }
-      }
-    },
-    plugins: {
-      '@typescript-eslint': tsPlugin
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      // TypeScript handles undefined types/identifiers; avoid false positives
-      'no-undef': 'off'
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }
+      ]
     }
   }
 ];

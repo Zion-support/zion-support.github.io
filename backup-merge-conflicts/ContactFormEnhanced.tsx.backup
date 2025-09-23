@@ -40,7 +40,6 @@ const "ContactFormEnhanced": React.FC = () => {
     "email": '',
     "subject": '',
     "message": ''});
->>>>>>> main
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
@@ -69,7 +68,6 @@ const "ContactFormEnhanced": React.FC = () => {
     setFormData({ name: '', email: '', subject: '', message: '' });      <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
->>>>>>> main
   };
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -104,7 +102,6 @@ const "ContactFormEnhanced": React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">                  setFormData({ ...formData, "name": 'e.target.value' })
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
->>>>>>> main
               {' '}
               Name *{' '}
             </label>{' '}
@@ -145,7 +142,6 @@ const "ContactFormEnhanced": React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">                  setFormData({ ...formData, "email": 'e.target.value' })
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
->>>>>>> main
               {' '}
               Email *{' '}
             </label>{' '}
@@ -186,7 +182,6 @@ const "ContactFormEnhanced": React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">                setFormData({ ...formData, "subject": 'e.target.value' })
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
->>>>>>> main
               {' '}
               Subject *{' '}
             </label>{' '}
@@ -223,7 +218,6 @@ const "ContactFormEnhanced": React.FC = () => {
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">                  setFormData({ ...formData, "message": 'e.target.value' })
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
->>>>>>> main
               {' '}
               Message *{' '}
             </label>{' '}
@@ -266,7 +260,6 @@ const "ContactFormEnhanced": React.FC = () => {
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"            <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
->>>>>>> main
           >
             {' '}
             {isSubmitting ? (

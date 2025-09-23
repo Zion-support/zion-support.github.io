@@ -541,7 +541,6 @@ class FileIntegrityMonitor {
       return null;
     }
   }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
   async scanProject() {
     this.log('Starting file integrity scan...');
     const checksums = {};

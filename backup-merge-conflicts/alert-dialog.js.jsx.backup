@@ -9,7 +9,6 @@ import React,{useState} from &apos;react&apos;; const AlertDialog({children,open
 =======
 }}>
       <div className="relative">
->>>>>>> main
 =======
 
 =======
@@ -42,9 +41,6 @@ export function AlertDialogTrigger("props": "any) {;
         throw new Error('AlertDialogTrigger must be used within AlertDialog');
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/alert-dialog.js.jsx.backup
-<<<<<<< HEAD
-    return (<div onClick={() => context.setIsOpen(true)"}>;
 =======
 =======
 =======

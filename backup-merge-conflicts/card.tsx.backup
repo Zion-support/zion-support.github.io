@@ -18,7 +18,6 @@ export function Card({ className, ...props }: CardProps) {
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || ''}`}
       {...props}
      />
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ui/card.tsx
@@ -86,7 +85,6 @@ export function CardDescription("props": "any) {;
 export function CardDescription(props: any) {
   return (
     <p className={`text-sm text-muted-foreground ${className}`} {...props}  />
->>>>>>> main
   );
 }
 interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}

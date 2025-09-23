@@ -42,8 +42,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
 // Mock Supabase client
 jest.mock('@/integrations/supabase/client', () => ({
@@ -98,7 +96,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
       "data": { role: 'admin' },
       "error": null});
@@ -137,8 +134,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
       "method": 'POST' as RequestMethod,
       "headers": {
@@ -187,7 +182,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
       "data": { user: null },
       "error": new Error('Invalid token')});
@@ -268,8 +262,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
       "data": { user: { id: 'user-id' } },
       "error": null});
@@ -345,7 +337,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
     // Auth and role are fine
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
@@ -413,7 +404,6 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:__tests__/api/admin/generate-pitch-deck.test.ts
 >>>>>>> pr-11935
       "data": { user: { id: 'user-id' } },
       "error": null});

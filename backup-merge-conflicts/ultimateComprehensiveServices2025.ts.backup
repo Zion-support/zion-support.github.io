@@ -84,7 +84,6 @@ export interface UltimateComprehensiveService2025 {
     security: string[];
   };
   competitors?: string[];
->>>>>>> main
 >>>>>>> pr-11935
   marketSize?: string;
   launchDate?: string;
@@ -319,7 +318,6 @@ export const getUltimateServiceStats = () => {
     "pricingTiers": ULTIMATE_PRICING_TIERS.map(tier => ({
       ...tier,
       "count": ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service => {
->>>>>>> main
 >>>>>>> pr-11935
         if (tier.id === 'budget') return service.price >= 1000 && service.price < 3000;
         if (tier.id === 'mid-range') return service.price >= 3000 && service.price < 7000;
@@ -455,7 +453,6 @@ export const getFeaturedUltimateServices = ("limit": number = 15) => {
     .sort((a, b) => {
       const aScore = parseFloat(a.roi.replace('%', ")) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
       const bScore = parseFloat(b.roi.replace('%', ")) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
->>>>>>> main
 >>>>>>> pr-11935
       return bScore - aScore;
     "});
@@ -512,7 +509,6 @@ export const getUltimateServicesByIndustry = ("industry": string) => {
     'real-estate': ['AI & Real Estate', 'Predictive Analytics', 'Data Analytics'],
     'education': ['AI & Education', 'Natural Language Processing', 'AI & Marketing']
   };
->>>>>>> main
 >>>>>>> pr-11935
   const categories = industryCategories[industry.toLowerCase()] || [];
   return ULTIMATE_COMPREHENSIVE_SERVICES_2025.filter(service =>;
@@ -534,7 +530,6 @@ export const getUltimateServiceRecommendations = ("preferences": "{;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 // Get service recommendations based on user preferences
 export const getUltimateServiceRecommendations = ("preferences": {
->>>>>>> main
 >>>>>>> pr-11935
   industry?: string;
   budget?: number;
@@ -610,7 +605,6 @@ export const getUltimateServiceRecommendations = ("preferences": {
   return recommendations.sort((a, b) => {
     const aScore = parseFloat(a.roi.replace('%', ")) + (a.innovationLevel === 'Revolutionary' ? 100 : a.innovationLevel === 'Cutting-edge' ? 50 : 0);
     const bScore = parseFloat(b.roi.replace('%', ")) + (b.innovationLevel === 'Revolutionary' ? 100 : b.innovationLevel === 'Cutting-edge' ? 50 : 0);
->>>>>>> main
     return bScore - aScore;
   "});
 };

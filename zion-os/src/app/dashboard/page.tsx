@@ -110,7 +110,7 @@ export default function DashboardPage() {
       {/* Account Info */}
       <div className="bg-zinc-800/30 rounded-xl p-6 border border-zinc-700/30">
         <h2 className="text-xl font-semibold text-white mb-4">Account Information</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md-grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>
             <p className="text-white">{user?.name || "Not provided"}</p>

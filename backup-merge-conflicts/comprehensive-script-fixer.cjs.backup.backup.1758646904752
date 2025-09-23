@@ -1,0 +1,43 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.scriptsDir = path.join(this.projectRoot, 'scripts')
+<<<<<<< HEAD
+    this.fixedCount = 0
+    this.errors = []
+  }
+  log(message, level = 'info') {
+    const timestamp = new Date().toISOString()
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
+    }
+  fixSyntaxErrors(content) {
+    let fixed = content
+    // Fix common syntax issues
+    fixed = fixed.replace(/;\s*,/g, ',') // Remove semicolons before commas
+    fixed = fixed.replace(/{\s*;/g, '{') // Remove semicolons after opening braces
+    fixed = fixed.replace(/,\s*}/g, '}') // Remove semicolons before closing braces
+    fixed = fixed.replace(/;\s*\)/g, ')') // Remove semicolons before closing parentheses
+    fixed = fixed.replace(/;\s*\]/g, ']') // Remove semicolons before closing brackets
+    fixed = fixed.replace(/;\s*$/gm, '') // Remove trailing semicolons at end of lines
+    // Fix malformed object literals
+    fixed = fixed.replace(/{\s*;\s*/g, '{')
+=======
+  log(message, level = 'info')
+    fixed = fixed.replace(/;\s*,/g, ',')
+    fixed = fixed.replace(/{\s*;/g, '{'})
+    fixed = fixed.replace(/,\s*}/g, '}')
+    fixed = fixed.replace(/;\s*\)/g, ')'
+    fixed = fixed.replace(/;\s*\]/g, ']')
+    fixed = fixed.replace(/;\s*$/gm, '')
+    fixed = fixed.replace(/{\s*;\s*/g, '{'})
+    fixed = fixed.replace(/,\s*}/g, '}')
+    fixed = fixed.replace(/\[\s*;\s*/g, '[')]
+    fixed = fixed.replace(/,\s*\]/g, ']')
+    fixed = fixed.replace(/\(\s*;\s*/g, '(')
+    fixed = fixed.replace(/;\s*\)/g, ')'
+    fixed = fixed.replace(/['"]\s*;\s*['"]/g, '"")
+    fixed = fixed.replace(/['"]\s*;\s*$/gm, '')
+    fixed = fixed.replace(/require\s*\(\s*['"]\s*;\s*['"]\s*\)/g, 'require("")
+      this.log(`⚠ ${this.errors.length} files had "errors"`)
+      this.log(`� Script fixing "failed"`)
+>>>>>>> main

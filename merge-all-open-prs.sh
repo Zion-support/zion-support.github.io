@@ -2,8 +2,6 @@
 
 <<<<<<< HEAD
 # Comprehensive script to resolve merge conflicts and merge all open PRs into main
-<<<<<<< HEAD
-=======
 # Optimized for handling thousands of unmerged branches
 =======
 # Comprehensive script to merge all open PRs from GitHub
@@ -15,7 +13,6 @@ set -e
 
 echo "🚀 Starting comprehensive merge conflict resolution for all open PRs..."
 echo "📊 Total unmerged branches to process: $(git branch -r --no-merged main | wc -l)"
->>>>>>> origin/auto/autonomy-17186719616
 echo "⏰ Started at: $(date)"
 echo "---"
 
@@ -32,8 +29,6 @@ FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
 <<<<<<< HEAD
 SKIPPED_BRANCHES=0
-<<<<<<< HEAD
-=======
 TOTAL_PROCESSED=0
 =======
 SKIPPED_DRAFTS=0
@@ -60,7 +55,6 @@ echo "🔍 Found $(echo "$OTHER_BRANCHES" | wc -l) other branches"
 echo "---"
 
 # Function to resolve conflicts in a file
->>>>>>> origin/auto/autonomy-17186719616
 resolve_conflicts() {
     local file="$1"
     local branch="$2"
@@ -154,9 +148,6 @@ can_merge_branch() {
     
     # Skip if branch has too many commits (likely complex conflicts)
     local commit_count=$(git log --oneline main.."origin/$branch" 2>/dev/null | wc -l)
-<<<<<<< HEAD
-    if [ "$commit_count" -gt 100 ]; then
-=======
     if [ "$commit_count" -gt 200 ]; then
 =======
 # Function to merge a single branch with enhanced error handling
@@ -177,7 +168,6 @@ merge_branch() {
     local branch="$1"
     
     echo "🔄 Attempting to merge $branch..."
->>>>>>> origin/auto/autonomy-17186719616
     
     # Fetch the latest version of the branch
     git fetch origin "$branch"
@@ -257,14 +247,6 @@ merge_branch() {
     fi
 }
 
-<<<<<<< HEAD
-# Main processing loop
-echo "🔄 Starting branch processing..."
-echo "---"
-
-for branch in $ALL_BRANCHES; do
-    echo "📋 Processing branch: $branch"
-=======
 # Main processing loop with progress tracking
 echo "🔄 Starting branch processing..."
 echo "---"
@@ -447,7 +429,6 @@ done
 
 # Final push
 echo "💾 Pushing final changes to remote..."
->>>>>>> origin/auto/autonomy-17186719616
 git push origin main
 
 # Summary
@@ -459,8 +440,6 @@ echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-<<<<<<< HEAD
-=======
 echo "   📈 Total processed: $TOTAL_PROCESSED"
 =======
 echo "🎉 Open PR merge process completed!"

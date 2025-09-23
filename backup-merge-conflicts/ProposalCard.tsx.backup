@@ -67,7 +67,6 @@ interface ProposalCardProps {
 ;
 interface ProposalCardProps {;
   proposal: Proposa l;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> pr-11913:src_backup_temp/components/governance/ProposalCard.tsx
   onVote?: (proposalId: string, vote: 'for' | 'against') => void;

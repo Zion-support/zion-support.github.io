@@ -1,3 +1,6 @@
+export default function StructuredData() {
+  return null;
+}
 <<<<<<< HEAD
 export default function StructuredData() {
 	return null;

@@ -318,7 +318,6 @@ export function PerformanceMonitor("props": "any) {;
 >>>>>>> main
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
         {/* Settings Panel */}
         <AnimatePresence>;
           {showSettings && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {;
@@ -571,7 +570,6 @@ export function PerformanceMonitor("props": "any) {;
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
->>>>>>> pr-11935
 </motion>
 </motion>
 </div>
