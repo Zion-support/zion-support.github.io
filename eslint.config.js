@@ -8,73 +8,7 @@ import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
-<<<<<<< HEAD
-	{
-		ignores: [
-			'node_modules/**',
-			'.next/**',
-			'**/.next/**',
-			'out/**',
-			'dist/**',
-			'build/**',
-			'coverage/**',
-			'public/**',
-			'automation/**',
-			'backups/**',
-			'backup/**',
-			'backup-merge-conflicts/**',
-			'backup-problematic-files/**',
-			'apps.backup/**',
-			'components.disabled/**',
-			'components.disabled_full/**',
-			'pages-disabled/**',
-			'pages.bak/**',
-			'pages_backup_before_cleanup/**',
-			'pages.broken/**',
-			'pages.corrupted*',
-			'recovered-branches/**',
-			'server/**',
-			'temp_backup/**',
-			'temp_exclude/**',
-			'tests.disabled/**',
-			'ts_files_backup/**',
-			'zion-os/**',
-			'zion-os.*',
-			'zion-website/**',
-		],
-	},
-	js.configs.recommended,
-	{
-		files: ['**/*.{js,jsx,ts,tsx}'],
-		languageOptions: {
-			ecmaVersion: 'latest',
-			sourceType: 'module',
-			parser: tsParser,
-			parserOptions: { ecmaFeatures: { jsx: true } },
-			globals: { ...globals.browser, ...globals.node },
-		},
-		plugins: {
-			react,
-			'react-hooks': reactHooks,
-			'react-refresh': reactRefresh,
-			'@typescript-eslint': tsPlugin,
-		},
-		settings: { react: { version: 'detect' } },
-		rules: {
-			'no-empty': 'off',
-			'no-console': 'warn',
-			'no-undef': 'off',
-			'no-unused-vars': 'off',
-			'@typescript-eslint/no-unused-vars': [
-				'warn',
-				{ argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-			],
-			'react/jsx-uses-react': 'off',
-			'react/react-in-jsx-scope': 'off',
-		},
-	},
-=======
-  // Global ignores for this monorepo-like workspace
+  // Global ignores for this workspace
   {
     ignores: [
       'node_modules/**',
@@ -84,6 +18,7 @@ export default [
       'dist/**',
       'build/**',
       'coverage/**',
+      'public/**',
       'automation/**',
       'backups/**',
       'backup/**',
@@ -91,7 +26,6 @@ export default [
       'backup-problematic-files/**',
       'api/**',
       'server/**',
-      'public/**',
       'netlify/**',
       'app_backup/**',
       'app-disabled/**',
@@ -135,7 +69,7 @@ export default [
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       sourceType: 'module',
       parser: tsParser,
       parserOptions: { ecmaFeatures: { jsx: true } },
@@ -147,20 +81,18 @@ export default [
       'react-refresh': reactRefresh,
       '@typescript-eslint': tsPlugin
     },
+    settings: { react: { version: 'detect' } },
     rules: {
-      'no-unused-vars': 'off',
       'no-empty': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off',
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
       ],
-      'no-console': 'warn',
       'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off',
-      // TypeScript handles undefined types/identifiers; avoid false positives
-      'no-undef': 'off'
-    },
-    settings: { react: { version: 'detect' } }
+      'react/react-in-jsx-scope': 'off'
+    }
   }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-e8a0
 ];
