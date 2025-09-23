@@ -1,94 +1,69 @@
-*
-!zion-website
-!zion-website/**
+# Ignore backups, disabled, archived, and conflict directories
+**/node_modules/**
+**/.next/**
+**/dist/**
+**/build/**
 
-# Always ignore dependencies and build outputs
-node_modules/
-.next/
-dist/
-build/
-coverage/
-out/
-*.log
-*.tmp
-backups/
-backup/
-backup-merge-conflicts/
-backup-problematic-files/
-recovered-branches/
-corrupted_backup/
-api.disabled/
-api.disabled.temp/
-app-disabled/
-app_backup/
-apps.backup/
+# Massive backup/quarantine/disabled folders
+backup/**
+backups/**
+backup-merge-conflicts/**
+backup-problematic-files/**
+*.backup/**
+*backup*/**
+*backups*/**
+.pages/**
+pages.bak/**
+pages-backup/**
+pages_backup/**
+pages_backup_before_cleanup/**
+pages.__backup/**
+pages._archive_corrupted/**
+pages._quarantine/**
+pages-quarantine/**
+pages-disabled/**
+pages.disabled/**
+pages.disabled_auto/**
+pages.disabled_build/**
+pages.disabled.full/**
+pages.disabled_full/**
+pages.broken/**
+pages.corrupted*/**
+pages.old/**
+pages.blog.disabled/**
 
-# Exclude most component suites and APIs that are archived/experimental
-components/
-components.disabled/
-components.disabled_full/
-components-disabled/
-components-disabled_full/
+src_backup/**
+src_backup_temp/**
+src.disabled/**
+src.broken/**
+src-corrupted/**
+src.corrupted/**
+lib_backup/**
+lib.disabled/**
+components.disabled/**
+components.disabled_full/**
+services_backup/**
+solutions.disabled/**
+solutions_backup/**
 
-# Exclude problematic page backups
-pages-disabled/
-pages.disabled/
-pages_disabled/
-pages.disabled_full/
-pages.disabled_auto/
-pages_backup/
-pages_backup_before_cleanup/
-pages_backup_conflict/
-pages_backup_conflicts/
-pages._archive_corrupted/
-pages.broken/
-pages.corrupted.*/
-pages_minimal/
-pages.old/
-pages-quarantine/
-pages._quarantine/
+recovered-branches/**
+workflow_backups/**
+automation/backups/**
 
-# Source backups/disabled
-src_backup/
-src_backup_temp/
-src.broken/
-src.corrupted/
-src-disabled/
-src.disabled/
-src.pages.disabled/
+# Misc temp
+.temp*/**
+.temp_*/**
+.temp*/
+**/*.conflict*/**
+**/*.broken/**
+**/*.disabled/**
+**/*.disabled/**
+**/*.disabled_full/**
 
-# Temp directories
-temp-backup/
-temp_backup/
-temp_broken_files/
-temp_components/
-temp_conflicts/
-temp-disabled/
-temp_exclude/
+# Logs and reports
+playwright-report/**
+playwright-logs/**
+ci-cd-reports/**
+reports/**
+**/*-report*/**
 
-# Additional noisy or non-primary directories
-ts_files_backup/
-utils/
-types/
-zion-os/
-zion-website/
-zion-ai-assistant/
-
-# Misc backups
-lib_backup/
-lib.broken/
-lib.disabled/
-
-# Catch-all patterns for backups/disabled variants
-**/*.backup*
-**/*.backups*/
-**/*.corrupted*/
-**/*.disabled*/
-
-# Additional exclusions to avoid linting corrupted or out-of-scope code
-utils/
-types/
-ts_files_backup/
-zion-os/
-zion-ai-assistant/
-zion-website/
