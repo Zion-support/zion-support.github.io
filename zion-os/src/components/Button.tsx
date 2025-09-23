@@ -1,29 +1,9 @@
-<<<<<<< HEAD
+import React from 'react';
 
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-
-
-
-
-
-
-
-
-
-
-
-=======
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  href?: string;
-  onClick?: () => void;
-  disabled?: boolean;
-  loading?: boolean;
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right';
-  className?: string;
-  type?: 'button' | 'submit' | 'reset';
-  fullWidth?: boolean;
-  rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+export default function Button(props: ButtonProps) {
+	return (
+		<button {...props} />
+	);
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4

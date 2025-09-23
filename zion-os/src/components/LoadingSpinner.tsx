@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default function LoadingSpinner() {
+	return (
+		<div role="status" aria-live="polite" aria-busy="true">
+			Loading...
+		</div>
+	);
+}
