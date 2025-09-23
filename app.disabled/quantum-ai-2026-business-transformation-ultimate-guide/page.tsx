@@ -9,7 +9,7 @@ export default function Page() {
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import SEO from '../components/SEO';
+// import SEO from '../components/SEO';
 import RelatedContentWidget from '../components/RelatedContentWidget';
 import SocialShareButtons from '../components/SocialShareButtons';
 
@@ -170,12 +170,7 @@ const relatedPosts = [
 export default function QuantumAI2026BusinessTransformationPage() {
   return (
     <div>
-      <SEO
-        title={blogPost.title}
-        description={blogPost.description}
-        keywords={blogPost.tags.join(', ')}
-        url="/quantum-ai-2026-business-transformation-ultimate-guide"
-      />
+      {/* SEO component temporarily unavailable */}
       
       <div className="min-h-screen bg-white">
         {/* Content Promotion Banner */}
@@ -200,14 +195,10 @@ export default function QuantumAI2026BusinessTransformationPage() {
         <SocialShareButtons 
           url="/quantum-ai-2026-business-transformation-ultimate-guide"
           title={blogPost.title}
-          description={blogPost.description}
         />
 
         {/* Related Content Widget */}
-        <RelatedContentWidget 
-          title="Related Quantum AI & Technology Content"
-          posts={relatedPosts}
-        />
+        {/* Related content temporarily unavailable */}
 
         {/* Call to Action Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">

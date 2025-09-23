@@ -11,50 +11,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^1.7.7",
-<<<<<<< HEAD
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
-    "express": "^4.19.2",
-    "cors": "^2.8.5",
-    "helmet": "^7.1.0",
-    "morgan": "^1.10.0",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
-=======
-    "dotenv": "^16.4.5",
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.1.5",
     "express-validator": "^7.0.1",
-<<<<<<< HEAD
     "helmet": "^7.1.0",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
-    "axios": "^1.7.7"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/cors": "^2.8.17",
-    "@types/morgan": "^1.9.9",
-    "@types/compression": "^1.7.5",
-    "@types/node": "^20.8.10",
-    "typescript": "^5.6.3",
-    "tsx": "^4.6.2",
-<<<<<<< HEAD
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
-    "nodemon": "^3.1.0"
-=======
     "@types/compression": "^1.7.5",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
@@ -63,9 +30,5 @@
     "nodemon": "^3.1.0",
     "tsx": "^4.6.2",
     "typescript": "^5.6.3"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-5719
-=======
-    "nodemon": "^3.0.2"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 }

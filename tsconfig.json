@@ -1,70 +1,86 @@
 {
-	"compilerOptions": {
-		"baseUrl": ".",
-		"paths": {
-			"@/*": [
-				"zion-website/src/*"
-			]
-		},
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": false,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"incremental": true,
-		"module": "esnext",
-		"esModuleInterop": true,
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"strictNullChecks": true,
-		"target": "ES2017"
-	},
-	"include": [
-		"next-env.d.ts",
-		"zion-website/src/**/*.ts",
-		"zion-website/src/**/*.tsx"
-	],
-	"exclude": [
-		"node_modules",
-		"**/node_modules/**",
-		".next/cache",
-		"dist",
-		"out",
-		"coverage",
-		"build",
-		"public/build",
-		"**/*backup*",
-		"**/*conflict*",
-		"**/*temp*",
-		"temp*/**",
-		"temp_*/**",
-		"temp-*/**",
-		"server",
-		"server/**",
-		".temp_backup_components",
-		".temp_backup_components/**",
-		"automation",
-		"automation/**",
-		"apps.backup",
-		"recovered-branches",
-		"backup-problematic-files",
-		"zion-os",
-		"zion-os/**",
-		"zion-ai-assistant",
-		"zion-ai-assistant/**",
-		"zion-os.disabled",
-		"zion-os.disabled/**"
-	]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "zion-website/src/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/**",
+    ".next/cache",
+    "dist",
+    "out",
+    "coverage",
+    "build",
+    "public/build",
+<<<<<<< HEAD
+    "server/**",
+    "zion-os/**",
+    "zion-ai-assistant/**",
+    "zion-website/**",
+    "apps.backup/**",
+    "src/pages_backup/**",
+    "src/components/navigation/ModernNavigation-broken.tsx",
+    "src/components/**/*.broken.*",
+    "**/*-broken.*",
+    "src/expandedServices.ts",
+    "src/comprehensiveServices.ts",
+    "src/data/comprehensiveServices.ts",
+    "backups/**",
+    "backup/**",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*"
+=======
+    "data_backup",
+    "backup",
+    "backups",
+    "pages_backup_conflict",
+    "apps.backup",
+    "corrupted-files-backup",
+    "lib_backup",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*",
+    "app/components/**",
+    "app/**/*.disabled/**",
+    "zion-os",
+    "zion-os.disabled",
+    "zion-ai-assistant"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+  ]
 }

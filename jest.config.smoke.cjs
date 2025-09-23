@@ -7,7 +7,7 @@ const createJestConfig = nextJest({
 const config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  roots: ['<rootDir>/src', '<rootDir>/app', '<rootDir>/components'],
+  roots: ['<rootDir>/src', '<rootDir>/components', '<rootDir>/pages', '<rootDir>/tests'],
   testMatch: [
     '**/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '**/*.smoke.(test|spec).(js|jsx|ts|tsx)',

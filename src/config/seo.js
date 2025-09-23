@@ -5,16 +5,22 @@ export const defaultSEO = {
   url: 'https://ziontechgroup.com',
   siteName: 'Zion Tech Group',
   title: 'Zion Tech Group - AI-Powered Business Solutions',
-  description:
-    'Transform your business with our comprehensive suite of AI-powered solutions.',
-  openGraph: {
+  description: 'Transform your business with our comprehensive suite of AI-powered solutions.',
+  images: [
+    {
+      url: 'https://ziontechgroup.com/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Zion Tech Group - AI-Powered Business Solutions',
+    },
+  ],
+  open_graph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://ziontechgroup.com',
     site_name: 'Zion Tech Group',
     title: 'Zion Tech Group - AI-Powered Business Solutions',
-    description:
-      'Transform your business with our comprehensive suite of AI-powered solutions.',
+    description: 'Transform your business with our comprehensive suite of AI-powered solutions.',
     images: [
       {
         url: 'https://ziontechgroup.com/og-image.jpg',
@@ -27,7 +33,7 @@ export const defaultSEO = {
   twitter: {
     handle: '@ziontechgroup',
     site: '@ziontechgroup',
-    cardType: 'summary_large_image',
+    card_type: 'summary_large_image',
   },
   additionalMetaTags: [
     {
