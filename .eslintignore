@@ -77,6 +77,25 @@ coverage/
 dist/
 build/
 coverage/
+<<<<<<< HEAD
+=======
+out/
+backups/
+backup/
+backup-merge-conflicts/
+backup-problematic-files/
+recovered-branches/
+corrupted_backup/
+api.disabled/
+api.disabled.temp/
+app-disabled/
+app_backup/
+apps.backup/
+zion-os/
+zion-website/
+zion-ai-assistant/
+apps/
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 
 # Ignore backups and temp artifacts
 **/backup*/
@@ -124,6 +143,7 @@ temp_components/
 temp_conflicts/
 temp-disabled/
 temp_exclude/
+ts_files_backup/
 
 # Misc backups
 lib_backup/

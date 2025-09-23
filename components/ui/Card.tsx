@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type CardProps = {
   children: React.ReactNode;
   className?: string;
@@ -74,3 +75,25 @@ export default Card;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+interface CardProps {
+	children: React.ReactNode;
+	className?: string;
+	style?: React.CSSProperties;
+	onClick?: () => void;
+	hover?: boolean;
+}
+
+export default function Card({ children, className = '', style, onClick, hover = true }: CardProps) {
+	const baseClasses = 'bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
+	const hoverClasses = hover ? 'hover:shadow-lg hover:-translate-y-0.5' : '';
+	const clickableClasses = onClick ? 'cursor-pointer' : '';
+	const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
+
+	return (
+		<div className={classes} style={style} onClick={onClick}>
+			{children}
+		</div>
+	);
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1

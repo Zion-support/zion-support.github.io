@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AI2026QuantumRevolutionUltimateBanner() {
 	return null;
 }
@@ -19,3 +20,10 @@ export default function AI2026QuantumRevolutionUltimateBanner() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+'use client';
+
+export default function AI2026QuantumRevolutionUltimateBanner() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1

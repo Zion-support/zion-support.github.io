@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React from 'react';
@@ -33,3 +34,10 @@ export default function SocialShareButtons({ url, title }: Props) {
   );
 }
 
+=======
+'use client';
+
+export default function SocialShareButtons() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1

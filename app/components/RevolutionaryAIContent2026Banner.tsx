@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function RevolutionaryAIContent2026Banner() {
 	return null;
 }
@@ -19,3 +20,10 @@ export default function RevolutionaryAIContent2026Banner() {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+'use client';
+
+export default function RevolutionaryAIContent2026Banner() {
+  return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1

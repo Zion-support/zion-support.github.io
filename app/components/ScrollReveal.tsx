@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 <<<<<<< HEAD
@@ -50,3 +51,14 @@ export default function ScrollReveal({ children }: ScrollRevealProps) {
 	return <>{children}</>;
 }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
+=======
+'use client';
+
+import { PropsWithChildren } from 'react';
+
+type ScrollRevealProps = PropsWithChildren<{ origin?: 'bottom' | 'top' | 'left' | 'right'; delay?: number }>;
+
+export default function ScrollReveal({ children }: ScrollRevealProps) {
+  return <>{children}</>;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
