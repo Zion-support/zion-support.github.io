@@ -1,51 +1,32 @@
 "use client";
 export const dynamic = "force-dynamic";
 
-export const dynamic = "force-dynamic";
-
 import { useState } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 
 export default function SignUpPage() {
-<<<<<<< HEAD
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
-  const { signIn } = useAuth();
+  const { register } = useAuth();
 
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setIsLoading(true);
-		setError("");
-		if (password !== confirmPassword) {
-			setError("Passwords do not match");
-			setIsLoading(false);
-			return;
-		}
-		try {
-			await register(name, email, password);
-		} catch (err) {
-			setError(err instanceof Error ? err.message : "Registration failed");
-		} finally {
-			setIsLoading(false);
-		}
-	};
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       setIsLoading(false);
       return;
     }
-
     try {
-      // Minimal demo: treat sign-up as sign-in for now
-      await signIn(email, password);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : "Registration failed");
+      await register(name, email, password);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Registration failed");
     } finally {
       setIsLoading(false);
     }
@@ -193,35 +174,6 @@ export default function SignUpPage() {
         </div>
       </div>
     </div>
-  );
-=======
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [confirmPassword, setConfirmPassword] = useState("");
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState("");
-	const { register } = useAuth();
-
-	const handleSubmit = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setIsLoading(true);
-		setError("");
-		if (password !== confirmPassword) {
-			setError("Passwords do not match");
-			setIsLoading(false);
-			return;
-		}
-		try {
-			await register(name, email, password);
-		} catch (err) {
-			setError(err instanceof Error ? err.message : "Registration failed");
-		} finally {
-			setIsLoading(false);
-		}
-	};
-
-	return (
 		<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">
 			<div className="max-w-md w-full space-y-8 p-8">
 				<div className="text-center">
@@ -303,6 +255,5 @@ export default function SignUpPage() {
 				</div>
 			</div>
 		</div>
-	);
->>>>>>> 45bde326a2e7 (fix(zion-os): repair corrupted pages, add path alias, implement minimal onboarding route; fix signin/signup/dashboard pages; clean homepage duplicates; build zion-website and zion-ai-assistant)
+  );
 }
