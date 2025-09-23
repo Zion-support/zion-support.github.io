@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Page() {
   return (
     <main style={{ padding: 32 }}>
@@ -15,6 +16,14 @@ import { Calculator, DollarSign, TrendingUp, ArrowRight, Clock } from 'lucide-re
 // Metadata will be handled by SEO component
 
 export default function AI2026ROICalculator() {
+=======
+"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { ArrowLeft, Calculator, TrendingUp, DollarSign, Users, Clock, ArrowRight } from 'lucide-react';
+
+export default function AIROICalculator() {
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
   const [inputs, setInputs] = useState({
     annualRevenue: '',
     employees: '',
@@ -97,8 +106,13 @@ export default function AI2026ROICalculator() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
               <Calculator className="w-8 h-8 text-green-600" />
             </div>
+<<<<<<< HEAD
             <h1 className="text-3xl font-bold text-gray-900 mb-2">AI 2026 ROI Calculator</h1>
             <p className="text-gray-600">Calculate the potential return on investment for your AI implementation in 2026</p>
+=======
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">AI ROI Calculator 2025</h1>
+            <p className="text-gray-600">Calculate the potential return on investment for your AI implementation</p>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -214,11 +228,18 @@ export default function AI2026ROICalculator() {
               <div className="grid grid-cols-1 gap-4">
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <span className="text-green-600 mr-2">💰</span>
                     <DollarSign className="w-5 h-5 text-green-600 mr-2" />
                     <span className="text-sm font-medium text-gray-700">Annual Savings</span>
                   </div>
+=======
+                    <div className="flex items-center">
+                      <DollarSign className="w-5 h-5 text-green-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Annual Savings</span>
+                    </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
                     <span className="text-lg font-bold text-green-600">
                       {formatCurrency(results.annualSavings)}
                     </span>
@@ -227,11 +248,18 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <span className="text-red-600 mr-2">💸</span>
                     <DollarSign className="w-5 h-5 text-red-600 mr-2" />
                     <span className="text-sm font-medium text-gray-700">Total Costs</span>
                   </div>
+=======
+                    <div className="flex items-center">
+                      <DollarSign className="w-5 h-5 text-red-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Total Costs</span>
+                    </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
                     <span className="text-lg font-bold text-red-600">
                       {formatCurrency(results.totalCosts)}
                     </span>
@@ -240,11 +268,18 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <span className="text-blue-600 mr-2">📈</span>
                     <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
                     <span className="text-sm font-medium text-gray-700">Net Benefit</span>
                   </div>
+=======
+                    <div className="flex items-center">
+                      <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Net Benefit</span>
+                    </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
                     <span className="text-lg font-bold text-blue-600">
                       {formatCurrency(results.netBenefit)}
                     </span>
@@ -253,11 +288,18 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <span className="text-purple-600 mr-2">🎯</span>
                     <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
                     <span className="text-sm font-medium text-gray-700">ROI</span>
                   </div>
+=======
+                    <div className="flex items-center">
+                      <ArrowRight className="w-5 h-5 text-purple-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">ROI</span>
+                    </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
                     <span className="text-lg font-bold text-purple-600">
                       {formatPercentage(results.roi)}
                     </span>
@@ -266,11 +308,18 @@ export default function AI2026ROICalculator() {
 
                 <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <span className="text-orange-600 mr-2">⏰</span>
                     <Clock className="w-5 h-5 text-orange-600 mr-2" />
                     <span className="text-sm font-medium text-gray-700">Payback Period</span>
                   </div>
+=======
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 text-orange-600 mr-2" />
+                      <span className="text-sm font-medium text-gray-700">Payback Period</span>
+                    </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
                     <span className="text-lg font-bold text-orange-600">
                       {results.paybackPeriod.toFixed(1)} months
                     </span>
@@ -326,4 +375,8 @@ export default function AI2026ROICalculator() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

@@ -54,6 +54,7 @@ const protectedRoutes: string[] = [
 =======
 const publicRoutes = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/",
   "/about",
   "/contact",
@@ -89,27 +90,36 @@ const publicRoutes = [
   "/auth/verify",
 ];
 const publicPaths = [
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
   '/',
   '/about',
-  '/services',
   '/contact',
+  '/services',
   '/ai-services',
   '/it-services',
   '/micro-saas',
-  '/api-docs',
   '/api',
+  '/api-docs',
   '/careers',
   '/case-studies',
+  '/cookies',
+  '/industries',
   '/blog',
-  '/docs',
+  '/solutions',
+  '/resources',
+  '/talent',
+  '/team',
+  '/partners',
+  '/news',
   '/privacy',
   '/terms',
-  '/login',
-  '/register',
+  '/sitemap',
   '/auth/login',
   '/auth/register',
   '/auth/forgot-password',
   '/auth/reset-password',
+<<<<<<< HEAD
   '/auth/verify'
 ];
 const protectedRoutes = [
@@ -185,6 +195,14 @@ const publicPaths = [
 const protectedRoutes = [
   '/dashboard', '/admin'
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+  '/auth/verify',
+  '/_next',
+  '/favicon.ico',
+  '/robots.txt',
+  '/sitemap.xml',
+  '/manifest.json',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 ];
 
 export function middleware(request: NextRequest) {
@@ -192,6 +210,7 @@ export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl;
 =======
   const { pathname } = request.nextUrl;
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Allow public routes
@@ -217,16 +236,24 @@ export function middleware(request: NextRequest) {
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
   // Skip middleware for static files and API routes
+=======
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
   if (
+    publicRoutes.includes(pathname) ||
     pathname.startsWith('/_next/') ||
     pathname.startsWith('/api/') ||
+<<<<<<< HEAD
     pathname.startsWith('/static/') ||
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
     pathname.includes('.')
   ) {
     return NextResponse.next();
   }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// Skip for static assets and API routes
 	if (
@@ -398,4 +425,13 @@ export const config = {
 		'/((?!api|_next/static|_next/image|favicon.ico).*)',
 	],
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+  return NextResponse.next();
+}
+
+export const config = {
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 };

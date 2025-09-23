@@ -1,5 +1,6 @@
-import Head from 'next/head';
+import Head from 'next/head'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -23,6 +24,8 @@ export default function SEO({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 interface SEOHeadProps {
 	title?: string;
 	description?: string;
@@ -66,15 +69,19 @@ export default function SEOHead({
       <meta name="description" content={description} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       {keywordsContent && <meta name="keywords" content={keywordsContent} />}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
 =======
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       <link rel="canonical" href={canonicalUrl} />
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 
+<<<<<<< HEAD
       <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />} 
 
@@ -89,6 +96,8 @@ export default function SEOHead({
 
       {/* Open Graph */}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -97,24 +106,31 @@ export default function SEOHead({
       <meta property="og:site_name" content="Zion Tech Group" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Twitter */}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* Structured Data */}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       {structuredData && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -228,4 +244,8 @@ export default function SEOHead({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+    </Head>
+  )
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 }

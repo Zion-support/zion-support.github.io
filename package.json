@@ -12,6 +12,7 @@
     "start": "next start",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "lint": "eslint src pages app lib components hooks --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
@@ -41,6 +42,15 @@
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc -p tsconfig.app.json --noEmit",
     "test": "jest -c jest.config.smoke.cjs --runInBand --passWithNoTests --no-cache",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-10d8
+=======
+    "lint": "next lint",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:clean": "rm -rf .next && npm run build",
+    "dev:clean": "rm -rf .next && npm run dev",
+    "lint:fix": "next lint --fix",
+    "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
+    "test": "jest --runInBand --passWithNoTests --no-cache",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
     "test:watch": "jest --watch --runInBand",
     "preview": "npm run build && npm run start",
     "test:coverage": "jest --coverage",
@@ -93,6 +103,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.3",
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
@@ -110,6 +121,9 @@
 =======
     "@next/swc-linux-x64-gnu": "^15.5.3",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
@@ -156,6 +170,7 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
+<<<<<<< HEAD
     "modulePathIgnorePatterns": [
 <<<<<<< HEAD
       "<rootDir>/automation/",
@@ -188,6 +203,8 @@
       "<rootDir>/recovered-branches/.*",
       "<rootDir>/zion-os/.*"
     ],
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
         "babel-jest",
@@ -203,23 +220,11 @@
       "<rootDir>/node_modules/",
       "<rootDir>/__tests__/",
       "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/src-corrupted/",
-      "<rootDir>/temp_backup/",
-      "<rootDir>/pages_backup/",
-      "<rootDir>/dao/",
       "<rootDir>/tests.disabled/",
       "<rootDir>/src.disabled/",
       "<rootDir>/src_backup_temp/",
       "<rootDir>/src_backup/",
       "<rootDir>/backup-problematic-files/",
-      "<rootDir>/zion-os/",
-      "<rootDir>/zion-os.broken/",
-      "<rootDir>/zion-os.disabled/",
-      "<rootDir>/zion-os.corrupted/",
-      "<rootDir>/server/",
-      "<rootDir>/automation/",
       "<rootDir>/pages-disabled/",
       "<rootDir>/pages.bak/",
       "<rootDir>/components.disabled/",
@@ -235,11 +240,8 @@
       "<rootDir>/ts_files_backup/",
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
-      "<rootDir>/App.test.ts",
-      "<rootDir>/plugins/wallet-connector/cypress/",
-      "<rootDir>/components/api/docs/",
-      "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
+<<<<<<< HEAD
     ]
   },
 <<<<<<< HEAD
@@ -251,4 +253,16 @@
 =======
   "packageManager": "npm@11.6.0"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530
+=======
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/automation/backups/",
+      "<rootDir>/.temp_backup_components/",
+      "<rootDir>/apps.backup/",
+      "<rootDir>/components/apps/",
+      "<rootDir>/server/"
+    ]
+  },
+  "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 }

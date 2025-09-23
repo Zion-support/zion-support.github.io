@@ -50,6 +50,9 @@ const config: Config = {
 
 <<<<<<< HEAD
 export default config
+<<<<<<< HEAD
 =======
 export default config
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

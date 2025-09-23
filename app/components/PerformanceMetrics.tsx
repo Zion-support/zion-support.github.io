@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
@@ -40,3 +41,17 @@ export default function PerformanceMetrics() {
 =======
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
+=======
+"use client";
+
+import React from "react";
+
+export default function PerformanceMetrics() {
+  return (
+    <div className="p-4 rounded-lg bg-white/10 text-white">
+      <h3 className="font-semibold">Performance Metrics (Coming Soon)</h3>
+    </div>
+  );
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

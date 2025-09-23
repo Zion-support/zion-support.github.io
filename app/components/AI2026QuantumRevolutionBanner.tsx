@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AI2026QuantumRevolutionBanner() {
 	return null;
 }
@@ -39,3 +40,17 @@ export default function AI2026QuantumRevolutionBanner() {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+"use client";
+
+import React from "react";
+
+export default function AI2026QuantumRevolutionBanner() {
+  return (
+    <section className="p-8 rounded-2xl bg-white/10 text-white">
+      <h3 className="text-2xl font-bold">AI 2026 Quantum Revolution</h3>
+    </section>
+  );
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

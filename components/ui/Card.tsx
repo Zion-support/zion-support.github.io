@@ -24,9 +24,21 @@ const Card: React.FC<CardProps> = ({
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
 
   return (
+<<<<<<< HEAD
     <div className={classes} style={style} onClick={onClick}>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       <div className="relative z-10">{children}</div>
+=======
+    <div
+      className={classes}
+      style={style}
+      onClick={onClick}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      <div className="relative z-10">
+        {children}
+      </div>
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
       {hover && (
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
       )}
@@ -101,6 +113,7 @@ export default function Card({ children, className = '', style, onClick, hover =
 export default Card;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-4850
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-45f8
@@ -128,3 +141,5 @@ export default function Card({ children, className = '', style, onClick, hover =
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6ba1
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:app.disabled/tools/quantum-ai-readiness-assessment-2026.disabled/page.tsx
 <<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
 ========
@@ -10,6 +11,9 @@ export default function Page() {
   );
 }
 >>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-3530:app.disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
+=======
+<<<<<<< HEAD:app-disabled/tools/quantum-ai-readiness-assessment-2026/page.tsx
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-1467
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
