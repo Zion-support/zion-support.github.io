@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-=======
-import Link from "next/link";
-
-export const metadata = {
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
-  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services",
-};
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
 export default function QuantumServicesPage() {
-  return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">Quantum Services</h1>
-      <p className="text-gray-600">Exploring quantum computing services.</p>
-    </main>
-  );
-<<<<<<< HEAD
+	return (
+		<main className="min-h-screen py-20 px-4">
+			<div className="max-w-5xl mx-auto">
+				<h1 className="text-3xl font-bold mb-4">Quantum Services</h1>
+				<p className="text-zinc-500">Exploring quantum computing services.</p>
+			</div>
+		</main>
+	);
 }
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
