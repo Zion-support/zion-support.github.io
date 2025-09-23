@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function AIAutonomousResearchAssistant() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center p-8">
@@ -8,5 +6,5 @@ export default function AIAutonomousResearchAssistant() {
         <p className="text-gray-600">Coming soon.</p>
       </div>
     </div>
-  )
+  );
 }
