@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import * as Sentry from '@sentry/browser';
 
 const DSN = import.meta.env.VITE_SENTRY_DSN;
@@ -24,7 +22,6 @@ export function captureException(error: unknown, context?: any): void { // Added
   if (context) {
     return Sentry.captureException(error, context);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export function captureException(error: unknown, context?: unknown): void {
   if (typeof window === 'undefined') {
     import('@sentry/nextjs').then(Sentry => {
@@ -34,9 +31,6 @@ export function captureException(error: unknown, context?: unknown): void {
         Sentry.captureException(error);
       }
     });
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }

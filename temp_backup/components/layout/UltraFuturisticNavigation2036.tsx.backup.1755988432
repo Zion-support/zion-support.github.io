@@ -169,12 +169,6 @@ const navigationItems: NavigationItem[] = [
     children: [
       { 
         name: 'Services Showcase', 
-<<<<<<< HEAD
-        href: '/comprehensive-2025-services-showcase', 
-        description: 'Complete services overview',
-        icon: <Calculator className="w-4 h-4" />,
-        featured: true
-=======
         href: '/showcase', 
         description: 'Complete services overview',
         icon: <Grid className="w-4 h-4" />,
@@ -185,7 +179,6 @@ const navigationItems: NavigationItem[] = [
         href: '/services', 
         description: 'Current service portfolio',
         icon: <Calculator className="w-4 h-4" />
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-feb9
       },
       { 
         name: 'Pricing Plans', 
@@ -223,11 +216,7 @@ const navigationItems: NavigationItem[] = [
       { 
         name: 'Leadership Team', 
         href: '/leadership', 
-<<<<<<< HEAD
-        description: 'Executive team',
-=======
         description: 'Meet our executives',
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-feb9
         icon: <Users className="w-4 h-4" />
       },
       { 

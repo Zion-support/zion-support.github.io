@@ -14,10 +14,7 @@ export interface EnterpriseItService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",

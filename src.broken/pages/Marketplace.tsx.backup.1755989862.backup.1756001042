@@ -9,9 +9,6 @@ import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-rea
 
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React, { useState, useEffect, useMemo } from "react";
 import { useTranslation } from 'react-i18next';
 import { Button } from "@/components/ui/button";
@@ -37,14 +34,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
-
-
-
 
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -61,7 +51,6 @@ import { fetchProducts } from '@/services/marketplace';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import apiClient from '@/lib/apiClient';
-
 
 /**
  * Marketplace component props
@@ -274,8 +263,6 @@ const FilterControls: React.FC<{
  */
 export default function Marketplace() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -284,7 +271,6 @@ export default function Marketplace() {
   const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
@@ -297,9 +283,6 @@ export default function Marketplace() {
   const { viewMode, setViewMode } = useViewMode();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
   const [sortBy, setSortBy] = useState('newest');
@@ -329,8 +312,6 @@ export default function Marketplace() {
       return;
     }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     // Navigate to admin products page
     router.push('/admin/products');
@@ -476,7 +457,6 @@ export default function Marketplace() {
             <SkeletonCard key={i} />
           ))}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
@@ -629,9 +609,6 @@ export default function Marketplace() {
               </div>
             )}
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/5i6q3p-codex/add-i18n-support-with-next-i18next
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         </div>
       </main>

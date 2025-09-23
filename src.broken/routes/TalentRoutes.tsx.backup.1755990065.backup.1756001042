@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -52,7 +50,6 @@ const TalentRoutes = () => {
 
 export default TalentRoutes;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function TalentRoutes() {
   return (
@@ -62,7 +59,4 @@ export function TalentRoutes() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

@@ -145,9 +145,6 @@ export default function ServicesIndexPage() {
     // Our new 2025 advanced services
     .concat(advanced2025MicroSaasExpansion as unknown[])
     .concat(advanced2025ITSolutionsExpansion as unknown[])
-<<<<<<< HEAD
-    .concat(advanced2025AIServicesExpansion as unknown[]);
-=======
     .concat(advancedAIServicesExpansion2025 as unknown[])
     // Our new 2025 innovative services
     .concat(innovativeMicroSaasExpansion2025 as unknown[])
@@ -162,7 +159,6 @@ export default function ServicesIndexPage() {
     .concat(innovativeITServicesExpansion2025V3 as unknown[])
     .concat(innovativeAIServicesExpansion2025V3 as unknown[])
     ;
->>>>>>> 7d0a781e658cc5d79dae76ad53c5e567dc7e5315
 
   // Filter out services without required properties
   const validServices = all.filter(service => 
@@ -214,10 +210,6 @@ export default function ServicesIndexPage() {
 
   const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
   const [searchQuery, setSearchQuery] = React.useState('');
-
-
-
-
 
   return (
     <div className="min-h-screen bg-black text-white">

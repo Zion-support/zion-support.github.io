@@ -180,8 +180,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
   return null;
 };
 
-<<<<<<< HEAD
-=======
 // Performance entry types
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -225,5 +223,4 @@ declare global {
   }
 }
 
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5426
 export default AnalyticsTracker;

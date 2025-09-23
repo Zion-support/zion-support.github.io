@@ -6,8 +6,4 @@ const { execSync } = require('child_process')
       const result = execSync('npm audit --json')
         "encoding"
         "criticalIssues"
-<<<<<<< HEAD
         "highIssues"
-=======
-        "highIssues"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

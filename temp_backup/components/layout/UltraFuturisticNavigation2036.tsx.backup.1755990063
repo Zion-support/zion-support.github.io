@@ -110,71 +110,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Service showcases and pricing',
     badge: 'Featured',
     category: 'showcase',
-<<<<<<< HEAD
-    featured: true,
-    children: [
-      { 
-        name: 'Innovative 2027 Services', 
-        href: '/innovative-2027-services-showcase', 
-        description: 'Cutting-edge 2027 services showcase',
-        icon: <Star className="w-4 h-4" />,
-        featured: true,
-        badge: 'NEW'
-      },
-      { 
-        name: 'Services Showcase', 
-        href: '/comprehensive-services-showcase-2025', 
-        description: 'Complete services overview',
-        icon: <Calculator className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Innovative 2037 Services', 
-        href: '/innovative-2037-services-showcase', 
-        description: 'Cutting-edge 2037 services',
-        icon: <Sparkles className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Pricing Plans', 
-        href: '/pricing', 
-        description: 'Transparent pricing structure',
-        icon: <DollarSign className="w-4 h-4" />
-      },
-      { 
-        name: 'Case Studies', 
-        href: '/case-studies', 
-        description: 'Success stories and results',
-        icon: <BarChart3 className="w-4 h-4" />
-      }
-    ]
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className="w-5 h-5" />,
-    description: 'Knowledge and insights',
-    category: 'resources',
-    children: [
-      { 
-        name: 'Blog & Insights', 
-        href: '/blog', 
-        description: 'Latest industry insights',
-        icon: <FileText className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Documentation', 
-        href: '/docs', 
-        description: 'Technical documentation',
-        icon: <Code className="w-4 h-4" />
-      },
-      { 
-        name: 'Webinars', 
-        href: '/webinars', 
-        description: 'Educational sessions',
-        icon: <Video className="w-4 h-4" />
-=======
     children: [
       {
         name: '2025 Services',
@@ -194,7 +129,6 @@ const navigationItems: NavigationItem[] = [
         href: '/enterprise-solutions-showcase',
         description: 'Large-scale deployments',
         icon: <Globe className="w-4 h-4" />
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
       }
     ]
   },

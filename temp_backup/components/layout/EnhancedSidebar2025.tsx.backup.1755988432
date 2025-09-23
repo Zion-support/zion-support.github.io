@@ -3,15 +3,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  X, ChevronDown, ChevronRight, Search, Settings, User, 
-  Brain, Atom, Rocket, Shield, Cpu, Database, Cloud, 
-  BarChart3, Code, Smartphone, Server, Users, Award, 
-  TrendingUp, BookOpen, FileText, GraduationCap, Headphones,
-  Zap, Globe, Lock, Phone, Mail, MapPin, Star, MessageCircle,
-  ExternalLink, Home, Briefcase, Info, HelpCircle, Shield as ShieldIcon, Play, Building,
-  Heart, Palette, Target, Sparkles, Download
-=======
   ChevronRight, Home, Star, Users, 
   HelpCircle, Mail, Phone, MapPin,
   Brain, Atom, Shield, Rocket, DollarSign,
@@ -19,7 +10,6 @@ import {
   TrendingUp, Award, CheckCircle, Clock,
   Search, X as CloseIcon,
   Target, BookOpen, Calendar, Video, FileText, Grid
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-feb9
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -119,12 +109,8 @@ const sidebarItems: SidebarItem[] = [
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-<<<<<<< HEAD
-  { name: 'All Services', href: '/comprehensive-2025-services-showcase', icon: <Star className="w-4 h-4" /> },
-=======
   { name: 'All Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" /> },
   { name: 'Services Showcase', href: '/showcase', icon: <Grid className="w-4 h-4" /> },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-feb9
   { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Services Advertising', href: '/services-advertising', icon: <BookOpen className="w-4 h-4" /> },

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { FormFieldFormItemFormLabelFormControlFormMessage } from '@/components/ui/form';
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
->>>>>>> origin/auto/autonomy-17186719616
 import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form';
 import { CertificationFormValues } from './types';
@@ -23,11 +19,7 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Certification Name</FormLabel>
               <FormControl>
-<<<<<<< HEAD
-                <Input placeholder="AWS Certified Solutions ArchitectPMPetc." {...field} />
-=======
                 <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />
->>>>>>> origin/auto/autonomy-17186719616
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -41,11 +33,7 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
             <FormItem>
               <FormLabel>Issuing Organization</FormLabel>
               <FormControl>
-<<<<<<< HEAD
-                <Input placeholder="Amazon Web ServicesPMIetc." {...field} />
-=======
                 <Input placeholder="Amazon Web Services, PMI, etc." {...field} />
->>>>>>> origin/auto/autonomy-17186719616
               </FormControl>
               <FormMessage />
             </FormItem>

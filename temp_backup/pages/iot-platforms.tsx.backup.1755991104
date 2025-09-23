@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function IotPlatforms() { return <div className="p-6">IoT Platforms</div>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -13,4 +10,3 @@ const IotPlatformsPage: NextPage = () => (
 );
 
 export default IotPlatformsPage;
->>>>>>> origin/cursor/build-digital-nation-creation-module-4d41

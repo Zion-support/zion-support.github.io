@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-<<<<<<< HEAD
-=======
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
@@ -30,7 +28,6 @@ module.exports = {
         'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
         'cyber-grid': 'cyberGrid 15s linear infinite',
 =======
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -760,8 +757,6 @@ module.exports = {
   },
   plugins: [],
 }
-<<<<<<< HEAD
-=======
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
@@ -771,5 +766,4 @@ module.exports = {
   plugins: [],
 }
 =======
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
 

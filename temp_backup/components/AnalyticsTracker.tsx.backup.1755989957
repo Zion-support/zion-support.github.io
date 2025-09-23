@@ -12,53 +12,6 @@ interface AnalyticsData {
   trafficSources: Array<{ source: string; percentage: number }>;
 }
 
-<<<<<<< HEAD
-const AnalyticsTracker: React.FC = () => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    pageViews: 0,
-    uniqueVisitors: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-    topPages: [],
-    trafficSources: []
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Simulate analytics data loading
-    const timer = setTimeout(() => {
-      setAnalyticsData({
-        pageViews: 15420,
-        uniqueVisitors: 8920,
-        sessionDuration: 245,
-        bounceRate: 23.4,
-        conversionRate: 4.8,
-        topPages: [
-          { page: '/', views: 5420 },
-          { page: '/services', views: 3210 },
-          { page: '/solutions', views: 2890 },
-          { page: '/contact', views: 1560 },
-          { page: '/about', views: 1340 }
-        ],
-        trafficSources: [
-          { source: 'Direct', percentage: 45.2 },
-          { source: 'Organic Search', percentage: 32.8 },
-          { source: 'Social Media', percentage: 12.5 },
-          { source: 'Referral', percentage: 6.8 },
-          { source: 'Paid Ads', percentage: 2.7 }
-        ]
-      });
-      setIsVisible(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Track page view
-  useEffect(() => {
-=======
 // Extend Window interface for Google Analytics
 declare global {
   interface Window {
@@ -119,7 +72,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
   useEffect(() => {
     // Track user engagement metrics
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
     if (typeof window !== 'undefined') {
       // Google Analytics tracking
       if ((window as any).gtag) {

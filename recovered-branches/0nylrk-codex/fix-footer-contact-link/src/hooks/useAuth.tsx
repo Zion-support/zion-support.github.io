@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React{ createContextuseContextuseStateuseEffectReactNode } from "react";
-=======
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
->>>>>>> origin/auto/autonomy-17186719616
 import { supabase } from "@/integrations/supabase/client";
 import { AuthContext } from "@/context/auth/AuthContext";
 import type { UserDetails as AuthUserDetails } from "@/types/auth";
@@ -29,15 +25,6 @@ export interface AuthContextType {
   user: UserDetails | null;
   isAuthenticated: boolean;
   isLoading: boolean;
-<<<<<<< HEAD
-  signIn: (email: stringpassword: string) => Promise<{ error: any }>;
-  signOut: () => Promise<void>;
-  signUp: (email: stringpassword: stringuserData?: Partial<UserDetails>) => Promise<{ error: any }>;
-  // Aliases for compatibility with other components
-  login: (email: stringpassword: string) => Promise<{ error: any }>;
-  logout: () => Promise<void>;
-  signup: (email: stringpassword: stringuserData?: Partial<UserDetails>) => Promise<{ error: any }>;
-=======
   signIn: (email: string, password: string) => Promise<{ error: any }>;
   signOut: () => Promise<void>;
   signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
@@ -45,7 +32,6 @@ export interface AuthContextType {
   login: (email: string, password: string) => Promise<{ error: any }>;
   logout: () => Promise<void>;
   signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
->>>>>>> origin/auto/autonomy-17186719616
   resetPassword: (email: string) => Promise<{ error: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>;
   loginWithGoogle: () => Promise<void>;
@@ -56,20 +42,6 @@ export interface AuthContextType {
 
 // Create a provider component
 export function AuthProvider({ children }: { children: ReactNode }) {
-<<<<<<< HEAD
-  const [usersetUser] = useState<UserDetails | null>(null);
-  const [isLoadingsetIsLoading] = useState(true);
-
-  // Mock auth functions for now - these would connect to Supabase in a real implementation
-  const signIn = async (email: stringpassword: string) => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign in attempted with:"email);
-    // Mock successful sign-in
-    setUser({ 
-      id: "mock-user-id"
-      email
-      displayName: "Mock User"
-=======
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -82,16 +54,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       id: "mock-user-id", 
       email, 
       displayName: "Mock User", 
->>>>>>> origin/auto/autonomy-17186719616
       name: "Mock User",
       avatarUrl: "",
       profileComplete: true,
       role: "enterprise_admin",
-<<<<<<< HEAD
-      permissions: ["billing_access"admin_access"team_management"],
-=======
       permissions: ["billing_access", "admin_access", "team_management"],
->>>>>>> origin/auto/autonomy-17186719616
       companyId: "company-123"
     });
     return { error: null };
@@ -103,15 +70,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser(null);
   };
 
-<<<<<<< HEAD
-  const signUp = async (email: stringpassword: stringuserData?: Partial<UserDetails>) => {
-    // This would be replaced with actual Supabase auth
-    console.log("Sign up attempted with:"emailuserData);
-    // Mock successful sign-up
-    setUser({ 
-      id: "mock-user-id"
-      email
-=======
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign up attempted with:", email, userData);
@@ -119,7 +77,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser({ 
       id: "mock-user-id", 
       email, 
->>>>>>> origin/auto/autonomy-17186719616
       displayName: userData?.name || "New User",
       name: userData?.name || "New User",
       userType: userData?.userType,
@@ -130,25 +87,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const resetPassword = async (email: string) => {
     // Mock implementation
-<<<<<<< HEAD
-    console.log("Password reset requested for:"email);
-=======
     console.log("Password reset requested for:", email);
->>>>>>> origin/auto/autonomy-17186719616
     return { error: null };
   };
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
-<<<<<<< HEAD
-    console.log("Profile update requested with:"data);
-    if (user) {
-      setUser({ ...user...data });
-=======
     console.log("Profile update requested with:", data);
     if (user) {
       setUser({ ...user, ...data });
->>>>>>> origin/auto/autonomy-17186719616
     }
     return { error: null };
   };
@@ -157,13 +104,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     console.log("Google login requested");
     // Mock implementation
     setUser({ 
-<<<<<<< HEAD
-      id: "google-user-id"
-      email: "google@example.com"
-=======
       id: "google-user-id", 
       email: "google@example.com", 
->>>>>>> origin/auto/autonomy-17186719616
       displayName: "Google User",
       name: "Google User",
       profileComplete: true
@@ -174,15 +116,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     console.log("Facebook login requested");
     // Mock implementation
     setUser({ 
-<<<<<<< HEAD
-      id: "facebook-user-id"
-      email: "facebook@example.com"
-      displayName: "Facebook User"
-=======
       id: "facebook-user-id", 
       email: "facebook@example.com", 
       displayName: "Facebook User", 
->>>>>>> origin/auto/autonomy-17186719616
       name: "Facebook User",
       profileComplete: true
     });
@@ -212,11 +148,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const address = accounts[0];
       await ethereum.request({
         method: 'personal_sign',
-<<<<<<< HEAD
-        params: [address]
-=======
         params: [address, address]
->>>>>>> origin/auto/autonomy-17186719616
       });
       setUser({
         id: address,
@@ -224,11 +156,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         profileComplete: true
       });
     } catch (err) {
-<<<<<<< HEAD
-      console.error('Web3 login failed'err);
-=======
       console.error('Web3 login failed', err);
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 
@@ -239,13 +167,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       setUser(null);
       setIsLoading(false);
-<<<<<<< HEAD
-    }100);
-  }[]);
-=======
     }, 100);
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   const value = {
     user,

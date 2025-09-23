@@ -494,38 +494,6 @@ const navigationItems: NavigationItem[] = [
   }
 ];
 
-<<<<<<< HEAD:components/layout/UltraFuturisticNavigation2045.tsx
-// Quick action buttons
-const quickActions = [
-  {
-    label: 'Get Started',
-    href: '/get-started',
-    icon: <Zap className="w-4 h-4" />,
-    variant: 'primary' as const
-  },
-  {
-    label: 'Demo',
-    href: '/demo',
-    icon: <Play className="w-4 h-4" />,
-    variant: 'secondary' as const
-  },
-  {
-    label: 'Pricing',
-    href: '/pricing',
-    icon: <DollarSign className="w-4 h-4" />,
-    variant: 'outline' as const
-  }
-];
-
-interface UltraFuturisticNavigation2045Props {
-  className?: string;
-}
-
-const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props> = ({ 
-  className = '' 
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
 interface UltraFuturisticNavigation2045Props {
   sidebarOpen?: boolean;
   setSidebarOpen?: (open: boolean) => void;
@@ -541,7 +509,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> origin/cursor/website-audit-and-enhancement-2e19:components/layout/UltraFuturisticNavigation2045.tsx.broken
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -573,10 +540,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-<<<<<<< HEAD:components/layout/UltraFuturisticNavigation2045.tsx
-  // Handle search
-  const handleSearch = useCallback((e: React.FormEvent) => {
-=======
 <<<<<<< HEAD
   const navigationItems = [
     {
@@ -789,7 +752,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
   }, [isSearchOpen]);
 
   const handleSearchSubmit = useCallback((e: React.FormEvent) => {
->>>>>>> origin/cursor/website-audit-and-enhancement-2e19:components/layout/UltraFuturisticNavigation2045.tsx.broken
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
@@ -816,26 +778,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
     setActiveDropdown(null);
   }, []);
 
-<<<<<<< HEAD:components/layout/UltraFuturisticNavigation2045.tsx
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '/services',
-      dropdown: [
-        { name: 'AI & Consciousness', href: '/services/ai-consciousness', icon: Brain, description: 'Revolutionary AI consciousness solutions' },
-        { name: 'Quantum Technology', href: '/services/quantum-technology', icon: Atom, description: 'Quantum computing and quantum AI' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security and threat protection' },
-        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket, description: 'Space resource intelligence and mining' },
-        { name: 'Business Solutions', href: '/services/business-solutions', icon: Target, description: 'AI-powered business transformation' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Cloud, description: 'Modern cloud and infrastructure solutions' }
-      ]
-    },
-    { name: 'About', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
-  ];
-=======
 <<<<<<< HEAD
                 {/* Dropdown Menu */}
                 {item.dropdown && (
@@ -1005,7 +947,6 @@ const UltraFuturisticNavigation2045: React.FC<UltraFuturisticNavigation2045Props
       </AnimatePresence>
     );
   }, [activeDropdown, isActiveRoute]);
->>>>>>> origin/cursor/website-audit-and-enhancement-2e19:components/layout/UltraFuturisticNavigation2045.tsx.broken
 
   return (
   }, [router]);

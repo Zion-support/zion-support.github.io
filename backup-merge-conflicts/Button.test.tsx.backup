@@ -1,9 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/Button.test.tsx.backup
-<<<<<<< HEAD:__tests__/Button.test.tsx
-=======
-<<<<<<< HEAD:backup-merge-conflicts/Button.test.tsx.backup
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/Button.test.tsx.backup
 =======
 >>>>>>> pr-11913:__tests__/Button.test.tsx
 import React from 'react';
@@ -22,13 +18,8 @@ describe('Button', () => {
 });
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import Button from \'../components/Button\'; describe(\'Button\',() => { test(\'renders without crashing\',() => { render(<Button />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import Button from "./components/Button"; describe("Button",() => { test("renders without crashing",() => { render(<Button />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
-<<<<<<< HEAD:backup-merge-conflicts/Button.test.tsx.backup
-<<<<<<< HEAD:__tests__/Button.test.tsx
-import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Button from '../components/Button'; describe('Button',() => { test('renders without crashing',() => { render(<Button />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-=======
 =======
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import Button from '../components/Button'; describe('Button',() => { test('renders without crashing',() => { render(<Button />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<Button />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

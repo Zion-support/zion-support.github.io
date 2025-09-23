@@ -12,16 +12,12 @@ import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
 import { AuthButtons } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
 
-
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
 import { toast } from '@/hooks/use-toast';
 import { AuthLayout } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useAuth } from "@/hooks/useAuth";
 import { registerUser } from "@/services/authService";
 import { toast } from "@/hooks/use-toast";
@@ -61,11 +57,7 @@ const signupSchema = z
     message: "Passwords do not match",
     path: ["confirmPassword"],
   });
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
@@ -84,8 +76,6 @@ const SignupSchema = Yup.object({
 
 export default function Signup() {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -95,7 +85,6 @@ export default function Signup() {
   const [healthCheckLoading, setHealthCheckLoading] = useState(true);
   const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -191,9 +180,6 @@ export default function Signup() {
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />;
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   
   // Check if this is a partner signup
@@ -421,8 +407,6 @@ export default function Signup() {
               </p>
             </div>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
           )}
           <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
           {/* Show Health Check Warning */}
@@ -485,7 +469,6 @@ export default function Signup() {
               <div className="text-red-500 text-sm">{formik.errors.name}</div>
             )}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
             <div className="bg-zion-blue-dark rounded-lg p-6">
               <Form {...form}>
@@ -754,9 +737,6 @@ export default function Signup() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           </div>
           

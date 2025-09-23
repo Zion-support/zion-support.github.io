@@ -1,26 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-  // Enable React strict mode for better development experience
-  reactStrictMode: true,
-  
-  // Enhanced performance optimizations
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
-  
-  // Turbopack configuration
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-  
-=======
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
@@ -34,32 +13,17 @@ const nextConfig = {
     },
   },
   
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-4b02
   // Image optimization
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
-<<<<<<< HEAD
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  
-  // Compression and optimization
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
-  
-  // Bundle analyzer
-  webpack: (config, { dev, isServer }) => {
-=======
   },
 
   // Bundle analyzer (optional)
   webpack: (config, { dev, isServer }) => {
     // Bundle splitting optimizations
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-4b02
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -80,36 +44,12 @@ const nextConfig = {
         },
       };
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-4b02
     // SVG optimization
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
-<<<<<<< HEAD
-    
-    return config;
-  },
-
-  // Disable static generation for problematic pages
-  async exportPathMap() {
-    return {
-      '/': { page: '/' },
-      '/services': { page: '/services' },
-      '/about': { page: '/about' },
-      '/contact': { page: '/contact' },
-      '/privacy': { page: '/privacy' },
-      '/terms': { page: '/terms' },
-      // Add other essential pages here
-    };
-  },
-
-  // Headers for security and performance
-=======
 
     return config;
   },
@@ -121,7 +61,6 @@ const nextConfig = {
   poweredByHeader: false,
   
   // Security headers
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-4b02
   async headers() {
     return [
       {
@@ -164,43 +103,6 @@ const nextConfig = {
     ];
   },
 
-<<<<<<< HEAD
-  // Rewrites for API routes (removed since using Netlify Functions for static export)
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/api/analytics',
-  //       destination: '/api/analytics',
-  //     },
-  //     {
-  //       source: '/api/error-reporting',
-  //       destination: '/api/error-reporting',
-  //     },
-  //   ];
-  // },
-
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
-
-  // Base path
-  basePath: '',
-
-  // Asset prefix
-  assetPrefix: '',
-
-  // Output configuration for static export
-  output: 'export',
-  
-  // Disable image optimization for static export
-  images: {
-    unoptimized: true,
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-=======
   // Rewrites for dynamic routes
   async rewrites() {
     return [
@@ -209,7 +111,6 @@ const nextConfig = {
         destination: '/api/:path*',
       },
     ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-4b02
   },
 };
 

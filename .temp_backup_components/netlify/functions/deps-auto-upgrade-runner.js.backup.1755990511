@@ -8,11 +8,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-<<<<<<< HEAD
-  schedule: '0 3 * * *',
-=======
   schedule: '7 */12 * * *',
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-40f6
 };
 
 exports.handler = async () => {
@@ -30,8 +26,4 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-40f6

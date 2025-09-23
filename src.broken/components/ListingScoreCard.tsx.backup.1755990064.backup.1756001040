@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -125,16 +123,12 @@ export function ListingScoreCard({
         )}
       </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function ListingScoreCard() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

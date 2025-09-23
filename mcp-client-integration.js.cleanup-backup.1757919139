@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log("MCP client integration placeholder");
-=======
 #!/usr/bin/env node
 
 /**
@@ -35,4 +32,3 @@ if (require.main === module) {
   const client = new MCPClientIntegration();
   client.connect();
 }
->>>>>>> origin/auto/autonomy-17186719616

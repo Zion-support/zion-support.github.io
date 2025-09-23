@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function PaymentButton() {
-=======
-<<<<<<< HEAD
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -119,7 +115,6 @@ export function PaymentButton({
 =======
 import React from 'react';
 export function PaymentButton() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

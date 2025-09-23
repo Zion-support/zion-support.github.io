@@ -21,7 +21,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -45,8 +44,6 @@
 
 [[scheduled.functions]]
   name = "front-enhancer"
-<<<<<<< HEAD
-=======
   schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
@@ -119,7 +116,6 @@
 
 [[scheduled.functions]]
   name = "front-ads-promoter"
->>>>>>> origin/cursor/autonomous-cloud-automation-and-sync-1971
   schedule = "*/10 * * * *" # every 10 minutes
 
 [[scheduled.functions]]

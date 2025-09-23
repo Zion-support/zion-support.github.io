@@ -5,25 +5,17 @@ import { motion } from 'framer-motion';
 import { TrendingUp, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, DollarSign, Shield } from 'lucide-react';
 import Link from 'next/link';
 =======
-<<<<<<< HEAD
-import { TrendingUp, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, DollarSign, Shield } from 'lucide-react';
-import Link from 'next/link';
-=======
 import { 
   Building, Users, Shield, Cpu, Database, Globe, Zap, Target, 
   TrendingUp, BarChart3, Lock, Cloud, Server, Network, Settings, Brain,
   DollarSign, CreditCard, PieChart, LineChart, Shield as ShieldIcon
 } from 'lucide-react';
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
 
 const FinancialSolutionsPage: React.FC = () => {
   const solutions = [
     {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
       name: 'AI-Powered Financial Risk Assessment 2045',
       description: 'Advanced AI financial risk analysis with consciousness and predictive intelligence',
       href: '/ai-powered-financial-risk-assessment-2045',
@@ -65,8 +57,6 @@ const FinancialSolutionsPage: React.FC = () => {
     { number: "1000x", label: "Trading Speed", icon: Zap },
     { number: "24/7", label: "Monitoring", icon: Clock },
     { number: "100+", label: "Financial Partners", icon: Users }
-<<<<<<< HEAD
-=======
 =======
       title: "Financial AI & Machine Learning",
       description: "Advanced AI solutions for financial institutions with predictive analytics and risk assessment",
@@ -118,16 +108,12 @@ const FinancialSolutionsPage: React.FC = () => {
       description: "Advanced financial insights",
       icon: <PieChart className="w-6 h-6" />
     }
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
   ];
 
   return (
     <Layout 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
       title="Financial Services Solutions - Zion Tech Group"
       description="Revolutionary financial solutions with AI consciousness, quantum trading, and autonomous investment intelligence. Leading the future of fintech innovation."
       keywords="financial solutions, AI risk assessment, quantum trading, investment AI, blockchain finance, Zion Tech Group"
@@ -166,8 +152,6 @@ const FinancialSolutionsPage: React.FC = () => {
                 >
                   Explore All Solutions
                 </Link>
-<<<<<<< HEAD
-=======
 =======
       title="Financial Solutions - Zion Tech Group"
       description="Advanced technology solutions for financial institutions. AI, cybersecurity, cloud infrastructure, and analytics designed for the financial sector."
@@ -201,7 +185,6 @@ const FinancialSolutionsPage: React.FC = () => {
                 >
                   View Case Studies
                 </a>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               </div>
             </motion.div>
@@ -209,9 +192,6 @@ const FinancialSolutionsPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,8 +226,6 @@ const FinancialSolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
-<<<<<<< HEAD
-=======
 =======
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -295,7 +273,6 @@ const FinancialSolutionsPage: React.FC = () => {
                     Learn More
                     <Zap className="w-4 h-4 ml-2" />
                   </a>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                 </motion.div>
               ))}
@@ -304,9 +281,6 @@ const FinancialSolutionsPage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         {/* Solutions Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -376,8 +350,6 @@ const FinancialSolutionsPage: React.FC = () => {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
-<<<<<<< HEAD
-=======
 =======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
@@ -410,7 +382,6 @@ const FinancialSolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-400">{benefit.description}</p>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
                 </motion.div>
               ))}
@@ -420,9 +391,6 @@ const FinancialSolutionsPage: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -452,8 +420,6 @@ const FinancialSolutionsPage: React.FC = () => {
                 >
                   Explore All Solutions
                 </Link>
-<<<<<<< HEAD
-=======
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -479,7 +445,6 @@ const FinancialSolutionsPage: React.FC = () => {
                 >
                   View Pricing
                 </a>
->>>>>>> origin/clean-website-enhancement
 >>>>>>> 2d4d481f1493a231e1d090623f77d5e17a4d5961
               </div>
             </motion.div>

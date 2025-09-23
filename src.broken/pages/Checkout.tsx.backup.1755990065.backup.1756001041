@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
@@ -256,16 +254,12 @@ export default function CheckoutPage() {
         </Form>
       </div>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function Checkout() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

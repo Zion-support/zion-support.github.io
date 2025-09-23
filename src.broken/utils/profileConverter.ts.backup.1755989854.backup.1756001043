@@ -13,10 +13,6 @@ function isTalentProfile(profile: unknown): profile is TalentProfile {
 export function convertProfileToTalentProfile(profile: ProfileData | unknown): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
 <<<<<<< HEAD
-  if (isTalentProfile(profile)) {
-    return profile;
-=======
-<<<<<<< HEAD
   
   // If this is already a TalentProfile, just return it
   if (profile.professional_title !== undefined) {
@@ -28,14 +24,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | unknown): T
 =======
   if (isTalentProfile(profile)) {
     return profile;
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
   // Convert ProfileData to TalentProfile
   const p = profile as ProfileData;
   return {
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
     id: profile.id,
     user_id: profile.id,
@@ -47,7 +40,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | unknown): T
     summary: profile.bio?.substring(0, 150),
     profile_picture_url: profile.avatarUrl,
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     id: p.id,
     user_id: p.id,
     full_name: p.name,
@@ -55,9 +47,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | unknown): T
     bio: p.bio || '',
     summary: p.bio?.substring(0, 150),
     profile_picture_url: p.avatarUrl,
-<<<<<<< HEAD
-=======
->>>>>>> origin/4fu9r9-codex/check-logs-and-fix-errors
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     years_experience: 3, // Default value
     skills: p.skills?.map((skill: { name: string }) => skill.name) || [],

@@ -1,53 +1,13 @@
 module.exports = {
   apps: [
-<<<<<<< HEAD
-    // Ultimate Redundancy Core Processes
-    {
-      name: "ultimate-redundancy-monitor",
-      script: "automation/ultimate-redundancy-system.cjs",
-=======
     // Master Ultimate Redundancy Orchestrator
     {
       name: "ultimate-master-orchestrator",
       script: "automation/comprehensive-redundancy-orchestrator.cjs",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       interpreter: "node",
       cwd: __dirname,
       watch: false,
       autorestart: true,
-<<<<<<< HEAD
-      max_restarts: 20,
-      exp_backoff_restart_delay: 1000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate",
-        REDUNDANCY_LEVEL: "3"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-redundancy-monitor-error.log",
-      out_file: "automation/logs/ultimate-redundancy-monitor-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-redundancy-orchestrator",
-      script: "automation/ultimate-redundancy-system.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 15,
-      exp_backoff_restart_delay: 1500,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-orchestrator",
-        REDUNDANCY_LEVEL: "3"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-redundancy-orchestrator-error.log",
-      out_file: "automation/logs/ultimate-redundancy-orchestrator-out.log",
-=======
       max_restarts: 10,
       exp_backoff_restart_delay: 10000,
       env: {
@@ -61,40 +21,19 @@ module.exports = {
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/ultimate-master-orchestrator-error.log",
       out_file: "automation/logs/ultimate-master-orchestrator-out.log",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       time: true,
       instances: 1,
       exec_mode: "fork"
     },
 
-<<<<<<< HEAD
-    // Ultimate Build and Development Processes
-    {
-      name: "ultimate-build-guardian",
-      script: "automation/build-guardian.cjs",
-=======
     // Ultimate PM2 Redundancy System
     {
       name: "ultimate-pm2-redundancy",
       script: "automation/comprehensive-pm2-redundancy.cjs",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       interpreter: "node",
       cwd: __dirname,
       watch: false,
       autorestart: true,
-<<<<<<< HEAD
-      max_restarts: 12,
-      exp_backoff_restart_delay: 2000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-build",
-        BUILD_MONITORING: "true",
-        AUTO_RECOVERY: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-build-guardian-error.log",
-      out_file: "automation/logs/ultimate-build-guardian-out.log",
-=======
       max_restarts: 5,
       exp_backoff_restart_delay: 5000,
       env: {
@@ -110,38 +49,19 @@ module.exports = {
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/ultimate-pm2-redundancy-error.log",
       out_file: "automation/logs/ultimate-pm2-redundancy-out.log",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       time: true,
       instances: 1,
       exec_mode: "fork"
     },
-<<<<<<< HEAD
-    {
-      name: "ultimate-git-sync",
-      script: "automation/git-sync.cjs",
-=======
 
     // Ultimate GitHub Actions Redundancy System
     {
       name: "ultimate-github-actions-redundancy",
       script: "automation/comprehensive-github-actions-redundancy.cjs",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       interpreter: "node",
       cwd: __dirname,
       watch: false,
       autorestart: true,
-<<<<<<< HEAD
-      max_restarts: 15,
-      exp_backoff_restart_delay: 1000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-git",
-        AUTO_SYNC_REMOTE: process.env.AUTO_SYNC_REMOTE || "origin",
-        AUTO_SYNC_BRANCH: process.env.AUTO_SYNC_BRANCH || "main",
-        AUTO_SYNC_STRATEGY: process.env.AUTO_SYNC_STRATEGY || "hardreset",
-        AUTO_SYNC_CLEAN: process.env.AUTO_SYNC_CLEAN || "1",
-        AUTO_SYNC_GC: process.env.AUTO_SYNC_GC || "0"
-=======
       max_restarts: 5,
       exp_backoff_restart_delay: 10000,
       env: {
@@ -258,136 +178,14 @@ module.exports = {
         GIT_SYNC_STRATEGY: "pull",
         GIT_SYNC_CLEAN: "1",
         GIT_ULTIMATE_MODE: "true"
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       },
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/ultimate-git-sync-error.log",
       out_file: "automation/logs/ultimate-git-sync-out.log",
-<<<<<<< HEAD
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-netlify-healer",
-      script: "automation/enhanced-netlify-healer.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 12,
-      exp_backoff_restart_delay: 1800,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-netlify",
-        AUTO_HEALING: "true",
-        HEALTH_MONITORING: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-netlify-healer-error.log",
-      out_file: "automation/logs/ultimate-netlify-healer-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-
-    // Enhanced Redundancy Managers
-    {
-      name: "ultimate-pm2-manager",
-      script: "automation/pm2-redundancy-monitor.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 2500,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-pm2",
-        PM2_MONITORING: "true",
-        AUTO_RECOVERY: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-pm2-manager-error.log",
-      out_file: "automation/logs/ultimate-pm2-manager-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-github-manager",
-      script: "automation/github-actions-redundancy.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 2500,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-github",
-        GITHUB_MONITORING: "true",
-        WORKFLOW_MANAGEMENT: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-github-manager-error.log",
-      out_file: "automation/logs/ultimate-github-manager-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-netlify-manager",
-      script: "automation/netlify-functions-redundancy.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 2500,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-netlify",
-        NETLIFY_MONITORING: "true",
-        FUNCTION_MANAGEMENT: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-netlify-manager-error.log",
-      out_file: "automation/logs/ultimate-netlify-manager-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-
-    // Ultimate Automation Orchestrators
-    {
-      name: "ultimate-automation-orchestrator",
-      script: "automation/intelligent-orchestrator.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 12,
-      exp_backoff_restart_delay: 2000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-automation",
-        INTELLIGENT_ORCHESTRATION: "true",
-        CONTINUOUS_OPERATION: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-automation-orchestrator-error.log",
-      out_file: "automation/logs/ultimate-automation-orchestrator-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-=======
       time: true
     },
 
     // Ultimate Build Orchestrator
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
     {
       name: "ultimate-build-orchestrator",
       script: "automation/master-build-orchestrator.cjs",
@@ -395,15 +193,6 @@ module.exports = {
       cwd: __dirname,
       watch: false,
       autorestart: true,
-<<<<<<< HEAD
-      max_restarts: 12,
-      exp_backoff_restart_delay: 2000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-build-orchestrator",
-        BUILD_ORCHESTRATION: "true",
-        SMART_BUILD: "true"
-=======
       max_restarts: 3,
       exp_backoff_restart_delay: 20000,
       env: {
@@ -411,7 +200,6 @@ module.exports = {
         BUILD_ORCHESTRATOR_ULTIMATE_MODE: "true",
         BUILD_AUTO_RECOVERY: "true",
         BUILD_SMART_MODE: "true"
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       },
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/ultimate-build-orchestrator-error.log",
@@ -421,107 +209,14 @@ module.exports = {
       exec_mode: "fork"
     },
 
-<<<<<<< HEAD
-    // Ultimate Health and Monitoring
-    {
-      name: "ultimate-health-monitor",
-      script: "automation/redundancy-health-monitor.cjs",
-=======
     // Legacy PM2 Auto Sync (for backward compatibility)
     {
       name: "zion-auto-sync",
       script: "automation/pm2-auto-sync.js",
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
       interpreter: "node",
       cwd: __dirname,
       watch: false,
       autorestart: true,
-<<<<<<< HEAD
-      max_restarts: 15,
-      exp_backoff_restart_delay: 1200,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-health",
-        HEALTH_MONITORING: "true",
-        ALERT_SYSTEM: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-health-monitor-error.log",
-      out_file: "automation/logs/ultimate-health-monitor-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-performance-monitor",
-      script: "automation/continuous-build-monitor.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 12,
-      exp_backoff_restart_delay: 1800,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-performance",
-        PERFORMANCE_MONITORING: "true",
-        METRICS_COLLECTION: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-performance-monitor-error.log",
-      out_file: "automation/logs/ultimate-performance-monitor-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-
-    // Ultimate Recovery and Maintenance
-    {
-      name: "ultimate-recovery-manager",
-      script: "automation/build-failure-recovery.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 3000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-recovery",
-        AUTO_RECOVERY: "true",
-        RECOVERY_STRATEGIES: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-recovery-manager-error.log",
-      out_file: "automation/logs/ultimate-recovery-manager-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    },
-    {
-      name: "ultimate-maintenance-orchestrator",
-      script: "automation/site-maintenance-orchestrator.js",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 3000,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_MODE: "ultimate-maintenance",
-        MAINTENANCE_ORCHESTRATION: "true",
-        PREVENTIVE_MAINTENANCE: "true"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-maintenance-orchestrator-error.log",
-      out_file: "automation/logs/ultimate-maintenance-orchestrator-out.log",
-      time: true,
-      instances: 1,
-      exec_mode: "fork"
-    }
-  ]
-=======
       max_restarts: 10,
       exp_backoff_restart_delay: 5000,
       env: {
@@ -574,5 +269,4 @@ module.exports = {
       "post-deploy": "npm install && pm2 reload ecosystem-ultimate-redundancy.pm2.cjs --env production"
     }
   }
->>>>>>> origin/cursor/automate-automation-redundancy-and-build-improvement-87ee
 };

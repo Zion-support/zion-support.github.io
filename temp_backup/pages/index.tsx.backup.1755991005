@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-
-export default function Home() {
-  return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-2xl font-semibold">Zion App</h1>
-      <p className="mt-2">Welcome. Explore the new contract builder:</p>
-      <Link href="/contract-builder"><span className="text-blue-600 underline mt-3 inline-block">Open Contract Builder</span></Link>
-    </main>
-  );
-}
-=======
 import React from 'react';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 
@@ -87,4 +74,3 @@ export default function HomePage() {
     </EnhancedLayout>
   );
 }
->>>>>>> origin/cursor/build-ai-pricing-suggestion-engine-ea4e

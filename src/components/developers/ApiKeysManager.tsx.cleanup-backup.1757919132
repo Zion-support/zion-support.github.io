@@ -1,27 +1,4 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-
-import CodeBlock from "./CodeBlock",
-
-export function ApiKeysManager() {
-  const { 
-    keys,
-=======
 import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
 import { format } from "date-fns";
@@ -43,7 +20,6 @@ import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
   const { 
     keys, 
->>>>>>> origin/auto/autonomy-17186719616
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -51,44 +27,6 @@ export function ApiKeysManager() {
     regenerateApiKey, 
     revokeApiKey,
     clearNewApiKey
-<<<<<<< HEAD
-  } = useApiKeys(),
-  
-  const [showCreateDialog, setShowCreateDialog] = useState(false),
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
-  // Create key form state
-  const [keyName, setKeyName] = useState(""),
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
-
-  // Load keys on mount
-  useState(() => {
-    fetchApiKeys(),
-  }),
-  
-  const handleCreateKey = async () => {
-    if (keyName.trim() === "" || selectedScopes.length === 0) return,
-    
-    await createApiKey(keyName, selectedScopes),
-    setShowCreateDialog(false),
-    setKeyName(""),
-    setSelectedScopes([]),
-  },
-
-  const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null)
-  },
-  
-  const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId),
-    setShowDeleteConfirm(null)
-  },
-  
-  // Scope options
-  const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
-=======
   } = useApiKeys();
   
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -125,17 +63,12 @@ export function ApiKeysManager() {
   
   // Scope options
   const scopeOptions: { value: ApiKeyScope; label: string; description: string }[] = [
->>>>>>> origin/auto/autonomy-17186719616
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },
     { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },
     { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
     { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
-<<<<<<< HEAD
-    { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
-=======
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' },
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
@@ -143,28 +76,12 @@ export function ApiKeysManager() {
       prev.includes(scope) 
         ? prev.filter(s => s !== scope) 
         : [...prev, scope]
-<<<<<<< HEAD
-    ),
-  },
-=======
     );
   };
->>>>>>> origin/auto/autonomy-17186719616
   
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
-<<<<<<< HEAD
-  -H "Content-Type: application/json"`
-  },
-
-  // Reset form when dialog closes
-  const handleDialogClose = () => {
-    setKeyName(""),
-    setSelectedScopes([]),
-    setShowCreateDialog(false),
-  },
-=======
   -H "Content-Type: application/json"`;
   };
 
@@ -174,7 +91,6 @@ export function ApiKeysManager() {
     setSelectedScopes([]);
     setShowCreateDialog(false);
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -367,10 +283,6 @@ export function ApiKeysManager() {
               </div>
             ))
           )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         </div>
       </CardContent>
       
@@ -429,11 +341,7 @@ export function ApiKeysManager() {
             </AlertDialogCancel>
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
-<<<<<<< HEAD
-              className="bg-red-600 hover: bg-red-700"
-=======
               className="bg-red-600 hover:bg-red-700"
->>>>>>> origin/auto/autonomy-17186719616
             >
               Revoke
             </AlertDialogAction>
@@ -441,9 +349,5 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

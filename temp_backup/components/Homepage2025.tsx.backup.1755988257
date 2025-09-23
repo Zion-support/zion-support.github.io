@@ -1,8 +1,6 @@
 import React from 'react';
 
 const Homepage2025: React.FC = () => {
-<<<<<<< HEAD
-=======
   // Enhanced animation variants for better performance
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -129,7 +127,6 @@ const Homepage2025: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b6d6
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-20">

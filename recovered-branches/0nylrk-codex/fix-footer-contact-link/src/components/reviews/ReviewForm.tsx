@@ -10,19 +10,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
-  FormMessage} from "@/components/ui/form";
-import {
-  RadioGroup,
-  RadioGroupItem} from "@/components/ui/radio-group";
-=======
   FormMessage,
 } from "@/components/ui/form";
 import {
   RadioGroup,
   RadioGroupItem,
 } from "@/components/ui/radio-group";
->>>>>>> origin/auto/autonomy-17186719616
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 
@@ -45,24 +38,15 @@ interface ReviewFormProps {
   isSubmitting: boolean;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export function ReviewForm({
   projectId,
   revieweeId,
   revieweeName,
   onSubmit,
   defaultValues,
-<<<<<<< HEAD
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStarsetHoveredStar] = useState<number>(0);
-=======
   isSubmitting,
 }: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
->>>>>>> origin/auto/autonomy-17186719616
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -72,36 +56,24 @@ export function ReviewForm({
       quality_rating: defaultValues.quality_rating,
       timeliness_rating: defaultValues.timeliness_rating,
       would_work_again: defaultValues.would_work_again,
-<<<<<<< HEAD
-      is_anonymous: defaultValues.is_anonymous} : {
-=======
       is_anonymous: defaultValues.is_anonymous,
     } : {
->>>>>>> origin/auto/autonomy-17186719616
       rating: 0,
       review_text: "",
       communication_rating: undefined,
       quality_rating: undefined,
       timeliness_rating: undefined,
       would_work_again: undefined,
-<<<<<<< HEAD
-      is_anonymous: false}
-=======
       is_anonymous: false,
     }
->>>>>>> origin/auto/autonomy-17186719616
   });
   
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
       ...values,
       project_id: projectId,
-<<<<<<< HEAD
-      reviewee_id: revieweeId};
-=======
       reviewee_id: revieweeId,
     };
->>>>>>> origin/auto/autonomy-17186719616
     
     const success = await onSubmit(formattedData);
     if (success) {
@@ -126,11 +98,7 @@ export function ReviewForm({
               </FormLabel>
               <FormControl>
                 <div className="flex justify-center gap-1">
-<<<<<<< HEAD
-                  {[12345].map((star) => (
-=======
                   {[1, 2, 3, 4, 5].map((star) => (
->>>>>>> origin/auto/autonomy-17186719616
                     <button
                       key={star}
                       type="button"
@@ -165,13 +133,9 @@ export function ReviewForm({
             required: "Please provide feedback",
             minLength: {
               value: 20,
-<<<<<<< HEAD
-              message: "Review must be at least 20 characters"}}}
-=======
               message: "Review must be at least 20 characters",
             },
           }}
->>>>>>> origin/auto/autonomy-17186719616
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your Review</FormLabel>
@@ -205,11 +169,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-<<<<<<< HEAD
-                      {[12345].map((value) => (
-=======
                       {[1, 2, 3, 4, 5].map((value) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -242,11 +202,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-<<<<<<< HEAD
-                      {[12345].map((value) => (
-=======
                       {[1, 2, 3, 4, 5].map((value) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"
@@ -279,11 +235,7 @@ export function ReviewForm({
                       defaultValue={field.value?.toString()}
                       className="flex flex-wrap gap-4"
                     >
-<<<<<<< HEAD
-                      {[12345].map((value) => (
-=======
                       {[1, 2, 3, 4, 5].map((value) => (
->>>>>>> origin/auto/autonomy-17186719616
                         <FormItem
                           key={value}
                           className="flex items-center space-x-2"

@@ -23,15 +23,6 @@ const EnhancedFooter2025: React.FC = () => {
     {
       title: 'Services',
       links: [
-<<<<<<< HEAD
-        { name: 'AI & Machine Learning', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
-        { name: 'Quantum Technology', href: '/quantum-services', icon: <Atom className="w-4 h-4" /> },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-        { name: 'Cloud & Infrastructure', href: '/it-services', icon: <Cloud className="w-4 h-4" /> },
-        { name: 'Business Intelligence', href: '/data-analytics', icon: <BarChart className="w-4 h-4" /> },
-        { name: 'DevOps & Automation', href: '/devops-automation', icon: <Code className="w-4 h-4" /> },
-        { name: 'Space Technology', href: '/space-tech', icon: <Rocket className="w-4 h-4" /> }
-=======
         { label: 'Innovative 2025 Showcase', href: '/innovative-2025-services-showcase' },
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -39,7 +30,6 @@ const EnhancedFooter2025: React.FC = () => {
         { label: 'Cloud Infrastructure', href: '/cloud-platform' },
         { label: 'Data Analytics', href: '/data-analytics' },
         { label: 'Process Automation', href: '/process-automation' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
       ]
     },
     {
@@ -161,34 +151,6 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
             </motion.div>
 
-<<<<<<< HEAD
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={fadeInUp}>
-                <h3 className="text-white font-semibold text-lg mb-6 flex items-center">
-                  {section.title === 'Services' && <Rocket className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title === 'Solutions' && <Target className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title === 'Company' && <Building className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-cyan-400 mr-2" />}
-                  {section.title}
-                </h3>
-                <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-400 hover:text-cyan-300 transition-colors duration-200 group"
-                      >
-                        {link.icon}
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">
-                          {link.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-=======
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
@@ -347,7 +309,6 @@ const EnhancedFooter2025: React.FC = () => {
               >
                 <social.icon className="w-5 h-5" />
               </motion.a>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19ed
             ))}
           </motion.div>
 

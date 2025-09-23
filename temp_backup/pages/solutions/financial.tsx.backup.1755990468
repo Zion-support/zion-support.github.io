@@ -2,17 +2,6 @@ import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  Building, Users, Shield, Cpu, Database, Globe, Zap, Target, 
-  TrendingUp, BarChart3, Lock, Cloud, Server, Network, Settings, Brain,
-  DollarSign, CreditCard, PieChart, LineChart, Shield as ShieldIcon
-} from 'lucide-react';
-import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturisticBackground2045';
-
-const FinancialSolutionsPage: React.FC = () => {
-  const solutions = [
-    {
-=======
       title: "Financial AI & Machine Learning",
       description: "Advanced AI solutions for financial institutions with predictive analytics and risk assessment",
       icon: <Brain className="w-8 h-8" />,
@@ -126,13 +115,10 @@ export default function FinancialSolutions() {
                 Revolutionary AI and quantum computing solutions that transform 
                 financial services, trading, and risk management.
               </p>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-375e
             </motion.div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Solutions Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -452,14 +438,11 @@ export default function FinancialSolutions() {
                   Learn More <ArrowRight className="w-4 h-4" />
                 </a>
               </motion.div>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-375e
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -510,7 +493,6 @@ export default function FinancialSolutions() {
                   className="px-8 py-4 border border-yellow-500 text-yellow-400 font-semibold rounded-xl hover:bg-yellow-500/10 transition-all duration-300"
                 >
                   View All Services
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-375e
                 </a>
               </div>
             </motion.div>
@@ -519,10 +501,4 @@ export default function FinancialSolutions() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-};
-
-export default FinancialSolutionsPage;
-=======
 }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-375e

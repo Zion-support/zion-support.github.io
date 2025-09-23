@@ -1,9 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-14T09:38:20.123Z",
-  "entries": [
-    {
-=======
   "generatedAt": "2025-08-19T03:44:14.297Z",
   "entries": [
     {
@@ -37,7 +32,6 @@
       "summary": "import { GetServerSideProps } from 'next'; export default function Sitemap() { return null; } export const getServerSideProps: GetServerSideProps = async ({ res }) => { const baseUrl = 'https://ziontechgroup.com'; const sitemap = ; res.setHeader('Content-Type', 'text/xml'); res.w"
     },
     {
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "route": "/site-health",
       "file": "pages/site-health.tsx",
       "title": "Site Health — Broken Images",
@@ -50,8 +44,6 @@
       "summary": "import { useEffect, useMemo, useState } from 'react'; import Head from 'next/head'; type SearchItem = { title: string; url: string; summary?: string }; export default function SearchPage() { const [q, setQ] = useState(''); const [items, setItems] = useState ([]); const [loaded, s"
     },
     {
-<<<<<<< HEAD
-=======
       "route": "/robots",
       "file": "pages/robots.tsx",
       "title": "Sitemap",
@@ -82,7 +74,6 @@
       "summary": "import { useState } from 'react'; import Head from 'next/head'; import Pagination from '../components/Pagination'; import Form from '../components/Form'; import Modal from '../components/Modal'; import Button from '../components/Button'; import Card from '../components/Card'; exp"
     },
     {
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "route": "/newsroom",
       "file": "pages/newsroom.tsx",
       "title": "Newsroom — Curated Tech Headlines",
@@ -99,8 +90,6 @@
       "file": "pages/contact.tsx",
       "title": "Contact — Zion Tech Group",
       "summary": "import Head from 'next/head'; export default function Contact() { return ( Contact — Zion Tech Group Contact Tell us about your use‑case. We typically reply within 24 hours. Send ); }"
-<<<<<<< HEAD
-=======
     },
     {
       "route": "/component-library",
@@ -131,7 +120,6 @@
       "file": "pages/about.tsx",
       "title": "About Zion Tech Group | Leading AI & Cloud Automation Solutions",
       "summary": "import Head from 'next/head'; import Link from 'next/link'; export default function AboutPage() { return ( About Zion Tech Group | Leading AI & Cloud Automation Solutions {JSON.stringify({ \"@context\": \"https://schema.org\", \"@type\": \"Organization\", \"name\": \"Zion Tech Group\", \"desc"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/_document",
@@ -152,12 +140,6 @@
       "summary": "import Link from 'next/link'; export default function NotFound() { return ( 404 Page not found The page you’re looking for doesn’t exist or has moved. Go home Search ); }"
     },
     {
-<<<<<<< HEAD
-      "route": "/services",
-      "file": "pages/services/index.tsx",
-      "title": "index",
-      "summary": "import Link from 'next/link'; const services = [ { slug: 'ai-seo-auditor', title: 'AI SEO Auditor', desc: 'Automate SEO improvements with continuous audits.' }, { slug: 'customer-support-chatbot', title: 'Customer Support Chatbot', desc: 'Reduce response time and scale support.' "
-=======
       "route": "/tutorials/rapid-1755575048173-zlaf4l",
       "file": "pages/tutorials/rapid-1755575048173-zlaf4l.tsx",
       "title": "Complete Guide to Web Development - Zion Tech Group",
@@ -384,7 +366,6 @@
       "file": "pages/tutorials/rapid-1755542820477-s3h0j0.tsx",
       "title": "Expert Techniques for Machine Learning - Zion Tech Group",
       "summary": "import Head from 'next/head'; export default function TutorialPage() { return ( Expert Techniques for Machine Learning - Zion Tech Group Expert Techniques for Machine Learning 📚 Tutorial Overview This comprehensive tutorial will guide you through mastering machine learning from "
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/services/:slug",
@@ -399,12 +380,6 @@
       "summary": "import Head from 'next/head'; import { useEffect } from 'react'; export default function SeoReportRedirect() { useEffect(() => { if (typeof window !== 'undefined') { window.location.replace('/reports/seo/index.html'); } }, []); return ( <> SEO Report — Site Metadata ); }"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/roadmap",
-      "file": "pages/reports/roadmap.tsx",
-      "title": "Autonomous Roadmap",
-      "summary": "import Head from 'next/head'; export default function RoadmapReport() { return ( Autonomous Roadmap Autonomous Roadmap Generated from live schedules and functions. Updated continuously by cloud automations. Run Curator View Markdown If the markdown is not yet generated, use “Run "
-=======
       "route": "/tutorials/rapid-1755542809114-c6acur",
       "file": "pages/tutorials/rapid-1755542809114-c6acur.tsx",
       "title": "Step-by-Step Guide to Mobile App Development - Zion Tech Group",
@@ -4039,7 +4014,6 @@
       "file": "pages/services/rapid-1755539340458-6lge19.tsx",
       "title": "Machine Learning - Zion Tech Group",
       "summary": "import Head from 'next/head'; export default function ServicePage() { return ( Machine Learning - Zion Tech Group Machine Learning 🚀 Service Overview Our machine learning service delivers cutting-edge solutions to help your business thrive in the digital age. We combine industry"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports",
@@ -4060,12 +4034,6 @@
       "summary": "import { useEffect, useState } from 'react'; interface ArticleEntry { title: string; url: string; createdAt: string; tags?: string[]; source?: string; } export default function AILabPage() { const [items, setItems] = useState ([]); const [loading, setLoading] = useState(true); us"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/updates/update-2025-08-14T09-37",
-      "file": "pages/reports/updates/update-2025-08-14T09-37.tsx",
-      "title": "Autonomous Update — 2025-08-14 09-37",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Autonomous Update — 2025-08-14 09-37 Autonomous Update — 2025-08-14 09-37 Auto-generated by Cloud Content Factory. ); }"
-=======
       "route": "/reports/updates/update-2025-08-19T03-44",
       "file": "pages/reports/updates/update-2025-08-19T03-44.tsx",
       "title": "Autonomous Update — 2025-08-19 03-44",
@@ -4154,7 +4122,6 @@
       "file": "pages/reports/updates/update-2025-08-18T18-47.tsx",
       "title": "Autonomous Update — 2025-08-18 18-47",
       "summary": "import Head from 'next/head'; export default function Page() { return ( Autonomous Update — 2025-08-18 18-47 Autonomous Update — 2025-08-18 18-47 Signal source: https://ziontechgroup.com/landing Autonomous cloud systems are live and improving the app in real timeAutonomous Cloud "
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/updates/update-2025-08-14T09-36",
@@ -5765,12 +5732,6 @@
       "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-14 04:02 Autonomous Update — 2025-08-14 04:02 Signal over noise—your automated update is here. Today's Highlight Hacker News : Open source AI is the path forward · 2360 pts W"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/updates/update-2025-08-14-0401",
-      "file": "pages/reports/updates/update-2025-08-14-0401.tsx",
-      "title": "Autonomous Update — 2025-08-14 04:01",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-14 04:01 Autonomous Update — 2025-08-14 04:01 Fresh insights from our autonomous systems, curated for clarity and speed. Today's Highlight Hacker News : Google Duplex: An AI "
-=======
       "route": "/reports/updates/update-2025-08-18-1848",
       "file": "pages/reports/updates/update-2025-08-18-1848.tsx",
       "title": "Autonomous Performance Tuning Guide — Edge AI & IoT (2025-08-18 18:48 UTC)",
@@ -5781,7 +5742,6 @@
       "file": "pages/reports/updates/update-2025-08-18-1847.tsx",
       "title": "Autonomous Reference Architecture — DevSecOps for AI (2025-08-18 18:47 UTC)",
       "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Reference Architecture — DevSecOps for AI (2025-08-18 18:47 UTC) {JSON.stringify({ \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"headline\": \"${title}\", \"description\": \"${subtitle}\", "
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/updates/update-2025-08-14-0400",
@@ -8610,12 +8570,6 @@
       "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 19:02 Autonomous Update — 2025-08-13 19:02 Fresh insights from our autonomous systems, curated for clarity and speed. Today's Highlight Hacker News : Zoom terms now allow "
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/updates/update-2025-08-13-1901",
-      "file": "pages/reports/updates/update-2025-08-13-1901.tsx",
-      "title": "Autonomous Update — 2025-08-13 19:01",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 19:01 Autonomous Update — 2025-08-13 19:01 Today’s autonomous brief: highlights, context, and actions. Today's Highlight Hacker News : The young, inexperienced engineers a"
-=======
       "route": "/reports/updates/ultra-1755575047940-ha0gxe",
       "file": "pages/reports/updates/ultra-1755575047940-ha0gxe.tsx",
       "title": "Rapid Technology Advancement",
@@ -8872,7 +8826,6 @@
       "file": "pages/reports/updates/ultra-1755542852470-k6dae8.tsx",
       "title": "Real-Time Innovation Hub",
       "summary": "import Head from 'next/head'; export default function UltraUpdatePage() { return ( Real-Time Innovation Hub Real-Time Innovation Hub 🚀 What's New We've implemented Ultra-fast testing frameworks to help teams accelerate development cycles. This ultra-fast update demonstrates our "
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/updates/update-2025-08-13-1900",
@@ -8905,29 +8858,10 @@
       "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 18:56 Autonomous Update — 2025-08-13 18:56 Today’s autonomous brief: highlights, context, and actions. Today's Highlight Hacker News : Zoom terms now allow training AI on "
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/updates/update-2025-08-13-1852",
-      "file": "pages/reports/updates/update-2025-08-13-1852.tsx",
-      "title": "Autonomous Update — 2025-08-13 18:52",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 18:52 Autonomous Update — 2025-08-13 18:52 Signal over noise—your automated update is here. Today's Highlight Hacker News : The young, inexperienced engineers aiding DOGE "
-    },
-    {
-      "route": "/reports/updates/update-2025-08-13-1851",
-      "file": "pages/reports/updates/update-2025-08-13-1851.tsx",
-      "title": "Autonomous Update — 2025-08-13 18:51",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 18:51 Autonomous Update — 2025-08-13 18:51 Signal over noise—your automated update is here. Today's Highlight Hacker News : Paper Airplane Designs · 1753 pts Why it matter"
-    },
-    {
-      "route": "/reports/updates/update-2025-08-13-1850",
-      "file": "pages/reports/updates/update-2025-08-13-1850.tsx",
-      "title": "Autonomous Update — 2025-08-13 18:50",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 18:50 Autonomous Update — 2025-08-13 18:50 Fresh insights from our autonomous systems, curated for clarity and speed. Today's Highlight Hacker News : Air Con: $1697 for an"
-=======
       "route": "/reports/updates/ultra-1755542840109-z5xc80",
       "file": "pages/reports/updates/ultra-1755542840109-z5xc80.tsx",
       "title": "Instantaneous Tech Insights",
       "summary": "import Head from 'next/head'; export default function UltraUpdatePage() { return ( Instantaneous Tech Insights Instantaneous Tech Insights 🚀 What's New We've implemented Real-time collaboration tools to help teams reduce time-to-market. This ultra-fast update demonstrates our co"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/updates/update-2025-08-13-1849",
@@ -11648,12 +11582,6 @@
       "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 05:07 Autonomous Update — 2025-08-13 05:07 This page was created automatically by the content creator automation. It showcases our continuous, autonomous publishing pipeli"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/updates/update-2025-08-13-0506",
-      "file": "pages/reports/updates/update-2025-08-13-0506.tsx",
-      "title": "Autonomous Update — 2025-08-13 05:06",
-      "summary": "import Head from 'next/head'; export default function UpdatePage() { return ( Autonomous Update — 2025-08-13 05:06 Autonomous Update — 2025-08-13 05:06 This page was created automatically by the content creator automation. It showcases our continuous, autonomous publishing pipeli"
-=======
       "route": "/reports/playbooks/playbook-2025-08-19-034410",
       "file": "pages/reports/playbooks/playbook-2025-08-19-034410.tsx",
       "title": "Playbook — Autonomous Delivery",
@@ -21618,7 +21546,6 @@
       "file": "pages/reports/insights/ultra-1755542785725-l0uohs.tsx",
       "title": "Ultra-Fast Instant feedback loops Insight",
       "summary": "import Head from 'next/head'; export default function UltraInsightPage() { return ( Ultra-Fast Instant feedback loops Insight Ultra-Fast Instant feedback loops Insight 💡 The Insight AI-powered automation represents a paradigm shift in how we approach reduce time-to-market. 🔍 An"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/updates/update-2025-08-13-0505",
@@ -24255,12 +24182,6 @@
       "summary": "import Head from 'next/head'; export default function Page() { return ( Playbook — Autonomous Delivery Playbook — Autonomous Delivery Auto-generated by Cloud Playbook Factory. ); }"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/playbooks/playbook-2025-08-14-090859",
-      "file": "pages/reports/playbooks/playbook-2025-08-14-090859.tsx",
-      "title": "Playbook — Autonomous Delivery",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Playbook — Autonomous Delivery Playbook — Autonomous Delivery Auto-generated by Cloud Playbook Factory. ); }"
-=======
       "route": "/reports/innovations/insight-2025-08-19T03-44",
       "file": "pages/reports/innovations/insight-2025-08-19T03-44.tsx",
       "title": "Innovation Insight — 2025-08-19 03-44",
@@ -24325,7 +24246,6 @@
       "file": "pages/reports/innovations/insight-2025-08-18T18-47.tsx",
       "title": "Innovation Insight — 2025-08-18 18-47",
       "summary": "import Head from 'next/head'; export default function Page() { return ( Innovation Insight — 2025-08-18 18-47 Innovation Insight — 2025-08-18 18-47 Opportunity: Transform recurring signals into structured guides Idea: Build a feature row summarizing value, capability, and link to"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-14-090846",
@@ -28174,12 +28094,6 @@
       "summary": "import Head from 'next/head'; export default function InsightPage() { return ( Pilot Plan: RAG Platforms Pilot Plan: RAG Platforms Patterns to accelerate delivery. Scope: Pilot Plan: RAG Platforms. Signals: AI Services. Architecture: ingestion → retrieval → reasoning → evaluation"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/innovations/insight-2025-08-13-2220",
-      "file": "pages/reports/innovations/insight-2025-08-13-2220.tsx",
-      "title": "Innovation Insight — 2025-08-13 22-20",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Innovation Insight — 2025-08-13 22-20 Innovation Insight — 2025-08-13 22-20 Opportunity: Transform recurring signals into structured guides Idea: Build a feature row summarizing value, capability, and link to"
-=======
       "route": "/reports/innovations/innovation-2025-08-19-0344",
       "file": "pages/reports/innovations/innovation-2025-08-19-0344.tsx",
       "title": "Checklist — Edge AI & IoT",
@@ -28214,7 +28128,6 @@
       "file": "pages/reports/innovations/innovation-2025-08-18-1846.tsx",
       "title": "Capability Map — Retrieval-Augmented Generation",
       "summary": "import Head from 'next/head'; export default function InnovationPage() { return ( Capability Map — Retrieval-Augmented Generation Capability Map — Retrieval-Augmented Generation Innovative, useful guidance to enhance security and compliance. Scope and objectives: Capability Map f"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/innovations/insight-2025-08-13-2211",
@@ -29783,12 +29696,6 @@
       "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/cases/case-2025-08-14-092331",
-      "file": "pages/reports/cases/case-2025-08-14-092331.tsx",
-      "title": "Case Study — Autonomous Reports",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
-=======
       "route": "/reports/guides/ultra-1755575047944-57p0kn",
       "file": "pages/reports/guides/ultra-1755575047944-57p0kn.tsx",
       "title": "Ultra-Fast Guide: AI-powered automation",
@@ -30039,7 +29946,6 @@
       "file": "pages/reports/guides/ultra-1755542852472-tfp80z.tsx",
       "title": "Ultra-Fast Guide: Ultra-fast testing frameworks",
       "summary": "import Head from 'next/head'; export default function UltraGuidePage() { return ( Ultra-Fast Guide: Ultra-fast testing frameworks Ultra-Fast Guide: Ultra-fast testing frameworks 📚 Overview This guide will walk you through implementing Real-time data processing to increase produc"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/cases/case-2025-08-14-092330",
@@ -30072,29 +29978,10 @@
       "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/cases/case-2025-08-14-092221",
-      "file": "pages/reports/cases/case-2025-08-14-092221.tsx",
-      "title": "Case Study — Autonomous Reports",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
-    },
-    {
-      "route": "/reports/cases/case-2025-08-14-092140",
-      "file": "pages/reports/cases/case-2025-08-14-092140.tsx",
-      "title": "Case Study — Autonomous Reports",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
-    },
-    {
-      "route": "/reports/cases/case-2025-08-14-092035",
-      "file": "pages/reports/cases/case-2025-08-14-092035.tsx",
-      "title": "Case Study — Autonomous Reports",
-      "summary": "import Head from 'next/head'; export default function Page() { return ( Case Study — Autonomous Reports Case Study — Autonomous Reports Source: https://ziontechgroup.com/explore Scenario Exploring how autonomous, reports, 2025, 30new, contentopen delivers value. Approach Baseline"
-=======
       "route": "/reports/guides/ultra-1755542840111-yq3kx6",
       "file": "pages/reports/guides/ultra-1755542840111-yq3kx6.tsx",
       "title": "Ultra-Fast Guide: Instant feedback loops",
       "summary": "import Head from 'next/head'; export default function UltraGuidePage() { return ( Ultra-Fast Guide: Instant feedback loops Ultra-Fast Guide: Instant feedback loops 📚 Overview This guide will walk you through implementing Real-time collaboration tools to boost team efficiency. 🚀"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/cases/case-2025-08-14-092031",
@@ -31981,12 +31868,6 @@
       "summary": "import Head from 'next/head'; export default function Page(){ return ( Reference Architecture — Autonomous Content Mesh Reference Architecture — Autonomous Content Mesh Signal source: https://ziontechgroup.com Components Ingestion & normalization Knowledge index Generation & eval"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/blueprints/blueprint-2025-08-14-003601",
-      "file": "pages/reports/blueprints/blueprint-2025-08-14-003601.tsx",
-      "title": "Reference Architecture — Autonomous Content Mesh",
-      "summary": "import Head from 'next/head'; export default function Page(){ return ( Reference Architecture — Autonomous Content Mesh Reference Architecture — Autonomous Content Mesh Signal source: https://ziontechgroup.com Components Ingestion & normalization Knowledge index Generation & eval"
-=======
       "route": "/reports/guides/ultra-1755541298658-w4zm7z",
       "file": "pages/reports/guides/ultra-1755541298658-w4zm7z.tsx",
       "title": "Ultra-Fast Guide: Rapid prototyping systems",
@@ -46859,7 +46740,6 @@
       "file": "pages/products/rapid-1755541307591-3zf4b2.tsx",
       "title": "Smart Dashboard - Zion Tech Group",
       "summary": "import Head from 'next/head'; export default function ProductPage() { return ( Smart Dashboard - Zion Tech Group Smart Dashboard 🌟 Product Overview Smart Dashboard is designed to revolutionize how businesses operate and grow in today's competitive landscape. Built with cutting-e"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
     },
     {
       "route": "/reports/blueprints/blueprint-2025-08-14-003554",

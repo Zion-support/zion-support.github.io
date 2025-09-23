@@ -1,10 +1,6 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { CardContentCardHeaderCardTitle } from "@/components/ui/card";
-=======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 
 interface VideoCallRoomProps {
@@ -15,11 +11,7 @@ interface VideoCallRoomProps {
   className?: string;
 }
 
-<<<<<<< HEAD
-export function VideoCallRoom({ roomtokenserverUrlonDisconnectclassName }: VideoCallRoomProps) {
-=======
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
->>>>>>> origin/auto/autonomy-17186719616
   return (
     <Card className={className || "w-full max-w-3xl mx-auto"}>
       <CardHeader>

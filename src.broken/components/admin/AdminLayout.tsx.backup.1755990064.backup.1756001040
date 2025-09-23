@@ -1,8 +1,5 @@
 import React from 'react';
 <<<<<<< HEAD
-export function AdminLayout() {
-=======
-<<<<<<< HEAD
 import Link from 'next/link';
 
 interface AdminLayoutProps {
@@ -20,7 +17,6 @@ const navItems = [
 export function AdminLayout({ children }: AdminLayoutProps) {
 =======
 export function AdminLayout() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

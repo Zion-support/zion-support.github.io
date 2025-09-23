@@ -69,23 +69,10 @@ const navigationItems: NavigationItem[] = [
         description: 'Enterprise-grade security solutions'
       },
       {
-<<<<<<< HEAD
-        label: 'IT Solutions',
-        href: '/it-services',
-        icon: <Cpu className="w-4 h-4" />,
-        description: 'Comprehensive IT infrastructure services'
-      },
-      {
-        label: 'Cloud Platform',
-        href: '/cloud-platform',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'Scalable cloud infrastructure solutions'
-=======
         label: 'Cloud Platform',
         href: '/cloud-platform',
         icon: <Globe className="w-4 h-4" />,
         description: 'Scalable cloud infrastructure'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-1912
       }
     ]
   },
@@ -216,30 +203,6 @@ const navigationItems: NavigationItem[] = [
     description: 'Whitepapers, case studies, and insights',
     children: [
       {
-<<<<<<< HEAD
-        label: 'Case Studies',
-        href: '/case-studies',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Real-world implementation success stories'
-      },
-      {
-        label: 'Blog',
-        href: '/blog',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Latest insights and technology trends'
-      },
-      {
-        label: 'Documentation',
-        href: '/docs',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Technical documentation and guides'
-      },
-      {
-        label: 'Training',
-        href: '/training',
-        icon: <BookOpen className="w-4 h-4" />,
-        description: 'Professional development and training programs'
-=======
         label: 'Blog',
         href: '/blog',
         icon: <BookOpen className="w-4 h-4" />,
@@ -276,7 +239,6 @@ const navigationItems: NavigationItem[] = [
         href: '/news',
         icon: <Globe className="w-4 h-4" />,
         description: 'Company updates and announcements'
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-1912
       }
     ]
   },

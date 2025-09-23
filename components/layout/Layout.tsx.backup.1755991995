@@ -7,11 +7,6 @@ interface LayoutProps {
   seo?: SEOConfig;
 }
 
-<<<<<<< HEAD
-export default function Layout({ children, seo }: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [showEnhancements, setShowEnhancements] = useState(false);
-=======
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="min-h-screen bg-black text-white">
@@ -25,7 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		</div>
 	);
 };
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-ee3d
 
   return (
     <div className="min-h-screen bg-black text-white">

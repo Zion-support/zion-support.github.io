@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-
-interface ResourceItem {
-  id: string,
-  title: string,
-  description: string,
-  type: 'image' | 'video' | 'document' | 'link',
-  icon: JSX.Element,
-  url: string
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
@@ -24,7 +10,6 @@ interface ResourceItem {
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
   url: string;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function PartnerResources() {
@@ -77,25 +62,16 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
-<<<<<<< HEAD
-  ],
-=======
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started",
       description: `Downloading ${resource.title}`,
-<<<<<<< HEAD
-      variant: "default"}),
-  },
-=======
       variant: "default",
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <div className="space-y-6">
@@ -131,10 +107,6 @@ export function PartnerResources() {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-      <Card className='bg-zion-blue-dark border-zion-blue-light'>
-=======
->>>>>>> origin/auto/autonomy-17186719616
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -154,12 +126,6 @@ export function PartnerResources() {
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>
             </ul>
           </div>
-<<<<<<< HEAD
-          <div className='space-y-2'>
-            <h3 className='text-lg font-semibold text-white'>Don'ts</h3>
-            <ul className='list-disc pl-5 space-y-1 text-zion-slate-light'>
-=======
->>>>>>> origin/auto/autonomy-17186719616
 
           <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">Don'ts</h3>
@@ -186,20 +152,11 @@ export function PartnerResources() {
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.
             Feel free to reach out if you have questions about promotions, resources, or payment.
           </p>
-<<<<<<< HEAD
-          <Button className="bg-zion-purple hover: bg-zion-purple-dark">
-=======
           <Button className="bg-zion-purple hover:bg-zion-purple-dark">
->>>>>>> origin/auto/autonomy-17186719616
             Contact Partner Support
           </Button>
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
->>>>>>> origin/auto/autonomy-17186719616

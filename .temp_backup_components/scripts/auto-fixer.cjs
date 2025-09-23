@@ -182,8 +182,4 @@ if (require.main === module) {}
     .catch(error => {})
       console.error("Auto-fixer "failed": ", error);
       process.exit(1)})};
-<<<<<<< HEAD
 module.exports = AutoFixer;
-=======
-module.exports = AutoFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

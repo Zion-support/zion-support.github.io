@@ -11,10 +11,6 @@ permissions:
 
 jobs:
   attempt-fix:
-<<<<<<< HEAD
-    continue-on-error: true
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     runs-on: ubuntu-latest
     steps:
@@ -34,30 +30,18 @@ jobs:
 
       - name: Run automated fixes
         run: |
-<<<<<<< HEAD
-          npm run lint -- --fix || true
-=======
           # Lint auto-fix
           npm run lint -- --fix || true
           # Regenerate sitemap and SEO artifacts
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
           node scripts/generate-sitemap.js || true
           node scripts/seo-audit.js || true
 
       - name: Rebuild and type-check
-<<<<<<< HEAD
-        continue-on-error: true
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
         run: |
           npm run type-check || true
           npm run build || true
 
       - name: Commit and push healing edits
-<<<<<<< HEAD
-        if: always()
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
@@ -68,9 +52,3 @@ jobs:
           else
             echo "No changes to push"
           fi
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d

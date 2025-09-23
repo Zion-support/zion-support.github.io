@@ -31,11 +31,6 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-<<<<<<< HEAD
-        run: npm ci --no-audit --no-fund
-      - name: Run workflow
-        run: echo "Workflow completed successfully"
-=======
         run: npm ci
 
       - name: Configure Git identity
@@ -69,4 +64,3 @@ jobs:
           git add -A
           git commit -m "chore: front CI sync [skip ci]" || true
           git push origin "$BRANCH" || true
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

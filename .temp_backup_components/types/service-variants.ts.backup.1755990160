@@ -94,19 +94,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
-  | 'manufacturing-futuristic'
-  | 'retail-futuristic'
-  | 'fintech-futuristic'
-  | 'customer-futuristic'
-  | 'ecommerce-futuristic'
-  | 'real-estate-futuristic'
-  | 'logistics-futuristic'
-  | 'quantum-security-futuristic'
-  | 'energy-futuristic'
-  | 'transportation-futuristic'
-  | 'education-futuristic';
-=======
   | 'digital-marketing'
   | 'seo'
   | 'metaverse'
@@ -146,4 +133,3 @@ export type ServiceVariant =
   | 'it-infrastructure'
   | 'micro-saas'
   | 'ai-services';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-5c15

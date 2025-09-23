@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { addToWishlist, loadWishlistFromDB, removeFromWishlist, getApiUrl } from '@/store/wishlistSlice';
@@ -65,16 +63,12 @@ export default function Wishlist() {
         </ul>
       )}
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function Wishlist() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

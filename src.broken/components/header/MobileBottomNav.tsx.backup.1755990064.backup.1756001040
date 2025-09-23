@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function MobileBottomNav() {
-=======
-<<<<<<< HEAD
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
@@ -13,13 +9,6 @@ import { useWishlist } from "@/hooks/useWishlist";
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
-
-
-
-
-
-
-
 
 interface MobileBottomNavProps {
   unreadCount?: number;
@@ -91,7 +80,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 =======
 import React from 'react';
 export function MobileBottomNav() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

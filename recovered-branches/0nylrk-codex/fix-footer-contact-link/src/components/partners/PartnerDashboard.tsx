@@ -1,13 +1,7 @@
 
-<<<<<<< HEAD
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { BarChartDollarSignLineChartTrendingUpUsers } from "lucide-react";
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react";
->>>>>>> origin/auto/autonomy-17186719616
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -32,11 +26,7 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
             <p className="text-xs text-zion-slate-light">
-<<<<<<< HEAD
-              {stats.completedReferrals} completed{stats.pendingReferrals} pending
-=======
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
->>>>>>> origin/auto/autonomy-17186719616
             </p>
           </CardContent>
         </Card>

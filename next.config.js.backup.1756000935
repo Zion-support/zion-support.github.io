@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-const os = require('os');
-const path = require('path');
-
-const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
-=======
 const path = require('path');
 
 let withSentryConfig = (cfg) => cfg;
@@ -15,13 +8,10 @@ try {
 } catch {}
 
 const baseConfig = {
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
-<<<<<<< HEAD
-=======
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
     ignoreDuringBuilds: true,
@@ -34,7 +24,6 @@ const baseConfig = {
   // Optimized for fast builds (hanging issue SOLVED)
   // outputFileTracing: false, // Intentionally disabled via env vars in build scripts and netlify.toml to prevent hanging.
   productionBrowserSourceMaps: false, // Disable for faster builds
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
   
   // Environment configuration
   env: {
@@ -64,13 +53,6 @@ const baseConfig = {
       'react-window',
       'fuse.js'
     ],
-<<<<<<< HEAD
-    esmExternals: 'loose',
-    optimizeCss: process.env.NODE_ENV === 'production',
-    largePageDataBytes: 128 * 1000,
-    workerThreads: false,
-    cpus: Math.min(2, os.cpus().length),
-=======
     // ESM configuration for problematic packages
     esmExternals: 'loose', // Allow loose ESM handling
     
@@ -82,7 +64,6 @@ const baseConfig = {
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level
     // Disable profiling for faster builds
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
     swcTraceProfiling: false,
   },
 

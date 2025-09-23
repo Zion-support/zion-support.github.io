@@ -9,14 +9,6 @@ export default function AutomationHub() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
-<<<<<<< HEAD
-        <title>Automation Hub</title>
-        <meta name="description" content="Explore autonomous cloud automations running 24/7." />
-      </Head>
-      <main className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-extrabold mb-2">Automation Hub</h1>
-        <p className="text-white/70 mb-8">Discover our autonomous, self-healing systems that keep the codebase evergreen. Powered by scheduled cloud functions — no GitHub Actions required.</p>
-=======
         <title>Automation Hub | Zion Tech Group</title>
         <meta name="description" content="Explore autonomous cloud automations running 24/7 with live monitoring and self-healing systems." />
         <meta property="og:title" content="Automation Hub | Zion Tech Group" />
@@ -35,7 +27,6 @@ export default function AutomationHub() {
         </div>
 
         <QuickNavigation />
->>>>>>> origin/cursor/optimize-application-internal-links-0f5e
         <ul className="space-y-4">
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Homepage Updates</h2>

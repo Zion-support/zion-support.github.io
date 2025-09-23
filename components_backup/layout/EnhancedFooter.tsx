@@ -559,6 +559,6 @@ export default function EnhancedFooter() {
       </motion.div>
     </footer>
   );
-};
+}
 
 export default EnhancedFooter;

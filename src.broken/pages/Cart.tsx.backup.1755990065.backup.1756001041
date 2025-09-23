@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
@@ -132,16 +130,12 @@ export default function CartPage() {
         Checkout
       </Button>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function Cart() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
     </div>
   );

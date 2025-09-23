@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-const supportOptions = [;
-  {}
-    title: 'Live Chat Support,',
-    description: 'Get instant help with our live chat support available 24/7,',
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -24,7 +17,6 @@ import {
 
 const supportChannels = [
   {
->>>>>>> main
     icon: MessageCircle,
     title: 'Live Chat',
     description: 'Get instant help with our 24/7 live chat support',
@@ -151,25 +143,6 @@ export default function SupportPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Need Immediate Help?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
-                Our support team is standing by to help you resolve any issues quickly and efficiently;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
-                  href="/contact"";
-                  className="px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
-                  <MessageCircle className="mr-2 w-5 h-5" />";
-                  Start Live Chat;
-                </Link>;
-                <a;
-                  href={`tel:${contactInfo.phone}`}
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Need Immediate Help?
@@ -197,6 +170,5 @@ export default function SupportPage() {
         </section>
       </div>
     </>
->>>>>>> main
   );
 }

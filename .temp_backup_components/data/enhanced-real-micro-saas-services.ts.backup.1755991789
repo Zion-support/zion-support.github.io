@@ -3818,8 +3818,6 @@ export const serviceCategories = [
   'Legal Technology',
   'HR & Talent Management'
 ];
-<<<<<<< HEAD
-=======
 
 enhancedRealMicroSaasServices.push(...additionalZionServices);
 
@@ -4267,4 +4265,3 @@ enhancedRealMicroSaasServices.push(
     reviews: 21
   }
 );
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-adba

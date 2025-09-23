@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect } from 'react';
 import { toast } from '@/hooks/use-toast';
 
@@ -40,7 +38,6 @@ export default function OfflineToast() {
 
   return null;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function OfflineToast() {
   return (
@@ -49,8 +46,5 @@ export function OfflineToast() {
       <p>Component placeholder</p>
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

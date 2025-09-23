@@ -9,16 +9,6 @@ import {
   GraduationCap, Building, Palette, BarChart3, Cloud, Lock
 } from 'lucide-react';
 
-<<<<<<< HEAD
-// Memoized footer data for better performance
-const footerData = {
-  company: {
-    name: 'Zion Tech Group',
-    description: 'Pioneering the future of technology with innovative AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
-    address: '364 E Main St STE 1008, Middletown DE 19709',
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com'
-=======
 const footerSections = [
   {
     title: 'Featured Revolutionary Services 2046',
@@ -37,7 +27,6 @@ const footerSections = [
       { name: 'Quantum Manufacturing Intelligence 2046', href: '/quantum-manufacturing-intelligence-2046' },
       { name: 'Quantum Education Intelligence 2046', href: '/quantum-education-intelligence-platform-2046' }
     ]
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-f6bf
   },
   quickLinks: [
     { label: 'About Us', href: '/about' },

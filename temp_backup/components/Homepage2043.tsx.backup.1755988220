@@ -2,13 +2,8 @@ import React, { useEffect, useState, useCallback, Suspense } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-<<<<<<< HEAD
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, CheckCircle, Users, Award, Zap
-=======
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
 } from 'lucide-react';
 
 // Import our new revolutionary services
@@ -146,34 +141,6 @@ const Homepage2043: React.FC = () => {
     window.location.href = service.slug;
   }, []);
 
-<<<<<<< HEAD
-  const handleCategoryChange = useCallback((categoryId: string) => {
-    setSelectedCategory(categoryId);
-    // Enhanced analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'click', {
-        event_category: 'category_filter',
-        event_label: categoryId,
-        value: 1
-      });
-    }
-  }, []);
-
-  // Loading state
-  if (isLoading) {
-    return (
-      <Layout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-            <h2 className="text-2xl font-semibold text-gray-300">Loading the Future...</h2>
-            <p className="text-gray-500 mt-2">Preparing revolutionary technology solutions</p>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
-=======
   // Animation variants
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
@@ -188,7 +155,6 @@ const Homepage2043: React.FC = () => {
       }
     }
   };
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
 
   return (
     <Layout>
@@ -514,23 +480,6 @@ const Homepage2043: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Enhanced Testimonials Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900/50 to-black">
-          <div className="max-w-6xl mx-auto">
-            <Suspense fallback={
-              <div className="text-center py-20">
-                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-500 mx-auto mb-4"></div>
-                <p className="text-gray-400">Loading testimonials...</p>
-              </div>
-            }>
-              <TestimonialSection />
-            </Suspense>
-          </div>
-        </section>
-
-        {/* Enhanced CTA Section */}
-=======
         {/* Revolutionary 2044 Services Preview */}
         <section className="py-20 px-4 relative overflow-hidden">
           {/* Enhanced Animated Background */}
@@ -660,7 +609,6 @@ const Homepage2043: React.FC = () => {
         </section>
 
         {/* CTA Section */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Link from 'next/link';
 import { 
@@ -405,4 +403,3 @@ export default function NeoFuturisticFooter() {
     </footer>
   );
 }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf

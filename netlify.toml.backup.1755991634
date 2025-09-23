@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -49,12 +48,6 @@
     Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
 
 [[redirects]]
-<<<<<<< HEAD
-  from = "/services/*"
-  to = "/:splat"
-  status = 301
-  force = true
-=======
   from = "/ai-solutions"
   to = "/services"
   status = 301
@@ -178,4 +171,3 @@
   from = "/twitter-image.jpg"
   to = "/og-image.svg"
   status = 302
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-5a95

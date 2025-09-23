@@ -4,12 +4,8 @@ import { Resend } from "npm:resend@2.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 interface SendNewsletterRequest {
   subject: string;
@@ -40,13 +36,6 @@ serve(async (req) => {
         to: [testEmail],
         subject: `[TEST] ${subject}`,
         html: body,
-<<<<<<< HEAD
-        text: previewText});
-
-      return new Response(JSON.stringify(emailResponse), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200});
-=======
         text: previewText,
       });
 
@@ -54,7 +43,6 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200,
       });
->>>>>>> origin/auto/autonomy-17186719616
     } 
     
     // In production, we would fetch subscriber emails from the database
@@ -67,22 +55,14 @@ serve(async (req) => {
 
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 200});
-=======
       status: 200,
     });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error in send-newsletter function:", error);
     
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
-      status: 500});
-=======
       status: 500,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

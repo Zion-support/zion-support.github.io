@@ -1,28 +1,4 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2025-08-19T18:22:42.684Z",
-  "functions": [
-    "a11y-alt-text-runner",
-    "adaptive-orchestrator",
-    "ai-changelog-runner",
-    "ai-trends-radar-runner",
-    "anchor-links-auto-fixer",
-    "auto-discovery-runner",
-    "auto-scheduler",
-    "automation-matrix",
-    "autonomous-invention-orchestrator",
-    "autonomous-meta-orchestrator",
-    "broken-image-scanner",
-    "broken-image-scanner-runner",
-    "canonical-auditor",
-    "cloud_deep_research",
-    "cloud_orchestrator",
-    "code-smell-audit-runner",
-    "component-coupling-graph-runner",
-    "component-props-docs-runner",
-    "component-size-report",
-    "content-freshness-score-runner",
-=======
   "generatedAt": "2025-08-11T22:34:16.602Z",
   "functions": [
     "ai-changelog-runner",
@@ -34,20 +10,12 @@
     "broken-image-scanner",
     "broken-image-scanner-runner",
     "cloud_orchestrator",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "continuous-front-runner",
     "continuous-orchestrator",
     "dead-code-audit",
     "dead-code-report",
-<<<<<<< HEAD
-    "deps-auto-upgrade-runner",
     "docs-index-runner",
     "docs-search-index-runner",
-    "duplicate-media-finder-runner",
-=======
-    "docs-index-runner",
-    "docs-search-index-runner",
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "external-link-check-runner",
     "fast-front-promoter",
     "fast-orchestrator",
@@ -62,10 +30,6 @@
     "front-visionary-expander",
     "frontpage-enhancer",
     "frontpage-scheduler",
-<<<<<<< HEAD
-    "headers-enforcer",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "home-visionary-expander",
     "homepage-advertiser-scheduler",
     "homepage-enhancer",
@@ -75,65 +39,26 @@
     "hyper-front-index-accelerator",
     "image-optimizer-runner",
     "innovation-lab",
-<<<<<<< HEAD
-    "innovations-promoter",
-    "intelligent-meta-orchestrator",
-    "internal-link-graph-runner",
-    "knowledge-pack-runner",
-    "license-compliance-auditor",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "link-and-health-scheduler",
     "link-crawler",
     "maintenance-scheduler",
     "marketing-and-features-promo",
     "marketing-scheduler",
     "media-og-and-optimize",
-<<<<<<< HEAD
-    "metadata-optimizer-runner",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "netlify-auto-healer-runner",
     "newsroom-auto-publisher",
     "newsroom-runner",
     "og-image-update-runner",
-<<<<<<< HEAD
-    "orphan-pages-detector",
-    "pagespeed-insights-runner",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "readme-advertiser",
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-<<<<<<< HEAD
-    "revenue-ideas-lab",
-    "roadmap-curator",
-    "robots-auditor",
-=======
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
     "schedule-site-health",
     "security-audit",
     "security-audit-runner",
-<<<<<<< HEAD
-    "seo-audit-runner",
-    "site-404-map-runner",
-    "site-crawler",
-    "sitemap_runner",
-    "stale-content-auditor-runner",
-    "todo-scanner-runner",
-    "todo-summary-runner",
-    "topic-cluster-builder-runner",
-    "topics-map-runner",
-    "trigger-all-and-commit",
-    "ui-enhancer",
-    "ultrafast-front-orchestrator",
-    "ultrafast-orchestrator",
-    "unused-media-scanner"
-=======
     "site-crawler",
     "sitemap_runner",
     "todo-scanner-runner",
@@ -142,6 +67,5 @@
     "ui-enhancer",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator"
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   ]
 }

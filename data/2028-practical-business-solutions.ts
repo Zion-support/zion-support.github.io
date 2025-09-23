@@ -14,10 +14,7 @@ export interface PracticalBusinessSolution2028 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
     id: "2028-practical-business-solution",

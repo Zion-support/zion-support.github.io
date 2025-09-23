@@ -20,7 +20,6 @@
   name = "asset-size-guardian"
   schedule = "*/30 * * * *"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -206,8 +205,6 @@
 
 # Resolved conflict: include all relevant scheduled functions
 [[scheduled.functions]]
-<<<<<<< HEAD
-=======
   name = "redirect-healer"
   schedule = "*/15 * * * *"
 
@@ -224,7 +221,6 @@
   schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-18c4
   name = "todo-summary-runner"
   schedule = "*/30 * * * *"
 
@@ -281,30 +277,6 @@ name = "deps-auto-upgrade-runner"
 schedule = "7 */12 * * *"
 
 [[scheduled.functions]]
-<<<<<<< HEAD
-name = "unused-media-scanner"
-schedule = "*/10 * * * *"
-
-[[scheduled.functions]]
-name = "orphan-pages-detector"
-schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-name = "component-size-report"
-schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-name = "large-image-auditor"
-schedule = "17 */6 * * *"
-
-[[scheduled.functions]]
-name = "duplicate-assets-scanner"
-schedule = "41 */12 * * *"
-
-[[scheduled.functions]]
-name = "route-map-generator"
-schedule = "*/30 * * * *"
-=======
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
@@ -316,4 +288,3 @@ schedule = "*/30 * * * *"
 [[scheduled.functions]]
   name = "repo-insights-digest"
   schedule = "*/15 * * * *" # every 15 minutes
->>>>>>> origin/cursor/invent-and-deploy-autonomous-cloud-automations-18c4

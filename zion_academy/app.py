@@ -35,12 +35,6 @@ def init_db_command():
 @app.route('/academy')
 @app.route('/learn')
 def index():
-<<<<<<< HEAD
-    """Homepage with hero, latest updates, and quick links."""
-    with app.app_context():
-        latest_updates = Update.query.filter_by(is_published=True).order_by(desc(Update.created_at)).limit(3).all()
-    return render_template('index.html', title='Welcome to Zion Academy', latest_updates=latest_updates)
-=======
     """Homepage with featured and latest courses."""
     with app.app_context():
         latest_courses = Course.query.order_by(desc(Course.created_at)).limit(6).all()
@@ -51,7 +45,6 @@ def index():
         latest_courses=latest_courses,
         featured_courses=featured_courses,
     )
->>>>>>> ae78a241413f04b853a8cb652af3c863231dcf08
 
 @app.route('/academy/founder-course')
 @app.route('/learn/launch')
@@ -114,7 +107,6 @@ def course_detail(course_id):
         # or just rendering a simple not found message.
         return render_template('404.html', title="Course Not Found"), 404 # Assuming you have a 404.html
 
-
 # ----- Progress Tracking Endpoints -----
 
 @app.route('/api/enroll', methods=['POST'])
@@ -134,7 +126,6 @@ def api_enroll():
             db.session.commit()
 
     return jsonify({'message': 'enrolled'}), 201
-
 
 @app.route('/api/complete', methods=['POST'])
 def api_complete_lesson():
@@ -185,7 +176,6 @@ def api_complete_lesson():
 
     return jsonify({'progress': enrollment.progress})
 
-
 @app.route('/api/progress/<int:user_id>')
 def api_user_progress(user_id):
     """Return progress and achievements for a user."""
@@ -212,7 +202,6 @@ def api_user_progress(user_id):
 
     return jsonify({'enrollments': progress_data, 'achievements': achievements})
 
-
 @app.route('/api/generate-quiz', methods=['POST'])
 def api_generate_quiz():
     """Return a simple quiz for a topic."""
@@ -230,7 +219,6 @@ def api_generate_quiz():
     ]
     return jsonify({'quiz': quiz})
 
-
 @app.route('/api/summarize', methods=['POST'])
 def api_summarize():
     """Return a basic summary of provided text."""
@@ -238,7 +226,6 @@ def api_summarize():
     text = data.get('text', '')
     summary = '.'.join(text.split('.')[:2]).strip()
     return jsonify({'summary': summary})
-
 
 # ----- Analytics Endpoints -----
 
@@ -272,7 +259,6 @@ def api_track_event():
         'session_id': session_id,
         'event_id': event.id
     })
-
 
 @app.route('/api/analytics/content/<content_type>/<int:content_id>')
 def api_content_analytics(content_type, content_id):
@@ -316,7 +302,6 @@ def api_content_analytics(content_type, content_id):
                 'event_data': e.event_data
             } for e in events]
         })
-
 
 @app.route('/api/analytics/dashboard')
 def api_analytics_dashboard():
@@ -369,7 +354,6 @@ def api_analytics_dashboard():
             } for f in feedback_summary]
         })
 
-
 # ----- Feedback Endpoints -----
 
 @app.route('/api/feedback/submit', methods=['POST'])
@@ -397,7 +381,6 @@ def api_submit_feedback():
         'message': 'Feedback submitted successfully'
     })
 
-
 @app.route('/api/feedback/list')
 def api_feedback_list():
     """Get list of feedback submissions"""
@@ -418,7 +401,6 @@ def api_feedback_list():
                 'user_id': f.user_id
             } for f in feedbacks]
         })
-
 
 @app.route('/api/feedback/<int:feedback_id>', methods=['PUT'])
 def api_update_feedback(feedback_id):
@@ -448,7 +430,6 @@ def api_update_feedback(feedback_id):
         'success': True,
         'message': 'Feedback updated successfully'
     })
-
 
 # ----- Content Performance Tracking -----
 
@@ -517,14 +498,12 @@ def api_update_content_metrics():
         'message': 'Content metrics updated successfully'
     })
 
-
 # ----- Admin Dashboard -----
 
 @app.route('/admin/dashboard')
 def admin_dashboard():
     """Admin dashboard for analytics and feedback management"""
     return render_template('admin_dashboard.html', title='Admin Dashboard')
-
 
 @app.route('/user/<int:user_id>')
 def user_profile(user_id):

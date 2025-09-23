@@ -7,15 +7,11 @@ on:
 
 permissions:
   contents: write
-<<<<<<< HEAD
-  actions: read
-=======
   pull-requests: write
 
 concurrency:
   group: sitemap-auto-commit
   cancel-in-progress: true
->>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c
 
 jobs:
   main:

@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import {logErrorToProduction} from "@/utils/productionLogger";
@@ -336,13 +334,9 @@ export function useApiKeys() {
   };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useApiKeys;
 export const useUseApiKeys: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

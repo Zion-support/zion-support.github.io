@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useStateuseEffect } from 'react';
-=======
 import { useState, useEffect } from 'react';
->>>>>>> origin/auto/autonomy-17186719616
 import { useTranslation } from 'react-i18next';
 import {
   AlertDialog,
@@ -12,16 +8,6 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-  AlertDialogTitle} from '../components/ui/alert-dialog';
-import { useLanguageSupportedLanguageContextType } from '../context/LanguageContext';
-
-export function LanguageDetectionPopup() {
-  const [opensetOpen] = useState(false);
-  const { t } = useTranslation();
-  const { changeLanguagecurrentLanguagesupportedLanguages } = useLanguage() as LanguageContextType;
-  const [detectedLanguagesetDetectedLanguage] = useState<SupportedLanguage | null>(null);
-=======
   AlertDialogTitle,
 } from '../components/ui/alert-dialog';
 import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
@@ -31,7 +17,6 @@ export function LanguageDetectionPopup() {
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
 
   useEffect(() => {
     // Check if this is first visit
@@ -39,17 +24,10 @@ export function LanguageDetectionPopup() {
     if (hasVisited) return;
 
     // Mark as visited
-<<<<<<< HEAD
-    localStorage.setItem('zion_has_visited'true');
-    
-    // Get browser language
-    const browserLang = navigator.language.substring(02) as SupportedLanguage;
-=======
     localStorage.setItem('zion_has_visited', 'true');
     
     // Get browser language
     const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
->>>>>>> origin/auto/autonomy-17186719616
     
     // Check if browser language is supported and different from current language
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
@@ -57,11 +35,7 @@ export function LanguageDetectionPopup() {
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
-<<<<<<< HEAD
-  }[]);
-=======
   }, []);
->>>>>>> origin/auto/autonomy-17186719616
 
   if (!detectedLanguage) return null;
 
@@ -77,11 +51,7 @@ export function LanguageDetectionPopup() {
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-white">
-<<<<<<< HEAD
-            {t('language.switch_to_detected'{ language: languageName })}
-=======
             {t('language.switch_to_detected', { language: languageName })}
->>>>>>> origin/auto/autonomy-17186719616
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}

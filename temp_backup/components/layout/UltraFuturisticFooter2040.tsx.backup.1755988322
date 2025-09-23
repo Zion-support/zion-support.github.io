@@ -92,22 +92,8 @@ const contactInfo = {
 };
 
 const socialLinks = [
-<<<<<<< HEAD
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'from-blue-400 to-blue-600' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'from-blue-600 to-blue-800' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'from-red-500 to-red-700' },
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" />, color: 'from-gray-600 to-gray-800' }
-];
-
-const companyStats = [
-  { number: '1500+', label: 'Revolutionary Services', icon: Star, color: 'from-yellow-500 to-orange-500' },
-  { number: '99.99%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-  { number: '24/7', label: 'AI Support Available', icon: Brain, color: 'from-cyan-500 to-blue-500' },
-  { number: '150+', label: 'Countries Served', icon: Globe, color: 'from-purple-500 to-pink-500' }
-=======
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-db78
 ];
 
 const UltraFuturisticFooter2040: React.FC = () => {

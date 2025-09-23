@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
 

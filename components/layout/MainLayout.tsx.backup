@@ -2,12 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-<<<<<<< HEAD
-=======
 =======
 import Header from '../Header';
 import Footer from '../Footer';
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> pr-11914
 
 interface MainLayoutProps {
@@ -15,15 +12,6 @@ interface MainLayoutProps {
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-}
-const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS"
-}: MainLayoutProps) => {
-=======
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
@@ -40,7 +28,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development"
 }) => {
 =======
->>>>>>> pr-11914
 const MainLayout: React.FC<MainLayoutProps> = ({ 
   children, 
   title, 
@@ -53,9 +40,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   nofollow = false, 
   canonical 
 }) => {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> pr-11914
   return (
     <>
@@ -65,12 +49,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         {keywords && <meta name="keywords" content={keywords} />}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-      </Head>
-      {children}
-    </>
-  );      </Head>
-=======
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -87,7 +65,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="twitter:title" content={title || 'Zion Tech Group'} />
         <meta name="twitter:description" content={description || 'Leading technology solutions provider'} />
         {image && <meta name="twitter:image" content={image} />}
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
       </Head>
 >>>>>>> pr-11914
       <div className="min-h-screen bg-gray-50">

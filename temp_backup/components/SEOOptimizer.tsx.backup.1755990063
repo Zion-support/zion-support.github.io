@@ -12,84 +12,10 @@ interface SEOIssue {
   impact: number; // 0-100
 }
 
-<<<<<<< HEAD
-interface SEOMetrics {
-  title: {
-    length: number;
-    hasKeywords: boolean;
-    hasBrand: boolean;
-    score: number;
-  };
-  description: {
-    length: number;
-    hasKeywords: boolean;
-    hasCallToAction: boolean;
-    score: number;
-  };
-  headings: {
-    h1Count: number;
-    h2Count: number;
-    h3Count: number;
-    hasKeywords: boolean;
-    score: number;
-  };
-  images: {
-    total: number;
-    withAlt: number;
-    optimized: number;
-    score: number;
-  };
-  links: {
-    internal: number;
-    external: number;
-    broken: number;
-    score: number;
-  };
-  content: {
-    wordCount: number;
-    keywordDensity: number;
-    readability: number;
-    score: number;
-  };
-  overall: number;
-}
-
-const SEOOptimizer: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [metrics, setMetrics] = useState<SEOMetrics | null>(null);
-  const [issues, setIssues] = useState<SEOIssue[]>([]);
-
-  const [currentUrl, setCurrentUrl] = useState<string>('');
-  const [analysisHistory, setAnalysisHistory] = useState<{ url: string; score: number; date: Date }[]>([]);
-
-  // Common SEO keywords for tech companies
-  const defaultKeywords = [
-    'technology', 'innovation', 'digital transformation', 'AI', 'machine learning',
-    'cloud computing', 'cybersecurity', 'software development', 'IT services',
-    'digital solutions', 'enterprise software', 'web development', 'mobile apps'
-  ];
-
-  // Load analysis history from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('seo-analysis-history');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setAnalysisHistory(parsed.map((item: { url: string; score: number; date: string }) => ({
-          ...item,
-          date: new Date(item.date)
-        })));
-      } catch {
-        // Silently handle parsing errors
-      }
-=======
     // Check description length
     if (seoData.description.length < 120 || seoData.description.length > 160) {
       issues.push('Description length should be between 120-160 characters');
       score -= 10;
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
     }
 
     // Check for missing alt text on images

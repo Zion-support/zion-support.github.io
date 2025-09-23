@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function LanguageContext() {
-=======
-<<<<<<< HEAD
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
@@ -254,7 +250,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 =======
 import React from 'react';
 export function LanguageContext() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

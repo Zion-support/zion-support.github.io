@@ -43,8 +43,6 @@ const queryClient = new QueryClient({
 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 function GlobalErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   const { t } = useTranslation();
   React.useEffect(() => {
@@ -70,16 +68,12 @@ try {
           <SnackbarProvider maxSnack={3}>
             <ToastInitializer />
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <Provider store={store}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <WhitelabelProvider>
             <Router>
@@ -87,8 +81,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <NotificationProvider>
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
                       <ErrorBoundary FallbackComponent={GlobalErrorFallback}>
                         <ViewModeProvider>
@@ -103,16 +95,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                         <LanguageDetectionPopup />
                       </ErrorBoundary>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
                       <ViewModeProvider>
                         <AppLayout>
                           <App />
                         </AppLayout>
                       </ViewModeProvider>
                       <LanguageDetectionPopup />
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
                     </LanguageProvider>
                   </AnalyticsProvider>
@@ -120,8 +108,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
               </AuthProvider>
             </Router>
           </WhitelabelProvider>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
           </SnackbarProvider>
         </QueryClientProvider>
@@ -166,13 +152,9 @@ window.addEventListener('unhandledrejection', (e) => {
 
 registerServiceWorker();
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         </Provider>
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
 );
-<<<<<<< HEAD
-=======
->>>>>>> origin/85f672-codex/implement-wishlist-functionality
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

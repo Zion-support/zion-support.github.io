@@ -45,23 +45,12 @@ body {
   outline-offset: 2px !important;
 }
 
-<<<<<<< HEAD
-/* Reduced Motion */
-.reduced-motion *,
-.reduced-motion *::before,
-.reduced-motion *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-=======
 /* Reduced Motion Mode */
 .reduced-motion * {
   animation-duration: 0.1s !important;
   animation-delay: 0s !important;
   transition-duration: 0.1s !important;
   transition-delay: 0s !important;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 }
 
 .reduced-motion .animate-pulse {
@@ -96,103 +85,10 @@ body {
   border: 0 !important;
 }
 
-<<<<<<< HEAD
-/* Enhanced Slider Styles */
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #06b6d4;
-  cursor: pointer;
-  box-shadow: 0 0 6px rgba(0,0,0,0.3);
-}
-
-.slider::-moz-range-thumb {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background: #06b6d4;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 0 6px rgba(0,0,0,0.3);
-}
-
-/* Performance Optimizations */
-* {
-  box-sizing: border-box;
-}
-
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Optimized Animations */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  body {
-    font-size: 12pt;
-    line-height: 1.4;
-  }
-  
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-}
-
-/* High DPI Displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .high-dpi {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
-}
-
-/* Focus Management */
-.focus-trap {
-  outline: none;
-}
-
-.focus-trap:focus {
-  outline: 2px solid #06b6d4;
-  outline-offset: 2px;
-=======
 .sr-only:focus {
   position: static !important;
   width: auto !important;
   height: auto !important;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
   overflow: visible !important;
   clip: auto !important;
   white-space: normal !important;
@@ -281,16 +177,6 @@ textarea:focus-visible {
   animation: slideIn 0.3s ease-out;
 }
 
-<<<<<<< HEAD
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-=======
 th,
 td {
   border: 1px solid var(--border-secondary, #e5e7eb) !important;
@@ -416,7 +302,6 @@ textarea:disabled {
 
 .info:focus {
   outline-color: #3b82f6 !important;
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 }
 
 /* Print Styles */

@@ -94,18 +94,6 @@ export type ServiceVariant =
   | 'biotech-futuristic'
   | 'simulation-futuristic'
   | 'space-futuristic'
-<<<<<<< HEAD
-  | 'cybersecurity-quantum-futuristic'
-  | 'cybersecurity-ai-futuristic'
-  | 'blockchain-quantum-futuristic'
-  | 'space-quantum-futuristic'
-  | 'space-ai-futuristic'
-  | 'sustainability-futuristic'
-  | 'healthcare-futuristic'
-  | 'education-futuristic'
-  | 'creative-futuristic'
-  | 'logistics-futuristic';
-=======
   | 'manufacturing-futuristic'
   | 'retail-futuristic'
   | 'fintech-futuristic'
@@ -117,4 +105,3 @@ export type ServiceVariant =
   | 'energy-futuristic'
   | 'transportation-futuristic'
   | 'education-futuristic';
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

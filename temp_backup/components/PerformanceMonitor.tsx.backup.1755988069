@@ -1,60 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Activity, Zap, Clock, HardDrive, TrendingUp, AlertTriangle } from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  renderTime: number;
-}
-
-interface PerformanceMonitorProps {
-  metrics: PerformanceMetrics;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ metrics }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
-  const [performanceScore, setPerformanceScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
-
-  useEffect(() => {
-    // Calculate performance score (0-100)
-    const loadScore = Math.max(0, 100 - (metrics.loadTime / 10));
-    const memoryScore = Math.max(0, 100 - (metrics.memoryUsage / 2));
-    const renderScore = Math.max(0, 100 - (metrics.renderTime / 5));
-    
-    const avgScore = Math.round((loadScore + memoryScore + renderScore) / 3);
-    setPerformanceScore(avgScore);
-
-    // Generate recommendations based on metrics
-    const newRecommendations: string[] = [];
-    if (metrics.loadTime > 1000) {
-      newRecommendations.push('Consider implementing code splitting and lazy loading');
-    }
-    if (metrics.memoryUsage > 50) {
-      newRecommendations.push('Optimize memory usage with better cleanup and caching');
-    }
-    if (metrics.renderTime > 100) {
-      newRecommendations.push('Optimize render performance with React.memo and useMemo');
-    }
-    setRecommendations(newRecommendations);
-
-    setIsVisible(true);
-  }, [metrics]);
-
-  const getPerformanceColor = (score: number) => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getPerformanceIcon = (score: number) => {
-    if (score >= 90) return <TrendingUp className="w-4 h-4" />;
-    if (score >= 70) return <Zap className="w-4 h-4" />;
-    return <AlertTriangle className="w-4 h-4" />;
-=======
 import { 
   TrendingUp, AlertTriangle, CheckCircle, Clock, 
   Zap, Database, Network, Cpu, HardDrive, X
@@ -215,7 +160,6 @@ const PerformanceMonitor: React.FC = () => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
   };
 
   const getMetricStatus = (metric: keyof PerformanceMetrics, value: number) => {
@@ -363,27 +307,6 @@ const PerformanceMonitor: React.FC = () => {
   if (!showUI) return null;
 
   return (
-<<<<<<< HEAD
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed top-4 right-4 z-50"
-    >
-      <div className="bg-black/80 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-4 max-w-sm">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-2">
-            <Activity className="w-5 h-5 text-cyan-400" />
-            <span className="text-white font-semibold text-sm">Performance</span>
-          </div>
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="text-cyan-400 hover:text-cyan-300 transition-colors"
-            aria-label={showDetails ? 'Hide details' : 'Show details'}
-          >
-            {showDetails ? '−' : '+'}
-          </button>
-=======
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -482,7 +405,6 @@ const PerformanceMonitor: React.FC = () => {
               {isExpanded ? 'Show Less' : 'Show More'}
             </button>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
         </div>
 
         {/* Performance Score */}

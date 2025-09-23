@@ -1,38 +1,4 @@
 
-<<<<<<< HEAD
-
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
-
-export interface HireRequestFormProps {
-  talent: TalentProfile,
-  onClose: () => void,
-  initialJobTitle?: string,
-  userDetails?: {
-    name?: string;
-    email?: string;
-    id?: string
-  }
-  onSubmitSuccess?: () => void
-export function HireRequestForm({
-  talent
-  onClose
-  initialJobTitle
-  userDetails
-  onSubmitSuccess
-}: HireRequestFormProps) {
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({
-    talent
-    onClose: onSubmitSuccess |onClose
-    initialJobTitle
-    userDetails
-  })
-    name?: string,
-    email?: string,
-    id?: string
-  },
-  onSubmitSuccess?: () => void,
-=======
 import React from "react";
 import { useHireRequestForm, FormValues } from "./useHireRequestForm";
 import { Button } from "@/components/ui/button";
@@ -55,7 +21,6 @@ export interface HireRequestFormProps {
     id?: string;
   };
   onSubmitSuccess?: () => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -64,11 +29,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     onClose: onSubmitSuccess || onClose, 
     initialJobTitle,
     userDetails 
-<<<<<<< HEAD
-  }),
-=======
   });
->>>>>>> origin/auto/autonomy-17186719616
   
   return (
     <Form {...form}>
@@ -86,11 +47,6 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         
         <DialogFooter className="pt-4">
           <Button 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
             type="button" 
             variant="outline" 
             onClick={onClose}
@@ -116,9 +72,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

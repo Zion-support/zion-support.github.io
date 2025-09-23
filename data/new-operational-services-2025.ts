@@ -14,10 +14,7 @@ export interface NewOperationalService2025 {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
     id: "smart-operations-center",

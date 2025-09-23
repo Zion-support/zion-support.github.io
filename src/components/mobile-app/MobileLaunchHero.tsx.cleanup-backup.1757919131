@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-
-export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = "#", // Replace with actual App Store URL
-  const googlePlayUrl = "#", // Replace with actual Google Play URL
-=======
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Smartphone } from 'lucide-react'
@@ -17,7 +10,6 @@ export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24">
@@ -74,10 +66,5 @@ export const MobileLaunchHero: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  ),
-},
-=======
   );
 };
->>>>>>> origin/auto/autonomy-17186719616

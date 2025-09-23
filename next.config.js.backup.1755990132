@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const { i18n } = require('./next-i18next.config');
-
-module.exports = {
-  i18n,
-=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable React strict mode for better development experience
@@ -181,5 +175,4 @@ const nextConfig = {
 
   // Output configuration
   output: 'standalone',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-eb99
 };

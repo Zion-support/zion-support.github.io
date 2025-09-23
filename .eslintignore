@@ -1,4 +1,5 @@
 *
+!zion-website
 !zion-website/**
 
 # Always ignore dependencies and build outputs
@@ -10,3 +11,84 @@ coverage/
 out/
 *.log
 *.tmp
+backups/
+backup/
+backup-merge-conflicts/
+backup-problematic-files/
+recovered-branches/
+corrupted_backup/
+api.disabled/
+api.disabled.temp/
+app-disabled/
+app_backup/
+apps.backup/
+
+# Exclude most component suites and APIs that are archived/experimental
+components/
+components.disabled/
+components.disabled_full/
+components-disabled/
+components-disabled_full/
+
+# Exclude problematic page backups
+pages-disabled/
+pages.disabled/
+pages_disabled/
+pages.disabled_full/
+pages.disabled_auto/
+pages_backup/
+pages_backup_before_cleanup/
+pages_backup_conflict/
+pages_backup_conflicts/
+pages._archive_corrupted/
+pages.broken/
+pages.corrupted.*/
+pages_minimal/
+pages.old/
+pages-quarantine/
+pages._quarantine/
+
+# Source backups/disabled
+src_backup/
+src_backup_temp/
+src.broken/
+src.corrupted/
+src-disabled/
+src.disabled/
+src.pages.disabled/
+
+# Temp directories
+temp-backup/
+temp_backup/
+temp_broken_files/
+temp_components/
+temp_conflicts/
+temp-disabled/
+temp_exclude/
+
+# Additional noisy or non-primary directories
+ts_files_backup/
+utils/
+types/
+zion-os/
+zion-website/
+zion-ai-assistant/
+
+# Misc backups
+lib_backup/
+lib.broken/
+lib.disabled/
+
+# Catch-all patterns for backups/disabled variants
+**/*.backup*
+**/*.backups*/
+**/*.corrupted*/
+**/*.disabled*/
+
+# Additional exclusions to avoid linting corrupted or out-of-scope code
+utils/
+types/
+ts_files_backup/
+zion-os/
+zion-ai-assistant/
+zion-website/

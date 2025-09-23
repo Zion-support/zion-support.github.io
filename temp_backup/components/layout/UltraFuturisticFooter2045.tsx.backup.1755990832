@@ -9,18 +9,8 @@ import {
 } from 'lucide-react';
 
 const UltraFuturisticFooter2045: React.FC = () => {
-<<<<<<< HEAD
-  const currentYear = new Date().getFullYear();
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-=======
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   };
 
 >>>>>>> 916d02471c24718d698d51219f240472f9d52b96
@@ -30,27 +20,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
       icon: <StarIcon className="w-5 h-5 text-yellow-400" />,
       description: 'Our most popular and innovative solutions',
       links: [
-<<<<<<< HEAD
-        { name: 'AI Consciousness Evolution 2045', href: '/ai-consciousness-evolution-2045', icon: Brain },
-        { name: 'Quantum Neural Networks 2045', href: '/quantum-neural-network-platform-2045', icon: Atom },
-        { name: 'AI Autonomous Business Intelligence 2045', href: '/ai-autonomous-business-intelligence-2045', icon: Cpu },
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-        { name: 'Quantum Cybersecurity 2045', href: '/quantum-cybersecurity-platform-2045', icon: Shield },
-        { name: 'Space Resource Intelligence 2045', href: '/space-resource-intelligence-2045', icon: Rocket },
-        { name: 'Autonomous Customer Success 2045', href: '/autonomous-customer-success-2045', icon: Users }
-      ]
-    },
-    {
-      title: 'Technology Solutions',
-      links: [
-        { name: 'Quantum Cloud Infrastructure 2045', href: '/quantum-cloud-infrastructure-2045', icon: Cloud },
-        { name: 'Autonomous DevOps Platform 2045', href: '/autonomous-devops-platform-2045', icon: Zap },
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-        { name: 'Quantum Data Center Management 2045', href: '/quantum-data-center-management-2045', icon: Server },
-        { name: 'Autonomous Network Management 2045', href: '/autonomous-network-management-2045', icon: Network },
-        { name: 'Autonomous IT Service Management 2045', href: '/autonomous-it-service-management-2045', icon: Settings },
-        { name: 'Autonomous Security Operations Center 2045', href: '/autonomous-security-operations-center-2045', icon: Lock }
-=======
         { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029/', featured: true },
         { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform/', featured: true },
         { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform/', featured: true },
@@ -61,7 +30,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform/' },
         { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform/' },
         { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform/' }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       ]
     },
     {
@@ -69,15 +37,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
       icon: <Brain className="w-5 h-5 text-cyan-400" />,
       description: 'Revolutionary AI platforms and solutions',
       links: [
-<<<<<<< HEAD
-        { name: 'AI Consciousness Evolution 2045', href: '/ai-consciousness-evolution-2045', icon: Brain },
-        { name: 'Quantum AI Cognitive 2045', href: '/quantum-ai-cognitive-2045', icon: Atom },
-        { name: 'Autonomous AI Research 2045', href: '/autonomous-ai-research-2045', icon: Cpu },
-        { name: 'Emotional AI Intelligence 2045', href: '/emotional-ai-intelligence-2045', icon: Heart },
-        { name: 'Quantum AI Metaverse 2045', href: '/quantum-ai-metaverse-2045', icon: Globe },
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-        { name: 'AI Autonomous Business Intelligence 2045', href: '/ai-autonomous-business-intelligence-2045', icon: Target }
-=======
         { name: 'AI Consciousness Evolution 2029', href: '/ai-consciousness-evolution-2029/' },
         { name: 'AI Emotional Intelligence Training', href: '/ai-emotional-intelligence-training/' },
         { name: 'AI Autonomous Business Operations', href: '/autonomous-business-operations-platform/' },
@@ -88,7 +47,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework/' },
         { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform/' },
         { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform/' }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       ]
     },
     {
@@ -96,15 +54,6 @@ const UltraFuturisticFooter2045: React.FC = () => {
       icon: <Atom className="w-5 h-5 text-blue-400" />,
       description: 'Breakthrough quantum and space technologies',
       links: [
-<<<<<<< HEAD
-        { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Mission', href: '/mission', icon: Star },
-        { name: 'Leadership Team', href: '/team', icon: Users },
-        { name: 'Careers', href: '/careers', icon: Code },
-        { name: 'News & Updates', href: '/news', icon: Globe },
-        { name: 'Press Kit', href: '/press', icon: Star }
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
         { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform/' },
         { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform/' },
         { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery-platform/' },
@@ -166,71 +115,10 @@ const UltraFuturisticFooter2045: React.FC = () => {
         { name: 'Synthetic Monitor Recorder', href: '/synthetic-monitor-recorder/' },
         { name: 'TLS Certificate Monitor', href: '/tls-certificate-monitor/' },
         { name: 'Uptime SLO Monitor', href: '/uptime-slo-monitor/' }
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       ]
     }
   ];
 
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600' },
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700' },
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500' },
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700' }
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-  ];
-
-// Quick stats
-const quickStats = [
-  { number: '500+', label: 'Global Clients', icon: Globe, color: 'text-cyan-400' },
-  { number: '99.9%', label: 'Uptime', icon: CheckCircle, color: 'text-green-400' },
-  { number: '24/7', label: 'Support', icon: Clock, color: 'text-blue-400' },
-  { number: '2045', label: 'Technology', icon: Sparkles, color: 'text-purple-400' }
-];
-
-// Newsletter signup component
-const NewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setIsLoading(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubscribed(true);
-    setEmail('');
-    setIsLoading(false);
-  }, [email]);
-
-  if (isSubscribed) {
-    return (
-      <motion.div
-        className="text-center p-6 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-3" />
-        <h3 className="text-lg font-semibold text-white mb-2">Thank you for subscribing!</h3>
-        <p className="text-green-300">You'll receive our latest insights and updates.</p>
-      </motion.div>
-    );
-  }
-
-  return (
-    <footer className="bg-black/90 backdrop-blur-xl border-t border-cyan-500/20 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-blue-900/10 to-purple-900/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
   const quickLinks = [
     { name: 'All Services', href: '/comprehensive-services-showcase-2025/' },
     { name: 'Pricing', href: '/pricing/' },
@@ -255,7 +143,6 @@ const NewsletterSignup: React.FC = () => {
     <footer className="relative bg-black/95 backdrop-blur-xl border-t border-white/10 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-cyan-900/5"></div>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -274,50 +161,6 @@ const NewsletterSignup: React.FC = () => {
                 {section.icon}
                 <h3 className="text-white font-semibold text-lg">{section.title}</h3>
               </div>
-<<<<<<< HEAD
-              
-              <p className="text-gray-300 leading-relaxed max-w-md">
-                Pioneering the future of technology with revolutionary AI consciousness, 
-                quantum computing, and autonomous solutions that transform businesses worldwide.
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm">{contactInfo.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-colors duration-200">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-400">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{contactInfo.address}</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div key={section.title} variants={fadeInUp} className="lg:col-span-1">
-                <h4 className="text-lg font-semibold text-white mb-6 flex items-center space-x-2">
-                  <span className="w-1 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></span>
-                  <span>{section.title}</span>
-                </h4>
-                <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.name}>
-                      <Link
-                        href={link.href}
-                        className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transition-all duration-200 group hover:translate-x-1"
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-                      >
-                        <div className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform duration-200">
-                          <link.icon />
-                        </div>
-                        <span className="text-sm group-hover:text-cyan-400 transition-colors duration-200">
-                          {link.name}
-=======
               <p className="text-white/60 text-sm">{section.description}</p>
               <ul className="space-y-2">
                 {section.links.map((link) => (
@@ -330,7 +173,6 @@ const NewsletterSignup: React.FC = () => {
                       {link.featured && (
                         <span className="ml-2 text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full">
                           Featured
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
                         </span>
                       )}
                     </Link>
@@ -400,17 +242,7 @@ const NewsletterSignup: React.FC = () => {
               <div className="grid grid-cols-2 gap-2">
                 {quickLinks.map((link) => (
                   <Link
-<<<<<<< HEAD
-                    key={social.name}
-                    href={social.href}
-                    className="p-2 rounded-lg bg-gray-900/50 border border-cyan-500/20 text-gray-400 transition-all duration-200 hover:scale-110 hover:border-cyan-500/50"
-                    aria-label={social.name}
-                  >
-<<<<<<< HEAD
-                    {social.icon}
-=======
                     <social.icon />
->>>>>>> origin/main
 =======
                     key={link.name}
                     href={link.href}
@@ -443,9 +275,6 @@ const NewsletterSignup: React.FC = () => {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
-=======
 
         {/* Bottom Section */}
         <motion.div
@@ -498,7 +327,6 @@ const NewsletterSignup: React.FC = () => {
             </p>
           </div>
         </motion.div>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
       </div>
 
       {/* Background Decorative Elements */}

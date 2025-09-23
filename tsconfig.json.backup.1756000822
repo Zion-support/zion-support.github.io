@@ -76,8 +76,6 @@
     "node_modules",
     "zion.app/recovered-content/**",
     "contracts/**",
-<<<<<<< HEAD
-=======
     "dao/**",
     "zion-os/**",
     "zion_academy/**",
@@ -85,7 +83,6 @@
     "monitoring/**",
     "scripts/**",
     "server/**",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ffb8
     "cypress/**"
   ]
 }

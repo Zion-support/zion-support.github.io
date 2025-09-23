@@ -1,15 +1,3 @@
-<<<<<<< HEAD:src.broken/utils/offworld/identity.ts
-// Stub offworld identity utility - placeholder for missing functionality
-export const createIdentity = async () => {
-  // Placeholder implementation
-  return { id: 'placeholder-id', success: true };
-};
-
-export const verifyIdentity = async (id: string) => {
-  // Placeholder implementation
-  return { verified: true, success: true };
-};
-=======
 let DIDKit: any;
 let ethers: any;
 
@@ -63,4 +51,3 @@ export async function buildIdentityProfile(address?: string): Promise<IdentityPr
   const lens = address ? await resolveLens(address) : null;
   return { did: did || undefined, ens, lens, address: address || null };
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/offworld/identity.ts

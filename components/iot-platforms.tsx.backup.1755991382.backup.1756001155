@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function IotPlatforms(){
-  return <div style={{padding:20}}>IoT Platforms</div>
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -24,7 +18,6 @@ const IotPlatforms: NextPage = () => {
 };
 
 export default IotPlatforms;
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
 export default function IoTPlatforms(){
   return <div className="max-w-3xl mx-auto p-6">IoT Platforms</div>;

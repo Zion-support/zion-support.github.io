@@ -510,8 +510,6 @@ const Homepage2025: React.FC = () => {
                   Get Started
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
 
               {/* Space Technology Service */}
               <motion.div
@@ -609,7 +607,6 @@ const Homepage2025: React.FC = () => {
               >
                 Explore Services
               </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-9a74
             </motion.div>
           </div>
         </section>

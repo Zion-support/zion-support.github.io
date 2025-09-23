@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function TalentDirectory() {
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -315,7 +311,6 @@ export default function TalentDirectory() {
 =======
 import React from 'react';
 export function TalentDirectory() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

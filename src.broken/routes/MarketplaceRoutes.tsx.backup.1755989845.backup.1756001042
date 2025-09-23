@@ -1,13 +1,10 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Routes have been converted to Next.js pages structure
 // This component is no longer needed since Next.js uses file-based routing
 
 const MarketplaceRoutes = () => {
   return null;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -115,9 +112,6 @@ const MarketplaceRoutes = () => {
       />
     </Routes>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/306ipd-codex/add-new-products-page-with-10-items
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 };
 

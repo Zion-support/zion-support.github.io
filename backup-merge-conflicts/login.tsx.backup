@@ -5,10 +5,7 @@ import { motion } from 'framer-motion';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD:pages/login.tsx
-=======
 export default function Login() {
->>>>>>> main:pages_disabled/login.tsx
   const [formData, setFormData] = useState({
     email: '',
     password: ''

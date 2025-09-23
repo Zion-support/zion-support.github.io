@@ -11,12 +11,8 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     tracesSampleRate: 0.1,
     // ...
     // Note: if you want to override the automatic release value, do so here
-<<<<<<< HEAD
-    //   release: process.env.npm_package_version});
-=======
     //   release: process.env.npm_package_version,
   });
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function captureException(error: unknown, context?: any): void { // Added context capability
