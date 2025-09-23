@@ -17,7 +17,7 @@
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "eslint src pages app lib components hooks --fix",
     "type-check": "tsc --noEmit",
-    "test": "jest --runInBand --passWithNoTests --no-cache",
+    "test": "jest --config=jest.config.mjs --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
     "test:coverage": "jest --coverage",
     "preview": "npm run build && npm run start",
