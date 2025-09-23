@@ -1,4 +1,5 @@
 import './globals.css'
+import type { ReactNode } from 'react'
 
 export const metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -42,7 +43,7 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>

@@ -49,6 +49,7 @@
     "public/build",
     "server/**",
     "zion-os/**",
+    "zion-os.disabled/**",
     "zion-ai-assistant/**",
     "zion-website/**",
     "apps.backup/**",
@@ -59,15 +60,16 @@
     "src/expandedServices.ts",
     "src/comprehensiveServices.ts",
     "src/data/comprehensiveServices.ts",
-    "backups/**",
-    "backup/**",
     "data_backup",
+    "backup",
+    "backups",
     "pages_backup_conflict",
     "corrupted-files-backup",
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+    "app/components/**",
     "app/**/*.disabled/**"
   ]
 }
