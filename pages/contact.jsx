@@ -149,6 +149,12 @@ const Contact = () => {
                   />
                 </div>
 
+                {submitSuccess && (
+                  <div className="bg-green-600/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-lg">
+                    Thank you for your message! We&apos;ll get back to you soon.
+                  </div>
+                )}
+                
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"

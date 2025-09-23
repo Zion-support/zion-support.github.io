@@ -6,6 +6,8 @@ import { IntegrationsState } from "./types";
 
 import fs from 'fs';
 import path from 'path';
+ 
+import type { IntegrationsState } from './types';
 
 import { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
@@ -100,7 +102,7 @@ export function writeState(
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
   const current = readState();
-  mutator(current);
+  applyUpdate(current);
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current
 }

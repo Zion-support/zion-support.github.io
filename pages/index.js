@@ -177,7 +177,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Join hundreds of companies that trust Zion Tech Group for their technology needs. Let's build the future together.
+                Join hundreds of companies that trust Zion Tech Group for their technology needs. Let&apos;s build the future together.
               </p>
               <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105 inline-block">
                 Start Your Project Today
