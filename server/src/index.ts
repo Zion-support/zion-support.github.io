@@ -1,11 +1,11 @@
 import express from 'express';
+import path from 'path';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
 import { config } from 'dotenv';
-import path from 'path';
 
 // Load environment variables
 config();
@@ -30,8 +30,8 @@ app.use(helmet({
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"]}}}));
 app.use(cors({
-  origin: NODE_ENV === 'development' 
-    ? ['http://localhost:3000', 'http://localhost:5000'] 
+  origin: NODE_ENV === 'development'
+    ? ['http://localhost:3000', 'http://localhost:5000']
     : process.env.FRONTEND_URL || 'http://localhost:3000',
   credentials: true
 }));
