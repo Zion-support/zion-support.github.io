@@ -1,0 +1,12 @@
+# Ignore large legacy or experimental directories
+components/**
+lib/**
+server/**
+pages/**
+src/**
+__tests__/**
+tests/**
+recovered-branches/**
+automation/**
+zion-os/**
+zion-ai-assistant/**
