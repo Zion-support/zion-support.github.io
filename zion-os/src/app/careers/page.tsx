@@ -5,30 +5,28 @@ export const metadata = {
 };
 
 export default function CareersPage() {
-  const openPositions = [
-    {
-      title: "Senior AI Engineer",
-      department: "Artificial Intelligence",
-      location: "Remote",
-      type: "Full-time",
-      description: "Lead development of cutting-edge AI solutions and machine learning models."
-    },
-    {
-      title: "Quantum Computing Researcher",
-      department: "Quantum Research",
-      location: "San Francisco, CA",
-      type: "Full-time",
-      description: "Research and develop quantum algorithms and quantum computing systems."
-    },
-    {
-      title: "Frontend Developer",
-      department: "Engineering",
-      location: "Remote",
-      type: "Full-time",
-      description: "Build beautiful, responsive user interfaces for our next-generation platforms."
-    }
-  ];
+	const openPositions = [
+		{
+			title: 'Senior AI Research Engineer',
+			department: 'Research & Development',
+			location: 'Remote / Global',
+			type: 'Full-time',
+			description:
+				'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+			requirements: [
+				'PhD in Computer Science, AI, or related field',
+				'5+ years experience in AI research',
+				'Expertise in machine learning and neural networks',
+				'Familiarity with quantum computing concepts',
+			],
+		},
+	];
 
+	const benefits = [
+		{ title: 'Remote First', description: 'Work from anywhere in the world with our distributed team.', icon: '🌍' },
+		{ title: 'Cutting-Edge Technology', description: 'Work with the latest AI and quantum technologies.', icon: '🚀' },
+		{ title: 'Flexible Hours', description: "Work when you're most productive with flexible scheduling.", icon: '⏰' },
+	];
   return (
     <div className="space-y-16">
       {/* Hero Section */}

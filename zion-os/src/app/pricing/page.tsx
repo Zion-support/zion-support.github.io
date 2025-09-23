@@ -1,12 +1,15 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 
-export default function PricingPage(): React.ReactElement {
-	return (
-		<main>
-			<h1>Pricing</h1>
-			<p>Choose the plan that fits your needs.</p>
-		</main>
-	);
+interface PricingTier {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+  cta: string;
+  ctaLink: string;
 }
 
 

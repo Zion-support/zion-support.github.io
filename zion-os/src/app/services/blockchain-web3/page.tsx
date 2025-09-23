@@ -1,4 +1,4 @@
-export default function BlockchainWeb3Page() {
+export default function Web3ServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-4">Blockchain & Web3</h1>
@@ -6,4 +6,3 @@ export default function BlockchainWeb3Page() {
     </main>
   );
 }
-

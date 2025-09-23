@@ -1,4 +1,4 @@
-export default function AIServicePage() {
+export default function AIServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-4">AI Services</h1>
@@ -6,4 +6,3 @@ export default function AIServicePage() {
     </main>
   );
 }
-
