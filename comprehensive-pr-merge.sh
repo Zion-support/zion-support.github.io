@@ -9,7 +9,7 @@ echo "---"
 
 # Configuration
 GITHUB_REPO="Zion-Holdings/zion.app"
-GITHUB_TOKEN="ghs_cdMF1uXtPrMpMzDGF8xCh38WM7LCKx0wdnwq"
+GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 BATCH_SIZE=10
 MAX_RETRIES=3
 BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
