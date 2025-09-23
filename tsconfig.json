@@ -47,9 +47,9 @@
     "coverage",
     "build",
     "public/build",
-<<<<<<< HEAD
     "server/**",
     "zion-os/**",
+    "zion-os.disabled/**",
     "zion-ai-assistant/**",
     "zion-website/**",
     "apps.backup/**",
@@ -60,27 +60,16 @@
     "src/expandedServices.ts",
     "src/comprehensiveServices.ts",
     "src/data/comprehensiveServices.ts",
-    "backups/**",
-    "backup/**",
-    "**/*backup*",
-    "**/*conflict*",
-    "**/*temp*"
-=======
     "data_backup",
     "backup",
     "backups",
     "pages_backup_conflict",
-    "apps.backup",
     "corrupted-files-backup",
     "lib_backup",
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
     "app/components/**",
-    "app/**/*.disabled/**",
-    "zion-os",
-    "zion-os.disabled",
-    "zion-ai-assistant"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-c0e1
+    "app/**/*.disabled/**"
   ]
 }
