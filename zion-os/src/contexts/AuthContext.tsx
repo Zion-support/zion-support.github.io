@@ -1,120 +1,25 @@
-"use client";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext } from "react";
 
-interface AuthContextValue {
-  isAuthenticated: boolean;
-  signIn: (email: string, password: string) => Promise<void>;
-  signOut: () => void;
-}
+type AuthContextValue = {
+  login: (email: string, password: string) => Promise<void>;
+  register: (name: string, email: string, password: string) => Promise<void>;
+};
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const login = async () => Promise.resolve();
+  const register = async () => Promise.resolve();
 
-  async function signIn(_email: string, _password: string) {
-    setIsAuthenticated(true);
-  }
-
-  function signOut() {
-    setIsAuthenticated(false);
-  }
-
-  const value: AuthContextValue = { isAuthenticated, signIn, signOut };
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
+  return (
+    <AuthContext.Provider value={{ login, register }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
 export function useAuth(): AuthContextValue {
   const ctx = useContext(AuthContext);
-  if (!ctx) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
+  if (!ctx) throw new Error("useAuth must be used within an AuthProvider");
   return ctx;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
