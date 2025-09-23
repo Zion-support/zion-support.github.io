@@ -42,7 +42,7 @@ const customJestConfig = {
     '<rootDir>/corrupted_backup/',
     '<rootDir>/e2e/',
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
 }
