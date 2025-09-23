@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function AdminIndex() {
@@ -10,18 +9,4 @@ export default function AdminIndex() {
       </ul>
     </div>
   );
-=======
-import AdminTable from '../../components/admin/AdminTable',
-
-export default function AdminDashboard() {
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin</h1>
-      <ul className="list-disc pl-6">
-        <li><Link href="/admin/vendors"><a>Vendors</a></Link></li>
-      </ul>
-      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
-    </div>
-  ),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

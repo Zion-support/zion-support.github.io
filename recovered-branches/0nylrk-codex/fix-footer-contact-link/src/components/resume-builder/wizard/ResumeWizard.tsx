@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -7,15 +6,6 @@ import { Tabs } from '@/components/ui/tabs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
-=======
-import { useStateuseEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { CardContent } from '@/components/ui/card';
-import { AlertDescriptionAlertTitle } from '@/components/ui/alert';
-AlertCircleFilePlusLoader2
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 
@@ -32,26 +22,15 @@ import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
-<<<<<<< HEAD
     isLoading, 
     error, 
     resume, 
-=======
-    isLoading
-    error
-    resume
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     fetchResume,
     createResume
   } = useResume();
   
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
-=======
-  const [activeTabsetActiveTab] = useState('basic-info');
-  const [showNewResumeFormsetShowNewResumeForm] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   // Use the extracted hook for progress calculation
   const progress = useResumeProgress(resume);
@@ -60,11 +39,7 @@ export function ResumeWizard() {
     if (user) {
       fetchResume();
     }
-<<<<<<< HEAD
   }, [user, fetchResume]);
-=======
-  }[userfetchResume]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   const handleCreateNewResume = async (title: string) => {
     const resumeId = await createResume({ title: title.trim() });

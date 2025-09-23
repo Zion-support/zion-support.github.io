@@ -14,10 +14,7 @@ export interface EmergingTechnologyService {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
     id: "blockchain-platform",

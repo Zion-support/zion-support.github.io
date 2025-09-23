@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
-=======
-"use client";
-import React{ useStateuseEffectuseCallbackuseMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-SearchXFilterTrendingUpClockStarZapBrainAtomShieldRocket
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface SearchResult {
   id: string;
@@ -40,21 +32,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   className = "",
   showFilters = true
 }) => {
-<<<<<<< HEAD
   const [query, setQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
-=======
-  const [querysetQuery] = useState('');
-  const [isSearchingsetIsSearching] = useState(false);
-  const [showResultsetShowResults] = useState(false);
-  const [resultsetResults] = useState<SearchResult[]>([]);
-  const [selectedFiltersetSelectedFilters] = useState<string[]>([]);
-  const [searchHistorysetSearchHistory] = useState<string[]>([]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [popularSearches] = useState([
     'AI Consciousness',
     'Quantum Computing',
@@ -64,11 +47,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     'Autonomous Systems'
   ]);
 
-<<<<<<< HEAD
   // Mock search results - in real app, this would come from API
-=======
-  // Mock search results - in real appthis would come from API
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const mockSearchResults: SearchResult[] = [
     {
       id: '1',
@@ -78,13 +57,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/ai-consciousness-evolution-platform-2045',
       relevance: 95,
-<<<<<<< HEAD
       features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution'],
       pricing: { starter: '$999/month', enterprise: 'Contact Sales' }
-=======
-      features: ['Emotional 'Intelligence', 'Self-'Awareness', 'Consciousness Evolution'],
-      pricing: { starter: '$999/'month', 'enterprise: 'Contact Sales' }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       id: '2',
@@ -94,13 +68,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-ai-hybrid-computing',
       relevance: 92,
-<<<<<<< HEAD
       features: ['Quantum Supremacy', 'AI Integration', 'Hybrid Computing'],
       pricing: { starter: '$1,499/month', enterprise: 'Contact Sales' }
-=======
-      features: ['Quantum 'Supremacy', 'AI 'Integration', 'Hybrid Computing'],
-      pricing: { starter: '$1,499/'month', 'enterprise: 'Contact Sales' }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     },
     {
       id: '3',
@@ -110,28 +79,16 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       type: 'Platform',
       slug: '/quantum-cybersecurity-intelligence',
       relevance: 88,
-<<<<<<< HEAD
       features: ['Quantum Resistance', 'Threat Prediction', 'AI Security'],
       pricing: { starter: '$799/month', enterprise: 'Contact Sales' }
-=======
-      features: ['Quantum 'Resistance', 'Threat 'Prediction', 'AI Security'],
-      pricing: { starter: '$799/'month', 'enterprise: 'Contact Sales' }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   ];
 
   const categories = [
-<<<<<<< HEAD
     { id: 'ai', name: 'AI & ML', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'quantum', name: 'Quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'business', name: 'Business', icon: Rocket, color: 'from-emerald-500 to-teal-500' }
-=======
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: Braincolor: 'from-purple-500 to-pink-500' },
-    { id: ''quantum', 'name: ''Quantum', 'icon: Atomcolor: 'from-blue-500 to-cyan-500' },
-    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-500 to-orange-500' },
-    { id: ''business', 'name: ''Business', 'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   ];
 
   // Debounced search function
@@ -163,22 +120,13 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           });
 
           // Sort by relevance
-<<<<<<< HEAD
           const sortedResults = filteredResults.sort((a, b) => b.relevance - a.relevance);
-=======
-          const sortedResults = filteredResults.sort((ab) => b.relevance - a.relevance);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           
           setResults(sortedResults);
           setShowResults(true);
           setIsSearching(false);
-<<<<<<< HEAD
         }, 300);
       }, 300),
-=======
-        }300);
-      }300),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       [selectedFilters]
     ),
     [selectedFilters]
@@ -186,11 +134,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
 
   useEffect(() => {
     debouncedSearch(query);
-<<<<<<< HEAD
   }, [query, debouncedSearch]);
-=======
-  }[querydebouncedSearch]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Handle search input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -201,11 +145,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       setShowResults(false);
       setResults([]);
     }
-<<<<<<< HEAD
   }, [suggestions, selectedIndex, query, handleSearch]);
-=======
-  }[suggestionselectedIndexqueryhandleSearch]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Close search on outside click
   useEffect(() => {
@@ -223,17 +163,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       addToSearchHistory(query);
       setShowResults(false);
     }
-<<<<<<< HEAD
   }, [router, handleSearch]);
-=======
-  }[routerhandleSearch]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
     router.push(action);
     setIsOpen(false);
-<<<<<<< HEAD
   }, [router]);
 
   // Add search to history
@@ -241,15 +176,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     const newHistory = [searchTerm, ...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
     setSearchHistory(newHistory);
     localStorage.setItem('zion-search-history', JSON.stringify(newHistory));
-=======
-  }[router]);
-
-  // Add search to history
-  const addToSearchHistory = (searchTerm: string) => {
-    const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(0, 5);
-    setSearchHistory(newHistory);
-    localStorage.setItem('zion-search-'history', 'JSON.stringify(newHistory));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   // Load search history from localStorage
@@ -259,28 +185,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       try {
         setSearchHistory(JSON.parse(savedHistory));
       } catch (error) {
-<<<<<<< HEAD
         console.error('Failed to parse search history:', error);
       }
     }
   }, []);
-=======
-        console.error('Failed to parse search history:'error);
-      }
-    }
-  }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Handle filter toggle
   const toggleFilter = (filterId: string) => {
     setSelectedFilters(prev => 
       prev.includes(filterId) 
         ? prev.filter(id => id !== filterId)
-<<<<<<< HEAD
         : [...prev, filterId]
-=======
-        : [...prevfilterId]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
   };
 
@@ -288,20 +203,12 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
     setShowResults(false);
-<<<<<<< HEAD
     setQuery('');
-=======
-    setQuery(', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   // Clear search
   const clearSearch = () => {
-<<<<<<< HEAD
     setQuery('');
-=======
-    setQuery(', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     setShowResults(false);
     setResults([]);
   };
@@ -346,15 +253,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       <AnimatePresence>
         {showResults && (
           <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
-=======
-            initial={{ opacity: 0, y: -10scale: 0.95 }}
-            animate={{ opacity: 1, y: 0scale: 1 }}
-            exit={{ opacity: 0, y: -10scale: 0.95 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             transition={{ duration: 0.2 }}
             className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
           >
@@ -498,11 +399,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <span className="text-sm font-medium text-gray-300">Recent Searches</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
                         {searchHistory.map((term, index) => (
-=======
-                        {searchHistory.map((termindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
@@ -522,11 +419,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       <span className="text-sm font-medium text-gray-300">Popular Searches</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
                       {popularSearches.map((term, index) => (
-=======
-                      {popularSearches.map((termindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
@@ -555,11 +448,7 @@ function debounce<T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-<<<<<<< HEAD
     timeout = setTimeout(() => func(...args), wait);
-=======
-    timeout = setTimeout(() => func(...args)wait);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 }
 

@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface Revolutionary2026FintechBlockchainService {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface Revolutionary2026FintechBlockchainService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const revolutionary2026FintechBlockchainServices: Revolutionary2026FintechBlockchainService[] = [
   // Autonomous Supply Chain Optimization AI
   {
@@ -100,10 +94,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.7,
     reviews: 234
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Marketing AI Platform
   {
     id: 'autonomous-marketing-ai-platform',
@@ -156,10 +147,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.8,
     reviews: 456
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // AI Cybersecurity Platform
   {
     id: 'ai-cybersecurity-platform',
@@ -212,10 +200,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.9,
     reviews: 234
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Autonomous Business Intelligence Network
   {
     id: 'autonomous-business-intelligence-network',
@@ -268,10 +253,7 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.7,
     reviews: 345
   },
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // Quantum Blockchain Infrastructure Platform
   {
     id: 'quantum-blockchain-infrastructure-platform',

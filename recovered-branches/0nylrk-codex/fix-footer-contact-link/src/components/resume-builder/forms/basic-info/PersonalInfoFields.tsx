@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
-=======
-import { FormFieldFormItemFormLabelFormControlFormMessage } from "@/components/ui/form";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Input } from "@/components/ui/input";
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
@@ -60,10 +56,6 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       <FormField
         control={control}
         name="phone"
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>

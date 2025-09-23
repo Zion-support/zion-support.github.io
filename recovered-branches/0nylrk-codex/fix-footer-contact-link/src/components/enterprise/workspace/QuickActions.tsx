@@ -1,14 +1,8 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
-=======
-import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileTextPlusUsersSearchCalendar } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function QuickActions() {
   const actions = [

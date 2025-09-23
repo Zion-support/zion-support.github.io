@@ -4,13 +4,8 @@ import { cn } from "@/lib/utils"
 
 export type TextareaProps = React.ComponentProps<"textarea">
 
-<<<<<<< HEAD
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
-=======
-const Textarea = React.forwardRef<HTMLTextAreaElementTextareaProps>(
-  ({ className...props }ref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     return (
       <textarea
         className={cn(

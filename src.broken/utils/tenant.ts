@@ -57,12 +57,8 @@ export function createTenant(branding: TenantBranding): Tenant {
     branding,
     members: [],
     createdAt: now,
-<<<<<<< HEAD
     updatedAt: now,
   };
-=======
-    updatedAt: now};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK);
   return tenant;
 }

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns";
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -11,30 +10,11 @@ import { cn } from "@/lib/utils";
 
 interface ReplyCardProps {
   reply: ForumReply;
-=======
-
-
-
-
-import {formatDistanceToNow} from "date-fns";
-import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ForumReply} from "@/types/community";
-import {cn} from "@/lib/utils";
-
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
 
-<<<<<<< HEAD
 export const ReplyCard = ({ 
   reply, 
   onMarkAnswer, 
@@ -47,42 +27,6 @@ export const ReplyCard = ({
     <Card className={cn(
       "transition-shadow",
       reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
-=======
-
-export const ReplyCard = ({
-  reply;
-  onMarkAnswer
-  canMarkAnswer = false;
-import { ForumReply } from "@/types/community",
-import { cn } from "@/lib/utils",
-
-interface ReplyCardProps {
-  reply: ForumReply,
-  onMarkAnswer?: () => void,
-  canMarkAnswer?: boolean,
-  className?: string
-}
-
-
-export const ReplyCard = ({ ;
-  reply;
-export const ReplyCard = ({ 
-  reply,
-  onMarkAnswer, 
-  canMarkAnswer = false,
-
-  className
-}: ReplyCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
-  return (
-    <Card className={cn(
-
-      "transition-shadow";
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20"
-      "transition-shadow",
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -97,7 +41,6 @@ export const ReplyCard = ({
             </span>
             {reply.authorRole && (
               <Badge variant="outline" className="ml-2 text-xs">
-<<<<<<< HEAD
                 {reply.authorRole}
               </Badge>
             )}
@@ -109,57 +52,6 @@ export const ReplyCard = ({
             )}
           </div>
           <div className="text-xs text-muted-foreground">
-=======
-
-import { formatDistanceToNow } from "date-fns",;
-import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ForumReply } from "@/types/community",;
-import { cn } from "@/lib/utils",;
-interface ReplyCardProps {;
-  reply: ForumReply,;
-  onMarkAnswer?: () => void,;
-  canMarkAnswer?: boolean,;
-  className?: string;
-}
-;
-export const ReplyCard = ({;
-  reply,;
-  onMarkAnswer,;
-  canMarkAnswer = false,;
-
-  className;
-}: ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
-
-  return (
-    <CardclassName={cn(
-      "transition-shadow"
-      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
-      className
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
-        <Avatar className="h-8 w-8">;
-          <AvatarImage src={reply && reply.authorAvatar} />;
-          <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex-1">;
-          <div className="flex items-center">;
-            <span className="font-medium">;
-              {reply && reply.authorName}
-            </span>;
-            {reply && reply.authorRole && (;
-              <Badge variant="outline" className="ml-2 text-xs">;
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -180,17 +72,11 @@ export const ReplyCard = ({;
           </div>
         </div>
       </CardHeader>
-<<<<<<< HEAD
       
       <CardContent>
         <div>{reply.content}</div>
       </CardContent>
       
-=======
-      <CardContent>
-        <div>{reply.content}</div>
-      </CardContent>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -202,42 +88,19 @@ export const ReplyCard = ({;
             <span>{reply.downvotes}</span>
           </Button>
         </div>
-<<<<<<< HEAD
         
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         {canMarkAnswer && !reply.isAnswer && (
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
             <CheckCircle className="h-4 w-4 mr-1" />
             Mark as Answer
           </Button>
         )}
-<<<<<<< HEAD
       </CardFooter>
     </Card>
   );
 };
 
 export default ReplyCard;
-=======
-
-      </CardFooter>
-    </Card>
-  )
-}
-export default ReplyCard;
-
-      </CardFooter>;
-    </Card>;
-  );
-};
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

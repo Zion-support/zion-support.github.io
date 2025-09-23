@@ -7,17 +7,10 @@ import { cn } from "@/lib/utils"
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => {
   return (
     <RadioGroupPrimitive.Root
       className={cn("grid gap-2", className)}
-=======
->(({ className...props }ref) => {
-  return (
-    <RadioGroupPrimitive.Root
-      className={cn("grid gap-2"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {...props}
       ref={ref}
     />
@@ -28,11 +21,7 @@ RadioGroup.displayName = RadioGroupPrimitive.Root.displayName
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => {
-=======
->(({ className...props }ref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <RadioGroupPrimitive.Item
       ref={ref}
@@ -50,8 +39,4 @@ const RadioGroupItem = React.forwardRef<
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
-<<<<<<< HEAD
 export { RadioGroup, RadioGroupItem }
-=======
-export { RadioGroupItem }
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

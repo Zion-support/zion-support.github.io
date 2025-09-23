@@ -1,17 +1,10 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Loader2, Info, ThumbsUp } from "lucide-react";
-=======
-import { TooltipProviderTooltipTriggerTooltipContent } from "@/components/ui/tooltip";
-import { CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Loader2InfoThumbsUp } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 
 interface PricingSuggestionBoxProps {
@@ -25,12 +18,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
-<<<<<<< HEAD
   rateType,
 }) => {
-=======
-  rateType}) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   if (isLoading) {
     return (
       <Card className="border border-dashed border-muted">
@@ -53,12 +42,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   const confidenceColor = {
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
-<<<<<<< HEAD
     Low: "bg-red-100 text-red-800",
   }[suggestion.confidence];
-=======
-    Low: "bg-red-100 text-red-800"}[suggestion.confidence];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">

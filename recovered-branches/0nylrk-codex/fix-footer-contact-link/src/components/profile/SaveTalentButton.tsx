@@ -9,11 +9,7 @@ interface SaveTalentButtonProps {
   isSaved: boolean;
 }
 
-<<<<<<< HEAD
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
-=======
-export function SaveTalentButton({ talentIdonSaveisSaved }: SaveTalentButtonProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <Button
       onClick={() => onSave(talentId)}

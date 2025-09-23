@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -7,17 +6,6 @@ import {
   FaCloud, 
   FaShieldAlt, 
   FaChartLine, 
-=======
-"use client";
-import React{ useStateuseEffectuseMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   FaCogs,
   FaLightbulb,
   FaGlobe,
@@ -28,15 +16,9 @@ import {
   FaSearch
 } from 'react-icons/fa';
 import { 
-<<<<<<< HEAD
   SiNextdotjs, 
   SiReact, 
   SiTypescript, 
-=======
-  SiNextdotjs
-  SiReact
-  SiTypescript
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   SiTailwindcss,
   SiPrisma,
   SiSupabase,
@@ -137,11 +119,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-<<<<<<< HEAD
     technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
-=======
-    technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
@@ -168,11 +146,7 @@ const services: Service[] = [
       professional: 2499,
       enterprise: 4999
     },
-<<<<<<< HEAD
     technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-=======
-    technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'Python'C++'CUDA'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Solve previously impossible problems',
       'Exponential speed improvements',
@@ -199,11 +173,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-<<<<<<< HEAD
     technologies: ['TensorFlow Lite', 'ONNX Runtime', 'Edge TPU', 'Raspberry Pi', 'Arduino'],
-=======
-    technologies: ['TensorFlow 'Lite', 'ONNX 'Runtime', 'Edge 'TPU', 'Raspberry 'Pi', 'Arduino'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Reduced latency by 90%',
       'Lower bandwidth costs',
@@ -230,11 +200,7 @@ const services: Service[] = [
       professional: 999,
       enterprise: 2499
     },
-<<<<<<< HEAD
     technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-=======
-    technologies: ['NIST 'PQC', 'QKD 'protocols', 'Zero 'Trust', 'SIEM'SOAR'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Future-proof security',
       'Quantum-resistant encryption',
@@ -261,11 +227,7 @@ const services: Service[] = [
       professional: 799,
       enterprise: 1999
     },
-<<<<<<< HEAD
     technologies: ['Apache Kafka', 'Apache Spark', 'Snowflake', 'Databricks', 'Airflow'],
-=======
-    technologies: ['Apache 'Kafka', 'Apache 'Spark', 'Snowflake', 'Databricks', 'Airflow'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Unified data view',
       'Real-time insights',
@@ -292,11 +254,7 @@ const services: Service[] = [
       professional: 599,
       enterprise: 1499
     },
-<<<<<<< HEAD
     technologies: ['Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
-=======
-    technologies: [', 'Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     benefits: [
       'Faster deployment',
       'Improved scalability',
@@ -307,17 +265,10 @@ const services: Service[] = [
 ];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-=======
-  const [selectedCategorysetSelectedCategory] = useState<string>('all');
-  const [selectedServicesetSelectedService] = useState<Service | null>(null);
-  const [searchTermsetSearchTerm] = useState('');
-  const [sortBysetSortBy] = useState<'name' | 'price' | 'category'>('name');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const filteredServices = useMemo(() => {
     let filtered = services;
@@ -334,11 +285,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       );
     }
     
-<<<<<<< HEAD
     return filtered.sort((a, b) => {
-=======
-    return filtered.sort((ab) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       switch (sortBy) {
         case 'price':
           return a.pricing.starter - b.pricing.starter;
@@ -348,11 +295,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.title.localeCompare(b.title);
       }
     });
-<<<<<<< HEAD
   }, [selectedCategory, searchTerm, sortBy]);
-=======
-  }[selectedCategorysearchTermsortBy]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
@@ -377,11 +320,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our cutting-edge technology solutions designed for the future. 
-<<<<<<< HEAD
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
-=======
-            From AI-powered automation to quantum 'computingwe', 're building 'tomorrow', 's innovations today.
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           </p>
         </motion.div>
 
@@ -389,22 +328,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.2 }}
-=======
-          transition={{ duration: 0.8delay: 0.2 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="mb-12"
         >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
               <input
                 type="text"
-<<<<<<< HEAD
                 placeholder="Search services, technologies, or features..."
-=======
-                placeholder="Search servicestechnologiesor features..."
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -428,11 +359,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.4 }}
-=======
-          transition={{ duration: 0.8delay: 0.4 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-4">
@@ -467,28 +394,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
-=======
-          transition={{ duration: 0.8delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {filteredServices.map((serviceindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
-=======
-              transition={{ duration: 0.6delay: index * 0.1 }}
-              whileHover={{ y: -5scale: 1.02 }}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300"
               onClick={() => handleServiceSelect(service)}
             >
@@ -505,11 +420,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-4">
-<<<<<<< HEAD
                 {service.technologies.slice(0, 3).map((tech) => (
-=======
-                {service.technologies.slice(03).map((tech) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <span
                     key={tech}
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
@@ -593,11 +504,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   <ul className="space-y-2">
-<<<<<<< HEAD
                     {selectedService.features.map((feature, index) => (
-=======
-                    {selectedService.features.map((featureindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                         {feature}
@@ -610,11 +517,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Benefits</h3>
                   <ul className="space-y-2">
-<<<<<<< HEAD
                     {selectedService.benefits.map((benefit, index) => (
-=======
-                    {selectedService.benefits.map((benefitindex) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         {benefit}
@@ -643,11 +546,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<<<<<<< HEAD
                   {Object.entries(selectedService.pricing).map(([plan, price]) => (
-=======
-                  {Object.entries(selectedService.pricing).map(([planprice]) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                     <div
                       key={plan}
                       className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"

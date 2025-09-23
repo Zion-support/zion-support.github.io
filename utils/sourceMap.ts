@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 
@@ -166,74 +165,10 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
 }
 
 export function getSourceMapWithExistence(): SourceNode[] {
-=======
-
-// Mock source map utility
-export function getSourceMapWithExistence() {
-  return {
-
-
-function buildZionSourceMap(): SourceNode[] {
-  return [
-    {
-      id: 'src',
-      name: 'src',
-      type: 'directory',
-      path: 'src',
-      exists: false,
-      children: [
-        {
-          id: 'components',
-          name: 'components',
-          type: 'directory',
-          path: 'src/components',
-          exists: false
-        },
-        {
-          id: 'pages',
-          name: 'pages',
-          type: 'directory',
-          path: 'src/pages',
-          exists: false
-        },
-        {
-          id: 'utils',
-          name: 'utils',
-          type: 'directory',
-          path: 'src/utils',
-          exists: false
-        }
-      ]
-    }
-  ];
-
-}
-
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path);
-  return {
-
-    ...node,
-    exists,
-    children: node.children?.map(markExistenceRecursive)
-  };
-}
-
-
-
-
-    connected: false,
-    branch: 'main';
-  };
-}
-
-export function getSourceMapWithExistence(): SourceNode[] {;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 
-<<<<<<< HEAD
 export interface DeployTemplateResult {
   createdPaths: string[];
   skippedPaths: string[];
@@ -271,14 +206,6 @@ export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemp
 
   return { createdPaths, skippedPaths };
 }
-=======
-export interface DeployTemplateResult {;
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

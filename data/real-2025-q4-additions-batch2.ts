@@ -16,10 +16,7 @@ export interface AdditionalQ42025Service {
 	trialDays?: number;
 	setupTime?: string;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 	{
 		id: 'devsecops-copilot',

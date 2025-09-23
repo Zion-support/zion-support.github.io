@@ -2,11 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
-<<<<<<< HEAD
 import { Bell, Users, Settings } from "lucide-react";
-=======
-import { BellUsersSettings } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface WorkspaceHeaderProps {
   company: Company;

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
-=======
-"use client";
-import React{ useEffectuseRef } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { motion } from 'framer-motion';
 
 const UltraFuturisticBackground2029: React.FC = () => {
@@ -40,28 +35,17 @@ const UltraFuturisticBackground2029: React.FC = () => {
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
-<<<<<<< HEAD
         color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
-=======
-        color: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'][Math.floor(Math.random() * 5)],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         opacity: Math.random() * 0.8 + 0.2,
         life: Math.random() * 100 + 50
       });
     }
 
     const animate = () => {
-<<<<<<< HEAD
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-=======
-      ctx.clearRect(0canvas.widthcanvas.height);
-
-      // Update and draw particles
-      particles.forEach((particleindex) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
@@ -73,20 +57,12 @@ const UltraFuturisticBackground2029: React.FC = () => {
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
             size: Math.random() * 3 + 1,
-<<<<<<< HEAD
             color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][Math.floor(Math.random() * 5)],
-=======
-            color: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'][Math.floor(Math.random() * 5)],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             opacity: Math.random() * 0.8 + 0.2,
             life: Math.random() * 100 + 50
           };
         }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         // Draw particle with glow effect
         ctx.save();
         ctx.globalCompositeOperation = 'screen';
@@ -97,32 +73,20 @@ const UltraFuturisticBackground2029: React.FC = () => {
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.opacity * 0.3;
         ctx.beginPath();
-<<<<<<< HEAD
         ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
-=======
-        ctx.arc(particle.xparticle.yparticle.size * 20Math.PI * 2);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.fill();
 
         // Inner particle
         ctx.globalAlpha = particle.opacity;
         ctx.shadowBlur = 10;
         ctx.beginPath();
-<<<<<<< HEAD
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-=======
-        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         ctx.fill();
         ctx.restore();
       });
 
       // Draw connecting lines between nearby particles
-<<<<<<< HEAD
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
-=======
-      ctx.strokeStyle = 'rgba(02550.1)';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       ctx.lineWidth = 0.5;
       ctx.globalCompositeOperation = 'screen';
 
@@ -135,13 +99,8 @@ const UltraFuturisticBackground2029: React.FC = () => {
           if (distance < 100) {
             ctx.globalAlpha = (100 - distance) / 100 * 0.3;
             ctx.beginPath();
-<<<<<<< HEAD
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-=======
-            ctx.moveTo(particles[i].xparticles[i].y);
-            ctx.lineTo(particles[j].xparticles[j].y);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ctx.stroke();
           }
         }
@@ -157,7 +116,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
       canvas.height = window.innerHeight;
     };
 
-<<<<<<< HEAD
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -165,15 +123,6 @@ const UltraFuturisticBackground2029: React.FC = () => {
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
-=======
-    window.addEventListener(', 'resize', 'handleResize);
-
-    return () => {
-      window.removeEventListener(', 'resize', 'handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }[]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -190,17 +139,10 @@ const UltraFuturisticBackground2029: React.FC = () => {
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-<<<<<<< HEAD
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)',
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
-=======
-              'radial-gradient(circle at 20% 80%rgba(12011980.3) 0%transparent 50%)',
-              'radial-gradient(circle at 80% 20%rgba(12011980.3) 0%transparent 50%)',
-              'radial-gradient(circle at 40% 40%rgba(12011980.3) 0%transparent 50%)',
-              'radial-gradient(circle at 20% 80%rgba(12011980.3) 0%transparent 50%)'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             ]
           }}
           transition={{
@@ -215,15 +157,9 @@ const UltraFuturisticBackground2029: React.FC = () => {
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
         animate={{
-<<<<<<< HEAD
           rotate: [0, 360],
           scale: [1, 1.1, 1],
           opacity: [0.3, 0.6, 0.3]
-=======
-          rotate: [0360],
-          scale: [1.1],
-          opacity: [0.30.60.3]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }}
         transition={{
           duration: 15,
@@ -235,13 +171,8 @@ const UltraFuturisticBackground2029: React.FC = () => {
       <motion.div
         className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
         animate={{
-<<<<<<< HEAD
           y: [0, -20, 0],
           opacity: [0.2, 0.5, 0.2]
-=======
-          y: [0-20],
-          opacity: [0.20.50.2]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }}
         transition={{
           duration: 8,
@@ -253,13 +184,8 @@ const UltraFuturisticBackground2029: React.FC = () => {
       <motion.div
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
         animate={{
-<<<<<<< HEAD
           rotate: [45, 405],
           scale: [1, 1.2, 1]
-=======
-          rotate: [45405],
-          scale: [1.21]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }}
         transition={{
           duration: 12,
@@ -274,22 +200,13 @@ const UltraFuturisticBackground2029: React.FC = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-<<<<<<< HEAD
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-=======
-              linear-gradient(rgba(02550.1) 1pxtransparent 1px),
-              linear-gradient(90degrgba(02550.1) 1pxtransparent 1px)
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             `,
             backgroundSize: '50px 50px'
           }}
           animate={{
-<<<<<<< HEAD
             backgroundPosition: ['0px 0px', '50px 50px']
-=======
-            backgroundPosition: ['0px 0px'50px 50px']
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 30,
@@ -304,19 +221,11 @@ const UltraFuturisticBackground2029: React.FC = () => {
         <motion.div
           className="absolute inset-0"
           style={{
-<<<<<<< HEAD
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
           }}
           animate={{
             scale: [1, 1.5, 1],
             opacity: [0.1, 0.3, 0.1]
-=======
-            background: 'radial-gradient(ellipse at centergba(02550.1) 0%transparent 70%)'
-          }}
-          animate={{
-            scale: [1.51],
-            opacity: [0.10.30.1]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           }}
           transition={{
             duration: 8,
@@ -330,15 +239,9 @@ const UltraFuturisticBackground2029: React.FC = () => {
       <motion.div
         className="absolute top-1/2 left-1/2 w-64 h-64 border border-cyan-400/20 rounded-full"
         animate={{
-<<<<<<< HEAD
           rotate: [0, 360],
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.3, 0.1]
-=======
-          rotate: [0360],
-          scale: [1.21],
-          opacity: [0.10.30.1]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }}
         transition={{
           duration: 25,
@@ -350,15 +253,9 @@ const UltraFuturisticBackground2029: React.FC = () => {
       <motion.div
         className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
         animate={{
-<<<<<<< HEAD
           rotate: [360, 0],
           scale: [1.2, 1, 1.2],
           opacity: [0.2, 0.4, 0.2]
-=======
-          rotate: [360],
-          scale: [1.21.2],
-          opacity: [0.20.40.2]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         }}
         transition={{
           duration: 20,
@@ -369,11 +266,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
 
       {/* Neural network connections */}
       <div className="absolute inset-0">
-<<<<<<< HEAD
         {Array.from({ length: 8 }).map((_, i) => (
-=======
-        {Array.from({ length: 8 }).map((_i) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
@@ -382,13 +275,8 @@ const UltraFuturisticBackground2029: React.FC = () => {
               top: `${30 + (i * 5)}%`
             }}
             animate={{
-<<<<<<< HEAD
               scale: [0, 1, 0],
               opacity: [0, 1, 0]
-=======
-              scale: [010],
-              opacity: [010]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             }}
             transition={{
               duration: 3,
@@ -402,11 +290,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
 
       {/* Data streams */}
       <div className="absolute inset-0 overflow-hidden">
-<<<<<<< HEAD
         {Array.from({ length: 5 }).map((_, i) => (
-=======
-        {Array.from({ length: 5 }).map((_i) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <motion.div
             key={i}
             className="absolute w-0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent"
@@ -415,11 +299,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
               top: '-20px'
             }}
             animate={{
-<<<<<<< HEAD
               y: [0, window.innerHeight + 20]
-=======
-              y: [0window.innerHeight + 20]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             }}
             transition={{
               duration: 4,

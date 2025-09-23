@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-"use client";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -30,7 +26,6 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   provider: 'Zion Provider',
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
-<<<<<<< HEAD
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10,
 });
 
@@ -40,16 +35,6 @@ const ServicesPage: NextPage = () => {
   const [filters, setFilters] = React.useState<Filters>({ categories: [] });
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
-=======
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10});
-
-const ServicesPage: NextPage = () => {
-  const [servicesetServices] = React.useState<ServiceItem[]>([]);
-  const [filteredsetFiltered] = React.useState<ServiceItem[]>([]);
-  const [filtersetFilters] = React.useState<Filters>({ categories: [] });
-  const [modalOpensetModalOpen] = React.useState(false);
-  const [selectedsetSelected] = React.useState<ServiceItem | null>(null);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -67,17 +52,10 @@ export default function ServicesIndexPage() {
       realServicesQ12025 as any[],
       newVerifiedServicesQ22025 as any[]
     );
-<<<<<<< HEAD
   const byCategory: Record<string, unknown[]> = {};
   for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string, string> = {
-=======
-  const byCategory: Record<stringunknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
-  // Normalize various category labels into our main buckets
-  const categoryAliases: Record<string> = {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     'AI & Data': 'AI & Data',
     'AI & Machine Learning': 'AI & Data',
     'GenAI': 'AI & Data',
@@ -94,11 +72,7 @@ export default function ServicesIndexPage() {
   };
   for (const s of all) {
     const service = s as { category?: string };
-<<<<<<< HEAD
     const rawCat = (service.category || '').trim();
-=======
-    const rawCat = (service.category || ', ').trim();
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
     byCategory[mapped].push(s);
   }
@@ -118,21 +92,13 @@ export default function ServicesIndexPage() {
       return true;
     });
     setFiltered(next);
-<<<<<<< HEAD
   }, [filters, services]);
-=======
-  }[filterservices]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const availableCategories = React.useMemo(() => {
     const set = new Set<string>();
     services.forEach((s) => s.categories.forEach((c) => set.add(c)));
     return Array.from(set);
-<<<<<<< HEAD
   }, [services]);
-=======
-  }[services]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service);
@@ -140,27 +106,17 @@ export default function ServicesIndexPage() {
   };
 
   const handleSubmit = async (values: QuoteFormValues) => {
-<<<<<<< HEAD
     const res = await fetch('/api/quote-request', {
-=======
-    const res = await fetch('/api/quote-request'{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         service: values.serviceTitle,
         description: values.projectDescription,
-<<<<<<< HEAD
         timeline: { start: values.timelineStart, end: values.timelineEnd },
         budgetRange: values.budgetRange,
         email: values.email,
       }),
     });
-=======
-        timeline: { start: values.timelineStartend: values.timelineEnd },
-        budgetRange: values.budgetRange,
-        email: values.email})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     if (!res.ok) {
       const err = await res.json().catch(() => ({}));
       throw new Error(err?.message || 'Failed to submit');

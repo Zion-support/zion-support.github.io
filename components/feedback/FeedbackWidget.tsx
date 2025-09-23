@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
-=======
-"use client";
-import React{ useMemouseState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { v4 as uuidv4 } from 'uuid';
 
 export type FeedbackWidgetProps = {
@@ -11,7 +6,6 @@ export type FeedbackWidgetProps = {
   aiModel?: string;
 };
 
-<<<<<<< HEAD
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
@@ -20,16 +14,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const [error, setError] = useState<string | null>(null);
 
   const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
-=======
-export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProps) {
-  const [ratingsetRating] = useState<null | 'up' | 'down'>(null);
-  const [commentsetComment] = useState('');
-  const [submittingsetSubmitting] = useState(false);
-  const [submittedsetSubmitted] = useState(false);
-  const [errorsetError] = useState<string | null>(null);
-
-  const effectiveResponseId = useMemo(() => responseId || uuidv4()[responseId]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const submit = async () => {
     if (!rating) {
@@ -39,11 +23,7 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
     setError(null);
     setSubmitting(true);
     try {
-<<<<<<< HEAD
       const res = await fetch('/api/feedback/submit', {
-=======
-      const res = await fetch('/api/feedback/submit'{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -51,13 +31,9 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
           rating,
           comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
-<<<<<<< HEAD
           aiModel,
         }),
       });
-=======
-          aiModel})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       if (!res.ok) throw new Error('Failed to submit feedback');
       setSubmitted(true);
     } catch (e: any) {
@@ -95,29 +71,15 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
             </button>
           </div>
           <textarea
-<<<<<<< HEAD
             placeholder="Optional feedback (what worked, what didn’t)"
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
-=======
-            placeholder="Optional feedback (what workedwhat didn’t)"
-            value={comment}
-            onChange={(e) => setComment(e.target.value.slice(02000))}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             className="w-full rounded-md border px-3 py-2 text-sm"
             rows={3}
           />
           {error && <div className="text-xs text-red-600">{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>

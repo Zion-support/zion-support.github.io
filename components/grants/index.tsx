@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -17,36 +16,11 @@ export default function GrantsPage() {
     if (filters.status) params.set('status', filters.status);
     if (filters.region) params.set('region', filters.region);
     if (filters.program) params.set('program', filters.program);
-=======
-"use client";
-import { useEffectuseState } from 'react';
-import Link from 'next/link';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import type { GrantApplicationGrantCategoryGrantStatus } from '../../types/grants';
-
-const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'];
-const statuses: GrantStatus[] = [', 'Draft', 'Submitted'Under 'Review', 'Approved'Rejected'];
-
-export default function GrantsPage() {
-  const [itemsetItems] = useState<GrantApplication[]>([]);
-  const [filtersetFilters] = useState<{ sector?: string; status?: string; region?: string; program?: string }>({});
-
-  useEffect(() => {
-    const params = new URLSearchParams();
-    if (filters.sector) params.set(', 'sector', 'filters.sector);
-    if (filters.status) params.set(', 'status', 'filters.status);
-    if (filters.region) params.set(', 'region', 'filters.region);
-    if (filters.program) params.set(', 'program', 'filters.program);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     fetch(`/api/grants?${params.toString()}`)
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]));
-<<<<<<< HEAD
   }, [filters]);
-=======
-  }[filters]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <EnhancedLayout>
@@ -59,33 +33,20 @@ export default function GrantsPage() {
       </div>
 
       <div className="grid md:grid-cols-4 gap-4 mb-6">
-<<<<<<< HEAD
         <select className="border rounded p-2" value={filters.sector || ''} onChange={(e) => setFilters((f) => ({ ...f, sector: e.target.value || undefined }))}>
-=======
-        <select className="border rounded p-2" value={filters.sector || ', '} onChange={(e) => setFilters((f) => ({ ...fsector: e.target.value || undefined }))}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <option value="">All Sectors</option>
           {categories.map((c) => (
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
-<<<<<<< HEAD
         <select className="border rounded p-2" value={filters.status || ''} onChange={(e) => setFilters((f) => ({ ...f, status: e.target.value || undefined }))}>
-=======
-        <select className="border rounded p-2" value={filters.status || ', '} onChange={(e) => setFilters((f) => ({ ...fstatus: e.target.value || undefined }))}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <option value="">All Stages</option>
           {statuses.map((s) => (
             <option key={s} value={s}>{s}</option>
           ))}
         </select>
-<<<<<<< HEAD
         <input className="border rounded p-2" placeholder="Region" value={filters.region || ''} onChange={(e) => setFilters((f) => ({ ...f, region: e.target.value || undefined }))} />
         <select className="border rounded p-2" value={filters.program || ''} onChange={(e) => setFilters((f) => ({ ...f, program: e.target.value || undefined }))}>
-=======
-        <input className="border rounded p-2" placeholder="Region" value={filters.region || ', '} onChange={(e) => setFilters((f) => ({ ...fregion: e.target.value || undefined }))} />
-        <select className="border rounded p-2" value={filters.program || ', '} onChange={(e) => setFilters((f) => ({ ...fprogram: e.target.value || undefined }))}>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <option value="">All Programs</option>
           <option value="grant">Grant</option>
           <option value="incubator">Incubator</option>

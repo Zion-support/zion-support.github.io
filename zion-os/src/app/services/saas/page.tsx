@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function SaaSServicesPage() {
   return (
     <main className="container mx-auto px-4 py-12">
@@ -7,17 +6,3 @@ export default function SaaSServicesPage() {
     </main>
   );
 }
-=======
-export default function SAASServicesPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="py-20 text-center">
-        <h1 className="text-4xl font-bold">SaaS Services</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          End‑to‑end SaaS design, development, and operations.
-        </p>
-      </section>
-    </div>
-  );
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

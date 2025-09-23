@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type PaymentTermsType = "hourly" | "fixed" | "milestone";
 
 export type Milestone = {
@@ -37,16 +36,6 @@ export type Offer = {
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
 
 export type ProjectDocument = {
-=======
-
-
-
-export interface Offer {;
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -116,7 +105,6 @@ export interface ProjectDocument {
   name: string;
   url?: string;
   uploadedAtIso: string;
-<<<<<<< HEAD
 };
 
 export type ProjectNote = {
@@ -144,25 +132,3 @@ export type MarketplaceDb = {
   offers: Offer[];
   projects: Project[];
 };
-=======
-}
-
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
-
-
-
-
-export interface ProjectNote {;
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

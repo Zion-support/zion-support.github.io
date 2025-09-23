@@ -7,12 +7,8 @@ const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-<<<<<<< HEAD
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
-=======
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -35,12 +31,8 @@ serve(async (req) => {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`,
-<<<<<<< HEAD
         'Content-Type': 'application/json',
       },
-=======
-        'Content-Type': 'application/json'},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: [
@@ -66,13 +58,9 @@ serve(async (req) => {
             }`
           }
         ],
-<<<<<<< HEAD
         temperature: 0.7,
       }),
     });
-=======
-        temperature: 0.7})});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     const openAIData = await openAIResponse.json();
     
@@ -120,10 +108,6 @@ serve(async (req) => {
     );
 
   } catch (error) {
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     console.error("Error in profile-summary-generator function:", error);
     
     return new Response(

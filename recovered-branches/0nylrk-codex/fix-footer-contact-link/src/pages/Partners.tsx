@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -18,42 +17,6 @@ export default function Partners() {
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
-=======
-
-
-
-
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
-import {useState} from "react";
-import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
-import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
-import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
-import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
-import {PartnerResources} from "@/components/partners/PartnerResources";
-import {useAuth} from "@/hooks/useAuth";
-import {useNavigate} from "react-router-dom";
-export default function Partners() {;
-
-
-
-
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-
-import { useAuth } from "@/hooks/useAuth",
-import { useNavigate } from "react-router-dom",
-export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (
@@ -62,10 +25,7 @@ export default function Partners() {
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>
         </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
@@ -96,10 +56,7 @@ export default function Partners() {
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Card className="bg-zion-blue-dark border-zion-blue-light">
             <CardHeader>
               <CardTitle className="text-white">For AI Organizations</CardTitle>
@@ -130,10 +87,7 @@ export default function Partners() {
             </CardContent>
           </Card>
         </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -148,10 +102,7 @@ export default function Partners() {
                 <p>Sign up and get approved as a Zion AI partner with your own dashboard</p>
               </CardContent>
             </Card>
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -163,10 +114,7 @@ export default function Partners() {
                 <p>Generate custom referral links and promote to your audience</p>
               </CardContent>
             </Card>
-<<<<<<< HEAD
             
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             <Card className="bg-zion-blue-dark border-zion-blue-light">
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
@@ -180,61 +128,19 @@ export default function Partners() {
             </Card>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="flex justify-center gap-4">
           <Button 
             size="lg" 
-=======
-        <div className="flex justify-center gap-4">
-          <Button
-            size="lg"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             className="bg-zion-purple hover:bg-zion-purple-dark"
             onClick={() => navigate('/signup')}
           >
             Apply to Join
           </Button>
-<<<<<<< HEAD
-=======
-
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-zion-cyan border-zion-cyan"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <Button 
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
-<<<<<<< HEAD
-=======
-
-
-
-
-
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",;
-import { useState } from "react",;
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",;
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",;
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard",;
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",;
-import { PartnerResources } from "@/components/partners/PartnerResources",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-export default function Partners() {;
-  const [activeTab, setActiveTab] = useState("overview"),;
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -378,23 +284,9 @@ export default function Partners() {;
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
     );
   }
 
-=======
-    )
-  }
-
-
-
-          <Button
-            size="lg" 
-            variant="outline" 
-
-            className="text-zion-cyan border-zion-cyan"
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -425,10 +317,7 @@ export default function Partners() {;
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
           <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -437,7 +326,6 @@ export default function Partners() {;
           <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
           <TabsTrigger value="resources">Resources</TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
         
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
@@ -447,14 +335,6 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
         
-=======
-        <TabsContent value="overview" className="space-y-4">
-          <PartnerDashboard />
-        </TabsContent>
-        <TabsContent value="referrals" className="space-y-4">
-          <PartnerReferralLinks />
-        </TabsContent>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <TabsContent value="earnings" className="space-y-4">
           <Card>
             <CardHeader>
@@ -467,30 +347,15 @@ export default function Partners() {;
             </CardContent>
           </Card>
         </TabsContent>
-<<<<<<< HEAD
         
         <TabsContent value="leaderboard" className="space-y-4">
           <PartnerLeaderboard />
         </TabsContent>
         
-=======
-        <TabsContent value="leaderboard" className="space-y-4">
-          <PartnerLeaderboard />
-        </TabsContent>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
       </Tabs>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-
-}
-}
-;
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

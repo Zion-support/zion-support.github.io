@@ -9,13 +9,8 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 
 export function ApplicationsTracker() {
-<<<<<<< HEAD
   const { applications, isLoading, error } = useJobApplications();
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
-=======
-  const { applicationsisLoadingerror } = useJobApplications();
-  const [statusFiltersetStatusFilter] = useState<ApplicationStatus | 'all'>('all');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   
   if (isLoading) {
     return <LoadingState />;

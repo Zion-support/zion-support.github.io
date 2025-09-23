@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-export const aiAutonomousServices2026 = [] as any[];
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export interface AiAutonomousService2026 {
   id: string;
   name: string;
@@ -18,10 +14,7 @@ export interface AiAutonomousService2026 {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",

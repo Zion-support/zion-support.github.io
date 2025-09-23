@@ -29,16 +29,11 @@ import { realServicesQ12025 } from '../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
 import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-<<<<<<< HEAD
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-=======
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
@@ -51,13 +46,8 @@ import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-=======
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('name');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   // Combine all services
   const allServices = [
@@ -103,16 +93,11 @@ export default function ServicesPage() {
     ...emergingTech2025Services,
     ...realMarketAugmentations2025,
     ...innovative2026MicroSaasServicesV2,
-<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV2,
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV2,
     ...enterpriseIT2026ServicesV4,
-=======
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ...aiAutonomousServices2026,
     ...quantumSpaceTechServices2026,
     ...metaverseDigitalRealityServices2026,
@@ -156,7 +141,6 @@ import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-servi
 import { advancedAIServices } from '../data/advanced-ai-services';
 import { blockchainEmergingTechServices } from '../data/blockchain-emerging-tech-services';
 
-<<<<<<< HEAD
 // Import our new service data
 import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -310,10 +294,6 @@ import { useRouter } from 'next/router';
 export default function Services() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
-=======
-export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
@@ -328,7 +308,6 @@ export default function ServicesPage() {
     ...blockchainEmergingTechServices
   ], []);
 
-<<<<<<< HEAD
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -419,44 +398,6 @@ export default function ServicesPage() {
         return <GraduationCap className="w-6 h-6 text-yellow-400" />;
       default:
         return <Shield className="w-6 h-6 text-gray-400" />;
-=======
-  // Get unique categories
-  const categories = useMemo(() => {
-    const cats = [...new Set(allServices.map(service => service.category))];
-    return ['all', ...cats.sort()];
-  }, [allServices]);
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length },
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length },
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
-  ];
-
-  // Get all categories
-  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
-    Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
-
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
 
     // Sort services
@@ -487,7 +428,6 @@ export default function ServicesPage() {
     website: 'https://ziontechgroup.com'
   };
 
-<<<<<<< HEAD
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => service.category === activeCategory);
@@ -504,9 +444,6 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -665,130 +602,9 @@ export default function ServicesPage() {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
 
       <EnhancedFooter />
     </>
-=======
-      {/* Services Grid */}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {filteredServices.length} Services Available
-            </h2>
-            <p className="text-white/60">
-              {selectedCategory !== 'all' && `Showing ${categories.find(c => c.id === selectedCategory)?.name} services`}
-            </p>
-          </div>
-
-          <AnimatePresence mode="wait">
-            {filteredServices.length === 0 ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="text-center py-20"
-              >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                  <Search className="w-12 h-12 text-white/40" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-white/60 mb-6">
-                  Try adjusting your search terms or category filter
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                  }}
-                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
-                >
-                  Clear Filters
-                </button>
-              </motion.div>
-            ) : (
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-                {filteredServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`group relative ${
-                      viewMode === 'grid' 
-                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
-                    }`}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 p-4 flex items-center justify-center">
-                          <service.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                          service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                          'bg-blue-500/20 text-blue-300'
-                        }`}>
-                          {service.status}
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      
-                      {/* Price */}
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      </div>
-                      
-                      {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
-                        <div className="space-y-2">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <a
-                          href={service.link}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
-                        >
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </a>
-                        <a
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
-                        >
-                          Get Quote
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-=======
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
@@ -1047,10 +863,6 @@ export default function ServicesPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default ServicesPage;
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

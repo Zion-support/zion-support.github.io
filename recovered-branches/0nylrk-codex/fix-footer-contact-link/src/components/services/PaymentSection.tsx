@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { MapPin } from "lucide-react";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -18,42 +17,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     });
   };
   
-=======
-
-import {MapPin} from "lucide-react";
-import {PaymentButton} from "@/components/transactions/PaymentButton";
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import {toast} from "@/hooks/use-toast";
-import { MapPin } from "lucide-react",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { CountryPricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-
-interface PaymentSectionProps {
-  selected_country: CountryPricing;
-}
-
-  const handlePaymentInitiated = () => {
-    toast({
-
-      title: "Processing your request"
-      description:
-        "You'll be redirected to our secure payment portal momentarily."
-    });
-  }
-
-      title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily."});
-  };
-      description: "You'll be redirected to our secure payment portal momentarily."})
-  },
-  
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -62,7 +25,6 @@ interface PaymentSectionProps {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
-<<<<<<< HEAD
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton 
@@ -70,38 +32,6 @@ interface PaymentSectionProps {
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
         buttonText={`Pay for Service in ${selectedCountry.country}`}
-=======
-
-import { MapPin } from "lucide-react",;
-import { PaymentButton } from "@/components/transactions/PaymentButton",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
-import { toast } from "@/hooks/use-toast",;
-interface PaymentSectionProps {;
-  selectedCountry: CountryPricing;
-}
-;
-export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
-  // Handle successful payment;
-  const handlePaymentInitiated = () => {;
-    toast({;
-      title: "Processing your request";
-      description: "You'll be redirected to our secure payment portal momentarily."});
-  };
-  return (;
-    <div className="text-center">;
-      <p className="text-zion-slate-light mb-2">Selected Country</p>;
-      <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
-        <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
-        {selectedCountry.country}
-      </h4>;
-      <p className="text-2xl font-bold text-zion-cyan mb-6">;
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -152,37 +82,4 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         onPaymentInitiated={handlePaymentInitiated}
       />
       <p className="text-xs text-zion-slate-light mt-2">
-<<<<<<< HEAD
 
-=======
-        Price includes transportation and first hour onsite. Additional hours billed separately.
-      </p>
-    </div>
-  );
-}
-=======
-        Price includes transportation and first hour onsite. Additional hours
-        billed separately.
-      </p>
-    </div>
-
-  );
-}
-  )
-
-}
-
-export /**
- * PaymentSection - Function description
- */
-function PaymentSection() {
-  // Handle successful payment;
-  const handlePaymentInitiated = () =>: any {
-    toast ({
-      title: "Processing your request",
-      description:;
-        "You'll be redirected to our secure payment portal momentarily.",
-    });
-  }
-;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

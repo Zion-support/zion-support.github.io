@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -13,37 +12,6 @@ export default function IntegrationsPage() {
       <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
-=======
-
-
-
-
-
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-
-export default function IntegrationsPage() {
-  return (
-    <ProtectedRoute adminOnly={true}>;
-      <SEO
-        title="Integrations - Zion AI Marketplace"
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems."
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       />
       <Header />
       <main className="min-h-screen bg-background">
@@ -51,66 +19,5 @@ export default function IntegrationsPage() {
       </main>
       <Footer />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-
-
-
-
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
-import { SEO } from "@/components/SEO",;
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function IntegrationsPage() {;
-  return (;
-    <ProtectedRoute adminOnly={true}>;
-      <SEO;
-        title="Integrations - Zion AI Marketplace";
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
-
-      />;
-      <Header />;
-      <main className="min-h-screen bg-background">;
-        <IntegrationsHub />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>;
-  );
-
-
-
-
-
-import React, { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { IntegrationsHub } from '@/components / integrations / IntegrationsHub';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-export default /**
- * IntegrationsPage - Function description
- */
-function IntegrationsPage() {
-  return (
-    <ProtectedRoute admin_only={true}>;
-      <SEO;
-        title="Integrations - Zion AI Marketplace";
-        description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
-      />;
-      <Header />;
-      <main className="min - h-screen bg - background">;
-        <IntegrationsHub />;
-      </main>;
-      <Footer />;
-    </ProtectedRoute>);
-
-
-
-
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

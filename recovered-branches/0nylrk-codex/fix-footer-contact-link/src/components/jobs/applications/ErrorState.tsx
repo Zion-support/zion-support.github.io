@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
-=======
-import { CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface ErrorStateProps {
   error: string;

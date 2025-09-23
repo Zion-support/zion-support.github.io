@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { forwardRef } from 'react';
-=======
-import React{ forwardRef } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export type ResumeData = {
   name: string;
@@ -45,15 +41,9 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   </h2>
 );
 
-<<<<<<< HEAD
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
     const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
-=======
-export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
-  ({ datatheme = ', 'light', 'maxPortfolioItems = 3 }ref) => {
-    const portfolioItems = (data.portfolio || []).slice(0Math.max(0maxPortfolioItems));
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
     return (
       <div
@@ -99,20 +89,12 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
             <section className="mb-5">
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className="mt-2 text-sm flex flex-wrap gap-2">
-<<<<<<< HEAD
                 {data.skills?.map((s, idx) => (
-=======
-                {data.skills?.map((sidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <span key={`skill-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
                     {s}
                   </span>
                 ))}
-<<<<<<< HEAD
                 {data.technologies?.map((t, idx) => (
-=======
-                {data.technologies?.map((tidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <span key={`tech-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
                     {t}
                   </span>
@@ -126,11 +108,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
             <section className="mb-5">
               <SectionTitle>Work Experience</SectionTitle>
               <div className="mt-2 space-y-3">
-<<<<<<< HEAD
                 {data.experience.map((role, idx) => (
-=======
-                {data.experience.map((roleidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <div key={`exp-${idx}`}>
                     <div className="flex items-baseline justify-between">
                       <h3 className="font-medium text-gray-900 dark:text-white">
@@ -140,11 +118,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
                       <div className="text-xs text-gray-600 dark:text-gray-300">
                         {(role.start || role.end) && (
                           <span>
-<<<<<<< HEAD
                             {role.start || ''}
-=======
-                            {role.start || ', '}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}
@@ -153,11 +127,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
                     </div>
                     {role.bullets?.length ? (
                       <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-<<<<<<< HEAD
                         {role.bullets.map((b, bIdx) => (
-=======
-                        {role.bullets.map((bIdx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
                         ))}
                       </ul>
@@ -173,19 +143,11 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
             <section className="mb-5">
               <SectionTitle>Education</SectionTitle>
               <div className="mt-2 space-y-2">
-<<<<<<< HEAD
                 {data.education.map((ed, idx) => (
                   <div key={`edu-${idx}`} className="text-sm">
                     <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
                     <div className="text-gray-700 dark:text-gray-300">
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
-=======
-                {data.education.map((edidx) => (
-                  <div key={`edu-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
-                    <div className="text-gray-700 dark:text-gray-300">
-                      {[ed.degreed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                         .filter(Boolean)
                         .join(' • ')}
                     </div>
@@ -195,26 +157,12 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
             </section>
           ) : null}
 
-<<<<<<< HEAD
           {/* Certifications */}
           {data.certifications?.length ? (
             <section className="mb-5">
               <SectionTitle>Certifications</SectionTitle>
               <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
                 {data.certifications.map((c, idx) => (
-=======
-
-
-
-          {/* Certifications */}
-          {data.certifications?.length ? (
-            <section className='mb-5'>
-              <SectionTitle>Certifications</SectionTitle>
-              <ul className='mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                {data.certifications.map((c, idx) => (            <section className="mb-5">
-              <SectionTitle>Certifications</SectionTitle>
-              <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-                {data.certifications.map((cidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <li key={`cert-${idx}`}>{c}</li>
                 ))}
               </ul>
@@ -225,14 +173,8 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
           {portfolioItems.length ? (
             <section className="mb-5">
               <SectionTitle>Portfolio</SectionTitle>
-<<<<<<< HEAD
               <div className="mt-2 space-y-2">
                 {portfolioItems.map((p, idx) => (
-=======
-
-              <div className="mt-2 space-y-2">
-                {portfolioItems.map((pidx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <div key={`proj-${idx}`} className="text-sm">
                     <div className="font-medium text-gray-900 dark:text-white">
                       {p.title}
@@ -247,11 +189,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
                     )}
                     {p.technologies?.length ? (
                       <div className="mt-1 text-xs flex flex-wrap gap-2">
-<<<<<<< HEAD
                         {p.technologies.map((t, tIdx) => (
-=======
-                        {p.technologies.map((tIdx) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                           <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
                             {t}
                           </span>

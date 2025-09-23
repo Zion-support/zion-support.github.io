@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,13 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.writeHead(302, { ...headers, Location: '/' });
   res.end();
 }
-=======
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

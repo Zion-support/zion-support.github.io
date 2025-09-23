@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
-=======
-"use client";
-import { useEffectuseState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useRouter } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
@@ -11,21 +6,14 @@ import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id: string };
-<<<<<<< HEAD
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
-=======
-  const [itemsetItem] = useState<GrantApplication | null>(null);
-  const [loadingsetLoading] = useState(true);
-  const [updateContentsetUpdateContent] = useState('');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     if (!id) return;
     setLoading(true);
     fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false));
-<<<<<<< HEAD
   }, [id]);
 
   const addUpdate = async () => {
@@ -35,17 +23,6 @@ export default function GrantDetailPage() {
       const u = await resp.json();
       setItem((prev) => prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev);
       setUpdateContent('');
-=======
-  }[id]);
-
-  const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return;
-    const resp = await fetch(`/api/grants/${id}/updates`{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) });
-    if (resp.ok) {
-      const u = await resp.json();
-      setItem((prev) => prev ? { ...prevupdates: [...(prev.updates || [])u.update] } : prev);
-      setUpdateContent(', ');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     }
   };
 
@@ -77,11 +54,7 @@ export default function GrantDetailPage() {
               <div className="mt-2">
                 <div className="text-sm font-medium">Supporting Links</div>
                 <ul className="list-disc list-inside text-sm">
-<<<<<<< HEAD
                   {item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
-=======
-                  {item.supportingLinks.map((li) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                 </ul>
               </div>
             )}

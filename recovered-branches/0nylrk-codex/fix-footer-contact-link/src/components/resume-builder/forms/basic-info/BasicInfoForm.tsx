@@ -1,20 +1,12 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
-=======
-import React{ useStateuseEffect } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Card } from "@/components/ui/card";
 import { RateOptimizationSection } from "../RateOptimizationSection";
-<<<<<<< HEAD
 import { basicInfoSchema, BasicInfoFormData } from "./schema";
-=======
-import { basicInfoSchemaBasicInfoFormData } from "./schema";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 
@@ -47,7 +39,6 @@ export function BasicInfoForm({
       linkedin: "",
       github: "",
       hourlyRate: 0,
-<<<<<<< HEAD
       ...initialData,
     },
   });
@@ -61,19 +52,6 @@ export function BasicInfoForm({
       });
     }
   }, [initialData, form]);
-=======
-      ...initialData}});
-
-  useEffect(() => {
-    if (initialData) {
-      Object.entries(initialData).forEach(([keyvalue]) => {
-        if (value !== undefined) {
-          form.setValue(key as keyof BasicInfoFormDatavalue as any);
-        }
-      });
-    }
-  }[initialDataform]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data);

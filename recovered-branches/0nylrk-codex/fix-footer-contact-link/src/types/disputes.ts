@@ -70,9 +70,5 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   communication: 'Communication Issues',
   payment: 'Payment Dispute',
   contract_terms: 'Contract Terms Disagreement',
-<<<<<<< HEAD
   other: 'Other Issue',
 };
-=======
-  other: 'Other Issue'};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

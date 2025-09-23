@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react";
-=======
-import React{ useState } from "react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
@@ -19,13 +15,8 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void;
 }
 
-<<<<<<< HEAD
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-=======
-export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpensetIsHireModalOpen] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { userDetails } = useAuthStatus();
   const navigate = useNavigate();
 

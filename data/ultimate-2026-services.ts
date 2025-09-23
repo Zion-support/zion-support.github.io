@@ -14,10 +14,7 @@ export interface Ultimate2026Service {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
     id: "2026-ultimate-service",

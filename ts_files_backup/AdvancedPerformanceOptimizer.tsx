@@ -1,4 +1,3 @@
-<<<<<<< HEAD:ts_files_backup/AdvancedPerformanceOptimizer.tsx
 import React from 'react';
 
 interface AdvancedPerformanceOptimizerProps {

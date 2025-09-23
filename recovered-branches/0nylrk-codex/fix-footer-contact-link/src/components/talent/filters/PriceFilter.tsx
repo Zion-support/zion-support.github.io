@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
@@ -7,15 +6,6 @@ import { PriceFilterProps } from "@/types/filters";
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]]);
-=======
-import { ChevronDownChevronUp } from "lucide-react";
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
-
-export function PriceFilter({ priceRangesetPriceRangexpandedtoggleSectionisMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = (values: number[]) => {
-    setPriceRange([values[0]values[1]]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
 
   return (
@@ -39,11 +29,7 @@ export function PriceFilter({ priceRangesetPriceRangexpandedtoggleSectionisMobil
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider 
-<<<<<<< HEAD
             value={[priceRange[0], priceRange[1]]}
-=======
-            value={[priceRange[0]priceRange[1]]}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             min={50}
             max={200}
             step={5}

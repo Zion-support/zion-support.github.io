@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-=======
-import React{ useEffectuseState } from 'react';
-import { RadioGroupItem } from '@/components/ui/radio-group';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 interface Address {
   name: string;
@@ -34,7 +29,6 @@ const fromAddress = {
   city: 'San Francisco',
   state: 'CA',
   zip: '94103',
-<<<<<<< HEAD
   country: 'US',
 };
 
@@ -44,16 +38,6 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string>('');
-=======
-  country: 'US'};
-
-const parcel = { weight: 1length: 10width: 10height: 10 };
-
-export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
-  const [ratesetRates] = useState<ShippingRate[]>([]);
-  const [loadingsetLoading] = useState(false);
-  const [selectedsetSelected] = useState<string>('');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   useEffect(() => {
     if (
@@ -66,43 +50,25 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
     const fetchRates = async () => {
       setLoading(true);
       try {
-<<<<<<< HEAD
         const res = await fetch('/api/shipping-rates', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fromAddress, toAddress, parcel }),
         });
-=======
-        const res = await fetch('/api/shipping-rates'{
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fromAddresstoAddressparcel })});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         const data = await res.json();
         if (res.ok) {
           setRates(data.rates || []);
         } else {
-<<<<<<< HEAD
           console.error('Rates error', data);
         }
       } catch (err) {
         console.error('Rates error', err);
-=======
-          console.error('Rates error'data);
-        }
-      } catch (err) {
-        console.error('Rates error'err);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } finally {
         setLoading(false);
       }
     };
     fetchRates();
-<<<<<<< HEAD
   }, [toAddress]);
-=======
-  }[toAddress]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   const handleChange = (value: string) => {
     setSelected(value);

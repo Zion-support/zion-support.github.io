@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 
@@ -20,18 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.status(200).send(pixel);
 }
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);

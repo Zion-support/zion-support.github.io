@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -18,16 +17,5 @@ export default function AICustomerService() {
       </div>
     </>
   );
-=======
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
-export default function AICustomerServiceRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/customer-service-ai');
-  }, [router]);
-  return null;
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }
 

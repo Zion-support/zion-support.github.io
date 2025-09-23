@@ -1,44 +1,25 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-=======
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2,
   Crown, Award, Target, Users, Clock, Globe2
-<<<<<<< HEAD
 } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-=======
-} from 'lucide-react',
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
-import { futuristic2028Services } from '../data/2028-futuristic-innovations',
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 };
-=======
-},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const pricingTiers = [
   {
@@ -47,18 +28,12 @@ const pricingTiers = [
     period: '/month',
     description: 'Perfect for small businesses and startups',
     features: [
-<<<<<<< HEAD
       'Basic AI integration',
       'Standard support',
       'Core features access',
       'Email support',
       'Basic analytics',
       'Mobile app access'
-=======
-      'Basic AI integrationStandard support',
-      'Core features accessEmail support',
-      'Basic analyticsMobile app access'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ],
     popular: false,
     color: 'from-blue-600 to-cyan-600',
@@ -71,7 +46,6 @@ const pricingTiers = [
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
     features: [
-<<<<<<< HEAD
       'Advanced AI capabilities',
       'Priority support',
       'Full feature access',
@@ -80,12 +54,6 @@ const pricingTiers = [
       'API access',
       'Custom integrations',
       'Training & onboarding'
-=======
-      'Advanced AI capabilitiesPriority support',
-      'Full feature accessPhone & email support',
-      'Advanced analyticsAPI access',
-      'Custom integrationsTraining & onboarding'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ],
     popular: true,
     color: 'from-purple-600 to-pink-600',
@@ -98,7 +66,6 @@ const pricingTiers = [
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
-<<<<<<< HEAD
       'Custom AI development',
       'Dedicated support team',
       'White-label solutions',
@@ -109,24 +76,13 @@ const pricingTiers = [
       'Dedicated account manager',
       'SLA guarantees',
       'On-premise deployment'
-=======
-      'Custom AI developmentDedicated support team',
-      'White-label solutions24/7 phone support',
-      'Custom analyticsFull API access',
-      'Custom integrationsDedicated account manager',
-      'SLA guaranteesOn-premise deployment'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ],
     popular: false,
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
   }
-<<<<<<< HEAD
 ];
-=======
-],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 const servicePricing = [
   {
@@ -145,11 +101,7 @@ const servicePricing = [
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
-<<<<<<< HEAD
 ];
-=======
-],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export default function Revolutionary2028Pricing() {
   return (
@@ -462,11 +414,7 @@ export default function Revolutionary2028Pricing() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Get Started</span>?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -511,9 +459,5 @@ export default function Revolutionary2028Pricing() {
 
       <UltraFuturisticFooter2028 />
     </>
-<<<<<<< HEAD
   );
-=======
-  )
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 }

@@ -92,24 +92,16 @@ export function useSavedTalents() {
         
         toast({
           title: "Removed from favorites",
-<<<<<<< HEAD
           description: `${talent.full_name} has been removed from your favorites`,
         });
-=======
-          description: `${talent.full_name} has been removed from your favorites`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
             user_id: userDetails.id,
-<<<<<<< HEAD
             talent_id: talent.id,
           });
-=======
-            talent_id: talent.id});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           
         if (error) throw error;
         
@@ -118,12 +110,8 @@ export function useSavedTalents() {
         
         toast({
           title: "Added to favorites",
-<<<<<<< HEAD
           description: `${talent.full_name} has been added to your favorites`,
         });
-=======
-          description: `${talent.full_name} has been added to your favorites`});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }
     } catch (error) {
       console.error('Error toggling saved talent:', error);

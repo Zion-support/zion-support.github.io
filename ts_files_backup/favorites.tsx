@@ -1,26 +1,16 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
-=======
-"use client";
-import { useEffectuseMemouseState } from 'react';
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import Head from 'next/head';
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 
 function useFavorites() {
   const storageKey = 'zion_favorites';
-<<<<<<< HEAD
   const [favorites, setFavorites] = useState<string[]>([]);
-=======
-  const [favoritesetFavorites] = useState<string[]>([]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
       if (raw) setFavorites(JSON.parse(raw));
     } catch {}
-<<<<<<< HEAD
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug));
   return { favorites, remove };
@@ -29,16 +19,6 @@ function useFavorites() {
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-=======
-  }[]);
-  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug));
-  return { favoritesremove };
-}
-
-export default function FavoritesPage() {
-  const { favoritesremove } = useFavorites();
-  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug))[favorites]);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   return (
     <div>
@@ -60,11 +40,7 @@ export default function FavoritesPage() {
 
       {profiles.length === 0 ? (
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
-<<<<<<< HEAD
           <div className="text-gray-600 dark:text-gray-300">You haven't saved any talent yet.</div>
-=======
-          <div className="text-gray-600 dark:text-gray-300">You 'haven', 't saved any talent yet.</div>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
           <div className="mt-4">
             <Link href="/talent"><a className="px-4 py-2 rounded-md bg-indigo-600 text-white">Browse Talent</a></Link>
           </div>
@@ -82,11 +58,7 @@ export default function FavoritesPage() {
               </div>
               <div className="mt-3 text-xs text-gray-500">{t.location}</div>
               <div className="mt-3 flex flex-wrap gap-2">
-<<<<<<< HEAD
                 {t.skills.slice(0, 4).map((s) => (
-=======
-                {t.skills.slice(04).map((s) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>
                 ))}
               </div>

@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -41,13 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       seo: {
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
-=======
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -73,7 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 },
-<<<<<<< HEAD
     };
     posts.unshift(post);
     writePosts(posts);
@@ -82,18 +73,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
-=======
-    }
-    posts.unshift (post);
-    write_posts (posts);
-    return res.status (201).json (post);
-  }
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

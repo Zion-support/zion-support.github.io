@@ -3,12 +3,8 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -78,7 +74,6 @@ serve(async (req) => {
 
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-<<<<<<< HEAD
       status: 200,
     });
   } catch (error) {
@@ -86,13 +81,6 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     });
-=======
-      status: 200});
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 });
 
@@ -137,15 +125,10 @@ async function processResumeScoring(supabase, applicationId) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
         body: JSON.stringify({ applicationId }),
       }
-=======
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({ applicationId })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
 
     if (!response.ok) {
@@ -197,22 +180,14 @@ async function processContentGeneration(supabase, contentType) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-<<<<<<< HEAD
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
-=======
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
         }),
       }
-=======
-        })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     );
 
     if (!response.ok) {
@@ -242,26 +217,16 @@ async function processContentGeneration(supabase, contentType) {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-<<<<<<< HEAD
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
             },
-=======
-              "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             body: JSON.stringify({
               subject: contentData.subject,
               previewText: contentData.previewText,
               body: contentData.body,
               testMode: true,
-<<<<<<< HEAD
               testEmail: adminEmail
             }),
           }
-=======
-
-              testEmail: adminEmail
-            })}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         );
         
         // Create notification for admin

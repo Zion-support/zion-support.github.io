@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import { List, RefreshCw } from "lucide-react";
@@ -22,39 +21,11 @@ export function ApiLogs() {
   
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize);
-=======
-import { useStateuseEffect } from "react";
-import { format } from "date-fns";
-import { ListRefreshCw } from "lucide-react";
-import { useApiKeystype ApiLog } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from "@/components/ui/card";
-import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-
-export function ApiLogs() {
-  const { logstotalLogsloadingfetchApiLogs } = useApiKeys();
-  const [pageSizesetPageSize] = useState(25);
-  const [currentPagesetCurrentPage] = useState(0);
-  
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSizecurrentPage * pageSize);
-  }[pageSizecurrentPage]);
-  
-  const handleRefresh = () => {
-    fetchApiLogs(pageSizecurrentPage * pageSize);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   // Helper to format the timestamp
   const formatTimestamp = (timestamp: string) => {
-<<<<<<< HEAD
     return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
-=======
-    return format(new Date(timestamp)'yyyy-MM-dd HH:mm:ss');
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   };
   
   // Helper to get badge color based on status code
@@ -190,11 +161,7 @@ export function ApiLogs() {
         {logs.length > 0 && (
           <div className="mt-4 flex justify-between items-center">
             <div className="text-sm text-zinc-500">
-<<<<<<< HEAD
               Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
-=======
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSizetotalLogs)} of {totalLogs} logs
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </div>
             <div className="flex space-x-2">
               <Button

@@ -49,7 +49,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     tagline: 'Light-speed computing with photonic processors',
     price: '$699',
     period: '/month',
-<<<<<<< HEAD
     description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for ultra-fast, energy-efficient computing. Enables light-speed data processing and quantum-like performance.',
     features: [
       'Photonic processors',
@@ -62,20 +61,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       'Optical computing',
       'Light-speed algorithms',
       'Photonic optimization'
-=======
-    description: 'Revolutionary photonic computing infrastructure that uses light instead of electricity for computation, enabling 1000x faster processing speeds and ultra-low power consumption.',
-    features: [
-      'Photonic processors',
-      'Light-speed computation',
-      'Ultra-low power consumption',
-      'Optical interconnects',
-      'Photonic memory systems',
-      'Quantum photonic integration',
-      'Optical neural networks',
-      'Photonic AI acceleration',
-      'Real-time photonic processing',
-      'Photonic optimization algorithms'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ],
     popular: true,
     icon: '💡',
@@ -83,7 +68,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/photonic-computing-infrastructure',
     marketPosition: 'Leading photonic computing platform. Competes with Lightmatter, PsiQuantum, and emerging photonic computing companies.',
-<<<<<<< HEAD
     targetAudience: 'Tech companies, Research institutions, Data centers, Cloud providers, AI companies',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -96,20 +80,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     competitors: ['Lightmatter, PsiQuantum, Xanadu, PicoQuant'],
     marketSize: '$15B photonic computing market',
     growthRate: '500% annual growth',
-=======
-    targetAudience: 'AI research institutions, Tech companies, Research universities, Government agencies, Defense contractors',
-    trialDays: 30,
-    setupTime: '2-4 weeks',
-    category: 'Photonic Computing',
-    realService: true,
-    technology: ['Photonic processors, Optical computing, Quantum photonics, Optical neural networks, Photonic memory'],
-    integrations: ['AI frameworks, Research platforms, Quantum systems, Development tools, Simulation environments'],
-    useCases: ['AI acceleration, Scientific computing, Real-time processing, Energy-efficient computing, Research applications'],
-    roi: 'Processing speed improvement: $3M+ annually. Energy savings: priceless for large-scale computing.',
-    competitors: ['Lightmatter, PsiQuantum, Xanadu, PicoQuant'],
-    marketSize: '$15B photonic computing market',
-    growthRate: '450% annual growth',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -118,13 +88,8 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready photonic computing infrastructure with photonic processors, optical interconnects, and comprehensive computing frameworks.',
     launchDate: '2029-02-10',
-=======
-    implementationDetails: 'Production-ready photonic computing platform with hardware integration, development tools, and comprehensive research frameworks.',
-    launchDate: '2029-02-15',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     customers: 45,
     rating: 4.8,
     reviews: 32
@@ -133,7 +98,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
-<<<<<<< HEAD
     tagline: 'Build immersive virtual worlds and digital experiences',
     price: '$499',
     period: '/month',
@@ -149,30 +113,12 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       'Real-time collaboration',
       'AI-powered NPCs',
       'Metaverse analytics'
-=======
-    tagline: 'Build immersive virtual worlds and experiences',
-    price: '$499',
-    period: '/month',
-    description: 'Advanced metaverse development platform that enables creators to build immersive virtual worlds, experiences, and digital assets for the next generation of the internet.',
-    features: [
-      '3D world building tools',
-      'Virtual asset creation',
-      'Multi-user experiences',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Digital economy tools',
-      'Avatar customization',
-      'Social interaction systems',
-      'Content monetization',
-      'Cross-platform deployment'
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     ],
     popular: true,
     icon: '🌌',
     color: 'from-indigo-600 via-purple-600 to-pink-600',
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
-<<<<<<< HEAD
     marketPosition: 'Leading metaverse development platform. Competes with Unity, Unreal Engine, and emerging metaverse platforms.',
     targetAudience: 'Game developers, VR companies, Digital agencies, Educational institutions, Entertainment companies',
     trialDays: 30,
@@ -186,21 +132,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     competitors: ['Unity, Unreal Engine, Roblox, Decentraland, The Sandbox'],
     marketSize: '$800B metaverse market',
     growthRate: '400% annual growth',
-=======
-    marketPosition: 'Leading metaverse development platform. Competes with Roblox, Unity, Unreal Engine, and emerging metaverse companies.',
-    targetAudience: 'Game developers, Content creators, Brands, Educational institutions, Entertainment companies',
-    trialDays: 14,
-    setupTime: '1-2 weeks',
-    category: 'Metaverse & Virtual Reality',
-    realService: true,
-    technology: ['3D graphics, VR/AR, Blockchain, AI, Cloud computing, Real-time rendering'],
-    integrations: ['VR headsets, AR devices, Blockchain networks, Payment systems, Social platforms'],
-    useCases: ['Virtual events, Gaming, Education, Training, Marketing, Social interaction'],
-    roi: 'Virtual asset sales: $500K+ annually. Brand engagement: priceless for customer experience.',
-    competitors: ['Roblox, Unity, Unreal Engine, Decentraland, The Sandbox'],
-    marketSize: '$800B metaverse market',
-    growthRate: '600% annual growth',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     variant: 'metaverse-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -209,40 +140,24 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready metaverse development platform with comprehensive 3D tools, VR integration, and social features.',
     launchDate: '2029-01-20',
     customers: 120,
     rating: 4.7,
     reviews: 89
-=======
-    implementationDetails: 'Production-ready metaverse development platform with comprehensive tools, templates, and deployment frameworks.',
-    launchDate: '2029-01-20',
-    customers: 1200,
-    rating: 4.7,
-    reviews: 890
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   // AI Predictive Health Analytics
   {
     id: 'ai-predictive-health-analytics',
     name: 'AI Predictive Health Analytics',
-<<<<<<< HEAD
     tagline: 'Predict health outcomes with AI-powered analytics',
     price: '$7,999',
     period: '/month',
     description: 'Advanced AI-powered health analytics platform that predicts health outcomes, identifies risk factors, and provides personalized health recommendations. Enables proactive healthcare and preventive medicine.',
-=======
-    tagline: 'Predict health outcomes with AI precision',
-    price: '$7,999',
-    period: '/month',
-    description: 'Advanced AI-powered health analytics platform that predicts health outcomes, identifies risk factors, and provides personalized health recommendations using machine learning and medical data.',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     features: [
       'Health outcome prediction',
       'Risk factor identification',
       'Personalized recommendations',
-<<<<<<< HEAD
       'Disease prevention',
       'Early detection algorithms',
       'Health trend analysis',
@@ -267,32 +182,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     useCases: ['Disease prevention, Early detection, Treatment optimization, Population health, Clinical research'],
     roi: 'Healthcare cost reduction: $50M+ annually. Improved outcomes: Priceless for patient health.',
     competitors: ['IBM Watson Health, Google Health, Optum, Cerner, Epic'],
-=======
-      'Medical data analysis',
-      'Predictive modeling',
-      'Health trend analysis',
-      'Early warning systems',
-      'Treatment optimization',
-      'Population health insights',
-      'Clinical decision support'
-    ],
-    popular: true,
-    icon: '🏥',
-    color: 'from-red-600 via-pink-600 to-rose-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-predictive-health-analytics',
-    marketPosition: 'Leading AI health analytics platform. Competes with Tempus, Flatiron Health, and emerging AI health companies.',
-    targetAudience: 'Hospitals, Healthcare systems, Insurance companies, Pharmaceutical companies, Research institutions',
-    trialDays: 30,
-    setupTime: '1-2 months',
-    category: 'AI Healthcare & Analytics',
-    realService: true,
-    technology: ['Machine learning, Medical AI, Predictive analytics, Health data processing, Clinical algorithms'],
-    integrations: ['Electronic health records, Medical devices, Health platforms, Insurance systems, Research databases'],
-    useCases: ['Disease prevention, Treatment optimization, Risk assessment, Population health, Clinical research'],
-    roi: 'Preventive care savings: $10M+ annually. Improved outcomes: priceless for patient health.',
-    competitors: ['Tempus, Flatiron Health, Foundation Medicine, Guardant Health'],
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     marketSize: '$45B AI healthcare market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
@@ -303,13 +192,8 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready AI health analytics platform with comprehensive predictive models, clinical integration, and health monitoring capabilities.',
     launchDate: '2029-01-15',
-=======
-    implementationDetails: 'Production-ready AI health analytics platform with comprehensive medical data processing, predictive models, and clinical decision support.',
-    launchDate: '2029-02-01',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     customers: 85,
     rating: 4.9,
     reviews: 67
@@ -318,7 +202,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
   {
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency',
-<<<<<<< HEAD
     tagline: 'End-to-end traceability and transparency in supply chains',
     price: '$399',
     period: '/month',
@@ -342,36 +225,10 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
     marketPosition: 'Leading blockchain supply chain platform. Competes with IBM Food Trust, VeChain, and emerging blockchain supply chain companies.',
     targetAudience: 'Manufacturing companies, Retail companies, Food companies, Pharmaceutical companies, Logistics firms',
-=======
-    tagline: 'End-to-end traceability and transparency',
-    price: '$399',
-    period: '/month',
-    description: 'Revolutionary blockchain-based supply chain transparency platform that provides end-to-end traceability, authenticity verification, and compliance monitoring for global supply chains.',
-    features: [
-      'End-to-end traceability',
-      'Authenticity verification',
-      'Compliance monitoring',
-      'Smart contracts',
-      'Real-time tracking',
-      'Quality assurance',
-      'Sustainability tracking',
-      'Cost optimization',
-      'Risk management',
-      'Stakeholder collaboration'
-    ],
-    popular: true,
-    icon: '🔗',
-    color: 'from-green-600 via-emerald-600 to-teal-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
-    marketPosition: 'Leading blockchain supply chain platform. Competes with IBM Food Trust, VeChain, and emerging blockchain supply chain companies.',
-    targetAudience: 'Manufacturing companies, Retail chains, Food companies, Pharmaceutical companies, Logistics firms',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     trialDays: 21,
     setupTime: '2-4 weeks',
     category: 'Blockchain & Supply Chain',
     realService: true,
-<<<<<<< HEAD
     technology: ['Blockchain, Smart contracts, IoT, Supply chain management, Data analytics'],
     integrations: ['ERP systems, Logistics platforms, IoT devices, Payment systems, Compliance tools'],
     useCases: ['Product traceability, Quality assurance, Compliance tracking, Sustainability monitoring, Fraud prevention'],
@@ -379,15 +236,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance, Ambrosus'],
     marketSize: '$25B blockchain supply chain market',
     growthRate: '450% annual growth',
-=======
-    technology: ['Blockchain, Smart contracts, IoT, AI, Supply chain analytics, Distributed ledgers'],
-    integrations: ['ERP systems, IoT devices, Logistics platforms, Payment systems, Compliance tools'],
-    useCases: ['Product traceability, Quality assurance, Compliance monitoring, Cost optimization, Risk management'],
-    roi: 'Supply chain efficiency: $2M+ annually. Compliance savings: priceless for regulatory requirements.',
-    competitors: ['IBM Food Trust, VeChain, OriginTrail, WaltonChain'],
-    marketSize: '$25B blockchain supply chain market',
-    growthRate: '400% annual growth',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     variant: 'blockchain-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -396,25 +244,16 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive traceability, smart contracts, and real-time monitoring.',
     launchDate: '2029-02-01',
     customers: 95,
     rating: 4.6,
     reviews: 78
-=======
-    implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive traceability, smart contracts, and compliance monitoring.',
-    launchDate: '2029-01-15',
-    customers: 320,
-    rating: 4.6,
-    reviews: 245
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   // AI Customer Success Automation
   {
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
-<<<<<<< HEAD
     tagline: 'Automate customer success and drive retention',
     price: '$199',
     period: '/month',
@@ -438,50 +277,16 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     link: 'https://ziontechgroup.com/ai-customer-success-automation',
     marketPosition: 'Leading AI customer success platform. Competes with Gainsight, Totango, and emerging AI customer success companies.',
     targetAudience: 'SaaS companies, Subscription businesses, B2B companies, Customer success teams, Sales teams',
-=======
-    tagline: 'Automate customer success and retention',
-    price: '$199',
-    period: '/month',
-    description: 'Advanced AI-powered customer success automation platform that predicts churn, automates onboarding, and optimizes customer retention through intelligent automation and personalization.',
-    features: [
-      'Churn prediction',
-      'Automated onboarding',
-      'Personalized engagement',
-      'Success milestone tracking',
-      'Automated interventions',
-      'Customer health scoring',
-      'Retention optimization',
-      'Success analytics',
-      'Automated workflows',
-      'Performance insights'
-    ],
-    popular: true,
-    icon: '🎯',
-    color: 'from-blue-600 via-cyan-600 to-teal-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-customer-success-automation',
-    marketPosition: 'Leading AI customer success platform. Competes with Gainsight, Totango, and emerging AI customer success companies.',
-    targetAudience: 'SaaS companies, Subscription businesses, E-commerce companies, Service companies, B2B companies',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'AI Customer Success',
     realService: true,
-<<<<<<< HEAD
     technology: ['Machine learning, Predictive analytics, Customer data analysis, Automation, AI algorithms'],
     integrations: ['CRM systems, Customer success platforms, Analytics tools, Communication platforms, Billing systems'],
     useCases: ['Churn prevention, Customer retention, Revenue expansion, Success optimization, Proactive support'],
     roi: 'Customer retention improvement: 25%+ increase. Revenue expansion: $500K+ annually.',
     competitors: ['Gainsight, Totango, ChurnZero, ClientSuccess, Planhat'],
     marketSize: '$8B customer success market',
-=======
-    technology: ['Machine learning, Customer analytics, Automation, Personalization, Predictive modeling'],
-    integrations: ['CRM systems, Marketing platforms, Support tools, Analytics platforms, Communication tools'],
-    useCases: ['Customer onboarding, Retention optimization, Churn prevention, Success automation, Performance improvement'],
-    roi: 'Retention improvement: $1M+ annually. Customer lifetime value: priceless for business growth.',
-    competitors: ['Gainsight, Totango, ChurnZero, CustomerSuccessBox'],
-    marketSize: '$18B customer success market',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
@@ -491,19 +296,11 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready AI customer success platform with comprehensive automation, predictive analytics, and customer engagement tools.',
     launchDate: '2029-01-30',
     customers: 180,
     rating: 4.8,
     reviews: 145
-=======
-    implementationDetails: 'Production-ready AI customer success platform with comprehensive automation, analytics, and optimization capabilities.',
-    launchDate: '2029-01-10',
-    customers: 650,
-    rating: 4.8,
-    reviews: 520
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   // Quantum-Secure Communication Platform
   {
@@ -512,7 +309,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     tagline: 'Unbreakable quantum encryption for communications',
     price: '$599',
     period: '/month',
-<<<<<<< HEAD
     description: 'Advanced quantum-secure communication platform that provides unbreakable encryption for all forms of communication. Uses quantum key distribution and post-quantum cryptography for ultimate security.',
     features: [
       'Quantum key distribution',
@@ -544,39 +340,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     competitors: ['Signal, WhatsApp, Telegram, Wickr, Threema'],
     marketSize: '$35B secure communication market',
     growthRate: '400% annual growth',
-=======
-    description: 'Advanced quantum-secure communication platform that provides unbreakable encryption for messaging, voice, and video communications using quantum key distribution and quantum-resistant algorithms.',
-    features: [
-      'Quantum key distribution',
-      'Quantum-resistant encryption',
-      'Secure messaging',
-      'Voice encryption',
-      'Video encryption',
-      'File encryption',
-      'Quantum authentication',
-      'Secure key exchange',
-      'Compliance monitoring',
-      'Audit trails'
-    ],
-    popular: true,
-    icon: '🔒',
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
-    textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-secure-communication-platform',
-    marketPosition: 'Leading quantum-secure communication platform. Competes with PQShield, Post-Quantum, and emerging quantum security companies.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Legal firms',
-    trialDays: 30,
-    setupTime: '2-4 weeks',
-    category: 'Quantum Security & Communication',
-    realService: true,
-    technology: ['Quantum key distribution, Post-quantum cryptography, Quantum-resistant algorithms, Secure communication, Quantum authentication'],
-    integrations: ['Communication platforms, Security systems, Compliance tools, Audit systems, Key management'],
-    useCases: ['Secure messaging, Voice encryption, Video calls, File sharing, Compliance requirements'],
-    roi: 'Security breach prevention: $20M+ annually. Compliance assurance: priceless for regulatory requirements.',
-    competitors: ['PQShield, Post-Quantum, ISARA, Quantum Xchange'],
-    marketSize: '$12B quantum security market',
-    growthRate: '350% annual growth',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -585,19 +348,11 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready quantum-secure communication platform with comprehensive encryption, quantum security, and compliance features.',
     launchDate: '2029-02-15',
     customers: 75,
     rating: 4.9,
     reviews: 58
-=======
-    implementationDetails: 'Production-ready quantum-secure communication platform with comprehensive encryption, authentication, and compliance monitoring.',
-    launchDate: '2029-02-01',
-    customers: 180,
-    rating: 4.9,
-    reviews: 145
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   },
   // AI Business Intelligence Suite
   {
@@ -606,15 +361,9 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     tagline: 'Intelligent business insights and analytics',
     price: '$299',
     period: '/month',
-<<<<<<< HEAD
     description: 'Advanced AI-powered business intelligence suite that provides intelligent insights, predictive analytics, and automated reporting. Transforms data into actionable business intelligence.',
     features: [
       'AI-powered insights',
-=======
-    description: 'Advanced AI-powered business intelligence suite that provides intelligent insights, predictive analytics, and automated reporting to drive data-driven decision making and business growth.',
-    features: [
-      'Intelligent insights',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       'Predictive analytics',
       'Automated reporting',
       'Data visualization',
@@ -622,7 +371,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       'Real-time analytics',
       'Performance monitoring',
       'Trend analysis',
-<<<<<<< HEAD
       'KPI tracking',
       'Business forecasting'
     ],
@@ -644,29 +392,6 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     competitors: ['Tableau, Power BI, Qlik, Looker, Sisense'],
     marketSize: '$30B business intelligence market',
     growthRate: '350% annual growth',
-=======
-      'Anomaly detection',
-      'Actionable recommendations'
-    ],
-    popular: true,
-    icon: '📊',
-    color: 'from-slate-600 via-gray-600 to-zinc-600',
-    textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
-    marketPosition: 'Leading AI business intelligence platform. Competes with Tableau, Power BI, and emerging AI BI companies.',
-    targetAudience: 'Businesses of all sizes, Data analysts, Business users, Executives, Consultants',
-    trialDays: 14,
-    setupTime: '1-2 weeks',
-    category: 'AI Business Intelligence',
-    realService: true,
-    technology: ['Machine learning, Data analytics, Natural language processing, Predictive modeling, Data visualization'],
-    integrations: ['Data sources, Business applications, CRM systems, ERP systems, Cloud platforms'],
-    useCases: ['Business analytics, Performance monitoring, Decision making, Trend analysis, Performance optimization'],
-    roi: 'Data-driven decisions: $500K+ annually. Performance improvement: priceless for business growth.',
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
-    marketSize: '$35B business intelligence market',
-    growthRate: '250% annual growth',
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -675,18 +400,10 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Production-ready AI business intelligence platform with comprehensive analytics, predictive insights, and automated reporting.',
     launchDate: '2029-01-25',
     customers: 250,
     rating: 4.7,
     reviews: 198
-=======
-    implementationDetails: 'Production-ready AI business intelligence platform with comprehensive analytics, visualization, and reporting capabilities.',
-    launchDate: '2029-01-15',
-    customers: 950,
-    rating: 4.7,
-    reviews: 780
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   }
 ];

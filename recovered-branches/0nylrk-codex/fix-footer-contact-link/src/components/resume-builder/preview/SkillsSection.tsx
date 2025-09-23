@@ -7,22 +7,14 @@ interface SkillsSectionProps {
 
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
-<<<<<<< HEAD
   const skillsByCategory = skills.reduce((acc, skill) => {
-=======
-  const skillsByCategory = skills.reduce((accskill) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     const category = skill.category || 'Other';
     if (!acc[category]) {
       acc[category] = [];
     }
     acc[category].push(skill);
     return acc;
-<<<<<<< HEAD
   }, {} as Record<string, Skill[]>);
-=======
-  }{} as Record<stringSkill[]>);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
   if (skills.length === 0) return null;
   
@@ -30,19 +22,11 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
       <div className="space-y-2">
-<<<<<<< HEAD
         {Object.entries(skillsByCategory).map(([category, skills]) => (
           <div key={category}>
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">
               {skills.map(skill => skill.name).join(', ')}
-=======
-        {Object.entries(skillsByCategory).map(([categoryskills]) => (
-          <div key={category}>
-            <h3 className="text-sm font-medium">{category}</h3>
-            <p className="text-sm">
-              {skills.map(skill => skill.name).join(')}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
             </p>
           </div>
         ))}

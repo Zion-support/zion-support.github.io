@@ -14,10 +14,7 @@ export interface QuantumSpaceService {
     address: string;
   };
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
     id: "quantum-computing-platform",

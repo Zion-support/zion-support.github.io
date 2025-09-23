@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -188,43 +187,6 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
 
   return { conversation, message };
 }
-=======
-
-// Messaging storage utilities
-export interface Message {;
-  id: string;
-  conversationId: string;
-  senderId: string;
-  recipientId: string;
-  body: string;
-  link_url?: string;
-  attachmentBase64?: string;
-  attachment_name?: string;
-  context?: string;
-  sentAtIso: string;
-  readAtIso?: string;
-  is_read: boolean;
-  is_edited: boolean;
-  editedAtIso?: string;
-  is_deleted: boolean;
-  deletedAtIso?: string;
-  replyToId?: string;
-  reactions: Array<{
-    user_id: string;
-    emoji: string;
-
-    createdAt: string
-
-
-
-  }>;
-}
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

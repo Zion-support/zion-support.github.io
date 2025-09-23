@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Revolutionary2025ITService {
@@ -494,6 +493,3 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
 ];
 
 export default revolutionary2025ITServices;
-=======
-export const revolutionary2025ITInfrastructure: Array<Record<string, any>> = []
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

@@ -12,30 +12,20 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
   FormMessage,
 } from '@/components/ui/form';
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-=======
-  FormMessage} from '@/components/ui/form';
-Loader2LinkFileImageGithubEdit
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 
 // Define schema for form validation
 const projectSchema = z.object({
-<<<<<<< HEAD
   title: z.string().min(1, 'Project title is required'),
-=======
-  title: z.string().min(1'Project title is required'),
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   description: z.string().optional(),
   technologies: z.string().optional(),
   image_url: z.string().optional(),
   github_url: z
-<<<<<<< HEAD
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
     .optional(),
   demo_url: z
@@ -43,14 +33,6 @@ const projectSchema = z.object({
     .optional(),
   pdf_url: z.string().optional(),
 });
-=======
-    .union([z.string().url('Please enter a valid URL')z.literal('')])
-    .optional(),
-  demo_url: z
-    .union([z.string().url('Please enter a valid URL')z.literal('')])
-    .optional(),
-  pdf_url: z.string().optional()});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 type ProjectFormValues = z.infer<typeof projectSchema>;
 
@@ -60,17 +42,10 @@ interface ProjectFormProps {
   onCancel: () => void;
 }
 
-<<<<<<< HEAD
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
-=======
-export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
-  const { user } = useAuth();
-  const { addProjectupdateProject } = usePortfolio();
-  const [isLoadingsetIsLoading] = useState(false);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const isEditing = !!project;
   
   const form = useForm<ProjectFormValues>({
@@ -78,20 +53,12 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
     defaultValues: {
       title: project?.title || '',
       description: project?.description || '',
-<<<<<<< HEAD
       technologies: project?.technologies ? project.technologies.join(', ') : '',
       image_url: project?.image_url || '',
       github_url: project?.github_url || '',
       demo_url: project?.demo_url || '',
       pdf_url: project?.pdf_url || '',
     }
-=======
-      technologies: project?.technologies ? project.technologies.join(') : '',
-      image_url: project?.image_url || '',
-      github_url: project?.github_url || '',
-      demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || ''}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   });
   
   const onSubmit = async (data: ProjectFormValues) => {
@@ -108,21 +75,13 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
-<<<<<<< HEAD
         pdf_url: data.pdf_url,
       };
-=======
-        pdf_url: data.pdf_url};
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       
       let success = false;
       
       if (isEditing && project?.id) {
-<<<<<<< HEAD
         success = await updateProject(project.id, projectData);
-=======
-        success = await updateProject(project.idprojectData);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       } else {
         const projectId = await addProject(projectData);
         success = !!projectId;
@@ -133,11 +92,7 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
         form.reset();
       }
     } catch (error) {
-<<<<<<< HEAD
       console.error('Error saving project:', error);
-=======
-      console.error('Error saving project:'error);
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     } finally {
       setIsLoading(false);
     }
@@ -153,11 +108,7 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-=======
-                <Input placeholder="E.g.AI ChatbotE-commerce Website" {...field} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -189,11 +140,7 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
-=======
-                <Input placeholder="ReactNode.jsMongoDBetc. (comma separated)" {...field} />
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
               </FormControl>
               <FormMessage />
             </FormItem>

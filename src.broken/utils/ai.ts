@@ -15,14 +15,9 @@ export async function generateText(prompt: string, system?: string): Promise<str
     model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
     messages: [
       ...(system ? [{ role: 'system' as const, content: system }] : []),
-<<<<<<< HEAD
       { role: 'user', content: prompt },
     ],
     temperature: 0.4,
   });
-=======
-      { role: 'user', content: prompt }],
-    temperature: 0.4});
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   return resp.choices?.[0]?.message?.content || '';
 }

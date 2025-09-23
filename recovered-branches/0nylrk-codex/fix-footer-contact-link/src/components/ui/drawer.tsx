@@ -23,17 +23,10 @@ const DrawerClose = DrawerPrimitive.Close
 const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
     className={cn("fixed inset-0 z-50 bg-black/80", className)}
-=======
->(({ className...props }ref) => (
-  <DrawerPrimitive.Overlay
-    ref={ref}
-    className={cn("fixed inset-0 z-50 bg-black/80"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -42,11 +35,7 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
-<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
-=======
->(({ classNamechildren...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DrawerPortal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
@@ -69,11 +58,7 @@ const DrawerHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-<<<<<<< HEAD
     className={cn("grid gap-1.5 p-4 text-center sm:text-left", className)}
-=======
-    className={cn("grid gap-1.5 p-4 text-center sm:text-left"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 )
@@ -84,11 +69,7 @@ const DrawerFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-<<<<<<< HEAD
     className={cn("mt-auto flex flex-col gap-2 p-4", className)}
-=======
-    className={cn("mt-auto flex flex-col gap-2 p-4"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 )
@@ -97,11 +78,7 @@ DrawerFooter.displayName = "DrawerFooter"
 const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
->(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
@@ -116,17 +93,10 @@ DrawerTitle.displayName = DrawerPrimitive.Title.displayName
 const DrawerDescription = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
-=======
->(({ className...props }ref) => (
-  <DrawerPrimitive.Description
-    ref={ref}
-    className={cn("text-sm text-muted-foreground"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -142,9 +112,5 @@ export {
   DrawerHeader,
   DrawerFooter,
   DrawerTitle,
-<<<<<<< HEAD
   DrawerDescription,
 }
-=======
-  DrawerDescription}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

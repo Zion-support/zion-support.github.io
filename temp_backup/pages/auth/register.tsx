@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -88,33 +87,10 @@ const RegisterPage = () => {
               </Link>
             </p>
           </div>
-=======
-import React from 'react';
-import Head from 'next/head';
-
-export default function RegisterPage() {
-  return (
-    <>
-      <Head>
-        <title>Register - Zion Tech Group</title>
-        <meta name="description" content="register page" />
-      </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Register</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-600 hover:underline">
-            ← Back to Home
-          </a>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default RegisterPage;
-=======
-}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

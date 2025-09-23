@@ -24,10 +24,7 @@ export interface SpaceTechBreakthroughService2029 {
   useCases: string[];
   spaceCapabilities: string[];
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",

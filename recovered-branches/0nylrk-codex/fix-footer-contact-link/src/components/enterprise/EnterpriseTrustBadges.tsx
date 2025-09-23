@@ -1,10 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
-=======
-import { ShieldLockAwardCheckCircle } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 export function EnterpriseTrustBadges() {
   return (

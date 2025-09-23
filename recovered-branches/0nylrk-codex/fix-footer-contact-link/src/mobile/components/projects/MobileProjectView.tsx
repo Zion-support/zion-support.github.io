@@ -1,18 +1,10 @@
 
 import React from "react";
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react";
-=======
-import { CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { AvatarImageAvatarFallback } from "@/components/ui/avatar";
-import { CheckCircleChevronRightFileTextMessageSquareVideo } from "lucide-react";
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 import { Progress } from "@/components/ui/progress";
 import { SeverityIndicator } from "../common/SeverityIndicator";
 import { useNavigate } from "react-router-dom";
@@ -45,20 +37,12 @@ interface ProjectViewProps {
   milestones: Milestone[];
 }
 
-<<<<<<< HEAD
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-=======
-export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const navigate = useNavigate();
   
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
-<<<<<<< HEAD
     toast.success("Starting project call", {
-=======
-    toast.success("Starting project call"{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       description: "Initializing video connection..."
     });
     
@@ -66,11 +50,7 @@ export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
   };
   
   const messageClient = () => {
-<<<<<<< HEAD
     toast.info("Opening message thread with client", {
-=======
-    toast.info("Opening message thread with client"{
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
@@ -187,11 +167,7 @@ export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Status:</span>
-<<<<<<< HEAD
                     <span className="capitalize">{milestone.status.replace('_', ' ')}</span>
-=======
-                    <span className="capitalize">{milestone.status.replace('_' ')}</span>
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
                   </div>
                   <Button 
                     size="sm" 

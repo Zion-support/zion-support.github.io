@@ -1,10 +1,6 @@
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
-<<<<<<< HEAD
 import { Check, ChevronRight, Circle } from "lucide-react"
-=======
-import { CheckChevronRightCircle } from "lucide-react"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 
 import { cn } from "@/lib/utils"
 
@@ -25,11 +21,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
   }
-<<<<<<< HEAD
 >(({ className, inset, children, ...props }, ref) => (
-=======
->(({ classNameinsetchildren...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
@@ -49,11 +41,7 @@ DropdownMenuSubTrigger.displayName =
 const DropdownMenuSubContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubContent>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubContent>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
-=======
->(({ className...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
@@ -69,11 +57,7 @@ DropdownMenuSubContent.displayName =
 const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
-<<<<<<< HEAD
 >(({ className, sideOffset = 4, ...props }, ref) => (
-=======
->(({ classNamesideOffset = 4...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.Portal>
     <DropdownMenuPrimitive.Content
       ref={ref}
@@ -93,11 +77,7 @@ const DropdownMenuItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {
     inset?: boolean
   }
-<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
-=======
->(({ classNameinset...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
@@ -113,11 +93,7 @@ DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName
 const DropdownMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
-<<<<<<< HEAD
 >(({ className, children, checked, ...props }, ref) => (
-=======
->(({ classNamechildrenchecked...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.CheckboxItem
     ref={ref}
     className={cn(
@@ -141,11 +117,7 @@ DropdownMenuCheckboxItem.displayName =
 const DropdownMenuRadioItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>
-<<<<<<< HEAD
 >(({ className, children, ...props }, ref) => (
-=======
->(({ classNamechildren...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.RadioItem
     ref={ref}
     className={cn(
@@ -169,11 +141,7 @@ const DropdownMenuLabel = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {
     inset?: boolean
   }
-<<<<<<< HEAD
 >(({ className, inset, ...props }, ref) => (
-=======
->(({ classNameinset...props }ref) => (
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   <DropdownMenuPrimitive.Label
     ref={ref}
     className={cn(
@@ -189,17 +157,10 @@ DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName
 const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
-<<<<<<< HEAD
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
-=======
->(({ className...props }ref) => (
-  <DropdownMenuPrimitive.Separator
-    ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-muted"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
     {...props}
   />
 ))
@@ -211,11 +172,7 @@ const DropdownMenuShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
-<<<<<<< HEAD
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
-=======
-      className={cn("ml-auto text-xs tracking-widest opacity-60"className)}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       {...props}
     />
   )
@@ -237,9 +194,5 @@ export {
   DropdownMenuSub,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-<<<<<<< HEAD
   DropdownMenuRadioGroup,
 }
-=======
-  DropdownMenuRadioGroup}
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982

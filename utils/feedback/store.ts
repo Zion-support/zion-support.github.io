@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 
@@ -29,15 +28,6 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
   return rec;
 }
-=======
-
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

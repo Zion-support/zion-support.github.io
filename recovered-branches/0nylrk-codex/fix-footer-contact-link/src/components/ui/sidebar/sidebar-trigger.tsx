@@ -8,11 +8,7 @@ import { useSidebar } from "./sidebar-context"
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>,
   React.ComponentProps<typeof Button>
-<<<<<<< HEAD
 >((props, ref) => {
-=======
->((propsref) => {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -21,18 +17,10 @@ export const SidebarTrigger = React.forwardRef<
       data-sidebar="trigger"
       variant="ghost"
       size="icon"
-<<<<<<< HEAD
       className={cn("h-7 w-7", props.className)}
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
-=======
-      className={cn("h-7 w-7"props.className)}
-      onClick={(event) => {
-        props.onClick?.(event)
-        toggleSidebar()
-
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
       }}
       {...props}
     >
