@@ -99,7 +99,7 @@ export function usePerformanceMonitor(componentName: string) {
         console.log(`${componentName} render time: ${duration.toFixed(2)}ms`);
       }
       
-      if (process.env.NODE_ENV === "production" && duration > 10o0) {
+      if (process.env.NODE_ENV === "production" && duration > 100) {
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }

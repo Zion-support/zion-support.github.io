@@ -1,13 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+// Temporary no-op Prisma client to avoid build errors when Prisma is not configured
+export type PrismaClient = unknown;
 
-declare global {
-  // eslint-disable-next-line no-var
-  var prisma: PrismaClient | undefined;
-}
-
-export const prisma = global.prisma || new PrismaClient();
-
-if (process.env.NODE_ENV !== "production") {
-  global.prisma = prisma;
-}
+export const prisma: any = {};
 

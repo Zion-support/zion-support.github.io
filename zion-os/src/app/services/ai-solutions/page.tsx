@@ -16,14 +16,17 @@ interface AIService {
   integration: string[];
 }
 
+export default function AISolutionsPage() {
+  const [services] = useState<AIService[]>([]);
 
-
-
-
-
-
-
-
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-6">AI Solutions</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map((service) => (
+          <div key={service.id} className="p-6 rounded-lg bg-white/5 border border-white/10">
+            <h2 className="text-xl font-semibold mb-2">{service.name}</h2>
+            <p className="opacity-80 mb-4">{service.description}</p>
             {/* CTA */}
             <div className="space-y-3 pt-4 border-t border-white/10">
               <a
@@ -44,7 +47,7 @@ interface AIService {
       </div>
 
       {/* AI Capabilities Overview */}
-      <div className="space-y-6">
+      <div className="space-y-6 mt-12">
         <h2 className="text-3xl font-bold text-center">AI Capabilities Overview</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center p-6 rounded-lg bg-white/5 border border-white/10">
@@ -63,15 +66,6 @@ interface AIService {
             <p className="text-sm opacity-80">Machine learning models for forecasting, trend analysis, and decision support</p>
           </div>
         </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="text-center space-y-6 py-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-lg border border-white/10">
-        <h2 className="text-3xl font-bold">Ready to Harness the Power of AI?</h2>
-        <p className="text-xl opacity-80 max-w-2xl mx-auto">
-          Let's discuss how our AI solutions can transform your business operations and drive innovation. 
-          Get in touch for a personalized AI strategy consultation.
-        </p>
       </div>
     </div>
   );
