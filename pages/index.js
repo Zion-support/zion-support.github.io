@@ -1,12 +1,43 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import SEO from '../components/SEO'
+import Head from 'next/head'
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsVisible(true)
+    // Simulate loading for better UX
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+      setIsVisible(true)
+    }, 300)
+    
+    // Add intersection observer for better performance
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in')
+        }
+      })
+    }, observerOptions)
+    
+    // Observe elements after component mounts
+    setTimeout(() => {
+      const elements = document.querySelectorAll('[data-animate]')
+      elements.forEach(el => observer.observe(el))
+    }, 500)
+    
+    return () => {
+      clearTimeout(timer)
+      observer.disconnect()
+    }
   }, [])
 
   const services = [
@@ -14,25 +45,29 @@ export default function HomePage() {
       title: "AI & Machine Learning",
       description: "Advanced AI solutions for business automation and intelligence",
       icon: "🧠",
-      href: "/services"
+      href: "/services",
+      features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
     {
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions for modern businesses",
       icon: "☁️",
-      href: "/services"
+      href: "/services",
+      features: ["Multi-Cloud Strategy", "Auto-scaling", "Cost Optimization"]
     },
     {
       title: "Cybersecurity",
       description: "Comprehensive security solutions to protect your business",
       icon: "🔒",
-      href: "/services"
+      href: "/services",
+      features: ["Threat Detection", "Compliance Management", "Security Audits"]
     },
     {
       title: "DevOps & Automation",
       description: "Streamlined development and deployment processes",
       icon: "⚡",
-      href: "/services"
+      href: "/services",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring"]
     }
   ]
 
@@ -42,6 +77,41 @@ export default function HomePage() {
     { number: "99.9%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" }
   ]
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      role: "CTO",
+      content: "Zion Tech Group transformed our infrastructure with their AI solutions. Our efficiency increased by 300%.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      company: "StartupXYZ",
+      role: "Founder",
+      content: "The cloud migration was seamless. We saved 60% on infrastructure costs while improving performance.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Global Finance",
+      role: "Security Director",
+      content: "Their cybersecurity solutions are top-notch. We've had zero security incidents since implementation.",
+      rating: 5
+    }
+  ]
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-400 mx-auto mb-4"></div>
+          <p className="text-white text-xl">Loading...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -101,13 +171,51 @@ export default function HomePage() {
             <h2 className="text-4xl font-bold text-white text-center mb-12">Our Core Services</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105">
-                  <div className="text-4xl mb-4">{service.icon}</div>
+                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all transform hover:scale-105 group">
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link href={service.href} className="text-purple-400 hover:text-purple-300 font-semibold">
+                  
+                  {/* Features list */}
+                  <div className="mb-4">
+                    <ul className="text-sm text-gray-400 space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link 
+                    href={service.href} 
+                    className="text-purple-400 hover:text-purple-300 font-semibold inline-flex items-center group-hover:translate-x-1 transition-transform"
+                  >
                     Learn More →
                   </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Section */}
+          <div className={`mt-20 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="text-4xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div className="border-t border-white/20 pt-4">
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-purple-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -125,8 +233,60 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
-      </main>
+          </div>
+
+          {/* Contact Section */}
+          <div className={`mt-20 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold text-white text-center mb-8">Get In Touch</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <span className="text-purple-400 mr-3">📧</span>
+                      <span className="text-gray-300">info@ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-purple-400 mr-3">📞</span>
+                      <span className="text-gray-300">+1 (555) 123-4567</span>
+                    </div>
+                    <div className="flex items-center">
+                      <span className="text-purple-400 mr-3">📍</span>
+                      <span className="text-gray-300">San Francisco, CA</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Quick Contact</h3>
+                  <form className="space-y-4">
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    />
+                    <textarea
+                      placeholder="Your Message"
+                      rows="3"
+                      className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                    ></textarea>
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
 
       {/* Footer */}
       <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
