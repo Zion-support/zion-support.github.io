@@ -49,7 +49,6 @@
     "public/build",
     "server/**",
     "zion-os/**",
-    "zion-os.disabled/**",
     "zion-ai-assistant/**",
     "zion-website/**",
     "apps.backup/**",
@@ -69,7 +68,7 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
-    "app/components/**",
-    "app/**/*.disabled/**"
+    "app/**/*.disabled/**",
+    "app/components/**"
   ]
 }

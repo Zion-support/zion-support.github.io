@@ -2,9 +2,7 @@
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
 export default [
   {
@@ -26,6 +24,9 @@ export default [
       'backup-merge-conflicts/**',
       'backup-problematic-files/**',
       'recovered-branches/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      'ts_files_backup/**',
       'temp_*/**',
       'temp-*/**',
       'temp/**',
@@ -78,9 +79,8 @@ export default [
     ]
   },
   js.configs.recommended,
-  ...tseslint.configs.recommended,
   {
-    files: ['app/**/*.{js,jsx,ts,tsx}', 'components/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}', 'src/**/*.{js,jsx,ts,tsx}'],
+    files: ['pages/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -89,8 +89,7 @@ export default [
     },
     plugins: {
       react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-hooks': reactHooks
     },
     settings: { react: { version: 'detect' } },
     rules: {
