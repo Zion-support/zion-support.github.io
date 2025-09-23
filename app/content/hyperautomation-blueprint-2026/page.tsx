@@ -18,7 +18,6 @@ export default function HyperautomationBlueprint2026() {
         keywords="hyperautomation, AI automation, enterprise blueprint, process orchestration"
         url="/content/hyperautomation-blueprint-2026"
       />
-
       <main className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

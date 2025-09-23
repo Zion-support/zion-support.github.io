@@ -15,8 +15,8 @@ export default function EdgeAIAgents2026() {
       <div className="min-h-screen bg-white">
         <SEO
           title="Edge AI Agents 2026: Real-Time Autonomy"
-          description="How edge-native AI agents enable ultra-low-latency decisioning and control with on-device intelligence in 2026."
-          keywords="edge AI, AI agents, real-time autonomy, on-device AI"
+          description="Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy."
+          keywords="edge ai, ai agents, real-time autonomy, on-device ai"
           url="/content/edge-ai-agents-2026"
         />
 

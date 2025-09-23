@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimized for Netlify deployment; use default output for Next 12
+  // Optimized for modern Next.js 14 deployment
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
@@ -30,8 +30,18 @@ const nextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
-  // Remove unsupported experimental flags for Next 12 compatibility
-  experimental: {},
+  // Modern experimental features for Next.js 14
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
 
   async redirects() {
     return [
