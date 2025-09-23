@@ -2,16 +2,6 @@ import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import React, { lazy, Suspense } from 'react'
 // Lightweight fallbacks for icons to avoid build-time bundling issues
-const ArrowRight = (props: any) => <span {...props}>→</span>
-const Brain = (props: any) => <span {...props}>🧠</span>
-const Cloud = (props: any) => <span {...props}>☁️</span>
-const Shield = (props: any) => <span {...props}>🛡️</span>
-const Zap = (props: any) => <span {...props}>⚡</span>
-const Users = (props: any) => <span {...props}>👥</span>
-const Globe = (props: any) => <span {...props}>🌐</span>
-const Target = (props: any) => <span {...props}>🎯</span>
-const Sparkles = (props: any) => <span {...props}>✨</span>
-const TrendingUp = (props: any) => <span {...props}>📈</span>
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
