@@ -46,7 +46,9 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user))
       else localStorage.removeItem('zion.user')
-    } catch {}
+    } catch (error) {
+      // Ignore persistence errors (e.g., private mode or quota exceeded)
+    }
   }, [user])
 
   const value = useMemo<UserContextValue>(() => ({

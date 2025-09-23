@@ -92,3 +92,25 @@ ts_files_backup/
 zion-os/
 zion-ai-assistant/
 zion-website/
+
+# Additional problematic/backup directories
+pages.__backup/
+pages.disabled_build/
+pages.blog.disabled/
+
+# Deprioritized roots not part of active Next app
+solutions/
+services/
+remote/
+
+# Individual problematic root files
+server.mjs
+performance-optimization.js
+performance-optimizations.js
+resolve-conflicts.js
+resolve-all-conflicts.js
+resolve-merge-conflicts-comprehensive.js
+seo-improvements.js
+security-config.js
+run-automation*.js
+simple-*.js
