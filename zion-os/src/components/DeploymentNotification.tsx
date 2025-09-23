@@ -89,51 +89,12 @@ export function DeploymentNotification({
   };
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {updates
-        .filter(update => visibleUpdates.has(update.id))
-        .map(update => (
-          <div
-            key={update.id}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg p-4 max-w-sm"
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex items-start space-x-3">
-                <div className={`w-2 h-2 rounded-full ${getStatusColor(update.status)} mt-2`} />
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-lg">{getStatusIcon(update.status)}</span>
-                    <h4 className="font-semibold text-gray-900">{update.title}</h4>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">{update.description}</p>
-                  <p className="text-xs text-gray-500 mt-2">
-                    {update.timestamp.toLocaleTimeString()}
-                  </p>
-                </div>
-              </div>
-              <button
-                onClick={() => handleDismiss(update.id)}
-                className="text-gray-400 hover:text-gray-600 ml-2"
-              >
-                ×
-              </button>
-            </div>
-            
-            {update.action && (
-              <div className="mt-3 flex space-x-2">
-                <Button
-                  size="sm"
-                  variant="primary"
-                  onClick={() => handleAction(update)}
-                >
-                  {update.action.label}
-                </Button>
-              </div>
-            )}
-          </div>
-        ))}
-    </div>
+    <DeploymentNotification
+      updates={updates}
+      onDismiss={handleDismiss}
+      onAction={handleAction}
+    />
   );
 }
 
-export default DeploymentNotification;
+ 
