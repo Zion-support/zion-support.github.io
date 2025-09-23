@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+// removed unused Link import
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',

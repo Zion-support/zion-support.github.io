@@ -1,8 +1,7 @@
 import eslintJs from '@eslint/js';
 import eslintReact from 'eslint-plugin-react';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
-import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
@@ -34,7 +33,7 @@ export default [
       '**/*.min.js'
     ]
   },
-  js.configs.recommended,
+  eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: [
@@ -43,11 +42,11 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
-      parser: tsParser,
+      parser: tseslint.parser,
       ecmaVersion: 2021,
       sourceType: 'module'
     },
-    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tsEslintPlugin },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tseslint.plugin },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
