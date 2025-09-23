@@ -5,7 +5,6 @@ import axiosRetry from 'axios-retry';
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger';
 import type { AxiosResponse } from 'axios';
 
-
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1';
 
 // Global interceptor for all axios instances
@@ -110,19 +109,6 @@ export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
 }
 
-<<<<<<< HEAD:src/services/apiClient.ts
-axiosRetry(apiClient, {
-  retries: 3,
-  retryCondition: (error) => {
-    return (
-      axiosRetry.isNetworkError(error) ||
-      axiosRetry.isIdempotentRequestError(error)
-    );
-  },
-});
-
-=======
->>>>>>> origin/backup-main-final-20250913-063409:src.broken/services/apiClient.ts
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
   async (error: unknown) => {

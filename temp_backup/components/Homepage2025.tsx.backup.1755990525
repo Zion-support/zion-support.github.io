@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense, lazy, useState, useEffect } from 'react';
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
 import Layout from './layout/Layout';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
@@ -199,46 +195,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-<<<<<<< HEAD
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4" />
-                Pioneering the Future of Technology
-              </div>
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight"
-            >
-              Zion Tech Group
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
-            >
-              Empowering businesses with cutting-edge AI, quantum computing, and innovative solutions that drive digital transformation and competitive advantage
-            </motion.p>
-              
-            {/* Enhanced Search Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="max-w-2xl mx-auto mb-8"
-            >
-              <EnhancedSearch 
-                onSearch={handleSearch}
-                placeholder="Search for AI services, quantum solutions, or autonomous systems..."
-                className="w-full"
-              />
-            </motion.div>
-              
-=======
               {/* Theme Toggle */}
               <motion.div
                 variants={itemVariants}
@@ -278,7 +234,6 @@ const Homepage2025: React.FC = () => {
               />
             </motion.div>
               
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
               <motion.p 
                 variants={itemVariants}
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
@@ -438,21 +393,11 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-center mt-12"
             >
-<<<<<<< HEAD
-              <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center gap-2">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
-                Explore Solutions
-              </button>
-=======
               <Link href="/services" aria-label="View all services">
                 <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black">
                   View All Services
                 </button>
               </Link>
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
             </motion.div>
           </div>
         </section>

@@ -7,20 +7,13 @@
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/og-image.jpg",
-=======
       "url": "https://ziontechgroup.com/og-image.svg",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap",
-=======
       "url": "https://ziontechgroup.com/site.webmanifest",
       "status": 200,
       "state": "OK",
@@ -43,7 +36,6 @@
     },
     {
       "url": "https://ziontechgroup.com/_next/static/chunks/webpack-02d184ef2e54511c.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
@@ -57,20 +49,13 @@
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/utils-vendor-BkLtITBR.js",
-=======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/index-0caabcd2c92d878a.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/index-DJYxq2y6.js",
-=======
       "url": "https://ziontechgroup.com/fonts/Inter-Variable.woff2",
       "status": 404,
       "state": "BROKEN",
@@ -78,93 +63,59 @@
     },
     {
       "url": "https://ziontechgroup.com/_next/static/chunks/framework-1548034a53843b9f.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/manifest.json",
-=======
       "url": "https://ziontechgroup.com/_next/static/puXOCR8OllF45BnFxJ7Ly/_buildManifest.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/react-vendor-ChHrLFfk.js",
-=======
       "url": "https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/icons-vendor-C7LX7ZF3.js",
-=======
       "url": "https://ziontechgroup.com/_next/static/puXOCR8OllF45BnFxJ7Ly/_ssgManifest.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/logo192.png",
-=======
       "url": "https://ziontechgroup.com/_next/static/chunks/pages/_app-65fac71aaa145cbe.js",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/css/index-DFnZGncG.css",
-=======
       "url": "https://ziontechgroup.com/contact/",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/ui-vendor-Q0n4tiXi.js",
-=======
       "url": "https://ziontechgroup.com/quote/",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
     },
     {
-<<<<<<< HEAD
-      "url": "https://ziontechgroup.com/js/animation-vendor-BZxzy8X-.js",
-=======
       "url": "https://ziontechgroup.com/contact",
->>>>>>> origin/auto/autonomy-17186719616
       "status": 200,
       "state": "OK",
       "parent": "https://ziontechgroup.com/",
       "failureDetails": []
-<<<<<<< HEAD
-    }
-  ],
-  "passed": true
-=======
     },
     {
       "url": "https://ziontechgroup.com/demo/",
@@ -3808,5 +3759,4 @@
     }
   ],
   "passed": false
->>>>>>> origin/auto/autonomy-17186719616
 }

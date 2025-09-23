@@ -78,21 +78,12 @@ const UltraFuturisticFooter2045: React.FC = () => {
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
-    { name: 'Facebook', icon: <Facebook className="w-4 h-4" />, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-500 to-blue-600' },
-    { name: 'Twitter', icon: <Twitter className="w-4 h-4" />, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-400 to-blue-500' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-4 h-4" />, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-600 to-blue-700' },
-    { name: 'Instagram', icon: <Instagram className="w-4 h-4" />, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-500 to-pink-500' },
-    { name: 'YouTube', icon: <Youtube className="w-4 h-4" />, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-500 to-red-600' },
-    { name: 'GitHub', icon: <Github className="w-4 h-4" />, href: 'https://github.com/ziontechgroup', color: 'from-gray-600 to-gray-700' }
-=======
     { name: 'Facebook', icon: Facebook, href: 'https://facebook.com', color: 'from-blue-500 to-blue-600' },
     { name: 'Twitter', icon: Twitter, href: 'https://twitter.com', color: 'from-cyan-400 to-blue-500' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', color: 'from-blue-600 to-blue-700' },
     { name: 'Instagram', icon: Instagram, href: 'https://instagram.com', color: 'from-purple-500 to-pink-500' },
     { name: 'YouTube', icon: Youtube, href: 'https://youtube.com', color: 'from-red-500 to-red-600' },
     { name: 'GitHub', icon: Github, href: 'https://github.com', color: 'from-gray-600 to-gray-700' }
->>>>>>> origin/cursor/website-audit-and-enhancement-de78
   ];
 
   const quickLinks = [
@@ -216,14 +207,10 @@ const UltraFuturisticFooter2045: React.FC = () => {
                         href={link.href}
                         className="text-gray-400 hover:text-purple-300 transition-colors duration-200 text-sm hover:translate-x-1 transform transition-transform duration-200 inline-block"
                       >
-<<<<<<< HEAD
-                        {link.name}
-=======
                         <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:scale-125 transition-transform duration-200"></div>
                         <span className="text-sm group-hover:text-cyan-400 transition-colors duration-200">
                           {link.name}
                         </span>
->>>>>>> origin/cursor/website-audit-and-enhancement-de78
                       </Link>
                     </li>
                   ))}

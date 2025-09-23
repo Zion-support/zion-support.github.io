@@ -24,8 +24,6 @@ import {
   SellerRoutes
 } from './routes';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -49,7 +47,6 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -76,9 +73,6 @@ import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
 import Checkout from './pages/Checkout';
 import ProductPage from './pages/ProductPage';
-<<<<<<< HEAD
-=======
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 const baseRoutes = [
@@ -96,13 +90,9 @@ const baseRoutes = [
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/new-products', element: <NewProductsPage /> },
 <<<<<<< HEAD
-  { path: '/product/:id', element: <ProductPage /> },
-=======
-<<<<<<< HEAD
   { path: '/more-products', element: <MoreProductsPage /> },
 =======
   { path: '/product/:id', element: <ProductPage /> },
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   { path: '/analytics', element: <Analytics /> },
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
@@ -123,13 +113,9 @@ const baseRoutes = [
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
 <<<<<<< HEAD
-  { path: '/cart', element: <Checkout /> },
-=======
-<<<<<<< HEAD
   { path: '/wishlist', element: <WishlistPage /> },
 =======
   { path: '/cart', element: <Checkout /> },
->>>>>>> origin/8aozst-codex/implement-cart-functionality-with-react-context
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },

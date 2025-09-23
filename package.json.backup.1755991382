@@ -22,16 +22,6 @@
     "health:check": "curl -s http://localhost:3000/api/health | jq",
     "health:monitor": "node -e \"setInterval(() => fetch('http://localhost:3000/api/health').then(r => r.json()).then(console.log).catch(console.error), 10000)\"",
     "build:netlify": "node scripts/optimized-build.cjs",
-<<<<<<< HEAD
-    "build:netlify:prepare": "prisma generate && node scripts/install-build-deps.cjs && node scripts/optimized-build.cjs",
-    "build:fast": "NEXT_DISABLE_CSS_INLINE=true SKIP_TYPE_CHECK=true NODE_OPTIONS='--no-deprecation --max-old-space-size=6144' npx next build --no-lint",
-    "build:react19": "REACT_19_MODE=true npm run build",
-    "build:production": "NODE_ENV=production npm run typecheck && npm run build",
-    "build:analyze": "node scripts/analyze-bundle.js",
-    "bundle:analyze": "node scripts/analyze-bundle.js",
-    "bundle:optimize": "node scripts/bundle-optimizer.cjs",
-    "bundle:report": "node scripts/bundle-analysis.cjs",
-=======
     "build:netlify:prepare": "node scripts/install-build-deps.cjs && node scripts/optimized-build.cjs",
     "build:fast": "NEXT_DISABLE_CSS_INLINE=true SKIP_TYPE_CHECK=true NODE_OPTIONS='--no-deprecation --max-old-space-size=6144' npx next build --no-lint",
     "build:react19": "REACT_19_MODE=true npm run build",
@@ -39,7 +29,6 @@
     "build:analyze": "ANALYZE=true npm run build && node scripts/analyze-build.cjs",
     "bundle:analyze": "node scripts/bundle-analyzer.cjs",
     "bundle:optimize": "node scripts/bundle-optimizer.cjs",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
     "bundle:monitor": "node scripts/bundle-monitor.cjs",
     "perf:audit": "node scripts/performance-audit.cjs",
@@ -64,17 +53,10 @@
     "lint:fix": "npx eslint . --fix",
     "lint:nextjs": "next lint",
     "preview": "NODE_ENV=production vite preview",
-<<<<<<< HEAD
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "test:jest": "echo 'Jest deprecated. Use vitest.' && exit 1",
-=======
     "test": "jest",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "test:vitest": "vitest run",
     "test:vitest:watch": "vitest",
     "test:vitest:coverage": "vitest run --coverage",
@@ -146,10 +128,6 @@
     "logs:health:summary": "node scripts/log-health-summary.cjs",
     "logs:monitor:realtime": "node scripts/realtime-log-monitor.cjs",
     "logs:monitor:dashboard": "node scripts/realtime-log-monitor.cjs",
-<<<<<<< HEAD
-    "env:check-placeholders": "node scripts/check-env-placeholders.cjs",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "logs:enhanced": "node -e \"require('./src/utils/enhanced-logger.ts').logger.info('Enhanced logging test', 'system')\"",
     "monitor:resources": "echo 'CPU:' && ps -A -o %cpu | awk '{sum+=$1} END {print sum\"%\"}' && echo 'Memory:' && free -h || vm_stat",
     "logs:realtime": "node scripts/enhanced-log-monitoring.cjs",
@@ -159,17 +137,11 @@
     "logs:security": "node scripts/security-log-monitor.cjs",
     "monitor:enhanced": "npm run logs:realtime",
     "monitor:all": "concurrently \"npm run logs:realtime\" \"npm run logs:performance\" \"npm run logs:security\"",
-<<<<<<< HEAD
-    "analyze:react19": "node scripts/react19-bundle-analysis.cjs",
-    "monitor:health": "curl -s https://ziontechgroup.netlify.app/api/health && echo ' - API Health: OK'",
-    "monitor:build": "npm run bundle:analyze && npm run monitor:health",
-=======
     "analyze:bundle": "node scripts/analyze-bundle.js",
     "analyze:react19": "node scripts/react19-bundle-analysis.cjs",
     "monitor:health": "curl -s https://ziontechgroup.netlify.app/api/health && echo ' - API Health: OK'",
     "monitor:build": "npm run bundle:analyze && npm run monitor:health",
     "bundle:report": "node scripts/bundle-analysis.cjs",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
     "performance:check": "node scripts/performance-monitor.cjs",
     "optimize:images": "find public -name '*.jpg' -o -name '*.png' | head -5",
@@ -189,10 +161,6 @@
     "fresh": "npm run clean && npm install && npm run build",
     "i18n:audit": "node scripts/i18n-audit.cjs",
     "i18n:hardcoded": "node scripts/find-hardcoded-strings.cjs",
-<<<<<<< HEAD
-    "i18n:missing": "node scripts/check-missing-i18n-keys.cjs",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "i18n:check": "npm run i18n:audit && npm run i18n:hardcoded",
     "i18n:report": "npm run i18n:check && echo 'i18n reports generated: i18n-audit-report.md and hardcoded-strings-report.md",
     "build:cache": "node scripts/cached-build.cjs",
@@ -211,12 +179,7 @@
     "automation:diagnose": "node automation/tests/system-diagnostic.js",
     "automation:test-slack": "node automation/tests/test-slack-connection.js",
     "automation:test-cursor": "node automation/tests/test-cursor-connection.js",
-<<<<<<< HEAD
-    "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js",
-    "optimize:bundle": "node scripts/optimize-bundle.cjs"
-=======
     "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -224,11 +187,7 @@
   "dependencies": {
     "@chainsafe/libp2p-gossipsub": "^14.1.1",
     "@chainsafe/libp2p-noise": "^16.1.3",
-<<<<<<< HEAD
-    "@chakra-ui/react": "3.21.1",
-=======
     "@chakra-ui/react": "2.10.9",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "@datadog/browser-logs": "^6.12.3",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
@@ -237,11 +196,6 @@
     "@hookform/resolvers": "3.10.0",
     "@libp2p/identify": "^3.0.37",
     "@libp2p/tcp": "^10.1.17",
-<<<<<<< HEAD
-    "@opentelemetry/api": "^1.8.0",
-    "@opentelemetry/core": "^1.8.0",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "@orbitdb/core": "^3.0.2",
     "@prisma/client": "^6.10.1",
     "@radix-ui/react-accordion": "^1.2.11",
@@ -277,18 +231,11 @@
     "@sentry/tracing": "^7.120.3",
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.4.0",
-<<<<<<< HEAD
-    "@supabase/ssr": "0.7.0-rc.2",
-    "@supabase/supabase-js": "^2.50.2",
-    "@tanstack/react-query": "^5.81.5",
-    "@types/lodash.debounce": "^4.0.9",
-=======
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.50.2",
     "@tanstack/react-query": "^5.81.5",
     "@types/lodash.debounce": "^4.0.9",
     "@types/next": "^9.0.0",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "@types/react-redux": "^7.1.34",
     "autoprefixer": "^10.4.21",
     "axios": "^1.10.0",
@@ -300,15 +247,9 @@
     "cors": "^2.8.5",
     "critters": "^0.0.23",
     "datastore-core": "^10.0.4",
-<<<<<<< HEAD
-    "date-fns": "2.30.0",
-    "dd-trace": "^3.58.0",
-    "dotenv": "^16.6.1",
-=======
     "date-fns": "^3.6.0",
     "dd-trace": "^3.58.0",
     "dotenv": "^16.5.0",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "embla-carousel-react": "^8.6.0",
     "ethers": "^6.14.4",
     "file-saver": "^2.0.5",
@@ -325,18 +266,10 @@
     "jspdf-autotable": "^5.0.2",
     "jszip": "^3.10.1",
     "libp2p": "^2.8.12",
-<<<<<<< HEAD
-    "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "lodash.debounce": "^4.0.8",
-    "logrocket": "^4.0.0",
-    "lucide-react": "^0.525.0",
-=======
     "lodash-es": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "logrocket": "^4.0.0",
     "lucide-react": "^0.523.0",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "micro": "^10.0.1",
     "mongoose": "^8.16.0",
     "morgan": "^1.10.0",
@@ -352,11 +285,7 @@
     "react-dom": "^19.1.0",
     "react-error-boundary": "^3.1.4",
     "react-focus-lock": "^2.13.6",
-<<<<<<< HEAD
-    "react-hook-form": "7.59.0",
-=======
     "react-hook-form": "7.58.1",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "react-hot-toast": "^2.5.2",
     "react-i18next": "^15.5.3",
     "react-loading-skeleton": "^3.5.0",
@@ -372,11 +301,7 @@
     "stripe": "^18.2.1",
     "swr": "^2.3.3",
     "tailwind-merge": "^3.3.1",
-<<<<<<< HEAD
-    "tailwindcss": "^4.1.11",
-=======
     "tailwindcss": "^3.4.17",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.172.0",
     "tslib": "^2.8.1",
@@ -387,23 +312,14 @@
     "web-push": "^3.6.7",
     "web-vitals": "^5.0.3",
     "yup": "^1.6.1",
-<<<<<<< HEAD
-    "zod": "^3.25.67",
-    "prisma": "^6.10.1"
-=======
     "zod": "^3.25.67"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-<<<<<<< HEAD
-    "@eslint/js": "^8.57.1",
-=======
     "@eslint/js": "^8.57.0",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "@modelcontextprotocol/sdk": "^1.13.2",
     "@next/bundle-analyzer": "^15.3.4",
     "@pact-foundation/pact": "^15.0.1",
@@ -434,10 +350,6 @@
     "@vitejs/plugin-react": "^4.6.0",
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
-<<<<<<< HEAD
-    "ajv": "^8.12.0",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "babel-jest": "^29.7.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -472,19 +384,11 @@
     "node-mocks-http": "^1.17.2",
     "npm-check-updates": "^18.0.1",
     "prettier": "^3.6.1",
-<<<<<<< HEAD
-=======
     "prisma": "^6.10.1",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "puppeteer": "^24.10.2",
     "redux-mock-store": "^1.5.5",
     "rollup-plugin-visualizer": "^5.14.0",
     "sass": "^1.89.2",
-<<<<<<< HEAD
-    "source-map-explorer": "^2.5.3",
-    "string-replace-loader": "^3.2.0",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "supertest": "^6.3.4",
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
@@ -492,12 +396,7 @@
     "typescript-eslint": "^8.35.0",
     "vite": "^6.3.5",
     "vitest": "^3.2.4",
-<<<<<<< HEAD
-    "whatwg-fetch": "^3.6.20",
-    "babel-plugin-react-compiler": "19.1.0-rc.2"
-=======
     "whatwg-fetch": "^3.6.20"
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "overrides": {
     "typescript-eslint": "^8.35.0",
@@ -508,16 +407,12 @@
     "eslint": "^8.57.0",
     "glob": "^11.0.2",
     "rimraf": "^6.0.1",
-<<<<<<< HEAD
-    "date-fns": "2.30.0"
-=======
     "formik": {
       "lodash": "npm:lodash-es@^4.17.21"
     },
     "react-day-picker": {
       "date-fns": "^3.6.0"
     }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
   },
   "engines": {
     "node": ">=18.17.0"
@@ -542,26 +437,12 @@
   },
   "scripts": {
 <<<<<<< HEAD
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
-    "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-    "sitemap": "node scripts/generate-sitemap.mjs",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
-    "export": "node fix_empty_pages.js && NODE_OPTIONS=--openssl-legacy-provider next build && next export",
-    "start": "next start",
-    "whitepaper:pdf:install": "npm i pdfkit@0.13.0 --save",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "type-check": "tsc --noEmit",
-    "prepare": "husky install",
-=======
-<<<<<<< HEAD
     "automations": "node scripts/run-automations.mjs",
 =======
     "test:jest": "jest --runInBand --passWithNoTests",
     "test:mocha": "mocha",
     "codex:capture": "node scripts/codex-capture-log.mjs",
     "codex:run": "node scripts/codex-test-loop.mjs",
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
@@ -636,12 +517,6 @@
     "automation:orchestrator": "node automation/intelligent-orchestrator.cjs continuous",
     "automation:dashboard": "node automation/automation-dashboard.cjs start",
     "automation:all": "node automation/launch-all-automation.cjs start",
-<<<<<<< HEAD
-    "automation:status": "node automation/launch-all-automation.cjs status",
-    "automation:report": "node automation/launch-all-automation.cjs report",
-    "automation:git-sync": "node automation/git-sync.cjs",
-    "automation:improvement": "node automation/continuous-automation-improvement-system.js",
-=======
     "automation:status": "node automation/launch-all-automation.cjs start",
     "automation:report": "node automation/launch-all-automation.cjs report",
     "intelligence:start": "node automation/app-intelligence-enhancer.cjs",
@@ -693,20 +568,14 @@
     "redundancy:pm2:legacy:stop": "pm2 stop ecosystem.redundancy.cjs",
     "redundancy:pm2:legacy:restart": "pm2 restart ecosystem.redundancy.cjs",
     "redundancy:pm2:legacy:status": "pm2 status",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "automation:improvement:dev": "nodemon automation/continuous-automation-improvement-system.js",
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
     "automation:beautify": "node automation/beautify-ui.cjs",
-<<<<<<< HEAD
-    "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
-    "autonomous:stop": "node automation/launch-autonomous-systems-clean.js stop",
-=======
     "autonomous:start": "node automation/autonomous-system-manager.cjs start",
     "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
     "autonomous:factory": "node automation/autonomous-error-monitoring-factory.js",
     "autonomous:orchestrator": "node automation/autonomous-automation-orchestrator.js",
@@ -787,9 +656,6 @@
     "cursor:chat:analyze": "node automation/cursor-chat-analyzer.cjs && node automation/cursor-chat-factory.cjs",
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
-<<<<<<< HEAD
-    "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",
-=======
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",
     "layout:audit": "node automation/layout-crawler.cjs",
     "layout:fix": "node automation/layout-fixer.cjs",
@@ -797,7 +663,6 @@
     "layout:run": "npm run layout:audit && npm run layout:fix && npm run layout:agents",
     "footer:inject": "node automation/footer-injector.cjs",
     "footer:cron": "bash automation/footer-cron.sh start",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "promo:start": "node automation/site-promo-orchestrator.cjs",
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
@@ -813,16 +678,6 @@
     "alignment:start": "node automation/alignment-orchestrator.cjs",
     "alignment:cron:start": "bash automation/alignment-cron.sh",
     "alignment:scan": "node automation/chat-fetcher.cjs && (node automation/google-doc-fetcher.cjs || true) && node automation/alignment-crawler.cjs && node automation/alignment-analyzer.cjs && node automation/alignment-factory.cjs && node automation/alignment-dev-factory.cjs",
-<<<<<<< HEAD
-    "maintenance:run": "node automation/site-maintenance-orchestrator.cjs",
-    "maintenance:cron:start": "bash automation/site-maintenance-cron.sh start",
-    "maintenance:cron:stop": "bash automation/site-maintenance-cron.sh stop",
-    "maintenance:cron:status": "bash automation/site-maintenance-cron.sh status",
-    "maintenance:cron:run": "bash automation/site-maintenance-cron.sh run",
-    "health:start": "node automation/auto-health-monitor/index.mjs",
-    "health:dev": "nodemon automation/auto-health-monitor/index.mjs",
-    "automation:all:plus": "npm run automation:all & npm run health:start",
-=======
     "automation:pm2": "npm run pm2:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:restart": "npm run pm2:restart && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:status": "npm run pm2:status",
@@ -832,7 +687,6 @@
     "automation:pm2:resurrect": "node scripts/pm2-resurrect-hook.cjs",
     "automation:pm2:fastads": "npm run pm2:fastads:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
@@ -854,10 +708,6 @@
     "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-<<<<<<< HEAD
-    "git:sync": "node automation/advanced-git-sync.cjs",
-=======
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
     "git:pull": "node automation/git-pull-rebase.cjs",
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
@@ -876,15 +726,10 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "talent:optimize": "node automation/talent-profile-optimizer.cjs"
-=======
     "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
   },
   "bin": {
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
   },
 =======
     "auto:intel": "node automation/auto-market-intel.cjs",
@@ -912,15 +757,8 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@semaphore-protocol/contracts": "^4.13.0-beta.1",
-    "@semaphore-protocol/identity": "^4.13.0-beta.1",
-    "@semaphore-protocol/proof": "^4.13.0-beta.1",
-=======
     "@pinata/sdk": "^2.1.0",
     "@spruceid/didkit-wasm-node": "^0.2.1",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",
@@ -935,12 +773,7 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "ethers": "^6.14.0",
-=======
     "ethers": "^6.13.4",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
     "events": "^3.3.0",
     "formidable": "^3.5.4",
 =======
@@ -953,31 +786,16 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
-<<<<<<< HEAD
-    "ipfs-http-client": "^60.0.0",
-    "lucide-react": "^0.536.0",
-    "mime-types": "^3.0.1",
-    "next": "^11.1.4",
-    "node-cron": "^4.2.1",
-<<<<<<< HEAD
-    "openai": "^5.12.2",
-=======
     "openai": "^5.11.0",
     "orbit-db": "^0.28.0",
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
     "path": "^0.12.7",
     "pdfkit": "^0.13.0",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
-    "react-json-view": "^1.21.3",
-    "uuid": "^11.1.0"
-=======
     "uuid": "^11.1.0",
     "web3.storage": "^4.6.0"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
@@ -999,43 +817,6 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
-<<<<<<< HEAD
-    "@netlify/plugin-nextjs": "4.41.3",
-    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
-    "@nomicfoundation/hardhat-ethers": "^3.1.0",
-    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.14",
-    "@nomicfoundation/hardhat-network-helpers": "^1.1.0",
-    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
-    "@nomicfoundation/hardhat-verify": "^2.1.1",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "12.1.5",
-    "@typechain/ethers-v6": "^0.5.1",
-    "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.20",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^24.2.0",
-    "@types/node-cron": "^3.0.11",
-    "@types/react": "^17.0.34",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
-    "autoprefixer": "^10.4.16",
-    "dotenv": "^17.2.1",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.0.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "hardhat": "^2.26.2",
-    "hardhat-gas-reporter": "^2.3.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
-    "postcss": "^8.4.32",
-    "solidity-coverage": "^0.8.16",
-    "tailwindcss": "^3.4.0",
-    "ts-node": "^10.9.2",
-    "typechain": "^8.3.2",
-    "typescript": "^5.6.3"
-=======
     "@testing-library/jest-dom": "^6.6.4",
 <<<<<<< HEAD
     "@testing-library/react": "^14.3.1",
@@ -1053,7 +834,6 @@
     "@types/react": "17.0.34",
     "@types/react-dom": "17.0.11",
     "@types/supertest": "^6.0.3",
->>>>>>> origin/cursor/build-zion-ai-api-developer-documentation-hub-2aa3
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
@@ -1080,9 +860,6 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",
@@ -1105,7 +882,6 @@
 =======
   },
   "type": "module"
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
   }
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

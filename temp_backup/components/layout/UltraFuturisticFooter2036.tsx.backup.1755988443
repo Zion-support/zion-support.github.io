@@ -42,18 +42,6 @@ const footerSections = [
     description: 'Cutting-edge future technology services',
     icon: <Lightbulb className="w-5 h-5 text-yellow-400" />,
     links: [
-<<<<<<< HEAD
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', featured: true },
-      { name: 'Quantum Secure Communication', href: '/quantum-secure-communication-hub', featured: true },
-      { name: 'Autonomous DevOps Orchestrator', href: '/autonomous-devops-orchestrator', featured: true },
-      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', featured: true },
-      { name: 'Neural Finance Predictor', href: '/neural-finance-predictor', featured: true },
-      { name: 'Zero Trust Network Automation', href: '/zero-trust-network-automation', featured: true },
-      { name: 'Space Resource Analytics', href: '/space-resource-analytics-platform' },
-      { name: 'Metaverse Development Studio', href: '/metaverse-development-studio-pro' },
-      { name: 'AI Ethics Governance', href: '/ai-ethics-governance-framework' },
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' }
-=======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', featured: true },
       { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', featured: true },
       { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform', featured: true },
@@ -64,7 +52,6 @@ const footerSections = [
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
       { name: 'AI Content Generator', href: '/ai-content-generator' },
       { name: 'Quantum IoT Platform', href: '/quantum-iot-platform' }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5d7f
     ]
   },
   {

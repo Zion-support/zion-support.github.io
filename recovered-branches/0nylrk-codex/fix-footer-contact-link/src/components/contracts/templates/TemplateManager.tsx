@@ -2,11 +2,7 @@
 import { useState } from "react";
 import { useContractTemplates } from "@/hooks/useContractTemplates";
 import { ContractTemplate } from "@/types/contracts";
-<<<<<<< HEAD
-import { DialogContentDialogHeaderDialogTitle } from "@/components/ui/dialog";
-=======
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
->>>>>>> origin/auto/autonomy-17186719616
 import { Button } from "@/components/ui/button";
 import { TemplateList } from "./TemplateList";
 import { TemplateSaveForm } from "./TemplateSaveForm";
@@ -26,15 +22,9 @@ export function TemplateManager({
   onSelectTemplate,
   currentValues
 }: TemplateManagerProps) {
-<<<<<<< HEAD
-  const [modesetMode] = useState<"list" | "save">("list");
-  const [selectedTemplatesetSelectedTemplate] = useState<ContractTemplate | null>(null);
-  const { templatesisLoading } = useContractTemplates();
-=======
   const [mode, setMode] = useState<"list" | "save">("list");
   const [selectedTemplate, setSelectedTemplate] = useState<ContractTemplate | null>(null);
   const { templates, isLoading } = useContractTemplates();
->>>>>>> origin/auto/autonomy-17186719616
   const { toast } = useToast();
 
   const handleSelectTemplate = (template: ContractTemplate) => {
@@ -43,12 +33,8 @@ export function TemplateManager({
       onClose();
       toast({
         title: "Template loaded",
-<<<<<<< HEAD
-        description: `Template "${template.title}" has been loaded.`});
-=======
         description: `Template "${template.title}" has been loaded.`,
       });
->>>>>>> origin/auto/autonomy-17186719616
     }
   };
 

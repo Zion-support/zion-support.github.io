@@ -1,9 +1,5 @@
 <<<<<<< HEAD:backup-merge-conflicts/PageTransition.test.tsx.backup
-<<<<<<< HEAD:__tests__/PageTransition.test.tsx
-=======
-<<<<<<< HEAD:backup-merge-conflicts/PageTransition.test.tsx.backup
 <<<<<<< HEAD
->>>>>>> pr-11914:backup-merge-conflicts/PageTransition.test.tsx.backup
 =======
 >>>>>>> pr-11913:__tests__/PageTransition.test.tsx
 import React from 'react';
@@ -22,13 +18,8 @@ describe('PageTransition', () => {
 });
 import React from \'react\'; import { render,screen } from \'@testing-library/react\'; import \'@testing-library/jest-dom\'; import PageTransition from \'../components/PageTransition\'; describe(\'PageTransition\',() => { test(\'renders without crashing\',() => { render(<PageTransition />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); test(\'displays correct content\',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe("PageTransition",() => { test("renders without crashing",() => { render(<PageTransition />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content",() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});''"
-<<<<<<< HEAD:backup-merge-conflicts/PageTransition.test.tsx.backup
-<<<<<<< HEAD:__tests__/PageTransition.test.tsx
-import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import PageTransition from '../components/PageTransition'; describe('PageTransition',() => { test('renders without crashing',() => { render(<PageTransition />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
-=======
 =======
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import PageTransition from '../components/PageTransition'; describe('PageTransition',() => { test('renders without crashing',() => { render(<PageTransition />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('displays correct content',() => { render(<PageTransition />); expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument()})});
->>>>>>> main
 >>>>>>> main
 >>>>>>> main
 =======

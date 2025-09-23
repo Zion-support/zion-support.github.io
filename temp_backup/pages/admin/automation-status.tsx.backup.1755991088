@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AutomationStatus() { return <div className="py-10">Automation Status</div> }
-=======
 import Head from 'next/head';
 
 export default function AdminAutomationStatusPage() {
@@ -14,4 +11,3 @@ export default function AdminAutomationStatusPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

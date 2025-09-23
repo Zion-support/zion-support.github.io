@@ -1,11 +1,8 @@
 
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from 'lucide-react'
->>>>>>> origin/auto/autonomy-17186719616
 
 export function PaymentMethods() {
   // Mock payment methods
@@ -17,12 +14,8 @@ export function PaymentMethods() {
       last4: "4242",
       expMonth: 12,
       expYear: 2025,
-<<<<<<< HEAD
-      isDefault: true},
-=======
       isDefault: true,
     },
->>>>>>> origin/auto/autonomy-17186719616
     {
       id: "pm-2",
       type: "credit_card",
@@ -30,26 +23,15 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-<<<<<<< HEAD
-      isDefault: false}
-  ],
-=======
       isDefault: false,
     }
   ];
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-<<<<<<< HEAD
-        <CardDescription>
-          Manage your payment methods for automatic billing
-        </CardDescription>
-=======
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
->>>>>>> origin/auto/autonomy-17186719616
       </CardHeader>
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
@@ -95,9 +77,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }

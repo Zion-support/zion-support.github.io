@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-  // Performance optimizations
-=======
   // Enable React strict mode for better development experience
   reactStrictMode: true,
   
@@ -12,13 +9,10 @@ const nextConfig = {
   },
   
   // Enable experimental features for better performance
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-cb9f
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,
   },
-
-
 
   // Image optimization
   images: {

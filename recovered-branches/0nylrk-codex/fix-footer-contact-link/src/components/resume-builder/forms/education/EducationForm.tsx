@@ -9,15 +9,6 @@ import { EducationList } from './EducationList';
 import { EducationFormFields } from './EducationFormFields';
 
 export function EducationForm({ 
-<<<<<<< HEAD
-  resumeId
-  educationEntries
-  onComplete
-  onBack 
-}: EducationFormProps) {
-  const { addEducationupdateEducationdeleteEducationisLoading } = useResume();
-  const [editingIdsetEditingId] = useState<string | null>(null);
-=======
   resumeId, 
   educationEntries, 
   onComplete, 
@@ -25,17 +16,12 @@ export function EducationForm({
 }: EducationFormProps) {
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
->>>>>>> origin/auto/autonomy-17186719616
   
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue;
-<<<<<<< HEAD
-    return format(dateValue'yyyy-MM-dd');
-=======
     return format(dateValue, 'yyyy-MM-dd');
->>>>>>> origin/auto/autonomy-17186719616
   };
 
   const handleAddOrUpdate = async (data: any) => {
@@ -47,15 +33,6 @@ export function EducationForm({
       end_date: data.is_current ? undefined : (data.end_date || undefined),
       is_current: data.is_current,
       description: data.description,
-<<<<<<< HEAD
-      location: data.location};
-
-    let success;
-    if (editingId) {
-      success = await updateEducation(editingIdeducationData);
-    } else {
-      success = await addEducation(resumeIdeducationData);
-=======
       location: data.location,
     };
 
@@ -64,7 +41,6 @@ export function EducationForm({
       success = await updateEducation(editingId, educationData);
     } else {
       success = await addEducation(resumeId, educationData);
->>>>>>> origin/auto/autonomy-17186719616
     }
 
     if (success) {
@@ -111,10 +87,6 @@ export function EducationForm({
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}

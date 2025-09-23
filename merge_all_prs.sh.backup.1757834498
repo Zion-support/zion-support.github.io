@@ -1,77 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Comprehensive PR merge script
-# This script will merge all open PRs into main branch
-
-set -e
-
-echo "🚀 Starting comprehensive PR merge process..."
-
-# Function to merge a branch with conflict resolution
-merge_branch() {
-    local branch_name=$1
-    local pr_number=$2
-    
-    echo "📋 Processing branch: $branch_name (PR #$pr_number)"
-    
-    # Check if branch exists locally
-    if git show-ref --verify --quiet refs/heads/$branch_name; then
-        echo "  ✅ Branch exists locally"
-    else
-        echo "  📥 Fetching branch from remote..."
-        git fetch origin $branch_name:$branch_name
-    fi
-    
-    # Check if branch can be merged without conflicts
-    echo "  🔍 Checking for merge conflicts..."
-    if git merge-base --is-ancestor $branch_name main; then
-        echo "  ✅ Branch is already merged"
-        return 0
-    fi
-    
-    # Try to merge
-    echo "  🔄 Attempting to merge $branch_name into main..."
-    if git merge $branch_name --no-ff -m "Merge $branch_name (PR #$pr_number) into main"; then
-        echo "  ✅ Successfully merged $branch_name"
-        return 0
-    else
-        echo "  ⚠️  Merge conflict detected in $branch_name"
-        
-        # Check which files have conflicts
-        conflict_files=$(git diff --name-only --diff-filter=U)
-        echo "  📝 Conflicted files: $conflict_files"
-        
-        # Try to resolve conflicts automatically
-        echo "  🔧 Attempting automatic conflict resolution..."
-        
-        # For each conflicted file, try to resolve
-        for file in $conflict_files; do
-            echo "    🔨 Resolving conflicts in $file"
-            
-            # Check if it's a merge conflict
-            if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-                echo "      📄 Processing merge conflict in $file"
-                
-                # Try to resolve by keeping both changes where possible
-                # Remove conflict markers and keep both versions
-                sed -i '/^<<<<<<< HEAD$/d' "$file"
-                sed -i '/^=======$/d' "$file"
-                sed -i '/^>>>>>>> /d' "$file"
-                
-                # Add the resolved file
-                git add "$file"
-            fi
-        done
-        
-        # Try to complete the merge
-        if git commit --no-edit; then
-            echo "  ✅ Successfully resolved conflicts and merged $branch_name"
-            return 0
-        else
-            echo "  ❌ Failed to resolve conflicts in $branch_name"
-            git merge --abort
-=======
 # Comprehensive PR Merge Script
 # This script will merge all open PRs into the main branch systematically
 
@@ -182,47 +110,11 @@ merge_branch() {
             error "Could not resolve conflicts for $branch_name (PR #$pr_number)"
             # Abort the merge
             git merge --abort || true
->>>>>>> origin/backup-main-final-20250913-063409
             return 1
         fi
     fi
 }
 
-<<<<<<< HEAD
-# Get list of open PRs from the JSON file
-echo "📊 Extracting open PR information..."
-
-# Extract PR numbers and branch names
-pr_data=$(grep -A 20 '"state": "open"' /workspace/_open_prs.json | grep -E '"number":|"head":' | paste - - | head -30)
-
-echo "Found open PRs:"
-echo "$pr_data"
-
-# Process each PR
-echo "$pr_data" | while IFS=$'\t' read -r number_line head_line; do
-    pr_number=$(echo "$number_line" | grep -o '"number": [0-9]*' | grep -o '[0-9]*')
-    branch_name=$(echo "$head_line" | grep -o '"ref": "[^"]*"' | cut -d'"' -f4)
-    
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
-        echo ""
-        echo "🔄 Processing PR #$pr_number: $branch_name"
-        merge_branch "$branch_name" "$pr_number"
-    fi
-done
-
-echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Summary:"
-echo "  - Total PRs processed: 30"
-echo "  - Check git log for details of merged commits"
-
-# Push all changes to main
-echo ""
-echo "🚀 Pushing all changes to main branch..."
-git push origin main
-
-echo "✅ All done! Main branch has been updated with all merged changes."
-=======
 # Function to resolve conflicts automatically
 resolve_conflicts() {
     local branch_name="$1"
@@ -326,4 +218,3 @@ main() {
 
 # Run the main function
 main "$@"
->>>>>>> origin/backup-main-final-20250913-063409

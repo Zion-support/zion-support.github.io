@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter } from 'next/router'
-export default function TalentSlug(){
-  const { query } = useRouter()
-  return <div style={{padding:20}}>Talent: {String(query.slug||'')}</div>
-}
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -26,7 +18,6 @@ const [slug]: NextPage = () => {
 };
 
 export default [slug];
->>>>>>> origin/cursor/deploy-offworld-zion-os-on-ipfs-and-orbitdb-92ee
 =======
 import { useRouter } from 'next/router';
 export default function TalentDetail(){

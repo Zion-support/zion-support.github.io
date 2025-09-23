@@ -85,8 +85,4 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
-<<<<<<< HEAD
   console.error(chalk.red(" Dashboard "error": ")
-=======
-  console.error(chalk.red(" Dashboard "error": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

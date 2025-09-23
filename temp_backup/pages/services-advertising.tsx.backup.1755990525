@@ -151,9 +151,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
-<<<<<<< HEAD
-export default ServicesAdvertising;
-=======
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">LMS Starter</h2>
 					<p className="text-slate-300">Courses, quizzes, certificates, and progress tracking in days.</p>
@@ -1658,4 +1655,3 @@ export default ServicesAdvertising;
 		</div>
 	);
 }
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5

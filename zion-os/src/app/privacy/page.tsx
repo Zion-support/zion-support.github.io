@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function PrivacyPage(): React.ReactElement {
+export default function PrivacyPage() {
 	return (
-		<main>
-			<h1>Privacy Policy</h1>
-			<p>Read about how we handle your data.</p>
-		</main>
+		<div className="max-w-4xl mx-auto p-8">
+			<h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
+			<p className="text-white/70">Our privacy policy will be published here.</p>
+		</div>
 	);
 }

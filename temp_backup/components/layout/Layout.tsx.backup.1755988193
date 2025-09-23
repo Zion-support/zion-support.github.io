@@ -2,11 +2,7 @@ import React, { useState, useEffect } from 'react';
 import UltraFuturisticNavigation2045 from './UltraFuturisticNavigation2045';
 import UltraFuturisticFooter2025 from './UltraFuturisticFooter2025';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
-<<<<<<< HEAD
-import UltraFuturisticBackground2046 from '../backgrounds/UltraFuturisticBackground2046';
-=======
 import UltraFuturisticBackground2040 from '../backgrounds/UltraFuturisticBackground2040';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4856
 import TopContactBar from './TopContactBar';
 import UltraFuturisticBackground2036 from '../backgrounds/UltraFuturisticBackground2036';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
@@ -24,14 +20,12 @@ export default function Layout({ children }: LayoutProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
-
   useEffect(() => {
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme') as 'dark' | 'light';
     if (savedTheme) {
       setTheme(savedTheme);
     }
-
 
     // Simulate loading time for better UX
     const timer = setTimeout(() => setIsLoading(false), 1000);
@@ -88,11 +82,7 @@ export default function Layout({ children }: LayoutProps) {
         <a href="#main" className="skip-link">Skip to main content</a>
         
         {/* Futuristic Background */}
-<<<<<<< HEAD
-        <UltraFuturisticBackground2046 />
-=======
         <UltraFuturisticBackground2040 theme="futuristic-2040" intensity="high" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4856
         
         {/* Layout Structure */}
         <div className="relative z-10">

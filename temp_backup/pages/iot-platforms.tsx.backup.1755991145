@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function IoTPlatforms() { return <div className="py-10">IoT Platforms</div> }
-=======
 import Head from 'next/head';
 
 export default function IoTPlatformsPage() {
@@ -14,4 +11,3 @@ export default function IoTPlatformsPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

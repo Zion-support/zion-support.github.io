@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -20,13 +18,9 @@ import {
 import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
 
-
-
-
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -41,9 +35,6 @@ import { apiClient } from "@/utils/apiClient";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 export default function Contact() {
@@ -170,8 +161,6 @@ export default function Contact() {
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await api.post(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
         {
@@ -181,7 +170,6 @@ export default function Contact() {
 
       if (response.status < 200 || response.status >= 300) {
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
@@ -193,9 +181,6 @@ export default function Contact() {
       });
       
       if (!response.ok) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         throw new Error("Failed to get response from AI assistant");
       }

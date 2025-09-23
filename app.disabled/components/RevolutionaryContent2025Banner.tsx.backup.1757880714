@@ -3,42 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-const RevolutionaryContent2025Banner = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  const revolutionaryContent = [
-    {
-      id: 'enterprise-ai-revolution',
-      title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide to 1,000% ROI',
-      url: '/blog/ai-2025-enterprise-ai-revolution-ultimate-breakthrough',
-      metrics: '1,000% ROI',
-      description: 'Fortune 500 companies achieving unprecedented results',
-      isNew: true
-    },
-    {
-      id: 'customer-experience-revolution',
-      title: 'AI 2025: The Customer Experience Revolution - Ultimate Guide to 750% ROI',
-      url: '/blog/ai-2025-customer-experience-revolution-ultimate-guide',
-      metrics: '750% ROI',
-      description: 'Transform customer experience with AI-powered solutions',
-      isNew: true
-    },
-    {
-      id: 'manufacturing-transformation',
-      title: 'AI 2025 Manufacturing Transformation: $4.2B Company Achieves 1,100% ROI',
-      url: '/case-studies/ai-2025-manufacturing-transformation-ultimate-success-story',
-      metrics: '1,100% ROI',
-      description: 'Global manufacturing leader achieves breakthrough results',
-      isNew: true
-    }
-  ];
-=======
 const RevolutionaryContent2025Banner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,30 +28,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
         <div className="absolute top-20 left-1/2 w-40 h-40 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
       </div>
 
-<<<<<<< HEAD
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Content */}
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
-                🚀 REVOLUTIONARY 2025 CONTENT
-              </span>
-              {currentContent.isNew && (
-                <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
-                  NEW
-                </span>
-              )}
-            </div>
-            
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
-              {currentContent.title}
-            </h2>
-            
-            <p className="text-lg opacity-90 mb-4">
-              {currentContent.description}
-            </p>
-=======
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <motion.div
@@ -110,7 +53,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
             that are transforming businesses worldwide in 2025.
 =======
 =======
->>>>>>> origin/main
 =======
 >>>>>>> cursor/create-and-deploy-new-content-60fa
     <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-16">
@@ -180,9 +122,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
               }`}
             />
           ))}
-<<<<<<< HEAD
-        </div>
-=======
         </motion.div>
 
         {/* Stats Section */}
@@ -342,12 +281,9 @@ const RevolutionaryContent2025Banner: React.FC = () => {
               >
                 Schedule Consultation
 <<<<<<< HEAD
->>>>>>> origin/main
 =======
 >>>>>>> origin/main
               </Link>
-<<<<<<< HEAD
-=======
 =======
     <div className="relative overflow-hidden">
       {/* Background with animated gradient */}
@@ -360,7 +296,6 @@ const RevolutionaryContent2025Banner: React.FC = () => {
         <div className="absolute top-32 right-20 w-16 h-16 bg-white opacity-10 rounded-full animate-pulse delay-1000" />
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white opacity-10 rounded-full animate-pulse delay-2000" />
         <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-white opacity-10 rounded-full animate-pulse delay-3000" />
->>>>>>> 0898e5119e1743cc34bc24d7b78e613422d39ff1
       </div>
 
       {/* Close Button */}

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, RefreshCw } from 'lucide-react';
 
@@ -20,18 +16,6 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [showMetrics, setShowMetrics] = useState(false);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationLevel, setOptimizationLevel] = useState<'low' | 'medium' | 'high'>('medium');
-  const [showDebugPanel, setShowDebugPanel] = useState(false);
-  const [showMetricsState, setShowMetricsState] = useState(showMetrics);
-  const [performanceIssues, setPerformanceIssues] = useState<string[]>([]);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [serviceWorkerStatus, setServiceWorkerStatus] = useState<'installing' | 'installed' | 'error' | 'not-supported'>('not-supported');
-=======
 // Performance entry types for Core Web Vitals
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
@@ -52,7 +36,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     loadTime: 0,
     networkRequests: 0
   });
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f821
 
   // Register service worker for PWA capabilities
   useEffect(() => {

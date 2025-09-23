@@ -140,10 +140,6 @@ export default function ServicesIndexPage() {
       real2029Q1Additions as unknown[],
       real2029Q2Additions as unknown[],
       real2029Q3Additions as unknown[],
-<<<<<<< HEAD
-      real2029Q4Additions as unknown[],
-      real2030Q1Additions as unknown[]
-=======
       real2030Q1Additions as unknown[],
       real2031MicroSaasAdditions as unknown[],
       real2031ITServicesAdditions as unknown[],
@@ -187,7 +183,6 @@ export default function ServicesIndexPage() {
     ;
 =======
     // .concat(advancedAIServicesExpansion2025V2 as unknown[]);
->>>>>>> origin/clean-website-enhancement
 
   // Filter out services without required properties
   const validServices = all.filter(service => 

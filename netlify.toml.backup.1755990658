@@ -11,7 +11,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -302,20 +301,6 @@
   name = "duplicate-media-finder-runner"
   schedule = "0 2 * * *"
 
-<<<<<<< HEAD
-# Cron Hub — intelligent cloud schedulers
-[[scheduled.functions]]
-  name = "cron-hub"
-  schedule = "*/1 * * * *"
-
-[[scheduled.functions]]
-  name = "cron-supervisor"
-  schedule = "*/5 * * * *"
-
-[[scheduled.functions]]
-  name = "cron-heartbeat"
-  schedule = "*/1 * * * *"
-=======
 [[scheduled.functions]]
   name = "intelligent-orchestrator"
   schedule = "*/1 * * * *" # every minute
@@ -327,4 +312,3 @@
 [[scheduled.functions]]
   name = "pulse-sync"
   schedule = "*/1 * * * *" # every minute
->>>>>>> origin/cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5

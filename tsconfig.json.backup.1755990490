@@ -1,17 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-=======
     "target": "ES2024",
     "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM", "DOM.Iterable", "WebWorker", "WebWorker.Iterable"],
@@ -37,7 +25,6 @@
     /* Bundler mode */
     "moduleResolution": "bundler",
     "esModuleInterop": true,
->>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
     "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "node",

@@ -269,11 +269,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       </div>
     </motion.div>
   );
-<<<<<<< HEAD
-};
-=======
 });
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 

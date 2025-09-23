@@ -190,14 +190,6 @@ export default function MarketPricing() {
   };
 
   return (
-<<<<<<< HEAD
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="Market Pricing & Competitor References | Zion Tech Group" description="Transparent market pricing references and competitor links for AI, security, analytics, and cloud services." url="https://ziontechgroup.com/market-pricing/" />
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
-          <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
-=======
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -244,7 +236,6 @@ export default function MarketPricing() {
           </motion.div>
         </div>
       </section>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
 
           <div className="space-y-6">
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">
@@ -684,17 +675,10 @@ export default function MarketPricing() {
                 Get Custom Quote
               </Link>
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-      </div>
-    </Layout>
-=======
           </motion.div>
         </div>
       </section>
     </div>
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   );
 };
 

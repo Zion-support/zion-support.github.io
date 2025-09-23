@@ -1,13 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Card from '../../components/ui/Card';
-=======
 import { useNavigation } from '../../hooks/useNavigation';
 import SmartSidebar from '../../components/SmartSidebar';
->>>>>>> origin/cursor/analyze-website-for-navigation-automation-1ae1
 =======
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -73,30 +66,15 @@ import { innovativeAIServices } from '../../data/innovative-2025-ai-services-exp
 // Import our new 2025 advanced services
 import { advanced2025MicroSaasExpansion } from '../../data/2025-advanced-micro-saas-expansion';
 import { advanced2025ITSolutionsExpansion } from '../../data/2025-advanced-it-solutions-expansion';
-<<<<<<< HEAD
-import { advancedAIServicesExpansion2025 } from '../../data/2025-advanced-ai-services-expansion';
-
-<<<<<<< HEAD
-=======
 import { advanced2025AIServicesExpansion } from '../../data/2025-advanced-ai-services-expansion';
 <<<<<<< HEAD
 import { advancedITInfrastructureServices2025 } from '../../data/2025-advanced-it-infrastructure-services';
 
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 // Import our new 2025 innovative services
 import { innovativeMicroSaasExpansion2025 } from '../../data/2025-innovative-micro-saas-expansion';
 import { innovative2025ITSolutionsExpansion } from '../../data/2025-innovative-it-solutions-expansion';
 import { innovative2025AISolutionsExpansion } from '../../data/2025-innovative-ai-solutions-expansion';
 
-<<<<<<< HEAD
-// Import our new 2025 innovative services V3
-import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
-
-function toSlug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-=======
 export default function ServicesPage() {
   const { navigation, isLoading, error } = useNavigation();
 
@@ -314,9 +292,7 @@ export default function ServicesPage() {
       </div>
     </div>
   );
->>>>>>> origin/cursor/analyze-website-for-navigation-automation-1ae1
 =======
-
 
 // Import our new 2025 innovative services
 import { innovativeRetailServices } from '../../data/innovative-retail-services';
@@ -371,18 +347,6 @@ const categories = [
   'Quantum Computing',
   'Space Technology',
   'Metaverse',
-<<<<<<< HEAD
-  'Cybersecurity',
-  'Supply Chain',
-  'Financial Services',
-  'Healthcare',
-  'Manufacturing',
-  'Retail',
-  'Education',
-  'Government',
-  'Energy',
-  'Transportation'
-=======
   'Cybersecurity & Threat Intelligence',
   'Supply Chain & Logistics',
   'Financial Technology & Fintech',
@@ -409,7 +373,6 @@ const categories = [
   'Government & Public Sector',
   'Transportation & Mobility',
   'Renewable Energy & Sustainability'
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 ];
 
 // Transform services data to match the expected Service interface
@@ -531,20 +494,6 @@ export default function ServicesIndexPage() {
     .concat(advanced2025ITSolutionsExpansion as unknown[])
     .concat(advanced2025AIServicesExpansion as unknown[])
     // Our new 2025 innovative services
-<<<<<<< HEAD
-    .concat(innovativeMicroSaasExpansion2025 as unknown[])
-    .concat(innovative2025ITSolutionsExpansion as unknown[])
-    .concat(innovative2025AISolutionsExpansion as unknown[])
-    // Our new 2025 advanced services V2
-    // .concat(advancedMicroSaasExpansion2025V2 as unknown[])
-    // .concat(advancedITInfrastructureExpansion2025V2 as unknown[])
-    // .concat(advancedAIServicesExpansion2025V2 as unknown[])
-    // Our new 2025 innovative services V3
-    .concat(innovativeMicroSaasExpansionV32025 as unknown[])
-    .concat(innovativeITServicesExpansion2025V3 as unknown[])
-    .concat(innovativeAIServicesExpansion2025V3 as unknown[])
-    ;
-=======
     .concat(innovativeRetailServices as unknown[])
     .concat(innovativeEntertainmentServices as unknown[])
     .concat(innovativeGamingServices as unknown[])
@@ -573,7 +522,6 @@ export default function ServicesIndexPage() {
     .concat(innovativeEducationServices as unknown[])
     .concat(innovativeGovernmentServices as unknown[])
     .concat(innovativeTransportationServices as unknown[]);
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
 
   const anchorMap: Record<string, string> = {
     'AI & Data': 'ai',

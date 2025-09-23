@@ -13,7 +13,6 @@ import { ChatMessage } from "./ChatMessage";
 import { QuickReplyButton } from "./QuickReplyButton";
 import { Send, Loader2 } from 'lucide-react';
 
-
 import { useTheme } from "@/hooks/useTheme";
 
 // Define suggested quick replies
@@ -119,8 +118,6 @@ export function ChatBotPanel() {
   const sendToAIAssistant = async (message: string) => {
     try {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const response = await api.post(
         "https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat",
         {
@@ -130,7 +127,6 @@ export function ChatBotPanel() {
 
       if (response.status < 200 || response.status >= 300) {
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
@@ -142,9 +138,6 @@ export function ChatBotPanel() {
       });
       
       if (!response.ok) {
-<<<<<<< HEAD
-=======
->>>>>>> origin/8arrdw-codex/centralize-fetch-error-handling
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
         return {
           success: false,

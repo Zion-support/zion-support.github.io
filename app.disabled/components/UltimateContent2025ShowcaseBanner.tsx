@@ -9,15 +9,6 @@ const UltimateContent2025ShowcaseBanner = () => {
 
   const featuredContent = [
     {
-<<<<<<< HEAD
-      id: 'enterprise-automation-mastery',
-      title: 'AI 2025: Enterprise Automation Mastery - Ultimate Success Guide',
-      description: 'Master enterprise automation with AI in 2025. Achieve 600% ROI, $500M+ savings, and 99.9% efficiency.',
-      url: '/blog/ai-2025-enterprise-automation-mastery-ultimate-success',
-      type: 'Blog Post',
-      metrics: {
-        roi: '600%',
-=======
       id: 'ultimate-business-transformation',
       title: 'AI 2025: The Ultimate Business Transformation Revolution',
       subtitle: '1,000% ROI Through Intelligent Automation',
@@ -26,7 +17,6 @@ const UltimateContent2025ShowcaseBanner = () => {
       type: 'blog',
       metrics: {
         roi: '1,000%',
->>>>>>> origin/new-content-and-promotional-components
         savings: '$500M+',
         efficiency: '99.9%',
         time: '18 min read'
@@ -35,36 +25,6 @@ const UltimateContent2025ShowcaseBanner = () => {
       badgeColor: 'bg-red-500'
     },
     {
-<<<<<<< HEAD
-      id: 'fortune-500-transformation',
-      title: 'Fortune 500 AI Transformation 2025: $2.1B Annual Savings',
-      description: 'How a Fortune 500 company achieved $2.1B annual savings and 800% ROI through AI transformation.',
-      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success',
-      type: 'Case Study',
-      metrics: {
-        roi: '800%',
-        savings: '$2.1B',
-        automation: '98.5%',
-        time: '12 min read'
-      },
-      badge: 'FEATURED',
-      badgeColor: 'bg-blue-500'
-    },
-    {
-      id: 'ai-transformation-guide',
-      title: 'AI Transformation Ultimate Guide 2025: From Strategy to 800% ROI',
-      description: 'Complete roadmap for AI transformation success. Achieve 800% ROI, $500M+ savings, and 99% automation.',
-      url: '/resources/ai-transformation-ultimate-guide-2025',
-      type: 'Resource',
-      metrics: {
-        roi: '800%',
-        savings: '$500M+',
-        automation: '99%',
-        time: '25 min read'
-      },
-      badge: 'ULTIMATE',
-      badgeColor: 'bg-purple-500'
-=======
       id: 'fortune-500-success',
       title: 'Fortune 500 AI Transformation: $2.8B Annual Savings',
       subtitle: 'Ultimate Success Story in 18 Months',
@@ -95,7 +55,6 @@ const UltimateContent2025ShowcaseBanner = () => {
       },
       badge: 'GUIDE',
       color: 'from-indigo-600 to-purple-600'
->>>>>>> origin/new-content-and-promotional-components
     }
   ];
 
@@ -126,58 +85,6 @@ const UltimateContent2025ShowcaseBanner = () => {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white overflow-hidden">
       {/* Animated Background */}
-<<<<<<< HEAD
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-pulse"></div>
-        <div className="absolute top-20 right-20 w-24 h-24 bg-blue-500/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-10 left-1/4 w-20 h-20 bg-indigo-500/10 rounded-full animate-pulse delay-2000"></div>
-      </div>
-
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center space-x-3">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">🚀</span>
-                <h2 className="text-2xl font-bold">Ultimate Content 2025 Showcase</h2>
-              </div>
-              <span className={`px-3 py-1 rounded-full text-xs font-semibold ${currentContent.badgeColor} text-white`}>
-                {currentContent.badge}
-              </span>
-            </div>
-            <button
-              onClick={handleDismiss}
-              className="text-white/70 hover:text-white transition-colors"
-              aria-label="Dismiss banner"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Content Preview */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm font-medium text-purple-300">{currentContent.type}</span>
-                  <span className="text-sm text-gray-300">•</span>
-                  <span className="text-sm text-gray-300">{currentContent.metrics.time}</span>
-                </div>
-                
-                <h3 className="text-3xl font-bold leading-tight">
-                  {currentContent.title}
-                </h3>
-                
-                <p className="text-lg text-gray-200 leading-relaxed">
-                  {currentContent.description}
-                </p>
-              </div>
-
-              {/* Success Metrics */}
-=======
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
       
@@ -225,7 +132,6 @@ const UltimateContent2025ShowcaseBanner = () => {
               </p>
 
               {/* Metrics Grid */}
->>>>>>> origin/new-content-and-promotional-components
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <div className="text-2xl font-bold text-green-400">{currentContent.metrics.roi}</div>
@@ -261,61 +167,6 @@ const UltimateContent2025ShowcaseBanner = () => {
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Content Showcase */}
-            <div className="space-y-4">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <h4 className="text-lg font-semibold mb-4">Featured Content</h4>
-                <div className="space-y-3">
-                  {featuredContent.map((content, index) => (
-                    <div
-                      key={content.id}
-                      className={`p-3 rounded-lg cursor-pointer transition-all ${
-                        index === currentSlide
-                          ? 'bg-white/20 border-2 border-white/30'
-                          : 'bg-white/5 border border-white/10 hover:bg-white/10'
-                      }`}
-                      onClick={() => setCurrentSlide(index)}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-2 mb-1">
-                            <span className="text-xs font-medium text-purple-300">{content.type}</span>
-                            <span className={`px-2 py-1 rounded text-xs font-semibold ${content.badgeColor} text-white`}>
-                              {content.badge}
-                            </span>
-                          </div>
-                          <h5 className="text-sm font-medium text-white line-clamp-2">
-                            {content.title}
-                          </h5>
-                        </div>
-                        <div className="ml-3 text-right">
-                          <div className="text-lg font-bold text-green-400">{content.metrics.roi}</div>
-                          <div className="text-xs text-gray-300">ROI</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Progress Indicators */}
-              <div className="flex justify-center space-x-2">
-                {featuredContent.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all ${
-                      index === currentSlide ? 'bg-white' : 'bg-white/30'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-=======
             {/* Visual Element */}
             <div className="relative">
               <div className={`bg-gradient-to-br ${currentContent.color} rounded-2xl p-8 text-center`}>
@@ -403,7 +254,6 @@ const UltimateContent2025ShowcaseBanner = () => {
             Dismiss this banner
           </button>
         </div>
->>>>>>> origin/new-content-and-promotional-components
       </div>
     </div>
   );

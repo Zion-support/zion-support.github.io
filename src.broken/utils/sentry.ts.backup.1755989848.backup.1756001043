@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import * as Sentry from '@sentry/nextjs';
 
 // Use environment variables directly instead of runtime config
@@ -17,7 +15,6 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     //   release: process.env.npm_package_version,
   });
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import * as Sentry from '@sentry/browser';
 
 const DSN = import.meta.env.VITE_SENTRY_DSN;
@@ -33,9 +30,6 @@ export function captureException(error: unknown) {
   if (typeof console !== 'undefined') {
     console.error('Sentry captured exception:', error);
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/3ycx6d-codex/implement-global-error-boundary-with-toasts
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }
 

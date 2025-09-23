@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import FuturisticNav from './FuturisticNav';
-import FuturisticFooter from './FuturisticFooter';
-import AnimatedBackground from '../ui/AnimatedBackground';
-=======
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -172,7 +166,6 @@ export default function Layout({ children, seo }: LayoutProps) {
         )}
       </AnimatePresence>
 
-
       
       {/* Layout Structure */}
       <div className="relative z-10">
@@ -248,21 +241,11 @@ export default function Layout({ children, seo }: LayoutProps) {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-black text-white">
-<<<<<<< HEAD
-      <EnhancedFuturisticBackground variant="quantum" intensity="medium">
-        <NeoFuturisticNavigation />
-        <main className="pt-24 lg:pt-28">
-          {children}
-        </main>
-        <NeoFuturisticFooter />
-      </EnhancedFuturisticBackground>
-=======
       <EnhancedNavigation />
       <main className="pt-24 lg:pt-28">
         {children}
       </main>
       <EnhancedFooter />
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e0c7
     </div>
   );
 };

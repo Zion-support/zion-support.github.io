@@ -89,70 +89,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Track focus changes
   useEffect(() => {
-<<<<<<< HEAD
-    const saved = localStorage.getItem('accessibility-settings');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setSettings(parsed);
-        applySettings(parsed);
-      } catch (e) {
-        // console.log('Failed to parse saved accessibility settings');
-      }
-    }
-  }, [applySettings]);
-
-  // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent) => {
-    const target = e.target as HTMLElement;
-    if (target) {
-      setCurrentFocus(target);
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-    }
-  }, []);
-
-  // Keyboard navigation enhancements
-  const handleKeyDown = useCallback(() => {
-    // Tab navigation detected
-  }, []);
-
-  // Announce to screen reader
-  const announceToScreenReader = useCallback((message: string) => {
-    // setAnnouncements(prev => [...prev, message]); // This line was removed
-    
-    // Create live region for screen readers
-    if (!announcementRef.current) {
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
-      announcementRef.current = liveRegion;
-    }
-    
-    if (announcementRef.current) {
-      announcementRef.current.textContent = message;
-    }
-    
-    // Remove announcement after a delay
-    setTimeout(() => {
-      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
-    }, 5000);
-  }, []);
-
-  // Auto-optimize accessibility
-  useEffect(() => {
-    if (!autoOptimize) return;
-    
-    const checkAccessibility = () => {
-      const issues: string[] = [];
-      
-      // Check for missing alt text
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.alt) {
-          issues.push(`Image missing alt text: ${img.src}`);
-=======
     const handleFocusChange = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target && target !== currentFocus) {
@@ -163,31 +99,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (settings.focusIndicator) {
           target.style.outline = '3px solid #0066cc';
           target.style.outlineOffset = '2px';
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
         }
       }
     };
 
-<<<<<<< HEAD
-  // Set up event listeners
-  useEffect(() => {
-    const handleFocusChangeWrapper = (e: Event) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        setCurrentFocus(target);
-        announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusChangeWrapper);
-    document.addEventListener('keydown', handleKeyDown);
-    
-    return () => {
-      document.removeEventListener('focusin', handleFocusChangeWrapper);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [handleKeyDown]);
-=======
     const handleBlur = (event: Event) => {
       const target = event.target as HTMLElement;
       if (target) {
@@ -204,7 +119,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
->>>>>>> 3d0c36eea3be5345cefaebf51a30415fed79edb9
 
   useEffect(() => {
     // Apply accessibility settings to document

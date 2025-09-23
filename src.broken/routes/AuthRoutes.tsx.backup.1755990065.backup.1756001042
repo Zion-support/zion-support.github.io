@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -49,7 +47,6 @@ const AuthRoutes = () => {
       />
     </Routes>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function AuthRoutes() {
   return (
@@ -57,9 +54,6 @@ export function AuthRoutes() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout/Layout';
-<<<<<<< HEAD
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
-import { motion } from 'framer-motion';
-=======
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3, Zap } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ae9
 
 const Homepage2025: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -226,13 +221,6 @@ const Homepage2025: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              About Zion Tech Group
-            </motion.h2>
-            <motion.p 
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Revolutionary Services
               </h2>
@@ -300,7 +288,6 @@ const Homepage2025: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3ae9
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}

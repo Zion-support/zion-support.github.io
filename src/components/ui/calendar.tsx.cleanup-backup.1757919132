@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import * as React from "react",
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { DayPicker } from "react-day-picker",
-
-import { cn } from "@/lib/utils",
-import { buttonVariants } from "@/components/ui/button",
-
-export type CalendarProps = React.ComponentProps<typeof DayPicker>,
-=======
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker";
@@ -16,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
->>>>>>> origin/auto/autonomy-17186719616
 
 function Calendar({
   className,
@@ -60,19 +49,6 @@ function Calendar({
         day_range_middle:
           "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
-<<<<<<< HEAD
-        ...classNames}}
-      components={{
-        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-      {...props}
-    />
-  ),
-}
-Calendar.displayName = "Calendar",
-
-export { Calendar },
-=======
         ...classNames,
       }}
       components={{
@@ -86,4 +62,3 @@ export { Calendar },
 Calendar.displayName = "Calendar";
 
 export { Calendar };
->>>>>>> origin/auto/autonomy-17186719616

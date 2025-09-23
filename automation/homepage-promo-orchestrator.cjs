@@ -1,17 +1,5 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-/**
- * Homepage Promo Orchestrator
- * Placeholder script to prevent workflow failures
- */
-
-console.log('Homepage promo orchestrator placeholder - no actual promos implemented');
-console.log('This script is a placeholder to prevent workflow failures');
-
-// Exit successfully
-process.exit(0);
-=======
 const fs = require('fs');
 const path = require('path');
 
@@ -85,5 +73,3 @@ if (require.main === module) {
   main().catch(e => { log(`Fatal: ${e.message}`); process.exit(1); });
 }
 
-
->>>>>>> origin/auto/autonomy-17186719616

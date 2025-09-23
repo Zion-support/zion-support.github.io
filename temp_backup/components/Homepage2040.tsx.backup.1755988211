@@ -1,9 +1,6 @@
 import React, { Suspense, lazy } from 'react';
-<<<<<<< HEAD
-=======
 import { Layout } from './layout/Layout';
 import UltraFuturisticServiceCard2040 from './ui/UltraFuturisticServiceCard2040';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -505,13 +502,6 @@ const Homepage2040: React.FC = () => {
                   <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
             </motion.div>
           </div>
         </section>
@@ -522,7 +512,6 @@ const Homepage2040: React.FC = () => {
         <LazyPerformanceMonitor showUI={true} />
       </Suspense>
     </Layout>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-36d0
   );
 };
 

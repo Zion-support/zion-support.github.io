@@ -1,16 +1,13 @@
-import Head from 'next/head';
+import React from 'react';
 
-interface StructuredDataProps {
-  data: Record<string, unknown>;
-}
-
-export default function StructuredData({ data }: StructuredDataProps) {
+export default function StructuredData() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com'
+  };
   return (
-    <Head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-      />
-    </Head>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
   );
 }

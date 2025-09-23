@@ -9,10 +9,6 @@ import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
 import AccessibilityEnhancer from '../EnhancedAccessibilityEnhancer';
 import CookieConsentBanner from '../CookieConsentBanner';
 import ServiceWorkerRegistration from '../ServiceWorkerRegistration';
-<<<<<<< HEAD
-import SEOHead from '../SEOHead';
-=======
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 >>>>>>> 5e27e402e0b68b9c85b868b0fd8919518fd31198
 
 interface LayoutProps {
@@ -50,14 +46,11 @@ export default function Layout({ children, seo }: LayoutProps) {
     };
   }, []);
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     // Apply theme to document
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }, [theme]);
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 
   useEffect(() => {
     // Check for saved theme preference or default to dark mode

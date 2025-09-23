@@ -1,12 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx
-import SEO from '../../components/SEO';
-=======
 <<<<<<< HEAD
 import SEO from '../../../components/SEO';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx.backup.1757883570
 
 export const metadata: Metadata = {
   title: 'AI 2025: The Quantum Computing Breakthrough That\'s Reshaping Enterprise',
@@ -21,27 +17,11 @@ export default function AI2025QuantumComputingPage() {
         title="AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise"
         description="Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation."
         keywords="quantum computing, AI, enterprise, breakthrough, 2025"
-<<<<<<< HEAD:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-4 py-8">
-          <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
-              AI 2025: The Quantum Computing Breakthrough That's Reshaping Enterprise
-            </h1>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-600 mb-8">
-                Discover how quantum computing breakthroughs in 2025 are revolutionizing AI capabilities and creating unprecedented opportunities for enterprise transformation.
-              </p>
-=======
 =======
 =======
 import SEO from '../../components/SEO';
 
 export const metadata: Metadata = {
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
   title: 'AI 2025 Quantum Computing Breakthrough: The Next Frontier',
   description: 'Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications and enterprise opportunities.',
   keywords: ['Quantum Computing', 'AI', 'Breakthrough', 'Enterprise', 'Innovation'],
@@ -62,21 +42,12 @@ export default function AI2025QuantumComputingBreakthroughPage() {
         title="AI 2025 Quantum Computing Breakthrough: The Next Frontier"
         description="Explore the revolutionary intersection of AI and quantum computing in 2025. Discover breakthrough applications and enterprise opportunities."
         keywords="quantum computing, AI, breakthrough, enterprise, innovation"
-<<<<<<< HEAD
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
-=======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
         url="/blog/ai-2025-quantum-computing-breakthrough"
       />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-=======
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 =======
         <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
 >>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
@@ -102,12 +73,7 @@ export default function AI2025QuantumComputingBreakthroughPage() {
                   href="/resources/ai-implementation-guide-2025"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  Download Implementation Guide
-=======
                   Get Consultation
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 =======
                   Get Consultation
 >>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
@@ -116,11 +82,7 @@ export default function AI2025QuantumComputingBreakthroughPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 >>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx.backup.1757883570
 
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -177,14 +139,9 @@ export default function AI2025QuantumComputingBreakthroughPage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx
-          </article>
-        </div>
-=======
           </div>
         </section>
 <<<<<<< HEAD
->>>>>>> b57990bbef189939aa68e799cdd591a161de203f
 =======
 >>>>>>> 0502a598e03c560839d6a6495f98d9e658772407
 >>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/blog/ai-2025-quantum-computing-breakthrough/page.tsx.backup.1757883570

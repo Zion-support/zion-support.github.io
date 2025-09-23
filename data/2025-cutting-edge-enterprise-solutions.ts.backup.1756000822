@@ -1,7 +1,5 @@
 import { UnifiedService } from '../types/unified-service-types';
 
-<<<<<<< HEAD
-=======
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -9,7 +7,6 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ffb8
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
   {
@@ -54,15 +51,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     growthRate: '25% annual growth',
     customers: 45,
     rating: 4.8,
-<<<<<<< HEAD
-    reviews: 32,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    }
-=======
     reviews: 67,
     contactInfo: contact
   },
@@ -145,6 +133,5 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6,
     reviews: 41,
     contactInfo: contact
->>>>>>> origin/cursor/expand-services-and-deploy-updates-ffb8
   }
 ];

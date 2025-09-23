@@ -137,10 +137,6 @@ export function useFilterTalents(talents: TalentProfile[]) {
     toggleSkill,
     toggleAvailability,
     toggleRegion,
-<<<<<<< HEAD
-    clearFilters};
-=======
     clearFilters,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

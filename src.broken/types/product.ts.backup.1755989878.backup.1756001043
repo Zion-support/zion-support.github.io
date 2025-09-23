@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export interface PriceTier {
   tier: string;
   price: number;
@@ -22,13 +20,9 @@ export interface ProductDetailsData {
   specifications?: string[] | null;
   priceTiers?: PriceTier[] | null;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 export interface Product {
   id: string;
   name: string;
   description?: string | null;
-<<<<<<< HEAD
-=======
->>>>>>> origin/7dxqey-codex/fix-missing-product-export-from-@prisma/client
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 }

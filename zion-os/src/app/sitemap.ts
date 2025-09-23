@@ -1,19 +1,9 @@
-import type { MetadataRoute } from "next";
-<<<<<<< HEAD
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://example.com";
-  return [
-    { url: `${baseUrl}/`, lastModified: new Date() },
-    { url: `${baseUrl}/about`, lastModified: new Date() },
-  ];
-}
-=======
->>>>>>> origin/main
+import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	return [
-		{ url: "https://example.com/", lastModified: new Date() },
-		{ url: "https://example.com/about", lastModified: new Date() },
+		{ url: 'https://ziontechgroup.com/' },
+		{ url: 'https://ziontechgroup.com/solutions' },
+		{ url: 'https://ziontechgroup.com/services' }
 	];
 }

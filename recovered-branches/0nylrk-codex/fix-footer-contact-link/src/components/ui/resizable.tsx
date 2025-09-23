@@ -40,8 +40,4 @@ const ResizableHandle = ({
   </ResizablePrimitive.PanelResizeHandle>
 )
 
-<<<<<<< HEAD
-export { ResizablePanelGroupResizablePanelResizableHandle }
-=======
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
->>>>>>> origin/auto/autonomy-17186719616

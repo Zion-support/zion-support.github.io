@@ -7,29 +7,6 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { CTAButton } from "@/components/CTAButton";
 
 export default function HomePage() {
-<<<<<<< HEAD
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeFeature, setActiveFeature] = useState(0);
-
-  useEffect(() => {
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Auto-rotate features for better engagement
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % 6);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner size="large" />
-=======
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Zion OS</h1>
@@ -58,7 +35,6 @@ export default function HomePage() {
           <div className="font-semibold">Admin Instances</div>
           <div className="text-sm opacity-80">Manage deployed instances, API keys, and governance.</div>
         </a>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-231d
       </div>
     );
   }

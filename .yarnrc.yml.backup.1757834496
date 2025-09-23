@@ -1,9 +1,5 @@
 nodeLinker: node-modules
 enableGlobalCache: false
-<<<<<<< HEAD
-enableTelemetry: false
-networkTimeout: 120000
-=======
 compressionLevel: mixed
 
 plugins:
@@ -16,4 +12,3 @@ packageExtensions:
   '*@*':
     dependencies:
       '@types/node': '*'
->>>>>>> origin/backup-main-final-20250913-063409

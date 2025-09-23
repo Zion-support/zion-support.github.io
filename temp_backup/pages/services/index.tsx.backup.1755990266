@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
@@ -75,7 +73,6 @@ import { innovative2025AISolutionsExpansion } from '../../data/2025-innovative-a
 import { innovativeMicroSaasExpansionV32025 } from '../../data/2025-innovative-micro-saas-expansion-v3';
 import { innovativeITServicesExpansion2025V3 } from '../../data/2025-innovative-it-services-expansion-v3';
 import { innovativeAIServicesExpansion2025V3 } from '../../data/2025-innovative-ai-services-expansion-v3';
->>>>>>> 916d02471c24718d698d51219f240472f9d52b96
 
 function toSlug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');

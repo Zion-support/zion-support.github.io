@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-export default function TestPage() {
-  return (
-    <div>
-      <h1>Test Page</h1>
-      <p>This is a minimal test page.</p>
-    </div>
-  );
-}
-=======
 import Head from 'next/head';
 
 export default function TestPage() {
@@ -137,4 +126,3 @@ export default function TestPage() {
     </>
   );
 } 
->>>>>>> origin/306l03-codex/fix-blank-screen-issue

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function Verify() { return <div className="py-10">Verify</div> }
-=======
 import Head from 'next/head';
 
 export default function VerifyAccountPage() {
@@ -14,4 +11,3 @@ export default function VerifyAccountPage() {
     </>
   );
 }
->>>>>>> origin/cursor/build-client-quote-request-form-74ea

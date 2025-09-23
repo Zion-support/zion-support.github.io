@@ -1,26 +1,4 @@
 [
-<<<<<<< HEAD
-  "quantum-creativity-studio",
-  "quantum-data-center",
-  "quantum-encryption-gateway",
-  "quantum-identity-verification",
-  "quantum-internet-security",
-  "quantum-internet-security-gateway",
-  "quantum-learning-accelerator",
-  "quantum-materials-discovery",
-  "quantum-network-security",
-  "quantum-networking",
-  "quantum-threat-detection",
-  "services/ai-sales-sequence-personalizer",
-  "services/ai-synthetic-data-studio",
-  "services/data-contracts-hub",
-  "services/edge-personalization-kit",
-  "services/etl-reliability-copilot",
-  "services/kubernetes-cost-anomaly-guard",
-  "services/postgres-performance-tuner",
-  "services/serverless-lakehouse-starter",
-  "services/zero-trust-sso-mesh"
-=======
 =======
   "ai-autonomous-business-intelligence",
   "ai-autonomous-business-process-automation",
@@ -94,7 +72,6 @@
   "quantum-threat-detection",
   "real-estate-technology-solutions",
   "satellite-technology-solutions",
->>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
   "services/data-contracts-hub",
   "services/it-infrastructure",
   "services/quantum-technology",

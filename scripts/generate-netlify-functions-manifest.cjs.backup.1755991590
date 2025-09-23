@@ -22,9 +22,6 @@ function main() {
   console.log(`Updated functions manifest with ${names.length} entries.`);
 }
 
-<<<<<<< HEAD
-main();
-=======
 (function main() {
   const scheduled = parseScheduledFunctionNamesFromToml(safeRead(tomlPath));
   const fromDir = listFunctionNamesFromDir(functionsDir);
@@ -38,4 +35,3 @@ main();
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   log(`Wrote ${manifestPath} with ${manifest.functions.length} functions.`);
 })();
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

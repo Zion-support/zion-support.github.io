@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function QuoteWizard() {
-=======
-<<<<<<< HEAD
 import { useState } from 'react';
 import type { WizardStep } from '@/context/RequestQuoteWizard';
 import useSWR from 'swr';
@@ -21,7 +17,6 @@ function StepIndicator({ step }: { step: number }) {
 =======
 import React from 'react';
 export function QuoteWizard() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>
@@ -30,8 +25,6 @@ export function QuoteWizard() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
@@ -222,5 +215,4 @@ export function QuoteWizard() {
   return null;
 }
 =======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

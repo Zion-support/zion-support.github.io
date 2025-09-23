@@ -1,9 +1,4 @@
-import React from 'react';
-
-import { useState } from "react";
-
-interface PricingTier {
-  name: string;
+export interface PricingTier {
   price: string;
   period: string;
   description: string;
@@ -13,63 +8,20 @@ interface PricingTier {
   ctaLink: string;
 }
 
+export interface PricingPlan {
+  category: string;
+  description: string;
+  tiers: PricingTier[];
+  features: string[];
+  benefits: string[];
+}
 
 export default function PricingPage() {
-  const [selected, setSelected] = useState<string | null>(tiers[1].name);
+  const plans: PricingPlan[] = [];
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Pricing & Plans</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Choose the perfect plan for your business needs. Transparent pricing, no hidden fees.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {tiers.map((tier) => (
-          <div
-            key={tier.name}
-            className={`relative border rounded-lg p-6 ${
-              tier.popular ? "border-blue-500 bg-blue-500/10" : "border-white/10"
-            }`}
-            onMouseEnter={() => setSelected(tier.name)}
-          >
-            {tier.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                  Most Popular
-                </span>
-              </div>
-            )}
-            <div className="text-center space-y-4">
-              <h3 className="text-xl font-semibold">{tier.name}</h3>
-              <div>
-                <span className="text-3xl font-bold">{tier.price}</span>
-                <span className="text-lg opacity-80">{tier.period}</span>
-              </div>
-              <p className="opacity-80">{tier.description}</p>
-            </div>
-            <ul className="space-y-2 mt-6 text-sm opacity-90">
-              {tier.features.map((f) => (
-                <li key={f} className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6">
-              <a
-                href={tier.ctaLink}
-                className={`block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${
-                  tier.popular ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-zinc-700 hover:bg-zinc-600 text-white"
-                }`}
-                aria-current={selected === tier.name}
-              >
-                {tier.cta}
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="max-w-4xl mx-auto p-8">
+      <h1 className="text-3xl font-bold mb-4">Pricing</h1>
+      <p className="text-white/70">Our pricing plans will be published here soon.</p>
     </div>
   );
 }

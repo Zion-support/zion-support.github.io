@@ -1,22 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "zion-assistant",
-  "private": true,
-  "version": "0.1.0",
-  "packageManager": "pnpm@9.7.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
-    "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
-    "sitemap": "node scripts/generate-sitemap.mjs",
-    "feedback:weekly": "ts-node scripts/weekly-feedback-analysis.ts"
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
-    "export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
-=======
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -61,7 +43,6 @@
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build",
     "prebuild": "npm run build:health-check && npm run netlify:manifest",
     "export": "rm -rf .next out tsconfig.tsbuildinfo && mkdir -p .temp && mv pages/reports .temp/ 2>/dev/null || true && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" next build --no-lint && mv .temp/reports pages/ 2>/dev/null || true && rm -rf .temp",
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "start": "next start",
     "postbuild": "node automation/footer-injector.cjs || true",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -70,14 +51,6 @@
     "fix:all": "npm run lint -- --fix || true",
     "build:heal": "npm run build || (npm run fix:all && npm run search:index || true && npm run build)",
     "ci:heal": "npm run fix:all && (npm run type-check || true) && npm run build:heal",
-<<<<<<< HEAD
-    "health:check": "node automation/build-health-monitor.cjs",
-    "health:react": "node automation/react-component-validator.cjs",
-    "health:preflight": "node automation/build-preflight-checker.cjs",
-    "health:netlify": "node automation/enhanced-netlify-healer.cjs",
-    "security:scan": "node automation/security-scanner.cjs || true && (npm audit --audit-level=high || true)",
-    "auto:intel": "node automation/intelligent-orchestrator.cjs run intelligent",
-=======
     "build:health-check": "node automation/pre-build-health-check.cjs",
     "build:validate": "node automation/nextjs-page-validator.cjs",
     "build:recovery": "node automation/build-failure-recovery.cjs",
@@ -96,7 +69,6 @@
     "netlify:cron:start": "bash automation/netlify-monitor-cron.sh start",
     "netlify:cron:stop": "bash automation/netlify-monitor-cron.sh stop",
     "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
@@ -141,13 +113,8 @@
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
     "automation:beautify": "node automation/beautify-ui.cjs",
-<<<<<<< HEAD
-    "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
-    "autonomous:stop": "node automation/launch-autonomous-systems-clean.js stop",
-=======
     "autonomous:start": "node automation/autonomous-system-manager.cjs start",
     "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
     "autonomous:factory": "node automation/autonomous-error-monitoring-factory.js",
     "autonomous:orchestrator": "node automation/autonomous-automation-orchestrator.js",
@@ -244,16 +211,6 @@
     "alignment:start": "node automation/alignment-orchestrator.cjs",
     "alignment:cron:start": "bash automation/alignment-cron.sh",
     "alignment:scan": "node automation/chat-fetcher.cjs && (node automation/google-doc-fetcher.cjs || true) && node automation/alignment-crawler.cjs && node automation/alignment-analyzer.cjs && node automation/alignment-factory.cjs && node automation/alignment-dev-factory.cjs",
-<<<<<<< HEAD
-    "maintenance:run": "node automation/site-maintenance-orchestrator.cjs",
-    "maintenance:cron:start": "bash automation/site-maintenance-cron.sh start",
-    "maintenance:cron:stop": "bash automation/site-maintenance-cron.sh stop",
-    "maintenance:cron:status": "bash automation/site-maintenance-cron.sh status",
-    "maintenance:cron:run": "bash automation/site-maintenance-cron.sh run",
-    "health:start": "node automation/auto-health-monitor/index.mjs",
-    "health:dev": "nodemon automation/auto-health-monitor/index.mjs",
-    "automation:all:plus": "npm run automation:all & npm run health:start",
-=======
     "automation:pm2": "npm run pm2:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:restart": "npm run pm2:restart && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:status": "npm run pm2:status",
@@ -263,7 +220,6 @@
     "automation:pm2:resurrect": "node scripts/pm2-resurrect-hook.cjs",
     "automation:pm2:fastads": "npm run pm2:fastads:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "postautomation": "npm run automation:git-sync",
     "lint:staged": "lint-staged",
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
@@ -285,31 +241,10 @@
     "frontend-sync:autonomous:start": "node automation/launch-frontend-sync-autonomous.js",
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
-<<<<<<< HEAD
-    "git:sync": "node automation/advanced-git-sync.cjs",
-=======
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "git:pull": "node automation/git-pull-rebase.cjs",
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
-<<<<<<< HEAD
-    "sync-health:run": "node automation/sync-health-check.cjs --fix",
-    "sync-health:cron:start": "bash automation/sync-health-cron.sh start",
-    "sync-health:cron:stop": "bash automation/sync-health-cron.sh stop",
-    "sync-health:cron:status": "bash automation/sync-health-cron.sh status",
-    "sync:all:start": "npm run git:cron:start && npm run sync-health:cron:start",
-    "git:health": "node automation/git-health.cjs --fast",
-    "git:health:fix": "node automation/git-health.cjs --fast --fix",
-    "git:health:deep": "node automation/git-health.cjs --deep",
-    "git:health:cron": "bash automation/git-health-cron.sh",
-    "conflicts:check": "bash scripts/check-merge-conflicts.sh",
-    "conflicts:watch": "watch -n 30 bash scripts/check-merge-conflicts.sh || true",
-    "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
-    "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
-    "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status"
-  },
-=======
     "homepage:update": "node automation/homepage-updater.cjs",
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
@@ -410,7 +345,6 @@
       "nextgen:cron:status": "bash automation/nextgen-cron.sh status",
       "nextgen:scheduler": "node automation/nextgen-scheduler.cjs"
     },
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -439,36 +373,15 @@
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
-<<<<<<< HEAD
-    "lucide-react": "^0.536.0",
-    "next": "^11.1.4",
-=======
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
     "next": "^13.5.6",
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "pdfkit": "^0.15.0",
     "postcss": "^8.4.32",
-<<<<<<< HEAD
-    "react": "^17.0.2",
-    "react-datepicker": "^8.4.0",
-    "react-dom": "^17.0.2",
-    "uuid": "^11.1.0",
-    "web3modal": "^1.9.12"
-  },
-  "devDependencies": {
-    "@types/node": "^20.14.10",
-    "@types/pg": "^8.15.5",
-    "concurrently": "^8.2.2",
-    "eslint": "^9.7.0",
-    "prettier": "^3.3.3",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.4"
-=======
     "react": "18.2.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
@@ -503,6 +416,5 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
->>>>>>> 2577b40c4bef6522a1d0a82703f52bae7a2766bf
   }
 }

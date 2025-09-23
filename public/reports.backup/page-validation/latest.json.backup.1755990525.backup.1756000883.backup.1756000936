@@ -7,11 +7,6 @@
     "buildBreakingFiles": 0,
     "canBuild": true
   },
-<<<<<<< HEAD
-  "results": [],
-  "buildBreakingFiles": [],
-  "generatedAt": "2025-08-19T17:56:48.039Z"
-=======
 =======
   "results": [
     {
@@ -29,6 +24,5 @@
     }
   ],
   "buildBreakingFiles": [],
->>>>>>> c192e63bd924f06af5d8f608cfc4b3b8245be2b5
   "generatedAt": "2025-08-19T17:38:00.458Z"
 }

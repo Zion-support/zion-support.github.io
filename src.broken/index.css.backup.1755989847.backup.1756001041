@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -134,7 +132,6 @@
     --sidebar-border: 214 32% 91%;
     --sidebar-ring: 262 83% 58%;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 /* Fonts are now loaded via Next.js font optimization in _app.tsx */
 @import './styles/navbar.css';
 @import './styles/responsive.css';
@@ -311,9 +308,6 @@ body {
     max-width: 640px;
     padding-left: var(--space-lg);
     padding-right: var(--space-lg);
-<<<<<<< HEAD
-=======
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }
@@ -324,8 +318,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   body {
     @apply bg-background text-foreground font-sans;
@@ -340,7 +332,6 @@ body {
     }
   }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
@@ -431,9 +422,6 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.025em;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 
 h3 {
@@ -448,8 +436,6 @@ h6 {
   font-weight: 600;
 }
 
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
   ::-webkit-scrollbar-track {
     background: theme('colors["zion-blue"].DEFAULT');
@@ -477,7 +463,6 @@ h6 {
     --lk-bg1: #0B1120;
     --lk-bg2: #0F172A;
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 p {
   margin-bottom: var(--space-md);
   line-height: 1.7;
@@ -776,9 +761,6 @@ button,
     bottom: 0;
     z-index: 50;
     background: hsl(var(--background));
-<<<<<<< HEAD
-=======
->>>>>>> origin/306l03-codex/fix-blank-screen-issue
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   }
 }

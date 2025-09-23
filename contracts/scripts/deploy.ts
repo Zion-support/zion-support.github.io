@@ -1,8 +1,5 @@
 import ethers from 'hardhat';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 async function main() {
   const [deployer] = await ethers.getSigners();
   console.log('Deploying with:', deployer.address);
@@ -14,10 +11,7 @@ async function main() {
   console.log('ZIONToken deployed at:', addr);
   console.log('Total supply:', totalSupply.toString());
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;

@@ -1,14 +1,9 @@
 module.exports = {
   presets: [
     ['@babel/preset-env', {
-<<<<<<< HEAD
-      modules: 'commonjs', // Use CommonJS instead of ESM
-      targets: {
-=======
       modules: false, // Preserve ES modules
       targets: {
         esmodules: true,
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
         node: '18'
       }
     }],
@@ -19,17 +14,11 @@ module.exports = {
   ],
   plugins: [
     ['@babel/plugin-transform-runtime', {
-<<<<<<< HEAD
-      useESModules: false, // Use CommonJS
-=======
       useESModules: true,
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
       corejs: false,
       helpers: true,
       regenerator: false
     }]
-<<<<<<< HEAD
-=======
   ],
   env: {
     test: {
@@ -65,6 +54,5 @@ module.exports = {
         }]
       ]
     }
->>>>>>> origin/cursor/website-audit-and-enhancement-751f
   ]
 };

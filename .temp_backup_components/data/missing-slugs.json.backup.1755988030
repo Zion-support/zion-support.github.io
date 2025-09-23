@@ -1,9 +1,5 @@
 [
   "accessibility",
-<<<<<<< HEAD
-  "ai-autonomous-vehicle-ai-platform",
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9191
   "ai-consciousness-evolution",
   "ai-content-marketing-automation",
   "ai-creativity-orchestrator",
@@ -33,10 +29,6 @@
   "quantum-threat-detection",
   "services/data-contracts-hub",
   "services/serverless-lakehouse-starter",
-<<<<<<< HEAD
-  "space-data-analytics",
-=======
   "services/space-technology",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9191
   "space-mining-automation-platform"
 ]

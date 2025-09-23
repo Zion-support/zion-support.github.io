@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function Contact() {
-=======
-<<<<<<< HEAD
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -186,7 +182,6 @@ export default function Contact() {
 =======
 import React from 'react';
 export function Contact() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

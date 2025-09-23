@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function AuthCallback() { return <main className="p-8">Auth callback.</main>; }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -21,4 +18,3 @@ const Callback: NextPage = () => {
 };
 
 export default Callback;
->>>>>>> origin/cursor/build-ai-pricing-suggestion-engine-ea4e

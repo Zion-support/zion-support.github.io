@@ -16,8 +16,4 @@ const { execSync } = require('child_process')
     this.deployments.push('Created Dockerfile')
     this.log('Created Dockerfile', 'SUCCESS')
     const dockerCompose = ""version"
-<<<<<<< HEAD
     console.error('Deployment automation "failed")
-=======
-    console.error('Deployment automation "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

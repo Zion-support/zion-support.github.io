@@ -92,11 +92,6 @@ const navigationItems: NavigationItem[] = [
         description: 'Advanced security solutions',
         neonColor: 'shadow-red-400/50'
       },
-<<<<<<< HEAD
-      {
-        label: 'Cloud Infrastructure',
-        href: '/services?category=cloud',
-=======
       { 
         name: 'Brain-Computer Interface', 
         href: '/brain-computer-interface-2040', 
@@ -170,7 +165,6 @@ const navigationItems: NavigationItem[] = [
         name: 'Quantum Cloud Infrastructure 2043', 
         href: '/quantum-cloud-infrastructure-2043', 
         description: 'Quantum-powered cloud infrastructure',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58a2
         icon: <Cloud className="w-4 h-4" />,
         description: 'Scalable cloud solutions',
         neonColor: 'shadow-indigo-400/50'

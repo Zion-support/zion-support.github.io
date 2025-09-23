@@ -11,26 +11,15 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-  hours: 'Mon-Fri: 9AM-6PM EST',
-  rating: '4.9/5 (500+ Reviews)',
-  availability: '24/7 Support Available'
-=======
   hours: '24/7 AI Support Available',
   rating: '4.9/5 (500+ Reviews)'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
 };
 
 const quickActions = [
   { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/contact', icon: <Calendar className="w-4 h-4" /> },
-<<<<<<< HEAD
-  { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4" /> },
-  { name: 'Free Trial', href: '/get-started', icon: <Star className="w-4 h-4" /> }
-=======
   { name: 'Q4 2025 Services', href: '/q4-2025-innovative-services-showcase', icon: <Star className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4" /> }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1aec
 ];
 
 export default function TopContactBar() {

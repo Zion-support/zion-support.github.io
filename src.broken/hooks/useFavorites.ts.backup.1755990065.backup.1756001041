@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useAuth } from './useAuth';
 import { safeFetch } from '@/integrations/supabase/client';
@@ -81,13 +79,9 @@ export function useFavorites() {
   return { favorites, count: favorites.length, loading, isFavorite, toggleFavorite, refetch: fetchFavorites };
 }
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 // Hook for useFavorites;
 export const useUseFavorites: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3

@@ -1,42 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "bolt.new.zion.app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "sitemap": "node scripts/generate-sitemap.mjs",
-    "dev": "next dev",
-    "build": "next build",
-    "export": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "next": "^13.4.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-datepicker": "^8.4.0",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.292.0",
-    "react-hook-form": "^7.62.0",
-    "react-hot-toast": "^2.6.0",
-    "zod": "^4.1.3",
-    "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.5.0",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
-    "@types/react-datepicker": "^6.2.0",
-    "autoprefixer": "^10.4.15",
-    "eslint": "^8.47.0",
-    "eslint-config-next": "^13.4.19",
-    "postcss": "^8.4.28",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6"
-=======
   "name": "project",
   "private": true,
   "version": "0.0.0",
@@ -391,7 +353,6 @@
     "automation:trigger:ai": "curl -X POST http://localhost:3002/improve -H 'Content-Type: application/json' -d '{\"target\":\"general\",\"priority\":\"normal\"}'",
     "automation:distribute:workload": "curl -X POST http://localhost:3003/api/tasks/submit -H 'Content-Type: application/json' -d '{\"task\":\"Fix all issues\",\"priority\":\"high\"}'",
     "build:optimize": "node scripts/replace-console-statements.cjs && npm run lint -- --fix && npm run build"
->>>>>>> 0170215e499e1b500bd479133aa1a5e56ab179ae
   },
   "dependencies": {
     "@chakra-ui/react": "^3.22.0",

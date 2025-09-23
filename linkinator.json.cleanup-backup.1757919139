@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "links": [],
-  "passed": true
-=======
   "links": [
     {
       "url": "https://ziontechgroup.com/",
@@ -3999,5 +3995,4 @@
     }
   ],
   "passed": false
->>>>>>> origin/auto/autonomy-17186719616
 }

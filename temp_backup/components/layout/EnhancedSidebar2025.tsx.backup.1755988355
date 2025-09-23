@@ -51,16 +51,6 @@ const sidebarItems: SidebarItem[] = [
     name: 'Solutions',
     href: '/solutions',
     icon: <Target className="w-5 h-5" />,
-<<<<<<< HEAD
-    description: 'Industry-specific solutions',
-    children: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
-      { name: 'Financial Solutions', href: '/solutions/financial', icon: <DollarSign className="w-4 h-4" /> },
-      { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: <Cog className="w-4 h-4" /> },
-      { name: 'Retail Solutions', href: '/retail-technology-solutions', icon: <Target className="w-4 h-4" /> },
-      { name: 'Government Solutions', href: '/government-technology-solutions', icon: <Shield className="w-4 h-4" /> }
-=======
     color: 'text-orange-400',
     items: [
       { name: 'Healthcare Solutions', href: '/healthcare-solutions', badge: 'New' },
@@ -77,7 +67,6 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Entertainment & Media', href: '/entertainment-media-solutions' },
       { name: 'Space Technology', href: '/space-technology' },
       { name: 'Biotech & Healthcare', href: '/biotech-ai' }
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-0fc2
     ]
   },
   {
@@ -388,16 +377,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                 </div>
               </div>
 
-<<<<<<< HEAD
-              {/* Navigation Sections */}
-              <div className="space-y-4">
-                <h3 className="text-sm font-semibold text-white/60 uppercase tracking-wider">
-                  Services & Solutions
-                </h3>
-                
-                {filteredSections.map((section) => (
-                  <div key={section.id} className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-=======
             {/* Quick Stats */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -485,7 +464,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
               <div className="space-y-2">
                 {sidebarSections.map((section) => (
                   <div key={section.title}>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-0fc2
                     <button
                       onClick={() => toggleSection(section.id)}
                       className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-white/5 transition-colors duration-300"

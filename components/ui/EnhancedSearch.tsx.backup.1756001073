@@ -294,11 +294,7 @@ const EnhancedSearch: React.FC = () => {
               </div>
             ) : query.length > 2 ? (
               <div className="p-4 text-center text-white/70">
-<<<<<<< HEAD
-                No results found for &quot;{query}&quot;
-=======
                 No results found for "{query}"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
               </div>
             ) : null}
           </motion.div>

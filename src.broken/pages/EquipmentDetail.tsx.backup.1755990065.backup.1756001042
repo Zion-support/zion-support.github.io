@@ -1,6 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -635,7 +633,6 @@ export default function EquipmentDetail() {
       </div>
     </>
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 import React from 'react';
 export function EquipmentDetail() {
   return (
@@ -643,9 +640,6 @@ export function EquipmentDetail() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   );
 }

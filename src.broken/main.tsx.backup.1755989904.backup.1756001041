@@ -27,11 +27,6 @@ import { NotificationProvider } from './context';
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 <<<<<<< HEAD
-import { ViewModeProvider } from './context/ViewModeContext';
-import { Provider } from 'react-redux';
-import { store } from './store/store';
-=======
-<<<<<<< HEAD
 import { initGA } from './lib/gtag';
 import { ErrorBoundary } from './components/ErrorBoundary';
 =======
@@ -40,7 +35,6 @@ import { ViewModeProvider } from './context/ViewModeContext';
 import { CartProvider } from './context/CartContext';
 import { UnitProvider } from './context/UnitContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
 =======
 import { Provider } from 'react-redux';
 import { store } from './store/store';
@@ -60,8 +54,6 @@ const queryClient = new QueryClient({
 });
 
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 initGA();
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -78,7 +70,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                     <ErrorBoundary>
                       <App />
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 try {
   console.log("main.tsx: Before ReactDOM.createRoot");
   // Render the app with proper provider structure
@@ -88,9 +79,6 @@ try {
         <QueryClientProvider client={queryClient}>
 =======
         <Provider store={store}>
-<<<<<<< HEAD
-=======
->>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality:src/main.tsx
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
           <WhitelabelProvider>
             <Router>
@@ -99,8 +87,6 @@ try {
                   <AnalyticsProvider>
                     <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                       <ViewModeProvider>
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:src_backup/main.tsx.backup.1755989904
                         <UnitProvider>
                           <CartProvider>
@@ -110,7 +96,6 @@ try {
                           </CartProvider>
                         </UnitProvider>
                       </ViewModeProvider>
->>>>>>> origin/a12zhz-codex/support-metric--imperial-units
                       <LanguageDetectionPopup />
                     </ErrorBoundary>
                   </LanguageProvider>
@@ -133,9 +118,6 @@ try {
             </Router>
           </WhitelabelProvider>
         </Provider>
-<<<<<<< HEAD
-=======
->>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality:src/main.tsx
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
       </QueryClientProvider>
     </HelmetProvider>

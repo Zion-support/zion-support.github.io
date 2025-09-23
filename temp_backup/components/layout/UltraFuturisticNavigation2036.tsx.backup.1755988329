@@ -92,45 +92,13 @@ const navigationItems: NavigationItem[] = [
   },
   {
     name: 'Showcase & Pricing',
-<<<<<<< HEAD
-    href: '/pricing',
-=======
     href: '/comprehensive-services-showcase-2038',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
     icon: <Star className="w-5 h-5" />,
     description: 'Service showcases and pricing',
     badge: 'Showcase',
     category: 'showcase',
     children: [
       { 
-<<<<<<< HEAD
-        name: '2040 Services Showcase', 
-        href: '/comprehensive-2040-services-showcase', 
-        description: 'Revolutionary 2040 technology solutions',
-        icon: <Star className="w-4 h-4" />,
-        featured: true,
-        badge: 'New'
-      },
-      { 
-        name: '2037 Services Showcase', 
-        href: '/comprehensive-2037-services-showcase', 
-        description: 'Revolutionary 2037 technology solutions',
-        icon: <Star className="w-4 h-4" />,
-        featured: true
-      },
-      { 
-        name: 'Revolutionary 2025 Pricing', 
-        href: '/revolutionary-2025-pricing', 
-        description: 'Innovative pricing models',
-        icon: <Calculator className="w-4 h-4" />
-      },
-      { 
-        name: '2040 Pricing', 
-        href: '/pricing-2040', 
-        description: 'Revolutionary 2040 technology pricing',
-        icon: <Star className="w-4 h-4" />,
-        badge: 'New'
-=======
         name: '2038 Services Showcase', 
         href: '/comprehensive-services-showcase-2038', 
         description: 'Latest revolutionary services',
@@ -142,7 +110,6 @@ const navigationItems: NavigationItem[] = [
         href: '/comprehensive-services-showcase-2025', 
         description: 'Previous services overview',
         icon: <Play className="w-4 h-4" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c3ac
       },
       { 
         name: 'Pricing Plans', 

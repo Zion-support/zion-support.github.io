@@ -1,8 +1,4 @@
 <<<<<<< HEAD
-import React from 'react';
-export function ListingModeration() {
-=======
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
@@ -51,7 +47,6 @@ export default function ListingModeration() {
 =======
 import React from 'react';
 export function ListingModeration() {
->>>>>>> origin/automation-error-fixes
 >>>>>>> origin/cursor/website-audit-and-enhancement-63e3
   return (
     <div>

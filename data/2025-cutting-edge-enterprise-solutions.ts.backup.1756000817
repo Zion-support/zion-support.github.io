@@ -46,20 +46,6 @@ export interface CuttingEdgeEnterpriseSolution {
 export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
   // ENTERPRISE SOLUTIONS
   {
-<<<<<<< HEAD
-    id: 'digital-transformation-accelerator',
-    name: 'Digital Transformation Accelerator',
-    tagline: 'Accelerate your digital transformation journey with proven methodologies and expert guidance',
-    description: 'Comprehensive digital transformation service that helps enterprises modernize their operations, adopt new technologies, and create competitive advantages in the digital economy.',
-    category: 'Enterprise Solutions',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      currency: 'USD',
-      trialDays: 0,
-      setupTime: '8-16 weeks',
-      enterprise: 'Project-based pricing: $50,000 - $500,000'
-=======
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
@@ -102,7 +88,6 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d4f3
     },
     features: [
       'Digital maturity assessment',
@@ -155,8 +140,6 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
     launchDate: '2025-01-15',
     customers: 28,
     rating: 4.9,
-<<<<<<< HEAD
-=======
     reviews: 42
   },
   {
@@ -269,7 +252,6 @@ export const cuttingEdgeEnterpriseSolutions: CuttingEdgeEnterpriseSolution[] = [
     reviews: 72,
     marketSize: '$42.8B enterprise AI market',
     growthRate: '34% annual growth',
->>>>>>> origin/main
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

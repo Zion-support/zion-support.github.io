@@ -1,67 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Complete merge process script
-set -e
-
-echo "🚀 Completing merge process for new AI 2025 content..."
-echo "⏰ Started at: $(date)"
-
-# Check current status
-echo "📊 Current git status:"
-git status
-
-# Add all changes
-echo "📝 Adding all changes..."
-git add .
-
-# Check if there are changes to commit
-if git diff --cached --quiet; then
-    echo "ℹ️  No changes to commit"
-else
-    echo "💾 Committing changes..."
-    git commit -m "Complete merge: Resolve conflicts and integrate new AI 2025 content
-
-- Resolved merge conflicts in layout.tsx
-- Integrated new AI 2025 Ultimate Breakthrough Revolution content
-- Added new case studies with high ROI metrics (10,000% ROI)
-- Created new blog posts about AI trends and predictions
-- Added promotional banners for better content discovery
-- Updated navigation to showcase new content prominently
-- Enhanced user experience with interactive components
-
-All conflicts resolved and new content successfully integrated into main branch."
-fi
-
-# Push to main
-echo "🚀 Pushing to main branch..."
-git push origin main
-
-# Verify the push
-echo "✅ Verifying push..."
-git status
-
-# Show recent commits
-echo "📝 Recent commits:"
-git log --oneline -10
-
-echo ""
-echo "🎉 Merge process completed successfully!"
-echo "📊 Summary:"
-echo "   ✅ All changes committed"
-echo "   🚀 Changes pushed to main branch"
-echo "   🎯 New AI 2025 content integrated"
-echo "   🔧 All merge conflicts resolved"
-echo "⏰ Completed at: $(date)"
-
-echo ""
-echo "🎯 The new AI 2025 content is now live on the main branch!"
-echo "   - AI 2025 Ultimate Breakthrough Revolution page"
-echo "   - Global Transformation Breakthrough case study (10,000% ROI)"
-echo "   - Revolutionary AI Trends & Predictions blog post"
-echo "   - Interactive promotional banners"
-echo "   - Enhanced navigation and user experience"
-=======
 echo "🚀 Complete Merge Process"
 echo "===="
 echo ""
@@ -227,4 +165,3 @@ log "   4. Verify navigation improvements"
 log "   5. Deploy to production if everything looks good"
 echo ""
 log_success "🎉 Process completed successfully!"
->>>>>>> origin/backup-main-final-20250913-063409

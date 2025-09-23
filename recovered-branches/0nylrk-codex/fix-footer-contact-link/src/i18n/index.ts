@@ -36,12 +36,8 @@ i18n
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'zion_language',
       caches: ['localStorage']
-<<<<<<< HEAD
-    }});
-=======
     },
   });
->>>>>>> origin/auto/autonomy-17186719616
 
 // For RTL language support
 document.documentElement.dir = i18n.dir();

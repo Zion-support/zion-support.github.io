@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-export { CartProvider, useCart } from './CartContext';
-=======
 export { AuthProvider } from './auth';
 export { MessagingProvider } from './MessagingContext';
 export { NotificationProvider } from './notifications/NotificationContext';
@@ -12,4 +9,3 @@ export {
 export { ViewModeProvider, useViewMode } from './ViewModeContext';
 export { CartProvider, useCart } from './CartContext';
 export { UnitProvider, useUnitSystem } from './UnitContext';
->>>>>>> origin/auto/autonomy-17186719616

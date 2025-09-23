@@ -1,9 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 17df199e451813150094c5ab1fb554b04628cb60
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import { Rocket, Atom, Cpu, Eye, Sparkles, Zap, CheckCircle, ArrowRight, Satellite } from 'lucide-react';
@@ -270,9 +267,6 @@ export default function SpaceMiningAutomationPlatformPage() {
       </div>
     </UltraFuturisticBackground>
   );
-<<<<<<< HEAD
-}
-=======
 }
 =======
 import { Rocket, Zap, Shield, Globe, Cpu, Satellite, Atom, Target } from 'lucide-react';
@@ -650,5 +644,4 @@ const SpaceMiningAutomationPlatformPage: React.FC = () => {
 };
 
 export default SpaceMiningAutomationPlatformPage;
->>>>>>> origin/HEAD
 >>>>>>> 17df199e451813150094c5ab1fb554b04628cb60

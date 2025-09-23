@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-import { Textarea } from "@/components/ui/textarea",
-import { Check, Pencil } from 'lucide-react'
-
-interface GeneratedDescriptionDisplayProps {
-  description: string,
-  onSave: (editedDescription: string) => void
-=======
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -21,27 +9,12 @@ import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void;
->>>>>>> origin/auto/autonomy-17186719616
 }
 
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
 }: GeneratedDescriptionDisplayProps) {
-<<<<<<< HEAD
-  const { toast } = useToast(),
-  const [isEditing, setIsEditing] = useState(false),
-  const [editedDescription, setEditedDescription] = useState(description),
-
-  const handleSave = () => {
-    onSave(editedDescription),
-    setIsEditing(false),
-    toast({
-      title: "Description Saved",
-      description: "Your edited description has been saved."
-    }),
-  },
-=======
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -54,21 +27,12 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved."
     });
   };
->>>>>>> origin/auto/autonomy-17186719616
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
-<<<<<<< HEAD
-          <Button
-            variant='outline'
-            size='sm'
-            onClick={() => setIsEditing(!isEditing)}
-            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
-=======
->>>>>>> origin/auto/autonomy-17186719616
           <Button 
             variant="outline" 
             size="sm" 
@@ -113,9 +77,5 @@ export function GeneratedDescriptionDisplay({
         </CardFooter>
       )}
     </Card>
-<<<<<<< HEAD
-  ),
-=======
   );
->>>>>>> origin/auto/autonomy-17186719616
 }
