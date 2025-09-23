@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+import Link from "next/link";
+=======
+<<<<<<< HEAD
+export default function EnterpriseITPage() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">Enterprise IT</h1>
+      <p className="text-gray-600">Enterprise-grade IT solutions and governance.</p>
+    </main>
+  );
+}
+=======
 import React from 'react';
+>>>>>>> origin/pr/22993
 
 export const metadata = {
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
@@ -307,6 +321,9 @@ export default function EnterpriseITPage() {
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
 
 
@@ -322,3 +339,4 @@ export default function EnterpriseITPage() {
 
 
 
+>>>>>>> origin/pr/22993

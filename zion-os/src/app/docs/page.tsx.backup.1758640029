@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+import Link from "next/link";
+=======
+<<<<<<< HEAD
+export default function DocsPage() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">Documentation</h1>
+      <p className="text-gray-600">Find guides and references for the platform.</p>
+    </main>
+  );
+}
+=======
 import React from 'react';
+>>>>>>> origin/pr/22993
 
 export const metadata = {
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",
@@ -286,6 +300,9 @@ export default function DocumentationPage() {
   );
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
 
 
@@ -325,3 +342,4 @@ export default function DocumentationPage() {
 
 
 
+>>>>>>> origin/pr/22993

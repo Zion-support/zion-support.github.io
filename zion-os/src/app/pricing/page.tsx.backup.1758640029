@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+"use client";
+=======
+<<<<<<< HEAD
+export default function PricingPage() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">Pricing</h1>
+      <p className="text-gray-600">Choose the plan that fits your needs.</p>
+    </main>
+  );
+}
+=======
 import React from 'react';
+>>>>>>> origin/pr/22993
 
 import { useState } from "react";
 
@@ -13,6 +27,40 @@ interface PricingTier {
   ctaLink: string;
 }
 
+<<<<<<< HEAD
+const tiers: PricingTier[] = [
+  {
+    name: "Starter",
+    price: "$99",
+    period: "/month",
+    description: "Perfect for small businesses and startups",
+    features: ["Up to 3 instances", "Basic feature set", "Community support"],
+    cta: "Start Free Trial",
+    ctaLink: "/multiverse/launch",
+  },
+  {
+    name: "Professional",
+    price: "$299",
+    period: "/month",
+    description: "Ideal for growing businesses",
+    features: ["Up to 10 instances", "Priority support", "API access"],
+    popular: true,
+    cta: "Get Started",
+    ctaLink: "/multiverse/launch",
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    period: "",
+    description: "For large organizations with complex needs",
+    features: ["Unlimited instances", "Custom integrations", "24/7 support"],
+    cta: "Contact Sales",
+    ctaLink: "mailto:kleber@ziontechgroup.com",
+  },
+];
+=======
+>>>>>>> origin/main
+>>>>>>> origin/pr/22993
 
 export default function PricingPage() {
   const [selected, setSelected] = useState<string | null>(tiers[1].name);
