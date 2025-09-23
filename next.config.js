@@ -4,8 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  // Disable SWC minifier to avoid WebpackError from version mismatch
-  swcMinify: false,
+  // Next.js 15 no longer supports swcMinify flag; remove for validity
   
   // Enhanced build settings
   eslint: { ignoreDuringBuilds: true },
