@@ -46,7 +46,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     try {
       if (user) localStorage.setItem('zion.user', JSON.stringify(user))
       else localStorage.removeItem('zion.user')
-    } catch (_error) {
+    } catch {
       // Intentionally ignoring storage write errors (e.g., private mode)
       // to avoid disrupting app state updates.
     }

@@ -1,67 +1,67 @@
-// Flat ESLint config for ESLint v9+
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import tseslint from 'typescript-eslint';
+// ESLint v9 flat config
+import js from "@eslint/js";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import tseslint from "typescript-eslint";
+
 export default [
   {
-    // Limit linting to main app sources; ignore backups/other projects
     ignores: [
-      'node_modules/**',
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'public/**',
-      'automation/**',
-      'apps.backup/**',
-      'backup/**',
-      'backups/**',
-      'backup-merge-conflicts/**',
-      'backup-problematic-files/**',
-      'recovered-branches/**',
-      'server/**',
-      'zion-os/**',
-      'zion-website/**',
-      'zion-ai-assistant/**',
-      'ts_files_backup/**',
-      'src_backup/**',
-      'src_backup_temp/**',
-      'components/2025-advanced-services-showcase.tsx',
-      'components/2025-comprehensive-services-showcase-v2.tsx',
-      'components/AI2025AdvancedAutomationShowcase.tsx',
-      'components/AI2025AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js'
-    ]
+      ".next",
+      "dist",
+      "build",
+      "coverage",
+      "node_modules",
+      "automation/**",
+      "backups/**",
+      "backup/**",
+      "backup-merge-conflicts/**",
+      "backup-problematic-files/**",
+      "apps.backup/**",
+      "components.disabled/**",
+      "src.disabled/**",
+      "server/**",
+      "recovered-branches/**",
+      "zion-os/**",
+      "zion-os.disabled/**",
+      "zion-ai-assistant/**",
+      "app.disabled/**",
+      "app_backup/**",
+      "app-disabled/**",
+      "app.conflicted.*/**",
+      "__tests__/**",
+      "__safe_tests__/**",
+      "e2e/**",
+      "components/api/docs/**",
+      "data/api-docs/**",
+      "plugins/**",
+      "dao/**",
+      ".temp_backup_components/**",
+      ".temp/**",
+      "temp_backup/**",
+      "temp_exclude/**",
+      "pages.bak/**",
+      "ts_files_backup/**",
+      "**/*.disabled/**",
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: [
-      'app/**/*.{js,jsx,ts,tsx}',
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}'
-    ],
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      parser: tseslint.parser,
-      parserOptions: { ecmaFeatures: { jsx: true } }
-    },
     plugins: {
       react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint.plugin
+      "react-hooks": reactHooks,
     },
     rules: {
-      'react/react-in-jsx-scope': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React)$', ignoreRestSiblings: true }
-      ]
+      "react/react-in-jsx-scope": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
     },
-    settings: { react: { version: 'detect' } }
-  }
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+  },
 ];
 
