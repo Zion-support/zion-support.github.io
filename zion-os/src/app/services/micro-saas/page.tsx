@@ -1,27 +1,23 @@
-<<<<<<< HEAD
+import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
-
-=======
-  name: string;
-  description: string;
-  targetMarket: string[];
-  features: string[];
-  pricing: string;
-  startingPrice: number;
-  contactLink: string;
-  icon: string;
-  benefits: string[];
-  integrations: string[];
-  deployment: string;
+export default function MicroSaasPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Micro SaaS</h1>
+			<p>Lightweight SaaS solutions tailored to your needs.</p>
+		</main>
+	);
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+
+
+
+
+
+
+
+
+
+
+
+

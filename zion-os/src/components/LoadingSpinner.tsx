@@ -1,14 +1,9 @@
-<<<<<<< HEAD
+import React from 'react';
 
+export function LoadingSpinner() {
+  return (
+    <div className="inline-block h-6 w-6 animate-spin rounded-full border-2 border-white/30 border-t-white" aria-label="Loading" />
+  );
+}
 
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default LoadingSpinner;

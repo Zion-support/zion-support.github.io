@@ -1,41 +1,7 @@
-<<<<<<< HEAD
+import React from 'react';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-  title: string;
-  description: string;
-  target?: string;
-  position: "top" | "bottom" | "left" | "right";
+export function OnboardingWalkthrough(): React.ReactElement | null {
+  return null;
 }
-  {
-    id: "welcome",
-    title: "Welcome to Zion OS! 🚀",
-    description: "Let's take a quick tour to help you get started with launching your digital economy.",
-  },
-  {
-    id: "navigation",
-    title: "Navigation",
-    description: "Use the top navigation to quickly access different sections of the platform.",
-  },
-  {
-    id: "complete",
-    title: "You're All Set! 🎉",
-    description: "You now know the basics. Start building your digital economy or explore more features.",
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+export default OnboardingWalkthrough;

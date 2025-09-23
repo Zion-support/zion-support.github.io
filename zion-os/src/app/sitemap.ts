@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+import type { MetadataRoute } from "next";
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+export default function sitemap(): MetadataRoute.Sitemap {
+	return [
+		{ url: "https://example.com/", lastModified: new Date() },
+		{ url: "https://example.com/about", lastModified: new Date() },
+	];
+}

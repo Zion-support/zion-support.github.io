@@ -1,110 +1,124 @@
+"use client";
+import React, { createContext, useContext, useMemo, useState } from "react";
 
+type AuthUser = { id: string; email: string } | null;
 
+type AuthContextValue = {
+	user: AuthUser;
+	signIn: (email: string, _password: string) => Promise<void>;
+	signOut: () => Promise<void>;
+};
 
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
+export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
+	const [user, setUser] = useState<AuthUser>(null);
 
+	const signIn = async (email: string): Promise<void> => {
+		setUser({ id: "demo-user", email });
+	};
 
+	const signOut = async (): Promise<void> => {
+		setUser(null);
+	};
 
+	const value = useMemo<AuthContextValue>(() => ({ user, signIn, signOut }), [user]);
 
-
-<<<<<<< HEAD
-
-
-=======
-  const login = async (email: string, password: string) => {
-  };
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
-
-
-<<<<<<< HEAD
-
-
-
-
-
-=======
-  const register = async (name: string, email: string, password: string) => {
-    }
-    await login(email, password);
-  };
-
-  const completeOnboarding = async () => {
-  };
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
-
-
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (context === undefined) throw new Error("useAuth must be used within an AuthProvider");
-  return context;
+	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
+export function useAuth(): AuthContextValue {
+	const ctx = useContext(AuthContext);
+	if (!ctx) {
+		throw new Error("useAuth must be used within an AuthProvider");
+	}
+	return ctx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

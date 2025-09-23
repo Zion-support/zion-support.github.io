@@ -1,4 +1,13 @@
-<<<<<<< HEAD
+import React from 'react';
+
+export default function ResearchPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Research</h1>
+			<p>Our research initiatives and publications.</p>
+		</main>
+	);
+}
 
 
 
@@ -18,5 +27,4 @@
 
 
 
-=======
->>>>>>> cursor/check-fix-push-and-merge-to-main-58c4
+
