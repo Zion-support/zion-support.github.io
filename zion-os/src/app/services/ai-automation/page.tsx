@@ -1,8 +1,11 @@
-export default function AiAutomationServicesPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>AI Automation Services</h1>
-      <p>Automate workflows with intelligent systems.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function AiAutomationServicesPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>AI Automation Services</h1>
+			<p>Automate business processes with AI-driven workflows.</p>
+		</main>
+	);
 }
+

@@ -1,11 +1,14 @@
-export default function SpaceTechPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Space Tech</h1>
-      <p>Exploring innovations at the intersection of AI and space.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function SpaceTechPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Space Tech</h1>
+			<p>Innovations at the intersection of space and AI.</p>
+		</main>
+	);
 }
+
 
 
 

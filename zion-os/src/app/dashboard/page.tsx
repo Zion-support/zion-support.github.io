@@ -1,11 +1,14 @@
-export default function DashboardPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Dashboard</h1>
-      <p>Welcome to the Zion OS dashboard.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function DashboardPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Dashboard</h1>
+			<p>Welcome to your dashboard.</p>
+		</main>
+	);
 }
+
 
 
 

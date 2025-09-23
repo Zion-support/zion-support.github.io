@@ -1,11 +1,14 @@
-export default function TermsPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Terms of Service</h1>
-      <p>Please review our terms and conditions.</p>
-    </main>
-  );
+import React from 'react';
+
+export default function TermsPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Terms and Conditions</h1>
+			<p>Please review our terms of service.</p>
+		</main>
+	);
 }
+
 
 
 

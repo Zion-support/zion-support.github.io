@@ -1,26 +1,14 @@
-export default function CybersecurityPage() {
-  return (
-    <main className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-4">Cybersecurity</h1>
-      <p className="text-gray-600">
-        This page provides information about our cybersecurity offerings and best practices.
-      </p>
-    </main>
-  );
+import React from 'react';
+
+export default function CybersecurityPage(): React.ReactElement {
+	return (
+		<main>
+			<h1>Cybersecurity</h1>
+			<p>Learn about our cybersecurity offerings and best practices.</p>
+		</main>
+	);
 }
 
-
-export default function CybersecurityPage() {
-  return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Cybersecurity</h1>
-      <p>
-        Explore our cybersecurity insights, best practices, and solutions for securing
-        modern applications and infrastructure.
-      </p>
-    </main>
-  );
-}
 
 
 
