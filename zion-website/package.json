@@ -15,7 +15,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
   "devDependencies": {
     "@headlessui/react": "^2.2.8",

@@ -10,11 +10,11 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-    "lint:fix": "next lint --fix",
+    "lint:fix": "eslint . --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
@@ -58,6 +58,7 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@next/bundle-analyzer": "^14.2.0",
+    "@next/swc-linux-x64-gnu": "^15.5.3",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
@@ -87,11 +88,26 @@
       "^@/(.*)$": "<rootDir>/$1"
     },
     "modulePathIgnorePatterns": [
-      "<rootDir>/automation/backups/",
-      "<rootDir>/apps.backup/",
-      "<rootDir>/.temp_backup_components/",
-      "<rootDir>/components/apps/",
-      "<rootDir>/zion-os/"
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/backup/.*",
+      "<rootDir>/backups/.*",
+      "<rootDir>/backup-merge-conflicts/.*",
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/automation/backups/.*",
+      "<rootDir>/apps.backup/.*",
+      "<rootDir>/components/apps/.*",
+      "<rootDir>/.temp_backup_components/.*",
+      "<rootDir>/backup/.*",
+      "<rootDir>/backups/.*",
+      "<rootDir>/backup-merge-conflicts/.*",
+      "<rootDir>/recovered-branches/.*",
+      "<rootDir>/zion-os/.*"
     ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
@@ -108,6 +124,12 @@
       "<rootDir>/node_modules/",
       "<rootDir>/__tests__/",
       "<rootDir>/tests/",
+      "<rootDir>/test/",
+      "<rootDir>/src.broken/",
+      "<rootDir>/src-corrupted/",
+      "<rootDir>/temp_backup/",
+      "<rootDir>/pages_backup/",
+      "<rootDir>/dao/",
       "<rootDir>/tests.disabled/",
       "<rootDir>/src.disabled/",
       "<rootDir>/src_backup_temp/",
@@ -128,8 +150,12 @@
       "<rootDir>/ts_files_backup/",
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
+      "<rootDir>/App.test.ts",
+      "<rootDir>/plugins/wallet-connector/cypress/",
+      "<rootDir>/components/api/docs/",
+      "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
     ]
   },
-  "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
+  "packageManager": "npm@11.6.0"
 }
