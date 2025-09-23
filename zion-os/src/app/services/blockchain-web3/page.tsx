@@ -1,18 +1,25 @@
+<<<<<<< HEAD
+export default function Web3ServicesPage() {
+  return (
+    <main className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-4">Blockchain & Web3</h1>
+      <p className="text-gray-600">Consulting and development for blockchain and Web3.</p>
+    </main>
+  );
+}
+=======
 "use client";
 
 export default function BlockchainWeb3Page() {
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>
-        <p className="text-xl opacity-80 max-w-3xl mx-auto">
-          Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business
+    <div className="min-h-screen bg-white">
+      <section className="py-20 text-center">
+        <h1 className="text-4xl font-bold">Blockchain & Web3</h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Secure blockchain integrations and Web3 solutions.
         </p>
-      </div>
-      {/* Content trimmed for brevity - keeping structure valid */}
-      <div className="text-center">
-        <p className="opacity-80">Details coming soon.</p>
-      </div>
+      </section>
     </div>
   );
 }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export default function Analytics() {
+	return null;
+}
+=======
 "use client";
 
 import { useEffect } from "react";
@@ -8,45 +13,51 @@ interface FirstInputEntry extends PerformanceEntry {
   target?: Element;
 }
 
-export default function Analytics() {
+export function Analytics() {
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === "largest-contentful-paint") {
-          console.log("LCP:", entry.startTime);
+    // Performance monitoring
+    if (typeof window !== "undefined") {
+      // Core Web Vitals monitoring
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === "largest-contentful-paint") {
+            console.log("LCP:", entry.startTime);
+          }
+          if (entry.entryType === "first-input") {
+            const firstInputEntry = entry as FirstInputEntry;
+            console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+          }
         }
-        if (entry.entryType === "first-input") {
-          const firstInputEntry = entry as FirstInputEntry;
-          console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+      });
+
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+
+      // Cumulative Layout Shift monitoring
+      let cls = 0;
+      const observer2 = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === "layout-shift") {
+            const layoutShiftEntry = entry as any;
+            cls += layoutShiftEntry.value;
+          }
         }
-      }
-    });
-    observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
+      });
 
-    let cls = 0;
-    const observer2 = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === "layout-shift") {
-          const layoutShiftEntry = entry as any;
-          cls += layoutShiftEntry.value;
-        }
-      }
-    });
-    observer2.observe({ entryTypes: ["layout-shift"] });
+      observer2.observe({ entryTypes: ["layout-shift"] });
 
-    const onBeforeUnload = () => {
-      console.log("CLS:", cls);
-    };
-    window.addEventListener("beforeunload", onBeforeUnload);
+      // Report metrics on page unload
+      window.addEventListener("beforeunload", () => {
+        console.log("CLS:", cls);
+      });
 
-    return () => {
-      observer.disconnect();
-      observer2.disconnect();
-      window.removeEventListener("beforeunload", onBeforeUnload);
-    };
+      // Cleanup
+      return () => {
+        observer.disconnect();
+        observer2.disconnect();
+      };
+    }
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 }
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
