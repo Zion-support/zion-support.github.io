@@ -3,6 +3,7 @@ import eslintReact from 'eslint-plugin-react';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
 import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
 export default [
   {
@@ -27,14 +28,11 @@ export default [
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
-      'components/20o25-advanced-services-showcase.tsx',
-      'components/20o25-comprehensive-services-showcase-v2.tsx',
-      'components/AI20o25AdvancedAutomationShowcase.tsx',
-      'components/AI20o25AdvancedAnalyticsDashboard.tsx',
+      'components/**',
       '**/*.min.js'
     ]
   },
-  js.configs.recommended,
+  eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: [
