@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import React, { Suspense, lazy } from 'react'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target, Sparkles, TrendingUp } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -82,7 +83,7 @@ import WhatsNew from './components/WhatsNew';
 // Import new 2026 promotional components
 import LatestBlogContent2026 from '../src/components/LatestBlogContent2026';
 import LatestServicesShowcase2026 from '../src/components/LatestServicesShowcase2026';
-import NewContent2026UltimateBanner from '../src/components/NewContent2026UltimateBanner';
+import NewContent2026UltimateBanner from './components/NewContent2026UltimateBanner';
 import SuccessStoriesShowcase2026 from '../src/components/SuccessStoriesShowcase2026';
 import UltimateContentPromotion2026 from '../src/components/UltimateContentPromotion2026';
 

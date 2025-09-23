@@ -38,6 +38,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Navigation */}
       <div className="bg-gray-50 border-b">
@@ -198,25 +199,20 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
-        </section>
 
           {/* Implementation Phases */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Phases</h2>
-            
             <div className="space-y-8">
               {/* Phase 1 */}
               <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
-                    1
-                  </div>
+                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Assessment & Planning</h3>
                     <p className="text-gray-600">Months 1-3</p>
                   </div>
                 </div>
-                
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Activities</h4>
@@ -266,15 +262,12 @@ export default function AI2025UltimateImplementationMasterGuide() {
               {/* Phase 2 */}
               <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
-                    2
-                  </div>
+                  <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Pilot Implementation</h3>
                     <p className="text-gray-600">Months 4-9</p>
                   </div>
                 </div>
-                
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Activities</h4>
@@ -324,15 +317,12 @@ export default function AI2025UltimateImplementationMasterGuide() {
               {/* Phase 3 */}
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
-                    3
-                  </div>
+                  <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">Full-Scale Deployment</h3>
                     <p className="text-gray-600">Months 10-18</p>
                   </div>
                 </div>
-                
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Activities</h4>
@@ -447,7 +437,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </Link>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   );
 }
