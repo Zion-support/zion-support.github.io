@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-/* minimal global css */
-body { margin: 0; padding: 0; }
->>>>>>> 3acf1df8c42e480e27c08a54303afaf751b8e30c
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 /* Global CSS Variables */
 :root {
   --foreground-rgb: 17, 24, 39;
@@ -117,8 +111,3 @@ body {
     display: none !important;
   }
 }
-=======
-/* Minimal base reset */
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; padding: 0; }
->>>>>>> 3acf1df8c42e480e27c08a54303afaf751b8e30c
