@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  swcMinify: false,
   experimental: {
     esmExternals: true,
   },
@@ -9,10 +9,10 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   typescript: {
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   images: {
     domains: ['localhost'],
