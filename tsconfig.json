@@ -61,6 +61,10 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
-    "app/**/*.disabled/**"
+    "src/pages_backup/**",
+    "src/pages.broken/**",
+    "src.broken/**",
+    "src.disabled/**",
+    "src.pages.disabled/**"
   ]
 }

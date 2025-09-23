@@ -7,46 +7,34 @@ const createJestConfig = nextJest({
 
 // Add any custom config to be passed to Jest
 const customJestConfig = {
-	setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-	testEnvironment: 'jest-environment-jsdom',
-	moduleNameMapper: {
-		'^@/(.*)$': '<rootDir>/$1',
-	},
-	modulePathIgnorePatterns: [
-		'/node_modules/',
-		'/.next/',
-		'/automation/backups/',
-		'/apps.backup/',
-		'/backup-merge-conflicts/',
-		'/backup-problematic-files/',
-		'/recovered-branches/',
-		'/src.disabled/',
-		'/components.disabled/',
-		'/pages.disabled/',
-		'/ts_files_backup/',
-		'/backups/',
-		'/backup/',
-		'/src.broken/',
-		'/temp_backup/',
-		'/tests/',
-		'/__tests__/',
-		'/test/',
-		'/__safe_tests__/'
-	],
-	testPathIgnorePatterns: [
-		'/node_modules/',
-		'/.next/',
-		'/src.disabled/',
-		'/components.disabled/',
-		'/pages.disabled/',
-		'/ts_files_backup/',
-		'/src.broken/',
-		'/__tests__/',
-		'/tests/',
-		'/test/',
-		'/__safe_tests__/'
-	],
-	testMatch: ['**/__never_run_tests__/**'],
+  roots: ['<rootDir>/app'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/__tests__/',
+    '<rootDir>/tests/',
+    '<rootDir>/tests.disabled/',
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/automation/',
+    '<rootDir>/automation/backups/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/backup/',
+    '<rootDir>/backups/',
+    '<rootDir>/backup-merge-conflicts/',
+    '<rootDir>/backup-problematic-files/',
+    '<rootDir>/recovered-branches/',
+    '<rootDir>/components/apps/',
+    '<rootDir>/zion-os/',
+    '<rootDir>/zion-website/',
+    '<rootDir>/zion-ai-assistant/',
+    '<rootDir>/server/'
+  ],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

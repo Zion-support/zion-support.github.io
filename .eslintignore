@@ -31,11 +31,18 @@ zion.app/
 
 # Temp and generated content
 temp*/
+temp_components/
+temp_disabled/
+temp_working/
 __tests__/
 tests/
 __mocks__/
 
 test*/
+
+# Broad utility and types folders that are not part of lint scope
+utils/
+types/
 
 # Specific noisy folders
 server/

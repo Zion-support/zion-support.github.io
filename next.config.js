@@ -1,15 +1,15 @@
 /********
- * Temporary build config to unblock production build
- * TODO: Re-enable type checking after resolving conflicts in TS files
+ * Next.js build configuration
+ * Type checking and ESLint are now enabled after resolving conflicts
  */
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
 }
 

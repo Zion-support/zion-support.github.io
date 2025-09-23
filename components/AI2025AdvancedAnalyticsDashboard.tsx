@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 
 const AI2025AdvancedAnalyticsDashboard = () => {
   const [timeRange, setTimeRange] = useState('7d');
   const [activeMetric, setActiveMetric] = useState('roi');
-  const [isLoading, setIsLoading] = useState(false);
 
   const timeRanges = [
     { value: '24h', label: '24 Hours' },
