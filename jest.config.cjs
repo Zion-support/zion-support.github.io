@@ -29,3 +29,7 @@ const customJestConfig = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
   passWithNoTests: true,
+}
+
+module.exports = createJestConfig(customJestConfig)
+

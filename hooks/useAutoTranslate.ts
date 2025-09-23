@@ -39,18 +39,9 @@ export type UseAutoTranslateResult = {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [key, debounceMs]);
-  
-  return {
-    translations,
-    loading,
-    error
-  };
+
+    translateAll();
+  }, [text, targets]);
+
+  return { translations, loading, error };
 }
-}
-    }
-  }, [key, debounce_ms]);
-;
-  return { translations, loading, error }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533

@@ -12,14 +12,18 @@ export function usePerformanceMonitor() {;
 
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
     // Check if Performance Observer is supported
     if (!('PerformanceObserver' in window)) {
-    setIsSupported(false)
-    return
-  }
+      setIsSupported(false);
+      return;
+    }
+
     setIsSupported(true);
+
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
@@ -31,14 +35,12 @@ export function usePerformanceMonitor() {;
             loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
           }));
         }
-        if (entry && entry.entryType === 'paint') {
-
+        if (entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+          if (paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-
               ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
+              firstContentfulPaint: paintEntry.startTime,
             }));
           }
         }
@@ -171,3 +173,5 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
+
+export default usePerformanceMonitor;
