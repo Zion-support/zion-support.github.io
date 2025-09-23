@@ -16,30 +16,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-<<<<<<< HEAD
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
-=======
-    "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "*"
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-7047
       ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
+    ]
   },
   "include": [
     "next-env.d.ts",
