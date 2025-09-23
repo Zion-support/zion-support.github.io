@@ -10,11 +10,11 @@
     "dev": "next dev",
     "build": "NODE_OPTIONS='--max-old-space-size=4096 --openssl-legacy-provider' next build --no-lint",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "build:analyze": "ANALYZE=true npm run build",
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
-    "lint:fix": "next lint --fix",
+    "lint:fix": "eslint . --fix",
     "type-check": "NODE_OPTIONS='--max-old-space-size=8192' tsc --noEmit",
     "test": "jest --runInBand --passWithNoTests --no-cache",
     "test:watch": "jest --watch --runInBand",
@@ -58,6 +58,10 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@next/bundle-analyzer": "^14.2.0",
+<<<<<<< HEAD
+=======
+    "@next/swc-linux-x64-gnu": "^15.5.3",
+>>>>>>> cursor/check-fix-push-and-merge-to-main-7e10
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
@@ -124,5 +128,5 @@
       "<rootDir>/e2e/"
     ]
   },
-  "packageManager": "npm@11.6.0+sha512.77f3fb0dbbd881835d7bd1217deabdf7ed77fc4ec4f363df64fc3cb986404abf6c437661041080f5c5d225103508e7c9ea30cb2742b7e942675d05a10af2d7b9"
+  "packageManager": "npm@11.6.0"
 }
