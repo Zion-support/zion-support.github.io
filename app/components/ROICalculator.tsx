@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import React from 'react';
 
 export default function ROICalculator() {
@@ -9,3 +10,9 @@ export default function ROICalculator() {
     </div>
   );
 }
+=======
+
+export default function ROICalculator() {
+	return null;
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

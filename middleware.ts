@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
@@ -46,3 +47,15 @@ export const config = {
     '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico|css|js)$).*)',
   ],
 };
+=======
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+export function middleware(_request: NextRequest) {
+  return NextResponse.next()
+}
+
+export const config = {
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f

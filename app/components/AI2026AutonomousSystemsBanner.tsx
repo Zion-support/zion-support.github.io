@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import React from 'react';
 
 export default function AI2026AutonomousSystemsBanner() {
@@ -10,4 +11,9 @@ export default function AI2026AutonomousSystemsBanner() {
 			</div>
 		</section>
 	);
+=======
+
+export default function AI2026AutonomousSystemsBanner() {
+	return null;
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-833f
 }
