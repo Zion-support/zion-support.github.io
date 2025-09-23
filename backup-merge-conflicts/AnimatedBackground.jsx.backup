@@ -142,9 +142,6 @@ export function AnimatedBackground($1) {
                 })})};
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/AnimatedBackground.jsx.backup
-<<<<<<< HEAD
-        const drawWaves = ("props": "any) => {;
 =======
 =======
 =======
@@ -173,10 +170,6 @@ export function AnimatedBackground($1) {
                 ctx.stroke()}
         };
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD:backup-merge-conflicts/AnimatedBackground.jsx.backup
-<<<<<<< HEAD
-        const drawMatrix = ("props": "any) => {;
 =======
 =======
 =======

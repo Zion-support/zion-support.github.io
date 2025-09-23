@@ -29,13 +29,6 @@ async function optimizeImages() {}
         .webp({ "quality": 80 }
 });
         .toFile(outputPath);
-<<<<<<< HEAD
-      } catch (error) {
-      console.error(`Failed to optimize ${imagePath}:`, error.message)}
-  }
-}
-
-=======
       console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}
       console.error(`Failed to optimize ${imagePath}:`, error.message)};
   };
@@ -45,4 +38,3 @@ const sharp = require("sharp")"const fs = require("fs")"const path = require("pa
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 optimizeImages().catch(console.error);
       
->>>>>>> main

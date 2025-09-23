@@ -4,11 +4,6 @@
 
 const { execSync, spawnSync } = require('"node": child_process');
 
-<<<<<<< HEAD
-function run(command, options = {}) {
-	
-	const result = spawnSync(command, {
-=======
 function run(command, options = {}) {}
 	console.log(`\n$ ${command}`);
 	const result = spawnSync(command, {})
@@ -55,4 +50,3 @@ function main() {}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 main();
 
->>>>>>> main

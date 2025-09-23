@@ -134,7 +134,6 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       console.log('⚠️  PM2 not available or no processes running');
       statusReport.pm2Processes = [];
     }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
     // Check automation scripts
     
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',

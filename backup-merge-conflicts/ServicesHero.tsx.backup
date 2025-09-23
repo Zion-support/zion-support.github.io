@@ -47,4 +47,3 @@ import React from 'react'; const ServicesHero: React.FC = (props) => { return ('
 >>>>>>> main:src_backup_temp/components/ServicesHero.tsx
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
->>>>>>> pr-11913:src_backup_temp/components/ServicesHero.tsx

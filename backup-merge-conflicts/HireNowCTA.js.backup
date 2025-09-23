@@ -101,8 +101,6 @@ export function HireNowCTA("props": "any) {;
 <<<<<<< HEAD
 
 export default HireNowCTA;
-<<<<<<< HEAD:backup-merge-conflicts/HireNowCTA.js.backup
-=======
 =======
 =======
 export default HireNowCTA;        e.preventDefault();        if (onHire) {
@@ -122,7 +120,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         message: ''
         e.preventDefault();
         if (onHire) {
->>>>>>> pr-11914:backup-merge-conflicts/HireNowCTA.js.backup
             onHire(formData);
         }
         // Reset form and close

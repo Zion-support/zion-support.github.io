@@ -424,7 +424,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "relatedServices": "randomRespons e.relatedServices",;
         "estimatedResponseTime": "1 + Math.random() * 2;
       "}
-<<<<<<< HEAD:backup-merge-conflicts/AIChatbotSystem.tsx.backup
 =======
 =======
 <<<<<<< HEAD

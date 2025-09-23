@@ -5,13 +5,6 @@ const path = require('path');
 function cleanMergeConflicts(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-    
-    // Remove all merge conflict markers
-    
-    // Remove duplicate category lines
-    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
-=======
     // Remove all merge conflict markers;
     content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');

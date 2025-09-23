@@ -37,7 +37,6 @@ interface PerformanceMetrics {
 }
 interface PerformanceOptions {
   enableRealUserMonitoring?: boolean;
->>>>>>> main
 >>>>>>> pr-11935
   enableWebVitals?: boolean;
   enableResourceTiming?: boolean;
@@ -269,7 +268,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
   // Get navigation timing metrics
   const getNavigationTiming = useCallback(() => {
     if (!enableNavigationTiming || !performance.getEntriesByType) return;
->>>>>>> main
 >>>>>>> pr-11935
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {;
@@ -354,7 +352,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
     // First Contentful Paint
     try {
       observerRef.current = new PerformanceObserver((list) => {
->>>>>>> main
 >>>>>>> pr-11935
         const entries = list.getEntries();
         entries.forEach((entry) => {;
@@ -387,7 +384,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
     // Largest Contentful Paint
     try {
       lcpObserverRef.current = new PerformanceObserver((list) => {
->>>>>>> main
 >>>>>>> pr-11935
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
@@ -521,7 +517,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
       getNavigationTiming();';
       getResourceTiming()} else {
       window.addEventListener('load', () => {
->>>>>>> main
 >>>>>>> pr-11935
         getNavigationTiming();
 <<<<<<< HEAD
@@ -532,7 +527,6 @@ export function usePerformance("options": PerformanceOptions = {}) {
 <<<<<<< HEAD:backup-merge-conflicts/usePerformance.ts.backup
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
->>>>>>> pr-11913:src_backup_temp/hooks/usePerformance.ts
         getResourceTiming();
       }
     );
@@ -764,7 +758,6 @@ export function useRenderTime() {;
     return () => observer.disconnect()}, [eventName, callback]);
 // Hook for measuring time between renders
 export function useRenderTime() {
->>>>>>> main
 >>>>>>> pr-11935
   const renderStart = useRef(performance.now());
   const [renderTime, setRenderTime] = useState(0);
@@ -976,7 +969,6 @@ export default usePerformance;
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 =======
 <<<<<<< HEAD

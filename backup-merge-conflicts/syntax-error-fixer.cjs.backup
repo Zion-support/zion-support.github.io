@@ -180,7 +180,6 @@ class SyntaxErrorFixer {
       this.startContinuousFixing();
       
       // Listen for signals to trigger fixes;
->>>>>>> main
       this.setupSignalHandlers();
       
       this.log('info', 'Syntax Error Fixer Service started successfully');

@@ -92,7 +92,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       
 =======
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       // Run all prevention checks
       results.checks.linting = await this.checkLinting();
 >>>>>>> main
@@ -119,12 +118,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     try {
       this.log('Checking linting...');
       const result = execSync('npm run lint', { 
-<<<<<<< HEAD
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 30000
-      ;};);
-=======
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
@@ -492,7 +485,6 @@ automation.start().catch(error => {}),
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       return {
         "success": true,
         "output": result,
@@ -530,7 +522,6 @@ automation.start().catch(error => {}),
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       return {
         "success": true,
         "output": result,
@@ -566,7 +557,6 @@ automation.start().catch(error => {}),
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       return {
         "success": true,
         "output": result,
@@ -602,7 +592,6 @@ automation.start().catch(error => {}),
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       return {
         "success": true,
         "output": result,
@@ -660,7 +649,6 @@ automation.start().catch(error => {}),
       
 =======
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
->>>>>>> main
       return {
         "success": true,
         "output": result,

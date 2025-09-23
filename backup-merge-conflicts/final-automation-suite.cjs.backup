@@ -4,34 +4,6 @@ const { execSync } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-<<<<<<< HEAD
-    this.ensureDirectories()
-    this.results = {"buildSuccess": false,"testsPassed": false,"securityIssues": 0;
-      performanceScore: 0}
-  }
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message, level = "INFO") {
-    const timestamp = new Date().toISOString()
-    const emoji = level === "SUCCESS" ? "✅" : level === "ERROR" ? "❌" : level === "WARN" ? "⚠️" : "ℹ️"
-    }
-  async runCommand(command, description) {
-    this.log(`🚀 ${description}`, "INFO")
-    try {
-      const result = execSync(command, {"cwd": this.projectRoot,"encoding": "utf8","timeout": 300000;
-        stdio: "pipe"})
-      this.log(`✅ ${description} completed`, "SUCCESS")
-      return { "success": true, "output": result }
-    } catch (error) {
-      this.log(`❌ ${description} "failed": ${error.message}`, "ERROR")
-      return { "success": false, "error": error.message }
-    }
-  }
-  async runBuild() {
-    this.log("🏗️ Building application...", "INFO")
-=======
     this.results = {"buildSuccess": false,"testsPassed": false,"securityIssues"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "INFO")
@@ -83,4 +55,3 @@ const path = require("path")
     this.log("=".repeat(60), "INFO"
       this.log("� Final Automation Suite completed!", "SUCCESS")
       this.log(`� Automation "failed": ${error.message}`, ``)
->>>>>>> main

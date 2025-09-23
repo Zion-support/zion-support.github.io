@@ -35,7 +35,6 @@ export function logErrorToProduction("message": string, error?: unknown): void {
 }';';
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 export function logErrorToProduction(message: 'string',error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 >>>>>>> pr-11935
   // "TODO": Implement production error logging service

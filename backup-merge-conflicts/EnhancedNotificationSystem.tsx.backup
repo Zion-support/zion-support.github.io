@@ -53,7 +53,6 @@ interface NotificationContextType {';
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 interface NotificationContextType {
   "notifications": Notificatio n[];';';
->>>>>>> main
   addNotification: (notification: Omi t<Notification,id'>)  => void;
   "removeNotification": (id: string)  => void;
   clearAll: ()  => void}
@@ -179,7 +178,6 @@ const "NotificationContainer": "React.FC = props {;  const { notifications", rem
 ;
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 const "NotificationContainer": React.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
->>>>>>> main
 >>>>>>> main
 >>>>>>> main:src_backup_temp/components/ui/EnhancedNotificationSystem.tsx
 =======

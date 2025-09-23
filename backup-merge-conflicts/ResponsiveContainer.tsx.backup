@@ -83,7 +83,6 @@ export function ResponsiveContainer({
   ].join(' ');
   return (
     <div className={containerClasses}>
->>>>>>> main
 =======
 >>>>>>> pr-11913:src_backup_temp/components/ResponsiveContainer.tsx
       {children}

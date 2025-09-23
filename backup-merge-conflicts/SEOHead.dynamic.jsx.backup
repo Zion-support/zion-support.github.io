@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/SEOHead.dynamic.jsx.backup
-<<<<<<< HEAD
-const SEOHead = dynamic(() => import("./SEOHead"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOHead" ,"""
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:components.disabled/SEOHead.dynamic.jsx
@@ -11,7 +7,6 @@ const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; loading: () => <p>Loadi
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 =======
 =======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:components.disabled/SEOHead.dynamic.jsx
 >>>>>>> pr-11935
 const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
 <<<<<<< HEAD

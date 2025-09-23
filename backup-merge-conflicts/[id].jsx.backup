@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD:backup-merge-conflicts/[id].jsx.backup
-=======
 <<<<<<< HEAD
 const React from "react"; import Link from "next/link"; import { ArrowRight,Phone,Mail } from "lucide-react"; ); export default function DynamicPage() { return; }; return null} )}""
 <<<<<<< HEAD:backup-merge-conflicts/[id].jsx.backup

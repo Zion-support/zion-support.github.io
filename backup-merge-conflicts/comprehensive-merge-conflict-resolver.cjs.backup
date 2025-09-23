@@ -13,11 +13,6 @@ class ComprehensiveMergeConflictResolver {}
     this.totalFiles = 0};
   async log(message, level = 'INFO') {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    }
-
-  async findFilesWithConflicts() {
-=======
     console.log(`[${timestamp}] [${level}] ${message}`)};
   async findFilesWithConflicts() {}
 =======
@@ -139,4 +134,3 @@ if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
 module.exports = ComprehensiveMergeConflictResolver;
->>>>>>> main
