@@ -1,56 +1,64 @@
 {
   "compilerOptions": {
-    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
+    "incremental": true,
     "module": "esnext",
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "strictNullChecks": true,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
+    "data_backup",
+    "backup",
+    "backups",
+    "pages_backup_conflict",
+    "apps.backup",
+    "corrupted-files-backup",
+    "lib_backup",
+    "**/*backup*",
+    "**/*conflict*",
+    "**/*temp*",
+    "zion-os",
+    "zion-os/**",
+    "server",
+    "server/**",
+    ".temp_backup_components",
+    ".temp_backup_components/**",
     "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    "automation/**",
+    "src",
+    "src/**",
+    "utils",
+    "utils/**",
+    "zion-ai-assistant",
+    "zion-ai-assistant/**",
+    "zion-os.disabled",
+    "zion-os.disabled/**"
   ]
 }

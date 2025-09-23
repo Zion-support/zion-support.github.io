@@ -1,4 +1,9 @@
 export const messageChannelHandler = {
-  sendMessage: (message$1 => {},
-  receiveMessage: (callback$1 => {},
+<<<<<<< HEAD
+  sendMessage: (message: any) => {},
+  receiveMessage: (callback: any) => {},
+=======
+  sendMessage: (message: string) => {},
+  receiveMessage: (callback: (message: string) => void) => {},
+>>>>>>> origin/auto/autonomy-17186719616
 };

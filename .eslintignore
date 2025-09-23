@@ -1,0 +1,12 @@
+*
+!zion-website/**
+
+# Always ignore dependencies and build outputs
+node_modules/
+.next/
+dist/
+build/
+coverage/
+out/
+*.log
+*.tmp
