@@ -1,30 +1,22 @@
-<<<<<<< HEAD
-
 import Link from "next/link";
-export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
-export default function CybersecurityPage() {return (;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
-export default function CybersecurityPage() {;
-  return (;
-    <div className="min-h-screen">;
 
-import Link from './next / link';,
 export const metadata = {
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},
-export default /**
- * CybersecurityPage - Function description
- */
-function CybersecurityPage() {
+  title: "Cybersecurity Services - Zion Tech Group",
+  description: "Protect your organization with our comprehensive cybersecurity solutions.",
+  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group"
+};
+
+export default function CybersecurityPage() {
   return (
-    <div className="min - h-screen">;
+    <div className="min-h-screen py-20">
+      <div className="max-w-5xl mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-6">Cybersecurity Services</h1>
+        <p className="text-zinc-300 mb-6">Advanced threat protection, compliance, and monitoring to secure your digital assets.</p>
+        <Link href="/contact" className="text-blue-400">Talk to an expert →</Link>
+      </div>
+    </div>
+  );
+}
 
 
 import Link from "next/link",;
