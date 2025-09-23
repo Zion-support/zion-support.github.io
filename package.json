@@ -58,10 +58,6 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@next/bundle-analyzer": "^14.2.0",
-<<<<<<< HEAD
-=======
-    "@next/swc-linux-x64-gnu": "^15.5.3",
->>>>>>> cursor/check-fix-push-and-merge-to-main-7e10
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "12.1.5",
     "@types/jest": "^29.0.0",
@@ -90,26 +86,6 @@
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1"
     },
-    "modulePathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
-    ],
-    "watchPathIgnorePatterns": [
-      "<rootDir>/automation/backups/.*",
-      "<rootDir>/apps.backup/.*",
-      "<rootDir>/components/apps/.*",
-      "<rootDir>/.temp_backup_components/.*",
-      "<rootDir>/backup/.*",
-      "<rootDir>/backups/.*",
-      "<rootDir>/backup-merge-conflicts/.*",
-      "<rootDir>/recovered-branches/.*"
-    ],
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": [
         "babel-jest",
@@ -125,12 +101,6 @@
       "<rootDir>/node_modules/",
       "<rootDir>/__tests__/",
       "<rootDir>/tests/",
-      "<rootDir>/test/",
-      "<rootDir>/src.broken/",
-      "<rootDir>/src-corrupted/",
-      "<rootDir>/temp_backup/",
-      "<rootDir>/pages_backup/",
-      "<rootDir>/dao/",
       "<rootDir>/tests.disabled/",
       "<rootDir>/src.disabled/",
       "<rootDir>/src_backup_temp/",
@@ -151,12 +121,7 @@
       "<rootDir>/ts_files_backup/",
       "<rootDir>/temp_exclude/",
       "<rootDir>/corrupted_backup/",
-      "<rootDir>/App.test.ts",
-      "<rootDir>/plugins/wallet-connector/cypress/",
-      "<rootDir>/components/api/docs/",
-      "<rootDir>/data/api-docs/",
       "<rootDir>/e2e/"
     ]
-  },
-  "packageManager": "npm@11.6.0"
+  }
 }
