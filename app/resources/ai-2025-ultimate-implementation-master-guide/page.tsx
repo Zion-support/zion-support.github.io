@@ -37,7 +37,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
               <span>Complete Toolkit</span>
             </div>
           </div>
-        </div>
+      </div>
 
       {/* Navigation */}
       <div className="bg-gray-50 border-b">
@@ -198,7 +198,8 @@ export default function AI2025UltimateImplementationMasterGuide() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
 
           {/* Implementation Phases */}
           <section className="mb-12">
