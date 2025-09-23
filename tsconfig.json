@@ -34,6 +34,7 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
+<<<<<<< HEAD
     "app-minimal/**/*.ts",
     "app-minimal/**/*.tsx",
     "zion-website/src/**/*.ts",
@@ -43,6 +44,10 @@
     "pages/**/*.ts",
     "pages/**/*.tsx",
     "types/**/*.d.ts"
+=======
+    "src/**/*.ts",
+    "src/**/*.tsx"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
   ],
   "exclude": [
     "node_modules",
@@ -73,6 +78,7 @@
     "**/*backup*",
     "**/*conflict*",
     "**/*temp*",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "zion-os/**",
@@ -123,5 +129,10 @@
     "utils/wallet.ts",
     "utils/validation.ts"
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+    "zion-os",
+    "zion-os.disabled",
+    "zion-ai-assistant"
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
   ]
 }

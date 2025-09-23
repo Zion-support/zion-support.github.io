@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
 "use client";
@@ -62,3 +63,12 @@ export default function SocialShareButtons({ url, title }: Props) {
 }
 
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-8d12
+=======
+"use client";
+import React from 'react';
+
+export default function SocialShareButtons() {
+  return null;
+}
+
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-6fc7
