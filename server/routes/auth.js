@@ -2,8 +2,8 @@
 async function registerUser(userData) {
   // Stub implementation for testing
   return { success: true, user: userData };
-};
-const express = require('express');const rateLimit = require('express-rate-limit');const { loginUser, registerUser } = require('../controllers/authController');;
+}
+const express = require('express');const rateLimit = require('express-rate-limit');const { loginUser, registerUser } = require('../controllers/authController');
 const router = express.Router();
 const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
