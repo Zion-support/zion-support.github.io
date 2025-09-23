@@ -1,13 +1,11 @@
-// Flat ESLint config for ESLint v9+
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import eslintJs from '@eslint/js';
+import eslintReact from 'eslint-plugin-react';
+import eslintReactHooks from 'eslint-plugin-react-hooks';
+import tsEslintPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
-    // Limit linting to main app sources; ignore backups/other projects
     ignores: [
       'node_modules/**',
       '.next/**',
@@ -43,20 +41,16 @@ export default [
       'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: { ...globals.browser, ...globals.node },
-      parser: tseslint.parser
+      parser: tsParser,
+      ecmaVersion: 2021,
+      sourceType: 'module'
     },
-    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tseslint.plugin },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tsEslintPlugin },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }
-      ]
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
     }
   }
 ];
