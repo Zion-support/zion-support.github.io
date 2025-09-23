@@ -1,6 +1,6 @@
 export const metadata = {
-	title: 'Zion Tech Group',
-	description: 'AI, cloud, and micro SaaS solutions',
+	title: "Zion Tech Group",
+	description: "AI, cloud, and micro SaaS solutions",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
