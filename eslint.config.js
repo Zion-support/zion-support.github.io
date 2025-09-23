@@ -201,7 +201,7 @@ export default [
       'structural-fix.js',
       'syntax-fixer.js',
       'test-utils.jsx',
-      'vite.config-backup.ts'
+      'vite.config-backup.ts',
       // Individual utility scripts that are not part of app linting
       'workbox-config.js',
       'verify-and-complete-merges.js',

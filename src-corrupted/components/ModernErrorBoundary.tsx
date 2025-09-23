@@ -1,5 +1,0 @@
-
-;
-import React, { Component, ErrorInfo, ReactNode } from 'react' import { motion     } from 'framer-motionimport { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield     } from lucide-react';  interface Props { children: ReactNode fallback?: ReactNode onError?: (error: Erro r, errorInfo: ErrorInf o) => void showDetails?: boolean } interface State { hasError: boolean error: Error | null errorInfo: ErrorInf o | null showDetails: boolean  } export class ModernErrorBoundary extends Component<Props, State> { constructor(props: Prop s) { super(props) this.state = { hasError: fals e, error: nul l, errorInfo: nul l, showDetails: fals e } } static getDerivedStateFromError(error: Erro r): State { return { hasError: tru e, error, errorInfo: nul l, showDetails: fals e } } componentDidCatch(error: Erro r, errorInfo: ErrorInf o) { this.setState({ error, errorInfo })  if(this.props.onError) { this.props.onError(error, errorInfo) }
-
-</Props>

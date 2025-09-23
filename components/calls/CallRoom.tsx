@@ -50,7 +50,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, [serverUrl, token, startMode]);
 
   const rebuild = (current?: Room | null) => {
