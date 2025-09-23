@@ -1,76 +1,20 @@
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
+import React from 'react';
+import Head from 'next/head';
 
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component
-:pages/research-development.tsx; import _React from; 'react'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component;
-:pages/research-development.tsx; import React from; \'react\'; const Component = () => { return ( <div> <h1>Page Content</h1> <p>This page is under construction.</p> </div> )} export default Component;
-pr-12325
+export default function ResearchDevelopmentPage() {
+	return (
+		<>
+			<Head>
+				<title>Research & Development | Zion Tech Group</title>
+				<meta name="description" content="Research & Development at Zion Tech Group" />
+				<link rel="canonical" href="https://ziontechgroup.com/research-development" />
+			</Head>
+			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+				<div className="container mx-auto px-6 py-16">
+					<h1 className="text-4xl font-bold mb-4">Research & Development</h1>
+					<p className="text-white/80 max-w-2xl">Exploring AIquantumand autonomous systems.</p>
+				</div>
+			</main>
+		</>
+	);
+}

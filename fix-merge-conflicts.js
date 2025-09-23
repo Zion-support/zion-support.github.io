@@ -1,94 +1,69 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
-// Function to resolve merge conflicts by keeping the HEAD version
-function resolveMergeConflicts(content) {
-  // Remove all merge conflict markers and keep only the HEAD version
-  let resolved = content;
-
-  // Handle simple conflicts (...
-  resolved = resolved.replace(/\n([\s\S]*?)\n
-
-  // Handle nested conflicts
-  resolved = resolved.replace(/\n([\s\S]*?)\n
-
-  // Remove any remaining conflict markers
-  resolved = resolved.replace(/^[<>=]{7}.*$/gm, '');
-
-  // Clean up extra newlines
-  resolved = resolved.replace(/\n{3,}/g, '\n\n');
-
-  return resolved;
-}
-
-// Function to process a file
-function processFile(filePath) {
+function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file has merge conflicts
-      console.log(`Processing: ${filePath}`);
-      const resolved = resolveMergeConflicts(content);
-      fs.writeFileSync(filePath, resolved);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers and keep HEAD version
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [a-f0-9]+\n/g, '$1');
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD\n/g, '');
+    content = content.replace(/=======\n/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+\n/g, '');
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed merge conflicts in ${filePath}`);
+    
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find and process files
-function processDirectory(dirPath, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let processedCount = 0;
+// Fix the specific file
+fixMergeConflicts('src/components/EnhancedSearch.tsx');
+const fs = require('fs');
+const path = require('path');
 
-  try {
-    const items = fs.readdirSync(dirPath);
-
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, and other common directories
-        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-          processedCount += processDirectory(fullPath, extensions);
-        }
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (extensions.includes(ext)) {
-          if (processFile(fullPath)) {
-            processedCount++;
+function fixMergeConflicts(directory) {
+  const files = fs.readdirSync(directory, { withFileTypes: true });
+  
+  for (const file of files) {
+    const fullPath = path.join(directory, file.name);
+    
+    if (file.isDirectory()) {
+      // Skip node_modules, .git, and other directories that shouldn't be processed
+      if (['node_modules', '.git', 'backups', 'logs'].includes(file.name)) {
+        continue;
+      }
+      fixMergeConflicts(fullPath);
+    } else if (file.isFile()) {
+      // Only process text files
+      const ext = path.extname(file.name).toLowerCase();
+      if (['.js', '.ts', '.tsx', '.jsx', '.json', '.md', '.txt', '.yml', '.yaml', '.toml', '.config.js'].includes(ext)) {
+        try {
+          let content = fs.readFileSync(fullPath, 'utf8');
+          let originalContent = content;
+          
+          // Remove merge conflict markers
+          content = content
+            .replace(/            .replace(/          
+          // If content changed, write it back
+          if (content !== originalContent) {
+            fs.writeFileSync(fullPath, content, 'utf8');
+            console.log(`✅ Fixed merge conflicts in: ${fullPath}`);
           }
+        } catch (error) {
+          console.log(`⚠️  Could not process ${fullPath}: ${error.message}`);
         }
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-
-  return processedCount;
-}
-
-// Main execution
-console.log('Starting merge conflict resolution...');
-
-// Process main directories
-const mainDirs = ['app', 'pages', 'components'];
-let totalProcessed = 0;
-
-for (const dir of mainDirs) {
-  if (fs.existsSync(dir)) {
-    console.log(`\nProcessing directory: ${dir}`);
-    const count = processDirectory(dir);
-    totalProcessed += count;
-    console.log(`Processed ${count} files in ${dir}`);
   }
 }
 
-console.log(`\nTotal files processed: ${totalProcessed}`);
-console.log('Merge conflict resolution complete!');
+console.log('🔧 Fixing merge conflicts throughout the project...');
+fixMergeConflicts('.');
+console.log('✅ Merge conflict fixing completed!'); 

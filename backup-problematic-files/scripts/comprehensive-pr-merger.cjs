@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
-#!/usr/bin/env node;
-
-const fs = require('fs')
-const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-=======
 
 
 
@@ -22,7 +5,6 @@ const path = require('path')
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { execSync } = require('child_process')
 // console.log('� Comprehensive PR Merger & Conflict Resolver')
 console.log('====')
@@ -49,13 +31,7 @@ async function githubApiCall(endpoint, method = 'GET')
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
 
-<<<<<<< HEAD
-    console.error(' Comprehensive PR merger "failed")"
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-"`;
-=======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

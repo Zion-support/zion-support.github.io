@@ -1,153 +1,343 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+// Define the base URL for your website
+const BASE_URL = 'https://ziontechgroup.com';
+// Define all the routes/pages on your website
+const routes = [
+  {
+    path: '/',
+    priority: '1.0',
+=======
+const fs = require('fs');
+const path = require('path');
 
-const baseUrl = 'https://zion.app';
+// Base URL for the site
+const BASE_URL = 'https://zion.app';
 
+// Define the pages and their metadata
 const pages = [
-  '',
-  '/about',
-  '/contact',
-  '/research',
-  '/services',
-  '/solutions',
-  '/services/ai-analytics-dashboard',
-  '/services/ai-analytics-platform',
-  '/services/ai-chatbot',
-  '/services/ai-chatbot-builder',
-  '/services/ai-chatbot-platform',
-  '/services/ai-code-assistant',
-  '/services/ai-code-reviewer',
-  '/services/ai-content-generation',
-  '/services/ai-content-generator',
-  '/services/ai-content-optimizer',
-  '/services/ai-content-writer',
-  '/services/ai-copilots',
-  '/services/ai-customer-insights',
-  '/services/ai-customer-support',
-  '/services/ai-customer-support-automation',
-  '/services/ai-data-analysis',
-  '/services/ai-data-analytics',
-  '/services/ai-documentation-generator',
-  '/services/ai-email-optimizer',
-  '/services/ai-expense-tracker',
-  '/services/ai-finance-analyzer',
-  '/services/ai-financial-analytics',
-  '/services/ai-financial-analyzer',
-  '/services/ai-fintech-solutions',
-  '/services/ai-healthcare-analytics',
-  '/services/ai-healthcare-assistant',
-  '/services/ai-hr-management',
-  '/services/ai-inventory-management',
-  '/services/ai-invoice-generator',
-  '/services/ai-marketing-automation',
-  '/services/ai-meeting-assistant',
-  '/services/ai-meeting-transcriber',
-  '/services/ai-powered-crm',
-  '/services/ai-powered-tools',
-  '/services/ai-predictive-analytics',
-  '/services/ai-project-management',
-  '/services/ai-project-management-suite',
-  '/services/ai-project-manager',
-  '/services/ai-services',
-  '/services/ai-social-media-scheduler',
-  '/services/ai-social-scheduler',
-  '/services/ai-testing-automation',
-  '/services/ai-video-generator',
-  '/services/analytics-dashboard',
-  '/services/api-development',
-  '/services/api-testing-suite',
-  '/services/automated-workflow-builder',
-  '/services/automation-solutions',
-  '/services/automation-tools',
-  '/services/blockchain',
-  '/services/blockchain-development',
-  '/services/blockchain-solutions',
-  '/services/business-automation',
-  '/services/chatbot-development',
-  '/services/ci-cd-pipeline-builder',
-  '/services/cloud-migration',
-  '/services/cloud-optimization',
-  '/services/cloud-security-audit',
-  '/services/cloud-services',
-  '/services/computer-vision-solutions',
-  '/services/crm-platform',
-  '/services/crm-solution',
-  '/services/customer-feedback-analyzer',
-  '/services/customer-support-automation',
-  '/services/cybersecurity',
-  '/services/cybersecurity-consulting',
-  '/services/cybersecurity-suite',
-  '/services/data-analytics',
-  '/services/database-optimization',
-  '/services/devops-automation',
-  '/services/digital-transformation',
-  '/services/document-processing-automation',
-  '/services/e-commerce-solutions',
-  '/services/ecommerce-platform',
-  '/services/edtech',
-  '/services/email-automation',
-  '/services/email-automation-suite',
-  '/services/email-campaign-manager',
-  '/services/email-marketing-automation',
-  '/services/erp-solutions',
-  '/services/expense-tracker',
-  '/services/fintech',
-  '/services/fintech-solutions',
-  '/services/healthcare-solutions',
-  '/services/healthtech',
-  '/services/helpdesk-platform',
-  '/services/industry-solutions',
-  '/services/industry-solutions/finance',
-  '/services/industry-solutions/healthcare',
-  '/services/invoice-automation',
-  '/services/iot-solutions',
-  '/services/it-services',
-  '/services/lead-generation-tool',
-  '/services/micro-saas',
-  '/services/mobile-app-development',
-  '/services/mobile-development',
-  '/services/natural-language-processing',
-  '/services/predictive-analytics',
-  '/services/project-management',
-  '/services/project-management-suite',
-  '/services/qa-testing',
-  '/services/real-time-data-processing',
-  '/services/seo-analyzer',
-  '/services/smart-invoice-generator',
-  '/services/social-media-automation',
-  '/services/social-media-management',
-  '/services/social-media-scheduler',
-  '/services/software-development',
-  '/services/team-collaboration-hub',
-  '/services/voice-recognition',
-  '/services/vulnerability-scanner',
-  '/services/web-application-development',
-  '/services/web-development',
-  '/services/website-analyzer'
+  {
+    url: '/',
+    priority: '1.0',
+    changefreq: 'daily',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/about',
+    priority: '0.8',
+>>>>>>> origin/auto/autonomy-17186719616
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+<<<<<<< HEAD
+    path: '/about',
+=======
+    url: '/services',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/micro-saas',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/ai-tools',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/developer-tools',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/ai-assistant',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/cloud-platform',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/automation',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/analytics',
+    priority: '0.8',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/pricing',
+>>>>>>> origin/auto/autonomy-17186719616
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+<<<<<<< HEAD
+    path: '/services',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    path: '/contact',
+    priority: '0.8',
+=======
+    url: '/contact',
+    priority: '0.7',
+>>>>>>> origin/auto/autonomy-17186719616
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+<<<<<<< HEAD
+    path: '/innovative-services-2025',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    path: '/advanced-services-2025',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    path: '/advanced-services-showcase-2025',
+    priority: '0.9',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    path: '/comprehensive-pricing-2025',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    path: '/blog',
+    priority: '0.7',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  }
+];
+// Generate the sitemap XML content
+function generateSitemapXML() {
+  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
+  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+  const urlsetClose = '</urlset>';
+  
+  const urls = routes.map(route => {
+    return `  <url>
+    <loc>${BASE_URL}${route.path}</loc>
+    <lastmod>${route.lastmod}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`;
+  }).join('\n');
+  
+  return `${xmlHeader}
+${urlsetOpen}
+${urls}
+${urlsetClose}`;
+}
+// Generate robots.txt content
+function generateRobotsTxt() {
+  return `User-agent: *
+Allow: /
+# Sitemap
+Sitemap: ${BASE_URL}/sitemap.xml
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+# Allow important files
+Allow: /robots.txt
+Allow: /sitemap.xml
+Allow: /favicon.ico
+Allow: /manifest.json
+# Crawl delay (optional)
+Crawl-delay: 1`;
+}
+// Generate the sitemap
+function generateSitemap() {
+  try {
+    // Create the public directory if it doesn't exist
+    const publicDir = path.join(__dirname, '..', 'public');
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
+    }
+    
+    // Generate and write sitemap.xml
+    const sitemapContent = generateSitemapXML();
+    const sitemapPath = path.join(publicDir, 'sitemap.xml');
+    fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
+    console.log('✅ Sitemap generated successfully at:', sitemapPath);
+    
+    // Generate and write robots.txt
+    const robotsContent = generateRobotsTxt();
+    const robotsPath = path.join(publicDir, 'robots.txt');
+    fs.writeFileSync(robotsPath, robotsContent, 'utf8');
+    console.log('✅ Robots.txt generated successfully at:', robotsPath);
+    
+    // Generate a JSON version for programmatic use
+    const sitemapJson = {
+      baseUrl: BASE_URL,
+      generatedAt: new Date().toISOString(),
+      routes: routes.map(route => ({
+        ...route,
+        fullUrl: `${BASE_URL}${route.path}`
+      }))
+    };
+    
+    const sitemapJsonPath = path.join(publicDir, 'sitemap.json');
+    fs.writeFileSync(sitemapJsonPath, JSON.stringify(sitemapJson, null, 2), 'utf8');
+    console.log('✅ Sitemap JSON generated successfully at:', sitemapJsonPath);
+    
+    // Generate a text sitemap for simple crawlers
+    const textSitemap = routes.map(route => `${BASE_URL}${route.path}`).join('\n');
+    const textSitemapPath = path.join(publicDir, 'sitemap.txt');
+    fs.writeFileSync(textSitemapPath, textSitemap, 'utf8');
+    console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
+    
+    console.log('\n🎉 All sitemap files generated successfully!');
+    console.log(`📊 Total routes: ${routes.length}`);
+    console.log(`🌐 Base URL: ${BASE_URL}`);
+    
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error.message);
+    process.exit(1);
+  }
+}
+// Run the sitemap generation
+generateSitemap();
+=======
+    url: '/case-studies',
+    priority: '0.7',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/blog',
+    priority: '0.7',
+    changefreq: 'weekly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/resources',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/support',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/docs',
+    priority: '0.6',
+    changefreq: 'monthly',
+    lastmod: new Date().toISOString().split('T')[0]
+  }
 ];
 
-const generateSitemap = () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-
-  const outDir = path.join(__dirname, '..', 'out');
-  if (!fs.existsSync(outDir)) {
-    fs.mkdirSync(outDir, { recursive: true });
-  }
+// Generate sitemap XML content
+function generateSitemapXML() {
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
-  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully');
-};
+  pages.forEach(page => {
+    xml += '  <url>\n';
+    xml += `    <loc>${BASE_URL}${page.url}</loc>\n`;
+    xml += `    <lastmod>${page.lastmod}</lastmod>\n`;
+    xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    xml += `    <priority>${page.priority}</priority>\n`;
+    xml += '  </url>\n';
+  });
+  
+  xml += '</urlset>';
+  return xml;
+}
 
-generateSitemap();
+// Generate sitemap.txt (simple text version)
+function generateSitemapTXT() {
+  return pages.map(page => `${BASE_URL}${page.url}`).join('\n');
+}
+
+// Main execution
+function main() {
+  try {
+    // Create public directory if it doesn't exist
+    const publicDir = path.join(__dirname, '../public');
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
+    }
+
+    // Generate and save sitemap.xml
+    const sitemapXML = generateSitemapXML();
+    const xmlPath = path.join(publicDir, 'sitemap.xml');
+    fs.writeFileSync(xmlPath, sitemapXML, 'utf8');
+    console.log(`✅ Sitemap XML generated: ${xmlPath}`);
+
+    // Generate and save sitemap.txt
+    const sitemapTXT = generateSitemapTXT();
+    const txtPath = path.join(publicDir, 'sitemap.txt');
+    fs.writeFileSync(txtPath, sitemapTXT, 'utf8');
+    console.log(`✅ Sitemap TXT generated: ${txtPath}`);
+
+    // Generate robots.txt
+    const robotsTXT = `User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: ${BASE_URL}/sitemap.xml
+Sitemap: ${BASE_URL}/sitemap.txt
+
+# Crawl-delay
+Crawl-delay: 1`;
+    
+    const robotsPath = path.join(publicDir, 'robots.txt');
+    fs.writeFileSync(robotsPath, robotsTXT, 'utf8');
+    console.log(`✅ Robots.txt generated: ${robotsPath}`);
+
+    console.log(`\n🎉 Sitemap generation complete!`);
+    console.log(`📊 Total pages: ${pages.length}`);
+    console.log(`🌐 Base URL: ${BASE_URL}`);
+    
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error);
+    process.exit(1);
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  main();
+}
+
+module.exports = { generateSitemapXML, generateSitemapTXT, pages };
+>>>>>>> origin/auto/autonomy-17186719616

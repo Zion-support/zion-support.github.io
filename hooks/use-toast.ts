@@ -10,14 +10,14 @@ const TOAST_REMOVE_DELAY = 1000000
 
 type ToastActionElement = React.ReactElement
 
-type ToastProps = ComponentProps<typeof Toast> & {
+type ToastComponentProps = ComponentProps<typeof Toast> & {
   id: string
   title?: React.ReactNode
   description?: React.ReactNode
   action?: ToastActionElement
 }
 
-type ToasterToast = ToastProps & {
+type ToasterToast = ToastComponentProps & {
   id: string
   open?: boolean
   onOpenChange?: (open: boolean) => void
@@ -145,9 +145,9 @@ const addToRemoveQueue = (toastId: string) => {
   toastTimeouts.set(toastId, timeout)
 }
 
-type Toast = Omit<ToasterToast, "id">
+type ToastProps = Omit<ToasterToast, "id">
 
-function toast({ ...props }: Toast) {
+function toast({ ...props }: ToastProps) {
   const id = genId()
 
   const update = (props: ToasterToast) =>

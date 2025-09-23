@@ -391,36 +391,21 @@ class AdvancedSourceFixer {}
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     }
   }
-
-hasParsingErrors(content) {
-    const errorPatterns = [
-  hasParsingErrors(content) {}
-    const errorPatterns = []
-'
-      /Error: 'Parsing error:/,      /Unterminated string literal/,
+  hasParsingErrors(content) {
+    const errorPatterns = [/"Error": 'Parsing error:/,
+      /Unterminated string literal/,
       /Identifier expected/,
       /Declaration or statement expected/,
       /Expression expected/,
       /Property or signature expected/,
       /Unexpected token/,
       /'from' expected/,
-      /', ' expected/,
       /',' expected/,
       /';' expected/,
       /'\)' expected/,
       /'\}' expected/,
     ];
-
-    return error_patterns.some ((pattern) => pattern.test (content));
-  }
-  hasImportExportIssues (content) {
-    return (
-      content.includes ("from") &&;
-      !content.includes ("import") &&;
-      !content.includes ("export"));
-  }
-  hasSyntaxIssues (content) {
-const syntax_issues = [;    return errorPatterns.some(pattern => pattern.test(content));
+    return errorPatterns.some(pattern => pattern.test(content));
   }
   hasImportExportIssues(content) {
     return (
@@ -430,8 +415,7 @@ const syntax_issues = [;    return errorPatterns.some(pattern => pattern.test(co
     );
   }
   hasSyntaxIssues(content) {
-    const syntaxIssues = [
-      /import.*from.*from/,
+    const syntaxIssues = [/import.*from.*from/,
       /export.*from.*from/,
       /function.*function/,
       /const.*const.*const/,
@@ -494,104 +478,6 @@ if ( {) {$2;
     // Fix duplicate keywords;
   getAppliedFixes(original, fixed) {
     if (original !== fixed) {
-    return syntaxIssues.some(pattern => pattern.test(content));
-  }
-  fixParsingErrors(content, filePath) {
-    let fixed = content;
-    fixed = fixed.replace(/"[^"]*$/gm, '"');
-    fixed = fixed.replace(/'[^']*$/gm, "'");
-    fixed = fixed.replace(/import\s+from\s+from/g, 'import React from');
-    fixed = fixed.replace(/export\s+from\s+from/g, 'export default');
-    fixed = fixed.replace(/function\s+function/g, 'function');
-    fixed = fixed.replace(/const\s+const/g, 'const');
-    fixed = fixed.replace(/let\s+let/g, 'let');
-    fixed = fixed.replace(/([^}])\n/g, '$1;\n');
-    fixed = fixed.replace(/<([^>]*)\s*>/g, '<$1>');
-    fixed = fixed.replace(/<\/([^>]*)\s*>/g, '</$1>');
-    return fixed;
-  }
-  fixImportExportIssues(content, filePath) {
-    let fixed = content;
-
-    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
-    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
-
-    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
-
-    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
-
-      fixed += "\n\nexport default {};";
-    }
-    return fixed;
-  }
-  fixSyntaxIssues(content, filePath) {
-    let fixed = content;
-    // Fix duplicate keywords
-    return fixed;
-  }
-  getAppliedFixes(original, fixed) {
-    const fixes = [];
-    if (original !== fixed) {
-      }
-if (fixed.includes('import React')) {
-        fixes.push('Added React import');
-      }
-      if (fixed.includes('export default')) {
-        fixes.push('Added default export');
-      }
-      if (fixed.includes(';')) {
-        fixes.push('Added semicolons');
-
-
-  fixImportExportIssues(content, filePath) {
-    let fixed = content;    if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      if (
-        !fixed.includes('import React') &&
-        !fixed.includes('import * as React')
-      ) {
-        fixed = "import React from 'react';\n" + fixed;
-      }
-    }
-    fixed = fixed.replace(/import\s+{\s*}\s*from/g, 'import React from');
-    fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
-    if (!fixed.includes('export default') && !fixed.includes('export {')) {
-      fixed += '\n\nexport default {};';
-    }
-    return fixed;
-  }
-  fixSyntaxIssues(content, filePath) {
-    let fixed = content;
-    fixed = fixed.replace(/\bconst\s+const\b/g, 'const');
-    fixed = fixed.replace(/\blet\s+let\b/g, 'let');
-    fixed = fixed.replace(/\bvar\s+var\b/g, 'var');
-    fixed = fixed.replace(/\bfunction\s+function\b/g, 'function');
-    fixed = fixed.replace(/\{\s*,\s*\}/g, '{}');
-    fixed = fixed.replace(/\{\s*,\s*/g, '{');
-    fixed = fixed.replace(/\[\s*,\s*\]/g, '[]');
-    fixed = fixed.replace(/\[\s*,\s*/g, '[');
-    fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
-    fixed = fixed.replace(/\(\s*,\s*/g, '(');
-    return fixed;
-  }
-  getAppliedFixes(original, fixed) {
-    const fixes = [];
-    if (original !== fixed) {
-      if (original.length !== fixed.length) {
-        fixes.push('Content length changed');
-      }
-      if (fixed.includes('import React')) {
-        fixes.push('Added React import');
-      }
-      if (fixed.includes('export default')) {
-        fixes.push('Added default export');
-      }
-      if (fixed.includes(';')) {
-        fixes.push('Added semicolons');
-      }
-    }
-    return fixes;
-  }
-
   async generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),

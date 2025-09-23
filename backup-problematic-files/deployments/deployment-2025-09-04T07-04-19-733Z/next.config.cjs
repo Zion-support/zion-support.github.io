@@ -50,8 +50,6 @@ const nextConfig = {}
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
         ];
       },
-<<<<<<< HEAD
-=======
 
 
       {
@@ -70,7 +68,6 @@ const nextConfig = {}
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       {}
         "source": '/public/(.*)',
         "headers": [{ key: 'Cache-Control', "value": 'public, max-age=31536000, immutable' };]
@@ -80,12 +77,9 @@ const nextConfig = {}
 };
 
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

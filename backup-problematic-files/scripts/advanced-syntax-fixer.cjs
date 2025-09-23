@@ -1,15 +1,8 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-
-      log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
-
-=======
 
 
 
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
@@ -45,15 +38,12 @@ if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -147,17 +137,7 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
 
-<<<<<<< HEAD
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 
-<<<<<<< HEAD
-=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
