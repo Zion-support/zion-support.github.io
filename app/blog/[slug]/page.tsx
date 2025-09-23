@@ -4,8 +4,11 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 import { blogPosts } from '../../../src/data/blog-posts.js';
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts.find(p => p.slug === params.slug);
+export default async function BlogPostPage({ params }: { params: { slug: string } | Promise<{ slug: string }> }) {
+  // Support Next 15 PageProps where params may be a Promise
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const awaitedParams: any = (typeof (params as any)?.then === 'function') ? await (params as Promise<{ slug: string }>) : params;
+  const post = blogPosts.find(p => p.slug === awaitedParams.slug);
   if (!post) {
     notFound();
   }
