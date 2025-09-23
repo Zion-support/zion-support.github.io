@@ -1,7 +1,7 @@
+// Flat ESLint config for ESLint v9+
 import js from '@eslint/js';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
@@ -9,6 +9,7 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 export default [
   // Global ignores (flat config)
   {
+    // Limit linting to main app sources; ignore backups/other projects
     ignores: [
       'node_modules/**',
       '.next/**',
@@ -16,17 +17,26 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
+      'public/**',
       'automation/**',
       'apps.backup/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
       '.temp_backup_components/**',
       'backup-problematic-files/**',
       'recovered-branches/**',
       'server/**',
       'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'ts_files_backup/**',
+      'src_backup/**',
+      'src_backup_temp/**',
+      '**/*.min.js',
       'zion-os.broken/**',
       'zion-os.disabled/**',
       'zion-os.corrupted/**',
-      'ts_files_backup/**',
       'temp_exclude/**',
       'corrupted_backup/**',
       'pages.disabled/**',
@@ -42,8 +52,6 @@ export default [
       'dao/**',
       'tests.disabled/**',
       'src.disabled/**',
-      'src_backup_temp/**',
-      'src_backup/**',
       'plugins/wallet-connector/cypress/**',
       'components/api/docs/**',
       'data/api-docs/**',
@@ -53,8 +61,10 @@ export default [
   js.configs.recommended,
   {
     files: [
-      'pages/**/*.{js,jsx,ts,tsx}',
+      'app/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
+      'pages/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}',
       'styles/**/*.{js,jsx,ts,tsx}',
       'providers/**/*.{js,jsx,ts,tsx}'
     ],
@@ -62,36 +72,12 @@ export default [
       ecmaVersion: 2020,
       sourceType: 'module',
       parser: tsParser,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-        console: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        require: 'readonly',
-        __dirname: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly'
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+      globals: { ...globals.browser, ...globals.node }
     },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      '@typescript-eslint': tsPlugin
-    },
+    plugins: { react, 'react-hooks': reactHooks, '@typescript-eslint': tsPlugin },
+    settings: { react: { version: 'detect' } },
     rules: {
-      'no-unused-vars': 'off',
-      'no-empty': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
