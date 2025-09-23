@@ -30,17 +30,10 @@ const nextConfig = {
   assetPrefix: undefined,
   generateEtags: true,
 
-  // Modern experimental features for Next.js 14
+  // Modern experimental features for Next.js 15
+  turbopack: {},
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
 
   async redirects() {
