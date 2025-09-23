@@ -1,4 +1,3 @@
-
 // CSRF protection utilities
 export const generateCSRFToken = () => {
   const array = new Uint8Array(32);
@@ -10,14 +9,14 @@ export const validateCSRFToken = (token, sessionToken) => {
   return token && sessionToken && token === sessionToken;
 };
 
-export const getCSRFTokenFromCookie = (cookieHeader) => {
+export const getCSRFTokenFromCookie = cookieHeader => {
   if (!cookieHeader) return null;
-  
+
   const cookies = cookieHeader.split(';').reduce((acc, cookie) => {
     const [key, value] = cookie.trim().split('=');
     acc[key] = value;
     return acc;
   }, {});
-  
+
   return cookies.csrfToken;
 };

@@ -1,52 +1,83 @@
 import Link from 'next/link';
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Production Guardrails for Autonomous Agents',
   description:
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.'};
+    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',
+};
 
 export default function ProductionGuardrailsForAutonomousAgentsPage() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="bg-purple-90o0 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">AI 20o26: Production Guardrails for Autonomous Agents</h1>
-          <p className="text-lg md:text-xl opacity-90">
-            Isolation domains, policy-as-code, evaluation gates, and deep telemetry to operate autonomous agents safely at scale.
+    <main className='min-h-screen bg-white'>
+      <section className='bg-purple-90o0 text-white py-16'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-3xl md:text-5xl font-bold mb-4'>
+            AI 20o26: Production Guardrails for Autonomous Agents
+          </h1>
+          <p className='text-lg md:text-xl opacity-90'>
+            Isolation domains, policy-as-code, evaluation gates, and deep
+            telemetry to operate autonomous agents safely at scale.
           </p>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-          <article className="prose prose-lg max-w-none">
+      <section className='py-12'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8'>
+          <article className='prose prose-lg max-w-none'>
             <h2>Why Guardrails</h2>
             <p>
-              Autonomous agents can take impactful actions. Enterprises need layered guardrails across design, deployment, and
-              operations to reduce risk while preserving velocity.
+              Autonomous agents can take impactful actions. Enterprises need
+              layered guardrails across design, deployment, and operations to
+              reduce risk while preserving velocity.
             </p>
             <h3>Core Controls</h3>
             <ul>
-              <li>Policy-as-code approvals for high-risk actions and data access</li>
-              <li>Isolation domains and capability scoping for tools and environments</li>
-              <li>Eval-gated releases with regression budgets and rollback criteria</li>
+              <li>
+                Policy-as-code approvals for high-risk actions and data access
+              </li>
+              <li>
+                Isolation domains and capability scoping for tools and
+                environments
+              </li>
+              <li>
+                Eval-gated releases with regression budgets and rollback
+                criteria
+              </li>
               <li>Runtime tripwires, rate limits, and anomaly detectors</li>
-              <li>Comprehensive telemetry across prompts, tools, outcomes, and costs</li>
+              <li>
+                Comprehensive telemetry across prompts, tools, outcomes, and
+                costs
+              </li>
             </ul>
             <h3>Rollout Checklist</h3>
             <ol>
               <li>Define safety envelopes and action categories</li>
-              <li>Implement policy checks and approvals in CI/CD and runtime</li>
-              <li>Instrument eval harnesses linked to representative datasets</li>
-              <li>Enable tracing, alerting, and cost monitors; test failure drills</li>
-              <li>Stage rollout with guardrail SLOs and human-in-the-loop for escalations</li>
+              <li>
+                Implement policy checks and approvals in CI/CD and runtime
+              </li>
+              <li>
+                Instrument eval harnesses linked to representative datasets
+              </li>
+              <li>
+                Enable tracing, alerting, and cost monitors; test failure drills
+              </li>
+              <li>
+                Stage rollout with guardrail SLOs and human-in-the-loop for
+                escalations
+              </li>
             </ol>
           </article>
 
-          <div className="flex gap-4">
-            <Link href="/contact" className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0">
+          <div className='flex gap-4'>
+            <Link
+              href='/contact'
+              className='bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
+            >
               Talk to an Expert
             </Link>
-            <Link href="/blog/ai-20o26-enterprise-agent-observability-guide" className="border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
+            <Link
+              href='/blog/ai-20o26-enterprise-agent-observability-guide'
+              className='border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
+            >
               Read Agent Observability
             </Link>
           </div>
@@ -55,4 +86,3 @@ export default function ProductionGuardrailsForAutonomousAgentsPage() {
     </main>
   );
 }
-

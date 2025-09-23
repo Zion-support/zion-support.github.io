@@ -11,16 +11,30 @@ export default function SEO(_props: SEOProps) {
   return null;
 }
 
-export default function SEO({ title, description, keywords, canonical, url }: SEOProps) {
+export default function SEO({
+  title,
+  description,
+  keywords,
+  canonical,
+  url,
+}: SEOProps) {
   // This component is deprecated in Next.js 13+ app directory
   // Use the metadata API in page.tsx files instead
-  console.warn('SEO component is deprecated. Use the metadata API in page.tsx files instead.')
-  
-  return null
+  console.warn(
+    'SEO component is deprecated. Use the metadata API in page.tsx files instead.'
+  );
+
+  return null;
 }
 
 // Helper function to generate metadata for pages
-export function generateMetadata({ title, description, keywords, canonical, url }: SEOProps): Metadata {
+export function generateMetadata({
+  title,
+  description,
+  keywords,
+  canonical,
+  url,
+}: SEOProps): Metadata {
   return {
     title,
     description,
@@ -30,9 +44,12 @@ export function generateMetadata({ title, description, keywords, canonical, url 
       title,
       description,
       type: 'article',
-      url},
+      url,
+    },
     twitter: {
       card: 'summary_large_image',
       title,
-      description}}
+      description,
+    },
+  };
 }

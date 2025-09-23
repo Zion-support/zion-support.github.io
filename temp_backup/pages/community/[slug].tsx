@@ -5,7 +5,7 @@ import PostCard from '@/components/community/PostCard';
 import { EmptyState } from '@/components/ui/empty-state';
 import type { ForumPost } from '@/types/community';
 import { fetchPostsByCategory } from '@/services/forumPostService';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 const POSTS_PER_PAGE = 20; // Or any other limit you prefer
 
@@ -42,12 +42,16 @@ export default function CategoryPage() {
     const res = await fetch('/api/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } })});
+      body: JSON.stringify({
+        query: POSTS_QUERY,
+        variables: { slug, cursor: after },
+      }),
+    });
     const json = await res.json();
     const result = json.data?.Posts;
     if (result) {
       const newPosts = result.edges.map((e: any) => e.node) as ForumPost[];
-      setPosts((prev) => (after ? [...prev, ...newPosts] : newPosts));
+      setPosts(prev => (after ? [...prev, ...newPosts] : newPosts));
       setCursor(result.pageInfo.endCursor);
       setHasMore(result.pageInfo.hasNextPage);
     }
@@ -67,16 +71,16 @@ export default function CategoryPage() {
       <Head>
         <title>{`${slug} Forum – ZionAI`}</title>
       </Head>
-      <main className="container py-8">
+      <main className='container py-8'>
         {posts.length > 0 ? (
-          <div className="space-y-4">
-            {posts.map((post) => (
-              <PostCard key={post.id} post={post}  />
+          <div className='space-y-4'>
+            {posts.map(post => (
+              <PostCard key={post.id} post={post} />
             ))}
             {hasMore && (
-              <div className="text-center mt-6">
+              <div className='text-center mt-6'>
                 <button
-                  className="text-zion-purple underline"
+                  className='text-zion-purple underline'
                   onClick={() => loadPosts(cursor)}
                   disabled={loading}
                 >
@@ -87,9 +91,9 @@ export default function CategoryPage() {
           </div>
         ) : !loading ? (
           <EmptyState
-            icon={<MessageSquare className="h-10 w-10 text-zion-purple"  />}
-            title="No posts yet"
-            description="Be the first to post"
+            icon={<MessageSquare className='h-10 w-10 text-zion-purple' />}
+            title='No posts yet'
+            description='Be the first to post'
           />
         ) : null}
       </main>

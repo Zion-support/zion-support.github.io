@@ -1,4 +1,3 @@
-
 import { Pool } from 'pg';
 
 // Database connection pool configuration
@@ -8,16 +7,19 @@ export const dbPool = new Pool({
   database: process.env.DB_NAME || 'zion_tech',
   user: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || '',
-  
+
   // Connection pool settings
   max: 20, // Maximum number of clients in the pool
-  min: 5,  // Minimum number of clients in the pool
+  min: 5, // Minimum number of clients in the pool
   idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
   connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
   maxUses: 7500, // Close (and replace) a connection after it has been used 7500 times
-  
+
   // SSL configuration for production
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  ssl:
+    process.env.NODE_ENV === 'production'
+      ? { rejectUnauthorized: false }
+      : false,
 });
 
 // Graceful shutdown

@@ -1,11 +1,7 @@
 {
   "monitoring": {
     "health_checks": {
-      "endpoints": [
-        "/api/health",
-        "/api/status",
-        "/api/metrics"
-      ],
+      "endpoints": ["/api/health", "/api/status", "/api/metrics"],
       "interval": 30,
       "timeout": 10
     },
@@ -33,11 +29,7 @@
   "logging": {
     "level": "info",
     "format": "json",
-    "destinations": [
-      "console",
-      "file",
-      "remote"
-    ]
+    "destinations": ["console", "file", "remote"]
   },
   "security": {
     "rate_limiting": {

@@ -10,6 +10,8 @@ interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
 }
 
-export default function UltraAdvancedFuturisticBackground(props: UltraAdvancedFuturisticBackgroundProps) {
-  return <UltraAdvancedFuturisticBackgroundV2 {...props}  />;
+export default function UltraAdvancedFuturisticBackground(
+  props: UltraAdvancedFuturisticBackgroundProps
+) {
+  return <UltraAdvancedFuturisticBackgroundV2 {...props} />;
 }

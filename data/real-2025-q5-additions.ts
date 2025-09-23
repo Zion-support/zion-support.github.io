@@ -3,7 +3,8 @@ export const real20o25Q5Additions = [
     id: 'ai-email-autoresponder',
     name: 'AI Email Autoresponder',
     category: 'AI & Data',
-    tagline: 'Automatically triage and answer routine emails with human‑like quality',
+    tagline:
+      'Automatically triage and answer routine emails with human‑like quality',
     description:
       'Deploy an AI agent that reads inbound email, drafts accurate responses, routes intents, and escalates edge cases with audit logs and allow‑lists.',
     price: '$79',
@@ -24,7 +25,8 @@ export const real20o25Q5Additions = [
     ],
     integrations: ['Gmail', 'Microsoft 365', 'Zendesk', 'HubSpot', 'Freshdesk'],
     competitors: ['superhuman.com', 'front.com', 'gmail.com/workspace'],
-    link: '/services/ai-email-autoresponder'},
+    link: '/services/ai-email-autoresponder',
+  },
   {
     id: 'mobile-conversational-surveys',
     name: 'Mobile Conversational Surveys',
@@ -46,12 +48,14 @@ export const real20o25Q5Additions = [
     useCases: ['NPS/CSAT', 'Product feedback', 'Post‑purchase surveys'],
     integrations: ['Segment', 'Zapier', 'Google Sheets', 'HubSpot'],
     competitors: ['typeform.com', 'tally.so', 'surveymonkey.com'],
-    link: '/services/mobile-conversational-surveys'},
+    link: '/services/mobile-conversational-surveys',
+  },
   {
     id: 'affiliate-tracking-suite',
     name: 'Affiliate Tracking Suite',
     category: 'Developer Tools',
-    tagline: 'Partner, referral, and influencer tracking with automated payouts',
+    tagline:
+      'Partner, referral, and influencer tracking with automated payouts',
     description:
       'Spin up a branded affiliate portal with unique links, fraud checks, and automated payouts. Import orders from ecommerce and SaaS billing.',
     price: '$99',
@@ -68,7 +72,8 @@ export const real20o25Q5Additions = [
     useCases: ['Ecommerce affiliate programs', 'B2B referral tracking'],
     integrations: ['Shopify', 'Stripe', 'WooCommerce', 'Chargebee'],
     competitors: ['partnerstack.com', 'impact.com', 'refersion.com'],
-    link: '/services/affiliate-tracking-suite'},
+    link: '/services/affiliate-tracking-suite',
+  },
   {
     id: 'simple-web-analytics',
     name: 'Simple SMB Web Analytics',
@@ -89,7 +94,8 @@ export const real20o25Q5Additions = [
     useCases: ['Small business websites', 'Marketing landing pages'],
     integrations: ['Next.js', 'GTM', 'Netlify', 'Vercel'],
     competitors: ['plausible.io', 'posthog.com', 'simpleanalytics.com'],
-    link: '/services/simple-smb-web-analytics'},
+    link: '/services/simple-smb-web-analytics',
+  },
   {
     id: 'managed-it-helpdesk',
     name: 'Managed IT Helpdesk',
@@ -110,8 +116,13 @@ export const real20o25Q5Additions = [
     ],
     useCases: ['MSP helpdesk', 'Internal IT support'],
     integrations: ['Freshdesk', 'Zendesk', 'Jira Service Management'],
-    competitors: ['freshdesk.com', 'zendesk.com', 'atlassian.com/jira/service-management'],
-    link: '/services/managed-it-helpdesk'},
+    competitors: [
+      'freshdesk.com',
+      'zendesk.com',
+      'atlassian.com/jira/service-management',
+    ],
+    link: '/services/managed-it-helpdesk',
+  },
   {
     id: 'ai-subject-line-tester',
     name: 'AI Subject Line Tester',
@@ -132,7 +143,8 @@ export const real20o25Q5Additions = [
     useCases: ['Newsletters', 'Sales sequences', 'Lifecycle emails'],
     integrations: ['Mailgun', 'SendGrid', 'Postmark', 'HubSpot'],
     competitors: ['subjectline.com', 'copy.ai', 'jasper.ai'],
-    link: '/services/ai-subject-line-tester'},
+    link: '/services/ai-subject-line-tester',
+  },
   {
     id: 'remote-onboarding-platform',
     name: 'Remote Onboarding Platform',
@@ -153,7 +165,8 @@ export const real20o25Q5Additions = [
     useCases: ['HR onboarding', 'Contractor onboarding'],
     integrations: ['Google Workspace', 'Okta', 'Slack', 'Jira'],
     competitors: ['rippling.com', 'bamboohr.com', 'workato.com (workflows)'],
-    link: '/services/remote-onboarding-platform'},
+    link: '/services/remote-onboarding-platform',
+  },
   {
     id: 'lms-starter',
     name: 'LMS Starter',
@@ -174,7 +187,8 @@ export const real20o25Q5Additions = [
     useCases: ['Employee training', 'Partner enablement', 'Customer education'],
     integrations: ['Stripe', 'Zapier', 'Google Drive', 'Vimeo'],
     competitors: ['talentlms.com', 'learnworlds.com', 'teachable.com'],
-    link: '/services/lms-starter'},
+    link: '/services/lms-starter',
+  },
   {
     id: 'smb-seo-health-monitor',
     name: 'SMB SEO Health Monitor',
@@ -193,9 +207,14 @@ export const real20o25Q5Additions = [
       'Core Web Vitals snapshots',
     ],
     useCases: ['Marketing sites', 'Content teams'],
-    integrations: ['Google Search Console', 'Screaming Frog (export)', 'Netlify'],
+    integrations: [
+      'Google Search Console',
+      'Screaming Frog (export)',
+      'Netlify',
+    ],
     competitors: ['ahrefs.com', 'semrush.com', 'sitebulb.com'],
-    link: '/services/smb-seo-health-monitor'},
+    link: '/services/smb-seo-health-monitor',
+  },
   {
     id: 'policy-privacy-request-portal-lite',
     name: 'Privacy Request Portal (Lite)',
@@ -216,7 +235,8 @@ export const real20o25Q5Additions = [
     useCases: ['GDPR/CCPA compliance', 'Customer data requests'],
     integrations: ['Zendesk', 'Jira', 'Email'],
     competitors: ['transcend.io', 'onetrust.com', 'osano.com'],
-    link: '/services/privacy-request-portal-lite'},
+    link: '/services/privacy-request-portal-lite',
+  },
   {
     id: 'ai-sales-sequence-optimizer',
     name: 'AI Sales Sequence Optimizer',
@@ -237,7 +257,8 @@ export const real20o25Q5Additions = [
     useCases: ['Outbound SDR', 'Lifecycle marketing'],
     integrations: ['HubSpot', 'Salesforce', 'Apollo'],
     competitors: ['lavender.ai', 'smartlead.ai', 'gong.io (insights)'],
-    link: '/services/ai-sales-sequence-optimizer'},
+    link: '/services/ai-sales-sequence-optimizer',
+  },
   {
     id: 'statuspages-slo-lite',
     name: 'Status Pages & SLO (Lite)',
@@ -258,5 +279,6 @@ export const real20o25Q5Additions = [
     useCases: ['SaaS status pages', 'Internal SRE dashboards'],
     integrations: ['Pingdom', 'UptimeRobot', 'Datadog'],
     competitors: ['statuspage.io', 'betteruptime.com', 'instatus.com'],
-    link: '/services/statuspages-slo-lite'},
+    link: '/services/statuspages-slo-lite',
+  },
 ];

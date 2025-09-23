@@ -1,5 +1,3 @@
-
-
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   // add more env variables as needed
@@ -12,7 +10,7 @@ interface ImportMeta {
 // Global type declarations
 declare namespace React {
   type ReactNode = React.ReactNode;
-  type FC<P ={}> = React.FC<P>;
+  type FC<P = {}> = React.FC<P>;
   type FormEvent<T = Element> = React.FormEvent<T>;
   type KeyboardEvent<T = Element> = React.KeyboardEvent<T>;
   type ChangeEvent<T = Element> = React.ChangeEvent<T>;
@@ -46,14 +44,14 @@ declare var process: {
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
-  }
+  };
 };
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
   export interface BadgeProps {
     className?: string;
-    variant?: "default" | "secondary" | "destructive" | "outline";
+    variant?: 'default' | 'secondary' | 'destructive' | 'outline';
     children?: React.ReactNode;
     key?: string | number;
   }
@@ -106,7 +104,7 @@ declare module '@/components/ChatAssistant/ChatMessage' {
 declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
     listing: any;
-    view?: any;  // Made optional to fix the errors
+    view?: any; // Made optional to fix the errors
     onRequestQuote: (listingId: string) => void;
     key?: string | number;
   }
@@ -124,7 +122,7 @@ declare module '@livekit/components-react' {
     onDisconnect?: () => void;
     className?: string;
   }
-  
+
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }

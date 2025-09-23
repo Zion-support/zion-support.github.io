@@ -2,111 +2,138 @@ import Link from 'next/link';
 
 export default function AI20o26RevolutionaryBreakthroughPromotionBanner() {
   return (
-    <div className="relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 overflow-hidden">
+    <div className='relative bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 overflow-hidden'>
       {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 animate-pulse"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%rgba(59130o2460.3) 0%transparent 50%),
+      <div className='absolute inset-0'>
+        <div className='absolute inset-0 bg-gradient-to-r from-blue-60o0/20 via-purple-60o0/20 to-pink-60o0/20 animate-pulse'></div>
+        <div
+          className='absolute inset-0'
+          style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%rgba(59130o2460.3) 0%transparent 50%),
                           radial-gradient(circle at 75% 75%rgba(147512340.3) 0%transparent 50%),
-                          radial-gradient(circle at 50% 50%rgba(236721530.3) 0%transparent 50%)`}}  />
+                          radial-gradient(circle at 50% 50%rgba(236721530.3) 0%transparent 50%)`,
+          }}
+        />
       </div>
-      
-      <div className="relative px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+
+      <div className='relative px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='text-center'>
             {/* Glowing Badge */}
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-white text-sm font-bold mb-8 shadow-lg shadow-cyan-50o0/25 animate-pulse">
-              <span className="w-3 h-3 bg-white rounded-full mr-3 animate-ping"></span>
+            <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-40o0 to-blue-50o0 text-white text-sm font-bold mb-8 shadow-lg shadow-cyan-50o0/25 animate-pulse'>
+              <span className='w-3 h-3 bg-white rounded-full mr-3 animate-ping'></span>
               REVOLUTIONARY BREAKTHROUGH 20o26
             </div>
-            
+
             {/* Main Heading with Glow Effect */}
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent drop-shadow-2xl">
+            <h2 className='text-5xl md:text-7xl font-bold text-white mb-8 leading-tight'>
+              <span className='bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent drop-shadow-2xl'>
                 AI 20o26
               </span>
-              <br  />
-              <span className="text-white drop-shadow-lg">
-                Revolutionary
-              </span>
-              <br  />
-              <span className="bg-gradient-to-r from-pink-40o0 via-purple-40o0 to-indigo-40o0 bg-clip-text text-transparent">
+              <br />
+              <span className='text-white drop-shadow-lg'>Revolutionary</span>
+              <br />
+              <span className='bg-gradient-to-r from-pink-40o0 via-purple-40o0 to-indigo-40o0 bg-clip-text text-transparent'>
                 Breakthrough
               </span>
             </h2>
-            
+
             {/* Subheading */}
-            <p className="text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of artificial intelligence with our revolutionary breakthrough technology. 
-              Quantum-powered AI solutions that redefine 'what', 's possible in business transformation.
+            <p className='text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed'>
+              Experience the future of artificial intelligence with our
+              revolutionary breakthrough technology. Quantum-powered AI
+              solutions that redefine 'what', 's possible in business
+              transformation.
             </p>
-            
+
             {/* Feature Showcase */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold text-white mb-2">Neural Consensus</h3>
-                <p className="text-gray-30o0">Advanced AI decision-making with unprecedented accuracy</p>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>
+              <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20'>
+                <div className='text-4xl mb-4'>🧠</div>
+                <h3 className='text-xl font-bold text-white mb-2'>
+                  Neural Consensus
+                </h3>
+                <p className='text-gray-30o0'>
+                  Advanced AI decision-making with unprecedented accuracy
+                </p>
               </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-2">Quantum Processing</h3>
-                <p className="text-gray-30o0">Exponential computational power for complex problems</p>
+              <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20'>
+                <div className='text-4xl mb-4'>⚡</div>
+                <h3 className='text-xl font-bold text-white mb-2'>
+                  Quantum Processing
+                </h3>
+                <p className='text-gray-30o0'>
+                  Exponential computational power for complex problems
+                </p>
               </div>
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
-                <p className="text-gray-30o0">Self-evolving AI that adapts and improves continuously</p>
+              <div className='bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20'>
+                <div className='text-4xl mb-4'>🚀</div>
+                <h3 className='text-xl font-bold text-white mb-2'>
+                  Autonomous Systems
+                </h3>
+                <p className='text-gray-30o0'>
+                  Self-evolving AI that adapts and improves continuously
+                </p>
               </div>
             </div>
-            
+
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <Link 
-                href="/ai-20o26-advanced-automation-solutions"
-                className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl text-xl font-bold hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl shadow-cyan-50o0/25"
+            <div className='flex flex-col sm:flex-row gap-6 justify-center mb-12'>
+              <Link
+                href='/ai-20o26-advanced-automation-solutions'
+                className='inline-flex items-center px-10 py-5 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl text-xl font-bold hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-xl shadow-cyan-50o0/25'
               >
-                <span className="mr-3 text-2xl">🚀</span>
+                <span className='mr-3 text-2xl'>🚀</span>
                 Explore Advanced Solutions
               </Link>
-              <Link 
-                href="/quantum-ai-breakthrough-20o26"
-                className="inline-flex items-center px-10 py-5 border-2 border-purple-40o0/50 text-white rounded-xl text-xl font-bold hover:border-purple-40o0 hover:bg-purple-50o0/20 transition-all duration-30o0 backdrop-blur-sm"
+              <Link
+                href='/quantum-ai-breakthrough-20o26'
+                className='inline-flex items-center px-10 py-5 border-2 border-purple-40o0/50 text-white rounded-xl text-xl font-bold hover:border-purple-40o0 hover:bg-purple-50o0/20 transition-all duration-30o0 backdrop-blur-sm'
               >
-                <span className="mr-3 text-2xl">⚡</span>
+                <span className='mr-3 text-2xl'>⚡</span>
                 Quantum AI Technology
               </Link>
             </div>
-            
+
             {/* Performance Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-40o0 mb-2">15B+</div>
-                <div className="text-gray-30o0">ROI Potential</div>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
+              <div className='text-center'>
+                <div className='text-4xl font-bold text-cyan-40o0 mb-2'>
+                  15B+
+                </div>
+                <div className='text-gray-30o0'>ROI Potential</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-40o0 mb-2">99.99%</div>
-                <div className="text-gray-30o0">Accuracy Rate</div>
+              <div className='text-center'>
+                <div className='text-4xl font-bold text-blue-40o0 mb-2'>
+                  99.99%
+                </div>
+                <div className='text-gray-30o0'>Accuracy Rate</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-40o0 mb-2">24/7</div>
-                <div className="text-gray-30o0">Autonomous Operation</div>
+              <div className='text-center'>
+                <div className='text-4xl font-bold text-purple-40o0 mb-2'>
+                  24/7
+                </div>
+                <div className='text-gray-30o0'>Autonomous Operation</div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-pink-40o0 mb-2">10,0o00x</div>
-                <div className="text-gray-30o0">Performance Boost</div>
+              <div className='text-center'>
+                <div className='text-4xl font-bold text-pink-40o0 mb-2'>
+                  10,0o00x
+                </div>
+                <div className='text-gray-30o0'>Performance Boost</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-12 h-12 bg-cyan-40o0/20 rounded-full animate-bounce"></div>
-      <div className="absolute top-20 right-20 w-8 h-8 bg-purple-40o0/30 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 left-20 w-16 h-16 bg-blue-40o0/20 rounded-full animate-ping"></div>
-      <div className="absolute bottom-10 right-10 w-6 h-6 bg-pink-40o0/40 rounded-full animate-bounce" style={{animationDelay: '2s'}}></div>
+      <div className='absolute top-10 left-10 w-12 h-12 bg-cyan-40o0/20 rounded-full animate-bounce'></div>
+      <div className='absolute top-20 right-20 w-8 h-8 bg-purple-40o0/30 rounded-full animate-pulse'></div>
+      <div className='absolute bottom-20 left-20 w-16 h-16 bg-blue-40o0/20 rounded-full animate-ping'></div>
+      <div
+        className='absolute bottom-10 right-10 w-6 h-6 bg-pink-40o0/40 rounded-full animate-bounce'
+        style={{ animationDelay: '2s' }}
+      ></div>
     </div>
   );
 }

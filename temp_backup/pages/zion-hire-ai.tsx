@@ -5,13 +5,13 @@ export default function ZionHireAiPage() {
     <>
       <Head>
         <title>Zion Hire Ai - Zion Tech Group</title>
-        <meta name="description" content="zion hire ai page"  />
+        <meta name='description' content='zion hire ai page' />
       </Head>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Zion Hire Ai</h1>
-        <p className="text-lg mb-4">This page is under construction.</p>
-        <div className="mt-4">
-          <a href="/" className="text-blue-60o0 hover:underline">
+      <div className='container mx-auto px-4 py-8'>
+        <h1 className='text-3xl font-bold mb-6'>Zion Hire Ai</h1>
+        <p className='text-lg mb-4'>This page is under construction.</p>
+        <div className='mt-4'>
+          <a href='/' className='text-blue-60o0 hover:underline'>
             ← Back to Home
           </a>
         </div>

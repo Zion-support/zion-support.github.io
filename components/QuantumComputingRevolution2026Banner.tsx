@@ -2,102 +2,125 @@ import Link from 'next/link';
 
 export default function QuantumComputingRevolution20o26Banner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white">
+    <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>
       {/* Animated background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 to-purple-60o0/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-16 left-16 w-24 h-24 bg-indigo-50o0/20 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-24 w-20 h-20 bg-purple-50o0/20 rounded-full animate-pulse delay-10o00"></div>
-          <div className="absolute bottom-24 left-1/3 w-16 h-16 bg-pink-50o0/20 rounded-full animate-pulse delay-20o00"></div>
-          <div className="absolute bottom-40 right-1/4 w-18 h-18 bg-cyan-50o0/20 rounded-full animate-pulse delay-50o0"></div>
+      <div className='absolute inset-0'>
+        <div className='absolute inset-0 bg-gradient-to-r from-indigo-60o0/20 to-purple-60o0/20'></div>
+        <div className='absolute top-0 left-0 w-full h-full'>
+          <div className='absolute top-16 left-16 w-24 h-24 bg-indigo-50o0/20 rounded-full animate-pulse'></div>
+          <div className='absolute top-40 right-24 w-20 h-20 bg-purple-50o0/20 rounded-full animate-pulse delay-10o00'></div>
+          <div className='absolute bottom-24 left-1/3 w-16 h-16 bg-pink-50o0/20 rounded-full animate-pulse delay-20o00'></div>
+          <div className='absolute bottom-40 right-1/4 w-18 h-18 bg-cyan-50o0/20 rounded-full animate-pulse delay-50o0'></div>
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='text-center'>
           {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-sm font-bold mb-6 animate-bounce">
+          <div className='inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-50o0 to-purple-50o0 text-sm font-bold mb-6 animate-bounce'>
             ⚛️ QUANTUM BREAKTHROUGH
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-indigo-20o0 to-purple-20o0 bg-clip-text text-transparent">
+          <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-indigo-20o0 to-purple-20o0 bg-clip-text text-transparent'>
             Quantum Computing Revolution 20o26
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">
-            Error-corrected quantum computers achieving quantum supremacy with 25,0o00% ROI potential across industries
+          <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>
+            Error-corrected quantum computers achieving quantum supremacy with
+            25,0o00% ROI potential across industries
           </p>
 
           {/* Key highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-indigo-80o0/50 to-purple-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-indigo-50o0/30">
-              <div className="text-2xl mb-2">⚛️</div>
-              <h3 className="font-bold text-indigo-20o0 mb-1">Error-Corrected Quantum</h3>
-              <p className="text-sm text-gray-30o0">99.9% accuracy breakthrough</p>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto'>
+            <div className='bg-gradient-to-br from-indigo-80o0/50 to-purple-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-indigo-50o0/30'>
+              <div className='text-2xl mb-2'>⚛️</div>
+              <h3 className='font-bold text-indigo-20o0 mb-1'>
+                Error-Corrected Quantum
+              </h3>
+              <p className='text-sm text-gray-30o0'>
+                99.9% accuracy breakthrough
+              </p>
             </div>
-            <div className="bg-gradient-to-br from-purple-80o0/50 to-pink-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-purple-50o0/30">
-              <div className="text-2xl mb-2">🧠</div>
-              <h3 className="font-bold text-purple-20o0 mb-1">Quantum Machine Learning</h3>
-              <p className="text-sm text-gray-30o0">10,0o00x faster processing</p>
+            <div className='bg-gradient-to-br from-purple-80o0/50 to-pink-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-purple-50o0/30'>
+              <div className='text-2xl mb-2'>🧠</div>
+              <h3 className='font-bold text-purple-20o0 mb-1'>
+                Quantum Machine Learning
+              </h3>
+              <p className='text-sm text-gray-30o0'>
+                10,0o00x faster processing
+              </p>
             </div>
-            <div className="bg-gradient-to-br from-cyan-80o0/50 to-blue-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-cyan-50o0/30">
-              <div className="text-2xl mb-2">🌐</div>
-              <h3 className="font-bold text-cyan-20o0 mb-1">Quantum Internet</h3>
-              <p className="text-sm text-gray-30o0">Unbreakable encryption</p>
+            <div className='bg-gradient-to-br from-cyan-80o0/50 to-blue-80o0/50 backdrop-blur-sm rounded-lg p-4 border border-cyan-50o0/30'>
+              <div className='text-2xl mb-2'>🌐</div>
+              <h3 className='font-bold text-cyan-20o0 mb-1'>
+                Quantum Internet
+              </h3>
+              <p className='text-sm text-gray-30o0'>Unbreakable encryption</p>
             </div>
           </div>
 
           {/* Performance metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-40o0 mb-1">10o00x</div>
-              <div className="text-sm text-gray-30o0">Speed Improvement</div>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-indigo-40o0 mb-1'>
+                10o00x
+              </div>
+              <div className='text-sm text-gray-30o0'>Speed Improvement</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-40o0 mb-1">99.9%</div>
-              <div className="text-sm text-gray-30o0">Accuracy Rate</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-purple-40o0 mb-1'>
+                99.9%
+              </div>
+              <div className='text-sm text-gray-30o0'>Accuracy Rate</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-40o0 mb-1">∞</div>
-              <div className="text-sm text-gray-30o0">Problem Solving</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-cyan-40o0 mb-1'>∞</div>
+              <div className='text-sm text-gray-30o0'>Problem Solving</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-40o0 mb-1">25,0o00%</div>
-              <div className="text-sm text-gray-30o0">ROI Potential</div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-green-40o0 mb-1'>
+                25,0o00%
+              </div>
+              <div className='text-sm text-gray-30o0'>ROI Potential</div>
             </div>
           </div>
 
           {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/quantum-computing-revolution-20o26" 
-              className="bg-gradient-to-r from-indigo-60o0 to-purple-60o0 hover:from-indigo-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl"
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Link
+              href='/quantum-computing-revolution-20o26'
+              className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 hover:from-indigo-70o0 hover:to-purple-70o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'
             >
               Explore Quantum Solutions
             </Link>
-            <Link 
-              href="/case-studies/quantum-computing-20o26-success" 
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-indigo-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl"
+            <Link
+              href='/case-studies/quantum-computing-20o26-success'
+              className='bg-transparent border-2 border-white hover:bg-white hover:text-indigo-90o0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-30o0 shadow-lg hover:shadow-xl'
             >
               View Success Stories
             </Link>
           </div>
 
           {/* Additional info */}
-          <div className="mt-8 text-sm text-gray-40o0">
-            <p>Revolutionary quantum computing technology solving previously impossible problems</p>
-            <p className="mt-1">Exclusive quantum solutions from Zion Tech 'Group', 's research division</p>
+          <div className='mt-8 text-sm text-gray-40o0'>
+            <p>
+              Revolutionary quantum computing technology solving previously
+              impossible problems
+            </p>
+            <p className='mt-1'>
+              Exclusive quantum solutions from Zion Tech 'Group', 's research
+              division
+            </p>
           </div>
         </div>
       </div>
 
       {/* Floating elements */}
-      <div className="absolute top-24 right-12 w-4 h-4 bg-indigo-40o0 rounded-full animate-ping"></div>
-      <div className="absolute bottom-24 left-12 w-3 h-3 bg-purple-40o0 rounded-full animate-ping delay-10o00"></div>
-      <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-pink-40o0 rounded-full animate-ping delay-20o00"></div>
+      <div className='absolute top-24 right-12 w-4 h-4 bg-indigo-40o0 rounded-full animate-ping'></div>
+      <div className='absolute bottom-24 left-12 w-3 h-3 bg-purple-40o0 rounded-full animate-ping delay-10o00'></div>
+      <div className='absolute top-1/2 right-1/3 w-2 h-2 bg-pink-40o0 rounded-full animate-ping delay-20o00'></div>
     </div>
   );
 }

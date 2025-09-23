@@ -1,25 +1,29 @@
 import SEO from '../../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Risk Mitigation Playbook',
-  description: 'Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.'
+  description:
+    'Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.',
 };
 
 const AgentRiskMitigationPlaybook20o26 = () => {
   return (
     <div>
       <SEO
-        title="AI 20o26: Agent Risk Mitigation Playbook"
-        description="Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments."
-        keywords="agent risk, AI safety, guardrails, evaluations, governance, policy-as-code"
-        url="/blog/ai-20o26-agent-risk-mitigation-playbook"
-       />
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold text-gray-90o0 mb-4">AI 20o26: Agent Risk Mitigation Playbook</h1>
-        <p className="text-gray-60o0 mb-8">
-          A practical playbook of safeguards and operating procedures to reduce risk in autonomous agent systems, from design to production.
+        title='AI 20o26: Agent Risk Mitigation Playbook'
+        description='Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.'
+        keywords='agent risk, AI safety, guardrails, evaluations, governance, policy-as-code'
+        url='/blog/ai-20o26-agent-risk-mitigation-playbook'
+      />
+      <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>
+          AI 20o26: Agent Risk Mitigation Playbook
+        </h1>
+        <p className='text-gray-60o0 mb-8'>
+          A practical playbook of safeguards and operating procedures to reduce
+          risk in autonomous agent systems, from design to production.
         </p>
-        <section className="prose max-w-none">
+        <section className='prose max-w-none'>
           <h2>Safeguard Layers</h2>
           <ul>
             <li>Prompt hardening and content filters</li>
@@ -46,4 +50,3 @@ const AgentRiskMitigationPlaybook20o26 = () => {
 };
 
 export default AgentRiskMitigationPlaybook20o26;
-

@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
   ArrowRight,
   Brain,
   Network,
@@ -44,7 +44,7 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers
+  Layers,
 } from 'lucide-react';
 
 const footerSections = [
@@ -58,8 +58,8 @@ const footerSections = [
       { title: 'Blockchain', href: '/blockchain', icon: Lock },
       { title: 'IoT Solutions', href: '/iot', icon: Globe },
       { title: 'AR/VR Solutions', href: '/ar-vr', icon: Eye },
-      { title: 'Space Technology', href: '/space-tech', icon: Settings }
-    ]
+      { title: 'Space Technology', href: '/space-tech', icon: Settings },
+    ],
   },
   {
     title: 'Solutions',
@@ -70,22 +70,30 @@ const footerSections = [
       { title: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
       { title: 'Data Analytics', href: '/data-analytics', icon: BarChart3 },
       { title: 'Automation', href: '/automation', icon: Zap },
-      { title: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp },
-      { title: 'Custom Development', href: '/custom-development', icon: Code }
-    ]
+      {
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: TrendingUp,
+      },
+      { title: 'Custom Development', href: '/custom-development', icon: Code },
+    ],
   },
   {
     title: 'Industries',
     links: [
       { title: 'Healthcare', href: '/industries/healthcare', icon: Heart },
       { title: 'Finance', href: '/industries/finance', icon: DollarSign },
-      { title: 'Manufacturing', href: '/industries/manufacturing', icon: Settings },
+      {
+        title: 'Manufacturing',
+        href: '/industries/manufacturing',
+        icon: Settings,
+      },
       { title: 'Retail', href: '/industries/retail', icon: ShoppingCart },
       { title: 'Education', href: '/industries/education', icon: BookOpen },
       { title: 'Real Estate', href: '/industries/real-estate', icon: Home },
       { title: 'Agriculture', href: '/industries/agriculture', icon: Target },
-      { title: 'Energy', href: '/industries/energy', icon: Zap }
-    ]
+      { title: 'Energy', href: '/industries/energy', icon: Zap },
+    ],
   },
   {
     title: 'Resources',
@@ -97,8 +105,8 @@ const footerSections = [
       { title: 'Tutorials', href: '/tutorials', icon: BookOpen },
       { title: 'API Documentation', href: '/api-docs', icon: Code },
       { title: 'Training', href: '/training', icon: BookOpen },
-      { title: 'FAQ', href: '/faq', icon: MessageSquare }
-    ]
+      { title: 'FAQ', href: '/faq', icon: MessageSquare },
+    ],
   },
   {
     title: 'Company',
@@ -110,8 +118,8 @@ const footerSections = [
       { title: 'News', href: '/news', icon: FileText },
       { title: 'Contact', href: '/contact', icon: MessageSquare },
       { title: 'Privacy Policy', href: '/privacy', icon: Lock },
-      { title: 'Terms of Service', href: '/terms', icon: FileText }
-    ]
+      { title: 'Terms of Service', href: '/terms', icon: FileText },
+    ],
   },
   {
     title: 'Support',
@@ -123,9 +131,9 @@ const footerSections = [
       { title: 'Community', href: '/community', icon: Users },
       { title: 'Training', href: '/training', icon: BookOpen },
       { title: 'Free Consultation', href: '/consultation', icon: Calendar },
-      { title: 'Get Quote', href: '/quote', icon: FileText }
-    ]
-  }
+      { title: 'Get Quote', href: '/quote', icon: FileText },
+    ],
+  },
 ];
 
 const microSaasCategories = [
@@ -136,7 +144,7 @@ const microSaasCategories = [
   { title: 'Security', icon: Shield, count: 8 },
   { title: 'Finance', icon: DollarSign, count: 10 },
   { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
+  { title: 'Development', icon: Code, count: 14 },
 ];
 
 const aiServiceCategories = [
@@ -145,7 +153,7 @@ const aiServiceCategories = [
   { title: 'Natural Language', icon: MessageSquare, count: 20 },
   { title: 'Predictive Analytics', icon: TrendingUp, count: 15 },
   { title: 'Robotics', icon: Settings, count: 8 },
-  { title: 'Quantum AI', icon: Code, count: 5 }
+  { title: 'Quantum AI', icon: Code, count: 5 },
 ];
 
 const itServiceCategories = [
@@ -154,62 +162,67 @@ const itServiceCategories = [
   { title: 'DevOps', icon: Settings, count: 20 },
   { title: 'Data Management', icon: HardDrive, count: 15 },
   { title: 'Network Security', icon: Lock, count: 18 },
-  { title: 'Infrastructure', icon: Building, count: 22 }
+  { title: 'Infrastructure', icon: Building, count: 22 },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-90o0 text-white">
+    <footer className='bg-gray-90o0 text-white'>
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className='container mx-auto px-4 py-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
+          <div className='lg:col-span-1'>
+            <div className='flex items-center space-x-2 mb-6'>
+              <div className='w-10 h-10 bg-blue-60o0 rounded-lg flex items-center justify-center'>
+                <span className='text-white font-bold text-xl'>Z</span>
               </div>
               <div>
-                <div className="text-xl font-bold">Zion Tech Group</div>
-                <div className="text-sm text-gray-40o0">AI & Technology Solutions</div>
+                <div className='text-xl font-bold'>Zion Tech Group</div>
+                <div className='text-sm text-gray-40o0'>
+                  AI & Technology Solutions
+                </div>
               </div>
             </div>
-            
-            <p className="text-gray-40o0 mb-6 leading-relaxed">
-              Leading provider of AI services, IT solutions, and innovative micro SaaS platforms. 
-              We help businesses scale, automate, and innovate with cutting-edge technology.
+
+            <p className='text-gray-40o0 mb-6 leading-relaxed'>
+              Leading provider of AI services, IT solutions, and innovative
+              micro SaaS platforms. We help businesses scale, automate, and
+              innovate with cutting-edge technology.
             </p>
-            
+
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-40o0"  />
-                <span className="text-gray-30o0">+1 30o2 464 0950</span>
+            <div className='space-y-3'>
+              <div className='flex items-center space-x-3'>
+                <Phone className='w-5 h-5 text-blue-40o0' />
+                <span className='text-gray-30o0'>+1 30o2 464 0950</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-40o0"  />
-                <span className="text-gray-30o0">kleber@ziontechgroup.com</span>
+              <div className='flex items-center space-x-3'>
+                <Mail className='w-5 h-5 text-blue-40o0' />
+                <span className='text-gray-30o0'>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-40o0"  />
-                <span className="text-gray-30o0">364 E Main St STE 10o08, Middletown DE 19709</span>
+              <div className='flex items-center space-x-3'>
+                <MapPin className='w-5 h-5 text-blue-40o0' />
+                <span className='text-gray-30o0'>
+                  364 E Main St STE 10o08, Middletown DE 19709
+                </span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
-            <div className="space-y-4">
-              {footerSections[0].links.map((link) => (
+            <h3 className='text-lg font-semibold mb-6'>Services</h3>
+            <div className='space-y-4'>
+              {footerSections[0].links.map(link => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group"
+                  className='flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group'
                 >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-40o0"  />
+                  <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />
                   <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity"  />
+                  <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity' />
                 </Link>
               ))}
             </div>
@@ -217,17 +230,17 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Solutions</h3>
-            <div className="space-y-4">
-              {footerSections[1].links.map((link) => (
+            <h3 className='text-lg font-semibold mb-6'>Solutions</h3>
+            <div className='space-y-4'>
+              {footerSections[1].links.map(link => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group"
+                  className='flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group'
                 >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-40o0"  />
+                  <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />
                   <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity"  />
+                  <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity' />
                 </Link>
               ))}
             </div>
@@ -235,17 +248,17 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Resources</h3>
-            <div className="space-y-4">
-              {footerSections[3].links.map((link) => (
+            <h3 className='text-lg font-semibold mb-6'>Resources</h3>
+            <div className='space-y-4'>
+              {footerSections[3].links.map(link => (
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group"
+                  className='flex items-center space-x-2 text-gray-40o0 hover:text-white transition-colors group'
                 >
-                  <link.icon className="w-4 h-4 group-hover:text-blue-40o0"  />
+                  <link.icon className='w-4 h-4 group-hover:text-blue-40o0' />
                   <span>{link.title}</span>
-                  <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity"  />
+                  <ArrowRight className='w-3 h-3 opacity-0 group-hover:opacity-10o0 transition-opacity' />
                 </Link>
               ))}
             </div>
@@ -253,17 +266,22 @@ export default function Footer() {
         </div>
 
         {/* Service Categories */}
-        <div className="mt-16 pt-8 border-t border-gray-80o0">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className='mt-16 pt-8 border-t border-gray-80o0'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {/* Micro SaaS Categories */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-40o0">Micro SaaS Solutions</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {microSaasCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-40o0">
-                    <category.icon className="w-4 h-4"  />
+              <h4 className='text-lg font-semibold mb-4 text-blue-40o0'>
+                Micro SaaS Solutions
+              </h4>
+              <div className='grid grid-cols-2 gap-2'>
+                {microSaasCategories.map(category => (
+                  <div
+                    key={category.title}
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'
+                  >
+                    <category.icon className='w-4 h-4' />
                     <span>{category.title}</span>
-                    <span className="text-blue-40o0">({category.count})</span>
+                    <span className='text-blue-40o0'>({category.count})</span>
                   </div>
                 ))}
               </div>
@@ -271,13 +289,18 @@ export default function Footer() {
 
             {/* AI Service Categories */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-green-40o0">AI Services</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {aiServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-40o0">
-                    <category.icon className="w-4 h-4"  />
+              <h4 className='text-lg font-semibold mb-4 text-green-40o0'>
+                AI Services
+              </h4>
+              <div className='grid grid-cols-2 gap-2'>
+                {aiServiceCategories.map(category => (
+                  <div
+                    key={category.title}
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'
+                  >
+                    <category.icon className='w-4 h-4' />
                     <span>{category.title}</span>
-                    <span className="text-green-40o0">({category.count})</span>
+                    <span className='text-green-40o0'>({category.count})</span>
                   </div>
                 ))}
               </div>
@@ -285,13 +308,18 @@ export default function Footer() {
 
             {/* IT Service Categories */}
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-purple-40o0">IT Services</h4>
-              <div className="grid grid-cols-2 gap-2">
-                {itServiceCategories.map((category) => (
-                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-40o0">
-                    <category.icon className="w-4 h-4"  />
+              <h4 className='text-lg font-semibold mb-4 text-purple-40o0'>
+                IT Services
+              </h4>
+              <div className='grid grid-cols-2 gap-2'>
+                {itServiceCategories.map(category => (
+                  <div
+                    key={category.title}
+                    className='flex items-center space-x-2 text-sm text-gray-40o0'
+                  >
+                    <category.icon className='w-4 h-4' />
                     <span>{category.title}</span>
-                    <span className="text-purple-40o0">({category.count})</span>
+                    <span className='text-purple-40o0'>({category.count})</span>
                   </div>
                 ))}
               </div>
@@ -300,46 +328,72 @@ export default function Footer() {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 pt-8 border-t border-gray-80o0">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className='mt-16 pt-8 border-t border-gray-80o0'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
             <div>
-              <div className="text-3xl font-bold text-blue-40o0 mb-2">235+</div>
-              <div className="text-gray-40o0">Services & Solutions</div>
+              <div className='text-3xl font-bold text-blue-40o0 mb-2'>235+</div>
+              <div className='text-gray-40o0'>Services & Solutions</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-40o0 mb-2">1,20o0+</div>
-              <div className="text-gray-40o0">Projects Completed</div>
+              <div className='text-3xl font-bold text-green-40o0 mb-2'>
+                1,20o0+
+              </div>
+              <div className='text-gray-40o0'>Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-40o0 mb-2">95+</div>
-              <div className="text-gray-40o0">Expert Team Members</div>
+              <div className='text-3xl font-bold text-purple-40o0 mb-2'>
+                95+
+              </div>
+              <div className='text-gray-40o0'>Expert Team Members</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-yellow-40o0 mb-2">15+</div>
-              <div className="text-gray-40o0">Years Experience</div>
+              <div className='text-3xl font-bold text-yellow-40o0 mb-2'>
+                15+
+              </div>
+              <div className='text-gray-40o0'>Years Experience</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-80o0 border-t border-gray-70o0">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-40o0 text-sm">
-              © 20o25 Zion Tech Group. All rights reserved. | 
-              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
-              <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
+      <div className='bg-gray-80o0 border-t border-gray-70o0'>
+        <div className='container mx-auto px-4 py-6'>
+          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
+            <div className='text-gray-40o0 text-sm'>
+              © 20o25 Zion Tech Group. All rights reserved. |
+              <Link
+                href='/privacy'
+                className='hover:text-white transition-colors ml-1'
+              >
+                Privacy Policy
+              </Link>{' '}
+              |
+              <Link
+                href='/terms'
+                className='hover:text-white transition-colors ml-1'
+              >
+                Terms of Service
+              </Link>
             </div>
-            
-            <div className="flex items-center space-x-6">
-              <Link href="/sitemap" className="text-gray-40o0 hover:text-white transition-colors text-sm">
+
+            <div className='flex items-center space-x-6'>
+              <Link
+                href='/sitemap'
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'
+              >
                 Sitemap
               </Link>
-              <Link href="/accessibility" className="text-gray-40o0 hover:text-white transition-colors text-sm">
+              <Link
+                href='/accessibility'
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'
+              >
                 Accessibility
               </Link>
-              <Link href="/cookies" className="text-gray-40o0 hover:text-white transition-colors text-sm">
+              <Link
+                href='/cookies'
+                className='text-gray-40o0 hover:text-white transition-colors text-sm'
+              >
                 Cookie Policy
               </Link>
             </div>

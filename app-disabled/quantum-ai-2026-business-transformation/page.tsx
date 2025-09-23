@@ -1,46 +1,55 @@
 import Link from 'next/link';
 import SEO from '../../components/SEO';
 
-export const metadata ={
+export const metadata = {
   title: 'Quantum AI 20o26: The Ultimate Business Transformation Guide',
-  description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.',
-  keywords: ['Quantum Computing', 'AI', 'Business Transformation', '20o26 Trends', 'Innovation']};
+  description:
+    'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.',
+  keywords: [
+    'Quantum Computing',
+    'AI',
+    'Business Transformation',
+    '20o26 Trends',
+    'Innovation',
+  ],
+};
 
 export default function QuantumAI20o26Page() {
   return (
     <>
       <SEO
-        title="Quantum AI 20o26: The Ultimate Business Transformation Guide"
-        description="Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities."
-        keywords="Quantum Computing, AI, Business Transformation, 20o26 Trends, Innovation"
-        url="/quantum-ai-20o26-business-transformation"
-       />
-      
-      <div className="min-h-screen bg-white">
+        title='Quantum AI 20o26: The Ultimate Business Transformation Guide'
+        description='Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.'
+        keywords='Quantum Computing, AI, Business Transformation, 20o26 Trends, Innovation'
+        url='/quantum-ai-20o26-business-transformation'
+      />
+
+      <div className='min-h-screen bg-white'>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">
-                <span className="text-sm font-medium">⚛️ QUANTUM AI 20o26</span>
+        <section className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='text-center'>
+              <div className='inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6'>
+                <span className='text-sm font-medium'>⚛️ QUANTUM AI 20o26</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className='text-4xl md:text-6xl font-bold mb-6'>
                 Quantum AI 20o26: The Ultimate Business Transformation
               </h1>
-              <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Explore how quantum computing and AI are converging to create unprecedented 
-                business opportunities with exponential speedups and revolutionary capabilities.
+              <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>
+                Explore how quantum computing and AI are converging to create
+                unprecedented business opportunities with exponential speedups
+                and revolutionary capabilities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
-                  href="#content"
-                  className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+                  href='#content'
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
                 >
                   Read Full Guide
                 </Link>
                 <Link
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
+                  href='/contact'
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
                 >
                   Explore Quantum Solutions
                 </Link>
@@ -50,71 +59,109 @@ export default function QuantumAI20o26Page() {
         </section>
 
         {/* Key Statistics */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-yellow-40o0 mb-2">10o00x</div>
-                <div className="text-gray-60o0">Speedup in ML Tasks</div>
+        <section className='py-16 bg-gray-50'>
+          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-yellow-40o0 mb-2'>
+                  10o00x
+                </div>
+                <div className='text-gray-60o0'>Speedup in ML Tasks</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-40o0 mb-2">95%</div>
-                <div className="text-gray-60o0">Optimization Accuracy</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-green-40o0 mb-2'>
+                  95%
+                </div>
+                <div className='text-gray-60o0'>Optimization Accuracy</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-blue-40o0 mb-2">$47.2B</div>
-                <div className="text-gray-60o0">Market Size 20o26</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-blue-40o0 mb-2'>
+                  $47.2B
+                </div>
+                <div className='text-gray-60o0'>Market Size 20o26</div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-purple-40o0 mb-2">340%</div>
-                <div className="text-gray-60o0">Fortune 50o0 Adoption</div>
+              <div className='bg-white p-6 rounded-xl shadow-lg'>
+                <div className='text-3xl font-bold text-purple-40o0 mb-2'>
+                  340%
+                </div>
+                <div className='text-gray-60o0'>Fortune 50o0 Adoption</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Main Content */}
-        <section id="content" className="py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">The Quantum AI Revolution: What's Changed in 20o26</h2>
-              
-              <h3 className="text-2xl font-bold text-gray-90o0 mb-6">Breakthrough Achievements</h3>
-              <p className="text-gray-60o0 mb-6">
-                20o26 has witnessed remarkable progress in quantum AI capabilities, with quantum machine learning, 
-                quantum neural networks, and quantum optimization creating unprecedented business opportunities.
+        <section id='content' className='py-16'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='prose prose-lg max-w-none'>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                The Quantum AI Revolution: What's Changed in 20o26
+              </h2>
+
+              <h3 className='text-2xl font-bold text-gray-90o0 mb-6'>
+                Breakthrough Achievements
+              </h3>
+              <p className='text-gray-60o0 mb-6'>
+                20o26 has witnessed remarkable progress in quantum AI
+                capabilities, with quantum machine learning, quantum neural
+                networks, and quantum optimization creating unprecedented
+                business opportunities.
               </p>
-              
-              <ul className="list-disc list-inside text-gray-60o0 mb-8 space-y-2">
-                <li><strong>Quantum Machine Learning:</strong> Algorithms leveraging quantum superposition and entanglement for exponential speedups</li>
-                <li><strong>Quantum Neural Networks:</strong> Hybrid systems combining quantum and classical computing for enhanced pattern recognition</li>
-                <li><strong>Quantum Optimization:</strong> Solving complex business problems with quantum annealing and variational algorithms</li>
-                <li><strong>Quantum Cryptography:</strong> Unbreakable security protocols for enterprise data protection</li>
+
+              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>
+                <li>
+                  <strong>Quantum Machine Learning:</strong> Algorithms
+                  leveraging quantum superposition and entanglement for
+                  exponential speedups
+                </li>
+                <li>
+                  <strong>Quantum Neural Networks:</strong> Hybrid systems
+                  combining quantum and classical computing for enhanced pattern
+                  recognition
+                </li>
+                <li>
+                  <strong>Quantum Optimization:</strong> Solving complex
+                  business problems with quantum annealing and variational
+                  algorithms
+                </li>
+                <li>
+                  <strong>Quantum Cryptography:</strong> Unbreakable security
+                  protocols for enterprise data protection
+                </li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Core Quantum AI Technologies</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-gray-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Quantum Machine Learning (QML)</h3>
-                  <p className="text-gray-60o0 mb-4">
-                    Quantum machine learning leverages quantum mechanical properties to process information 
-                    in ways impossible with classical computers, providing exponential speedups for certain tasks.
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                Core Quantum AI Technologies
+              </h2>
+
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
+                <div className='bg-gray-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Quantum Machine Learning (QML)
+                  </h3>
+                  <p className='text-gray-60o0 mb-4'>
+                    Quantum machine learning leverages quantum mechanical
+                    properties to process information in ways impossible with
+                    classical computers, providing exponential speedups for
+                    certain tasks.
                   </p>
-                  <ul className="text-sm text-gray-60o0 space-y-1">
+                  <ul className='text-sm text-gray-60o0 space-y-1'>
                     <li>• Quantum feature maps</li>
                     <li>• Quantum support vector machines</li>
                     <li>• Quantum neural networks</li>
                   </ul>
                 </div>
-                
-                <div className="bg-gray-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Quantum Optimization</h3>
-                  <p className="text-gray-60o0 mb-4">
-                    Quantum optimization solves complex business problems with exponential speedup, 
-                    enabling solutions to previously intractable optimization challenges.
+
+                <div className='bg-gray-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Quantum Optimization
+                  </h3>
+                  <p className='text-gray-60o0 mb-4'>
+                    Quantum optimization solves complex business problems with
+                    exponential speedup, enabling solutions to previously
+                    intractable optimization challenges.
                   </p>
-                  <ul className="text-sm text-gray-60o0 space-y-1">
+                  <ul className='text-sm text-gray-60o0 space-y-1'>
                     <li>• Traveling salesman problem</li>
                     <li>• Portfolio optimization</li>
                     <li>• Resource allocation</li>
@@ -123,137 +170,242 @@ export default function QuantumAI20o26Page() {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Business Applications and Use Cases</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-blue-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Financial Services</h3>
-                  <ul className="text-gray-60o0 space-y-2">
-                    <li>• <strong>Portfolio Optimization:</strong> Quantum algorithms optimize investment portfolios with thousands of assets</li>
-                    <li>• <strong>Risk Management:</strong> Monte Carlo simulations with quantum speedup</li>
-                    <li>• <strong>Fraud Detection:</strong> Quantum-enhanced pattern recognition</li>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                Business Applications and Use Cases
+              </h2>
+
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
+                <div className='bg-blue-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Financial Services
+                  </h3>
+                  <ul className='text-gray-60o0 space-y-2'>
+                    <li>
+                      • <strong>Portfolio Optimization:</strong> Quantum
+                      algorithms optimize investment portfolios with thousands
+                      of assets
+                    </li>
+                    <li>
+                      • <strong>Risk Management:</strong> Monte Carlo
+                      simulations with quantum speedup
+                    </li>
+                    <li>
+                      • <strong>Fraud Detection:</strong> Quantum-enhanced
+                      pattern recognition
+                    </li>
                   </ul>
                 </div>
-                
-                <div className="bg-green-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Healthcare & Life Sciences</h3>
-                  <ul className="text-gray-60o0 space-y-2">
-                    <li>• <strong>Drug Discovery:</strong> Quantum simulation of molecular interactions</li>
-                    <li>• <strong>Medical Imaging:</strong> Quantum-enhanced MRI and CT scan analysis</li>
-                    <li>• <strong>Personalized Medicine:</strong> Quantum genetic analysis</li>
+
+                <div className='bg-green-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Healthcare & Life Sciences
+                  </h3>
+                  <ul className='text-gray-60o0 space-y-2'>
+                    <li>
+                      • <strong>Drug Discovery:</strong> Quantum simulation of
+                      molecular interactions
+                    </li>
+                    <li>
+                      • <strong>Medical Imaging:</strong> Quantum-enhanced MRI
+                      and CT scan analysis
+                    </li>
+                    <li>
+                      • <strong>Personalized Medicine:</strong> Quantum genetic
+                      analysis
+                    </li>
                   </ul>
                 </div>
-                
-                <div className="bg-purple-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Manufacturing & Supply Chain</h3>
-                  <ul className="text-gray-60o0 space-y-2">
-                    <li>• <strong>Supply Chain Optimization:</strong> Quantum algorithms for complex logistics networks</li>
-                    <li>• <strong>Quality Control:</strong> Quantum-enhanced computer vision for defect detection</li>
-                    <li>• <strong>Predictive Maintenance:</strong> Quantum machine learning for equipment monitoring</li>
+
+                <div className='bg-purple-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Manufacturing & Supply Chain
+                  </h3>
+                  <ul className='text-gray-60o0 space-y-2'>
+                    <li>
+                      • <strong>Supply Chain Optimization:</strong> Quantum
+                      algorithms for complex logistics networks
+                    </li>
+                    <li>
+                      • <strong>Quality Control:</strong> Quantum-enhanced
+                      computer vision for defect detection
+                    </li>
+                    <li>
+                      • <strong>Predictive Maintenance:</strong> Quantum machine
+                      learning for equipment monitoring
+                    </li>
                   </ul>
                 </div>
-                
-                <div className="bg-orange-50 p-6 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Energy & Utilities</h3>
-                  <ul className="text-gray-60o0 space-y-2">
-                    <li>• <strong>Smart Grid Management:</strong> Quantum optimization of energy distribution</li>
-                    <li>• <strong>Climate Modeling:</strong> Quantum simulation of climate systems</li>
-                    <li>• <strong>Renewable Energy:</strong> Quantum planning for sustainable energy</li>
+
+                <div className='bg-orange-50 p-6 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Energy & Utilities
+                  </h3>
+                  <ul className='text-gray-60o0 space-y-2'>
+                    <li>
+                      • <strong>Smart Grid Management:</strong> Quantum
+                      optimization of energy distribution
+                    </li>
+                    <li>
+                      • <strong>Climate Modeling:</strong> Quantum simulation of
+                      climate systems
+                    </li>
+                    <li>
+                      • <strong>Renewable Energy:</strong> Quantum planning for
+                      sustainable energy
+                    </li>
                   </ul>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Real-World Success Stories</h2>
-              
-              <div className="space-y-8 mb-12">
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Global Investment Bank</h3>
-                  <p className="text-gray-60o0 mb-4">
-                    <strong>Challenge:</strong> Portfolio optimization for 10,0o00+ assets with complex constraints.
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                Real-World Success Stories
+              </h2>
+
+              <div className='space-y-8 mb-12'>
+                <div className='bg-gray-50 p-8 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Global Investment Bank
+                  </h3>
+                  <p className='text-gray-60o0 mb-4'>
+                    <strong>Challenge:</strong> Portfolio optimization for
+                    10,0o00+ assets with complex constraints.
                   </p>
-                  <p className="text-gray-60o0 mb-4">
-                    <strong>Solution:</strong> Implemented quantum annealing algorithms for real-time portfolio optimization.
+                  <p className='text-gray-60o0 mb-4'>
+                    <strong>Solution:</strong> Implemented quantum annealing
+                    algorithms for real-time portfolio optimization.
                   </p>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                  <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-center'>
                     <div>
-                      <div className="text-2xl font-bold text-green-60o0">40%</div>
-                      <div className="text-sm text-gray-60o0">Portfolio Returns Improvement</div>
+                      <div className='text-2xl font-bold text-green-60o0'>
+                        40%
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        Portfolio Returns Improvement
+                      </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-blue-60o0">60%</div>
-                      <div className="text-sm text-gray-60o0">Optimization Time Reduction</div>
+                      <div className='text-2xl font-bold text-blue-60o0'>
+                        60%
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        Optimization Time Reduction
+                      </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-purple-60o0">$50M</div>
-                      <div className="text-sm text-gray-60o0">Additional Annual Revenue</div>
+                      <div className='text-2xl font-bold text-purple-60o0'>
+                        $50M
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        Additional Annual Revenue
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <div className="bg-gray-50 p-8 rounded-xl">
-                  <h3 className="text-xl font-bold text-gray-90o0 mb-4">Pharmaceutical Company</h3>
-                  <p className="text-gray-60o0 mb-4">
-                    <strong>Challenge:</strong> Accelerating drug discovery process for cancer treatments.
+
+                <div className='bg-gray-50 p-8 rounded-xl'>
+                  <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                    Pharmaceutical Company
+                  </h3>
+                  <p className='text-gray-60o0 mb-4'>
+                    <strong>Challenge:</strong> Accelerating drug discovery
+                    process for cancer treatments.
                   </p>
-                  <p className="text-gray-60o0 mb-4">
-                    <strong>Solution:</strong> Deployed quantum simulation for molecular interaction modeling.
+                  <p className='text-gray-60o0 mb-4'>
+                    <strong>Solution:</strong> Deployed quantum simulation for
+                    molecular interaction modeling.
                   </p>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                  <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-center'>
                     <div>
-                      <div className="text-2xl font-bold text-green-60o0">80%</div>
-                      <div className="text-sm text-gray-60o0">Discovery Time Reduction</div>
+                      <div className='text-2xl font-bold text-green-60o0'>
+                        80%
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        Discovery Time Reduction
+                      </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-blue-60o0">3x</div>
-                      <div className="text-sm text-gray-60o0">Successful Drug Candidates</div>
+                      <div className='text-2xl font-bold text-blue-60o0'>
+                        3x
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        Successful Drug Candidates
+                      </div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-purple-60o0">$20o0M</div>
-                      <div className="text-sm text-gray-60o0">R&D Cost Savings</div>
+                      <div className='text-2xl font-bold text-purple-60o0'>
+                        $20o0M
+                      </div>
+                      <div className='text-sm text-gray-60o0'>
+                        R&D Cost Savings
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Future Trends and Predictions</h2>
-              
-              <h3 className="text-xl font-bold text-gray-90o0 mb-4">Emerging Technologies (20o27-20o28)</h3>
-              <ul className="list-disc list-inside text-gray-60o0 mb-8 space-y-2">
-                <li><strong>Quantum Internet:</strong> Global quantum communication networks</li>
-                <li><strong>Quantum AI Chips:</strong> Specialized hardware for quantum machine learning</li>
-                <li><strong>Quantum Edge Computing:</strong> Distributed quantum processing</li>
-                <li><strong>Quantum Blockchain:</strong> Quantum-secured distributed ledgers</li>
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                Future Trends and Predictions
+              </h2>
+
+              <h3 className='text-xl font-bold text-gray-90o0 mb-4'>
+                Emerging Technologies (20o27-20o28)
+              </h3>
+              <ul className='list-disc list-inside text-gray-60o0 mb-8 space-y-2'>
+                <li>
+                  <strong>Quantum Internet:</strong> Global quantum
+                  communication networks
+                </li>
+                <li>
+                  <strong>Quantum AI Chips:</strong> Specialized hardware for
+                  quantum machine learning
+                </li>
+                <li>
+                  <strong>Quantum Edge Computing:</strong> Distributed quantum
+                  processing
+                </li>
+                <li>
+                  <strong>Quantum Blockchain:</strong> Quantum-secured
+                  distributed ledgers
+                </li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Getting Started: Your Quantum AI Journey</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-gray-50 p-6 rounded-xl text-center">
-                  <div className="text-3xl mb-4">📋</div>
-                  <h3 className="text-lg font-bold text-gray-90o0 mb-3">Immediate Actions (30 Days)</h3>
-                  <ul className="text-sm text-gray-60o0 space-y-2 text-left">
+              <h2 className='text-3xl font-bold text-gray-90o0 mb-8'>
+                Getting Started: Your Quantum AI Journey
+              </h2>
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>
+                  <div className='text-3xl mb-4'>📋</div>
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
+                    Immediate Actions (30 Days)
+                  </h3>
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
                     <li>• Quantum Readiness Assessment</li>
                     <li>• Use Case Identification</li>
                     <li>• Technology Partner Selection</li>
                     <li>• Team Planning and Recruitment</li>
                   </ul>
                 </div>
-                
-                <div className="bg-gray-50 p-6 rounded-xl text-center">
-                  <div className="text-3xl mb-4">🚀</div>
-                  <h3 className="text-lg font-bold text-gray-90o0 mb-3">Short-term Goals (90 Days)</h3>
-                  <ul className="text-sm text-gray-60o0 space-y-2 text-left">
+
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>
+                  <div className='text-3xl mb-4'>🚀</div>
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
+                    Short-term Goals (90 Days)
+                  </h3>
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
                     <li>• Pilot Program Development</li>
                     <li>• Quantum Cloud Service Setup</li>
                     <li>• Initial Algorithm Development</li>
                     <li>• Proof of Concept Testing</li>
                   </ul>
                 </div>
-                
-                <div className="bg-gray-50 p-6 rounded-xl text-center">
-                  <div className="text-3xl mb-4">🎯</div>
-                  <h3 className="text-lg font-bold text-gray-90o0 mb-3">Long-term Vision (18 Months)</h3>
-                  <ul className="text-sm text-gray-60o0 space-y-2 text-left">
+
+                <div className='bg-gray-50 p-6 rounded-xl text-center'>
+                  <div className='text-3xl mb-4'>🎯</div>
+                  <h3 className='text-lg font-bold text-gray-90o0 mb-3'>
+                    Long-term Vision (18 Months)
+                  </h3>
+                  <ul className='text-sm text-gray-60o0 space-y-2 text-left'>
                     <li>• Full-Scale Quantum AI Implementation</li>
                     <li>• Enterprise Integration</li>
                     <li>• Advanced Quantum Capabilities</li>
@@ -266,23 +418,26 @@ export default function QuantumAI20o26Page() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with Quantum AI?</h2>
-            <p className="text-xl opacity-90 mb-8">
-              Contact Zion Tech Group today to learn how we can help you implement 
-              cutting-edge quantum computing solutions that drive real business results.
+        <section className='bg-gradient-to-r from-purple-60o0 to-indigo-60o0 text-white py-16'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold mb-6'>
+              Ready to Transform Your Business with Quantum AI?
+            </h2>
+            <p className='text-xl opacity-90 mb-8'>
+              Contact Zion Tech Group today to learn how we can help you
+              implement cutting-edge quantum computing solutions that drive real
+              business results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href="/contact"
-                className="bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors"
+                href='/contact'
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
               >
                 Get Started Today
               </Link>
               <Link
-                href="/services/quantum-technology"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors"
+                href='/services/quantum-technology'
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
               >
                 View Quantum Services
               </Link>

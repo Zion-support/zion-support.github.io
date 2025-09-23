@@ -3,7 +3,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
   {
@@ -12,7 +12,8 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     tagline: 'Predict churn, increase NRR, automate success workflows',
     price: '$299',
     period: '/month',
-    description: 'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.',
+    description:
+      'Customer health scoring, churn prediction, playbooks, and automated lifecycle campaigns with CRM and CS integrations.',
     features: [
       'Health scores with leading/lagging indicators',
       'Churn prediction and expansion likelihood',
@@ -20,22 +21,34 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
       '360° customer view with product analytics',
       'CRM and ticketing integrations',
       'Slack and email signals with alerts',
-      'Cohort analysis and NPS tracking'
+      'Cohort analysis and NPS tracking',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-500 to-teal-600',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/ai-customer-success-platform',
-    marketPosition: 'Comparable to Gainsight ($500+) and Totango ($400+) with AI-first automation and lower TCO.',
+    marketPosition:
+      'Comparable to Gainsight ($500+) and Totango ($400+) with AI-first automation and lower TCO.',
     targetAudience: 'B2B SaaS, Customer Success teams, RevOps',
     trialDays: 14,
     setupTime: '1-2 days',
     category: 'AI & Data',
     realService: true,
-    technology: ['Node.js', 'PostgreSQL', 'OpenAI', 'React', 'Airbyte/Fivetran connectors'],
+    technology: [
+      'Node.js',
+      'PostgreSQL',
+      'OpenAI',
+      'React',
+      'Airbyte/Fivetran connectors',
+    ],
     integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Slack'],
-    useCases: ['Churn reduction', 'NRR growth', 'Lifecycle automation', 'CSAT/NPS insights'],
+    useCases: [
+      'Churn reduction',
+      'NRR growth',
+      'Lifecycle automation',
+      'CSAT/NPS insights',
+    ],
     roi: '10-20% churn reduction, 5-12% NRR lift in 90 days',
     competitors: ['Gainsight', 'Totango', 'Planhat'],
     marketSize: '$3B+ CS platforms',
@@ -43,11 +56,12 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant app with role-based access, connectors, and rules engine',
+    implementationDetails:
+      'Multi-tenant app with role-based access, connectors, and rules engine',
     launchDate: '2025-11-01',
     customers: 85,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'ai-sales-intelligence-platform',
@@ -55,20 +69,22 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     tagline: 'Automate prospecting, ICP matches, and sequence copy generation',
     price: '$149',
     period: '/month',
-    description: 'Prospect enrichment, lead scoring, AI-written outreach with A/B testing, and pipeline analytics.',
+    description:
+      'Prospect enrichment, lead scoring, AI-written outreach with A/B testing, and pipeline analytics.',
     features: [
       'Company/person enrichment and signals',
       'ICP and buying committee detection',
       'AI sequences with tone and persona',
       'Intent and risk scoring',
-      'Multichannel orchestration (email/LinkedIn)'
+      'Multichannel orchestration (email/LinkedIn)',
     ],
     popular: true,
     icon: '🧭',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
-    marketPosition: 'Alternatives to Apollo.io and Outreach with AI-first scoring and copy.',
+    marketPosition:
+      'Alternatives to Apollo.io and Outreach with AI-first scoring and copy.',
     targetAudience: 'BDR/AE teams and RevOps',
     trialDays: 14,
     setupTime: '1 day',
@@ -76,7 +92,11 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['TypeScript', 'Pinecone', 'OpenAI', 'PostgreSQL'],
     integrations: ['Salesforce', 'HubSpot', 'Gmail/Microsoft 365'],
-    useCases: ['Pipeline generation', 'Outbound personalization', 'Lead scoring'],
+    useCases: [
+      'Pipeline generation',
+      'Outbound personalization',
+      'Lead scoring',
+    ],
     roi: '30-60% lift in reply rates and 2-4x pipeline increase',
     competitors: ['Apollo.io', 'ZoomInfo', 'Outreach'],
     marketSize: '$20B+ sales tech',
@@ -84,11 +104,12 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     variant: 'quantum-cyberpunk',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Prospecting engine with vector search and scoring models',
+    implementationDetails:
+      'Prospecting engine with vector search and scoring models',
     launchDate: '2025-10-01',
     customers: 140,
     rating: 4.7,
-    reviews: 88
+    reviews: 88,
   },
   {
     id: 'ai-financial-planning-platform',
@@ -96,20 +117,22 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     tagline: 'Driver-based planning with scenario and Monte Carlo simulations',
     price: '$199',
     period: '/month',
-    description: 'FP&A with live ERP connectors, assumptions library, and what-if simulations.',
+    description:
+      'FP&A with live ERP connectors, assumptions library, and what-if simulations.',
     features: [
       'Driver-based models',
       'Scenario planning and stress tests',
       'Rolling forecast and variances',
       'Excel/Sheets bi-directional sync',
-      'ERP/CRM connectors'
+      'ERP/CRM connectors',
     ],
     popular: true,
     icon: '💹',
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/ai-financial-planning-platform',
-    marketPosition: 'Competes with Anaplan ($30k+/yr) and Pigment ($15k+/yr) with SMB pricing.',
+    marketPosition:
+      'Competes with Anaplan ($30k+/yr) and Pigment ($15k+/yr) with SMB pricing.',
     targetAudience: 'Finance and RevOps',
     trialDays: 14,
     setupTime: '2-5 days',
@@ -129,7 +152,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-09-01',
     customers: 60,
     rating: 4.7,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'ai-hr-analytics-platform',
@@ -137,19 +160,21 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     tagline: 'Predict attrition, optimize hiring, and monitor DEI metrics',
     price: '$99',
     period: '/month',
-    description: 'HR analytics with attrition risk, skill gap analysis, and recruiting pipeline metrics.',
+    description:
+      'HR analytics with attrition risk, skill gap analysis, and recruiting pipeline metrics.',
     features: [
       'Attrition risk scoring',
       'Workforce planning and skills mapping',
       'DEI dashboards',
-      'ATS and HRIS connectors'
+      'ATS and HRIS connectors',
     ],
     popular: false,
     icon: '👥',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/ai-hr-analytics-platform',
-    marketPosition: 'Alternatives to Visier and ChartHop with lower pricing and AI features.',
+    marketPosition:
+      'Alternatives to Visier and ChartHop with lower pricing and AI features.',
     targetAudience: 'People Analytics and HR',
     trialDays: 14,
     setupTime: '3-5 days',
@@ -169,6 +194,6 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-08-01',
     customers: 35,
     rating: 4.6,
-    reviews: 28
-  }
+    reviews: 28,
+  },
 ];

@@ -1,4 +1,3 @@
-
 // Performance monitoring utilities
 export class PerformanceMonitor {
   static measurePageLoad() {
@@ -6,14 +5,19 @@ export class PerformanceMonitor {
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType('navigation')[0];
         const metrics = {
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          domContentLoaded:
+            navigation.domContentLoadedEventEnd -
+            navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-          firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+          firstPaint:
+            performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+          firstContentfulPaint:
+            performance.getEntriesByName('first-contentful-paint')[0]
+              ?.startTime || 0,
         };
-        
+
         console.log('Performance Metrics:', metrics);
-        
+
         // Send to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'page_performance', {
@@ -29,7 +33,7 @@ export class PerformanceMonitor {
     const start = performance.now();
     const result = renderFunction();
     const end = performance.now();
-    
+
     console.log(`${componentName} render time: ${end - start}ms`);
     return result;
   }

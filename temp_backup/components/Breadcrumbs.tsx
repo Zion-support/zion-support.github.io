@@ -7,17 +7,15 @@ interface BreadcrumbItem {
 
 export default function Breadcrumbs() {
   const router = useRouter();
-  
+
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const pathSegments = router.asPath.split('/').filter(Boolean);
-    const breadcrumbs: BreadcrumbItem[] = [
-      { label: 'Home', href: '/' }
-    ];
+    const breadcrumbs: BreadcrumbItem[] = [{ label: 'Home', href: '/' }];
 
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
-      
+
       // Convert segment to readable label
       let label = segment;
       if (segment === 'reports') label = 'Reports';
@@ -41,13 +39,14 @@ export default function Breadcrumbs() {
       else if (segment === 'cases') label = 'Case Studies';
       else {
         // Capitalize first letter and replace hyphens with spaces
-        label = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+        label =
+          segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
       }
 
       breadcrumbs.push({
         label,
         href: currentPath,
-        isCurrent: index === pathSegments.length - 1
+        isCurrent: index === pathSegments.length - 1,
       });
     });
 
@@ -59,22 +58,33 @@ export default function Breadcrumbs() {
   if (breadcrumbs.length <= 1) return null;
 
   return (
-    <nav className="flex items-center space-x-2 text-sm text-white/60 mb-6" aria-label="Breadcrumb">
+    <nav
+      className='flex items-center space-x-2 text-sm text-white/60 mb-6'
+      aria-label='Breadcrumb'
+    >
       {breadcrumbs.map((breadcrumb, index) => (
         <React.Fragment key={breadcrumb.href}>
           {index > 0 && (
-            <svg className="w-4 h-4 text-white/40" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M7.293 14.70o7a1 1 0 0o10-1.414L10.586 10 7.293 6.70o7a1 1 0 0o11.414-1.414l4 4a1 1 0 0o10 1.414l-4 4a1 1 0 0o1-1.414 0z" clipRule="evenodd"  />
+            <svg
+              className='w-4 h-4 text-white/40'
+              fill='currentColor'
+              viewBox='0 0 20 20'
+            >
+              <path
+                fillRule='evenodd'
+                d='M7.293 14.70o7a1 1 0 0o10-1.414L10.586 10 7.293 6.70o7a1 1 0 0o11.414-1.414l4 4a1 1 0 0o10 1.414l-4 4a1 1 0 0o1-1.414 0z'
+                clipRule='evenodd'
+              />
             </svg>
           )}
           {breadcrumb.isCurrent ? (
-            <span className="text-white font-medium" aria-current="page">
+            <span className='text-white font-medium' aria-current='page'>
               {breadcrumb.label}
             </span>
           ) : (
-            <Link 
+            <Link
               href={breadcrumb.href}
-              className="hover:text-white transition-colors"
+              className='hover:text-white transition-colors'
             >
               {breadcrumb.label}
             </Link>

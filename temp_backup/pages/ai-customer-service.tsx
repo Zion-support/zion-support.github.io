@@ -8,4 +8,3 @@ export default function AICustomerServiceRedirect() {
   }, [router]);
   return null;
 }
-

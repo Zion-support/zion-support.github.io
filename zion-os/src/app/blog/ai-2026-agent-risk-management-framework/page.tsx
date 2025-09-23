@@ -1,22 +1,25 @@
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Risk Management Framework',
   description:
-    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.'};
+    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.',
+};
 
 export default function AgentRiskManagementFrameworkPage() {
   return (
-    <div className="prose prose-invert max-w-3xl mx-auto py-12 px-4">
+    <div className='prose prose-invert max-w-3xl mx-auto py-12 px-4'>
       <h1>AI 20o26: Agent Risk Management Framework</h1>
       <p>
-        This framework provides a practical approach to identifying, evaluating, and mitigating
-        risks in autonomous agent systems. It emphasizes defense-in-depth and continuous
-        verification.
+        This framework provides a practical approach to identifying, evaluating,
+        and mitigating risks in autonomous agent systems. It emphasizes
+        defense-in-depth and continuous verification.
       </p>
 
       <h2>Risk Categories</h2>
       <ul>
         <li>Safety: harmful actions, escalation, and specification gaming</li>
-        <li>Security: data exfiltration, prompt injection, supply chain attacks</li>
+        <li>
+          Security: data exfiltration, prompt injection, supply chain attacks
+        </li>
         <li>Compliance: privacy, ownership, and regulatory obligations</li>
         <li>Operational: reliability, drift, and cost runaways</li>
       </ul>
@@ -39,4 +42,3 @@ export default function AgentRiskManagementFrameworkPage() {
     </div>
   );
 }
-

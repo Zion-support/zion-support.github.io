@@ -1,36 +1,66 @@
 import Link from 'next/link';
 
-export const metadata ={
+export const metadata = {
   title: 'AI 20o26: Agent Evaluation Playground — Overview',
-  description: 'Why every agent platform needs a quick, safe way to prototype evaluations.'};
+  description:
+    'Why every agent platform needs a quick, safe way to prototype evaluations.',
+};
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-8">
-        <div className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-70o0 text-xs font-semibold">New • 20o25-09-15</div>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-90o0 mt-3">AI 20o26: Agent Evaluation Playground — Overview</h1>
-        <p className="text-gray-60o0 mt-3">A lightweight approach to define scenarios, run evaluations locally, and publish results to an evaluation hub with policy gates.</p>
+    <main className='max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <div className='mb-8'>
+        <div className='inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 text-emerald-70o0 text-xs font-semibold'>
+          New • 20o25-09-15
+        </div>
+        <h1 className='text-3xl md:text-4xl font-bold text-gray-90o0 mt-3'>
+          AI 20o26: Agent Evaluation Playground — Overview
+        </h1>
+        <p className='text-gray-60o0 mt-3'>
+          A lightweight approach to define scenarios, run evaluations locally,
+          and publish results to an evaluation hub with policy gates.
+        </p>
       </div>
 
-      <article className="prose prose-purple max-w-none">
+      <article className='prose prose-purple max-w-none'>
         <h2>Principles</h2>
         <ul>
           <li>Outcomes over metrics: define success in plain language first</li>
-          <li>Policy‑as‑code: versioned thresholds and auto‑fail on regressions</li>
-          <li>Traceability: every action tied to eval IDs and model/router versions</li>
+          <li>
+            Policy‑as‑code: versioned thresholds and auto‑fail on regressions
+          </li>
+          <li>
+            Traceability: every action tied to eval IDs and model/router
+            versions
+          </li>
         </ul>
 
         <h3>Getting started</h3>
-        <p>Start with one critical scenario. Add guardrail checks and cost budgets. Automate weekly scorecards for review.</p>
+        <p>
+          Start with one critical scenario. Add guardrail checks and cost
+          budgets. Automate weekly scorecards for review.
+        </p>
 
-        <p className="mt-8">See also:</p>
+        <p className='mt-8'>See also:</p>
         <ul>
-          <li><Link href="/content/ai-20o26-agent-evaluation-playground" className="text-purple-60o0">Agent Evaluation Playground (Guide)</Link></li>
-          <li><Link href="/content/ai-20o26-evaluation-hub" className="text-purple-60o0">Evaluation Hub</Link></li>
+          <li>
+            <Link
+              href='/content/ai-20o26-agent-evaluation-playground'
+              className='text-purple-60o0'
+            >
+              Agent Evaluation Playground (Guide)
+            </Link>
+          </li>
+          <li>
+            <Link
+              href='/content/ai-20o26-evaluation-hub'
+              className='text-purple-60o0'
+            >
+              Evaluation Hub
+            </Link>
+          </li>
         </ul>
       </article>
     </main>
   );
 }
-
