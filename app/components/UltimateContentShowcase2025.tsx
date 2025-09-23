@@ -1,11 +1,6 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from 'react';
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import React from 'react';
 import Link from 'next/link';
 
 const UltimateContentShowcase2025 = () => {
@@ -303,5 +298,4 @@ const UltimateContentShowcase2025 = () => {
   );
 };
 
-export default UltimateContentShowcase2025;
 export default UltimateContentShowcase2025;
