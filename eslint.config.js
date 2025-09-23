@@ -59,6 +59,7 @@ export default [
 ];
 
 import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -68,7 +69,9 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 
 export default [
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
+<<<<<<< HEAD
     files: [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -93,11 +96,16 @@ export default [
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
       },
+=======
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
+        ecmaFeatures: { jsx: true }
+      },
+      globals: { ...globals.browser, ...globals.node }
     },
     plugins: {
       react,
@@ -144,6 +152,7 @@ export default [
       'out/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
       '*.config.js',
       '*.config.ts',
       'scripts/**',
@@ -165,6 +174,25 @@ export default [
       'zion-website/.next/**',
       'zion-os/.next/**',
       // Exclude non-root apps and alt projects
+=======
+      'coverage/**',
+      'public/**',
+      'netlify/**',
+      '**/*.config.*',
+      'scripts/**',
+      'automation/**',
+      'apps/**',
+      'apps.backup/**',
+      'backup/**',
+      'backups/**',
+      'backup-merge-conflicts/**',
+      'backup-problematic-files/**',
+      'corrupted*/**',
+      'recovered-branches/**',
+      'ts_files_backup/**',
+      'zion-os/**',
+      'zion-website/**',
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-bd83
       'zion.app/**',
       'zion_academy/**',
       // Project folders to ignore from lint scope
