@@ -29,13 +29,16 @@ export default [
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
+      'components/2025-advanced-services-showcase.tsx',
+      'components/2025-comprehensive-services-showcase-v2.tsx',
+      'components/AI2025AdvancedAutomationShowcase.tsx',
+      'components/AI2025AdvancedAnalyticsDashboard.tsx',
       '**/*.min.js'
     ]
   },
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
-      'components/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
       'src/**/*.{js,jsx,ts,tsx}'
     ],

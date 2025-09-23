@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build --no-lint",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" next build",
     "start": "next start",
     "lint": "eslint src app --no-error-on-unmatched-pattern",
     "build:analyze": "ANALYZE=true npm run build",
@@ -24,7 +24,7 @@
     "clean": "rm -rf .next out dist build",
     "export": "npm run build && next export",
     "deploy": "npm run build && npm run export",
-    "postinstall": "echo 'Type-check skipped (non-blocking)'",
+    "postinstall": "echo 'Dependencies installed successfully'",
     "format": "prettier --write ."
   },
   "dependencies": {
