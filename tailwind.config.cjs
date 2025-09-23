@@ -20,7 +20,8 @@ module.exports = {
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-          950: '#172554'},
+          950: '#172554'
+        },
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -32,7 +33,9 @@ module.exports = {
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-          950: '#030712'}},
+          950: '#030712'
+        }
+      },
       fontSize: {
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
@@ -40,13 +43,15 @@ module.exports = {
         '6xl': ['3.75rem', { lineHeight: '1' }],
         '7xl': ['4.5rem', { lineHeight: '1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }]},
+        '9xl': ['8rem', { lineHeight: '1' }]
+      },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
         'spin': 'spin 1s linear infinite',
-        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'},
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -58,16 +63,10 @@ module.exports = {
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-<<<<<<< HEAD:tailwind.config.cjs
-          '100%': { transform: 'scale(1)' },
-        },
-      },
-    },
+          '100%': { transform: 'scale(1)' }
+        }
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
-
-=======
-          '100%': { transform: 'scale(1)' }}}}},
-  plugins: []}
->>>>>>> cursor/check-fix-push-and-merge-to-main-f8bc:tailwind.config.js
