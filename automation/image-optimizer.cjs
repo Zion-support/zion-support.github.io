@@ -1,68 +1,73 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-function* walkImages(startDir, exts = ['.png', '.jpg', '.jpeg']) {
-  if (!fs.existsSync(startDir)) return;
-  const stack = [startDir];
-  while (stack.length) {
-    const current = stack.pop();
-    let entries = [];
-    try { entries = fs.readdirSync(current, { withFileTypes: true }); } catch { continue; }
-    for (const entry of entries) {
-      const full = path.join(current, entry.name);
-      if (entry.isDirectory()) {
-        if (entry.name === 'node_modules' || entry.name.startsWith('.')) continue;
-        stack.push(full);
-      } else if (entry.isFile()) {
-        if (exts.includes(path.extname(entry.name).toLowerCase())) yield full;
-      }
+const ROOT = process.cwd();
+const IN_DIR = path.join(ROOT, 'public');
+const OUT_DIR = path.join(ROOT, 'public');
+
+const exts = new Set(['.png', '.jpg', '.jpeg']);
+
+async function listImages(dir) {
+  /** @type {string[]} */
+  const out = [];
+  const entries = await fs.promises.readdir(dir, { withFileTypes: true });
+  for (const e of entries) {
+    if (e.name.startsWith('.')) continue;
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) {
+      out.push(...await listImages(full));
+    } else if (e.isFile()) {
+      const ext = path.extname(e.name).toLowerCase();
+      if (exts.has(ext)) out.push(full);
     }
   }
+  return out;
 }
 
-async function optimizeImage(filePath) {
-  const ext = path.extname(filePath).toLowerCase();
-  const dir = path.dirname(filePath);
-  const base = path.basename(filePath, ext);
-  const tmpOut = path.join(dir, `${base}.optimized${ext}`);
-  const input = fs.readFileSync(filePath);
-  let buffer;
-  if (ext === '.png') {
-    buffer = await sharp(input).png({ compressionLevel: 9, palette: true }).toBuffer();
+async function optimize(file) {
+  const rel = path.relative(IN_DIR, file);
+  const base = path.join(OUT_DIR, rel);
+  const dir = path.dirname(base);
+  await fs.promises.mkdir(dir, { recursive: true });
+
+  const input = await fs.promises.readFile(file);
+  const before = input.length;
+
+  let output;
+  if (file.toLowerCase().endsWith('.png')) {
+    output = await sharp(input).png({ compressionLevel: 9, palette: true }).toBuffer();
   } else {
-    buffer = await sharp(input).jpeg({ quality: 72, mozjpeg: true }).toBuffer();
+    output = await sharp(input).jpeg({ quality: 80, mozjpeg: true }).toBuffer();
   }
-  if (buffer.length < input.length * 0.98) {
-    fs.writeFileSync(tmpOut, buffer);
-    fs.renameSync(tmpOut, filePath);
-    return { file: filePath, saved: input.length - buffer.length };
-  }
-  return { file: filePath, saved: 0 };
+  await fs.promises.writeFile(base, output);
+  const after = output.length;
+  return { file: rel, before, after, saved: Math.max(0, before - after) };
 }
 
 async function main() {
-  const publicDir = path.join(process.cwd(), 'public');
-  const report = { generatedAt: new Date().toISOString(), files: [], totalSavedBytes: 0 };
-  const tasks = [];
-  for (const img of walkImages(publicDir)) tasks.push(img);
-  for (const f of tasks) {
+  const files = await listImages(IN_DIR);
+  const results = [];
+  for (const f of files) {
     try {
-      const res = await optimizeImage(f);
-      report.files.push(res);
-      report.totalSavedBytes += res.saved;
+      const r = await optimize(f);
+      results.push(r);
+      console.log('Optimized:', r.file, `${r.saved} bytes saved`);
     } catch (e) {
-      report.files.push({ file: f, error: e.message });
+      console.warn('Failed image:', f, e.message);
     }
   }
-  const outDir = path.join(process.cwd(), 'data', 'reports', 'images');
-  fs.mkdirSync(outDir, { recursive: true });
-  const outFile = path.join(outDir, `image-optimization-${Date.now()}.json`);
-  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-  fs.writeFileSync(path.join(outDir, 'latest.json'), JSON.stringify(report, null, 2));
-  console.log(`Optimized ${report.files.length} images. Saved ${report.totalSavedBytes} bytes.`);
+
+  const report = {
+    generatedAt: new Date().toISOString(),
+    totalSaved: results.reduce((a, r) => a + r.saved, 0),
+    items: results,
+  };
+  const reportFile = path.join(ROOT, 'public', 'automation-reports', 'image-optimizer-report.json');
+  await fs.promises.mkdir(path.dirname(reportFile), { recursive: true });
+  await fs.promises.writeFile(reportFile, JSON.stringify(report, null, 2));
+  console.log('Image optimizer report written:', path.relative(ROOT, reportFile));
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
