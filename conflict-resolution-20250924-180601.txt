@@ -337,3 +337,9 @@
 2025-09-24 18:07:38 - Merge conflicts detected in backup-main-20250923-195549
 2025-09-24 18:07:38 - Resolving conflicts in app/page.tsx for branch backup-main-20250923-195549
 2025-09-24 18:07:40 - Resolving conflicts in eslint.config.js for branch backup-main-20250923-195549
+2025-09-24 18:07:51 - Merge conflicts detected in bulk-merge-backup-20250923-140330
+2025-09-24 18:07:51 - Resolving conflicts in app/page.tsx for branch bulk-merge-backup-20250923-140330
+2025-09-24 18:07:52 - Resolving conflicts in components/SEO.tsx for branch bulk-merge-backup-20250923-140330
+2025-09-24 18:07:53 - Resolving conflicts in components/ui/Card.tsx for branch bulk-merge-backup-20250923-140330
+2025-09-24 18:07:53 - Resolving conflicts in middleware.ts for branch bulk-merge-backup-20250923-140330
+2025-09-24 18:07:54 - Resolving conflicts in package.json for branch bulk-merge-backup-20250923-140330
