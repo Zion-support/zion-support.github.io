@@ -1,38 +1,22 @@
-#!/usr/bin/env node
-// Simple test script to verify environment without failing hard on missing deps
-/* eslint-disable no-console */
-
-function safeRequire(moduleName) {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    return require(moduleName);
-  } catch (err) {
-    return null;
-  }
-}
-
+#!/usr/bin/env node,
+// Simple test script to verify Next.js configuration,
+const { execSync } = require('child_process'),
+// // console.log('Testing Next.js configuration...'),
 try {
-  const pkg = safeRequire('./package.json');
-  const next = safeRequire('next');
-  if (pkg && pkg.dependencies && pkg.dependencies.next) {
-    console.log(`Next.js declared: ${pkg.dependencies.next}`);
-  } else {
-    console.log('Next.js not declared in package.json or package.json missing');
-  }
-  if (next) {
-    console.log('Next.js module can be required');
-  } else {
-    console.log('Next.js module not available');
-  }
-  const swc = safeRequire('@next/swc-linux-x64-gnu') || safeRequire('@next/swc-linux-x64-musl');
-  if (swc) {
-    console.log('SWC native binary available');
-  } else {
-    console.log('SWC native binary not available');
-  }
-  console.log('Configuration probe completed');
-  process.exit(0);
-} catch (error) {
-  console.error('Configuration probe failed:', error && error.message ? error.message : error);
-  process.exit(0);
-}
+  // Check if Next.js can be imported,
+  const next = require('next'),
+  // // console.log('✓ Next.js can be imported'),
+  // Check Next.js version,
+  const packageJson = require('./package.json'),
+  // // console.log(`✓ Next.js version: ${packageJson.dependencies.next}`),
+  // Check if SWC is available,
+  try {
+    const swc = require('@next/swc-linux-x64-gnu'),
+    // // console.log('✓ SWC native binary available')} catch (e) {
+    // // console.log(
+      '⚠ SWC native binary not available, will use JavaScript fallback')}
+,
+  // // console.log('✓ Configuration test passed')} catch (error) {
+  console.error('✗ Configuration test failed:', error.message),
+  process.exit(1)}
+,
