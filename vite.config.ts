@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
   plugins: [
@@ -9,8 +10,15 @@ export default defineConfig({
       fastRefresh: true,
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    })
-  ],
+    }),
+    // Bundle analyzer for optimization insights
+    process.env.ANALYZE === 'true' && visualizer({
+      filename: 'dist/bundle-analysis.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -24,13 +32,19 @@ export default defineConfig({
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: false,
+    cssCodeSplit: true,
+    reportCompressedSize: false, // Disable gzip size reporting for faster builds
     rollupOptions: {
       output: {
-        // Better chunk splitting
+        // Better chunk splitting for optimal loading
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
-          utils: ['clsx', 'tailwind-merge', 'date-fns'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar', '@radix-ui/react-dropdown-menu'],
+          animations: ['framer-motion', 'motion-utils'],
+          forms: ['@hookform/resolvers', 'react-hook-form', 'zod'],
+          utils: ['clsx', 'tailwind-merge', 'date-fns', 'lucide-react'],
+          routing: ['react-router-dom'],
+          state: ['@tanstack/react-query'],
         },
         // Optimize chunk file names
         chunkFileNames: 'assets/[name]-[hash].js',

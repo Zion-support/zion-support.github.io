@@ -15,7 +15,9 @@
     "type-check": "npx tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "test:accessibility": "vitest run tests/Accessibility.test.tsx"
+    "test:accessibility": "vitest run tests/Accessibility.test.tsx",
+    "analyze": "ANALYZE=true npm run build",
+    "build:analyze": "ANALYZE=true vite build"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.28.0",
@@ -77,7 +79,6 @@
     "react-i18next": "^14.0.1",
     "react-router-dom": "^6.20.1",
     "recharts": "^2.12.0",
-    "rollup-plugin-visualizer": "^6.0.3",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.3.0",
