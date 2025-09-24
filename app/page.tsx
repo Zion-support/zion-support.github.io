@@ -1,50 +1,12 @@
+import PerformanceMetrics from './components/PerformanceMetrics'
+import ROICalculator from './components/ROICalculator'
 
 export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description:
     'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: [
-    'AI',
-    'Technology',
-    'Cloud',
-    'Cybersecurity',
-    'Micro SaaS',
-    'Consulting',
-    'Digital Transformation',
-    'Automation',
-    'Machine Learning'],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: { email: false, address: false, telephone: false },
-  metadataBase: new URL('https://zion.app'),
-  alternates: { canonical: '/' },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zion.app',
-    title: 'Zion Tech Group - AI & Technology Solutions',
-    description:
-      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    siteName: 'Zion Tech Group'},
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & Technology Solutions',
-    description:
-      'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    creator: '@ziontech'},
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1}}};
-
-import PerformanceMetrics from './components/PerformanceMetrics';
-import ROICalculator from './components/ROICalculator';
+  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting'],
+}
 
 export default function HomePage() {
   return (
@@ -59,7 +21,8 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Transform your business with cutting-edge AI, cloud infrastructure, cybersecurity solutions, and autonomous systems that drive unprecedented growth and efficiency.
+            Transform your business with cutting-edge AI, cloud infrastructure, cybersecurity solutions, and autonomous systems that
+            drive unprecedented growth and efficiency.
           </p>
         </div>
 
@@ -106,5 +69,5 @@ export default function HomePage() {
         </section>
       </section>
     </main>
-  );
+  )
 }

@@ -1,35 +1,28 @@
-import React from 'react';
-import type { ReactNode } from 'react';
+import React from 'react'
+import type { ReactNode } from 'react'
 
-// import './globals.css';
-
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import './globals.css'
+import ErrorBoundary from './components/ErrorBoundary'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
 
 export const metadata = {
   title: {
     default: 'Zion Tech Group - AI & Technology Solutions',
-    template: '%s | Zion Tech Group'},
+    template: '%s | Zion Tech Group',
+  },
   description:
     'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: [
-    'AI',
-    'Technology',
-    'Cloud',
-    'Cybersecurity',
-    'Micro SaaS',
-    'Consulting',
-    'Digital Transformation'],
+  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting', 'Digital Transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
   formatDetection: {
     email: false,
     address: false,
-    telephone: false},
+    telephone: false,
+  },
   metadataBase: new URL('https://zion.app'),
-  alternates: {
-    canonical: '/'},
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -37,13 +30,15 @@ export const metadata = {
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    siteName: 'Zion Tech Group'},
+    siteName: 'Zion Tech Group',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - AI & Technology Solutions',
     description:
       'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-    creator: '@ziontech'},
+    creator: '@ziontech',
+  },
   robots: {
     index: true,
     follow: true,
@@ -52,9 +47,11 @@ export const metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1}},
-  verification: {
-    google: 'your-google-verification-code'}};
+      'max-snippet': -1,
+    },
+  },
+  verification: { google: 'your-google-verification-code' },
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -72,5 +69,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </ErrorBoundary>
       </body>
     </html>
-  );
+  )
 }
