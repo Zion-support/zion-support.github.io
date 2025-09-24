@@ -49,10 +49,10 @@ process_pr() {
         return 1
     fi
     
-    # Extract branch information robustly using Node to parse JSON
-    local head_branch=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write(p.head&&p.head.ref?p.head.ref:'');}catch{}})")
-    local base_branch=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write(p.base&&p.base.ref?p.base.ref:'');}catch{}})")
-    local title=$(echo "$pr_info" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{try{const p=JSON.parse(s);process.stdout.write((p.title||'').replace(/\s+/g,' ').trim());}catch{}})")
+    # Extract branch information
+    local head_branch=$(echo "$pr_info" | grep -o '"head":[^}]*"ref":"[^"]*"' | sed 's/.*"ref":"\([^"]*\)".*/\1/')
+    local base_branch=$(echo "$pr_info" | grep -o '"base":[^}]*"ref":"[^"]*"' | sed 's/.*"ref":"\([^"]*\)".*/\1/')
+    local title=$(echo "$pr_info" | grep -o '"title":"[^"]*"' | sed 's/"title":"\([^"]*\)".*/\1/')
     
     log "📋 PR #$pr_num: $title"
     log "🌿 Head: $head_branch -> Base: $base_branch"
@@ -63,33 +63,19 @@ process_pr() {
         return 0
     fi
     
-    # Check if branch exists locally or remotely; if missing, try fetching PR head ref
+    # Check if branch exists locally or remotely
     if ! git show-ref --verify --quiet "refs/remotes/origin/$head_branch"; then
-        log "⚠️  Branch $head_branch not found on origin; trying PR ref fetch..."
-        if git fetch origin "pull/$pr_num/head:pr-$pr_num" 2>/dev/null; then
-            log "🌿 Created local branch pr-$pr_num from PR head"
-            head_branch="pr-$pr_num"
-        else
-            log "❌ Branch $head_branch not found in remote and PR ref fetch failed"
-            return 1
-        fi
+        log "❌ Branch $head_branch not found in remote"
+        return 1
     fi
     
     # Create local tracking branch
     if ! git show-ref --verify --quiet "refs/heads/$head_branch"; then
         log "🌿 Creating local branch $head_branch"
-        # Use origin upstream if exists; otherwise assume local pr-$pr_num already created
-        if git show-ref --verify --quiet "refs/remotes/origin/$head_branch"; then
-          git checkout -b "$head_branch" "origin/$head_branch" || {
+        git checkout -b "$head_branch" "origin/$head_branch" || {
             log "❌ Failed to create local branch $head_branch"
             return 1
-          }
-        else
-          git checkout -B "$head_branch" || {
-            log "❌ Failed to create local branch $head_branch"
-            return 1
-          }
-        fi
+        }
     else
         git checkout "$head_branch" || {
             log "❌ Failed to checkout $head_branch"

@@ -52,7 +52,6 @@ module.exports = {
     'src.disabled/**',
     'src-disabled/**',
     'src_backup/**',
-    'src_backup_all/**',
     'src_backup_temp/**',
     'src.broken/**',
     'src.corrupted/**',
