@@ -4,6 +4,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import importPlugin from 'eslint-plugin-import'
 import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
+import globals from 'globals'
 
 export default [
 	{
@@ -33,7 +34,6 @@ export default [
 			'zion-ai-assistant/**',
 			'zion-os.disabled/**',
 			'ts_files_backup/**',
-			'ts_files_backup/**',
 			'src_backup/**',
 			'src_backup_all/**',
 			'src_backup_temp/**',
@@ -61,34 +61,19 @@ export default [
 			parser: typescriptParser,
 			ecmaVersion: 2021,
 			sourceType: 'module',
-			globals: {
-				window: true,
-				document: true,
-				localStorage: true,
-				setTimeout: true,
-				clearTimeout: true,
-				setInterval: true,
-				clearInterval: true,
-				requestAnimationFrame: true,
-				cancelAnimationFrame: true,
-				IntersectionObserver: true,
-				HTMLSpanElement: true,
-				HTMLImageElement: true,
-				URL: true,
-				console: true,
-				process: true
-			}},
+			globals: { ...globals.browser, ...globals.node }
+		},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
-			'import': importPlugin,
-			'@typescript-eslint': typescriptEslintPlugin},
+			'@typescript-eslint': typescriptEslintPlugin,
+			import: importPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
-			'no-unused-vars': 'off',
 			'import/order': 'off',
 			'@typescript-eslint/no-unused-vars': [
 				'warn',
-				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}]
+				{ argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]}}
+]
