@@ -1,20 +1,20 @@
 // Jest setup for jsdom environment
 import 'whatwg-fetch'
 import '@testing-library/jest-dom'
-import fetchMock from 'jest-fetch-mock'
+import { jest } from '@jest/globals'
 import { TextEncoder, TextDecoder } from 'util'
 
-fetchMock.enableMocks()
-
-beforeEach(() => {
-	fetchMock.resetMocks()
-})
 
 // Polyfill TextEncoder/TextDecoder for JSDOM
-// @ts-expect-error acceptable for tests
-global.TextEncoder = TextEncoder
-// @ts-expect-error acceptable for tests
-global.TextDecoder = TextDecoder
+// Note: In jsdom these may be missing; assign Node's util versions if absent.
+if (typeof (global as unknown as { TextEncoder?: unknown }).TextEncoder === 'undefined') {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const util = require('util') as { TextEncoder: typeof TextEncoder; TextDecoder: typeof TextDecoder }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ;(global as any).TextEncoder = util.TextEncoder
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ;(global as any).TextDecoder = util.TextDecoder
+}
 
 // matchMedia mock for components using media queries
 Object.defineProperty(window, 'matchMedia', {
