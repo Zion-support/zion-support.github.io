@@ -1,0 +1,16 @@
+// Common constants used across fraud detection modules,
+// Phrases that might indicate fraud,
+export const suspiciousPhrases = [
+  'whatsapp mecontact me outside',
+  'cashapp onlywestern union',
+  'pay directlybypass',
+  'telegramsignal me',
+  'avoid feespayment link',
+  'urgent paymentdeal outside',
+],
+// Email domains often used for throwaway accounts,
+export const suspiciousEmailDomains = [
+  'tempmailthrowaway',
+  'fakeemailmailinator',
+  'guerrillamail10minutemail',
+],
