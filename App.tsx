@@ -31,6 +31,9 @@ import ModernMobileOptimizer from './src/components/ModernMobileOptimizer';
 import ModernPerformanceMonitor from './src/components/ModernPerformanceMonitor';
 import ModernSEOOptimizer from './src/components/ModernSEOOptimizer';
 import NewContentBanner2026 from './src/components/NewContentBanner2026';
+import QuantumAIBusinessTransformation2026 from './src/pages/QuantumAIBusinessTransformation2026';
+import EnterpriseQuantumAITransformation2026 from './src/pages/EnterpriseQuantumAITransformation2026';
+import QuantumConsciousnessImplementationGuide2026 from './src/pages/QuantumConsciousnessImplementationGuide2026';
 import LatestContentPromotionBanner2026 from './src/components/LatestContentPromotionBanner2026';
 import NotificationSystem from './src/components/NotificationSystem';
 import PerformanceDashboard from './src/components/PerformanceDashboard';
@@ -262,9 +265,9 @@ export default function App(): JSX.Element {
                   <RevolutionaryContentPromotionBanner2026 />
                 </div>
                 
-                {/* New Content Advertising Banner */}
+                {/* Enhanced New Content Banner */}
                 <div className="mb-12">
-                  <NewContentAdvertisingBanner2026 />
+                  <NewContentBanner2026 />
                 </div>
                 
                 {/* Revolutionary Content Promotion Banner */}
@@ -1428,6 +1431,12 @@ export default function App(): JSX.Element {
           {/* New Content Routes 2026 */}
           <Route path="/pages/AI2026LatestBreakthroughs" element={<AI2026LatestBreakthroughs />} />
           <Route path="/pages/Fortune500AITransformation2026" element={<Fortune500AITransformation2026 />} />
+          
+          {/* New Quantum AI Content Routes */}
+          <Route path="/quantum-ai-business-transformation-2026" element={<QuantumAIBusinessTransformation2026 />} />
+          <Route path="/enterprise-quantum-ai-transformation-2026" element={<EnterpriseQuantumAITransformation2026 />} />
+          <Route path="/quantum-consciousness-implementation-guide-2026" element={<QuantumConsciousnessImplementationGuide2026 />} />
+          <Route path="/ai-2026-latest-breakthroughs" element={<AI2026LatestBreakthroughs />} />
           
           <Route path="*" element={
             <main className="container mx-auto px-4 py-16 text-center">
