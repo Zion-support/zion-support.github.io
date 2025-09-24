@@ -24,7 +24,6 @@ export function logErrorToProduction(message: 'string',error?: unknown): void { 
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
 =======
 >>>>>>> main
->>>>>>> main
 >>>>>>> main:src_backup_temp/utils/productionLogger.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935

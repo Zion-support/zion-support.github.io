@@ -755,8 +755,6 @@ export function useAPIPerformance() {
       return newMap})}, []);
   const getAPIAverage = useCallback(("endpoint": string) => {
 =======
-=======
->>>>>>> main
 >>>>>>> main:src_backup_temp/hooks/usePerformance.ts
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
 >>>>>>> pr-11935
