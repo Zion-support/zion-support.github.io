@@ -46,4 +46,7 @@ module.exports = {
   ],
   passWithNoTests: true
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-eab5
