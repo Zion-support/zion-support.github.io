@@ -1,137 +1,111 @@
 #!/bin/bash
 
-# Script to merge all cursor branches into main
+# Script to merge all cursor/check-fix branches into main
 set -e
 
-echo "🚀 Starting cursor branch merge process..."
+echo "Starting merge process for cursor branches..."
 
-# Statistics
-TOTAL_BRANCHES=$(wc -l < all_cursor_branches.txt)
-PROCESSED=0
-MERGED=0
-FAILED=0
-CONFLICTS_RESOLVED=0
+# Array of branches to merge
+branches=(
+    "cursor/check-fix-push-and-merge-to-main-0a34"
+    "cursor/check-fix-push-and-merge-to-main-2b29"
+    "cursor/check-fix-push-and-merge-to-main-43bd"
+    "cursor/check-fix-push-and-merge-to-main-5149"
+    "cursor/check-fix-push-and-merge-to-main-6972"
+    "cursor/check-fix-push-and-merge-to-main-6df3"
+    "cursor/check-fix-push-and-merge-to-main-8c36"
+    "cursor/check-fix-push-and-merge-to-main-b528"
+    "cursor/check-fix-push-and-merge-to-main-d62b"
+    "cursor/check-fix-push-and-merge-to-main-d753"
+)
 
-log() {
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
-}
+# Ensure we're on main branch
+git checkout main
 
-# Function to merge a single branch
-merge_branch() {
-    local branch_full=$1
-    local branch_name=$(echo "$branch_full" | sed 's/origin\///')
-    
-    log "🔍 Processing branch: $branch_name"
-    
-    # Fetch the branch
-    git fetch origin "$branch_name" 2>/dev/null || {
-        log "❌ Failed to fetch $branch_name"
-        return 1
-    }
-    
-    # Create local tracking branch
-    if ! git show-ref --verify --quiet "refs/heads/$branch_name"; then
-        log "🌿 Creating local branch $branch_name"
-        git checkout -b "$branch_name" "origin/$branch_name" || {
-            log "❌ Failed to create local branch $branch_name"
-            return 1
-        }
-    else
-        git checkout "$branch_name" || {
-            log "❌ Failed to checkout $branch_name"
-            return 1
-        }
-        git reset --hard "origin/$branch_name" || {
-            log "❌ Failed to reset branch $branch_name"
-            return 1
-        }
-    fi
-    
-    # Update branch with latest main
-    log "🔄 Updating branch with latest main..."
-    git fetch origin main
-    
-    # Try to merge main into the branch
-    if git merge origin/main --no-commit --no-edit 2>/dev/null; then
-        log "✅ No conflicts found, committing merge..."
-        git commit -m "Merge main into $branch_name" || true
-    else
-        log "⚠️  Conflicts detected, resolving automatically..."
-        # Auto-resolve conflicts by preferring main branch
-        git checkout --theirs . 2>/dev/null || true
-        git add . 2>/dev/null || true
-        git commit -m "Resolve merge conflicts: prefer main branch for $branch_name" 2>/dev/null || {
-            log "⚠️  Auto-resolution failed, trying manual resolution..."
-            # If auto-resolution fails, abort and try a different approach
-            git merge --abort 2>/dev/null || true
-            # Force merge by preferring main
-            git reset --hard origin/main 2>/dev/null || true
-            git cherry-pick "$branch_name" 2>/dev/null || true
-        }
-        CONFLICTS_RESOLVED=$((CONFLICTS_RESOLVED + 1))
-    fi
-    
-    # Switch back to main and merge the branch
-    git checkout main
-    if git merge "$branch_name" --no-edit 2>/dev/null; then
-        log "✅ Successfully merged $branch_name into main"
-        MERGED=$((MERGED + 1))
-        
-        # Push to remote
-        if git push origin main 2>/dev/null; then
-            log "🚀 Pushed to remote successfully"
-        else
-            log "⚠️  Push failed, trying to sync..."
-            git pull origin main --no-rebase --no-edit 2>/dev/null || true
-            git push origin main 2>/dev/null || true
-        fi
-        
-        # Clean up
-        git branch -D "$branch_name" 2>/dev/null || true
-        
-        return 0
-    else
-        log "❌ Failed to merge $branch_name into main"
-        git merge --abort 2>/dev/null || true
-        return 1
-    fi
-}
+# Counter for successful merges
+successful_merges=0
+failed_merges=0
 
-# Main processing loop
-log "🎯 Starting to process $TOTAL_BRANCHES cursor branches..."
-
-while IFS= read -r branch_full; do
-    if [ -z "$branch_full" ]; then
+for branch in "${branches[@]}"; do
+    echo ""
+    echo "Processing branch: $branch"
+    echo "=================================="
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        echo "Branch $branch does not exist, skipping..."
         continue
     fi
     
-    PROCESSED=$((PROCESSED + 1))
-    log "📊 Progress: $PROCESSED/$TOTAL_BRANCHES branches processed"
-    
-    if merge_branch "$branch_full"; then
-        log "✅ Branch $branch_full completed successfully"
+    # Try to merge the branch
+    if git merge origin/$branch --no-ff -m "Merge branch '$branch' into main"; then
+        echo "✅ Successfully merged $branch"
+        ((successful_merges++))
     else
-        log "❌ Branch $branch_full failed"
-        FAILED=$((FAILED + 1))
+        echo "❌ Merge conflict in $branch"
+        
+        # Check if there are conflicts
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "Resolving conflicts in $branch..."
+            
+            # List conflicted files
+            conflicted_files=$(git diff --name-only --diff-filter=U)
+            echo "Conflicted files: $conflicted_files"
+            
+            # Try to resolve conflicts automatically
+            for file in $conflicted_files; do
+                echo "Resolving conflicts in $file..."
+                
+                # For package.json and yarn.lock files, prefer the main branch version
+                if [[ "$file" == *"package.json"* ]] || [[ "$file" == *"yarn.lock"* ]] || [[ "$file" == *"package-lock.json"* ]]; then
+                    echo "Using main branch version for $file"
+                    git checkout --ours "$file"
+                    git add "$file"
+                else
+                    # For other files, try to resolve automatically
+                    if command -v git-mergetool &> /dev/null; then
+                        git mergetool --tool=vimdiff "$file" || true
+                    else
+                        # Manual conflict resolution - prefer main branch
+                        echo "Preferring main branch version for $file"
+                        git checkout --ours "$file"
+                        git add "$file"
+                    fi
+                fi
+            done
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                echo "✅ Successfully resolved conflicts and merged $branch"
+                ((successful_merges++))
+            else
+                echo "❌ Failed to complete merge for $branch"
+                git merge --abort
+                ((failed_merges++))
+            fi
+        else
+            # No conflicts but merge failed for other reasons
+            echo "❌ Merge failed for $branch (no conflicts detected)"
+            git merge --abort
+            ((failed_merges++))
+        fi
     fi
-    
-    # Small delay to avoid issues
-    sleep 1
-    
-done < all_cursor_branches.txt
+done
 
-# Final statistics
-log "🏁 Process completed!"
-log "📊 Final Statistics:"
-log "   Total Branches: $TOTAL_BRANCHES"
-log "   Processed: $PROCESSED"
-log "   Merged: $MERGED"
-log "   Failed: $FAILED"
-log "   Conflicts Resolved: $CONFLICTS_RESOLVED"
+echo ""
+echo "=================================="
+echo "Merge Summary:"
+echo "✅ Successful merges: $successful_merges"
+echo "❌ Failed merges: $failed_merges"
+echo "=================================="
 
-# Final commit
-git add -A 2>/dev/null || true
-git commit -m "Complete: processed $PROCESSED/$TOTAL_BRANCHES cursor branches (merged: $MERGED, failed: $FAILED, conflicts: $CONFLICTS_RESOLVED)" 2>/dev/null || true
-git push origin main 2>/dev/null || true
+# Push the updated main branch
+if [ $successful_merges -gt 0 ]; then
+    echo "Pushing updated main branch..."
+    git push origin main
+    echo "✅ Main branch pushed successfully"
+else
+    echo "No successful merges to push"
+fi
 
-echo "🎉 Cursor branch merge process completed!"
+echo "Merge process completed!"

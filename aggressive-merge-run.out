@@ -1,322 +1,56 @@
 🚀 Starting aggressive merge of PRs with actual differences...
-📊 Total cursor branches available: 6030
-⏰ Started at: Tue Sep 23 08:21:08 PM UTC 2025
+📊 Total cursor branches available: 6371
+⏰ Started at: Wed Sep 24 01:30:22 PM UTC 2025
 ---
-2025-09-23 20:21:08 - 🔒 Creating backup branch: aggressive-merge-backup-20250923-202108
+2025-09-24 13:30:22 - 🔒 Creating backup branch: aggressive-merge-backup-20250924-133022
+Switched to a new branch 'aggressive-merge-backup-20250924-133022'
+remote: 
+remote: Create a pull request for 'aggressive-merge-backup-20250924-133022' on GitHub by visiting:        
+remote:      https://github.com/Zion-Holdings/zion.app/pull/new/aggressive-merge-backup-20250924-133022        
+remote: 
+To https://github.com/Zion-Holdings/zion.app
+ * [new branch]                aggressive-merge-backup-20250924-133022 -> aggressive-merge-backup-20250924-133022
+Switched to branch 'main'
+M	aggressive-merge-run.out
 Your branch is up to date with 'origin/main'.
-2025-09-23 20:21:10 - 📋 Getting list of cursor branches...
-2025-09-23 20:21:10 - 🔄 Starting aggressive batch processing...
+2025-09-24 13:30:24 - 📋 Getting list of cursor branches...
+2025-09-24 13:30:24 - 🔄 Starting aggressive batch processing...
 ---
-2025-09-23 20:21:10 - 📋 Processing branch 1: cursor/automate-automation-redundancy-and-build-improvement-e3e4
-2025-09-23 20:21:10 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-e3e4...
-2025-09-23 20:21:11 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 has 208134 files to merge
-2025-09-23 20:21:11 - ⚠️  Large branch detected (208134 files), proceeding with caution...
+2025-09-24 13:30:24 - 📋 Processing branch 1: cursor/automate-automation-redundancy-and-build-improvement-e3e4
+2025-09-24 13:30:24 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-e3e4...
+2025-09-24 13:30:25 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 has 234266 files to merge
+2025-09-24 13:30:25 - ⚠️  Large branch detected (234266 files), proceeding with caution...
 Already up to date.
-2025-09-23 20:21:12 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-e3e4
+2025-09-24 13:30:25 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-e3e4
 On branch main
 Your branch is up to date with 'origin/main'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   aggressive-merge-run.out
 
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:21:12 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 processed successfully
-2025-09-23 20:21:12 - 📊 Progress: 1 successful, 0 failed, 0 conflicts resolved, 0 skipped
+no changes added to commit (use "git add" and/or "git commit -a")
+2025-09-24 13:30:26 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 processed successfully
+2025-09-24 13:30:26 - 📊 Progress: 1 successful, 0 failed, 0 conflicts resolved, 0 skipped
 ---
-2025-09-23 20:21:12 - 📋 Processing branch 2: cursor/automate-automation-redundancy-and-build-improvement-ea74
-2025-09-23 20:21:12 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-ea74...
-2025-09-23 20:21:13 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 has 208138 files to merge
-2025-09-23 20:21:13 - ⚠️  Large branch detected (208138 files), proceeding with caution...
+2025-09-24 13:30:26 - 📋 Processing branch 2: cursor/automate-automation-redundancy-and-build-improvement-ea74
+2025-09-24 13:30:26 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-ea74...
+2025-09-24 13:30:26 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 has 234270 files to merge
+2025-09-24 13:30:26 - ⚠️  Large branch detected (234270 files), proceeding with caution...
 Already up to date.
-2025-09-23 20:21:13 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-ea74
+2025-09-24 13:30:27 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-ea74
 On branch main
 Your branch is up to date with 'origin/main'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   aggressive-merge-run.out
 
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:21:14 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 processed successfully
-2025-09-23 20:21:14 - 📊 Progress: 2 successful, 0 failed, 0 conflicts resolved, 0 skipped
+no changes added to commit (use "git add" and/or "git commit -a")
+2025-09-24 13:30:28 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 processed successfully
+2025-09-24 13:30:28 - 📊 Progress: 2 successful, 0 failed, 0 conflicts resolved, 0 skipped
 ---
-2025-09-23 20:21:14 - 📋 Processing branch 3: cursor/automate-automation-redundancy-and-build-improvement-f8c0
-2025-09-23 20:21:14 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-f8c0...
-2025-09-23 20:21:14 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-f8c0 has 208134 files to merge
-2025-09-23 20:21:14 - ⚠️  Large branch detected (208134 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:21:15 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-f8c0
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:21:15 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-f8c0 processed successfully
-2025-09-23 20:21:15 - 📊 Progress: 3 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:21:15 - 💾 Pushing progress to remote...
-🚀 Starting aggressive merge of PRs with actual differences...
-📊 Total cursor branches available: 6042
-⏰ Started at: Tue Sep 23 08:21:55 PM UTC 2025
----
-2025-09-23 20:21:55 - 🔒 Creating backup branch: aggressive-merge-backup-20250923-202155
-Your branch is up to date with 'origin/main'.
-2025-09-23 20:21:57 - 📋 Getting list of cursor branches...
-2025-09-23 20:21:57 - 🔄 Starting aggressive batch processing...
----
-2025-09-23 20:21:57 - 📋 Processing branch 1: cursor/automate-automation-redundancy-and-build-improvement-e3e4
-2025-09-23 20:21:57 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-e3e4...
-2025-09-23 20:21:58 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 has 208133 files to merge
-2025-09-23 20:21:58 - ⚠️  Large branch detected (208133 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:21:59 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-e3e4
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:21:59 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-e3e4 processed successfully
-2025-09-23 20:21:59 - 📊 Progress: 1 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:21:59 - 📋 Processing branch 2: cursor/automate-automation-redundancy-and-build-improvement-ea74
-2025-09-23 20:21:59 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-ea74...
-2025-09-23 20:22:00 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 has 208137 files to merge
-2025-09-23 20:22:00 - ⚠️  Large branch detected (208137 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:01 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-ea74
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:01 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-ea74 processed successfully
-2025-09-23 20:22:01 - 📊 Progress: 2 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:01 - 📋 Processing branch 3: cursor/automate-automation-redundancy-and-build-improvement-f8c0
-2025-09-23 20:22:01 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-f8c0...
-2025-09-23 20:22:02 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-f8c0 has 208133 files to merge
-2025-09-23 20:22:02 - ⚠️  Large branch detected (208133 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:03 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-f8c0
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:03 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-f8c0 processed successfully
-2025-09-23 20:22:03 - 📊 Progress: 3 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:03 - 💾 Pushing progress to remote...
-2025-09-23 20:22:04 - 📋 Processing branch 4: cursor/automate-automation-redundancy-and-build-improvement-f915
-2025-09-23 20:22:04 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-f915...
-2025-09-23 20:22:05 - 📁 Branch cursor/automate-automation-redundancy-and-build-improvement-f915 has 208134 files to merge
-2025-09-23 20:22:05 - ⚠️  Large branch detected (208134 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:05 - ✅ Successfully merged cursor/automate-automation-redundancy-and-build-improvement-f915
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:06 - ✅ Branch cursor/automate-automation-redundancy-and-build-improvement-f915 processed successfully
-2025-09-23 20:22:06 - 📊 Progress: 4 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:06 - 📋 Processing branch 5: cursor/automate-broken-link-and-missing-page-checks-b931
-2025-09-23 20:22:06 - 🔄 Attempting to merge cursor/automate-broken-link-and-missing-page-checks-b931...
-2025-09-23 20:22:07 - 📁 Branch cursor/automate-broken-link-and-missing-page-checks-b931 has 242396 files to merge
-2025-09-23 20:22:07 - ⚠️  Large branch detected (242396 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:07 - ✅ Successfully merged cursor/automate-broken-link-and-missing-page-checks-b931
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:08 - ✅ Branch cursor/automate-broken-link-and-missing-page-checks-b931 processed successfully
-2025-09-23 20:22:08 - 📊 Progress: 5 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:08 - 📋 Processing branch 6: cursor/automate-broken-link-checking-with-agent-factories-41c3
-2025-09-23 20:22:08 - 🔄 Attempting to merge cursor/automate-broken-link-checking-with-agent-factories-41c3...
-2025-09-23 20:22:09 - 📁 Branch cursor/automate-broken-link-checking-with-agent-factories-41c3 has 233521 files to merge
-2025-09-23 20:22:09 - ⚠️  Large branch detected (233521 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:09 - ✅ Successfully merged cursor/automate-broken-link-checking-with-agent-factories-41c3
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:10 - ✅ Branch cursor/automate-broken-link-checking-with-agent-factories-41c3 processed successfully
-2025-09-23 20:22:10 - 📊 Progress: 6 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:10 - 💾 Pushing progress to remote...
-2025-09-23 20:22:11 - 📋 Processing branch 7: cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
-2025-09-23 20:22:11 - 🔄 Attempting to merge cursor/automate-cloud-cron-jobs-and-sync-repository-16dc...
-2025-09-23 20:22:11 - 📁 Branch cursor/automate-cloud-cron-jobs-and-sync-repository-16dc has 207361 files to merge
-2025-09-23 20:22:11 - ⚠️  Large branch detected (207361 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:12 - ✅ Successfully merged cursor/automate-cloud-cron-jobs-and-sync-repository-16dc
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:12 - ✅ Branch cursor/automate-cloud-cron-jobs-and-sync-repository-16dc processed successfully
-2025-09-23 20:22:12 - 📊 Progress: 7 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:12 - 📋 Processing branch 8: cursor/automate-cloud-cron-jobs-and-sync-repository-5730
-2025-09-23 20:22:12 - 🔄 Attempting to merge cursor/automate-cloud-cron-jobs-and-sync-repository-5730...
-2025-09-23 20:22:13 - 📁 Branch cursor/automate-cloud-cron-jobs-and-sync-repository-5730 has 207359 files to merge
-2025-09-23 20:22:13 - ⚠️  Large branch detected (207359 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:14 - ✅ Successfully merged cursor/automate-cloud-cron-jobs-and-sync-repository-5730
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:14 - ✅ Branch cursor/automate-cloud-cron-jobs-and-sync-repository-5730 processed successfully
-2025-09-23 20:22:14 - 📊 Progress: 8 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:14 - 📋 Processing branch 9: cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
-2025-09-23 20:22:14 - 🔄 Attempting to merge cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5...
-2025-09-23 20:22:15 - 📁 Branch cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5 has 207361 files to merge
-2025-09-23 20:22:15 - ⚠️  Large branch detected (207361 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:16 - ✅ Successfully merged cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:16 - ✅ Branch cursor/automate-cloud-cron-jobs-and-sync-repository-8cc5 processed successfully
-2025-09-23 20:22:16 - 📊 Progress: 9 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:16 - 💾 Pushing progress to remote...
-2025-09-23 20:22:17 - 📋 Processing branch 10: cursor/automate-commit-push-and-sync-across-computers-bbfb
-2025-09-23 20:22:17 - 🔄 Attempting to merge cursor/automate-commit-push-and-sync-across-computers-bbfb...
-2025-09-23 20:22:18 - 📁 Branch cursor/automate-commit-push-and-sync-across-computers-bbfb has 266965 files to merge
-2025-09-23 20:22:18 - ⚠️  Large branch detected (266965 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:19 - ✅ Successfully merged cursor/automate-commit-push-and-sync-across-computers-bbfb
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:19 - ✅ Branch cursor/automate-commit-push-and-sync-across-computers-bbfb processed successfully
-2025-09-23 20:22:19 - 📊 Progress: 10 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:19 - 📋 Processing branch 11: cursor/automate-continuous-development-processes-4d04
-2025-09-23 20:22:19 - 🔄 Attempting to merge cursor/automate-continuous-development-processes-4d04...
-2025-09-23 20:22:20 - 📁 Branch cursor/automate-continuous-development-processes-4d04 has 207309 files to merge
-2025-09-23 20:22:20 - ⚠️  Large branch detected (207309 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:20 - ✅ Successfully merged cursor/automate-continuous-development-processes-4d04
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:21 - ✅ Branch cursor/automate-continuous-development-processes-4d04 processed successfully
-2025-09-23 20:22:21 - 📊 Progress: 11 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:21 - 📋 Processing branch 12: cursor/automate-continuous-project-improvement-and-integration-3bb7
-2025-09-23 20:22:21 - 🔄 Attempting to merge cursor/automate-continuous-project-improvement-and-integration-3bb7...
-2025-09-23 20:22:21 - 📁 Branch cursor/automate-continuous-project-improvement-and-integration-3bb7 has 266427 files to merge
-2025-09-23 20:22:21 - ⚠️  Large branch detected (266427 files), proceeding with caution...
-Already up to date.
-2025-09-23 20:22:22 - ✅ Successfully merged cursor/automate-continuous-project-improvement-and-integration-3bb7
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	aggressive-merge-20250923-202108.txt
-	aggressive-merge-20250923-202155.txt
-	aggressive-merge-run.out
-	auto_merge_prs.out
-
-nothing added to commit but untracked files present (use "git add" to track)
-2025-09-23 20:22:23 - ✅ Branch cursor/automate-continuous-project-improvement-and-integration-3bb7 processed successfully
-2025-09-23 20:22:23 - 📊 Progress: 12 successful, 0 failed, 0 conflicts resolved, 0 skipped
----
-2025-09-23 20:22:23 - 💾 Pushing progress to remote...
-2025-09-23 20:22:23 - 📋 Processing branch 13: cursor/automate-continuous-project-optimization-and-diversity-631b
-2025-09-23 20:22:23 - 🔄 Attempting to merge cursor/automate-continuous-project-optimization-and-diversity-631b...
+2025-09-24 13:30:28 - 📋 Processing branch 3: cursor/automate-automation-redundancy-and-build-improvement-f8c0
+2025-09-24 13:30:28 - 🔄 Attempting to merge cursor/automate-automation-redundancy-and-build-improvement-f8c0...

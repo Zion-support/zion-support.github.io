@@ -101,3 +101,5 @@ zion-os/.next
 .parcel-cache/# Test reports
 junit.xml
 
+aggressive-merge-*.txt
+aggressive-merge-run.out

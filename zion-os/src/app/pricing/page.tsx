@@ -1,12 +1,12 @@
 'use client';
 import { useState } from 'react';
-interface PricingTier {;
-  name: string: price: string: period: string: description: string: features: string[];
+interface PricingTier {
+  name: string: price: string: period: string: description: string: features: string[];,
   popular?: boolean: cta: string: ctaLink: string}
 ;
-interface ServicePricing {;
+interface ServicePricing {
   serviceName: string: category: string: description: string: tiers: PricingTier[];
-  features: string[];
+  features: string[];,
   benefits: string[]}
 ;
 const servicePricing: ServicePricing[] = [;
@@ -36,7 +36,7 @@ const servicePricing: ServicePricing[] = [;
           'Standard deployment';
           'Basic analytics';];
         cta: 'Start Free Trial';
-        ctaLink: '/multiverse/launch';
+        ctaLink: '/multiverse/launch';,
       };
       {;
         name: 'Professional';
@@ -50,7 +50,7 @@ const servicePricing: ServicePricing[] = [;
           'Advanced analytics';
           'API access';];
         popular: true: cta: 'Get Started';
-        ctaLink: '/multiverse/launch';
+        ctaLink: '/multiverse/launch';,
       };
       {;
         name: 'Enterprise';
@@ -64,7 +64,7 @@ const servicePricing: ServicePricing[] = [;
           'White-label options';
           'Dedicated account manager';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
@@ -94,13 +94,13 @@ const servicePricing: ServicePricing[] = [;
           'Standard response time';
           'Basic documentation';];
         cta: 'Start Free Trial';
-        ctaLink: '/services/zion-gpt';
+        ctaLink: '/services/zion-gpt';,
       };
       {;
         name: 'Professional';
         price: '$149';
         period: '/month';
-        description: 'For growing businesses';
+        description: 'For growing businesses';,
         features: ['1, 0000 API calls/day';
           'Advanced models';
           'Priority support';
@@ -108,7 +108,7 @@ const servicePricing: ServicePricing[] = [;
           'Multi-language support';
           'Analytics dashboard';];
         cta: 'Get Started';
-        ctaLink: '/services/zion-gpt';
+        ctaLink: '/services/zion-gpt';,
       };
       {;
         name: 'Enterprise';
@@ -122,7 +122,7 @@ const servicePricing: ServicePricing[] = [;
           'SLA guarantee';
           'Custom integrations';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
@@ -152,7 +152,7 @@ const servicePricing: ServicePricing[] = [;
           'Content calendar';
           'Basic analytics';];
         cta: 'Start Free Trial';
-        ctaLink: '/services/ai-content-hub';
+        ctaLink: '/services/ai-content-hub';,
       };
       {;
         name: 'Professional';
@@ -166,7 +166,7 @@ const servicePricing: ServicePricing[] = [;
           'Advanced analytics';
           'API access';];
         cta: 'Get Started';
-        ctaLink: '/services/ai-content-hub';
+        ctaLink: '/services/ai-content-hub';,
       };
       {;
         name: 'Enterprise';
@@ -180,14 +180,14 @@ const servicePricing: ServicePricing[] = [;
           'Dedicated support';
           'Custom workflows';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
   {;
     serviceName: 'Digital Marketplace Platform';
     category: 'E-commerce & Services';
-    description:;
+    description:;,
       'Complete marketplace solution for jobs, talent, projects, and services';
     features: ['Job posting & matching';
       'Talent marketplace';
@@ -210,13 +210,13 @@ const servicePricing: ServicePricing[] = [;
           'Basic analytics';
           'Email support';];
         cta: 'Start Free Trial';
-        ctaLink: '/services/marketplace';
+        ctaLink: '/services/marketplace';,
       };
       {;
         name: 'Professional';
         price: '$199';
         period: '/month';
-        description: 'For growing marketplaces';
+        description: 'For growing marketplaces';,
         features: ['Up to 1, 0000 users';
           'Advanced features';
           'Custom branding';
@@ -224,7 +224,7 @@ const servicePricing: ServicePricing[] = [;
           'API access';
           'Priority support';];
         cta: 'Get Started';
-        ctaLink: '/services/marketplace';
+        ctaLink: '/services/marketplace';,
       };
       {;
         name: 'Enterprise';
@@ -238,7 +238,7 @@ const servicePricing: ServicePricing[] = [;
           'Dedicated support';
           'Custom workflows';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
@@ -257,7 +257,7 @@ const servicePricing: ServicePricing[] = [;
       'Enhanced security';];
     tiers: [;
       {;
-        name: 'Basic Migration';
+        name: 'Basic Migration';,
         price: '$2,5000';
         period: 'one-time';
         description: 'Simple infrastructure migration';
@@ -267,10 +267,10 @@ const servicePricing: ServicePricing[] = [;
           'Basic testing';
           'Documentation';];
         cta: 'Get Quote';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
       {;
-        name: 'Standard Migration';
+        name: 'Standard Migration';,
         price: '$7,5000';
         period: 'one-time';
         description: 'Comprehensive migration with optimization';
@@ -281,10 +281,10 @@ const servicePricing: ServicePricing[] = [;
           'Testing & validation';
           'Training';];
         cta: 'Get Quote';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
       {;
-        name: 'Enterprise Migration';
+        name: 'Enterprise Migration';,
         price: '$15,0000+';
         period: 'one-time';
         description: 'Complex enterprise migration';
@@ -295,7 +295,7 @@ const servicePricing: ServicePricing[] = [;
           'Ongoing support';
           'SLA guarantee';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
@@ -314,7 +314,7 @@ const servicePricing: ServicePricing[] = [;
       'Reduce security risks';];
     tiers: [;
       {;
-        name: 'Basic Audit';
+        name: 'Basic Audit';,
         price: '$1,5000';
         period: 'one-time';
         description: 'Essential security assessment';
@@ -324,10 +324,10 @@ const servicePricing: ServicePricing[] = [;
           'Basic report';
           'Email support';];
         cta: 'Get Quote';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
       {;
-        name: 'Standard Audit';
+        name: 'Standard Audit';,
         price: '$4,5000';
         period: 'one-time';
         description: 'Comprehensive security assessment';
@@ -338,10 +338,10 @@ const servicePricing: ServicePricing[] = [;
           'Remediation guidance';
           'Phone support';];
         cta: 'Get Quote';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
       {;
-        name: 'Enterprise Audit';
+        name: 'Enterprise Audit';,
         price: '$9,0000+';
         period: 'one-time';
         description: 'Advanced security assessment';
@@ -352,7 +352,7 @@ const servicePricing: ServicePricing[] = [;
           'Incident response';
           'Dedicated support';];
         cta: 'Contact Sales';
-        ctaLink: 'mailto:kleber@ziontechgroup.com';
+        ctaLink: 'mailto: kleber@ziontechgroup.com';,
       };
     ];
   };
@@ -363,173 +363,173 @@ const categories = ['All';
   'IT Services';
   'E-commerce & Services';];
 export default function PricingPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All')
   const filteredServices =;
     selectedCategory === 'All';
       ? servicePricing;
-      : servicePricing.filter(service => service.category === selectedCategory);
-  return (;
-    <div className='space-y-8'>;
-      <div className='text-center space-y-4'>;
-        <h1 className='text-4xl font-bold'>Pricing & Plans</h1>;
-        <p className='text-xl opacity-80 max-w-3xl mx-auto'>;
+       : servicePricing.filter(service => service.category === selectedCategory)
+  return (
+    <div className='space-y-8'>
+      <div className='text-center space-y-4'>
+        <h1 className='text-4xl font-bold'>Pricing & Plans</h1>
+        <p className='text-xl opacity-80 max-w-3xl mx-auto'>
           Choose the perfect plan for your business needs. All plans include our: core features with transparent pricing and no hidden fees.;
-        </p>;
-      </div>;
+        </p>
+      </div>;,
       {/* Category Filter */}
-      <div className='flex justify-center'>;
-        <div className='flex flex-wrap gap-2 bg-zinc-8000 rounded-lg p-1'>;
+      <div className='flex justify-center'>
+        <div className='flex flex-wrap gap-2 bg-zinc-8000 rounded-lg p-1'>
           {categories.map(category => (;
-            <button;
+            <button
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${;
                 selectedCategory === category;
                   ? 'bg-blue-6000 text-white';
-                  : 'text-gray-3000 hover: text-white hover:bg-zinc-7000'}}
-            >;
+                   : 'text-gray-3000 hover: text-white hover: bg-zinc-7000'}}
+            >
               {category}
             </button>))}
-        </div>;
-      </div>;
+        </div>
+      </div>
       {/* Services Pricing */}
-      <div className='space-y-12'>;
+      <div className='space-y-12'>
         {filteredServices.map((service, serviceIndex) => (;
-          <div key={serviceIndex} className='space-y-6'>;
-            <div className='text-center space-y-2'>;
-              <h2 className='text-2xl font-bold'>{service.serviceName}</h2>;
-              <p className='text-lg opacity-80'>{service.description}</p>;
-            </div>;
+          <div key={serviceIndex} className='space-y-6'>
+            <div className='text-center space-y-2'>
+              <h2 className='text-2xl font-bold'>{service.serviceName}</h2>
+              <p className='text-lg opacity-80'>{service.description}</p>
+            </div>
             {/* Features & Benefits */}
-            <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>;
-              <div>;
-                <h3 className='text-lg font-semibold mb-3'>Key Features</h3>;
-                <ul className='space-y-2'>;
+            <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
+              <div>
+                <h3 className='text-lg font-semibold mb-3'>Key Features</h3>
+                <ul className='space-y-2'>;,
                   {service.features.map((feature, index) => (;
-                    <li key={index} className='flex items-center gap-2'>;
-                      <span className='w-2 h-2 bg-blue-5000 rounded-full'></span>;
+                    <li key={index} className='flex items-center gap-2'>
+                      <span className='w-2 h-2 bg-blue-5000 rounded-full'></span>
                       {feature}
                     </li>))}
-                </ul>;
-              </div>;
-              <div>;
-                <h3 className='text-lg font-semibold mb-3'>Benefits</h3>;
-                <ul className='space-y-2'>;
+                </ul>
+              </div>
+              <div>
+                <h3 className='text-lg font-semibold mb-3'>Benefits</h3>
+                <ul className='space-y-2'>
                   {service.benefits.map((benefit, index) => (;
-                    <li key={index} className='flex items-center gap-2'>;
-                      <span className='w-2 h-2 bg-green-5000 rounded-full'></span>;
+                    <li key={index} className='flex items-center gap-2'>
+                      <span className='w-2 h-2 bg-green-5000 rounded-full'></span>
                       {benefit}
                     </li>))}
-                </ul>;
-              </div>;
-            </div>;
+                </ul>
+              </div>
+            </div>
             {/* Pricing Tiers */}
-            <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>;
+            <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>;,
               {service.tiers.map((tier, tierIndex) => (;
-                <div;
+                <div
                   key={tierIndex}
                   className={``relative border rounded-lg p-6 ${;
                     tier.popular;
                       ? 'border-blue-5000 bg-blue-5000/10';
-                      : 'border-white/10'}}
-                >;
+                       : 'border-white/10'}}
+                >
                   {tier.popular && (;
-                    <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>;
-                      <span className='bg-blue-5000 text-white px-3 py-1 rounded-full text-xs font-medium'>;
+                    <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
+                      <span className='bg-blue-5000 text-white px-3 py-1 rounded-full text-xs font-medium'>
                         Most Popular;
-                      </span>;
+                      </span>
                     </div>)}
 ;
-                  <div className='text-center space-y-4'>;
-                    <h3 className='text-xl font-semibold'>{tier.name}</h3>;
-                    <div>;
-                      <span className='text-3xl font-bold'>{tier.price}</span>;
-                      <span className='text-lg opacity-80'>{tier.period}</span>;
-                    </div>;
-                    <p className='text-sm opacity-80'>{tier.description}</p>;
-                  </div>;
-                  <ul className='space-y-3 mt-6'>;
+                  <div className='text-center space-y-4'>
+                    <h3 className='text-xl font-semibold'>{tier.name}</h3>
+                    <div>
+                      <span className='text-3xl font-bold'>{tier.price}</span>
+                      <span className='text-lg opacity-80'>{tier.period}</span>
+                    </div>
+                    <p className='text-sm opacity-80'>{tier.description}</p>
+                  </div>
+                  <ul className='space-y-3 mt-6'>
                     {tier.features.map((feature, index) => (;
-                      <li;
+                      <li
                         key={index}
-                        className='flex items-center gap-2 text-sm'>;
-                        <span className='w-2 h-2 bg-green-5000 rounded-full'></span>;
+                        className='flex items-center gap-2 text-sm'>
+                        <span className='w-2 h-2 bg-green-5000 rounded-full'></span>
                         {feature}
                       </li>))}
-                  </ul>;
-                  <div className='mt-6'>;
-                    <a;
+                  </ul>
+                  <div className='mt-6'>
+                    <a
                       href={tier.ctaLink}
                       className={``block w-full text-center py-3 px-4 rounded-lg font-medium transition-colors ${;
                         tier.popular;
-                          ? 'bg-blue-6000 hover: bg-blue-7000 text-white';
-                          : 'bg-zinc-7000 hover:bg-zinc-6000 text-white'}}
-                    >;
+                          ? 'bg-blue-6000 hover : bg-blue-7000 text-white';
+                          : 'bg-zinc-7000 hover: bg-zinc-6000 text-white'}}
+                    >
                       {tier.cta}
-                    </a>;
-                  </div>;
+                    </a>
+                  </div>
                 </div>))}
-            </div>;
+            </div>
           </div>))}
-      </div>;
+      </div>
       {/* Additional Services */}
-      <div className='bg-gradient-to-r from-purple-6000 to-blue-6000 rounded-lg p-8 text-white'>;
-        <div className='text-center space-y-4'>;
-          <h2 className='text-2xl font-bold'>Need Custom Solutions?</h2>;
-          <p className='opacity-90'>;
-            We offer custom development, enterprise solutions, and specialized: services tailored to your specific needs.;
-          </p>;
-          <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-center'>;
-            <div>;
-              <h3 className='font-semibold'>Custom Development</h3>;
-              <p className='text-sm opacity-90'>;
+      <div className='bg-gradient-to-r from-purple-6000 to-blue-6000 rounded-lg p-8 text-white'>
+        <div className='text-center space-y-4'>
+          <h2 className='text-2xl font-bold'>Need Custom Solutions? </h2>
+          <p className='opacity-90'>
+            We offer custom development, enterprise solutions, and specialized : services tailored to your specific needs.;
+          </p>
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-center'>
+            <div>
+              <h3 className='font-semibold'>Custom Development</h3>
+              <p className='text-sm opacity-90'>;,
                 Tailored solutions from $5,0000+;
-              </p>;
-            </div>;
-            <div>;
-              <h3 className='font-semibold'>Enterprise Solutions</h3>;
-              <p className='text-sm opacity-90'>;
+              </p>
+            </div>
+            <div>
+              <h3 className='font-semibold'>Enterprise Solutions</h3>
+              <p className='text-sm opacity-90'>
                 Custom pricing for large organizations;
-              </p>;
-            </div>;
-            <div>;
-              <h3 className='font-semibold'>Consulting Services</h3>;
-              <p className='text-sm opacity-90'>;
+              </p>
+            </div>
+            <div>
+              <h3 className='font-semibold'>Consulting Services</h3>
+              <p className='text-sm opacity-90'>
                 Strategic guidance from $150/hour;
-              </p>;
-            </div>;
-          </div>;
-          <a;
+              </p>
+            </div>
+          </div>
+          <a
             href='mailto: kleber@ziontechgroup.com';
-            className='inline-block px-6 py-3 bg-white text-purple-6000 rounded-lg font-semibold hover:bg-gray-1000 transition-colors'>;
+            className='inline-block px-6 py-3 bg-white text-purple-6000 rounded-lg font-semibold hover: bg-gray-1000 transition-colors'>
             Get Custom Quote;
-          </a>;
-        </div>;
-      </div>;
+          </a>
+        </div>
+      </div>;,
       {/* Contact Information */}
-      <div className='text-center space-y-4'>;
-        <h2 className='text-2xl font-bold'>Questions About Pricing?</h2>;
-        <p className='opacity-80'>;
+      <div className='text-center space-y-4'>
+        <h2 className='text-2xl font-bold'>Questions About Pricing? </h2>
+        <p className='opacity-80'>
           Our team is here to help you choose the right plan for your business.;
-        </p>;
-        <div className='grid grid-cols-1 md: grid-cols-3 gap-4'>;
-          <div>;
-            <h3 className='font-semibold'>Phone</h3>;
-            <p className='opacity-80'>+1 302 464 0950</p>;
-          </div>;
-          <div>;
-            <h3 className='font-semibold'>Email</h3>;
-            <p className='opacity-80'>kleber@ziontechgroup.com</p>;
-          </div>;
-          <div>;
-            <h3 className='font-semibold'>Address</h3>;
-            <p className='opacity-80'>;
+        </p>
+        <div className='grid grid-cols-1 md : grid-cols-3 gap-4'>
+          <div>
+            <h3 className='font-semibold'>Phone</h3>
+            <p className='opacity-80'>+1 302 464 0950</p>
+          </div>
+          <div>
+            <h3 className='font-semibold'>Email</h3>
+            <p className='opacity-80'>kleber@ziontechgroup.com</p>
+          </div>
+          <div>
+            <h3 className='font-semibold'>Address</h3>
+            <p className='opacity-80'>
               364 E Main St STE 10008;
-              <br />;
+              <br />
               Middletown DE 19709;
-            </p>;
-          </div>;
-        </div>;
+            </p>
+          </div>
+        </div>
       </div>;
     </div>)}
 ;`;
