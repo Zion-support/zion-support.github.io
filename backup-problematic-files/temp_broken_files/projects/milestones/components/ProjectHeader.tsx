@@ -1,8 +1,0 @@
-
-<<<<<<< HEAD
-=======
-import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
-;
-// Re-export the existing ProjectHeader component;
-export { OriginalProjectHeader as ProjectHeader },; 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

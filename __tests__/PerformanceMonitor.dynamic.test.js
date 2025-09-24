@@ -1,39 +1,13 @@
-<<<<<<< HEAD
-import { describe, it, expect } from '@jest/globals';
-
-describe('PerformanceMonitor.dynamic', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitordynamic from '../components/PerformanceMonitor.dynamic';
-
-describe('PerformanceMonitordynamic', () => {
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import PerformanceMonitor from '../components/PerformanceMonitor',
+describe('PerformanceMonitor', () => {
   test('renders without crashing', () => {
-    render(<PerformanceMonitordynamic />);
-    expect(
-      screen.getByTestId('performancemonitor.dynamic')
-    ).toBeInTheDocument();
-  });
-
+    render(<PerformanceMonitor />),
+    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument()}),
   test('displays correct content', () => {
-    render(<PerformanceMonitordynamic />);
-    // Add specific content tests based on component
-  });
-
+    render(<PerformanceMonitor />)}),
   test('handles user interactions', () => {
-    render(<PerformanceMonitordynamic />);
-    // Add interaction tests based on component functionality
-  });
-
+    render(<PerformanceMonitor />)}),
   test('applies correct styling', () => {
-    render(<PerformanceMonitordynamic />);
-    // Add styling tests if needed
-  });
-});
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> origin/main
+    render(<PerformanceMonitor />)})}),

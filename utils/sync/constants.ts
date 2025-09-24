@@ -1,7 +1,0 @@
-// Sync constants
-export const SYNC_CONSTANTS = {
-  MAX_RETRIES: 3,
-  DEFAULT_TIMEOUT: 5000,
-  DEFAULT_INTERVAL: 1000,
-  MAX_QUEUE_SIZE: 100
-} as const;

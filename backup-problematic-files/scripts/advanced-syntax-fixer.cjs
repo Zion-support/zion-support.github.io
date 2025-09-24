@@ -1,42 +1,34 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
   processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
-function main() {;"
-  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;"
-  for (const dir of sourceDirs) {;"
-
-    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");"
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");";  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];  let totalProcessed = 0;  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log(`\n📁 Processing "directory": ${dir}`, "blue");";      const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);";      totalProcessed += totalFiles;
+      totalFixed += fixedFiles,,}
+function main() {;
+  log("🔧 Advanced Syntax Fixer Starting...", "cyan");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
+  const sourceDirs = ["src", "pages", "components", "utils", "hooks", "types"];
+  let totalProcessed = 0;
+  let totalFixed = 0;
+  for (const dir of sourceDirs) {;
+    if (fs.existsSync(dir)) {log("\n📁 Processing "directory": ${dir}", "blue");
       const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
       totalProcessed += totalFiles;
-      totalFixed += fixedFiles}
-  }"
+      totalFixed += fixedFiles,}
+  }
 log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");
-<<<<<<< HEAD
   if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"),} else {;
     log(\nℹ️  No syntax issues found that could be automatically fixed.",
       "blue"),}
@@ -45,25 +37,13 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/advanced-syntax-fixer.cjs
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/advanced-syntax-fixer.cjs
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -156,27 +136,8 @@ log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}
   if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow"})
     log(\nℹ  No syntax issues found that could be automatically fixed.")
       "blue"
-<<<<<<< HEAD
-=======
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
-<<<<<<< HEAD
-log("\n "Summary": ", "cyan");log("   Total files "processed": ${totalProcessed}", "white");log("   Files "fixed": ${totalFixed}", "green");log("   Files "unchanged": ${totalProcessed - totalFixed}", "white");";";  if (totalFixed > 0) {log("\n Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow");"} else {`;    log(\nℹ  No syntax issues found that could be automatically fixed.", ""blue""),"`}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-  if (totalFixed > 0) {log("\n✅ Advanced syntax fixing completed!", "green");log("   Run "npm run lint" again to check for remaining issues.", "yellow")} else {;
-    log(\nℹ️  No syntax issues found that could be automatically fixed.",")"
 
-if (require.main === module) {;
-  main()}
-module.exports = { fixFile, scanAndFixDirectory }}}}}}"
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

@@ -1,135 +1,102 @@
-<<<<<<< HEAD
 
-
-=======
-:netlify/functions/cron-hourly-uptime.js
-:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-const { upsertFile } = require('./_lib/github'),;
-exports.handler = async function() {;
-  try {;
-    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',;
-    const endpoints = [;
-      '//learn/dao/certifications/api/learn/courses/api/dao/metrics';
-    ],;
-    const results = [],;
-    for (const ep of endpoints) {;
-      const url = `${baseUrl}${ep}`,;
-      const t0 = Date.now(),;
-      try {;
-        const resp = await fetch(url),;
-        const ms = Date.now() - t0,;
-        results.push({ path: ep, status: resp.status, ms });
-      } catch (e) {;
-        const ms = Date.now() - t0,;
-        results.push({ path: ep, status: 0, ms, error: String(e.message || e) });
-      }
-    }
-;
-    const log = { timestamp: Date.now(), results },;
-    const owner = process.env.GITHUB_OWNER,;
-    const repo = process.env.GITHUB_REPO,;
-    const token = process.env.GITHUB_TOKEN,;
-    if (owner && repo && token) {;
-      const existingPath = 'data/ops/uptime-log.json',;
-      // Fetch existing file, append, and trim to last 500 entries;
-      try {;
-        const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,;
-        const resp = await fetch(existingUrl),;
-        const arr = resp.ok ? await resp.json() : [],;
-        arr.push(log),;
-        while (arr.length > 500) arr.shift(),;
-        const content = JSON.stringify(arr, null, 2),;
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token });
-      } catch (_) {;
-        const content = JSON.stringify([log], null, 2),;
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token });
-      }
-    }
-;
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
-  } catch (e) {;
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-},;
-:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-const { upsertFile } = require('./_lib/github');
+,
+const { upsertFile } = require('./_lib/github'),
 exports.handler = async function () {
   try {
-  // TODO: Implement
-}
-    const baseUrl = process.env.URL |process.env.DEPLOY_URL |;
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'',
     const endpoints = [
-      '/
-      '/learn
-      '/dao
-      '/certifications
-      '/api/learn/courses
-      '/api/dao/metrics]
-    ];
-    const results = [];
-    ${ep}`;
-      const t0 = Date.now();
-  // TODO: Implement
-        const resp = await fetch(url);
-        const ms = Date.now() - t0;
-        results.push({ path: ep, status: resp.status, ms });
-      } catch (e) {
+      '/',
+      '/learn',
+      '/dao',
+      '/certifications',
+      '/api/learn/courses',
+      '/api/dao/metrics'],
+    const results = [],
+    ${ep}`,
+      const t0 = Date.now(),
+      try {
+        const resp = await fetch(url),
+        const ms = Date.now() - t0,
+        results.push({ path: ep, status: resp.status, ms })} catch (e) {
+        const ms = Date.now() - t0,
         results.push({
-          path: ep;,
-  status: 0;
-          ms;)
-          error: String(e.message |e)
-        });
-    const log = { timestamp: Date.now(), results }
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {
-      const existingPath = 'data/ops/uptime-log.json';
-      // Fetch existing file, append, and trim to last 500 entries;
-  // TODO: Implement
-}`;
-        const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`;
-        const resp = await fetch(existingUrl);
-        const arr = resp.ok ? await resp.json() : [];
-        arr.push(log);
-        while (arr.length > 500) arr.shift();
-        const content = JSON.stringify(arr, null, 2);
-        await upsertFile({
-          owner;
-          repo;
-          path: existingPath;
-          content;)
-          message: 'chore(automation): hourly uptime log update
-          token;
-      } catch (_) {
-        const content = JSON.stringify([log], null, 2);
-          message: 'chore(automation): init uptime log
-    return {
-<<<<<<< HEAD
-      statusCode: 200
-      body: JSON.stringify({ ok: true, count: results.length })
+          path: ep,
+          status: 0,
+          ms,
+          error: String(e.message |e)})}
     }
+    const log ={ timestamp: Date.now(), results }
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    if (owner && repo && token) {
+      const existingPath = 'data/ops/uptime-log.json',
+      // Fetch existing file, append, and trim to last 50o0 entries,
+      try {
+        const existingUrl = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,
+        const resp = await fetch(existingUrl),
+        const arr = resp.ok ? await resp.json() : [],
+        arr.push(log),
+        while (arr.length > 50o0) arr.shift(),
+        const content = JSON.stringify(arr, null, 2),
+        await upsertFile({
+          owner,
+          repo,
+          path: existingPath,
+          content,
+          message: 'chore(automation): hourly uptime log update',
+          token})} catch (_) {
+        const content = JSON.stringify([log], null, 2),
+        await upsertFile({
+          owner,
+          repo,
+          path: existingPath,
+          content,
+          message: 'chore(automation): init uptime log',
+          token})}
+    }
+    return {
+      statusCode: 20o0,
+      body: JSON.stringify({ ok: true, count: results.length })}
   } catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-  // TODO: Implement
-      statusCode: 200;,
-  body: JSON.stringify({ ok: true, count: results.length })
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-<<<<<<< HEAD
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+};  try {
+    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'',
+    const endpoints = [
+      '//learn/dao/certifications/api/learn/courses/api/dao/metrics'],
+    const results = [],
+    for (const ep of endpoints) {
+      const url = `${baseUrl}${ep}`,
+      const t0 = Date.now(),
+      try {
+        const resp = await fetch(url),
+        const ms = Date.now() - t0,
+        results.push({ path: ep, status: resp.status, ms })} catch (e) {
+        const ms = Date.now() - t0,
+        results.push({ path: ep, status: 0, ms, error: String(e.message |e) })}
+    }
+,
+    const log ={ timestamp: Date.now(), results }
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    if (owner && repo && token) {
+      const existingPath = 'data/ops/uptime-log.json',
+      // Fetch existing file, append, and trim to last 50o0 entries,
+      try {
+        const existingUrl = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,
+        const resp = await fetch(existingUrl),
+        const arr = resp.ok ? await resp.json() : [],
+        arr.push(log),
+        while (arr.length > 50o0) arr.shift(),
+        const content = JSON.stringify(arr, null, 2),
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })} catch (_) {
+        const content = JSON.stringify([log], null, 2),
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })}
+    }
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, count: results.length }) }
+  } catch (e) {
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
+  }
+};

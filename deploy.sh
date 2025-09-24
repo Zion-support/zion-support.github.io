@@ -1,81 +1,60 @@
 #!/bin/bash
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-# Deployment script for production
 set -e
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-echo "🚀 Starting deployment process..."
+# Deployment script for Zion Tech Group
+ENVIRONMENT=${1:-staging}
+VERSION=${2:-latest}
 
-# Check if we're in the right directory
-if [ ! -f "package.json" ]; then
-    echo "❌ Error: package.json not found. Please run this script from the project root."
+echo "🚀 Starting deployment to ${ENVIRONMENT} environment..."
+
+# Check if Docker is running
+if ! docker info > /dev/null 2>&1; then
+    echo "❌ Docker is not running. Please start Docker and try again."
     exit 1
 fi
-
-# Check if Docker is installed
-if ! command -v docker &> /dev/null; then
-    echo "❌ Error: Docker is not installed or not in PATH."
-    exit 1
-fi
-
-# Build the Docker image
-echo "🐳 Building Docker image..."
-docker build -f Dockerfile.production -t ziontechgroup-app:latest .
-
-# Stop existing container if running
-echo "🛑 Stopping existing container..."
-docker stop ziontechgroup-app || true
-docker rm ziontechgroup-app || true
-
-# Run the new container
-echo "▶️ Starting new container..."
-docker run -d \
-    --name ziontechgroup-app \
-    -p 80:80 \
-    --restart unless-stopped \
-    ziontechgroup-app:latest
-
-# Wait for health check
-echo "⏳ Waiting for health check..."
-sleep 10
-
-# Check if container is healthy
-if docker ps | grep -q "ziontechgroup-app"; then
-    echo "✅ Deployment successful!"
-    echo "🌐 Application is running at http://localhost"
-else
-    echo "❌ Deployment failed!"
-    exit 1
-fi
-=======
-echo "🚀 Deploying Zion Tech Group Application..."
 
 # Build the application
+echo "📦 Building application..."
 npm run build
 
-<<<<<<< HEAD
-# Deploy to production
-echo "🚀 Deploying to production..."
-# Add your deployment commands here
+# Build Docker image
+echo "🐳 Building Docker image..."
+docker build -t ziontechgroup:${VERSION} .
 
-echo "✅ Deployment completed successfully!"
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-# Check if build was successful
-if [ $? -eq 0 ]; then
-  echo "✅ Build successful"
-  
-  # Start the application
-  npm run start &
-  
-  echo "🎉 Application deployed successfully!"
+# Tag image for environment
+docker tag ziontechgroup:${VERSION} ziontechgroup:${ENVIRONMENT}
+
+# Deploy based on environment
+if [ "${ENVIRONMENT}" = "production" ]; then
+    echo "🚀 Deploying to production..."
+    docker-compose -f docker-compose.prod.yml up -d
+    
+    # Wait for health check
+    echo "⏳ Waiting for health check..."
+    sleep 30
+    
+    # Check if deployment is healthy
+    if curl -f http://localhost/api/health > /dev/null 2>&1; then
+        echo "✅ Production deployment successful!"
+    else
+        echo "❌ Production deployment failed health check"
+        exit 1
+    fi
 else
-  echo "❌ Build failed"
-  exit 1
+    echo "🚀 Deploying to staging..."
+    docker-compose -f docker-compose.dev.yml up -d
+    
+    # Wait for health check
+    echo "⏳ Waiting for health check..."
+    sleep 15
+    
+    # Check if deployment is healthy
+    if curl -f http://localhost:3000/api/health > /dev/null 2>&1; then
+        echo "✅ Staging deployment successful!"
+    else
+        echo "❌ Staging deployment failed health check"
+        exit 1
+    fi
 fi
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+
+echo "🎉 Deployment completed successfully!"

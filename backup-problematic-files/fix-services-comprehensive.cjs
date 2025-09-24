@@ -1,42 +1,64 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 #!/usr/bin/env node
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
 class ServicesComprehensiveFixer {
-  // TODO: Implement
-}
   constructor() {
     this.projectRoot = process.cwd()}
   log(message) {
-    .toISOString()}] ${message})}
+    .toISOString()}] ${message}`)}
   fixServicesFile() {
     try {
-  // TODO: Implement
-
+      this.log('🔧 Comprehensive fix for data/services.ts...');
+      const filePath = `${this.projectRoot}/data/services.ts`;
+      let content = fs.readFileSync(filePath, 'utf8');
+      // Fix missing commas after array items
+      content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n      $2');
+      content = content.replace(/(\w+)\s*\n\s*]/g, '$1\n    ]');
+      content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n  }');
+      // Fix missing commas after object properties
+      content = content.replace(/(\w+):\s*'([^']*)'\s*\n/g, "$"1": '$2',\n");
+      content = content.replace(/(\w+):\s*"([^"]*)"\s*\n/g, '$"1": "$2",\n');
+      content = content.replace(/(\w+):\s*(\d+)\s*\n/g, '$"1": $2,\n');
+      content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$"1": $2,\n');
+      // Fix missing commas in arrays
+      content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, "'$1',\n      '$2'");
+      content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"');
+      // Fix missing commas after object closing braces
+      content = content.replace(/}\s*\n\s*{/g, '},\n  {');
+      // Fix missing commas after array closing brackets
+      content = content.replace(/]\s*\n\s*{/g, '],\n  {');
+      // Remove duplicate commas
+      content = content.replace(/,,+/g, ',');
+      // Fix trailing commas before closing braces/brackets
+      content = content.replace(/,(\s*[}\]])/g, '$1');
+      // Fix specific patterns
+      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2": ');
+      content = content.replace(/(\w+)\s*\n\s*]/g, '$1\n  ]');
+      content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n}');
+      fs.writeFileSync(filePath, content, 'utf8');
+      this.log('✅ Comprehensive fix applied to data/services.ts');
+      return true} catch (error) {
+      this.log(`❌ Error fixing services "file": ${error.message}`);
       return false}
-// Run the fixer if this file is executed directly;
+  }
+}
+// Run the fixer if this file is executed directly
 if (require.main === module) {
   const fixer = new ServicesComprehensiveFixer();
   const success = fixer.fixServicesFile();
   process.exit(success ? 0 : 1)}
-<<<<<<< HEAD
 module.exports = ServicesComprehensiveFixer;
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");class ServicesComprehensiveFixer { constructor() { this.projectRoot = process.cwd()} log(message) { console.log(`[${new Date().toISOString()}] ${message}`)} fixServicesFile() { try {" this.log(" Comprehensive fix for data/services.ts.");` const filePath = `${this.projectRoot}/data/services.ts`;" let content = fs.readFileSync(filePath, "utf8"); / Fix missing commas after array items" content = content.replace(/(\w+)\s*\n\s*(\w+)/g, "$1,\n $2");" content = content.replace(/(\w+)\s*\n\s*]/g, "$1\n ]");" content = content.replace(/(\w+)\s*\n\s*}/g, "$1\n }"); / Fix missing commas after object properties" content = content.replace(/(\w+):\s*"([^"]*)"\s*\n/g, "$1: "$2",\n");"" content = content.replace(/(\w+):\s*"([^"]*)"\s*\n/g, "$1: "$2",\n");"" content = content.replace(/(\w+):\s*(\d+)\s*\n/g, "$1: $2,\n");"" content = content.replace(/(\w+):\s*(\w+)\s*\n/g, "$1: $2,\n"); / Fix missing commas in arrays"" content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, ""$1",\n "$2"");"" content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, ""$1",\n "$2""); / Fix missing commas after object closing braces" content = content.replace(/}\s*\n\s*{/g, "},\n {"); / Fix missing commas after array closing brackets" content = content.replace(/]\s*\n\s*{/g, "],\n {"); / Remove duplicate commas" content = content.replace(/,+/g, ","); / Fix trailing commas before closing braces/brackets" content = content.replace(/,(\s*[}\]])/g, "$1"); / Fix specific patterns"" content = content.replace(/(\w+)\s*\n\s*(\w+):/g, "$1,\n $2: ");" content = content.replace(/(\w+)\s*\n\s*]/g, "$1\n ]");" content = content.replace(/(\w+)\s*\n\s*}/g, "$1\n}"); " fs.writeFileSync(filePath, content, "utf8");" this.log(" Comprehensive fix applied to data/services.ts"); return true} catch (error) {"` this.log(` Error fixing services file: ${error.message}`); return false} }}/ Run the fixer if this file is executed directlyif (require.main === module) { const fixer = new ServicesComprehensiveFixer(); const success = fixer.fixServicesFile(); process.exit(success ? 0 : 1)}module.exports = ServicesComprehensiveFixer;""`"`
-<<<<<<< HEAD
+
+
+
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 #!/usr/bin/env node;
 const fs = require('fs')
       this.log(' Comprehensive fix for data/services.ts...')
@@ -50,15 +72,11 @@ const fs = require('fs')
       content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$"1"
       content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, '
       content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"
-<<<<<<< HEAD
 
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

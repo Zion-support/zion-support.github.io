@@ -1,103 +1,42 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/AvailabilityFilter.tsx
-=======
-import { ChevronDown, ChevronUp } from "lucide-react",;
-=======
-import { ChevronDown, ChevronUp } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import { Checkbox } from "@/components/ui/checkbox",;
-import { AvailabilityFilterProps } from "@/types/filters",;
-=======
-import { Checkbox } from "@/components/ui/checkbox";""
-import { AvailabilityFilterProps } from "@/types/filters";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-;
-const AVAILABILITY_OPTIONS = [;"
-  { id: "full_time";, label: "Full-time" ;},;""
-  { id: "part_time";, label: "Part-time" ;},;""
-  { id: "project";, label: "Project-based" ;}"]
-],;
-export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen } AvailabilityFilterProps) {;
-  return (;"
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
-</div>
-      <button;
-        onClick={toggleSection}"
-        className="flex w-full items-center justify-between text-white font-medium";"
-      >;
-</button>
-        <span>Availability</span>;"
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
-"
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-
-      </button>;"
-        <div className="mt-4 space-y-2">;"
-</div>"
-            <div key={option.id} className="flex items-center">;"
-              <Checkbox;
-                id={`availability-${option.id}`})
+import { ChevronDown, ChevronUp } from 'lucide-react',
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+const AVAILABILITY_OPTIONS = [
+  { id:"full_time", label: "Full-time" };
+  { id:"part_time", label: "Part-time" };
+  { id:"project", label: "Project-based" }
+];
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen } AvailabilityFilterProps) {
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">,
+      <button
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium">,
+        <span>Availability</span>,
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light"  />) :(
+          <ChevronDown className="h-4 w-4 text-zion-slate-light"  />)}
+      </button>,
+      {expanded && (
+        <div className="mt-4 space-y-2">,
+          {AVAILABILITY_OPTIONS.map(option => (
+            <div key={option.id} className="flex items-center">,
+              <Checkbox
+                id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-
-              <label;`;
-                htmlFor={`availability-${option.id}`}"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
-</label>
-              </label>;
-            </div>;          ))}
-        </div>;
-<<<<<<< HEAD
-      )}
-    </div>;
-  ),;}
- ];
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/AvailabilityFilter.tsx
-  toggleSection 
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
-}</button> {
-  AVAILABILITY OPTIONS.map (option => (<div key= {
-  option.id 
-}className="flex items-center" > <Checkbox > {
-  option.label 
-}</label> </div>) ) 
-}</div>) 
-}</div>) 
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-:temp_broken_files/talent/filters/AvailabilityFilter.tsx
-
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
-  toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;
-  option.label ;
-}</label> </div>) ) ;
-}</div>) ;
-:temp_broken_files/talent/filters/AvailabilityFilter.tsx
-}</div>) ;"}"
-}</div>) ;
-}"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/talent/filters/AvailabilityFilter.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>;"
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;"
-}</button> {;"
-  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;"
-</div>)
-}</label> </div>) ) ;
-}</div>) ;"
-}</div>) ;"}""
-}</div>) ;"`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple",
+              />,
+              <label
+                htmlFor={`availability-${option.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer">,
+                {option.label}
+              </label>,
+            </div>))}
+        </div>)}
+    </div>);}
+ ],
+  toggleSection }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light"  />) }</button> {
+  AVAILABILITY OPTIONS.map (option => (<div key={"  option.id ","}className="flex items-center" > <Checkbox > {
+  option.label }</label> </div>) ) }</div>) ,

@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-export default function EnhancedHome() { return null; }
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

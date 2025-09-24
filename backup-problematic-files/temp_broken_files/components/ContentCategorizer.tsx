@@ -1,114 +1,50 @@
-<<<<<<< HEAD
-
-import React, { useState, useEffect, useMemo } from 'react',;
-import {;
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-  BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
-interface ContentItem {id: string;,
-  title: string;
-  href: string;,
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;,
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];,
-  source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 import React, { useState, useEffect, useMemo } from 'react',
-import { 
-=======
+import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
 import React, { useState, useEffect, useMemo } from 'react';
 import {
-  // TODO: Implement;
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
+:components/ContentCategorizer.tsx,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
-} from 'lucide-react',
-interface ContentItem {
-  // TODO: Implement
-  id: string;,
-  title: string;,
-  href: string;,
-  desc: string;,
-  category: string;,
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+  BarChart3, Globe, Database, Cpu, Rocket, Brain} from 'lucide-react',
+interface ContentItem {id: string,
+  title: string,
+  href: string,
+  desc: string,
+  category: string,
   subcategory?: string,
-<<<<<<< HEAD
   date: string,
   relevance: 'high' | 'medium' | 'low',
   tags: string[],
   source: string,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-}
-interface ContentCategory {id: string;
-  name: string;
-  icon: any;
-=======
-}
-interface ContentCategory {id: string;
-  name: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+  BarChart3, Globe, Database, Cpu, Rocket, Brain} from 'lucide-react';
+interface ContentItem {
+  id: string;
+  title: string;
+  href: string;
+  desc: string;
+  category: string;
+  subcategory?: string;
+  date: string;
+  relevance: 'high' | 'medium' | 'low';
+  tags: string[];
+  source: string;
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx}
+interface ContentCategory {id: string,
+  name: string,
   icon: any,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  date: string;,
-  relevance: 'high' | 'medium' | 'low';,
-  tags: string[];,
-  source: string;,
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature
-interface ContentCategory {id: string;,
-  name: string;
-  icon: any;,
-  icon: any;,
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: string;
-  color: string;,
-  count: number;
-  subcategories?: string[];
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  // Sample content data - in a real implementation, this would come from an API;
-  const contentItems: ContentItem[] = [;
-    {;
-      id: '1';',
-  title: 'Structured Data Audit Report';
-      href: '/reports/structured-data-audit.json';',
-  desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
-      category: 'seo';',
-  subcategory: 'structured-data';
-      date: '2025-08-19';',
-  relevance: 'high';']
-      tags: ['seojson-ldschemaaudit'];',
-  source: 'autonomous-auditor';
-      type: 'report';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState(),
+  description: string,
+  color: string,
+  count: number,
+  subcategories?: string[]}
+,
+:components/ContentCategorizer.tsx,
+const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
   const [selectedType, setSelectedType] = useState('all'),
@@ -116,752 +52,608 @@ const ContentCategorizer: React.FC = () => {
   const [selectedRelevance, setSelectedRelevance] = useState('all'),
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
+const ContentCategorizer: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDateRange, setSelectedDateRange] = useState('all');
+  const [selectedRelevance, setSelectedRelevance] = useState('all');
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   // Sample content data - in a real implementation, this would come from an API,
-const contentItems: ContentItem[] = [
+  const contentItems: ContentItem[] = [
     {
-      id: '1';,
-      title: 'Structured Data Audit Report';,
-      href: '/reports/structured-data-audit.json';,
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';,
-      category: 'seo';,
-      subcategory: 'structured-data';,
-      date: '2025-08-19';,
-      relevance: 'high';,']
-      tags: ['seojson-ldschemaaudit'];,
-      source: 'autonomous-auditor';,
-      type: 'report;
-    },
-<<<<<<< HEAD
-    {
-      id: '2',
-      title: 'Security Vulnerability Scan Results',
-      href: '/reports/security-scan-2025-08-19',
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
-      category: 'security',
-      subcategory: 'vulnerability-scan',
-      date: '2025-08-19',
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '20o25-08-19',
       relevance: 'high',
-      tags: ['securityvulnerabilityscanremediation'],
-      source: 'security-scanner',
-      type: 'security'
-    },
+      tags: ['seojson-ldschemaaudit'],
+      source: 'autonomous-auditor',
+      type: 'report'};
     {
-      id: '3',
-      title: 'AI Model Performance Update',
-      href: '/reports/ai-model-performance-2025-08-19',
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
-      category: 'ai',
-      subcategory: 'performance',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['aiperformanceoptimizationmetrics'],
-      source: 'ai-monitor',
-      type: 'update'
-    },
-    {
-      id: '4',
-      title: 'Feature Deployment Summary',
-      href: '/reports/feature-deployment-2025-08-19',
-      desc: 'Overview of newly deployed features and their impact on user experience.',
-      category: 'features',
-      subcategory: 'deployment',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['featuresdeploymentuximpact'],
-      source: 'deployment-tracker',
-      type: 'feature'
-    },
-    {
-      id: '5',
-      title: 'System Health Dashboard',
-      href: '/reports/system-health-2025-08-19',
-      desc: 'Real-time system performance metrics and infrastructure health status.',
-      category: 'monitoring',
-      subcategory: 'system-health',
-      date: '2025-08-19',
-      relevance: 'medium',
-      tags: ['monitoringperformanceinfrastructurehealth'],
-      source: 'health-monitor',
-      type: 'report'
-    },
-    {
-      id: '6',
-      title: 'User Behavior Insights',
-      href: '/reports/user-behavior-2025-08-19',
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
-      category: 'analytics',
-      subcategory: 'user-behavior',
-      date: '2025-08-19',
-      relevance: 'high',
-      tags: ['analyticsuser-behaviorengagementoptimization'],
-      source: 'behavior-analyzer',
-      type: 'insight'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    }
-    {id: '2';
+      id: '2';
       title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
+      href: '/reports/security-scan-20o25-08-19';
       desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
       category: 'security';
       subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
+      date: '20o25-08-19';
       relevance: 'high';
       tags: ['securityvulnerabilityscanremediation'];
       source: 'security-scanner';
-=======
-      id: '2';,
-      title: 'Security Vulnerability Scan Results';,
-      href: '/reports/security-scan-2025-08-19';,
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';,
-      category: 'security';,
-      subcategory: 'vulnerability-scan';,
-      relevance: 'high';,
-      tags: ['securityvulnerabilityscanremediation'];,
-      source: 'security-scanner';,
-      type: 'security
-      id: '3';,
-      title: 'AI Model Performance Update';,
-      href: '/reports/ai-model-performance-2025-08-19';,
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';,
-      category: 'ai';,
-      subcategory: 'performance';,
-      tags: ['aiperformanceoptimizationmetrics'];,
-      source: 'ai-monitor';,
-      type: 'update
-      id: '4';,
-      title: 'Feature Deployment Summary';,
-      href: '/reports/feature-deployment-2025-08-19';,
-      desc: 'Overview of newly deployed features and their impact on user experience.';,
-      category: 'features';,
-      subcategory: 'deployment';,
-      relevance: 'medium';,
-      tags: ['featuresdeploymentuximpact'];,
-      source: 'deployment-tracker';,
-      type: 'feature
-      id: '5';,
-      title: 'System Health Dashboard';,
-      href: '/reports/system-health-2025-08-19';,
-      desc: 'Real-time system performance metrics and infrastructure health status.';,
-      category: 'monitoring';,
-      subcategory: 'system-health';,
-      tags: ['monitoringperformanceinfrastructurehealth'];,
-      source: 'health-monitor';,
-      id: '6';,
-      title: 'User Behavior Insights';,
-      href: '/reports/user-behavior-2025-08-19';,
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';,
-      category: 'analytics';,
-      subcategory: 'user-behavior';,
-      tags: ['analyticsuser-behaviorengagementoptimization'];,
-      source: 'behavior-analyzer';,
-      type: 'insight
-    {id: '2';',
-  title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';',
-  desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';',
-  subcategory: 'vulnerability-scan';
-  relevance: 'high';
-      tags: ['securityvulnerabilityscanremediation'];',
-  source: 'security-scanner';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      type: 'security';
-    {id: '3';',
-  title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';',
-  desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';',
-  subcategory: 'performance';
-      tags: ['aiperformanceoptimizationmetrics'];',
-  source: 'ai-monitor';
-      type: 'update';
-    {id: '4';',
-  title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';',
-  desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';',
-  subcategory: 'deployment';
-  relevance: 'medium';
-      tags: ['featuresdeploymentuximpact'];',
-  source: 'deployment-tracker';
-      type: 'feature';
-    {id: '5';',
-  title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';',
-  desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';',
-  subcategory: 'system-health';
-      tags: ['monitoringperformanceinfrastructurehealth'];',
-  source: 'health-monitor';
-    {id: '6';',
-  title: 'User Behavior Insights';
-      href: '/reports/user-behavior-2025-08-19';',
-  desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
-      category: 'analytics';',
-  subcategory: 'user-behavior';
-      tags: ['analyticsuser-behaviorengagementoptimization'];',
-  source: 'behavior-analyzer';
-      type: 'insight';
-  ];
-  const categories: ContentCategory[] = [;
-    {id: 'all';
-      name: 'All Content';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
-=======
-      icon: Globe,
-=======
-      icon: Globe;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'Complete collection of autonomous content';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-blue-500 to-cyan-500';
-      count: contentItems.length;
-    }
-    {id: 'seo';
-      name: 'SEO & Analytics';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
-=======
-      icon: BarChart3,
-=======
-      icon: BarChart3;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'Search optimization and performance analytics';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
-      subcategories: ['structured-dataperformancetechnical-seo'];
-    }
-    {id: 'security';
-      name: 'Security & Compliance';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
-=======
-      icon: Shield,
-=======
-      icon: Shield;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'Security assessments and compliance reports';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-scancompliancethreat-detection'];
-    }
-    {id: 'ai';
-      name: 'AI & Machine Learning';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain;
-      description: 'AI model performance and insights';
-=======
-      icon: Brain,
-=======
-      icon: Brain;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'AI model performance and insights';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: ['performancetrainingdeployment'];
-    }
-    {id: 'features';
-      name: 'Feature Updates';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Zap;
-      description: 'New features and system updates';
-=======
-      icon: Zap,
-=======
-      icon: Zap;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'New features and system updates';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: ['deploymentenhancementsroadmap'];
-    }
-    {id: 'monitoring';
-      name: 'System Monitoring';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Cpu;
-      description: 'Infrastructure and system health';
-=======
-      icon: Cpu,
-=======
-      icon: Cpu;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'Infrastructure and system health';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-healthperformanceinfrastructure'];
-    }
-    {id: 'analytics';
-      name: 'User Analytics';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
-=======
-      icon: TrendingUp,
-=======
-      icon: TrendingUp;,
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  description: 'User behavior and engagement insights';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
-    {id: 'all';',
-  name: 'All Content';
-      icon: Globe;,
-  description: 'Complete collection of autonomous content';
-      color: 'from-blue-500 to-cyan-500';',
-  count: contentItems.length;
-    {id: 'seo';',
-  name: 'SEO & Analytics';
-      icon: BarChart3;,
-  description: 'Search optimization and performance analytics';
-      color: 'from-green-500 to-emerald-500';',
-  count: contentItems.filter(item => item.category === 'seo').length;']
-      subcategories: ['structured-dataperformancetechnical-seo'];
-    {id: 'security';',
-  name: 'Security & Compliance';
-      icon: Shield;,
-  description: 'Security assessments and compliance reports';
-      color: 'from-red-500 to-orange-500';',
-  count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-scancompliancethreat-detection'];
-    {id: 'ai';',
-  name: 'AI & Machine Learning';
-      icon: Brain;,
-  description: 'AI model performance and insights';
-      color: 'from-purple-500 to-pink-500';',
-  count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: ['performancetrainingdeployment'];
-    {id: 'features';',
-  name: 'Feature Updates';
-      icon: Zap;,
-  description: 'New features and system updates';
-      color: 'from-yellow-500 to-orange-500';',
-  count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: ['deploymentenhancementsroadmap'];
-    {id: 'monitoring';',
-  name: 'System Monitoring';
-      icon: Cpu;,
-  description: 'Infrastructure and system health';
-      color: 'from-indigo-500 to-purple-500';',
-  count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-healthperformanceinfrastructure'];
-    {id: 'analytics';',
-  name: 'User Analytics';
-      icon: TrendingUp;,
-  description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';',
-  count: contentItems.filter(item => item.category === 'analytics').length;
-pr-12325
-      subcategories: ['user-behaviorengagementconversion'];
-  const contentTypes = [;
-    { id: 'all';, name: 'All Types';, icon: Globe ;}
-    { id: 'report';, name: 'Reports';, icon: BookOpen ;}
-    { id: 'update';, name: 'Updates';, icon: Zap ;}
-    { id: 'insight';, name: 'Insights';, icon: Lightbulb ;}
-    { id: 'guide';, name: 'Guides';, icon: Code ;}
-    { id: 'security';, name: 'Security';, icon: Shield ;}
-    { id: 'feature';, name: 'Features';, icon: TrendingUp ;}']
-  const dateRanges = [;
-    { id: 'all';, name: 'All Time' ;}
-    { id: 'today';, name: 'Today' ;}
-    { id: 'week';, name: 'This Week' ;}
-    { id: 'month';, name: 'This Month' ;}
-    { id: 'quarter';, name: 'This Quarter' ;}']
-  const relevanceLevels = [;
-<<<<<<< HEAD
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
-    { id: 'high', name: 'High Priority', color: 'text-green-400' }
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
-    { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    { id: 'all';, name: 'All Relevance';, color: 'text-gray-400' ;}
-    { id: 'high';, name: 'High Priority';, color: 'text-green-400' ;}
-    { id: 'medium';, name: 'Medium Priority';, color: 'text-yellow-400' ;}
-    { id: 'low';, name: 'Low Priority';, color: 'text-red-400' ;}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
-    });
-    // Sort items;
-    filtered.sort((a, b) => {let comparison = 0;
-      switch (sortBy) {;
-        case 'date':;
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-<<<<<<< HEAD
-          break;
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
-          break;]
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      type: 'security'};
+    {
+      id: '3';
+      title: 'AI Model Performance Update';
+      href: '/reports/ai-model-performance-20o25-08-19';
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
+      category: 'ai';
+      subcategory: 'performance';
+      date: '20o25-08-19';
+      relevance: 'high';
+      tags: ['aiperformanceoptimizationmetrics'];
+      source: 'ai-monitor';
+      type: 'update'};
+    {
+      id: '4';
+      title: 'Feature Deployment Summary';
+      href: '/reports/feature-deployment-20o25-08-19';
+      desc: 'Overview of newly deployed features and their impact on user experience.';
+      category: 'features';
+      subcategory: 'deployment';
+      date: '20o25-08-19';
+      relevance: 'medium';
+      tags: ['featuresdeploymentuximpact'];
+      source: 'deployment-tracker';
+      type: 'feature'};
+    {
+      id: '5';
+      title: 'System Health Dashboard';
+      href: '/reports/system-health-20o25-08-19';
+      desc: 'Real-time system performance metrics and infrastructure health status.';
+      category: 'monitoring';
+      subcategory: 'system-health';
+      date: '20o25-08-19';
+      relevance: 'medium';
+      tags: ['monitoringperformanceinfrastructurehealth'];
+      source: 'health-monitor';
+      type: 'report'};
+    {
+      id: '6';
+      title: 'User Behavior Insights';
+      href: '/reports/user-behavior-20o25-08-19';
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
+      category: 'analytics';
+      subcategory: 'user-behavior';
+      date: '20o25-08-19';
+      relevance: 'high';
+      tags: ['analyticsuser-behaviorengagementoptimization'];
+      source: 'behavior-analyzer';
+      type: 'insight'}
+    {id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-20o25-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'}
+    {id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-20o25-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'}
+    {id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-20o25-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '20o25-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'}
+    {id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-20o25-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '20o25-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'}
+    {id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-20o25-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
+      type: 'insight'}
   ],
-
-  const filteredItems = useMemo(() => {
-    const filtered = contentItems.filter(item => {)
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const categories: ContentCategory[] = [
+    {id: 'all',
+      name: 'All Content',
+      icon: Globe,
+      description: 'Complete collection of autonomous content',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      count: contentItems.length}
+    {id: 'seo',
+      name: 'SEO & Analytics',
+      icon: BarChart3,
+      description: 'Search optimization and performance analytics',
+      color: 'from-green-50o0 to-emerald-50o0',
+      count: contentItems.filter(item => item.category === 'seo').length,
+      subcategories: ['structured-dataperformancetechnical-seo']}
+    {id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security assessments and compliance reports',
+      color: 'from-red-50o0 to-orange-50o0',
+      count: contentItems.filter(item => item.category === 'security').length,
+      subcategories: ['vulnerability-scancompliancethreat-detection']}
+    {id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'AI model performance and insights',
+      color: 'from-purple-50o0 to-pink-50o0',
+      count: contentItems.filter(item => item.category === 'ai').length,
+      subcategories: ['performancetrainingdeployment']}
+    {id: 'features',
+      name: 'Feature Updates',
+      icon: Zap,
+      description: 'New features and system updates',
+      color: 'from-yellow-50o0 to-orange-50o0',
+      count: contentItems.filter(item => item.category === 'features').length,
+      subcategories: ['deploymentenhancementsroadmap']}
+    {id: 'monitoring',
+      name: 'System Monitoring',
+      icon: Cpu,
+      description: 'Infrastructure and system health',
+      color: 'from-indigo-50o0 to-purple-50o0',
+      count: contentItems.filter(item => item.category === 'monitoring').length,
+      subcategories: ['system-healthperformanceinfrastructure']}
+    {id: 'analytics',
+      name: 'User Analytics',
+      icon: TrendingUp,
+      description: 'User behavior and engagement insights',
+      color: 'from-teal-50o0 to-cyan-50o0',
+      count: contentItems.filter(item => item.category === 'analytics').length,
+      subcategories: ['user-behaviorengagementconversion']}
+  ],
+  const contentTypes = [
+    { id: 'all', name: 'All Types', icon: Globe }
+    { id: 'report', name: 'Reports', icon: BookOpen }
+    { id: 'update', name: 'Updates', icon: Zap }
+    { id: 'insight', name: 'Insights', icon: Lightbulb }
+    { id: 'guide', name: 'Guides', icon: Code }
+    { id: 'security', name: 'Security', icon: Shield }
+    { id: 'feature', name: 'Features', icon: TrendingUp }
+  ],
+  const dateRanges = [
+    { id: 'all', name: 'All Time' }
+    { id: 'today', name: 'Today' }
+    { id: 'week', name: 'This Week' }
+    { id: 'month', name: 'This Month' }
+    { id: 'quarter', name: 'This Quarter' }
+  ],
+  const relevanceLevels = [
+    { id: 'all', name: 'All Relevance', color: 'text-gray-40o0' }
+    { id: 'high', name: 'High Priority', color: 'text-green-40o0' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-40o0' }
+    { id: 'low', name: 'Low Priority', color: 'text-red-40o0' }
+,
+:components/ContentCategorizer.tsx],
+  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |,
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |,
                            item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
-      const matchesType = selectedType === 'all' || item.type === selectedType,
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
-    }),
-
+      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' |item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance];
+  const filteredItems = useMemo(() => {
+    const filtered = contentItems.filter(item => {
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
+      const matchesType = selectedType === 'all' || item.type === selectedType;
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance}),
     // Sort items,
-filtered.sort((a, b) => {
-      let comparison = 0,      switch (sortBy) {
-        case 'date':
+    filtered.sort((a, b) => {let comparison = 0,
+      switch (sortBy) {
+        case 'date':,
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
           break,
-        case 'relevance':
-          const relevanceOrder = { high: 3;, medium: 2;, low: 1 ;},
+        case 'relevance':,
+          const relevanceOrder ={ high: 3, medium: 2, low: 1 }
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
-          break,        case 'title':
+          break,
+        case 'title':,
           comparison = a.title.localeCompare(b.title),
-<<<<<<< HEAD
-          break
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-      }
-=======
+          break];
+  const filteredItems = useMemo(() => {
+    const filtered = contentItems.filter(item => {
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||,
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
+      const matchesType = selectedType === 'all' || item.type === selectedType;
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance});
+    // Sort items;
+filtered.sort((a, b) => {
+      let comparison = 0,      switch (sortBy) {
+        case 'date':,
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      return sortOrder === 'asc' ? comparison : -comparison;
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
-  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
-    return cat ? cat.icon : Globe;
-  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
-      case 'high': return 'text-green-400';
-      case 'medium': return 'text-yellow-400';
-      case 'low': return 'text-red-400';
-      default: return 'text-gray-400';
+        case 'relevance':,
+          const relevanceOrder ={ high: 3, medium: 2, low: 1 };
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          break,        case 'title':,
+          comparison = a.title.localeCompare(b.title);
+          break,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx}
+      return sortOrder === 'asc' ? comparison : -comparison}),
+    return filtered}, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),
+  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category),
+    return cat ? cat.icon : Globe}
+  const getRelevanceColor = (relevance: string) => {switch (relevance) {
+      case 'high': return 'text-green-40o0',
+      case 'medium': return 'text-yellow-40o0',
+      case 'low': return 'text-red-40o0',
+      default: return 'text-gray-40o0'}
+}
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type)
-    return typeInfo ? typeInfo.icon : Globe;
+    const typeInfo = contentTypes.find(t => t.id === type),
+    return typeInfo ? typeInfo.icon : Globe}
   const clearAllFilters = () => {
-    setSearchTerm()
-    setSelectedCategory('all')
-    setSelectedSubcategory('all')
-    setSelectedType('all')
-    setSelectedDateRange('all')
-    setSelectedRelevance('all')
+    setSearchTerm(''),
+    setSelectedCategory('all'),
+    setSelectedSubcategory('all'),
+    setSelectedType('all'),
+    setSelectedDateRange('all'),
+    setSelectedRelevance('all')}
   return (
-    <div className=&quot;space-y-6&quot;>
-</div>
-      <div className=&quot;space-y-4&quot;>
-        <div className=&quot;relative&quot;>
-          <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot; />
-
-          <input,
-type=&quot;text&quot;
-            placeholder=&quot;Search content by title, description, tags, or keywords...&quot;
-            value={searchTerm})
+    <div className=&quot,space-y-6&quot>,
+      {/* Search and Advanced Filters */}
+      <div className=&quot,space-y-4&quot>,
+        {/* Search Bar */}
+        <div className=&quot,relative&quot>,
+          <Search className=&quot,absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot,  />,
+          <input;
+type=&quot,text&quot,
+            placeholder=&quot,Search content by title, description, tags, or keywords...&quot,
+            value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-</input>
-        <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
-          {/* Category Filter */}          <div>
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            className=&quot,w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot,
+          />,
+        </div>,
+        {/* Advanced Filter Controls */}
+        <div className=&quot,grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4&quot>,
+          {/* Category Filter */}          <div>,
+            <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Category</label>,
+:components/ContentCategorizer.tsx,
+            <select
+              value={selectedCategory}
+              onChange={(e) => {setSelectedCategory(e.target.value),
+                setSelectedSubcategory('all')}}
+className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
+            <select;
+value={selectedCategory}
+              onChange={(e) => {
+                setSelectedCategory(e.target.value);
+                setSelectedSubcategory('all')}}
+              className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name} ({category.count})
-                </option>
-              ))}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <option key={category.id} value={category.id}>
-</option>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
-            <select,
+                <option key={category.id} value={category.id}>,
+                  {category.name} ({category.count}),
+                </option>))}
+,
+:components/ContentCategorizer.tsx,
+            </select>,
+          </div>,
+          {/* Subcategory Filter */}
+<div>,
+            </select>,
+          </div>,
+          {_/* Subcategory Filter */}
+          <div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+            <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Subcategory</label>,
+            <select;
 value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-</select>
-              <option value=&quot;all&quot;>All Subcategories</option>
-                <option key={sub} value={sub}>
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
+              className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
+              <option value=&quot,all&quot>All Subcategories</option>,
+              {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
+                <option key={sub} value={sub}>,
+:components/ContentCategorizer.tsx,
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
+                </option>))}
+            </select>,
+          </div>,
+          {/* Content Type Filter */}
+<div>,
+                  {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>))}
+            </select>,
+          </div>,
+          {_/* Content Type Filter */}
+          <div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+            <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Content Type</label>,
+            <select;
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-                <option key={type.id} value={type.id}>
-                </option>;
-<<<<<<< HEAD
-              ))}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
+              className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
+              {contentTypes.map(type => (
+                <option key={type.id} value={type.id}>,
+                  {type.name}
+                </option>))}
+,
+:components/ContentCategorizer.tsx,
+            </select>,
+          </div>,
+          {/* Relevance Filter */}
+<div>,
+            </select>,
+          </div>,
+          {_/* Relevance Filter */}
+          <div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+            <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Relevance</label>,
+            <select;
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
-                <option key={level.id} value={level.id}>
-            </select>;
-          </div>;
-<<<<<<< HEAD
-        </div>;
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
+              {relevanceLevels.map(level => (
+                <option key={level.id} value={level.id}>,
+                  {level.name}
+                </option>))}
+            </select>,
+          </div>,
+        </div>,
+:components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
         {/* Sort Controls and Clear Filters */}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
-          <div className=&quot;flex items-center gap-4&quot;>
-            <div className=&quot;flex items-center gap-2&quot;>
-              <label className=&quot;text-sm text-white/70&quot;>Sort by:</label>
+<div className=&quot,flex flex-wrap items-center justify-between gap-4&quot>,
+          <div className=&quot,flex items-center gap-4&quot>,
+            <div className=&quot,flex items-center gap-2&quot>,
+              <label className=&quot,text-sm text-white/70&quot>Sort by: </label>,
+              <select;
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
-                <option value=&quot;date&quot;>Date</option>
-                <option value=&quot;relevance&quot;>Relevance</option>
-                <option value=&quot;title&quot;>Title</option>
-              <button,
+                className=&quot,px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50&quot>,
+                <option value=&quot,date&quot>Date</option>,
+                <option value=&quot,relevance&quot>Relevance</option>,
+                <option value=&quot,title&quot>Title</option>,
+              </select>,
+              <button;
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-<<<<<<< HEAD
-                className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
-<<<<<<< HEAD
+                className=&quot,p-1 bg-white/5 border border-white/10 rounded hover: bg-white/10 transition-colors duration-20o0&quot>,
                 {sortOrder === 'asc' ? '↑' : '↓'}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-            Clear All Filters
-          </button>
-        </div>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:components/ContentCategorizer.tsx
+,
+:components/ContentCategorizer.tsx,
+              </button>,
+            </div>,
+          </div>,
+          <button
+            onClick={clearAllFilters}
+className=&quot,px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover: text-white hover:bg-white/10 transition-all duration-20o0&quot>,
+              </button>,
+            </div>,
+          </div>,
+          <button;
+onClick={clearAllFilters}
+            className=&quot,px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover: text-white hover:bg-white/10 transition-all duration-20o0&quot>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+            Clear All Filters,
+          </button>,
+        </div>,
+      </div>,
+:components/ContentCategorizer.tsx,
       {/* Category Pills */}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-</button>
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      <div>
-        <div className=&quot;flex flex-wrap gap-2&quot;>
-            <button;
+      <div>,
+        <div className=&quot,flex flex-wrap gap-2&quot>,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              <category.icon className=&quot;w-4 h-4&quot; />
-</category>
-              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-</span>
-              </span>;
-            </button>;
-<<<<<<< HEAD
-          ))}
-        </div>;
-      </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id,
+                  ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0',
+                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10'}`}
+>,
+              <category.icon className=&quot,w-4 h-4&quot,  />,
+              {category.name}
+              <span className=&quot,text-xs bg-white/10 px-2 py-1 rounded-full&quot>,
+                {category.count}
+              </span>,
+            </button>))}
+        </div>,
+      </div>,
+      {_/* Category Pills */}
+      <div>,
+        <div className=&quot,flex flex-wrap gap-2&quot>,
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-20o0 ${selectedCategory === category.id,
+                  ? 'border-cyan-50o0 bg-cyan-50o0/20 text-cyan-30o0',
+                  : 'border-white/10 bg-white/5 text-white/70 hover: border-white/20 hover:bg-white/10'}`}
+>,
+              <category.icon className=&quot,w-4 h-4&quot,  />,
+              {category.name}
+              <span className=&quot,text-xs bg-white/10 px-2 py-1 rounded-full&quot>,
+                {category.count}
+              </span>,
+            </button>))}
+        </div>,
+      </div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
       {/* Results Summary */}
-<div className=&quot;text-sm text-white/60&quot;>
-        Showing {filteredItems.length} of {contentItems.length} items
-        {searchTerm && ` matching &quot;${searchTerm}&quot;`}
+<div className=&quot,text-sm text-white/60&quot>,
+        Showing {filteredItems.length} of {contentItems.length} items,
+        {searchTerm && ` matching &quot,${searchTerm}&quot,`}
         {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
-      </div>;
+      </div>,
       {/* Content Grid */}
-<<<<<<< HEAD
-:components/ContentCategorizer.tsx
-
+,
+:components/ContentCategorizer.tsx,
                   {item.type}
-                </div>;
-              </div>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                  {item.type}
-                </div>;
-              </div>;
+                </div>,
+              </div>,
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
-          const CategoryIcon = getCategoryIcon(item.category),
-          const TypeIcon = getTypeIcon(item.type),
-          const category = categories.find(c => c.id === item.category),
-      {_/* Results Summary */}
-      <div className="text-sm text-white/60">
-        Showing {filteredItems.length} of {contentItems.length} items
-        {searchTerm && ` matching "${searchTerm}"`}
-        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
-        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
-      </div>
-
-      {_/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredItems.map(_(item) => {
           const CategoryIcon = getCategoryIcon(item.category);
           const TypeIcon = getTypeIcon(item.type);
           const category = categories.find(c => c.id === item.category);
-          
+      {_/* Results Summary */}
+      <div className="text-sm text-white/60">,
+        Showing {filteredItems.length} of {contentItems.length} items,
+        {searchTerm && ` matching "${searchTerm}"`}
+        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+      </div>,
+      {_/* Content Grid */}
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
+        {filteredItems.map(_(item) => {
+          const CategoryIcon = getCategoryIcon(item.category),
+          const TypeIcon = getTypeIcon(item.type),
+          const category = categories.find(c => c.id === item.category),
           return (
-=======
-<div className=&quot;text-sm text-white/60&quot;>
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {"
-</div>"
-      <div className="text-sm text-white/60">"
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-            <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
-              <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
-              <div className=&quot;flex items-center justify-between mb-3&quot;>
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
-                    <CategoryIcon className=&quot;w-4 h-4 text-white&quot; />
-
-                  <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
-                <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
-                  <TypeIcon className=&quot;w-3 h-3&quot; />
-<<<<<<< HEAD
+            <div key={item.id} className=&quot,group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 transition-all duration-30o0 transform hover:scale-10o5&quot>,
+              <div className=&quot,pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0&quot,  />,
+              {/* Header with Category and Type */}
+              <div className=&quot,flex items-center justify-between mb-3&quot>,
+                <div className=&quot,flex items-center gap-2&quot>,
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-50o0 to-gray-60o0'} p-2 flex items-center justify-center`}>,
+                    <CategoryIcon className=&quot,w-4 h-4 text-white&quot,  />,
+                  </div>,
+                  <span className=&quot,text-xs text-white/60 uppercase tracking-wider&quot>,
+                    {category?.name}
+                  </span>,
+                </div>,
+                <div className=&quot,flex items-center gap-1 text-xs text-white/50&quot>,
+                  <TypeIcon className=&quot,w-3 h-3&quot,  />,
                   {item.type}
-                </div>;
-              </div>;
-;
-<<<<<<< HEAD
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
-:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                </div>,
+              </div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {/* Title and Description */}
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
-</h3>
-              <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
-</p>
-              </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+<h3 className=&quot,text-lg font-semibold text-white mb-2 group-hover: text-cyan-30o0 transition-colors duration-20o0&quot>,
+                {item.title}
+              </h3>,
+              <p className=&quot,text-sm text-white/75 mb-4 leading-relaxed&quot>,
+                {item.desc}
+              </p>,
+:components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {/* Tags */}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
-                  <span key={index} className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>
-<<<<<<< HEAD
+<div className=&quot,flex flex-wrap gap-1 mb-4&quot>,
+                {item.tags.slice(0, 3).map((tag, index) => (
+                  <span key={index} className=&quot,px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot>,
                     {tag}
-                  </span>;
-                ))}
-<<<<<<< HEAD
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+                  </span>))}
+,
+:components/ContentCategorizer.tsx,
+{item.tags.length > 3 && (
+                  <span className=&quot,px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot>,
+                    +{item.tags.length - 3}
+                  </span>)}
+              </div>,
+                {item.tags.length > 3 && (
+                  <span className=&quot,px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot>                    +{item.tags.length - 3}
+                  </span>)}
+              </div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
               {/* Metadata */}
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-<div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
-                <span className=&quot;flex items-center gap-1&quot;>
-                  <Calendar className=&quot;w-3 h-3&quot; />
-
-                </span>`;
-                <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
-                  <TrendingUp className=&quot;w-3 h-3&quot; />
-
-              <div className=&quot;flex items-center justify-between&quot;>
-                <span className=&quot;text-xs text-white/40&quot;>
-<<<<<<< HEAD
+<div className=&quot,flex items-center justify-between text-xs text-white/50 mb-4&quot>,
+                <span className=&quot,flex items-center gap-1&quot>,
+                  <Calendar className=&quot,w-3 h-3&quot,  />,
+                  {item.date}
+                </span>,
+                <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>,
+                  <TrendingUp className=&quot,w-3 h-3&quot,  />,
+                  {item.relevance} priority,
+                </span>,
+              </div>,
+              {/* Source and Action */}
+              <div className=&quot,flex items-center justify-between&quot>,
+                <span className=&quot,text-xs text-white/40&quot>,
                   Source: {item.source}
-                </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        })}
-      </div>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                </span>,
+:components/ContentCategorizer.tsx,
+                <a
+                  href={item.href}
+                <a
+                  href={item.href} })}
+      </div>,
+                <a;
+href={item.href} ,
+                  target="blank",
+                  rel="noopener noreferrer",
+                  className="inline-flex items-center gap-2 text-cyan-30o0 hover: text-cyan-20o0 transition-colors duration-20o0 text-sm font-medium",
+                  target=&quot,blank&quot,
+                  rel=&quot,noopener&quot,
+                  className=&quot,inline-flex items-center gap-2 text-cyan-30o0 hover:text-cyan-20o0 transition-colors duration-20o0 text-sm font-medium&quot>,
+                  Open Content,
+                  <span aria-hidden></span>,
+                </a>,
+              </div>,
+            </div>)})}
+      </div>,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
       {/* No Results */}
 {filteredItems.length === 0 && (
-        <div className=&quot;text-center py-12&quot;>
-          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
-=======
-        })}
-      </div>;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                <a,
-href={item.href} 
-                  target="blank"""
-                  rel="noopener noreferrer"""
-                  className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200 text-sm font-medium""
-                  target=&quot;blank&quot; 
-                  rel=&quot;noopener&quot;
-                  className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
-                >
-</a>
-                  <span aria-hidden></span>
-        <div className=&quot;text-center py-12&quot;>
-          <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
-=======
-          <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-          <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
+        <div className=&quot,text-center py-12&quot>,
+          <div className=&quot,text-white/40 text-6xl mb-4&quot></div>,
+          <h3 className=&quot,text-xl font-semibold text-white/70 mb-2&quot>No content found</h3>,
+          <p className=&quot,text-white/50 mb-4&quot>            Try adjusting your search terms or filters to find what you're looking for.,
+          </p>,
+          <button;
 onClick={clearAllFilters}
-            className=&quot;px-6 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-all duration-200&quot;
-<<<<<<< HEAD
-          >
-            Reset All Filters
-          </button>
-        </div>
-      )}
-    </div>;
-  );
-}
-<<<<<<< HEAD
+            className=&quot,px-6 py-2 bg-cyan-50o0/20 border border-cyan-50o0/50 rounded-lg text-cyan-30o0 hover: bg-cyan-50o0/30 transition-all duration-20o0&quot>,
+            Reset All Filters,
+          </button>,
+        </div>)}
+    </div>)}
 export default ContentCategorizer;
-=======
-export default ContentCategorizer;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    </div>;`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}}}}}}}))

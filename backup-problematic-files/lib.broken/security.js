@@ -1,76 +1,49 @@
-// Security utility functions;
+// Security utility functions,
 export class SecurityUtils {
-  // TODO: Implement
-}
   static sanitizeInput(input) {
-  if (typeof input !== "string") return input;"
-    return input;"
-      .replace(/[<>]/g, "") // Remove potential HTML tags;""
-      .replace(/"javascript": /gi, "") // Remove "javascript": protocol;""
-      .replace(/on\w+=/gi, "") // Remove event handlers;"
+  if (typeof input !== "string") return input,
+    return input,
+      .replace(/[<>]/g, "") // Remove potential HTML tags,
+      .replace(/"javascript": /gi, "") // Remove "javascript": protocol,
+      .replace(/on\w+=/gi, "") // Remove event handlers,
       .trim()}
-;
+,
   static validateEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     return emailRegex.test(email)}
-  static generateCSRFToken() {"
-  return crypto.randomBytes(32).toString("hex")}"
-  static hashPassword(password) {"
-  return crypto.createHash("sha256").update(password).digest("hex")}"
+,
+  static generateCSRFToken() {
+  return crypto.randomBytes(32).toString("hex")}
+,
+  static hashPassword(password) {
+  return crypto.createHash("sha256").update(password).digest("hex")}
+,
   static validatePassword(password) {
-  // At least 8 characters, 1 uppercase, 1 lowercase, 1 number;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/;
+  // At least 8 characters, 1 uppercase, 1 lowercase, 1 number,
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/,
     return passwordRegex.test(password)}
+,
   static escapeHtml(text) {
-<<<<<<< HEAD
-  const map = {
-  "&": "&amp;",
-      "<": "&lt;">;
-      ">": "&gt;",
-      """: "&quot;",
-      """: "&#039;"}
+  const map ={
+  "&": "&amp,";
+      "<": "&lt,">,
+      ">": "&gt,";
+      """: "&quot,";
+      """: "&#0o39,"}
     return text.replace(/[&<>""]/g, (m) => map[m])}
-<<<<<<< HEAD
-=======
-
-
-}
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,) .replace(/javascript: '/gi',"") .replace(/on\w+=/gi,) .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;",; "<": "&lt;"> ">": "&gt;",; ": "&quot;",; ": "&#039;";,} return text.replace(/[&<>""]/g,(m) => map[m])} }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-}
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,) .replace(/javascript: '/gi',"") .replace(/on\w+=/gi,) .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;",; "<": "&lt;"> ">": "&gt;",; ": "&quot;",; ": "&#039;";,} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  const map = {"
-  "&": "&amp;",""
-      "<": "&lt;">;""
-      ">": "&gt;",""
-      """: "&quot;",""
-      """: "&#039;"}""
-    return text.replace(/[&<>""]/g, (m) => map[m])}"
-}"
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,) .replace(/javascript: '/gi',"") .replace(/on\w+=/gi,) .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;",; "<": "&lt;"> ">": "&gt;",; ": "&quot;",; ": "&#039;";,} return text.replace(/[&<>""]/g,(m) => map[m])} }""
-export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input; return input; .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} ; static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; return emailRegex.test(email)} ; static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} ; static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} ; static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/; return passwordRegex.test(password)} ; static escapeHtml(text) { const map = { "&": "&amp;","<": "&lt;">; ">": "&gt;",""": "&quot;",""": "&#039;",} return text.replace(/[&<>""]/g,(m) => map[m])} }""
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+,
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+ursor/add-new-services-and-deploy-updates-0o462,
+ursor/fix-syntax-push-and-merge-to-main-40de,
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+origin/cursor/integrate-build-improve-and-re-verify-c7b5}
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g) .replace(/javascript: '/gi',"") .replace(/on\w+=/gi) .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,"; "<": "&lt,"> ">": "&gt,"; ": "&quot,"; ": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+export class SecurityUtils { static sanitizeInput(input) { if (typeof input !== "string") return input, return input, .replace(/[<>]/g,"") .replace(/javascript:/gi,"") .replace(/on\w+=/gi,"") .trim()} , static validateEmail(email) { const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/, return emailRegex.test(email)} , static generateCSRFToken() { return crypto.randomBytes(32).toString("hex")} , static hashPassword(password) { return crypto.createHash("sha256").update(password).digest("hex")} , static validatePassword(password) { const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8}$/, return passwordRegex.test(password)} , static escapeHtml(text) { const map ={ "&": "&amp,","<": "&lt,">, ">": "&gt,",""": "&quot,",""": "&#0o39,"} return text.replace(/[&<>""]/g,(m) => map[m])} }
+:backup-problematic-files/lib.broken/security.js,

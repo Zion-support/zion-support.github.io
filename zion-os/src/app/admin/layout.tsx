@@ -1,304 +1,39 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ReactNode } from "react";
-=======
-<<<<<<< HEAD
-=======
-
-import { ReactNode } from "react";
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react';
+import { ReactNode } from 'react';
 export default function AdminLayout({ children }: { children: ReactNode }) {;
-  return (;
-
-
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-<<<<<<< HEAD
-=======
-=======
-import { ReactNode  } from './react';
-export default /**
- * AdminLayout - Function description
- */
-function AdminLayout() {
   return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
-=======
-import { ReactNode } from "react";
-<<<<<<< HEAD
-export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-=======
-export default function AdminLayout({ children }: { children: ReactNode }) {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+    <div className='min-h-screen bg-gradient-to-br from-gray-9000 via-gray-8000 to-black'>
       {/* Admin Header */}
-      <div className="glass border-b border-white/10">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex items-center justify-between h-16">;
-            <div className="flex items-center space-x-4">;
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-sm">A</span>;
-              </div>;
-              <h1 className="text-xl font-bold text-white">Admin Dashboard</h1>;
-            </div>;
-            <nav className="flex items-center space-x-6">;
-              <a;
-                href="/admin/instances";
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-=======
-export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-import { ReactNode } from "react";
-
-export default function AdminLayout({ children }: { children: ReactNode }) {;
-  return (;
-
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-import { ReactNode  } from './react';
-export default /**
- * AdminLayout - Function description
- */
-function AdminLayout() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - gray - 800 to - black">;
-import { ReactNode } from "react";
-export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-import { ReactNode } from "react";
-export default function AdminLayout({ children }: { children: ReactNode }) {;
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      {/* Admin Header */}
-      <div className="glass border - b border-white / 10">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="flex items - center justify - between h-16">;
-            <div className="flex items - center space-x-4">;
-              <div className="w - 8 h - 8 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg flex items - center justify-center">;
-                <span className="text - white font - bold text-sm">A</span>;
-              </div>;
-              <h1 className="text - xl font - bold text-white">Admin Dashboard</h1>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-      {/* Admin Header */}
-      <div className="glass border - b border-white / 10">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8">;
-          <div className="flex items - center justify - between h-16">;
-            <div className="flex items - center space-x-4">;
-              <div className="w - 8 h - 8 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg flex items - center justify-center">;
-                <span className="text - white font - bold text-sm">A</span>;
-              </div>;
-              <h1 className="text - xl font - bold text-white">Admin Dashboard</h1>;
-            </div>;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-            <nav className="flex items - center space-x-6">;
-              <a;
-                href="/admin / instances";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-            <nav className="flex items - center space - x-6">;
-              <a;
-                href="/admin / instances";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <nav className="flex items - center space-x-6">;
-              <a;
-                href="/admin / instances";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-      <div className="glass border-b border-white/10">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex items-center justify-between h-16">;
-            <div className="flex items-center space-x-4">;
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">;
-                <span className="text-white font-bold text-sm">A</span>;
-              </div>;
-              <h1 className="text-xl font-bold text-white">Admin Dashboard</h1>;
-            </div>;
-            <nav className="flex items-center space-x-6">;
-              <a;
-                href="/admin/instances";
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              >;
+      <div className='glass border-b border-white/10'>
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 lg: px-8'>
+          <div className='flex items-center justify-between h-16'>
+            <div className='flex items-center space-x-4'>
+              <div className='w-8 h-8 bg-gradient-to-r from-purple-6000 to-blue-6000 rounded-lg flex items-center justify-center'>
+                <span className='text-white font-bold text-sm'>A</span>
+              </div>
+              <h1 className='text-xl font-bold text-white'>Admin Dashboard</h1>
+            </div>
+            <nav className='flex items-center space-x-6'>
+              <a
+                href='/admin/instances';
+                className='text-white/70 hover: text-white transition-colors duration-2000 font-medium'>
                 Instances;
-              </a>;
-              <a;
-<<<<<<< HEAD
-                href="/admin/os-deploy";
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-=======
-                href="/admin / os - deploy";
-<<<<<<< HEAD
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                href="/admin/os-deploy";
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              >;
+              </a>
+              <a
+                href='/admin/os-deploy';
+                className='text-white/70 hover: text-white transition-colors duration-2000 font-medium'>
                 Deploy;
-              </a>;
-              <a;
-                href="/";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-=======
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
-
-      {/* Admin Header */}"
-      <div className="glass border - b border - white / 10">;"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="flex items - center justify - between h - 16">;"
-            <div className="flex items - center space - x-4">;"
-              <div className="w - 8 h - 8 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg flex items - center justify - center">;"
-                <span className="text - white font - bold text - sm">A</span>;
-              </div>;"
-              <h1 className="text - xl font - bold text - white">Admin Dashboard</h1>;
-            </div>;"
-            <nav className="flex items - center space - x-6">;
-              <a;"
-                href="/admin / instances";"
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-                className="text-white/70 hover:text-white transition-colors duration-200 font-medium";
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font-medium";
-              >;
-                Instances;
-              </a>;
-              <a;"
-                href="/admin / os - deploy";"
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
-              >;
-                Deploy;
-              </a>;
-              <a;"
-                href="/";"
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-              >;
+              </a>
+              <a
+                href='/';
+                className='text-white/70 hover: text-white transition-colors duration-2000 font-medium'>
                 ← Back to Dashboard;
-              </a>;
-            </nav>;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>;,
       {/* Admin Content */}
-      <div className="py-8">;
-        {children}
-      </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>;
-  );
-}
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-    </div>;
-  );
-
-};
-
-export default Layout;
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-      {/* Admin Content */}"
-      <div className="py - 8">;
-        {children}
-      </div>;
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-      <div className="py-8">;
-        {children}
-      </div>;
-    </div>;
-  );
-}
-export default function AdminLayout({ children }: { children: ReactNode }) {return (;
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;"
-</div>"
-      <div className="glass border - b border - white / 10">;"
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;"
-          <div className="flex items - center justify - between h - 16">;"
-            <div className="flex items - center space - x-4">;"
-              <div className="w - 8 h - 8 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg flex items - center justify - center">;"
-                <span className="text - white font - bold text - sm">A</span>;"
-              </div>;"
-              <h1 className="text - xl font - bold text - white">Admin Dashboard</h1>;"
-            <nav className="flex items - center space - x-6">;"
-</nav>
-              <a;"
-                href="/admin / instances";""
-                className="text - white / 70 hover:text - white transition - colors duration - 200 font - medium";"
-              >;
-</a>
-              </a>;
-                href="/admin / os - deploy";""
-                href="/";""
-            </nav>;
-          </div>;
-      <div className="py - 8">;"
-</div>
-      </div>;)"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      <div className='py-8'>{children}</div>
+    </div>)}
+;

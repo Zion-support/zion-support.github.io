@@ -1,150 +1,49 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
-=======
-import React from "react",;
-import { QrCode } from "lucide-react",;
-=======
-import React from "react",;
-import { QrCode } from 'lucide-react';
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/QrCodeDownload.tsx
-=======
-import React from "react",;
-import { QrCode } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-import { AppStoreButtons } from "./AppStoreButtons",;
-;
-export const QrCodeDownload:React.FC = () => {;
-  // App store links - these would come from environment variables in production;
-  const appStoreUrl = "#", // Replace with actual App Store URL;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;
-;
-  return (;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/QrCodeDownload.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="max-w-5xl mx-auto">;
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;
-            <div className="flex-1">;
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
-                Download <span className="text-zion-cyan">Zion</span> to Your Device;
-              </h2>;
-              <p className="text-lg text-gray-300 mb-8">;
-                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.;
-              </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
-
-            <div className="flex-shrink-0">;
-              <div className="bg-white p-6 rounded-xl shadow-lg">;
-                <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">;
-=======
-              ;
-              <AppStoreButtons ;
-                className="mb-8" ;
-=======
-import React from "react";""
-import { QrCode } from 'lucide-react';
-import { AppStoreButtons } from "./AppStoreButtons";"
-;
-export const QrCodeDownload:React.FC = () => {;
-  // App store links - these would come from environment variables in production;"
-  const appStoreUrl = "#", // Replace with actual App Store URL;""
-  const googlePlayUrl = "#", // Replace with actual Google Play URL;"
-  return (;"
-    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;"
-</section>"
-      <div className="container mx-auto px-4">;"
-</div>"
-        <div className="max-w-5xl mx-auto">;"
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">;"
-            <div className="flex-1">;"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;"
-</h2>"
-                Download <span className="text-zion-cyan">Zion</span> to Your Device;"
-              </h2>;"
-              <p className="text-lg text-gray-300 mb-8">;"
-</p>
-              </p>;
-              <AppStoreButtons ;"
-                className="mb-8" ;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from "react";;
+import { QrCode } from 'lucide-react',
+import { AppStoreButtons } from "./AppStoreButtons";
+export const QrCodeDownload: React.FC = () => {
+  // App store links - these would come from environment variables in production,
+  const appStoreUrl = "#", // Replace with actual App Store URL,
+  const googlePlayUrl = "#", // Replace with actual Google Play URL,
+  return (
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">,
+      <div className="container mx-auto px-4">,
+        <div className="max-w-5xl mx-auto">,
+          <div className="flex flex-col md: flex-row items-center justify-between gap-8 md:gap-12">,
+            <div className="flex-1">,
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">,
+                Download <span className="text-zion-cyan">Zion</span> to Your Device,
+              </h2>,
+              <p className="text-lg text-gray-30o0 mb-8">,
+                Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.,
+              </p>,
+              <AppStoreButtons
+                className="mb-8" ,
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-              />;
-"
-              <div className="flex gap-2 items-center text-sm text-gray-400">;"
-                <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>;"
-                <span>Compatible with iOS 14+ and Android 8.0+</span>;
-              </div>;
-            </div>;
-            ;
-            <div className="flex-shrink-0">;
-              <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">;
-                <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                  <QrCode className="w-full h-full p-4" />;
+               />,
+              <div className="flex gap-2 items-center text-sm text-gray-40o0">,
+                <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>,
+                <span>Compatible with iOS 14+ and Android 8.0+</span>,
+              </div>,
+            </div>,
+            <div className="flex-shrink-0">,
+              <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-xl shadow-lg">,
+                <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">,
+                  <QrCode className="w-full h-full p-4"  />,
                   {/* This would be replaced with an actual QR code in production */}
-                </div>;
-                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/QrCodeDownload.tsx
-
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-                  Scan to download;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
-  ),;
-},; py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark"> <div className=" container mx-auto px-4"> <div className=" max-w-5xl mx-auto"> <div className=" flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"> <div className=" flex-1"> <h2 className=" text-3xl md:text-4xl font-bold text-white mb-6"> Download <span className=" text-zion-cyan">Zion</span> to Your Device </h2> </p> <AppStoreButtons className=" mb-8"appStoreUrl= {;
-  appStoreUrl ;
-:temp_broken_files/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
-}googlePlayUrl= {;"  googlePlayUrl ";"}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) ;
-};""
-}googlePlayUrl= {;
-  googlePlayUrl ";
-}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) ;
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/QrCodeDownload.tsx
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/mobile-app/QrCodeDownload.tsx
-=======
-}googlePlayUrl= {;"  googlePlayUrl ";"}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) 
-};""
-}googlePlayUrl= {;
-  googlePlayUrl ";
-}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) 
-};
-"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/QrCodeDownload.tsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            </div>;"
-            <div className="flex-shrink-0">;"
-              <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">;"
-                <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;"
-                  <QrCode className="w-full h-full p-4" />;"
-
-                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;"
-    </section>;"
-},; py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark"> <div className=" container mx-auto px-4"> <div className=" max-w-5xl mx-auto"> <div className=" flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12"> <div className=" flex-1"> <h2 className=" text-3xl md:text-4xl font-bold text-white mb-6"> Download <span className=" text-zion-cyan">Zion</span> to Your Device </h2> </p> <AppStoreButtons className=" mb-8"appStoreUrl= {;"
-</div>)"
-}googlePlayUrl= {;"  googlePlayUrl ";"}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) ;""
-}/> <div className=" flex gap-2 items-center text-sm text-gray-400"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) ;""
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                </div>,
+                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">,
+                  Scan to download,
+                </p>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>);
+}; py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark"> <div className=" container mx-auto px-4"> <div className=" max-w-5xl mx-auto"> <div className=" flex flex-col md: flex-row items-center justify-between gap-8 md:gap-12"> <div className=" flex-1"> <h2 className=" text-3xl md:text-4xl font-bold text-white mb-6"> Download <span className=" text-zion-cyan">Zion</span> to Your Device </h2> </p> <AppStoreButtons className=" mb-8"appStoreUrl={
+  appStoreUrl }googlePlayUrl={
+  googlePlayUrl "} /> <div className=" flex gap-2 items-center text-sm text-gray-40o0"> <span className=" block h-1 w-1 rounded-full bg-zion-purple"></span> <span>Compatible with iOS 14+ and Android 8.0+</span> </div> </div> </div> <p className=" text-center text-sm mt-2 text-zion-blue-dark font-medium" > Scan to download </p> </div> </div> </div> </div> </div> </section>) };
+",
