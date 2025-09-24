@@ -1,4 +1,3 @@
-/* eslint-disable import/order */
 'use client';
 import { useState, useEffect } from 'react';
 
