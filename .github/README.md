@@ -1,130 +1,137 @@
-# GitHub Actions Workflows - DEPRECATED
+# GitHub Actions Workflows
 
-⚠️ **IMPORTANT: This directory is deprecated. All automation has been migrated to PM2.**
+This directory contains all the GitHub Actions workflows for the Zion Tech Group website.
 
-## Migration Status
+## Workflows Overview
 
-All GitHub Actions workflows have been replaced with PM2-based automation processes that run continuously on the server. This provides better performance, reliability, and real-time monitoring compared to GitHub Actions.
-
-## What Was Replaced
-
-The following GitHub Actions workflows have been replaced by PM2 processes:
-
-### 🔄 CI (Continuous Integration) → PM2: `daily-build-test`
-
-- **PM2 Process**: Runs every hour
+### 🔄 CI (Continuous Integration)
+- **File**: `.github/workflows/ci.yml`
+- **Trigger**: Push to main branch or pull requests
 - **Purpose**: Build verification, linting, and type checking
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Build and Test
 
-### 🧪 Test → PM2: `daily-build-test`
-
-- **PM2 Process**: Runs every hour
+### 🧪 Test
+- **File**: `.github/workflows/test.yml`
+- **Trigger**: Push to main branch or pull requests
 - **Purpose**: Comprehensive testing and build verification
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Main testing job with build artifacts
 
-### 🔒 CodeQL Security Analysis → PM2: `security-audit`
+### 🔒 CodeQL Security Analysis
+- **File**: `.github/workflows/codeql.yml`
+- **Trigger**: Push to main/develop branches, pull requests, and weekly schedule
+- **Purpose**: Security vulnerability scanning using GitHub's CodeQL
+- **Jobs**: JavaScript/TypeScript security analysis
 
-- **PM2 Process**: Runs every 4 hours
-- **Purpose**: Security vulnerability scanning and dependency analysis
-- **Status**: ✅ Migrated to PM2
+### 📦 NPM Package Check
+- **File**: `.github/workflows/npm-publish.yml`
+- **Trigger**: Push to main branch (excluding markdown files)
+- **Purpose**: Package verification and build testing
+- **Jobs**: Package validation and build verification
 
-### 📦 NPM Package Check → PM2: `dependency-updates`
-
-- **PM2 Process**: Runs every 6 hours
-- **Purpose**: Package verification and dependency updates
-- **Status**: ✅ Migrated to PM2
-
-### 🚀 Deploy to Production → PM2: `zion-app` & `zion-backend`
-
-- **PM2 Process**: Continuous deployment with auto-restart
+### 🚀 Deploy to Production
+- **File**: `.github/workflows/deploy.yml`
+- **Trigger**: Push to main branch or manual dispatch
 - **Purpose**: Production deployment with build verification
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Production deployment with artifacts
 
-### 🔍 Dependency Review → PM2: `dependency-updates`
-
-- **PM2 Process**: Runs every 6 hours
+### 🔍 Dependency Review
+- **File**: `.github/workflows/dependency-review.yml`
+- **Trigger**: Pull requests to main/develop branches
 - **Purpose**: Security vulnerability checking in dependencies
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Dependency security analysis
 
-### ✅ Quality Check → PM2: `quality-checks`
-
-- **PM2 Process**: Runs every 3 hours
+### ✅ Quality Check
+- **File**: `.github/workflows/quality-check.yml`
+- **Trigger**: Push to main/develop branches and pull requests
 - **Purpose**: Code quality, linting, and security audits
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Comprehensive quality assurance
 
-### 🔄 Continuous Improvement → PM2: `continuous-improvement`
+### 🔄 Continuous Improvement
+- **File**: `.github/workflows/continuous-improvement.yml`
+- **Trigger**: Every 4 hours and manual dispatch
+- **Purpose**: Automated improvement suggestions and PR creation
+- **Jobs**: Improvement automation with auto-merge
 
-- **PM2 Process**: Runs every 2 hours
-- **Purpose**: Automated improvement suggestions and optimization
-- **Status**: ✅ Migrated to PM2
-
-### 🕷️ Link Crawler Factory → PM2: `link-checker` & `link-integrity`
-
-- **PM2 Process**: Runs every 30 minutes and 2 hours respectively
+### 🕷️ Link Crawler Factory
+- **File**: `.github/workflows/agent-factory.yml`
+- **Trigger**: Every 30 minutes and manual dispatch
 - **Purpose**: Automated link checking and broken link detection
-- **Status**: ✅ Migrated to PM2
+- **Jobs**: Distributed link crawling with issue reporting
 
-## PM2 Automation Benefits
+## Configuration Files
 
-### 🚀 Performance Improvements
+### CodeQL Configuration
+- **File**: `.github/codeql/codeql-config.yml`
+- **Purpose**: Security analysis configuration for TypeScript/React projects
 
-- **Real-time execution**: No waiting for GitHub Actions queue
-- **Faster feedback**: Immediate error detection and fixing
-- **Resource optimization**: Better memory and CPU utilization
+## Scripts Required
 
-### 🔧 Enhanced Monitoring
+The following npm scripts must be available in `package.json`:
 
-- **Live process monitoring**: Real-time status and metrics
-- **Automatic restart**: Self-healing on failures
-- **Memory management**: Automatic restart on memory issues
-
-### 📊 Continuous Operations
-
-- **24/7 automation**: No dependency on external services
-- **Scheduled execution**: Configurable intervals for each task
-- **Parallel processing**: Multiple automation tasks run simultaneously
-
-## Current PM2 Status
-
-All automation processes are running continuously:
-
-```bash
-# Check PM2 status
-pm2 status
-
-# View logs for specific process
-pm2 logs [process-name]
-
-# Restart all processes
-pm2 restart all
+```json
+{
+  "scripts": {
+    "test": "echo 'No tests configured yet'",
+    "test:ci": "echo 'CI tests placeholder'",
+    "security:scan": "echo 'Security scan placeholder'",
+    "cypress:run": "echo 'Cypress tests placeholder'",
+    "automation:improvement": "echo 'Automation improvement placeholder'",
+    "diversify": "echo 'Diversification placeholder'"
+  }
+}
 ```
 
-## Configuration
+## Environment Variables
 
-PM2 configuration is in `ecosystem.config.cjs` at the project root, which includes:
+The following secrets may be required (depending on your setup):
 
-- **Main Application**: `zion-app` and `zion-backend`
-- **Automation Processes**: 12 continuous automation tasks
-- **Resource Management**: Memory limits and auto-restart policies
-- **Environment Variables**: Production-optimized settings
+- `GITHUB_TOKEN` - Automatically provided by GitHub
+- `NPM_TOKEN` - For NPM package publishing (if applicable)
+- `CYPRESS_*` - For Cypress testing (if applicable)
+- `CODECOV_TOKEN` - For code coverage reporting (if applicable)
 
-## Why This Migration?
+## Branch Protection
 
-1. **Cost Efficiency**: No GitHub Actions minutes consumption
-2. **Performance**: Faster execution and real-time monitoring
-3. **Reliability**: No external service dependencies
-4. **Control**: Full control over execution environment
-5. **Scalability**: Easy to add new automation tasks
+Recommended branch protection rules for `main`:
+
+- Require status checks to pass before merging
+- Require branches to be up to date before merging
+- Require pull request reviews before merging
+- Require conversation resolution before merging
+
+## Monitoring
+
+- All workflows run on Ubuntu latest with Node.js 20
+- Build artifacts are uploaded for inspection
+- Security scans run automatically
+- Quality checks run on every push and PR
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Build Failures**: Check Node.js version compatibility
+2. **Missing Scripts**: Ensure all required npm scripts exist
+3. **Permission Errors**: Verify workflow permissions are correctly set
+4. **Timeout Issues**: Increase timeout values for long-running jobs
+
+### Debug Mode
+
+To debug workflows, add `ACTIONS_STEP_DEBUG: true` to your repository secrets.
+
+## Contributing
+
+When adding new workflows:
+
+1. Follow the existing naming conventions
+2. Include proper error handling and continue-on-error where appropriate
+3. Add comprehensive documentation
+4. Test workflows in a fork before submitting
 
 ## Support
 
-For automation issues, check:
-
-1. PM2 process status: `pm2 status`
-2. Process logs: `pm2 logs [process-name]`
-3. Ecosystem configuration: `ecosystem.config.cjs`
-4. Individual automation scripts in `scripts/automation/`
-
----
-
-**Note**: This directory is kept for reference only. All active automation is now handled by PM2 processes running on the server.
+For workflow issues, check:
+1. GitHub Actions logs for detailed error messages
+2. Required scripts and dependencies
+3. Permission configurations
+4. Environment variable requirements

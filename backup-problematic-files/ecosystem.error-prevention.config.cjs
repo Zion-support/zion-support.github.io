@@ -1,45 +1,87 @@
-<<<<<<< HEAD
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 module.exports = {
   apps: [
     {
-
-      time: true;
+      name: 'error-prevention-monitor',
+      script: 'automation/error-prevention-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVAL: 30000, // 30 seconds
+        LOG_LEVEL: 'info'
+      },
+      error_file: 'automation/logs/error-prevention-error.log',
+      out_file: 'automation/logs/error-prevention-out.log',
+      log_file: 'automation/logs/error-prevention-combined.log',
+      time: true
+    },
+    {
       name: 'syntax-fixer',
       script: 'automation/syntax-fix-launcher.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
       max_memory_restart: '500M',
-        FIX_INTERVAL: 60000, // 1 minute;
+      env: {
+        NODE_ENV: 'production',
+        FIX_INTERVAL: 60000, // 1 minute
+        LOG_LEVEL: 'info'
+      },
       error_file: 'automation/logs/syntax-fixer-error.log',
       out_file: 'automation/logs/syntax-fixer-out.log',
       log_file: 'automation/logs/syntax-fixer-combined.log',
+      time: true
+    },
+    {
       name: 'linting-automation',
       script: 'automation/linting-automation-orchestrator.cjs',
-        LINT_INTERVAL: 120000, // 2 minutes;
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      env: {
+        NODE_ENV: 'production',
+        LINT_INTERVAL: 120000, // 2 minutes
+        LOG_LEVEL: 'info'
+      },
       error_file: 'automation/logs/linting-error.log',
       out_file: 'automation/logs/linting-out.log',
       log_file: 'automation/logs/linting-combined.log',
+      time: true
+    },
+    {
       name: 'build-monitor',
       script: 'automation/build-monitor.js',
-        BUILD_CHECK_INTERVAL: 300000, // 5 minutes;
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        BUILD_CHECK_INTERVAL: 300000, // 5 minutes
+        LOG_LEVEL: 'info'
+      },
       error_file: 'automation/logs/build-monitor-error.log',
       out_file: 'automation/logs/build-monitor-out.log',
       log_file: 'automation/logs/build-monitor-combined.log',
-    }]
+      time: true
+    }
   ]
 };
-<<<<<<< HEAD
 module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/error-prevention/linter-watcher.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-linter.log","" out_file: "logs/error-prevention-linter-out.log","" error_file: "logs/error-prevention-linter-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-build-monitor","" script: "scripts/error-prevention/build-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-build.log","" out_file: "logs/error-prevention-build-out.log","" error_file: "logs/error-prevention-build-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-security-audit","" script: "scripts/error-prevention/security-auditor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-security.log","" out_file: "logs/error-prevention-security-out.log","" error_file: "logs/error-prevention-security-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-dependency-monitor","" script: "scripts/error-prevention/dependency-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-dependency.log","" out_file: "logs/error-prevention-dependency-out.log","" error_file: "logs/error-prevention-dependency-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-type-checker","" script: "scripts/error-prevention/type-checker.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-type.log","" out_file: "logs/error-prevention-type-out.log","" error_file: "logs/error-prevention-type-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" } ]};"""
-<<<<<<< HEAD
+
+
+
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
 module.exports = {}
   "apps": [{}]
       name: 'error-prevention-linter',
@@ -117,16 +159,11 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
-<<<<<<< HEAD
 
-};
-};
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
-  ];
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

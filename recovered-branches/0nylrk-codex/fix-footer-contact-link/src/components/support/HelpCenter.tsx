@@ -1,62 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-=======
-import React, { useState } from "react";"
-import { Input } from "@/components/ui/input";"
-import { Button } from "@/components/ui/button";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { HelpCategoryList } from "./HelpCategoryList";"
-import { HelpArticleList } from "./HelpArticleList";"
-import { HelpArticleView } from "./HelpArticleView";"
-import { HELP_CATEGORIES } from "./help-content";"
-import { AppLayout } from "@/layout/AppLayout";"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { Search } from "lucide-react";
-export default function HelpCenter() {};
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);"
-  const [searchQuery, setSearchQuery] = useState("");
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-import React, { useState } from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {HelpCategoryList} from "./HelpCategoryList";
-import {HelpArticleList} from "./HelpArticleList";
-import {HelpArticleView} from "./HelpArticleView";
-import {HELP_CATEGORIES} from "./help-content";
-import {AppLayout} from "@/layout/AppLayout";
-import {Search} from "lucide-react";
-export default function HelpCenter() {;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
 import React, { useState } from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -67,1432 +8,311 @@ import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { AppLayout } from "@/layout/AppLayout",
 import { Search } from "lucide-react",
+import {Input} from "@/components/ui/input",
+import {Button} from "@/components/ui/button",
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
+import {HelpCategoryList} from "./HelpCategoryList",
+import {HelpArticleList} from "./HelpArticleList",
+import {HelpArticleView} from "./HelpArticleView",
+import {HELP_CATEGORIES} from "./help-content",
+import {AppLayout} from "@/layout/AppLayout",
+import {Search} from "lucide-react",
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
-<<<<<<< HEAD
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {HelpCategoryList} from "./HelpCategoryList";
-import {HelpArticleList} from "./HelpArticleList";
-import {HelpArticleView} from "./HelpArticleView";
-import {HELP_CATEGORIES} from "./help-content";
-import {AppLayout} from "@/layout/AppLayout";
-import {Search} from "lucide-react";
-export default function HelpCenter() {;
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export default function HelpCenter() {
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setSelectedArticle(null)};
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId)};
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedArticle(null)};
+  const handleBackToArticles = () => {
+    setSelectedArticle(null)};
+  return (
+    <AppLayout>,
+      <div className="container mx-auto px-4 py-8">,
+        <div className="max-w-4xl mx-auto">,
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">,
+            Help Center,
+          </h1>,
+          <p className="text-zion-slate-light mb-6">,
+            Find answers to common questions or get in touch with our support,
+            team.,
+          </p>,
+          <div className="relative mb-8">,
+            <Input
+              placeholder="Search for help articles...",
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10",
+            />,
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />,
+          </div>,
+          <Tabs defaultValue="articles" className="mb-8">,
+            <TabsList className="w-full grid grid-cols-3 mb-6">,
+              <TabsTrigger value="articles">Articles</TabsTrigger>,
+              <TabsTrigger value="faq">FAQ</TabsTrigger>,
+              <TabsTrigger value="contact">Contact Us</TabsTrigger>,
+            </TabsList>,
+            <TabsContent value="articles">,
+              {!selectedCategory && !selectedArticle && (
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES} ,
+export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
-
-<<<<<<< HEAD
-
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
   const handleCategorySelect = (categoryId: string) => {
-    setSelectedCategory(categoryId),
-    setSelectedArticle(null)
-  },
-  
+    setSelectedCategory(categoryId);
+    setSelectedArticle(null)};
   const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId)
-  },
-  
+    setSelectedArticle(articleId)};
   const handleBackToCategories = () => {
     setSelectedCategory(null),
-    setSelectedArticle(null)
-  },
-  
+    setSelectedArticle(null)};
   const handleBackToArticles = () => {
-    setSelectedArticle(null)
-  },
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React, { useState } from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {HelpCategoryList} from "./HelpCategoryList";
-import {HelpArticleList} from "./HelpArticleList";
-import {HelpArticleView} from "./HelpArticleView";
-import {HELP_CATEGORIES} from "./help-content";
-import {AppLayout} from "@/layout/AppLayout";
-import {Search} from "lucide-react";
-export default function HelpCenter() {;
-
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-
-    <AppLayout>
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-=======
-  const handleCategorySelect = (categoryId: string) => {}
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  };
-
-  const handleArticleSelect = (articleId: string) => {}
-    setSelectedArticle(articleId);
-  };
-
-  const handleBackToCategories = () => {}
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
-  const handleBackToArticles = () => {}
-    setSelectedArticle(null);
-  };
-
+    setSelectedArticle(null)};
   return (
-    <AppLayout>"
-      <div className="container mx-auto px-4 py-8">"
-        <div className="max-w-4xl mx-auto">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-            Help Center;
-          </h1>"
-          <p className="text-zion-slate-light mb-6">
-            Find answers to common questions or get in touch with our support;
-            team.
-          </p>
-"
-          <div className="relative mb-8">
-            <Input"
-              placeholder="Search for help articles..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}"
-              className="pl-10"
-            />"
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-          </div>
-"
-          <Tabs defaultValue="articles" className="mb-8">"
-            <TabsList className="w-full grid grid-cols-3 mb-6">"
-              <TabsTrigger value="articles">Articles</TabsTrigger>"
-              <TabsTrigger value="faq">FAQ</TabsTrigger>"
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>
-            </TabsList>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <HelpCategoryList
-=======
-"
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-"
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                  categories={HELP_CATEGORIES}
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-=======
-
-import React, { useState } from './react';
-import { Input  } from '@/components / ui / input';
-import { Button  } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { HelpCategoryList  } from './HelpCategoryList';
-import { HelpArticleList  } from './HelpArticleList';
-import { HelpArticleView  } from './HelpArticleView';
-import { HELP_CATEGORIES  } from './help - content';
-import { AppLayout  } from '@/layout / AppLayout';
-import { Search  } from './lucide-react';
-export default /**
- * HelpCenter - Function description
- */
-function HelpCenter() {
-  const [selected_category, setSelectedCategory] = useState < string | null>(null);
-  const [selected_article, setSelectedArticle] = useState < string | null>(null);
-  const [search_query, setSearchQuery] = useState ("");
-;
-  const handleCategorySelect = (category_id: string) =>: any {
-    (setSelectedCategory (category_id), setSelectedArticle (null));
-  }
-;
-  const handleArticleSelect = (article_id: string) =>: any {
-    setSelectedArticle (article_id);
-  }
-;
-  const handleBackToCategories = () =>: any {
-    setSelectedCategory (null);
-    setSelectedArticle (null);
-  }
-;
-  const handleBackToArticles = () =>: any {
-    setSelectedArticle (null);
-  }
-;
-  return (
-    <AppLayout>;
-      <div className="container mx - auto px - 4 py - 8">;
-        <div className="max - w-4xl mx - auto">;
-          <h1 className="text - 3xl font - bold mb - 2 bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">;
-            Help Center;
-          </h1>;
-          <p className="text - zion - slate - light mb - 6">;
-            Find answers to common questions or get in touch with our support;
-            team.;
-          </p>;
-          <div className="relative mb - 8">;
-            <Input;
-              placeholder="Search for help articles...";
-              value={search_query}
-              on_change={(e) => setSearchQuery (e.target.value)}
-              className="pl - 10";
-            />;
-            <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
-          </div>;
-          <Tabs default_value="articles" className="mb - 8">;
-            <TabsList className="w - full grid grid - cols - 3 mb - 6">;
-              <TabsTrigger value="articles">Articles</TabsTrigger>;
-              <TabsTrigger value="faq">FAQ</TabsTrigger>;
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="articles">;
-              {!selected_category && !selected_article && (
-                <HelpCategoryList;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                  categories={HELP_CATEGORIES}
-=======
-  const handleCategorySelect = (categoryId: string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  };
-
-  const handleArticleSelect = (articleId: string) => {;
-    setSelectedArticle(articleId);
-  };
-
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-<<<<<<< HEAD
-
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-
-  return (
-=======
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-  return (
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { Search } from "lucide-react",;
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const handleCategorySelect = (categoryId: string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-  const handleArticleSelect = (articleId: string) => {;
-    setSelectedArticle(articleId);
-  },;
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setSelectedArticle(null);
-  };
-=======
-    setSelectedArticle(null)
-};
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null)
-};
-  return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-    setSelectedArticle(null)
-};
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null)
-};
-  return (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    <AppLayout>;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="max-w-4xl mx-auto">;
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-            Help Center;
-          </h1>;
-          <p className="text-zion-slate-light mb-6">;
-            Find answers to common questions or get in touch with our support team.;
-          </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <div className="relative mb-8">;
+    <AppLayout>,
+      <div className="container mx-auto px-4 py-8">,
+        <div className="max-w-4xl mx-auto">,
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">,
+            Help Center,
+          </h1>,
+          <p className="text-zion-slate-light mb-6">,
+            Find answers to common questions or get in touch with our support team.,
+          </p>,
+          <div className="relative mb-8">,
             <Input
-              placeholder="Search for help articles..."
+              placeholder="Search for help articles...",
               value={searchQuery}
               onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          ;
-          <div className="relative mb-8">;
-            <Input;
-              placeholder="Search for help articles...";
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-              className="pl-10";
-            />;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
-          </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-          ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-          ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-          ;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-          <Tabs defaultValue="articles" className="mb-8">;
-            <TabsList className="w-full grid grid-cols-3 mb-6">;
-              <TabsTrigger value="articles">Articles</TabsTrigger>;
-              <TabsTrigger value="faq">FAQ</TabsTrigger>;
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>;
-            </TabsList>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES} ;
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-=======
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-
-                <HelpCategoryList 
-                  categories={HELP_CATEGORIES} 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-<<<<<<< HEAD
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-=======
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-
-            <TabsContent value="articles">
+              className="pl-10",
+            />,
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />,
+          </div>,
+          <Tabs defaultValue="articles" className="mb-8">,
+            <TabsList className="w-full grid grid-cols-3 mb-6">,
+              <TabsTrigger value="articles">Articles</TabsTrigger>,
+              <TabsTrigger value="faq">FAQ</TabsTrigger>,
+              <TabsTrigger value="contact">Contact Us</TabsTrigger>,
+            </TabsList>,
+            <TabsContent value="articles">,
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
-                  categories={HELP_CATEGORIES}
+                  categories={HELP_CATEGORIES} ,
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
-                />
-              )}
-
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-import React, { useState } from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { HelpCategoryList } from "./HelpCategoryList",;
-import { HelpArticleList } from "./HelpArticleList",;
-import { HelpArticleView } from "./HelpArticleView",;
-import { HELP_CATEGORIES } from "./help-content",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { Search } from "lucide-react",;
-export default function HelpCenter() {;
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const handleCategorySelect = (categoryId: string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-  const handleArticleSelect = (articleId: string) => {;
-    setSelectedArticle(articleId);
-  },;
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
-    setSelectedArticle(null)
-};
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null)
-};
-  return (;
-    <AppLayout>;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="max-w-4xl mx-auto">;
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-            Help Center;
-          </h1>;
-          <p className="text-zion-slate-light mb-6">;
-            Find answers to common questions or get in touch with our support team.;
-          </p>;
-          ;
-          <div className="relative mb-8">;
-            <Input;
-              placeholder="Search for help articles...";
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10";
-            />;
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
-          </div>;
-          ;
-          <Tabs defaultValue="articles" className="mb-8">;
-            <TabsList className="w-full grid grid-cols-3 mb-6">;
-              <TabsTrigger value="articles">Articles</TabsTrigger>;
-              <TabsTrigger value="faq">FAQ</TabsTrigger>;
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="articles">;
-              {!selectedCategory && !selectedArticle && (;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                />)}
+,
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES} ,
+                  onCategorySelect={handleCategorySelect}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
               {selectedCategory && !selectedArticle && (
-                <>
-                  <Button"
-                    variant="ghost"
-                    onClick={handleBackToCategories}"
-                    className="mb-4"
-                  >
-                    ← All Categories;
-                  </Button>
-                  <HelpArticleList;
+                <>,
+                  <Button
+                    variant="ghost",
+                    onClick={handleBackToCategories}
+                    className="mb-4">,
+                     All Categories,
+                  </Button>,
+                  <HelpArticleList
+                  <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
-                  />;
-
-import React, { useState } from "react";""
-import { Input } from "@/components/ui/input";""
-import { Button } from "@/components/ui/button";""
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
-import { HelpCategoryList } from "./HelpCategoryList";""
-import { HelpArticleList } from "./HelpArticleList";""
-import { HelpArticleView } from "./HelpArticleView";""
-import { HELP_CATEGORIES } from "./help-content";""
-import { AppLayout } from "@/layout/AppLayout";""
-import { Search } from "lucide-react";"
-export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-</string>
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-    <AppLayout>
-"
-      <div className="container mx-auto px-4 py-8">"
-</div>"
-        <div className="max-w-4xl mx-auto">"
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">"
-</h1>
-          </h1>"
-          <p className="text-zion-slate-light mb-6">"
-</p>
-          <div className="relative mb-8">"
-</div>
-            <Input;"
-              placeholder="Search for help articles...""
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />"
-
-          <Tabs defaultValue="articles" className="mb-8">"
-            <TabsList className="w-full grid grid-cols-3 mb-6">"
-              <TabsTrigger value="articles">Articles""
-              <TabsTrigger value="faq">FAQ""
-              <TabsTrigger value="contact">Contact Us"
-            <TabsContent value="articles">"
-
-                <HelpCategoryList;
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-
-
-                <>
-                  <Button;"
-                    variant="ghost""
-                    onClick={handleBackToCategories}"
-                    className="mb-4""
-                  >
-
-                  <HelpArticleList;
-                    categoryId={selectedCategory}
-                    onArticleSelect={handleArticleSelect}
-                  />;
-
-pr-12325
-</HelpArticleList>
-                </>;
-
-              )}
-
-<<<<<<< HEAD
+                  />,
+                </>)}
+,
               {selectedArticle && (
-                <>
-
-
-              {selectedArticle && (;
-                <>;
+                <>,
+              {selectedArticle && (
+                <>,
                   <Button
-                    variant="ghost"
+                    variant="ghost",
                     onClick={handleBackToArticles}
-                    className="mb-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              ;
-=======
-;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-                    onClick={handleBackToArticles}
-                    className="mb-4";
-                  >;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                    ← Back to Articles;
-
-
-=======
-                    ← Back to Articles;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
-              )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-            </TabsContent>
-"
-            <TabsContent value="faq">"
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions;
-                </h2>
-<<<<<<< HEAD
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-            </TabsContent>
-
-            <TabsContent value="faq">
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                <div className="space-y-6">
-                  <div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">
-                      How does the AI matching work?
-                    </h3>"
-                    <p className="text-zion-slate-light">
-<<<<<<< HEAD
-                      Our AI matching algorithm analyzes your requirements and
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
-=======
-                      Our AI matching algorithm analyzes your requirements and;
-                      preferences to match you with the most compatible talent;
+                    className="mb-4">,
+                    ← Back to Articles,
+                  </Button>,
+                  <HelpArticleView articleId={selectedArticle} />,
+                </>)}
+,
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>,
+                <div className="space-y-6">,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">,
+                      How does the AI matching work?,
+                    </h3>,
+                    <p className="text-zion-slate-light">,
+                      Our AI matching algorithm analyzes your requirements and,
+                      preferences to match you with the most compatible talent,
                       or services. The process takes into account skills,
-                      experience, availability, and past performance to ensure;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                      preferences to match you with the most compatible talent
-                      or services. The process takes into account skills,
-                      experience, availability, and past performance to ensure
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-                      preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-                      optimal results.
-                  <Button;"
-                    variant="ghost""
-                    onClick={handleBackToArticles}"
-                    className="mb-4">;"
-</Button>
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-</HelpArticleView>
-                </>;)
-              )}
-            </TabsContent>
-"
-            <TabsContent value="faq">"
-</TabsContent>"
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-</div>"
-                <h2 className="text-xl font-semibold mb-4">"
-</h2>
-                </h2>
-"
-                <div className="space-y-6">"
-</div>
-                  <div>
-</div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">"
-</h3>
-                    </h3>"
-                    <p className="text-zion-slate-light">"
-</p>
-                    </p>
-                  </div>
-
-                  <div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">
-                      How do I hire someone on Zion?
-                    </h3>"
-                    <p className="text-zion-slate-light">
-                      To hire talent on Zion, post a job or project, review;
-                      matches or applications, interview candidates through our;
-                      platform, and extend an offer. Our secure payment system;
-                      protects both parties throughout the engagement.
-</div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">"
-</h3>
-                    </h3>"
-                    <p className="text-zion-slate-light">"
-</p>
-                    </p>
-                  </div>
-
-                  <div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">
-                      What are the payment terms?
-                    </h3>"
-                    <p className="text-zion-slate-light">
-                      Zion offers flexible payment options including;
-                      milestone-based payments, hourly rates, or fixed project;
-                      fees. Funds are held in escrow until deliverables are;
-                      approved, ensuring security for both clients and talent.
-</div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">"
-</h3>
-                    </h3>"
-                    <p className="text-zion-slate-light">"
-</p>
-                    </p>
-                  </div>
-
-                  <div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">
-                      How do I contact support?
-                    </h3>"
-                    <p className="text-zion-slate-light">
-                      You can reach our support team through the chat widget at;
-                      the bottom right of any page, by emailing;
-                      support@ziontechgroup.com, or by scheduling a call with;
-                      our team through the Contact tab.
-</div>"
-                    <h3 className="font-medium text-zion-cyan mb-2">"
-</h3>
-                    </h3>"
-                    <p className="text-zion-slate-light">"
-</p>
-
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
-"
-            <TabsContent value="contact">"
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-                  <h2 className="text-xl font-semibold mb-4">
-                    Contact Support;
-                  </h2>"
-                  <p className="text-zion-slate-light mb-4">
-                    Our support team is available 24/7 to assist you with any;
-                    questions or issues.
-                  </p>
-"
-                  <div className="space-y-4">"
-                    <div className="flex items-center">"
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
-                        <svg"
-                          xmlns="http://www.w3.org/2000/svg""
-                          className="h-5 w-5 text-zion-purple""
-                          viewBox="0 0 20 20""
-                          fill="currentColor"
-                        >"
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />"
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
-                      </div>
-                      <a"
-                        href="mailto:support@ziontechgroup.com""
-                        className="text-zion-cyan hover:underline"
-                      >
-<<<<<<< HEAD
-                        support@ziontechgroup.com
-                      </a>
-                    </div>
-                      </Link>                    </div>
-
-                    <div className="flex items-center">
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
+                      experience, availability, and past performance to ensure,
+                      optimal results.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">,
+                      How do I hire someone on Zion?,
+                    </h3>,
+                    <p className="text-zion-slate-light">,
+                      To hire talent on Zion, post a job or project, review,
+                      matches or applications, interview candidates through our,
+                      platform, and extend an offer. Our secure payment system,
+                      protects both parties throughout the engagement.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">,
+                      What are the payment terms?,
+                    </h3>,
+                    <p className="text-zion-slate-light">,
+                      Zion offers flexible payment options including,
+                      milestone-based payments, hourly rates, or fixed project,
+                      fees. Funds are held in escrow until deliverables are,
+                      approved, ensuring security for both clients and talent.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">,
+                      How do I contact support?,
+                    </h3>,
+                    <p className="text-zion-slate-light">,
+                      You can reach our support team through the chat widget at,
+                      the bottom right of any page, by emailing,
+                      support@ziontechgroup.com, or by scheduling a call with,
+                      our team through the Contact tab.>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+                    </p>,
+                  </div>,
+                </div>,
+              </div>,
+            </TabsContent>,
+            <TabsContent value="contact">,
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
+                <div className="bg-zion-blue-light/20 rounded-lg p-6">,
+                  <h2 className="text-xl font-semibold mb-4">,
+                    Contact Support,
+                  </h2>,
+                  <p className="text-zion-slate-light mb-4">,
+                    Our support team is available 24/7 to assist you with any,
+                    questions or issues.,
+                  </p>,
+                  <div className="space-y-4">,
+                    <div className="flex items-center">,
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">,
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-zion-purple"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                      </div>
-                      <span className="text-zion-slate-light">
-                        +1 302 464 0950
-                      </span>
-                    </div>
-                  </div>
-
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
-                    Open Live Chat
-                  </Button>
-                </div>
-
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                  <h2 className="text-xl font-semibold mb-4">
-                    Feedback & Suggestions
-                  </h2>
-                  <p className="text-zion-slate-light mb-4">
-                    We value your input and are constantly looking to improve
-                    our platform.
-                  </p>
-
-                  <form className="space-y-4">
-                    <div>
-                      <Input placeholder="Your email" />
-                    </div>
-                    <div>
-                      <Input placeholder="Subject" />
-                    </div>
-                    <div>
+                          xmlns="http://www.w3.org/2000/svg",
+                          className="h-5 w-5 text-zion-purple",
+                          viewBox="0 0 20 20",
+                          fill="currentColor">,
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />,
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />,
+                        </svg>,
+                      </div>,
+                      <a
+                        href="mailto:support@ziontechgroup.com",
+                        className="text-zion-cyan hover:underline">,
+                        support@ziontechgroup.com,
+                      </a>,
+                    </div>,
+                    <div className="flex items-center">,
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">,
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg",
+                          className="h-5 w-5 text-zion-purple",
+                          viewBox="0 0 20 20",
+                          fill="currentColor">,
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />,
+                        </svg>,
+                      </div>,
+                      <span className="text-zion-slate-light">,
+                        +1 302 464 0950,
+                      </span>,
+                    </div>,
+                  </div>,
+                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">,
+                    Open Live Chat,
+                  </Button>,
+                </div>,
+                <div className="bg-zion-blue-light/20 rounded-lg p-6">,
+                  <h2 className="text-xl font-semibold mb-4">,
+                    Feedback & Suggestions,
+                  </h2>,
+                  <p className="text-zion-slate-light mb-4">,
+                    We value your input and are constantly looking to improve,
+                    our platform.,
+                  </p>,
+                  <form className="space-y-4">,
+                    <div>,
+                      <Input placeholder="Your email" />,
+                    </div>,
+                    <div>,
+                      <Input placeholder="Subject" />,
+                    </div>,
+                    <div>,
                       <textarea
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"
-                        placeholder="Your feedback or suggestion"
-                      />
-                    </div>
-
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
-                      Submit Feedback
-"
-            <TabsContent value="contact">"
-</TabsContent>"
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
-</div>"
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-</div>"
-                  <h2 className="text-xl font-semibold mb-4">"
-</h2>
-                  </h2>"
-                  <p className="text-zion-slate-light mb-4">"
-</p>
-                  </p>
-"
-                  <div className="space-y-4">"
-</div>"
-                    <div className="flex items-center">"
-</div>"
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">"
-</div>
-                        <svg;"
-                          xmlns="http://www.w3.org/2000/svg"""
-                          className="h-5 w-5 text-zion-purple"""
-                          viewBox="0 0 20 20"""
-                          fill="currentColor""
-                        >
-</svg>"
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />"
-</path>"
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />"
-</path>
-                        </svg>
-                      </div>
-                      <a;"
-                        href="mailto:support@ziontechgroup.com"""
-                        className="text-zion-cyan hover:underline""
-                      >
-</a>
-                      </a>
-                    </div>
-"
-                    <div className="flex items-center">"
-</div>"
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">"
-</div>
-                        <svg;"
-                          xmlns="http://www.w3.org/2000/svg"""
-                          className="h-5 w-5 text-zion-purple"""
-                          viewBox="0 0 20 20"""
-                          fill="currentColor""
-                        >
-</svg>"
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />"
-</path>
-                        </svg>
-                      </div>"
-                      <span className="text-zion-slate-light">"
-</span>
-                      </span>
-                    </div>
-                  </div>
-"
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">"
-</Button>
-                  </Button>
-                </div>
-"
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-</div>"
-                  <h2 className="text-xl font-semibold mb-4">"
-</h2>
-                  </h2>"
-                  <p className="text-zion-slate-light mb-4">"
-</p>
-                  </p>
-"
-                  <form className="space-y-4">"
-</form>
-                    <div>
-</div>"
-                      <Input placeholder="Your email" />"
-</Input>
-                    </div>
-                    <div>
-</div>"
-                      <Input placeholder="Subject" />"
-</Input>
-                    </div>
-                    <div>
-</div>
-                      <textarea;"
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"""
-                        placeholder="Your feedback or suggestion""
-
-                      />
-</textarea>
-                    </div>
-
-"
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">"
-</Button>
-
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </AppLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-  )
-;
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            </TabsContent>;
-
-            <TabsContent value="faq">;
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">;
-                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>;
-
-                <div className="space-y-6">;
-                  <div>;
-                    <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>;
-                    <p className="text-zion-slate-light">;
-                      Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.;
-                    </p>;
-                  </div>;
-
-                  <div>;
-                    <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>;
-                    <p className="text-zion-slate-light">;
-                      To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.;
-                    </p>;
-                  </div>;
-
-                  <div>;
-                    <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>;
-                    <p className="text-zion-slate-light">;
-                      Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent.;
-                    </p>;
-                  </div>;
-
-                  <div>;
-                    <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>;
-                    <p className="text-zion-slate-light">;
-                      You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup && ziontechgroup.com, or by scheduling a call with our team through the Contact tab.;
-=======
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                  search_query={search_query}
-                />)}
-              {selected_category && !selected_article && (
-                <>;
-                  <Button;
-                    variant="ghost";
-<<<<<<< HEAD
-                    on_click={handleBackToCategories}
-                    className="mb - 4";
-                  >;
-                    ← All Categories;
-                  </Button>;
-                  <HelpArticleList;
-                    category_id={selected_category}
-                    onArticleSelect={handleArticleSelect}
-                    search_query={search_query}
-                  />;
-                </>)}
-              {selected_article && (
-                <>;
-                  <Button;
-                    variant="ghost";
-                    on_click={handleBackToArticles}
-                    className="mb - 4";
-                  >;
-                    ← Back to Articles;
-                  </Button>;
-                  <HelpArticleView article_id={selected_article} />;
-                </>)}
-            </TabsContent>;
-            <TabsContent value="faq">;
-              <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
-                <h2 className="text - xl font - semibold mb - 4">;
-                  Frequently Asked Questions;
-                </h2>;
-                <div className="space - y-6">;
-                  <div>;
-                    <h3 className="font - medium text - zion - cyan mb - 2">;
-                      How does the AI matching work?;
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      Our AI matching algorithm analyzes your requirements and;
-                      preferences to match you with the most compatible talent;
-                      or services. The process takes into account skills,
-                      experience, availability, and past performance to ensure;
-                      optimal results.;
-                    </p>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - medium text - zion - cyan mb - 2">;
-                      How do I hire someone on Zion?;
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      To hire talent on Zion, post a job or project, review;
-                      matches or applications, interview candidates through our;
-                      platform, and extend an offer. Our secure payment system;
-                      protects both parties throughout the engagement.;
-                    </p>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - medium text - zion - cyan mb - 2">;
-                      What are the payment terms?;
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      Zion offers flexible payment options including;
-                      milestone - based payments, hourly rates, or fixed project;
-                      fees. Funds are held in escrow until deliverables are;
-                      approved, ensuring security for both clients and talent.;
-                    </p>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - medium text - zion - cyan mb - 2">;
-                      How do I contact support?;
-                    </h3>;
-                    <p className="text - zion - slate - light">;
-                      You can reach our support team through the chat widget at;
-                      the bottom right of any page, by emailing;
-                      support@ziontechgroup.com, or by scheduling a call with;
-                      our team through the Contact tab.;
-
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-            </TabsContent>;
-
-            <TabsContent value="contact">;
-              <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 8">;
-                <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
-                  <h2 className="text - xl font - semibold mb - 4">;
-                    Contact Support;
-                  </h2>;
-                  <p className="text - zion - slate - light mb - 4">;
-                    Our support team is available 24 / 7 to assist you with any;
-                    questions or issues.;
-                  </p>;
-                  <div className="space - y-4">;
-                    <div className="flex items - center">;
-                      <div className="bg - zion - purple / 10 p - 2 rounded - full mr - 3">;
-                        <svg;
-                          xmlns="http://www.w3.org / 2000 / svg";
-                          className="h - 5 w - 5 text - zion - purple";
-                          view_box="0 0 20 20";
-                          fill="current_color";
-                        >;
-                          <path d="M2.003 5.884L10 9.882l7.997 - 3.998A2 2 0 0016 4H4a2 2 0 00 - 1.997 1.884z" />;
-                          <path d="M18 8.118l - 8 4 - 8-4V14a2 2 0 002 2h12a2 2 0 002 - 2V8.118z" />;
-                        </svg>;
-                      </div>;
-                      <a;
-                        href="mailto:support@ziontechgroup.com";
-                        className="text - zion - cyan hover:underline";
-                      >;
-                        support@ziontechgroup.com;
-                      </a>;
-                    </div>;
-                    <div className="flex items - center">;
-                      <div className="bg - zion - purple / 10 p - 2 rounded - full mr - 3">;
-                        <svg;
-                          xmlns="http://www.w3.org / 2000 / svg";
-                          className="h - 5 w - 5 text - zion - purple";
-                          view_box="0 0 20 20";
-                          fill="current_color";
-                        >;
-                          <path d="M2 3a1 1 0 011 - 1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l - 1.548.773a11.037 11.037 0 006.105 6.105l.774 - 1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01 - 1 1h - 2C7.82 18 2 12.18 2 5V3z" />;
-                        </svg>;
-                      </div>;
-                      <span className="text - zion - slate - light">;
-                        +1 302 464 0950;
-                      </span>;
-                    </div>;
-                  </div>;
-                  <Button className="w - full mt - 6 bg - zion - purple hover:bg - zion - purple - light">;
-                    Open Live Chat;
-                  </Button>;
-                </div>;
-                <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
-                  <h2 className="text - xl font - semibold mb - 4">;
-                    Feedback & Suggestions;
-                  </h2>;
-                  <p className="text - zion - slate - light mb - 4">;
-                    We value your input and are constantly looking to improve;
-                    our platform.;
-                  </p>;
-                  <form className="space - y-4">;
-                    <div>;
-                      <Input placeholder="Your email" />;
-                    </div>;
-                    <div>;
-                      <Input placeholder="Subject" />;
-                    </div>;
-                    <div>;
-                      <textarea;
-                        className="w - full min - h-[120px] px - 3 py - 2 rounded - md border border - zion - blue - light bg - zion - blue / 20 text - white";
-                        placeholder="Your feedback or suggestion";
-                      />;
-                    </div>;
-                    <Button className="w - full bg - zion - cyan hover:bg - zion - cyan / 80">;
-
-                      Submit Feedback;
-                    </Button>;
-                  </form>;
-                </div>;
-              </div>;
-            </TabsContent>;
-          </Tabs>;
-        </div>;
-      </div>;
-
-
-  )
-
-
-=======
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
-                        support@ziontechgroup.com;
-  );
-
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-  );
-
-}
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-  );
-  );
-}
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    </AppLayout>);
-}    </AppLayout>);
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-    </AppLayout>;
-  );}
- export default function HelpCenter () {};
-  const [selectedCategory, setSelectedCategory] = useState<string | null> (null);
-const [selectedArticle, setSelectedArticle] = useState<string | null> (null);"
-const [searchQuery, setSearchQuery] = useState ("");
-const handleCategorySelect = (categoryId: string) => {}
-  setSelectedCategory (categoryId);
-setSelectedArticle (null) 
-};
-const handleArticleSelect = (articleId: string) => {}
-  setSelectedArticle (articleId) 
-};
-const handleBackToCategories = () => {}
-  setSelectedCategory (null);
-setSelectedArticle (null) 
-};
-const handleBackToArticles = () => {}
-  setSelectedArticle (null) 
-};"
-> <Input className="pl-10"/> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/> </div> <Tabs defaultValue=" articles"className="mb-8"> <TabsList className="w-full grid grid-cols-3 mb-6"> <TabsTrigger value=" articles">Articles</TabsTrigger> <TabsTrigger value=" faq">FAQ</TabsTrigger> <TabsTrigger value=" contact">Contact Us</TabsTrigger> </TabsList> <HelpCategoryList categories= {}
-  HELP CATEGORIES;
-}onCategorySelect= {}
-  handleCategorySelect;
-}searchQuery= {}
-  searchQuery;
-}/>) 
-}{"
-  selectedCategory && !selectedArticle && (<> <Button variant=" ghost"onClick= {}
-  handleBackToCategories "
-}className="mb-4"> ← All Categories </Button> <HelpArticleList categoryId= {}
-  selectedCategory;
-}onArticleSelect= {}
-  handleArticleSelect;
-}searchQuery= {}
-  searchQuery;
-}/> </>) 
-}{"
-  selectedArticle && (<> <Button variant=" ghost"onClick= {}
-  handleBackToArticles "
-}className="mb-4"> ← Back to Articles </Button> <HelpArticleView articleId= {}
-  selectedArticle;
-}/> </>) "
-}</TabsContent> <TabsContent value=" faq"> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2> <div className="space-y-6"> <div> <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3> <p className="text-zion-slate-light"> Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3> <p className="text-zion-slate-light"> To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3> <p className="text-zion-slate-light"> Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3> <p className="text-zion-slate-light"> You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab. </p> </div> </div> </div> </TabsContent> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Contact Support</h2> <p className="text-zion-slate-light mb-4"> Our support team is available 24/7 to assist you with any questions or issues. </p> <div className="space-y-4"> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/> <path d=" M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/> </svg> </div> <a href="mailto:support@ziontechgroup.com"className="text-zion-cyan hover:underline"> support@ziontechgroup.com </Link> </div> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/> </svg> </div> <span className="text-zion-slate-light">+1 302 464 0950</span> </div> </div> <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light"> Open Live Chat </Button> </div> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2> <p className="text-zion-slate-light mb-4"> We value your input and are constantly looking to improve our platform. </p> <form className="space-y-4"> <div> <Input placeholder=" Your email"/> </div> <div> <Input placeholder=" Subject"/> </div> <div> <textarea className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"placeholder=" Your feedback or suggestion"/> </div> <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80"> Submit Feedback </Button> </form> </div> </div> </TabsContent> </Tabs> </div> </div> </AppLayout>) 
-}
-);
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-}
-;
-
-}
-;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-
-              {selectedArticle && (;
-                <>;
-                    onClick={handleBackToArticles}"
-                    className="mb-4">;"
-
-                  ;
-                  <HelpArticleView articleId={selectedArticle} />;
-
-                </>;)
-            <TabsContent value="faq">"
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">"
-                <h2 className="text-xl font-semibold mb-4">"
-</h2>
-                <div className="space-y-6">"
-                  <div>
-                    <h3 className="font-medium text-zion-cyan mb-2">"
-</h3>
-                    </h3>"
-                    <p className="text-zion-slate-light">"
-
-
-
-            <TabsContent value="contact">"
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
-                  </h2>"
-                  <p className="text-zion-slate-light mb-4">"
-                  <div className="space-y-4">"
-                    <div className="flex items-center">"
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">"
-                        <svg;"
-                          xmlns="http://www.w3.org/2000/svg"""
-                          className="h-5 w-5 text-zion-purple"""
-                          viewBox="0 0 20 20"""
-                          fill="currentColor""
-</svg>"
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />"
-</path>"
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />"
-</path>
-                        </svg>
-                      <a;"
-                        href="mailto:support@ziontechgroup.com"""
-                        className="text-zion-cyan hover:underline""
-</a>
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />"
-                      <span className="text-zion-slate-light">"
-</span>
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">"
-
-                  <form className="space-y-4">"
-</form>
-                      <Input placeholder="Your email" />"
-
-                      <Input placeholder="Subject" />"
-
-                      <textarea;"
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"""
-                        placeholder="Your feedback or suggestion""
-</textarea>
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">"
-
-    );
-
-    </AppLayout>);
-    </AppLayout>;
-  const [selectedCategory, setSelectedCategory] = useState<string | null> (null);
-const [selectedArticle, setSelectedArticle] = useState<string | null> (null);
-</string>"
-> <Input className="pl-10"/> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/> </div> <Tabs defaultValue=" articles"className="mb-8"> <TabsList className="w-full grid grid-cols-3 mb-6"> <TabsTrigger value=" articles">Articles <TabsTrigger value=" faq">FAQ <TabsTrigger value=" contact">Contact Us  <HelpCategoryList categories= {"
-  selectedCategory && !selectedArticle && (<> <Button variant=" ghost"onClick= {"
-  handleBackToCategories;"
-}className="mb-4"> ← All Categories  <HelpArticleList categoryId= {"
-  selectedCategory;
-}onArticleSelect= {
-  handleArticleSelect;
-}searchQuery= {
-  searchQuery;)
-}/> </>) 
-}{"
-  selectedArticle && (<> <Button variant=" ghost"onClick= {"
-  handleBackToArticles;"
-}className="mb-4"> ← Back to Articles  <HelpArticleView articleId= {"
-  selectedArticle;)
-}/> </>) "
-} <TabsContent value=" faq"> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2> <div className="space-y-6"> <div> <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3> <p className="text-zion-slate-light"> Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3> <p className="text-zion-slate-light"> To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3> <p className="text-zion-slate-light"> Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3> <p className="text-zion-slate-light"> You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab. </p> </div> </div> </div>  <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Contact Support</h2> <p className="text-zion-slate-light mb-4"> Our support team is available 24/7 to assist you with any questions or issues. </p> <div className="space-y-4"> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/> <path d=" M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/> </svg> </div> <a href="mailto:support@ziontechgroup.com"className="text-zion-cyan hover:underline"> support@ziontechgroup.com  </div> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/> </svg> </div> <span className="text-zion-slate-light">+1 302 464 0950</span> </div> </div> <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light"> Open Live Chat  </div> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2> <p className="text-zion-slate-light mb-4"> We value your input and are constantly looking to improve our platform. </p> <form className="space-y-4"> <div> <Input placeholder=" Your email"/> </div> <div> <Input placeholder=" Subject"/> </div> <div> <textarea className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"placeholder=" Your feedback or suggestion"/> </div> <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80"> Submit Feedback  </form> </div> </div>   </div> </div> )""
-pr-12325
-}</TabsContent> <TabsContent value=" faq"> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2> <div className="space-y-6"> <div> <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3> <p className="text-zion-slate-light"> Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3> <p className="text-zion-slate-light"> To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3> <p className="text-zion-slate-light"> Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent. </p> </div> <div> <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3> <p className="text-zion-slate-light"> You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab. </p> </div> </div> </div> </TabsContent> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Contact Support</h2> <p className="text-zion-slate-light mb-4"> Our support team is available 24/7 to assist you with any questions or issues. </p> <div className="space-y-4"> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/> <path d=" M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/> </svg> </div> <a href="mailto:support@ziontechgroup.com"className="text-zion-cyan hover:underline"> support@ziontechgroup.com </Link> </div> <div className="flex items-center"> <div className="bg-zion-purple/10 p-2 rounded-full mr-3"> <svg xmlns=" http://www.w3.org/2000/svg"className="h-5 w-5 text-zion-purple"viewBox=" 0 0 20 20"fill=" currentColor"> <path d=" M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/> </svg> </div> <span className="text-zion-slate-light">+1 302 464 0950</span> </div> </div> <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light"> Open Live Chat </Button> </div> <div className="bg-zion-blue-light/20 rounded-lg p-6"> <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2> <p className="text-zion-slate-light mb-4"> We value your input and are constantly looking to improve our platform. </p> <form className="space-y-4"> <div> <Input placeholder=" Your email"/> </div> <div> <Input placeholder=" Subject"/> </div> <div> <textarea className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"placeholder=" Your feedback or suggestion"/> </div> <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80"> Submit Feedback </Button> </form> </div> </div> </TabsContent> </Tabs> </div> </div> </AppLayout>)""
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white",
+                        placeholder="Your feedback or suggestion",
+                      />,
+                    </div>,
+                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">,
+                      Submit Feedback,
+                    </Button>,
+                  </form>,
+                </div>,
+              </div>,
+            </TabsContent>,
+          </Tabs>,
+        </div>,
+      </div>,
+    </AppLayout>)}
+  ),
+              {selectedArticle && (
+                <>,
+                  <Button
+                    variant="ghost",
+            </TabsContent>,
+            <TabsContent value="faq">,
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">,
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>,
+                <div className="space-y-6">,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>,
+                    <p className="text-zion-slate-light">,
+                      Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>,
+                    <p className="text-zion-slate-light">,
+                      To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>,
+                    <p className="text-zion-slate-light">,
+                      Zion offers flexible payment options including milestone-based payments, hourly rates, or fixed project fees. Funds are held in escrow until deliverables are approved, ensuring security for both clients and talent.,
+                    </p>,
+                  </div>,
+                  <div>,
+                    <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>,
+                    <p className="text-zion-slate-light">,
+                      You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup && ziontechgroup.com, or by scheduling a call with our team through the Contact tab.>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}})))

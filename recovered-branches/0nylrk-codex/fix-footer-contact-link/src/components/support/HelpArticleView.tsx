@@ -1,45 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES } from "./help-content";
+,
+import React, { useState } from './react',
+import { Button  } from '@/components / ui / button',
+import { Card  } from '@/components / ui / card',
+import { ThumbsUp, ThumbsDown  } from './lucide-react',
+import { toast  } from '@/components / ui / use - toast',
+import { HELP_CATEGORIES  } from './help - content',
 interface HelpArticleViewProps {
-import { HELP_CATEGORIES } from "./help-content",
+  article_id: string}
+,
 interface HelpArticleViewProps {
-  articleId: string
-}
-
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+  articleId: string}
+,
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
-  
-  // Find the article in all categories
-  let article,
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+  // Find the article in all categories,
+  let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
+    const found = category.articles.find(a => a.id === articleId);
     if (found) {
-      article = found,
-      break
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from "lucide-react",;
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
-=======
+      article = found;
+      break,
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -47,725 +30,219 @@ import { ThumbsUp, ThumbsDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  articleId: string;
-}
-
+  articleId: string}
+,
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  const [feedbackGiven, setFeedbackGiven] = useState<
-    "helpful" | "not-helpful" | null
-  >(null);
-
-  // Find the article in all categories
-<<<<<<< HEAD
-  let article = null;
+  const [feedbackGiven, setFeedbackGiven] = useState<,
+    "helpful" | "not-helpful" | null>(null),
+  // Find the article in all categories,
+  let article;
   for (const category of HELP_CATEGORIES) {
-
-    const found = category.articles.find((a) => a.id === articleId);
+    const found = category.articles.find((a) => a.id === articleId),
     if (found) {
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
-interface HelpArticleViewProps {;
-  articleId: string;
-}
-
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<;
-    "helpful" | "not - helpful" | null;
-  >(null);
-;
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find ((a) => a.id === article_id);
-    // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      article = found;
-      break;
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    }
+import React, { useState } from "react",
+import {Button} from "@/components/ui/button",
+import {Card} from "@/components/ui/card",
+import {ThumbsUp, ThumbsDown} from "lucide-react",
+import {toast} from "@/components/ui/use-toast",
+import {HELP_CATEGORIES} from "./help-content",
+interface HelpArticleViewProps {
+  articleId: string}
+,
+      article = found,
+      break>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
   }
   if (!article) {
-    return <div>Article not found</div>;
-  }
+    return <div>Article not found</div>}
+,
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-    (setFeedbackGiven(type)
-      // In a real implementation, this would send feedback to the server
-      toast({
-        title: "Thank you for your feedback!"
-        description:
-          type === "helpful"
-            ? "We're glad this article was helpful."
-            : "We'll work on improving this article."
-      }));
-  }
-  
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type),
-    
-    // In a real implementation, this would send feedback to the server
-    toast({
-      title: "Thank you for your feedback!",
-      description: type === "helpful" 
-        ? "We're glad this article was helpful." 
-        : "We'll work on improving this article."})
-  },
-  
-=======
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  articleId: string
-=======
-  articleId: string;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<
-    "helpful" | "not-helpful" | null
-  >(null);
-=======
-
-interface HelpArticleViewProps {
-  articleId: string
-}
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-import React, { useState } from "react";"
-import { Button } from "@/components/ui/button";"
-import { Card } from "@/components/ui/card";"
-import { ThumbsUp, ThumbsDown } from "lucide-react";"
-import { toast } from "@/components/ui/use-toast";"
-import { HELP_CATEGORIES } from "./help-content";
-interface HelpArticleViewProps {}
-  articleId: string;
-}
-
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {}
-  const [feedbackGiven, setFeedbackGiven] = useState<";
-    "helpful" | "not-helpful" | null;
-  >(null);
-
-  // Find the article in all categories;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-  // Find the article in all categories
-<<<<<<< HEAD
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  let article;
-  for (const category of HELP_CATEGORIES) {}
-    const found = category.articles.find((a) => a.id === articleId);
-    if (found) {}
-      article = found;
-      break;
-    }
-  }
-=======
-  let article,
-  for (const category of HELP_CATEGORIES) {
-
-}
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-  if (!article) {}
-    return <div>Article not found</div>;
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-
-  const handleFeedback = (type: "helpful" | "not-helpful") => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-"
-  const handleFeedback = (type: "helpful" | "not-helpful") => {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     (setFeedbackGiven(type),
-      // In a real implementation, this would send feedback to the server;
-      toast({"
-        title: "Thank you for your feedback!",
-        description:"
-          type === "helpful""
-            ? "We're glad this article was helpful."'"
-=======
-    (setFeedbackGiven(type),
-      // In a real implementation, this would send feedback to the server
+      // In a real implementation, this would send feedback to the server,
       toast({
         title: "Thank you for your feedback!",
-        description:
-          type === "helpful"
-            ? "We're glad this article was helpful."
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-            : "We'll work on improving this article.",
-      }));
-  };
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-  return (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-    setFeedbackGiven(type),
-    
-    // In a real implementation, this would send feedback to the server
+        description:,
+          type === "helpful",
+            ? "We're glad this article was helpful.",
+            : "We'll work on improving this article."}))}
+,
+  const handleFeedback = (type: "helpful" | "not-helpful") => {
+    setFeedbackGiven(type);
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+    // In a real implementation, this would send feedback to the server,
     toast({
-      title: "Thank you for your feedback!",
-      description: type === "helpful" 
-        ? "We're glad this article was helpful." 
-        : "We'll work on improving this article."})
-  },
-    return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
+      title: "Thank you for your feedback!";
+      description: type === "helpful",
+        ? "We're glad this article was helpful.",
+        : "We'll work on improving this article."})};
   return (
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-    <div>
-      <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
-<<<<<<< HEAD
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-=======
-=======
-    <div>
-      <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-        <div className="prose dark:prose-invert max-w-none mb-8">
-=======
-    <div>"
-      <Card className="p-6">"
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
-"
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-"
-        <div className="prose dark:prose-invert max-w-none mb-8">"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    <div>,
+      <Card className="p-6">,
+        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>,
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">,
+          <span>Last updated: {formatDate(article.lastUpdated)}</span>,
+        </div>,
+        <div className="prose dark: prose-invert max-w-none mb-8">,
           {article.content.split("\n").map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
-          ))}
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between">
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
-              Was this article helpful?
-            </div>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-3">
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-"
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">"
-          <div className="flex flex-col sm:flex-row items-center justify-between">"
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
-              Was this article helpful?
-            </div>
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-            <div className="flex items-center space-x-3">
-=======
-=======
-            <div className="flex items-center space-x-3">
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-
-  if (!article) {;
-    return <div>Article not found</div>;
-  }
-<<<<<<< HEAD
-"
-=======
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-  const handleFeedback = (type: "helpful" | "not-helpful") => {;
-    setFeedbackGiven(type),;
-
-    // In a real implementation, this would send feedback to the server;
-<<<<<<< HEAD
-    toast({;"
-      title: "Thank you for your feedback!",;"
-      description: type === "helpful" ;'"
-        ? "We're glad this article was helpful." ;'"
-=======
-    toast({;
-      title: "Thank you for your feedback!",;
-      description: type === "helpful" ;
-        ? "We're glad this article was helpful." ;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-        : "We'll work on improving this article."});
-  };
-
+            <p key={idx}>{paragraph}</p>))}
+        </div>,
+        <div className="border-t border-gray-200 dark: border-gray-700 pt-6 mt-6">,
+          <div className="flex flex-col sm:flex-row items-center justify-between">,
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">,
+              Was this article helpful?,
+            </div>,
+            <div className="flex items-center space-x-3">,
+              <Button
+                variant="outline",
+                size="sm",
+  // Check condition,
+if ( {) {
+  $2}
+    return <div > Article not found</div>}
+  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
+    (setFeedbackGiven (type);
+      // In a real implementation, this would send feedback to the server,
+      toast ({
+        title: "Thank you for your feedback!";
+        description: ,
+          type === "helpful",
+            ? "We're glad this article was helpful.",
+            : "We'll work on improving this article.";
+      }))}
+,
   return (
-<<<<<<< HEAD
-    <div>;"
-      <Card className="p-6">;"
-        <h2 className="text-2xl font-bold mb-4">{article && article.title}</h2>;
-"
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">;
-          <span>Last updated: {formatDate(article && article.lastUpdated)}</span>;
-        </div>;
-"
-        <div className="prose dark:prose-invert max-w-none mb-8">;"
-=======
-=======
-    <div>
-</div>"
-      <Card className="p-6">"
-"
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>""
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">"
-</div>
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        <div className="prose dark:prose-invert max-w-none mb-8">"
-            <p key={idx}>{paragraph}</p>
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">"
-          <div className="flex flex-col sm:flex-row items-center justify-between">"
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">"
-            <div className="flex items-center space-x-3">"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    <div>;
-      <Card className="p-6">;"
-        <h2 className="text-2xl font-bold mb-4">{article && article.title}</h2>;""
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">;"
-          <span>Last updated: {formatDate(article && article.lastUpdated)}</span>;
-<<<<<<< HEAD
-        </div>;
-
-        <div className="prose dark:prose-invert max-w-none mb-8">;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-          {article && article.content.split("\n").map((paragraph, idx) => (;
-            <p key={idx}>{paragraph}</p>;
-          ))}
-        </div>;
-<<<<<<< HEAD
-"
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;"
-          <div className="flex flex-col sm:flex-row items-center justify-between">;"
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;
-              Was this article helpful?;
-            </div>;
-"
-            <div className="flex items-center space-x-3">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+    <div>,
+      <Card className="p - 6">,
+        <h2 className="text - 2xl font - bold mb - 4">{article.title}</h2>,
+        <div className="flex items - center text - sm text - zion - slate - light mb - 6">,
+          <span > Last updated: {format_date (article.last_updated)}</span>,
+        </div>,
+        <div className="prose dark: prose - invert max - w-none mb - 8">,
+          {article.content.split ("\n").map ((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>))}
+        </div>,
+        <div className="border - t border - gray - 200 dark: border - gray - 700 pt - 6 mt - 6">,
+          <div className="flex flex - col sm:flex - row items - center justify - between">,
+            <div className="text - sm text - zion - slate - light mb - 4 sm:mb - 0">,
+              Was this article helpful?,
+            </div>,
+            <div className="flex items - center space - x-3">,
               <Button
-=======
-            <div className="flex items-center space-x-3">              <Button
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <div className="flex items-center space-x-3">              <Button
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-        </div>;"
-        <div className="prose dark:prose-invert max-w-none mb-8">;"
-            <p key={idx}>{paragraph}</p>;
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;"
-          <div className="flex flex-col sm:flex-row items-center justify-between">;"
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;"
-            <div className="flex items-center space-x-3">;"
-              <Button;"
-                variant="outline"""
-                size="sm""
-                className={"
-                  feedbackGiven === "helpful"""
-                    ? "bg-green-100 dark:bg-green-900/30"""
-                    : """
-                }"
-                onClick={() => handleFeedback("helpful")}"
-                <ThumbsUp className="h-4 w-4 mr-2" />"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
-
-                  feedbackGiven === "not-helpful"""
-                    ? "bg-red-100 dark:bg-red-900/30"""
-                onClick={() => handleFeedback("not-helpful")}"
-                <ThumbsDown className="h-4 w-4 mr-2" />"
-
-            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">"
-              <p className="text-sm text-zion-slate-light mb-2">"
-</p>
-                size="sm"""
-                className="bg-zion-purple hover:bg-zion-purple-light""
-              >
-
-                <ThumbsDown className="h - 4 w - 4 mr - 2" />;"
-
-              ;
-            </div>;
-<<<<<<< HEAD
-
-            <div className="flex items-center space-x-3">;
-              <Button
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                variant="outline"
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a;
-              <Button"
-                variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                size="sm"
-                className={"
-                  feedbackGiven === "helpful""
-                    ? "bg-green-100 dark:bg-green-900/30""
-                    : ""
-                }"
+                variant="outline",
+                size="sm",
+                className={
+                  feedback_given === "helpful",
+                    ? "bg - green - 100 dark:bg - green - 900 / 30",
+                    : ""}
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
-              >"
-                <ThumbsUp className="h-4 w-4 mr-2" />
-                Yes;
-              </Button>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+              >,
+                <ThumbsUp className="h-4 w-4 mr-2" />,
+                Yes,
+              </Button>,
               <Button
-                variant="outline"
-=======
-              <Button"
-                variant="outline""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                size="sm"
-                className={"
-                  feedbackGiven === "not-helpful""
-                    ? "bg-red-100 dark:bg-red-900/30""
-                    : ""
-                }"
+                variant="outline",
+                size="sm",
+                className={
+                  feedbackGiven === "not-helpful",
+                    ? "bg-red-100 dark: bg-red-900/30",
+                    : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
-              >"
-                <ThumbsDown className="h-4 w-4 mr-2" />
-                No;
-              </Button>
-            </div>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
+              >,
+                <ThumbsDown className="h-4 w-4 mr-2" />,
+                No,
+              </Button>,
+            </div>,
+          </div>,
           {feedbackGiven === "not-helpful" && (
-            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
-              <p className="text-sm text-zion-slate-light mb-2">
-                We're sorry this article wasn't helpful. Please contact our
-=======
-"
-          {feedbackGiven === "not-helpful" && ("
-            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">"
-              <p className="text-sm text-zion-slate-light mb-2">'
-                We're sorry this article wasn't helpful. Please contact our;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                support team for further assistance.
-              </p>
-              <Button"
-                size="sm""
-                className="bg-zion-purple hover:bg-zion-purple-light"
-              >
-                Contact Support;
-              </Button>
-            </div>
-<<<<<<< HEAD
-;
-  const handleFeedback = (type: "helpful" | "not-helpful") => {;
-    setFeedbackGiven(type),;
-    // In a real implementation, this would send feedback to the server;
-    toast({;
-      title: "Thank you for your feedback!",;
-      description: type === "helpful";
-        ? "We're glad this article was helpful.";
-        : "We'll work on improving this article."});
-  },;
-  return (;
-    <div>;
-      <Card className="p-6">;
-        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>;
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">;
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>;
-        </div>;
-        <div className="prose dark:prose-invert max-w-none mb-8">;
-          {article.content.split("\n").map((paragraph, idx) => (;
-            <p key={idx}>{paragraph}</p>;
-          ))}
-        </div>;
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;
-          <div className="flex flex-col sm:flex-row items-center justify-between">;
-            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;
-              Was this article helpful?;
-            </div>;
-            <div className="flex items-center space-x-3">;
-              <Button;
-                variant="outline";
-                size="sm";
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">,
+              <p className="text-sm text-zion-slate-light mb-2">,
+                We're sorry this article wasn't helpful. Please contact our,
+                support team for further assistance.,
+              </p>,
+              <Button
+                size="sm",
+                className="bg-zion-purple hover: bg-zion-purple-light">,
+                Contact Support,
+              </Button>,
+            </div>,
+  const handleFeedback = (type: "helpful" | "not-helpful") => {
+    setFeedbackGiven(type);
+    // In a real implementation, this would send feedback to the server,
+    toast({
+      title: "Thank you for your feedback!";
+      description: type === "helpful",
+        ? "We're glad this article was helpful.",
+        : "We'll work on improving this article."})};
+  return (
+    <div>,
+      <Card className="p-6">,
+        <h2 className="text-2xl font-bold mb-4">{article.title}</h2>,
+        <div className="flex items-center text-sm text-zion-slate-light mb-6">,
+          <span>Last updated: {formatDate(article.lastUpdated)}</span>,
+        </div>,
+        <div className="prose dark: prose-invert max-w-none mb-8">,
+          {article.content.split("\n").map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>))}
+        </div>,
+        <div className="border-t border-gray-200 dark: border-gray-700 pt-6 mt-6">,
+          <div className="flex flex-col sm:flex-row items-center justify-between">,
+            <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">,
+              Was this article helpful?,
+            </div>,
+            <div className="flex items-center space-x-3">,
+              <Button
+                variant="outline",
+                size="sm",
                 className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
                 onClick={() => handleFeedback("helpful")}
                 disabled={feedbackGiven !== null}
-              >;
-                <ThumbsUp className="h-4 w-4 mr-2" />;
-                Yes;
-              </Button>;
-              <Button;
-                variant="outline";
-                size="sm";
-                className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
+              >,
+                <ThumbsUp className="h - 4 w - 4 mr - 2" />,
+                Yes,
+              </Button>,
+              <Button
+                variant="outline",
+                size="sm",
+                className={
+                  feedback_given === "not - helpful",
+                    ? "bg - red - 100 dark: bg - red - 900 / 30",
+                    : ""}
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
-
-              >;
-                <ThumbsDown className="h-4 w-4 mr-2" />;
-=======
-          )}
-        </div>
-      </Card>
-    </div>
-  );
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                on_click={() => handle_feedback ("not - helpful")}
-                disabled={feedback_given !== null}
-              >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-"
-                on_click={() => handle_feedback ("not - helpful")}
-                disabled={feedback_given !== null}
-              >;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-                <ThumbsDown className="h - 4 w - 4 mr - 2" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-                <ThumbsDown className="h - 4 w - 4 mr-2" />;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-                <ThumbsDown className="h - 4 w - 4 mr-2" />;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-                on_click={() => handle_feedback ("not - helpful")}
-                disabled={feedback_given !== null}
-              >;
-                <ThumbsDown className="h - 4 w - 4 mr - 2" />;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-                No;
-              </Button>;
-            </div>;
-<<<<<<< HEAD
-          </div>;
-<<<<<<< HEAD
-
-          {feedbackGiven === "not-helpful" && (;
-            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">;
-              <p className="text-sm text-zion-slate-light mb-2">;
-                We're sorry this article wasn't helpful. Please contact our support team for further assistance.;
-              </p>;
-              <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light">;
-                Contact Support;
-              </Button>;
-            </div>;
-<<<<<<< HEAD
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          )}
-        </div>;
-      </Card>;
-    </div>;
-  );
-}
-
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric"
-    month: "long"
-    day: "numeric"
-  });
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-          {feedback_given === "not - helpful" && (
-            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;
-              <p className="text - sm text - zion - slate - light mb - 2">;
-                We're sorry this article wasn't helpful. Please contact our;
-                support team for further assistance.;
-              </p>;
-              <Button;
-                size="sm";
-<<<<<<< HEAD
-                className="bg - zion - purple hover:bg - zion - purple-light";
-=======
-          </div>;"
-          {feedback_given === "not - helpful" && ("
-            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;"
-              <p className="text - sm text - zion - slate - light mb - 2">;'
-                We're sorry this article wasn't helpful. Please contact our;
-                support team for further assistance.;
-              </p>;
-              <Button;"
-                size="sm";"
-                className="bg - zion - purple hover:bg - zion - purple - light";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-                className="bg - zion - purple hover:bg - zion - purple - light";
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;"
-              <p className="text - sm text - zion - slate - light mb - 2">;"
-              </p>;
-                size="sm";""
-                className="bg - zion - purple hover:bg - zion - purple - light";"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-              >;
-
+>,
+                <ThumbsDown className="h-4 w-4 mr-2" />,
+                No,
+              </Button>,
+            </div>,
+          </div>,
+          {feedbackGiven === "not-helpful" && (
+            <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">,
+              <p className="text-sm text-zion-slate-light mb-2">,
+                We're sorry this article wasn't helpful. Please contact our support team for further assistance.,
+              </p>,
+              <Button size="sm" className="bg-zion-purple hover: bg-zion-purple-light">,
+                Contact Support,
+              </Button>,
             </div>)}
-<<<<<<< HEAD
-        </div>;
-      </Card>;
-    </div>);
-}
-function format_date (date: string): string {"
-  return new Date (date).toLocaleDateString ("en - US", {"
-    year: "numeric","
-    month: "long","
-    day: "numeric",
-  });
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-function formatDate(date:string):string {;
-  return new Date(date).toLocaleDateString("en-US", {;
-    year:"numeric",;
-    month:"long",;
-    day:"numeric";
-  }),; interface HelpArticleViewProps {
-  articleId: string 
-}export function HelpArticleView ({
-  articleId 
-}: HelpArticleViewProps) {
-  for (const category of HELP CATEGORIES) {
-  //In a real implementation, this would send feedback to the server toast ({
-  title: "Thank you for your feedback!", description: type === "helpful" ? "We're glad this article was helpful." : "We'll work on improving this article." 
-}) 
-};
-}</div> <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6" > <div className="flex flex-col sm:flex-row items-center justify-between" > <div className="text-sm text-zion-slate-light mb-4 sm:mb-0" > Was this article helpful? </div> <div className="flex items-center space-x-3" > <Button > <ThumbsUp className="h-4 w-4 mr-2" /> Yes </Button> <Button > <ThumbsDown className="h-4 w-4 mr-2" /> No </Button> </div> </div> We're sorry this article wasn't helpful. Please contact our support team for further assistance. </p> <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-light" > Contact Support </Button> </div>) 
-}</div> </Card> </div>) 
-}
-}
-          )}
-        </div>
-      </Card>
-    </div>
-  );
-}
-=======
-
-
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+        </div>,
+      </Card>,
+    </div>)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4)}
+        </div>,
+      </Card>,
+    </div>)}
+,
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
-    day: "numeric",
-  });
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-=======
-
-
-function formatDate(date: string): string {"
-  return new Date(date).toLocaleDateString("en-US", {"
-    year: "numeric","
-    month: "long","
-    day: "numeric",
-  });
-}
-;'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-;
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
-    </div>);"
-pr-12325
-    </div>);"
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    day: "numeric"})}
+})})}
+,
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"})}
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -1,914 +1,299 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/scripts/deployment-automation.js
-=======
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/deployment-automation.js
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; ';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() {  try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); } catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()}  class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() {  try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); } catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {', const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' ` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` ` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { ';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; } catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { ';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; } catch (error) {'; ';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { ';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; } else {'; ';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { ';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; } else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; }'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { ';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { ';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try {  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) {  this.warnings.push(`${verification.name} verification: failed`)}  try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); } catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() {  try {  try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); } catch (error) {  this.warnings.push('Some deployment tests failed') } } async deployToStaging() {'  try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); } else {'  this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() {  try {  try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); } else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); } } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() {  const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; `; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; `; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {'  const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {'  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` ` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { ';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) {  this.deploymentSteps.push('✅ Rollback: completed')} else {'; ';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { ';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation();  try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; ';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() {  try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); } catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()}  class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() {  try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); } catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {', const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' ` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` ` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { ';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; } catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { ';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; } catch (error) {'; ';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { ';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; } else {'; ';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { ';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; } else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; }'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { ';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { ';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try {  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) {  this.warnings.push(`${verification.name} verification: failed`)}  try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); } catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() {  try {  try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); } catch (error) {  this.warnings.push('Some deployment tests failed') } } async deployToStaging() {'  try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); } else {'  this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() {  try {  try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); } else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); } } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() {  const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; `; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; `; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {'  const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {'  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` ` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { ';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) {  this.deploymentSteps.push('✅ Rollback: completed')} else {'; ';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { ';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation();  try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-#!/usr/bin/"env": node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('🚀 "Deployment": Automation Starting...')';
-=======
-=======
-console.log('🚀 "Deployment": Automation Starting...')';
+
+#!/usr/bin/env: node, import fs from 'fs'; import path from 'path', import { execSync } from 'child_process'; '; class: DeploymentAutomation { constructor() { this.deploymentSteps = [], this.errors: = [], this.warnings: = [], this.environment: = process.env.NODE_ENV || 'development'}', async: deploy() {  try: { await: this.runPreDeploymentChecks(), await: this.buildApplication(), await: this.runDeploymentTests(), if: (this.environment === 'staging') {', await: this.deployToStaging()} if: (this.environment === 'production') {', await: this.deployToProduction()} await: this.runPostDeploymentVerification(), await: this.generateDeploymentReport()} catch (error) {', console.error('❌ Deployment: failed:',error.message)'; this.errors.push(error.message), await: this.rollback()}  class DeploymentAutomation { constructor() { this.deploymentSteps = [], this.errors = [], this.warnings = [], this.environment = process.env.NODE_ENV || `development`} async deploy() {  try { await this.runPreDeploymentChecks(), await this.buildApplication(), await this.runDeploymentTests(), if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') { await this.deployToProduction()} await this.runPostDeploymentVerification(), await this.generateDeploymentReport()} catch (error) { console.error('❌ Deployment failed: ',error.message), this.errors.push(error.message), await this.rollback() } } async runPreDeploymentChecks() {', const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ], for (const check of checks) { try {' ` execSync(check.command,{ stdio: 'pipe' }), this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` ` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { ', try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})', execSync('npm: ci --only=production',{ stdio: 'pipe'})', const buildCommand = this.environment === 'production''; ? 'npm: run build: production''; : 'npm: run build:optimized'', execSync(buildComman,d,{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Application: built successfully')'} catch (error) {', throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { ', try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployment: tests passed')'} catch (error) {', '; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { '; try: { if: (fs.existsSync('.env.staging')) {', execSync('vercel: --env=staging',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployed: to staging')'} else {', '; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { '; try: { if: (fs.existsSync('.env.production')) {', execSync('vercel: --prod',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployed: to production')'} else {', await: this.createDeploymentPackage(), this.deploymentSteps.push('✅ Deployment: package created')'}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { ', const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`, execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})', const instructions = `# Deployment Instructions, ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString()} ### Steps to deploy: , 1. Upload: the package to your server, 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production, 4. Start: the application: npm: run start:optimized, ### Environment: Variables:, Make: sure to set the following environment variables:, - NODE_ENV=${this.environmen,t} - PORT=30o00, - NEXT_PUBLIC_API_URL=your_api_url, ### Health: Check: , After: deploymen,t,verify the application is running: , curl: http: `, fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)'; this.deploymentSteps.push('✅ Deployment: package and instructions created')}', async: runPostDeploymentVerification() { ', const verifications = [ { name: 'Health: check,',url: '/api/health'},', { name: 'Home: page,',url: '/'},', { name: 'Services: page,',url: '/services'}'], for: (const verification of verifications) { try {  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) {  this.warnings.push(`${verification.name} verification: failed`)}  try { execSync('rm -rf .next out dist',{ stdio: 'pipe' }), execSync('npm ci --only=production',{ stdio: 'pipe' }), const buildCommand = this.environment === 'production', ? 'npm run build: production', : 'npm run buil d:optimized', execSync(buildCommand,{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Application built successfully')} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() {  try {  try { execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployment tests passed')} catch (error) {  this.warnings.push('Some deployment tests failed') } } async deployToStaging() {'  try { if (fs.existsSync('.env.staging')) { execSync('vercel --env=staging',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployed to staging')} else {'  this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() {  try {  try { if (fs.existsSync('.env.production')) { execSync('vercel --prod',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployed to production')} else { await this.createDeploymentPackage(), this.deploymentSteps.push('✅ Deployment package created')} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() {  const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`, execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }), const instructions = `# Deployment Instructions, ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy: , 1. Upload the package to your server, 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production, 4. Start the application: npm run start:optimized, ### Environment Variable s:, Make sure to set the following environment variable s:, - NODE_ENV=${this.environment} - PORT=30o00, - NEXT_PUBLIC_API_URL=your_api_url, ### Health "Check":,",After deployment,verify the application is "running":,",curl "http": try { `, this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`, `, this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {'  const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ], for (const verification of verifications) { try {'  this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` ` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { '; try: { const previousDeployment = await this.getPreviousDeployment(), if: (previousDeployment) {  this.deploymentSteps.push('✅ Rollback: completed')} else {', '; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)'; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}', async: generateDeploymentReport() { ', const report ={ timestamp: new: Date().toISOString() environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,',', steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','',Implement: blue-green deployment strategy','',Add: comprehensive monitoring and alerting','',Create: disaster recovery procedures','',Implement: automated security scanning'']} , fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))'; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(),  try { const previousDeployment = await this.getPreviousDeployment(), if (previousDeployment) {',
+#!/usr/bin/"env": node,
+import { execSync } from 'child_process',
+// // console.log('🚀 "Deployment": Automation Starting...')',
 class: DeploymentAutomation {
-#!/usr/bin/"env": node;""
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-console.log(' "Deployment": Automation Starting...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-class: DeploymentAutomation {
-  // TODO: Implement
-}
   constructor() {
-    this.deploymentSteps = [];
-    this.errors: = [];
-    this.warnings: = [];
-    this.environment: = process.env.NODE_ENV || 'development'}';
+    this.deploymentSteps = [],
+    this.errors: = [],
+    this.warnings: = [],
+    this.environment: = process.env.NODE_ENV || 'development'}',
   "async": deploy() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(`🌍 Deploying to ${this.environment} environment...`);
-=======
-    console.log(` Deploying to ${this.environment} environment...`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log(`🌍 Deploying to ${this.environment} environment...`);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // // console.log(`🌍 Deploying to ${this.environment} environment...`),
     "try": {
-      // 1. Pre-deployment checks;
-      await: this.runPreDeploymentChecks();
-      // 2. Build: the application;
-      await: this.buildApplication();
-      // 3. Run: tests;
-      await: this.runDeploymentTests();
-      // 4. Deploy: to staging (if applicable);
-      if: (this.environment === 'staging') {';
-  "async": deploy() {"
-    console.log(` Deploying to ${this.environment} environment...`);"
-    "try": {"
-      // 1. Pre-deployment checks;
-      await: this.runPreDeploymentChecks();
-      // 2. Build: the application;,
-  await: this.buildApplication();
-      // 3. Run: tests;,
-  await: this.runDeploymentTests();
-      // 4. Deploy: to staging (if applicable);,"
-  if: (this.environment === 'staging') {';
+      // 1. Pre-deployment checks,
+      await: this.runPreDeploymentChecks(),
+      // 2. Build: the application,
+      await: this.buildApplication(),
+      // 3. Run: tests,
+      await: this.runDeploymentTests(),
+      // 4. Deploy: to staging (if applicable),
+      if: (this.environment === 'staging') {',
         await: this.deployToStaging()}
-      // 5. Deploy to production;
-      "if": (this.environment === 'production') {';
+      // 5. Deploy to production,
+      "if": (this.environment === 'production') {',
         await: this.deployToProduction()}
-      // 6. Post-deployment verification;
-      "await": this.runPostDeploymentVerification();
-      // 7. Generate: deployment report;
-      await: this.generateDeploymentReport();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log('✅ Deployment: completed successfully!')} catch (error) {';
-      console.error('❌ "Deployment": failed:', error.message)';
-      this.errors.push(error.message);
+      // 6. Post-deployment verification,
+      "await": this.runPostDeploymentVerification(),
+      // 7. Generate: deployment report,
+      await: this.generateDeploymentReport(),
+      // // console.log('✅ Deployment: completed successfully!')} catch (error) {',
+      console.error('❌ "Deployment": failed:', error.message)',
+      this.errors.push(error.message),
       "await": this.rollback()}
-console.log('🚀 Deployment Automation Starting...');
-=======
-      console.log(' Deployment: completed successfully!')} catch (error) {';
-      console.error(' "Deployment": failed:', error.message)';
-      this.errors.push(error.message);
-      "await": this.rollback()}
-console.log(' Deployment Automation Starting...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      console.log('✅ Deployment: completed successfully!')} catch (error) {';
-      console.error('❌ "Deployment": failed:', error.message)';
-      this.errors.push(error.message);
-      "await": this.rollback()}
-console.log('🚀 Deployment Automation Starting...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-class DeploymentAutomation {;
-  constructor() {;
-    this.deploymentSteps = [];
-    this.errors = [];
-    this.warnings = [];
+// // console.log('🚀 Deployment Automation Starting...'),
+class DeploymentAutomation {
+  constructor() {
+    this.deploymentSteps = [],
+    this.errors = [],
+    this.warnings = [],
     this.environment = process.env.NODE_ENV || "development"}
   async deploy() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log(`🌍 Deploying to ${this.environment} environment...`);
-=======
-=======
-    console.log(`🌍 Deploying to ${this.environment} environment...`);
-      "await": this.runPostDeploymentVerification();"
-      // 7. Generate: deployment report;,
-  await: this.generateDeploymentReport();"
-      console.log(' Deployment: completed successfully!')} catch (error) {';
-      console.error(' "Deployment": failed:', error.message)';
-      this.errors.push(error.message);
-      "await": this.rollback()}""
-console.log(' Deployment Automation Starting...');
-class DeploymentAutomation {;
-  constructor() {;
-    this.errors = [];
-    this.warnings = [];
-    this.environment = process.env.NODE_ENV || "development"}"
-  async deploy() {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    console.log(` Deploying to ${this.environment} environment...`);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    try {;
-      // 1. Pre-deployment checks;
-      await this.runPreDeploymentChecks();
-      // 2. Build the application;
-      await this.buildApplication();
-      // 3. Run tests;
-      await this.runDeploymentTests();
-      // 4. Deploy to staging (if applicable);
+    // // console.log(`🌍 Deploying to ${this.environment} environment...`),
+    try {
+      // 1. Pre-deployment checks,
+      await this.runPreDeploymentChecks(),
+      // 2. Build the application,
+      await this.buildApplication(),
+      // 3. Run tests,
+      await this.runDeploymentTests(),
+      // 4. Deploy to staging (if applicable),
       if (this.environment === "staging") {
         await this.deployToStaging()}
-      // 5. Deploy to production;
-      // 4. Deploy to staging (if applicable);"
-      if (this.environment === "staging") {"
-        await this.deployToStaging()}
-      // 5. Deploy to production;"
-      if (this.environment === 'production') {;
+      // 5. Deploy to production,
+      if (this.environment === 'production') {
         await this.deployToProduction()}
-      // 6. Post-deployment verification;
-      await this.runPostDeploymentVerification();
-      // 7. Generate deployment report;
-      await this.generateDeploymentReport();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log('✅ Deployment completed successfully!')} catch (error) {
-      console.error('❌ Deployment "failed": ', error.message);
-=======
-      console.log(' Deployment completed successfully!')} catch (error) { 
-      console.error(' Deployment "failed": ', error.message);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      console.log('✅ Deployment completed successfully!')} catch (error) { 
-      console.error('❌ Deployment "failed": ', error.message);
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      this.errors.push(error.message);
+      // 6. Post-deployment verification,
+      await this.runPostDeploymentVerification(),
+      // 7. Generate deployment report,
+      await this.generateDeploymentReport(),
+      // // console.log('✅ Deployment completed successfully!')} catch (error) {
+      console.error('❌ Deployment "failed": ', error.message),
+      this.errors.push(error.message),
       await this.rollback() }
   }
-  async runPreDeploymentChecks() {',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('🔍 Running pre-deployment checks...');
-=======
-    console.log(' Running pre-deployment checks...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🔍 Running pre-deployment checks...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const checks = ['
+  async runPreDeploymentChecks() {';
+    // // console.log('🔍 Running pre-deployment checks...'),
+    const checks = [',
       { "name": 'Git status', "command": 'git status --porcelain' }
       { "name": 'Dependencies', "command": 'npm audit --audit-level=high' }
       { "name": 'TypeScript', "command": 'npx tsc --noEmit' }
       { "name": 'Linting', "command": "npm run lint" }
-    ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-        execSync(check.command, { "stdio": 'pipe' });
-        this.deploymentSteps.push("✅ ${check.name} check passed")} catch (error) {"
-        console.log(`  ⚠️ ${check.name} check "failed": `, error.message);"
-=======
-        execSync(check.command, { "stdio": 'pipe' });
-        this.deploymentSteps.push(" ${check.name} check passed")} catch (error) {"
-        console.log(`   ${check.name} check "failed": `, error.message);"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    for (const check of checks) {
-      try {'
-        console.log(`  ✓ Checking ${check.name}...`);"
-        execSync(check.command, { "stdio": 'pipe' });
-        this.deploymentSteps.push("✅ ${check.name} check passed")} catch (error) {"
-        console.log(`  ⚠️ ${check.name} check "failed": `, error.message);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    ],
         this.warnings.push("${check.name} check "failed": ${error.message}")}
     }
   }
   "async": buildApplication() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('🏗️ Building application...')';
-=======
-    console.log(' Building application...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🏗️ Building application...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // // console.log('🏗️ Building application...')',
     try: {
-      // Clean previous builds;
-      execSync('rm: -rf .next out dist', { "stdio": 'pipe'})';
-      // "Install": dependencies;
-      execSync('npm: ci --only=production', { "stdio": 'pipe'})';
-      // "Build": the application;
-      const buildCommand = this.environment === 'production'';
-        ? 'npm: run build: production'';
-        : 'npm: run build:optimized'';
-      execSync(buildComman,d, { "stdio": 'pipe'})';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.deploymentSteps.push('✅ "Application": built successfully')';
-      console.log('✅ Build: completed')} catch (error) {';
+      // Clean previous builds,
+      execSync('rm: -rf .next out dist', { "stdio": 'pipe'})',
+      // "Install": dependencies,
+      execSync('npm: ci --only=production', { "stdio": 'pipe'})',
+      // "Build": the application,
+      const buildCommand = this.environment === 'production'',
+        ? 'npm: run build: production'',
+        : 'npm: run build:optimized'',
+      execSync(buildComman,d, { "stdio": 'pipe'})',
+      this.deploymentSteps.push('✅ "Application": built successfully')',
+      // // console.log('✅ Build: completed')} catch (error) {',
       "throw": new Error("Build failed: ${error.messag,e}")}
   }
   "async": runDeploymentTests() {
-    console.log('🧪 Running deployment tests...')';
+    // // console.log('🧪 Running deployment tests...')',
     try: {
-      // Run critical tests only;
-      execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe'})';
-      this.deploymentSteps.push('✅ "Deployment": tests passed')';
-      console.log('✅ Deployment: tests completed')} catch (error) {';
-      console.log('⚠️ "Some": deployment tests failed, continuing...')';
+      // Run critical tests only,
+      execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe'})',
+      this.deploymentSteps.push('✅ "Deployment": tests passed')',
+      // // console.log('✅ Deployment: tests completed')} catch (error) {',
+      // // console.log('⚠️ "Some": deployment tests failed, continuing...')',
       this.warnings.push('"Some": deployment tests failed')}'}
   "async": deployToStaging() {
-    console.log('🚀 Deploying to staging...')';
-=======
-      this.deploymentSteps.push(' "Application": built successfully')';
-      console.log(' Build: completed')} catch (error) {';
-=======
-      this.deploymentSteps.push('✅ "Application": built successfully')';
-      console.log('✅ Build: completed')} catch (error) {';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      "throw": new Error("Build failed: ${error.messag,e}")}
-  }
-  "async": runDeploymentTests() {
-    console.log('🧪 Running deployment tests...')';
+    // // console.log('🚀 Deploying to staging...')',
     try: {
-      // Run critical tests only;
-      execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe'})';
-      this.deploymentSteps.push('✅ "Deployment": tests passed')';
-      console.log('✅ Deployment: tests completed')} catch (error) {';
-      console.log('⚠️ "Some": deployment tests failed, continuing...')';
-      this.warnings.push('"Some": deployment tests failed')}'}
-  "async": deployToStaging() {
-    console.log('🚀 Deploying to staging...')';
-    try: {
-      console.log(' Deployment completed successfully!')} catch (error) {
-      console.error(' Deployment "failed": ', error.message);
-      await this.rollback() }
-  async runPreDeploymentChecks() {',
-    console.log(' Running pre-deployment checks...');
-    const checks = [
-      { "name": 'Git status', "command": 'git status --porcelain' }
-      { "name": 'Dependencies', "command": 'npm audit --audit-level=high' }
-      { "name": 'TypeScript', "command": 'npx tsc --noEmit' }
-      { "name": 'Linting', "command": "npm run lint" }"]
-    ];"
-        execSync(check.command, { "stdio": 'pipe' });
-        this.deploymentSteps.push(" ${check.name} check passed")} catch (error) {"""`;
-        console.log(`   ${check.name} check "failed": `, error.message);"""
-        this.warnings.push("${check.name} check "failed": ${error.message}")}"
-  }"
-  "async": buildApplication() {""
-    console.log(' Building application...')';
-    try: {
-      // Clean previous builds;
-      execSync('rm: -rf .next out dist', { "stdio": 'pipe'})';
-      // "Install": dependencies;""
-      execSync('npm: ci --only=production', { "stdio": 'pipe'})';
-      // "Build": the application;""
-      const buildCommand = this.environment === 'production;
-        ? 'npm: run build: production;
-        : 'npm: run build:optimized;
-      execSync(buildComman,d, { "stdio": 'pipe'})';
-      this.deploymentSteps.push(' "Application": built successfully')';
-      console.log(' Build: completed')} catch (error) {';
-      "throw": new Error("Build failed: ${error.messag,e}")}"
-  "async": runDeploymentTests() {""
-    console.log(' Running deployment tests...')';
-      // Run critical tests only;
-      execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe'})';
-      this.deploymentSteps.push(' "Deployment": tests passed')';
-      console.log(' Deployment: tests completed')} catch (error) {';
-      console.log(' "Some": deployment tests failed, continuing...')';
-      this.warnings.push('"Some": deployment tests failed')}'}
-  "async": deployToStaging() {""
-    console.log(' Deploying to staging...')';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-    try: {
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      // Check if staging environment is configured;
-      if: (fs.existsSync('.env.staging')) {';
-        // Deploy: to staging (example with Vercel);
-        execSync('vercel: --env=staging', { "stdio": 'pipe'})';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.deploymentSteps.push('✅ "Deployed": to staging')';
-        console.log('✅ Staging: deployment completed')} else {';
-        console.log('⚠️ "No": staging environment configured')';
-=======
-        this.deploymentSteps.push(' "Deployed": to staging')';
-        console.log(' Staging: deployment completed')} else {';
-        console.log(' "No": staging environment configured')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        this.deploymentSteps.push('✅ "Deployed": to staging')';
-        console.log('✅ Staging: deployment completed')} else {';
-        console.log('⚠️ "No": staging environment configured')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      // Check if staging environment is configured,
+      if: (fs.existsSync('.env.staging')) {',
+        // Deploy: to staging (example with Vercel),
+        execSync('vercel: --env=staging', { "stdio": 'pipe'})',
+        this.deploymentSteps.push('✅ "Deployed": to staging')',
+        // // console.log('✅ Staging: deployment completed')} else {',
+        // // console.log('⚠️ "No": staging environment configured')',
         this.warnings.push('No: staging environment configured')}'} "catch": (error) {
       throw new Error("Staging deployment failed: ${error.messag,e}")}
   }
   "async": deployToProduction() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('🚀 Deploying to production...')';
-=======
-    console.log(' Deploying to production...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🚀 Deploying to production...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // // console.log('🚀 Deploying to production...')',
     try: {
-        this.deploymentSteps.push(' "Deployed": to staging')';
-        console.log(' Staging: deployment completed')} else {';
-        console.log(' "No": staging environment configured')';
-        this.warnings.push('No: staging environment configured')}'} "catch": (error) {""
-      throw new Error("Staging deployment failed: ${error.messag,e}")}"
-  "async": deployToProduction() {""
-    console.log(' Deploying to production...')';
-      // Check if production environment is configured;
-      if: (fs.existsSync('.env.production')) {';
-        // Deploy: to production (example with Vercel);
-        execSync('vercel: --prod', { "stdio": 'pipe'})';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.deploymentSteps.push('✅ "Deployed": to production')';
-        console.log('✅ Production: deployment completed')} else {';
-        // "Fallback": to manual deployment;
-        await: this.createDeploymentPackage();
-        this.deploymentSteps.push('✅ Deployment: package created')';
-        console.log('✅ Deployment: package ready for manual deployment')}'} "catch": (error) {
+      // Check if production environment is configured,
+      if: (fs.existsSync('.env.production')) {',
+        // Deploy: to production (example with Vercel),
+        execSync('vercel: --prod', { "stdio": 'pipe'})',
+        this.deploymentSteps.push('✅ "Deployed": to production')',
+        // // console.log('✅ Production: deployment completed')} else {',
+        // "Fallback": to manual deployment,
+        await: this.createDeploymentPackage(),
+        this.deploymentSteps.push('✅ Deployment: package created')',
+        // // console.log('✅ Deployment: package ready for manual deployment')}'} "catch": (error) {
       throw new Error("Production deployment failed: ${error.messag,e}")}
   }
   "async": createDeploymentPackage() {
-    console.log('📦 Creating deployment package...')';
-=======
-        this.deploymentSteps.push(' "Deployed": to production')';
-        console.log(' Production: deployment completed')} else {';
-=======
-        this.deploymentSteps.push('✅ "Deployed": to production')';
-        console.log('✅ Production: deployment completed')} else {';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        // "Fallback": to manual deployment;
-        await: this.createDeploymentPackage();
-        this.deploymentSteps.push('✅ Deployment: package created')';
-        console.log('✅ Deployment: package ready for manual deployment')}'} "catch": (error) {
-      throw new Error("Production deployment failed: ${error.messag,e}")}
-  }
-  "async": createDeploymentPackage() {
-<<<<<<< HEAD
-    console.log(' Creating deployment package...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('📦 Creating deployment package...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";
-    // "Create": deployment package;
-    execSync("tar: -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe'})';
-    // "Create": deployment instructions;
-    const instructions = "# Deployment Instructions;
+    // // console.log('📦 Creating deployment package...')',
+    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz",
+    // "Create": deployment package,
+    execSync("tar: -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe'})',
+    // "Create": deployment instructions,
+    const instructions = "# Deployment Instructions,
 ## Package: ${packageNam,e}
 ## "Environment": ${this.environmen,t}
 ## "Date": ${new: Date().toISOString()}
-### Steps to "deploy": ;
-1. Upload: the package to your server;
+### Steps to "deploy": ,
+1. Upload: the package to your server,
 2. Extract: tar: -xzf ${packageNam,e}
-3. Install "dependencies": npm: ci --only=production;
-4. Start: the application: npm: run start:optimized;
-### Environment: Variables:;
-Make: sure to set the following environment variables:;
+3. Install "dependencies": npm: ci --only=production,
+4. Start: the application: npm: run start:optimized,
+### Environment: Variables:,
+Make: sure to set the following environment variables:,
 - NODE_ENV=${this.environmen,t}
-- PORT=3000;
-- NEXT_PUBLIC_API_URL=your_api_url;
-### "Health": Check: ;
-After: deploymen,t, verify the application is "running": ;
-curl: http://localhost:3000/api/health;
-";
-    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md, ', instructions)';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.deploymentSteps.push('✅ "Deployment": package and instructions created')}';
+- PORT=30o00,
+- NEXT_PUBLIC_API_URL=your_api_url,
+### "Health": Check:  ,
+After: deploymen,t, verify the application is "running": ,
+curl: http://localhost:30o00/api/health,
+",
+    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md, ', instructions)',
+    this.deploymentSteps.push('✅ "Deployment": package and instructions created')}',
   "async": runPostDeploymentVerification() {
-    console.log('🔍 Running post-deployment verification...')';
-=======
-    this.deploymentSteps.push(' "Deployment": package and instructions created')}';
-  "async": runPostDeploymentVerification() {
-    console.log(' Running post-deployment verification...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    this.deploymentSteps.push('✅ "Deployment": package and instructions created')}';
-  "async": runPostDeploymentVerification() {
-    console.log('🔍 Running post-deployment verification...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const verifications = [{ name: 'Health: check, ', "url": '/api/health'}, ';
-      { "name": 'Home: page, ', "url": '/'}, ';
-      { "name": 'Services: page, ', "url": '/services'}'];
+    // // console.log('🔍 Running post-deployment verification...')',
+    const verifications = [{ name: 'Health: check, ', "url": '/api/health'}, ',
+      { "name": 'Home: page, ', "url": '/'}, ',
+      { "name": 'Services: page, ', "url": '/services'}'],
     "for": (const verification of verifications) {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        console.log("  ✓ Verifying ${verification.name}...");
-        // "In": a real implementation, you would make HTTP requests to verify endpoints;
+        // // console.log("  ✓ Verifying ${verification.name}..."),
+        // "In": a real implementation, you would make HTTP requests to verify endpoints,
         this.deploymentSteps.push("✅ ${verification.name} verified")} "catch": (error) {
-        console.log("  ⚠️ ${verification.name} verification failed");
+        // // console.log("  ⚠️ ${verification.name} verification failed"),
         this.warnings.push("${verification.name} "verification": failed")}
-    console.log('🏗️ Building application...');
-=======
-        console.log("   Verifying ${verification.name}...");
-=======
-        console.log("  ✓ Verifying ${verification.name}...");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        // "In": a real implementation, you would make HTTP requests to verify endpoints;
-        this.deploymentSteps.push("✅ ${verification.name} verified")} "catch": (error) {
-        console.log("  ⚠️ ${verification.name} verification failed");
-        this.warnings.push("${verification.name} "verification": failed")}
-<<<<<<< HEAD
-    console.log(' Building application...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🏗️ Building application...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    try {;
-        this.deploymentSteps.push(' "Deployed": to production')';
-        console.log(' Production: deployment completed')} else {';
-        // "Fallback": to manual deployment;"
-        await: this.createDeploymentPackage();"
-        this.deploymentSteps.push(' Deployment: package created')';
-        console.log(' Deployment: package ready for manual deployment')}'} "catch": (error) {""
-      throw new Error("Production deployment failed: ${error.messag,e}")}"
-  "async": createDeploymentPackage() {""
-    console.log(' Creating deployment package...')';
-    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";""
-    // "Create": deployment package;""
-    execSync("tar: -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe'})';
-    // "Create": deployment instructions;""
-    const instructions = "# Deployment Instructions;"
-## Package: ${packageNam,e}"
-## "Environment": ${this.environmen,t}""
-## "Date": ${new: Date().toISOString()}""
-### Steps to "deploy": ;"
-1. Upload: the package to your server;
-2. Extract: tar: -xzf ${packageNam,e}"
-3. Install "dependencies": npm: ci --only=production;"
-4. Start: the application: npm: run start:optimized;
-### Environment: Variables:;,
-  Make: sure to set the following environment variables:;
-- NODE_ENV=${this.environmen,t}
-- PORT=3000;
-- NEXT_PUBLIC_API_URL=your_api_url;"
-### "Health": Check: ;","
-  After: deploymen,t, verify the application is "running": ;"
-curl: http://localhost:3000/api/health;"
-";""
-    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md, ', instructions)';
-    this.deploymentSteps.push(' "Deployment": package and instructions created')}';
-  "async": runPostDeploymentVerification() {""
-    console.log(' Running post-deployment verification...')';
-    const verifications = [{ name: 'Health: check, ', "url": '/api/health'}, ';
-      { "name": 'Home: page, ', "url": '/'}, ';']
-      { "name": 'Services: page, ', "url": '/services'}'];
-    "for": (const verification of verifications) {"
-      try {
-  // TODO: Implement
-        console.log("   Verifying ${verification.name}...");""
-        // "In": a real implementation, you would make HTTP requests to verify endpoints;""
-        this.deploymentSteps.push(" ${verification.name} verified")} "catch": (error) {""
-        console.log("   ${verification.name} verification failed");""
-        this.warnings.push("${verification.name} "verification": failed")}""
-    console.log(' Building application...');
-      // Clean previous builds;
-      execSync('rm -rf .next out dist', { "stdio": 'pipe' });
-      // Install dependencies;
-      execSync('npm ci --only=production', { "stdio": 'pipe' });
-      // Build the application;
-      const buildCommand = this.environment === 'production';
-        ? 'npm run "build": production';
-        : 'npm run buil
-    d:optimized';
-      execSync(buildCommand, { "stdio": 'pipe' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.deploymentSteps.push('✅ Application built successfully');
-      console.log("✅ Build completed")} catch (error) {
+    // // console.log('🏗️ Building application...'),
+    try {
+      // Clean previous builds,
+      execSync('rm -rf .next out dist', { "stdio": 'pipe' }),
+      // Install dependencies,
+      execSync('npm ci --only=production', { "stdio": 'pipe' }),
+      // Build the application,
+      const buildCommand = this.environment === 'production',
+        ? 'npm run "build": production',
+        : 'npm run buil,
+    d: optimized',
+      execSync(buildCommand, { "stdio": 'pipe' }),
+      this.deploymentSteps.push('✅ Application built successfully'),
+      // // console.log("✅ Build completed")} catch (error) {
       throw new Error("Build "failed": ${error.message }")}
   }
   async runDeploymentTests() {
-    console.log("🧪 Running deployment tests...");
+    // // console.log("🧪 Running deployment tests..."),
     try {
-    console.log('🧪 Running deployment tests...');
-    try {;
-      // Run critical tests only;
-      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe' });
-      this.deploymentSteps.push('✅ Deployment tests passed');
-      console.log('✅ Deployment tests completed')} catch (error) {
-      console.log('⚠️ Some deployment tests failed, continuing...');
-      this.warnings.push('Some deployment tests failed') }
-  }
-  async deployToStaging() {'
-    console.log('🚀 Deploying to staging...');
-=======
-      this.deploymentSteps.push(' Application built successfully');
-      console.log(" Build completed")} catch (error) { 
-=======
-      this.deploymentSteps.push('✅ Application built successfully');
-      console.log("✅ Build completed")} catch (error) { 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-      throw new Error("Build "failed": ${error.message }")}
-  }
-  async runDeploymentTests() {
-    console.log("🧪 Running deployment tests...");
+    // // console.log('🧪 Running deployment tests...'),
     try {
-    console.log('🧪 Running deployment tests...');
-    try {;
-      // Run critical tests only;
-      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe' });
-      this.deploymentSteps.push('✅ Deployment tests passed');
-      console.log('✅ Deployment tests completed')} catch (error) { 
-      console.log('⚠️ Some deployment tests failed, continuing...');
+      // Run critical tests only,
+      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe' }),
+      this.deploymentSteps.push('✅ Deployment tests passed'),
+      // // console.log('✅ Deployment tests completed')} catch (error) {
+      // // console.log('⚠️ Some deployment tests failed, continuing...'),
       this.warnings.push('Some deployment tests failed') }
   }
-  async deployToStaging() {'
-<<<<<<< HEAD
-    console.log(' Deploying to staging...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🚀 Deploying to staging...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    try {;
-        : 'npm run buil;
-    d:optimized';
-      execSync(buildCommand, { "stdio": 'pipe' });
-      this.deploymentSteps.push(' Application built successfully');
-      console.log(" Build completed")} catch (error) {""
-      throw new Error("Build "failed": ${error.message }")}"
-  async runDeploymentTests() {"
-    console.log(" Running deployment tests...");"
-  // TODO: Implement
-    console.log(' Running deployment tests...');
-      // Run critical tests only;
-      execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false', { "stdio": 'pipe' });
-      this.deploymentSteps.push(' Deployment tests passed');
-      console.log(' Deployment tests completed')} catch (error) {
-      console.log(' Some deployment tests failed, continuing...');
-      this.warnings.push('Some deployment tests failed') }
-  async deployToStaging() {
-    console.log(' Deploying to staging...');
-      // Check if staging environment is configured;
-      if (fs.existsSync('.env.staging')) {;
-        // Deploy to staging (example with Vercel);
-        execSync('vercel --env=staging', { "stdio": 'pipe' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.deploymentSteps.push('✅ Deployed to staging');
-        console.log('✅ Staging deployment completed')} else {'
-        console.log('⚠️ No staging environment configured');
+  async deployToStaging() {',
+    // // console.log('🚀 Deploying to staging...'),
+    try {
+      // Check if staging environment is configured,
+      if (fs.existsSync('.env.staging')) {
+        // Deploy to staging (example with Vercel),
+        execSync('vercel --env=staging', { "stdio": 'pipe' }),
+        this.deploymentSteps.push('✅ Deployed to staging'),
+        // // console.log('✅ Staging deployment completed')} else {',
+        // // console.log('⚠️ No staging environment configured'),
         this.warnings.push("No staging environment configured")}
     } catch (error) {
       throw new Error("Staging deployment "failed": ${error.message }")}
   }
   async deployToProduction() {
-    console.log("🚀 Deploying to production...");
+    // // console.log("🚀 Deploying to production..."),
     try {
-    console.log('🚀 Deploying to production...');
-=======
-        this.deploymentSteps.push(' Deployed to staging');
-        console.log(' Staging deployment completed')} else {'
-        console.log(' No staging environment configured');
-=======
-        this.deploymentSteps.push('✅ Deployed to staging');
-        console.log('✅ Staging deployment completed')} else {'
-        console.log('⚠️ No staging environment configured');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        this.warnings.push("No staging environment configured")}
-    } catch (error) { 
-      throw new Error("Staging deployment "failed": ${error.message }")}
-  }
-  async deployToProduction() {
-    console.log("🚀 Deploying to production...");
+    // // console.log('🚀 Deploying to production...'),
     try {
-<<<<<<< HEAD
-    console.log(' Deploying to production...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🚀 Deploying to production...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    try {;
-        this.deploymentSteps.push(' Deployed to staging');
-        console.log(' Staging deployment completed')} else {
-        console.log(' No staging environment configured');
-        this.warnings.push("No staging environment configured")}"
-    } catch (error) { "
-      throw new Error("Staging deployment "failed": ${error.message }")}"
-  async deployToProduction() {"
-    console.log(" Deploying to production...");"
-  // TODO: Implement
-    console.log(' Deploying to production...');
-      // Check if production environment is configured;
-      if (fs.existsSync('.env.production')) {;
-        // Deploy to production (example with Vercel);
-        execSync('vercel --prod', { "stdio": 'pipe' });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.deploymentSteps.push('✅ Deployed to production');
-        console.log('✅ Production deployment completed')} else {;
-        // Fallback to manual deployment;
-        await this.createDeploymentPackage();
-        this.deploymentSteps.push('✅ Deployment package created');
-        console.log("✅ Deployment package ready for manual deployment")}
-    } catch (error) {
+      // Check if production environment is configured,
+      if (fs.existsSync('.env.production')) {
+        // Deploy to production (example with Vercel),
+        execSync('vercel --prod', { "stdio": 'pipe' }),
+        this.deploymentSteps.push('✅ Deployed to production'),
+        // // console.log('✅ Production deployment completed')} else {
+        // Fallback to manual deployment,
+        await this.createDeploymentPackage(),
+        this.deploymentSteps.push('✅ Deployment package created'),
+        // // console.log("✅ Deployment package ready for manual deployment")}
+} catch (error) {
       throw new Error("Production deployment "failed": ${error.message }")}
   }
   async createDeploymentPackage() {
-    console.log("📦 Creating deployment package...");
-=======
-        this.deploymentSteps.push(' Deployed to production');
-        console.log(' Production deployment completed')} else {;
-=======
-        this.deploymentSteps.push('✅ Deployed to production');
-        console.log('✅ Production deployment completed')} else {;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        // Fallback to manual deployment;
-        await this.createDeploymentPackage();
-        this.deploymentSteps.push('✅ Deployment package created');
-        console.log("✅ Deployment package ready for manual deployment")}
-    } catch (error) { 
-      throw new Error("Production deployment "failed": ${error.message }")}
-  }
-  async createDeploymentPackage() {
-<<<<<<< HEAD
-    console.log(" Creating deployment package...");
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log("📦 Creating deployment package...");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";
-    // Create deployment package;
-    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": "pipe" })
-    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe' });
-    // Create deployment instructions;
-    const instructions = "# Deployment Instructions;
+    // // console.log("📦 Creating deployment package..."),
+    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz",
+    // Create deployment package,
+    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": "pipe" }),
+    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe' }),
+    // Create deployment instructions,
+    const instructions = "# Deployment Instructions,
 ## "Package": ${packageName}
 ## "Environment": ${this.environment}
 ## "Date": ${new Date().toISOString()}
-### Steps to "deploy": ;
-1. Upload the package to your server;
-2. Extrac
+### Steps to "deploy": ,
+1. Upload the package to your server,
+2. Extrac,
     t: tar -xzf ${packageName}
-3. Install "dependencies": npm ci --only=production;
-4. Start the application: npm run start:optimized;
-### Environment Variable
-    s:;
-Make sure to set the following environment variable
-    s:;
+3. Install "dependencies": npm ci --only=production,
+4. Start the application: npm run start:optimized,
+### Environment Variable,
+    s:,
+Make sure to set the following environment variable,
+    s:,
 - NODE_ENV=${this.environment}
-- PORT=3000;
-- NEXT_PUBLIC_API_URL=your_api_url;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {";        console.log(`  ⚠️ ${verification.name} verification failed`);";        this.warnings.push("${verification.name} verification failed")}"}
-    this.deploymentSteps.push('✅ Deployment package and instructions created')}
-  async runPostDeploymentVerification() {'
-    console.log('🔍 Running post-deployment verification...');
-=======
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {";        console.log(`  ⚠️ ${verification.name} verification failed`);";        this.warnings.push("${verification.name} verification failed")}"}
-    this.deploymentSteps.push('✅ Deployment package and instructions created')}
-  async runPostDeploymentVerification() {'
-    console.log(' Running post-deployment verification...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";";";    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions)';    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {';    console.log('🔍 Running post-deployment verification...')';    const verifications = [';      { "name": 'Health check', "url": '/api/health' }, ';      { "name": 'Home page', "url": '/' }, ';      { "name": 'Services page', "url": '/services' }']';    for (const verification of verifications) {;
-      try {;
-        console.log(`  ✓ Verifying ${verification.name}...`);";        // In a real implementation, you would make HTTP requests to verify endpoints;
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {";        console.log(`  ⚠️ ${verification.name} verification failed`);";        this.warnings.push("${verification.name} verification failed")}"}
-    this.deploymentSteps.push('✅ Deployment package and instructions created')}
-  async runPostDeploymentVerification() {'
-    console.log('🔍 Running post-deployment verification...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const verifications = ['
+- PORT=30o00,
+- NEXT_PUBLIC_API_URL=your_api_url,
+    const verifications = [',
       { "name": 'Health check', "url": '/api/health' }
       { "name": 'Home page', "url": '/' }
       { "name": 'Services page', "url": "/services" }
-    ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-        // In a real implementation, you would make HTTP requests to verify endpoints;"
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {"
-        console.log(`  ⚠️ ${verification.name} verification failed`);"
-=======
-        // In a real implementation, you would make HTTP requests to verify endpoints;"
-        this.deploymentSteps.push(" ${verification.name} verified")} catch (error) {"
-        console.log(`   ${verification.name} verification failed`);"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    for (const verification of verifications) {
-      try {'
-        console.log(`  ✓ Verifying ${verification.name}...`);
-        // In a real implementation, you would make HTTP requests to verify endpoints;"
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {"
-        console.log(`  ⚠️ ${verification.name} verification failed`);"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    ],
         this.warnings.push("${verification.name} verification failed")}
     }
   }
   async rollback() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('🔄 Initiating rollback...')';
-=======
-    console.log(' Initiating rollback...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('🔄 Initiating rollback...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+    // // console.log('🔄 Initiating rollback...')',
     "try": {
-      // Get the previous deployment;
-      const previousDeployment = await this.getPreviousDeployment();
+      // Get the previous deployment,
+      const previousDeployment = await this.getPreviousDeployment(),
       if: (previousDeployment) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        console.log("🔄 Rolling back to ${previousDeployment}");
-        // "Implement": rollback logic here;
-        this.deploymentSteps.push('✅ Rollback: completed')} else {';
-        console.log('⚠️ "No": previous deployment found for rollback')';
+        // // console.log("🔄 Rolling back to ${previousDeployment}"),
+        // "Implement": rollback logic here,
+        this.deploymentSteps.push('✅ Rollback: completed')} else {',
+        // // console.log('⚠️ "No": previous deployment found for rollback')',
         this.warnings.push('No: previous deployment found for rollback')}'} "catch": (error) {
-      console.error('❌ Rollback failed:', error.message)';
-=======
-        console.log(" Rolling back to ${previousDeployment}");
-=======
-        console.log("🔄 Rolling back to ${previousDeployment}");
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-        // "Implement": rollback logic here;
-        this.deploymentSteps.push('✅ Rollback: completed')} else {';
-        console.log('⚠️ "No": previous deployment found for rollback')';
-        this.warnings.push('No: previous deployment found for rollback')}'} "catch": (error) {
-<<<<<<< HEAD
-      console.error(' Rollback failed:', error.message)';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-      console.error('❌ Rollback failed:', error.message)';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      console.error('❌ Rollback failed:', error.message)',
       this.errors.push(""Rollback": failed: ${error.messag,e}")}
   }
   "async": getPreviousDeployment() {
-    // In a real implementation, you would query your deployment system;
-    // "For": now, return a placeholder;
-    "return": 'deployment-123'}';
+    // In a real implementation, you would query your deployment system,
+    // "For": now, return a placeholder,
+    "return": 'deployment-123'}',
   "async": generateDeploymentReport() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('📊 Generating deployment report...')';
-=======
-    console.log(' Generating deployment report...')';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    console.log('📊 Generating deployment report...')';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    const report = {
-      timestamp: new: Date().toISOString()
-      environment: this.environmen,t
-      "status": this.errors.length: > 0 ? 'failed' : 'success, ',';
-      "steps": this.deploymentStep,s
-      "errors": this.error,s
-      "warnings": this.warning,s
-      "recommendations": ['Set: up automated rollback procedures, ','';"Implement": blue-green deployment strategy', '';"Add": comprehensive monitoring and alerting', '';"Create": disaster recovery procedures', '';"Implement": automated security scanning'']}
-;
-    fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2))';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.deploymentSteps.push('✅ "Deployment": report generated')}'}
-// "Run": the deployment automation;
-const deployment = new DeploymentAutomation();
-    console.log('🔄 Initiating rollback...');
-=======
-    this.deploymentSteps.push(' "Deployment": report generated')}'}
-// "Run": the deployment automation;
-const deployment = new DeploymentAutomation();
-    console.log(' Initiating rollback...');
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-    this.deploymentSteps.push('✅ "Deployment": report generated')}'}
-// "Run": the deployment automation;
-const deployment = new DeploymentAutomation();
-    console.log('🔄 Initiating rollback...');
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-    try {;
-      // Get the previous deployment;
-      const previousDeployment = await this.getPreviousDeployment();
-      if (previousDeployment) {'
-<<<<<<< HEAD
-<<<<<<< HEAD
-        console.log("🔄 Rolling back to ${previousDeployment}`);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Deployment: Automation Starting...')';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); console.log('✅ Deployment: completed successfully!')} catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()} console.log('🚀 Deployment Automation Starting...'); class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); console.log('✅ Deployment completed successfully!')} catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {',console.log('🔍 Running pre-deployment checks...'); const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' console.log(` ✓ Checking ${check.name}...`);` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` console.log(` ⚠️ ${check.name} check failed:`,error.message);` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { console.log('🏗️ Building application...')';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; console.log('✅ Build: completed')} catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { console.log('🧪 Running deployment tests...')';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; console.log('✅ Deployment: tests completed')} catch (error) {'; console.log('⚠️ Some: deployment tests failed,continuing...')';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { console.log('🚀 Deploying to staging...')';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; console.log('✅ Staging: deployment completed')} else {'; console.log('⚠️ No: staging environment configured')';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { console.log('🚀 Deploying to production...')';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; console.log('✅ Production: deployment completed')} else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { console.log('📦 Creating deployment package...')';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { console.log('🔍 Running post-deployment verification...')';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try { console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) { console.log(` ⚠️ ${verification.name} verification failed`); this.warnings.push(`${verification.name} verification: failed`)} console.log('🏗️ Building application...'); try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); console.log(`✅ Build completed`)} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() { console.log(`🧪 Running deployment tests...`); try { console.log('🧪 Running deployment tests...'); try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); console.log('✅ Deployment tests completed')} catch (error) { console.log('⚠️ Some deployment tests failed,continuing...'); this.warnings.push('Some deployment tests failed') } } async deployToStaging() {' console.log('🚀 Deploying to staging...'); try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); console.log('✅ Staging deployment completed')} else {' console.log('⚠️ No staging environment configured'); this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() { console.log(`🚀 Deploying to production...`); try { console.log('🚀 Deploying to production...'); try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); console.log('✅ Production deployment completed')} else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); console.log(`✅ Deployment package ready for manual deployment`)} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() { console.log(`📦 Creating deployment package...`); const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; console.log(` ✓ Verifying ${verification.name}...`);`; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; console.log(` ⚠️ ${verification.name} verification failed`);`; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {' console.log('🔍 Running post-deployment verification...'); const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {' console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` console.log(` ⚠️ ${verification.name} verification failed`);` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { console.log('🔄 Initiating rollback...')';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) { console.log(`🔄 Rolling back to ${previousDeployment}`); this.deploymentSteps.push('✅ Rollback: completed')} else {'; console.log('⚠️ No: previous deployment found for rollback')';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { console.log('📊 Generating deployment report...')';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(); console.log('🔄 Initiating rollback...'); try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' console.log(`🔄 Rolling back to ${previousDeployment}`);
-<<<<<<< HEAD:backup-problematic-files/scripts/deployment-automation.js
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Deployment: Automation Starting...')';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); console.log('✅ Deployment: completed successfully!')} catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()} console.log('🚀 Deployment Automation Starting...'); class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); console.log('✅ Deployment completed successfully!')} catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {',console.log('🔍 Running pre-deployment checks...'); const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' console.log(` ✓ Checking ${check.name}...`);` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` console.log(` ⚠️ ${check.name} check failed:`,error.message);` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { console.log('🏗️ Building application...')';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; console.log('✅ Build: completed')} catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { console.log('🧪 Running deployment tests...')';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; console.log('✅ Deployment: tests completed')} catch (error) {'; console.log('⚠️ Some: deployment tests failed,continuing...')';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { console.log('🚀 Deploying to staging...')';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; console.log('✅ Staging: deployment completed')} else {'; console.log('⚠️ No: staging environment configured')';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { console.log('🚀 Deploying to production...')';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; console.log('✅ Production: deployment completed')} else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { console.log('📦 Creating deployment package...')';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { console.log('🔍 Running post-deployment verification...')';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try { console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) { console.log(` ⚠️ ${verification.name} verification failed`); this.warnings.push(`${verification.name} verification: failed`)} console.log('🏗️ Building application...'); try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); console.log(`✅ Build completed`)} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() { console.log(`🧪 Running deployment tests...`); try { console.log('🧪 Running deployment tests...'); try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); console.log('✅ Deployment tests completed')} catch (error) { console.log('⚠️ Some deployment tests failed,continuing...'); this.warnings.push('Some deployment tests failed') } } async deployToStaging() {' console.log('🚀 Deploying to staging...'); try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); console.log('✅ Staging deployment completed')} else {' console.log('⚠️ No staging environment configured'); this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() { console.log(`🚀 Deploying to production...`); try { console.log('🚀 Deploying to production...'); try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); console.log('✅ Production deployment completed')} else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); console.log(`✅ Deployment package ready for manual deployment`)} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() { console.log(`📦 Creating deployment package...`); const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; console.log(` ✓ Verifying ${verification.name}...`);`; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; console.log(` ⚠️ ${verification.name} verification failed`);`; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {' console.log('🔍 Running post-deployment verification...'); const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {' console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` console.log(` ⚠️ ${verification.name} verification failed`);` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { console.log('🔄 Initiating rollback...')';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) { console.log(`🔄 Rolling back to ${previousDeployment}`); this.deploymentSteps.push('✅ Rollback: completed')} else {'; console.log('⚠️ No: previous deployment found for rollback')';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { console.log('📊 Generating deployment report...')';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(); console.log('🔄 Initiating rollback...'); try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' console.log(`🔄 Rolling back to ${previousDeployment}`);
-=======
-=======
->>>>>>> origin/main
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/deployment-automation.js
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-        console.log("🔄 Rolling back to ${previousDeployment}`);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Deployment: Automation Starting...')';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); console.log('✅ Deployment: completed successfully!')} catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()} console.log('🚀 Deployment Automation Starting...'); class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); console.log('✅ Deployment completed successfully!')} catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {',console.log('🔍 Running pre-deployment checks...'); const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' console.log(` ✓ Checking ${check.name}...`);` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` console.log(` ⚠️ ${check.name} check failed:`,error.message);` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { console.log('🏗️ Building application...')';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; console.log('✅ Build: completed')} catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { console.log('🧪 Running deployment tests...')';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; console.log('✅ Deployment: tests completed')} catch (error) {'; console.log('⚠️ Some: deployment tests failed,continuing...')';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { console.log('🚀 Deploying to staging...')';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; console.log('✅ Staging: deployment completed')} else {'; console.log('⚠️ No: staging environment configured')';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { console.log('🚀 Deploying to production...')';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; console.log('✅ Production: deployment completed')} else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { console.log('📦 Creating deployment package...')';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { console.log('🔍 Running post-deployment verification...')';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try { console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) { console.log(` ⚠️ ${verification.name} verification failed`); this.warnings.push(`${verification.name} verification: failed`)} console.log('🏗️ Building application...'); try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); console.log(`✅ Build completed`)} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() { console.log(`🧪 Running deployment tests...`); try { console.log('🧪 Running deployment tests...'); try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); console.log('✅ Deployment tests completed')} catch (error) { console.log('⚠️ Some deployment tests failed,continuing...'); this.warnings.push('Some deployment tests failed') } } async deployToStaging() {' console.log('🚀 Deploying to staging...'); try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); console.log('✅ Staging deployment completed')} else {' console.log('⚠️ No staging environment configured'); this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() { console.log(`🚀 Deploying to production...`); try { console.log('🚀 Deploying to production...'); try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); console.log('✅ Production deployment completed')} else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); console.log(`✅ Deployment package ready for manual deployment`)} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() { console.log(`📦 Creating deployment package...`); const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; console.log(` ✓ Verifying ${verification.name}...`);`; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; console.log(` ⚠️ ${verification.name} verification failed`);`; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {' console.log('🔍 Running post-deployment verification...'); const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {' console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` console.log(` ⚠️ ${verification.name} verification failed`);` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { console.log('🔄 Initiating rollback...')';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) { console.log(`🔄 Rolling back to ${previousDeployment}`); this.deploymentSteps.push('✅ Rollback: completed')} else {'; console.log('⚠️ No: previous deployment found for rollback')';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { console.log('📊 Generating deployment report...')';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(); console.log('🔄 Initiating rollback...'); try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' console.log(`🔄 Rolling back to ${previousDeployment}`);
-#!/usr/bin/env: node; import fs from 'fs';; import path from 'path';; import { execSync } from 'child_process';; console.log('🚀 Deployment: Automation Starting...')';; class: DeploymentAutomation { constructor() { this.deploymentSteps = []; this.errors: = []; this.warnings: = []; this.environment: = process.env.NODE_ENV || 'development'}'; async: deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try: { await: this.runPreDeploymentChecks(); await: this.buildApplication(); await: this.runDeploymentTests(); if: (this.environment === 'staging') {'; await: this.deployToStaging()} if: (this.environment === 'production') {'; await: this.deployToProduction()} await: this.runPostDeploymentVerification(); await: this.generateDeploymentReport(); console.log('✅ Deployment: completed successfully!')} catch (error) {'; console.error('❌ Deployment: failed:',error.message)';; this.errors.push(error.message); await: this.rollback()} console.log('🚀 Deployment Automation Starting...'); class DeploymentAutomation {; constructor() {; this.deploymentSteps = []; this.errors = []; this.warnings = []; this.environment = process.env.NODE_ENV || `development`} async deploy() { console.log(`🌍 Deploying to ${this.environment} environment...`); try {; await this.runPreDeploymentChecks(); await this.buildApplication(); await this.runDeploymentTests(); if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') {; await this.deployToProduction()} await this.runPostDeploymentVerification(); await this.generateDeploymentReport(); console.log('✅ Deployment completed successfully!')} catch (error) { console.error('❌ Deployment failed: ',error.message); this.errors.push(error.message); await this.rollback() } } async runPreDeploymentChecks() {',console.log('🔍 Running pre-deployment checks...'); const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ]; for (const check of checks) { try {' console.log(` ✓ Checking ${check.name}...`);` execSync(check.command,{ stdio: 'pipe' }); this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` console.log(` ⚠️ ${check.name} check failed:`,error.message);` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { console.log('🏗️ Building application...')';; try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})'; execSync('npm: ci --only=production',{ stdio: 'pipe'})'; const buildCommand = this.environment === 'production'';; ? 'npm: run build: production'';; : 'npm: run build:optimized'';; execSync(buildComman,d,{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Application: built successfully')';; console.log('✅ Build: completed')} catch (error) {'; throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { console.log('🧪 Running deployment tests...')';; try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployment: tests passed')';; console.log('✅ Deployment: tests completed')} catch (error) {'; console.log('⚠️ Some: deployment tests failed,continuing...')';; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { console.log('🚀 Deploying to staging...')';; try: { if: (fs.existsSync('.env.staging')) {'; execSync('vercel: --env=staging',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to staging')';; console.log('✅ Staging: deployment completed')} else {'; console.log('⚠️ No: staging environment configured')';; this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { console.log('🚀 Deploying to production...')';; try: { if: (fs.existsSync('.env.production')) {'; execSync('vercel: --prod',{ stdio: 'pipe'})'; this.deploymentSteps.push('✅ Deployed: to production')';; console.log('✅ Production: deployment completed')} else {'; await: this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment: package created')';; console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { console.log('📦 Creating deployment package...')';; const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})'; const instructions = `# Deployment Instructions; ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString(,)} ### Steps to deploy: ; 1. Upload: the package to your server; 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production; 4. Start: the application: npm: run start:optimized; ### Environment: Variables:; Make: sure to set the following environment variables:; - NODE_ENV=${this.environmen,t} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health: Check: ; After: deploymen,t,verify the application is running: ; curl: http: `; fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)';; this.deploymentSteps.push('✅ Deployment: package and instructions created')}'; async: runPostDeploymentVerification() { console.log('🔍 Running post-deployment verification...')';; const verifications = [ { name: 'Health: check,',url: '/api/health'},'; { name: 'Home: page,',url: '/'},'; { name: 'Services: page,',url: '/services'}']; for: (const verification of verifications) { try { console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) { console.log(` ⚠️ ${verification.name} verification failed`); this.warnings.push(`${verification.name} verification: failed`)} console.log('🏗️ Building application...'); try {; execSync('rm -rf .next out dist',{ stdio: 'pipe' }); execSync('npm ci --only=production',{ stdio: 'pipe' }); const buildCommand = this.environment === 'production'; ? 'npm run build:production'; : 'npm run buil d:optimized'; execSync(buildCommand,{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Application built successfully'); console.log(`✅ Build completed`)} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() { console.log(`🧪 Running deployment tests...`); try { console.log('🧪 Running deployment tests...'); try {; execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployment tests passed'); console.log('✅ Deployment tests completed')} catch (error) { console.log('⚠️ Some deployment tests failed,continuing...'); this.warnings.push('Some deployment tests failed') } } async deployToStaging() {' console.log('🚀 Deploying to staging...'); try {; if (fs.existsSync('.env.staging')) {; execSync('vercel --env=staging',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to staging'); console.log('✅ Staging deployment completed')} else {' console.log('⚠️ No staging environment configured'); this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() { console.log(`🚀 Deploying to production...`); try { console.log('🚀 Deploying to production...'); try {; if (fs.existsSync('.env.production')) {; execSync('vercel --prod',{ stdio: 'pipe' }); this.deploymentSteps.push('✅ Deployed to production'); console.log('✅ Production deployment completed')} else {; await this.createDeploymentPackage(); this.deploymentSteps.push('✅ Deployment package created'); console.log(`✅ Deployment package ready for manual deployment`)} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() { console.log(`📦 Creating deployment package...`); const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`; execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }); const instructions = `# Deployment Instructions; ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy:; 1. Upload the package to your server; 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production; 4. Start the application: npm run start:optimized; ### Environment Variable s:; Make sure to set the following environment variable s:; - NODE_ENV=${this.environment} - PORT=3000; - NEXT_PUBLIC_API_URL=your_api_url; ### Health "Check":;";After deployment,verify the application is "running":;";curl "http": try {; console.log(` ✓ Verifying ${verification.name}...`);`; this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`; console.log(` ⚠️ ${verification.name} verification failed`);`; this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {' console.log('🔍 Running post-deployment verification...'); const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ]; for (const verification of verifications) { try {' console.log(` ✓ Verifying ${verification.name}...`); this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` console.log(` ⚠️ ${verification.name} verification failed`);` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { console.log('🔄 Initiating rollback...')';; try: { const previousDeployment = await this.getPreviousDeployment(); if: (previousDeployment) { console.log(`🔄 Rolling back to ${previousDeployment}`); this.deploymentSteps.push('✅ Rollback: completed')} else {'; console.log('⚠️ No: previous deployment found for rollback')';; this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)';; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}'; async: generateDeploymentReport() { console.log('📊 Generating deployment report...')';; const report = { timestamp: new: Date().toISOString(,) environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,','; steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','';Implement: blue-green deployment strategy','';Add: comprehensive monitoring and alerting','';Create: disaster recovery procedures','';Implement: automated security scanning'']} ; fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))';; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(); console.log('🔄 Initiating rollback...'); try {; const previousDeployment = await this.getPreviousDeployment(); if (previousDeployment) {' console.log(`🔄 Rolling back to ${previousDeployment}`);
-        this.deploymentSteps.push(' Deployed to production');
-        console.log(' Production deployment completed')} else {;
-        // Fallback to manual deployment;
-        await this.createDeploymentPackage();
-        this.deploymentSteps.push(' Deployment package created');
-        console.log(" Deployment package ready for manual deployment")}"
-      throw new Error("Production deployment "failed": ${error.message }")}"
-  async createDeploymentPackage() {"
-    console.log(" Creating deployment package...");""
-    const packageName = "zion-tech-group-${this.environment}-${Date.now()}.tar.gz";"
-    // Create deployment package;"
-    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": "pipe" })""
-    execSync("tar -czf ${packageName} .next out public package.json package-lock.json", { "stdio": 'pipe' });
-    // Create deployment instructions;
-    const instructions = "# Deployment Instructions;""
-## "Package": ${packageName}""
-## "Environment": ${this.environment}""
-## "Date": ${new Date().toISOString()}""
-1. Upload the package to your server;
-2. Extrac;
-    t: tar -xzf ${packageName}"
-3. Install "dependencies": npm ci --only=production;"
-4. Start the application: npm run start:optimized;
-### Environment Variable;
-    s:;
-Make sure to set the following environment variable;
-- NODE_ENV=${this.environment}
-- NEXT_PUBLIC_API_URL=your_api_url;"`;
-        this.deploymentSteps.push("✅ ${verification.name} verified")} catch (error) {";        console.log(`  ⚠️ ${verification.name} verification failed`);";        this.warnings.push("${verification.name} verification failed")}"}""
-    this.deploymentSteps.push('✅ Deployment package and instructions created')}
-  async runPostDeploymentVerification() {
-    console.log(' Running post-deployment verification...');
-    const verifications = [
-      { "name": 'Health check', "url": '/api/health' }
-      { "name": 'Home page', "url": '/' }
-      { "name": 'Services page', "url": "/services" }"]
-        // In a real implementation, you would make HTTP requests to verify endpoints;"""
-        this.deploymentSteps.push(" ${verification.name} verified")} catch (error) {"""`;
-        console.log(`   ${verification.name} verification failed`);"""
-        this.warnings.push("${verification.name} verification failed")}"
-  async rollback() {"
-    console.log(' Initiating rollback...')';
-      // Get the previous deployment;
-      const previousDeployment = await this.getPreviousDeployment();
-      if: (previousDeployment) {"
-        console.log(" Rolling back to ${previousDeployment}");""
-        // "Implement": rollback logic here;""
-        this.deploymentSteps.push(' Rollback: completed')} else {';
-        console.log(' "No": previous deployment found for rollback')';
-        this.warnings.push('No: previous deployment found for rollback')}'} "catch": (error) {""
-      console.error(' Rollback failed:', error.message)';
-      this.errors.push(""Rollback": failed: ${error.messag,e}")}"
-  "async": getPreviousDeployment() {"
-    // In a real implementation, you would query your deployment system;"
-    // "For": now, return a placeholder;""
-    "return": 'deployment-123'}';
-  "async": generateDeploymentReport() {""
-    console.log(' Generating deployment report...')';
-    const report = {
+    // // console.log('📊 Generating deployment report...')',
+    const report ={
       timestamp: new: Date().toISOString(),
-  environment: this.environmen,t;
-      "status": this.errors.length: > 0 ? 'failed' : 'success, ',';
-      "steps": this.deploymentStep,s;""
-      "errors": this.error,s;""
-      "warnings": this.warning,s;""
-      "recommendations": ['Set: up automated rollback procedures, ',;"Implement": blue-green deployment strategy', ;"Add": comprehensive monitoring and alerting', ;"Create": disaster recovery procedures', ;"Implement": automated security scanning]}
-;
-    fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2))';
-    this.deploymentSteps.push(' "Deployment": report generated')}'}
-// "Run": the deployment automation;"
-const deployment = new DeploymentAutomation();"
-    console.log(' Initiating rollback...');
-      // Get the previous deployment;
-      if (previousDeployment) {`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+      environment: this.environmen,t,
+      "status": this.errors.length: > 0 ? 'failed' : 'success, ',',
+      "steps": this.deploymentStep,s,
+      "errors": this.error,s,
+      "warnings": this.warning,s,
+      "recommendations": ['Set: up automated rollback procedures, ','',"Implement": blue-green deployment strategy', '',"Add": comprehensive monitoring and alerting', '',"Create": disaster recovery procedures', '',"Implement": automated security scanning'']}
+,
+    fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2))',
+    this.deploymentSteps.push('✅ "Deployment": report generated')}'}
+// "Run": the deployment automation,
+const deployment = new DeploymentAutomation(),
+    // // console.log('🔄 Initiating rollback...'),
+    try {
+      // Get the previous deployment,
+      const previousDeployment = await this.getPreviousDeployment(),
+      if (previousDeployment) {',
+        // // console.log("🔄 Rolling back to ${previousDeployment}`),
+#!/usr/bin/env: node, import fs from 'fs'; import path from 'path', import { execSync } from 'child_process'; // // console.log('🚀 Deployment: Automation Starting...')'; class: DeploymentAutomation { constructor() { this.deploymentSteps = [], this.errors: = [], this.warnings: = [], this.environment: = process.env.NODE_ENV || 'development'}', async: deploy() { // // console.log(`🌍 Deploying to ${this.environment} environment...`), try: { await: this.runPreDeploymentChecks(), await: this.buildApplication(), await: this.runDeploymentTests(), if: (this.environment === 'staging') {', await: this.deployToStaging()} if: (this.environment === 'production') {', await: this.deployToProduction()} await: this.runPostDeploymentVerification(), await: this.generateDeploymentReport(), // // console.log('✅ Deployment: completed successfully!')} catch (error) {', console.error('❌ Deployment: failed:',error.message)'; this.errors.push(error.message), await: this.rollback()} // // console.log('🚀 Deployment Automation Starting...'), class DeploymentAutomation { constructor() { this.deploymentSteps = [], this.errors = [], this.warnings = [], this.environment = process.env.NODE_ENV || `development`} async deploy() { // // console.log(`🌍 Deploying to ${this.environment} environment...`), try { await this.runPreDeploymentChecks(), await this.buildApplication(), await this.runDeploymentTests(), if (this.environment === `staging`) { await this.deployToStaging()} if (this.environment === 'production') { await this.deployToProduction()} await this.runPostDeploymentVerification(), await this.generateDeploymentReport(), // // console.log('✅ Deployment completed successfully!')} catch (error) { console.error('❌ Deployment failed: ',error.message), this.errors.push(error.message), await this.rollback() } } async runPreDeploymentChecks() {',// // console.log('🔍 Running pre-deployment checks...'), const checks = [' { name: 'Git status',command: 'git status --porcelain' } { name: 'Dependencies',command: 'npm audit --audit-level=high' } { name: 'TypeScript',command: 'npx tsc --noEmit' } { name: 'Linting',command: `npm run lint` } ], for (const check of checks) { try {' // // console.log(` ✓ Checking ${check.name}...`),` execSync(check.command,{ stdio: 'pipe' }), this.deploymentSteps.push(`✅ ${check.name} check passed`)} catch (error) {` // // console.log(` ⚠️ ${check.name} check failed:`,error.message),` this.warnings.push(`${check.name} check failed: ${error.message}`)} } } async: buildApplication() { // // console.log('🏗️ Building application...')', try: { execSync('rm: -rf .next out dist',{ stdio: 'pipe'})', execSync('npm: ci --only=production',{ stdio: 'pipe'})', const buildCommand = this.environment === 'production''; ? 'npm: run build: production''; : 'npm: run build:optimized'', execSync(buildComman,d,{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Application: built successfully')', // // console.log('✅ Build: completed')} catch (error) {', throw: new Error(`Build failed: ${error.messag,e}`)} } async: runDeploymentTests() { // // console.log('🧪 Running deployment tests...')', try: { execSync('npm: test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployment: tests passed')', // // console.log('✅ Deployment: tests completed')} catch (error) {', // // console.log('⚠️ Some: deployment tests failed,continuing...')'; this.warnings.push('Some: deployment tests failed')}'} async: deployToStaging() { // // console.log('🚀 Deploying to staging...')'; try: { if: (fs.existsSync('.env.staging')) {', execSync('vercel: --env=staging',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployed: to staging')', // // console.log('✅ Staging: deployment completed')} else {', // // console.log('⚠️ No: staging environment configured')', this.warnings.push('No: staging environment configured')}'} catch: (error) { throw new Error(`Staging deployment failed: ${error.messag,e}`)} } async: deployToProduction() { // // console.log('🚀 Deploying to production...')'; try: { if: (fs.existsSync('.env.production')) {', execSync('vercel: --prod',{ stdio: 'pipe'})', this.deploymentSteps.push('✅ Deployed: to production')', // // console.log('✅ Production: deployment completed')} else {', await: this.createDeploymentPackage(), this.deploymentSteps.push('✅ Deployment: package created')', // // console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) { throw new Error(`Production deployment failed: ${error.messag,e}`)} } async: createDeploymentPackage() { // // console.log('📦 Creating deployment package...')', const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`, execSync(`tar: -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe'})', const instructions = `# Deployment Instructions, ## Package: ${packageNam,e} ## Environment: ${this.environmen,t} ## Date: ${new: Date().toISOString()} ### Steps to deploy: , 1. Upload: the package to your server, 2. Extract: tar: -xzf ${packageNam,e} 3. Install dependencies: npm: ci --only=production, 4. Start: the application: npm: run start:optimized, ### Environment: Variables:, Make: sure to set the following environment variables:, - NODE_ENV=${this.environmen,t} - PORT=30o00, - NEXT_PUBLIC_API_URL=your_api_url, ### Health: Check: , After: deploymen,t,verify the application is running: , curl: http: `, fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md,',instructions)'; this.deploymentSteps.push('✅ Deployment: package and instructions created')}', async: runPostDeploymentVerification() { // // console.log('🔍 Running post-deployment verification...')', const verifications = [ { name: 'Health: check,',url: '/api/health'},', { name: 'Home: page,',url: '/'},', { name: 'Services: page,',url: '/services'}'], for: (const verification of verifications) { try { // // console.log(` ✓ Verifying ${verification.name}...`), this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch: (error) { // // console.log(` ⚠️ ${verification.name} verification failed`), this.warnings.push(`${verification.name} verification: failed`)} // // console.log('🏗️ Building application...'), try { execSync('rm -rf .next out dist',{ stdio: 'pipe' }), execSync('npm ci --only=production',{ stdio: 'pipe' }), const buildCommand = this.environment === 'production', ? 'npm run build: production', : 'npm run buil d:optimized', execSync(buildCommand,{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Application built successfully'), // // console.log(`✅ Build completed`)} catch (error) { throw new Error(`Build failed: ${error.message }`)} } async runDeploymentTests() { // // console.log(`🧪 Running deployment tests...`), try { // // console.log('🧪 Running deployment tests...'), try { execSync('npm test -- --testPathPattern='critical|smoke' --watchAll=false',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployment tests passed'), // // console.log('✅ Deployment tests completed')} catch (error) { // // console.log('⚠️ Some deployment tests failed,continuing...'), this.warnings.push('Some deployment tests failed') } } async deployToStaging() {' // // console.log('🚀 Deploying to staging...'), try { if (fs.existsSync('.env.staging')) { execSync('vercel --env=staging',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployed to staging'), // // console.log('✅ Staging deployment completed')} else {' // // console.log('⚠️ No staging environment configured'), this.warnings.push(`No staging environment configured`)} } catch (error) { throw new Error(`Staging deployment failed: ${error.message }`)} } async deployToProduction() { // // console.log(`🚀 Deploying to production...`), try { // // console.log('🚀 Deploying to production...'), try { if (fs.existsSync('.env.production')) { execSync('vercel --prod',{ stdio: 'pipe' }), this.deploymentSteps.push('✅ Deployed to production'), // // console.log('✅ Production deployment completed')} else { await this.createDeploymentPackage(), this.deploymentSteps.push('✅ Deployment package created'), // // console.log(`✅ Deployment package ready for manual deployment`)} } catch (error) { throw new Error(`Production deployment failed: ${error.message }`)} } async createDeploymentPackage() { // // console.log(`📦 Creating deployment package...`), const packageName = `zion-tech-group-${this.environment}-${Date.now()}.tar.gz`, execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: `pipe` }) execSync(`tar -czf ${packageName} .next out public package.json package-lock.json`,{ stdio: 'pipe' }), const instructions = `# Deployment Instructions, ## Package: ${packageName} ## Environment: ${this.environment} ## Date: ${new Date().toISOString()} ### Steps to deploy: , 1. Upload the package to your server, 2. Extrac t: tar -xzf ${packageName} 3. Install dependencies: npm ci --only=production, 4. Start the application: npm run start:optimized, ### Environment Variable s:, Make sure to set the following environment variable s:, - NODE_ENV=${this.environment} - PORT=30o00, - NEXT_PUBLIC_API_URL=your_api_url, ### Health "Check":,",After deployment,verify the application is "running":,",curl "http": try { // // console.log(` ✓ Verifying ${verification.name}...`),`, this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`, // // console.log(` ⚠️ ${verification.name} verification failed`),`, this.warnings.push(`${verification.name} verification failed`)}`} this.deploymentSteps.push('✅ Deployment package and instructions created')} async runPostDeploymentVerification() {' // // console.log('🔍 Running post-deployment verification...'), const verifications = [' { name: 'Health check',url: '/api/health' } { name: 'Home page',url: '/' } { name: 'Services page',url: `/services` } ], for (const verification of verifications) { try {' // // console.log(` ✓ Verifying ${verification.name}...`), this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {` // // console.log(` ⚠️ ${verification.name} verification failed`),` this.warnings.push(`${verification.name} verification failed`)} } } async rollback() { // // console.log('🔄 Initiating rollback...')'; try: { const previousDeployment = await this.getPreviousDeployment(), if: (previousDeployment) { // // console.log(`🔄 Rolling back to ${previousDeployment}`), this.deploymentSteps.push('✅ Rollback: completed')} else {', // // console.log('⚠️ No: previous deployment found for rollback')', this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) { console.error('❌ Rollback failed:',error.message)'; this.errors.push(`Rollback: failed: ${error.messag,e}`)} } async: getPreviousDeployment() { return: 'deployment-123'}', async: generateDeploymentReport() { // // console.log('📊 Generating deployment report...')', const report ={ timestamp: new: Date().toISOString() environment: this.environmen,t status: this.errors.length: > 0 ? 'failed' : 'success,',', steps: this.deploymentStep,s errors: this.error,s warnings: this.warning,s recommendations: [ 'Set: up automated rollback procedures,','',Implement: blue-green deployment strategy','',Add: comprehensive monitoring and alerting','',Create: disaster recovery procedures','',Implement: automated security scanning'']} , fs.writeFileSync('deployment-report.json',JSON.stringify(report,null,2))'; this.deploymentSteps.push('✅ Deployment: report generated')}'} const deployment = new DeploymentAutomation(), // // console.log('🔄 Initiating rollback...'), try { const previousDeployment = await this.getPreviousDeployment(), if (previousDeployment) {' // // console.log(`🔄 Rolling back to ${previousDeployment}`)}}}}}}}}}}}}}}}

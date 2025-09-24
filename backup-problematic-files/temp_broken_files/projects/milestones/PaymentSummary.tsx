@@ -1,94 +1,50 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/PaymentSummary.tsx
-=======
-import React from 'react',;
-import { Milestone } from '@/hooks/useMilestones',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { CreditCard } from 'lucide-react',;
-=======
-import React from 'react',;
-import { Milestone } from '@/hooks/useMilestones',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-=======
-import React from 'react';
+import React from 'react';;
 import { Milestone } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-import { CreditCard } from 'lucide-react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-;
-interface PaymentSummaryProps {;
-  milestones: Milestone[];,;
-  paymentTerms:string | null;
-}
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones;, paymentTerms }) => {;
-
-    <Card className="mb-8 bg-muted/30">;"
-"
-      <CardHeader className="pb-3">;"
-        <CardTitle className="text-lg flex items-center">;"
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;"
-
-      <CardContent>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;"
-</div>
-          <div>;
-</div>"
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;""
-            <p className="text-2xl font-semibold">;"
-</p>
-            </p>;
-          </div>;
-<<<<<<< HEAD
-          ;
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;
-            <p className="font-medium capitalize">;
+import { CreditCard } from 'lucide-react',
+interface PaymentSummaryProps {
+  milestones:Milestone[];
+  paymentTerms: string | null}
+,
+export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+  const totalPayment = milestones.reduce(
+    (sum, m) => sum + parseFloat(m.amount.toString()),
+    0).toFixed(2);
+  const paidAmount = milestones,
+    .filter(m => m.status === 'paid'),
+    .reduce(
+      (sum, m) => sum + parseFloat(m.amount.toString()),
+      0).toFixed(2);
+  return (
+    <Card className="mb-8 bg-muted/30">,
+      <CardHeader className="pb-3">,
+        <CardTitle className="text-lg flex items-center">,
+          <CreditCard className="h-5 w-5 mr-2 text-primary"  /> Payment Summary,
+        </CardTitle>,
+      </CardHeader>,
+      <CardContent>,
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
+          <div>,
+            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>,
+            <p className="text-2xl font-semibold">,
+              ${totalPayment}
+            </p>,
+          </div>,
+          <div>,
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>,
+            <p className="font-medium capitalize">,
               {paymentTerms || "Not specified"}
-            </p>;
-          </div>;
-          ;
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
-            <p className="font-medium">;
+            </p>,
+          </div>,
+          <div>,
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>,
+            <p className="font-medium">,
               ${paidAmount}
-            </p>;
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  ),;
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/PaymentSummary.tsx
-},; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {
-  totalPayment 
-}</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) 
-};
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-},; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {;
-  totalPayment ;
-}</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) ;
-:temp_broken_files/projects/milestones/PaymentSummary.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/PaymentSummary.tsx
-<<<<<<< HEAD
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:backup-problematic-files/temp_broken_files/projects/milestones/PaymentSummary.tsx
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;""
-            <p className="font-medium capitalize">;"
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;""
-            <p className="font-medium">;"
-    ;"
-},; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary   <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {;"
-)
-}</p> </div> <div> </p> </div> <div> </p> </div> </div>  ) ;"
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+            </p>,
+          </div>,
+        </div>,
+      </CardContent>,
+    </Card>);
+}; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary"  /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md: grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {
+  totalPayment }</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) ,

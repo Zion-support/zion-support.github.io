@@ -1,657 +1,105 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from 'react';
+'use client';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-"use client",
-import { create_context, useContext, useEffect, useState  } from './react';,
-import { use_session, sign_in, sign_out  } from './next - auth / react';,
-import { use_router  } from './next / navigation';,
-interface User {
-  id: string,
-  name?: string,
-  email: string,
-  role: string,
-  onboarding_completed: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
-interface User {id: string;
-  name?: string;
+type User = {
+  id: string;
+  name: string;
   email: string;
   role: string;
   onboardingCompleted: boolean;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
+};
 
+interface AuthContextType {
+  user: User | null;
+  isLoading: boolean;
+  isAuthenticated: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+  register: (name: string, email: string, password: string) => Promise<void>;
+  completeOnboarding: () => Promise<void>;
+  // Aliases for compatibility
+  signIn: (email: string, password: string) => Promise<void>;
+  signUp: (name: string, email: string, password: string) => Promise<void>;
+}
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-}
-<<<<<<< HEAD
-interface AuthContextType {}
-=======
-interface AuthContextType {
-"use client";""
-import { createContext, useContext, useEffect, useState } from "react";""
-import { useSession, signIn, signOut } from "next-auth/react";""
-import { useRouter } from "next/navigation";"
-interface User {id: string;
-  name?: string;
-  email: string;,
-  role: string;
-  onboardingCompleted: boolean;
-}
-interface AuthContextType {
-  // TODO: Implement
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-  user: User | null,
-  is_loading: boolean,
-  is_authenticated: boolean,
-  login: (email: string, password: string) => Promise < void>,
-  logout: () => Promise < void>,
-  register: (name: string, email: string, password: string) => Promise < void>,
-  complete_onboarding: () => Promise < void>;
-}
-const AuthContext = create_context < AuthContextType | undefined>(undefined),
-<<<<<<< HEAD
-export /**;
- * AuthProvider - Function description;
-=======
-export /**
- * AuthProvider - Function description
-const AuthContext = create_context < AuthContextType | undefined>(undefined),
-export /**
- * AuthProvider - Function description;
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
- */
-function AuthProvider() {}
-  const { data: session, status } = use_session (),
-  const [user, set_user] = useState < User | null>(null),
-  const [is_loading, setIsLoading] = useState (true),
-  const router = use_router (),
-  useEffect (() => {}
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      setIsLoading (true),
-      return;
-    }
-    // Check condition;
-if ( {) {}
-  $2;
-}
-      set_user ({}
-        id: session.user.id,
-        name: session.user.name || undefined,
-        email: session.user.email!,
-        role: session.user.role || "user",
-        onboarding_completed: false, // This would come from the database;
-      });
-    } else {}
-      set_user (null);
-    }
-    // Check condition;
-if ( {) {
-  $2;
-      setIsLoading (true),
-      return;
-    // Check condition;
-      set_user ({
-        id: session.user.id,
-        name: session.user.name || undefined,
-        email: session.user.email!,"
-        role: session.user.role || "user","
-        onboarding_completed: false, // This would come from the database;)
-      });
-    } else {
-  // TODO: Implement
-      set_user (null);
-pr-12325
-    setIsLoading (false);
-  }, [session, status]),
-  const login = async (email: string, password: string) => {}
-    try {"
-      const result = await sign_in ("credentials", {}
-        email,
-        password,
-        redirect: false}),
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        throw new Error (result.error);
-      }"
-      router.push ("/dashboard");
-    } catch (error) {}
-      throw error;
-    }
-  },
-  const logout = async () => {}
-    await sign_out ({ redirect: false }),"
-    router.push ("/");
-  },
-  const register = async (name: string, email: string, password: string) => {}
-    try {"
-      const response = await fetch ("/api / auth / register", {"
-        method: "POST",
-        headers: {"
-          "Content - Type": "application / json"},
-        body: JSON.stringify ({ name, email, password })}),
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        const error = await response.json (),
-        throw new Error (error.message);
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    try {
+      const stored =
+        typeof window !== 'undefined'
+          ? window.localStorage.getItem('zion-os:user')
+          : null;
+      if (stored) {
+        setUser(JSON.parse(stored) as User);
       }
-      // Auto - login after successful registration;
-      await login (email, password);
-    } catch (error) {}
-      throw error;
-    }
-  },
-  const complete_onboarding = async () => {}
-    try {"
-      const response = await fetch ("/api / user / onboarding", {"
-        method: "POST",
-        headers: {"
-          "Content - Type": "application / json"}}),
-      // Check condition;
-if ( {) {}
-  $2;
-}"
-        throw new Error ("Failed to complete onboarding");
-      }
-      // Check condition;
-if ( {) {}
-  $2;
-}
-        set_user ({ ...user, onboarding_completed: true });
-      }
-    } catch (error) {}
-      throw error;
-    }
-  },
-<<<<<<< HEAD
-  const value: AuthContextType = {}
-=======
-  // TODO: Implement
-}"
-      const result = await sign_in ("credentials", {"
-        email,
-        password,)
-        redirect: false}),
-      // Check condition;
-        throw new Error (result.error);
-      router.push ("/dashboard");"
-    } catch (error) {
-      throw error;
-  },
+    } catch {}
+    setIsLoading(false);
+  }, []);
+
+  const login = async (email: string, password: string) => {
+    const mockUser: User = {
+      id: 'local-user',
+      name: email.split('@')[0],
+      email,
+      role: 'user',
+      onboardingCompleted: false,
+    };
+    setUser(mockUser);
+    try {
+      window.localStorage.setItem('zion-os:user', JSON.stringify(mockUser));
+    } catch {}
+    router.push('/dashboard');
+  };
+
   const logout = async () => {
-    await sign_out ({ redirect: false }),"
-    router.push ("/");"
-  const register = async (name: string, email: string, password: string) => {
-  // TODO: Implement
-      const response = await fetch ("/api / auth / register", {""
-        method: "POST","
-        headers: {"
-          "Content - Type": "application / json"},")
-        body: JSON.stringify ({ name, email, password })}),
-      // Check condition;
-        const error = await response.json (),
-        throw new Error (error.message);
-      // Auto - login after successful registration;
-      await login (email, password);
-  const complete_onboarding = async () => {
-  // TODO: Implement
-      const response = await fetch ("/api / user / onboarding", {""
-        headers: {)"
-          "Content - Type": "application / json"}}),"
-      // Check condition;
-        throw new Error ("Failed to complete onboarding");"
-      // Check condition;
-        set_user ({ ...user, onboarding_completed: true });
-pr-12325
+    setUser(null);
+    try {
+      window.localStorage.removeItem('zion-os:user');
+    } catch {}
+    router.push('/');
+  };
+
+  const register = async (_name: string, email: string, password: string) => {
+    await login(email, password);
+  };
+
+  const completeOnboarding = async () => {
+    if (user) {
+      const updated = { ...user, onboardingCompleted: true };
+      setUser(updated);
+      try {
+        window.localStorage.setItem('zion-os:user', JSON.stringify(updated));
+      } catch {}
+    }
+  };
+
   const value: AuthContextType = {
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     user,
-    is_loading,
-    is_authenticated: !!user,
+    isLoading,
+    isAuthenticated: !!user,
     login,
     logout,
     register,
-    complete_onboarding}
+    completeOnboarding,
+    signIn: login,
+    signUp: register,
+  };
+
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-export /**;
- * use_auth - Function description;
- */
-function use_auth() {}
-  const context = useContext (AuthContext);
-  // Check condition;
-if ( {) {}
-  $2;
-}"
-    throw new Error ("use_auth must be used within an AuthProvider");
 
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-"use client",;
-import { createContext, useContext, useEffect, useState } from "react",;
-import { useSession, signIn, signOut } from "next-auth/react",;
-=======
-
-"
-"use client",;"
-import { createContext, useContext, useEffect, useState } from "react",;"
-import { useSession, signIn, signOut } from "next-auth/react",;"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-import { useRouter } from "next/navigation",;
-interface User {;
-  id: string,;
-  name?: string,;
-  email: string,;
-  role: string,;
-  onboardingCompleted: boolean;
-}
-;
-interface AuthContextType {;
-  user: User | null,;
-  isLoading: boolean,;
-  isAuthenticated: boolean,;
-  login: (email: string, password: string) => Promise<void>,;
-  logout: () => Promise<void>,;
-  register: (name: string, email: string, password: string) => Promise<void>,;
-  completeOnboarding: () => Promise<void>;
-}
-;
-const AuthContext = createContext<AuthContextType | undefined>(undefined),;
-export function AuthProvider() { return null; }
-  const { data: session, status } = useSession(),;
-  const [user, setUser] = useState<User | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const router = useRouter(),;
-  useEffect(() => {;"
-    if (status === "loading") {;
-      setIsLoading(true),;
-      return;
-    }
-;
-    if (session?.user) {;
-      setUser({;
-        id: session.user.id,;
-        name: session.user.name || undefined,;
-        email: session.user.email!,;"
-        role: session.user.role || "user",;
-        onboardingCompleted: false, // This would come from the database;
-      });
-    } else {;
-      setUser(null);
-    }
-;
-    setIsLoading(false);
-  }, [session, status]),;
-  const login = async (email: string, password: string) => {;
-    try {;"
-      const result = await signIn("credentials", {;
-        email,;
-        password,;
-        redirect: false}),;
-      if (result?.error) {;
-        throw new Error(result.error);
-      }
-;"
-      router.push("/dashboard");
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const logout = async () => {;
-    await signOut({ redirect: false }),;"
-    router.push("/");
-  },;
-  const register = async (name: string, email: string, password: string) => {;
-    try {;"
-      const response = await fetch("/api/auth/register", {;"
-        method: "POST",;
-        headers: {;"
-          "Content-Type": "application/json"},;
-        body: JSON.stringify({ name, email, password })}),;
-      if (!response.ok) {;
-        const error = await response.json(),;
-        throw new Error(error.message);
-      }
-;
-      // Auto-login after successful registration;
-      await login(email, password);
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const completeOnboarding = async () => {;
-    try {;"
-      const response = await fetch("/api/user/onboarding", {;"
-        method: "POST",;
-        headers: {;"
-          "Content-Type": "application/json"}}),;
-      if (!response.ok) {;"
-        throw new Error("Failed to complete onboarding");
-      }
-;
-      if (user) {;
-        setUser({ ...user, onboardingCompleted: true });
-      }
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const value: AuthContextType = {;
-    user,;
-    isLoading,;
-    isAuthenticated: !!user,;
-    login,;
-    logout,;
-    register,;
-    completeOnboarding};
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-;
-export function useAuth() { return null; }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-  return context;
-}  return context;
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-
-  return context;
-<<<<<<< HEAD
-}
-=======
-}
-<<<<<<< HEAD
-;
-interface AuthContextType {;
-  user: User | null,;
-  isLoading: boolean,;
-  isAuthenticated: boolean,;
-  login: (email: string, password: string) => Promise<void>,;
-  logout: () => Promise<void>,;
-  register: (name: string, email: string, password: string) => Promise<void>,;
-  completeOnboarding: () => Promise<void>;
-}
-;
-const AuthContext = createContext<AuthContextType | undefined>(undefined),;
-export function AuthProvider({ children }: { children: React.ReactNode }) {;
-  const { data: session, status } = useSession(),;
-  const [user, setUser] = useState<User | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const router = useRouter(),;
-  useEffect(() => {;
-    if (status === "loading") {;
-      setIsLoading(true),;
-      return;
-    }
-;
-    if (session?.user) {;
-      setUser({;
-        id: session.user.id,;
-        name: session.user.name || undefined,;
-        email: session.user.email!,;
-        role: session.user.role || "user",;
-        onboardingCompleted: false, // This would come from the database;
-      });
-    } else {;
-      setUser(null);
-    }
-;
-    setIsLoading(false);
-  }, [session, status]),;
-  const login = async (email: string, password: string) => {;
-    try {;
-      const result = await signIn("credentials", {;
-        email,;
-        password,;
-        redirect: false}),;
-      if (result?.error) {;
-        throw new Error(result.error);
-      }
-;
-      router.push("/dashboard");
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const logout = async () => {;
-    await signOut({ redirect: false }),;
-    router.push("/");
-  },;
-  const register = async (name: string, email: string, password: string) => {;
-    try {;
-      const response = await fetch("/api/auth/register", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"},;
-        body: JSON.stringify({ name, email, password })}),;
-      if (!response.ok) {;
-        const error = await response.json(),;
-        throw new Error(error.message);
-      }
-;
-      // Auto-login after successful registration;
-      await login(email, password);
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const completeOnboarding = async () => {;
-    try {;
-      const response = await fetch("/api/user/onboarding", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"}}),;
-      if (!response.ok) {;
-        throw new Error("Failed to complete onboarding");
-      }
-;
-      if (user) {;
-        setUser({ ...user, onboardingCompleted: true });
-      }
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const value: AuthContextType = {;
-    user,;
-    isLoading,;
-    isAuthenticated: !!user,;
-    login,;
-    logout,;
-    register,;
-    completeOnboarding};
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-;
-export function useAuth() {;
+export function useAuth() {
   const context = useContext(AuthContext);
-  if (context === undefined) {;
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return context;
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-  return context;
-}  return context;
-}
-
-  login: (email: string, password: string) => Promise<void>,;
-</void>
-  logout: () => Promise<void>,;
-  register: (name: string, email: string, password: string) => Promise<void>,;
-  completeOnboarding: () => Promise<void>;
-const AuthContext = createContext<AuthContextType | undefined>(undefined),;
-
-  const [user, setUser] = useState<User | null>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const router = useRouter(),;
-  useEffect(() => {;
-    if (status === "loading") {;
-      setIsLoading(true),;
-      return;
-    }
-;
-    if (session?.user) {;
-      setUser({;
-        id: session.user.id,;
-        name: session.user.name || undefined,;
-        email: session.user.email!,;
-        role: session.user.role || "user",;
-        onboardingCompleted: false, // This would come from the database;
-      });
-    } else {;
-      setUser(null);
-    }
-;
-    setIsLoading(false);
-  }, [session, status]),;
-  const login = async (email: string, password: string) => {;
-    try {;
-      const result = await signIn("credentials", {;
-        email,;
-        password,;
-        redirect: false}),;
-      if (result?.error) {;
-        throw new Error(result.error);
-      }
-;
-      router.push("/dashboard");
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const logout = async () => {;
-    await signOut({ redirect: false }),;
-    router.push("/");
-  },;
-  const register = async (name: string, email: string, password: string) => {;
-    try {;
-      const response = await fetch("/api/auth/register", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"},;
-        body: JSON.stringify({ name, email, password })}),;
-      if (!response.ok) {;
-        const error = await response.json(),;
-        throw new Error(error.message);
-      }
-;
-      // Auto-login after successful registration;
-      await login(email, password);
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const completeOnboarding = async () => {;
-    try {;
-      const response = await fetch("/api/user/onboarding", {;
-        method: "POST",;
-        headers: {;
-          "Content-Type": "application/json"}}),;
-      if (!response.ok) {;
-        throw new Error("Failed to complete onboarding");
-      }
-;
-      if (user) {;
-        setUser({ ...user, onboardingCompleted: true });
-      }
-    } catch (error) {;
-      throw error;
-    }
-  },;
-  const value: AuthContextType = {;
-    user,;
-    isLoading,;
-    isAuthenticated: !!user,;
-    login,;
-    logout,;
-    register,;
-    completeOnboarding};
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
-;
-export function useAuth() {;
-  const context = useContext(AuthContext);
-  if (context === undefined) {;
-    throw new Error("useAuth must be used within an AuthProvider");
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
-
-"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
-}
-
-"
-pr-12325
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
