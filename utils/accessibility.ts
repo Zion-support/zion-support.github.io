@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+// Accessibility utilities
+export const getAriaLabel = (label: string, required?: boolean) => {
+  return required ? `${label} (required)` : label;
+};
+
+export const generateId = (prefix: string) => {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
+
+export const announceToScreenReader = (message: string) => {
+=======
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -10,12 +22,17 @@ export const generateId = (prefix: string = 'id'): string => {;
 export const announceToScreenReader = (message: string): void => {;
 
   if (typeof window === 'undefined') return;
+>>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', 'polite');
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
   document.body.appendChild(announcement);
+<<<<<<< HEAD
+  setTimeout(() => document.body.removeChild(announcement), 1000);
+};
+=======
   // Remove after announcement
   setTimeout(() => {
     document.body.removeChild(announcement);
@@ -241,3 +258,4 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
   return skipLink;
 }
 
+>>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9
