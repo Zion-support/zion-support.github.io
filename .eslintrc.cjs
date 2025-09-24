@@ -41,6 +41,7 @@ module.exports = {
     // Consolidated ignores from both branches
     'components/**',
     'components.disabled/**',
+    'components.browserstack.config.ts',
     'pages.disabled/**',
     'pages_backup/**',
     'pages.bak/**',
