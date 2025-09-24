@@ -1,4 +1,4 @@
-/* Minimal globals to unblock build (Tailwind temporarily disabled) */
+/* Minimal globals to unblock build */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
