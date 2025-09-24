@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import {
   Zap,
   Users,
@@ -21,7 +21,8 @@ import {
   Shield,
   Globe,
   Smartphone,
-  Database} from 'lucide-react',
+  Database
+} from 'lucide-react';
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
     {
@@ -191,8 +192,10 @@ export default function MicroSAASServicesPage() {
         "Professional presentations"],
       website: "https://ziontechgroup.com/analytics-dashboard",
       freeTrial: "30 days",
-      setupTime: "Under 3 hours"}
-  ],
+      setupTime: "Under 3 hours"
+    }
+  ];
+
   const additionalMicroSAAS = [
     {
       name: "Time Tracking Tool",
@@ -213,14 +216,17 @@ export default function MicroSAASServicesPage() {
       name: "Appointment Scheduler",
       description: "Automated appointment booking system with calendar integration and reminder notifications.",
       pricing: "$25/month",
-      icon: <Calendar className="w-8 h-8 text-orange-400" />}
-  ],
+      icon: <Calendar className="w-8 h-8 text-orange-400" />
+    }
+  ];
+
   const stats = [
     { label: "Active Users", value: "10,000+" },
     { label: "Cost Savings", value: "40-60%" },
     { label: "Setup Time", value: "< 2 hours" },
     { label: "Customer Satisfaction", value: "96%" }
-  ],
+  ];
+
   const whyChooseUs = [
     {
       title: "Affordable Pricing",
@@ -323,8 +329,8 @@ export default function MicroSAASServicesPage() {
                 </div>,
                 <p className="text-gray-300 leading-relaxed">{service.description}</p>,
                 <div className="space-y-4">,
-                  <div>,
-                    <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Features: </h4>,
+                  <div>
+<h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Features: </h4>,
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">,
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">,
@@ -581,5 +587,6 @@ export default function MicroSAASServicesPage() {
           </div>,
         </div>,
       </footer>,
-    </div>)}
-,
+</div>
+  );
+}

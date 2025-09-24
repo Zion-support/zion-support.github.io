@@ -1,38 +1,40 @@
-import React, { useEffect, useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { useNavigate, useSearchParams } from 'react-router-dom',
-import { Input } from '@/components/ui/input',
-import { safeStorage } from '@/utils/safeStorage',
-import { Button } from '@/components/ui/button',
-import { getStripe } from '@/utils/getStripe',
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Input } from '@/components/ui/input';
+import { safeStorage } from '@/utils/safeStorage';
+import { Button } from '@/components/ui/button';
+import { getStripe } from '@/utils/getStripe';
 import {
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage} from '@/components/ui/form',
-import { useFeatureFlags } from '@/context/FeatureFlagContext',
+  FormMessage
+} from '@/components/ui/form';
+import { useFeatureFlags } from '@/context/FeatureFlagContext';
 interface CartItem {
   id: string,
   name: string,
   price: number,
-  quantity: number}
-,
+  quantity: number;
+}
 interface CheckoutForm {
   name: string,
   email: string,
   address: string,
   city: string,
-  country: string}
-,
+  country: string;
+}
 export default function CheckoutV2() {
-  const navigate = useNavigate(),
-  const [searchParams] = useSearchParams(),
-  const [items, setItems] = useState<CartItem[]>([]),
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
-    defaultValues: { name: '', email: '', address: '', city: '', country: '' }}),
-  const { track } = useFeatureFlags(),
+    defaultValues: { name: '', email: '', address: '', city: '', country: '' }
+  });
+  const { track } = useFeatureFlags();
   useEffect(() => {
     const sku = searchParams.get('sku'),
     if (sku) {

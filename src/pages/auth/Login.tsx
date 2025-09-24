@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom',
-import { useForm } from 'react-hook-form',
-import { toast } from '@/hooks/use-toast',
-import * as auth from '@/services/auth',
+import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { toast } from '@/hooks/use-toast';
+import * as auth from '@/services/auth';
 interface LoginFields {
   email: string,
   password: string}

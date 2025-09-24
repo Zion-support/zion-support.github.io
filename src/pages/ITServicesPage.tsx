@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import {
   Server,
   Cloud,
@@ -21,7 +21,8 @@ import {
   Monitor,
   Lock,
   Users,
-  BarChart3} from 'lucide-react',
+  BarChart3
+} from 'lucide-react';
 export default function ITServicesPage() {
   const itServices = [
     {
@@ -179,8 +180,10 @@ export default function ITServicesPage() {
         "Improved performance",
         "Enhanced security",
         "Peace of mind"],
-      website: "https://ziontechgroup.com/infrastructure-management"}
-  ],
+      website: "https://ziontechgroup.com/infrastructure-management"
+    }
+  ];
+
   const additionalServices = [
     {
       name: "API Development & Integration",
@@ -201,14 +204,17 @@ export default function ITServicesPage() {
       name: "IT Consulting",
       description: "Strategic IT consulting and technology roadmap planning.",
       pricing: "From $150/hour",
-      icon: <Users className="w-8 h-8 text-orange-400" />}
-  ],
+      icon: <Users className="w-8 h-8 text-orange-400" />
+    }
+  ];
+
   const stats = [
     { label: "Infrastructure Deployed", value: "200+" },
     { label: "Security Audits", value: "150+" },
     { label: "Uptime Guarantee", value: "99.9%" },
     { label: "Client Satisfaction", value: "97%" }
-  ],
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
       {/* Hero Section */}
@@ -272,8 +278,8 @@ export default function ITServicesPage() {
                 </div>,
                 <p className="text-gray-300 leading-relaxed">{service.description}</p>,
                 <div className="space-y-4">,
-                  <div>,
-                    <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features: </h4>,
+                  <div>
+<h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features: </h4>,
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">,
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">,
@@ -498,5 +504,6 @@ export default function ITServicesPage() {
           </div>,
         </div>,
       </footer>,
-    </div>)}
-,
+</div>
+  );
+}
