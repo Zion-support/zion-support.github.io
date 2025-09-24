@@ -34,37 +34,48 @@ const NewContentPromoBanner = ({
 
   const newContent: ContentItem[] = [
     {
-      id: '60',
-      title: 'Platform Engineering for AI Agents (2025)',
-      description: 'Blueprint for enterprise agent platforms: reliability, safety, observability, and cost.',
-      href: '/blog/ai-2025-platform-engineering-for-agents',
+      id: '56',
+      title: 'LLM Inference Optimization on GPUs (2025)',
+      description: 'Quantization, KV cache strategies, smart batching, and parallelism to cut latency and cost.',
+      href: '/blog/ai-2025-llm-inference-optimization-gpus',
       type: 'blog',
       featured: true,
-      readTime: '22 min read',
+      readTime: '15 min read',
       date: 'Sep 12, 2025',
-      category: 'Platform'
+      category: 'Inference'
     },
     {
-      id: '61',
-      title: 'Evaluations + Guardrails Integration (2025)',
-      description: 'Integrate offline/online evals with policy guardrails to ship safely at speed.',
-      href: '/blog/ai-2025-evals-guardrails-integration',
+      id: '57',
+      title: 'Serverless GenAI Architectures (2025)',
+      description: 'Event-driven GenAI with functions, queues, vector DBs, and eval guardrails on AWS/GCP/Azure.',
+      href: '/blog/ai-2025-serverless-genai-architectures',
       type: 'blog',
       featured: true,
-      readTime: '18 min read',
+      readTime: '14 min read',
       date: 'Sep 12, 2025',
-      category: 'AI Safety'
+      category: 'Architecture'
     },
     {
-      id: '62',
-      title: 'Enterprise AI Cost Optimization Playbook (2025)',
-      description: 'Cut AI costs with routing, caching, distillation, and rigorous measurement.',
-      href: '/blog/ai-2025-enterprise-cost-optimization-playbook',
+      id: '54',
+      title: 'MLOps Best Practices 2025: Shipping Reliable AI',
+      description: 'Versioning, automated evaluations, guardrails, and budget-aware controls for production AI.',
+      href: '/blog/ai-2025-mlops-best-practices',
       type: 'blog',
       featured: true,
-      readTime: '20 min read',
+      readTime: '14 min read',
       date: 'Sep 12, 2025',
-      category: 'Optimization'
+      category: 'MLOps'
+    },
+    {
+      id: '55',
+      title: 'Vector Databases Benchmarks 2025',
+      description: 'A pragmatic comparison focusing on recall, latency tails, scale, and ops tradeoffs.',
+      href: '/blog/ai-2025-vector-databases-benchmarks',
+      type: 'blog',
+      featured: true,
+      readTime: '16 min read',
+      date: 'Sep 12, 2025',
+      category: 'RAG'
     },
     {
       id: '50',
