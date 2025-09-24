@@ -1,4 +1,0 @@
-=======
-import {motion} from 'framer-motion';
-=======
-import {motion} from &apos;framer-motion&apos;; export function PerformanceOptimizedLoader($1) { const sizeClasses = { sm: &apos;w-6 h-6&apos;,md: &apos;w-12 h-12&apos;,lg: &apos;w-16 h-16&apos; };;&apos;;&apos;; const colorClasses = {primary: &apos;text-zion-purple&apos;,secondary: &apos;text-zion-cyan&apos;,white: &apos;text-white&apos;};; const spinnerVariants = { animate: { rotate: 360,transition: { duration: 1,repeat: Infinity,ease: &quot;linear&quot; } } };; const pulseVariants = { export default PerformanceOptimizedLoader;&apos;;&apos;;

@@ -54,15 +54,12 @@ class ErrorBoundary extends React.Component<
 
 		if (
 			typeof window !== 'undefined' &&
-			typeof (window as unknown as {
-				gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
-			}).gtag === 'function'
+			typeof (window as unknown as { gtag?: unknown }).gtag === 'function'
 		) {
-			((window as unknown as {
-				gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
-			}).gtag)('event', 'exception', {
+			((window as unknown as { gtag: Function }).gtag)('event', 'exception', {
 				description: error.message,
-				fatal: true});
+				fatal: true
+			});
 		}
 
 		if (typeof window !== 'undefined') {
