@@ -89,13 +89,13 @@
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
-[[plugins]]
-  package = "./netlify/plugins/run-functions-and-rerun"
-  [plugins.inputs]
-    include = ""
-    exclude = ""
-    concurrency = 6
-    timeoutMs = 180000
+# [[plugins]]
+#   package = "./netlify/plugins/run-functions-and-rerun"
+#   [plugins.inputs]
+#     include = ""
+#     exclude = ""
+#     concurrency = 6
+#     timeoutMs = 180000
 
 # Scheduled Functions
 [[scheduled.functions]]
