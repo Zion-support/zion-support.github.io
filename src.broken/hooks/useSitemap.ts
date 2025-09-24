@@ -1,5 +1,5 @@
-// Hook for useSitemap;
+// Hook for useSitemap,
 export const useUseSitemap: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

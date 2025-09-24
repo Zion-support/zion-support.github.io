@@ -27,8 +27,9 @@ def get_client_ip(request):
     return request.META.get('REMOTE_ADDR')
 
 @csrf_exempt
-@require_POST
 def forgot_password(request):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Method not allowed.'}, status=405)
     ip = get_client_ip(request)
     key = f"forgot_pw:{ip}"
     attempts = cache.get(key, 0)
@@ -38,21 +39,23 @@ def forgot_password(request):
     data = json_from_request(request)
     email = data.get('email')
 
-    if not email:
-        return JsonResponse({'error': 'Email address is required.'}, status=400)
+    if email is None:
+        return JsonResponse({'error': 'This field is required.'}, status=400)
+    if email == '':
+        return JsonResponse({'error': 'This field may not be blank.'}, status=400)
 
     validator = EmailValidator()
     try:
         validator(email)
     except DjangoValidationError:
-        return JsonResponse({'error': 'Invalid email address format.'}, status=400)
+        return JsonResponse({'error': 'Enter a valid email address.'}, status=400)
 
     try:
         user = User.objects.get(email=email)
     except User.DoesNotExist:
         # Do not reveal whether the user exists or not
         logger.info(f"Password reset requested for non-existent email: {email}")
-        return JsonResponse({'detail': 'If an account with this email exists, a reset link has been sent.'}, status=200)
+        return JsonResponse({'message': 'Password reset email sent if user exists.'}, status=200)
 
     uid = urlsafe_base64_encode(force_bytes(user.pk))
     token = default_token_generator.make_token(user)
@@ -73,7 +76,7 @@ def forgot_password(request):
 
     try:
         send_mail(
-            'Password Reset Request',
+            'Reset your password',
             f'Please click the link to reset your password: {reset_link}', # Plain text part
             from_email,
             [user.email],
@@ -83,28 +86,30 @@ def forgot_password(request):
     except Exception as e: # Catch broader SMTP exceptions, specific ones can be added
         logger.error(f"Error sending password reset email to {user.email}: {e}", exc_info=True)
         return JsonResponse({'error': 'An error occurred while trying to send the reset email. Please try again later.'}, status=500)
-
-    return JsonResponse({'detail': 'If an account with this email exists, a reset link has been sent.'}, status=200)
+    return JsonResponse({'message': 'Password reset email sent if user exists.'}, status=200)
 
 @csrf_exempt
-@require_POST
 def reset_password(request, uidb64, token):
+    if request.method != 'POST':
+        return JsonResponse({'error': 'Method not allowed.'}, status=405)
     data = json_from_request(request)
     password = data.get('password')
 
-    if not password:
-        return JsonResponse({'error': 'Password is required.'}, status=400)
+    if password is None:
+        return JsonResponse({'error': {'password': 'This field is required.'}}, status=400)
+    if password == '':
+        return JsonResponse({'error': {'password': 'This field is required.'}}, status=400)
 
     try:
         uid = urlsafe_base64_decode(uidb64).decode()
         user = User.objects.get(pk=uid)
     except (User.DoesNotExist, ValueError, TypeError, OverflowError): # Added OverflowError for invalid base64
         logger.warning(f"Password reset attempt with invalid uidb64: {uidb64}", exc_info=True)
-        return JsonResponse({'error': 'Invalid reset link.'}, status=400)
+        return JsonResponse({'error': 'Invalid UID or token.'}, status=400)
 
     if not default_token_generator.check_token(user, token):
         logger.warning(f"Password reset attempt with invalid or expired token for user {user.email}")
-        return JsonResponse({'error': 'Invalid or expired token. Please request a new reset link.'}, status=400)
+        return JsonResponse({'error': 'Invalid UID or token.'}, status=400)
 
     try:
         # Validate password strength
@@ -122,7 +127,7 @@ def reset_password(request, uidb64, token):
     user.set_password(password)
     user.save()
     logger.info(f"Password successfully reset for user {user.email}")
-    return JsonResponse({'detail': 'Password has been successfully updated.'}, status=200)
+    return JsonResponse({'message': 'Password has been reset successfully.'}, status=200)
 
 
 def json_from_request(request):

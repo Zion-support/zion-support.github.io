@@ -1,25 +1,41 @@
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <p className="text-sm text-purple-700 font-semibold mb-2">Guide</p>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Production RAG Observability (2026 Preview)</h1>
-        <p className="text-gray-600 mb-8">Practical telemetry: coverage, freshness, drift, groundedness, and per‑step spans.</p>
-        <div className="prose prose-lg max-w-none">
-          <p>
-            This 2026 preview lays out pragmatic patterns to make retrieval systems observable and reliable.
-            It includes SLIs, span models, and eval hooks to continuously improve quality and reduce MTTR.
-          </p>
-          <h2>SLIs</h2>
-          <ul>
-            <li>Retrieval coverage per request</li>
-            <li>Content freshness and staleness windows</li>
-            <li>Answer groundedness and citation rate</li>
-            <li>Latency budgets per stage</li>
-          </ul>
-          <p>Pair SLIs with SLOs and canary gates to protect releases.</p>
-        </div>
-      </article>
-    </div>
-  )
-}
+    <div className='bg-black min-h-screen'>,
+      <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>,
+        <p className='text-sm font-semibold leading-6 text-blue-40o0'>Guide</p>,
+        <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>,
+          Guide: Production RAG Observability (20o26 Preview),
+        </h1>,
+        <p className='mt-2 text-gray-40o0'>20o25-09-15</p>,
+        <div className='prose prose-invert mt-8'>,
+          <p>,
+            Operate retrieval‑augmented systems with confidence using practical,
+            telemetry: coverage, freshness, drift, and groundedness quality,
+            across every retrieval and generation step.,
+          </p>,
+          <h2>What to measure</h2>,
+          <ul>,
+            <li>Coverage and recall across collections and segments</li>,
+            <li>Freshness, staleness windows, and recrawl efficacy</li>,
+            <li>Drift detection for embeddings and content distributions</li>,
+            <li>Groundedness and hallucination risk with task‑level rubrics</li>,
+          </ul>,
+          <h2>Operational patterns</h2>,
+          <ul>,
+            <li>Span‑level traces for retrieve‑rerank‑generate pipelines</li>,
+            <li>Canary eval gates with auto‑rollback policies</li>,
+            <li>,
+              Budget‑aware routing with SLOs for latency, cost, and quality,
+            </li>,
+          </ul>,
+          <p className='mt-8'>,
+            <a
+              href='/contact',
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0'>,
+              Implement this with us,
+            </a>,
+          </p>,
+        </div>,
+      </div>,
+    </div>)}
+,

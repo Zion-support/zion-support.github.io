@@ -1,5 +1,5 @@
-// Hook for useLocalStorage;
+// Hook for useLocalStorage,
 export const useUseLocalStorage: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

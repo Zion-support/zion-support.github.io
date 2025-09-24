@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -10,14 +9,6 @@ function resolveMergeConflicts() {
       .trim()
       .split('\n')
       .filter(file => file.length > 0);
-=======
-
-
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
->>>>>>> origin/merge-pr-12271
 
     console.log(`Found ${conflictedFiles.length} conflicted files`);
 
@@ -31,7 +22,6 @@ const path = require('path');
         console.log(`Error resolving ${file}: ${error.message}`);
       }
     }
-<<<<<<< HEAD
 
     console.log('All merge conflicts resolved');
   } catch (error) {
@@ -40,62 +30,3 @@ const path = require('path');
 }
 
 resolveMergeConflicts();
-=======
-    
-    const resolvedContent = resolvedLines.join('\n');
-    
-    if (content !== resolvedContent) {
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`Resolved conflicts in: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-
-    return false;
-  }
-}
-
-// Find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('
-
-        }
-      }
-    }
-  }
-
-  walkDir(dir);
-  return files;
-}
-
-// Process all files
-const filesWithConflicts = findFilesWithConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-for (const file of filesWithConflicts) {
-  if (resolveMergeConflicts(file)) {
-
-    resolvedCount++;
-  }
-}
-
-console.log(`Resolved conflicts in ${resolvedCount} files`);
-
->>>>>>> origin/merge-pr-12271

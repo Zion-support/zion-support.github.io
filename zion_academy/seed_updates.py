@@ -204,30 +204,6 @@ We apologize for the inconvenience and appreciate your prompt action to secure y
                 'update_type': 'event',
                 'priority': 'normal',
                 'created_at': datetime.utcnow()
-            },
-            {
-                'title': 'New Track: AI Product Management',
-                'content': 'A structured path covering AI strategy, data products, experimentation, and responsible AI. Includes templates and case studies.',
-                'summary': 'Launch of AI PM track with strategy-to-execution curriculum.',
-                'update_type': 'course',
-                'priority': 'high',
-                'created_at': datetime.utcnow()
-            },
-            {
-                'title': 'Feature: Notebook-to-Lab One-Click Export',
-                'content': 'Export any course notebook directly into an interactive GPU lab with preinstalled dependencies in one click.',
-                'summary': 'One-click export from notebooks to GPU labs.',
-                'update_type': 'feature',
-                'priority': 'normal',
-                'created_at': datetime.utcnow()
-            },
-            {
-                'title': 'Community Spotlight: Student Builds On-Chain Certificate Verifier',
-                'content': 'Showcasing a student project verifying Zion Academy certificates on-chain with a simple wallet check.',
-                'summary': 'Student project spotlight: on-chain certificate verifier.',
-                'update_type': 'announcement',
-                'priority': 'low',
-                'created_at': datetime.utcnow()
             }
         ]
 

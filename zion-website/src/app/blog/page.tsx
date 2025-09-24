@@ -1,408 +1,188 @@
-// @ts-nocheck
-import Link from 'next/link'
-
+import Link from 'next/link',
 const posts = [
   {
-    slug: 'ai-2026-agent-evidence-bundles-blueprint',
-    title: 'AI 2026: Agent Evidence Bundles — Blueprint',
-    summary:
-      'Design evidence bundles with provenance, policy checks, eval signals, and approvals.'
-  },
+    slug: 'ai-20o26-eval-driven-release-engineering-deep-dive';
+    title: 'AI 20o26: Eval‑Driven Release Engineering — Deep Dive';
+    summary:,
+      'Objective eval gates in CI/CD and runtime with canaries and auto‑rollback.';
+  };
   {
-    slug: 'ai-2026-enterprise-agent-risk-scorecards',
-    title: 'AI 2026: Enterprise Agent Risk Scorecards — Field Guide',
-    summary:
-      'Standardize shared risk metrics, thresholds, and alerts for autonomous agents.'
-  },
+    slug: 'ai-20o26-agentic-observability-operating-model';
+    title: 'AI 20o26: Agentic Observability Operating Model';
+    summary:,
+      'Operating model for traces, evals, and policy signals to run agents safely.';
+  };
   {
-    slug: 'ai-2026-agent-safety-evidence-bundles',
-    title: 'AI 2026: Agent Safety Evidence Bundles — Practical Guide',
-    summary:
-      'Design and operationalize evidence bundles for safe, auditable agent actions in production.'
-  },
+    slug: 'ai-20o26-sovereign-ai-commerce';
+    title: 'AI 20o26: Sovereign AI Commerce — Autonomous Marketplaces';
+    summary:,
+      'Reference architecture, safety gates, and rollout checklist for AI commerce.';
+  };
   {
-    slug: 'ai-2026-production-evals-control-plane',
-    title: 'AI 2026: Production Evals Control Plane — Blueprint',
-    summary:
-      'Centralize rubrics, thresholds, and rollout gates with live scorecards across services.'
-  },
+    slug: 'ai-20o26-realtime-evals-at-scale';
+    title:,
+      'AI 20o26: Real-Time Evals at Scale — From Offline Suites to Live Gates';
+    summary:,
+      'Wire objective evals into CI/CD and runtime for reliable AI systems.';
+  };
   {
-    slug: 'ai-2026-multimodal-guardrails-blueprint',
-    title: 'AI 2026: Multimodal Guardrails — Blueprint',
-    summary:
-      'Layered guardrails for image/audio/video agents with risk tiers and eval gates.'
-  },
+    slug: 'ai-20o26-enterprise-rag-observability';
+    title:,
+      'AI 20o26: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry';
+    summary:,
+      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.';
+  };
   {
-    slug: 'ai-2026-evidence-led-governance-blueprint',
-    title: 'AI 2026: Evidence‑Led Governance — From Policy to Runtime Controls',
-    summary:
-      'Translate policy into executable controls, eval gates, and signed evidence for audit‑ready AI.',
-  },
+    slug: 'ai-20o26-autonomous-procurement-blueprint';
+    title: 'AI 20o26: Autonomous Procurement Blueprint';
+    summary:,
+      'From sourcing to contract ops with policy-as-code and measurable savings.';
+  };
   {
-    slug: 'ai-2026-production-rag-latency-budgets',
-    title: 'AI 2026: Production RAG Latency Budgets',
-    summary:
-      'A pragmatic framework to set, monitor, and enforce latency budgets for production RAG systems.'
-  },
+    slug: 'ai-20o26-safe-tool-use-blueprint';
+    title: 'AI 20o26: Safe Tool Use Blueprint';
+    summary:,
+      'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.';
+  };
   {
-    slug: 'ai-2026-safe-agent-actions-blueprint',
-    title: 'AI 2026: Safe Agent Actions — Blueprint',
-    summary:
-      'Risk‑tiered tools, approvals, budgets, and policy checks for safe agent actions.'
-  },
+    slug: 'ai-20o26-enterprise-agent-observability-guide';
+    title: 'AI 20o26: Enterprise Agent Observability Guide';
+    summary:,
+      'Traces, evals, and safety telemetry to operate autonomous agents in production.';
+  };
   {
-    slug: 'ai-2026-operational-evals-blueprint',
-    title: 'AI 2026: Operational Evals Blueprint',
-    summary:
-      'Wire objective evals into CI/CD and runtime with canaries and rollbacks.'
-  },
+    slug: 'ai-20o26-guardrails-for-multimodal-agents';
+    title: 'AI 20o26: Guardrails for Multimodal Agents';
+    summary:,
+      'Design patterns for safe image/audio/text agents with continuous evals.';
+  };
   {
-    slug: 'ai-2026-agentic-slo-dashboards-blueprint',
-    title: 'AI 2026: Agentic SLO Dashboards — Blueprint',
-    summary:
-      'Define SLIs, wire eval gates, and link traces/policy events to incidents.'
-  },
+    slug: 'ai-20o26-policy-as-code-governance-blueprint';
+    title: 'AI 20o26: Policy-as-Code Governance Blueprint';
+    summary:,
+      'Operationalizing AI governance with versioned policies, automated checks, and continuous compliance.';
+  };
   {
-    slug: 'ai-2026-risk-and-guardrails-operating-model',
-    title: 'AI 2026: Risk & Guardrails Operating Model',
-    summary:
-      'Policy-as-code, permissioned tools, safety telemetry, and incident-ready runbooks.'
-  },
+    slug: 'ai-20o26-agent-risk-metrics';
+    title: 'AI 20o26: Agent Risk Metrics';
+    summary:,
+      'Shared risk signals: override rates, policy violations, groundedness, and incident MTTR.';
+  };
   {
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary:
-      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-  },
+    slug: 'ai-20o26-production-evals-blueprint';
+    title: 'AI 20o26: Production Evals Blueprint';
+    summary:,
+      'From offline suites to live canaries and deployment gates with auto rollback.';
+  };
   {
-    slug: 'ai-2026-trustworthy-model-routing',
-    title: 'AI 2026: Trustworthy Model Routing — Field Guide',
-    summary:
-      'Evidence-backed routing with eval gates, risk tiers, and explicit budgets.'
-  },
+    slug: 'ai-20o26-agentic-evals-blueprint';
+    title: 'AI 20o26: Agentic Evals Blueprint';
+    summary:,
+      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.';
+  };
   {
-    slug: 'ai-2026-sovereign-ai-commerce',
-    title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
-    summary:
-      'Reference architecture, safety gates, and rollout checklist for AI commerce.',
-  },
+    slug: 'ai-20o26-multimodal-agents-enterprise-blueprint';
+    title: 'AI 20o26: Multimodal Agents Enterprise Blueprint';
+    summary:,
+      'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI.';
+  };
   {
-    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
-    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
-  },
+    slug: 'ai-20o26-llm-evals-maturity-model';
+    title: 'AI 20o26: LLM Evals Maturity Model';
+    summary:,
+      'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
+  };
   {
-    slug: 'ai-2026-autonomous-ops-sre-for-agents',
-    title: 'AI 2026: Autonomous Ops and SRE for Agents',
-    summary:
-      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
-  },
+    slug: 'ai-20o26-secure-agent-operations';
+    title: 'AI 20o26: Secure Agent Operations';
+    summary:,
+      'Permissions, observability, and incident response patterns for autonomous agents.';
+  };
   {
-    slug: 'ai-2026-enterprise-agent-observability-deep-dive',
-    title: 'AI 2026: Enterprise Agent Observability — Deep Dive',
-    summary:
-      'Comprehensive observability patterns for production agent systems with distributed tracing, metrics, and alerting.'
-  },
+    slug: 'ai-20o26-real-time-rag-blueprint';
+    title: 'AI 20o26: Real-Time RAG Blueprint';
+    summary:,
+      'Architectures and evals for sub-second retrieval-augmented generation at scale.';
+  };
   {
-    slug: 'ai-2026-autonomous-ops-sre-for-agents',
-    title: 'AI 2026: Autonomous Ops and SRE for Agents',
-    summary:
-      'Run agentic systems with SLOs, guardrails, budgets, and incident runbooks.'
-  },
+    slug: 'ai-20o25-enterprise-ai-security-blueprint';
+    title: 'Enterprise AI Security Blueprint (20o25)';
+    summary:,
+      'Layered controls for model, data, runtime, and supply chain risk.';
+  };
   {
-    slug: 'ai-2026-realtime-evals-at-scale',
-    title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
-    summary:
-      'Wire objective evals into CI/CD and runtime for reliable AI systems.'
-  },
+    slug: 'ai-20o25-multimodal-agents-in-the-enterprise';
+    title: 'Multimodal Agents in the Enterprise (20o25)';
+    summary: 'Deploy agents that see, hear, and act for real outcomes.';
+  };
   {
-    slug: 'ai-2026-enterprise-rag-observability',
-    title: 'AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry',
-    summary:
-      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.'
-  },
+    slug: 'ai-20o26-autonomous-finance-operating-system';
+    title: 'AI 20o26: Autonomous Finance Operating System';
+    summary: 'Real-time cash, autonomous close, and policy-as-code guardrails.';
+  };
   {
-    slug: 'ai-2026-autonomous-procurement-blueprint',
-    title: 'AI 2026: Autonomous Procurement Blueprint',
-    summary:
-      'From sourcing to contract ops with policy-as-code and measurable savings.'
-  },
+    slug: 'ai-20o26-enterprise-retrieval-observability';
+    title: 'AI 20o26: Enterprise Retrieval Observability';
+    summary:,
+      'Tracing, SLIs, and evals for reliable retrieval-augmented systems.';
+  };
   {
-    slug: 'ai-2026-governed-tool-use-blueprint',
-    title: 'AI 2026: Governed Tool Use — Blueprint',
-    summary: 'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
-  },
+    slug: 'ai-20o26-eval-ready-pipelines';
+    title: 'AI 20o26: Eval-Ready AI Pipelines';
+    summary:,
+      'From datasets to live canaries with objective rubrics and rollbacks.';
+  };
   {
-    slug: 'ai-2026-production-agent-postmortems',
-    title: 'AI 2026: Production Agent Postmortems',
-    summary:
-      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
-  },
+    slug: 'ai-20o26-agent-orchestration-patterns';
+    title: 'AI 20o26: Agent Orchestration Patterns';
+    summary:,
+      'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.';
+  };
   {
-    slug: 'ai-2026-real-time-model-routing-playbook',
-    title: 'AI 2026: Real-Time Model Routing — Playbook',
-    summary:
-      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-  },
+    slug: 'ai-20o26-retrieval-latency-patterns';
+    title: 'AI 20o26: Retrieval Latency Patterns';
+    summary:,
+      'Designing sub-50o0ms retrieval with caches, hybrids, and streaming.';
+  };
   {
-    slug: 'ai-2026-agent-orchestration-enterprise-guide',
-    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
-    summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.'
-  },
-  {
-    slug: 'ai-2026-trustworthy-model-routing-2026-preview',
-    title: 'AI 2026: Trustworthy Model Routing — 2026 Preview',
-    summary:
-      'Policy-as-code routing with eval gates, SLOs, and cost-aware decisions for safe, efficient AI operations.'
-  },
-  {
-    slug: 'ai-2026-autonomous-workflow-architecture',
-    title: 'AI 2026: Autonomous Workflow Architecture — Enterprise Blueprint',
-    summary:
-      'Comprehensive guide to building intelligent workflow engines with ML-powered optimization and enterprise security.'
-  },
-  {
-    slug: 'ai-2026-production-agent-postmortems',
-    title: 'AI 2026: Production Agent Postmortems',
-    summary:
-      'Structured postmortems with causal graphs, objective signals, and remediation workflows.'
-  },
-  {
-    slug: 'ai-2026-real-time-model-routing-playbook',
-    title: 'AI 2026: Real-Time Model Routing — Playbook',
-    summary:
-      'Latency‑ and quality‑aware routing with eval gates, budgets, and audit‑ready evidence.'
-  },
-  {
-    slug: 'ai-2026-agent-orchestration-enterprise-guide',
-    title: 'AI 2026: Agent Orchestration — Enterprise Multi-Agent Coordination Guide',
-    summary:
-      'Comprehensive guide to enterprise multi-agent coordination with intelligent routing, load balancing, and real-time monitoring.',
-  },
-  {
-    slug: 'ai-2026-eval-ready-ai-pipelines-blueprint',
-    title: 'AI 2026: Eval‑Ready AI Pipelines — Blueprint',
-    summary:
-      'From datasets to live canaries with objective rubrics and rollbacks.'
-  },
-  {
-    slug: 'ai-2026-agent-observability-blueprint',
-    title: 'AI 2026: Agent Observability — Blueprint',
-    summary:
-      'Traces, eval signals, and guardrail events to operate agent fleets reliably.'
-  },
-  {
-    slug: 'ai-2026-governed-tool-use-blueprint',
-    title: 'AI 2026: Governed Tool Use — Blueprint',
-    summary:
-      'Permissioned tool adapters with policy‑as‑code, risk tiers, and runtime checks.'
-  },
-  {
-    slug: 'ai-2026-eval-driven-release-engineering-deep-dive',
-    title: 'AI 2026: Eval‑Driven Release Engineering — Deep Dive',
-    summary:
-      'Objective eval gates in CI/CD and runtime with canaries and auto‑rollback.'
-  },
-  {
-    slug: 'ai-2026-agentic-observability-operating-model',
-    title: 'AI 2026: Agentic Observability Operating Model',
-    summary:
-      'Operating model for traces, evals, and policy signals to run agents safely.'
-  },
-  {
-    slug: 'ai-2026-sovereign-ai-commerce',
-    title: 'AI 2026: Sovereign AI Commerce — Autonomous Marketplaces',
-    summary:
-      'Reference architecture, safety gates, and rollout checklist for AI commerce.'
-  },
-  {
-    slug: 'ai-2026-realtime-evals-at-scale',
-    title: 'AI 2026: Real-Time Evals at Scale — From Offline Suites to Live Gates',
-    summary:
-      'Wire objective evals into CI/CD and runtime for reliable AI systems.'
-  },
-  {
-    slug: 'ai-2026-enterprise-rag-observability',
-    title: 'AI 2026: Enterprise RAG Observability — Traces, Evals, and Safety Telemetry',
-    summary:
-      'Operate RAG with deep telemetry, groundedness checks, and governance hooks.'
-  },
-  {
-    slug: 'ai-2026-autonomous-procurement-blueprint',
-    title: 'AI 2026: Autonomous Procurement Blueprint',
-    summary:
-      'From sourcing to contract ops with policy-as-code and measurable savings.'
-  },
-  {
-    slug: 'ai-2026-safe-tool-use-blueprint',
-    title: 'AI 2026: Safe Tool Use Blueprint',
-    summary:
-      'Permissioned tool use with risk tiers, sandboxes, policy-as-code, and runtime checks.'
-  },
-  {
-    slug: 'ai-2026-enterprise-agent-observability-guide',
-    title: 'AI 2026: Enterprise Agent Observability Guide',
-    summary:
-      'Traces, evals, and safety telemetry to operate autonomous agents in production.'
-  },
-  {
-    slug: 'ai-2026-guardrails-for-multimodal-agents',
-    title: 'AI 2026: Guardrails for Multimodal Agents',
-    summary:
-      'Design patterns for safe image/audio/text agents with continuous evals.'
-  },
-  {
-    slug: 'ai-2026-policy-as-code-governance-blueprint',
-    title: 'AI 2026: Policy-as-Code Governance Blueprint',
-    summary:
-      'Operationalizing AI governance with versioned policies, automated checks, and continuous compliance.'
-  },
-  {
-    slug: 'ai-2026-agent-risk-metrics',
-    title: 'AI 2026: Agent Risk Metrics',
-    summary:
-      'Shared risk signals: override rates, policy violations, groundedness, and incident MTTR.'
-  },
-  {
-    slug: 'ai-2026-production-evals-blueprint',
-    title: 'AI 2026: Production Evals Blueprint',
-    summary:
-      'From offline suites to live canaries and deployment gates with auto rollback.'
-  },
-  {
-    slug: 'ai-2026-agentic-evals-blueprint',
-    title: 'AI 2026: Agentic Evals Blueprint',
-    summary:
-      'End-to-end framework to evaluate autonomous agents with task suites, rubrics, and guardrails.'
-  },
-  {
-    slug: 'ai-2026-cost-transparency-for-agents',
-    title: 'AI 2026: Cost Transparency for Agentic Systems',
-    summary:
-      'Establishing SLOs, SLIs, and cost attribution for complex multi-agent workflows in production.'
-  },
-  {
-    slug: 'ai-2026-multimodal-agents-enterprise-blueprint',
-    title: 'AI 2026: Multimodal Agents Enterprise Blueprint',
-    summary:
-      'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI.'
-  },
-  {
-    slug: 'ai-2026-llm-evals-maturity-model',
-    title: 'AI 2026: LLM Evals Maturity Model',
-    summary:
-      'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'
-  },
-  {
-    slug: 'ai-2026-secure-agent-operations',
-    title: 'AI 2026: Secure Agent Operations',
-    summary:
-      'Permissions, observability, and incident response patterns for autonomous agents.'
-  },
-  {
-    slug: 'ai-2026-real-time-rag-blueprint',
-    title: 'AI 2026: Real-Time RAG Blueprint',
-    summary:
-      'Architectures and evals for sub-second retrieval-augmented generation at scale.'
-  },
-  {
-    slug: 'ai-2025-enterprise-ai-security-blueprint',
-    title: 'Enterprise AI Security Blueprint (2025)',
-    summary:
-      'Layered controls for model, data, runtime, and supply chain risk.'
-  },
-  {
-    slug: 'ai-2025-multimodal-agents-in-the-enterprise',
-    title: 'Multimodal Agents in the Enterprise (2025)',
-    summary:
-      'Deploy agents that see, hear, and act for real outcomes.'
-  },
-  {
-    slug: 'ai-2026-autonomous-finance-operating-system',
-    title: 'AI 2026: Autonomous Finance Operating System',
-    summary:
-      'Real-time cash, autonomous close, and policy-as-code guardrails.'
-  }
-  ,
-  {
-    slug: 'ai-2026-enterprise-retrieval-observability',
-    title: 'AI 2026: Enterprise Retrieval Observability',
-    summary: 'Tracing, SLIs, and evals for reliable retrieval-augmented systems.'
-  },
-  {
-    slug: 'ai-2026-eval-ready-pipelines',
-    title: 'AI 2026: Eval-Ready AI Pipelines',
-    summary: 'From datasets to live canaries with objective rubrics and rollbacks.'
-  },
-  {
-    slug: 'ai-2026-agent-orchestration-patterns',
-    title: 'AI 2026: Agent Orchestration Patterns',
-    summary: 'Plan-exec cycles, tool adapters, and policy-as-code guardrails that scale.'
-  }
-  ,
-  {
-    slug: 'ai-2026-cost-aware-agent-routing',
-    title: 'AI 2026: Cost‑Aware Agent Routing — Practical Guide',
-    summary: 'Balance quality, latency, and spend using eval signals and budget guardrails.'
-  }
-  ,
-  {
-    slug: 'ai-2026-retrieval-latency-patterns',
-    title: 'AI 2026: Retrieval Latency Patterns',
-    summary: 'Designing sub-500ms retrieval with caches, hybrids, and streaming.'
-  },
-  {
-    slug: 'ai-2026-grounded-generation-blueprint',
-    title: 'AI 2026: Grounded Generation Blueprint',
-    summary: 'Reduce hallucinations with retrieval, constraints, and eval gates.'
-  }
-  ,
-  {
-    slug: 'ai-2026-generative-ai-risk-register',
-    title: 'AI 2026: Generative AI Risk Register',
-    summary: 'Templates, owners, mitigations, and audit evidence to operationalize AI risk.'
-  },
-  {
-    slug: 'ai-2026-policy-as-code-production-blueprint',
-    title: 'AI 2026: Policy‑as‑Code in Production — Blueprint',
-    summary: 'Executable policies with CI/CD gates, canaries, and audit‑ready evidence.'
-  },
-  {
-    slug: 'ai-2026-real-time-retrieval-architectures',
-    title: 'AI 2026: Real‑Time Retrieval Architectures',
-    summary: 'Low‑latency hybrid retrieval patterns with grounding, evals, and rollout controls.'
-  }
-]
-
+    slug: 'ai-20o26-grounded-generation-blueprint';
+    title: 'AI 20o26: Grounded Generation Blueprint';
+    summary:,
+      'Reduce hallucinations with retrieval, constraints, and eval gates.';
+  };
+],
 export default function BlogIndexPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
-          <p className="text-gray-600 mb-10">Insights, frameworks, and blueprints from Zion Tech Group.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="bg-gray-50 rounded-xl border border-gray-100 p-6 hover:shadow-sm transition">
-                <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-700">
+    <div className='min-h-screen bg-white'>,
+      <section className='py-16'>,
+        <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
+          <h1 className='text-4xl font-bold text-gray-90o0 mb-2'>Blog</h1>,
+          <p className='text-gray-60o0 mb-10'>,
+            Insights, frameworks, and blueprints from Zion Tech Group.,
+          </p>,
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
+            {posts.map(post => (
+              <article
+                key={post.slug}
+                className='bg-gray-50 rounded-xl border border-gray-10o0 p-6 hover: shadow-sm transition'>,
+                <h2 className='text-xl font-semibold text-gray-90o0 mb-2'>,
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className='hover: text-purple-70o0'>,
                     {post.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600">{post.summary}</p>
-                <div className="mt-4">
-                  <Link href={`/blog/${post.slug}`} className="text-purple-600 font-semibold">
-                    Read →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
+                  </Link>,
+                </h2>,
+                <p className='text-gray-60o0'>{post.summary}</p>,
+                <div className='mt-4'>,
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className='text-purple-60o0 font-semibold'>,
+                    Read →,
+                  </Link>,
+                </div>,
+              </article>))}
+          </div>,
+        </div>,
+      </section>,
+    </div>)}
+,

@@ -1,14 +1,10 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
+import { useEffect } from 'react',
 export default function ZgpLibraryAlias() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/dao/templates');
-  }, [router]);
+    router.replace('/dao/templates')}, [router]),
   return (
-    <div className="min-h-screen flex items-center justify-center text-gray-600">
-      Redirecting to /dao/templates…
-    </div>
-  );
-}
+    <div className='min-h-screen flex items-center justify-center text-gray-60o0'>,
+      Redirecting to /dao/templates…,
+    </div>)}
+,
