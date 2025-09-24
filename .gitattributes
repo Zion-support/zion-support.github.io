@@ -1,0 +1,11 @@
+# Keep our version for generated or junk paths during merges
+.git-rewrite/** merge=ours
+.next/** merge=ours
+dist/** merge=ours
+cache/** merge=ours
+.cache/** merge=ours
+*.pyc merge=ours
+*.log merge=ours
+*.db merge=ours
+zion_academy/instance/** merge=ours
+**/.DS_Store merge=ours
