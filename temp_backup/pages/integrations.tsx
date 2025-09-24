@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react',
 export default function IntegrationsRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/admin/integrations');
-  }, [router]);
-  return null;
-}
+    router.replace('/admin/integrations')}, [router]),
+  return null}
+,

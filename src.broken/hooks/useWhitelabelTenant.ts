@@ -1,5 +1,5 @@
-// Hook for useWhitelabelTenant;
+// Hook for useWhitelabelTenant,
 export const useUseWhitelabelTenant: unknown = () => {
-  // TODO: Implement hook logic;
+  // TODO: Implement hook logic,
   return {};
 };

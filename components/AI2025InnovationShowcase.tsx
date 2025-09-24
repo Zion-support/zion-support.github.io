@@ -1,169 +1,156 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 const AI20o25InnovationShowcase = () => {
   return (
-    <section className='py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <section className='py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         {/* Header */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>
-            <span className='text-sm font-bold text-white'>
-              🚀 20o25 AI INNOVATION BREAKTHROUGH
-            </span>
-          </div>
-          <h2 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>
-            Revolutionary AI Innovations
-          </h2>
-          <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed'>
-            Experience the future of artificial intelligence with cutting-edge
-            innovations that are transforming industries worldwide.
-          </p>
-        </div>
-
+        <div className='text-center mb-16'>,
+          <div className='inline-flex items-center bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full px-6 py-2 mb-6'>,
+            <span className='text-sm font-bold text-white'>,
+              🚀 20o25 AI INNOVATION BREAKTHROUGH,
+            </span>,
+          </div>,
+          <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent'>,
+            Revolutionary AI Innovations,
+          </h2>,
+          <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed'>,
+            Experience the future of artificial intelligence with cutting-edge,
+            innovations that are transforming industries worldwide.,
+          </p>,
+        </div>,
         {/* Innovation Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
           {/* Innovation 1 */}
-          <div className='bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-40o0/50 transition-all duration-30o0 group'>
-            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>
-              🧠
-            </div>
-            <h3 className='text-2xl font-bold mb-4 text-cyan-40o0'>
-              Neural Consciousness AI
-            </h3>
-            <p className='text-gray-30o0 mb-6 leading-relaxed'>
-              Breakthrough neural networks that achieve human-level
-              consciousness and emotional intelligence.
-            </p>
-            <div className='flex items-center text-cyan-40o0 font-semibold'>
-              <span>Learn More</span>
+          <div className='bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-40o0/50 transition-all duration-30o0 group'>,
+            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
+              🧠,
+            </div>,
+            <h3 className='text-2xl font-bold mb-4 text-cyan-40o0'>,
+              Neural Consciousness AI,
+            </h3>,
+            <p className='text-gray-30o0 mb-6 leading-relaxed'>,
+              Breakthrough neural networks that achieve human-level,
+              consciousness and emotional intelligence.,
+            </p>,
+            <div className='flex items-center text-cyan-40o0 font-semibold'>,
+              <span>Learn More</span>,
               <svg
-                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
+                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
+                fill='none',
+                stroke='currentColor',
+                viewBox='0 0 24 24'>,
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap='round',
+                  strokeLinejoin='round',
                   strokeWidth={2}
-                  d='M9 5l7 7-7 7'
-                />
-              </svg>
-            </div>
-          </div>
-
+                  d='M9 5l7 7-7 7',
+                />,
+              </svg>,
+            </div>,
+          </div>,
           {/* Innovation 2 */}
-          <div className='bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-40o0/50 transition-all duration-30o0 group'>
-            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>
-              ⚡
-            </div>
-            <h3 className='text-2xl font-bold mb-4 text-purple-40o0'>
-              Quantum AI Processing
-            </h3>
-            <p className='text-gray-30o0 mb-6 leading-relaxed'>
-              Quantum-powered AI systems that process data at unprecedented
-              speeds with infinite scalability.
-            </p>
-            <div className='flex items-center text-purple-40o0 font-semibold'>
-              <span>Discover</span>
+          <div className='bg-gradient-to-br from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-40o0/50 transition-all duration-30o0 group'>,
+            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
+              ⚡,
+            </div>,
+            <h3 className='text-2xl font-bold mb-4 text-purple-40o0'>,
+              Quantum AI Processing,
+            </h3>,
+            <p className='text-gray-30o0 mb-6 leading-relaxed'>,
+              Quantum-powered AI systems that process data at unprecedented,
+              speeds with infinite scalability.,
+            </p>,
+            <div className='flex items-center text-purple-40o0 font-semibold'>,
+              <span>Discover</span>,
               <svg
-                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
+                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
+                fill='none',
+                stroke='currentColor',
+                viewBox='0 0 24 24'>,
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap='round',
+                  strokeLinejoin='round',
                   strokeWidth={2}
-                  d='M9 5l7 7-7 7'
-                />
-              </svg>
-            </div>
-          </div>
-
+                  d='M9 5l7 7-7 7',
+                />,
+              </svg>,
+            </div>,
+          </div>,
           {/* Innovation 3 */}
-          <div className='bg-gradient-to-br from-green-60o0/20 to-blue-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-40o0/50 transition-all duration-30o0 group'>
-            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>
-              🌐
-            </div>
-            <h3 className='text-2xl font-bold mb-4 text-green-40o0'>
-              Autonomous Business Networks
-            </h3>
-            <p className='text-gray-30o0 mb-6 leading-relaxed'>
-              Self-managing business ecosystems that optimize operations without
-              human intervention.
-            </p>
-            <div className='flex items-center text-green-40o0 font-semibold'>
-              <span>Explore</span>
+          <div className='bg-gradient-to-br from-green-60o0/20 to-blue-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-green-40o0/50 transition-all duration-30o0 group'>,
+            <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
+              🌐,
+            </div>,
+            <h3 className='text-2xl font-bold mb-4 text-green-40o0'>,
+              Autonomous Business Networks,
+            </h3>,
+            <p className='text-gray-30o0 mb-6 leading-relaxed'>,
+              Self-managing business ecosystems that optimize operations without,
+              human intervention.,
+            </p>,
+            <div className='flex items-center text-green-40o0 font-semibold'>,
+              <span>Explore</span>,
               <svg
-                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-              >
+                className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
+                fill='none',
+                stroke='currentColor',
+                viewBox='0 0 24 24'>,
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
+                  strokeLinecap='round',
+                  strokeLinejoin='round',
                   strokeWidth={2}
-                  d='M9 5l7 7-7 7'
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-
+                  d='M9 5l7 7-7 7',
+                />,
+              </svg>,
+            </div>,
+          </div>,
+        </div>,
         {/* Stats Section */}
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
-          <div className='text-center'>
-            <div className='text-4xl font-bold text-cyan-40o0 mb-2'>50o00%</div>
-            <div className='text-gray-30o0'>ROI Increase</div>
-          </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold text-purple-40o0 mb-2'>
-              99.9%
-            </div>
-            <div className='text-gray-30o0'>Accuracy Rate</div>
-          </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold text-green-40o0 mb-2'>24/7</div>
-            <div className='text-gray-30o0'>Autonomous Operation</div>
-          </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold text-pink-40o0 mb-2'>10x</div>
-            <div className='text-gray-30o0'>Faster Processing</div>
-          </div>
-        </div>
-
+        <div className='grid grid-cols-1 md: grid-cols-4 gap-8 mb-16'>,
+          <div className='text-center'>,
+            <div className='text-4xl font-bold text-cyan-40o0 mb-2'>50o00%</div>,
+            <div className='text-gray-30o0'>ROI Increase</div>,
+          </div>,
+          <div className='text-center'>,
+            <div className='text-4xl font-bold text-purple-40o0 mb-2'>,
+              99.9%,
+            </div>,
+            <div className='text-gray-30o0'>Accuracy Rate</div>,
+          </div>,
+          <div className='text-center'>,
+            <div className='text-4xl font-bold text-green-40o0 mb-2'>24/7</div>,
+            <div className='text-gray-30o0'>Autonomous Operation</div>,
+          </div>,
+          <div className='text-center'>,
+            <div className='text-4xl font-bold text-pink-40o0 mb-2'>10x</div>,
+            <div className='text-gray-30o0'>Faster Processing</div>,
+          </div>,
+        </div>,
         {/* CTA Section */}
-        <div className='text-center'>
-          <div className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-2xl p-8 max-w-4xl mx-auto'>
-            <h3 className='text-3xl font-bold mb-4'>
-              Ready to Transform Your Business?
-            </h3>
-            <p className='text-lg opacity-90 mb-8'>
-              Join thousands of enterprises already leveraging these
-              revolutionary AI innovations.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        <div className='text-center'>,
+          <div className='bg-gradient-to-r from-cyan-50o0 to-purple-60o0 rounded-2xl p-8 max-w-4xl mx-auto'>,
+            <h3 className='text-3xl font-bold mb-4'>,
+              Ready to Transform Your Business?,
+            </h3>,
+            <p className='text-lg opacity-90 mb-8'>,
+              Join thousands of enterprises already leveraging these,
+              revolutionary AI innovations.,
+            </p>,
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link
-                href='/services'
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'
-              >
-                Get Started Today
-              </Link>
+                href='/services',
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
+                Get Started Today,
+              </Link>,
               <Link
-                href='/contact'
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+                href='/contact',
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
+                Schedule Demo,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>),
 };
-
 export default AI20o25InnovationShowcase;

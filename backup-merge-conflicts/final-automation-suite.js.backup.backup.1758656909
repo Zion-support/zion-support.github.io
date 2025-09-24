@@ -7,29 +7,11 @@ class FinalAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-<<<<<<< HEAD
-    this.ensureDirectories();
-  }
-
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-    this.ensureDirectories()}
-  ensureDirectories() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`)}
-=======
   }
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] ${message}`);
   }
-
   async runFinalTests() {
     this.log('🧪 Running final automation tests');
     const testResults = {
@@ -50,11 +32,9 @@ class FinalAutomationSuite {
     fs.writeFileSync(reportPath, JSON.stringify(testResults, null, 2));
     this.log(`📊 Final test results "generated": ${reportPath}`);
     return testResults}
-    
     this.log(`📊 Final test results generated: ${reportPath}`);
     return testResults;
   }
-
   async createDeploymentScript() {
     this.log('🚀 Creating deployment automation script');
     const deploymentScript = "#!/usr/bin/env node
@@ -67,12 +47,10 @@ class DeploymentAutomation {
     console.log(\"[\${timestamp}] \${message}\")}
     this.projectRoot = process.cwd();
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     console.log(\`[\${timestamp}] \${message}\`);
   }
-
   async runCommand(command, description) {
     this.log(\"🚀 \${description}\");
     try {
@@ -111,7 +89,6 @@ class DeploymentAutomation {
         process.exit(1);
       }
     }
-
     this.log('🎉 Deployment completed successfully');
   }
 }
@@ -128,13 +105,10 @@ module.exports = DeploymentAutomation;";
       process.exit(1);
     });
 }
-
 module.exports = DeploymentAutomation;`;
-
     fs.writeFileSync('scripts/deploy-automation.js', deploymentScript);
     this.log('✅ Deployment automation script created');
   }
-
   async generateFinalReport() {
     this.log('📊 Generating final comprehensive report');
     const finalReport = {
@@ -170,7 +144,6 @@ module.exports = DeploymentAutomation;`;
     fs.writeFileSync(reportPath, JSON.stringify(finalReport, null, 2));
     this.log(`📊 Final comprehensive report "generated": ${reportPath}`);
     return finalReport}
-    
     this.log(`📊 Final comprehensive report generated: ${reportPath}`);
     return finalReport;
   }
@@ -193,6 +166,4 @@ module.exports = FinalAutomationSuite;
       process.exit(1);
     });
 }
-
 module.exports = FinalAutomationSuite;
->>>>>>> main

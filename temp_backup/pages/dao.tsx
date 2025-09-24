@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react',
 export default function DaoRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/governance');
-  }, [router]);
-  return null;
-}
+    router.replace('/governance')}, [router]),
+  return null}
+,

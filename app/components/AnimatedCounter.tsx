@@ -15,16 +15,16 @@ export default function AnimatedCounter({
   duration = 2000,
   prefix = '',
   suffix = '',
-  className = '',
-}: AnimatedCounterProps) {
+  className = ''}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const counterRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting && !isVisible) {
           setIsVisible(true);
         }
       },
@@ -41,11 +41,11 @@ export default function AnimatedCounter({
   useEffect(() => {
     if (!isVisible) return;
 
-    let startTime: number;
-    let animationFrame: number;
+    let startTime: number | undefined;
+    let animationFrame: number | undefined;
 
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
+      if (startTime === undefined) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
 
       // Easing function for smooth animation

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 
 interface Testimonial {
   id: number;
@@ -25,8 +25,7 @@ const testimonials: Testimonial[] = [
     company: 'TechFlow Inc.',
     content:
       'Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.',
-    rating: 5,
-  },
+    rating: 5},
   {
     id: 2,
     name: 'Michael Rodriguez',
@@ -34,8 +33,7 @@ const testimonials: Testimonial[] = [
     company: 'CloudScale Solutions',
     content:
       'Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.',
-    rating: 5,
-  },
+    rating: 5},
   {
     id: 3,
     name: 'Emily Watson',
@@ -43,36 +41,38 @@ const testimonials: Testimonial[] = [
     company: 'DataDriven Corp',
     content:
       'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
-    rating: 5,
-  },
-];
+    rating: 5}];
 
 export default function TestimonialCard({
   testimonial,
-  isActive,
-}: TestimonialCardProps) {
+  isActive}: TestimonialCardProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (isActive) {
       setIsVisible(true);
+      return undefined;
     } else {
       const timer = setTimeout(() => setIsVisible(false), 300);
       return () => clearTimeout(timer);
     }
   }, [isActive]);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span
-        key={i}
-        className={`text-lg ${
-          i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
-        }`}
-      >
-        ★
+  const renderStars = (rating: number): ReactElement => {
+    return (
+      <span>
+        {Array.from({ length: 5 }, (_, i) => (
+          <span
+            key={i}
+            className={`text-lg ${
+              i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
+            }`}
+          >
+            ★
+          </span>
+        ))}
       </span>
-    ));
+    );
   };
 
   return (

@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ProductListing } from "@/types/listings"; ;"","});"})"""""""@/types/listings";&apos,"
-""
-import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
-";";"
-=======
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
 =======
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
->>>>>>> main
 =======
 import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings";&apos,"
->>>>>>> pr-11935
 ";";"
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
 ";";"
->>>>>>> pr-11935

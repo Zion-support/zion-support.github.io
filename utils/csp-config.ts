@@ -1,60 +1,55 @@
 
-// Content Security Policy configuration
+// Content Security Policy configuration,
 export const cspDirectives = {
-  'default-src': ["'self'"],
+  'default-src': ["'self'"];
   'script-src': [
-    "'self'",
-    "'unsafe-inline'", // Required for Next.js
-    'https://vercel.live',
-    'https://va.vercel-scripts.com',
-  ],
+    "'self'";
+    "'unsafe-inline'", // Required for Next.js,
+    'https://vercel.live';
+    'https://va.vercel-scripts.com';
+  ];
   'style-src': [
-    "'self'",
-    "'unsafe-inline'", // Required for styled-jsx
-    'https://fonts.googleapis.com',
-  ],
+    "'self'";
+    "'unsafe-inline'", // Required for styled-jsx,
+    'https://fonts.googleapis.com';
+  ];
   'font-src': [
-    "'self'",
-    'https://fonts.gstatic.com',
-  ],
+    "'self'";
+    'https://fonts.gstatic.com';
+  ];
   'img-src': [
-    "'self'",
-    'data:',
-    'https:',
-    'blob:',
-  ],
+    "'self'";
+    'data:';
+    'https:';
+    'blob:';
+  ];
   'connect-src': [
-    "'self'",
-    'https://api.vercel.com',
-    'https://vitals.vercel-insights.com',
-  ],
+    "'self'";
+    'https://api.vercel.com';
+    'https://vitals.vercel-insights.com';
+  ];
   'frame-src': [
-    "'none'",
-  ],
+    "'none'";
+  ];
   'object-src': [
-    "'none'",
-  ],
+    "'none'";
+  ];
   'base-uri': [
-    "'self'",
-  ],
+    "'self'";
+  ];
   'form-action': [
-    "'self'",
-  ],
+    "'self'";
+  ];
   'frame-ancestors': [
-    "'none'",
-  ],
-  'upgrade-insecure-requests': [],
+    "'none'";
+  ];
+  'upgrade-insecure-requests': [];
 };
-
 export const generateCSP = (): string => {
-  return Object.entries(cspDirectives)
+  return Object.entries(cspDirectives),
     .map(([directive, sources]) => {
       if (sources.length === 0) {
-        return directive;
-      }
-      return `${directive} ${sources.join(' ')}`;
-    })
-    .join('; ');
-};
-
-export const cspHeader = `Content-Security-Policy: ${generateCSP()}`;
+        return directive}
+      return `${directive} ${sources.join(' ')}`}),
+    .join(', ')};
+export const cspHeader = `Content-Security-Policy: ${generateCSP()}`,

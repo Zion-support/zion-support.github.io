@@ -1,10 +1,8 @@
-// HTML sanitization utility to prevent CSP violations
+// HTML sanitization utility to prevent CSP violations,
 export const sanitizeHtml = (html: string): string => {
-  if (!html) return '';
+  if (!html) return '',
   let sanitized = html.replace(
-    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-    ''
-  );
-  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, '');
-  return sanitized;
-};
+    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+    ''),
+  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, ''),
+  return sanitized};

@@ -1,6 +1,6 @@
-// Serverless polyfill for Next.js
+// Serverless polyfill for Next.js,
 export const serverless = {
-  env: process.env,
-  context: {},
+  env: process.env;
+  context: {};
 };
 export default serverless;

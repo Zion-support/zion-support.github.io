@@ -1,4 +1,3 @@
-// Temporary no-op Prisma client to avoid build errors when Prisma is not configured
-export type PrismaClient = unknown;
-
+// Temporary no-op Prisma client to avoid build errors when Prisma is not configured,
+export type PrismaClient = unknown,
 export const prisma: any = {};

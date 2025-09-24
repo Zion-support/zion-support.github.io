@@ -2,7 +2,7 @@
 try {
   require('@testing-library/jest-dom');
 } catch (error) {
-  // Non-fatal if not installed for minimal runs
+  // optional in minimal runs
 }
 
 // Mock Next.js Image to a simple function component without JSX here
@@ -10,13 +10,12 @@ jest.mock('next/image', () => ({
   __esModule: true,
   default: function MockImage() {
     return null;
-  },
-}));
+  }}));
 
 // matchMedia mock
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -24,9 +23,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
-});
+    dispatchEvent: jest.fn()}))});
 
 // Observers
 global.IntersectionObserver = class IntersectionObserver {

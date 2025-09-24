@@ -1,12 +1,3 @@
-<<<<<<< HEAD:components.disabled_full/MainSidebar.dynamic.jsx
-const MainSidebar = dynamic(() => import(\"./MainSidebar\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default MainSidebar\' ,
-=======
 =======
 const MainSidebar = dynamic(() => import("./MainSidebar"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default MainSidebar' ,'
 </p>'
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

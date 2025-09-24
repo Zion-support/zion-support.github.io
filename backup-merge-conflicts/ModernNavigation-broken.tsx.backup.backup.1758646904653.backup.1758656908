@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD:backup-merge-conflicts/ModernNavigation-broken.tsx.backup
-import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
-;
-const ModernNavigation = ("props": "any) => {;
-  const [isOpen", setIsOpen] = useState<any>(false);
-=======
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
-
 const "EnhancedHeader": React.FC = (props) => {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [isScrolled, setIsScrolled] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 =======
-
   useEffect(() => {
     const handleScroll = (props) => {
       setIsScrolled(window.scrollY > 20);
     };';
-
     window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [{ "name": 'Home', "href": '/' },
     {
       "name": 'Services',
@@ -89,21 +79,17 @@ const "EnhancedHeader": React.FC = (props) => {
     { "name": 'Blog', "href": '/blog' },
     { "name": 'Contact', "href": '/contact' };
   ];
-
   const contactInfo = [{ "icon": Phone, "text": '+1 302 464 0950', "href": 'tel:+13024640950' },
     { "icon": Mail, "text": 'kleber@ziontechgroup.com', "href": 'mailto:kleber@ziontechgroup.com' },
     { "icon": MapPin, "text": '364 E Main St STE 1008, Middletown DE 19709', "href": '#' };
   ];
-
   const toggleDropdown = (props) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const closeMobileMenu = (props) => {
     setIsOpen(false);
     setActiveDropdown(null);
   };
-
   const handleSearch = (props) => {
     e.preventDefault();
     if (searchQuery.trim()) {;
@@ -126,7 +112,6 @@ const "EnhancedHeader": React.FC = (props) => {
               Zion Tech Group;
             </span>;
           </Link>;
-
           <div className="hidden "lg":flex items-center space-x-8">;
             {navigationItems.map((item) => (;
               <div key={item.name"} className="relative">;
@@ -268,7 +253,6 @@ const ModernNavigation = (props) => {
                         </motion.div>;
                       )}
                     </AnimatePresence>;
-
                   </div>;
                 ) : "(;
                   <Link;
@@ -279,7 +263,6 @@ const ModernNavigation = (props) => {
                   >;
 =======
 =======
->>>>>>> pr-11935
                     </AnimatePresence>
                   </div>
                 ) : (
@@ -290,14 +273,12 @@ const ModernNavigation = (props) => {
                     }`}
                   >
 =======
->>>>>>> pr-11935
                     {item.name}
                   </Link>;
                 )}
               </div>;
             ))}
           </div>;
-
           <div className="hidden "lg": "block">;
             <Link;
               to="/contact";
@@ -306,7 +287,6 @@ const ModernNavigation = (props) => {
               Get Started;
             </Link>;
           </div>;
-
           <button;
             onClick={() => setIsOpen(!isOpen)"}
             className=""lg": "hidden p-2 rounded-lg text-gray-300 "hover":text-cyan-300 "hover":bg-gray-800/50 transition-colors duration-200";
@@ -316,7 +296,6 @@ const ModernNavigation = (props) => {
           </button>;
         </div>;
       </div>;
-
       <AnimatePresence>;
         {isOpen && (;
           <motion.div;
@@ -329,7 +308,6 @@ const ModernNavigation = (props) => {
             <div className="px-4 py-6 space-y-4">;
               <div className="pb-4 border-b border-gray-700">;
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">;
-
                   Contact Information;
                 </h3>;
                 <div className="space-y-2">;
@@ -360,7 +338,6 @@ const ModernNavigation = (props) => {
               Get Started
             </Link>
           </div>
-
           <button
             onClick={() => setIsOpen(!isOpen)}
             className=""lg": hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
@@ -370,7 +347,6 @@ const ModernNavigation = (props) => {
           </button>
         </div>
       </div>
-
       <AnimatePresence>
         {isOpen && (
           <motion.div';
@@ -384,7 +360,6 @@ const ModernNavigation = (props) => {
               <div className="pb-4 border-b border-gray-700">
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">
                   Contact Information
-                
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) => (
                     <a
@@ -398,12 +373,10 @@ const ModernNavigation = (props) => {
                   ))}
                 </div>;
               </div>;
-
               <div className="space-y-2">;
                 {navigationItems.map((item) => (;
                   <div key={item.name}>;
                     {item.dropdown ? (;
-
                       <div>;
                         <button;
                           onClick={() => toggleDropdown(item.name)}
@@ -464,7 +437,6 @@ const ModernNavigation = (props) => {
               <div className="pb-4 border-b border-gray-700">
                 <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wide">
                   Contact Information
-                
                 <div className="space-y-2">
                   {contactInfo.map((contact, index) => (
                     <a
@@ -513,7 +485,6 @@ const ModernNavigation = (props) => {
                                   <span>{dropdownItem.name}</span>
                                 </Link>
 =======
->>>>>>> pr-11935
                               ))}
                             </motion.div>;
                           )}
@@ -531,7 +502,6 @@ const ModernNavigation = (props) => {
                       >;
 =======
 =======
->>>>>>> pr-11935
                         className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${
                           location.pathname === item.href';';
                             ? 'text-cyan-400 bg-cyan-400/10'
@@ -539,14 +509,12 @@ const ModernNavigation = (props) => {
                         }`}
                       >
 =======
->>>>>>> pr-11935
                         {item.name}
                       </Link>;
                     )}
                   </div>;
                 ))}
               </div>;
-
               <div className="pt-4 border-t border-gray-700">;
                 <Link;
                   to="/contact";
@@ -598,7 +566,6 @@ export default ModernNavigation;
 };
 ;
 export default EnhancedHeader;
-
 </motion>
 </ChevronDown>
 </motion>

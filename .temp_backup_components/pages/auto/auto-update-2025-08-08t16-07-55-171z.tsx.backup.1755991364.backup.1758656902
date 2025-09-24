@@ -1,17 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-
-export default function AutoUpdate_2025_08_08T16_07_55_171Z() {
-  return (
-    <main className="p-6">
-      <h1 className="text-xl font-semibold">Auto Update (16:07:55)</h1>
-      <p className="text-gray-600">Generated content placeholder.</p>
-    </main>
-  );
-}
-=======
 import Head from "next/head";
-
 const Page: React.FC = () => {
   return (
     <>
@@ -25,9 +13,6 @@ const Page: React.FC = () => {
     </>
   );
 };
-
 export default Page;
 =======
 export default function Page() { return null; }
->>>>>>> origin/cursor/build-partner-integration-portal-and-api-da2c
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

@@ -1,232 +1,217 @@
 export const metadata = {
-  title: 'Email Automation Platform | Zion Tech Group',
-  description:
-    'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.',
+  title: 'Email Automation Platform | Zion Tech Group';
+  description:,
+    'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.';
 };
-
 export default function EmailAutomationPage() {
   return (
-    <div className='max-w-6xl mx-auto px-4 py-8'>
-      <section className='mb-12'>
-        <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>
-          Email Automation Platform
-        </h1>
-        <p className='text-xl text-gray-60o0 mb-8'>
-          Build sophisticated email automation platforms with drip campaigns,
-          personalization, and advanced analytics.
-        </p>
-
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>
+    <div className='max-w-6xl mx-auto px-4 py-8'>,
+      <section className='mb-12'>,
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
+          Email Automation Platform,
+        </h1>,
+        <p className='text-xl text-gray-60o0 mb-8'>,
+          Build sophisticated email automation platforms with drip campaigns;
+          personalization, and advanced analytics.,
+        </p>,
+        <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
-            title='Campaign Management'
+            title='Campaign Management',
             details={[
-              'Visual email builder',
-              'Drip campaign sequences',
-              'A/B testing framework',
-              'Send time optimization',
-              'List segmentation',
-              'Template library',
-              'Mobile-responsive design',
+              'Visual email builder';
+              'Drip campaign sequences';
+              'A/B testing framework';
+              'Send time optimization';
+              'List segmentation';
+              'Template library';
+              'Mobile-responsive design';
             ]}
-          />
+          />,
           <Item
-            title='Personalization & AI'
+            title='Personalization & AI',
             details={[
-              'Dynamic content blocks',
-              'AI-powered subject lines',
-              'Behavioral triggers',
-              'Customer journey mapping',
-              'Predictive analytics',
-              'Smart recommendations',
-              'Real-time personalization',
+              'Dynamic content blocks';
+              'AI-powered subject lines';
+              'Behavioral triggers';
+              'Customer journey mapping';
+              'Predictive analytics';
+              'Smart recommendations';
+              'Real-time personalization';
             ]}
-          />
+          />,
           <Item
-            title='Analytics & Insights'
+            title='Analytics & Insights',
             details={[
-              'Open & click tracking',
-              'Revenue attribution',
-              'Engagement scoring',
-              'Deliverability monitoring',
-              'ROI reporting',
-              'Heatmap analysis',
-              'Custom dashboards',
+              'Open & click tracking';
+              'Revenue attribution';
+              'Engagement scoring';
+              'Deliverability monitoring';
+              'ROI reporting';
+              'Heatmap analysis';
+              'Custom dashboards';
             ]}
-          />
-        </div>
-
-        <div className='bg-gradient-to-r from-green-50 to-blue-50 border border-green-20o0 rounded-lg p-6 mb-8'>
-          <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>
-            Why Choose Our Email Automation Platform?
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <div>
-              <h3 className='font-semibold text-gray-90o0 mb-2'>Proven ROI</h3>
-              <p className='text-gray-60o0'>
-                Our clients see average 340% ROI on email marketing campaigns
-                with our automation tools.
-              </p>
-            </div>
-            <div>
-              <h3 className='font-semibold text-gray-90o0 mb-2'>
-                Enterprise-Grade
-              </h3>
-              <p className='text-gray-60o0'>
-                Built to handle millions of emails with 99.9% deliverability
-                rates and advanced compliance.
-              </p>
-            </div>
-            <div>
-              <h3 className='font-semibold text-gray-90o0 mb-2'>
-                Easy Integration
-              </h3>
-              <p className='text-gray-60o0'>
-                Seamlessly integrates with CRM, e-commerce, and marketing tools
-                via robust APIs.
-              </p>
-            </div>
-            <div>
-              <h3 className='font-semibold text-gray-90o0 mb-2'>
-                Compliance Ready
-              </h3>
-              <p className='text-gray-60o0'>
-                GDPR, CAN-SPAM, and CASL compliant with built-in unsubscribe
-                management.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Pricing />
-    </div>
-  );
-}
-
-function Item({ title, details }: { title: string; details: string[] }) {
+          />,
+        </div>,
+        <div className='bg-gradient-to-r from-green-50 to-blue-50 border border-green-20o0 rounded-lg p-6 mb-8'>,
+          <h2 className='text-2xl font-bold text-gray-90o0 mb-4'>,
+            Why Choose Our Email Automation Platform?,
+          </h2>,
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
+            <div>,
+              <h3 className='font-semibold text-gray-90o0 mb-2'>Proven ROI</h3>,
+              <p className='text-gray-60o0'>,
+                Our clients see average 340% ROI on email marketing campaigns,
+                with our automation tools.,
+              </p>,
+            </div>,
+            <div>,
+              <h3 className='font-semibold text-gray-90o0 mb-2'>,
+                Enterprise-Grade,
+              </h3>,
+              <p className='text-gray-60o0'>,
+                Built to handle millions of emails with 99.9% deliverability,
+                rates and advanced compliance.,
+              </p>,
+            </div>,
+            <div>,
+              <h3 className='font-semibold text-gray-90o0 mb-2'>,
+                Easy Integration,
+              </h3>,
+              <p className='text-gray-60o0'>,
+                Seamlessly integrates with CRM, e-commerce, and marketing tools,
+                via robust APIs.,
+              </p>,
+            </div>,
+            <div>,
+              <h3 className='font-semibold text-gray-90o0 mb-2'>,
+                Compliance Ready,
+              </h3>,
+              <p className='text-gray-60o0'>,
+                GDPR, CAN-SPAM, and CASL compliant with built-in unsubscribe,
+                management.,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+      <Pricing />,
+    </div>)}
+,
+function Item({ title, details }: { title: string, details: string[] }) {
   return (
-    <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>
-      <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>{title}</h3>
-      <ul className='space-y-2'>
+    <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
+      <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>{title}</h3>,
+      <ul className='space-y-2'>,
         {details.map((detail, index) => (
-          <li key={index} className='flex items-start'>
-            <span className='text-green-50o0 mr-2 mt-1'>•</span>
-            <span className='text-gray-60o0'>{detail}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
+          <li key={index} className='flex items-start'>,
+            <span className='text-green-50o0 mr-2 mt-1'>•</span>,
+            <span className='text-gray-60o0'>{detail}</span>,
+          </li>))}
+      </ul>,
+    </div>)}
+,
 function Pricing() {
   return (
-    <section>
-      <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>
-        Email Automation Pricing
-      </h2>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+    <section>,
+      <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
+        Email Automation Pricing,
+      </h2>,
+      <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
         <Plan
-          name='Starter Platform'
-          price='$12k–$25k'
-          duration='4–6 weeks'
+          name='Starter Platform',
+          price='$12k–$25k',
+          duration='4–6 weeks',
           features={[
-            'Basic email builder',
-            'Drip campaigns',
-            'List management',
-            'Basic analytics',
-            'Template library',
-            'API integration',
-            'Email testing',
+            'Basic email builder';
+            'Drip campaigns';
+            'List management';
+            'Basic analytics';
+            'Template library';
+            'API integration';
+            'Email testing';
           ]}
-        />
+        />,
         <Plan
-          name='Professional Platform'
-          price='$25k–$50k'
-          duration='6–10 weeks'
+          name='Professional Platform',
+          price='$25k–$50k',
+          duration='6–10 weeks',
           features={[
-            'Everything in Starter',
-            'Advanced personalization',
-            'A/B testing suite',
-            'Behavioral triggers',
-            'Advanced analytics',
-            'CRM integration',
-            'White-label options',
+            'Everything in Starter';
+            'Advanced personalization';
+            'A/B testing suite';
+            'Behavioral triggers';
+            'Advanced analytics';
+            'CRM integration';
+            'White-label options';
           ]}
-        />
+        />,
         <Plan
-          name='Enterprise Platform'
-          price='$50k+'
-          duration='8–12 weeks'
+          name='Enterprise Platform',
+          price='$50k+',
+          duration='8–12 weeks',
           features={[
-            'Everything in Professional',
-            'AI-powered features',
-            'Advanced segmentation',
-            'Custom integrations',
-            'Dedicated support',
-            'SLA guarantees',
-            'Custom development',
+            'Everything in Professional';
+            'AI-powered features';
+            'Advanced segmentation';
+            'Custom integrations';
+            'Dedicated support';
+            'SLA guarantees';
+            'Custom development';
           ]}
-        />
-      </div>
-
-      <div className='mt-12 text-center'>
-        <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>
-          Ready to Build Your Email Platform?
-        </h3>
-        <p className='text-gray-60o0 mb-6 max-w-2xl mx-auto'>
-          Let's create a powerful email automation platform that drives
-          engagement and revenue for your business.
-        </p>
-        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        />,
+      </div>,
+      <div className='mt-12 text-center'>,
+        <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
+          Ready to Build Your Email Platform?,
+        </h3>,
+        <p className='text-gray-60o0 mb-6 max-w-2xl mx-auto'>,
+          Let's create a powerful email automation platform that drives,
+          engagement and revenue for your business.,
+        </p>,
+        <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
           <a
-            href='tel:+130o24640950'
-            className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'
-          >
-            Call +1 30o2 464 0950
-          </a>
+            href='tel:+130o24640950',
+            className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'>,
+            Call +1 30o2 464 0950,
+          </a>,
           <a
-            href='mailto:kleber@ziontechgroup.com'
-            className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors'
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+            href='mailto:kleber@ziontechgroup.com',
+            className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors'>,
+            Email Us,
+          </a>,
+        </div>,
+      </div>,
+    </section>),
 }
-
+,
 function Plan({
-  name,
-  price,
-  duration,
-  features,
+  name;
+  price;
+  duration;
+  features;
 }: {
-  name: string;
-  price: string;
-  duration: string;
-  features: string[];
+  name: string,
+  price: string,
+  duration: string,
+  features: string[],
 }) {
   return (
-    <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow'>
-      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>
-      <div className='text-3xl font-bold text-green-60o0 mb-1'>{price}</div>
-      <div className='text-gray-50o0 mb-6'>{duration}</div>
-      <ul className='space-y-3'>
+    <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow'>,
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
+      <div className='text-3xl font-bold text-green-60o0 mb-1'>{price}</div>,
+      <div className='text-gray-50o0 mb-6'>{duration}</div>,
+      <ul className='space-y-3'>,
         {features.map((feature, index) => (
-          <li key={index} className='flex items-start'>
-            <span className='text-green-50o0 mr-2 mt-1'>✓</span>
-            <span className='text-gray-60o0'>{feature}</span>
-          </li>
-        ))}
-      </ul>
+          <li key={index} className='flex items-start'>,
+            <span className='text-green-50o0 mr-2 mt-1'>✓</span>,
+            <span className='text-gray-60o0'>{feature}</span>,
+          </li>))}
+      </ul>,
       <a
-        href='mailto:kleber@ziontechgroup.com?subject=Email Automation Platform Inquiry'
-        className='block w-full mt-6 bg-green-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'
-      >
-        Get Started
-      </a>
-    </div>
-  );
+        href='mailto: kleber@ziontechgroup.com?subject=Email Automation Platform Inquiry',
+        className='block w-full mt-6 bg-green-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'>,
+        Get Started,
+      </a>,
+    </div>),
 }
+,

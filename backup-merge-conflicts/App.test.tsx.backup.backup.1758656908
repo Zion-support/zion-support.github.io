@@ -7,13 +7,6 @@ describe('App', () => {
   });
   it('has proper heading structure', () => {
     render(<App />);
-<<<<<<< HEAD
-<<<<<<< HEAD:__tests__/App.test.tsx
-    const heading = screen.getByRole('heading', { level: '1' });
-    expect(heading).toBeInTheDocument();
-  });
-});
-=======
 =======
     const heading = screen.getByRole('heading', { level: 1 });
     expect(heading).toBeInTheDocument();
@@ -23,6 +16,3 @@ describe('App', () => {
     expect(heading).toBeInTheDocument();
   });
 });
->>>>>>> main
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11914:backup-merge-conflicts/App.test.tsx.backup

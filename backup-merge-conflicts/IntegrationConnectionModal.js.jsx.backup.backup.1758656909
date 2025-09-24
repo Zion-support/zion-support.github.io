@@ -4,13 +4,4 @@
 =======
 " " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
 =======
-<<<<<<< HEAD:src.disabled/components/integrations/IntegrationConnectionModal.js.jsx
 " " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
-' \' \' \' \"export\": function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ \"autoCreateContacts\": \'tru\',e,\"pushNotes\": \'fals\',e,\"syncJobDetails\": \'tru\',e,\"syncApplicantData\": \'true\'}) const handleConnectOAuth = () => { setIsConnecting(true)\';\"";
-<<<<<<< HEAD:backup-merge-conflicts/IntegrationConnectionModal.js.jsx.backup
-" " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
-=======
-" " " " export: function IntegrationConnectionModal({ isOpen,onClose,integration }) { const [isConnecting,setIsConnecting] = useState(false) const [syncSettings,setSyncSettings] = useState({ autoCreateContacts: "tru",e,pushNotes: "fals",e,syncJobDetails: "tru",e,syncApplicantData: "true"}) const handleConnectOAuth = () => { setIsConnecting(true)";"";"""
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

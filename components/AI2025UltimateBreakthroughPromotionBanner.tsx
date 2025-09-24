@@ -1,67 +1,59 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 export default function AI20o25UltimateBreakthroughPromotionBanner() {
   return (
-    <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='text-center'>
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-50o0/20 border border-red-40o0/30 mb-6'>
-            <span className='text-red-30o0 font-semibold text-sm animate-pulse'>
-              🚀 BREAKTHROUGH ANNOUNCEMENT
-            </span>
-          </div>
-
-          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-20o0 to-blue-20o0 bg-clip-text text-transparent'>
-            AI 20o25 Ultimate Breakthrough Revolution
-          </h2>
-
-          <p className='text-xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>
-            Discover the most revolutionary AI breakthroughs of 20o25delivering
-            unprecedented 10,0o00% ROI and 99.9% accuracy across all industries.
-          </p>
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8'>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-green-40o0 mb-2'>
-                10,0o00%
-              </div>
-              <div className='text-sm text-gray-30o0'>ROI Potential</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-blue-40o0 mb-2'>
-                99.9%
-              </div>
-              <div className='text-sm text-gray-30o0'>Accuracy Rate</div>
-            </div>
-            <div className='text-center'>
-              <div className='text-3xl font-bold text-purple-40o0 mb-2'>
-                10o00x
-              </div>
-              <div className='text-sm text-gray-30o0'>Speed Improvement</div>
-            </div>
-          </div>
-
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+    <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16'>,
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
+        <div className='text-center'>,
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-50o0/20 border border-red-40o0/30 mb-6'>,
+            <span className='text-red-30o0 font-semibold text-sm animate-pulse'>,
+              🚀 BREAKTHROUGH ANNOUNCEMENT,
+            </span>,
+          </div>,
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-20o0 to-blue-20o0 bg-clip-text text-transparent'>,
+            AI 20o25 Ultimate Breakthrough Revolution,
+          </h2>,
+          <p className='text-xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
+            Discover the most revolutionary AI breakthroughs of 20o25delivering,
+            unprecedented 10,0o00% ROI and 99.9% accuracy across all industries.,
+          </p>,
+          <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto mb-8'>,
+            <div className='text-center'>,
+              <div className='text-3xl font-bold text-green-40o0 mb-2'>,
+                10,0o00%,
+              </div>,
+              <div className='text-sm text-gray-30o0'>ROI Potential</div>,
+            </div>,
+            <div className='text-center'>,
+              <div className='text-3xl font-bold text-blue-40o0 mb-2'>,
+                99.9%,
+              </div>,
+              <div className='text-sm text-gray-30o0'>Accuracy Rate</div>,
+            </div>,
+            <div className='text-center'>,
+              <div className='text-3xl font-bold text-purple-40o0 mb-2'>,
+                10o00x,
+              </div>,
+              <div className='text-sm text-gray-30o0'>Speed Improvement</div>,
+            </div>,
+          </div>,
+          <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
             <Link
-              href='/ai-20o25-ultimate-breakthrough-revolution'
-              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'
-            >
-              Explore Breakthroughs
-            </Link>
+              href='/ai-20o25-ultimate-breakthrough-revolution',
+              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover:from-purple-70o0 hover:to-blue-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
+              Explore Breakthroughs,
+            </Link>,
             <Link
-              href='/case-studies/ai-20o25-global-transformation-breakthrough'
-              className='bg-transparent border-2 border-white hover:bg-white hover:text-purple-90o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 shadow-lg'
-            >
-              View Success Stories
-            </Link>
-          </div>
-
-          <div className='mt-8 text-sm text-gray-40o0'>
-            Join thousands of companies already experiencing the AI 20o25
-            revolution
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+              href='/case-studies/ai-20o25-global-transformation-breakthrough',
+              className='bg-transparent border-2 border-white hover:bg-white hover:text-purple-90o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-30o0 shadow-lg'>,
+              View Success Stories,
+            </Link>,
+          </div>,
+          <div className='mt-8 text-sm text-gray-40o0'>,
+            Join thousands of companies already experiencing the AI 20o25,
+            revolution,
+          </div>,
+        </div>,
+      </div>,
+    </div>),
 }
+,

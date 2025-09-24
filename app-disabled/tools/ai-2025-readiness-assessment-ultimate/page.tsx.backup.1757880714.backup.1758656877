@@ -1,19 +1,9 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import { Badge } from '@/components/ui/badge';
-import { CheckCircle, XCircle, AlertCircle, TrendingUp, Zap, ArrowRight } from 'lucide-react';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../components/ui/card';
 import { Button } from '../../../components/ui/button';
 import { Badge } from '../../../components/ui/badge';
 import { CheckCircle, XCircle, AlertCircle, TrendingUp, Target, Zap } from 'lucide-react';
->>>>>>> 30b45328d96b64c38b016a4cc6bac6d96d3d090e:app/tools/ai-2025-readiness-assessment-ultimate/page.tsx.backup.1757880714
-
 interface AssessmentQuestion {
   id: string;
   category: string;
@@ -24,7 +14,6 @@ interface AssessmentQuestion {
     description: string;
   }[];
 }
-
 interface AssessmentResult {
   overallScore: number;
   categoryScores: {
@@ -34,7 +23,6 @@ interface AssessmentResult {
   nextSteps: string[];
   priorityLevel: 'Low' | 'Medium' | 'High' | 'Critical';
 }
-
 const assessmentQuestions: AssessmentQuestion[] = [
   // Data Infrastructure
   {
@@ -73,7 +61,6 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 5, label: 'Military-Grade', description: 'Highest level of security and privacy protection' }
     ]
   },
-
   // Technical Capabilities
   {
     id: 'ai-expertise',
@@ -111,7 +98,6 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 5, label: 'Fully Autonomous', description: 'Complete automation with minimal human intervention' }
     ]
   },
-
   // Business Readiness
   {
     id: 'leadership-support',
@@ -149,7 +135,6 @@ const assessmentQuestions: AssessmentQuestion[] = [
       { value: 5, label: 'Unlimited Budget', description: 'Full support with unlimited resources' }
     ]
   },
-
   // Use Case Readiness
   {
     id: 'use-case-clarity',
@@ -188,24 +173,20 @@ const assessmentQuestions: AssessmentQuestion[] = [
     ]
   }
 ];
-
 const categoryDescriptions = {
   'Data Infrastructure': 'Foundation for AI success - data quality, integration, and security',
   'Technical Capabilities': 'Your current AI/ML expertise and technical infrastructure',
   'Business Readiness': 'Organizational readiness for AI transformation',
   'Use Case Readiness': 'Clarity and definition of AI use cases and success metrics'
 };
-
 export default function AI2025ReadinessAssessment() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [isComplete, setIsComplete] = useState(false);
   const [result, setResult] = useState<AssessmentResult | null>(null);
-
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }));
   };
-
   const nextQuestion = () => {
     if (currentQuestion < assessmentQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -213,37 +194,30 @@ export default function AI2025ReadinessAssessment() {
       calculateResult();
     }
   };
-
   const prevQuestion = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
     }
   };
-
   const calculateResult = () => {
     const categoryScores: { [key: string]: number } = {};
     const categories = [...new Set(assessmentQuestions.map(q => q.category))];
-    
     categories.forEach(category => {
       const categoryQuestions = assessmentQuestions.filter(q => q.category === category);
       const categoryAnswers = categoryQuestions.map(q => answers[q.id] || 0);
       const categoryScore = categoryAnswers.reduce((sum, score) => sum + score, 0) / categoryAnswers.length;
       categoryScores[category] = Math.round(categoryScore * 20); // Convert to percentage
     });
-
     const overallScore = Math.round(
       Object.values(categoryScores).reduce((sum, score) => sum + score, 0) / categories.length
     );
-
     let priorityLevel: 'Low' | 'Medium' | 'High' | 'Critical';
     if (overallScore >= 80) priorityLevel = 'Low';
     else if (overallScore >= 60) priorityLevel = 'Medium';
     else if (overallScore >= 40) priorityLevel = 'High';
     else priorityLevel = 'Critical';
-
     const recommendations = generateRecommendations(categoryScores, overallScore);
     const nextSteps = generateNextSteps(priorityLevel, categoryScores);
-
     setResult({
       overallScore,
       categoryScores,
@@ -253,40 +227,31 @@ export default function AI2025ReadinessAssessment() {
     });
     setIsComplete(true);
   };
-
   const generateRecommendations = (categoryScores: { [key: string]: number }, overallScore: number): string[] => {
     const recommendations: string[] = [];
-    
     if (categoryScores['Data Infrastructure'] < 60) {
       recommendations.push('Invest in data quality improvement and integration platforms');
       recommendations.push('Implement comprehensive data security and privacy protection measures');
     }
-    
     if (categoryScores['Technical Capabilities'] < 60) {
       recommendations.push('Build AI/ML expertise through training and hiring');
       recommendations.push('Modernize cloud infrastructure for AI workloads');
     }
-    
     if (categoryScores['Business Readiness'] < 60) {
       recommendations.push('Secure executive sponsorship and create AI transformation roadmap');
       recommendations.push('Implement change management program for AI adoption');
     }
-    
     if (categoryScores['Use Case Readiness'] < 60) {
       recommendations.push('Define clear AI use cases with measurable success metrics');
       recommendations.push('Develop ROI framework and set realistic expectations');
     }
-
     if (overallScore < 40) {
       recommendations.push('Consider partnering with AI consulting firm for comprehensive transformation');
     }
-
     return recommendations;
   };
-
   const generateNextSteps = (priorityLevel: string, categoryScores: { [key: string]: number }): string[] => {
     const nextSteps: string[] = [];
-    
     if (priorityLevel === 'Critical') {
       nextSteps.push('Immediate executive briefing on AI readiness assessment results');
       nextSteps.push('Engage AI transformation consulting partner within 30 days');
@@ -304,17 +269,14 @@ export default function AI2025ReadinessAssessment() {
       nextSteps.push('Explore advanced AI technologies and emerging trends');
       nextSteps.push('Share best practices and become AI transformation leader');
     }
-
     return nextSteps;
   };
-
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600';
     if (score >= 60) return 'text-yellow-600';
     if (score >= 40) return 'text-orange-600';
     return 'text-red-600';
   };
-
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'Low': return 'bg-green-100 text-green-800';
@@ -324,7 +286,6 @@ export default function AI2025ReadinessAssessment() {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
-
   const getPriorityIcon = (priority: string) => {
     switch (priority) {
       case 'Low': return <CheckCircle className="w-5 h-5" />;
@@ -334,7 +295,6 @@ export default function AI2025ReadinessAssessment() {
       default: return <Target className="w-5 h-5" />;
     }
   };
-
   if (isComplete && result) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12">
@@ -347,7 +307,6 @@ export default function AI2025ReadinessAssessment() {
               Your comprehensive AI transformation readiness analysis
             </p>
           </div>
-
           {/* Overall Score */}
           <Card className="mb-8">
             <CardHeader>
@@ -383,7 +342,6 @@ export default function AI2025ReadinessAssessment() {
               </div>
             </CardContent>
           </Card>
-
           {/* Category Scores */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {Object.entries(result.categoryScores).map(([category, score]) => (
@@ -410,7 +368,6 @@ export default function AI2025ReadinessAssessment() {
               </Card>
             ))}
           </div>
-
           {/* Recommendations */}
           <Card className="mb-8">
             <CardHeader>
@@ -430,7 +387,6 @@ export default function AI2025ReadinessAssessment() {
               </ul>
             </CardContent>
           </Card>
-
           {/* Next Steps */}
           <Card className="mb-8">
             <CardHeader>
@@ -452,7 +408,6 @@ export default function AI2025ReadinessAssessment() {
               </ol>
             </CardContent>
           </Card>
-
           {/* Action Buttons */}
           <div className="text-center">
             <Button 
@@ -478,10 +433,8 @@ export default function AI2025ReadinessAssessment() {
       </div>
     );
   }
-
   const currentQ = assessmentQuestions[currentQuestion];
   const progress = ((currentQuestion + 1) / assessmentQuestions.length) * 100;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 py-12">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -502,7 +455,6 @@ export default function AI2025ReadinessAssessment() {
             Question {currentQuestion + 1} of {assessmentQuestions.length}
           </p>
         </div>
-
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="text-2xl">
@@ -534,7 +486,6 @@ export default function AI2025ReadinessAssessment() {
             </div>
           </CardContent>
         </Card>
-
         <div className="flex justify-between">
           <Button
             onClick={prevQuestion}

@@ -1,17 +1,17 @@
-'use client';
-import React, { useState } from 'react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import ThemeToggle from './ThemeToggle';
+'use client'
+import React, { useState } from 'react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+
+import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
+    { name: 'Contact', href: '/contact' }]
 
   return (
     <header className='bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700'>
@@ -23,7 +23,6 @@ export default function Header() {
               Zion Tech Group
             </h1>
           </div>
-
           {/* Desktop Navigation */}
           <nav className='hidden md:flex space-x-8'>
             {navigation.map(item => (
@@ -36,7 +35,6 @@ export default function Header() {
               </a>
             ))}
           </nav>
-
           {/* Theme Toggle and CTA Button */}
           <div className='hidden md:flex items-center space-x-4'>
             <ThemeToggle />
@@ -44,7 +42,6 @@ export default function Header() {
               Get Started
             </button>
           </div>
-
           {/* Mobile menu button */}
           <div className='md:hidden'>
             <button
@@ -59,7 +56,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className='md:hidden'>
@@ -87,5 +83,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

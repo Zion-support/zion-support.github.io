@@ -1,15 +1,7 @@
 const React from "react";"""; import { Button } from "@/components/ui/button"; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };""
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/src/components/community/CreatePostButton.js.jsx
-import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
-=======
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
 =======
-<<<<<<< HEAD
-=======
 =======
 import _React from 'react';'''; import { Button } from '@/components/ui/button'; export default function CreatePostButton({ categoryId }) {}; return null} </Button>)} export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton }; export { CreatePostButton };
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/community/CreatePostButton.js.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

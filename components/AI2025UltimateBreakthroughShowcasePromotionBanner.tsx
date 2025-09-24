@@ -1,124 +1,113 @@
-import Link from 'next/link';
-ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3
-
+import Link from 'next/link',
+ArrowRightStarZapTrendingUpUsersAwardCheckCircleRocketBrainCpuTargetBarChart3,
 export default function AI20o25UltimateBreakthroughShowcasePromotionBanner() {
   return (
-    <section className="relative py-16 px-4 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden">
+    <section className="relative py-16 px-4 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white overflow-hidden">,
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-40o0/20 to-blue-40o0/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white text-sm font-bold mb-6 animate-pulse shadow-lg">
-            🚀 BREAKTHROUGH ANNOUNCEMENT - NEW SHOWCASE
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            AI 20o25 Ultimate
-            <span className="block bg-gradient-to-r from-yellow-30o0 to-orange-30o0 bg-clip-text text-transparent">
-              Breakthrough Showcase
-            </span>
-          </h2>
-          <p className="text-xl md:text-2xl text-blue-10o0 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover the most revolutionary AI technologies of 20o25. Explore cutting-edge solutions
-            <span className="font-bold text-yellow-30o0"> success stories with 2,50o0-15,0o00% ROI</span>
-            and transformative technologies that are reshaping industries.
-          </p>
-        </div>
-
+      <div className="absolute inset-0 opacity-10">,
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-40o0/20 to-blue-40o0/20"></div>,
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>,
+      </div>,
+      <div className="relative max-w-7xl mx-auto">,
+        <div className="text-center mb-12">,
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-red-50o0 to-pink-50o0 text-white text-sm font-bold mb-6 animate-pulse shadow-lg">,
+            🚀 BREAKTHROUGH ANNOUNCEMENT - NEW SHOWCASE,
+          </div>,
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">,
+            AI 20o25 Ultimate,
+            <span className="block bg-gradient-to-r from-yellow-30o0 to-orange-30o0 bg-clip-text text-transparent">,
+              Breakthrough Showcase,
+            </span>,
+          </h2>,
+          <p className="text-xl md:text-2xl text-blue-10o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
+            Discover the most revolutionary AI technologies of 20o25. Explore cutting-edge solutions,
+            <span className="font-bold text-yellow-30o0"> success stories with 2,50o0-15,0o00% ROI</span>,
+            and transformative technologies that are reshaping industries.,
+          </p>,
+        </div>,
         {/* Key Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center mr-4">
-                <Brain className="w-6 h-6 text-white"  />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Quantum-Neural Fusion</h3>
-                <div className="text-yellow-30o0 font-semibold text-sm">15,0o00% ROI</div>
-              </div>
-            </div>
-            <p className="text-blue-10o0 text-sm">
-              Revolutionary fusion of quantum computing and neural networks delivering unprecedented processing power.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mr-4">
-                <Cpu className="w-6 h-6 text-white"  />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Autonomous AI Systems</h3>
-                <div className="text-yellow-30o0 font-semibold text-sm">8,50o0% ROI</div>
-              </div>
-            </div>
-            <p className="text-blue-10o0 text-sm">
-              Self-managing AI systems that optimize operations and maximize efficiency without human intervention.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center mr-4">
-                <Target className="w-6 h-6 text-white"  />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Predictive Intelligence</h3>
-                <div className="text-yellow-30o0 font-semibold text-sm">5,0o00% ROI</div>
-              </div>
-            </div>
-            <p className="text-blue-10o0 text-sm">
-              Advanced predictive analytics that forecast trends and optimize decisions in real-time.
-            </p>
-          </div>
-        </div>
-
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">,
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-30o0">,
+            <div className="flex items-center mb-4">,
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center mr-4">,
+                <Brain className="w-6 h-6 text-white"  />,
+              </div>,
+              <div>,
+                <h3 className="text-lg font-bold">Quantum-Neural Fusion</h3>,
+                <div className="text-yellow-30o0 font-semibold text-sm">15,0o00% ROI</div>,
+              </div>,
+            </div>,
+            <p className="text-blue-10o0 text-sm">,
+              Revolutionary fusion of quantum computing and neural networks delivering unprecedented processing power.,
+            </p>,
+          </div>,
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0">,
+            <div className="flex items-center mb-4">,
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mr-4">,
+                <Cpu className="w-6 h-6 text-white"  />,
+              </div>,
+              <div>,
+                <h3 className="text-lg font-bold">Autonomous AI Systems</h3>,
+                <div className="text-yellow-30o0 font-semibold text-sm">8,50o0% ROI</div>,
+              </div>,
+            </div>,
+            <p className="text-blue-10o0 text-sm">,
+              Self-managing AI systems that optimize operations and maximize efficiency without human intervention.,
+            </p>,
+          </div>,
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-30o0">,
+            <div className="flex items-center mb-4">,
+              <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center mr-4">,
+                <Target className="w-6 h-6 text-white"  />,
+              </div>,
+              <div>,
+                <h3 className="text-lg font-bold">Predictive Intelligence</h3>,
+                <div className="text-yellow-30o0 font-semibold text-sm">5,0o00% ROI</div>,
+              </div>,
+            </div>,
+            <p className="text-blue-10o0 text-sm">,
+              Advanced predictive analytics that forecast trends and optimize decisions in real-time.,
+            </p>,
+          </div>,
+        </div>,
         {/* Success Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-yellow-30o0 mb-2">15,0o00%</div>
-            <div className="text-blue-10o0 font-semibold">Max ROI Achieved</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-green-30o0 mb-2">99.9%</div>
-            <div className="text-blue-10o0 font-semibold">Accuracy Rate</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-orange-30o0 mb-2">10,0o00x</div>
-            <div className="text-blue-10o0 font-semibold">Faster Processing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-pink-30o0 mb-2">50o0+</div>
-            <div className="text-blue-10o0 font-semibold">Success Stories</div>
-          </div>
-        </div>
-
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
+          <div className="text-center">,
+            <div className="text-3xl md:text-4xl font-bold text-yellow-30o0 mb-2">15,0o00%</div>,
+            <div className="text-blue-10o0 font-semibold">Max ROI Achieved</div>,
+          </div>,
+          <div className="text-center">,
+            <div className="text-3xl md: text-4xl font-bold text-green-30o0 mb-2">99.9%</div>,
+            <div className="text-blue-10o0 font-semibold">Accuracy Rate</div>,
+          </div>,
+          <div className="text-center">,
+            <div className="text-3xl md:text-4xl font-bold text-orange-30o0 mb-2">10,0o00x</div>,
+            <div className="text-blue-10o0 font-semibold">Faster Processing</div>,
+          </div>,
+          <div className="text-center">,
+            <div className="text-3xl md: text-4xl font-bold text-pink-30o0 mb-2">50o0+</div>,
+            <div className="text-blue-10o0 font-semibold">Success Stories</div>,
+          </div>,
+        </div>,
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link 
-              href="/ai-20o25-ultimate-breakthrough-showcase" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 font-bold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
-            >
-              Explore Breakthrough Showcase
-              <ArrowRight className="ml-2 w-5 h-5"  />
-            </Link>
-            <Link 
-              href="/case-studies/ai-20o25-global-transformation-breakthrough" 
-              className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-30o0 backdrop-blur-sm"
-            >
-              View Success Stories
-            </Link>
-          </div>
-          
-          <div className="text-blue-20o0 text-sm">
-            <span className="font-semibold">Limited Time:</span> Get exclusive access to breakthrough technologies and implementation guides
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+        <div className="text-center">,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-6">,
+            <Link
+              href="/ai-20o25-ultimate-breakthrough-showcase",
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-gray-90o0 font-bold rounded-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
+              Explore Breakthrough Showcase,
+              <ArrowRight className="ml-2 w-5 h-5"  />,
+            </Link>,
+            <Link
+              href="/case-studies/ai-20o25-global-transformation-breakthrough",
+              className="inline-flex items-center px-8 py-4 bg-white/20 text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all duration-30o0 backdrop-blur-sm">,
+              View Success Stories,
+            </Link>,
+          </div>,
+          <div className="text-blue-20o0 text-sm">,
+            <span className="font-semibold">Limited Time:</span> Get exclusive access to breakthrough technologies and implementation guides,
+          </div>,
+        </div>,
+      </div>,
+    </section>),
 }

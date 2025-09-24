@@ -1,22 +1,10 @@
 export function Select({ className, children, ...props }) {
   return (
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD:backup-merge-conflicts/select.jsx.backup
-<<<<<<< HEAD
-
-export function Select({ className, children, ...props }) {
-  return (
-    <div className="min-h-screen bg-white">
-    <div className={`relative ${className || ''}`} {...props}>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
 ;
 export function Select({ className, children, ...props }) {;
   return (;
     <div className={`relative ${className || ''}`} {...props}>;
->>>>>>> main
       {children}
     </div>;
   );
@@ -25,53 +13,22 @@ export function SelectTrigger({ className, children, ...props }) {;
   return (;
     <button;
       className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 "placeholder": "text-gray-500 "focus":outline-none "focus":ring-2 "focus":ring-blue-500 "focus":border-transparent transition-colors cursor-pointer ${className || ''"}`}
-<<<<<<< HEAD
-
-=======
 =======
 =======
 =======
 import React from &apos;react&apos;; export function Select({ className,children,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || &quot;}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || &quot;}`} {...props}> {placeholder || &apos;Select an option&apos;} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className=&quot;min-h-screen bg-white&quot;> {children} </div> )} export default select;&apos;;&apos;;
-<<<<<<< HEAD:backup-merge-conflicts/select.jsx.backup
-import React from 'react';
-export function Select({ className, children, ...props }) {
-  return (
-    <div className="min-h-screen bg-white">
-      {children}
-    </div>
-    );
-}
-export function SelectTrigger({ className, children, ...props }) {
-  return (
-    <button
-      className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 "placeholder": text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`}
->>>>>>> main
-      {...props}
-    >;
-      {children}
-    </button>;
-  );
-}
-<<<<<<< HEAD
-=======
 export function SelectValue({ placeholder, className, ...props }) {;
   return (;
     <span className={`text-sm ${className || ''}`} {...props}>;
 export function SelectValue({ placeholder, className, ...props }) {
   return (
     <span className={`text-sm ${className || "}`} {...props}>
->>>>>>> main
       {placeholder || 'Select an option'}
     </span>;
   );
 }
 export function SelectContent({ className, children, ...props }) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-<<<<<<< HEAD
-=======
 export function SelectContent({ className, children, ...props }) {
   return (
 =======
@@ -102,10 +59,8 @@ export function SelectItem({ className, children, value, ...props }) {;
       absolute top-full left-0 right-0 z-50 mt-1 rounded-md border
       border-gray-300 bg-white shadow-lg ${className || ''}
     `} {...props}>
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
     <div className="min-h-screen bg-white">
->>>>>>> main
       {children}
     </div>
     );
@@ -129,12 +84,3 @@ export default select;';';
     </div>
   );
 }
-<<<<<<< HEAD:backup-merge-conflicts/select.jsx.backup
-import React from 'react'; export function Select({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || "}`} {...props}> {placeholder || 'Select an option'} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default select;';';
->>>>>>> main
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main
-import React from 'react'; export function Select({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || "}`} {...props}> {placeholder || 'Select an option'} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default select;';';
-import React from 'react'; export function Select({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectTrigger({ className,children,...props }) { return ( <button className={`flex h-10 w-full items-center justify-between rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors cursor-pointer ${className || "}`} {...props} > {children} </button> )} export function SelectValue({ placeholder,className,...props }) { return ( <span className={`text-sm ${className || "}`} {...props}> {placeholder || 'Select an option'} </span> )} export function SelectContent({ className,children,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export function SelectItem({ className,children,value,...props }) { return ( <div className="min-h-screen bg-white"> {children} </div> )} export default select;';';
-=======
->>>>>>> pr-11935

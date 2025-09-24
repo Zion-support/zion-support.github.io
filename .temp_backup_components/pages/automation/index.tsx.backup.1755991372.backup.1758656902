@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function AutomationIndexPage() {
-  return <div>Automation Overview</div>;
-}
-=======
 export default function AutomationPage() {
   return <div className="py-10">Automation Dashboard Placeholder</div>;
 }
 =======
 import Link from 'next/link';
-
 export default function AutomationsIndex() {
   return (
     <div className="space-y-6">
@@ -27,5 +19,3 @@ export default function AutomationsIndex() {
     </div>
   );
 }
->>>>>>> origin/cursor/build-talent-marketplace-platform-793e
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

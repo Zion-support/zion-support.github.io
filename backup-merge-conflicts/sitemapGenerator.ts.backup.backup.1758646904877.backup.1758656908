@@ -1,11 +1,6 @@
 =======
-<<<<<<< HEAD
-interface: SitemapUrl {
-<<<<<<< HEAD
-=======
 =======
 "interface": SitemapUrl {
->>>>>>> main
   url: string;
    lastmod?: string;
    changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'';

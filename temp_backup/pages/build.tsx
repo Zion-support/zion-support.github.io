@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
-
+import { useEffect } from 'react',
 export default function BuildRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
   useEffect(() => {
-    router.replace('/roadmap');
-  }, [router]);
-  return null;
-}
+    router.replace('/roadmap')}, [router]),
+  return null}
+,

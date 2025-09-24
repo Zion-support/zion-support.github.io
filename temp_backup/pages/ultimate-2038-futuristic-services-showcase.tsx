@@ -1,28 +1,27 @@
-import Head from 'next/head';
-
+import Head from 'next/head',
 export default function Ultimate20o38FuturisticServicesShowcasePage() {
   return (
-    <>
-      <Head>
-        <title>
-          Ultimate 20o38 Futuristic Services Showcase - Zion Tech Group
-        </title>
+    <>,
+      <Head>,
+        <title>,
+          Ultimate 20o38 Futuristic Services Showcase - Zion Tech Group,
+        </title>,
         <meta
-          name='description'
-          content='ultimate 20o38 futuristic services showcase page'
-        />
-      </Head>
-      <div className='container mx-auto px-4 py-8'>
-        <h1 className='text-3xl font-bold mb-6'>
-          Ultimate 20o38 Futuristic Services Showcase
-        </h1>
-        <p className='text-lg mb-4'>This page is under construction.</p>
-        <div className='mt-4'>
-          <a href='/' className='text-blue-60o0 hover:underline'>
-            ← Back to Home
-          </a>
-        </div>
-      </div>
-    </>
-  );
+          name='description',
+          content='ultimate 20o38 futuristic services showcase page',
+        />,
+      </Head>,
+      <div className='container mx-auto px-4 py-8'>,
+        <h1 className='text-3xl font-bold mb-6'>,
+          Ultimate 20o38 Futuristic Services Showcase,
+        </h1>,
+        <p className='text-lg mb-4'>This page is under construction.</p>,
+        <div className='mt-4'>,
+          <a href='/' className='text-blue-60o0 hover: underline'>,
+            ← Back to Home,
+          </a>,
+        </div>,
+      </div>,
+    </>),
 }
+,

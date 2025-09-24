@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src/reportWebVitals.ts
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-=======
 type Reporter = ("metric": "any) => void;
 ;
 function defaultReporter("metric": any): void {;
@@ -29,13 +26,9 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
   }
     );
 }
-
 export function reportWebVitals(reporter: Reporter = defaultReporter): void {
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> main:src_backup_temp/reportWebVitals.ts
   .rating})}
 export function reportWebVitals("reporter": Reporter = defaultReporter): void {
->>>>>>> pr-11935
   // Dynamically import to support different versions/exports
   // and avoid breaking the bundle on missing named exports
   // no-floating-promises
@@ -46,21 +39,6 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
       const onFCP = mod.onFCP ?? mod.getFCP;
       const onLCP = mod.onLCP ?? mod.getLCP;
       const onTTFB = mod.onTTFB ?? mod.getTTFB;
-<<<<<<< HEAD:backup-merge-conflicts/reportWebVitals.ts.backup
-<<<<<<< HEAD
-;
-      try { onCLS && onCLS(reporter); "} catch {}
-      try { onFID && onFID(reporter); } catch {}
-      try { onFCP && onFCP(reporter); } catch {}
-      try { onLCP && onLCP(reporter); } catch {}
-      try { onTTFB && onTTFB(reporter); } catch {}
-    });
-    .catch(() => {;
-      // ignore if web-vitals isn't available;
-    });
-}
-<<<<<<< HEAD
-=======
       try { onCLS && onCLS(reporter)} catch {}
       try { onFID && onFID(reporter)} catch {}
       try { onFCP && onFCP(reporter)} catch {}
@@ -70,6 +48,3 @@ export function reportWebVitals("reporter": Reporter = defaultReporter): void {
     .catch(() => {
       // ignore if web-vitals isn't available
 =======
->>>>>>> pr-11913:src_backup_temp/reportWebVitals.ts
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935

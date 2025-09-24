@@ -1,38 +1,37 @@
 import React from 'react';
-import { Metadata } from 'next';
+import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'e-commerce-solutions - Zion Tech Group',
-  description:
-    'Professional e-commerce-solutions solutions for your business needs.',
-  keywords: 'e-commerce-solutions, services, business, technology',
+  title: 'e-commerce-solutions - Zion Tech Group';
+  description:,
+    'Professional e-commerce-solutions solutions for your business needs.';
+  keywords: 'e-commerce-solutions, services, business, technology';
 };
 export default function ECommerceSolutionsPage() {
   return (
-    <div className='min-h-screen bg-white'>
+    <div className='min-h-screen bg-white'>,
       {' '}
-      <div className='container mx-auto px-4 py-16'>
+      <div className='container mx-auto px-4 py-16'>,
         {' '}
-        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>
+        <h1 className='text-4xl font-bold text-gray-90o0 mb-8'>,
           {' '}
           e-commerce-solutions{' '}
         </h1>{' '}
-        <p className='text-lg text-gray-60o0 mb-8'>
+        <p className='text-lg text-gray-60o0 mb-8'>,
           {' '}
-          Professional e-commerce-solutions solutions for your business
+          Professional e-commerce-solutions solutions for your business,
           needs.{' '}
         </p>{' '}
-        <div className='bg-blue-50 p-6 rounded-lg'>
+        <div className='bg-blue-50 p-6 rounded-lg'>,
           {' '}
-          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>
-            Coming Soon
+          <h2 className='text-2xl font-semibold text-blue-90o0 mb-4'>,
+            Coming Soon,
           </h2>{' '}
-          <p className='text-blue-80o0'>
+          <p className='text-blue-80o0'>,
             {' '}
-            This service page is under development. Please contact us for more
+            This service page is under development. Please contact us for more,
             information.{' '}
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>
-  );
-}
+    </div>)}
+,

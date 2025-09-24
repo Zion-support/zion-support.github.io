@@ -1,91 +1,82 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Operational Guardrails',
-  description:
-    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.',
+  title: 'AI 20o26: Operational Guardrails';
+  description:,
+    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.';
 };
-
 export default function OperationalGuardrails20o26Page() {
   return (
-    <main className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-      <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>
-        AI 20o26: Operational Guardrails
-      </h1>
-      <p className='text-gray-70o0 mb-6'>
-        Establish operational guardrails to ensure safe, reliable, and compliant
-        autonomous AI systems. This guide covers runtime protections, policy
-        gates, evaluation SLAs, and incident response.
-      </p>
-
-      <section className='space-y-6'>
-        <div className='bg-white rounded-xl shadow p-6'>
-          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>
-            Core Guardrails
-          </h2>
-          <ul className='list-disc pl-6 text-gray-70o0 space-y-1'>
-            <li>Policy-as-Code enforcement with attestations</li>
-            <li>Scenario-driven CI/CD evaluation gates</li>
-            <li>Runtime sandboxing and isolation domains</li>
-            <li>Safety budgets and fallback strategies</li>
-          </ul>
-        </div>
-
-        <div className='bg-white rounded-xl shadow p-6'>
-          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>
-            Related Guides
-          </h2>
-          <ul className='list-disc pl-6 text-gray-70o0 space-y-1'>
-            <li>
+    <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
+      <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
+        AI 20o26: Operational Guardrails,
+      </h1>,
+      <p className='text-gray-70o0 mb-6'>,
+        Establish operational guardrails to ensure safe, reliable, and compliant,
+        autonomous AI systems. This guide covers runtime protections, policy,
+        gates, evaluation SLAs, and incident response.,
+      </p>,
+      <section className='space-y-6'>,
+        <div className='bg-white rounded-xl shadow p-6'>,
+          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>,
+            Core Guardrails,
+          </h2>,
+          <ul className='list-disc pl-6 text-gray-70o0 space-y-1'>,
+            <li>Policy-as-Code enforcement with attestations</li>,
+            <li>Scenario-driven CI/CD evaluation gates</li>,
+            <li>Runtime sandboxing and isolation domains</li>,
+            <li>Safety budgets and fallback strategies</li>,
+          </ul>,
+        </div>,
+        <div className='bg-white rounded-xl shadow p-6'>,
+          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>,
+            Related Guides,
+          </h2>,
+          <ul className='list-disc pl-6 text-gray-70o0 space-y-1'>,
+            <li>,
               <Link
-                href='/blog/ai-20o26-production-guardrails-playbook'
-                className='text-purple-70o0 hover:underline'
-              >
-                Production Guardrails Playbook
-              </Link>
-            </li>
-            <li>
+                href='/blog/ai-20o26-production-guardrails-playbook',
+                className='text-purple-70o0 hover: underline'>,
+                Production Guardrails Playbook,
+              </Link>,
+            </li>,
+            <li>,
               <Link
-                href='/content/ai-20o26-agent-risk-management-framework'
-                className='text-purple-70o0 hover:underline'
-              >
-                Agent Risk Management Framework
-              </Link>
-            </li>
-            <li>
+                href='/content/ai-20o26-agent-risk-management-framework',
+                className='text-purple-70o0 hover:underline'>,
+                Agent Risk Management Framework,
+              </Link>,
+            </li>,
+            <li>,
               <Link
-                href='/content/ai-20o26-autonomous-ops-playbook'
-                className='text-purple-70o0 hover:underline'
-              >
-                Autonomous Ops Playbook
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className='bg-white rounded-xl shadow p-6'>
-          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>
-            Implement
-          </h2>
-          <p className='text-gray-70o0 mb-4'>
-            Adopt a layered defense with pre-deployment checks and runtime
-            protections.
-          </p>
-          <div className='flex flex-wrap gap-3'>
+                href='/content/ai-20o26-autonomous-ops-playbook',
+                className='text-purple-70o0 hover:underline'>,
+                Autonomous Ops Playbook,
+              </Link>,
+            </li>,
+          </ul>,
+        </div>,
+        <div className='bg-white rounded-xl shadow p-6'>,
+          <h2 className='text-2xl font-semibold text-gray-90o0 mb-2'>,
+            Implement,
+          </h2>,
+          <p className='text-gray-70o0 mb-4'>,
+            Adopt a layered defense with pre-deployment checks and runtime,
+            protections.,
+          </p>,
+          <div className='flex flex-wrap gap-3'>,
             <Link
-              href='/content/ai-20o26-agent-governance-policy-as-code'
-              className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
-            >
-              Policy-as-Code
-            </Link>
+              href='/content/ai-20o26-agent-governance-policy-as-code',
+              className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
+              Policy-as-Code,
+            </Link>,
             <Link
-              href='/content/ai-20o26-evaluation-harness-blueprint'
-              className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'
-            >
-              Eval Harness
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+              href='/content/ai-20o26-evaluation-harness-blueprint',
+              className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
+              Eval Harness,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
+    </main>),
 }
+,

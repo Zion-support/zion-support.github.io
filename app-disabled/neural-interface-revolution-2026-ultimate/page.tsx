@@ -1,294 +1,280 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
-
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import Card from '../../components/ui/Card',
 export const metadata = {
-  title:
-    'Neural Interface Revolution 20o26 Ultimate - Direct Brain-Computer Integration',
-  description:
-    'Experience the ultimate neural interface revolution of 20o26, where direct brain-computer integration transforms human capabilities and communication.',
+  title:,
+    'Neural Interface Revolution 20o26 Ultimate - Direct Brain-Computer Integration';
+  description:,
+    'Experience the ultimate neural interface revolution of 20o26, where direct brain-computer integration transforms human capabilities and communication.';
   keywords: [
-    'neural interface 20o26',
-    'brain-computer interface',
-    'neural implants',
-    'mind control',
-    'neural technology',
-  ],
+    'neural interface 20o26';
+    'brain-computer interface';
+    'neural implants';
+    'mind control';
+    'neural technology';
+  ];
 };
-
 export default function NeuralInterfaceRevolution20o26Ultimate() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white'>
+    <div className='min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0 text-white'>,
       <SEO
-        title='Neural Interface Revolution 20o26 Ultimate - Direct Brain-Computer Integration'
-        description='Experience the ultimate neural interface revolution of 20o26, where direct brain-computer integration transforms human capabilities and communication.'
-        keywords='neural interface 20o26, brain-computer interface, neural implants, mind control, neural technology'
-        url='/neural-interface-revolution-20o26-ultimate'
-      />
-
+        title='Neural Interface Revolution 20o26 Ultimate - Direct Brain-Computer Integration',
+        description='Experience the ultimate neural interface revolution of 20o26, where direct brain-computer integration transforms human capabilities and communication.',
+        keywords='neural interface 20o26, brain-computer interface, neural implants, mind control, neural technology',
+        url='/neural-interface-revolution-20o26-ultimate',
+      />,
       {/* Hero Section */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-16'>
-            <div className='inline-flex items-center bg-gradient-to-r from-emerald-50o0 to-teal-50o0 rounded-full px-6 py-2 mb-6'>
-              <span className='text-sm font-medium'>🧠 NEURAL REVOLUTION</span>
-            </div>
-            <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-20o0 bg-clip-text text-transparent'>
-              Neural Interface Revolution 20o26 Ultimate
-            </h1>
-            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>
-              Experience the ultimate neural interface revolution of 20o26.
-              Direct brain-computer integration that transforms human
-              capabilities, communication, and interaction with technology.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>,
+        <div className='max-w-6xl mx-auto'>,
+          <div className='text-center mb-16'>,
+            <div className='inline-flex items-center bg-gradient-to-r from-emerald-50o0 to-teal-50o0 rounded-full px-6 py-2 mb-6'>,
+              <span className='text-sm font-medium'>🧠 NEURAL REVOLUTION</span>,
+            </div>,
+            <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-emerald-20o0 bg-clip-text text-transparent'>,
+              Neural Interface Revolution 20o26 Ultimate,
+            </h1>,
+            <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
+              Experience the ultimate neural interface revolution of 20o26.,
+              Direct brain-computer integration that transforms human,
+              capabilities, communication, and interaction with technology.,
+            </p>,
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link
-                href='/contact'
-                className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all transform hover:scale-10o5'
-              >
-                Join the Revolution
-              </Link>
+                href='/contact',
+                className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all transform hover:scale-10o5'>,
+                Join the Revolution,
+              </Link>,
               <Link
-                href='/neural-interface-revolution-20o25'
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+                href='/neural-interface-revolution-20o25',
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'>,
+                Learn More,
+              </Link>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Neural Breakthroughs Section */}
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-center mb-12'>
-            Neural Interface Breakthroughs
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            <Card className='bg-gradient-to-br from-emerald-80o0 to-teal-80o0 p-8 border-0'>
-              <div className='text-4xl mb-4'>🧠</div>
-              <h3 className='text-2xl font-bold mb-4'>Direct Neural Control</h3>
-              <p className='text-gray-20o0 mb-6'>
-                Revolutionary neural interfaces that enable direct control of
-                devices, computers, and prosthetics through pure thought.
-              </p>
-              <ul className='text-sm text-gray-30o0 space-y-2'>
-                <li>• 99.9% accuracy in thought detection</li>
-                <li>• Real-time neural signal processing</li>
-                <li>• Multi-device simultaneous control</li>
-              </ul>
-            </Card>
-
-            <Card className='bg-gradient-to-br from-teal-80o0 to-cyan-80o0 p-8 border-0'>
-              <div className='text-4xl mb-4'>💭</div>
-              <h3 className='text-2xl font-bold mb-4'>Neural Communication</h3>
-              <p className='text-gray-20o0 mb-6'>
-                Breakthrough technology enabling direct brain-to-brain
-                communication, sharing thoughts, emotions, and experiences
-                instantly.
-              </p>
-              <ul className='text-sm text-gray-30o0 space-y-2'>
-                <li>• Instant thought transmission</li>
-                <li>• Emotional state sharing</li>
-                <li>• Memory and experience transfer</li>
-              </ul>
-            </Card>
-
-            <Card className='bg-gradient-to-br from-cyan-80o0 to-blue-80o0 p-8 border-0'>
-              <div className='text-4xl mb-4'>🔮</div>
-              <h3 className='text-2xl font-bold mb-4'>Enhanced Cognition</h3>
-              <p className='text-gray-20o0 mb-6'>
-                Neural enhancement systems that augment human intelligence,
-                memory, and cognitive abilities beyond natural limitations.
-              </p>
-              <ul className='text-sm text-gray-30o0 space-y-2'>
-                <li>• 10x memory enhancement</li>
-                <li>• Instant knowledge acquisition</li>
-                <li>• Enhanced problem-solving abilities</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 sm: px-6 lg:px-8'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-center mb-12'>,
+            Neural Interface Breakthroughs,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
+            <Card className='bg-gradient-to-br from-emerald-80o0 to-teal-80o0 p-8 border-0'>,
+              <div className='text-4xl mb-4'>🧠</div>,
+              <h3 className='text-2xl font-bold mb-4'>Direct Neural Control</h3>,
+              <p className='text-gray-20o0 mb-6'>,
+                Revolutionary neural interfaces that enable direct control of,
+                devices, computers, and prosthetics through pure thought.,
+              </p>,
+              <ul className='text-sm text-gray-30o0 space-y-2'>,
+                <li>• 99.9% accuracy in thought detection</li>,
+                <li>• Real-time neural signal processing</li>,
+                <li>• Multi-device simultaneous control</li>,
+              </ul>,
+            </Card>,
+            <Card className='bg-gradient-to-br from-teal-80o0 to-cyan-80o0 p-8 border-0'>,
+              <div className='text-4xl mb-4'>💭</div>,
+              <h3 className='text-2xl font-bold mb-4'>Neural Communication</h3>,
+              <p className='text-gray-20o0 mb-6'>,
+                Breakthrough technology enabling direct brain-to-brain,
+                communication, sharing thoughts, emotions, and experiences,
+                instantly.,
+              </p>,
+              <ul className='text-sm text-gray-30o0 space-y-2'>,
+                <li>• Instant thought transmission</li>,
+                <li>• Emotional state sharing</li>,
+                <li>• Memory and experience transfer</li>,
+              </ul>,
+            </Card>,
+            <Card className='bg-gradient-to-br from-cyan-80o0 to-blue-80o0 p-8 border-0'>,
+              <div className='text-4xl mb-4'>🔮</div>,
+              <h3 className='text-2xl font-bold mb-4'>Enhanced Cognition</h3>,
+              <p className='text-gray-20o0 mb-6'>,
+                Neural enhancement systems that augment human intelligence;
+                memory, and cognitive abilities beyond natural limitations.,
+              </p>,
+              <ul className='text-sm text-gray-30o0 space-y-2'>,
+                <li>• 10x memory enhancement</li>,
+                <li>• Instant knowledge acquisition</li>,
+                <li>• Enhanced problem-solving abilities</li>,
+              </ul>,
+            </Card>,
+          </div>,
+        </div>,
+      </section>,
       {/* Applications Section */}
-      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-30'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-center mb-12'>
-            Revolutionary Applications
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-            <div>
-              <h3 className='text-2xl font-bold mb-6'>Medical Applications</h3>
-              <div className='space-y-4'>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-emerald-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>
-                      Paralysis Recovery
-                    </h4>
-                    <p className='text-gray-30o0'>
-                      Restoring movement through neural bypass technology
-                    </p>
-                  </div>
-                </div>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-teal-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>
-                      Memory Restoration
-                    </h4>
-                    <p className='text-gray-30o0'>
-                      Recovering lost memories through neural stimulation
-                    </p>
-                  </div>
-                </div>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-cyan-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>
-                      Sensory Enhancement
-                    </h4>
-                    <p className='text-gray-30o0'>
-                      Augmenting human senses beyond natural capabilities
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className='text-2xl font-bold mb-6'>
-                Technology Integration
-              </h3>
-              <div className='space-y-4'>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>Virtual Reality</h4>
-                    <p className='text-gray-30o0'>
-                      Fully immersive VR experiences through neural input
-                    </p>
-                  </div>
-                </div>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-indigo-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>AI Collaboration</h4>
-                    <p className='text-gray-30o0'>
-                      Direct human-AI collaboration through neural interfaces
-                    </p>
-                  </div>
-                </div>
-                <div className='flex items-start space-x-4'>
-                  <div className='w-2 h-2 bg-purple-40o0 rounded-full mt-2'></div>
-                  <div>
-                    <h4 className='font-semibold text-lg'>Remote Control</h4>
-                    <p className='text-gray-30o0'>
-                      Controlling devices and systems from anywhere
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-center mb-12'>,
+            Revolutionary Applications,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>,
+            <div>,
+              <h3 className='text-2xl font-bold mb-6'>Medical Applications</h3>,
+              <div className='space-y-4'>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-emerald-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>,
+                      Paralysis Recovery,
+                    </h4>,
+                    <p className='text-gray-30o0'>,
+                      Restoring movement through neural bypass technology,
+                    </p>,
+                  </div>,
+                </div>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-teal-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>,
+                      Memory Restoration,
+                    </h4>,
+                    <p className='text-gray-30o0'>,
+                      Recovering lost memories through neural stimulation,
+                    </p>,
+                  </div>,
+                </div>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-cyan-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>,
+                      Sensory Enhancement,
+                    </h4>,
+                    <p className='text-gray-30o0'>,
+                      Augmenting human senses beyond natural capabilities,
+                    </p>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+            <div>,
+              <h3 className='text-2xl font-bold mb-6'>,
+                Technology Integration,
+              </h3>,
+              <div className='space-y-4'>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-blue-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>Virtual Reality</h4>,
+                    <p className='text-gray-30o0'>,
+                      Fully immersive VR experiences through neural input,
+                    </p>,
+                  </div>,
+                </div>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-indigo-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>AI Collaboration</h4>,
+                    <p className='text-gray-30o0'>,
+                      Direct human-AI collaboration through neural interfaces,
+                    </p>,
+                  </div>,
+                </div>,
+                <div className='flex items-start space-x-4'>,
+                  <div className='w-2 h-2 bg-purple-40o0 rounded-full mt-2'></div>,
+                  <div>,
+                    <h4 className='font-semibold text-lg'>Remote Control</h4>,
+                    <p className='text-gray-30o0'>,
+                      Controlling devices and systems from anywhere,
+                    </p>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Technology Specifications */}
-      <section className='py-16 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-center mb-12'>
-            Neural Technology Specifications
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            <div className='text-center'>
-              <div className='bg-gradient-to-br from-emerald-60o0 to-teal-60o0 p-8 rounded-xl mb-4'>
-                <div className='text-3xl font-bold mb-2'>1M+</div>
-                <div className='text-lg opacity-90'>Neural Channels</div>
-              </div>
-              <p className='text-gray-30o0'>
-                Ultra-high resolution neural signal capture and processing
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='bg-gradient-to-br from-teal-60o0 to-cyan-60o0 p-8 rounded-xl mb-4'>
-                <div className='text-3xl font-bold mb-2'>0.1ms</div>
-                <div className='text-lg opacity-90'>Response Time</div>
-              </div>
-              <p className='text-gray-30o0'>
-                Near-instantaneous neural signal processing and response
-              </p>
-            </div>
-            <div className='text-center'>
-              <div className='bg-gradient-to-br from-cyan-60o0 to-blue-60o0 p-8 rounded-xl mb-4'>
-                <div className='text-3xl font-bold mb-2'>99.9%</div>
-                <div className='text-lg opacity-90'>Accuracy Rate</div>
-              </div>
-              <p className='text-gray-30o0'>
-                Precise neural signal interpretation and device control
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 sm: px-6 lg:px-8'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-center mb-12'>,
+            Neural Technology Specifications,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-br from-emerald-60o0 to-teal-60o0 p-8 rounded-xl mb-4'>,
+                <div className='text-3xl font-bold mb-2'>1M+</div>,
+                <div className='text-lg opacity-90'>Neural Channels</div>,
+              </div>,
+              <p className='text-gray-30o0'>,
+                Ultra-high resolution neural signal capture and processing,
+              </p>,
+            </div>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-br from-teal-60o0 to-cyan-60o0 p-8 rounded-xl mb-4'>,
+                <div className='text-3xl font-bold mb-2'>0.1ms</div>,
+                <div className='text-lg opacity-90'>Response Time</div>,
+              </div>,
+              <p className='text-gray-30o0'>,
+                Near-instantaneous neural signal processing and response,
+              </p>,
+            </div>,
+            <div className='text-center'>,
+              <div className='bg-gradient-to-br from-cyan-60o0 to-blue-60o0 p-8 rounded-xl mb-4'>,
+                <div className='text-3xl font-bold mb-2'>99.9%</div>,
+                <div className='text-lg opacity-90'>Accuracy Rate</div>,
+              </div>,
+              <p className='text-gray-30o0'>,
+                Precise neural signal interpretation and device control,
+              </p>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
       {/* Safety and Ethics */}
-      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-30'>
-        <div className='max-w-6xl mx-auto'>
-          <h2 className='text-4xl font-bold text-center mb-12'>
-            Safety & Ethics
-          </h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            <Card className='bg-gradient-to-br from-green-80o0 to-emerald-80o0 p-8 border-0'>
-              <h3 className='text-2xl font-bold mb-4'>Safety First</h3>
-              <ul className='space-y-3 text-gray-20o0'>
-                <li>• Non-invasive neural interface technology</li>
-                <li>• Advanced safety protocols and monitoring</li>
-                <li>• Reversible neural modifications</li>
-                <li>• Comprehensive medical oversight</li>
-              </ul>
-            </Card>
-            <Card className='bg-gradient-to-br from-blue-80o0 to-indigo-80o0 p-8 border-0'>
-              <h3 className='text-2xl font-bold mb-4'>Ethical Guidelines</h3>
-              <ul className='space-y-3 text-gray-20o0'>
-                <li>• User consent and privacy protection</li>
-                <li>• Transparent data usage policies</li>
-                <li>• Equal access to neural technology</li>
-                <li>• Human autonomy preservation</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+      <section className='py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30'>,
+        <div className='max-w-6xl mx-auto'>,
+          <h2 className='text-4xl font-bold text-center mb-12'>,
+            Safety & Ethics,
+          </h2>,
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
+            <Card className='bg-gradient-to-br from-green-80o0 to-emerald-80o0 p-8 border-0'>,
+              <h3 className='text-2xl font-bold mb-4'>Safety First</h3>,
+              <ul className='space-y-3 text-gray-20o0'>,
+                <li>• Non-invasive neural interface technology</li>,
+                <li>• Advanced safety protocols and monitoring</li>,
+                <li>• Reversible neural modifications</li>,
+                <li>• Comprehensive medical oversight</li>,
+              </ul>,
+            </Card>,
+            <Card className='bg-gradient-to-br from-blue-80o0 to-indigo-80o0 p-8 border-0'>,
+              <h3 className='text-2xl font-bold mb-4'>Ethical Guidelines</h3>,
+              <ul className='space-y-3 text-gray-20o0'>,
+                <li>• User consent and privacy protection</li>,
+                <li>• Transparent data usage policies</li>,
+                <li>• Equal access to neural technology</li>,
+                <li>• Human autonomy preservation</li>,
+              </ul>,
+            </Card>,
+          </div>,
+        </div>,
+      </section>,
       {/* Call to Action */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <h2 className='text-4xl font-bold mb-6'>
-            Transform Your Human Potential
-          </h2>
-          <p className='text-xl mb-8 opacity-90'>
-            Join the neural interface revolution and unlock unprecedented human
-            capabilities. Experience the future of human-computer interaction
-            today.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>,
+        <div className='max-w-4xl mx-auto text-center'>,
+          <h2 className='text-4xl font-bold mb-6'>,
+            Transform Your Human Potential,
+          </h2>,
+          <p className='text-xl mb-8 opacity-90'>,
+            Join the neural interface revolution and unlock unprecedented human,
+            capabilities. Experience the future of human-computer interaction,
+            today.,
+          </p>,
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
             <Link
-              href='/contact'
-              className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all transform hover:scale-10o5'
-            >
-              Start Your Neural Journey
-            </Link>
+              href='/contact',
+              className='bg-gradient-to-r from-emerald-60o0 to-teal-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-teal-70o0 transition-all transform hover:scale-10o5'>,
+              Start Your Neural Journey,
+            </Link>,
             <Link
-              href='/neural-interfaces-20o25'
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'
-            >
-              Explore Technology
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+              href='/neural-interfaces-20o25',
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'>,
+              Explore Technology,
+            </Link>,
+          </div>,
+        </div>,
+      </section>,
+    </div>),
 }
+,

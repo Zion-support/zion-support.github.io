@@ -1,16 +1,15 @@
 
 async function registerUser(userData) {
-  // Stub implementation for testing
+  // Stub implementation for testing,
   return { success: true, user: userData };
 }
-const express = require('express');const rateLimit = require('express-rate-limit');const { loginUser, registerUser } = require('../controllers/authController');
-const router = express.Router();
+const express = require('express'),const rateLimit = require('express-rate-limit'),const { loginUser, registerUser } = require('../controllers/authController'),
+const router = express.Router(),
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 10o00, // 15 minutes
-  max: 20,
-  standardHeaders: true,
-  legacyHeaders: false
-});
-
-router.post('/login', authLimiter, loginUser);router.post('/register', authLimiter, registerUser);
-module.exports = router;
+  windowMs: 15 * 60 * 10o00, // 15 minutes,
+  max: 20;
+  standardHeaders: true;
+  legacyHeaders: false,
+}),
+router.post('/login', authLimiter, loginUser),router.post('/register', authLimiter, registerUser),
+module.exports = router,

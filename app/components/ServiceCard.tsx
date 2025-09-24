@@ -1,15 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+'use client'
+import React, { useState } from 'react'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
 
 interface ServiceCardProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  color: string;
-  href?: string;
-  features?: string[];
+  icon: React.ReactNode
+  title: string
+  description: string
+  color: string
+  href?: string
+  features?: string[]
 }
 
 export default function ServiceCard({
@@ -18,15 +17,21 @@ export default function ServiceCard({
   description,
   color,
   href = '#',
-  features = [],
-}: ServiceCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  features = []}: ServiceCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
 
   return (
     <div
       className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-1'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if ((e.key === 'Enter' || e.key === ' ') && href !== '#') {
+          window.open(href, '_blank')
+        }
+      }}
       onClick={() => href !== '#' && window.open(href, '_blank')}
     >
       <div className='flex items-center mb-4'>
@@ -39,9 +44,7 @@ export default function ServiceCard({
           {title}
         </h3>
       </div>
-
       <p className='text-gray-600 dark:text-gray-300 mb-4'>{description}</p>
-
       {features.length > 0 && (
         <ul className='space-y-2 mb-4'>
           {features.map((feature, index) => (
@@ -63,5 +66,5 @@ export default function ServiceCard({
         />
       </div>
     </div>
-  );
+  )
 }

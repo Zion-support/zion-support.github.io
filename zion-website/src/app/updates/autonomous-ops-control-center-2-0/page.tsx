@@ -1,40 +1,39 @@
 import React from 'react';
-
 export default function AutonomousOpsControlCenter20Page() {
   return (
-    <div className='bg-black min-h-screen'>
-      <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>
-        <div className='mb-4 flex items-center gap-3 text-xs text-gray-40o0'>
-          <span className='rounded-full bg-green-50o0/10 px-2 py-0.5 text-green-30o0'>
-            Launch
-          </span>
-          <time dateTime='20o25-09-15'>September 15, 20o25</time>
-        </div>
-        <h1 className='text-4xl font-bold tracking-tight text-white'>
-          Autonomous Ops Control Center 2.0
-        </h1>
-        <p className='mt-4 text-lg leading-8 text-gray-30o0'>
-          Unified command center with live evals, automated guardrails, and
-          incident workflows to safely operate autonomous agents at scale.
-        </p>
-        <div className='mt-8 prose prose-invert prose-lg max-w-none'>
-          <h2>What&apos;s New</h2>
-          <ul>
-            <li>
-              Live evaluation dashboards with quality, latency, and cost SLIs
-            </li>
-            <li>
-              Policy-as-code guardrails with canary and rollback automation
-            </li>
-            <li>Incident workflows integrated with observability traces</li>
-          </ul>
-          <p className='mt-6'>
-            <a href='/contact' className='text-blue-40o0 hover:text-blue-30o0'>
-              Request a demo →
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    <div className='bg-black min-h-screen'>,
+      <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>,
+        <div className='mb-4 flex items-center gap-3 text-xs text-gray-40o0'>,
+          <span className='rounded-full bg-green-50o0/10 px-2 py-0.5 text-green-30o0'>,
+            Launch,
+          </span>,
+          <time dateTime='20o25-09-15'>September 15, 20o25</time>,
+        </div>,
+        <h1 className='text-4xl font-bold tracking-tight text-white'>,
+          Autonomous Ops Control Center 2.0,
+        </h1>,
+        <p className='mt-4 text-lg leading-8 text-gray-30o0'>,
+          Unified command center with live evals, automated guardrails, and,
+          incident workflows to safely operate autonomous agents at scale.,
+        </p>,
+        <div className='mt-8 prose prose-invert prose-lg max-w-none'>,
+          <h2>What&apos,s New</h2>,
+          <ul>,
+            <li>,
+              Live evaluation dashboards with quality, latency, and cost SLIs,
+            </li>,
+            <li>,
+              Policy-as-code guardrails with canary and rollback automation,
+            </li>,
+            <li>Incident workflows integrated with observability traces</li>,
+          </ul>,
+          <p className='mt-6'>,
+            <a href='/contact' className='text-blue-40o0 hover: text-blue-30o0'>,
+              Request a demo →,
+            </a>,
+          </p>,
+        </div>,
+      </div>,
+    </div>),
 }
+,

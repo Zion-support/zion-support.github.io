@@ -1,63 +1,56 @@
-import Link from 'next/link';
-
+import Link from 'next/link',
 const RevolutionaryAI20o25BreakthroughBanner = () => {
   return (
-    <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 px-4'>
-      <div className='max-w-7xl mx-auto text-center'>
-        <div className='mb-8'>
-          <h2 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent'>
-            Revolutionary AI 20o25 Breakthrough
-          </h2>
-          <p className='text-xl md:text-2xl mb-8 text-blue-10o0'>
-            Experience the most advanced AI technologies that are reshaping
-            industries and delivering unprecedented results
-          </p>
-        </div>
-
-        <div className='grid md:grid-cols-3 gap-8 mb-12'>
-          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>
-              2,0o00% ROI
-            </h3>
-            <p className='text-blue-10o0'>
-              Average return on investment for our AI implementations
-            </p>
-          </div>
-          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>
-              $5.2B+ Savings
-            </h3>
-            <p className='text-blue-10o0'>
-              Total savings achieved across all client implementations
-            </p>
-          </div>
-          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>
-            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>
-              99.8% Efficiency
-            </h3>
-            <p className='text-blue-10o0'>
-              Operational efficiency improvements across all systems
-            </p>
-          </div>
-        </div>
-
-        <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+    <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 px-4'>,
+      <div className='max-w-7xl mx-auto text-center'>,
+        <div className='mb-8'>,
+          <h2 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 bg-clip-text text-transparent'>,
+            Revolutionary AI 20o25 Breakthrough,
+          </h2>,
+          <p className='text-xl md:text-2xl mb-8 text-blue-10o0'>,
+            Experience the most advanced AI technologies that are reshaping,
+            industries and delivering unprecedented results,
+          </p>,
+        </div>,
+        <div className='grid md:grid-cols-3 gap-8 mb-12'>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>,
+              2,0o00% ROI,
+            </h3>,
+            <p className='text-blue-10o0'>,
+              Average return on investment for our AI implementations,
+            </p>,
+          </div>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>,
+              $5.2B+ Savings,
+            </h3>,
+            <p className='text-blue-10o0'>,
+              Total savings achieved across all client implementations,
+            </p>,
+          </div>,
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20'>,
+            <h3 className='text-2xl font-bold mb-4 text-yellow-40o0'>,
+              99.8% Efficiency,
+            </h3>,
+            <p className='text-blue-10o0'>,
+              Operational efficiency improvements across all systems,
+            </p>,
+          </div>,
+        </div>,
+        <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
           <Link
-            href='/ai-20o25-20o26-ultimate-breakthrough'
-            className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5'
-          >
-            Explore AI 20o25 Breakthrough
-          </Link>
+            href='/ai-20o25-20o26-ultimate-breakthrough',
+            className='bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
+            Explore AI 20o25 Breakthrough,
+          </Link>,
           <Link
-            href='/contact'
-            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'
-          >
-            Get Started Today
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+            href='/contact',
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0'>,
+            Get Started Today,
+          </Link>,
+        </div>,
+      </div>,
+    </div>),
 };
-
 export default RevolutionaryAI20o25BreakthroughBanner;

@@ -1,518 +1,467 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Moon,
-  Sun,
-  Globe,
-  ExternalLink,
-  Brain,
-  Atom,
-  Cpu,
-  Shield,
-  Building,
-  Zap,
-  Rocket,
-  Star
-} from 'lucide-react';
-
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link',
+import {
+  Menu;
+  X;
+  ChevronDown;
+  Search;
+  Phone;
+  Mail;
+  MapPin;
+  Moon;
+  Sun;
+  Globe;
+  ExternalLink;
+  Brain;
+  Atom;
+  Cpu;
+  Shield;
+  Building;
+  Zap;
+  Rocket;
+  Star} from 'lucide-react',
 interface NavigationItem {
-  label: string;
-  href: string;
-  children?: NavigationItem[];
-  isExternal?: boolean;
-  icon?: React.ComponentType<{ className?: string }>;
-  description?: string;
-}
-
+  label: string,
+  href: string,
+  children?: NavigationItem[],
+  isExternal?: boolean,
+  icon?: React.ComponentType<{ className?: string }>,
+  description?: string}
+,
 interface UltraFuturisticNavigation20o26Props {
-  className?: string;
-}
-
+  className?: string}
+,
 const UltraFuturisticNavigation20o26: React.FC<UltraFuturisticNavigation20o26Props> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const navRef = useRef<HTMLElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  // Enhanced navigation items with icons and descriptions
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isDarkMode, setIsDarkMode] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const navRef = useRef<HTMLElement>(null),
+  const dropdownRef = useRef<HTMLDivElement>(null),
+  // Enhanced navigation items with icons and descriptions,
   const navigationItems: NavigationItem[] = [
     {
-      label: 'AI & Autonomous',
-      href: '/services/ai-autonomous',
-      icon: Brain,
-      description: 'Revolutionary AI systems that operate independently',
+      label: 'AI & Autonomous';
+      href: '/services/ai-autonomous';
+      icon: Brain;
+      description: 'Revolutionary AI systems that operate independently';
       children: [
-        { 
-          label: 'AI Autonomous Content Factory Pro', 
-          href: '/ai-autonomous-content-factory-pro',
-          description: 'Autonomous content creation and distribution'
-        },
-        { 
-          label: 'AI Autonomous HR Platform', 
-          href: '/ai-autonomous-hr-platform',
-          description: 'Intelligent HR management and automation'
-        },
-        { 
-          label: 'AI Autonomous Education Platform', 
-          href: '/ai-autonomous-education-platform',
-          description: 'Personalized learning and adaptive education'
-        },
-        { 
-          label: 'AI Autonomous Project Management', 
-          href: '/ai-autonomous-project-management',
-          description: 'Intelligent project planning and optimization'
-        },
-        { 
-          label: 'AI Autonomous Cybersecurity Sentinel', 
-          href: '/ai-autonomous-cybersecurity-sentinel',
-          description: 'Autonomous threat detection and response'
+        {
+          label: 'AI Autonomous Content Factory Pro';
+          href: '/ai-autonomous-content-factory-pro';
+          description: 'Autonomous content creation and distribution',
+        };
+        {
+          label: 'AI Autonomous HR Platform';
+          href: '/ai-autonomous-hr-platform';
+          description: 'Intelligent HR management and automation',
+        };
+        {
+          label: 'AI Autonomous Education Platform';
+          href: '/ai-autonomous-education-platform';
+          description: 'Personalized learning and adaptive education',
+        };
+        {
+          label: 'AI Autonomous Project Management';
+          href: '/ai-autonomous-project-management';
+          description: 'Intelligent project planning and optimization',
+        };
+        {
+          label: 'AI Autonomous Cybersecurity Sentinel';
+          href: '/ai-autonomous-cybersecurity-sentinel';
+          description: 'Autonomous threat detection and response',
         }
-      ]
-    },
+      ]};
     {
-      label: 'Quantum Technology',
-      href: '/services/quantum',
-      icon: Atom,
-      description: 'Next-generation quantum computing solutions',
+      label: 'Quantum Technology';
+      href: '/services/quantum';
+      icon: Atom;
+      description: 'Next-generation quantum computing solutions';
       children: [
-        { 
-          label: 'Quantum Edge Computing Platform', 
-          href: '/quantum-edge-computing-platform',
-          description: 'Quantum-enhanced edge processing platform'
-        },
-        { 
-          label: 'Neuromorphic Computing Infrastructure', 
-          href: '/neuromorphic-computing-infrastructure',
-          description: 'Brain-inspired computing infrastructure'
-        },
-        { 
-          label: 'Holographic Data Center Platform', 
-          href: '/holographic-data-center-platform',
-          description: '3D holographic storage and processing'
-        },
-        { 
-          label: 'Bio-Computing Infrastructure', 
-          href: '/bio-computing-infrastructure',
-          description: 'DNA-based computing solutions'
-        },
-        { 
-          label: 'Quantum Internet Backbone', 
-          href: '/quantum-internet-backbone',
-          description: 'Ultra-secure quantum networking'
+        {
+          label: 'Quantum Edge Computing Platform';
+          href: '/quantum-edge-computing-platform';
+          description: 'Quantum-enhanced edge processing platform',
+        };
+        {
+          label: 'Neuromorphic Computing Infrastructure';
+          href: '/neuromorphic-computing-infrastructure';
+          description: 'Brain-inspired computing infrastructure',
+        };
+        {
+          label: 'Holographic Data Center Platform';
+          href: '/holographic-data-center-platform';
+          description: '3D holographic storage and processing',
+        };
+        {
+          label: 'Bio-Computing Infrastructure';
+          href: '/bio-computing-infrastructure';
+          description: 'DNA-based computing solutions',
+        };
+        {
+          label: 'Quantum Internet Backbone';
+          href: '/quantum-internet-backbone';
+          description: 'Ultra-secure quantum networking',
         }
-      ]
-    },
+      ]};
     {
-      label: 'IT Infrastructure',
-      href: '/services/infrastructure',
-      icon: Cpu,
-      description: 'Cutting-edge infrastructure solutions',
+      label: 'IT Infrastructure';
+      href: '/services/infrastructure';
+      icon: Cpu;
+      description: 'Cutting-edge infrastructure solutions';
       children: [
-        { 
-          label: 'Cloud Migration', 
-          href: '/cloud-migration',
-          description: 'Seamless cloud infrastructure migration'
-        },
-        { 
-          label: 'DevOps Automation', 
-          href: '/devops-automation',
-          description: 'Automated development and deployment'
-        },
-        { 
-          label: 'Edge Computing', 
-          href: '/edge-computing',
-          description: 'Distributed edge computing solutions'
-        },
-        { 
-          label: 'Data Center Optimization', 
-          href: '/data-center-optimization',
-          description: 'Performance and efficiency optimization'
-        },
-        { 
-          label: '5G Private Network Solutions', 
-          href: '/5g-private-network-solutions',
-          description: 'Enterprise-grade 5G private networks'
-        },
-        { 
-          label: 'Autonomous DevOps Platform 20o44', 
-          href: '/autonomous-devops-platform-20o44',
-          description: 'AI-powered DevOps automation'
-        },
-        { 
-          label: 'Quantum Data Center Management 20o44', 
-          href: '/quantum-data-center-management-20o44',
-          description: 'Quantum-optimized data center management'
+        {
+          label: 'Cloud Migration';
+          href: '/cloud-migration';
+          description: 'Seamless cloud infrastructure migration',
+        };
+        {
+          label: 'DevOps Automation';
+          href: '/devops-automation';
+          description: 'Automated development and deployment',
+        };
+        {
+          label: 'Edge Computing';
+          href: '/edge-computing';
+          description: 'Distributed edge computing solutions',
+        };
+        {
+          label: 'Data Center Optimization';
+          href: '/data-center-optimization';
+          description: 'Performance and efficiency optimization',
+        };
+        {
+          label: '5G Private Network Solutions';
+          href: '/5g-private-network-solutions';
+          description: 'Enterprise-grade 5G private networks',
+        };
+        {
+          label: 'Autonomous DevOps Platform 20o44';
+          href: '/autonomous-devops-platform-20o44';
+          description: 'AI-powered DevOps automation',
+        };
+        {
+          label: 'Quantum Data Center Management 20o44';
+          href: '/quantum-data-center-management-20o44';
+          description: 'Quantum-optimized data center management',
         }
-      ]
-    },
+      ]};
     {
-      label: 'Micro SAAS',
-      href: '/services/micro-saas',
-      icon: Building,
-      description: 'Innovative software-as-a-service solutions',
+      label: 'Micro SAAS';
+      href: '/services/micro-saas';
+      icon: Building;
+      description: 'Innovative software-as-a-service solutions';
       children: [
-        { 
-          label: 'AI Content Factory Pro', 
-          href: '/ai-autonomous-content-factory-pro',
-          description: 'Autonomous content creation platform'
-        },
-        { 
-          label: 'Quantum CRM Intelligence', 
-          href: '/quantum-crm-intelligence-suite',
-          description: 'Quantum-powered customer relationship management'
-        },
-        { 
-          label: 'AI HR Platform', 
-          href: '/ai-autonomous-hr-platform',
-          description: 'Intelligent human resources management'
-        },
-        { 
-          label: 'Quantum Financial Intelligence', 
-          href: '/quantum-financial-intelligence-platform',
-          description: 'Advanced financial analytics and insights'
-        },
-        { 
-          label: 'AI Education Platform', 
-          href: '/ai-autonomous-education-platform',
-          description: 'Personalized learning experiences'
-        },
-        { 
-          label: 'Quantum Supply Chain Optimizer', 
-          href: '/quantum-supply-chain-optimizer',
-          description: 'Quantum-powered supply chain optimization'
-        },
-        { 
-          label: 'Quantum Data Analytics Platform', 
-          href: '/quantum-data-analytics-platform',
-          description: 'Quantum-enhanced data analytics'
-        },
-        { 
-          label: 'Quantum Customer Intelligence Platform', 
-          href: '/quantum-customer-intelligence-platform',
-          description: 'Advanced customer behavior analysis'
+        {
+          label: 'AI Content Factory Pro';
+          href: '/ai-autonomous-content-factory-pro';
+          description: 'Autonomous content creation platform',
+        };
+        {
+          label: 'Quantum CRM Intelligence';
+          href: '/quantum-crm-intelligence-suite';
+          description: 'Quantum-powered customer relationship management',
+        };
+        {
+          label: 'AI HR Platform';
+          href: '/ai-autonomous-hr-platform';
+          description: 'Intelligent human resources management',
+        };
+        {
+          label: 'Quantum Financial Intelligence';
+          href: '/quantum-financial-intelligence-platform';
+          description: 'Advanced financial analytics and insights',
+        };
+        {
+          label: 'AI Education Platform';
+          href: '/ai-autonomous-education-platform';
+          description: 'Personalized learning experiences',
+        };
+        {
+          label: 'Quantum Supply Chain Optimizer';
+          href: '/quantum-supply-chain-optimizer';
+          description: 'Quantum-powered supply chain optimization',
+        };
+        {
+          label: 'Quantum Data Analytics Platform';
+          href: '/quantum-data-analytics-platform';
+          description: 'Quantum-enhanced data analytics',
+        };
+        {
+          label: 'Quantum Customer Intelligence Platform';
+          href: '/quantum-customer-intelligence-platform';
+          description: 'Advanced customer behavior analysis',
         }
-      ]
-    },
+      ]};
     {
-      label: 'Cybersecurity',
-      href: '/services/cybersecurity',
-      icon: Shield,
-      description: 'Advanced security and protection solutions',
+      label: 'Cybersecurity';
+      href: '/services/cybersecurity';
+      icon: Shield;
+      description: 'Advanced security and protection solutions';
       children: [
-        { 
-          label: 'Zero Trust Architecture', 
-          href: '/zero-trust-network-architecture',
-          description: 'Comprehensive security framework'
-        },
-        { 
-          label: 'Threat Intelligence', 
-          href: '/threat-intelligence-platform',
-          description: 'Real-time threat detection and analysis'
-        },
-        { 
-          label: 'Compliance Automation', 
-          href: '/compliance-automation',
-          description: 'Automated regulatory compliance'
-        },
-        { 
-          label: 'Quantum Cybersecurity Platform 20o44', 
-          href: '/quantum-cybersecurity-platform-20o44',
-          description: 'Quantum-powered security platform'
-        },
-        { 
-          label: 'AI Autonomous Cybersecurity Sentinel', 
-          href: '/ai-autonomous-cybersecurity-sentinel',
-          description: 'Autonomous threat detection and response'
+        {
+          label: 'Zero Trust Architecture';
+          href: '/zero-trust-network-architecture';
+          description: 'Comprehensive security framework',
+        };
+        {
+          label: 'Threat Intelligence';
+          href: '/threat-intelligence-platform';
+          description: 'Real-time threat detection and analysis',
+        };
+        {
+          label: 'Compliance Automation';
+          href: '/compliance-automation';
+          description: 'Automated regulatory compliance',
+        };
+        {
+          label: 'Quantum Cybersecurity Platform 20o44';
+          href: '/quantum-cybersecurity-platform-20o44';
+          description: 'Quantum-powered security platform',
+        };
+        {
+          label: 'AI Autonomous Cybersecurity Sentinel';
+          href: '/ai-autonomous-cybersecurity-sentinel';
+          description: 'Autonomous threat detection and response',
         }
-      ]
-    },
+      ]};
     {
-      label: 'Solutions',
-      href: '/solutions',
-      icon: Zap,
-      description: 'Industry-specific technology solutions',
+      label: 'Solutions';
+      href: '/solutions';
+      icon: Zap;
+      description: 'Industry-specific technology solutions';
       children: [
-        { 
-          label: 'Healthcare Solutions', 
-          href: '/healthcare-solutions',
-          description: 'Digital health transformation'
-        },
-        { 
-          label: 'Financial Solutions', 
-          href: '/financial-solutions',
-          description: 'FinTech innovation and optimization'
-        },
-        { 
-          label: 'Manufacturing Solutions', 
-          href: '/manufacturing-solutions',
-          description: 'Industry 4.0 and smart manufacturing'
-        },
-        { 
-          label: 'Retail Solutions', 
-          href: '/retail-technology-solutions',
-          description: 'Digital retail transformation'
+        {
+          label: 'Healthcare Solutions';
+          href: '/healthcare-solutions';
+          description: 'Digital health transformation',
+        };
+        {
+          label: 'Financial Solutions';
+          href: '/financial-solutions';
+          description: 'FinTech innovation and optimization',
+        };
+        {
+          label: 'Manufacturing Solutions';
+          href: '/manufacturing-solutions';
+          description: 'Industry 4.0 and smart manufacturing',
+        };
+        {
+          label: 'Retail Solutions';
+          href: '/retail-technology-solutions';
+          description: 'Digital retail transformation',
         }
-      ]
-    }
-  ];
-
-  // Handle scroll effect
+      ]}
+  ],
+  // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Handle click outside dropdown
+      setIsScrolled(window.scrollY > 20)};
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
+  // Handle click outside dropdown,
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+        setActiveDropdown(null),
       }
     };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
+    document.addEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown(activeDropdown === label ? null : label),
   };
-
   return (
-    <motion.nav
+    <motion.nav,
       ref={navRef}
       initial={{ y: -10o0 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20' 
-          : 'bg-transparent'
-      } ${className}`}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        isScrolled,
+          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20',
+          : 'bg-transparent'} ${className}`}
+    >,
+      <div className="container mx-auto px-4">,
+        <div className="flex items-center justify-between h-20">,
           {/* Logo */}
-          <motion.div
+          <motion.div,
             whileHover={{ scale: 1.0o5 }}
-            className="flex items-center space-x-3"
-          >
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-30o0">
-                  <Star className="w-7 h-7 text-white"  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"  />
-              </div>
-              <div className="hidden sm:block">
-                <div className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
-                  Zion Tech
-                </div>
-                <div className="text-xs text-gray-40o0 font-medium">
-                  Future Technology Group
-                </div>
-              </div>
-            </Link>
-          </motion.div>
-
+            className="flex items-center space-x-3">,
+            <Link href="/" className="flex items-center space-x-3 group">,
+              <div className="relative">,
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl flex items-center justify-center group-hover: scale-110 transition-transform duration-30o0">,
+                  <Star className="w-7 h-7 text-white"  />,
+                </div>,
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-30o0"  />,
+              </div>,
+              <div className="hidden sm:block">,
+                <div className="text-2xl font-bold bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">,
+                  Zion Tech,
+                </div>,
+                <div className="text-xs text-gray-40o0 font-medium">,
+                  Future Technology Group,
+                </div>,
+              </div>,
+            </Link>,
+          </motion.div>,
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg: flex items-center space-x-8">,
             {navigationItems.map((item) => (
-              <div key={item.label} className="relative" ref={dropdownRef}>
+              <div key={item.label} className="relative" ref={dropdownRef}>,
                 <button
                   onClick={() => toggleDropdown(item.label)}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover:text-white transition-colors duration-30o0 group"
-                >
+                  className="flex items-center space-x-2 px-4 py-2 text-gray-30o0 hover: text-white transition-colors duration-30o0 group">,
                   {item.icon && <item.icon className="w-4 h-4 group-hover:text-purple-40o0 transition-colors duration-30o0"  />}
-                  <span className="font-medium">{item.label}</span>
+                  <span className="font-medium">{item.label}</span>,
                   <ChevronDown className={`w-4 h-4 transition-transform duration-30o0 ${
-                    activeDropdown === item.label ? 'rotate-180' : ''
-                  }`}  />
-                </button>
-
-                <AnimatePresence>
+                    activeDropdown === item.label ? 'rotate-180' : ''}`}  />,
+                </button>,
+                <AnimatePresence>,
                   {activeDropdown === item.label && (
-                    <motion.div
+                    <motion.div,
                       initial={{ opacity: 0, y: 20, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 20, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20 overflow-hidden"
-                    >
-                      <div className="p-4">
-                        <div className="mb-4">
-                          <h3 className="text-lg font-semibold text-white mb-1">{item.label}</h3>
-                          <p className="text-sm text-gray-40o0">{item.description}</p>
-                        </div>
-                        <div className="space-y-2">
+                      className="absolute top-full left-0 mt-2 w-80 bg-gray-90o0/95 backdrop-blur-xl rounded-2xl border border-purple-50o0/30 shadow-2xl shadow-purple-50o0/20 overflow-hidden">,
+                      <div className="p-4">,
+                        <div className="mb-4">,
+                          <h3 className="text-lg font-semibold text-white mb-1">{item.label}</h3>,
+                          <p className="text-sm text-gray-40o0">{item.description}</p>,
+                        </div>,
+                        <div className="space-y-2">,
                           {item.children?.map((child) => (
                             <Link
                               key={child.href}
                               href={child.href}
-                              className="block p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0 group"
-                            >
-                              <div className="flex items-start space-x-3">
-                                <div className="w-2 h-2 bg-purple-40o0 rounded-full mt-2 group-hover:scale-150 transition-transform duration-30o0"  />
-                                <div className="flex-1">
-                                  <div className="font-medium text-white group-hover:text-purple-40o0 transition-colors duration-30o0">
+                              className="block p-3 rounded-xl hover: bg-purple-50o0/10 transition-colors duration-30o0 group">,
+                              <div className="flex items-start space-x-3">,
+                                <div className="w-2 h-2 bg-purple-40o0 rounded-full mt-2 group-hover:scale-150 transition-transform duration-30o0"  />,
+                                <div className="flex-1">,
+                                  <div className="font-medium text-white group-hover:text-purple-40o0 transition-colors duration-30o0">,
                                     {child.label}
-                                  </div>
-                                  <div className="text-sm text-gray-40o0 mt-1">
+                                  </div>,
+                                  <div className="text-sm text-gray-40o0 mt-1">,
                                     {child.description}
-                                  </div>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-
+                                  </div>,
+                                </div>,
+                              </div>,
+                            </Link>))}
+                        </div>,
+                      </div>,
+                    </motion.div>)}
+                </AnimatePresence>,
+              </div>))}
+          </div>,
           {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4">,
             {/* Search */}
-            <motion.div
+            <motion.div,
               whileHover={{ scale: 1.0o5 }}
-              className="relative hidden md:block"
-            >
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4"  />
+              className="relative hidden md: block">,
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4"  />,
               <input
-                type="text"
-                placeholder="Search services..."
+                type="text",
+                placeholder="Search services...",
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent transition-all duration-30o0"
-              />
-            </motion.div>
-
+                className="w-64 pl-10 pr-4 py-2 bg-gray-80o0/50 border border-gray-70o0/50 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-purple-50o0 focus:border-transparent transition-all duration-30o0",
+              />,
+            </motion.div>,
             {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <motion.a
+            <div className="hidden lg: flex items-center space-x-4">,
+              <motion.a,
                 whileHover={{ scale: 1.0o5 }}
-                href="tel:+130o24640950"
-                className="flex items-center space-x-2 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
-              >
-                <Phone className="w-4 h-4"  />
-                <span className="text-sm font-medium">+1 30o2 464 0950</span>
-              </motion.a>
-            </div>
-
+                href="tel: +130o24640950",
+                className="flex items-center space-x-2 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0">,
+                <Phone className="w-4 h-4"  />,
+                <span className="text-sm font-medium">+1 30o2 464 0950</span>,
+              </motion.a>,
+            </div>,
             {/* Theme Toggle */}
-            <motion.button
+            <motion.button,
               whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover:text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0"
-            >
+              className="p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover: text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0">,
               {isDarkMode ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-            </motion.button>
-
+            </motion.button>,
             {/* Mobile Menu Button */}
-            <motion.button
+            <motion.button,
               whileHover={{ scale: 1.0o5 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover:text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0"
-            >
+              className="lg: hidden p-2 rounded-xl bg-gray-80o0/50 border border-gray-70o0/50 text-gray-30o0 hover:text-purple-40o0 hover:border-purple-50o0/50 transition-all duration-30o0">,
               {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-            </motion.button>
-          </div>
-        </div>
-      </div>
-
+            </motion.button>,
+          </div>,
+        </div>,
+      </div>,
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence>,
         {isOpen && (
-          <motion.div
+          <motion.div,
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/30"
-          >
-            <div className="container mx-auto px-4 py-6">
-              <div className="space-y-4">
+            className="lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/30">,
+            <div className="container mx-auto px-4 py-6">,
+              <div className="space-y-4">,
                 {navigationItems.map((item) => (
-                  <div key={item.label}>
-                    <div className="flex items-center space-x-3 p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0">
+                  <div key={item.label}>,
+                    <div className="flex items-center space-x-3 p-3 rounded-xl hover: bg-purple-50o0/10 transition-colors duration-30o0">,
                       {item.icon && <item.icon className="w-5 h-5 text-purple-40o0"  />}
-                      <div className="flex-1">
-                        <div className="font-medium text-white">{item.label}</div>
-                        <div className="text-sm text-gray-40o0">{item.description}</div>
-                      </div>
-                    </div>
+                      <div className="flex-1">,
+                        <div className="font-medium text-white">{item.label}</div>,
+                        <div className="text-sm text-gray-40o0">{item.description}</div>,
+                      </div>,
+                    </div>,
                     {item.children && (
-                      <div className="ml-8 mt-2 space-y-2">
+                      <div className="ml-8 mt-2 space-y-2">,
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block p-3 rounded-xl hover:bg-purple-50o0/10 transition-colors duration-30o0"
+                            className="block p-3 rounded-xl hover: bg-purple-50o0/10 transition-colors duration-30o0",
                             onClick={() => setIsOpen(false)}
-                          >
-                            <div className="text-sm text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0">
+                          >,
+                            <div className="text-sm text-gray-30o0 hover: text-purple-40o0 transition-colors duration-30o0">,
                               {child.label}
-                            </div>
-                            <div className="text-xs text-gray-50o0 mt-1">
+                            </div>,
+                            <div className="text-xs text-gray-50o0 mt-1">,
                               {child.description}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-
+                            </div>,
+                          </Link>))}
+                      </div>)}
+                  </div>))}
+              </div>,
               {/* Mobile Contact */}
-              <div className="mt-6 pt-6 border-t border-gray-70o0/50">
-                <div className="space-y-3">
+              <div className="mt-6 pt-6 border-t border-gray-70o0/50">,
+                <div className="space-y-3">,
                   <a
-                    href="tel:+130o24640950"
-                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
-                  >
-                    <Phone className="w-4 h-4"  />
-                    <span>+1 30o2 464 0950</span>
-                  </a>
+                    href="tel: +130o24640950",
+                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0">,
+                    <Phone className="w-4 h-4"  />,
+                    <span>+1 30o2 464 0950</span>,
+                  </a>,
                   <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0"
-                  >
-                    <Mail className="w-4 h-4"  />
-                    <span>kleber@ziontechgroup.com</span>
-                  </a>
-                  <div className="flex items-center space-x-3 text-gray-30o0">
-                    <MapPin className="w-4 h-4"  />
-                    <span>364 E Main St STE 10o08, Middletown DE 19709</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
-  );
-};
-
+                    href="mailto:kleber@ziontechgroup.com",
+                    className="flex items-center space-x-3 text-gray-30o0 hover:text-purple-40o0 transition-colors duration-30o0">,
+                    <Mail className="w-4 h-4"  />,
+                    <span>kleber@ziontechgroup.com</span>,
+                  </a>,
+                  <div className="flex items-center space-x-3 text-gray-30o0">,
+                    <MapPin className="w-4 h-4"  />,
+                    <span>364 E Main St STE 10o08, Middletown DE 19709</span>,
+                  </div>,
+                </div>,
+              </div>,
+            </div>,
+          </motion.div>)}
+      </AnimatePresence>,
+    </motion.nav>)};
 export default UltraFuturisticNavigation20o26;
