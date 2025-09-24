@@ -1,25 +1,26 @@
-import express from 'express',
-import path from 'path',
-import cors from 'cors',
-import helmet from 'helmet',
-import morgan from 'morgan',
-import compression from 'compression',
-import { rateLimit } from 'express-rate-limit',
-import { config } from 'dotenv',
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import compression from 'compression';
+import { rateLimit } from 'express-rate-limit';
+import { config } from 'dotenv';
+import apiRoutes from './routes/api';
 
 // Load environment variables
-config(),
+config();
 
-const app = express(),
-const PORT = Number(process.env.PORT) || 5000,
-const NODE_ENV = process.env.NODE_ENV || 'development',
+const app = express();
+const PORT = Number(process.env.PORT) || 5000;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.'
-}),
+});
 
 // Security headers
 app.use(
@@ -34,7 +35,7 @@ app.use(
       }
     }
   }) as any
-),
+);
 
 // CORS
 app.use(
@@ -42,22 +43,20 @@ app.use(
   cors({
     origin:
       NODE_ENV === 'development'
-        ? ['http://localhost:3000http://localhost:5000']
+        ? ['http://localhost:3000', 'http://localhost:5000']
         : (process.env.FRONTEND_URL as string) || 'http://localhost:3000',
     credentials: true
   }) as any
-),
+);
 
-app.use('/', compression() as any),
-app.use('/', morgan('combined') as any),
+app.use('/', compression() as any);
+app.use('/', morgan('combined') as any);
+
 // Wrap limiter to avoid type incompatibilities across @types/express versions
-const anyLimiter: any = limiter,
-app.use('/', anyLimiter),
-app.use('/', express.json({ limit: '10mb' }) as any),
-app.use('/', express.urlencoded({ extended: true, limit: '10mb' }) as any),
-
-// Import API routes
-import apiRoutes from './routes/api',
+const anyLimiter: any = limiter;
+app.use('/', anyLimiter);
+app.use('/', express.json({ limit: '10mb' }) as any);
+app.use('/', express.urlencoded({ extended: true, limit: '10mb' }) as any);
 
 // Health route
 app.use('/api/health', (_req, res) => {
@@ -66,20 +65,20 @@ app.use('/api/health', (_req, res) => {
     timestamp: new Date().toISOString(),
     environment: NODE_ENV,
     uptime: process.uptime()
-  }),
-}),
+  });
+});
 
 // Mount API routes
-app.use('/api', apiRoutes),
+app.use('/api', apiRoutes);
 
 // Serve static files from the built frontend
 if (NODE_ENV === 'production') {
-  const frontendPath = path.join(__dirname, '../../dist'),
-  app.use(express.static(frontendPath)),
+  const frontendPath = path.join(__dirname, '../../dist');
+  app.use(express.static(frontendPath));
   // Handle client-side routing
   app.get('*', (_req, res) => {
-    res.sendFile(path.join(frontendPath, 'index.html')),
-  }),
+    res.sendFile(path.join(frontendPath, 'index.html'));
+  });
 }
 
 // Error handling middleware
@@ -91,22 +90,19 @@ app.use(
     _next: express.NextFunction
   ) => {
     // eslint-disable-next-line no-console
-    console.error(err.stack),
+    console.error((err as any).stack);
     res.status(500).json({
       error: 'Something went wrong!',
-      message: NODE_ENV === 'development' ? err.message : 'Internal server error'
-    }),
+      message: NODE_ENV === 'development' ? (err as any).message : 'Internal server error'
+    });
   }
-),
+);
 
 // 404 handler
 app.use('*', (_req, res) => {
-  res.status(404).json({ error: 'Route not found' }),
-}),
+  res.status(404).json({ error: 'Route not found' });
+});
 
 app.listen(PORT, () => {
-  // // console.log(`🚀 Server running on port ${PORT}`),
-  // // console.log(`🌍 Environment: ${NODE_ENV}`),
-  // // console.log(`📱 Frontend: http://localhost:3000`),
-  // // console.log(`🔧 Backend API: http://localhost:${PORT}/api`),
-}),
+  // console.log(`Server running on port ${PORT}`);
+});
