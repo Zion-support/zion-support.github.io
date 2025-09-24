@@ -9,19 +9,6 @@ import { Textarea } from '@/components/ui/textarea',;
 import { Input } from '@/components/ui/input',;
 import { Checkbox } from '@/components/ui/checkbox',;
 import { Alert, AlertDescription } from '@/components/ui/alert',;
-<<<<<<< HEAD
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import {;
   Form,;
   FormControl,;
@@ -84,30 +71,13 @@ export function EducationFormFields({ ;
           <FormField;
             control={form.control}
             name="institution";
-<<<<<<< HEAD
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Institution</FormLabel>;
-            control={form.control}"
-            name="institution";"
-            render={({ field } { field: any ;}) => (;
-
-              <FormItem>;
-
-                <FormLabel>Institution;
-=======
             render={({ field } { field:any }) => (;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 <FormControl>;
-                  <Input placeholder="University of California, MIT, etc." {...field} />;
+                  <Input placeholder="University of California, MIT, etc." {...field}  />;
                 </FormControl>;
-                <FormMessage />;
-<<<<<<< HEAD
-
-            render={({ field }) => (;
-=======
+                <FormMessage  />;
               </FormItem>;            )}
           />;
 ;
@@ -115,13 +85,12 @@ export function EducationFormFields({ ;
             control={form.control}
             name="degree";
             render={({ field } { field:any }) => (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
-                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />;
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field}  />;
                 </FormControl>;
-                <FormMessage />;
+                <FormMessage  />;
               </FormItem>;            )}
           />;
         </div>;
@@ -133,9 +102,9 @@ export function EducationFormFields({ ;
             <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
               <FormControl>;
-                <Input placeholder="Computer Science, Engineering, etc." {...field} />;
+                <Input placeholder="Computer Science, Engineering, etc." {...field}  />;
               </FormControl>;
-              <FormMessage />;
+              <FormMessage  />;
             </FormItem>;
           )}
         />;
@@ -152,9 +121,9 @@ export function EducationFormFields({ ;
                     type="date" ;
                     {...field}
                     value={field.value || ''} ;
-                  />;
+                   />;
                 </FormControl>;
-                <FormMessage />;
+                <FormMessage  />;
               </FormItem>;
             )}
           />;
@@ -169,7 +138,7 @@ export function EducationFormFields({ ;
                     <Checkbox;
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                    />;
+                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
                     <FormLabel>I am currently studying here</FormLabel>;
@@ -177,14 +146,6 @@ export function EducationFormFields({ ;
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD
-
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>End Date</FormLabel>;
-                    <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
             {!form.watch('is_current') && (;
               <FormField;
@@ -198,22 +159,14 @@ export function EducationFormFields({ ;
                         type="date" ;
                         {...field} ;
                         value={field.value || ''} ;
-                      />;
+                       />;
                     </FormControl>;
-                    <FormMessage />;
+                    <FormMessage  />;
                   </FormItem>;                )}
               />;
             )}
           </div>;
         </div>;
-<<<<<<< HEAD
-
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Description (Optional)</FormLabel>;
-              <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
         <FormField;
           control={form.control}
@@ -222,9 +175,9 @@ export function EducationFormFields({ ;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
               <FormControl>;
-                <Input placeholder="Cambridge, MA" {...field} />;
+                <Input placeholder="Cambridge, MA" {...field}  />;
               </FormControl>;
-              <FormMessage />;
+              <FormMessage  />;
             </FormItem>;          )}
         />;
 ;
@@ -237,11 +190,11 @@ export function EducationFormFields({ ;
               <FormControl>;
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
-                  className="min-h-[100px]";
+                  className="min-h-[10o0px]";
                   {...field}
-                />;
+                 />;
               </FormControl>;
-              <FormMessage />;
+              <FormMessage  />;
             </FormItem>;
           )}
         />;
@@ -258,7 +211,7 @@ export function EducationFormFields({ ;
           </Button>;
 ;
           <Button type="submit" disabled={isLoading}>;
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"  />}
             {isEditing ? 'Update' :'Add'} Education;
           </Button>;
         </div>;
@@ -266,26 +219,17 @@ export function EducationFormFields({ ;
     </Form>;
   ),;}
  type EducationFormValues = z.infer<typeof educationSchema>;
-</FormControl> <FormMessage /> </FormItem>) ;
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {;
+</FormControl> <FormMessage  /> </FormItem>) ;
+}/> <FormField </FormControl> <FormMessage  /> </FormItem>) ;
+}/> </div> <FormField </FormControl> <FormMessage  /> </FormItem>) ;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input  /> </FormControl> <FormMessage  /> </FormItem>) ";"}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked={;
   field.value ;
-}onCheckedChange= {;"  field.onChange ";"}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) ;
+}onCheckedChange={;"  field.onChange ";"} /> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) ;
 }/> {;
-  !form.watch ('is current') && (<FormField control= {;
+  !form.watch ('is current') && (<FormField control={;
   form.control ;
-}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ;
+}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input  /> </FormControl> <FormMessage  /> </FormItem>) ;
 }/>) ;
-}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
+}</div> </div> <FormField </FormControl> <FormMessage  /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea  /> </FormControl> <FormMessage  /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
   isEditing ? 'Cancel' : 'Back' ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
-}</Button> </Button> </div> </form> </Form>) ;"}'"
-}</Button> </Button> </div> </form> </Form>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

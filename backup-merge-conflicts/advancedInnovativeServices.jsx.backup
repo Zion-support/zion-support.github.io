@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"export\": const ADVANCED_INNOVATIVE_SERVICES = [
-=======
-<<<<<<< HEAD
-export: const ADVANCED_INNOVATIVE_SERVICES = [""
-<<<<<<< HEAD:backup-merge-conflicts/advancedInnovativeServices.jsx.backup
-=======
 "export": const ADVANCED_INNOVATIVE_SERVICES = ["]"
->>>>>>> main
+=======
+"export\": const ADVANCED_INNOVATIVE_SERVICES = [
 >>>>>>> main
 =======
 "export": const ADVANCED_INNOVATIVE_SERVICES = ["]"

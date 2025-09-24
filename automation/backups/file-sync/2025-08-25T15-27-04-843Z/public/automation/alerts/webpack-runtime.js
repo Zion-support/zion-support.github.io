@@ -11,7 +11,7 @@
 /******/ 	var __webpack_modules__ = ({});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	var __webpack_module_cache__ ={};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -21,7 +21,7 @@
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		var module = __webpack_module_cache__[moduleId] ={
 /******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
@@ -70,7 +70,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/ensure chunk */
 /******/ 	(() => {
-/******/ 		__webpack_require__.f = {};
+/******/ 		__webpack_require__.f ={};
 /******/ 		// This file contains only the entry chunk.
 /******/ 		// The chunk loading function for additional chunks
 /******/ 		__webpack_require__.e = (chunkId) => {
@@ -124,7 +124,7 @@
 /******/ 		
 /******/ 		// object to store loaded chunks
 /******/ 		// "1" means "loaded", otherwise not loaded yet
-/******/ 		var installedChunks = {
+/******/ 		var installedChunks ={
 /******/ 			"webpack-runtime": 1
 /******/ 		};
 /******/ 		

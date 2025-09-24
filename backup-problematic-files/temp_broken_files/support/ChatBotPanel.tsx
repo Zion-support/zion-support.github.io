@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { ScrollArea } from "@/components/ui/scroll-area",;
@@ -12,25 +9,8 @@ import { toast } from "@/components/ui/use-toast",;
 import { cn } from "@/lib/utils",;
 import { ChatMessage } from "./ChatMessage",;
 import { QuickReplyButton } from "./QuickReplyButton",;
-<<<<<<< HEAD
-import { Send, Loader2 } from "lucide-react",;
-import { useTheme } from "@/hooks/useTheme",;
-import React, { useState, useRef, useEffect } from "react";""
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button";""
-import { Input } from "@/components/ui/input";""
-import { ScrollArea } from "@/components/ui/scroll-area";""
-import { Separator } from "@/components/ui/separator";""
-import { toast } from "@/components/ui/use-toast";""
-import { cn } from "@/lib/utils";""
-import { ChatMessage } from "./ChatMessage";""
-import { QuickReplyButton } from "./QuickReplyButton";""
-import { Send, Loader2 } from 'lucide-react';
-import { useTheme } from "@/hooks/useTheme";"
-=======
 import { Send, Loader2 } from 'lucide-react';
 import { useTheme } from "@/hooks/useTheme",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 // Define suggested quick replies;
 const QUICK_REPLIES = [;
@@ -38,7 +18,7 @@ const QUICK_REPLIES = [;
   { id:"match", text:"How do I get matched?" },;
   { id:"billing", text:"Billing help" }],;
 ;
-type Message = {;
+type Message ={;
   id:string,;
   content:string,;
   sender:"user" | "bot",;
@@ -76,7 +56,7 @@ export function ChatBotPanel() {;
   const handleSendMessage = async (text:string = inputValue) => {;
     if (!text.trim()) return,;
     ;
-    const userMessage:Message = {;
+    const userMessage:Message ={;
       id:`user-${Date.now()}`,;
       content:text,;
       sender:"user",;
@@ -90,7 +70,7 @@ export function ChatBotPanel() {;
       // Call the OpenAI-powered support function;
       const response = await sendToAIAssistant(text),;
       ;
-      const botMessage:Message = {;
+      const botMessage:Message ={;
         id:`bot-${Date.now()}`,;
         content:response.message || "Sorry, I couldn't process your request. Please try again.",;
         sender:"bot",;
@@ -111,23 +91,11 @@ export function ChatBotPanel() {;
         setFailedAttempts(0),;
       }
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Error in AI chat:", error),;
-=======
       logErrorToProduction("Error in AI chat", error as Error, { component:'ChatBotPanel' }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       toast({;
         variant:"destructive",;
         title:"Communication Error",;
         description:"We're having trouble connecting to our support service."}),;
-<<<<<<< HEAD
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' ;}),;
-      toast({;
-        variant: "destructive";,;
-        title: "Communication Error";,,
-  description: "We're having trouble connecting to our support service.";}),;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -161,12 +129,7 @@ export function ChatBotPanel() {;
         message:data.message;
       },;
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Error in AI chat:", error),;
-      logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component: 'ChatBotPanel';, functionName: 'ai-chat' ;}),;
-=======
       logErrorToProduction("Error calling Supabase AI chat function", error as Error, { component:'ChatBotPanel', functionName:'ai-chat' }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       return {;
         success:false,;
         message:"I'm experiencing technical difficulties. Please try again later.";
@@ -175,7 +138,7 @@ export function ChatBotPanel() {;
   },;
 ;
   const suggestEscalation = () => {;
-    const escalationMessage:Message = {;
+    const escalationMessage:Message ={;
       id:`bot-escalation-${Date.now()}`,;
       content:;
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",;
@@ -259,12 +222,12 @@ export function ChatBotPanel() {;
               key={message.id}              message={message.content}
               isUser={message.sender === &quot;user&quot}
               timestamp={message.timestamp}
-            />;
+             />;
           ))}
           ;
           {isLoading && (;
             <div className="flex items-center justify-center py-2">;
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"  />;
             </div>;
           )}
         </div>;
@@ -272,7 +235,7 @@ export function ChatBotPanel() {;
       ;
       {messages.length === 1 && (;
         <div className="px-4 py-3">;
-          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
+          <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-30o0" :"text-gray-60o0")}>;
             Suggested questions:;
           </p>;
           <div className="flex flex-wrap gap-2">;
@@ -288,7 +251,7 @@ export function ChatBotPanel() {;
       ;
       {failedAttempts >= 3 && (;
         <div className="px-4 py-3 border-t border-zion-purple/10">;
-          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-30o0" :"text-gray-60o0")}>;
             Need more help?;
           </p>;
           <div className="flex gap-2">;
@@ -312,7 +275,7 @@ export function ChatBotPanel() {;
       ;
       <div className={cn(;
         "p-4 border-t", ;
-        theme === "dark" ? "border-zion-blue-light" :"border-gray-200";
+        theme === "dark" ? "border-zion-blue-light" :"border-gray-20o0";
       )}>;
         <form ;
           onSubmit={(e) => {;
@@ -330,7 +293,7 @@ export function ChatBotPanel() {;
               "flex-1",;
               theme === "dark" ;
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-                :"bg-white border-gray-200";
+                :"bg-white border-gray-20o0";
             )}
           />;
           <Button;
@@ -340,17 +303,12 @@ export function ChatBotPanel() {;
             className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";
             aria-label="Send message";
           >;
-            <Send className="h-4 w-4" />;
+            <Send className="h-4 w-4"  />;
           </Button>;
         </form>;
       </div>;
     </div>;
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-  ); type Message = {;
+  ); type Message ={;
   id: string;
 content: string;
 export function ChatBotPanel () {;
@@ -373,7 +331,6 @@ id: `user-$ {;
 content: text;
 setIsLoading (true);
 
-
   id: `bot-$ {;
   Date.now () ;
 }`;
@@ -395,7 +352,6 @@ body: JSON.stringify ({;
 }) ;
 });
 
-
 }const data = await response.json ();
 return {;
   success: true;
@@ -406,7 +362,7 @@ message: data.message ;
 }
 };
 const suggestEscalation = () => {;
-  const escalationMessage: Message = {;
+  const escalationMessage: Message ={;
   id: `bot-escalation-$ {;
   Date.now () ;
 }`;
@@ -430,44 +386,20 @@ timestamp: new Date () ;
 }]);
 //In a real implementation, this would trigger a live chat request ;
 };
-<<<<<<< HEAD
-timestamp: new Date () ;
-}]);
-//In a real implementation, this would trigger a live chat request 
-};
-:temp_broken_files/support/ChatBotPanel.tsx
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-
 
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
-<<<<<<< HEAD
-Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
-=======
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 timestamp: new Date () ;
 };
 timestamp: new Date () ;
 }]) ;
 };
-<<<<<<< HEAD
-timestamp: new Date () ;
-}]) 
-};
-pr-12325
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 </div>) ;
-}</div> </ScrollArea> key= {;
+}</div> </ScrollArea> key={;
   reply.id ;
-}text= {;
+}text={;
   reply.text ;
 }onClick={;
   () => handleQuickReply (reply.text) ;
-<<<<<<< HEAD
 }/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
-=======
-}/>) ) ;"}</div> </div>) ";"}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) ";"}aria-label="Send message" h-4 w-4" /> </Button> </form> </div> </div>) ;"}'"
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

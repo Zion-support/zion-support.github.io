@@ -4,7 +4,6 @@
   return pool;
 }
 
-
     await client.query('COMMIT');
     return result;
   } catch (err) {

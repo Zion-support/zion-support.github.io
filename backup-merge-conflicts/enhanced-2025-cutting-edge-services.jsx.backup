@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-"export\": const CUTTING_EDGE_SERVICES_2025 = [
-=======
-<<<<<<< HEAD
-export: const CUTTING_EDGE_SERVICES_2025 = [""
-<<<<<<< HEAD:backup-merge-conflicts/enhanced-2025-cutting-edge-services.jsx.backup
-=======
 "export": const CUTTING_EDGE_SERVICES_2025 = ["]"
->>>>>>> main
+=======
+"export\": const CUTTING_EDGE_SERVICES_2025 = [
 >>>>>>> main
 =======
 "export": const CUTTING_EDGE_SERVICES_2025 = ["]"

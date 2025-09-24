@@ -1,159 +1,62 @@
-import Link from 'next/link'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Users, Globe, Target } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import Testimonials from './components/Testimonials'
-import AnimatedCounter from './components/AnimatedCounter'
-import ScrollReveal from './components/ScrollReveal'
 
-export default function Home() {
+// removed unused Link import
+
+export const metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
+  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting'],
+};
+
+import PerformanceMetrics from './components/PerformanceMetrics';
+import ROICalculator from './components/ROICalculator';
+
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-
+    <main className="min-h-screen px-6 py-12">
       {/* Hero Section */}
-      <main className="relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 blur-3xl"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Advanced AI and{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Technology Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. 
-              We deliver enterprise-grade technology that drives innovation and growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all transform hover:scale-105 inline-flex items-center justify-center">
-                Explore Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link href="/contact" className="border border-gray-300 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all inline-flex items-center justify-center">
-                Get Started
-              </Link>
-            </div>
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Advanced AI and <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Technology Solutions</span>
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Transform your business with cutting-edge AI, cloud infrastructure, cybersecurity solutions, and autonomous systems that drive unprecedented growth and efficiency.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 p-8 rounded-xl">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Performance Metrics</h2>
+            <PerformanceMetrics />
+          </div>
+          
+          <div className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20 p-8 rounded-xl">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">ROI Calculator</h2>
+            <ROICalculator />
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ScrollReveal origin="bottom" delay={100}>
-              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">AI Solutions</h3>
-              <p className="text-gray-300 text-sm mb-4">
-                Cutting-edge artificial intelligence solutions for enterprise automation and decision-making.
-              </p>
-              <Link href="/services/ai" className="text-blue-400 hover:text-blue-300 text-sm font-medium inline-flex items-center">
-                Learn more <ArrowRight className="ml-1 w-4 h-4" />
-              </Link>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal origin="bottom" delay={200}>
-              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <Cloud className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Scalable cloud infrastructure, migration services, and DevOps automation.
-                </p>
-                <Link href="/services/cloud" className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal origin="bottom" delay={300}>
-              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Advanced security solutions and comprehensive threat protection strategies.
-                </p>
-                <Link href="/services/security" className="text-red-400 hover:text-red-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal origin="bottom" delay={400}>
-              <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Next-generation technology and digital transformation consulting.
-                </p>
-                <Link href="/services/innovation" className="text-purple-400 hover:text-purple-300 text-sm font-medium inline-flex items-center">
-                  Learn more <ArrowRight className="ml-1 w-4 h-4" />
-                </Link>
-              </div>
-            </ScrollReveal>
+        {/* Services Section */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">AI Solutions</h3>
+              <p className="text-gray-600 dark:text-gray-300">Custom AI implementations, machine learning models, and intelligent automation systems.</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Cloud Infrastructure</h3>
+              <p className="text-gray-600 dark:text-gray-300">Scalable cloud solutions, DevOps automation, and infrastructure optimization.</p>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Cybersecurity</h3>
+              <p className="text-gray-600 dark:text-gray-300">Advanced security frameworks, threat detection, and compliance solutions.</p>
+            </div>
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <ScrollReveal origin="bottom" delay={200}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              <ScrollReveal origin="bottom" delay={300}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
-                    <AnimatedCounter end={500} suffix="+" duration={2000} />
-                  </h3>
-                  <p className="text-gray-300">Enterprise Clients</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal origin="bottom" delay={400}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Globe className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
-                    <AnimatedCounter end={50} suffix="+" duration={2000} />
-                  </h3>
-                  <p className="text-gray-300">Countries Served</p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal origin="bottom" delay={500}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-2">
-                    <AnimatedCounter end={99.9} suffix="%" duration={2000} />
-                  </h3>
-                  <p className="text-gray-300">Uptime Guarantee</p>
-                </div>
-              </ScrollReveal>
-            </div>
-          </ScrollReveal>
-        </div>
-
-        {/* Testimonials Section */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-          <Testimonials />
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  )
+      </div>
+    </main>
+  );
 }
+

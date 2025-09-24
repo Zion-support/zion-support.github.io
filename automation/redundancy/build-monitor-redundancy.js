@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -140,7 +140,7 @@ function checkFileSystem() {
       "README.md"
     ];
     
-    const fileStatus = {};
+    const fileStatus ={};
     for (const file of criticalFiles) {
       fileStatus[file] = fs.existsSync(path.join(process.cwd(), file));
     }
@@ -169,7 +169,7 @@ function checkFileSystem() {
 
 function generateBuildReport(buildHealth, dependencies, gitStatus, fileSystem) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -307,7 +307,7 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { 
+module.exports ={ 
   main, 
   checkBuildHealth, 
   checkDependencies, 

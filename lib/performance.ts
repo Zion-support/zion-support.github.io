@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Note: Removed unused Metadata import to satisfy ESLint no-unused-vars
 
 export function optimizeImages() {
   return {
@@ -15,23 +15,23 @@ export function getPerformanceHeaders() {
   return [
     {
       key: 'X-DNS-Prefetch-Control',
-      value: 'on'
+      value: 'on',
     },
     {
       key: 'X-Frame-Options',
-      value: 'DENY'
+      value: 'DENY',
     },
     {
       key: 'X-Content-Type-Options',
-      value: 'nosniff'
+      value: 'nosniff',
     },
     {
       key: 'Referrer-Policy',
-      value: 'origin-when-cross-origin'
+      value: 'origin-when-cross-origin',
     },
     {
       key: 'Permissions-Policy',
-      value: 'camera=(), microphone=(), geolocation=()'
-    }
+      value: 'camera=(), microphone=(), geolocation=()',
+    },
   ];
 }

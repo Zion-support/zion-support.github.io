@@ -1,16 +1,8 @@
 
-<<<<<<< HEAD
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface AIEnhancementButtonProps {;
   currentContent:string,;
@@ -60,9 +52,9 @@ export function AIEnhancementButton({;
       disabled={isEnhancing}
     >;
       {isEnhancing ? (;
-        <Loader2 className="h-3 w-3 animate-spin" />;
+        <Loader2 className="h-3 w-3 animate-spin"  />;
       ) :(;
-        <Sparkles className="h-3 w-3" />;
+        <Sparkles className="h-3 w-3"  />;
       )}
       <span className="text-xs">{buttonText}</span>;
     </Button>;
@@ -70,6 +62,5 @@ export function AIEnhancementButton({;
  currentContent;
 enhancementType;
 context);
-) : (<Sparkles className="h-3 w-3" />) ;
-
+) : (<Sparkles className="h-3 w-3"  />) ;
 

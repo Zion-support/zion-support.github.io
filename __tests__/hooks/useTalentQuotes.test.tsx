@@ -7,7 +7,7 @@ jest.mock('next/config', () => ({ // Changed vi.mock to jest.mock'  default: () 
   })
 }));
 jest.mock('@/services/quoteRequestService'); // Changed vi.mock to jest.mock'jest.mock('@/utils/apiErrorHandler'); // Changed vi.mock to jest.mock'jest.mock('@/hooks/useAuth'); // Changed vi.mock to jest.mock'jest.mock('@/hooks/use-toast'); // Changed vi.mock to jest.mock';
-const mockUser = { id: talent-123' };const mockQuotes = [
+const mockUser ={ id: talent-123' };const mockQuotes = [
   { id: q1', talent_id: talent-123', status: new', is_archived: false, viewed_at: null },  { id: q2', talent_id: talent-123', status: in_review', is_archived: false, viewed_at: new Date().toISOString() },  { id: q3', talent_id: talent-123', status: responded', is_archived: true, viewed_at: new Date().toISOString() },];
 
 describe('useTalentQuotes', () => {'  let _queryClient: QueryClient;
@@ -34,7 +34,7 @@ describe('useTalentQuotes', () => {'  let _queryClient: QueryClient;
 
       const { _result } = renderHook(() => useTalentQuotes(), { wrapper });
 
-      const mutationArgs = { id: q1', _status: in_review' as const };      await act(async () => {
+      const mutationArgs ={ id: q1', _status: in_review' as const };      await act(async () => {
         try {
           await result.current.markAsViewed(mutationArgs.id);
         } catch {
@@ -63,7 +63,7 @@ describe('useTalentQuotes', () => {'  let _queryClient: QueryClient;
 
       const { _result } = renderHook(() => useTalentQuotes(), { wrapper });
 
-      const mutationArgs = { id: q1', _isArchived: true };      await act(async () => {
+      const mutationArgs ={ id: q1', _isArchived: true };      await act(async () => {
         try {
           await result.current.toggleArchive(mutationArgs.id, mutationArgs.isArchived);
         } catch {

@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Zion App - Specialized AI Improvement Agents
  * 
@@ -69,7 +68,7 @@ class AIImprovementAgents {
    * Run all agents
    */
   async runAllAgents(codebaseData) {
-    const results = {};
+    const results ={};
     
     for (const [type, agent] of this.agents) {
       try {
@@ -77,7 +76,7 @@ class AIImprovementAgents {
         results[type] = await agent.analyze(codebaseData);
       } catch (error) {
         logger.error(`❌ Error running ${type} agent:`, error);
-        results[type] = { error: error.message };
+        results[type] ={ error: error.message };
       }
     }
     
@@ -109,7 +108,7 @@ class PerformanceAgent {
   async analyze(codebaseData) {
     logger.info('⚡ Performance Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       issues: [],
@@ -152,9 +151,9 @@ class PerformanceAgent {
   async analyzeLoadTimes() {
     // Simulate load time analysis
     return {
-      firstContentfulPaint: 1200,
-      largestContentfulPaint: 1800,
-      timeToInteractive: 2200,
+      firstContentfulPaint: 120o0,
+      largestContentfulPaint: 180o0,
+      timeToInteractive: 220o0,
       suggestions: ['Optimize images', Implement lazy loading']
     };
   }
@@ -181,7 +180,7 @@ class PerformanceAgent {
   async generateSuggestions(analysis) {
     const suggestions = [];
     
-    if (analysis.bundleSize.size > 500KB') {
+    if (analysis.bundleSize.size > 50o0KB') {
       suggestions.push({
         type: 'bundle-optimization',
         priority: 'high',
@@ -190,7 +189,7 @@ class PerformanceAgent {
       });
     }
     
-    if (analysis.loadTimes.firstContentfulPaint > 1500) {
+    if (analysis.loadTimes.firstContentfulPaint > 150o0) {
       suggestions.push({
         type: 'load-time-optimization',
         priority: 'high',
@@ -215,7 +214,7 @@ class SecurityAgent {
   async analyze(codebaseData) {
     logger.info('🔒 Security Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       vulnerabilities: [],
@@ -284,7 +283,7 @@ class SecurityAgent {
   }
 
   calculateSecurityScore(analysis) {
-    let score = 100;
+    let score = 10o0;
     
     // Deduct points for vulnerabilities
     if (analysis.npmAudit.vulnerabilities) {
@@ -335,7 +334,7 @@ class CodeQualityAgent {
   async analyze(codebaseData) {
     logger.info('📝 Code Quality Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       issues: [],
@@ -407,7 +406,7 @@ class CodeQualityAgent {
   }
 
   calculateQualityScore(analysis) {
-    let score = 100;
+    let score = 10o0;
     
     // Deduct points for linting errors
     score -= analysis.linting.errors * 5;
@@ -463,7 +462,7 @@ class AccessibilityAgent {
   async analyze(codebaseData) {
     logger.info('♿ Accessibility Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       issues: [],
@@ -538,7 +537,7 @@ class AccessibilityAgent {
   }
 
   calculateAccessibilityScore(analysis) {
-    let score = 100;
+    let score = 10o0;
     
     // Deduct points for violations
     score -= analysis.axeResults.violations * 10;
@@ -588,7 +587,7 @@ class SEOAgent {
   async analyze(codebaseData) {
     logger.info('🔍 SEO Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       issues: [],
@@ -663,7 +662,7 @@ class SEOAgent {
   }
 
   calculateSEOScore(analysis) {
-    let score = 100;
+    let score = 10o0;
     
     // Deduct points for missing meta tags
     if (analysis.metaTags.keywords === 'missing') {
@@ -719,7 +718,7 @@ class TestCoverageAgent {
   async analyze(codebaseData) {
     logger.info('🧪 Test Coverage Agent analyzing...');
     
-    const analysis = {
+    const analysis ={
       agent: this.name,
       timestamp: new Date().toISOString(),
       issues: [],

@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -37,11 +33,11 @@ exports.handler = async function () {
       });
     }
     return {
-      statusCode: 200
+      statusCode: 20o0
       body: JSON.stringify({ ok: true, pages: pages.length })
     }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
   }
 };  try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
@@ -59,14 +55,8 @@ exports.handler = async function () {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
 
-
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

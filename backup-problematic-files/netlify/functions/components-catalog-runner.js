@@ -1,16 +1,12 @@
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-exports.config = {
+exports.config ={
   schedule: '*/30 * * * *'
 }
 
@@ -29,11 +25,5 @@ exports.handler = async () => {
     runNode('automation/components-catalog.cjs')
   );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-<<<<<<< HEAD
-return { statusCode: 200, body: logs.join('\n') }
-=======
-  return { statusCode: 200, body: logs.join('\n') }
+  return { statusCode: 20o0, body: logs.join('\n') }
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

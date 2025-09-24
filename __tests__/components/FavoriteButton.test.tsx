@@ -9,5 +9,5 @@ const renderWithStore = (_ui: React.ReactElement) => {
   return { ...render(<Provider store={store}>{ui}</Provider>), store };
 };
 
-test('clicking heart adds item to wishlist', () => {'  const { _store } = renderWithStore(<FavoriteButton itemId="p1" itemType="product" />);"  fireEvent.click(screen.getByRole('button'));  expect(store.getState().wishlist.items).toHaveLength(1);
+test('clicking heart adds item to wishlist', () => {'  const { _store } = renderWithStore(<FavoriteButton itemId="p1" itemType="product"  />);"  fireEvent.click(screen.getByRole('button'));  expect(store.getState().wishlist.items).toHaveLength(1);
 });

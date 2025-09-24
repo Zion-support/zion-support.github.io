@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import crypto from "crypto";
-import { ProposalVoteEntry } from "./types";
-export function sha256Hex(input: string): string {;
-  return crypto.createHash("sha256").update(input).digest("hex");
-=======
 
 
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
-
 
 import crypto from 'crypto';
 
@@ -19,7 +12,6 @@ export interface MerkleNode {
   left?: MerkleNode;
   right?: MerkleNode;
   data?: any;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 }
 ;
 export function leafHashForVote(vote: ProposalVoteEntry): string {;
@@ -66,18 +58,3 @@ export function verifyMerkleProof(leafData: any, proof: string[], rootHash: stri
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
 
-
-<<<<<<< HEAD
-import crypto from 'crypto';
-export interface MerkleNode {
-  // TODO: Implement
-}
-  hash: string;
-  left?: MerkleNode;
-  right?: MerkleNode;
-  data?: any;
-}
-}
-=======
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -22,14 +22,13 @@ function loadConfiguration() {
     } catch (error) {
       console.warn(
         '⚠️ Failed to load automation-config.json, using defaults:',
-        error.message,
-      );
+        error.message);
     }
   }
 
   // Load infinite improvement configuration
   const infiniteConfigPath = path.join(__dirname, 'infinite-improvement-config.json');
-  let infiniteConfig = {};
+  let infiniteConfig ={};
   
   if (fs.existsSync(infiniteConfigPath)) {
     try {
@@ -46,51 +45,39 @@ function loadConfiguration() {
       enabled: true,
       selfHealing: true,
       learning: true,
-      adaptiveScheduling: true,
-    },
+      adaptiveScheduling: true},
     monitoring: {
       enabled: true,
-      interval: 60000,
-      healthCheckInterval: 300000,
-    },
+      interval: 60o000,
+      healthCheckInterval: 30o0000},
     reporting: {
       enabled: true,
       daily: true,
       weekly: true,
-      monthly: false,
-    },
+      monthly: false},
     dashboard: {
       enabled: true,
-      port: process.env.DASHBOARD_PORT || 3001,
-    },
+      port: process.env.DASHBOARD_PORT || 30o01},
     tasks: {
       dependencyUpdater: {
         enabled: true,
-        interval: 24 * 60 * 60 * 1000,
-      },
+        interval: 24 * 60 * 60 * 10o00},
       securityScanner: {
         enabled: true,
-        interval: 6 * 60 * 60 * 1000,
-      },
+        interval: 6 * 60 * 60 * 10o00},
       codeQualityEnforcer: {
         enabled: true,
-        interval: 2 * 60 * 60 * 1000,
-      },
+        interval: 2 * 60 * 60 * 10o00},
       staleCleaner: {
         enabled: true,
-        interval: 12 * 60 * 60 * 1000,
-      },
-    },
+        interval: 12 * 60 * 60 * 10o00}},
     notifications: {
       slack: {
         enabled: !!process.env.SLACK_WEBHOOK_URL,
         webhookUrl: process.env.SLACK_WEBHOOK_URL,
-        channel: process.env.SLACK_CHANNEL || '#automation',
-      },
+        channel: process.env.SLACK_CHANNEL || '#automation'},
       email: {
-        enabled: false,
-      },
-    },
+        enabled: false}},
     // Merge infinite improvement configuration
     ...infiniteConfig
   };
@@ -106,8 +93,7 @@ async function main() {
 
     // Import and initialize the orchestrator
     const {
-      IntelligentAutomationOrchestrator,
-    } = require('./intelligent-automation-orchestrator');
+      IntelligentAutomationOrchestrator} = require('./intelligent-automation-orchestrator');
 
     // Import infinite improvement loop
     const { InfiniteImprovementLoop } = require('./infinite-improvement-loop');
@@ -127,7 +113,7 @@ async function main() {
           enableInfiniteLoop: true,
           enableOrchestrator: false, // We already have the orchestrator
           enableIntegration: true,
-          dashboardPort: config.infiniteImprovement.dashboardPort || 3002,
+          dashboardPort: config.infiniteImprovement.dashboardPort || 30o02,
           logLevel: config.infiniteImprovement.logLevel || 'info'
         });
         
@@ -187,12 +173,11 @@ async function main() {
 
 function parseArguments() {
   const args = process.argv.slice(2);
-  const parsed = {
+  const parsed ={
     help: false,
     watch: false,
     daemon: false,
-    config: null,
-  };
+    config: null};
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -258,4 +243,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { main, loadConfiguration };
+module.exports ={ main, loadConfiguration };

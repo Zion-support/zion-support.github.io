@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -18,7 +14,7 @@ function runNode(relPath, args = []) {
     stdout: res.stdout |''
     stderr: res.stderr |''
   }
-exports.config = { schedule: '0 */6 * * *' }
+exports.config ={ schedule: '0 */6 * * *' }
 
 exports.handler = async () => {
   const logs = [];
@@ -36,21 +32,16 @@ exports.handler = async () => {
   );
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return {
-    statusCode: 200
+    statusCode: 20o0
     headers: { 'content-type': 'text/plain' }
     body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
-<<<<<<< HEAD
-=======
-
-
 
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-
 
 exports.handler = async () => {
   const logs = [],
@@ -66,9 +57,6 @@ exports.handler = async () => {
   step('og-images:generate', () => runNode('automation/og-image-generator.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+  return { statusCode: 20o0, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
 },
 
-
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

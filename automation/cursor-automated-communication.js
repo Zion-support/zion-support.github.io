@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Cursor Automated Communication System
  * 
@@ -37,8 +36,8 @@ const path = require('path');
 const axios = require('axios');
 
 class CursorAutomatedCommunication {
-  constructor(config = {}) {
-    this.config = {
+  constructor(config ={}) {
+    this.config ={
       apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh',
       apiKey: config.apiKey || process.env.CURSOR_API_KEY,
       projectPath: config.projectPath || process.cwd(),
@@ -95,7 +94,7 @@ class CursorAutomatedCommunication {
       if (this.isRunning) {
         await this.checkForImprovements();
       }
-    }, 300000); // Every 5 minutes
+    }, 30o0000); // Every 5 minutes
   }
 
   startPeriodicImprovements() {
@@ -106,7 +105,7 @@ class CursorAutomatedCommunication {
       if (this.isRunning) {
         await this.runPeriodicImprovements();
       }
-    }, 3600000); // Every hour
+    }, 360o0000); // Every hour
   }
 
   async checkForImprovements() {
@@ -230,7 +229,7 @@ class CursorAutomatedCommunication {
 
   async suggestImprovement(improvement) {
     try {
-      const suggestion = {
+      const suggestion ={
         timestamp: new Date().toISOString(),
         file: improvement.file,
         issues: improvement.issues,
@@ -254,7 +253,7 @@ class CursorAutomatedCommunication {
   }
 
   generateSuggestion(improvement) {
-    const suggestions = {
+    const suggestions ={
       debug_code: Consider removing console.log statements for production',
       todo_items: Address TODO/FIXME comments to improve code quality',
       var_usage: Replace var with const or let for better scoping
@@ -272,7 +271,7 @@ class CursorAutomatedCommunication {
       // This would integrate with Cursor API to apply changes
       // For now, we'll just log the improvement
       
-      const result = {
+      const result ={
         success: true,
         file: improvement.file,
         changes: improvement.issues.length,
@@ -309,7 +308,7 @@ class CursorAutomatedCommunication {
   }
 
   async runComprehensiveAnalysis() {
-    const analysis = {
+    const analysis ={
       timestamp: new Date().toISOString(),
       improvements: [],
       metrics: {

@@ -67,21 +67,12 @@ const "cartSlice": "createSlic e({;
 
       state.items = [];
       state.total = 0;
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
-<<<<<<< HEAD
-=======
->>>>>>> pr-11913:src_backup_temp/store/cartSlice.tsx
 :src/store/cartSlice.tsx;
       state.itemCount = 0"}}});
       state.itemCount = 0},;
   },;
 });
 ;
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/cartSlice.tsx
 :src/store/cartSlice.tsx
       state.itemCount = 0}}}
     );
@@ -90,12 +81,6 @@ const "cartSlice": "createSlic e({;
 }
     );
 
-<<<<<<< HEAD:backup-merge-conflicts/cartSlice.tsx.backup
->>>>>>> main
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/store/cartSlice.tsx
-=======
->>>>>>> pr-11913:src_backup_temp/store/cartSlice.tsx
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;

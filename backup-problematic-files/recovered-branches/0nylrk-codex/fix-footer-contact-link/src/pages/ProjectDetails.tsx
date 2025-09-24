@@ -119,12 +119,9 @@ function ProjectDetailsContent() {;
       const { data, error } = await supabase;
         .from("project_notes");
         .insert({;
-<<<<<<< HEAD
-=======
           project_id:project.id,;
           user_id:user.id,;
           content:newNote});
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         .select(),;
       ;
       if (error) throw error,;
@@ -172,11 +169,11 @@ function ProjectDetailsContent() {;
     switch (status) {;
       case "offer_sent":return <Badge variant="outline">Offer Sent</Badge>,;
       case "offer_accepted":;
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,;
+        return <Badge className="bg-green-10o0 text-green-80o0">Offer Accepted</Badge>,;
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>,;
       case "in_progress":;
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,;
+        return <Badge className="bg-blue-10o0 text-blue-80o0">In Progress</Badge>,;
       case "completed":;
         return <Badge variant="default">Completed</Badge>,;
       case "canceled":;
@@ -198,48 +195,13 @@ function ProjectDetailsContent() {;
       </div>;
     ),;
   }
-<<<<<<< HEAD
-
-        <Card>;
-"
-          <CardContent className="flex flex-col items-center justify-center py-10">;"
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;"
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;""
-            <p className="text-muted-foreground mb-4">;"
-</p>
-            </p>;"
-            <Button onClick={() => navigate("/dashboard")}>;"
-
-    <>;
-      <SEO ;"
-        title={`Project: ${project.job?.title || 'Project Details';} | Zion AI Marketplace`} ;
-        description="View and manage your project details and collaboration.";"
-      />;
-
-      <AppHeader />;
-      <main className="container mx-auto px-4 py-8">;"
-</main>"
-        <div className="mb-6">;"
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;"
-            <div>;
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;""
-              <div className="flex items-center gap-2 mt-1">;"
-                <span className="text-muted-foreground">;"
-</span>
-                </span>;
-</div>;
-            </div>;
-            ;
-            {/* Action Buttons Based on Role and Status */}
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   ;
   if (!project) {;
     return (;
       <div className="container mx-auto py-8">;
         <Card>;
           <CardContent className="flex flex-col items-center justify-center py-10">;
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"  />;
             <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
             <p className="text-muted-foreground mb-4">;
               The project you're looking for doesn't exist or you don't have access to it.;
@@ -271,8 +233,8 @@ function ProjectDetailsContent() {;
       <SEO ;
         title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
         description="View and manage your project details and collaboration.";
-      />;
-      <AppHeader />;
+       />;
+      <AppHeader  />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
@@ -287,8 +249,6 @@ function ProjectDetailsContent() {;
             </div>;
             ;
             {/* Action Buttons Based on Role and Status */}
-<<<<<<< HEAD
-=======
 
   ;
   if (!project) {;
@@ -296,7 +256,7 @@ function ProjectDetailsContent() {;
       <div className="container mx-auto py-8">;
         <Card>;
           <CardContent className="flex flex-col items-center justify-center py-10">;
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"  />;
             <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
             <p className="text-muted-foreground mb-4">;
               The project you're looking for doesn't exist or you don't have access to it.;
@@ -328,8 +288,8 @@ function ProjectDetailsContent() {;
       <SEO ;
         title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
         description="View and manage your project details and collaboration.";
-      />;
-      <AppHeader />;
+       />;
+      <AppHeader  />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
@@ -345,15 +305,13 @@ function ProjectDetailsContent() {;
             ;
             {/* Action Buttons Based on Role and Status */}
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;
                   <AlertDialog>;
                     <AlertDialogTrigger asChild>;
                       <Button variant="default">;
-                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer;
+                        <CheckCircle2 className="mr-2 h-4 w-4"  /> Accept Offer;
                       </Button>;
                     </AlertDialogTrigger>;
                     <AlertDialogContent>;
@@ -372,12 +330,9 @@ function ProjectDetailsContent() {;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
-<<<<<<< HEAD
-=======
                   ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
-                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
+                    <MessageSquare className="mr-2 h-4 w-4"  /> Request Changes;
                   </Button>;
                 </>;
               )}
@@ -386,7 +341,7 @@ function ProjectDetailsContent() {;
                 <AlertDialog>;
                   <AlertDialogTrigger asChild>;
                     <Button variant="default">;
-                      <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
+                      <CheckCircle2 className="mr-2 h-4 w-4"  /> Mark as Completed;
                     </Button>;
                   </AlertDialogTrigger>;
                   <AlertDialogContent>;
@@ -410,7 +365,7 @@ function ProjectDetailsContent() {;
               {isActiveProject && (;
                 <Button variant="default" asChild>;
                   <Link to={`/project/${project.id}/milestones`}>;
-                    <Layers className="mr-2 h-4 w-4" /> Milestones;
+                    <Layers className="mr-2 h-4 w-4"  /> Milestones;
                   </Link>;
                 </Button>;
               )}
@@ -418,7 +373,7 @@ function ProjectDetailsContent() {;
               {isActiveProject && (;
                 <Button variant="outline" asChild>;
                   <Link to={`/project/${project.id}/room`}>;
-                    <Video className="mr-2 h-4 w-4" /> Project Room;
+                    <Video className="mr-2 h-4 w-4"  /> Project Room;
                   </Link>;
                 </Button>;
               )}
@@ -428,7 +383,7 @@ function ProjectDetailsContent() {;
                   variant="outline" ;
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >;
-                  <MessageSquare className="mr-2 h-4 w-4" /> Message;
+                  <MessageSquare className="mr-2 h-4 w-4"  /> Message;
                 </Button>;
               )}
             </div>;
@@ -461,8 +416,6 @@ function ProjectDetailsContent() {;
                       <div>;
                         <h3 className="font-semibold mb-2">Project Description</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
-<<<<<<< HEAD
-=======
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>;
                         </div>;
                       </div>;
@@ -478,7 +431,6 @@ function ProjectDetailsContent() {;
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                         </div>;
                       </div>;
                     </div>;
@@ -497,7 +449,7 @@ function ProjectDetailsContent() {;
                   <CardContent>;
                     <div className="space-y-4">;
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
-                        <Calendar className="h-5 w-5 text-primary mt-0.5" />;
+                        <Calendar className="h-5 w-5 text-primary mt-0.5"  />;
                         <div>;
                           <h3 className="font-semibold">Start Date</h3>;
                           <p>{format(new Date(project.start_date), "PPP")}</p>;
@@ -505,7 +457,7 @@ function ProjectDetailsContent() {;
                       </div>;
                       ;
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">;
-                        <Clock className="h-5 w-5 text-primary mt-0.5" />;
+                        <Clock className="h-5 w-5 text-primary mt-0.5"  />;
                         <div>;
                           <h3 className="font-semibold">Project Status</h3>;
                           <div className="mt-1">;
@@ -530,7 +482,7 @@ function ProjectDetailsContent() {;
                     {project.agreement_url ? (;
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">;
                         <div className="flex items-center gap-3">;
-                          <FileText className="h-5 w-5 text-primary" />;
+                          <FileText className="h-5 w-5 text-primary"  />;
                           <div>;
                             <h3 className="font-semibold">Project Agreement</h3>;
                             <p className="text-sm text-muted-foreground">;
@@ -546,7 +498,7 @@ function ProjectDetailsContent() {;
                       </div>;
                     ) :(;
                       <div className="text-center py-8">;
-                        <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2" />;
+                        <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2"  />;
                         <h3 className="font-semibold">No Documents Yet</h3>;
                         <p className="text-sm text-muted-foreground">;
                           No documents have been uploaded to this project.;
@@ -567,7 +519,7 @@ function ProjectDetailsContent() {;
                   </CardHeader>;
                   <CardContent>;
                     <div className="space-y-4">;
-                      <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">;
+                      <div className="space-y-4 max-h-[40o0px] overflow-y-auto mb-4">;
                         {notes.length > 0 ? (;
                           notes.map((note) => (;
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">;
@@ -577,9 +529,9 @@ function ProjectDetailsContent() {;
                                     <img;
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-                                    />;
+                                     />;
                                   ) :(;
-                                    <User className="h-4 w-4" />;
+                                    <User className="h-4 w-4"  />;
                                   )}
                                 </Avatar>;
                                 <span className="font-medium text-sm">;
@@ -594,7 +546,7 @@ function ProjectDetailsContent() {;
                           ));
                         ) :(;
                           <div className="text-center py-8">;
-                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />;
+                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2"  />;
                             <p className="text-muted-foreground">;
                               No notes yet. Add the first note to this project.;
                             </p>;
@@ -608,17 +560,13 @@ function ProjectDetailsContent() {;
                             placeholder="Add a note or update to the project...";
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
-                            className="min-h-[100px] mb-2";
+                            className="min-h-[10o0px] mb-2";
                           />;
                           <Button;
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
                           >;
-<<<<<<< HEAD
-{isSubmittingNote ? "Posting..." :"Post Note"}
-=======
                             {isSubmittingNote ? "Posting..." :"Post Note"}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                           </Button>;
                         </div>;
                       )}
@@ -626,12 +574,9 @@ function ProjectDetailsContent() {;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
-<<<<<<< HEAD
-=======
               ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <TabsContent value="reviews">;
-                <ProjectReviewSection project={project} />;
+                <ProjectReviewSection project={project}  />;
               </TabsContent>;
             </Tabs>;
           </div>;
@@ -649,9 +594,9 @@ function ProjectDetailsContent() {;
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                        />;
+                         />;
                       ) :(;
-                        <User className="h-6 w-6" />;
+                        <User className="h-6 w-6"  />;
                       )}
                     </Avatar>;
                     <div>;
@@ -668,7 +613,7 @@ function ProjectDetailsContent() {;
                           className="mt-2";
                           onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
                         >;
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                          <MessageSquare className="mr-1 h-3 w-3"  /> Message;
                         </Button>;
                       )}
                     </div>;
@@ -680,9 +625,9 @@ function ProjectDetailsContent() {;
                         <img;
                           src={project.client_profile.avatar_url}
                           alt={project.client_profile.display_name}
-                        />;
+                         />;
                       ) :(;
-                        <User className="h-6 w-6" />;
+                        <User className="h-6 w-6"  />;
                       )}
                     </Avatar>;
                     <div>;
@@ -697,7 +642,7 @@ function ProjectDetailsContent() {;
                           className="mt-2";
                           onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
                         >;
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                          <MessageSquare className="mr-1 h-3 w-3"  /> Message;
                         </Button>;                      )}
                     </div>;
                   </div>;
@@ -736,15 +681,15 @@ function ProjectDetailsContent() {;
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-amber-600 flex items-center gap-1">;
-                    <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
+                  <p className="text-sm text-amber-60o0 flex items-center gap-1">;
+                    <AlertCircle className="h-4 w-4"  /> The talent has requested changes to this offer.;
                   </p>;
                   <Button ;
                     variant="outline";
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
                     className="w-full";
                   >;
-                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
+                    <MessageSquare className="mr-2 h-4 w-4"  /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
               )}
@@ -759,16 +704,16 @@ function ProjectDetailsContent() {;
               ;
               {project.status === "completed" && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-green-600 flex items-center gap-1">;
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.;
+                  <p className="text-sm text-green-60o0 flex items-center gap-1">;
+                    <CheckCircle2 className="h-4 w-4"  /> This project has been completed.;
                   </p>;
                 </CardFooter>;
               )}
               ;
               {project.status === "canceled" && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-red-600 flex items-center gap-1">;
-                    <XCircle className="h-4 w-4" /> This project has been canceled.;
+                  <p className="text-sm text-red-60o0 flex items-center gap-1">;
+                    <XCircle className="h-4 w-4"  /> This project has been canceled.;
                   </p>;
                 </CardFooter>;
               )}
@@ -776,7 +721,7 @@ function ProjectDetailsContent() {;
           </div>;
         </div>;
       </main>;
-      <Footer />;
+      <Footer  />;
     </>;
   ),;
 }
@@ -784,7 +729,7 @@ function ProjectDetailsContent() {;
 export default function ProjectDetails() {;
   return (;
     <ProtectedRoute>;
-      <ProjectDetailsContent />;
+      <ProjectDetailsContent  />;
     </ProtectedRoute>;
   ),;
 } import {
@@ -849,9 +794,9 @@ status: newStatus
 }
 }
 };
-case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+case "offer accepted": return <Badge className="bg-green-10o0 text-green-80o0">Offer Accepted</Badge>;
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;
-case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+case "in progress": return <Badge className="bg-blue-10o0 text-blue-80o0">In Progress</Badge>;
 case "completed": return <Badge variant="default">Completed</Badge>;
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;
 default: return <Badge variant="outline"> {
@@ -859,72 +804,72 @@ default: return <Badge variant="outline"> {
 }</Badge> 
 }
 };
-<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick= {
+<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"  /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={
   () => navigate ("/dashboard") 
 }> Return to Dashboard </Button> </CardContent> </Card> </div>) 
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
+}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4" /> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={
   () => handleStatusChange (" offer accepted") 
 }> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) 
-}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick= {
+}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4" /> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={
   () => handleStatusChange (" completed") 
 }> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
-}<Link to= {
+}<Link to={
   `/project/$ {
   project.id 
 }/milestones` 
-}> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) 
-}<Link to= {
+}> <Layers className=" mr-2 h-4 w-4" /> Milestones </Link> </Button>) 
+}<Link to={
   `/project/$ {
   project.id 
 }/room` 
-}> <Video className=" mr-2 h-4 w-4"/> Project Room </Link> </Button>) 
-}> <MessageSquare className=" mr-2 h-4 w-4"/> Message </Button>) 
+}> <Video className=" mr-2 h-4 w-4" /> Project Room </Link> </Button>) 
+}> <MessageSquare className=" mr-2 h-4 w-4" /> Message </Button>) 
 }</div> </div> </div>) 
-}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {
+}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5" /> <div> </div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5" /> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href={
   project.agreement url 
-}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2"/> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) 
-}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> <img src= {
+}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text-center py-8"> <FileText className=" h-10 w-10 text-muted-foreground mx-auto mb-2" /> <h3 className=" font-semibold">No Documents Yet</h3> <p className=" text-sm text-muted-foreground"> No documents have been uploaded to this project. </p> </div>) 
+}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle>Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> <img src={
   note.created by profile.avatar url 
-}alt= {
+}alt={
   note.created by profile.display name 
-}/>) : (<User className=" h-4 w-4"/>) 
-}</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>) 
+} />) : (<User className=" h-4 w-4" />) 
+}</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2" /> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>) 
 }</div> {
-  isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
+  isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value={
   newNote 
-}/> <Button onClick= {
+} /> <Button onClick={
   handleSubmitNote 
-}disabled= {
+}disabled={
   !newNote.trim () || isSubmittingNote 
 }> </Button> </div>) 
-}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> <img src= {
+}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> <img src={
   project.talent profile.profile picture url 
-}alt= {
+}alt={
   project.talent profile.full name 
-}/>) : (<User className=" h-6 w-6"/>) 
-}</Avatar> <div> onClick= {
+} />) : (<User className=" h-6 w-6" />) 
+}</Avatar> <div> onClick={
   () => navigate (`/messages?talentId=$ {
   project.talent id 
 }`) 
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
-}</div> </div> <img src= {
+}> <MessageSquare className=" mr-1 h-3 w-3" /> Message </Button>) 
+}</div> </div> <img src={
   project.client profile.avatar url 
-}alt= {
+}alt={
   project.client profile.display name 
-}/>) : (<User className=" h-6 w-6"/>) 
-}</Avatar> <div> onClick= {
+} />) : (<User className=" h-6 w-6" />) 
+}</Avatar> <div> onClick={
   () => navigate (`/messages?clientId=$ {
   project.client id 
 }`) 
-}> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) 
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick= {
+}> <MessageSquare className=" mr-1 h-3 w-3" /> Message </Button>) 
+}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={
   () => navigate (`/messages?talentId=$ {
   project.talent id 
 }`) 
-}className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>) 
+}className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4"  /> Discuss Changes </Button> </CardFooter>) 
 }Waiting for the talent to accept your offer. </p> </CardFooter>) 
 }</p> </CardFooter>) 
 }</p> </CardFooter>) 
-}</Card> </div> </div> </main> <Footer /> </>) 
+}</Card> </div> </div> </main> <Footer  /> </>) 
 }export default function ProjectDetails () {
-  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> 
+  return (<ProtectedRoute> <ProjectDetailsContent  /> </ProtectedRoute> 

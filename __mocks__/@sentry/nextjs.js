@@ -1,6 +1,6 @@
 /* global jest */
 // __mocks__/@sentry/nextjs.js
-const Sentry = {
+const Sentry ={
   init: jest.fn(),
   captureException: jest.fn(),
   captureMessage: jest.fn(),
@@ -19,8 +19,7 @@ const Sentry = {
       addBreadcrumb: jest.fn(),
       captureException: jest.fn(),
       captureMessage: jest.fn()
-    }),
-  ),
+    })),
   // Add any other Sentry methods you use in your application
   // For example, if you use Performance HOCs or other specific functions:
   withSentryConfig: jest.fn((config) => config),

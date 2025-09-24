@@ -1,9 +1,5 @@
 
 import React from "react",;
-<<<<<<< HEAD
-import React from "react";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { ;
   Dialog,;
   DialogContent, ;
@@ -12,28 +8,12 @@ import { ;
   DialogDescription ;
 } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
-<<<<<<< HEAD
-import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
-=======
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Card, CardContent } from "@/components/ui/card",;
 import { Separator } from "@/components/ui/separator",;
 import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
-<<<<<<< HEAD
-  DialogDescription ;"
-} from "@/components/ui/dialog",;""
-import { Button } from "@/components/ui/button";""
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";""
-import { Separator } from "@/components/ui/separator";""
-import { QuoteStatusBadge } from "./QuoteStatusBadge";""
-import type { QuoteRequest } from "@/types/quotes";""
-import { format } from "date-fns";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface QuoteDetailsProps {;
   quote:QuoteRequest | null,;
@@ -54,27 +34,19 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
   },;
 ;
   return (;
-<<<<<<< HEAD
-  return (;)
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
-<<<<<<< HEAD
-<DialogTitle className="text-2xl flex items-center justify-between">;
-=======
           <DialogTitle className="text-2xl flex items-center justify-between">;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             <span>{quote.project_name}</span>;
-            <QuoteStatusBadge status={quote.status} />;
+            <QuoteStatusBadge status={quote.status}  />;
           </DialogTitle>;
           <DialogDescription>;
             Quote request submitted on {formatDate(quote.created_at)}
           </DialogDescription>;
         </DialogHeader>;
         ;
-        <Separator className="my-4" />;
+        <Separator className="my-4"  />;
         ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           <Card>;
@@ -82,37 +54,27 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>;
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
-                  <User className="h-4 w-4 text-gray-500" />;
+                  <User className="h-4 w-4 text-gray-50o0"  />;
                   <span>{quote.requester_name}</span>;
-<<<<<<< HEAD
-                </div>;"
-                  <Mail className="h-4 w-4 text-gray-500" />;"
-
-                  <span>{quote.requester_email}</span>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 </div>;
                 <div className="flex items-center gap-2">;
-                  <Mail className="h-4 w-4 text-gray-500" />;
+                  <Mail className="h-4 w-4 text-gray-50o0"  />;
                   <span>{quote.requester_email}</span>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
-=======
           ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           <Card>;
             <CardContent className="pt-6">;
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>;
               <div className="space-y-2">;
                 <div className="flex items-center gap-2">;
-                  <Calendar className="h-4 w-4 text-gray-500" />;
+                  <Calendar className="h-4 w-4 text-gray-50o0"  />;
                   <span>Start date:{formatDate(quote.start_date)}</span>;
                 </div>;
                 <div className="flex items-center gap-2">;
-                  <Clock className="h-4 w-4 text-gray-500" />;
+                  <Clock className="h-4 w-4 text-gray-50o0"  />;
                   <span>Timeline:{quote.timeline}</span>;
                 </div>;
               </div>;
@@ -133,7 +95,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {;
             )}
             ;
             <div className="mt-6 flex items-center gap-2">;
-              <DollarSign className="h-4 w-4 text-gray-500" />;
+              <DollarSign className="h-4 w-4 text-gray-50o0"  />;
               <span className="font-medium">Budget:</span>;
               {quote.budget_display || ;
                (quote.budget_min && quote.budget_max ;
@@ -172,14 +134,14 @@ try {';
   return dateString;
 }
 };
-return (<Dialog open= {;
+return (<Dialog open={;
   isOpen ;
-}onOpenChange= {;
+}onOpenChange={;
   (open) => !open && onClose () ;
 }> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span >{;
   quote.project name ;
-}</span> <QuoteStatusBadge status= {;
-  quote.status ;"}/> formatDate (quote.created at) ";"}</DialogDescription> </DialogHeader> <Separator className="my-4" /> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <Card> </div> </div> </CardContent> </Card> <Card> </div> </div> </CardContent> </Card> </div> {";"  quote.project description && (<> <h4 className="font-medium mt-4" >Additional Details</h4> <p >{;
+}</span> <QuoteStatusBadge status={;
+  quote.status ;"} /> formatDate (quote.created at) ";"}</DialogDescription> </DialogHeader> <Separator className="my-4"  /> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <Card> </div> </div> </CardContent> </Card> <Card> </div> </div> </CardContent> </Card> </div> {";"  quote.project description && (<> <h4 className="font-medium mt-4" >Additional Details</h4> <p >{;
   quote.project description ;
 }</p> </>) ;
 }(quote.budget min && quote.budget max ? `$$ {;
@@ -190,13 +152,4 @@ return (<Dialog open= {;
   quote.budget min ';
 }` : 'Not specified') ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
-<<<<<<< HEAD
-:temp_broken_files/quotes/QuoteDetails.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteDetails.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

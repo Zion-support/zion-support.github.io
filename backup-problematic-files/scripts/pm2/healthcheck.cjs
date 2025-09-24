@@ -23,8 +23,6 @@ function pingPreview() {
 })();
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -33,7 +31,6 @@ function pingPreview() {
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -51,11 +48,8 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -236,107 +230,6 @@ class HealthChecker {
     let score = 100;
 
     // Check disk space
-<<<<<<< HEAD
-		process.exit(1);
-
-		process.exit(1)};
-	console.log('Healthy')})();    // Check disk space;
-const path = require('path');
-class HealthChecker {
-  // TODO: Implement
-
-  constructor() {
-    this.logFile = './logs/pm2/health.log';
-    this.errorFile = './logs/pm2/health-error.log';
-    this.healthReport = './logs/health-report.json';
-    this.ensureLogDirectory();
-  ensureLogDirectory() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    try {
-  // TODO: Implement
-
-  async checkSystemHealth() {
-  // TODO: Implement
-
-      // Check disk space;
-      const diskUsage = this.checkDiskSpace();
-      // Check memory usage;
-      const memoryUsage = this.checkMemoryUsage();
-      // Check PM2 processes;
-      const pm2Status = this.checkPM2Processes();
-      // Check application build;
-      const buildStatus = this.checkBuildStatus();
-      // Generate health report;
-      const healthReport = {
-        timestam: new Date().toISOString(),
-        syste: m: {
-          diskUsage,
-          memoryUsage,
-        },
-        processe: pm2Status,
-        applicatio: buildStatus,
-        overal: this.calculateOverallHealth(
-          pm2Status,
-          buildStatus;)
-        );
-      };
-      // Save health report;
-      fs.writeFileSync(
-        this.healthReport;)
-        JSON.stringify(healthReport, null, 2)
-
-      throw error;
-  checkDiskSpace() {
-  // TODO: Implement
-
-      const lines = result.trim().split('\n');
-      const data = lines[1].split(/\s+/);
-      return {
-  // TODO: Implement
-        tota: data[1],
-        use: data[2],
-        availabl: data[3],
-        percentag: data[4],
-
-      return { erro: error.message };
-  checkMemoryUsage() {
-  // TODO: Implement
-
-  // TODO: Implement
-        fre: data[3],
-        availabl: data[4],
-
-  checkPM2Processes() {
-  // TODO: Implement
-
-        processe: processes.map(p => ({,
-  nam: p.name,
-          statu: p.pm2_env.status,
-          memor: p.monit.memory,
-          cp: p.monit.cpu)
-        })),
-      return status;
-
-  checkBuildStatus() {
-  // TODO: Implement
-
-      const stats = fs.statSync(buildDir);
-      const lastModified = new Date(stats.mtime);
-      const now = new Date();
-      const hoursSinceBuild = (now - lastModified) / (1000 * 60 * 60);
-  // TODO: Implement
-
-  calculateOverallHealth(diskUsage, memoryUsage, pm2Status, buildStatus) {
-    let score = 100;
-    // Check disk space;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
@@ -397,27 +290,6 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
-
-module.exports = HealthChecker;
-const http = require('http');
-const distOk = fs.existsSync('dist/index.html');
-function pingPreview() {}
-	return new Promise((resolve) => {}
-		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
-			resolve(res.statusCode && res.statusCode < 500)}
-});
-		req.on('error', () => resolve(false));
-		req.end()})};
-(async () => {}
-	const ok = distOk && (await pingPreview());
-	if (!ok) {}
-		console.error('Healthcheck failed');
-		process.exit(1)}
-	})();
-		process.exit(1)};
-	console.log('Healthy')})();
-=======
 
 
 module.exports = HealthChecker;
@@ -434,4 +306,3 @@ module.exports = HealthChecker;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

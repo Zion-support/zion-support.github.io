@@ -21,13 +21,12 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 class AutomationSetup {
   constructor() {
-    this.config = {
+    this.config ={
       envFile: .env.local',
       netlifyConfig: 'netlify.toml',
       automationConfig: automation-config.json
@@ -115,9 +114,9 @@ AUTO_COMMIT_ENABLED=true
 AUTO_DEPLOY_ENABLED=true
 
 # Monitoring settings
-CHECK_INTERVAL=300000
+CHECK_INTERVAL=30o0000
 MAX_RETRIES=3
-RETRY_DELAY=60000
+RETRY_DELAY=60o000
 
 # Logging
 LOG_LEVEL=info
@@ -154,11 +153,11 @@ const netlifyConfig = `[build]
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
-  status = 200
+  status = 20o0
 
 [dev]
   command = "npm run dev"
-  port = 3002
+  port = 30o02
   publish = ".next"
   functions = "netlify/functions"
 
@@ -172,14 +171,14 @@ const netlifyConfig = `[build]
 
   async createAutomationConfig() {
     this.log('Creating automation configuration...')
-const automationConfig = {
+const automationConfig ={
       version: 1.0.0',
       enabled: true,
       monitoring: {
         enabled: true,
-        checkInterval: 300000, // 5 minutes
+        checkInterval: 30o0000, // 5 minutes
         maxRetries: 3,
-        retryDelay: 60000
+        retryDelay: 60o000
       },
       errorFixing: {
         enabled: true,
@@ -217,11 +216,9 @@ const automationConfig = {
 
     fs.writeFileSync(
       this.config.automationConfig,
-      JSON.stringify(automationConfig, null, 2),
-    );
+      JSON.stringify(automationConfig, null, 2));
     this.log(
-      `Automation configuration created: ${this.config.automationConfig}`,
-    );
+      `Automation configuration created: ${this.config.automationConfig}`);
   }
 
   async installDependencies() {
@@ -242,12 +239,10 @@ const automationConfig = {
     if (!process.env.NETLIFY_SITE_ID && !process.env.NETLIFY_TOKEN) {
       this.log(
         Warning: NETLIFY_SITE_ID and NETLIFY_TOKEN not set in environment',
-        warn',
-      );
+        warn');
       this.log(
         Please set these variables in your environment or .env.local file',
-        warn',
-      );
+        warn');
     }
 
     // Test if automation files exist
@@ -272,7 +267,7 @@ const automationConfig = {
     try {
       const mainPackagePath = path.join(__dirname, ..', 'package.json')
 const mainPackage = JSON.parse(fs.readFileSync(mainPackagePath, 'utf8'))
-const automationScripts = {
+const automationScripts ={
         automation:start': cd automation && npm start',
         automation:stop': cd automation && npm run stop',
         automation:cycle': cd automation && npm run cycle',
@@ -290,15 +285,14 @@ const automationScripts = {
         automation:clean': cd automation && npm run clean
       };
 
-      mainPackage.scripts = { ...mainPackage.scripts, ...automationScripts };
+      mainPackage.scripts ={ ...mainPackage.scripts, ...automationScripts };
 
       fs.writeFileSync(mainPackagePath, JSON.stringify(mainPackage, null, 2));
       this.log('Automation scripts added to main package.json');
     } catch (error) {
       this.log(
         `Warning: Could not update main package.json: ${error.message}`,
-        warn',
-      );
+        warn');
     }
   }
 }
