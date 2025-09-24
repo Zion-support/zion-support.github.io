@@ -1,0 +1,8 @@
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e.preventDefault () "";"";"""
+=======
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e.preventDefault () "";"";"""
+=======
+"export\": function WaitlistSection () { const [email,setEmail] = useState (\') const handleSubmit = (e) => { e.preventDefault () \'';\"";
+export: function WaitlistSection () { const [email,setEmail] = useState (") const handleSubmit = (e) => { e.preventDefault () "";"";"""
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b
