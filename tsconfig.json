@@ -39,11 +39,26 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/ts_files_backup/**",
+    "**/src.broken/**",
+    "**/src.disabled/**",
+    "**/pages-disabled/**",
+    "**/pages_backup/**",
+    "**/pages.bak/**",
+    "**/backup*/**",
+    "**/backups/**",
+    "**/temp_*/**",
+    "**/zion-website/**",
+    "**/zion-os/**",
+    "**/zion-ai-assistant/**"
   ]
 }
