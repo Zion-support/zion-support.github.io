@@ -57,6 +57,8 @@
     ".next",
     "out",
     "dist",
+    "utils/**",
+    "types/**",
     "**/*.backup.*",
     "**/*.cleanup-backup.*",
     "**/*.conflict-backup.*",
