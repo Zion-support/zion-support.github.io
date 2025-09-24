@@ -1,5 +1,7 @@
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
+
 import { ErrorBoundary } from '../../../components/ErrorBoundary';
 import SEO from '../../components/SEO';
 

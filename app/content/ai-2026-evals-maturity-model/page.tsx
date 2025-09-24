@@ -1,5 +1,7 @@
 import React from 'react';
+
 import Link from 'next/link';
+
 import SEO from '../../components/SEO';
 
 export const metadata = {
@@ -60,7 +62,7 @@ export default function EvalsMaturityModelPage() {
 }
 
 
-const LlmEvalsMaturityModel2026 = () => {
+const _LlmEvalsMaturityModel2026 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO

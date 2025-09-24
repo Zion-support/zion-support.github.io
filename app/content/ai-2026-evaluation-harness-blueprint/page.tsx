@@ -1,5 +1,7 @@
-import Link from 'next/link';
 import React from 'react';
+
+import Link from 'next/link';
+
 import SEO from '../../../components/SEO';
 
 export const metadata = {
@@ -85,7 +87,7 @@ const EvaluationHarnessBlueprint2026: React.FC = () => {
 export default EvaluationHarnessBlueprint2026;
 
 
-function Page() {
+function _Page() {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">

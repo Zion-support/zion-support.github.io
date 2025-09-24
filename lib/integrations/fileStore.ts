@@ -1,6 +1,7 @@
 // File storage for integrations
 import fs from 'fs';
 import path from 'path';
+
 import { IntegrationsState } from './types';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');

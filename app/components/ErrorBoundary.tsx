@@ -32,10 +32,15 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
     };
 
+    // eslint-disable-next-line no-console
     console.group('🚨 Error Boundary Caught Error');
+    // eslint-disable-next-line no-console
     console.error('Error:', error);
+    // eslint-disable-next-line no-console
     console.error('Error Info:', errorInfo);
+    // eslint-disable-next-line no-console
     console.error('Full Details:', errorDetails);
+    // eslint-disable-next-line no-console
     console.groupEnd();
 
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
@@ -46,6 +51,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     }
 
     if (typeof window !== 'undefined') {
+      // eslint-disable-next-line no-console
       console.log('Error would be sent to error tracking service:', errorDetails);
     }
   }
@@ -73,7 +79,7 @@ function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError
           </svg>
         </div>
         <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">Something went wrong</h2>
-        <p className="text-gray-600 text-center mb-4">We're sorry, but something unexpected happened. Please try again.</p>
+        <p className="text-gray-600 text-center mb-4">We&apos;re sorry, but something unexpected happened. Please try again.</p>
         {process.env.NODE_ENV === 'development' && error && (
           <details className="mb-4 p-3 bg-gray-100 rounded text-sm">
             <summary className="cursor-pointer font-medium">Error Details</summary>

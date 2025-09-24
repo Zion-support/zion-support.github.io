@@ -47,7 +47,7 @@ export default function FoundationModelOpsPage() {
 
 import SEO from '../../../components/SEO';
 
-const FoundationModelOps2026 = () => {
+const _FoundationModelOps2026 = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO

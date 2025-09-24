@@ -1,6 +1,8 @@
 import React from 'react';
-import SEO from '../../../components/SEO';
+
 import Link from 'next/link';
+
+import SEO from '../../../components/SEO';
 
 export const metadata = {
   title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
@@ -79,7 +81,7 @@ export default function GoToMarketAgentsBlueprintPage() {
 }
 
 
-function Page() {
+function _Page() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
