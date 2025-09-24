@@ -1,0 +1,2 @@
+export { default } from '../../components/UltimatePromotionBanner20o26',
+,

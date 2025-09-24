@@ -1,0 +1,308 @@
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
+import { ArrowRight, CheckCircle, Cloud, DollarSign, TrendingDown, BarChart3, Zap, Target, Star, Settings, AlertCircle } from 'lucide-react',
+,
+const CloudCostOptimizationSuitePage: NextPage = () => {,
+  const features = [,
+    'AI-powered cost analysis across AWS, Azure, and GCP',;
+    'Automated resource optimization and rightsizing recommendations',;
+    'Real-time cost monitoring and anomaly detection',;
+    'Reserved instance and savings plan optimization',;
+    'Multi-cloud cost allocation and chargeback',;
+    'Automated scaling policies and cost controls',;
+    'Custom dashboards and cost forecasting',;
+    'Integration with existing cloud management tools',
+  ],
+,
+  const benefits = [,
+    'Reduce cloud costs by 30-50% on average',;
+    'Eliminate waste through automated optimization',;
+    'Improve budget predictability with forecasting',;
+    'Enhance resource utilization efficiency',;
+    'Achieve better ROI on cloud investments',
+  ],
+,
+  const useCases = [,
+    'Enterprise cloud cost management',;
+    'Multi-cloud optimization',;
+    'DevOps cost optimization',;
+    'FinOps and cloud governance',;
+    'Startup cost scaling management',
+  ],
+,
+  const pricingPlans = [,
+    {,
+      name: 'Starter',;
+      price: 50o0,;
+      period: 'month',;
+      description: 'For small to medium cloud spend',;
+      features: [,
+        'Up to $50K monthly cloud spend',;
+        'Single cloud provider support',;
+        'Basic cost optimization',;
+        'Monthly reports',;
+        'Email support',;
+        'Standard dashboard',
+      ],
+    },;
+    {,
+      name: 'Professional',;
+      price: 150o0,;
+      period: 'month',;
+      description: 'For growing cloud environments',;
+      features: [,
+        'Up to $20o0K monthly cloud spend',;
+        'Multi-cloud support',;
+        'Advanced optimization algorithms',;
+        'Real-time monitoring',;
+        'Priority support',;
+        'Custom dashboards',;
+        'API access',
+      ],
+    },;
+    {,
+      name: 'Enterprise',;
+      price: 350o0,;
+      period: 'month',;
+      description: 'For large-scale cloud operations',;
+      features: [,
+        'Unlimited cloud spend',;
+        'All cloud providers',;
+        'AI-powered optimization',;
+        'Custom integrations',;
+        'Dedicated account manager',;
+        'White-label options',;
+        'Advanced analytics',
+      ],
+    }
+  ],
+,
+  const testimonials = [,
+    {,
+      name: "Alex Thompson",;
+      company: "TechScale Inc.",;
+      role: "Cloud Architect",;
+      content: "We reduced our AWS costs by 45% in the first quarter. The AI recommendations are incredibly accurate and actionable.",;
+      rating: 5,
+    ,},;
+    {,
+      name: "Maria Garcia",;
+      company: "Global Retail Corp",;
+      role: "FinOps Director",;
+      content: "The cost forecasting and budget management features have transformed our cloud financial planning. Highly recommended.",;
+      rating: 5,
+    ,}
+  ],
+,
+  return (,
+    <>,
+      <Head>,
+        <title>Cloud Cost Optimization Suite - Zion Tech Group</title>,
+        <meta name="description" content="AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization and intelligent recommendations."  />,
+        <meta name="keywords" content="cloud cost optimization, AWS cost management, Azure optimization, GCP cost reduction, FinOps, cloud governance"  />,
+        <link rel="canonical" href="https: //ziontechgroup.com/services/cloud-cost-optimization-suite"  />,
+      </Head>,
+      <div className="min-h-screen bg-gray-50">,
+        {/* Hero Section */,}
+        <section className="bg-gradient-to-br from-green-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center">,
+              <div className="flex justify-center mb-6">,
+                <div className="bg-green-60o0 p-4 rounded-full">,
+                  <Cloud className="w-12 h-12"  />,
+                </div>,
+              </div>,
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">,
+                Cloud Cost Optimization Suite,
+              </h1>,
+              <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto">,
+                AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization,;
+                intelligent recommendations, and real-time monitoring.,
+              </p>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+                <Link href="/contact">,
+                  <span className="bg-green-60o0 hover:bg-green-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">,
+                    Start Free Analysis,
+                    <ArrowRight className="ml-2 w-5 h-5"  />,
+                  </span>,
+                </Link>,
+                <Link href="#demo">,
+                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">,
+                    View Demo,
+                  </span>,
+                </Link>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
+        {/* Features Section */,}
+        <section className="py-20 bg-white">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center mb-16">,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">,
+                Advanced Cost Optimization Features,
+              </h2>,
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                Comprehensive cloud cost management with AI-powered insights and automation,
+              </p>,
+            </div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+              {features.map((feature, index) => (,
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">,
+                  <CheckCircle className="w-8 h-8 text-green-50o0 mb-4"  />,
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{feature}</h3>,
+                </div>,
+              ))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center mb-16">,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">,
+                Proven Cost Savings,
+              </h2>,
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                Join thousands of organizations saving millions on cloud costs,
+              </p>,
+            </div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+              {benefits.map((benefit, index) => (,
+                <div key={index} className="text-center">,
+                  <div className="bg-green-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
+                    <DollarSign className="w-8 h-8 text-green-60o0"  />,
+                  </div>,
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{benefit}</h3>,
+                </div>,
+              ))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Use Cases Section */}
+        <section className="py-20 bg-white">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center mb-16">,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">,
+                Perfect For Every Organization,
+              </h2>,
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                From startups to enterprises, optimize your cloud costs at any scale,
+              </p>,
+            </div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+              {useCases.map((useCase, index) => (,
+                <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border border-green-10o0">,
+                  <Target className="w-8 h-8 text-green-60o0 mb-4"  />,
+                  <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{useCase}</h3>,
+                </div>,
+              ))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Pricing Section */}
+        <section className="py-20 bg-gray-50">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center mb-16">,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">,
+                Transparent Pricing,
+              </h2>,
+              <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
+                Pay for what you use. Our platform typically pays for itself within the first month.,
+              </p>,
+            </div>,
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
+              {pricingPlans.map((plan, index) => (,
+                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-green-50o0 transform scale-10o5' : ''}`}>,
+                  {index === 1 && (,
+                    <div className="bg-green-50o0 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">,
+                      Most Popular,
+                    </div>,
+                  )}
+                  <h3 className="text-2xl font-bold text-gray-90o0 mb-2">{plan.name}</h3>,
+                  <p className="text-gray-60o0 mb-6">{plan.description}</p>,
+                  <div className="mb-6">,
+                    <span className="text-4xl font-bold text-gray-90o0">${plan.price.toLocaleString()}</span>,
+                    <span className="text-gray-60o0">/{plan.period}</span>,
+                  </div>,
+                  <ul className="space-y-3 mb-8">,
+                    {plan.features.map((feature, featureIndex) => (,
+                      <li key={featureIndex} className="flex items-center">,
+                        <CheckCircle className="w-5 h-5 text-green-50o0 mr-3"  />,
+                        <span className="text-gray-70o0">{feature}</span>,
+                      </li>,
+                    ))}
+                  </ul>,
+                  <Link href="/contact">,
+                    <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${,
+                      index === 1,
+                        ? 'bg-green-60o0 hover: bg-green-70o0 text-white',
+                        : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
+                    ,}`}>,
+                      Get Started,
+                    </span>,
+                  </Link>,
+                </div>,
+              ))}
+            </div>,
+          </div>,
+        </section>,
+        {/* Testimonials Section */}
+        <section className="py-20 bg-white">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
+            <div className="text-center mb-16">,
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">,
+                Customer Success Stories,
+              </h2>,
+            </div>,
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+              {testimonials.map((testimonial, index) => (,
+                <div key={index} className="bg-gray-50 p-6 rounded-lg">,
+                  <div className="flex items-center mb-4">,
+                    {[...Array(testimonial.rating)].map((_, i) => (,
+                      <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current"  />,
+                    ))}
+                  </div>,
+                  <p className="text-gray-70o0 mb-4">"{testimonial.content}"</p>,
+                  <div>,
+                    <p className="font-semibold text-gray-90o0">{testimonial.name}</p>,
+                    <p className="text-gray-60o0">{testimonial.role}, {testimonial.company}</p>,
+                  </div>,
+                </div>,
+              ))}
+            </div>,
+          </div>,
+        </section>,
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-br from-green-90o0 via-blue-90o0 to-indigo-90o0 text-white">,
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">,
+              Start Saving on Cloud Costs Today,
+            </h2>,
+            <p className="text-xl mb-8 text-gray-20o0 max-w-3xl mx-auto">,
+              Get a free cost analysis and see how much you can save. Most customers see ROI within 30 days.,
+            </p>,
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">,
+              <Link href="/contact">,
+                <span className="bg-green-60o0 hover:bg-green-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">,
+                  Get Free Analysis,
+                  <ArrowRight className="ml-2 w-5 h-5"  />,
+                </span>,
+              </Link>,
+              <a href="tel:+130o24640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">,
+                Call +1 30o2 464 0950,
+              </a>,
+            </div>,
+            <div className="mt-8 text-sm text-gray-30o0">,
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-green-30o0">kleber@ziontechgroup.com</a></p>,
+              <p>Address: 364 E Main St STE 10o08, Middletown, DE 19709</p>,
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,
+  ),
+};
+,
+export default CloudCostOptimizationSuitePage,

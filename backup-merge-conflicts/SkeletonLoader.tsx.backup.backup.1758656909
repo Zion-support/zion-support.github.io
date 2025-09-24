@@ -1,0 +1,15 @@
+      className={cn()
+        baseClasses,
+        variantClasses[variant],
+        animationClasses[animation],
+        className
+=======
+      )}
+      style={style}
+    />;
+  )}
+              height={16}
+               />;
+          ))}
+        </div>;
+      ))}
