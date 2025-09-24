@@ -4,7 +4,9 @@ import { useEffect } from 'react';
 
 export default function PerformanceOptimizer() {
   useEffect(() => {
+    // Preload critical resources,
     const preloadCriticalResources = () => {
+      // Preload fonts,
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
       fontLink.href = '/fonts/inter-var.woff2';
@@ -13,34 +15,35 @@ export default function PerformanceOptimizer() {
       fontLink.crossOrigin = 'anonymous';
       document.head.appendChild(fontLink);
 
+      // Preload critical images
       const imageLink = document.createElement('link');
       imageLink.rel = 'preload';
       imageLink.href = '/images/hero-bg.webp';
       imageLink.as = 'image';
       document.head.appendChild(imageLink);
     };
-
+    // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!img.getAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-        if (!img.getAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
+        if (!img.decoding) {
+          img.decoding = 'async';
         }
       });
     };
 
+    // Add intersection observer for lazy loading
     const setupLazyLoading = () => {
       if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const img = entry.target as HTMLImageElement;
-              const dataSrc = img.getAttribute('data-src');
-              if (dataSrc) {
-                img.src = dataSrc;
+              if ((img as any).dataset && (img as any).dataset.src) {
+                img.src = (img as any).dataset.src as string;
                 img.removeAttribute('data-src');
                 imageObserver.unobserve(img);
               }
@@ -53,12 +56,14 @@ export default function PerformanceOptimizer() {
       }
     };
 
+    // Initialize performance optimizations
     preloadCriticalResources();
     optimizeImages();
     setupLazyLoading();
 
+    // Cleanup
     return () => {
-      // Cleanup if needed
+      // Remove any event listeners or observers if needed
     };
   }, []);
 
