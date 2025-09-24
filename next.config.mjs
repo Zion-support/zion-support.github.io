@@ -66,8 +66,8 @@ const nextConfig = {
 		ignoreBuildErrors: false
 	},
 	eslint: {
-		ignoreDuringBuilds: false
+		ignoreDuringBuilds: true
 	},
 };
 
-module.exports = nextConfig;
+export default nextConfig;

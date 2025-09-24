@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,10 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src-clean/src/*"]
+      "@/*": [
+        "src-clean/src/*"
+      ]
     },
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -26,14 +32,26 @@
     "noImplicitAny": false,
     "noImplicitThis": false,
     "noImplicitOverride": false,
-    "types": ["vite/client", "node", "react", "react-dom"]
+    "types": [
+      "node",
+      "react",
+      "react-dom"
+    ],
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "src-clean/src/**/*",
     "src-clean/src/types/offline-shims.d.ts",
     "*.d.ts",
     "tailwind.config.js",
-    "postcss.config.js"
+    "postcss.config.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
