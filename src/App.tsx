@@ -1,39 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ScrollToTop from './ScrollToTop';
-import Header from './Header';
-import Footer from './Footer';
-import EnhancedHeroSection from './components/EnhancedHeroSection';
-import FeaturedContentSection from './components/FeaturedContentSection';
-import DynamicContentCarousel from './components/DynamicContentCarousel';
-import InteractiveTechShowcase from './components/InteractiveTechShowcase';
-import './index.css';
-import AdvancedTechSolutions2026 from './pages/AdvancedTechSolutions2026';
-import InnovationShowcase2026 from './pages/InnovationShowcase2026';
-import AdvancedAITransformation2025 from './pages/AdvancedAITransformation2025';
-import QuantumComputingRevolution2025 from './pages/QuantumComputingRevolution2025';
-import NeuralInterfaceRevolution2025 from './pages/NeuralInterfaceRevolution2025';
-import NextGenTechShowcase2025 from './pages/NextGenTechShowcase2025';
-import AdvancedQuantumComputing2026 from './pages/AdvancedQuantumComputing2026';
-import NeuralInterfaceRevolution2026 from './pages/NeuralInterfaceRevolution2026';
-import AdvancedAISystems2026 from './pages/AdvancedAISystems2026';
-import SyntheticIntelligence2026 from './pages/SyntheticIntelligence2026';
-import QuantumNeuralFusion2026 from './pages/QuantumNeuralFusion2026';
-import NextGenAIRevolution2026 from './pages/NextGenAIRevolution2026';
-import QuantumComputingRevolution2026 from './pages/QuantumComputingRevolution2026';
-import RevolutionaryTechBlog2026 from './pages/RevolutionaryTechBlog2026';
-import ComprehensiveTechInsights2026 from './pages/ComprehensiveTechInsights2026';
-import AdvancedAnalyticsDashboard2026 from './pages/AdvancedAnalyticsDashboard2026';
-import BiotechRevolution2026 from './pages/BiotechRevolution2026';
-import SpaceTechInnovation2026 from './pages/SpaceTechInnovation2026';
-import NewContentShowcase2026 from './components/NewContentShowcase2026';
-import EnhancedContentShowcase2026 from './components/EnhancedContentShowcase2026';
-import EnhancedNavigation2026 from './components/EnhancedNavigation2026';
-import UltimateTechRevolution2026 from './pages/UltimateTechRevolution2026';
-import NextGenInnovationHub2026 from './pages/NextGenInnovationHub2026';
-import RevolutionaryTechInsights2026 from './pages/RevolutionaryTechInsights2026';
 
-export default function App(): JSX.Element {
+const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen bg-white">

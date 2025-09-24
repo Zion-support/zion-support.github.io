@@ -1,16 +1,7 @@
-import React from 'react';
-
-interface ScrollAreaProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const ScrollArea: React.FC<ScrollAreaProps> = ({ children, className = '' }) => {
+import React from 'react',
+export export export default function scroll-area()   {
   return (
-    <div className={`overflow-auto ${className}`}>
-      {children}
-    </div>
-  );
-};
-
-export default ScrollArea;
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>)}
