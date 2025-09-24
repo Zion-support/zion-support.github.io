@@ -1,0 +1,17 @@
+scripts/**
+automation/**
+server/**
+apps/**
+netlify/**
+__tests__/**
+tests/**
+backups/**
+backup*/**
+backup-problematic-files/**
+corrupted_backup/**
+temp_exclude/**
+temp_*/**
+ts_files_backup/**
+zion-os/**
+zion-website/**
+zion-ai-assistant/**
