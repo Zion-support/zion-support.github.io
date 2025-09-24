@@ -30,7 +30,6 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-<<<<<<< HEAD
     const errorDetails = {
       message: error.message,
       stack: error.stack,
@@ -40,19 +39,22 @@ class ErrorBoundary extends React.Component<
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
     };
 
-    // eslint-disable-next-line no-console
-    console.group('🚨 Error Boundary Caught Error');
-    // eslint-disable-next-line no-console
-    console.error('Error:', error);
-    // eslint-disable-next-line no-console
-    console.error('Error Info:', errorInfo);
-    // eslint-disable-next-line no-console
-    console.error('Full Details:', errorDetails);
-    // eslint-disable-next-line no-console
-    console.groupEnd();
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.group('🚨 Error Boundary Caught Error');
+      // eslint-disable-next-line no-console
+      console.error('Error:', error);
+      // eslint-disable-next-line no-console
+      console.error('Error Info:', errorInfo);
+      // eslint-disable-next-line no-console
+      console.error('Full Details:', errorDetails);
+      // eslint-disable-next-line no-console
+      console.groupEnd();
+    }
 
-    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
+      ((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'exception', {
         description: error.message,
         fatal: true,
       });
@@ -61,12 +63,6 @@ class ErrorBoundary extends React.Component<
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line no-console
       console.log('Error would be sent to error tracking service:', errorDetails);
-=======
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
->>>>>>> origin/main
     }
     this.setState({
       error,
@@ -154,33 +150,4 @@ class ErrorBoundary extends React.Component<
   }
 }
 
-<<<<<<< HEAD
-function DefaultErrorFallback({ error, resetError }: { error?: Error; resetError: () => void }) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-          </svg>
-        </div>
-        <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">Something went wrong</h2>
-        <p className="text-gray-600 text-center mb-4">We&apos;re sorry, but something unexpected happened. Please try again.</p>
-        {process.env.NODE_ENV === 'development' && error && (
-          <details className="mb-4 p-3 bg-gray-100 rounded text-sm">
-            <summary className="cursor-pointer font-medium">Error Details</summary>
-            <pre className="mt-2 text-xs overflow-auto">{error.stack}</pre>
-          </details>
-        )}
-        <div className="flex space-x-3">
-          <button onClick={resetError} className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Try Again</button>
-          <button onClick={() => (window.location.href = '/')} className="flex-1 border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">Go Home</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-=======
->>>>>>> origin/main
 export default ErrorBoundary;
