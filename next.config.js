@@ -25,7 +25,6 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
   },
-  serverExternalPackages: ['sharp'],
   // Security headers
   async headers() {
     return [
