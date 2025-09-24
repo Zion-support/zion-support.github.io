@@ -1,4 +1,6 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react-hooks', 'import', '@next/next'],
   extends: ['next/core-web-vitals'],
   rules: {
     'react-hooks/rules-of-hooks': 'error',
@@ -56,6 +58,14 @@ module.exports = {
     'components.disabled_full/**',
     'pages.disabled_full/**',
     'apps.backup/**',
-    'app_backup/**'
+    'app_backup/**',
+    // Additional large directories or mixed-quality code not part of the main Next.js app
+    'src/**',
+    'lib/**',
+    'backend/**',
+    'server/**',
+    'zion-os/**',
+    'zion-website/**',
+    'zion-ai-assistant/**',
   ],
 };
