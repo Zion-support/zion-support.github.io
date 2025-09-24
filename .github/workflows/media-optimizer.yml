@@ -2,18 +2,22 @@ name: Media Optimizer
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch: {}
+    - cron: "*/15 * * * *" # every 15 minutes
+  workflow_dispatch:
+  push:
+    paths:
+      - "public/**"
+      - "styles/**"
 
 permissions:
   contents: write
 
 concurrency:
-  group: media-optimizer-${{ github.ref }}
+  group: media-optimizer
   cancel-in-progress: true
 
 jobs:
-  optimize_media:
+  optimize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,32 +25,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 20.x
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund
+        run: npm ci
 
-      - name: Optimize images and media
-        run: |
-          node automation/optimize-images.cjs || true
-          node automation/image-optimizer.cjs || true
-          node scripts/generate-readme.js
+      - name: Optimize images
+        run: node automation/optimize-images.cjs || node automation/image-optimizer.cjs || true
 
-      - name: Build (non-blocking)
-        run: npm run build || true
+      - name: Build to validate
+        run: npm run build --if-present || true
 
-      - name: Commit and push changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A
-            git commit -m "perf(media): optimized assets [skip ci]"
-            git push origin HEAD:main
-          else
-            echo "No changes to push"
-          fi
+      - name: Auto-commit optimized assets
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(automation): optimize media assets"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          file_pattern: |
+            public/**
+            data/**
+            automation/logs/**
