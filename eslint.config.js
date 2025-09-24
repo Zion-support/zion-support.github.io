@@ -58,13 +58,31 @@ export default [
 		languageOptions: {
 			parser: typescriptParser,
 			ecmaVersion: 2021,
-			sourceType: 'module'},
+			sourceType: 'module',
+			globals: {
+				window: 'readonly',
+				document: 'readonly',
+				localStorage: 'readonly',
+				setTimeout: 'readonly',
+				clearTimeout: 'readonly',
+				setInterval: 'readonly',
+				clearInterval: 'readonly',
+				requestAnimationFrame: 'readonly',
+				cancelAnimationFrame: 'readonly',
+				IntersectionObserver: 'readonly',
+				HTMLImageElement: 'readonly',
+				HTMLSpanElement: 'readonly',
+				URL: 'readonly',
+				process: 'readonly',
+				console: 'readonly'
+			}},
 		plugins: {
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
 			'@typescript-eslint': typescriptEslintPlugin},
 		settings: { react: { version: 'detect' } },
 		rules: {
+			'no-unused-vars': 'off',
 			'react/react-in-jsx-scope': 'off',
 			'no-console': 'warn',
 			'@typescript-eslint/no-unused-vars': [
