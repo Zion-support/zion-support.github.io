@@ -1,0 +1,10 @@
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+>>>>>>> 83415ede492b23ecd0f96dcc700efe0026b04f84
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
