@@ -86,7 +86,6 @@ export default [
   },
          {
            ignores: [
-            '**/src/**',
             '**/ts_files_backup/**',
             '**/types/**',
               '**/src.broken/**',
