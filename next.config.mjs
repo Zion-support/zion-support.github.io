@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Performance optimizations
@@ -16,6 +14,10 @@ const nextConfig = {
   
   // Compression
   compress: true,
+  
+  // Disable static optimization for problematic pages
+  output: 'export',
+  trailingSlash: true,
   
   // Bundle analyzer (only in development)
   ...(process.env.ANALYZE === 'true' && {
@@ -60,6 +62,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-=======
-export default { typescript: { ignoreBuildErrors: true }, eslint: { ignoreDuringBuilds: true } };
->>>>>>> 76ac031ee1bd0638dab6f2aa5c6a46ca343d86e9

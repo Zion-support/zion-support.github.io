@@ -33,13 +33,6 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-<<<<<<< HEAD
-    // Log error for debugging
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo)
-    }
-=======
     const errorDetails = {
       message: error.message,
       stack: error.stack,
@@ -78,7 +71,6 @@ class ErrorBoundary extends React.Component<
       error,
       errorInfo,
     });
->>>>>>> aedbd402ba3262b2df8906bbffb3ecc3f0026b4b
   }
 
   resetError = () => {

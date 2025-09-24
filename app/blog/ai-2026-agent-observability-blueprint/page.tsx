@@ -10,6 +10,8 @@ export const metadata = {
   keywords: ['agent observability', 'tracing', 'telemetry', 'evals', 'governance'],
 };
 
+export const dynamic = 'force-dynamic'
+
 const AgentObservabilityBlueprint: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
