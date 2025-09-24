@@ -1247,8 +1247,7 @@ export default function HomePage() {
                   <h4 className='font-semibold'>AI Implementation Checklist</h4>
                   <p className='text-sm opacity-90'>Step-by-step guide to successful AI implementation</p>
                 </div>
-              </article>
-            </Link>
+              </div>
 
             <Link href='/blog/cloud-native-architecture-2025' className='group'>
               <article className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100'>
@@ -1327,6 +1326,7 @@ export default function HomePage() {
                 </div>
               </article>
             </Link>
+          </div>
           </div>
 
           {/* Trending Articles */}
@@ -1548,5 +1548,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </ErrorBoundary>
   );
 }

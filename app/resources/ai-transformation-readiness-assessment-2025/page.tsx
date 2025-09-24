@@ -245,7 +245,7 @@ export default function AITransformationReadinessAssessment2025() {
                     </label>
                     <label className="flex items-center gap-2">
                       <input type="radio" name="data-quality" className="text-blue-600" />
-                      Poor (<60% accuracy)
+                      Poor ({'<'}60% accuracy)
                     </label>
                   </div>
                 </div>
