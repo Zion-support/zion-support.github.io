@@ -134,7 +134,7 @@ class WorkflowAutoHealer {
     
     // Remove extra newlines
     fixed = fixed.replace(/jobs:\n\n\n/g, 'jobs:\n');
-    fixed = fixed.replace(/jobs:\n  \n/g, 'jobs:\n');
+    fixed = fixed.replace(/jobs:\n {2}\n/g, 'jobs:\n');
     
     // If jobs section is completely malformed, replace it
     if (fixed.includes('jobs:') && !fixed.includes('runs-on:')) {

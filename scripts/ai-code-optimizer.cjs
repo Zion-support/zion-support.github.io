@@ -318,77 +318,77 @@ const auditResults = JSON.parse(auditOutput);
         logger.error('❌ Error in optimization cycle:', error);
       }
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
 // Store timeoutId for cleanup if needed
-;
+
     };
 
     optimizationLoop();
