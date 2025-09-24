@@ -1,10 +1,4 @@
-<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
-<<<<<<< HEAD
-<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-7720
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
 const values = [
@@ -17,8 +11,6 @@ export default function AboutPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
-<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
-=======
 import { 
   UserGroupIcon, 
   LightBulbIcon, 
@@ -96,7 +88,6 @@ export default function AboutPage() {
         </div>
       </div>
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-e453
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720
@@ -127,9 +118,6 @@ export default function AboutPage() {
           </dl>
         </div>
       </div>
-<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
-<<<<<<< HEAD
-=======
 
       {/* Leadership Team */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
@@ -207,7 +195,6 @@ export default function AboutPage() {
   )
 }
 =======
->>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
 =======
     </div>
   )

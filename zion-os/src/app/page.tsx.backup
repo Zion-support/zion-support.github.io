@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-=======
 import React from 'react';
->>>>>>> cursor/create-and-deploy-new-content-5863
 import FeatureCard from './components/FeatureCard';
 =======
 >>>>>>> origin/feature/new-blog-content-and-promo
@@ -267,16 +263,6 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
-                🚀 Launch Your Economy
-              </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift">
-                📊 View Instances
-<<<<<<< HEAD
-              </Link>
-=======
               <a href="/multiverse/launch" className="btn-primary hover-lift">🚀 Launch Your Economy</a>
               <a href="/admin/instances" className="btn-secondary hover-lift">📊 View Instances</a>
               <a href="/news" className="btn-secondary hover-lift">📰 See what's new in 2025</a>
@@ -288,25 +274,13 @@ export default function HomePage() {
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
               </a>
->>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-5863
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Promo Banner - New Articles */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
-          <a
-            href="/blog/agent-safety-red-teaming-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
-          >
 =======
 =======
-=======
->>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-f175
@@ -517,16 +491,6 @@ export default function HomePage() {
               </a>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-                🚀 Start Building Now
-              </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📊 Explore Examples
-<<<<<<< HEAD
-              </Link>
-=======
               </a>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -552,7 +516,6 @@ export default function HomePage() {
 =======
               <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Agent Safety Playbook 2025
->>>>>>> origin/feature/add-ai-agent-safety-post
 =======
               <a href="/blog/ai-governance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Governance 2025
@@ -640,8 +603,6 @@ export default function HomePage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 =======
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
@@ -649,7 +610,6 @@ export default function HomePage() {
               <a href="/blog/agent-safety-evaluation-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 ✅ Read: Agent Safety Evaluation 2025
               </a>
->>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
             </div>
           </div>
         </div>

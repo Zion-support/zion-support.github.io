@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import SEOHead from '../components/SEOHead';
   FileText, 
   Database, 
@@ -182,7 +180,6 @@ const AIAutonomousResearchAssistant = () => {
       title: "Real-time Analysis",
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const AIAutonomousResearchAssistant: React.FC = () => {
   return (

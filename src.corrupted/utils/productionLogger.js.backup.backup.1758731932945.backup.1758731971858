@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Production logger utility for safe logging in production environments
 
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -43,7 +41,6 @@ export const productionLogger = {
       }
     } catch (error) {
       // Silently fail in production
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     }
   }
 };

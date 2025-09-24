@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": ["src/*"]
+=======
+      "@/*": [
+        "src/*"
+      ]
+>>>>>>> origin/aggressive-merge-backup-20250923-155532
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "src/components/InteractiveCard.tsx",
+    "src/components/LayoutWrapper.tsx",
+    "src/components/LoadingSpinner.tsx",
+    "src/components/OnboardingWalkthrough.tsx",
+    "src/components/StructuredData.tsx",
+    "src/data/services.ts"
+  ]
+}

@@ -51,8 +51,6 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 =======
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
@@ -112,7 +110,6 @@ export default function Blog() {
           ))}
         </div>
       </section>
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-79ca
     </div>
   );

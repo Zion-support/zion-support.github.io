@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// @ts-nocheck
-=======
 
 ;
 "use client",import { useState, useEffect } from "react",interface Feature  {id: string,title: string,description: string,icon: React.ReactNode,color: string,details: string[],demo?: string;
@@ -111,7 +106,6 @@ const features: Feature[] = [
       "Liquidity pools",
       "Token burning mechanisms",
 =======
->>>>>>> cursor/create-and-deploy-new-content-d9c7
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -181,9 +175,6 @@ const features: Feature[] = [
 			"Cross-chain bridges"
 		]
 	}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 ];
 
@@ -195,21 +186,6 @@ export function FeatureShowcase() {
 		setIsVisible(true);
 	}, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getColorClasses = (color: Feature["color"]) => {
-    const colorMap = {
-      blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600",
-      green: "from-green-500 to-green-600",
-      red: "from-red-500 to-red-600",
-      yellow: "from-yellow-500 to-yellow-600",
-      indigo: "from-indigo-500 to-indigo-600",
-    } as const;
-    return colorMap[color] || "from-blue-500 to-blue-600";
-  };
-
-=======
       "Cross - chain bridges";
     ];
   }
@@ -371,7 +347,6 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
 export default FeatureShowcase;
 =======
 =======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 	const getColorClasses = (color: string) => {
 		const colorMap = {
@@ -514,7 +489,4 @@ export default FeatureShowcase;
 		</section>
 	);
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7

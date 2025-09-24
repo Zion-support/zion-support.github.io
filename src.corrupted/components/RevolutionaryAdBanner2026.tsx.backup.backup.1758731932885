@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-79ca
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

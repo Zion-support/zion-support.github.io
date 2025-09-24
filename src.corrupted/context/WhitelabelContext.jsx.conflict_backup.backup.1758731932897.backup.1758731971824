@@ -11,8 +11,6 @@ export const useWhitelabel = () => {
 };
 
 export const WhitelabelProvider = ({ children }) => {
-<<<<<<< HEAD
-=======
   const [whitelabelConfig, setWhitelabelConfig] = useState({
     brandName: 'Zion Tech Group',
     logo: '/logo.png',
@@ -27,7 +25,6 @@ export const WhitelabelProvider = ({ children }) => {
   const value = {
     whitelabelConfig,
     updateConfig,
->>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (

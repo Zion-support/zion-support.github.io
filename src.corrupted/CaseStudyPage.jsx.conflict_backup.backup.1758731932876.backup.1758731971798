@@ -7,8 +7,6 @@ const CaseStudyPage = () => {
   const caseStudies = {
     'ai-transformation': {
       title: 'AI Transformation Success Story',
-<<<<<<< HEAD
-=======
       company: 'Fortune 500 Manufacturing',
       industry: 'Manufacturing',
       challenge: 'Legacy systems and manual processes were limiting operational efficiency and growth potential.',
@@ -121,7 +119,6 @@ const CaseStudyPage = () => {
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 View All Services
->>>>>>> cursor/create-and-deploy-new-content-c963
               </a>
             </div>
           </div>

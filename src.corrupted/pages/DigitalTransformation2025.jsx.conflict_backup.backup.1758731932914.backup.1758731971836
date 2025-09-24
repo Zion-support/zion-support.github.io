@@ -2,8 +2,6 @@ import React from 'react';
 
 const DigitalTransformation2025 = () => {
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100 py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -37,12 +35,10 @@ const DigitalTransformation2025 = () => {
               Advanced data analytics and business intelligence.
             </p>
           </div>
->>>>>>> cursor/create-and-deploy-new-content-c963
         </div>
       </div>
     </div>
   );
 };
-
 
 export default DigitalTransformation2025;

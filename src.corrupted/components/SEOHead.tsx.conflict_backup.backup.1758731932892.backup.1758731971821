@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import { SEOProps } from '../types';
 
-<<<<<<< HEAD
-=======
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -22,7 +20,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = "website",
   structuredData
->>>>>>> cursor/create-and-deploy-new-content-c963
 }) => {
   const siteUrl = 'https://ziontechgroup.com';
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -51,8 +48,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-<<<<<<< HEAD
-=======
     <Helmet>
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
@@ -69,14 +64,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={image} />
->>>>>>> cursor/create-and-deploy-new-content-c963
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-=======
       <meta property="twitter:url" content={url} />
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={fullDescription} />
@@ -111,7 +103,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         })}
       </script>
     </Helmet>
->>>>>>> cursor/create-and-deploy-new-content-c963
   );
 };
 

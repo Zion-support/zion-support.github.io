@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Safe storage utility for handling localStorage and sessionStorage
 // with error handling and fallbacks
 
@@ -109,7 +107,6 @@ export const safeStorage = {
         console.warn('JSON stringify failed:', error);
         return false;
       }
->>>>>>> cursor/create-and-deploy-new-content-d9c7
     }
   }
 };
