@@ -90,7 +90,6 @@ export default [
             '**/app_disabled/**',
             '**/app_backup/**',
             '**/pages.disabled/**',
-            '**/app.disabled*/**',
             '**/src/**',
             '**/ts_files_backup/**',
             '**/types/**',
