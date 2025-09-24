@@ -1,6 +1,6 @@
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import eslintJs from '@eslint/js';
+import eslintReact from 'eslint-plugin-react';
+import eslintReactHooks from 'eslint-plugin-react-hooks';
 import tseslint from 'typescript-eslint';
 
 export default [
@@ -12,8 +12,6 @@ export default [
       'dist/**',
       'build/**',
       'public/**',
-      'components/**',
-      'lib/**',
       'automation/**',
       'apps.backup/**',
       'backup/**',
@@ -28,39 +26,33 @@ export default [
       'ts_files_backup/**',
       'src_backup/**',
       'src_backup_temp/**',
-      'components/20o25-advanced-services-showcase.tsx',
-      'components/20o25-comprehensive-services-showcase-v2.tsx',
-      'components/AI20o25AdvancedAutomationShowcase.tsx',
-      'components/AI20o25AdvancedAnalyticsDashboard.tsx',
-      '**/*.min.js',
-    ],
+      'components/2025-advanced-services-showcase.tsx',
+      'components/2025-comprehensive-services-showcase-v2.tsx',
+      'components/AI2025AdvancedAutomationShowcase.tsx',
+      'components/AI2025AdvancedAnalyticsDashboard.tsx',
+      '**/*.min.js'
+    ]
   },
   eslintJs.configs.recommended,
-  ...tsEslintPlugin.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: [
       'app/**/*.{js,jsx,ts,tsx}',
       'pages/**/*.{js,jsx,ts,tsx}',
-      'src/**/*.{js,jsx,ts,tsx}',
+      'src/**/*.{js,jsx,ts,tsx}'
     ],
     languageOptions: {
       parser: tseslint.parser,
       ecmaVersion: 2021,
-      sourceType: 'module',
+      sourceType: 'module'
     },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      '@typescript-eslint': tseslint.plugin,
-    },
+    plugins: { react: eslintReact, 'react-hooks': eslintReactHooks, '@typescript-eslint': tseslint.plugin },
     settings: { react: { version: 'detect' } },
     rules: {
       'react/react-in-jsx-scope': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' },
-      ],
-    },
-  },
+      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^(React|_)' }]
+    }
+  }
 ];
+
