@@ -765,7 +765,9 @@ export default function App(): JSX.Element {
                 </div>
               </main>
             </div>
-          } />
+          </div>
+        </div>
+      } />
           <Route path="/pages/InnovationLanding2025" element={<InnovationLanding2025 />} />
           <Route path="/pages/InnovativeServicesShowcase2025" element={<InnovativeServicesShowcase2025 />} />
           <Route path="/pages/BlogPost2025" element={<BlogPost2025 />} />

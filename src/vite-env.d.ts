@@ -59,15 +59,17 @@ declare module '@/components/ui/badge' {
     key?: string | number;
   }
 
-  export const Badge: React.FC<BadgeProps>
+  export const Badge: React.FC<BadgeProps>;
 }
 
 // FeatureCard type fixes
 declare module '@/components/FeatureCard' {
   export interface FeatureCardProps {
-    title: string,description: string,icon: React.ReactNode;
-    className?: string,
-    key?: number | string
+    title: string;
+    description: string;
+    icon: React.ReactNode;
+    className?: string;
+    key?: number | string;
   }
 }
 
