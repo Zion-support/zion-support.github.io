@@ -1,3 +1,15 @@
+module.exports = {
+  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@swc/jest', { jsc: { transform: { react: { runtime: 'automatic' } } } }],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/', '/coverage/'],
+};
+
 /** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: 'jsdom',
