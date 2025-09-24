@@ -359,3 +359,11 @@
 2025-09-24 18:08:20 - Merge conflicts detected in HEAD
 2025-09-24 18:08:20 - Resolving conflicts in .eslintignore for branch HEAD
 2025-09-24 18:08:22 - Resolving conflicts in pnpm-lock.yaml for branch HEAD
+2025-09-24 18:08:24 - Merge conflicts detected in ->
+2025-09-24 18:08:25 - Merge conflicts detected in origin/main
+2025-09-24 18:08:29 - Merge conflicts detected in resolved-merge-conflicts-20250924-164212
+2025-09-24 18:08:29 - Resolving conflicts in App.tsx for branch resolved-merge-conflicts-20250924-164212
+2025-09-24 18:08:30 - Resolving conflicts in dist/index.html for branch resolved-merge-conflicts-20250924-164212
+2025-09-24 18:08:31 - Resolving conflicts in package-lock.json for branch resolved-merge-conflicts-20250924-164212
+2025-09-24 18:08:33 - Resolving conflicts in package.json for branch resolved-merge-conflicts-20250924-164212
+2025-09-24 18:08:35 - Resolving conflicts in src/components/InteractiveTechShowcase.tsx for branch resolved-merge-conflicts-20250924-164212
