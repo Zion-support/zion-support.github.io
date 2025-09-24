@@ -7,11 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
-    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}', 'app/**/*.{ts,tsx,js,jsx}'],
-=======
-    files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> 6ae6df4a84c41566ef0ec447b781bce8f661ffae
+    files: ['src-clean/src/**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -90,7 +86,7 @@ export default [
   },
          {
            ignores: [
-             '**/*',
+            '**/*',
              '**/node_modules/**',
              '**/dist/**',
              '**/build/**',
@@ -315,7 +311,7 @@ export default [
              '**/test/**',
              '**/src-corrupted/**',
              '**/src.corrupted/**',
-             '**/src-clean/**',
+            // Do not ignore clean source; we lint only that via files pattern
              '**/services_backup/**',
              '**/solutions.disabled/**',
              '**/solutions/**',

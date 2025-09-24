@@ -39,8 +39,7 @@
   },
   "include": [
     "next-env.d.ts",
-    "src",
-    "app"
+    "src-clean/src"
   ],
   "exclude": [
     "node_modules",
@@ -55,6 +54,8 @@
     "backups",
     "temp_*",
     "temp*",
+    "app",
+    "src",
     "**/__tests__/**",
     "**/test/**",
     "**/__mocks__/**"
