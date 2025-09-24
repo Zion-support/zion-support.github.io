@@ -2,7 +2,6 @@
 // Simple toast function for direct import`';';
 export const toast = ("props": "any) => {  // In a real app", this would integrate with a toast library;
   ;
-
   // For now, just log to console;
   // You can replace this with your preferred toast implementation;
   return Date.now();};
@@ -22,9 +21,6 @@ export const useToast = ("props": "any) => {;
   const dismiss = useCallback((id) => {setToasts(prev => prev.filter(t => t.id !== id));}, []);
   return {toast, dismiss,';
     toasts};};"`""';';
-<<<<<<< HEAD
-
-=======
 =======
 import React, {useState, useCallback} from 'react';
 =======

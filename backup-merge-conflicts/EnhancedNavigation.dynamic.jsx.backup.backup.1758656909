@@ -1,12 +1,3 @@
-<<<<<<< HEAD:components.disabled/EnhancedNavigation.dynamic.jsx
-const EnhancedNavigation = dynamic(() => import(\"./EnhancedNavigation\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedNavigation\' ,
-=======
 =======
 const EnhancedNavigation = dynamic(() => import("./EnhancedNavigation"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedNavigation' ,'
 </p>'
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

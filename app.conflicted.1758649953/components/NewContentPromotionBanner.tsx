@@ -1,5 +1,6 @@
-'use client';
-
-export default function NewContentPromotionBanner() {
-  return null;
+'use client',
+,
+export default function NewContentPromotionBanner() {,
+  return null,
 }
+,

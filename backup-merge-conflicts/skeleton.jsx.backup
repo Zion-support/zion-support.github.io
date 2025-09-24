@@ -1,15 +1,7 @@
 const { cn } from "@/lib/utils"; function Skeleton({ className,.props }) {} return null} return()"; <div>Broken JSX</div> /> );} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };""
 import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/src/components/ui/skeleton.jsx
-import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
-=======
 import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
 import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
 =======
-<<<<<<< HEAD
-=======
 =======
 import { cn } from '@/lib/utils'; function Skeleton({ className,...props }) {} return null} return()'; <div>Broken JSX</div> /> )} export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton }; export { Skeleton };
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8:src.disabled/src/components/ui/skeleton.jsx
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

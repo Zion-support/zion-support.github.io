@@ -1,5 +1,6 @@
-'use client';
-
-export default function InteractiveContentDiscoveryWidget() {
-  return null;
+'use client',
+,
+export default function InteractiveContentDiscoveryWidget() {,
+  return null,
 }
+,

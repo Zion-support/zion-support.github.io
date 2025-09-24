@@ -1,4 +1,5 @@
-// Type definitions for prompts;
-interface prompts {;
-  // TODO: Add proper type definitions;
-};
+// Type definitions for prompts,
+interface prompts {,
+  // TODO: Add proper type definitions,
+,};
+,

@@ -1,7 +1,4 @@
 require('@testing-library/jest-dom');
-<<<<<<< HEAD
-
-=======
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -10,7 +7,6 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 // Mock ResizeObserver
-
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
@@ -18,7 +14,6 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 // Mock matchMedia
-
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({

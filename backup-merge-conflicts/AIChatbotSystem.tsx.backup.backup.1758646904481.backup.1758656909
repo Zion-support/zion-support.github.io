@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -18,7 +16,6 @@ import {
   Settings,';
   HelpCircle';';
 } from 'lucide-react';
-
 interface ChatMessage {
   id: string;';
   content: string;';';
@@ -42,7 +39,6 @@ import {;
 =======
   Settings,
   HelpCircle
->>>>>>> main
 } from 'lucide-react';
 } from 'lucide-react';
 ;
@@ -55,7 +51,6 @@ interface ChatMessage {;
   "status": 'sent';
   metadata?: {;
 =======
-
 interface ChatMessage {
   id: string;
   content: string;
@@ -63,7 +58,6 @@ interface ChatMessage {
   timestamp: Dat e;
   type: 'text';
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
   status: 'sent';
   metadata?: {
     confidence?: number;
@@ -80,7 +74,6 @@ interface AIChatbotSystemProps {;
   autoScroll?: boolean;
 ;
 }
-
 export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
@@ -91,9 +84,7 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
 =======
 =======
 "}
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 ;
 export const "AIChatbotSystem": "React.FC<AIChatbotSystemProps> = ({;
   showHeader = true",;
@@ -103,17 +94,12 @@ export const "AIChatbotSystem": "React.FC<AIChatbotSystemProps> = ({;
 }) => {;
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
 interface AIChatbotSystemProps {
-
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean;
-
 }
-
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
@@ -125,7 +111,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const [isTyping, setIsTyping] = useState<any>(false);
   const [isOpen, setIsOpen] = useState<any>(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {';
@@ -143,9 +128,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           estimatedResponseTime: 2
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatbotSystem.tsx
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 ;
   // Sample welcome message;
   useEffect(() => {;
@@ -164,7 +147,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           estimatedResponseTime: 2;
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
       const "welcomeMessage": "ChatMessag e = {;
         "id": 'welcome'",;
         "content": "Hello! I'm Zion AI, your intelligent assistant. I can help you "with": "\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?"",;
@@ -180,8 +162,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "}
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -202,15 +182,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       setMessages([welcomeMessage]);
     }
   }, [isOpen, messages.length]);
-
   // Auto-scroll to bottom
   useEffect(() => {';
     if (autoScroll && messagesEndRef.current) {';';
 =======
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatbotSystem.tsx
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 ;
   // Auto-scroll to bottom;
   useEffect(() => {;
@@ -218,7 +195,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
 =======
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
       messagesEndRef.current.scrollIntoView({ "behavior": 'smooth' });
     }
   }, [messages, autoScroll]);
@@ -229,7 +205,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 ;
     // Simulate processing delay;
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
     const responses = [
       {';
         content: "We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics. Our services help businesses automate processes, gain insights from data, and create intelligent applications.",';';
@@ -248,9 +223,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
 =======
     await new Promise(resolve => setTimeout(resolve", 1000 + Math.random() * 2000));
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 ;
     const responses = [;
       {;
@@ -275,8 +248,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "suggestions": "['Strategy development'", 'Implementation process', 'Change management', 'ROI examples'],;
         "relatedServices": "['Digital Transformation'", 'Process Optimization', 'Change Management'];
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
@@ -284,14 +255,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     );
     }
   }, [messages, autoScroll]);
-
   // Simulate AI response
   const simulateAIResponse = useCallback(async (userInput: string) => {
     setIsTyping(true);
-    
     // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
     const responses = [
       {
         content: "We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics. Our services help businesses automate processes, gain insights from data, and create intelligent applications.",
@@ -309,7 +277,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
       }
     ];
-
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 ;
     const "botMessage": "ChatMessag e = {;
@@ -327,8 +294,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       "}
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
     const botMessage: ChatMessag e = {
       id: Dat e.now().toString(),
       content: randomRespons e.content,
@@ -343,7 +308,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         estimatedResponseTime: 1 + Math.random() * 2
       }
     };
-
     setMessages(prev => [...prev, botMessage]);
     setIsTyping(false);
   }, []);
@@ -361,16 +325,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       "type": 'text',;
       "status": 'sent';
 =======
-
   // Handle message submission
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 =======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatbotSystem.tsx
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
     const userMessage: ChatMessag e = {
       id: Dat e.now().toString(),
       content: inputValu e.trim(),
@@ -395,11 +355,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
 ';
     setMessages(prev => [...prev, userMessage]);';';
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
-
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
-    
     await simulateAIResponse(inputValue.trim());
   }, [inputValue, isTyping, simulateAIResponse]);
 ;
@@ -420,17 +377,14 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         "type": 'file',;
         "status": 'sent';
 =======
-
   // Handle suggestion click
   const handleSuggestionClick = (props: any) => {
     setInputValue(suggestion);
     }, []);
-
   // Handle file upload
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
     if (file) {
       const fileMessage: ChatMessag e = {
         id: Dat e.now().toString(),
@@ -443,7 +397,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       setMessages(prev => [...prev, fileMessage]);
     }
   }, []);
-
   // Toggle voice input
   const toggleVoiceInput = useCallback(() => {
     setIsListening(!isListening);
@@ -457,15 +410,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   return (;
     <>;
 =======
-
   // Clear chat
   const clearChat = (props: any) => {
     setMessages([]);
   };
-
   return (
     <>
->>>>>>> main
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
@@ -523,9 +473,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                       className="p-2 text-gray-400 hover: tex t-white transition-colors";
 =======
                       className="p-2 text-gray-400 "hover": "tex t-white transition-colors";
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
                     >;
                       <HelpCircle className="w-4 h-4"  />;
                     </button>;
@@ -541,7 +489,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
       >
         {isOpen ? <X className="w-6 h-6"  /> : <MessageCircle className="w-6 h-6"  />}
       </button>
-
       {/* Chat Interface */}
       <AnimatePresence>
         {isOpen && (
@@ -581,9 +528,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                 </div>
               </div>
             )}
-
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
               {messages.map((message) => (
@@ -598,9 +543,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   animate={{ "opacity": "1", "y": "0 "}}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'bg-cyan-500 text-white' : 'bg-gray-800 text-white'} rounded-lg p-3`}>
                     <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                     {message.metadata?.suggestions && (
@@ -618,7 +561,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                           >
                             {suggestion}
                           </button>
->>>>>>> main
                         ))}
                         ))}
                           </div>
@@ -631,16 +573,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     )}
                   </div>;
                 </motion.div>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
                       </div>
                     )}
                   </div>
                 </motion.div>
               ))}
-
               {/* Typing Indicator */}
               {isTyping && (;
                 <motion.div;
@@ -661,9 +600,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 =======
                   initial={{ "opacity": "0 "}}
                   animate={{ "opacity": "1 "}}
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
                   className="flex justify-start";
                 >;
                   <div className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg">;
@@ -691,10 +628,8 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   </div>
                 </motion.div>
               )}
-
               <div ref={messagesEndRef}  />
             </div>
-
             {/* Input Area */}
             <div className="p-4 border-t border-gray-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
@@ -714,9 +649,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     disabled={isTyping}
                   />
                 </div>
-
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
                 {/* Send Button */}
                 <button
                   type="submit"
@@ -747,7 +680,6 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                   <Send className="w-4 h-4"  />
                 </button>
               </form>
-
               {/* Quick Actions */}
               <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                 <div className="flex items-center gap-2">
@@ -761,21 +693,17 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
               </div>
             </div>
           </motion.div>
->>>>>>> main
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
         )}
       </AnimatePresence>
     </>
   );
 };
-
 export default AIChatbotSystem;
 </motion>
 </motion>
 </motion>
 </motion>
-
 </any>
 =======
 ;
@@ -789,12 +717,10 @@ export default AIChatbotSystem;
 </any>;
 </ChatMessage>;
 </AIChatbotSystemProps>;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
 =======
 </ChatMessage>';
 </AIChatbotSystemProps>;';;';
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx
 </any>
 </any>
 </ChatMessage>
@@ -873,13 +799,8 @@ const React,{ useState,useEffect,useRef,useCallback } from "react"; import { mot
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{ useState,useEffect,useRef,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { MessageCircle,X,Send,Bot,User,Paperclip,Mic,MicOff,Sparkles,Clock,Settings,HelpCircle';'} from 'lucide-react'; interface ChatMessage { id: string;'; content: string;';'; sender: 'user' | 'bot';'; timestamp: Dat e;';'; type: 'text';';'; status: 'sent'; metadata?: {; confidence?: number; suggestions?: string[]; relatedServices?: string[]; estimatedResponseTime?: number}} ; interface AIChatbotSystemProps {; showHeader?: boolean; showSettings?: boolean; maxMessages?: number; autoScroll?: boolean} export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({ showHeader = true,showSettings = true,maxMessages = 50,autoScroll = true };) => { const [messages,setMessages] = useState<ChatMessage[]>([]); const [inputValue,setInputValue] = useState<any>("); const [isTyping,setIsTyping] = useState<any>(false); const [isOpen,setIsOpen] = useState<any>(false); const messagesEndRef = useRef<HTMLDivElement>(null); useEffect(() => { if (isOpen && messages.length === 0) { const welcomeMessage: ChatMessag e = { id: 'welcome,content: "Hello! I'm Zion AI,your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot,timestamp: new Date(),type: 'text,status: 'sent,metadata: { confidence: 0.95,suggestions: ['Tell me about your services,'Get a quote','Technical support','Contact information'],relatedServices: ['AI Consulting,'Cloud Solutions','Digital Transformation'],estimatedResponseTime: 2 } };; setMessages([welcomeMessage])} },[isOpen,messages.length]); useEffect(() => { if (autoScroll && messagesEndRef.current) { messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })} },[messages,autoScroll]); ; const simulateAIResponse = useCallback(async (userInput: string) => {; setIsTyping(true); ; await new Promise(resolve => setTimeout(resolve,1000 + Math.random() * 2000)); const responses = [ { content: "We offer comprehensive AI solutions including machine learning,natural language processing,computer vision,and predictive analytics. Our services help businesses automate processes,gain insights from data,and create intelligent applications.",suggestions: ['AI Consulting,'Machine Learning','Data Analytics','Automation'],relatedServices: ['AI Solutions,'Data Science','Process Automation'] },{ content: "Our cybersecurity services include threat detection,vulnerability assessment,security audits,and compliance management. We help protect your digital assets with enterprise-grade security solutions.",suggestions: ['Security Assessment,'Compliance','Threat Detection','Incident Response'],relatedServices: ['Cybersecurity,'Compliance','Security Operations'] },{ content: "Digital transformation is our specialty! We help businesses modernize their technology stack,improve processes,and enhance customer experiences. Our approach includes strategy development,implementation,and change management.",suggestions: ['Strategy development,'Implementation process','Change management','ROI examples'],relatedServices: ['Digital Transformation,'Process Optimization','Change Management'] }; ]; ; const randomResponse = responses[Math.floor(Math.random() * responses.length)]; const botMessage: ChatMessag e = { id: Dat e.now().toString(),content: randomRespons e.content,sender: 'bot,timestamp: new Date(),type: 'text,status: 'sent,metadata: { confidence: 0.85 + Math.random() * 0.1,suggestions: randomRespons e.suggestions,relatedServices: randomRespons e.relatedServices,estimatedResponseTime: 1 + Math.random() * 2 } };; ; setMessages(prev => [...prev,botMessage]); setIsTyping(false)},[]); ; const handleSubmit = useCallback(async (e: _React.FormEvent) => {; e.preventDefault(); if (!inputValue.trim() || isTyping) return; const userMessage: ChatMessag e = { id: Dat e.now().toString(),content: inputValu e.trim(),sender: 'user,timestamp: new Date(),type: 'text,status: 'sent' };; setMessages(prev => [...prev,userMessage]);';'; setInputValue("); ; await simulateAIResponse(inputValue.trim())},[inputValue,isTyping,simulateAIResponse]); ; const handleSuggestionClick = (props) => {; setInputValue(suggestion)},[]); ; const handleFileUpload = useCallback((e: _React.ChangeEvent<HTMLInputElement>) => {; const file = e.target.files?.[0]; if (file) { const fileMessage: ChatMessag e = { id: Dat e.now().toString(),content: `Uploaded: ${file.name}`,sender: 'user,timestamp: new Date(),type: 'file,status: 'sent' };; setMessages(prev => [...prev,fileMessage])} },[]); ; const toggleVoiceInput = useCallback(() => {; setIsListening(!isListening)},[isListening]); ; const clearChat = (props) => {; setMessages([])}; ; return (; <>; {} <motion.button; onClick={() => setIsOpen(!isOpen)} className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: rin g-offset-2 focus: rin g-offset-gray-900"; whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Toggle AI chatbot"; >; {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />} </button>; {} <AnimatePresence>; {isOpen && (; <motion.div; initial={{ opacity: 0,scale: 0.9,y: 2 0 }} animate={{ opacity: 1,scale: 1,y: 0 }} exit={{ opacity: 0,scale: 0.9,y: 2 0 }} transition={{ duration: 0.3,ease: 'easeOut' }} className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden"; >; {} {showHeader && (; <div className="p-4 bg-gray-800/50 border-b border-gray-700/50">; <div className="flex items-center justify-between">; <div className="flex items-center gap-3">; <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">; <Bot className="w-4 h-4 text-white" />; </div>; <div>; <h3 className="text-white font-semibold">Zion AI Assistant; <p className="text-xs text-gray-400">Online • 24/7 Available</p>; </div>; </div>; <div className="flex items-center gap-2">; {showSettings && (; <button className="p-2 text-gray-400 hover: tex t-white transition-colors">; <Settings className="w-4 h-4" />; </button>; )} <button; onClick={clearChat} className="p-2 text-gray-400 hover: tex t-white transition-colors" > <HelpCircle className="w-4 h-4" /> </button> </div> </div> </div> )} {} <div className="flex-1 overflow-y-auto p-4 space-y-4">; {messages.map((message) => (; <motion.div; key={message.id} initial={{ opacity: 0,y: 1 0 }} animate={{ opacity: 1,y: 0 }} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`} >'; <div className={`max-w-[80%] ${message.sender === 'user' ? 'bg-cyan-500 text-white' : 'bg-gray-800 text-white'} rounded-lg p-3`}> <p className="text-sm whitespace-pre-wrap">{message.content}</p> {message.metadata?.suggestions && ( <div className="mt-2 flex flex-wrap gap-1"> {message.metadata.suggestions.slice(0,3).map((suggestion,index) => ( <button key={index} onClick={() => handleSuggestionClick(suggestion)} className="text-xs bg-gray-700 hover: b g-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"; >; {suggestion} </button>; ))} </div> )} </div> </motion.div> ))} ; {} {isTyping && (; <motion.div; initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-start" > <div className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg"> <divclassName="flex space-x-1"> <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>'; <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>'; <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div> </div> <span className="text-sm text-gray-400">Zion AI is typing...</span> </div> </motion.div> )} ; <div ref={messagesEndRef} />; </div>; {} <div className="p-4 border-t border-gray-700/50">; <form onSubmit={handleSubmit} className="flex items-center gap-2">; <div className="flex-1 relative">; <input; type="text"></input>; value={inputValue}></input>; onChange={(e) => setInputValue(e.target.value)} placeholder="Ask me anything about Zion Tech Group..."; className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"; disabled={isTyping} />; </div>; {} <button; type="submit"; disabled={!inputValue.trim() || isTyping} className="p-3 bg-cyan-500 text-white rounded-lg hover: b g-cyan-600 transition-colors disabled: opacit y-50 disabled: curso r-not-allowed"; aria-label="Send message"; >; <Send className="w-4 h-4" />; </button>; </form>; {} <div className="flex items-center justify-between mt-3 text-xs text-gray-500">; <div className="flex items-center gap-2">; <Sparkles className="w-3 h-3" />; <span>Powered by Zion AI</span>; </div>; <div className="flex items-center gap-1">; <Clock className="w-3 h-3" />; <span>24/7 Available</span>; </div>; </div>; </div>; </motion.div>; )} </AnimatePresence>; </>; )}; export default AIChatbotSystem; </motion> </HTMLInputElement> </HTMLDivElement> </any> </ChatMessage> </AIChatbotSystemProps>;';';
->>>>>>> main
->>>>>>> main
->>>>>>> main
 =======
 import { useEffect } from 'react';,
 import { useState } from 'react';,
 import _React,{ useState,useEffect,useRef,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { MessageCircle,X,Send,Bot,User,Paperclip,Mic,MicOff,Sparkles,Clock,Settings,HelpCircle';'} from 'lucide-react'; interface ChatMessage { id: string;'; content: string;';'; sender: 'user' | 'bot';'; timestamp: Dat e;';'; type: 'text';';'; status: 'sent'; metadata?: {; confidence?: number; suggestions?: string[]; relatedServices?: string[]; estimatedResponseTime?: number}} ; interface AIChatbotSystemProps {; showHeader?: boolean; showSettings?: boolean; maxMessages?: number; autoScroll?: boolean} export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({ showHeader = true,showSettings = true,maxMessages = 50,autoScroll = true };) => { const [messages,setMessages] = useState<ChatMessage[]>([]); const [inputValue,setInputValue] = useState<any>("); const [isTyping,setIsTyping] = useState<any>(false); const [isOpen,setIsOpen] = useState<any>(false); const messagesEndRef = useRef<HTMLDivElement>(null); useEffect(() => { if (isOpen && messages.length === 0) { const welcomeMessage: ChatMessag e = { id: 'welcome,content: "Hello! I'm Zion AI,your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",sender: 'bot,timestamp: new Date(),type: 'text,status: 'sent,metadata: { confidence: 0.95,suggestions: ['Tell me about your services,'Get a quote','Technical support','Contact information'],relatedServices: ['AI Consulting,'Cloud Solutions','Digital Transformation'],estimatedResponseTime: 2 } };; setMessages([welcomeMessage])} },[isOpen,messages.length]); useEffect(() => { if (autoScroll && messagesEndRef.current) { messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })} },[messages,autoScroll]); ; const simulateAIResponse = useCallback(async (userInput: string) => {; setIsTyping(true); ; await new Promise(resolve => setTimeout(resolve,1000 + Math.random() * 2000)); const responses = [ { content: "We offer comprehensive AI solutions including machine learning,natural language processing,computer vision,and predictive analytics. Our services help businesses automate processes,gain insights from data,and create intelligent applications.",suggestions: ['AI Consulting,'Machine Learning','Data Analytics','Automation'],relatedServices: ['AI Solutions,'Data Science','Process Automation'] },{ content: "Our cybersecurity services include threat detection,vulnerability assessment,security audits,and compliance management. We help protect your digital assets with enterprise-grade security solutions.",suggestions: ['Security Assessment,'Compliance','Threat Detection','Incident Response'],relatedServices: ['Cybersecurity,'Compliance','Security Operations'] },{ content: "Digital transformation is our specialty! We help businesses modernize their technology stack,improve processes,and enhance customer experiences. Our approach includes strategy development,implementation,and change management.",suggestions: ['Strategy development,'Implementation process','Change management','ROI examples'],relatedServices: ['Digital Transformation,'Process Optimization','Change Management'] }; ]; ; const randomResponse = responses[Math.floor(Math.random() * responses.length)]; const botMessage: ChatMessag e = { id: Dat e.now().toString(),content: randomRespons e.content,sender: 'bot,timestamp: new Date(),type: 'text,status: 'sent,metadata: { confidence: 0.85 + Math.random() * 0.1,suggestions: randomRespons e.suggestions,relatedServices: randomRespons e.relatedServices,estimatedResponseTime: 1 + Math.random() * 2 } };; ; setMessages(prev => [...prev,botMessage]); setIsTyping(false)},[]); ; const handleSubmit = useCallback(async (e: _React.FormEvent) => {; e.preventDefault(); if (!inputValue.trim() || isTyping) return; const userMessage: ChatMessag e = { id: Dat e.now().toString(),content: inputValu e.trim(),sender: 'user,timestamp: new Date(),type: 'text,status: 'sent' };; setMessages(prev => [...prev,userMessage]);';'; setInputValue("); ; await simulateAIResponse(inputValue.trim())},[inputValue,isTyping,simulateAIResponse]); ; const handleSuggestionClick = (props) => {; setInputValue(suggestion)},[]); ; const handleFileUpload = useCallback((e: _React.ChangeEvent<HTMLInputElement>) => {; const file = e.target.files?.[0]; if (file) { const fileMessage: ChatMessag e = { id: Dat e.now().toString(),content: `Uploaded: ${file.name}`,sender: 'user,timestamp: new Date(),type: 'file,status: 'sent' };; setMessages(prev => [...prev,fileMessage])} },[]); ; const toggleVoiceInput = useCallback(() => {; setIsListening(!isListening)},[isListening]); ; const clearChat = (props) => {; setMessages([])}; ; return (; <>; {} <motion.button; onClick={() => setIsOpen(!isOpen)} className="fixed bottom-4 right-4 z-50 p-4 bg-cyan-500 text-white rounded-full shadow-lg hover: shado w-xl transition-all duration-300 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: rin g-offset-2 focus: rin g-offset-gray-900"; whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Toggle AI chatbot"; >; {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />} </button>; {} <AnimatePresence>; {isOpen && (; <motion.div; initial={{ opacity: 0,scale: 0.9,y: 2 0 }} animate={{ opacity: 1,scale: 1,y: 0 }} exit={{ opacity: 0,scale: 0.9,y: 2 0 }} transition={{ duration: 0.3,ease: 'easeOut' }} className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden"; >; {} {showHeader && (; <div className="p-4 bg-gray-800/50 border-b border-gray-700/50">; <div className="flex items-center justify-between">; <div className="flex items-center gap-3">; <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">; <Bot className="w-4 h-4 text-white" />; </div>; <div>; <h3 className="text-white font-semibold">Zion AI Assistant; <p className="text-xs text-gray-400">Online • 24/7 Available</p>; </div>; </div>; <div className="flex items-center gap-2">; {showSettings && (; <button className="p-2 text-gray-400 hover: tex t-white transition-colors">; <Settings className="w-4 h-4" />; </button>; )} <button; onClick={clearChat} className="p-2 text-gray-400 hover: tex t-white transition-colors" > <HelpCircle className="w-4 h-4" /> </button> </div> </div> </div> )} {} <div className="flex-1 overflow-y-auto p-4 space-y-4">; {messages.map((message) => (; <motion.div; key={message.id} initial={{ opacity: 0,y: 1 0 }} animate={{ opacity: 1,y: 0 }} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`} >'; <div className={`max-w-[80%] ${message.sender === 'user' ? 'bg-cyan-500 text-white' : 'bg-gray-800 text-white'} rounded-lg p-3`}> <p className="text-sm whitespace-pre-wrap">{message.content}</p> {message.metadata?.suggestions && ( <div className="mt-2 flex flex-wrap gap-1"> {message.metadata.suggestions.slice(0,3).map((suggestion,index) => ( <button key={index} onClick={() => handleSuggestionClick(suggestion)} className="text-xs bg-gray-700 hover: b g-gray-600 text-gray-300 px-2 py-1 rounded transition-colors"; >; {suggestion} </button>; ))} </div> )} </div> </motion.div> ))} ; {} {isTyping && (; <motion.div; initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex justify-start" > <div className="flex items-center gap-2 p-3 bg-gray-800/50 rounded-lg"> <divclassName="flex space-x-1"> <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>'; <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.1s'}}"}></div>'; <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0.2s'}}"}></div> </div> <span className="text-sm text-gray-400">Zion AI is typing...</span> </div> </motion.div> )} ; <div ref={messagesEndRef} />; </div>; {} <div className="p-4 border-t border-gray-700/50">; <form onSubmit={handleSubmit} className="flex items-center gap-2">; <div className="flex-1 relative">; <input; type="text"></input>; value={inputValue}></input>; onChange={(e) => setInputValue(e.target.value)} placeholder="Ask me anything about Zion Tech Group..."; className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"; disabled={isTyping} />; </div>; {} <button; type="submit"; disabled={!inputValue.trim() || isTyping} className="p-3 bg-cyan-500 text-white rounded-lg hover: b g-cyan-600 transition-colors disabled: opacit y-50 disabled: curso r-not-allowed"; aria-label="Send message"; >; <Send className="w-4 h-4" />; </button>; </form>; {} <div className="flex items-center justify-between mt-3 text-xs text-gray-500">; <div className="flex items-center gap-2">; <Sparkles className="w-3 h-3" />; <span>Powered by Zion AI</span>; </div>; <div className="flex items-center gap-1">; <Clock className="w-3 h-3" />; <span>24/7 Available</span>; </div>; </div>; </div>; </motion.div>; )} </AnimatePresence>; </>; )}; export default AIChatbotSystem; </motion> </HTMLInputElement> </HTMLDivElement> </any> </ChatMessage> </AIChatbotSystemProps>;';';
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/components/AIChatbotSystem.tsx
 =======
->>>>>>> pr-11913:src_backup_temp/components/AIChatbotSystem.tsx

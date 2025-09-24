@@ -1,5 +1,6 @@
-// Hook for useUser;
-export const useUseUser: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
+// Hook for useUser,
+export const useUseUser: unknown = () => {,
+  // TODO: Implement hook logic,
+  return {,};
 };
+,

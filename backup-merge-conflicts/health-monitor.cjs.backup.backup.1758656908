@@ -1,120 +1,8 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");const log = (message) => { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] Health Monitor: ${message}`);};const runCommand = (command, description) => { try {` log(`Starting: ${description}`); const output = execSync(command, { " encoding: "utf8", " stdio: "pipe", cwd: process.cwd() });` log(`Completed: ${description}`); return { success: true, output }; } catch (error) {` log(`Failed: ${description} - ${error.message}`); return { success: false, error: error.message }; }};const checkSystemHealth = () => {" log("Checking system health"); / Check if the application is running" const appCheck = runCommand("curl -f http:/localhost:3000 | echo "App not responding"", "Checking application health"); / Check disk space" const diskCheck = runCommand("df -h .", "Checking disk space"); / Check memory usage" const memoryCheck = runCommand("free -m", "Checking memory usage"); return { app: appCheck.success, disk: diskCheck.success, memory: memoryCheck.success, overall: appCheck.success && diskCheck.success && memoryCheck.success };};const generateHealthReport = (results) => { const report = { timestamp: new Date().toISOString(), system: results.system, overall: {" status: results.system.overall ? "HEALTHY" : "UNHEALTHY" } }; / Save report" const reportPath = "logs/pm2/health-report.json"; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));` log(`Health report saved to ${reportPath}`); return report;};const main = async () => {" log("Starting Health Monitor Process"); / Check system health const systemResults = checkSystemHealth(); / Generate comprehensive report const results = { system: systemResults }; const report = generateHealthReport(results); " if (report.overall.status === "HEALTHY") {" log("System health check passed: All systems operational"); } else {" log("System health check failed: Issues detected"); } " log("Health Monitor Process completed");};/ Handle process termination"process.on("SIGINT", () => {" log("Health Monitor Process interrupted"); process.exit(0);});"process.on("SIGTERM", () => {" log("Health Monitor Process terminated"); process.exit(0);});/ Run the main functionmain().catch(error => {` log(`Health Monitor Process failed: ${error.message}`); process.exit(1);});'"`'"`
-#!/usr/bin/env node;
-/**
- * Health Monitor Script for PM2;
- * Replaces GitHub Actions health monitoring workflows;
- * Runs every 5 minutes to monitor system health;
- */
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-
-const log = (message) => {}
-  const timestamp = new Date().toISOString();
-  
-};
-
-const runCommand = (command, description) => {}
-  try {}
-    log(`Starting: ${description}`);
-    const output = execSync(command, { })
-      encoding: 'utf8', 
-      stdio: 'pipe',
-      cwd: process.cwd();
-    }
-});
-    log(`Completed: ${description}`);
-    return { success: true, output };
-  } catch (error) {}
-    log(`Failed: ${description} - ${error.message}`);
-    return { success: false, error: error.message };
-  };
-};
-
-const checkSystemHealth = () => {}
-  log('Checking system health');
-  
-  // Check if the application is running;
-  const appCheck = runCommand('curl -f http://localhost:3000 || echo "App not responding"', 'Checking application health');
-  
-  // Check disk space;
-  const diskCheck = runCommand('df -h .', 'Checking disk space');
-  
-  // Check memory usage;
-  const memoryCheck = runCommand('free -m', 'Checking memory usage');
-  
-  return {}
-    app: appCheck.success,
-    disk: diskCheck.success,
-    memory: memoryCheck.success,
-    overall: appCheck.success && diskCheck.success && memoryCheck.success;
-  };
-};
-
-const generateHealthReport = (results) => {}
-  const report = {}
-    timestamp: new Date().toISOString(),
-    system: results.system,
-    overall: {}
-      status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
-    };
-  };
-  
-  // Save report;
-  const reportPath = 'logs/pm2/health-report.json';
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  log(`Health report saved to ${reportPath}`);
-  
-  return report;
-};
-
-const main = async () => {}
-  log('Starting Health Monitor Process');
-  
-  // Check system health;
-  const systemResults = checkSystemHealth();
-  
-  // Generate comprehensive report;
-  const results = {}
-    system: systemResults;
-  };
-  
-  const report = generateHealthReport(results);
-  
-  if (report.overall.status === 'HEALTHY') {}
-    log('System health check passed: All systems operational');
-  } else {}
-    log('System health check failed: Issues detected');
-  };
-  log('Health Monitor Process completed');
-};
-
-// Handle process termination;
-process.on('SIGINT', () => {}
-  log('Health Monitor Process interrupted');
-  process.exit(0);
-}
-});
-
-process.on('SIGTERM', () => {}
-  log('Health Monitor Process terminated');
-  process.exit(0);
-}
-});
-
-// Run the main function;
-main().catch(error => {})
-  log(`Health Monitor Process failed: ${error.message}`);
-  process.exit(1);
-}
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const os = require('os');
-
 class HealthMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -122,26 +10,21 @@ class HealthMonitor {
     this.reportFile = path.join(this.projectRoot, 'logs/pm2/health-monitor-report.json');
     this.startTime = Date.now();
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       console.error('Error writing to log file:', error.message);
     }
   }
-
   async checkSystemHealth() {
     try {
       this.log('💻 Checking system health...');
-      
       const memUsage = process.memoryUsage();
       const cpuUsage = process.cpuUsage();
       const uptime = process.uptime();
-      
       const systemInfo = {
         platform: os.platform(),
         arch: os.arch(),
@@ -151,7 +34,6 @@ class HealthMonitor {
         loadAverage: os.loadavg(),
         uptime: os.uptime()
       };
-      
       return {
         process: {
           memory: {
@@ -173,19 +55,15 @@ class HealthMonitor {
       return null;
     }
   }
-
   async checkPM2Processes() {
     try {
       this.log('🔄 Checking PM2 processes...');
-      
       const pm2List = execSync('pm2 list --json', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
       const processes = JSON.parse(pm2List);
-      
       return {
         total: processes.length,
         running: processes.filter(p => p.pm2_env.status === 'online').length,
@@ -204,17 +82,14 @@ class HealthMonitor {
       return { total: 0, running: 0, stopped: 0, errored: 0, processes: [] };
     }
   }
-
   async checkDiskSpace() {
     try {
       this.log('💾 Checking disk space...');
-      
       const diskUsage = execSync('df -h', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
       const lines = diskUsage.split('\n').slice(1);
       const partitions = lines.map(line => {
         const parts = line.trim().split(/\s+/);
@@ -227,24 +102,20 @@ class HealthMonitor {
           mounted: parts[5]
         };
       });
-      
       return partitions;
     } catch (error) {
       this.log(`Disk space check failed: ${error.message}`);
       return [];
     }
   }
-
   async checkNetworkConnectivity() {
     try {
       this.log('🌐 Checking network connectivity...');
-      
       const pingResult = execSync('ping -c 1 8.8.8.8', {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-      
       return {
         internet: true,
         latency: this.extractLatency(pingResult)
@@ -257,7 +128,6 @@ class HealthMonitor {
       };
     }
   }
-
   extractLatency(pingOutput) {
     try {
       const match = pingOutput.match(/time=(\d+\.?\d*)/);
@@ -266,14 +136,11 @@ class HealthMonitor {
       return null;
     }
   }
-
   async checkApplicationHealth() {
     try {
       this.log('🏥 Checking application health...');
-      
       // Check if dist directory exists
       const distExists = fs.existsSync(path.join(this.projectRoot, 'dist'));
-      
       // Check if package.json exists and is valid
       let packageValid = false;
       try {
@@ -282,10 +149,8 @@ class HealthMonitor {
       } catch (error) {
         // Package.json is invalid
       }
-      
       // Check if node_modules exists
       const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, 'node_modules'));
-      
       return {
         distExists,
         packageValid,
@@ -302,17 +167,13 @@ class HealthMonitor {
       };
     }
   }
-
   generateReport(systemHealth, pm2Processes, diskSpace, network, appHealth) {
     const alertThreshold = parseInt(process.env.ALERT_THRESHOLD || '80');
-    
     // Calculate memory usage percentage
     const memoryUsagePercent = systemHealth ? 
       ((systemHealth.system.totalMemory - systemHealth.system.freeMemory) / systemHealth.system.totalMemory) * 100 : 0;
-    
     // Check for alerts
     const alerts = [];
-    
     if (memoryUsagePercent > alertThreshold) {
       alerts.push({
         type: 'memory',
@@ -320,7 +181,6 @@ class HealthMonitor {
         message: `Memory usage is ${memoryUsagePercent.toFixed(1)}% (threshold: ${alertThreshold}%)`
       });
     }
-    
     if (pm2Processes.errored > 0) {
       alerts.push({
         type: 'pm2',
@@ -328,7 +188,6 @@ class HealthMonitor {
         message: `${pm2Processes.errored} PM2 processes are in error state`
       });
     }
-    
     if (pm2Processes.stopped > 0) {
       alerts.push({
         type: 'pm2',
@@ -336,7 +195,6 @@ class HealthMonitor {
         message: `${pm2Processes.stopped} PM2 processes are stopped`
       });
     }
-    
     if (!appHealth.overall) {
       alerts.push({
         type: 'application',
@@ -344,7 +202,6 @@ class HealthMonitor {
         message: 'Application health check failed'
       });
     }
-    
     if (!network.internet) {
       alerts.push({
         type: 'network',
@@ -352,7 +209,6 @@ class HealthMonitor {
         message: 'No internet connectivity detected'
       });
     }
-    
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
@@ -373,13 +229,10 @@ class HealthMonitor {
       alerts,
       recommendations: this.generateRecommendations(alerts, memoryUsagePercent, pm2Processes)
     };
-    
     return report;
   }
-
   generateRecommendations(alerts, memoryUsage, pm2Processes) {
     const recommendations = [];
-    
     if (memoryUsage > 90) {
       recommendations.push({
         type: 'memory',
@@ -395,7 +248,6 @@ class HealthMonitor {
         action: 'Monitor memory usage and consider restarting processes'
       });
     }
-    
     if (pm2Processes.errored > 0) {
       recommendations.push({
         type: 'pm2',
@@ -404,7 +256,6 @@ class HealthMonitor {
         action: 'Check PM2 logs and restart failed processes'
       });
     }
-    
     if (pm2Processes.stopped > 0) {
       recommendations.push({
         type: 'pm2',
@@ -413,58 +264,44 @@ class HealthMonitor {
         action: 'Start stopped processes if they should be running'
       });
     }
-    
     return recommendations;
   }
-
   async saveReport(report) {
     try {
       const reportDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportDir)) {
         fs.mkdirSync(reportDir, { recursive: true });
       }
-      
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`Report saved to: ${this.reportFile}`);
     } catch (error) {
       this.log(`Error saving report: ${error.message}`);
     }
   }
-
   async run() {
     this.log('🏥 Starting Health Monitor...');
     this.log(`Project root: ${this.projectRoot}`);
-    
     try {
       // Create logs directory if it doesn't exist
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
       }
-      
       // Check system health
       const systemHealth = await this.checkSystemHealth();
-      
       // Check PM2 processes
       const pm2Processes = await this.checkPM2Processes();
-      
       // Check disk space
       const diskSpace = await this.checkDiskSpace();
-      
       // Check network connectivity
       const network = await this.checkNetworkConnectivity();
-      
       // Check application health
       const appHealth = await this.checkApplicationHealth();
-      
       // Generate report
       const report = this.generateReport(systemHealth, pm2Processes, diskSpace, network, appHealth);
-      
       // Save report
       await this.saveReport(report);
-      
       const duration = Date.now() - this.startTime;
-      
       // Log summary
       this.log('\n📊 Health Monitor Report:');
       this.log(`Memory usage: ${report.summary.memoryUsagePercent}%`);
@@ -473,14 +310,12 @@ class HealthMonitor {
       this.log(`Network connected: ${report.summary.networkConnected ? '✅' : '❌'}`);
       this.log(`Alerts: ${report.summary.alertsCount}`);
       this.log(`Duration: ${duration}ms`);
-      
       if (report.alerts.length > 0) {
         this.log('\n🚨 Alerts:');
         report.alerts.forEach(alert => {
           this.log(`  [${alert.severity.toUpperCase()}] ${alert.message}`);
         });
       }
-      
       if (report.recommendations.length > 0) {
         this.log('\n💡 Recommendations:');
         report.recommendations.forEach(rec => {
@@ -488,14 +323,12 @@ class HealthMonitor {
           this.log(`    Action: ${rec.action}`);
         });
       }
-      
     } catch (error) {
       this.log(`❌ Error running health monitor: ${error.message}`);
       process.exit(1);
     }
   }
 }
-
 // Run the health monitor
 const monitor = new HealthMonitor();
 monitor.run().catch(error => {

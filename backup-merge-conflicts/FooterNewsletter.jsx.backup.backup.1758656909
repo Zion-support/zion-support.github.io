@@ -1,18 +1,7 @@
 "export: function FooterNewsletter () {" const [email,setEmail] = useState (") " const [isSubscribed,setIsSubscribed] = useState (false) " const handleSubmit = e => { e.preventDefault () "";"";"""
-<<<<<<< HEAD:backup-merge-conflicts/FooterNewsletter.jsx.backup
-'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/components/FooterNewsletter.jsx
-'"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
-=======
 '\"export\": function FooterNewsletter () {\' const [email,setEmail] = useState (\') \' const [isSubscribed,setIsSubscribed] = useState (false) \' const handleSubmit = e => { e.preventDefault () \'';\"";
->>>>>>> main
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 =======
 '"export": function FooterNewsletter () {' const [email,setEmail] = useState (') ' const [isSubscribed,setIsSubscribed] = useState (false) ' const handleSubmit = e => { e.preventDefault () '';"";""}
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

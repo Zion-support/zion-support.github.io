@@ -1,13 +1,5 @@
-
 import {Button} from "@/components/ui/button";
 import {Bell, Users, Settings} from "lucide-react";
-<<<<<<< HEAD
-export function WorkspaceHeader(props: any) {
-    return (
-        <div className="space-y-6">
-=======
-<<<<<<< HEAD
-=======
 =======
 import {Button} from "@/components/ui/button";
 import {Bell, Users, Settings} from "lucide-react";

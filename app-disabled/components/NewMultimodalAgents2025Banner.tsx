@@ -1,3 +1,4 @@
-export default function NewMultimodalAgents20o25Banner() {
-  return null;
+export default function NewMultimodalAgents20o25Banner() {,
+  return null,
 }
+,

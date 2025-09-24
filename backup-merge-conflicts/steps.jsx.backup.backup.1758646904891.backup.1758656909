@@ -1,19 +1,4 @@
-
 import {cn} from '@/lib/utils';
-<<<<<<< HEAD
-export const Steps = (props: any) => {
-    return (
-        <div className={cn("flex items-center space-x-2", className)}>
-      {React.Children.map(children, (child, index) => {
-            if (React.isValidElement(child)) {
-                return React.cloneElement(child, {
-                    isActive: index === currentStep,
-                    isCompleted: index < currentStep,
-                }
-    );
-=======
-<<<<<<< HEAD
-=======
 =======
 import {cn} from '@/lib/utils';
 export const Steps = (props) => {
@@ -24,7 +9,6 @@ export const Steps = (props) => {
                 return React.cloneElement(child, {
                     "isActive": index === currentStep,
                     "isCompleted": index < currentStep};);
->>>>>>> main
             }
             return child;
         })}
@@ -34,8 +18,6 @@ export const Steps = (props) => {
 export const Step = (props: any) => {
     return (
         <div className={cn("flex items-center space-x-2", isActive && "text-primary", isCompleted && "text-green-600", className)}>
-<<<<<<< HEAD
-=======
 export const Step = (props) => {
     return (
     <div className="min-h-screen bg-white">

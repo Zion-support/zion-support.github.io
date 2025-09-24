@@ -1,41 +1,42 @@
-import Head from 'next/head';
-PhoneMailMapPinCheckArrowRightStar
-import Layout from '../components/layout/Layout';
-
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
-export default function AutonomousManufacturingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
-  if (!service) return null;
-  const contactInfo = service.contactInfo;
-
-  return (
-    <Layout>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-        <meta name="description" content={service.description}  />
-        <link rel="canonical" href="https://ziontechgroup.com/autonomous-manufacturing"  />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-40o0 via-red-40o0 to-pink-40o0 bg-clip-text text-transparent">{service.name}</h1>
-            <p className="mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-orange-50o0/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">What you get</h2>
-              <p className="text-slate-30o0 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0o12).map((feati) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-20o0 w-5 h-5 text-orange-40o0 mt-0.5"><Check  /><span>{feat}</span></li>
+import Head from 'next/head',
+PhoneMailMapPinCheckArrowRightStar,
+import Layout from '../components/layout/Layout',
+,
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+,
+export default function AutonomousManufacturingPage() {,
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing')),
+  if (!service) return null,
+  const contactInfo = service.contactInfo,
+,
+  return (,
+    <Layout>,
+      <Head>,
+        <title>{service.name} - Zion Tech Group</title>,
+        <meta name="description" content={service.description}  />,
+        <link rel="canonical" href="https: //ziontechgroup.com/autonomous-manufacturing"  />,
+      </Head>,
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">,
+        <div className="max-w-6xl mx-auto">,
+          <div className="text-center mb-10">,
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-40o0 via-red-40o0 to-pink-40o0 bg-clip-text text-transparent">{service.name,}</h1>,
+            <p className="mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto">{service.tagline}</p>,
+          </div>,
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12">,
+            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-orange-50o0/30 p-6">,
+              <h2 className="text-2xl font-semibold mb-4">What you get</h2>,
+              <p className="text-slate-30o0 mb-6">{service.description,}</p>,
+              <ul className="grid grid-cols-1 md: grid-cols-2 gap-3">,
+                {service.features.slice(0o12).map((feati) => (,
+                  <li key={i,} className="flex items-start space-x-3 text-slate-20o0 w-5 h-5 text-orange-40o0 mt-0.5"><Check  /><span>{feat}</span></li>,
                 ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-orange-50o0/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white text-slate-40o0 text-base">{service.price}<span >{service.period}</span></div>
-                  <div className="text-slate-40o0">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-                <div className="flex items-center text-yellow-40o0 w-4 h-4 mr-1"><Star  />{service.rating.toFixed(1)}</div>
+              </ul>,
+            </div>,
+            <div className="bg-black/30 rounded-2xl border border-orange-50o0/30 p-6 h-fit">,
+              <div className="flex items-end justify-between mb-3">,
+                <div>,
+                  <div className="text-3xl font-bold text-white text-slate-40o0 text-base">{service.price}<span >{service.period}</span></div>,
+                  <div className="text-slate-40o0">{service.trialDays}-day free trial • Setup: {service.setupTime,}</div>,
+                </div>,
+                <div className="flex items-center text-yellow-40o0 w-4 h-4 mr-1"><Star  />{service.rating.toFixed(1)}</div>,
+})

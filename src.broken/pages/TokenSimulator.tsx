@@ -1,8 +1,9 @@
-export function TokenSimulator() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
+export function TokenSimulator() {,
+  return (,
+    <div>,
+      <h1>Component</h1>,
+      <p>Component placeholder</p>,
+    </div>,
+  ),
 }
+,

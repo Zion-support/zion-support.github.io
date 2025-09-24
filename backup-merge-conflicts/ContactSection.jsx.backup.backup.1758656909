@@ -1,18 +1,7 @@
 const React from "react"; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from "react-router-dom"; return null} ,; {}; export {};''"
-<<<<<<< HEAD:backup-merge-conflicts/ContactSection.jsx.backup
-import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD:src.disabled/src/components/ContactSection.jsx
-import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
-=======
 import React from \'react\'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from \'react-router-dom\'; return null} ,; {}; export {};
->>>>>>> main
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
 =======
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982
->>>>>>> pr-11935
 =======
 import _React from 'react'; import { Mail,Phone,MapPin,Clock,MessageSquare,ArrowRight,Globe,Shield,Users export function ContactSection () { import { Link } from 'react-router-dom'; return null} ,; {}; export {};
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

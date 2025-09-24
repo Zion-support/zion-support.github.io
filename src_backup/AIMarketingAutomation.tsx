@@ -1,4 +1,5 @@
-/* simplified to resolve conflicts */
-export default function Placeholder() {
-  return null;
+/* simplified to resolve conflicts */,
+export default function Placeholder() {,
+  return null,
 }
+,

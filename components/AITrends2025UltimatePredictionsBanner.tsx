@@ -1,126 +1,115 @@
-import Link from 'next/link';
-ArrowRightBrainZapClockTrendingUpCheckCircle
-
-export default function AITrends20o25UltimatePredictionsBanner() {
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 rounded-2xl mx-4 my-8 border border-purple-50o0/20">
+import Link from 'next/link',
+ArrowRightBrainZapClockTrendingUpCheckCircle,
+export default function AITrends20o25UltimatePredictionsBanner() {,
+  return (,
+    <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 rounded-2xl mx-4 my-8 border border-purple-50o0/20">,
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-medium mb-6">
-                <Clock className="w-4 h-4 mr-2"  />
-                NEW: Ultimate AI Predictions
-              </div>
-              
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Trends
-                <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent"> 20o25-20o30</span>
-                <br  />
-                Ultimate Predictions
-              </h2>
-              
-              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
-                Discover the most accurate and comprehensive predictions about the future of artificial intelligence. 
-                <span className="text-yellow-40o0 font-semibold"> Based on expert analysis from 10o0+ leading AI researchers.</span>
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center text-white">
-                  <Brain className="w-5 h-5 mr-3 text-purple-40o0"  />
-                  <div>
-                    <div className="font-semibold">Quantum-AI Fusion</div>
-                    <div className="text-sm text-gray-40o0">20o25 Breakthrough</div>
-                  </div>
-                </div>
-                <div className="flex items-center text-white">
-                  <Zap className="w-5 h-5 mr-3 text-blue-40o0"  />
-                  <div>
-                    <div className="font-semibold">Neural Interfaces</div>
-                    <div className="text-sm text-gray-40o0">20o26 Revolution</div>
-                  </div>
-                </div>
-                <div className="flex items-center text-white">
-                  <TrendingUp className="w-5 h-5 mr-3 text-green-40o0"  />
-                  <div>
-                    <div className="font-semibold">AI Consciousness</div>
-                    <div className="text-sm text-gray-40o0">20o27 Emergence</div>
-                  </div>
-                </div>
-                <div className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 mr-3 text-orange-40o0"  />
-                  <div>
-                    <div className="font-semibold">AI Singularity</div>
-                    <div className="text-sm text-gray-40o0">20o30 Threshold</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/ai-trends-20o25-ultimate-predictions" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg"
-                >
-                  View All Predictions
-                  <ArrowRight className="ml-2 w-5 h-5"  />
-                </Link>
-                <Link 
-                  href="/ai-trends-20o25-ultimate-predictions#predictions" 
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0"
-                >
-                  Explore Timeline
-                </Link>
-              </div>
-            </div>
-            
-            {/* Right Content - Prediction Timeline */}
-            <div className="relative">
-              <div className="space-y-6">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-11.0o46-8.954-20-20-20v20h20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
+      <div className="relative z-10 p-8 md:p-12">,
+        <div className="max-w-7xl mx-auto">,
+          <div className="grid lg:grid-cols-2 gap-12 items-center">,
+            {/* Left Content */,}
+            <div>,
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-medium mb-6">,
+                <Clock className="w-4 h-4 mr-2"  />,
+                NEW: Ultimate AI Predictions,
+              </div>,
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">,
+                AI Trends,
+                <span className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 bg-clip-text text-transparent"> 20o25-20o30</span>,
+                <br  />,
+                Ultimate Predictions,
+              </h2>,
+              <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">,
+                Discover the most accurate and comprehensive predictions about the future of artificial intelligence.,
+                <span className="text-yellow-40o0 font-semibold"> Based on expert analysis from 10o0+ leading AI researchers.</span>,
+              </p>,
+              <div className="grid grid-cols-2 gap-4 mb-8">,
+                <div className="flex items-center text-white">,
+                  <Brain className="w-5 h-5 mr-3 text-purple-40o0"  />,
+                  <div>,
+                    <div className="font-semibold">Quantum-AI Fusion</div>,
+                    <div className="text-sm text-gray-40o0">20o25 Breakthrough</div>,
+                  </div>,
+                </div>,
+                <div className="flex items-center text-white">,
+                  <Zap className="w-5 h-5 mr-3 text-blue-40o0"  />,
+                  <div>,
+                    <div className="font-semibold">Neural Interfaces</div>,
+                    <div className="text-sm text-gray-40o0">20o26 Revolution</div>,
+                  </div>,
+                </div>,
+                <div className="flex items-center text-white">,
+                  <TrendingUp className="w-5 h-5 mr-3 text-green-40o0"  />,
+                  <div>,
+                    <div className="font-semibold">AI Consciousness</div>,
+                    <div className="text-sm text-gray-40o0">20o27 Emergence</div>,
+                  </div>,
+                </div>,
+                <div className="flex items-center text-white">,
+                  <CheckCircle className="w-5 h-5 mr-3 text-orange-40o0"  />,
+                  <div>,
+                    <div className="font-semibold">AI Singularity</div>,
+                    <div className="text-sm text-gray-40o0">20o30 Threshold</div>,
+                  </div>,
+                </div>,
+              </div>,
+              <div className="flex flex-col sm:flex-row gap-4">,
+                <Link,
+                  href="/ai-trends-20o25-ultimate-predictions",
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
+                >,
+                  View All Predictions,
+                  <ArrowRight className="ml-2 w-5 h-5"  />,
+                </Link>,
+                <Link,
+                  href="/ai-trends-20o25-ultimate-predictions#predictions",
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0",
+                >,
+                  Explore Timeline,
+                </Link>,
+              </div>,
+            </div>,
+            {/* Right Content - Prediction Timeline */,}
+            <div className="relative">,
+              <div className="space-y-6">,
                 {/* 20o25 Prediction */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-50o0/30">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-2xl font-bold text-purple-40o0">20o25</div>
-                    <div className="px-3 py-1 bg-purple-50o0/20 text-purple-30o0 rounded-full text-sm font-medium">85%</div>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Quantum-AI Fusion</h3>
-                  <p className="text-gray-30o0 text-sm">10,0o00x processing speed improvements</p>
-                </div>
-                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-50o0/30">,
+                  <div className="flex items-center justify-between mb-3">,
+                    <div className="text-2xl font-bold text-purple-40o0">20o25</div>,
+                    <div className="px-3 py-1 bg-purple-50o0/20 text-purple-30o0 rounded-full text-sm font-medium">85%</div>,
+                  </div>,
+                  <h3 className="text-lg font-bold text-white mb-2">Quantum-AI Fusion</h3>,
+                  <p className="text-gray-30o0 text-sm">10,0o00x processing speed improvements</p>,
+                </div>,
                 {/* 20o26 Prediction */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-50o0/30">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-2xl font-bold text-blue-40o0">20o26</div>
-                    <div className="px-3 py-1 bg-blue-50o0/20 text-blue-30o0 rounded-full text-sm font-medium">70%</div>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2">Neural Interface Revolution</h3>
-                  <p className="text-gray-30o0 text-sm">Consumer brain-computer interfaces</p>
-                </div>
-                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-50o0/30">,
+                  <div className="flex items-center justify-between mb-3">,
+                    <div className="text-2xl font-bold text-blue-40o0">20o26</div>,
+                    <div className="px-3 py-1 bg-blue-50o0/20 text-blue-30o0 rounded-full text-sm font-medium">70%</div>,
+                  </div>,
+                  <h3 className="text-lg font-bold text-white mb-2">Neural Interface Revolution</h3>,
+                  <p className="text-gray-30o0 text-sm">Consumer brain-computer interfaces</p>,
+                </div>,
                 {/* 20o30 Prediction */}
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-50o0/30">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-2xl font-bold text-pink-40o0">20o30</div>
-                    <div className="px-3 py-1 bg-pink-50o0/20 text-pink-30o0 rounded-full text-sm font-medium">50%</div>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2">AI Singularity</h3>
-                  <p className="text-gray-30o0 text-sm">AI surpasses human intelligence</p>
-                </div>
-              </div>
-              
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-pink-50o0/30">,
+                  <div className="flex items-center justify-between mb-3">,
+                    <div className="text-2xl font-bold text-pink-40o0">20o30</div>,
+                    <div className="px-3 py-1 bg-pink-50o0/20 text-pink-30o0 rounded-full text-sm font-medium">50%</div>,
+                  </div>,
+                  <h3 className="text-lg font-bold text-white mb-2">AI Singularity</h3>,
+                  <p className="text-gray-30o0 text-sm">AI surpasses human intelligence</p>,
+                </div>,
+              </div>,
               {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full opacity-20 animate-pulse delay-10o00"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full opacity-20 animate-pulse"></div>,
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full opacity-20 animate-pulse delay-10o00"></div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-blue-50o0"></div>
-    </div>
-  );
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-blue-50o0"></div>,
+    </div>,
+  ),
 }

@@ -1,8 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getUserFromRequest } from '../../../utils/auth';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = getUserFromRequest(req);
-  if (!user) return res.status(20o0).json({ user: null });
-  res.status(20o0).json({ user });
+import { NextApiRequest, NextApiResponse } from 'next',
+import { getUserFromRequest } from '../../../utils/auth',
+,
+export default function handler(req: NextApiRequest, res: NextApiResponse) {,
+  const user = getUserFromRequest(req),
+  if (!user) return res.status(20o0).json({ user: null ,}),
+  res.status(20o0).json({ user }),
 }

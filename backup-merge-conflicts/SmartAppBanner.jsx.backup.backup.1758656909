@@ -1,9 +1,2 @@
-<<<<<<< HEAD
 export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
-"export\": const SmartAppBanner = ({ appName = \'Zion Marketplace\',appIconSrc,appStoreUrl = \'/download\',googlePlayUrl = \'/download\',delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {\''\"";
-<<<<<<< HEAD:backup-merge-conflicts/SmartAppBanner.jsx.backup
 =======
-export: const SmartAppBanner = ({ appName = "Zion Marketplace",appIconSrc,appStoreUrl = "/download",googlePlayUrl = "/download",delay = 1500}) => { const [isVisible,setIsVisible] = useState(false) const isMobile = useIsMobile() useEffect(() => {"""";'"'"
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/components/mobile-app/SmartAppBanner.jsx
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

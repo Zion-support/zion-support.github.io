@@ -1,3 +1,4 @@
-export default function WhatsNewStrip() {
-  return null;
+export default function WhatsNewStrip() {,
+  return null,
 }
+,

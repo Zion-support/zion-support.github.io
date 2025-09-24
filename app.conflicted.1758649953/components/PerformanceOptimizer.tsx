@@ -1,16 +1,18 @@
-'use client';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableMetrics?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  return <>{children}</>;
+import React from 'react',
+'use client',
+,
+interface PerformanceOptimizerProps {,
+  children: React.ReactNode,
+  enableMetrics?: boolean,
+  enableLazyLoading?: boolean,
+  enablePreloading?: boolean,
+,}
+,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  children,;
+}) => {,
+  return <>{children}</>,
 };
-
-export default PerformanceOptimizer;
+,
+export default PerformanceOptimizer,
+,

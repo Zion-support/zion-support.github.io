@@ -1,3 +1,4 @@
-export default function RevolutionaryContentBanner20o26() {
-  return null;
+export default function RevolutionaryContentBanner20o26() {,
+  return null,
 }
+,

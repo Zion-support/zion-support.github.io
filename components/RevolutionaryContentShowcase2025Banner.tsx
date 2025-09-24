@@ -1,155 +1,142 @@
-import Link from 'next/link';
-ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward
-
-export default function RevolutionaryContentShowcase20o25Banner() {
-  const contentTypes = [
-    { icon: BookOpename: "Articles"count: "150+"color: "blue" },
-    { icon: Videoname: "Videos"count: "75+"color: "purple" },
-    { icon: FileTextname: "Guides"count: "50+"color: "green" },
-    { icon: Usersname: "Community"count: "20o0+"color: "yellow" }
-  ];
-
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl p-8 mb-8">
+import Link from 'next/link',
+ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward,
+export default function RevolutionaryContentShowcase20o25Banner() {,
+  const contentTypes = [,
+    { icon: BookOpename: "Articles"count: "150+"color: "blue" ,},;
+    { icon: Videoname: "Videos"count: "75+"color: "purple" ,},;
+    { icon: FileTextname: "Guides"count: "50+"color: "green" ,},;
+    { icon: Usersname: "Community"count: "20o0+"color: "yellow" ,}
+  ],
+,
+  return (,
+    <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 border border-purple-50o0/30 rounded-2xl p-8 mb-8">,
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="flex-1 mb-6 lg:mb-0">
-            <div className="flex items-center mb-4">
-              <BookOpen className="h-8 w-8 text-purple-40o0 mr-3 animate-pulse"  />
-              <span className="text-purple-40o0 font-semibold text-sm uppercase tracking-wider">
-                📚 REVOLUTIONARY CONTENT
-              </span>
-            </div>
-            
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Revolutionary Content Showcase 20o25
-            </h2>
-            
-            <p className="text-lg text-gray-30o0 mb-6 max-w-2xl">
-              Immerse yourself in 50o0+ pieces of premium AI content including breakthrough articles
-              video tutorialsimplementation guidesand community insights from industry experts.
-            </p>
-
-            {/* Content Types */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              {contentTypes.map((typeindex) => {
-                const IconComponent = type.icon;
-                const colorClasses ={
-                  blue: "text-blue-40o0 bg-blue-50o0/20",
-                  purple: "text-purple-40o0 bg-purple-50o0/20",
-                  green: "text-green-40o0 bg-green-50o0/20",
-                  yellow: "text-yellow-40o0 bg-yellow-50o0/20"
-                };
-                
-                return (
-                  <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>
-                    <div className="flex items-center">
-                      <IconComponent className="h-5 w-5 mr-2"  />
-                      <span className="text-sm font-medium">{type.name}</span>
-                    </div>
-                    <span className="text-sm font-bold">{type.count}</span>
-                  </div>
-                );
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
+      <div className="relative z-10">,
+        <div className="flex flex-col lg:flex-row items-center justify-between">,
+          <div className="flex-1 mb-6 lg:mb-0">,
+            <div className="flex items-center mb-4">,
+              <BookOpen className="h-8 w-8 text-purple-40o0 mr-3 animate-pulse"  />,
+              <span className="text-purple-40o0 font-semibold text-sm uppercase tracking-wider">,
+                📚 REVOLUTIONARY CONTENT,
+              </span>,
+            </div>,
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">,
+              Revolutionary Content Showcase 20o25,
+            </h2>,
+            <p className="text-lg text-gray-30o0 mb-6 max-w-2xl">,
+              Immerse yourself in 50o0+ pieces of premium AI content including breakthrough articles,
+              video tutorialsimplementation guidesand community insights from industry experts.,
+            </p>,
+            {/* Content Types */,}
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-3 mb-6">,
+              {contentTypes.map((typeindex) => {,
+                const IconComponent = type.icon,
+                const colorClasses ={,
+                  blue: "text-blue-40o0 bg-blue-50o0/20",;
+                  purple: "text-purple-40o0 bg-purple-50o0/20",;
+                  green: "text-green-40o0 bg-green-50o0/20",;
+                  yellow: "text-yellow-40o0 bg-yellow-50o0/20",
+                ,};
+,
+                return (,
+                  <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>,
+                    <div className="flex items-center">,
+                      <IconComponent className="h-5 w-5 mr-2"  />,
+                      <span className="text-sm font-medium">{type.name}</span>,
+                    </div>,
+                    <span className="text-sm font-bold">{type.count}</span>,
+                  </div>,
+                ),
               })}
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/revolutionary-content-showcase-20o25"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full font-semibold hover:from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl"
-              >
-                Explore Content Library
-                <ArrowRight className="ml-2 h-4 w-4"  />
-              </Link>
-              
-              <Link 
-                href="/blog/ai-20o25-revolutionary-breakthroughs"
-                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-30o0"
-              >
-                Latest Articles
-              </Link>
-            </div>
-          </div>
-
-          {/* Visual Element */}
-          <div className="flex-shrink-0 lg:ml-8">
-            <div className="relative">
-              <div className="w-64 h-64 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full flex items-center justify-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-purple-40o0/30 to-pink-40o0/30 rounded-full flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-yellow-40o0/40 to-orange-40o0/40 rounded-full flex items-center justify-center">
-                    <BookOpen className="h-16 w-16 text-white animate-pulse"  />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating Content Icons */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-40o0 rounded-full flex items-center justify-center animate-bounce">
-                <Video className="h-4 w-4 text-white"  />
-              </div>
-              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' }}>
-                <FileText className="h-4 w-4 text-white"  />
-              </div>
-              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' }}>
-                <Users className="h-4 w-4 text-white"  />
-              </div>
-              <div className="absolute top-1/4 -left-8 w-8 h-8 bg-pink-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1.5s' }}>
-                <TrendingUp className="h-4 w-4 text-white"  />
-              </div>
-            </div>
-          </div>
-        </div>
-
+            </div>,
+            <div className="flex flex-wrap gap-4">,
+              <Link,
+                href="/revolutionary-content-showcase-20o25",
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white rounded-full font-semibold hover: from-purple-60o0 hover:to-pink-60o0 transition-all duration-30o0 shadow-lg hover:shadow-xl",
+              >,
+                Explore Content Library,
+                <ArrowRight className="ml-2 h-4 w-4"  />,
+              </Link>,
+              <Link,
+                href="/blog/ai-20o25-revolutionary-breakthroughs",
+                className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-30o0",
+              >,
+                Latest Articles,
+              </Link>,
+            </div>,
+          </div>,
+          {/* Visual Element */,}
+          <div className="flex-shrink-0 lg: ml-8">,
+            <div className="relative">,
+              <div className="w-64 h-64 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full flex items-center justify-center">,
+                <div className="w-48 h-48 bg-gradient-to-br from-purple-40o0/30 to-pink-40o0/30 rounded-full flex items-center justify-center">,
+                  <div className="w-32 h-32 bg-gradient-to-br from-yellow-40o0/40 to-orange-40o0/40 rounded-full flex items-center justify-center">,
+                    <BookOpen className="h-16 w-16 text-white animate-pulse"  />,
+                  </div>,
+                </div>,
+              </div>,
+              {/* Floating Content Icons */,}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-40o0 rounded-full flex items-center justify-center animate-bounce">,
+                <Video className="h-4 w-4 text-white"  />,
+              </div>,
+              <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-green-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '0.5s' ,}}>,
+                <FileText className="h-4 w-4 text-white"  />,
+              </div>,
+              <div className="absolute top-1/2 -right-8 w-8 h-8 bg-yellow-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1s' ,}}>,
+                <Users className="h-4 w-4 text-white"  />,
+              </div>,
+              <div className="absolute top-1/4 -left-8 w-8 h-8 bg-pink-40o0 rounded-full flex items-center justify-center animate-bounce" style={{ animationDelay: '1.5s' ,}}>,
+                <TrendingUp className="h-4 w-4 text-white"  />,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
         {/* Featured Content Preview */}
-        <div className="mt-8 pt-6 border-t border-white/20">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-white">Featured This Week</h3>
-            <Link href="/revolutionary-content-showcase-20o25" className="text-purple-40o0 hover:text-purple-30o0 text-sm font-medium">
-              View All Featured
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <div className="flex items-center mb-2">
-                <Play className="h-4 w-4 text-purple-40o0 mr-2"  />
-                <span className="text-purple-40o0 text-xs font-semibold">VIDEO</span>
-              </div>
-              <h4 className="text-sm font-semibold text-white mb-1">Quantum AI Masterclass</h4>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-40o0">2.5 hours</span>
-                <Award className="h-3 w-3 text-yellow-40o0"  />
-              </div>
-            </div>
-            
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <div className="flex items-center mb-2">
-                <FileText className="h-4 w-4 text-blue-40o0 mr-2"  />
-                <span className="text-blue-40o0 text-xs font-semibold">GUIDE</span>
-              </div>
-              <h4 className="text-sm font-semibold text-white mb-1">AI Security Framework</h4>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-40o0">45 min read</span>
-                <TrendingUp className="h-3 w-3 text-green-40o0"  />
-              </div>
-            </div>
-            
-            <div className="bg-white/5 rounded-lg p-4 border border-white/10">
-              <div className="flex items-center mb-2">
-                <Users className="h-4 w-4 text-green-40o0 mr-2"  />
-                <span className="text-green-40o0 text-xs font-semibold">EVENT</span>
-              </div>
-              <h4 className="text-sm font-semibold text-white mb-1">AI Practitioner Summit</h4>
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-40o0">Live Event</span>
-                <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+        <div className="mt-8 pt-6 border-t border-white/20">,
+          <div className="flex items-center justify-between mb-4">,
+            <h3 className="text-lg font-semibold text-white">Featured This Week</h3>,
+            <Link href="/revolutionary-content-showcase-20o25" className="text-purple-40o0 hover: text-purple-30o0 text-sm font-medium">,
+              View All Featured,
+            </Link>,
+          </div>,
+          <div className="grid md:grid-cols-3 gap-4">,
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">,
+              <div className="flex items-center mb-2">,
+                <Play className="h-4 w-4 text-purple-40o0 mr-2"  />,
+                <span className="text-purple-40o0 text-xs font-semibold">VIDEO</span>,
+              </div>,
+              <h4 className="text-sm font-semibold text-white mb-1">Quantum AI Masterclass</h4>,
+              <div className="flex items-center justify-between">,
+                <span className="text-xs text-gray-40o0">2.5 hours</span>,
+                <Award className="h-3 w-3 text-yellow-40o0"  />,
+              </div>,
+            </div>,
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">,
+              <div className="flex items-center mb-2">,
+                <FileText className="h-4 w-4 text-blue-40o0 mr-2"  />,
+                <span className="text-blue-40o0 text-xs font-semibold">GUIDE</span>,
+              </div>,
+              <h4 className="text-sm font-semibold text-white mb-1">AI Security Framework</h4>,
+              <div className="flex items-center justify-between">,
+                <span className="text-xs text-gray-40o0">45 min read</span>,
+                <TrendingUp className="h-3 w-3 text-green-40o0"  />,
+              </div>,
+            </div>,
+            <div className="bg-white/5 rounded-lg p-4 border border-white/10">,
+              <div className="flex items-center mb-2">,
+                <Users className="h-4 w-4 text-green-40o0 mr-2"  />,
+                <span className="text-green-40o0 text-xs font-semibold">EVENT</span>,
+              </div>,
+              <h4 className="text-sm font-semibold text-white mb-1">AI Practitioner Summit</h4>,
+              <div className="flex items-center justify-between">,
+                <span className="text-xs text-gray-40o0">Live Event</span>,
+                <div className="w-2 h-2 bg-green-40o0 rounded-full animate-pulse"></div>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,
+  ),
+,}

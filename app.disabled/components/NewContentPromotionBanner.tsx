@@ -1,63 +1,64 @@
-'use client';
-
-import React from 'react';
-const NewContentPromotionBanner: React.FC = () => {
-  return (
-    <div className='py-16 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6'>
-          <div>
-            <div className='text-sm font-semibold text-purple-70o0 mb-2'>
-              Just published
-            </div>
-            <h2 className='text-3xl font-bold text-gray-90o0 mb-2'>
-              AI 20o26: Zero-Trust Agent Architecture
-            </h2>
-            <p className='text-lg text-gray-60o0 max-w-2xl'>
-              Blueprint for zero-trust agents with isolation domains,
-              policy-as-code, and runtime guards.
-            </p>
-          </div>
-          <div className='flex gap-3'>
-            <a
-              href='/content/ai-20o26-zero-trust-agent-architecture'
-              className='shrink-0 inline-block bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-70o0'
-            >
-              Read →
-            </a>
-            <a
-              href='/blog/ai-20o26-privacy-preserving-agents'
-              className='shrink-0 inline-block border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
-            >
-              Privacy
-            </a>
-          </div>
-        </div>
-        <div className='mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6'>
-          <div>
-            <div className='text-sm font-semibold text-purple-70o0 mb-2'>
-              Also new
-            </div>
-            <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>
-              AI 20o26: Privacy-Preserving Agents
-            </h3>
-            <p className='text-lg text-gray-60o0 max-w-2xl'>
-              Private-by-default agents using scoped memory, redaction, and
-              confidential computing.
-            </p>
-          </div>
-          <a
-            href='/blog/ai-20o26-privacy-preserving-agents'
-            className='shrink-0 inline-block border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50'
-          >
-            Read →
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default function NewContentPromotionBanner() {
-  return null;
+'use client',
+,
+import React from 'react',
+const NewContentPromotionBanner: React.FC = () => {,
+  return (,
+    <div className='py-16 bg-gradient-to-r from-purple-50 via-blue-50 to-indigo-50'>,
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
+        <div className='bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6'>,
+          <div>,
+            <div className='text-sm font-semibold text-purple-70o0 mb-2'>,
+              Just published,
+            </div>,
+            <h2 className='text-3xl font-bold text-gray-90o0 mb-2'>,
+              AI 20o26: Zero-Trust Agent Architecture,
+            </h2>,
+            <p className='text-lg text-gray-60o0 max-w-2xl'>,
+              Blueprint for zero-trust agents with isolation domains,;
+              policy-as-code, and runtime guards.,
+            </p>,
+          </div>,
+          <div className='flex gap-3'>,
+            <a,
+              href='/content/ai-20o26-zero-trust-agent-architecture',
+              className='shrink-0 inline-block bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
+            >,
+              Read →,
+            </a>,
+            <a,
+              href='/blog/ai-20o26-privacy-preserving-agents',
+              className='shrink-0 inline-block border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50',
+            >,
+              Privacy,
+            </a>,
+          </div>,
+        </div>,
+        <div className='mt-6 bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6'>,
+          <div>,
+            <div className='text-sm font-semibold text-purple-70o0 mb-2'>,
+              Also new,
+            </div>,
+            <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>,
+              AI 20o26: Privacy-Preserving Agents,
+            </h3>,
+            <p className='text-lg text-gray-60o0 max-w-2xl'>,
+              Private-by-default agents using scoped memory, redaction, and,
+              confidential computing.,
+            </p>,
+          </div>,
+          <a,
+            href='/blog/ai-20o26-privacy-preserving-agents',
+            className='shrink-0 inline-block border border-purple-60o0 text-purple-70o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-50',
+          >,
+            Read →,
+          </a>,
+        </div>,
+      </div>,
+    </div>,
+  ),
+,};
+,
+export default function NewContentPromotionBanner() {,
+  return null,
 }
+,

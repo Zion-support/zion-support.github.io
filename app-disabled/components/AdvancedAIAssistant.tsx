@@ -1,1 +1,2 @@
-export { default } from '../../components/AdvancedAIAssistant';
+export { default } from '../../components/AdvancedAIAssistant',
+,
