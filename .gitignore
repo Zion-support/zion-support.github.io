@@ -98,4 +98,6 @@ zion-os/.next
 .nyc_output/
 # Cache
 .cache/
-.parcel-cache/
+.parcel-cache/# Test reports
+junit.xml
+
