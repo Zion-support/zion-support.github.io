@@ -1,14 +1,52 @@
-import { ReactNode } from "react";
+import React from "react",
+import React from 'react',
 
-interface EnhancedCardProps {
-  children: ReactNode;
-  className?: string;
+,
+class ErrorBoundary extends React.Component {,
+  constructor(props) {,
+    super(props),
+    this.state = { hasError: false ,};
+  }
+  static getDerivedStateFromError(error) {,
+    return { hasError: true ,};
+  }
+  componentDidCatch(error, errorInfo) {,
+    console.error('Error caught by boundary:', error, errorInfo),
+  }
+  render() {,
+    if (this.state.hasError) {,
+      return <div>Something went wrong.</div>,
+    }
+    return this.props.children,
+  }
 }
-
-export default function EnhancedCard({ children, className = "bg-white rounded-lg shadow-md p-6" }: EnhancedCardProps) {
-  return (
-    <div className={className}>
+,
+export default function EnhancedCard(): any ({,
+  children,;
+  className = "",;
+}: {,
+,
+  className?: string,
+}) {,
+  return (,
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>,
+  ),
+  return (,
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>,
+  ),
+,
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {,
+  return (,
+    <div className={["card-base p-4", className].join(' ')}>,
       {children}
-    </div>
-  );
+</div>,
+  ),
+  return (,
+    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>),
+  return (,
+    <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>),
+    </div>,
+  ),
 }
+}
+,
