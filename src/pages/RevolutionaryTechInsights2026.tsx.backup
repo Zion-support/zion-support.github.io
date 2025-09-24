@@ -1,11 +1,8 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 import React, { useState, useEffect } from 'react';
@@ -53,9 +50,6 @@ import {
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -325,9 +319,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6"
               >
 <<<<<<< HEAD
-            <div className="mb-8">
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mb-8">
 =======
@@ -335,7 +326,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 =======
 =======
             <div className="mb-8">
->>>>>>> cursor/create-and-deploy-new-content-36f9
 >>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
@@ -441,13 +431,10 @@ const RevolutionaryTechInsights2026: React.FC = () => {
             </div>
           </div>
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
->>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
         </section>
@@ -619,9 +606,6 @@ const RevolutionaryTechInsights2026: React.FC = () => {
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 >>>>>>> cursor/create-and-deploy-new-content-1912
 =======
@@ -693,13 +677,7 @@ const RevolutionaryTechInsights2026: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
-<<<<<<< HEAD
-export default RevolutionaryTechInsights2026;
 =======
-=======
->>>>>>> cursor/create-and-deploy-new-content-39c9
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-36f9

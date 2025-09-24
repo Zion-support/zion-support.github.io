@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
 =======
->>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720
 import { LightBulbIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline'
 
@@ -25,8 +17,6 @@ export default function AboutPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 =======
 import { 
@@ -106,7 +96,6 @@ export default function AboutPage() {
         </div>
       </div>
 <<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-e453
 =======
 >>>>>>> cursor/create-and-deploy-new-content-81d0
@@ -138,11 +127,6 @@ export default function AboutPage() {
           </dl>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
@@ -219,7 +203,6 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
->>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
     </div>
   )
 }
@@ -230,12 +213,7 @@ export default function AboutPage() {
   )
 }
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-b0b6
->>>>>>> cursor/create-and-deploy-new-content-e453
-=======
     </div>
   )
 }
->>>>>>> cursor/create-and-deploy-new-content-81d0
 >>>>>>> cursor/create-and-deploy-new-content-7720

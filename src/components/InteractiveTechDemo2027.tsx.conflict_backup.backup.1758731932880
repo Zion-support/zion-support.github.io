@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface TechDemoProps {
@@ -211,11 +209,9 @@ const InteractiveTechDemo2027: React.FC<TechDemoProps> = ({ technology, onComple
         >
           Reset
         </button>
->>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );
 };
-
 
 export default InteractiveTechDemo2027;
