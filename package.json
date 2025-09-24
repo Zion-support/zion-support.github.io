@@ -16,7 +16,7 @@
     "build:clean": "rm -rf .next && npm run build",
     "dev:clean": "rm -rf .next && npm run dev",
     "lint:fix": "next lint --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit -p tsconfig.typecheck.app.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "preview": "npm run build && npm run start",
