@@ -1,17 +1,16 @@
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Compliance Operating Model',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Compliance Operating Model';
   description:,
-    'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.',;
+    'Design a compliance-as-code operating model for AI agents with automated evidence collection, continuous controls testing, and audit readiness.';
 };
-,
-export default function AutonomousCompliance20o26() {,
-  return (,
+export default function AutonomousCompliance20o26() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Autonomous Compliance Operating Model,
       </h1>,
       <p className='text-gray-60o0 mb-8'>,
-        Implement compliance-as-code for AI systems. Automate control mapping,;
+        Implement compliance-as-code for AI systems. Automate control mapping;
         evidence collection, and continuous testing to maintain audit readiness,
         without slowing down delivery.,
       </p>,
@@ -35,7 +34,5 @@ export default function AutonomousCompliance20o26() {,
           provable assurance of responsible AI operations.,
         </p>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

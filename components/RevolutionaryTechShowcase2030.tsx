@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const RevolutionaryTechShowcase20o30: React.FC = () => {,
-  return (,
+const RevolutionaryTechShowcase20o30: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-20'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -171,40 +170,36 @@ const RevolutionaryTechShowcase20o30: React.FC = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-bold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-bold rounded-full hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span>Prepare for 20o30</span>,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover: bg-white hover:text-gray-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover: bg-white hover:text-gray-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span>Explore Current Tech</span>,
-              <svg,
+              <svg
                 className='ml-2 w-5 h-5',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M9 5l7 7-7 7',
                 />,
               </svg>,
@@ -212,9 +207,5 @@ const RevolutionaryTechShowcase20o30: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default RevolutionaryTechShowcase20o30,
-,
+    </section>)};
+export default RevolutionaryTechShowcase20o30;

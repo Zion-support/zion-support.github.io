@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-meeting-assistant - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-meeting-assistant - Zion Tech Group';
   description:,
-    'Professional ai-meeting-assistant solutions for your business needs.',;
-  keywords: 'ai-meeting-assistant, services, business, technology',;
+    'Professional ai-meeting-assistant solutions for your business needs.';
+  keywords: 'ai-meeting-assistant, services, business, technology';
 };
-export default function AiMeetingAssistantPage() {,
-  return (,
+export default function AiMeetingAssistantPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiMeetingAssistantPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

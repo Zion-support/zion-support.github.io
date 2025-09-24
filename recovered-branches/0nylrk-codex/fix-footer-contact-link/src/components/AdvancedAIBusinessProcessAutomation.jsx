@@ -1,146 +1,140 @@
 import React, { useState, useRef } from 'react',
 import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react',
-const mockBusinessProcesses = [,
-    {,
-        id: 'bp-0o01',;
-        name: 'Invoice Processing & Approval',;
-        description: 'Automated invoice processing with AI-powered validation and approval workflows',;
-        category: 'finance',;
-        status: 'active',;
-        priority: 'high',;
-        automationLevel: 'fully-automated',;
-        aiInsights: [,
-            'Pattern detected: 15% of invoices require manual review',;
-            'Optimization opportunity: Reduce approval time by 40%',;
-            'Cost savings potential: $12,0o00/month through automation',
-        ],;
-        efficiency: 92,;
-        costSavings: 120o00,;
-        timeReduction: 65,;
-        stakeholders: ['Finance Team', 'AP Department', 'Vendors'],;
-        lastExecuted: new Date('20o24-0o1-15T10:30:0o0Z'),;
-        nextExecution: new Date('20o24-0o1-16T09:0o0:0o0Z'),;
-        executionHistory: [,
-            {,
-                id: 'exec-0o01',;
-                timestamp: new Date('20o24-0o1-15T10:30:0o0Z'),;
-                status: 'success',;
-                duration: 45,;
-                aiDecisions: ['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'],;
-                manualInterventions: 2,;
-                cost: 150,;
+const mockBusinessProcesses = [
+    {
+        id: 'bp-0o01';
+        name: 'Invoice Processing & Approval';
+        description: 'Automated invoice processing with AI-powered validation and approval workflows';
+        category: 'finance';
+        status: 'active';
+        priority: 'high';
+        automationLevel: 'fully-automated';
+        aiInsights: [
+            'Pattern detected: 15% of invoices require manual review';
+            'Optimization opportunity: Reduce approval time by 40%';
+            'Cost savings potential: $12,0o00/month through automation'];
+        efficiency: 92;
+        costSavings: 120o00;
+        timeReduction: 65;
+        stakeholders: ['Finance Team', 'AP Department', 'Vendors'];
+        lastExecuted: new Date('20o24-0o1-15T10:30:0o0Z');
+        nextExecution: new Date('20o24-0o1-16T09:0o0:0o0Z');
+        executionHistory: [
+            {
+                id: 'exec-0o01';
+                timestamp: new Date('20o24-0o1-15T10:30:0o0Z');
+                status: 'success';
+                duration: 45;
+                aiDecisions: ['Auto-approved 85% of invoices', 'Flagged 3 suspicious entries'];
+                manualInterventions: 2;
+                cost: 150;
                 efficiency: 94,
-            ,}
-        ],;
-        rules: [,
-            {,
-                id: 'rule-0o01',;
-                name: 'Auto-approve under $10o00',;
-                condition: 'amount < 10o00 AND vendor_verified = true',;
-                action: 'auto_approve',;
-                priority: 1,;
-                isActive: true,;
-                aiOptimized: true,;
-                lastTriggered: new Date('20o24-0o1-15T10:30:0o0Z'),;
+            }
+        ];
+        rules: [
+            {
+                id: 'rule-0o01';
+                name: 'Auto-approve under $10o00';
+                condition: 'amount < 10o00 AND vendor_verified = true';
+                action: 'auto_approve';
+                priority: 1;
+                isActive: true;
+                aiOptimized: true;
+                lastTriggered: new Date('20o24-0o1-15T10:30:0o0Z');
                 triggerCount: 156,
-            ,}
-        ],;
-        dependencies: ['vendor_verification', 'budget_approval'],
-    },;
-    {,
-        id: 'bp-0o02',;
-        name: 'Employee Onboarding',;
-        description: 'Streamlined employee onboarding with automated document processing and task assignment',;
-        category: 'hr',;
-        status: 'active',;
-        priority: 'medium',;
-        automationLevel: 'semi-automated',;
-        aiInsights: [,
-            'Bottleneck identified: IT setup takes 3 days on average',;
-            'Recommendation: Implement parallel processing for faster onboarding',;
-            'Success rate: 98% completion within SLA',
-        ],;
-        efficiency: 87,;
-        costSavings: 80o00,;
-        timeReduction: 55,;
-        stakeholders: ['HR Team', 'IT Department', 'New Employees'],;
-        lastExecuted: new Date('20o24-0o1-14T14:15:0o0Z'),;
-        nextExecution: new Date('20o24-0o1-17T09:0o0:0o0Z'),;
-        executionHistory: [,
-            {,
-                id: 'exec-0o02',;
-                timestamp: new Date('20o24-0o1-14T14:15:0o0Z'),;
-                status: 'success',;
-                duration: 120,;
-                aiDecisions: ['Optimized task sequence', 'Identified resource conflicts'],;
-                manualInterventions: 1,;
-                cost: 20o0,;
+            }
+        ];
+        dependencies: ['vendor_verification', 'budget_approval']};
+    {
+        id: 'bp-0o02';
+        name: 'Employee Onboarding';
+        description: 'Streamlined employee onboarding with automated document processing and task assignment';
+        category: 'hr';
+        status: 'active';
+        priority: 'medium';
+        automationLevel: 'semi-automated';
+        aiInsights: [
+            'Bottleneck identified: IT setup takes 3 days on average';
+            'Recommendation: Implement parallel processing for faster onboarding';
+            'Success rate: 98% completion within SLA'];
+        efficiency: 87;
+        costSavings: 80o00;
+        timeReduction: 55;
+        stakeholders: ['HR Team', 'IT Department', 'New Employees'];
+        lastExecuted: new Date('20o24-0o1-14T14:15:0o0Z');
+        nextExecution: new Date('20o24-0o1-17T09:0o0:0o0Z');
+        executionHistory: [
+            {
+                id: 'exec-0o02';
+                timestamp: new Date('20o24-0o1-14T14:15:0o0Z');
+                status: 'success';
+                duration: 120;
+                aiDecisions: ['Optimized task sequence', 'Identified resource conflicts'];
+                manualInterventions: 1;
+                cost: 20o0;
                 efficiency: 89,
-            ,}
-        ],;
-        rules: [,
-            {,
-                id: 'rule-0o02',;
-                name: 'Auto-assign IT tasks',;
-                condition: 'employee_type = "full_time" AND department != "contractor"',;
-                action: 'assign_it_tasks',;
-                priority: 2,;
-                isActive: true,;
-                aiOptimized: true,;
-                lastTriggered: new Date('20o24-0o1-14T14:15:0o0Z'),;
+            }
+        ];
+        rules: [
+            {
+                id: 'rule-0o02';
+                name: 'Auto-assign IT tasks';
+                condition: 'employee_type = "full_time" AND department != "contractor"';
+                action: 'assign_it_tasks';
+                priority: 2;
+                isActive: true;
+                aiOptimized: true;
+                lastTriggered: new Date('20o24-0o1-14T14:15:0o0Z');
                 triggerCount: 23,
-            ,}
-        ],;
-        dependencies: ['background_check', 'document_verification'],
-    },;
-    {,
-        id: 'bp-0o03',;
-        name: 'Customer Support Ticket Routing',;
-        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',;
-        category: 'operations',;
-        status: 'active',;
-        priority: 'critical',;
-        automationLevel: 'fully-automated',;
-        aiInsights: [,
-            'AI accuracy: 94% correct ticket classification',;
-            'Response time improved by 60%',;
-            'Customer satisfaction increased by 25%',
-        ],;
-        efficiency: 96,;
-        costSavings: 150o00,;
-        timeReduction: 70,;
-        stakeholders: ['Support Team', 'Customers', 'Product Team'],;
-        lastExecuted: new Date('20o24-0o1-15T16:45:0o0Z'),;
-        nextExecution: new Date('20o24-0o1-15T17:0o0:0o0Z'),;
-        executionHistory: [,
-            {,
-                id: 'exec-0o03',;
-                timestamp: new Date('20o24-0o1-15T16:45:0o0Z'),;
-                status: 'success',;
-                duration: 15,;
-                aiDecisions: ['Classified 47 tickets by priority', 'Assigned to optimal agents'],;
-                manualInterventions: 0,;
-                cost: 50,;
+            }
+        ];
+        dependencies: ['background_check', 'document_verification']};
+    {
+        id: 'bp-0o03';
+        name: 'Customer Support Ticket Routing';
+        description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise';
+        category: 'operations';
+        status: 'active';
+        priority: 'critical';
+        automationLevel: 'fully-automated';
+        aiInsights: [
+            'AI accuracy: 94% correct ticket classification';
+            'Response time improved by 60%';
+            'Customer satisfaction increased by 25%'];
+        efficiency: 96;
+        costSavings: 150o00;
+        timeReduction: 70;
+        stakeholders: ['Support Team', 'Customers', 'Product Team'];
+        lastExecuted: new Date('20o24-0o1-15T16:45:0o0Z');
+        nextExecution: new Date('20o24-0o1-15T17:0o0:0o0Z');
+        executionHistory: [
+            {
+                id: 'exec-0o03';
+                timestamp: new Date('20o24-0o1-15T16:45:0o0Z');
+                status: 'success';
+                duration: 15;
+                aiDecisions: ['Classified 47 tickets by priority', 'Assigned to optimal agents'];
+                manualInterventions: 0;
+                cost: 50;
                 efficiency: 98,
-            ,}
-        ],;
-        rules: [,
-            {,
-                id: 'rule-0o03',;
-                name: 'Priority-based routing',;
-                condition: 'priority = "critical" AND category = "technical"',;
-                action: 'route_to_senior_agent',;
-                priority: 1,;
-                isActive: true,;
-                aiOptimized: true,;
-                lastTriggered: new Date('20o24-0o1-15T16:45:0o0Z'),;
+            }
+        ];
+        rules: [
+            {
+                id: 'rule-0o03';
+                name: 'Priority-based routing';
+                condition: 'priority = "critical" AND category = "technical"';
+                action: 'route_to_senior_agent';
+                priority: 1;
+                isActive: true;
+                aiOptimized: true;
+                lastTriggered: new Date('20o24-0o1-15T16:45:0o0Z');
                 triggerCount: 8,
-            ,}
-        ],;
-        dependencies: ['ticket_classification', 'agent_availability'],
-    }
+            }
+        ];
+        dependencies: ['ticket_classification', 'agent_availability']}
 ],
-export function AdvancedAIBusinessProcessAutomation() {,
+export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false),
     const [isMinimized, setIsMinimized] = useState(false),
     const [isFullscreen, setIsFullscreen] = useState(false),
@@ -154,35 +148,35 @@ export function AdvancedAIBusinessProcessAutomation() {,
     const [selectedProcess, setSelectedProcess] = useState(null),
     const [isExecuting, setIsExecuting] = useState(false),
     const containerRef = useRef(null),
-    const getStatusColor = (status) => {,
-        switch (status) {,
+    const getStatusColor = (status) => {
+        switch (status) {
             case 'active': return 'text-green-50o0 bg-green-10o0 dark: bg-green-90o0/20',
             case 'paused': return 'text-yellow-50o0 bg-yellow-10o0 dark:bg-yellow-90o0/20',
             case 'completed': return 'text-blue-50o0 bg-blue-10o0 dark:bg-blue-90o0/20',
             case 'failed': return 'text-red-50o0 bg-red-10o0 dark:bg-red-90o0/20',
             case 'draft': return 'text-gray-50o0 bg-gray-10o0 dark:bg-gray-90o0/20',
             default: return 'text-gray-50o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        ,}
+        }
     };
-    const getPriorityColor = (priority) => {,
-        switch (priority) {,
+    const getPriorityColor = (priority) => {
+        switch (priority) {
             case 'critical': return 'text-red-60o0 bg-red-10o0 dark: bg-red-90o0/20',
             case 'high': return 'text-orange-60o0 bg-orange-10o0 dark:bg-orange-90o0/20',
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/20',
             case 'low': return 'text-green-60o0 bg-green-10o0 dark:bg-green-90o0/20',
             default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        ,}
+        }
     };
-    const getAutomationLevelColor = (level) => {,
-        switch (level) {,
+    const getAutomationLevelColor = (level) => {
+        switch (level) {
             case 'fully-automated': return 'text-green-60o0 bg-green-10o0 dark: bg-green-90o0/20',
             case 'semi-automated': return 'text-yellow-60o0 bg-yellow-10o0 dark:bg-yellow-90o0/20',
             case 'manual': return 'text-red-60o0 bg-red-10o0 dark:bg-red-90o0/20',
             default: return 'text-gray-60o0 bg-gray-10o0 dark:bg-gray-90o0/20',
-        ,}
+        }
     };
-    const getCategoryIcon = (category) => {,
-        switch (category) {,
+    const getCategoryIcon = (category) => {
+        switch (category) {
             case 'finance': return <DollarSign className="w-4 h-4" />,
             case 'hr': return <Users className="w-4 h-4" />,
             case 'operations': return <Settings className="w-4 h-4" />,
@@ -190,37 +184,33 @@ export function AdvancedAIBusinessProcessAutomation() {,
             case 'marketing': return <Target className="w-4 h-4" />,
             case 'it': return <Server className="w-4 h-4" />,
             default: return <FileText className="w-4 h-4" />,
-        ,}
+        }
     };
-    const formatCurrency = (amount) => {,
-        return new Intl.NumberFormat('en-US', {,
-            style: 'currency',;
-            currency: 'USD',;
-            minimumFractionDigits: 0,;
+    const formatCurrency = (amount) => {
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency';
+            currency: 'USD';
+            minimumFractionDigits: 0;
             maximumFractionDigits: 0,
-        ,}).format(amount),
-    };
-    const formatPercentage = (value) => {,
-        return `${value}%`,
-    };
-    const executeProcess = async (processId) => {,
+        }).format(amount)};
+    const formatPercentage = (value) => {
+        return `${value}%`};
+    const executeProcess = async (processId) => {
         setIsExecuting(true),
         // Simulate process execution,
         await new Promise(resolve => setTimeout(resolve, 20o00)),
         setIsExecuting(false),
         // Update process status,
         setBusinessProcesses(prev => prev.map(p => p.id === processId,
-            ? { ...p, lastExecuted: new Date(), status: 'active' ,}
-            : p)),
-    };
-    const filteredProcesses = businessProcesses.filter(process => {,
+            ? { ...p, lastExecuted: new Date(), status: 'active' }
+            : p))};
+    const filteredProcesses = businessProcesses.filter(process => {
         const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory,
         const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus,
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
             process.description.toLowerCase().includes(searchQuery.toLowerCase()),
-        return matchesCategory && matchesStatus && matchesSearch,
-    }),
-    if (!isOpen) {,
+        return matchesCategory && matchesStatus && matchesSearch}),
+    if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover: shadow-zion-blue/50 transition-all duration-30o0 z-50 group">,
         <div className="flex items-center gap-3">,
           <Workflow className="w-6 h-6" />,
@@ -230,19 +220,19 @@ export function AdvancedAIBusinessProcessAutomation() {,
           NEW,
         </div>,
       </button>),
-    ,}
-    if (isMinimized) {,
+    }
+    if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">,
         <div className="flex items-center gap-3 p-3">,
           <Workflow className="w-5 h-5 text-zion-blue" />,
           <span className="font-semibold text-sm">AI BPA</span>,
-          <button onClick={() => setIsMinimized(false),} className="ml-auto p-1 hover: bg-zion-slate-light rounded">,
+          <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover: bg-zion-slate-light rounded">,
             <Maximize2 className="w-4 h-4" />,
           </button>,
         </div>,
       </div>),
-    ,}
-    return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]',}`} ref={containerRef}>,
+    }
+    return (<div className={`fixed bg-white dark: bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-30o0 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[140o0px] h-[90o0px]'}`} ref={containerRef}>,
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">,
         <div className="flex items-center gap-3">,
@@ -256,20 +246,20 @@ export function AdvancedAIBusinessProcessAutomation() {,
           <button onClick={() => setIsMinimized(true)} className="p-2 hover: bg-white/20 rounded-lg transition-colors">,
             <Minimize2 className="w-4 h-4" />,
           </button>,
-          <button onClick={() => setIsFullscreen(!isFullscreen),} className="p-2 hover: bg-white/20 rounded-lg transition-colors">,
-            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />,}
+          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover: bg-white/20 rounded-lg transition-colors">,
+            {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>,
           <button onClick={() => setIsOpen(false)} className="p-2 hover: bg-white/20 rounded-lg transition-colors">,
             <X className="w-4 h-4" />,
           </button>,
         </div>,
       </div>,
-      {/* Controls */,}
+      {/* Controls */}
       <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/10">,
         <div className="flex items-center gap-4 mb-4">,
           <div className="flex items-center gap-2">,
             <label className="text-sm font-medium">Category: </label>,
-            <select value={selectedCategory,} onChange={(e) => setSelectedCategory(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate">,
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate">,
               <option value="all">All Categories</option>,
               <option value="finance">Finance</option>,
               <option value="hr">HR</option>,
@@ -281,7 +271,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
           </div>,
           <div className="flex items-center gap-2">,
             <label className="text-sm font-medium">Status:</label>,
-            <select value={selectedStatus,} onChange={(e) => setSelectedStatus(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate">,
+            <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate">,
               <option value="all">All Statuses</option>,
               <option value="active">Active</option>,
               <option value="paused">Paused</option>,
@@ -292,12 +282,12 @@ export function AdvancedAIBusinessProcessAutomation() {,
           </div>,
           <div className="flex items-center gap-2">,
             <Search className="w-4 h-4 text-zion-slate-light" />,
-            <input type="text" placeholder="Search processes..." value={searchQuery,} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate w-64"/>,
+            <input type="text" placeholder="Search processes..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-1 border border-zion-slate-light rounded-md text-sm bg-white dark: bg-zion-slate w-64"/>,
           </div>,
         </div>,
         <div className="flex items-center gap-4">,
           <label className="flex items-center gap-2 text-sm">,
-            <input type="checkbox" checked={showAIInsights,} onChange={(e) => setShowAIInsights(e.target.checked)} className="rounded"/>,
+            <input type="checkbox" checked={showAIInsights} onChange={(e) => setShowAIInsights(e.target.checked)} className="rounded"/>,
             Show AI Insights,
           </label>,
           <label className="flex items-center gap-2 text-sm">,
@@ -310,7 +300,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
       <div className="flex border-b border-zion-slate-light">,
         {['overview', 'processes', 'automation', 'analytics', 'optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab,
                 ? 'text-zion-blue border-b-2 border-zion-blue',
-                : 'text-zion-slate-light hover: text-zion-slate',}`}>,
+                : 'text-zion-slate-light hover: text-zion-slate'}`}>,
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>))}
       </div>,
@@ -322,7 +312,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 <div className="flex items-center justify-between">,
                   <div>,
                     <p className="text-zion-blue-light text-sm">Total Processes</p>,
-                    <p className="text-3xl font-bold">{businessProcesses.length,}</p>,
+                    <p className="text-3xl font-bold">{businessProcesses.length}</p>,
                   </div>,
                   <Workflow className="w-12 h-12 text-white/50" />,
                 </div>,
@@ -395,7 +385,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                       <div className="flex items-center gap-2">,
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${process.executionHistory[0]?.status === 'success',
                     ? 'bg-green-10o0 text-green-70o0 dark: bg-green-90o0/20 dark:text-green-40o0',
-                    : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0',}`}>,
+                    : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0'}`}>,
                           {process.executionHistory[0]?.status || 'Unknown'}
                         </span>,
                         <span className="text-xs text-zion-slate-light">,
@@ -413,7 +403,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 <div className="flex items-start justify-between mb-4">,
                   <div className="flex items-start gap-3">,
                     <div className="p-2 bg-zion-blue/10 rounded-lg">,
-                      {getCategoryIcon(process.category),}
+                      {getCategoryIcon(process.category)}
                     </div>,
                     <div>,
                       <h3 className="text-lg font-semibold">{process.name}</h3>,
@@ -422,7 +412,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                   </div>,
                   <div className="flex items-center gap-2">,
                     <button onClick={() => executeProcess(process.id)} disabled={isExecuting} className="px-4 py-2 bg-zion-blue text-white rounded-lg hover: bg-zion-blue-dark disabled:opacity-50 flex items-center gap-2">,
-                      {isExecuting ? <Loader className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" />,}
+                      {isExecuting ? <Loader className="w-4 h-4 animate-spin" /> : <Play className="w-4 h-4" />}
                       Execute,
                     </button>,
                     <button onClick={() => setSelectedProcess(process)} className="p-2 text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/10 rounded-lg">,
@@ -432,7 +422,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 </div>,
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">,
                   <div className="text-center">,
-                    <p className="text-2xl font-bold text-zion-blue">{formatPercentage(process.efficiency),}</p>,
+                    <p className="text-2xl font-bold text-zion-blue">{formatPercentage(process.efficiency)}</p>,
                     <p className="text-xs text-zion-slate-light">Efficiency</p>,
                   </div>,
                   <div className="text-center">,
@@ -478,23 +468,23 @@ export function AdvancedAIBusinessProcessAutomation() {,
                        Automation Rules,
                     </h4>,
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-3">,
-                      {process.rules.map(rule => (<div key={rule.id,} className="p-3 bg-zion-slate-light/10 rounded-lg">,
+                      {process.rules.map(rule => (<div key={rule.id} className="p-3 bg-zion-slate-light/10 rounded-lg">,
                           <div className="flex items-center justify-between mb-2">,
                             <span className="font-medium text-sm">{rule.name}</span>,
                             <span className={`px-2 py-1 rounded-full text-xs ${rule.isActive,
                             ? 'bg-green-10o0 text-green-70o0 dark: bg-green-90o0/20 dark:text-green-40o0',
-                            : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0',}`}>,
+                            : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0'}`}>,
                               {rule.isActive ? 'Active' : 'Inactive'}
                             </span>,
                           </div>,
-                          <p className="text-xs text-zion-slate-light mb-2">If: {rule.condition,}</p>,
-                          <p className="text-xs text-zion-slate-light">Then: {rule.action,}</p>,
+                          <p className="text-xs text-zion-slate-light mb-2">If: {rule.condition}</p>,
+                          <p className="text-xs text-zion-slate-light">Then: {rule.action}</p>,
                           <div className="flex items-center justify-between mt-2">,
                             <span className="text-xs text-zion-slate-light">,
-                              Priority: {rule.priority,}
+                              Priority: {rule.priority}
                             </span>,
                             <span className="text-xs text-zion-slate-light">,
-                              Triggered: {rule.triggerCount,} times,
+                              Triggered: {rule.triggerCount} times,
                             </span>,
                           </div>,
                         </div>))}
@@ -535,11 +525,11 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 Automation Rules Management,
               </h3>,
               <div className="space-y-4">,
-                {businessProcesses.flatMap(process => process.rules.map(rule => ({,
-                ...rule,;
-                processName: process.name,;
+                {businessProcesses.flatMap(process => process.rules.map(rule => ({
+                ...rule;
+                processName: process.name;
                 processCategory: process.category,
-            ,}))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">,
+            }))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">,
                     <div className="flex items-center gap-3">,
                       <div className="p-2 bg-zion-blue/10 rounded-lg">,
                         {getCategoryIcon(rule.processCategory)}
@@ -552,19 +542,19 @@ export function AdvancedAIBusinessProcessAutomation() {,
                     <div className="flex items-center gap-3">,
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.isActive,
                     ? 'bg-green-10o0 text-green-70o0 dark: bg-green-90o0/20 dark:text-green-40o0',
-                    : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0',}`}>,
+                    : 'bg-red-10o0 text-red-70o0 dark:bg-red-90o0/20 dark:text-red-40o0'}`}>,
                         {rule.isActive ? 'Active' : 'Inactive'}
                       </span>,
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${rule.aiOptimized,
                     ? 'bg-purple-10o0 text-purple-70o0 dark: bg-purple-90o0/20 dark:text-purple-40o0',
-                    : 'bg-gray-10o0 text-gray-70o0 dark:bg-gray-90o0/20 dark:text-gray-40o0',}`}>,
+                    : 'bg-gray-10o0 text-gray-70o0 dark:bg-gray-90o0/20 dark:text-gray-40o0'}`}>,
                         {rule.aiOptimized ? 'AI Optimized' : 'Manual'}
                       </span>,
                       <button className="p-2 text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/10 rounded-lg">,
                         <Edit3 className="w-4 h-4" />,
                       </button>,
                     </div>,
-                  </div>)),}
+                  </div>))}
               </div>,
             </div>,
           </div>)}
@@ -605,7 +595,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                     </tr>,
                   </thead>,
                   <tbody>,
-                    {businessProcesses.map(process => (<tr key={process.id,} className="border-b border-zion-slate-light/50">,
+                    {businessProcesses.map(process => (<tr key={process.id} className="border-b border-zion-slate-light/50">,
                         <td className="p-3">,
                           <div className="flex items-center gap-2">,
                             {getCategoryIcon(process.category)}
@@ -618,7 +608,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                         <td className="p-3">,
                           <div className="flex items-center gap-2">,
                             <div className="w-20 bg-zion-slate-light rounded-full h-2">,
-                              <div className="bg-zion-blue h-2 rounded-full" style={{ width: `${process.efficiency,}%` }}></div>,
+                              <div className="bg-zion-blue h-2 rounded-full" style={{ width: `${process.efficiency}%` }}></div>,
                             </div>,
                             <span className="text-sm font-medium">{formatPercentage(process.efficiency)}</span>,
                           </div>,
@@ -640,12 +630,12 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 AI Optimization Recommendations,
               </h3>,
               <div className="space-y-4">,
-                {businessProcesses.map(process => (<div key={process.id,} className="p-4 bg-zion-slate-light/10 rounded-lg">,
+                {businessProcesses.map(process => (<div key={process.id} className="p-4 bg-zion-slate-light/10 rounded-lg">,
                     <div className="flex items-start justify-between mb-3">,
                       <h4 className="font-medium">{process.name}</h4>,
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${process.automationLevel === 'fully-automated',
                     ? 'bg-green-10o0 text-green-70o0 dark: bg-green-90o0/20 dark:text-green-40o0',
-                    : 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/20 dark:text-yellow-40o0',}`}>,
+                    : 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/20 dark:text-yellow-40o0'}`}>,
                         {process.automationLevel === 'fully-automated' ? 'Optimized' : 'Optimization Available'}
                       </span>,
                     </div>,
@@ -659,7 +649,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                         <button className="px-4 py-2 bg-zion-blue text-white rounded-lg hover: bg-zion-blue-dark text-sm">,
                           Apply AI Optimization,
                         </button>,
-                      </div>),}
+                      </div>)}
                   </div>))}
               </div>,
             </div>,
@@ -675,7 +665,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                     <span className="font-medium text-yellow-80o0 dark:text-yellow-20o0">Manual Processes</span>,
                   </div>,
                   <p className="text-sm text-yellow-70o0 dark:text-yellow-30o0 mb-3">,
-                    {businessProcesses.filter(p => p.automationLevel === 'manual').length,} processes still require manual intervention,
+                    {businessProcesses.filter(p => p.automationLevel === 'manual').length} processes still require manual intervention,
                   </p>,
                   <button className="px-3 py-1 bg-yellow-60o0 text-white rounded text-sm hover: bg-yellow-70o0">,
                     View Details,
@@ -687,7 +677,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                     <span className="font-medium text-blue-80o0 dark:text-blue-20o0">Efficiency Targets</span>,
                   </div>,
                   <p className="text-sm text-blue-70o0 dark:text-blue-30o0 mb-3">,
-                    {businessProcesses.filter(p => p.efficiency < 90).length,} processes below 90% efficiency target,
+                    {businessProcesses.filter(p => p.efficiency < 90).length} processes below 90% efficiency target,
                   </p>,
                   <button className="px-3 py-1 bg-blue-60o0 text-white rounded text-sm hover: bg-blue-70o0">,
                     View Details,
@@ -695,8 +685,7 @@ export function AdvancedAIBusinessProcessAutomation() {,
                 </div>,
               </div>,
             </div>,
-          </div>),}
+          </div>)}
       </div>,
-    </div>),
-}
+    </div>)}
 ,

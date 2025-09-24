@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25RevolutionaryTrendsBreakthroughBanner() {,
-  return (,
+export default function AI20o25RevolutionaryTrendsBreakthroughBanner() {
+  return (
     <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-12 relative overflow-hidden'>,
       {/* Animated background elements */}
       <div className='absolute inset-0'>,
@@ -32,16 +31,14 @@ export default function AI20o25RevolutionaryTrendsBreakthroughBanner() {,
             interfaces - the future is here!,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-revolutionary-trends-breakthrough',
-              className='bg-gradient-to-r from-red-50o0 to-pink-50o0 hover:from-red-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-red-50o0 to-pink-50o0 hover:from-red-60o0 hover:to-pink-60o0 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               🚀 Explore Revolutionary Trends,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-90o0 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0',
-            >,
+              className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-90o0 px-8 py-4 rounded-lg text-lg font-bold transition-all duration-30o0'>,
               📊 View Success Stories,
             </Link>,
           </div>,
@@ -69,7 +66,5 @@ export default function AI20o25RevolutionaryTrendsBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

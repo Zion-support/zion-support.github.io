@@ -1,50 +1,43 @@
 
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() ,}),
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() }),
 let totalFixed = 0,
-files && files.forEach((file) => {,
-  try {,
+files && files.forEach((file) => {
+  try {
     const filePath = path && path.join(process && process.cwd(), file),
     let content = fs && fs.readFileSync(filePath, "utf8"),
     const modified = false,
     // Fix import statements with double punctuation,
-      (match) => {,
-        if (!match ,")) {,
+      (match) => {
+        if (!match ,")) {
           return match && match.trim() + ",",
-,
     // Fix import statements missing semicolons,
-    content = content.replace (,
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,;
-      (match) => {,
+    content = content.replace (
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm;
+      (match) => {
         // Check condition,
-if (.ends_with (") {,
-  $2,
-}")) {,
+if (.ends_with (") {
+  $2}")) {
           return match.trim () + ",",
-,
-    content = content.replace(,
-      /import\s+.*?from\s+['"][^'"]+['"],\s*,/g,;
-      (match) => {,
-        return match.replace(",", ","),
-      }
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*,/g;
+      (match) => {
+        return match.replace(",", ",")}
     ),
     // Fix import statements missing semicolons,
-    content = content.replace(,
+    content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {,
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,;
-      (match) => {,
+      (match) => {
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+      (match) => {
 ,
-        if (!match.trim().endsWith(",")) {,
-          return match.trim() + ",",
-        }
-        return match,
-      }
+        if (!match.trim().endsWith(",")) {
+          return match.trim() + ","}
+        return match}
     ),
-,
-    content = content && content.replace(,
-      /(\w+)\s*=\s*[^,]+(?!,)\s*$/gm,;
-      (match, varName) => {,
-        if (,
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      (match, varName) => {
+        if (
           !match && match.includes("function") &&,
           !match && match.includes("if") &&,
           !match && match.includes("for") &&,
@@ -59,18 +52,16 @@ if (.ends_with (") {,
           !match && match.includes("continue") &&,
           !match && match.includes("debugger") &&,
           !match && match.includes("export") &&,
-          !match && match.includes("import"),
-        ) {,
+          !match && match.includes("import")) {
 ,
     // Fix other common syntax issues,
     // Fix missing semicolons after variable declarations,
-    content = content.replace (,
-      /(\w+)\s*=\s*[^,]+(?!)\s*$/gm,;
-      (match, var_name) => {,
+    content = content.replace (
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      (match, var_name) => {
         // Check condition,
-if (&&) {,
-  $2,
-}
+if (&&) {
+  $2}
           !match.includes ("if") &&,
           !match.includes ("for") &&,
           !match.includes ("while") &&,
@@ -84,30 +75,20 @@ if (&&) {,
           !match.includes ("continue") &&,
           !match.includes ("debugger") &&,
           !match.includes ("export") &&,
-          !match.includes ("import")) {,
-          return match + ",",
-        }
-        return match,
-      }
+          !match.includes ("import")) {
+          return match + ","}
+        return match}
     ),
-,
-console && console.log(`\nTotal files fixed: ${totalFixed,}`),
-,
+console && // console.log(`\nTotal files fixed: ${totalFixed}`),
 ,
     // Check condition,
-if ( {) {,
-  $2,
-}
+if ( {) {
+  $2}
       fs.writeFileSync (file_path, content, "utf8"),
-      console.log (`Fixed: ${file,}`),
-      total_fixed++,
-    }
-  } catch (error) {,
-    console.error (`Error processing ${file}:`, error.message),
-  }
+      console.log (`Fixed: ${file}`),
+      total_fixed++}
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message)}
 }),
-,
-console.log (`\n_total files fixed: ${total_fixed,}`),
-,
-,
+console.log (`\n_total files fixed: ${total_fixed}`),
 }}}}}}}

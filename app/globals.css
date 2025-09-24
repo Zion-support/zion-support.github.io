@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Minimal globals to unblock build; Tailwind temporarily disabled */
 
-/* Minimal, safe globals to unblock build */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
@@ -21,4 +18,6 @@ html, body {
   padding: 0;
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, Noto Sans, 'Apple Color Emoji', 'Segoe UI Emoji';
 }

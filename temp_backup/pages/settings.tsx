@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SettingsPage() {,
-  return (,
+export default function SettingsPage() {
+  return (
     <>,
       <Head>,
         <title>Settings - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function SettingsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

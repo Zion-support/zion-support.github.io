@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'AI 20o26: Zero-Trust Agent Architecture | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Zero-Trust Agent Architecture | Zion Tech Group';
   description:,
-    'A practical blueprint for zero-trust autonomous agents with isolation domains, policy-as-code, permissions, and runtime guards.',;
+    'A practical blueprint for zero-trust autonomous agents with isolation domains, policy-as-code, permissions, and runtime guards.';
 };
-,
-export default function ZeroTrustAgentArchitecturePage() {,
-  return (,
+export default function ZeroTrustAgentArchitecturePage() {
+  return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <header className='mb-8'>,
         <div className='text-sm font-semibold text-purple-70o0 mb-2'>,
@@ -88,20 +86,16 @@ export default function ZeroTrustAgentArchitecturePage() {,
         </p>,
       </section>,
       <footer className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-agent-risk-management-framework',
-          className='text-purple-70o0 font-semibold',
-        >,
+          className='text-purple-70o0 font-semibold'>,
           Risk Framework →,
         </Link>,
-        <Link,
+        <Link
           href='/blog/ai-20o26-secure-agent-architecture',
-          className='text-purple-70o0 font-semibold',
-        >,
+          className='text-purple-70o0 font-semibold'>,
           Secure Architecture →,
         </Link>,
       </footer>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

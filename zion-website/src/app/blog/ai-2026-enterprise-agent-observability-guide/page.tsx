@@ -1,5 +1,5 @@
-export default function EnterpriseAgentObservabilityGuidePage() {,
-  return (,
+export default function EnterpriseAgentObservabilityGuidePage() {
+  return (
     <div className='bg-white min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 py-16 lg: px-8'>,
         <header className='mb-8'>,
@@ -15,7 +15,7 @@ export default function EnterpriseAgentObservabilityGuidePage() {,
         <article className='prose prose-lg max-w-none'>,
           <h2>Why observability for autonomous agents?</h2>,
           <p>,
-            Agentic systems introduce new classes of failure: tool misuse,;
+            Agentic systems introduce new classes of failure: tool misuse;
             policy violations, hallucinated actions, and hidden long-tail,
             errors. Traditional logs and metrics are not enough. You need rich,
             behavior traces, evaluation signals, and guardrail telemetry to,
@@ -32,7 +32,7 @@ export default function EnterpriseAgentObservabilityGuidePage() {,
               scenario coverage,
             </li>,
             <li>,
-              Operational metrics: latency, cost, token usage, cache hit-rate,;
+              Operational metrics: latency, cost, token usage, cache hit-rate;
               and retriable errors,
             </li>,
             <li>,
@@ -57,7 +57,5 @@ export default function EnterpriseAgentObservabilityGuidePage() {,
           </ol>,
         </article>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

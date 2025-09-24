@@ -1,31 +1,28 @@
 'use client',
-,
 import Link from 'next/link',
 import { CardContent } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
-import {,
+import {
   Brain,
   Zap,
   TrendingUp,
   ArrowRight,
   Calendar,
   Users,
-  Target,;
-  Sparkles,;
-  Rocket,;
-  Star,
-} from 'lucide-react',
-,
-export default function AI20o30ContentShowcaseBanner() {,
-  return (,
+  Target;
+  Sparkles;
+  Rocket;
+  Star} from 'lucide-react',
+export default function AI20o30ContentShowcaseBanner() {
+  return (
     <section className="py-16 bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden relative">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%20o0%20o60%20o60%22%20xmlns%3D%22http%3A//www.w3.org/20o00/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">,
             <Sparkles className="h-4 w-4 mr-2"  />,
@@ -41,7 +38,7 @@ export default function AI20o30ContentShowcaseBanner() {,
         </div>,
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">,
-          {/* Featured Blog Posts */,}
+          {/* Featured Blog Posts */}
           <div className="space-y-6">,
             <div className="flex items-center gap-2 mb-6">,
               <Brain className="h-6 w-6 text-yellow-40o0"  />,
@@ -96,7 +93,7 @@ export default function AI20o30ContentShowcaseBanner() {,
               </CardContent>,
             </Card>,
           </div>,
-          {/* Interactive Tools */,}
+          {/* Interactive Tools */}
           <div className="space-y-6">,
             <div className="flex items-center gap-2 mb-6">,
               <Zap className="h-6 w-6 text-yellow-40o0"  />,
@@ -152,7 +149,7 @@ export default function AI20o30ContentShowcaseBanner() {,
             </Card>,
           </div>,
         </div>,
-        {/* Key Benefits */,}
+        {/* Key Benefits */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12">,
           <div className="text-center">,
             <div className="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">,
@@ -182,7 +179,7 @@ export default function AI20o30ContentShowcaseBanner() {,
             </p>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm border border-white border-opacity-20">,
             <h3 className="text-2xl font-bold mb-4">,
@@ -206,6 +203,5 @@ export default function AI20o30ContentShowcaseBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}

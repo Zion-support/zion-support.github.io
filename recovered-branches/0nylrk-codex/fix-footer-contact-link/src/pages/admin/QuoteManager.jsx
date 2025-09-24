@@ -7,54 +7,51 @@ import { Navigate } from 'react-router-dom',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { QuoteDetails } from '@/components/quotes/QuoteDetails',
 import { ExportToCSV } from '@/components/quotes/ExportToCSV',
-import {,
-  QuoteStatusCards,;
-  QuotesFilter,;
-  QuotesTable,;
+import {
+  QuoteStatusCards;
+  QuotesFilter;
+  QuotesTable;
 } from '@/components/admin/quotes',
-export default function QuoteManager() {,
+export default function QuoteManager() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
   const [selectedQuote, setSelectedQuote] = useState(null),
   const [showDetails, setShowDetails] = useState(false),
-  const {,
-    quotes,;
-    isLoading,;
-    error,;
-    statusFilter,;
-    setStatusFilter,;
-    archiveFilter,;
-    setArchiveFilter,;
-    searchQuery,;
-    setSearchQuery,;
-    dateRange,;
-    setDateRange,;
-    updateStatus,;
-    toggleArchive,;
-    deleteQuote,;
+  const {
+    quotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange;
+    updateStatus;
+    toggleArchive;
+    deleteQuote;
   } = useAdminQuotes(),
   // Count quotes by status,
-  const statusCounts = {,
-    new: quotes.filter(q => q.status === 'new').length,;
-    in_review: quotes.filter(q => q.status === 'in_review').length,;
-    accepted: quotes.filter(q => q.status === 'accepted').length,;
-    responded: quotes.filter(q => q.status === 'responded').length,;
-    closed: quotes.filter(q => q.status === 'closed').length,;
+  const statusCounts = {
+    new: quotes.filter(q => q.status === 'new').length;
+    in_review: quotes.filter(q => q.status === 'in_review').length;
+    accepted: quotes.filter(q => q.status === 'accepted').length;
+    responded: quotes.filter(q => q.status === 'responded').length;
+    closed: quotes.filter(q => q.status === 'closed').length;
   };
-  const handleViewDetails = quote => {,
+  const handleViewDetails = quote => {
     setSelectedQuote(quote),
-    setShowDetails(true),
-  };
-  const handleResetFilters = () => {,
+    setShowDetails(true)};
+  const handleResetFilters = () => {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
-    setDateRange({ from: undefined, to: undefined ,}),
-  };
-  if (!isAdmin) {,
-    return <Navigate to='/unauthorized' replace />,
-  }
-  return (,
+    setDateRange({ from: undefined, to: undefined })};
+  if (!isAdmin) {
+    return <Navigate to='/unauthorized' replace />}
+  return (
     <ProtectedRoute adminOnly>,
       <div>,
         <div className='min-h-screen bg-zion-blue px-4 py-8'>,
@@ -68,12 +65,12 @@ export default function QuoteManager() {,
                   Manage and respond to all talent hire requests,
                 </p>,
               </div>,
-              <ExportToCSV quotes={quotes,} filename='zion-quote-requests' />,
+              <ExportToCSV quotes={quotes} filename='zion-quote-requests' />,
             </div>,
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />,
             {/* Filters */}
-            <QuotesFilter,
+            <QuotesFilter
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
               statusFilter={statusFilter}
@@ -93,7 +90,7 @@ export default function QuoteManager() {,
               <TabsContent value='active'>,
                 {/* Quotes Table */}
                 <Card className='bg-zion-blue-dark border border-zion-blue-light overflow-hidden'>,
-                  <QuotesTable,
+                  <QuotesTable
                     quotes={quotes.filter(quote => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
@@ -105,7 +102,7 @@ export default function QuoteManager() {,
               </TabsContent>,
               <TabsContent value='archived'>,
                 <Card className='bg-zion-blue-dark border border-zion-blue-light overflow-hidden'>,
-                  <QuotesTable,
+                  <QuotesTable
                     quotes={quotes.filter(quote => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
@@ -120,16 +117,13 @@ export default function QuoteManager() {,
           </div>,
         </div>,
         {/* Quote Details Modal */}
-        <QuoteDetails,
+        <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-          onClose={() => {,
+          onClose={() => {
             setShowDetails(false),
-            setSelectedQuote(null),
-          }}
+            setSelectedQuote(null)}}
         />,
       </div>,
-    </ProtectedRoute>,
-  ),
-}
+    </ProtectedRoute>)}
 ,

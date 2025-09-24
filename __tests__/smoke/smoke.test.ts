@@ -1,6 +1,3 @@
-describe('Smoke Suite', () => {,
-  it('runs a basic truthy assertion', () => {,
-    expect(true).toBe(true),
-  }),
-}),
-,
+describe('Smoke Suite', () => {
+  it('runs a basic truthy assertion', () => {
+    expect(true).toBe(true)})}),

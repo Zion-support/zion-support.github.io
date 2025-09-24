@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ComplianceAutomationPage() {,
-  return (,
+export default function ComplianceAutomationPage() {
+  return (
     <>,
       <Head>,
         <title>Compliance Automation - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ComplianceAutomationPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function WishlistPage() {,
-  return (,
+export default function WishlistPage() {
+  return (
     <>,
       <Head>,
         <title>Wishlist - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function WishlistPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

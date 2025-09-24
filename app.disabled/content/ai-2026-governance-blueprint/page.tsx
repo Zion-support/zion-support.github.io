@@ -1,13 +1,11 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Guide: Enterprise AI Governance (20o26)',;
+export const metadata = {
+  title: 'Guide: Enterprise AI Governance (20o26)';
   description:,
-    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.',;
+    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -48,7 +46,5 @@ export default function Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25UltimateTransformation50o000ROIBanner = () => {,
-  return (,
+const AI20o25UltimateTransformation50o000ROIBanner = () => {
+  return (
     <section className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
@@ -10,7 +9,7 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-bounce">,
             <span className="mr-2">🚀</span>,
             NEW: 50,0o00% ROI SUCCESS STORY,
@@ -36,7 +35,7 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {,
             <span className="text-green-40o0 font-bold"> $15.6 Billion Revenue Increase</span>,
             in Just 18 Months,
           </p>,
-          {/* Key Stats */,}
+          {/* Key Stats */}
           <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">,
               <div className="text-3xl md:text-4xl font-black text-yellow-40o0 mb-2">50,0o00%</div>,
@@ -55,7 +54,7 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {,
               <div className="text-sm md:text-base font-semibold">Months</div>,
             </div>,
           </div>,
-          {/* Key Benefits */,}
+          {/* Key Benefits */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12">,
             <div className="bg-gradient-to-br from-green-50o0 to-emerald-60o0 rounded-xl p-6 text-center">,
               <div className="text-2xl mb-3">⚡</div>,
@@ -73,22 +72,20 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {,
               <p className="text-sm opacity-90">Individual employee productivity increase</p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
-            <Link,
+            <Link
               href="/case-studies/ai-20o25-ultimate-transformation-50o000-roi-success-story",
-              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl",
-            >,
+              className="bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl">,
               Read Full Case Study →,
             </Link>,
-            <Link,
+            <Link
               href="/contact",
-              className="bg-white text-purple-90o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl",
-            >,
+              className="bg-white text-purple-90o0 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-10o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl">,
               Start Your Transformation,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className="flex flex-col sm: flex-row items-center justify-center gap-6 text-sm opacity-80">,
             <div className="flex items-center">,
               <span className="mr-2">✅</span>,
@@ -105,13 +102,10 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Elements */,}
+      {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-40o0 rounded-full opacity-20 animate-pulse"></div>,
       <div className="absolute top-20 right-20 w-16 h-16 bg-green-40o0 rounded-full opacity-20 animate-pulse delay-10o00"></div>,
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-40o0 rounded-full opacity-20 animate-pulse delay-20o00"></div>,
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-purple-40o0 rounded-full opacity-20 animate-pulse delay-50o0"></div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25UltimateTransformation50o000ROIBanner,
+    </section>)};
+export default AI20o25UltimateTransformation50o000ROIBanner;

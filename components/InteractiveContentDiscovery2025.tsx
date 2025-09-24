@@ -1,124 +1,116 @@
 'use client',
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const InteractiveContentDiscovery20o25 = () => {,
+const InteractiveContentDiscovery20o25 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [hoveredItem, setHoveredItem] = useState(null),
   const [isVisible, setIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }, []),
-,
-  const categories = [,
-    { id: 'all', label: 'All Content', icon: '🌟' ,},;
-    { id: 'ai', label: 'AI & Machine Learning', icon: '🤖' ,},;
-    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' ,},;
-    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' ,},;
-    { id: 'autonomous', label: 'Autonomous Systems', icon: '🚀' ,},;
-    { id: 'business', label: 'Business Solutions', icon: '💼' ,},;
+  useEffect(() => {
+    setIsVisible(true)}, []),
+  const categories = [
+    { id: 'all', label: 'All Content', icon: '🌟' };
+    { id: 'ai', label: 'AI & Machine Learning', icon: '🤖' };
+    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' };
+    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' };
+    { id: 'autonomous', label: 'Autonomous Systems', icon: '🚀' };
+    { id: 'business', label: 'Business Solutions', icon: '💼' };
   ],
-,
-  const contentItems = [,
-    {,
-      id: 1,;
-      title: 'Enterprise AI Transformation: 50o0% ROI in 6 Months',;
-      category: 'case-study',;
-      type: 'Case Study',;
+  const contentItems = [
+    {
+      id: 1;
+      title: 'Enterprise AI Transformation: 50o0% ROI in 6 Months';
+      category: 'case-study';
+      type: 'Case Study';
       description:,
-        'How a Fortune 50o0 company achieved unprecedented ROI through AI automation',;
-      readTime: '8 min read',;
-      featured: true,;
-      tags: ['AI Automation', 'Enterprise', 'ROI'],;
-      image: '🏢',;
-      gradient: 'from-blue-50o0 to-cyan-60o0',;
-      link: '/case-studies/enterprise-ai-transformation',;
-    },;
-    {,
-      id: 2,;
-      title: 'AI Revolution 20o25: The Future is Now',;
+        'How a Fortune 50o0 company achieved unprecedented ROI through AI automation';
+      readTime: '8 min read';
+      featured: true;
+      tags: ['AI Automation', 'Enterprise', 'ROI'];
+      image: '🏢';
+      gradient: 'from-blue-50o0 to-cyan-60o0';
+      link: '/case-studies/enterprise-ai-transformation';
+    };
+    {
+      id: 2;
+      title: 'AI Revolution 20o25: The Future is Now';
       description:,
-        'Discover how artificial intelligence is transforming industries and creating unprecedented opportunities.',;
-      category: 'ai',;
-      readTime: '8 min read',;
-      difficulty: 'Intermediate',;
-      tags: ['AI', 'Automation', 'Future Tech'],;
-      link: '/ai-20o25',;
-      featured: true,;
-      type: 'Blog Post',;
-      image: '🤖',;
-      gradient: 'from-purple-50o0 to-pink-60o0',;
-    },;
-    {,
-      id: 3,;
-      title: 'Quantum Computing Breakthrough: 10o00x Faster Processing',;
-      category: 'quantum',;
-      type: 'Research Paper',;
+        'Discover how artificial intelligence is transforming industries and creating unprecedented opportunities.';
+      category: 'ai';
+      readTime: '8 min read';
+      difficulty: 'Intermediate';
+      tags: ['AI', 'Automation', 'Future Tech'];
+      link: '/ai-20o25';
+      featured: true;
+      type: 'Blog Post';
+      image: '🤖';
+      gradient: 'from-purple-50o0 to-pink-60o0';
+    };
+    {
+      id: 3;
+      title: 'Quantum Computing Breakthrough: 10o00x Faster Processing';
+      category: 'quantum';
+      type: 'Research Paper';
       description:,
-        'Revolutionary quantum algorithms that are reshaping computational possibilities',;
-      readTime: '12 min read',;
-      featured: true,;
-      tags: ['Quantum Computing', 'Algorithms', 'Performance'],;
-      image: '⚛️',;
-      gradient: 'from-indigo-50o0 to-purple-60o0',;
-      link: '/research/quantum-computing-breakthrough',;
-    },;
-    {,
-      id: 4,;
-      title: 'Neural Interface Revolution: Mind-Computer Integration',;
+        'Revolutionary quantum algorithms that are reshaping computational possibilities';
+      readTime: '12 min read';
+      featured: true;
+      tags: ['Quantum Computing', 'Algorithms', 'Performance'];
+      image: '⚛️';
+      gradient: 'from-indigo-50o0 to-purple-60o0';
+      link: '/research/quantum-computing-breakthrough';
+    };
+    {
+      id: 4;
+      title: 'Neural Interface Revolution: Mind-Computer Integration';
       description:,
-        'Explore the latest developments in brain-computer interfaces and their potential applications.',;
-      category: 'neural',;
-      readTime: '10 min read',;
-      difficulty: 'Advanced',;
-      tags: ['Neural Interfaces', 'BCI', 'Innovation'],;
-      link: '/neural-interfaces',;
-      featured: false,;
-      type: 'Technical Guide',;
-      image: '🧠',;
-      gradient: 'from-green-50o0 to-teal-60o0',;
-    },;
-    {,
-      id: 5,;
-      title: 'Autonomous Business Systems: The Future of Operations',;
-      category: 'autonomous',;
-      type: 'Implementation Guide',;
+        'Explore the latest developments in brain-computer interfaces and their potential applications.';
+      category: 'neural';
+      readTime: '10 min read';
+      difficulty: 'Advanced';
+      tags: ['Neural Interfaces', 'BCI', 'Innovation'];
+      link: '/neural-interfaces';
+      featured: false;
+      type: 'Technical Guide';
+      image: '🧠';
+      gradient: 'from-green-50o0 to-teal-60o0';
+    };
+    {
+      id: 5;
+      title: 'Autonomous Business Systems: The Future of Operations';
+      category: 'autonomous';
+      type: 'Implementation Guide';
       description:,
-        'Complete guide to implementing autonomous business systems for maximum efficiency',;
-      readTime: '15 min read',;
-      featured: true,;
-      tags: ['Autonomous Systems', 'Business Automation', 'Efficiency'],;
-      image: '🚀',;
-      gradient: 'from-orange-50o0 to-red-60o0',;
-      link: '/guides/autonomous-business-systems',;
-    },;
-    {,
-      id: 6,;
-      title: 'Business Intelligence Revolution: Data-Driven Decisions',;
+        'Complete guide to implementing autonomous business systems for maximum efficiency';
+      readTime: '15 min read';
+      featured: true;
+      tags: ['Autonomous Systems', 'Business Automation', 'Efficiency'];
+      image: '🚀';
+      gradient: 'from-orange-50o0 to-red-60o0';
+      link: '/guides/autonomous-business-systems';
+    };
+    {
+      id: 6;
+      title: 'Business Intelligence Revolution: Data-Driven Decisions';
       description:,
-        'Learn how advanced analytics and AI are transforming business decision-making processes.',;
-      category: 'business',;
-      readTime: '6 min read',;
-      difficulty: 'Beginner',;
-      tags: ['Business Intelligence', 'Analytics', 'Decision Making'],;
-      link: '/business-intelligence',;
-      featured: false,;
-      type: 'Business Guide',;
-      image: '💼',;
-      gradient: 'from-yellow-50o0 to-orange-60o0',;
-    },;
+        'Learn how advanced analytics and AI are transforming business decision-making processes.';
+      category: 'business';
+      readTime: '6 min read';
+      difficulty: 'Beginner';
+      tags: ['Business Intelligence', 'Analytics', 'Decision Making'];
+      link: '/business-intelligence';
+      featured: false;
+      type: 'Business Guide';
+      image: '💼';
+      gradient: 'from-yellow-50o0 to-orange-60o0';
+    };
   ],
-,
   const filteredItems =,
     selectedCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.category === selectedCategory),
-,
-  const getDifficultyColor = difficulty => {,
-    switch (difficulty) {,
+  const getDifficultyColor = difficulty => {
+    switch (difficulty) {
       case 'Beginner':,
         return 'bg-green-10o0 text-green-80o0',
       case 'Intermediate':,
@@ -127,11 +119,10 @@ const InteractiveContentDiscovery20o25 = () => {,
         return 'bg-red-10o0 text-red-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+    }
   };
-,
-  const getTypeColor = type => {,
-    switch (type) {,
+  const getTypeColor = type => {
+    switch (type) {
       case 'Case Study':,
         return 'bg-blue-10o0 text-blue-80o0',
       case 'Blog Post':,
@@ -146,15 +137,14 @@ const InteractiveContentDiscovery20o25 = () => {,
         return 'bg-pink-10o0 text-pink-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+    }
   };
-,
-  return (,
-    <section,
+  return (
+    <section
       className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-4'>,
             <span className='text-sm font-medium'>,
@@ -172,29 +162,28 @@ const InteractiveContentDiscovery20o25 = () => {,
         </div>,
         {/* Category Filter */}
         <div className='flex flex-wrap justify-center gap-3 mb-8'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${,
+              className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${
                 selectedCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg',
                   : 'bg-white text-gray-70o0 border border-gray-30o0 hover: border-purple-30o0',
-              ,}`}
+              }`}
             >,
               <span className='mr-2'>{category.icon}</span>,
               {category.label}
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredItems.map(item => (,
-            <div,
-              key={item.id,}
-              className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
+          {filteredItems.map(item => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-xl shadow-lg border border-gray-20o0 overflow-hidden hover: shadow-xl transition-all duration-30o0 transform hover:-translate-y-2 ${
                 hoveredItem === item.id ? 'scale-10o5' : '',
-              ,}`}
+              }`}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >,
@@ -204,25 +193,23 @@ const InteractiveContentDiscovery20o25 = () => {,
                   <div className='flex items-center'>,
                     <span className='text-3xl mr-3'>{item.image}</span>,
                     <div className='flex flex-col'>,
-                      <span,
+                      <span
                         className={`px-2 py-1 rounded text-xs font-medium ${getTypeColor(item.type)}`}
                       >,
                         {item.type}
                       </span>,
-                      {item.featured && (,
+                      {item.featured && (
                         <span className='mt-1 bg-yellow-10o0 text-yellow-80o0 px-2 py-1 rounded-full text-xs font-medium'>,
                           ⭐ FEATURED,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                   </div>,
-                  {item.difficulty && (,
-                    <span,
+                  {item.difficulty && (
+                    <span
                       className={`px-2 py-1 rounded text-xs font-medium ${getDifficultyColor(item.difficulty)}`}
                     >,
                       {item.difficulty}
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 leading-tight'>,
                   {item.title}
@@ -232,14 +219,12 @@ const InteractiveContentDiscovery20o25 = () => {,
                 </p>,
                 {/* Tags */}
                 <div className='flex flex-wrap gap-2 mb-4'>,
-                  {item.tags.map((tag, index) => (,
-                    <span,
+                  {item.tags.map((tag, index) => (
+                    <span
                       key={index}
-                      className='bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs',
-                    >,
+                      className='bg-gray-10o0 text-gray-70o0 px-2 py-1 rounded-full text-xs'>,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 {/* Metrics */}
                 <div className='flex items-center justify-between text-sm text-gray-50o0'>,
@@ -251,15 +236,14 @@ const InteractiveContentDiscovery20o25 = () => {,
               <div className={`h-1 bg-gradient-to-r ${item.gradient}`}></div>,
               {/* Action Button */}
               <div className='p-6 pt-0'>,
-                <Link,
+                <Link
                   href={item.link}
-                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-30o0 bg-gradient-to-r ${item.gradient} text-white hover: shadow-lg transform hover:scale-10o5`,}
+                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-30o0 bg-gradient-to-r ${item.gradient} text-white hover: shadow-lg transform hover:scale-10o5`}
                 >,
                   Explore Content,
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='mt-12 text-center'>,
@@ -272,25 +256,20 @@ const InteractiveContentDiscovery20o25 = () => {,
               technologies to achieve unprecedented growth and efficiency.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-bold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </Link>,
-              <Link,
+              <Link
                 href='/resources',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View All Resources,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InteractiveContentDiscovery20o25,
-,
+    </section>),
+};
+export default InteractiveContentDiscovery20o25;

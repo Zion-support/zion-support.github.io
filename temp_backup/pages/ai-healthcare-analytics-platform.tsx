@@ -1,64 +1,56 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Heart, Activity, Shield, Zap, Target, BarChart3,;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor,;
-  Award, MessageCircle, Stethoscope,
-} from 'lucide-react',
-,
-export default function AIHealthcareAnalyticsPlatform() {,
-  const features = [,
-    {,
-      icon: <Heart className="w-6 h-6"  />,;
-      title: 'Patient Health Analytics',;
+import {
+  Heart, Activity, Shield, Zap, Target, BarChart3;
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Stethoscope} from 'lucide-react',
+export default function AIHealthcareAnalyticsPlatform() {
+  const features = [
+    {
+      icon: <Heart className="w-6 h-6"  />;
+      title: 'Patient Health Analytics';
       description: 'Comprehensive patient health monitoring and predictive analytics for early disease detection and prevention.',
-    ,},;
-    {,
-      icon: <Activity className="w-6 h-6"  />,;
-      title: 'Clinical Decision Support',;
+    };
+    {
+      icon: <Activity className="w-6 h-6"  />;
+      title: 'Clinical Decision Support';
       description: 'AI-powered clinical decision support systems that provide evidence-based recommendations for healthcare providers.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Population Health Management',;
-      description: 'Advanced population health analytics for identifying health trends, risk factors, and intervention opportunities.',
-    },;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Predictive Diagnostics',;
+    };
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Population Health Management';
+      description: 'Advanced population health analytics for identifying health trends, risk factors, and intervention opportunities.'};
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Predictive Diagnostics';
       description: 'Machine learning algorithms that predict disease progression and treatment outcomes with high accuracy.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Healthcare Security & Compliance',;
+    };
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Healthcare Security & Compliance';
       description: 'HIPAA-compliant data security with advanced encryption and privacy protection for patient information.',
-    ,},;
-    {,
-      icon: <BarChart3 className="w-6 h-6"  />,;
-      title: 'Real-Time Health Monitoring',;
+    };
+    {
+      icon: <BarChart3 className="w-6 h-6"  />;
+      title: 'Real-Time Health Monitoring';
       description: 'Continuous health monitoring with real-time alerts and automated intervention recommendations.',
-    ,}
+    }
   ],
-,
-  const benefits = [,
-    'Improve patient outcomes by 40%',;
-    'Reduce diagnostic errors by 60%',;
-    'Lower healthcare costs by 30%',;
-    'Increase treatment efficiency by 50%',;
-    'Improve patient satisfaction by 35%',;
-    'Reduce readmission rates by 45%',;
-    'Optimize resource allocation by 40%',;
-    'Enhance clinical decision-making by 55%',
-  ],
-,
-  const useCases = [,
-    'Patient Monitoring', 'Disease Prediction', 'Treatment Optimization',;
-    'Population Health', 'Clinical Research', 'Drug Discovery',;
-    'Medical Imaging', 'Genomics Analysis', 'Epidemiology',;
-    'Preventive Care', 'Chronic Disease Management', 'Emergency Response',
-  ],
-,
-  return (,
+  const benefits = [
+    'Improve patient outcomes by 40%';
+    'Reduce diagnostic errors by 60%';
+    'Lower healthcare costs by 30%';
+    'Increase treatment efficiency by 50%';
+    'Improve patient satisfaction by 35%';
+    'Reduce readmission rates by 45%';
+    'Optimize resource allocation by 40%';
+    'Enhance clinical decision-making by 55%'],
+  const useCases = [
+    'Patient Monitoring', 'Disease Prediction', 'Treatment Optimization';
+    'Population Health', 'Clinical Research', 'Drug Discovery';
+    'Medical Imaging', 'Genomics Analysis', 'Epidemiology';
+    'Preventive Care', 'Chronic Disease Management', 'Emergency Response'],
+  return (
     <>,
       <Head>,
         <title>AI Healthcare Analytics Platform | Zion Tech Group</title>,
@@ -71,16 +63,15 @@ export default function AIHealthcareAnalyticsPlatform() {,
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-analytics-platform"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-red-90o0/20 via-pink-90o0/20 to-purple-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-red-50o0 to-pink-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Heart className="w-8 h-8 text-white"  />,
@@ -90,37 +81,34 @@ export default function AIHealthcareAnalyticsPlatform() {,
                 AI Healthcare Analytics Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform healthcare with AI-powered analytics. Get patient monitoring, predictive diagnostics,;
+                Transform healthcare with AI-powered analytics. Get patient monitoring, predictive diagnostics;
                 and clinical decision support that improves outcomes and saves lives.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-red-50o0 to-pink-60o0 text-white rounded-xl font-semibold text-lg hover: from-red-60o0 hover:to-pink-70o0 transition-all duration-20o0 shadow-lg shadow-red-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-red-50o0 to-pink-60o0 text-white rounded-xl font-semibold text-lg hover: from-red-60o0 hover:to-pink-70o0 transition-all duration-20o0 shadow-lg shadow-red-50o0/25">,
                   Start Free Trial,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-red-50o0/30 text-red-40o0 rounded-xl font-semibold text-lg hover: bg-red-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-red-50o0/30 text-red-40o0 rounded-xl font-semibold text-lg hover: bg-red-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Powerful Healthcare Analytics Features,
               </h2>,
@@ -130,23 +118,21 @@ export default function AIHealthcareAnalyticsPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-red-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-red-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-red-50o0/20 to-pink-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-red-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +140,10 @@ export default function AIHealthcareAnalyticsPlatform() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Healthcare Outcomes,
               </h2>,
@@ -168,20 +153,18 @@ export default function AIHealthcareAnalyticsPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-red-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-red-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-red-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +172,10 @@ export default function AIHealthcareAnalyticsPlatform() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Comprehensive Healthcare Solutions,
               </h2>,
@@ -203,20 +185,18 @@ export default function AIHealthcareAnalyticsPlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-red-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-red-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-red-50o0/20 to-pink-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Stethoscope className="w-6 h-6 text-red-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{useCase,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{useCase}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +204,9 @@ export default function AIHealthcareAnalyticsPlatform() {,
         <section className="py-20 bg-gradient-to-r from-red-90o0/20 via-pink-90o0/20 to-purple-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Healthcare?,
@@ -237,17 +217,15 @@ export default function AIHealthcareAnalyticsPlatform() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-red-50o0 to-pink-60o0 text-white rounded-xl font-semibold text-lg hover: from-red-60o0 hover:to-pink-70o0 transition-all duration-20o0 shadow-lg shadow-red-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-red-50o0 to-pink-60o0 text-white rounded-xl font-semibold text-lg hover: from-red-60o0 hover:to-pink-70o0 transition-all duration-20o0 shadow-lg shadow-red-50o0/25">,
                   Get Started Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-red-50o0/30 text-red-40o0 rounded-xl font-semibold text-lg hover: bg-red-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-red-50o0/30 text-red-40o0 rounded-xl font-semibold text-lg hover: bg-red-50o0/10 transition-all duration-20o0">,
                   Contact Sales,
                 </motion.button>,
               </div>,
@@ -255,6 +233,5 @@ export default function AIHealthcareAnalyticsPlatform() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

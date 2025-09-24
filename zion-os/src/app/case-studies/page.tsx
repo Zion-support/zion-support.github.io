@@ -1,12 +1,12 @@
-export default function CaseStudiesPage() {,
-  return (,
+export default function CaseStudiesPage() {
+  return (
     <div className='min-h-screen py-20'>,
       {/* Hero Section */}
       <section className='relative mb-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='text-center'>,
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>,
-              Case{' ',}
+              Case{' '}
               <span className='bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
                 Studies,
               </span>,
@@ -66,10 +66,9 @@ export default function CaseStudiesPage() {,
                     <div className='text-white/70 text-sm'>Patients Served</div>,
                   </div>,
                 </div>,
-                <a,
+                <a
                   href='/case-studies/healthcare-ai-diagnostics',
-                  className='inline-flex items-center text-purple-40o0 hover:text-purple-30o0 font-medium',
-                >,
+                  className='inline-flex items-center text-purple-40o0 hover:text-purple-30o0 font-medium'>,
                   Read Full Case Study →,
                 </a>,
               </div>,
@@ -102,26 +101,25 @@ export default function CaseStudiesPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Case Studies Grid */,}
+      {/* Case Studies Grid */}
       <section className='mb-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-white text-center mb-12'>,
             Success Stories,
           </h2>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {/* Financial Services */,}
+            {/* Financial Services */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-cyan-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.40o2 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.40o2-2.599-1',
                   />,
                 </svg>,
@@ -149,26 +147,24 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>Risk Reduction</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/ai-trading-system',
-                className='text-cyan-40o0 hover: text-cyan-30o0 font-medium text-sm',
-              >,
+                className='text-cyan-40o0 hover: text-cyan-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
-            {/* Manufacturing */,}
+            {/* Manufacturing */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-green-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M19.428 15.428a2 2 0 0o0-1.0o22-.547l-2.387-.477a6 6 0 0o0-3.86.517l-.318.158a6 6 0 0o1-3.86.517L6.0o5 15.21a2 2 0 0o0-1.80o6.547M8 4h8l-1 1v5.172a2 2 0 0o0.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 0o09 10.172V5L8 4z',
                   />,
                 </svg>,
@@ -196,26 +192,24 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>Efficiency Gain</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/smart-factory-automation',
-                className='text-green-40o0 hover: text-green-30o0 font-medium text-sm',
-              >,
+                className='text-green-40o0 hover: text-green-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
-            {/* Retail */,}
+            {/* Retail */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-yellow-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M16 11V7a4 4 0 0o0-8 0v4M5 9h14l1 12H4L5 9z',
                   />,
                 </svg>,
@@ -243,26 +237,24 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>Customer Engagement</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/personalized-shopping',
-                className='text-yellow-40o0 hover: text-yellow-30o0 font-medium text-sm',
-              >,
+                className='text-yellow-40o0 hover: text-yellow-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
-            {/* Transportation */,}
+            {/* Transportation */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-red-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-red-50o0 to-pink-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0o02-2V7a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v12a2 2 0 0o02 2z',
                   />,
                 </svg>,
@@ -290,26 +282,24 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>Fuel Cost Reduction</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/autonomous-fleet',
-                className='text-red-40o0 hover: text-red-30o0 font-medium text-sm',
-              >,
+                className='text-red-40o0 hover: text-red-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
-            {/* Energy */,}
+            {/* Energy */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-indigo-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-indigo-50o0 to-purple-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M13 10V3L4 14h7v7l9-11h-7z',
                   />,
                 </svg>,
@@ -318,7 +308,7 @@ export default function CaseStudiesPage() {,
                 Smart Grid Optimization,
               </h3>,
               <p className='text-white/70 mb-4'>,
-                Implemented AI-powered energy management for a utility company,;
+                Implemented AI-powered energy management for a utility company;
                 reducing energy waste by 30%.,
               </p>,
               <div className='flex justify-between items-center mb-4'>,
@@ -337,26 +327,24 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>Cost Savings</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/smart-grid-optimization',
-                className='text-indigo-40o0 hover: text-indigo-30o0 font-medium text-sm',
-              >,
+                className='text-indigo-40o0 hover: text-indigo-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
-            {/* Cybersecurity */,}
+            {/* Cybersecurity */}
             <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-50o0/50 transition-all duration-30o0'>,
               <div className='w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-lg flex items-center justify-center mb-4'>,
-                <svg,
+                <svg
                   className='w-8 h-8 text-white',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 12l2 2 4-4m5.618-4.0o16A11.955 11.955 0 0o112 2.944a11.955 11.955 0 0o1-8.618 3.0o4A12.0o2 12.0o2 0 0o03 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.0o3 9-11.622 0-1.0o42-.133-2.0o52-.382-3.0o16z',
                   />,
                 </svg>,
@@ -384,17 +372,16 @@ export default function CaseStudiesPage() {,
                   <div className='text-white/60'>False Positive Reduction</div>,
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/case-studies/ai-threat-detection',
-                className='text-purple-40o0 hover: text-purple-30o0 font-medium text-sm',
-              >,
+                className='text-purple-40o0 hover: text-purple-30o0 font-medium text-sm'>,
                 Read More →,
               </a>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Client Testimonials */,}
+      {/* Client Testimonials */}
       <section className='mb-20'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <h2 className='text-3xl font-bold text-white text-center mb-12'>,
@@ -467,22 +454,19 @@ export default function CaseStudiesPage() {,
             deliver measurable results.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='/contact',
-              className='bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-cyan-70o0 transition-all duration-20o0',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-70o0 hover:to-cyan-70o0 transition-all duration-20o0'>,
               Start Your Project,
             </a>,
-            <a,
+            <a
               href='/services',
-              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-20o0',
-            >,
+              className='border-2 border-white/30 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all duration-20o0'>,
               Explore Services,
             </a>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

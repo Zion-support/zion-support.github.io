@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
-  return (,
+export default function QuantumComputingBreakthrough20o26PromotionBanner() {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-blue-90o0 text-white'>,
       {/* Animated quantum particles */}
       <div className='absolute inset-0'>,
@@ -10,28 +9,26 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-50o0/10 rounded-full blur-2xl animate-pulse'></div>,
         {/* Quantum circuit pattern */}
         <div className='absolute inset-0 opacity-10'>,
-          <svg,
+          <svg
             className='w-full h-full',
             viewBox='0 0 10o0 10o0',
-            preserveAspectRatio='none',
-          >,
+            preserveAspectRatio='none'>,
             <defs>,
-              <pattern,
+              <pattern
                 id='quantum-circuit',
                 x='0',
                 y='0',
                 width='20',
                 height='20',
-                patternUnits='userSpaceOnUse',
-              >,
-                <circle,
+                patternUnits='userSpaceOnUse'>,
+                <circle
                   cx='10',
                   cy='10',
                   r='1',
                   fill='currentColor',
                   opacity='0.3',
                 />,
-                <line,
+                <line
                   x1='0',
                   y1='10',
                   x2='20',
@@ -40,7 +37,7 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
                   strokeWidth='0.5',
                   opacity='0.3',
                 />,
-                <line,
+                <line
                   x1='10',
                   y1='0',
                   x2='10',
@@ -57,16 +54,16 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <div className='text-center'>,
-          {/* Main headline */,}
+          {/* Main headline */}
           <h1 className='text-4xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent animate-pulse'>,
             Quantum Computing Breakthrough 20o26,
           </h1>,
-          {/* Subtitle */,}
+          {/* Subtitle */}
           <p className='text-xl md: text-2xl mb-8 text-gray-30o0 max-w-4xl mx-auto'>,
             Revolutionary quantum computing solutions that will solve problems,
             impossible for classical computers,
           </p>,
-          {/* Badges */,}
+          {/* Badges */}
           <div className='flex flex-wrap justify-center gap-4 mb-8'>,
             <span className='bg-blue-50o0 text-white px-6 py-2 rounded-full text-lg font-semibold animate-bounce'>,
               BREAKTHROUGH,
@@ -115,20 +112,18 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/quantum-computing-breakthrough-20o26',
-              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70o0 hover:to-purple-70o0 transition-all transform hover:scale-10o5 shadow-lg'>,
               Explore Quantum Solutions,
             </Link>,
-            <Link,
+            <Link
               href='/tools/quantum-readiness-assessment',
-              className='bg-transparent border-2 border-blue-50o0 text-blue-40o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50o0 hover:text-white transition-all transform hover:scale-10o5',
-            >,
+              className='bg-transparent border-2 border-blue-50o0 text-blue-40o0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50o0 hover:text-white transition-all transform hover:scale-10o5'>,
               Assess Readiness,
             </Link>,
           </div>,
-          {/* Technical specs */,}
+          {/* Technical specs */}
           <div className='mt-12 grid grid-cols-2 md: grid-cols-4 gap-4 max-w-4xl mx-auto'>,
             <div className='text-center p-4 bg-blue-80o0/30 rounded-lg'>,
               <div className='text-2xl font-bold text-blue-40o0'>1,0o00+</div>,
@@ -155,7 +150,6 @@ export default function QuantumComputingBreakthrough20o26PromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

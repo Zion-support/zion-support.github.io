@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function BrainComputerInterfaceDevelopmentPlatformPage() {,
-  return (,
+export default function BrainComputerInterfaceDevelopmentPlatformPage() {
+  return (
     <>,
       <Head>,
         <title>,
           Brain Computer Interface Development Platform - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='brain computer interface development platform page',
         />,
@@ -23,7 +22,6 @@ export default function BrainComputerInterfaceDevelopmentPlatformPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

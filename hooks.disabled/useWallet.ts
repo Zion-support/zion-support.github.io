@@ -1,13 +1,10 @@
-interface UseWalletProps {,
-  // Add props here as needed,
-}
+interface UseWalletProps {
+  // Add props here as needed}
 ,
-export default function UseWallet({ }: UseWalletProps) {,
-  return (,
+export default function UseWallet({ }: UseWalletProps) {
+  return (
     <div>,
       <h1>UseWallet</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

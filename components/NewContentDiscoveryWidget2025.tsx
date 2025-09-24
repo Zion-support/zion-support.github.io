@@ -1,139 +1,134 @@
 'use client',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const NewContentDiscoveryWidget20o25 = () => {,
+const NewContentDiscoveryWidget20o25 = () => {
   const [activeTab, setActiveTab] = useState('featured'),
   const [searchQuery, setSearchQuery] = useState(''),
-,
-  const contentItems = {,
-    featured: [,
-      {,
-        id: 1,;
-        title: 'AI 20o25 Ultimate Business Revolution: Complete Guide',;
-        type: 'Blog Post',;
-        category: 'AI Implementation',;
+  const contentItems = {
+    featured: [
+      {
+        id: 1;
+        title: 'AI 20o25 Ultimate Business Revolution: Complete Guide';
+        type: 'Blog Post';
+        category: 'AI Implementation';
         description:,
-          'Complete roadmap for implementing AI-driven business transformation with 10o00%+ ROI strategies.',;
-        image: '/images/ai-business-revolution-guide.jpg',;
-        readTime: '15 min read',;
-        featured: true,;
-        url: '/blog/ai-20o25-ultimate-business-revolution-complete-guide',;
-      },;
-      {,
-        id: 2,;
-        title: '50,0o00% ROI Success Story: Fortune 10o0 Transformation',;
-        type: 'Case Study',;
-        category: 'Success Stories',;
+          'Complete roadmap for implementing AI-driven business transformation with 10o00%+ ROI strategies.';
+        image: '/images/ai-business-revolution-guide.jpg';
+        readTime: '15 min read';
+        featured: true;
+        url: '/blog/ai-20o25-ultimate-business-revolution-complete-guide';
+      };
+      {
+        id: 2;
+        title: '50,0o00% ROI Success Story: Fortune 10o0 Transformation';
+        type: 'Case Study';
+        category: 'Success Stories';
         description:,
-          'How a Fortune 10o0 manufacturing giant achieved $2.8B savings and $15.6B revenue increase.',;
-        image: '/images/50k-roi-case-study.jpg',;
-        readTime: '12 min read',;
-        featured: true,;
-        url: '/case-studies/ai-20o25-ultimate-transformation-50o000-roi-success-story',;
-      },;
-      {,
-        id: 3,;
-        title: 'AI 20o25 Neural Superintelligence Breakthrough',;
-        type: 'Blog Post',;
-        category: 'Advanced AI',;
+          'How a Fortune 10o0 manufacturing giant achieved $2.8B savings and $15.6B revenue increase.';
+        image: '/images/50k-roi-case-study.jpg';
+        readTime: '12 min read';
+        featured: true;
+        url: '/case-studies/ai-20o25-ultimate-transformation-50o000-roi-success-story';
+      };
+      {
+        id: 3;
+        title: 'AI 20o25 Neural Superintelligence Breakthrough';
+        type: 'Blog Post';
+        category: 'Advanced AI';
         description:,
-          'Exploring the latest breakthroughs in neural superintelligence and consciousness evolution.',;
-        image: '/images/neural-superintelligence.jpg',;
-        readTime: '18 min read',;
-        featured: true,;
-        url: '/blog/ai-20o25-20o26-neural-superintelligence-breakthrough',;
-      },;
-    ],;
-    latest: [,
-      {,
-        id: 4,;
-        title: 'Quantum AI Business Applications 20o25',;
-        type: 'Blog Post',;
-        category: 'Quantum Computing',;
+          'Exploring the latest breakthroughs in neural superintelligence and consciousness evolution.';
+        image: '/images/neural-superintelligence.jpg';
+        readTime: '18 min read';
+        featured: true;
+        url: '/blog/ai-20o25-20o26-neural-superintelligence-breakthrough';
+      };
+    ];
+    latest: [
+      {
+        id: 4;
+        title: 'Quantum AI Business Applications 20o25';
+        type: 'Blog Post';
+        category: 'Quantum Computing';
         description:,
-          'Real-world quantum AI applications delivering breakthrough business results.',;
-        image: '/images/quantum-ai-business.jpg',;
-        readTime: '14 min read',;
-        featured: false,;
-        url: '/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide',;
-      },;
-      {,
-        id: 5,;
-        title: 'Autonomous Enterprise Systems Implementation',;
-        type: 'Case Study',;
-        category: 'Automation',;
+          'Real-world quantum AI applications delivering breakthrough business results.';
+        image: '/images/quantum-ai-business.jpg';
+        readTime: '14 min read';
+        featured: false;
+        url: '/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide';
+      };
+      {
+        id: 5;
+        title: 'Autonomous Enterprise Systems Implementation';
+        type: 'Case Study';
+        category: 'Automation';
         description:,
-          'Complete guide to implementing self-managing business operations.',;
-        image: '/images/autonomous-enterprise.jpg',;
-        readTime: '20 min read',;
-        featured: false,;
-        url: '/case-studies/ai-20o25-autonomous-enterprise-transformation-ultimate-success',;
-      },;
-      {,
-        id: 6,;
-        title: 'AI Cybersecurity Revolution 20o25',;
-        type: 'Blog Post',;
-        category: 'Security',;
+          'Complete guide to implementing self-managing business operations.';
+        image: '/images/autonomous-enterprise.jpg';
+        readTime: '20 min read';
+        featured: false;
+        url: '/case-studies/ai-20o25-autonomous-enterprise-transformation-ultimate-success';
+      };
+      {
+        id: 6;
+        title: 'AI Cybersecurity Revolution 20o25';
+        type: 'Blog Post';
+        category: 'Security';
         description:,
-          'Next-generation AI-powered cybersecurity solutions for enterprise protection.',;
-        image: '/images/ai-cybersecurity.jpg',;
-        readTime: '16 min read',;
-        featured: false,;
-        url: '/blog/ai-20o25-cybersecurity-revolution-ultimate-guide',;
-      },;
-    ],;
-    popular: [,
-      {,
-        id: 7,;
-        title: 'Fortune 50o0 AI Transformation: 15,0o00% ROI',;
-        type: 'Case Study',;
-        category: 'Success Stories',;
+          'Next-generation AI-powered cybersecurity solutions for enterprise protection.';
+        image: '/images/ai-cybersecurity.jpg';
+        readTime: '16 min read';
+        featured: false;
+        url: '/blog/ai-20o25-cybersecurity-revolution-ultimate-guide';
+      };
+    ];
+    popular: [
+      {
+        id: 7;
+        title: 'Fortune 50o0 AI Transformation: 15,0o00% ROI';
+        type: 'Case Study';
+        category: 'Success Stories';
         description:,
-          'How a Fortune 50o0 company achieved unprecedented ROI through AI transformation.',;
-        image: '/images/fortune-50o0-ai-transformation.jpg',;
-        readTime: '13 min read',;
-        featured: false,;
-        url: '/case-studies/fortune-50o0-ai-transformation-150o00-roi-success-story',;
-      },;
-      {,
-        id: 8,;
-        title: 'Enterprise AI Automation Mastery',;
-        type: 'Blog Post',;
-        category: 'Automation',;
+          'How a Fortune 50o0 company achieved unprecedented ROI through AI transformation.';
+        image: '/images/fortune-50o0-ai-transformation.jpg';
+        readTime: '13 min read';
+        featured: false;
+        url: '/case-studies/fortune-50o0-ai-transformation-150o00-roi-success-story';
+      };
+      {
+        id: 8;
+        title: 'Enterprise AI Automation Mastery';
+        type: 'Blog Post';
+        category: 'Automation';
         description:,
-          'Master the art of enterprise AI automation with proven strategies and frameworks.',;
-        image: '/images/enterprise-ai-automation.jpg',;
-        readTime: '17 min read',;
-        featured: false,;
-        url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide',;
-      },;
-      {,
-        id: 9,;
-        title: 'AI Content Revolution: 25,0o00% ROI',;
-        type: 'Case Study',;
-        category: 'Content Marketing',;
+          'Master the art of enterprise AI automation with proven strategies and frameworks.';
+        image: '/images/enterprise-ai-automation.jpg';
+        readTime: '17 min read';
+        featured: false;
+        url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide';
+      };
+      {
+        id: 9;
+        title: 'AI Content Revolution: 25,0o00% ROI';
+        type: 'Case Study';
+        category: 'Content Marketing';
         description:,
-          'Revolutionary AI content strategies delivering massive ROI for businesses.',;
-        image: '/images/ai-content-revolution.jpg',;
-        readTime: '11 min read',;
-        featured: false,;
-        url: '/case-studies/ai-20o25-ultimate-content-revolution-250o00-roi-success-story',;
-      },;
-    ],;
+          'Revolutionary AI content strategies delivering massive ROI for businesses.';
+        image: '/images/ai-content-revolution.jpg';
+        readTime: '11 min read';
+        featured: false;
+        url: '/case-studies/ai-20o25-ultimate-content-revolution-250o00-roi-success-story';
+      };
+    ];
   };
-,
-  const filteredContent = contentItems[activeTab].filter(,
+  const filteredContent = contentItems[activeTab].filter(
     item =>,
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-      item.category.toLowerCase().includes(searchQuery.toLowerCase()),
-  ),
-,
-  return (,
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())),
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-6 py-2 rounded-full text-sm font-bold mb-6'>,
             <span className='mr-2'>🔍</span>,
@@ -142,7 +137,7 @@ const NewContentDiscoveryWidget20o25 = () => {,
           <h2 className='text-4xl md: text-5xl font-black text-gray-90o0 mb-6'>,
             Discover Our Latest,
             <span className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 bg-clip-text text-transparent'>,
-              {' ',}
+              {' '}
               AI Content,
             </span>,
           </h2>,
@@ -154,7 +149,7 @@ const NewContentDiscoveryWidget20o25 = () => {,
         {/* Search Bar */}
         <div className='max-w-2xl mx-auto mb-12'>,
           <div className='relative'>,
-            <input,
+            <input
               type='text',
               placeholder='Search content, topics, or categories...',
               value={searchQuery}
@@ -162,16 +157,15 @@ const NewContentDiscoveryWidget20o25 = () => {,
               className='w-full px-6 py-4 pl-12 pr-4 text-lg border-2 border-gray-30o0 rounded-2xl focus: border-purple-50o0 focus:outline-none transition-colors',
             />,
             <div className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0'>,
-              <svg,
+              <svg
                 className='w-6 h-6',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0o114 0z',
                 />,
               </svg>,
@@ -180,42 +174,39 @@ const NewContentDiscoveryWidget20o25 = () => {,
         </div>,
         {/* Tab Navigation */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {[,
-            { key: 'featured', label: 'Featured', icon: '⭐' ,},;
-            { key: 'latest', label: 'Latest', icon: '🆕' ,},;
-            { key: 'popular', label: 'Popular', icon: '🔥' ,},;
-          ].map(tab => (,
-            <button,
+          {[
+            { key: 'featured', label: 'Featured', icon: '⭐' };
+            { key: 'latest', label: 'Latest', icon: '🆕' };
+            { key: 'popular', label: 'Popular', icon: '🔥' };
+          ].map(tab => (
+            <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-30o0 ${,
+              className={`px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-30o0 ${
                 activeTab === tab.key,
                   ? 'bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white shadow-2xl transform scale-10o5',
                   : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-lg',
-              ,}`}
+              }`}
             >,
               <span className='mr-2'>{tab.icon}</span>,
               {tab.label}
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden group',
-            >,
-              {/* Image */,}
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className='bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:scale-10o5 overflow-hidden group'>,
+              {/* Image */}
               <div className='relative h-48 bg-gradient-to-br from-purple-40o0 to-blue-50o0 overflow-hidden'>,
                 <div className='absolute inset-0 bg-black bg-opacity-20'></div>,
                 <div className='absolute top-4 left-4'>,
-                  <span,
-                    className={`px-3 py-1 rounded-full text-xs font-bold ${,
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-bold ${
                       item.featured,
                         ? 'bg-yellow-40o0 text-black',
-                        : 'bg-white bg-opacity-90 text-gray-70o0',
-                    }`}
+                        : 'bg-white bg-opacity-90 text-gray-70o0'}`}
                   >,
                     {item.featured ? 'FEATURED' : item.type}
                   </span>,
@@ -238,12 +229,11 @@ const NewContentDiscoveryWidget20o25 = () => {,
                     {item.category}
                   </span>,
                   <div className='flex items-center text-sm text-gray-50o0'>,
-                    <svg,
+                    <svg
                       className='w-4 h-4 mr-1',
                       fill='currentColor',
-                      viewBox='0 0 20 20',
-                    >,
-                      <path,
+                      viewBox='0 0 20 20'>,
+                      <path
                         fillRule='evenodd',
                         d='M10 18a8 8 0 10o0-16 8 8 0 0o00 16zm1-12a1 1 0 10-2 0v4a1 1 0 0o0.293.70o7l2.828 2.829a1 1 0 10o1.415-1.415L11 9.586V6z',
                         clipRule='evenodd',
@@ -253,51 +243,46 @@ const NewContentDiscoveryWidget20o25 = () => {,
                   </div>,
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-3 group-hover: text-purple-60o0 transition-colors'>,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4 line-clamp-3'>,
                   {item.description}
                 </p>,
-                <Link,
+                <Link
                   href={item.url}
-                  className='inline-flex items-center text-purple-60o0 font-semibold hover: text-purple-80o0 transition-colors group',
-                >,
+                  className='inline-flex items-center text-purple-60o0 font-semibold hover: text-purple-80o0 transition-colors group'>,
                   Read More,
-                  <svg,
+                  <svg
                     className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 5l7 7-7 7',
                     />,
                   </svg>,
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* View All Button */}
         <div className='text-center mt-12'>,
-          <Link,
+          <Link
             href='/content',
-            className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-2xl font-bold text-lg hover: from-purple-60o0 hover:to-blue-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl',
-          >,
+            className='inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 text-white px-8 py-4 rounded-2xl font-bold text-lg hover: from-purple-60o0 hover:to-blue-60o0 transform hover:scale-10o5 transition-all duration-30o0 shadow-2xl'>,
             View All Content,
-            <svg,
+            <svg
               className='w-5 h-5 ml-2',
               fill='none',
               stroke='currentColor',
-              viewBox='0 0 24 24',
-            >,
-              <path,
+              viewBox='0 0 24 24'>,
+              <path
                 strokeLinecap='round',
                 strokeLinejoin='round',
-                strokeWidth={2,}
+                strokeWidth={2}
                 d='M9 5l7 7-7 7',
               />,
             </svg>,
@@ -329,9 +314,6 @@ const NewContentDiscoveryWidget20o25 = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContentDiscoveryWidget20o25,
-,
+    </section>),
+};
+export default NewContentDiscoveryWidget20o25;

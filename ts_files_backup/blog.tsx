@@ -1,10 +1,9 @@
 import SEO from '../components/SEO',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-,
-export default function BlogPage() {,
-  return (,
+export default function BlogPage() {
+  return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>,
-      <SEO,
+      <SEO
         title='Blog | Zion Tech Group',
         description='Insights and updates on AIcloudand automation.',
         canonical='https: //ziontechgroup.com/blog/',
@@ -19,7 +18,6 @@ export default function BlogPage() {,
           kleber@ziontechgroup.com.,
         </p>,
       </div>,
-    </UltraFuturisticBackground>,
-  ),
-,}
+    </UltraFuturisticBackground>),
+}
 ,

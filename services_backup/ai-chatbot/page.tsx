@@ -1,55 +1,54 @@
-export const metadata = {,
-  title: 'AI Chatbot Development | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Chatbot Development | Zion Tech Group';
   description:,
-    'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',;
+    'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.';
 };
-,
-export default function AIChatbotPage() {,
-  return (,
+export default function AIChatbotPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       <section className='mb-12'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Chatbot Development,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build intelligent AI chatbots with natural language processing,;
+          Build intelligent AI chatbots with natural language processing;
           multi-channel support, and seamless human handoff capabilities.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
-          <Item,
+          <Item
             title='Natural Language Processing',
-            details={[,
-              'Intent recognition',;
-              'Entity extraction',;
-              'Context understanding',;
-              'Multi-language support',;
-              'Sentiment analysis',;
-              'Conversation flow',;
-              'Fallback handling',;
+            details={[
+              'Intent recognition';
+              'Entity extraction';
+              'Context understanding';
+              'Multi-language support';
+              'Sentiment analysis';
+              'Conversation flow';
+              'Fallback handling';
             ]}
           />,
-          <Item,
+          <Item
             title='Multi-Channel Integration',
-            details={[,
-              'Website chat widget',;
-              'Facebook Messenger',;
-              'WhatsApp Business',;
-              'Slack integration',;
-              'Telegram support',;
-              'Voice interfaces',;
-              'Mobile apps',;
+            details={[
+              'Website chat widget';
+              'Facebook Messenger';
+              'WhatsApp Business';
+              'Slack integration';
+              'Telegram support';
+              'Voice interfaces';
+              'Mobile apps';
             ]}
           />,
-          <Item,
+          <Item
             title='Advanced Features',
-            details={[,
-              'Human handoff',;
-              'Knowledge base integration',;
-              'API connections',;
-              'Analytics dashboard',;
-              'A/B testing',;
-              'Custom training',;
-              'White-label options',;
+            details={[
+              'Human handoff';
+              'Knowledge base integration';
+              'API connections';
+              'Analytics dashboard';
+              'A/B testing';
+              'Custom training';
+              'White-label options';
             ]}
           />,
         </div>,
@@ -98,73 +97,68 @@ export default function AIChatbotPage() {,
         </div>,
       </section>,
       <Pricing />,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Item({ title, details }: { title: string, details: string[] ,}) {,
-  return (,
+function Item({ title, details }: { title: string, details: string[] }) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2'>,
-        {details.map((detail, index) => (,
+        {details.map((detail, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-blue-50o0 mr-2 mt-1'>•</span>,
             <span className='text-gray-60o0'>{detail}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <section>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         AI Chatbot Pricing,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-        <Plan,
+        <Plan
           name='Basic Chatbot',
           price='$8k–$15k',
           duration='4–6 weeks',
-          features={[,
-            'Basic NLP capabilities',;
-            'Single channel integration',;
-            'Pre-built responses',;
-            'Simple analytics',;
-            'Basic customization',;
-            'Email support',;
-            'Standard hosting',;
+          features={[
+            'Basic NLP capabilities';
+            'Single channel integration';
+            'Pre-built responses';
+            'Simple analytics';
+            'Basic customization';
+            'Email support';
+            'Standard hosting';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Professional Chatbot',
           price='$15k–$35k',
           duration='6–10 weeks',
-          features={[,
-            'Everything in Basic',;
-            'Multi-channel support',;
-            'Custom training',;
-            'Advanced analytics',;
-            'API integrations',;
-            'Human handoff',;
-            'Priority support',;
+          features={[
+            'Everything in Basic';
+            'Multi-channel support';
+            'Custom training';
+            'Advanced analytics';
+            'API integrations';
+            'Human handoff';
+            'Priority support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Enterprise Chatbot',
           price='$35k+',
           duration='8–16 weeks',
-          features={[,
-            'Everything in Professional',;
-            'Custom development',;
-            'Advanced AI models',;
-            'White-label options',;
-            'Dedicated support',;
-            'SLA guarantees',;
-            'On-premise deployment',;
+          features={[
+            'Everything in Professional';
+            'Custom development';
+            'Advanced AI models';
+            'White-label options';
+            'Dedicated support';
+            'SLA guarantees';
+            'On-premise deployment';
           ]}
         />,
       </div>,
@@ -177,55 +171,49 @@ function Pricing() {,
           and reduces support workload.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-          >,
+            className='bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-blue-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,
-function Plan({,
-  name,;
-  price,;
-  duration,;
-  features,;
-}: {,
+function Plan({
+  name;
+  price;
+  duration;
+  features;
+}: {
   name: string,
   price: string,
   duration: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow'>,
-      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name,}</h4>,
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-blue-60o0 mb-1'>{price}</div>,
       <div className='text-gray-50o0 mb-6'>{duration}</div>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-green-50o0 mr-2 mt-1'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='mailto: kleber@ziontechgroup.com?subject=AI Chatbot Development Inquiry',
-        className='block w-full mt-6 bg-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors',
-      >,
+        className='block w-full mt-6 bg-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors'>,
         Get Started,
       </a>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

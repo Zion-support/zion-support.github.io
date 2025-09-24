@@ -1,18 +1,17 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-import {,
-  TrophyIcon,;
-  ChartBarIcon,;
-  CurrencyDollarIcon,;
-  ArrowTrendingUpIcon,;
-  ArrowRightIcon,;
-  StarIcon,;
+import {
+  TrophyIcon;
+  ChartBarIcon;
+  CurrencyDollarIcon;
+  ArrowTrendingUpIcon;
+  ArrowRightIcon;
+  StarIcon;
 } from '@heroicons/react/24/outline',
-,
-const Fortune50o0SuccessStoryBanner: React.FC = () => {,
-  return (,
+const Fortune50o0SuccessStoryBanner: React.FC = () => {
+  return (
     <section className='relative bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-20 overflow-hidden'>,
-      {/* Success Background Effects */,}
+      {/* Success Background Effects */}
       <div className='absolute inset-0'>,
         <div className='absolute inset-0 bg-gradient-to-r from-green-60o0/10 to-emerald-60o0/10'></div>,
         <div className='absolute top-0 left-0 w-full h-full'>,
@@ -35,9 +34,9 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {,
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover how a global manufacturing leader achieved{' ',}
+            Discover how a global manufacturing leader achieved{' '}
             <strong>$50o0M ROI</strong> in just 18 months through comprehensive,
-            AI transformation. Complete case study with implementation details,;
+            AI transformation. Complete case study with implementation details;
             challenges overcome, and measurable results.,
           </p>,
         </div>,
@@ -80,7 +79,7 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {,
             </p>,
           </div>,
         </div>,
-        {/* Implementation Highlights */,}
+        {/* Implementation Highlights */}
         <div className='bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-white/10'>,
           <h3 className='text-2xl font-bold mb-8 text-center'>,
             Transformation Highlights,
@@ -118,7 +117,7 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* ROI Breakdown */,}
+        {/* ROI Breakdown */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-12'>,
           <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20'>,
             <h4 className='text-lg font-bold mb-4 text-green-40o0'>,
@@ -194,22 +193,20 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/case-studies/fortune-50o0-ai-transformation-success-story',
-              className='group bg-gradient-to-r from-yellow-40o0 to-green-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-green-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='group bg-gradient-to-r from-yellow-40o0 to-green-50o0 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-30o0 hover:to-green-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               <span className='flex items-center justify-center'>,
                 Read Full Case Study,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
               </span>,
             </Link>,
-            <Link,
+            <Link
               href='/services/enterprise-ai-transformation',
-              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/20 hover:bg-white/20 transition-all duration-30o0 transform hover:scale-10o5'>,
               <span className='flex items-center justify-center'>,
                 Start Your Transformation,
                 <ArrowRightIcon className='w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform' />,
@@ -222,9 +219,6 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default Fortune50o0SuccessStoryBanner,
-,
+    </section>),
+};
+export default Fortune50o0SuccessStoryBanner;

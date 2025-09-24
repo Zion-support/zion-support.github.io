@@ -1,5 +1,4 @@
 // Type definitions for projects,
-interface projects {,
+interface projects {
   // TODO: Add proper type definitions,
-,};
-,
+};

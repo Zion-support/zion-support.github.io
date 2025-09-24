@@ -1,57 +1,53 @@
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
-import {,
-  Check,;
-  Star,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Brain,;
-  Atom,;
-  Rocket,;
-  Target,;
-  Server,;
-  Building,;
-  Shield,;
-  Globe,;
-  Zap,;
-  TrendingUp,;
-  Users,;
-  Award,;
+import {
+  Check;
+  Star;
+  ArrowRight;
+  Phone;
+  Mail;
+  MapPin;
+  Brain;
+  Atom;
+  Rocket;
+  Target;
+  Server;
+  Building;
+  Shield;
+  Globe;
+  Zap;
+  TrendingUp;
+  Users;
+  Award;
 } from 'lucide-react',
-,
 // Import all our new services,
 import { advancedAIAutomationPlatforms20o25 } from '../data/20o25-advanced-ai-automation-platforms',
 import { innovativeITInfrastructureSolutions20o25 } from '../data/20o25-innovative-it-infrastructure-solutions',
 import { specializedMicroSaasSolutions20o25 } from '../data/20o25-specialized-micro-saas-solutions',
 import { emergingTechnologyServices20o25 } from '../data/20o25-emerging-technology-services',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const ServiceCard = ({ service, index }: { service: any, index: number ,}) => (,
+const ServiceCard = ({ service, index }: { service: any, index: number }) => (
   <motion.div,
-    initial={{ opacity: 0, y: 20 ,}}
-    animate={{ opacity: 1, y: 0 ,}}
-    transition={{ duration: 0.5, delay: index * 0.1 ,}}
-    className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 hover: scale-10o5 ${,
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 hover: scale-10o5 ${
       service.popular ? 'ring-2 ring-blue-50o0' : '',
-    ,}`}
-    style={{,
-      background: `linear-gradient(135deg, ${service.color})`,;
+    }`}
+    style={{
+      background: `linear-gradient(135deg, ${service.color})`;
     }}
   >,
-    {service.popular && (,
+    {service.popular && (
       <div className='absolute -right-2 -top-2 bg-blue-50o0 text-white px-3 py-1 rounded-full text-sm font-semibold'>,
         Popular,
-      </div>,
-    )}
+      </div>)}
 ,
     <div className='text-white'>,
       <div className='text-4xl mb-4'>{service.icon}</div>,
@@ -75,12 +71,11 @@ const ServiceCard = ({ service, index }: { service: any, index: number ,}) => (,
       <div className='mb-4'>,
         <h4 className='font-semibold mb-2'>Key Benefits: </h4>,
         <ul className='space-y-1'>,
-          {service.benefits.slice(0, 3).map((benefit: string, idx: number) => (,
-            <li key={idx,} className='text-sm flex items-start'>,
+          {service.benefits.slice(0, 3).map((benefit: string, idx: number) => (
+            <li key={idx} className='text-sm flex items-start'>,
               <Check className='w-3 h-3 mr-2 mt-0.5 flex-shrink-0' />,
               {benefit}
-            </li>,
-          ))}
+            </li>))}
         </ul>,
       </div>,
       <div className='mb-4'>,
@@ -91,36 +86,33 @@ const ServiceCard = ({ service, index }: { service: any, index: number ,}) => (,
       </div>,
       <div className='mb-4'>,
         <h4 className='font-semibold mb-2'>Market Position: </h4>,
-        <div className='text-sm opacity-75'>{service.marketPosition,}</div>,
+        <div className='text-sm opacity-75'>{service.marketPosition}</div>,
       </div>,
       <div className='mb-4'>,
         <h4 className='font-semibold mb-2'>ROI: </h4>,
-        <div className='text-sm opacity-75'>{service.roi,}</div>,
+        <div className='text-sm opacity-75'>{service.roi}</div>,
       </div>,
-      <a,
+      <a
         href={service.link}
-        className='inline-flex items-center justify-center w-full px-4 py-2 bg-white text-gray-90o0 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors',
-      >,
+        className='inline-flex items-center justify-center w-full px-4 py-2 bg-white text-gray-90o0 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors'>,
         Learn More <ArrowRight className='w-4 h-4 ml-2' />,
       </a>,
     </div>,
-  </motion.div>,
-),
-,
-const ServiceCategory = ({,
-  title,;
-  services,;
-  icon: Icon,;
-  color,;
-}: {,
+  </motion.div>),
+const ServiceCategory = ({
+  title;
+  services;
+  icon: Icon;
+  color;
+}: {
   title: string,
   services: any[],
   icon: any,
   color: string,
-,}) => (,
+}) => (
   <div className='mb-16'>,
     <div className='text-center mb-12'>,
-      <div,
+      <div
         className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${color}`}
       >,
         <Icon className='w-8 h-8 text-white' />,
@@ -132,14 +124,11 @@ const ServiceCategory = ({,
       </p>,
     </div>,
     <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-      {services.map((service, index) => (,
-        <ServiceCard key={service.id} service={service} index={index} />,
-      ))}
+      {services.map((service, index) => (
+        <ServiceCard key={service.id} service={service} index={index} />))}
     </div>,
-  </div>,
-),
-,
-const ContactSection = () => (,
+  </div>),
+const ContactSection = () => (
   <div className='bg-gradient-to-r from-blue-60o0 to-purple-70o0 text-white py-20'>,
     <div className='max-w-6xl mx-auto px-6 text-center'>,
       <h2 className='text-4xl font-bold mb-8'>,
@@ -154,7 +143,7 @@ const ContactSection = () => (,
         <div className='text-center'>,
           <Phone className='w-12 h-12 mx-auto mb-4 text-blue-20o0' />,
           <h3 className='text-xl font-semibold mb-2'>Call Us</h3>,
-          <p className='text-blue-10o0'>{contactInfo.mobile,}</p>,
+          <p className='text-blue-10o0'>{contactInfo.mobile}</p>,
         </div>,
         <div className='text-center'>,
           <Mail className='w-12 h-12 mx-auto mb-4 text-blue-20o0' />,
@@ -168,26 +157,22 @@ const ContactSection = () => (,
         </div>,
       </div>,
       <div className='space-y-4'>,
-        <a,
-          href={`tel: ${contactInfo.mobile,}`}
-          className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-colors mr-4',
-        >,
+        <a
+          href={`tel: ${contactInfo.mobile}`}
+          className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover: bg-gray-10o0 transition-colors mr-4'>,
           <Phone className='w-5 h-5 mr-2' />,
           Call Now,
         </a>,
-        <a,
-          href={`mailto:${contactInfo.email,}`}
-          className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors',
-        >,
+        <a
+          href={`mailto:${contactInfo.email}`}
+          className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors'>,
           <Mail className='w-5 h-5 mr-2' />,
           Send Email,
         </a>,
       </div>,
     </div>,
-  </div>,
-),
-,
-const StatsSection = () => (,
+  </div>),
+const StatsSection = () => (
   <div className='py-20 bg-gray-50'>,
     <div className='max-w-6xl mx-auto px-6'>,
       <div className='text-center mb-16'>,
@@ -230,90 +215,83 @@ const StatsSection = () => (,
         </div>,
       </div>,
     </div>,
-  </div>,
-),
-,
-export default function UltimateServicesShowcase20o25() {,
-  return (,
+  </div>),
+export default function UltimateServicesShowcase20o25() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='20o25 Ultimate Services Showcase - Zion Tech Group',
         description='Discover our comprehensive portfolio of innovative AI, IT, and micro SAAS services. Transform your business with cutting-edge technology solutions.',
-        keywords={[,
-          'AI services',;
-          'IT solutions',;
-          'micro SAAS',;
-          'quantum computing',;
-          'blockchain',;
-          'robotics',;
-          'Zion Tech Group',;
+        keywords={[
+          'AI services';
+          'IT solutions';
+          'micro SAAS';
+          'quantum computing';
+          'blockchain';
+          'robotics';
+          'Zion Tech Group';
         ]}
       />,
       {/* Hero Section */}
       <div className='bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-pink-60o0 text-white py-20'>,
         <div className='max-w-6xl mx-auto px-6 text-center'>,
           <motion.h1,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className='text-6xl font-bold mb-6',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-6xl font-bold mb-6'>,
             20o25 Ultimate Services Showcase,
           </motion.h1>,
           <motion.p,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className='text-2xl mb-8 max-w-4xl mx-auto',
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-2xl mb-8 max-w-4xl mx-auto'>,
             Transform your business with our comprehensive portfolio of,
             cutting-edge AI, IT infrastructure, and specialized micro SAAS,
             solutions. Stay ahead of the competition with innovative technology.,
           </motion.p>,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
-            className='flex flex-col sm: flex-row gap-4 justify-center',
-          >,
-            <a,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='flex flex-col sm: flex-row gap-4 justify-center'>,
+            <a
               href='#services',
-              className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-colors',
-            >,
+              className='inline-flex items-center justify-center px-8 py-4 bg-white text-blue-60o0 rounded-lg font-semibold text-lg hover:bg-gray-10o0 transition-colors'>,
               Explore Services <ArrowRight className='w-5 h-5 ml-2' />,
             </a>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors',
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-60o0 transition-colors'>,
               <Phone className='w-5 h-5 mr-2' />,
               Get Started,
             </a>,
           </motion.div>,
         </div>,
       </div>,
-      {/* Services Section */,}
+      {/* Services Section */}
       <div id='services' className='py-20'>,
         <div className='max-w-6xl mx-auto px-6'>,
-          <ServiceCategory,
+          <ServiceCategory
             title='Advanced AI Automation Platforms',
             services={advancedAIAutomationPlatforms20o25}
             icon={Brain}
             color='bg-gradient-to-r from-blue-50o0 to-cyan-50o0',
           />,
-          <ServiceCategory,
+          <ServiceCategory
             title='Innovative IT Infrastructure Solutions',
             services={innovativeITInfrastructureSolutions20o25}
             icon={Server}
             color='bg-gradient-to-r from-indigo-50o0 to-purple-50o0',
           />,
-          <ServiceCategory,
+          <ServiceCategory
             title='Specialized Micro SAAS Solutions',
             services={specializedMicroSaasSolutions20o25}
             icon={Target}
             color='bg-gradient-to-r from-orange-50o0 to-red-50o0',
           />,
-          <ServiceCategory,
+          <ServiceCategory
             title='Emerging Technology Services',
             services={emergingTechnologyServices20o25}
             icon={Rocket}
@@ -325,7 +303,5 @@ export default function UltimateServicesShowcase20o25() {,
       <StatsSection />,
       {/* Contact Section */}
       <ContactSection />,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,5 +1,5 @@
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>,
         <p className='text-sm font-semibold leading-6 text-blue-40o0'>Guide</p>,
@@ -21,16 +21,14 @@ export default function Page() {,
             <li>Exception workflows and periodic reviews</li>,
           </ul>,
           <p className='mt-8'>,
-            <a,
+            <a
               href='/contact',
-              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0',
-            >,
+              className='inline-flex items-center rounded-md bg-blue-60o0 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-70o0'>,
               Talk to us,
             </a>,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

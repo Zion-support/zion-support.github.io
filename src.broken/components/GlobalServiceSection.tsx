@@ -1,9 +1,7 @@
-export function GlobalServiceSection() {,
-  return (,
+export function GlobalServiceSection() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

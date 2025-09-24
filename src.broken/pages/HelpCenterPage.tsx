@@ -1,9 +1,7 @@
-export function HelpCenterPage() {,
-  return (,
+export function HelpCenterPage() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

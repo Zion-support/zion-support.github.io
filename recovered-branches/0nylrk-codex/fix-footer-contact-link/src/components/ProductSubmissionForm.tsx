@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
@@ -6,14 +6,13 @@ import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
-,
-import {,
-  Form,;
-  FormControl,;
-  FormDescription,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
   FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -22,147 +21,122 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { TabsListTabsTriggerTabsContent } from "@/components/ui/tabs",
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
-,
 // Define the form schema with zod,
-const productSchema = z.object({,
-  title: z.string().min(3"Title must be at least 3 characters"),;
-  description: z.string().min(10"Description must be at least 10 characters"),;
-  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0{,
-    message: "Price must be a valid number",}),;
-  category: z.string().min(1"Please select a category"),;
-  image: z.instanceof(File).optional(),;
-  tags: z.string().optional(),}),
-,
+const productSchema = z.object({
+  title: z.string().min(3"Title must be at least 3 characters");
+  description: z.string().min(10"Description must be at least 10 characters");
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0{
+    message: "Price must be a valid number"});
+  category: z.string().min(1"Please select a category");
+  image: z.instanceof(File).optional();
+  tags: z.string().optional()}),
 // Type for our form values,
 type ProductFormValues = z.infer<typeof productSchema>,
-,
-export function ProductSubmissionForm() {,
+export function ProductSubmissionForm() {
   const { user } = useAuth(),
   const { toast } = useToast(),
   const navigate = useNavigate(),
   const [isSubmittingsetIsSubmitting] = React.useState(false),
   const [imagePreviewsetImagePreview] = React.useState(null as string | null),
   const [activeTabsetActiveTab] = React.useState("manual"),
-,
   // Initialize the form,
-  const form = useForm<ProductFormValues>({,
-    resolver: zodResolver(productSchema),;
-    defaultValues: {,
-      title: "",;
-      description: "",;
-      price: "",;
-      category: "",;
-      tags: "",}}),
-,
+  const form = useForm<ProductFormValues>({
+    resolver: zodResolver(productSchema);
+    defaultValues: {
+      title: "";
+      description: "";
+      price: "";
+      category: "";
+      tags: ""}}),
   // Handle image upload preview,
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
-    if (file) {,
+    if (file) {
       form.setValue("image"file),
       const reader = new FileReader(),
-      reader.onloadend = () => {,
+      reader.onloadend = () => {
         setImagePreview(reader.result as string),
-      ,};
-      reader.readAsDataURL(file),
-    }
+      };
+      reader.readAsDataURL(file)}
   };
-,
   // Apply AI-generated content to the form,
-  const handleApplyGenerated = (content: any) => {,
+  const handleApplyGenerated = (content: any) => {
     form.setValue("description"content.description),
     form.setValue("tags"content.tags.join(")),
-,
     // Set a default price as the middle of the suggested range,
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
     form.setValue("price"averagePrice),
-,
     // Switch to the manual tab to show applied content,
     setActiveTab("manual"),
-  ,};
-,
+  };
   // Handle form submission,
-  const onSubmit = async (values: ProductFormValues) => {,
-    if (!user) {,
-      toast({,
-        title: "Authentication Required",;
-        description: "You must be logged in to publish products",;
-        variant: "destructive",}),
-      return,
-    }
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+        title: "Authentication Required";
+        description: "You must be logged in to publish products";
+        variant: "destructive"}),
+      return}
 ,
     setIsSubmitting(true),
-,
-    try {,
+    try {
       // Create the product listing,
-      const productData = {,
-        title: values.title,;
-        description: values.description,;
-        price: parseFloat(values.price),;
-        category: values.category,;
+      const productData = {
+        title: values.title;
+        description: values.description;
+        price: parseFloat(values.price);
+        category: values.category;
         currency: "USD"// Default currency,
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],;
-        author: {,
-          name: user.displayName || "Anonymous Creator",;
-          id: user.id,},;
-        createdAt: new Date().toISOString(),};
-,
-      const { data: productRecorderror: productError ,} = await supabase,
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        author: {
+          name: user.displayName || "Anonymous Creator";
+          id: user.id};
+        createdAt: new Date().toISOString()};
+      const { data: productRecorderror: productError } = await supabase,
         .from('product_listings'),
         .insert([productData]),
         .select('id'),
         .single(),
-,
-      if (productError) {,
-        throw new Error(productError.message),
-      }
+      if (productError) {
+        throw new Error(productError.message)}
 ,
       // If we have an imageupload it,
-      if (values.image) {,
+      if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
-        const { error: uploadError ,} = await supabase.storage,
+        const { error: uploadError } = await supabase.storage,
           .from('products'),
           .upload(imagePathvalues.image),
-,
-        if (uploadError) {,
-          throw new Error(uploadError.message),
-        }
+        if (uploadError) {
+          throw new Error(uploadError.message)}
 ,
         // Get the public URL for the image,
-        const { data: publicUrlData ,} = supabase.storage,
+        const { data: publicUrlData } = supabase.storage,
           .from('products'),
           .getPublicUrl(imagePath),
-,
         // Update the product with the image URL,
-        const { error: updateError ,} = await supabase,
+        const { error: updateError } = await supabase,
           .from('product_listings'),
-          .update({,
+          .update({
             images: [publicUrlData.publicUrl],
-          ,}),
+          }),
           .eq('id'productRecord.id),
-,
-        if (updateError) {,
-          throw new Error(updateError.message),
-        }
+        if (updateError) {
+          throw new Error(updateError.message)}
       }
 ,
       // Show success message,
-      toast({,
-        title: "Product Published!",;
-        description: "Your product has been successfully published on Zion.",}),
-,
+      toast({
+        title: "Product Published!";
+        description: "Your product has been successfully published on Zion."}),
       // Redirect to product page,
-      navigate(`/marketplace/listing/${productRecord.id}`),
-    } catch (error) {,
-      toast({,
-        title: "Publication Failed",;
-        description: error instanceof Error ? error.message : "An unknown error occurred",;
-        variant: "destructive",}),
-    } finally {,
-      setIsSubmitting(false),
-    }
+      navigate(`/marketplace/listing/${productRecord.id}`)} catch (error) {
+      toast({
+        title: "Publication Failed";
+        description: error instanceof Error ? error.message : "An unknown error occurred";
+        variant: "destructive"})} finally {
+      setIsSubmitting(false)}
   };
-,
-  return (,
+  return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
       <TabsList className="grid grid-cols-2 mb-6">,
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">,
@@ -176,10 +150,10 @@ export function ProductSubmissionForm() {,
       <TabsContent value="manual">,
         <Form {...form}>,
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">,
-            <FormField,
+            <FormField
               control={form.control}
               name="title",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Product Title</FormLabel>,
                   <FormControl>,
@@ -189,17 +163,16 @@ export function ProductSubmissionForm() {,
                     Create a compelling title that describes your product,
                   </FormDescription>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={form.control}
               name="description",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Description</FormLabel>,
                   <FormControl>,
-                    <Textarea,
+                    <Textarea
                       placeholder="Describe your product in detail...",
                       className="min-h-32",
                       {...field} ,
@@ -209,14 +182,13 @@ export function ProductSubmissionForm() {,
                     Provide a detailed description of what you're offering,
                   </FormDescription>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
             <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
-              <FormField,
-                control={form.control,}
+              <FormField
+                control={form.control}
                 name="price",
-                render={({ field }) => (,
+                render={({ field }) => (
                   <FormItem>,
                     <FormLabel>Price (USD)</FormLabel>,
                     <FormControl>,
@@ -226,19 +198,18 @@ export function ProductSubmissionForm() {,
                       Set your price in USD,
                     </FormDescription>,
                     <FormMessage />,
-                  </FormItem>,
-                )}
+                  </FormItem>)}
               />,
-              <FormField,
+              <FormField
                 control={form.control}
                 name="category",
-                render={({ field }) => (,
+                render={({ field }) => (
                   <FormItem>,
                     <FormLabel>Category</FormLabel>,
                     <FormControl>,
-                      <select,
+                      <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder: text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-                        {...field,}
+                        {...field}
                       >,
                         <option value="">Select a category</option>,
                         <option value="digital_product">Digital Product</option>,
@@ -250,14 +221,13 @@ export function ProductSubmissionForm() {,
                       </select>,
                     </FormControl>,
                     <FormMessage />,
-                  </FormItem>,
-                )}
+                  </FormItem>)}
               />,
             </div>,
-            <FormField,
+            <FormField
               control={form.control}
               name="tags",
-              render={({ field }) => (,
+              render={({ field }) => (
                 <FormItem>,
                   <FormLabel>Tags</FormLabel>,
                   <FormControl>,
@@ -267,17 +237,16 @@ export function ProductSubmissionForm() {,
                     Add relevant tags to help users find your product (e.g.aiproductivitydesign),
                   </FormDescription>,
                   <FormMessage />,
-                </FormItem>,
-              )}
+                </FormItem>)}
             />,
-            <FormField,
+            <FormField
               control={form.control}
               name="image",
-              render={() => (,
+              render={() => (
                 <FormItem>,
                   <FormLabel>Product Image</FormLabel>,
                   <FormControl>,
-                    <Input,
+                    <Input
                       type="file",
                       accept="image/*",
                       onChange={handleImageChange}
@@ -288,42 +257,37 @@ export function ProductSubmissionForm() {,
                     Upload a high-quality image of your product (recommended size: 1200x800px),
                   </FormDescription>,
                   <FormMessage />,
-                  {imagePreview && (,
+                  {imagePreview && (
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">,
-                      <AspectRatio ratio={3/2,}>,
-                        <img,
+                      <AspectRatio ratio={3/2}>,
+                        <img
                           src={imagePreview} ,
                           alt="Preview",
                           className="w-full h-full object-cover",
                         />,
                       </AspectRatio>,
-                    </div>,
-                  )}
-                </FormItem>,
-              )}
+                    </div>)}
+                </FormItem>)}
             />,
             <div className="flex justify-end">,
-              <Button,
+              <Button
                 type="submit",
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-              >,
-                {isSubmitting ? "Publishing..." : "Publish Product",}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">,
+                {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>,
             </div>,
           </form>,
         </Form>,
       </TabsContent>,
       <TabsContent value="ai">,
-        <AIListingGenerator,
+        <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
-          initialValues={{,
-            title: form.getValues("title"),;
+          initialValues={{
+            title: form.getValues("title");
             category: form.getValues("category"),
-          ,}}
+          }}
         />,
       </TabsContent>,
-    </Tabs>,
-  ),
-}
+    </Tabs>)}
 ,

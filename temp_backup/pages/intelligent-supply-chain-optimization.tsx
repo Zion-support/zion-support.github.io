@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function IntelligentSupplyChainOptimization() {,
-  return (,
+export default function IntelligentSupplyChainOptimization() {
+  return (
     <div className='relative isolate'>,
       <section className='px-6 lg: px-10 py-16 lg:py-24'>,
         <div className='max-w-6xl mx-auto'>,
@@ -14,40 +13,38 @@ export default function IntelligentSupplyChainOptimization() {,
             exception management.,
           </p>,
           <div className='mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-            {[,
-              {,
-                title: 'Demand Forecasting',;
-                desc: 'Hierarchical time series with promotions and seasonality, MAPE dashboards.',;
-              },;
-              {,
-                title: 'Inventory Optimization',;
-                desc: 'Multi-echelon safety stock, reorder points, and service levels.',;
-              },;
-              {,
-                title: 'Network Optimization',;
-                desc: 'Facility location, route planning, and carrier selection with constraints.',;
-              },;
-              {,
-                title: 'Anomaly Detection',;
-                desc: 'Supplier risk, late shipments, and fraud detection with alerts.',;
-              },;
-              {,
-                title: 'What-if Simulations',;
-                desc: 'Scenario testing for lead time, MOQ, demand spikes, and costs.',;
-              },;
-              {,
-                title: 'Integrations',;
-                desc: 'ERP/WMS/TMS connectors and data lake exports.',;
-              },;
-            ].map(f => (,
-              <div,
+            {[
+              {
+                title: 'Demand Forecasting';
+                desc: 'Hierarchical time series with promotions and seasonality, MAPE dashboards.';
+              };
+              {
+                title: 'Inventory Optimization';
+                desc: 'Multi-echelon safety stock, reorder points, and service levels.';
+              };
+              {
+                title: 'Network Optimization';
+                desc: 'Facility location, route planning, and carrier selection with constraints.';
+              };
+              {
+                title: 'Anomaly Detection';
+                desc: 'Supplier risk, late shipments, and fraud detection with alerts.';
+              };
+              {
+                title: 'What-if Simulations';
+                desc: 'Scenario testing for lead time, MOQ, demand spikes, and costs.';
+              };
+              {
+                title: 'Integrations';
+                desc: 'ERP/WMS/TMS connectors and data lake exports.';
+              };
+            ].map(f => (
+              <div
                 key={f.title}
-                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur',
-              >,
+                className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>,
                 <h3 className='text-lg font-semibold text-white'>{f.title}</h3>,
                 <p className='mt-2 text-sm text-gray-30o0'>{f.desc}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div className='mt-12'>,
             <h2 className='text-2xl font-semibold'>Pricing</h2>,
@@ -85,54 +82,46 @@ export default function IntelligentSupplyChainOptimization() {,
               </div>,
             </div>,
             <p className='mt-4 text-sm text-gray-40o0'>,
-              Market references: {' ',}
-              <a,
+              Market references: {' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://www.o9solutions.com/',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 o9 Solutions,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://www.kinaxis.com/en/products/rapidresponse',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Kinaxis,
-              </a>,
-              ,{' '}
-              <a,
+              </a>,{' '}
+              <a
                 className='underline hover: text-cyan-30o0',
                 href='https://www.arkieva.com/',
                 target='_blank',
-                rel='noreferrer',
-              >,
+                rel='noreferrer'>,
                 Arkieva,
               </a>,
               .,
             </p>,
           </div>,
           <div className='mt-12 flex flex-wrap items-center gap-4'>,
-            <Link,
+            <Link
               href='/contact',
-              className='px-5 py-3 rounded-lg bg-cyan-40o0 text-black font-semibold',
-            >,
+              className='px-5 py-3 rounded-lg bg-cyan-40o0 text-black font-semibold'>,
               Optimize My Network,
             </Link>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='px-5 py-3 rounded-lg border border-white/20',
-            >,
+              className='px-5 py-3 rounded-lg border border-white/20'>,
               Email: kleber@ziontechgroup.com,
             </a>,
             <span className='text-gray-40o0'>Call: +1 30o2 464 0950</span>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

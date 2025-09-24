@@ -1,24 +1,19 @@
 "use client",
 import React{ useState } from 'react',
-,
-export default function RevolutionaryNewsletterSignup20o26() {,
+export default function RevolutionaryNewsletterSignup20o26() {
   const [emailsetEmail] = useState(''),
   const [isSubscribedsetIsSubscribed] = useState(false),
   const [isLoadingsetIsLoading] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
-,
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
-,
     setIsSubscribed(true),
     setIsLoading(false),
-  ,};
-,
-  if (isSubscribed) {,
-    return (,
+  };
+  if (isSubscribed) {
+    return (
       <div className="bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div className="text-6xl mb-6">🎉</div>,
@@ -48,11 +43,10 @@ export default function RevolutionaryNewsletterSignup20o26() {,
             </div>,
           </div>,
         </div>,
-      </div>,
-    ),
-  ,}
+      </div>),
+  }
 ,
-  return (,
+  return (
     <div className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
@@ -70,7 +64,7 @@ export default function RevolutionaryNewsletterSignup20o26() {,
         </div>,
         <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-cyan-50o0/20">,
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-            {/* Benefits */,}
+            {/* Benefits */}
             <div>,
               <h3 className="text-2xl font-bold mb-6">What 'You', 'll Get: </h3>,
               <div className="space-y-4">,
@@ -119,7 +113,7 @@ export default function RevolutionaryNewsletterSignup20o26() {,
                   <label htmlFor="email" className="block text-sm font-medium mb-2">,
                     Email Address,
                   </label>,
-                  <input,
+                  <input
                     type="email",
                     id="email",
                     value={email}
@@ -130,7 +124,7 @@ export default function RevolutionaryNewsletterSignup20o26() {,
                   />,
                 </div>,
                 <div className="flex items-center gap-2">,
-                  <input,
+                  <input
                     type="checkbox",
                     id="terms",
                     className="w-4 h-4 text-cyan-50o0 bg-white/10 border-cyan-50o0/30 rounded focus:ring-cyan-50o0",
@@ -140,19 +134,16 @@ export default function RevolutionaryNewsletterSignup20o26() {,
                     I agree to receive revolutionary AI content and ROI opportunities,
                   </label>,
                 </div>,
-                <button,
+                <button
                   type="submit",
-                  disabled={isLoading,}
-                  className="w-full px-6 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-lg hover: from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5 disabled:opacity-50 disabled:cursor-not-allowed",
-                >,
-                  {isLoading ? (,
+                  disabled={isLoading}
+                  className="w-full px-6 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white font-bold rounded-lg hover: from-cyan-40o0 hover:to-purple-40o0 transition-all duration-30o0 transform hover:scale-10o5 disabled:opacity-50 disabled:cursor-not-allowed">,
+                  {isLoading ? (
                     <div className="flex items-center justify-center gap-2">,
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>,
                       Joining Revolution...,
-                    </div>,
-                  ) : (,
-                    'Join the AI Revolution',
-                  ),}
+                    </div>) : (
+                    'Join the AI Revolution')}
                 </button>,
               </form>,
               {/* Trust Indicators */}
@@ -181,21 +172,18 @@ export default function RevolutionaryNewsletterSignup20o26() {,
             Already a member? <span className="text-cyan-40o0 font-semibold">Access your exclusive content here</span>,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <a,
+            <a
               href="/member-dashboard",
-              className="px-6 py-3 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-50o0 hover:text-white transition-all duration-30o0",
-            >,
+              className="px-6 py-3 border-2 border-cyan-50o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-50o0 hover:text-white transition-all duration-30o0">,
               Member Dashboard,
             </a>,
-            <a,
+            <a
               href="/exclusive-content",
-              className="px-6 py-3 border-2 border-purple-50o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-50o0 hover:text-white transition-all duration-30o0",
-            >,
+              className="px-6 py-3 border-2 border-purple-50o0 text-purple-40o0 font-semibold rounded-lg hover:bg-purple-50o0 hover:text-white transition-all duration-30o0">,
               Exclusive Content,
             </a>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}

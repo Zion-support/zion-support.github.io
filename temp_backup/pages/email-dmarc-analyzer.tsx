@@ -1,16 +1,15 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-,
-export default function EmailDmarcAnalyzerPage() {,
-  return (,
+export default function EmailDmarcAnalyzerPage() {
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Email DMARC Analyzer | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Monitor DMARC aggregate reports, SPF/DKIM posture, domain reputation hints, and deliverability scorecards.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/email-dmarc-analyzer',
         />,
@@ -25,37 +24,31 @@ export default function EmailDmarcAnalyzerPage() {,
             provider insights for small teams.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
-            {[,
-              'DMARC aggregate/forensic reports',;
-              'SPF/DKIM audits & DNS history',;
-              'Provider insights & tips',;
-              'Weekly deliverability scorecard',;
-            ].map(f => (,
-              <div,
+            {[
+              'DMARC aggregate/forensic reports';
+              'SPF/DKIM audits & DNS history';
+              'Provider insights & tips';
+              'Weekly deliverability scorecard';
+            ].map(f => (
+              <div
                 key={f}
-                className='p-4 rounded-xl bg-black/40 border border-amber-500/30 text-slate-200',
-              >,
+                className='p-4 rounded-xl bg-black/40 border border-amber-500/30 text-slate-200'>,
                 {f}
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div className='flex gap-3'>,
-            <a,
+            <a
               href='/contact',
-              className='px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-700 text-white',
-            >,
+              className='px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-700 text-white'>,
               Start from $39/mo,
             </a>,
-            <a,
+            <a
               href='/market-pricing',
-              className='px-6 py-3 rounded-xl border border-gray-700 text-gray-200',
-            >,
+              className='px-6 py-3 rounded-xl border border-gray-700 text-gray-200'>,
               See market pricing,
             </a>,
           </div>,
         </div>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-}
+    </UltraAdvancedFuturisticBackground>)}
 ,

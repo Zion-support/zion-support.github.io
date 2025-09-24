@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {,
-  return (,
+const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>,
@@ -19,16 +18,14 @@ const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {,
               implementationROI optimizationand competitive advantage.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/ai-20o25-ultimate-business-transformation',
-                className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-              >,
+                className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                 Read the Complete Guide,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center',
-              >,
+                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center'>,
                 Get Expert Consultation,
               </Link>,
             </div>,
@@ -80,9 +77,6 @@ const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o25UltimateBusinessTransformationPromotionBanner,
-,
+    </section>),
+};
+export default AI20o25UltimateBusinessTransformationPromotionBanner;

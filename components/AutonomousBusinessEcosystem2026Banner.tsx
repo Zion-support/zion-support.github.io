@@ -1,23 +1,22 @@
 import Link from 'next/link',
-,
-const AutonomousBusinessEcosystem20o26Banner = () => {,
-  return (,
+const AutonomousBusinessEcosystem20o26Banner = () => {
+  return (
     <section className='relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-zinc-90o0 text-white py-20'>,
       {/* Autonomous system network visualization */}
       <div className='absolute inset-0'>,
         <div className='absolute top-1/4 left-1/4 w-48 h-48 bg-blue-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse'></div>,
-        <div,
+        <div
           className='absolute top-3/4 right-1/4 w-32 h-32 bg-green-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse',
-          style={{ animationDelay: '1s' ,}}
+          style={{ animationDelay: '1s' }}
         ></div>,
-        <div,
+        <div
           className='absolute bottom-1/4 left-1/2 w-40 h-40 bg-purple-50o0 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse',
-          style={{ animationDelay: '2s' ,}}
+          style={{ animationDelay: '2s' }}
         ></div>,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-8'>,
             <span className='text-sm font-medium'>,
               🤖 AUTONOMOUS BUSINESS ECOSYSTEM 20o26,
@@ -30,7 +29,7 @@ const AutonomousBusinessEcosystem20o26Banner = () => {,
               Ecosystem 20o26,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed'>,
             Experience the future of business with fully autonomous AI,
             ecosystems that manage, optimize, and scale your operations without,
@@ -62,22 +61,20 @@ const AutonomousBusinessEcosystem20o26Banner = () => {,
               </p>,
             </div>,
           </div>,
-          {/* CTA buttons */,}
+          {/* CTA buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/autonomous-business-ecosystem-20o26',
-              className='bg-gradient-to-r from-blue-40o0 to-green-40o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-50o0 hover:to-green-50o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-blue-40o0 to-green-40o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-50o0 hover:to-green-50o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Build Your Ecosystem →,
             </Link>,
-            <Link,
+            <Link
               href='/autonomous-business-ecosystem-20o26/case-studies',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-90o0 transition-all duration-30o0',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-90o0 transition-all duration-30o0'>,
               View Case Studies,
             </Link>,
           </div>,
-          {/* Ecosystem stats */,}
+          {/* Ecosystem stats */}
           <div className='mt-16 grid grid-cols-2 md: grid-cols-4 gap-8'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-blue-40o0'>10o0%</div>,
@@ -98,9 +95,6 @@ const AutonomousBusinessEcosystem20o26Banner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AutonomousBusinessEcosystem20o26Banner,
-,
+    </section>),
+};
+export default AutonomousBusinessEcosystem20o26Banner;

@@ -1,16 +1,15 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {,
-  return (,
+const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           MicroservicesArchitectureBenefitsAndChallengesChat - Zion Tech,
           Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='MicroservicesArchitectureBenefitsAndChallengesChat blog post',
         />,
@@ -20,9 +19,6 @@ const MicroservicesArchitectureBenefitsAndChallengesChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default MicroservicesArchitectureBenefitsAndChallengesChat,
-,
+    </div>),
+};
+export default MicroservicesArchitectureBenefitsAndChallengesChat;

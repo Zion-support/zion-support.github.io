@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom',
 import { MainNavigation } from './MainNavigation',
-export function Header() {,
-  return (,
+export function Header() {
+  return (
     <header className='bg-white shadow-sm border-b border-gray-20o0'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex justify-between items-center h-16'>,
@@ -15,7 +15,6 @@ export function Header() {,
           <MainNavigation />,
         </div>,
       </div>,
-    </header>,
-  ),
-,}
+    </header>),
+}
 ,

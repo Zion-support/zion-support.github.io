@@ -1,11 +1,10 @@
-export const metadata = {,
-  title: 'AI-Powered Tools | Zion Tech Group',;
+export const metadata = {
+  title: 'AI-Powered Tools | Zion Tech Group';
   description:,
-    'Cutting-edge AI-powered micro SAAS tools for content creation, automation, analytics, and business optimization. Leverage artificial intelligence to transform your workflow.',;
+    'Cutting-edge AI-powered micro SAAS tools for content creation, automation, analytics, and business optimization. Leverage artificial intelligence to transform your workflow.';
 };
-,
-export default function AIPoweredToolsPage() {,
-  return (,
+export default function AIPoweredToolsPage() {
+  return (
     <div className='min-h-screen bg-gray-50 py-12'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -13,50 +12,50 @@ export default function AIPoweredToolsPage() {,
             AI-Powered Micro SAAS Tools,
           </h1>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Cutting-edge AI-powered micro SAAS tools for content creation,;
+            Cutting-edge AI-powered micro SAAS tools for content creation;
             automation, analytics, and business optimization. Leverage,
             artificial intelligence to transform your workflow.,
           </p>,
         </div>,
         {/* AI Tool Categories */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          <AIToolCategory,
+          <AIToolCategory
             title='Content Generation',
             icon='✍️',
             description='AI-powered content creation and optimization tools',
-            tools={[,
-              'AI Blog Writer Pro',;
-              'Social Media Content Generator',;
-              'Email Marketing AI',;
-              'SEO Content Optimizer',;
-              'Video Script Generator',;
-              'Product Description AI',;
+            tools={[
+              'AI Blog Writer Pro';
+              'Social Media Content Generator';
+              'Email Marketing AI';
+              'SEO Content Optimizer';
+              'Video Script Generator';
+              'Product Description AI';
             ]}
           />,
-          <AIToolCategory,
+          <AIToolCategory
             title='Business Automation',
             icon='🤖',
             description='Intelligent automation for business processes',
-            tools={[,
-              'Smart Document Processor',;
-              'AI Customer Support Bot',;
-              'Automated Lead Scoring',;
-              'Invoice Processing AI',;
-              'Meeting Scheduler AI',;
-              'Workflow Automation Engine',;
+            tools={[
+              'Smart Document Processor';
+              'AI Customer Support Bot';
+              'Automated Lead Scoring';
+              'Invoice Processing AI';
+              'Meeting Scheduler AI';
+              'Workflow Automation Engine';
             ]}
           />,
-          <AIToolCategory,
+          <AIToolCategory
             title='Analytics & Insights',
             icon='📈',
             description='AI-driven analytics and business intelligence',
-            tools={[,
-              'Predictive Analytics Dashboard',;
-              'Customer Behavior AI',;
-              'Sales Forecasting Tool',;
-              'Market Trend Analyzer',;
-              'Competitor Intelligence AI',;
-              'ROI Optimization Engine',;
+            tools={[
+              'Predictive Analytics Dashboard';
+              'Customer Behavior AI';
+              'Sales Forecasting Tool';
+              'Market Trend Analyzer';
+              'Competitor Intelligence AI';
+              'ROI Optimization Engine';
             ]}
           />,
         </div>,
@@ -66,96 +65,96 @@ export default function AIPoweredToolsPage() {,
             Featured AI-Powered Tools,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            <AITool,
+            <AITool
               title='AI Content Studio',
               description='Complete content creation suite with AI writing, editing, and optimization',
-              features={[,
-                'Multi-format content generation',;
-                'Brand voice training',;
-                'SEO optimization',;
-                'Plagiarism detection',;
-                'Content calendar integration',;
-                'Performance analytics',;
+              features={[
+                'Multi-format content generation';
+                'Brand voice training';
+                'SEO optimization';
+                'Plagiarism detection';
+                'Content calendar integration';
+                'Performance analytics';
               ]}
               price='$29-99/month',
               category='Content Creation',
               useCase='Marketing teams, agencies, content creators',
               demoUrl='https: //demo.ziontechgroup.com/ai-content-studio',
             />,
-            <AITool,
+            <AITool
               title='Smart CRM Assistant',
               description='AI-powered CRM with intelligent lead scoring and automated follow-ups',
-              features={[,
-                'Predictive lead scoring',;
-                'Automated email sequences',;
-                'Meeting transcription',;
-                'Deal probability analysis',;
-                'Customer sentiment tracking',;
-                'Sales forecasting',;
+              features={[
+                'Predictive lead scoring';
+                'Automated email sequences';
+                'Meeting transcription';
+                'Deal probability analysis';
+                'Customer sentiment tracking';
+                'Sales forecasting';
               ]}
               price='$49-149/month',
               category='Sales & CRM',
               useCase='Sales teams, small businesses, startups',
               demoUrl='https: //demo.ziontechgroup.com/smart-crm',
             />,
-            <AITool,
+            <AITool
               title='AI Analytics Pro',
               description='Advanced business intelligence with natural language queries',
-              features={[,
-                'Natural language queries',;
-                'Automated insights generation',;
-                'Anomaly detection',;
-                'Custom dashboard creation',;
-                'Data visualization',;
-                'Mobile app access',;
+              features={[
+                'Natural language queries';
+                'Automated insights generation';
+                'Anomaly detection';
+                'Custom dashboard creation';
+                'Data visualization';
+                'Mobile app access';
               ]}
               price='$39-119/month',
               category='Analytics',
               useCase='Data analysts, executives, business owners',
               demoUrl='https: //demo.ziontechgroup.com/ai-analytics',
             />,
-            <AITool,
+            <AITool
               title='Document AI Processor',
               description='Intelligent document processing and data extraction',
-              features={[,
-                'OCR with 99% accuracy',;
-                'Smart data extraction',;
-                'Document classification',;
-                'Automated workflows',;
-                'API integration',;
-                'Bulk processing',;
+              features={[
+                'OCR with 99% accuracy';
+                'Smart data extraction';
+                'Document classification';
+                'Automated workflows';
+                'API integration';
+                'Bulk processing';
               ]}
               price='$19-79/month',
               category='Document Processing',
               useCase='Legal firms, accounting, healthcare, insurance',
               demoUrl='https: //demo.ziontechgroup.com/document-ai',
             />,
-            <AITool,
+            <AITool
               title='AI Email Marketing',
               description='Intelligent email marketing with personalization and optimization',
-              features={[,
-                'AI subject line optimization',;
-                'Send time optimization',;
-                'Content personalization',;
-                'A/B testing automation',;
-                'Unsubscribe prediction',;
-                'Revenue attribution',;
+              features={[
+                'AI subject line optimization';
+                'Send time optimization';
+                'Content personalization';
+                'A/B testing automation';
+                'Unsubscribe prediction';
+                'Revenue attribution';
               ]}
               price='$25-89/month',
               category='Email Marketing',
               useCase='E-commerce, SaaS, marketing agencies',
               demoUrl='https: //demo.ziontechgroup.com/ai-email',
             />,
-            <AITool,
+            <AITool
               title='Smart Inventory Manager',
               description='AI-powered inventory optimization and demand forecasting',
-              features={[,
-                'Demand forecasting',;
-                'Reorder point optimization',;
-                'Price optimization',;
-                'Supplier performance analysis',;
-                'Seasonal trend analysis',;
-                'Multi-location management',;
+              features={[
+                'Demand forecasting';
+                'Reorder point optimization';
+                'Price optimization';
+                'Supplier performance analysis';
+                'Seasonal trend analysis';
+                'Multi-location management';
               ]}
               price='$35-129/month',
               category='Inventory Management',
@@ -164,50 +163,50 @@ export default function AIPoweredToolsPage() {,
             />,
           </div>,
         </div>,
-        {/* AI Technology Stack */,}
+        {/* AI Technology Stack */}
         <div className='mb-16'>,
           <h2 className='text-3xl font-bold text-gray-90o0 text-center mb-12'>,
             AI Technology Stack,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-            <AITechnology,
+            <AITechnology
               category='Language Models',
-              technologies={[,
-                'GPT-4',;
-                'Claude',;
-                'Gemini',;
-                'Llama',;
-                'Custom Models',;
+              technologies={[
+                'GPT-4';
+                'Claude';
+                'Gemini';
+                'Llama';
+                'Custom Models';
               ]}
             />,
-            <AITechnology,
+            <AITechnology
               category='Machine Learning',
-              technologies={[,
-                'TensorFlow',;
-                'PyTorch',;
-                'Scikit-learn',;
-                'XGBoost',;
-                'AutoML',;
+              technologies={[
+                'TensorFlow';
+                'PyTorch';
+                'Scikit-learn';
+                'XGBoost';
+                'AutoML';
               ]}
             />,
-            <AITechnology,
+            <AITechnology
               category='NLP & Processing',
-              technologies={[,
-                'spaCy',;
-                'NLTK',;
-                'Transformers',;
-                'BERT',;
-                'RoBERTa',;
+              technologies={[
+                'spaCy';
+                'NLTK';
+                'Transformers';
+                'BERT';
+                'RoBERTa';
               ]}
             />,
-            <AITechnology,
+            <AITechnology
               category='Computer Vision',
-              technologies={[,
-                'OpenCV',;
-                'YOLO',;
-                'ResNet',;
-                'EfficientNet',;
-                'Custom CNNs',;
+              technologies={[
+                'OpenCV';
+                'YOLO';
+                'ResNet';
+                'EfficientNet';
+                'Custom CNNs';
               ]}
             />,
           </div>,
@@ -218,37 +217,37 @@ export default function AIPoweredToolsPage() {,
             Integration Capabilities,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            <Integration,
+            <Integration
               title='CRM & Sales Tools',
               description='Seamless integration with popular CRM platforms',
-              platforms={[,
-                'Salesforce',;
-                'HubSpot',;
-                'Pipedrive',;
-                'Zoho',;
-                'Custom APIs',;
+              platforms={[
+                'Salesforce';
+                'HubSpot';
+                'Pipedrive';
+                'Zoho';
+                'Custom APIs';
               ]}
             />,
-            <Integration,
+            <Integration
               title='Marketing Platforms',
               description='Connect with marketing automation tools',
-              platforms={[,
-                'Mailchimp',;
-                'Constant Contact',;
-                'ActiveCampaign',;
-                'Marketo',;
-                'Pardot',;
+              platforms={[
+                'Mailchimp';
+                'Constant Contact';
+                'ActiveCampaign';
+                'Marketo';
+                'Pardot';
               ]}
             />,
-            <Integration,
+            <Integration
               title='Business Applications',
               description='Integrate with essential business software',
-              platforms={[,
-                'Slack',;
-                'Microsoft Teams',;
-                'Google Workspace',;
-                'Office 365',;
-                'Zapier',;
+              platforms={[
+                'Slack';
+                'Microsoft Teams';
+                'Google Workspace';
+                'Office 365';
+                'Zapier';
               ]}
             />,
           </div>,
@@ -259,48 +258,48 @@ export default function AIPoweredToolsPage() {,
             AI Tool Pricing Plans,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-            <AIPricingPlan,
+            <AIPricingPlan
               name='Starter',
               price='$29/month',
               description='Perfect for individuals and small teams',
-              features={[,
-                '1 AI tool access',;
-                'Basic AI features',;
-                'Email support',;
-                'Standard integrations',;
-                'Monthly usage limits',;
-                'Basic analytics',;
+              features={[
+                '1 AI tool access';
+                'Basic AI features';
+                'Email support';
+                'Standard integrations';
+                'Monthly usage limits';
+                'Basic analytics';
               ]}
               popular={false}
             />,
-            <AIPricingPlan,
+            <AIPricingPlan
               name='Professional',
               price='$99/month',
               description='Ideal for growing businesses',
-              features={[,
-                '3 AI tools access',;
-                'Advanced AI features',;
-                'Priority support',;
-                'All integrations',;
-                'Higher usage limits',;
-                'Advanced analytics',;
-                'Custom workflows',;
+              features={[
+                '3 AI tools access';
+                'Advanced AI features';
+                'Priority support';
+                'All integrations';
+                'Higher usage limits';
+                'Advanced analytics';
+                'Custom workflows';
               ]}
               popular={true}
             />,
-            <AIPricingPlan,
+            <AIPricingPlan
               name='Enterprise',
               price='$299/month',
               description='For large organizations',
-              features={[,
-                'Unlimited AI tools',;
-                'Premium AI features',;
-                '24/7 dedicated support',;
-                'Custom integrations',;
-                'Unlimited usage',;
-                'Custom analytics',;
-                'White-label options',;
-                'SLA guarantee',;
+              features={[
+                'Unlimited AI tools';
+                'Premium AI features';
+                '24/7 dedicated support';
+                'Custom integrations';
+                'Unlimited usage';
+                'Custom analytics';
+                'White-label options';
+                'SLA guarantee';
               ]}
               popular={false}
             />,
@@ -312,21 +311,21 @@ export default function AIPoweredToolsPage() {,
             Success Stories,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-            <SuccessStory,
+            <SuccessStory
               company='TechStart Inc.',
               industry='SaaS',
               tool='AI Content Studio',
               result='30o0% increase in content production',
               description='Reduced content creation time from 8 hours to 2 hours per article while maintaining quality.',
             />,
-            <SuccessStory,
+            <SuccessStory
               company='RetailMax',
               industry='E-commerce',
               tool='Smart Inventory Manager',
               result='40% reduction in stockouts',
               description='Optimized inventory levels and reduced carrying costs by $50k annually.',
             />,
-            <SuccessStory,
+            <SuccessStory
               company='MarketingPro Agency',
               industry='Marketing',
               tool='AI Email Marketing',
@@ -335,7 +334,7 @@ export default function AIPoweredToolsPage() {,
             />,
           </div>,
         </div>,
-        {/* Contact CTA */,}
+        {/* Contact CTA */}
         <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-12 text-center text-white'>,
           <h2 className='text-3xl font-bold mb-4'>,
             Ready to Harness AI Power?,
@@ -345,16 +344,14 @@ export default function AIPoweredToolsPage() {,
             started with a free trial and see the difference AI can make.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <a,
+            <a
               href='tel:+130o24640950',
-              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-            >,
+              className='bg-white text-purple-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
               Call +1 30o2 464 0950,
             </a>,
-            <a,
+            <a
               href='mailto:kleber@ziontechgroup.com',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
               Email Us,
             </a>,
           </div>,
@@ -363,47 +360,42 @@ export default function AIPoweredToolsPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function AIToolCategory({,
-  title,;
-  icon,;
-  description,;
-  tools,;
-}: {,
+function AIToolCategory({
+  title;
+  icon;
+  description;
+  tools;
+}: {
   title: string,
   icon: string,
   description: string,
   tools: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='bg-white rounded-xl p-6 shadow-lg border border-gray-20o0'>,
       <div className='text-3xl mb-4'>{icon}</div>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <ul className='space-y-2'>,
-        {tools.map((tool, index) => (,
+        {tools.map((tool, index) => (
           <li key={index} className='flex items-center text-gray-60o0'>,
             <span className='text-purple-50o0 mr-2'>•</span>,
             {tool}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function AITool({,
-  title,;
-  description,;
-  features,;
-  price,;
-  category,;
-  useCase,;
-  demoUrl,;
-}: {,
+function AITool({
+  title;
+  description;
+  features;
+  price;
+  category;
+  useCase;
+  demoUrl;
+}: {
   title: string,
   description: string,
   features: string[],
@@ -411,11 +403,11 @@ function AITool({,
   category: string,
   useCase: string,
   demoUrl: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='bg-white rounded-xl p-6 shadow-lg border border-gray-20o0 hover: shadow-xl transition-shadow'>,
       <div className='flex justify-between items-start mb-4'>,
-        <h3 className='text-xl font-bold text-gray-90o0'>{title,}</h3>,
+        <h3 className='text-xl font-bold text-gray-90o0'>{title}</h3>,
         <span className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm font-medium'>,
           {category}
         </span>,
@@ -427,12 +419,11 @@ function AITool({,
         </span>,
       </div>,
       <ul className='space-y-1 mb-4'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='text-sm text-gray-60o0 flex items-center'>,
             <span className='text-green-50o0 mr-2'>✓</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
       <div className='flex justify-between items-center pt-4 border-t border-gray-20o0'>,
         <div>,
@@ -441,131 +432,117 @@ function AITool({,
             View Demo,
           </a>,
         </div>,
-        <a,
+        <a
           href='tel:+130o24640950',
-          className='bg-purple-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-70o0 transition-colors',
-        >,
+          className='bg-purple-60o0 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-70o0 transition-colors'>,
           Get Started,
         </a>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,
-function AITechnology({,
-  category,;
-  technologies,;
-}: {,
+function AITechnology({
+  category;
+  technologies;
+}: {
   category: string,
   technologies: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <h3 className='font-bold text-gray-90o0 mb-4'>{category}</h3>,
       <div className='flex flex-wrap gap-2'>,
-        {technologies.map((tech, index) => (,
-          <span,
+        {technologies.map((tech, index) => (
+          <span
             key={index}
-            className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm',
-          >,
+            className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm'>,
             {tech}
-          </span>,
-        ))}
+          </span>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Integration({,
-  title,;
-  description,;
-  platforms,;
-}: {,
+function Integration({
+  title;
+  description;
+  platforms;
+}: {
   title: string,
   description: string,
   platforms: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <h3 className='font-bold text-gray-90o0 mb-2'>{title}</h3>,
       <p className='text-gray-60o0 mb-4'>{description}</p>,
       <div className='flex flex-wrap gap-2'>,
-        {platforms.map((platform, index) => (,
-          <span,
+        {platforms.map((platform, index) => (
+          <span
             key={index}
-            className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm',
-          >,
+            className='bg-purple-10o0 text-purple-80o0 px-3 py-1 rounded-full text-sm'>,
             {platform}
-          </span>,
-        ))}
+          </span>))}
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function AIPricingPlan({,
-  name,;
-  price,;
-  description,;
-  features,;
-  popular,;
-}: {,
+function AIPricingPlan({
+  name;
+  price;
+  description;
+  features;
+  popular;
+}: {
   name: string,
   price: string,
   description: string,
   features: string[],
   popular: boolean,
-,}) {,
-  return (,
-    <div,
+}) {
+  return (
+    <div
       className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-purple-50o0' : 'border-gray-20o0'} relative`}
     >,
-      {popular && (,
+      {popular && (
         <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>,
           <span className='bg-purple-50o0 text-white px-4 py-1 rounded-full text-sm font-semibold'>,
             Most Popular,
           </span>,
-        </div>,
-      )}
+        </div>)}
       <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>{name}</h3>,
       <div className='text-3xl font-bold text-purple-60o0 mb-1'>{price}</div>,
       <div className='text-gray-50o0 mb-6'>{description}</div>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-center text-gray-60o0'>,
             <span className='text-green-50o0 mr-3'>✓</span>,
             {feature}
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='tel: +130o24640950',
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${,
+        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular,
             ? 'bg-purple-60o0 text-white hover:bg-purple-70o0',
             : 'bg-gray-10o0 text-gray-90o0 hover:bg-gray-20o0',
-        ,}`}
+        }`}
       >,
         Get Started,
       </a>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function SuccessStory({,
-  company,;
-  industry,;
-  tool,;
-  result,;
-  description,;
-}: {,
+function SuccessStory({
+  company;
+  industry;
+  tool;
+  result;
+  description;
+}: {
   company: string,
   industry: string,
   tool: string,
   result: string,
   description: string,
-,}) {,
-  return (,
+}) {
+  return (
     <div className='bg-white rounded-lg p-6 shadow-md border border-gray-20o0'>,
       <div className='flex items-center mb-4'>,
         <div className='w-12 h-12 bg-purple-10o0 rounded-full flex items-center justify-center mr-4'>,
@@ -581,7 +558,5 @@ function SuccessStory({,
       <h5 className='font-semibold text-gray-90o0 mb-2'>{tool}</h5>,
       <div className='text-2xl font-bold text-purple-60o0 mb-2'>{result}</div>,
       <p className='text-gray-60o0 text-sm'>{description}</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

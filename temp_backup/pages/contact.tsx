@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 import React, { useState } from 'react',
 import Head from 'next/head',
 import EnhancedNavigation from '../components/EnhancedNavigation',
@@ -11,130 +11,111 @@ import Card from '../components/ui/Card',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
 import Link from 'next/link',
-import {,
+import {
 import Layout from '../components/layout/Layout',
 import { Phone, Mail, MapPin } from 'lucide-react',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 =======,
 =======,
-  Mail, Phone, MapPin, Clock, MessageSquare, Send,;
-  Globe, Building, Users, Award, Shield, Rocket,
-} from 'lucide-react',
-,
-const ContactPage: React.FC = () => {,
+  Mail, Phone, MapPin, Clock, MessageSquare, Send;
+  Globe, Building, Users, Award, Shield, Rocket} from 'lucide-react',
+const ContactPage: React.FC = () => {
 =======,
-  Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle,;
-  ArrowRight, MessageSquare, Calendar, Building, Users,
-} from 'lucide-react',
+  Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle;
+  ArrowRight, MessageSquare, Calendar, Building, Users} from 'lucide-react',
 =======,
 =======,
 export default function Page(){return null}
 ,
-export default function ContactPage() {,
-  const [formData, setFormData] = useState({,
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '';
+    email: '';
+    company: '';
+    phone: '';
+    service: '';
     message: '',
-  ,}),
-,
+  }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
-,
-  const contactInfo = {,
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',;
-    hours: '24/7 Support Available',;
+  const contactInfo = {
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
+    website: 'https://ziontechgroup.com';
+    hours: '24/7 Support Available';
     timezone: 'Eastern Time (ET)',
-  ,};
-,
-  // Get popular services for showcase,
-  const popularServices = [,
-    ...innovativeAIServices2029.filter(s => s.popular),;
-    ...quantumSpaceInnovations2029.filter(s => s.popular),;
-    ...enterpriseITInnovations2029.filter(s => s.popular),;
-    ...innovativeMicroSaas2029.filter(s => s.popular),
-  ].slice(0, 6),
-,
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    setFormData({,
-      ...formData,;
-      [e.target.name]: e.target.value,
-    }),
   };
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  // Get popular services for showcase,
+  const popularServices = [
+    ...innovativeAIServices2029.filter(s => s.popular);
+    ...quantumSpaceInnovations2029.filter(s => s.popular);
+    ...enterpriseITInnovations2029.filter(s => s.popular);
+    ...innovativeMicroSaas2029.filter(s => s.popular)].slice(0, 6),
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData;
+      [e.target.name]: e.target.value})};
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
-,
     // Simulate form submission,
     await new Promise(resolve => setTimeout(resolve, 2000)),
-,
     setIsSubmitting(false),
     setSubmitSuccess(true),
-,
     // Reset form after 3 seconds,
-    setTimeout(() => {,
+    setTimeout(() => {
       setSubmitSuccess(false),
-      setFormData({,
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        message: '',;
-        budget: '',;
+      setFormData({
+        name: '';
+        email: '';
+        company: '';
+        phone: '';
+        service: '';
+        message: '';
+        budget: '';
         timeline: '',
-      ,}),
-    }, 5000),
-  };
-,
-  const contactMethods = [,
-    {,
-      icon: Phone,;
-      title: 'Call Us',;
-      value: '+1 (302) 464-0950',;
-      description: 'Available 24/7 for urgent inquiries',;
-      color: 'from-blue-500 to-cyan-500',;
+      })}, 5000)};
+  const contactMethods = [
+    {
+      icon: Phone;
+      title: 'Call Us';
+      value: '+1 (302) 464-0950';
+      description: 'Available 24/7 for urgent inquiries';
+      color: 'from-blue-500 to-cyan-500';
       action: 'tel:+13024640950',
-    ,},;
-    {,
-      icon: Mail,;
-      title: 'Email Us',;
-      value: 'kleber@ziontechgroup.com',;
-      description: 'Response within 2 hours guaranteed',;
-      color: 'from-green-500 to-emerald-500',;
+    };
+    {
+      icon: Mail;
+      title: 'Email Us';
+      value: 'kleber@ziontechgroup.com';
+      description: 'Response within 2 hours guaranteed';
+      color: 'from-green-500 to-emerald-500';
       action: 'mailto:kleber@ziontechgroup.com',
-    ,},;
-    {,
-      icon: MapPin,;
-      title: 'Visit Us',;
-      value: 'Middletown, DE',;
-      description: 'Global headquarters and innovation center',;
-      color: 'from-purple-500 to-pink-500',;
-      action: 'https://maps.google.com/?q=Middletown,DE',
-    },;
-    {,
-      icon: Clock,;
-      title: 'Business Hours',;
-      value: '24/7 Support',;
-      description: 'Always here when you need us',;
-      color: 'from-orange-500 to-red-500',;
+    };
+    {
+      icon: MapPin;
+      title: 'Visit Us';
+      value: 'Middletown, DE';
+      description: 'Global headquarters and innovation center';
+      color: 'from-purple-500 to-pink-500';
+      action: 'https://maps.google.com/?q=Middletown,DE'};
+    {
+      icon: Clock;
+      title: 'Business Hours';
+      value: '24/7 Support';
+      description: 'Always here when you need us';
+      color: 'from-orange-500 to-red-500';
       action: '#',
-    ,}
+    }
   ],
-,
       <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >,
             <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">,
               Ready to Get Started?,
@@ -144,21 +125,19 @@ export default function ContactPage() {,
               and discover how our revolutionary micro SaaS services can accelerate your growth.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">,
-              <Button,
+              <Button
                 href="/services",
                 variant="primary",
                 size="lg",
-                className="group relative overflow-hidden",
-              >,
+                className="group relative overflow-hidden">,
                 Explore Services,
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />,
               </Button>,
-              <Button,
+              <Button
                 href="/pricing",
                 variant="secondary",
                 size="lg",
-                className="group relative overflow-hidden",
-              >,
+                className="group relative overflow-hidden">,
                 View Pricing,
                 <DollarSign className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />,
               </Button>,
@@ -169,43 +148,35 @@ export default function ContactPage() {,
               <p>✓ 24/7 AI support and emergency hotline</p>,
               <p>✓ Custom implementation and training</p>,
 =======,
-  const services = [,
-    'AI Business Intelligence',;
-    'Quantum Cybersecurity',;
-    'Edge Computing Orchestration',;
-    'Space Technology Innovation',;
-    'Neural Interface Development',;
-    'Autonomous DevOps',;
-    'AI Customer Experience',;
-    'Quantum Neural Networks',;
-    'Other (Please specify)',
-  ],
-,
-  const budgets = [,
-    'Under $10,000',;
-    '$10,000 - $50,000',;
-    '$50,000 - $100,000',;
-    '$100,000 - $500,000',;
-    '$500,000+',;
-    'To be discussed',
-  ],
-,
-  const timelines = [,
-    'Immediate (1-2 weeks)',;
-    'Quick (1-2 months)',;
-    'Standard (3-6 months)',;
-    'Extended (6+ months)',;
-    'Flexible timeline',;
-    'To be discussed',
-  ],
-,
+  const services = [
+    'AI Business Intelligence';
+    'Quantum Cybersecurity';
+    'Edge Computing Orchestration';
+    'Space Technology Innovation';
+    'Neural Interface Development';
+    'Autonomous DevOps';
+    'AI Customer Experience';
+    'Quantum Neural Networks';
+    'Other (Please specify)'],
+  const budgets = [
+    'Under $10,000';
+    '$10,000 - $50,000';
+    '$50,000 - $100,000';
+    '$100,000 - $500,000';
+    '$500,000+';
+    'To be discussed'],
+  const timelines = [
+    'Immediate (1-2 weeks)';
+    'Quick (1-2 months)';
+    'Standard (3-6 months)';
+    'Extended (6+ months)';
+    'Flexible timeline';
+    'To be discussed'],
 =======,
-  Mail, Phone, MapPin, ArrowRight, MessageSquare,;
-  Clock, Globe, Building, Users, Award, Shield, Home, ChevronRight, Brain,
-} from 'lucide-react',
-,
-export default function ContactPage() {,
-  return (,
+  Mail, Phone, MapPin, ArrowRight, MessageSquare;
+  Clock, Globe, Building, Users, Award, Shield, Home, ChevronRight, Brain} from 'lucide-react',
+export default function ContactPage() {
+  return (
     <>,
       <Head>,
         <title>Contact Zion Tech Group | Get in Touch for Technology Solutions</title>,
@@ -240,7 +211,7 @@ export default function ContactPage() {,
             </div>,
           </div>,
         </nav>,
-        {/* Breadcrumb */,}
+        {/* Breadcrumb */}
         <div className="bg-black/20 border-b border-white/10">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">,
             <nav className="flex" aria-label="Breadcrumb">,
@@ -263,7 +234,7 @@ export default function ContactPage() {,
             </nav>,
           </div>,
         </div>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="relative overflow-hidden py-24">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center">,
@@ -277,11 +248,11 @@ export default function ContactPage() {,
             </div>,
           </div>,
         </div>,
-        {/* Contact Form Section */,}
+        {/* Contact Form Section */}
         <div className="py-16 bg-black/20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="lg:grid lg:grid-cols-2 lg:gap-8">,
-              {/* Contact Form */,}
+              {/* Contact Form */}
               <div className="lg: col-span-1">,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">,
                   <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>,
@@ -291,7 +262,7 @@ export default function ContactPage() {,
                         <label htmlFor="first-name" className="block text-sm font-medium text-gray-300">,
                           First name,
                         </label>,
-                        <input,
+                        <input
                           type="text",
                           name="first-name",
                           id="first-name",
@@ -303,7 +274,7 @@ export default function ContactPage() {,
                         <label htmlFor="last-name" className="block text-sm font-medium text-gray-300">,
                           Last name,
                         </label>,
-                        <input,
+                        <input
                           type="text",
                           name="last-name",
                           id="last-name",
@@ -316,7 +287,7 @@ export default function ContactPage() {,
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300">,
                         Email,
                       </label>,
-                      <input,
+                      <input
                         type="email",
                         name="email",
                         id="email",
@@ -328,18 +299,17 @@ export default function ContactPage() {,
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300">,
                         Company,
                       </label>,
-                      <input,
+                      <input
                         type="text",
-      {/* Contact Methods */,}
+      {/* Contact Methods */}
       <section className="py-20 px-6">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
-            viewport={{ once: true ,}}
-            className="mb-16",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-16">,
             <h2 className="text-3xl font-bold text-white mb-4 text-center">,
               Multiple Ways to Connect,
             </h2>,
@@ -348,30 +318,27 @@ export default function ContactPage() {,
             </p>,
           </motion.div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {contactMethods.map((method, index) => (,
+            {contactMethods.map((method, index) => (
               <motion.div,
                 key={method.title}
-                initial={{ opacity: 0, y: 20 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                viewport={{ once: true ,}}
-                className="group",
-              >,
-                <a,
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group">,
+                <a
                   href={method.action}
                   target={method.action.startsWith('http') ? '_blank' : '_self'}
                   rel={method.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl",
-                >,
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color,} p-4 mb-4 flex items-center justify-center group-hover: scale-110 transition-transform duration-300`,}>,
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">,
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${method.color} p-4 mb-4 flex items-center justify-center group-hover: scale-110 transition-transform duration-300`}>,
                     <method.icon className="w-8 h-8 text-white" />,
                   </div>,
                   <h3 className="text-xl font-bold text-white mb-2">{method.title}</h3>,
                   <p className="text-cyan-400 font-semibold text-lg mb-2">{method.value}</p>,
                   <p className="text-white/70 text-sm">{method.description}</p>,
                 </a>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -379,12 +346,11 @@ export default function ContactPage() {,
       <section id="contact-form" className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">,
         <div className="max-w-4xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            viewport={{ once: true ,}}
-            className="text-center mb-16",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">,
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">,
               Start Your Project,
             </h2>,
@@ -392,12 +358,11 @@ export default function ContactPage() {,
               Tell us about your project and we'll get back to you within 2 hours with a personalized solution.,
             </p>,
           </motion.div>,
-          {isSubmitted ? (,
+          {isSubmitted ? (
             <motion.div,
-              initial={{ opacity: 0, scale: 0.9 ,}}
-              animate={{ opacity: 1, scale: 1 ,}}
-              className="text-center py-20",
-            >,
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="text-center py-20">,
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center">,
                 <CheckCircle className="w-12 h-12 text-green-400" />,
               </div>,
@@ -408,16 +373,14 @@ export default function ContactPage() {,
               <div className="text-white/60">,
                 <p>In the meantime, you can: </p>,
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">,
-                  <a,
+                  <a
                     href="/services",
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors",
-                  >,
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors">,
                     Explore Our Services,
                   </a>,
-                  <a,
+                  <a
                     href="/about",
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors",
-                  >,
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors">,
                     Learn More About Us,
                   </a>,
 =======,
@@ -431,19 +394,18 @@ export default function ContactPage() {,
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300">,
                         Message,
                       </label>,
-                      <textarea,
+                      <textarea
                         name="message",
                         id="message",
-                        rows={4,}
+                        rows={4}
                         className="mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus: border-purple-500 focus:ring-purple-500 sm:text-sm",
                         placeholder="Tell us about your project and how we can help...",
                       />,
                     </div>,
                     <div>,
-                      <button,
+                      <button
                         type="submit",
-                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500",
-                      >,
+                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">,
                         Send Message,
                         <ArrowRight className="ml-2 h-4 w-4" />,
                       </button>,
@@ -451,7 +413,7 @@ export default function ContactPage() {,
                   </form>,
                 </div>,
               </div>,
-              {/* Contact Information */,}
+              {/* Contact Information */}
               <div className="mt-12 lg: mt-0 lg:col-span-1">,
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">,
                   <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>,
@@ -506,7 +468,7 @@ export default function ContactPage() {,
                       </div>,
                     </div>,
                   </div>,
-                  {/* Quick Contact Options */,}
+                  {/* Quick Contact Options */}
                   <div className="mt-8 pt-8 border-t border-gray-700">,
                     <h3 className="text-lg font-medium text-white mb-4">Quick Contact Options</h3>,
                     <div className="space-y-3">,
@@ -525,7 +487,7 @@ export default function ContactPage() {,
             </div>,
           </div>,
         </div>,
-        {/* Why Choose Us Section */,}
+        {/* Why Choose Us Section */}
         <div className="py-16">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-12">,
@@ -586,7 +548,7 @@ export default function ContactPage() {,
             </div>,
           </div>,
         </div>,
-        {/* Footer */,}
+        {/* Footer */}
         <footer className="bg-black/40">,
           <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">,
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">,
@@ -644,32 +606,27 @@ export default function ContactPage() {,
           </div>,
         </footer>,
       </div>,
-    </>,
-  ),
-,};
-,
-export default ContactPage,
+    </>),
+};
+export default ContactPage;
 =======,
-,
-export default function ContactPage() {,
-	const contact = {,
-		mobile: '+1 302 464 0950',;
-		email: 'kleber@ziontechgroup.com',;
+export default function ContactPage() {
+	const contact = {
+		mobile: '+1 302 464 0950';
+		email: 'kleber@ziontechgroup.com';
 		address: '364 E Main St STE 1008 Middletown DE 19709',
-	,};
-	return (,
+	};
+	return (
 		<Layout>,
 =======,
-,
-export default function ContactPage() {,
-	const contact = {,
-		mobile: '+1 302 464 0950',;
-		email: 'kleber@ziontechgroup.com',;
-		address: '364 E Main St STE 1008 Middletown DE 19709',;
+export default function ContactPage() {
+	const contact = {
+		mobile: '+1 302 464 0950';
+		email: 'kleber@ziontechgroup.com';
+		address: '364 E Main St STE 1008 Middletown DE 19709';
 		website: 'https://ziontechgroup.com',
-	,};
-,
-	return (,
+	};
+	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">,
 			<Head>,
 				<title>Contact | Zion Tech Group</title>,
@@ -679,41 +636,36 @@ export default function ContactPage() {,
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Talk to Us</h1>,
 				<p className="text-gray-300 mb-10 max-w-2xl">We ship outcomes in weeks. Call, email, or visit to get a tailored plan and pricing.</p>,
 				<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-					<a href={`tel:${contact.mobile,}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-cyan-500/50">,
+					<a href={`tel:${contact.mobile}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-cyan-500/50">,
 						<Phone className="w-5 h-5 text-cyan-400" />,
 						<div className="mt-3 font-semibold">Call</div>,
-						<div className="text-gray-300">{contact.mobile,}</div>,
+						<div className="text-gray-300">{contact.mobile}</div>,
 					</a>,
-					<a href={`mailto: ${contact.email,}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-purple-500/50">,
+					<a href={`mailto: ${contact.email}`} className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-purple-500/50">,
 						<Mail className="w-5 h-5 text-purple-400" />,
 						<div className="mt-3 font-semibold">Email</div>,
-						<div className="text-gray-300">{contact.email,}</div>,
+						<div className="text-gray-300">{contact.email}</div>,
 					</a>,
-					<a href={`https: //maps.google.com/?q=${encodeURIComponent(contact.address),}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-pink-500/50">,
+					<a href={`https: //maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/50 border border-gray-700/60 hover: border-pink-500/50">,
 						<MapPin className="w-5 h-5 text-pink-400" />,
 						<div className="mt-3 font-semibold">Visit</div>,
-						<div className="text-gray-300 text-sm">{contact.address,}</div>,
+						<div className="text-gray-300 text-sm">{contact.address}</div>,
 					</a>,
 				</div>,
 			</div>,
-		</UltraFuturisticBackground>,
-	),
+		</UltraFuturisticBackground>),
 =======,
         message: '',
-      ,}),
-    }, 3000),
-  };
-,
-  const stats = [,
-    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' ,},;
-    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' ,},;
-    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' ,},;
-    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' ,},;
-    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' ,},;
-    { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' ,}
+      })}, 3000)};
+  const stats = [
+    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' };
+    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' };
+    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' };
+    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' };
+    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' };
+    { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
   ],
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
         <title>Contact Us - Zion Tech Group | Get Started with Revolutionary Micro SaaS Services</title>,
@@ -726,15 +678,14 @@ export default function ContactPage() {,
         <link rel="canonical" href="https://ziontechgroup.com/contact" />,
       </Head>,
       <UltraFuturisticBackground>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
       <section className="relative z-10 pt-20 pb-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto text-center">,
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
-            className="mb-8",
-          >,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8">,
             <h1 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">,
               Let's Transform Your Business,
             </h1>,
@@ -745,23 +696,21 @@ export default function ContactPage() {,
           </motion.div>,
           {/* Stats Grid */}
           <motion.div,
-            initial={{ opacity: 0, y: 30 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
-            className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12",
-          >,
-            {stats.map((stat, index) => (,
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto mb-12">,
+            {stats.map((stat, index) => (
               <motion.div,
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 ,}}
-                animate={{ opacity: 1, scale: 1 ,}}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 ,}}
-                className="text-center group",
-              >,
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                className="text-center group">,
                 <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover: border-gray-600/70 transition-all duration-300 hover:scale-105">,
                   <div className="flex justify-center mb-3">,
                     <div className="p-3 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl group-hover:scale-110 transition-transform duration-300">,
-                      {stat.icon,}
+                      {stat.icon}
                     </div>,
                   </div>,
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>,
@@ -771,8 +720,7 @@ export default function ContactPage() {,
                     {stat.label}
                   </div>,
                 </div>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </motion.div>,
         </div>,
       </section>,
@@ -780,23 +728,22 @@ export default function ContactPage() {,
       <section className="relative z-10 py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
-            {/* Contact Form */,}
+            {/* Contact Form */}
             <motion.div,
-              initial={{ opacity: 0, x: -30 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">,
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">,
                   Get Free Consultation,
                 </h2>,
-                {isSubmitted ? (,
+                {isSubmitted ? (
                   <motion.div,
-                    initial={{ opacity: 0, scale: 0.8 ,}}
-                    animate={{ opacity: 1, scale: 1 ,}}
-                    className="text-center py-12",
-                  >,
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="text-center py-12">,
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />,
                     <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>,
                     <p className="text-gray-300 mb-6">,
@@ -806,6 +753,5 @@ export default function ContactPage() {,
                       <p>✓ Free consultation scheduled</p>,
                       <p>✓ Service recommendations prepared</p>,
                       <p>✓ ROI analysis in progress</p>,
-                    </div>,
-}
-,))
+                    </div>}
+))

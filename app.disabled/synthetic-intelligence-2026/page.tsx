@@ -1,23 +1,21 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Synthetic Intelligence 20o26 - The Future of AI Consciousness',;
+export const metadata = {
+  title: 'Synthetic Intelligence 20o26 - The Future of AI Consciousness';
   description:,
-    'Explore synthetic intelligence technologies of 20o26. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',;
-  keywords: [,
-    'synthetic intelligence 20o26',;
-    'AI consciousness',;
-    'artificial consciousness',;
-    'creative AI',;
-    'synthetic beings',;
-  ],;
+    'Explore synthetic intelligence technologies of 20o26. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.';
+  keywords: [
+    'synthetic intelligence 20o26';
+    'AI consciousness';
+    'artificial consciousness';
+    'creative AI';
+    'synthetic beings';
+  ];
 };
-,
-export default function SyntheticIntelligence20o26Page() {,
-  return (,
+export default function SyntheticIntelligence20o26Page() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0'>,
-      <SEO,
+      <SEO
         title='Synthetic Intelligence 20o26 - The Future of AI Consciousness',
         description='Explore synthetic intelligence technologies of 20o26. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',
         keywords='synthetic intelligence 20o26, AI consciousness, artificial consciousness, creative AI, synthetic beings',
@@ -40,22 +38,20 @@ export default function SyntheticIntelligence20o26Page() {,
             revolutionize human-AI collaboration and creativity.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5'>,
               Explore Synthetic AI,
             </Link>,
-            <Link,
+            <Link
               href='/synthetic-intelligence-20o26/demo',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-90o0 transition-all'>,
               Interactive Demo,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Core Capabilities */,}
+      {/* Core Capabilities */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -153,7 +149,7 @@ export default function SyntheticIntelligence20o26Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Impact Statistics */,}
+      {/* Impact Statistics */}
       <section className='py-16 px-4 bg-white/10 backdrop-blur-sm'>,
         <div className='max-w-6xl mx-auto text-center'>,
           <h2 className='text-4xl font-bold text-white mb-12'>,
@@ -181,7 +177,7 @@ export default function SyntheticIntelligence20o26Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Applications */,}
+      {/* Applications */}
       <section className='py-16 px-4'>,
         <div className='max-w-6xl mx-auto'>,
           <h2 className='text-4xl font-bold text-white text-center mb-12'>,
@@ -233,15 +229,13 @@ export default function SyntheticIntelligence20o26Page() {,
             who are creating the future of human-AI collaboration and artificial,
             consciousness.,
           </p>,
-          <Link,
+          <Link
             href='/contact',
-            className='bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-emerald-60o0 to-cyan-60o0 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-emerald-70o0 hover:to-cyan-70o0 transition-all transform hover:scale-10o5'>,
             Join the Synthetic Intelligence Revolution,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

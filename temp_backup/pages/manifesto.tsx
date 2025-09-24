@@ -1,10 +1,10 @@
 import Head from 'next/head',
-export default function ManifestoPage(): JSX.Element {,
-  return (,
+export default function ManifestoPage(): JSX.Element {
+  return (
     <>,
       <Head>,
         <title>Zion Manifesto</title>,
-        <meta,
+        <meta
           name='description',
           content='Zion Manifesto: Our purpose, philosophy, and decentralized future.',
         />,
@@ -63,15 +63,15 @@ export default function ManifestoPage(): JSX.Element {,
             </h2>,
             <p>,
               AI should amplify human capability and agency—not replace it or,
-              capture its value. Zion is AI-native by design: matching, scoping,;
+              capture its value. Zion is AI-native by design: matching, scoping;
               verification, and reputation signals are assisted by models, yet,
-              decisions remain human-sovereign. We prioritize transparency,;
+              decisions remain human-sovereign. We prioritize transparency;
               auditability, and consent. Your data powers your outcomes, not,
               someone else’s moat.,
             </p>,
             <h2 id='our-decentralized-future'>Our Decentralized Future</h2>,
             <p>,
-              Zion evolves from a product into a protocol: identity, reputation,;
+              Zion evolves from a product into a protocol: identity, reputation;
               escrow, and discovery as shared public goods. Governance,
               transitions gradually, guided by real usage and contributor,
               ownership. The end-state is a resilient, permissionless network,
@@ -82,7 +82,5 @@ export default function ManifestoPage(): JSX.Element {,
           </section>,
         </div>,
       </main>,
-    </>,
-  ),
-}
+    </>)}
 ,

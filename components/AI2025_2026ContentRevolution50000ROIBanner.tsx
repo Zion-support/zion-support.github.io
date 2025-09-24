@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {,
-  return (,
+const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {
+  return (
     <section className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -13,7 +12,7 @@ const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {,
       </div>,
       <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
-          {/* Badge */,}
+          {/* Badge */}
           <div className='inline-flex items-center bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse'>,
             🚀 BREAKTHROUGH SUCCESS: 50,0o00% ROI ACHIEVED,
           </div>,
@@ -59,20 +58,18 @@ const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {,
           </div>,
           {/* CTA Buttons */}
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o25-20o26-content-revolution-50o000-roi-success-story',
-              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-            >,
+              className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
               Read Full Case Study,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-20o26-ultimate-content-revolution-breakthrough',
-              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='bg-white bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Learn About the Technology,
             </Link>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div className='flex flex-col sm: flex-row items-center justify-center gap-6 text-sm opacity-80'>,
             <div className='flex items-center gap-2'>,
               <span className='w-2 h-2 bg-green-40o0 rounded-full'></span>,
@@ -89,11 +86,7 @@ const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Bottom Wave */,}
+      {/* Bottom Wave */}
       <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent'></div>,
-    </section>,
-  ),
-};
-,
-export default AI20o25_20o26ContentRevolution50o000ROIBanner,
-,
+    </section>)};
+export default AI20o25_20o26ContentRevolution50o000ROIBanner;

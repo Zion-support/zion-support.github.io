@@ -1,14 +1,13 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'Zion Tech Group acquires VectorEdge to expand edge-AI capabilities',;
+export const metadata = {
+  title: 'Zion Tech Group acquires VectorEdge to expand edge-AI capabilities';
   description:,
-    "The acquisition of VectorEdge strengthens Zion's edge-AI portfolio with low-latency inference and device orchestration.",;
+    "The acquisition of VectorEdge strengthens Zion's edge-AI portfolio with low-latency inference and device orchestration.";
   keywords:,
-    'acquisition, VectorEdge, edge AI, device orchestration, low latency',;
+    'acquisition, VectorEdge, edge AI, device orchestration, low latency';
 };
-,
-export default function ArticlePage() {,
-  return (,
+export default function ArticlePage() {
+  return (
     <div className='min-h-screen'>,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-3xl mx-auto'>,
@@ -22,7 +21,7 @@ export default function ArticlePage() {,
             Zion Tech Group acquires VectorEdge to expand edge-AI capabilities,
           </h1>,
           <p className='text-gray-30o0 text-lg mb-10'>,
-            VectorEdge brings a production-grade edge orchestration runtime,;
+            VectorEdge brings a production-grade edge orchestration runtime;
             enabling secure, low-latency deployment of AI models to fleets of,
             devices across manufacturing, retail, and logistics.,
           </p>,
@@ -48,7 +47,5 @@ export default function ArticlePage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

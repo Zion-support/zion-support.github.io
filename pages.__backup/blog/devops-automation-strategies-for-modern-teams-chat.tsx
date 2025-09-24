@@ -1,15 +1,14 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {,
-  return (,
+const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>,
           DevopsAutomationStrategiesForModernTeamsChat - Zion Tech Solutions,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='DevopsAutomationStrategiesForModernTeamsChat blog post',
         />,
@@ -19,9 +18,6 @@ const DevopsAutomationStrategiesForModernTeamsChat: NextPage = () => {,
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default DevopsAutomationStrategiesForModernTeamsChat,
-,
+    </div>),
+};
+export default DevopsAutomationStrategiesForModernTeamsChat;

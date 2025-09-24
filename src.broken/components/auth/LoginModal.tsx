@@ -1,9 +1,7 @@
-export function LoginModal() {,
-  return (,
+export function LoginModal() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

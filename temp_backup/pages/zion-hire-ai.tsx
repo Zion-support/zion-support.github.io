@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ZionHireAiPage() {,
-  return (,
+export default function ZionHireAiPage() {
+  return (
     <>,
       <Head>,
         <title>Zion Hire Ai - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ZionHireAiPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

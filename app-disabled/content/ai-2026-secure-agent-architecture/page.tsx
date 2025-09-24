@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Secure Agent Architecture | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Secure Agent Architecture | Zion Tech Group';
   description:,
-    'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 20o26.',;
+    'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 20o26.';
 };
-,
-export default function SecureAgentArchitecture20o26Page() {,
-  return (,
+export default function SecureAgentArchitecture20o26Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-indigo-60o0 to-purple-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -46,7 +45,5 @@ export default function SecureAgentArchitecture20o26Page() {,
           </p>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

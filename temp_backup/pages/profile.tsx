@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ProfilePage() {,
-  return (,
+export default function ProfilePage() {
+  return (
     <>,
       <Head>,
         <title>Profile - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ProfilePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

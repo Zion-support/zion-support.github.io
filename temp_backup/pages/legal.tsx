@@ -1,10 +1,9 @@
 import SEO from '../components/SEO',
 import Link from 'next/link',
-,
-export default function LegalPage() {,
-  return (,
+export default function LegalPage() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Legal | Zion Tech Group',
         description='Legal resources including privacy policy, terms of service, and cookies.',
         canonical='/legal',
@@ -29,7 +28,5 @@ export default function LegalPage() {,
           </li>,
         </ul>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

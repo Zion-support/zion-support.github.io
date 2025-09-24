@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'industry-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'industry-solutions - Zion Tech Group';
   description:,
-    'Professional industry-solutions solutions for your business needs.',;
-  keywords: 'industry-solutions, services, business, technology',;
+    'Professional industry-solutions solutions for your business needs.';
+  keywords: 'industry-solutions, services, business, technology';
 };
-export default function IndustrySolutionsPage() {,
-  return (,
+export default function IndustrySolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function IndustrySolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

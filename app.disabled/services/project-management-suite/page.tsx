@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'project-management-suite - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'project-management-suite - Zion Tech Group';
   description:,
-    'Professional project-management-suite solutions for your business needs.',;
-  keywords: 'project-management-suite, services, business, technology',;
+    'Professional project-management-suite solutions for your business needs.';
+  keywords: 'project-management-suite, services, business, technology';
 };
-export default function ProjectManagementSuitePage() {,
-  return (,
+export default function ProjectManagementSuitePage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function ProjectManagementSuitePage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

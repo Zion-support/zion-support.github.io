@@ -1,64 +1,57 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
-  Home, Zap, Target, Shield, TrendingUp, Globe,;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,;
-  Award, MessageCircle, Cpu,
-} from 'lucide-react',
-,
-export default function AIRealEstatePlatform() {,
-  const features = [,
-    {,
-      icon: <Home className="w-6 h-6"  />,;
-      title: 'Property Valuation',;
+import {
+  Home, Zap, Target, Shield, TrendingUp, Globe;
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Cpu} from 'lucide-react',
+export default function AIRealEstatePlatform() {
+  const features = [
+    {
+      icon: <Home className="w-6 h-6"  />;
+      title: 'Property Valuation';
       description: 'Advanced AI-powered property valuation with real-time market analysis and predictive pricing models.',
-    ,},;
-    {,
-      icon: <Zap className="w-6 h-6"  />,;
-      title: 'Market Analysis',;
+    };
+    {
+      icon: <Zap className="w-6 h-6"  />;
+      title: 'Market Analysis';
       description: 'Revolutionary market analysis with AI algorithms that identify trends and investment opportunities.',
-    ,},;
-    {,
-      icon: <Target className="w-6 h-6"  />,;
-      title: 'Investment Intelligence',;
+    };
+    {
+      icon: <Target className="w-6 h-6"  />;
+      title: 'Investment Intelligence';
       description: 'Intelligent investment intelligence with AI-powered ROI analysis and risk assessment.',
-    ,},;
-    {,
-      icon: <Shield className="w-6 h-6"  />,;
-      title: 'Risk Assessment',;
+    };
+    {
+      icon: <Shield className="w-6 h-6"  />;
+      title: 'Risk Assessment';
       description: 'Advanced risk assessment with automated market volatility analysis and portfolio protection.',
-    ,},;
-    {,
-      icon: <TrendingUp className="w-6 h-6"  />,;
-      title: 'Portfolio Optimization',;
+    };
+    {
+      icon: <TrendingUp className="w-6 h-6"  />;
+      title: 'Portfolio Optimization';
       description: 'Comprehensive portfolio optimization with AI-powered asset allocation and performance analytics.',
-    ,},;
-    {,
-      icon: <Globe className="w-6 h-6"  />,;
-      title: 'Global Market Access',;
+    };
+    {
+      icon: <Globe className="w-6 h-6"  />;
+      title: 'Global Market Access';
       description: 'Access to global real estate markets with AI-powered cross-border analysis and opportunities.',
-    ,}
+    }
   ],
-,
-  const benefits = [,
-    'Improve investment returns by 30o0%',;
-    'Reduce risk exposure by 70%',;
-    'Increase market insights by 50o0%',;
-    'Accelerate decision making by 20o0%',;
-    'Enable 24/7 market monitoring',;
-    'Optimize portfolio performance',;
-    'Scale real estate operations globally',;
-    'Future-proof investment strategy',
-  ],
-,
-  const useCases = [,
-    'Property Investment', 'Market Analysis', 'Portfolio Management',;
-    'Risk Assessment', 'Valuation Models', 'Investment Intelligence',;
-    'Real Estate Analytics', 'Market Research', 'Portfolio Optimization',;
-    'Investment Strategy', 'Market Prediction', 'Asset Management',
-  ],
-,
-  return (,
+  const benefits = [
+    'Improve investment returns by 30o0%';
+    'Reduce risk exposure by 70%';
+    'Increase market insights by 50o0%';
+    'Accelerate decision making by 20o0%';
+    'Enable 24/7 market monitoring';
+    'Optimize portfolio performance';
+    'Scale real estate operations globally';
+    'Future-proof investment strategy'],
+  const useCases = [
+    'Property Investment', 'Market Analysis', 'Portfolio Management';
+    'Risk Assessment', 'Valuation Models', 'Investment Intelligence';
+    'Real Estate Analytics', 'Market Research', 'Portfolio Optimization';
+    'Investment Strategy', 'Market Prediction', 'Asset Management'],
+  return (
     <>,
       <Head>,
         <title>AI Real Estate Platform | Zion Tech Group</title>,
@@ -71,16 +64,15 @@ export default function AIRealEstatePlatform() {,
         <link rel="canonical" href="https://ziontechgroup.com/ai-real-estate-platform"  />,
       </Head>,
       <div className="min-h-screen bg-black text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">,
           <div className="absolute inset-0 bg-gradient-to-br from-orange-90o0/20 via-amber-90o0/20 to-yellow-90o0/20"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center">,
               <div className="flex items-center justify-center mb-6">,
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-50o0 to-amber-60o0 rounded-2xl flex items-center justify-center mb-4">,
                   <Home className="w-8 h-8 text-white"  />,
@@ -90,37 +82,34 @@ export default function AIRealEstatePlatform() {,
                 AI Real Estate Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Revolutionize real estate with AI-powered property valuation,;
+                Revolutionize real estate with AI-powered property valuation;
                 market analysis, and investment intelligence for optimal returns.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-orange-50o0 to-amber-60o0 text-white rounded-xl font-semibold text-lg hover: from-orange-60o0 hover:to-amber-70o0 transition-all duration-20o0 shadow-lg shadow-orange-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-orange-50o0 to-amber-60o0 text-white rounded-xl font-semibold text-lg hover: from-orange-60o0 hover:to-amber-70o0 transition-all duration-20o0 shadow-lg shadow-orange-50o0/25">,
                   Unlock Opportunities,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-orange-50o0/30 text-orange-40o0 rounded-xl font-semibold text-lg hover: bg-orange-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-orange-50o0/30 text-orange-40o0 rounded-xl font-semibold text-lg hover: bg-orange-50o0/10 transition-all duration-20o0">,
                   Watch Demo,
                 </motion.button>,
               </div>,
             </motion.div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Revolutionary Real Estate Features,
               </h2>,
@@ -130,23 +119,21 @@ export default function AIRealEstatePlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-orange-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-2xl p-8 hover: border-orange-50o0/30 transition-all duration-30o0 group">,
                   <div className="w-14 h-14 bg-gradient-to-br from-orange-50o0/20 to-amber-60o0/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-30o0">,
                     <div className="text-orange-40o0">,
-                      {feature.icon,}
+                      {feature.icon}
                     </div>,
                   </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>,
                   <p className="text-gray-40o0 leading-relaxed">{feature.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -154,11 +141,10 @@ export default function AIRealEstatePlatform() {,
         <section className="py-20 bg-black">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Transform Real Estate Investment,
               </h2>,
@@ -168,20 +154,18 @@ export default function AIRealEstatePlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-orange-50o0/30 transition-all duration-30o0 group",
-                >,
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-orange-50o0/30 transition-all duration-30o0 group">,
                   <div className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-orange-40o0"  />,
-                    <span className="text-white font-medium text-sm">{benefit,}</span>,
+                    <span className="text-white font-medium text-sm">{benefit}</span>,
                   </div>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -189,11 +173,10 @@ export default function AIRealEstatePlatform() {,
         <section className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              className="text-center mb-16",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16">,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Real Estate Solutions for Every Need,
               </h2>,
@@ -203,20 +186,18 @@ export default function AIRealEstatePlatform() {,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
-              {useCases.map((useCase, index) => (,
+              {useCases.map((useCase, index) => (
                 <motion.div,
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 ,}}
-                  whileInView={{ opacity: 1, scale: 1 ,}}
-                  transition={{ duration: 0.8, delay: index * 0.1 ,}}
-                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-orange-50o0/30 transition-all duration-30o0 group text-center",
-                >,
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-90o0/50 to-gray-80o0/50 backdrop-blur-xl border border-gray-70o0/50 rounded-xl p-6 hover: border-orange-50o0/30 transition-all duration-30o0 group text-center">,
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-50o0/20 to-amber-60o0/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">,
                     <Cpu className="w-6 h-6 text-orange-40o0"  />,
                   </div>,
-                  <span className="text-white font-medium text-sm">{useCase,}</span>,
-                </motion.div>,
-              ))}
+                  <span className="text-white font-medium text-sm">{useCase}</span>,
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -224,9 +205,9 @@ export default function AIRealEstatePlatform() {,
         <section className="py-20 bg-gradient-to-r from-orange-90o0/20 via-amber-90o0/20 to-yellow-90o0/20">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Unlock Real Estate Opportunities?,
@@ -237,17 +218,15 @@ export default function AIRealEstatePlatform() {,
               </p>,
               <div className="flex flex-col sm:flex-row gap-4 justify-center">,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 bg-gradient-to-r from-orange-50o0 to-amber-60o0 text-white rounded-xl font-semibold text-lg hover: from-orange-60o0 hover:to-amber-70o0 transition-all duration-20o0 shadow-lg shadow-orange-50o0/25",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-orange-50o0 to-amber-60o0 text-white rounded-xl font-semibold text-lg hover: from-orange-60o0 hover:to-amber-70o0 transition-all duration-20o0 shadow-lg shadow-orange-50o0/25">,
                   Unlock Opportunities Now,
                 </motion.button>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="px-8 py-4 border-2 border-orange-50o0/30 text-orange-40o0 rounded-xl font-semibold text-lg hover: bg-orange-50o0/10 transition-all duration-20o0",
-                >,
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-orange-50o0/30 text-orange-40o0 rounded-xl font-semibold text-lg hover: bg-orange-50o0/10 transition-all duration-20o0">,
                   Contact Real Estate Team,
                 </motion.button>,
               </div>,
@@ -255,6 +234,5 @@ export default function AIRealEstatePlatform() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

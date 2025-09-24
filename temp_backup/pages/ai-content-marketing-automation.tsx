@@ -1,9 +1,8 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import { PenTool, Target, Users, TrendingUp, Zap, Globe, BarChart3, Smartphone } from 'lucide-react',
-,
-const AIContentMarketingAutomationPage: React.FC = () => {,
-  return (,
+const AIContentMarketingAutomationPage: React.FC = () => {
+  return (
     <>,
       <Head>,
         <title>AI Content Marketing Automation - Zion Tech Group</title>,
@@ -12,7 +11,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
         <link rel="canonical" href="https: //ziontechgroup.com/ai-content-marketing-automation"  />,
       </Head>,
       <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto text-center">,
             <div className="mb-8">,
@@ -67,7 +66,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Core Features */,}
+        {/* Core Features */}
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20">,
           <div className="max-w-7xl mx-auto">,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">,
@@ -78,7 +77,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
                 <div className="bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-slate-70o0">,
                   <h3 className="text-xl font-semibold text-white mb-3">Content Generation</h3>,
                   <p className="text-gray-30o0">,
-                    AI-powered writing tools for blogs, social media, emails,;
+                    AI-powered writing tools for blogs, social media, emails;
                     and marketing copy with brand voice consistency.,
                   </p>,
                 </div>,
@@ -115,7 +114,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
                 <div className="bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-slate-70o0">,
                   <h3 className="text-xl font-semibold text-white mb-3">A/B Testing</h3>,
                   <p className="text-gray-30o0">,
-                    Automated A/B testing for headlines, content variations,;
+                    Automated A/B testing for headlines, content variations;
                     and optimization strategies.,
                   </p>,
                 </div>,
@@ -133,7 +132,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
               <div className="bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-6 border border-slate-70o0">,
                 <h3 className="text-xl font-semibold text-white mb-3">Blog Posts & Articles</h3>,
                 <p className="text-gray-30o0">,
-                  Long-form content with SEO optimization,;
+                  Long-form content with SEO optimization;
                   research integration, and engaging storytelling.,
                 </p>,
               </div>,
@@ -213,7 +212,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Analytics & Insights */,}
+        {/* Analytics & Insights */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div className="bg-slate-80o0/50 backdrop-blur-sm rounded-xl p-8 border border-slate-70o0">,
@@ -243,7 +242,7 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Integration Capabilities */,}
+        {/* Integration Capabilities */}
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-80o0/20">,
           <div className="max-w-7xl mx-auto">,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">,
@@ -308,5 +307,4 @@ const AIContentMarketingAutomationPage: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-        </section>,
-})
+        </section>})

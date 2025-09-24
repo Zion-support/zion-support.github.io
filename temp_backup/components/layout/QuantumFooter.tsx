@@ -1,104 +1,94 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Mail, Phone, MapPin, Globe, Twitter, Linkedin,;
-  Github, Facebook, Instagram, Youtube, Rocket,;
-  Shield, Brain, Cpu, Database, Sparkles,
-} from 'lucide-react',
-,
-const QuantumFooter: React.FC = () => {,
+import {
+  Mail, Phone, MapPin, Globe, Twitter, Linkedin;
+  Github, Facebook, Instagram, Youtube, Rocket;
+  Shield, Brain, Cpu, Database, Sparkles} from 'lucide-react',
+const QuantumFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-,
-  const footerSections = [,
-    {,
-      title: 'Revolutionary Services',;
-      links: [,
-        { name: 'AI & Machine Learning', href: '/services#ai' ,},;
-        { name: 'Quantum Computing', href: '/services#quantum' ,},;
-        { name: 'Space Technology', href: '/services#space' ,},;
-        { name: 'Cybersecurity', href: '/services#security' ,},;
-        { name: 'Biomedical AI', href: '/services#biomedical' ,},;
-        { name: 'Metaverse Development', href: '/services#metaverse' ,}
-      ],
-    },;
-    {,
-      title: 'Micro SAAS Solutions',;
-      links: [,
-        { name: '150+ Services', href: '/micro-saas' ,},;
-        { name: 'AI Content Generation', href: '/micro-saas#ai-content' ,},;
-        { name: 'Customer Service AI', href: '/micro-saas#customer-service' ,},;
-        { name: 'Sales Automation', href: '/micro-saas#sales' ,},;
-        { name: 'Data Analytics', href: '/micro-saas#analytics' ,},;
-        { name: 'Legal Contract AI', href: '/micro-saas#legal' ,}
-      ],
-    },;
-    {,
-      title: 'Industries',;
-      links: [,
-        { name: 'Healthcare', href: '/solutions#healthcare' ,},;
-        { name: 'Finance', href: '/solutions#finance' ,},;
-        { name: 'Manufacturing', href: '/solutions#manufacturing' ,},;
-        { name: 'Education', href: '/solutions#education' ,},;
-        { name: 'Government', href: '/solutions#government' ,},;
-        { name: 'Retail', href: '/solutions#retail' ,}
-      ],
-    },;
-    {,
-      title: 'Company',;
-      links: [,
-        { name: 'About Us', href: '/about' ,},;
-        { name: 'Careers', href: '/careers' ,},;
-        { name: 'Case Studies', href: '/case-studies' ,},;
-        { name: 'News', href: '/news' ,},;
-        { name: 'Blog', href: '/blog' ,},;
-        { name: 'Support', href: '/support' ,}
-      ],
-    }
+  const footerSections = [
+    {
+      title: 'Revolutionary Services';
+      links: [
+        { name: 'AI & Machine Learning', href: '/services#ai' };
+        { name: 'Quantum Computing', href: '/services#quantum' };
+        { name: 'Space Technology', href: '/services#space' };
+        { name: 'Cybersecurity', href: '/services#security' };
+        { name: 'Biomedical AI', href: '/services#biomedical' };
+        { name: 'Metaverse Development', href: '/services#metaverse' }
+      ]};
+    {
+      title: 'Micro SAAS Solutions';
+      links: [
+        { name: '150+ Services', href: '/micro-saas' };
+        { name: 'AI Content Generation', href: '/micro-saas#ai-content' };
+        { name: 'Customer Service AI', href: '/micro-saas#customer-service' };
+        { name: 'Sales Automation', href: '/micro-saas#sales' };
+        { name: 'Data Analytics', href: '/micro-saas#analytics' };
+        { name: 'Legal Contract AI', href: '/micro-saas#legal' }
+      ]};
+    {
+      title: 'Industries';
+      links: [
+        { name: 'Healthcare', href: '/solutions#healthcare' };
+        { name: 'Finance', href: '/solutions#finance' };
+        { name: 'Manufacturing', href: '/solutions#manufacturing' };
+        { name: 'Education', href: '/solutions#education' };
+        { name: 'Government', href: '/solutions#government' };
+        { name: 'Retail', href: '/solutions#retail' }
+      ]};
+    {
+      title: 'Company';
+      links: [
+        { name: 'About Us', href: '/about' };
+        { name: 'Careers', href: '/careers' };
+        { name: 'Case Studies', href: '/case-studies' };
+        { name: 'News', href: '/news' };
+        { name: 'Blog', href: '/blog' };
+        { name: 'Support', href: '/support' }
+      ]}
   ],
-,
-  const socialLinks = [,
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> ,},;
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> ,},;
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> ,},;
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> ,},;
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> ,},;
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> ,}
+  const socialLinks = [
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> };
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> };
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> };
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> };
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> };
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> }
   ],
-,
-  return (,
+  return (
     <footer className="relative bg-black border-t border-cyan-50o0/20 overflow-hidden">,
       {/* Quantum Energy Field Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-50o0/5 to-transparent"></div>,
       {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">,
-        {[...Array(20)].map((_, i) => (,
+        {[...Array(20)].map((_, i) => (
           <motion.div,
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-30",
-            style={{,
-              left: `${Math.random() * 10o0,}%`,;
-              top: `${Math.random() * 10o0,}%`}}
-            animate={{,
-              y: [0, -30, 0],;
+            style={{
+              left: `${Math.random() * 10o0}%`;
+              top: `${Math.random() * 10o0}%`}}
+            animate={{
+              y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3]}}
-            transition={{,
-              duration: 4 + Math.random() * 2,;
-              repeat: Infinity,;
-              delay: Math.random() * 2,}}
-           />,
-        ))}
+            transition={{
+              duration: 4 + Math.random() * 2;
+              repeat: Infinity;
+              delay: Math.random() * 2}}
+           />))}
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Main Footer Content */,}
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-6 gap-8 mb-12">,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className="lg: col-span-2">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >,
               <div className="flex items-center space-x-3 mb-6">,
                 <div className="relative">,
@@ -148,14 +138,14 @@ const QuantumFooter: React.FC = () => {,
               </div>,
             </motion.div>,
           </div>,
-          {/* Footer Sections */,}
-          {footerSections.map((section, index) => (,
+          {/* Footer Sections */}
+          {footerSections.map((section, index) => (
             <motion.div,
               key={section.title}
-              initial={{ opacity: 0, y: 20 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: index * 0.1 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >,
               <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">,
                 {section.title === 'Revolutionary Services' && <Rocket className="w-5 h-5 text-cyan-40o0"  />}
@@ -165,65 +155,58 @@ const QuantumFooter: React.FC = () => {,
                 <span>{section.title}</span>,
               </h4>,
               <ul className="space-y-2">,
-                {section.links.map((link) => (,
+                {section.links.map((link) => (
                   <li key={link.name}>,
-                    <Link,
+                    <Link
                       href={link.href}
-                      className="text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 text-sm",
-                    >,
-                      {link.name,}
+                      className="text-gray-40o0 hover: text-cyan-40o0 transition-colors duration-20o0 text-sm">,
+                      {link.name}
                     </Link>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </div>,
         {/* Bottom Section */}
         <div className="border-t border-cyan-50o0/20 pt-8">,
           <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">,
-            {/* Copyright */,}
+            {/* Copyright */}
             <motion.div,
-              initial={{ opacity: 0, x: -20 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="text-gray-40o0 text-sm",
-            >,
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-gray-40o0 text-sm">,
               <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>,
               <p className="mt-1">Building the future with quantum technology and AI.</p>,
             </motion.div>,
             {/* Social Links */}
             <motion.div,
-              initial={{ opacity: 0, x: 20 ,}}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              transition={{ duration: 0.6 ,}}
-              viewport={{ once: true ,}}
-              className="flex items-center space-x-4",
-            >,
-              {socialLinks.map((social) => (,
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-4">,
+              {socialLinks.map((social) => (
                 <motion.a,
                   key={social.name}
                   href={social.href}
                   target="_blank",
                   rel="noopener noreferrer",
                   className="w-10 h-10 bg-gray-80o0 hover: bg-cyan-50o0/20 border border-gray-70o0 hover:border-cyan-40o0/50 rounded-lg flex items-center justify-center text-gray-40o0 hover:text-cyan-40o0 transition-all duration-20o0 group",
-                  whileHover={{ scale: 1.1, rotate: 5 ,}}
-                  whileTap={{ scale: 0.9 ,}}
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
                 >,
                   {social.icon}
-                </motion.a>,
-              ))}
+                </motion.a>))}
             </motion.div>,
           </div>,
           {/* Additional Links */}
           <motion.div,
-            initial={{ opacity: 0, y: 20 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.3 ,}}
-            viewport={{ once: true ,}}
-            className="flex flex-wrap justify-center items-center space-x-6 mt-8 text-sm text-gray-40o0",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center items-center space-x-6 mt-8 text-sm text-gray-40o0">,
             <Link href="/privacy" className="hover: text-cyan-40o0 transition-colors duration-20o0">,
               Privacy Policy,
             </Link>,
@@ -239,20 +222,17 @@ const QuantumFooter: React.FC = () => {,
           </motion.div>,
         </div>,
       </div>,
-      {/* Quantum Energy Pulse */,}
+      {/* Quantum Energy Pulse */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent">,
         <motion.div,
           className="h-full bg-cyan-40o0",
-          animate={{,
+          animate={{
             scaleX: [0, 1, 0]}}
-          transition={{,
-            duration: 3,;
-            repeat: Infinity,;
-            ease: "easeInOut",}}
+          transition={{
+            duration: 3;
+            repeat: Infinity;
+            ease: "easeInOut"}}
          />,
       </div>,
-    </footer>,
-  ),
-};
-,
-export default QuantumFooter,
+    </footer>)};
+export default QuantumFooter;

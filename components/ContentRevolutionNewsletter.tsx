@@ -1,27 +1,20 @@
 "use client",
 import React, { useState } from 'react',
-,
-const ContentRevolutionNewsletter = () => {,
+const ContentRevolutionNewsletter = () => {
   const [email, setEmail] = useState(''),
   const [isSubscribed, setIsSubscribed] = useState(false),
   const [isLoading, setIsLoading] = useState(false),
-,
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!email) return,
-,
     setIsLoading(true),
-,
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve, 20o00)),
-,
     setIsSubscribed(true),
     setIsLoading(false),
-    setEmail(', '),
-  };
-,
-  if (isSubscribed) {,
-    return (,
+    setEmail(', ')};
+  if (isSubscribed) {
+    return (
       <section className="py-20 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <div className="text-6xl mb-6">🎉</div>,
@@ -40,11 +33,9 @@ const ContentRevolutionNewsletter = () => {,
             </ul>,
           </div>,
         </div>,
-      </section>,
-    ),
-  }
+      </section>)}
 ,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white relative overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>,
@@ -55,7 +46,7 @@ const ContentRevolutionNewsletter = () => {,
       <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-white/10 rounded-full animate-pulse"></div>,
       <div className="relative max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-bold">🚀 JOIN THE REVOLUTION</span>,
           </div>,
@@ -66,13 +57,13 @@ const ContentRevolutionNewsletter = () => {,
               AI 20o25 Ultimate Content Revolution,
             </span>,
           </h2>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className="text-xl md: text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">,
             Join thousands of businesses already transforming their content strategy with,
             our revolutionary AI technology. Get exclusive access to:,
           </p>,
         </div>,
-        {/* Benefits Grid */,}
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-12">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">,
             <div className="text-4xl mb-4">📊</div>,
@@ -99,27 +90,24 @@ const ContentRevolutionNewsletter = () => {,
         <div className="max-w-2xl mx-auto">,
           <form onSubmit={handleSubmit} className="space-y-6">,
             <div className="flex flex-col sm: flex-row gap-4">,
-              <input,
+              <input
                 type="email",
-                value={email,}
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address",
                 className="flex-1 px-6 py-4 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus: ring-2 focus:ring-yellow-40o0 focus:outline-none",
                 required,
               />,
-              <button,
+              <button
                 type="submit",
-                disabled={isLoading || !email,}
-                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover: from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none",
-              >,
-                {isLoading ? (,
+                disabled={isLoading || !email}
+                className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-black px-8 py-4 rounded-lg font-bold text-lg hover: from-yellow-40o0 hover:to-orange-40o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">,
+                {isLoading ? (
                   <div className="flex items-center gap-2">,
                     <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>,
                     Joining...,
-                  </div>,
-                ) : (,
-                  'Join the Revolution',
-                ),}
+                  </div>) : (
+                  'Join the Revolution')}
               </button>,
             </div>,
             <p className="text-sm text-center opacity-75">,
@@ -140,8 +128,5 @@ const ContentRevolutionNewsletter = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default ContentRevolutionNewsletter,
+    </section>)};
+export default ContentRevolutionNewsletter;

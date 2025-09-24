@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function CustomerSupportChatbot() {,
-  return (,
+export default function CustomerSupportChatbot() {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Customer Support Chatbot — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Reduce response time and deflect tickets with an autonomous support assistant.',
         />,
@@ -31,21 +30,18 @@ export default function CustomerSupportChatbot() {,
           <li>Hand-off to humans with context</li>,
         </ul>,
         <div className='mt-8 flex gap-3'>,
-          <Link,
+          <Link
             href='/services',
-            className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10',
-          >,
+            className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10'>,
             Back to Services,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white',
-          >,
+            className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-90o0 hover:bg-white'>,
             Get Started,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

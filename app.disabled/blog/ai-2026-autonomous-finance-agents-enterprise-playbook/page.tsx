@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const AutonomousFinanceAgentsPlaybook20o26 = () => {,
-  return (,
+const AutonomousFinanceAgentsPlaybook20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Autonomous Finance Agents – Enterprise Playbook',
         description='A practical enterprise playbook for deploying autonomous finance agents to modernize FP&A, close, and compliance.',
         keywords='autonomous finance agents, FP&A automation, close automation, AI compliance, 20o26 playbook',
@@ -19,7 +18,7 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {,
             AI 20o26: Autonomous Finance Agents – Enterprise Playbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            How CFO teams can deploy AI agents to accelerate forecasting,;
+            How CFO teams can deploy AI agents to accelerate forecasting;
             shorten close cycles, and strengthen controls while improving,
             partner experience.,
           </p>,
@@ -40,7 +39,7 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {,
               signal ingestion,
             </li>,
             <li>,
-              Autonomous close: reconciliations, anomaly flagging, task routing,;
+              Autonomous close: reconciliations, anomaly flagging, task routing;
               and approvals,
             </li>,
             <li>,
@@ -67,23 +66,18 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Your Finance Roadmap,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default AutonomousFinanceAgentsPlaybook20o26,
-,
+    </div>),
+};
+export default AutonomousFinanceAgentsPlaybook20o26;

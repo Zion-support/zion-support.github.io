@@ -2,97 +2,78 @@ import React{ useStateuseMemo } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  SearchStarDollarSignCheckCircle,;
-  ArrowRightRocketPhoneMailMapPinGridList,;
-  ChevronDownSparkles,
-} from 'lucide-react',
+import {
+  SearchStarDollarSignCheckCircle;
+  ArrowRightRocketPhoneMailMapPinGridList;
+  ChevronDownSparkles} from 'lucide-react',
 import { ultimate20o26Services } from '../data/ultimate-20o26-services',
 import { revolutionary20o26Innovations } from '../data/revolutionary-20o26-innovations',
-,
-export default function Ultimate20o26ServicesShowcase() {,
+export default function Ultimate20o26ServicesShowcase() {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
   const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all'),
   const [sortBysetSortBy] = useState<string>('name'),
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
-,
-  const contactInfo ={,
-    mobile: '+1 30o2 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 10o08 Middletown DE 19709',;
+  const contactInfo ={
+    mobile: '+1 30o2 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 10o08 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-  ,};
-,
+  };
   // Combine all services,
-  const allServices = [,
-    ...ultimate20o26Services,;
-    ...revolutionary20o26Innovations,
-  ],
-,
+  const allServices = [
+    ...ultimate20o26Services;
+    ...revolutionary20o26Innovations],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
-    service.category?.includes('AI') || service.category?.includes('Machine Learning'),
-  ).length,
+    service.category?.includes('AI') || service.category?.includes('Machine Learning')).length,
   const quantumCount = allServices.filter(service =>,
-    service.category?.includes('Quantum') || service.category?.includes('Space'),
-  ).length,
+    service.category?.includes('Quantum') || service.category?.includes('Space')).length,
   const enterpriseCount = allServices.filter(service =>,
-    service.category?.includes('Enterprise') || service.category?.includes('IT'),
-  ).length,
+    service.category?.includes('Enterprise') || service.category?.includes('IT')).length,
   const emergingCount = allServices.filter(service =>,
-    service.category?.includes('Emerging') || service.category?.includes('Innovation'),
-  ).length,
-,
-  const categories = [,
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length ,},;
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount ,},;
-    { id: 'quantum'name: 'Quantum & Space'icon: '⚛️'count: quantumCount ,},;
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseCount ,},;
-    { id: 'emerging'name: 'Emerging Tech'icon: '✨'count: emergingCount ,}
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')).length,
+  const categories = [
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length };
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount };
+    { id: 'quantum'name: 'Quantum & Space'icon: '⚛️'count: quantumCount };
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseCount };
+    { id: 'emerging'name: 'Emerging Tech'icon: '✨'count: emergingCount }
   ],
-,
-  const priceRanges = [,
-    { id: 'all'name: 'All Prices'range: 'All' ,},;
-    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' ,},;
-    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' ,},;
-    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' ,},;
-    { id: 'enterprise'name: 'Custom pricing'range: 'Custom' ,}
+  const priceRanges = [
+    { id: 'all'name: 'All Prices'range: 'All' };
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' };
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' };
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' };
+    { id: 'enterprise'name: 'Custom pricing'range: 'Custom' }
   ],
-,
   // Filter and sort services,
-  const filteredServices = useMemo(() => {,
-    let filtered = allServices.filter(service => {,
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-,
       const matchesCategory = selectedCategory === 'all' ||,
         (selectedCategory === 'ai' && service.category.includes('AI')) ||,
         (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||,
         (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||,
         (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'))),
-,
       const matchesPrice = selectedPriceRange === 'all' ||,
         (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g'')) < 10o00) ||,
         (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g'')) >= 10o00 && parseInt(service.price.replace(/[^0-9]/g'')) <= 50o00) ||,
         (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g'')) > 50o00) ||,
         (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
-,
-      return matchesSearch && matchesCategory && matchesPrice,
-    }),
-,
+      return matchesSearch && matchesCategory && matchesPrice}),
     // Sort services,
-    switch (sortBy) {,
+    switch (sortBy) {
       case 'name':,
         filtered.sort((ab) => a.name.localeCompare(b.name)),
         break,
       case 'price':,
-        filtered.sort((ab) => {,
+        filtered.sort((ab) => {
           const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g'')),
           const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g'')),
-          return priceA - priceB,
-        }),
+          return priceA - priceB}),
         break,
       case 'popularity':,
         filtered.sort((ab) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
@@ -102,14 +83,11 @@ export default function Ultimate20o26ServicesShowcase() {,
         break,
       default: ,
         break,
-    ,}
+    }
 ,
-    return filtered,
-  }[allServicesearchTermselectedCategoryselectedPriceRangesortBy]),
-,
+    return filtered}[allServicesearchTermselectedCategoryselectedPriceRangesortBy]),
   const featuredServices = allServices.filter(service => service.popular).slice(0o6),
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Ultimate 20o26 Services Showcase | Zion Tech Group</title>,
@@ -121,7 +99,7 @@ export default function Ultimate20o26ServicesShowcase() {,
         <meta property="og:type" content="website"  />,
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-20o26-services-showcase"  />,
       </Head>,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-90o0 to-black">,
         {/* Animated Background */}
         <div className="absolute inset-0">,
@@ -131,9 +109,9 @@ export default function Ultimate20o26ServicesShowcase() {,
         </div>,
         <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            animate={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0y: 30 }}
+            animate={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
               Ultimate 20o26,
@@ -141,25 +119,25 @@ export default function Ultimate20o26ServicesShowcase() {,
               <span className="text-6xl md:text-8xl">Innovations</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-              Discover revolutionary AI consciousness simulationquantum neural interfacesautonomous AI agents,;
+              Discover revolutionary AI consciousness simulationquantum neural interfacesautonomous AI agents;
               and cutting-edge enterprise solutions that will transform your business in 20o26 and beyond.,
             </p>,
             {/* Service Statistics */}
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">,
               <div className="text-center">,
-                <div className="text-3xl md:text-4xl font-bold text-cyan-40o0 mb-2">{allServices.length,}+</div>,
+                <div className="text-3xl md:text-4xl font-bold text-cyan-40o0 mb-2">{allServices.length}+</div>,
                 <div className="text-gray-40o0">Revolutionary Services</div>,
               </div>,
               <div className="text-center">,
-                <div className="text-3xl md: text-4xl font-bold text-purple-40o0 mb-2">{aiCount,}+</div>,
+                <div className="text-3xl md: text-4xl font-bold text-purple-40o0 mb-2">{aiCount}+</div>,
                 <div className="text-gray-40o0">AI Solutions</div>,
               </div>,
               <div className="text-center">,
-                <div className="text-3xl md: text-4xl font-bold text-pink-40o0 mb-2">{quantumCount,}+</div>,
+                <div className="text-3xl md: text-4xl font-bold text-pink-40o0 mb-2">{quantumCount}+</div>,
                 <div className="text-gray-40o0">Quantum Tech</div>,
               </div>,
               <div className="text-center">,
-                <div className="text-3xl md: text-4xl font-bold text-green-40o0 mb-2">{enterpriseCount,}+</div>,
+                <div className="text-3xl md: text-4xl font-bold text-green-40o0 mb-2">{enterpriseCount}+</div>,
                 <div className="text-gray-40o0">Enterprise Solutions</div>,
               </div>,
             </div>,
@@ -175,7 +153,7 @@ export default function Ultimate20o26ServicesShowcase() {,
             </div>,
           </motion.div>,
         </div>,
-        {/* Floating Elements */,}
+        {/* Floating Elements */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-50o0/20 rounded-full blur-xl animate-pulse"></div>,
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-50o0/20 rounded-full blur-xl animate-pulse delay-10o00"></div>,
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-50o0"></div>,
@@ -186,7 +164,7 @@ export default function Ultimate20o26ServicesShowcase() {,
           <div className="flex items-center space-x-6 mb-4 md:mb-0">,
             <div className="flex items-center">,
               <Phone className="w-4 h-4 mr-2"  />,
-              <span className="text-sm">{contactInfo.mobile,}</span>,
+              <span className="text-sm">{contactInfo.mobile}</span>,
             </div>,
             <div className="flex items-center">,
               <Mail className="w-4 h-4 mr-2"  />,
@@ -205,13 +183,13 @@ export default function Ultimate20o26ServicesShowcase() {,
           </div>,
         </div>,
       </section>,
-      {/* Featured Services */,}
+      {/* Featured Services */}
       <section className="py-20 bg-gray-90o0">,
         <div className="max-w-7xl mx-auto px-6">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}} className="text-center mb-16">,
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }} className="text-center mb-16">,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-40o0 to-purple-40o0">Revolutionary Services</span>,
             </h2>,
@@ -220,26 +198,25 @@ export default function Ultimate20o26ServicesShowcase() {,
             </p>,
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {featuredServices.map((serviceindex) => (,
+            {featuredServices.map((serviceindex) => (
               <motion.div,
-                key={service.id,}
-                initial={{ opacity: 0y: 30 ,}}
-                whileInView={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.8delay: index * 0.1 ,}} className="group relative">,
+                key={service.id}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.1 }} className="group relative">,
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-80o0 to-gray-90o0 p-8 border border-gray-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0 transform hover:scale-10o5">,
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"></div>,
                   <div className="relative z-10">,
                     <div className="flex items-center justify-between mb-4">,
-                      <div className="text-4xl">{service.icon,}</div>,
-                      {service.popular && (,
+                      <div className="text-4xl">{service.icon}</div>,
+                      {service.popular && (
                         <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">,
                           <Star className="w-3 h-3 mr-1"  />,
                           Popular,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                     <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-40o0 transition-colors">,
-                      {service.name,}
+                      {service.name}
                     </h3>,
                     <p className="text-gray-40o0 mb-4 line-clamp-3">,
                       {service.description}
@@ -258,7 +235,7 @@ export default function Ultimate20o26ServicesShowcase() {,
                       <div className="text-sm text-gray-50o0">,
                         {service.customers.toLocaleString()} customers,
                       </div>,
-                      <Link,
+                      <Link
                         href={service.link} className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors group-hover:translate-x-1 transform duration-20o0">,
                         Learn More,
                         <ArrowRight className="w-4 h-4 ml-1"  />,
@@ -266,8 +243,7 @@ export default function Ultimate20o26ServicesShowcase() {,
                     </div>,
                   </div>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -275,9 +251,9 @@ export default function Ultimate20o26ServicesShowcase() {,
       <section id="services" className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-6">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}} className="text-center mb-16">,
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }} className="text-center mb-16">,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-40o0 to-pink-40o0">Revolutionary Services</span>,
             </h2>,
@@ -285,49 +261,47 @@ export default function Ultimate20o26ServicesShowcase() {,
               Explore our complete portfolio of cutting-edge 20o26 innovations,
             </p>,
           </motion.div>,
-          {/* Filters and Search */,}
+          {/* Filters and Search */}
           <div className="mb-12 space-y-6">,
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">,
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5"  />,
-              <input,
+              <input
                 type="text",
                 placeholder="Search revolutionary services...",
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-80o0 border border-gray-70o0 rounded-full text-white placeholder-gray-40o0 focus: outline-none focus:border-cyan-50o0 focus:ring-2 focus:ring-cyan-50o0/20 transition-all",
               />,
             </div>,
-            {/* Filters */,}
+            {/* Filters */}
             <div className="flex flex-wrap items-center justify-center gap-4">,
               {/* Category Filter */}
               <div className="relative">,
-                <select,
+                <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-2 text-white focus: outline-none focus:border-cyan-50o0 focus:ring-2 focus:ring-cyan-50o0/20 transition-all">,
-                  {categories.map((category) => (,
-                    <option key={category.id,} value={category.id}>,
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>,
                       {category.name} ({category.count}),
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
               {/* Price Filter */}
               <div className="relative">,
-                <select,
+                <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-2 text-white focus: outline-none focus:border-cyan-50o0 focus:ring-2 focus:ring-cyan-50o0/20 transition-all">,
-                  {priceRanges.map((range) => (,
-                    <option key={range.id,} value={range.id}>,
+                  {priceRanges.map((range) => (
+                    <option key={range.id} value={range.id}>,
                       {range.name}
-                    </option>,
-                  ))}
+                    </option>))}
                 </select>,
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
               {/* Sort */}
               <div className="relative">,
-                <select,
+                <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-80o0 border border-gray-70o0 rounded-lg px-4 py-2 text-white focus: outline-none focus:border-cyan-50o0 focus:ring-2 focus:ring-cyan-50o0/20 transition-all">,
                   <option value="name">Sort by Name</option>,
@@ -337,17 +311,17 @@ export default function Ultimate20o26ServicesShowcase() {,
                 </select>,
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-4 h-4 pointer-events-none"  />,
               </div>,
-              {/* View Mode */,}
+              {/* View Mode */}
               <div className="flex bg-gray-80o0 border border-gray-70o0 rounded-lg p-1">,
-                <button,
+                <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',}`}
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <Grid className="w-4 h-4"  />,
                 </button>,
-                <button,
+                <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white',}`}
+                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-50o0 text-white' : 'text-gray-40o0 hover: text-white'}`}
                 >,
                   <List className="w-4 h-4"  />,
                 </button>,
@@ -355,30 +329,29 @@ export default function Ultimate20o26ServicesShowcase() {,
             </div>,
           </div>,
           {/* Services Grid/List */}
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6',}>,
-            {filteredServices.map((serviceindex) => (,
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>,
+            {filteredServices.map((serviceindex) => (
               <motion.div,
                 key={service.id}
-                initial={{ opacity: 0y: 30 ,}}
-                whileInView={{ opacity: 1y: 0 ,}}
-                transition={{ duration: 0.8delay: index * 0.0o5 ,}}
-                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-80o0 rounded-2xl p-6 border border-gray-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0',}
+                initial={{ opacity: 0y: 30 }}
+                whileInView={{ opacity: 1y: 0 }}
+                transition={{ duration: 0.8delay: index * 0.0o5 }}
+                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-80o0 rounded-2xl p-6 border border-gray-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0'}
               >,
-                {viewMode === 'grid' ? (,
+                {viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-80o0 to-gray-90o0 p-8 border border-gray-70o0 hover: border-cyan-50o0/50 transition-all duration-30o0 transform hover:scale-10o5">,
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"></div>,
                     <div className="relative z-10">,
                       <div className="flex items-center justify-between mb-4">,
-                        <div className="text-4xl">{service.icon,}</div>,
-                        {service.popular && (,
+                        <div className="text-4xl">{service.icon}</div>,
+                        {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">,
                             <Star className="w-3 h-3 mr-1"  />,
                             Popular,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
                       <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-40o0 transition-colors">,
-                        {service.name,}
+                        {service.name}
                       </h3>,
                       <p className="text-gray-40o0 mb-4 line-clamp-3">,
                         {service.description}
@@ -397,34 +370,32 @@ export default function Ultimate20o26ServicesShowcase() {,
                         <div className="text-sm text-gray-50o0">,
                           {service.customers.toLocaleString()} customers,
                         </div>,
-                        <Link,
+                        <Link
                           href={service.link} className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors group-hover:translate-x-1 transform duration-20o0">,
                           Learn More,
                           <ArrowRight className="w-4 h-4 ml-1"  />,
                         </Link>,
                       </div>,
                     </div>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div className="flex items-center space-x-6">,
-                    <div className="text-4xl">{service.icon,}</div>,
+                    <div className="text-4xl">{service.icon}</div>,
                     <div className="flex-1">,
                       <div className="flex items-center justify-between mb-2">,
                         <h3 className="text-xl font-bold text-white group-hover: text-cyan-40o0 transition-colors">,
-                          {service.name,}
+                          {service.name}
                         </h3>,
-                        {service.popular && (,
+                        {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">,
                             <Star className="w-3 h-3 mr-1"  />,
                             Popular,
-                          </div>,
-                        )}
+                          </div>)}
                       </div>,
                       <p className="text-gray-40o0 mb-3">{service.description}</p>,
                       <div className="flex items-center space-x-6 text-sm text-gray-50o0">,
-                        <span>Category: {service.category,}</span>,
+                        <span>Category: {service.category}</span>,
                         <span>{service.customers.toLocaleString()} customers</span>,
-                        <span>Rating: {service.rating,}/5</span>,
+                        <span>Rating: {service.rating}/5</span>,
                       </div>,
                     </div>,
                     <div className="text-right">,
@@ -432,41 +403,38 @@ export default function Ultimate20o26ServicesShowcase() {,
                         {service.price}
                         <span className="text-sm text-gray-40o0">{service.period}</span>,
                       </div>,
-                      <Link,
+                      <Link
                         href={service.link} className="inline-flex items-center text-cyan-40o0 hover: text-cyan-30o0 transition-colors group-hover:translate-x-1 transform duration-20o0">,
                         Learn More,
                         <ArrowRight className="w-4 h-4 ml-1"  />,
                       </Link>,
                     </div>,
-                  </div>,
-                ),}
-              </motion.div>,
-            ))}
+                  </div>)}
+              </motion.div>))}
           </div>,
-          {filteredServices.length === 0 && (,
+          {filteredServices.length === 0 && (
             <motion.div,
-              initial={{ opacity: 0 ,}}
-              animate={{ opacity: 1 ,}} className="text-center py-20">,
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }} className="text-center py-20">,
               <div className="text-6xl mb-4">🔍</div>,
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
               <p className="text-gray-40o0">Try adjusting your search criteria or filters</p>,
-            </motion.div>,
-          )}
+            </motion.div>)}
         </div>,
       </section>,
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-60o0 via-purple-60o0 to-pink-60o0">,
         <div className="max-w-4xl mx-auto text-center px-6">,
           <motion.div,
-            initial={{ opacity: 0y: 30 ,}}
-            whileInView={{ opacity: 1y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0y: 30 }}
+            whileInView={{ opacity: 1y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
               Ready to Transform Your Business with 20o26 Innovations?,
             </h2>,
             <p className="text-xl text-white/90 mb-8">,
-              Join thousands of forward-thinking companies already leveraging our revolutionary AIquantum computing,;
+              Join thousands of forward-thinking companies already leveraging our revolutionary AIquantum computing;
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -496,7 +464,7 @@ export default function Ultimate20o26ServicesShowcase() {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Footer Contact */,}
+      {/* Footer Contact */}
       <section className="py-16 bg-gray-90o0">,
         <div className="max-w-7xl mx-auto px-6">,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-12">,
@@ -511,7 +479,7 @@ export default function Ultimate20o26ServicesShowcase() {,
               <div className="space-y-4">,
                 <div className="flex items-center text-gray-30o0">,
                   <Phone className="w-5 h-5 mr-3 text-cyan-40o0"  />,
-                  <span>{contactInfo.mobile,}</span>,
+                  <span>{contactInfo.mobile}</span>,
                 </div>,
                 <div className="flex items-center text-gray-30o0">,
                   <Mail className="w-5 h-5 mr-3 text-cyan-40o0"  />,
@@ -559,6 +527,4 @@ export default function Ultimate20o26ServicesShowcase() {,
           </div>,
         </div>,
       </section>,
-    </>,
-  ),
-}
+    </>)}

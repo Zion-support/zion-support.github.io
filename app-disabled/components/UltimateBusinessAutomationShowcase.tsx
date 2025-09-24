@@ -1,84 +1,78 @@
 'use client',
-,
 import React, { useState } from 'react',
 import Link from 'next/link',
-,
-const UltimateBusinessAutomationShowcase = () => {,
+const UltimateBusinessAutomationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const contentItems = [,
-    {,
-      id: 'ultimate-business-automation-revolution',;
-      title: 'AI 20o25: The Ultimate Business Automation Revolution',;
-      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI',;
+  const contentItems = [
+    {
+      id: 'ultimate-business-automation-revolution';
+      title: 'AI 20o25: The Ultimate Business Automation Revolution';
+      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI';
       description:,
-        'Complete business automation transformation with $2.8B annual savings. Learn how Fortune 50o0 companies achieve unprecedented ROI through intelligent automation.',;
-      type: 'blog',;
-      category: 'automation',;
-      metrics: {,
-        roi: '5,0o00%',;
-        savings: '$2.8B',;
-        accuracy: '99.7%',;
-        efficiency: '340%',;
-      },;
-      link: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough',;
-      readingTime: '25 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'fortune-50o0-automation-success',;
-      title: 'Fortune 50o0 Ultimate Business Automation Success',;
-      subtitle: '$2.8B Annual Savings - 5,0o00% ROI Success Story',;
+        'Complete business automation transformation with $2.8B annual savings. Learn how Fortune 50o0 companies achieve unprecedented ROI through intelligent automation.';
+      type: 'blog';
+      category: 'automation';
+      metrics: {
+        roi: '5,0o00%';
+        savings: '$2.8B';
+        accuracy: '99.7%';
+        efficiency: '340%';
+      };
+      link: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough';
+      readingTime: '25 min read';
+      featured: true;
+    };
+    {
+      id: 'fortune-50o0-automation-success';
+      title: 'Fortune 50o0 Ultimate Business Automation Success';
+      subtitle: '$2.8B Annual Savings - 5,0o00% ROI Success Story';
       description:,
-        'Real-world case study of a Fortune 10o0 manufacturing company that achieved 5,0o00% ROI through complete business automation transformation.',;
-      type: 'case-study',;
-      category: 'automation',;
-      metrics: {,
-        roi: '5,0o00%',;
-        savings: '$2.8B',;
-        timeline: '18 months',;
-        satisfaction: '99.7%',;
-      },;
-      link: '/case-studies/fortune-50o0-ultimate-business-automation-50o00-roi-success-story',;
-      readingTime: '18 min read',;
-      featured: true,;
-    },;
-    {,
-      id: 'automation-implementation-guide',;
-      title: 'Ultimate Business Automation Implementation Guide',;
-      subtitle: 'Complete Roadmap to 5,0o00% ROI',;
+        'Real-world case study of a Fortune 10o0 manufacturing company that achieved 5,0o00% ROI through complete business automation transformation.';
+      type: 'case-study';
+      category: 'automation';
+      metrics: {
+        roi: '5,0o00%';
+        savings: '$2.8B';
+        timeline: '18 months';
+        satisfaction: '99.7%';
+      };
+      link: '/case-studies/fortune-50o0-ultimate-business-automation-50o00-roi-success-story';
+      readingTime: '18 min read';
+      featured: true;
+    };
+    {
+      id: 'automation-implementation-guide';
+      title: 'Ultimate Business Automation Implementation Guide';
+      subtitle: 'Complete Roadmap to 5,0o00% ROI';
       description:,
-        'Step-by-step implementation guide for achieving 5,0o00% ROI through business automation. Includes detailed timelines, best practices, and success metrics.',;
-      type: 'resource',;
-      category: 'automation',;
-      metrics: {,
-        roi: '5,0o00%',;
-        success: '98%',;
-        timeline: '18 months',;
-        processes: '20o0+',;
-      },;
-      link: '/resources/ultimate-business-automation-implementation-guide-20o25',;
-      readingTime: '35 min read',;
-      featured: true,;
-    },;
+        'Step-by-step implementation guide for achieving 5,0o00% ROI through business automation. Includes detailed timelines, best practices, and success metrics.';
+      type: 'resource';
+      category: 'automation';
+      metrics: {
+        roi: '5,0o00%';
+        success: '98%';
+        timeline: '18 months';
+        processes: '20o0+';
+      };
+      link: '/resources/ultimate-business-automation-implementation-guide-20o25';
+      readingTime: '35 min read';
+      featured: true;
+    };
   ],
-,
-  const categories = [,
-    { id: 'all', name: 'All Content', count: contentItems.length ,},;
-    {,
-      id: 'automation',;
-      name: 'Business Automation',;
-      count: contentItems.filter(item => item.category === 'automation').length,;
-    },;
+  const categories = [
+    { id: 'all', name: 'All Content', count: contentItems.length };
+    {
+      id: 'automation';
+      name: 'Business Automation';
+      count: contentItems.filter(item => item.category === 'automation').length;
+    };
   ],
-,
   const filteredContent =,
     activeCategory === 'all',
       ? contentItems,
       : contentItems.filter(item => item.category === activeCategory),
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-50o0',
       case 'case-study':,
@@ -87,11 +81,10 @@ const UltimateBusinessAutomationShowcase = () => {,
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0',
-    ,}
+    }
   };
-,
-  const getTypeIcon = (type: string) => {,
-    switch (type) {,
+  const getTypeIcon = (type: string) => {
+    switch (type) {
       case 'blog':,
         return '📝',
       case 'case-study':,
@@ -100,20 +93,19 @@ const UltimateBusinessAutomationShowcase = () => {,
         return '📚',
       default:,
         return '📄',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <section className='py-20 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='text-center mb-16'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white rounded-full px-6 py-2 mb-6'>,
             <span className='mr-2'>🚀</span>,
             ULTIMATE BUSINESS AUTOMATION REVOLUTION 20o25,
           </div>,
           <h2 className='text-4xl md: text-5xl font-bold text-gray-90o0 mb-6'>,
-            Transform Your Business with{' ',}
+            Transform Your Business with{' '}
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-60o0 to-blue-60o0'>,
               5,0o00% ROI,
             </span>,
@@ -126,35 +118,34 @@ const UltimateBusinessAutomationShowcase = () => {,
         </div>,
         {/* Category filters */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
-          {categories.map(category => (,
-            <button,
+          {categories.map(category => (
+            <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${,
+              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 ${
                 activeCategory === category.id,
                   ? 'bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white shadow-lg transform scale-10o5',
                   : 'bg-white text-gray-70o0 hover: bg-gray-10o0 shadow-md',
-              ,}`}
+              }`}
             >,
               {category.name} ({category.count}),
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
-          {filteredContent.map(item => (,
-            <div,
-              key={item.id,}
-              className={`bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
+          {filteredContent.map(item => (
+            <div
+              key={item.id}
+              className={`bg-white rounded-2xl shadow-xl overflow-hidden hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
                 item.featured,
                   ? 'ring-2 ring-gradient-to-r ring-purple-50o0',
                   : '',
-              ,}`}
+              }`}
             >,
               {/* Content header */}
               <div className='p-6 pb-4'>,
                 <div className='flex items-center justify-between mb-4'>,
-                  <div,
+                  <div
                     className={`flex items-center px-3 py-1 rounded-full text-white text-sm font-medium ${getTypeColor(item.type)}`}
                   >,
                     <span className='mr-2'>{getTypeIcon(item.type)}</span>,
@@ -162,11 +153,10 @@ const UltimateBusinessAutomationShowcase = () => {,
                     {item.type === 'case-study' && 'Case Study'}
                     {item.type === 'resource' && 'Resource Guide'}
                   </div>,
-                  {item.featured && (,
+                  {item.featured && (
                     <div className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold'>,
                       ⭐ Featured,
-                    </div>,
-                  )}
+                    </div>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-2 leading-tight'>,
                   {item.title}
@@ -179,19 +169,17 @@ const UltimateBusinessAutomationShowcase = () => {,
                 </p>,
                 {/* Metrics */}
                 <div className='grid grid-cols-2 gap-3 mb-4'>,
-                  {Object.entries(item.metrics).map(([key, value]) => (,
-                    <div,
+                  {Object.entries(item.metrics).map(([key, value]) => (
+                    <div
                       key={key}
-                      className='bg-gray-50 rounded-lg p-3 text-center',
-                    >,
+                      className='bg-gray-50 rounded-lg p-3 text-center'>,
                       <div className='text-lg font-bold text-purple-60o0'>,
                         {value}
                       </div>,
                       <div className='text-xs text-gray-50o0 capitalize'>,
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Reading time */}
                 <div className='text-sm text-gray-50o0 mb-4'>,
@@ -200,17 +188,15 @@ const UltimateBusinessAutomationShowcase = () => {,
               </div>,
               {/* Action buttons */}
               <div className='px-6 pb-6'>,
-                <Link,
+                <Link
                   href={item.link}
-                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-                >,
-                  {item.type === 'blog' && 'Read Full Article',}
+                  className='block w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white text-center py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
+                  {item.type === 'blog' && 'Read Full Article'}
                   {item.type === 'case-study' && 'View Case Study'}
                   {item.type === 'resource' && 'Download Guide'}
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success metrics summary */}
         <div className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 rounded-2xl p-8 text-white'>,
@@ -269,25 +255,20 @@ const UltimateBusinessAutomationShowcase = () => {,
               comprehensive assessment and implementation roadmap today.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Get Free Assessment,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-all duration-30o0',
-              >,
+                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-all duration-30o0'>,
                 View Services,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimateBusinessAutomationShowcase,
-,
+    </section>),
+};
+export default UltimateBusinessAutomationShowcase;

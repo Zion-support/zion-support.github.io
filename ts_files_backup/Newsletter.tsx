@@ -1,32 +1,26 @@
 'use client',
-,
 import React, { useState } from 'react',
-,
-export default function Newsletter() {,
+export default function Newsletter() {
   const [email, setEmail] = useState(''),
   const [isSubscribed, setIsSubscribed] = useState(false),
-,
-  const handleSubmit = (e: React.FormEvent) => {,
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Here you would typically send the email to your backend,
-    console.log('Newsletter subscription:', email),
+    // console.log('Newsletter subscription:', email),
     setIsSubscribed(true),
-    setEmail(''),
-  };
-,
-  if (isSubscribed) {,
-    return (,
+    setEmail('')};
+  if (isSubscribed) {
+    return (
       <section className='py-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white'>,
         <div className='container mx-auto px-4 text-center'>,
           <div className='max-w-2xl mx-auto'>,
             <div className='w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6'>,
-              <svg,
+              <svg
                 className='w-8 h-8',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
                   strokeWidth={2}
@@ -43,11 +37,9 @@ export default function Newsletter() {,
             </p>,
           </div>,
         </div>,
-      </section>,
-    ),
-  }
+      </section>)}
 ,
-  return (,
+  return (
     <section className='py-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white'>,
       <div className='container mx-auto px-4'>,
         <div className='max-w-4xl mx-auto text-center'>,
@@ -60,18 +52,17 @@ export default function Newsletter() {,
           </p>,
           <form onSubmit={handleSubmit} className='max-w-md mx-auto'>,
             <div className='flex flex-col sm: flex-row gap-4'>,
-              <input,
+              <input
                 type='email',
-                value={email,}
+                value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder='Enter your email address',
                 className='flex-1 px-4 py-3 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus: outline-none focus:ring-2 focus:ring-white/50',
                 required,
               />,
-              <button,
+              <button
                 type='submit',
-                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors shadow-lg hover:shadow-xl',
-              >,
+                className='bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors shadow-lg hover:shadow-xl'>,
                 Subscribe,
               </button>,
             </div>,
@@ -81,7 +72,6 @@ export default function Newsletter() {,
           </form>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

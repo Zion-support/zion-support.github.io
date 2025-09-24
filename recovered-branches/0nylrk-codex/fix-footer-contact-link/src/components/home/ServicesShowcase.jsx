@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge',
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices',
 import { ArrowRight } from "lucide-react",
-export function ServicesShowcase() {,
+export function ServicesShowcase() {
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6),
     return (<section className="py-20 relative">,
       {/* Background accent */}
@@ -27,14 +27,14 @@ export function ServicesShowcase() {,
               <CardHeader className="pb-4">,
                 <div className="flex justify-between items-start mb-4">,
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">,
-                    {service.icon,}
+                    {service.icon}
                   </div>,
                   <Badge variant="secondary" className="bg-primary/20 text-primary">,
                     {service.badge}
                   </Badge>,
                 </div>,
                 <CardTitle className="text-xl mb-2 group-hover: text-primary transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
                 <CardDescription className="text-base">,
                   {service.description}
@@ -68,7 +68,7 @@ export function ServicesShowcase() {,
                   <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark">,
                     Get Started,
                   </Button>,
-                  <Link to={`/micro-saas-services#${service.id,}`}>,
+                  <Link to={`/micro-saas-services#${service.id}`}>,
                     <Button variant="outline" size="sm" className="w-full">,
                       Learn More,
                       <ArrowRight className="w-4 h-4 ml-1" />,
@@ -94,11 +94,11 @@ export function ServicesShowcase() {,
               <CardHeader className="pb-3">,
                 <div className="flex justify-center mb-3">,
                   <div className="p-2 rounded-lg bg-black/20">,
-                    {service.icon,}
+                    {service.icon}
                   </div>,
                 </div>,
                 <CardTitle className="text-lg text-center group-hover: text-primary transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
               </CardHeader>,
               <CardContent className="text-center space-y-3">,
@@ -128,7 +128,7 @@ export function ServicesShowcase() {,
               Ready to Transform Your Business?,
             </h3>,
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">,
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth,;
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth;
               improve efficiency, and stay ahead of the competition.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -147,5 +147,5 @@ export function ServicesShowcase() {,
         </div>,
       </div>,
     </section>),
-,}
+}
 ,

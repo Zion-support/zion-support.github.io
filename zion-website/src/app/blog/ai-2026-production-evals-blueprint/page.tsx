@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function BlogPostPage() {,
-  return (,
+import React from 'react';
+export default function BlogPostPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -29,7 +28,5 @@ export default function BlogPostPage() {,
           </ul>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

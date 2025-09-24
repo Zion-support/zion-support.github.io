@@ -1,7 +1,6 @@
 'use client',
-,
-export default function BlockchainWeb3Page() {,
-  return (,
+export default function BlockchainWeb3Page() {
+  return (
     <div className='min-h-screen bg-white'>,
       <section className='py-20 text-center'>,
         <h1 className='text-4xl font-bold'>Blockchain & Web3</h1>,
@@ -9,7 +8,5 @@ export default function BlockchainWeb3Page() {,
           Secure blockchain integrations and Web3 solutions.,
         </p>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

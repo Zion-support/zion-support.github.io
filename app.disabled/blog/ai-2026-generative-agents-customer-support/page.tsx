@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const GenerativeAgentsCustomerSupport20o26 = () => {,
-  return (,
+const GenerativeAgentsCustomerSupport20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Generative Agents for Customer Support',
         description='How generative AI agents will reshape customer support in 20o26 with autonomous resolution, omnichannel orchestration, and measurable CSAT improvements.',
         keywords='generative agents, customer support, AI 20o26, CX automation, CSAT',
@@ -61,23 +60,18 @@ const GenerativeAgentsCustomerSupport20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Discuss Your CX Strategy,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default GenerativeAgentsCustomerSupport20o26,
-,
+    </div>),
+};
+export default GenerativeAgentsCustomerSupport20o26;

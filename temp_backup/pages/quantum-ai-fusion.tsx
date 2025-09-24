@@ -1,60 +1,56 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Code,;
-  Database, Globe, Shield, Cpu, Users2, Award,;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock,;
-  Server, Network, Monitor, Settings, RefreshCw,;
-  Play, Pause, AlertTriangle, CheckCircle2, Building,;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,;
-  Wallet, CreditCard, PiggyBank, Building2, Activity,;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio,;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,;
-  Calendar, Clock, Target, Users2, FileText2, PieChart,;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,;
-  TrendingUp, Shield, Globe, Database, Network,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'Quantum AI Fusion | Zion Tech Group',;
-  description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',;
-  keywords: 'quantum AI fusion, quantum computing, artificial intelligence, quantum machine learning, quantum algorithms',;
-  openGraph: {,
-    title: 'Quantum AI Fusion | Zion Tech Group',;
-    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',;
-    url: 'https://ziontechgroup.com/quantum-ai-fusion',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'Quantum AI Fusion',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'Quantum AI Fusion | Zion Tech Group',;
-    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',;
-    images: ['https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/quantum-ai-fusion',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Code;
+  Database, Globe, Shield, Cpu, Users2, Award;
+  CheckCircle, Target, BarChart3, TrendingUp, Lock;
+  Server, Network, Monitor, Settings, RefreshCw;
+  Play, Pause, AlertTriangle, CheckCircle2, Building;
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
+  Wallet, CreditCard, PiggyBank, Building2, Activity;
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
+  Film, Headphones, Camera, Gamepad2, Tv, Radio;
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
+  Calendar, Clock, Target, Users2, FileText2, PieChart;
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
+  TrendingUp, Shield, Globe, Database, Network} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'Quantum AI Fusion | Zion Tech Group';
+  description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
+  keywords: 'quantum AI fusion, quantum computing, artificial intelligence, quantum machine learning, quantum algorithms';
+  openGraph: {
+    title: 'Quantum AI Fusion | Zion Tech Group';
+    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
+    url: 'https://ziontechgroup.com/quantum-ai-fusion';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'Quantum AI Fusion'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'Quantum AI Fusion | Zion Tech Group';
+    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
+    images: ['https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/quantum-ai-fusion'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
-export default function QuantumAIFusion() {,
-  return (,
+};
+export default function QuantumAIFusion() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -73,24 +69,22 @@ export default function QuantumAIFusion() {,
               that unlocks unprecedented computational power and problem-solving capabilities.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover:from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover:from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#technology",
-                className="inline-flex items-center px-8 py-4 border border-blue-50o0/30 rounded-xl font-semibold text-blue-30o0 hover:bg-blue-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-blue-50o0/30 rounded-xl font-semibold text-blue-30o0 hover:bg-blue-50o0/10 transition-all duration-30o0">,
                 Explore Technology,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Technology Overview Section */,}
+      {/* Technology Overview Section */}
       <section id="technology" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -160,7 +154,7 @@ export default function QuantumAIFusion() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum AI Capabilities Section */,}
+      {/* Quantum AI Capabilities Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -253,7 +247,7 @@ export default function QuantumAIFusion() {,
           </div>,
         </div>,
       </section>,
-      {/* Applications Section */,}
+      {/* Applications Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -373,7 +367,7 @@ export default function QuantumAIFusion() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack Section */,}
+      {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -434,24 +428,22 @@ export default function QuantumAIFusion() {,
             Experience the future of computing with our revolutionary quantum AI fusion platform.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover:from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover:from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Your Journey,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-blue-50o0/30 rounded-xl font-semibold text-blue-30o0 hover: bg-blue-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-blue-50o0/30 rounded-xl font-semibold text-blue-30o0 hover: bg-blue-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -463,14 +455,14 @@ export default function QuantumAIFusion() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-blue-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-blue-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -484,10 +476,9 @@ export default function QuantumAIFusion() {,
               <p className="text-gray-40o0 mb-6">,
                 Let's discuss your quantum AI needs and how our fusion platform can transform your operations.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover: from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-60o0 to-indigo-60o0 rounded-xl font-semibold text-white hover: from-blue-70o0 hover:to-indigo-70o0 transition-all duration-30o0">,
                 Schedule Consultation,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -495,6 +486,5 @@ export default function QuantumAIFusion() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}

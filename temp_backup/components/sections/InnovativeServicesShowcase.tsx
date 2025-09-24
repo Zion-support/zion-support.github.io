@@ -1,78 +1,68 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Filter,;
-  Search,;
-  Grid,;
-  List,;
-  Star,;
-  TrendingUp,;
-  Zap,;
+import {
+  Filter;
+  Search;
+  Grid;
+  List;
+  Star;
+  TrendingUp;
+  Zap;
 } from 'lucide-react',
 import UltraAdvancedServiceCard from '../ui/UltraAdvancedServiceCard',
 import { innovativeMicroSaasServices } from '../../data/innovative-micro-saas-services',
-,
-const InnovativeServicesShowcase: React.FC = () => {,
+const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<,
-    'name' | 'price' | 'rating' | 'popularity',
-  >('popularity'),
-,
+    'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Get unique categories,
-  const categories = [,
-    'all',;
-    ...Array.from(,
-      new Set(innovativeMicroSaasServices.map(service => service.category)),
-    ),;
+  const categories = [
+    'all';
+    ...Array.from(
+      new Set(innovativeMicroSaasServices.map(service => service.category)));
   ],
-,
   // Filter and sort services,
   const filteredServices = innovativeMicroSaasServices,
-    .filter(service => {,
+    .filter(service => {
       const matchesSearch =,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
       const matchesCategory =,
         selectedCategory === 'all' || service.category === selectedCategory,
-      return matchesSearch && matchesCategory,
-    }),
-    .sort((a, b) => {,
-      switch (sortBy) {,
+      return matchesSearch && matchesCategory}),
+    .sort((a, b) => {
+      switch (sortBy) {
         case 'name':,
           return a.name.localeCompare(b.name),
         case 'price':,
-          return (,
+          return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -,
-            parseFloat(b.price.replace('$', '').replace(',', '')),
-          ),
+            parseFloat(b.price.replace('$', '').replace(',', ''))),
         case 'rating':,
           return b.rating - a.rating,
         case 'popularity':,
           return b.customers - a.customers,
         default: ,
           return 0,
-      ,}
+      }
     }),
-,
-  const containerVariants = {,
-    hidden: { opacity: 0 ,},;
-    visible: {,
-      opacity: 1,;
-      transition: {,
-        staggerChildren: 0.1,;
-      },;
-    },;
+  const containerVariants = {
+    hidden: { opacity: 0 };
+    visible: {
+      opacity: 1;
+      transition: {
+        staggerChildren: 0.1;
+      };
+    };
   };
-,
-  const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,},;
-    visible: { opacity: 1, y: 0 ,},;
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 };
+    visible: { opacity: 1, y: 0 };
   };
-,
-  return (,
+  return (
     <section className='py-20 px-4 relative'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black' />,
@@ -81,10 +71,10 @@ const InnovativeServicesShowcase: React.FC = () => {,
         {/* Header Section */}
         <motion.div,
           className='text-center mb-16',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.8 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >,
           <h2 className='text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-40o0 via-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent'>,
             Revolutionary Micro SAAS Services,
@@ -98,24 +88,22 @@ const InnovativeServicesShowcase: React.FC = () => {,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8 mt-12'>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-blue-40o0 mb-2'>,
-                {innovativeMicroSaasServices.length,}+,
+                {innovativeMicroSaasServices.length}+,
               </div>,
               <div className='text-gray-40o0'>Innovative Services</div>,
             </div>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-purple-40o0 mb-2'>,
-                {Math.max(,
-                  ...innovativeMicroSaasServices.map(s => s.customers),
-                ).toLocaleString()}
+                {Math.max(
+                  ...innovativeMicroSaasServices.map(s => s.customers)).toLocaleString()}
                 +,
               </div>,
               <div className='text-gray-40o0'>Total Customers</div>,
             </div>,
             <div className='text-center'>,
               <div className='text-3xl font-bold text-green-40o0 mb-2'>,
-                {Math.max(,
-                  ...innovativeMicroSaasServices.map(s => s.rating),
-                ).toFixed(1)}
+                {Math.max(
+                  ...innovativeMicroSaasServices.map(s => s.rating)).toFixed(1)}
               </div>,
               <div className='text-gray-40o0'>Average Rating</div>,
             </div>,
@@ -130,16 +118,16 @@ const InnovativeServicesShowcase: React.FC = () => {,
         {/* Controls Section */}
         <motion.div,
           className='bg-black/40 backdrop-blur-xl border border-gray-80o0/50 rounded-2xl p-6 mb-12',
-          initial={{ opacity: 0, y: 20 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.6, delay: 0.2 ,}}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >,
           <div className='flex flex-col lg: flex-row gap-6 items-center justify-between'>,
-            {/* Search */,}
+            {/* Search */}
             <div className='relative flex-1 max-w-md'>,
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5' />,
-              <input,
+              <input
                 type='text',
                 placeholder='Search services...',
                 value={searchTerm}
@@ -147,33 +135,29 @@ const InnovativeServicesShowcase: React.FC = () => {,
                 className='w-full pl-10 pr-4 py-3 bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-blue-50o0/50 focus:border-transparent',
               />,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <div className='flex items-center space-x-4'>,
               <Filter className='text-gray-40o0 w-5 h-5' />,
-              <select,
+              <select
                 value={selectedCategory}
                 onChange={e => setSelectedCategory(e.target.value)}
-                className='bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50',
-              >,
-                {categories.map(category => (,
-                  <option,
-                    key={category,}
+                className='bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50'>,
+                {categories.map(category => (
+                  <option
+                    key={category}
                     value={category}
-                    className='bg-gray-90o0 text-white',
-                  >,
+                    className='bg-gray-90o0 text-white'>,
                     {category === 'all' ? 'All Categories' : category}
-                  </option>,
-                ))}
+                  </option>))}
               </select>,
             </div>,
             {/* Sort By */}
             <div className='flex items-center space-x-4'>,
               <TrendingUp className='text-gray-40o0 w-5 h-5' />,
-              <select,
+              <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value as any)}
-                className='bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50',
-              >,
+                className='bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-blue-50o0/50'>,
                 <option value='popularity' className='bg-gray-90o0 text-white'>,
                   Most Popular,
                 </option>,
@@ -188,25 +172,25 @@ const InnovativeServicesShowcase: React.FC = () => {,
                 </option>,
               </select>,
             </div>,
-            {/* View Mode Toggle */,}
+            {/* View Mode Toggle */}
             <div className='flex items-center space-x-2 bg-gray-90o0/50 border border-gray-70o0/50 rounded-lg p-1'>,
-              <button,
+              <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-md transition-all duration-20o0 ${,
+                className={`p-2 rounded-md transition-all duration-20o0 ${
                   viewMode === 'grid',
                     ? 'bg-blue-50o0/20 text-blue-40o0',
                     : 'text-gray-40o0 hover: text-white',
-                ,}`}
+                }`}
               >,
                 <Grid className='w-5 h-5' />,
               </button>,
-              <button,
+              <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded-md transition-all duration-20o0 ${,
+                className={`p-2 rounded-md transition-all duration-20o0 ${
                   viewMode === 'list',
                     ? 'bg-blue-50o0/20 text-blue-40o0',
                     : 'text-gray-40o0 hover: text-white',
-                ,}`}
+                }`}
               >,
                 <List className='w-5 h-5' />,
               </button>,
@@ -215,36 +199,35 @@ const InnovativeServicesShowcase: React.FC = () => {,
         </motion.div>,
         {/* Services Grid */}
         <motion.div,
-          className={`grid gap-8 ${,
+          className={`grid gap-8 ${
             viewMode === 'grid',
               ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
               : 'grid-cols-1',
-          ,}`}
+          }`}
           variants={containerVariants}
           initial='hidden',
           whileInView='visible',
-          viewport={{ once: true ,}}
+          viewport={{ once: true }}
         >,
           <AnimatePresence>,
-            {filteredServices.map((service, index) => (,
+            {filteredServices.map((service, index) => (
               <motion.div,
                 key={service.id}
                 variants={itemVariants}
                 layout,
-                transition={{ duration: 0.3 ,}}
+                transition={{ duration: 0.3 }}
               >,
                 <UltraAdvancedServiceCard service={service} />,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </AnimatePresence>,
         </motion.div>,
         {/* No Results */}
-        {filteredServices.length === 0 && (,
+        {filteredServices.length === 0 && (
           <motion.div,
             className='text-center py-20',
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            transition={{ duration: 0.5 ,}}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >,
             <div className='text-6xl mb-4'>🔍</div>,
             <h3 className='text-2xl font-bold text-white mb-2'>,
@@ -253,16 +236,15 @@ const InnovativeServicesShowcase: React.FC = () => {,
             <p className='text-gray-40o0'>,
               Try adjusting your search criteria or browse all categories.,
             </p>,
-          </motion.div>,
-        )}
+          </motion.div>)}
 ,
         {/* Call to Action */}
         <motion.div,
           className='text-center mt-20',
-          initial={{ opacity: 0, y: 30 ,}}
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
-          transition={{ duration: 0.8, delay: 0.4 ,}}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >,
           <div className='bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 border border-blue-50o0/30 rounded-2xl p-8'>,
             <h3 className='text-3xl font-bold text-white mb-4'>,
@@ -285,9 +267,6 @@ const InnovativeServicesShowcase: React.FC = () => {,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default InnovativeServicesShowcase,
-,
+    </section>),
+};
+export default InnovativeServicesShowcase;

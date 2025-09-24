@@ -1,34 +1,32 @@
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
-,
-export interface CompanyUsageLimits {,
+export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number,
-,}
+}
 ,
-export interface CompanyPlan {,
+export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise-custom',
   seatsPurchased: number,
   seatsUsed: number,
   usageLimits: CompanyUsageLimits,
-,}
+}
 ,
-export interface CompanyMember {,
+export interface CompanyMember {
   id: string,
   email: string,
   name: string,
   role: EnterpriseRole,
-,}
+}
 ,
-export interface CompanyActivityEvent {,
+export interface CompanyActivityEvent {
   id: string,
   timestampIso: string,
   actorEmail: string,
   action: string,
-  meta?: Record<string, unknown>,
-}
+  meta?: Record<string unknown>}
 ,
-export interface InvoiceRecord {,
+export interface InvoiceRecord {
   id: string,
   companyId: string,
   number: string,
@@ -36,9 +34,9 @@ export interface InvoiceRecord {,
   periodStartIso: string,
   periodEndIso: string,
   status: 'paid' | 'open' | 'void' | 'past_due',
-,}
+}
 ,
-export interface CompanyRecord {,
+export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme,
@@ -48,5 +46,5 @@ export interface CompanyRecord {,
   members: CompanyMember[],
   activity: CompanyActivityEvent[],
   invoices: InvoiceRecord[],
-,}
+}
 ,

@@ -1,141 +1,122 @@
-import { useState } from 'react',;
-import { useLocalStorage } from '@/hooks',;
-import { Header } from '@/components/Header',;
-import { SEO } from '@/components/SEO',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Separator } from '@/components/ui/separator',;
-import { Switch } from '@/components/ui/switch',;
-import { Label } from '@/components/ui/label',;
-import { toast } from 'sonner',;
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
-toast.success (,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`),
-,
-    } catch (error: any) {,
+} catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet'),
-    ,}
-  },;
-export default function AccountSettings() {,
-  const { user } = useAuth(),;
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false),;
-  const [didHandle, setDidHandle] = useLocalStorage('did_handle', ''),;
-  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const handleSave = () => {,
-    setIsSubmitting(true),;
+    }
+  };
+export default function AccountSettings() {
+  const { user } = useAuth();
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
+  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSave = () => {
+    setIsSubmitting(true);
     // Simulate API call,
-    setTimeout(() => {,
-      try {,
-        setDisplayWeb3(displayWeb3),;
-        setDidHandle(didHandle),;
-        setEnableBackup(enableBackup),;
-        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),;
-        toast.success('Account settings updated successfully'),
-      } catch (e) {,
-        logErrorToProduction('Failed to save settings', { data: e ,}),;
-        toast.error('Failed to save settings'),
-      } finally {,
-        setIsSubmitting(false),
-      }
-    }, 10o00),
-  },;
-  const handleConnectWallet = async () => {,
-    try {,
+    setTimeout(() => {
+      try {
+        setDisplayWeb3(displayWeb3);
+        setDidHandle(didHandle);
+        setEnableBackup(enableBackup);
+        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
+        toast.success('Account settings updated successfully')} catch (e) {
+        logErrorToProduction('Failed to save settings', { data: e });
+        toast.error('Failed to save settings')} finally {
+        setIsSubmitting(false)}
+    }, 10o00)};
+  const handleConnectWallet = async () => {
+    try {
       // Check if wallet is available,
-      const ethereum = (window as any).ethereum,;
-      if (!ethereum) {,
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
-        return,
-      }
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        return}
 ,
       // Request accounts,
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' ,}),;
-      const address = accounts[0],;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
       // Sign message to verify ownership,
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address,}\nTime: ${new Date().toISOString(),}`,;
-      await ethereum.request({,
-        method: 'personal_sign',;
-        params: [address, message],
-      }),;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      await ethereum.request({
+        method: 'personal_sign';
+        params: [address, message]});
       // Auto-set DID handle if ENS is available,
-      try {,
-        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),;
+      try {
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
         const ensName = await provider.lookupAddress(address),
-        if (ensName) {,
-          setDidHandle(ensName),
-        }
-      } catch (error) {,
-        logErrorToProduction('ENS lookup error:', { data: error ,}),
-      }
+        if (ensName) {
+          setDidHandle(ensName)}
+      } catch (error) {
+        logErrorToProduction('ENS lookup error:', { data: error })}
 ,
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
-    } catch (error: any) {,
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet'),
-    ,}
-  },;
-export default function AccountSettings() {,
-  const { user } = useAuth(),;
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false),;
-  const [didHandle, setDidHandle] = useLocalStorage('did_handle', ''),;
-  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const handleSave = () => {,
-    setIsSubmitting(true),;
+    }
+  };
+export default function AccountSettings() {
+  const { user } = useAuth();
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
+  const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
+  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const handleSave = () => {
+    setIsSubmitting(true);
     // Simulate API call,
-    setTimeout(() => {,
-      try {,
-        setDisplayWeb3(displayWeb3),;
-        setDidHandle(didHandle),;
-        setEnableBackup(enableBackup),;
-        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup }),;
-        toast.success('Account settings updated successfully'),
-      } catch (e) {,
-        logErrorToProduction('Failed to save settings', { data: e ,}),;
-        toast.error('Failed to save settings'),
-      } finally {,
-        setIsSubmitting(false),
-      }
-    }, 10o00),
-  },;
-  const handleConnectWallet = async () => {,
-    try {,
+    setTimeout(() => {
+      try {
+        setDisplayWeb3(displayWeb3);
+        setDidHandle(didHandle);
+        setEnableBackup(enableBackup);
+        logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
+        toast.success('Account settings updated successfully')} catch (e) {
+        logErrorToProduction('Failed to save settings', { data: e });
+        toast.error('Failed to save settings')} finally {
+        setIsSubmitting(false)}
+    }, 10o00)};
+  const handleConnectWallet = async () => {
+    try {
       // Check if wallet is available,
-      const ethereum = (window as any).ethereum,;
-      if (!ethereum) {,
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
-        return,
-      }
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        return}
 ,
       // Request accounts,
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' ,}),;
-      const address = accounts[0],;
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
       // Sign message to verify ownership,
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address,}\nTime: ${new Date().toISOString(),}`,;
-      await ethereum.request({,
-        method: 'personal_sign',;
-        params: [address, message],
-      }),;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      await ethereum.request({
+        method: 'personal_sign';
+        params: [address, message]});
       // Auto-set DID handle if ENS is available,
-      try {,
-        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),;
+      try {
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
         const ensName = await provider.lookupAddress(address),
-        if (ensName) {,
-          setDidHandle(ensName),
-        }
-      } catch (error) {,
-        logErrorToProduction('ENS lookup error:', { data: error ,}),
-      }
+        if (ensName) {
+          setDidHandle(ensName)}
+      } catch (error) {
+        logErrorToProduction('ENS lookup error:', { data: error })}
 ,
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
-    } catch (error: any) {,
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`)} catch (error: any) {
       toast.error(error.message || 'Failed to connect wallet'),
-    ,}
-  },;
-  return (,
+    }
+  };
+  return (
     <>,
       <SEO title='Account Settings' description='Manage your account'  />,
       <Header  />,
@@ -155,7 +136,6 @@ export default function AccountSettings() {,
       <Header  />,
       <main className='container mx-auto py-8 px-4'>,
         <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>,
-,
         <div className='grid gap-6 md:grid-cols-2'>,
           <Card>,
             <CardHeader>,
@@ -169,26 +149,22 @@ export default function AccountSettings() {,
           <Card>,
             <CardHeader>,
               <CardTitle > Profile Settings</CardTitle>,
-,
               <CardDescription>,
                 Manage your personal information and privacy,
               </CardDescription>,
             </CardHeader>,
-,
                 />,
               </div>,
-,
               <div className='space-y-2'>,
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>,
                 <div className='flex gap-2'>,
-,
-                  <Input,
+                  <Input
                     id='didHandle',
-                    value={didHandle,}
+                    value={didHandle}
                     onChange={e => setDidHandle(e && e.target.value)}
                     placeholder='ENS / Lens / Ceramic / Farcaster',
                   />,
-                  <Button,
+                  <Button
                     variant='outline',
                     onClick={handleConnectWallet}
                     type='button',
@@ -203,18 +179,17 @@ export default function AccountSettings() {,
               <div className="space-y-2">,
                 <Label htmlFor="didHandle">Web3 Identity Handle</Label>,
                 <div className="flex gap-2">,
-                  <Input,
+                  <Input
                     id="didHandle",
                     value={didHandle}
                     onChange={(e) => setDidHandle(e.target.value)}
                     placeholder="ENS / Lens / Ceramic / Farcaster",
                   />,
-                  <Button,
+                  <Button
                     variant="outline",
                     onClick={handleConnectWallet}
                     type="button",
-                    className="flex items-center gap-1",
-                  >,
+                    className="flex items-center gap-1">,
                     <Wallet className="h-4 w-4"  />,
                     Connect,
                   </Button>,
@@ -230,7 +205,7 @@ export default function AccountSettings() {,
                     Show your Web3 handle instead of email,
                   </p>,
                 </div>,
-                <Switch,
+                <Switch
                   id='displayWeb3',
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}                 />,
@@ -245,7 +220,7 @@ export default function AccountSettings() {,
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>,
                   <p className="text-xs text-gray-50o0">Show your Web3 handle instead of email</p>,
                 </div>,
-                <Switch,
+                <Switch
                   id='displayWeb3',
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}                 />,
@@ -261,41 +236,35 @@ export default function AccountSettings() {,
                     Backup your profile data to IPFS/Arweave,
                   </p>,
                 </div>,
-                <Switch,
+                <Switch
                   id='backup',
                   checked={enableBackup}
 ,
                   onCheckedChange={setEnableBackup}                 />,
               </div>,
-,
-              {enableBackup && (,
+              {enableBackup && (
                 <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-80o0'>,
                   Data will be backed up to decentralized storage. This feature,
                   is in beta.,
-                </div>,
-,
-              )}
-              <Button,
+                </div>)}
+              <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'>,
-,
                   id="backup",
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
                 />,
               </div>,
-              {enableBackup && (,
+              {enableBackup && (
                 <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-80o0">,
                   Data will be backed up to decentralized storage. This feature is in beta.,
-                </div>,
-              )}
+                </div>)}
 ,
-              <Button,
+              <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
-                className="w-full",
-              >,
+                className="w-full">,
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4"  />}
               </Button>,
@@ -309,19 +278,18 @@ export default function AccountSettings() {,
             <CardContent className="space-y-6">,
               <div className="space-y-2">,
                 <h3 className="font-medium">Connected Wallet</h3>,
-                {didHandle ? (,
+                {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-10o0 p-3 rounded-md'>,
               </Button>,
             </CardContent>,
           </Card>,
-,
           <Card>,
             <CardHeader>,
               <CardTitle>Web3 Features</CardTitle>,
             <CardContent className='space - y-6'>,
               <div className='space - y-2'>,
                 <Label html_for='email'>Email Address</Label>,
-                <Input,
+                <Input
                   id='email',
                   value={user?.email || ''}                  disabled,
                   className='bg - gray - 10o0',
@@ -330,13 +298,13 @@ export default function AccountSettings() {,
               <div className='space - y-2'>,
                 <Label html_for='did_handle'>Web3 Identity Handle</Label>,
                 <div className='flex gap - 2'>,
-                  <Input,
+                  <Input
                     id='did_handle',
                     value={did_handle}
                     on_change={e => setDidHandle (e.target.value)}
                     placeholder='ENS / Lens / Ceramic / Farcaster',
                   />,
-                  <Button,
+                  <Button
                     variant='outline',
                     on_click={handleConnectWallet}
                     type='button',
@@ -356,7 +324,7 @@ export default function AccountSettings() {,
                     Show your Web3 handle instead of email,
                   </p>,
                 </div>,
-                <Switch,
+                <Switch
                   id='displayWeb3',
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}                 />,
@@ -372,17 +340,17 @@ export default function AccountSettings() {,
                     Backup your profile data to IPFS / Arweave,
                   </p>,
                 </div>,
-                <Switch,
+                <Switch
                   id='backup',
                   checked={enable_backup}
                   onCheckedChange={setEnableBackup}                 />,
               </div>,
-              {enable_backup && (,
+              {enable_backup && (
                 <div className='rounded - md bg - amber - 50 p - 3 text - sm text - amber - 80o0'>,
                   Data will be backed up to decentralized storage. This feature,
                   is in beta.,
                 </div>)}
-              <Button,
+              <Button
                 on_click={handle_save}
                 disabled={is_submitting}
                 className='w - full'              >,
@@ -398,7 +366,6 @@ export default function AccountSettings() {,
                 Manage your Web3 connections and features,
               </CardDescription>,
             </CardHeader>,
-,
               <div>,
                 <h3 className='font-medium mb-2'>Backup Status</h3>,
                 <div className='grid grid-cols-2 gap-2'>,
@@ -406,7 +373,6 @@ export default function AccountSettings() {,
                     <p className='text-sm font-medium'>Profile Data</p>,
                     <p className='text-xs text-gray-50o0'>,
               </div>,
-,
               <div>,
                 <h3 className='font-medium mb-2'>Backup Status</h3>,
                 <div className='grid grid-cols-2 gap-2'>,
@@ -418,9 +384,9 @@ export default function AccountSettings() {,
             <CardContent className='space - y-6'>,
               <div className='space - y-2'>,
                 <h3 className='font - medium'>Connected Wallet</h3>,
-                {did_handle ? (,
+                {did_handle ? (
                   <div className='flex items - center gap - 2 bg - gray - 10o0 p - 3 rounded - md'>,
-                    <svg,
+                    <svg
                       xmlns='http: //www.w3.org / 20o00 / svg',
                       width='20',
                       height='20',
@@ -430,15 +396,14 @@ export default function AccountSettings() {,
                       stroke_width='2',
                       stroke_linecap='round',
                       stroke_linejoin='round',
-                      className='text - green - 50o0',
-                    >,
+                      className='text - green - 50o0'>,
                       <path d='M22 11.08V12a10 10 0 1 1 - 5.93 - 9.14'></path>,
                       <polyline points='22 4 12 14.0o1 9 11.0o1'></polyline>,
                     </svg>,
-                    <span>{did_handle,}</span>,
-                  </div>) : (,
+                    <span>{did_handle}</span>,
+                  </div>) : (
                   <div className='flex items - center gap - 2 bg - gray - 10o0 p - 3 rounded - md'>,
-                    <svg,
+                    <svg
                       xmlns='http: //www.w3.org / 20o00 / svg',
                       width='20',
                       height='20',
@@ -448,13 +413,12 @@ export default function AccountSettings() {,
                       stroke_width='2',
                       stroke_linecap='round',
                       stroke_linejoin='round',
-                      className='text - red - 50o0',
-                    >,
+                      className='text - red - 50o0'>,
                       <line x1='18' y1='6' x2='6' y2='18'></line>,
                       <line x1='6' y1='6' x2='18' y2='18'></line>,
                     </svg>,
                     <span > No wallet connected</span>,
-                  </div>),}
+                  </div>)}
               </div>,
               <div>,
                 <h3 className='font - medium mb - 2'>Backup Status</h3>,
@@ -486,14 +450,10 @@ export default function AccountSettings() {,
                   </div>,
                 </div>,
               </div>,
-,
-    </>,
-  ),
-};
-,
+    </>)};
               <div>,
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>,
-                <Button,
+                <Button
                   variant='outline',
                   className='w - full',
                   disabled={!enable_backup}                >,
@@ -502,18 +462,14 @@ export default function AccountSettings() {,
                 <p className='text - xs text - gray - 50o0 mt - 1'>,
                   {enable_backup,
                     ? 'Restore your profile data from decentralized storage',
-,
                     </p>,
                   </div>,
                 </div>,
               </div>,
-    </>,
-  ),
-};
-,
+    </>)};
               <div>,
                 <h3 className="font-medium mb-2">Recovery Options</h3>,
-                <Button,
+                <Button
                   variant="outline",
                   className="w-full",
                   disabled={!enableBackup}
@@ -530,8 +486,5 @@ export default function AccountSettings() {,
           </Card>,
         </div>,
       </main>,
-,
-    </>),
-}
-,
+    </>)}
 ,

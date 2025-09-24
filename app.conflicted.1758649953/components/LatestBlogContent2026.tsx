@@ -1,6 +1,4 @@
 'use client',
-,
-export default function LatestBlogContent20o26() {,
-  return null,
-}
+export default function LatestBlogContent20o26() {
+  return null}
 ,

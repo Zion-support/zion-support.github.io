@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function MockPage() {,
-  return (,
+export default function MockPage() {
+  return (
     <>,
       <Head>,
         <title>Mock - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function MockPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'email-automation - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'email-automation - Zion Tech Group';
   description:,
-    'Professional email-automation solutions for your business needs.',;
-  keywords: 'email-automation, services, business, technology',;
+    'Professional email-automation solutions for your business needs.';
+  keywords: 'email-automation, services, business, technology';
 };
-export default function EmailAutomationPage() {,
-  return (,
+export default function EmailAutomationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function EmailAutomationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

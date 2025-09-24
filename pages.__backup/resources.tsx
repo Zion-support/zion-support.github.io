@@ -1,184 +1,179 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function ResourcesPage() {,
-  const caseStudies = [,
-    {,
-      id: 'ai-automation-manufacturing',;
-      title: 'AI-Powered Manufacturing Automation',;
-      company: 'Global Manufacturing Corp',;
-      industry: 'Manufacturing',;
-      results: '40% increase in production efficiency60% reduction in downtime',;
+export default function ResourcesPage() {
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing';
+      title: 'AI-Powered Manufacturing Automation';
+      company: 'Global Manufacturing Corp';
+      industry: 'Manufacturing';
+      results: '40% increase in production efficiency60% reduction in downtime';
       description:,
-        'How we implemented autonomous AI systems to revolutionize manufacturing processes.',;
-    },;
-    {,
-      id: 'content-generation-scale',;
-      title: 'Scaling Content Generation 10x',;
-      company: 'Digital Marketing Agency',;
-      industry: 'Marketing',;
-      results: '10x increase in content output85% improvement in engagement',;
+        'How we implemented autonomous AI systems to revolutionize manufacturing processes.';
+    };
+    {
+      id: 'content-generation-scale';
+      title: 'Scaling Content Generation 10x';
+      company: 'Digital Marketing Agency';
+      industry: 'Marketing';
+      results: '10x increase in content output85% improvement in engagement';
       description:,
-        'Transforming content creation through autonomous AI systems.',;
-    },;
-    {,
-      id: 'cloud-infrastructure-optimization',;
-      title: 'Cloud Infrastructure Optimization',;
-      company: 'E-commerce Platform',;
-      industry: 'Technology',;
-      results: '50% reduction in cloud costs99.9% uptime achieved',;
-      description: 'Building self-healingauto-scaling cloud infrastructure.',;
-    },;
+        'Transforming content creation through autonomous AI systems.';
+    };
+    {
+      id: 'cloud-infrastructure-optimization';
+      title: 'Cloud Infrastructure Optimization';
+      company: 'E-commerce Platform';
+      industry: 'Technology';
+      results: '50% reduction in cloud costs99.9% uptime achieved';
+      description: 'Building self-healingauto-scaling cloud infrastructure.';
+    };
   ],
-,
-  const whitepapers = [,
-    {,
-      id: 'autonomous-systems-guide',;
-      title: 'The Complete Guide to Autonomous Systems',;
+  const whitepapers = [
+    {
+      id: 'autonomous-systems-guide';
+      title: 'The Complete Guide to Autonomous Systems';
       description:,
-        'A comprehensive overview of autonomous technologyimplementation strategiesand best practices.',;
-      downloadUrl: '#',;
-      pages: '45',;
-      category: 'Technology',;
-    },;
-    {,
-      id: 'ai-ethics-framework',;
-      title: 'AI Ethics Framework for Business',;
+        'A comprehensive overview of autonomous technologyimplementation strategiesand best practices.';
+      downloadUrl: '#';
+      pages: '45';
+      category: 'Technology';
+    };
+    {
+      id: 'ai-ethics-framework';
+      title: 'AI Ethics Framework for Business';
       description:,
-        'Establishing ethical guidelines for AI implementation in enterprise environments.',;
-      downloadUrl: '#',;
-      pages: '32',;
-      category: 'Ethics',;
-    },;
-    {,
-      id: 'automation-roi-calculator',;
-      title: 'Automation ROI Calculator Guide',;
+        'Establishing ethical guidelines for AI implementation in enterprise environments.';
+      downloadUrl: '#';
+      pages: '32';
+      category: 'Ethics';
+    };
+    {
+      id: 'automation-roi-calculator';
+      title: 'Automation ROI Calculator Guide';
       description:,
-        'How to calculate and maximize return on investment for automation initiatives.',;
-      downloadUrl: '#',;
-      pages: '28',;
-      category: 'Business',;
-    },;
-    {,
-      id: 'cloud-native-automation',;
-      title: 'Cloud-Native Automation Strategies',;
+        'How to calculate and maximize return on investment for automation initiatives.';
+      downloadUrl: '#';
+      pages: '28';
+      category: 'Business';
+    };
+    {
+      id: 'cloud-native-automation';
+      title: 'Cloud-Native Automation Strategies';
       description:,
-        'Best practices for building scalableresilient automation systems in the cloud.',;
-      downloadUrl: '#',;
-      pages: '38',;
-      category: 'Technology',;
-    },;
-    {,
-      id: 'performance-optimization-guide',;
-      title: 'Performance Optimization in AI Systems',;
+        'Best practices for building scalableresilient automation systems in the cloud.';
+      downloadUrl: '#';
+      pages: '38';
+      category: 'Technology';
+    };
+    {
+      id: 'performance-optimization-guide';
+      title: 'Performance Optimization in AI Systems';
       description:,
-        'Comprehensive guide to optimizing AI model performance and system efficiency.',;
-      downloadUrl: '#',;
-      pages: '42',;
-      category: 'Performance',;
-    },;
-    {,
-      id: 'human-ai-collaboration',;
-      title: 'Human-AI Collaboration Framework',;
+        'Comprehensive guide to optimizing AI model performance and system efficiency.';
+      downloadUrl: '#';
+      pages: '42';
+      category: 'Performance';
+    };
+    {
+      id: 'human-ai-collaboration';
+      title: 'Human-AI Collaboration Framework';
       description:,
-        'Designing effective collaboration between human workers and AI systems.',;
-      downloadUrl: '#',;
-      pages: '35',;
-      category: 'Workplace',;
-    },;
+        'Designing effective collaboration between human workers and AI systems.';
+      downloadUrl: '#';
+      pages: '35';
+      category: 'Workplace';
+    };
   ],
-,
-  const tools = [,
-    {,
-      id: 'automation-assessment',;
-      title: 'Automation Readiness Assessment',;
+  const tools = [
+    {
+      id: 'automation-assessment';
+      title: 'Automation Readiness Assessment';
       description:,
-        "Evaluate your organization's readiness for AI automation implementation.",;
-      type: 'Interactive Tool',;
-      estimatedTime: '15 minutes',;
-    },;
-    {,
-      id: 'ai-maturity-model',;
-      title: 'AI Maturity Model',;
+        "Evaluate your organization's readiness for AI automation implementation.";
+      type: 'Interactive Tool';
+      estimatedTime: '15 minutes';
+    };
+    {
+      id: 'ai-maturity-model';
+      title: 'AI Maturity Model';
       description:,
-        'Assess your current AI capabilities and plan your transformation journey.',;
-      type: 'Framework',;
-      estimatedTime: '30 minutes',;
-    },;
-    {,
-      id: 'performance-benchmark',;
-      title: 'Performance Benchmarking Tool',;
+        'Assess your current AI capabilities and plan your transformation journey.';
+      type: 'Framework';
+      estimatedTime: '30 minutes';
+    };
+    {
+      id: 'performance-benchmark';
+      title: 'Performance Benchmarking Tool';
       description:,
-        'Compare your automation performance against industry standards.',;
-      type: 'Analytics Tool',;
-      estimatedTime: '20 minutes',;
-    },;
-    {,
-      id: 'cost-optimization-calculator',;
-      title: 'Cost Optimization Calculator',;
+        'Compare your automation performance against industry standards.';
+      type: 'Analytics Tool';
+      estimatedTime: '20 minutes';
+    };
+    {
+      id: 'cost-optimization-calculator';
+      title: 'Cost Optimization Calculator';
       description:,
-        'Calculate potential cost savings from automation initiatives.',;
-      type: 'Financial Tool',;
-      estimatedTime: '25 minutes',;
-    },;
-    {,
-      id: 'security-assessment',;
-      title: 'AI Security Assessment',;
+        'Calculate potential cost savings from automation initiatives.';
+      type: 'Financial Tool';
+      estimatedTime: '25 minutes';
+    };
+    {
+      id: 'security-assessment';
+      title: 'AI Security Assessment';
       description:,
-        'Evaluate security risks and compliance requirements for AI systems.',;
-      type: 'Security Tool',;
-      estimatedTime: '35 minutes',;
-    },;
-    {,
-      id: 'scalability-planner',;
-      title: 'Scalability Planning Tool',;
-      description: 'Plan and design scalable automation architectures.',;
-      type: 'Architecture Tool',;
-      estimatedTime: '40 minutes',;
-    },;
+        'Evaluate security risks and compliance requirements for AI systems.';
+      type: 'Security Tool';
+      estimatedTime: '35 minutes';
+    };
+    {
+      id: 'scalability-planner';
+      title: 'Scalability Planning Tool';
+      description: 'Plan and design scalable automation architectures.';
+      type: 'Architecture Tool';
+      estimatedTime: '40 minutes';
+    };
   ],
-,
-  const additionalResources = [,
-    {,
-      id: 'webinars',;
-      title: 'Webinars & Events',;
-      description: 'Live and recorded webinars on AI automation topics',;
-      icon: '🎥',;
-      color: 'from-blue-40o0 to-indigo-50o0',;
-    },;
-    {,
-      id: 'templates',;
-      title: 'Implementation Templates',;
-      description: 'Ready-to-use templates for common automation scenarios',;
-      icon: '📋',;
-      color: 'from-green-40o0 to-teal-50o0',;
-    },;
-    {,
-      id: 'code-samples',;
-      title: 'Code Samples & Libraries',;
-      description: 'Open-source code examples and reusable components',;
-      icon: '💻',;
-      color: 'from-purple-40o0 to-pink-50o0',;
-    },;
-    {,
-      id: 'training-materials',;
-      title: 'Training Materials',;
-      description: 'Educational content and learning resources',;
-      icon: '🎓',;
-      color: 'from-yellow-40o0 to-orange-50o0',;
-    },;
+  const additionalResources = [
+    {
+      id: 'webinars';
+      title: 'Webinars & Events';
+      description: 'Live and recorded webinars on AI automation topics';
+      icon: '🎥';
+      color: 'from-blue-40o0 to-indigo-50o0';
+    };
+    {
+      id: 'templates';
+      title: 'Implementation Templates';
+      description: 'Ready-to-use templates for common automation scenarios';
+      icon: '📋';
+      color: 'from-green-40o0 to-teal-50o0';
+    };
+    {
+      id: 'code-samples';
+      title: 'Code Samples & Libraries';
+      description: 'Open-source code examples and reusable components';
+      icon: '💻';
+      color: 'from-purple-40o0 to-pink-50o0';
+    };
+    {
+      id: 'training-materials';
+      title: 'Training Materials';
+      description: 'Educational content and learning resources';
+      icon: '🎓';
+      color: 'from-yellow-40o0 to-orange-50o0';
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>Resources | Zion Tech Group - AI & Automation Resources</title>,
-        <meta,
+        <meta
           name='description',
           content='Access case studieswhitepaperstoolsand resources to help you understand and implement AI automation solutions.',
         />,
         <meta property='og: title' content='Resources | Zion Tech Group' />,
-        <meta,
+        <meta
           property='og:description',
           content='Access case studieswhitepaperstoolsand resources for AI automation.',
         />,
@@ -188,10 +183,9 @@ export default function ResourcesPage() {,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-7xl mx-auto'>,
             <nav className='mb-8'>,
-              <Link,
+              <Link
                 href='/',
-                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors',
-              >,
+                className='text-cyan-40o0 hover:text-cyan-30o0 transition-colors'>,
                 ← Back to Home,
               </Link>,
             </nav>,
@@ -205,20 +199,19 @@ export default function ResourcesPage() {,
                 automation journey.,
               </p>,
             </header>,
-            {/* Case Studies Section */,}
+            {/* Case Studies Section */}
             <section className='mb-20'>,
               <h2 className='text-3xl font-bold mb-8 text-center text-white'>,
                 Success Stories,
               </h2>,
               <div className='grid grid-cols-1 lg: grid-cols-3 gap-8'>,
-                {caseStudies.map(study => (,
-                  <div,
-                    key={study.id,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-cyan-40o0/30 transition-all duration-30o0',
-                  >,
+                {caseStudies.map(study => (
+                  <div
+                    key={study.id}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-cyan-40o0/30 transition-all duration-30o0'>,
                     <div className='mb-4'>,
                       <span className='px-3 py-1 bg-cyan-40o0/20 text-cyan-40o0 text-sm rounded-full border border-cyan-40o0/30'>,
-                        {study.industry,}
+                        {study.industry}
                       </span>,
                     </div>,
                     <h3 className='text-xl font-bold mb-3 text-white'>,
@@ -236,15 +229,13 @@ export default function ResourcesPage() {,
                       </h4>,
                       <p className='text-white/70 text-sm'>{study.results}</p>,
                     </div>,
-                    <Link,
+                    <Link
                       href={`/resources/case-studies/${study.id}`}
-                      className='inline-flex items-center gap-2 text-cyan-40o0 hover: text-cyan-30o0 transition-colors font-semibold',
-                    >,
+                      className='inline-flex items-center gap-2 text-cyan-40o0 hover: text-cyan-30o0 transition-colors font-semibold'>,
                       Read Full Case Study,
                       <span aria-hidden>→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </section>,
             {/* Whitepapers Section */}
@@ -253,14 +244,13 @@ export default function ResourcesPage() {,
                 Whitepapers & Guides,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-                {whitepapers.map(paper => (,
-                  <div,
-                    key={paper.id,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-fuchsia-40o0/30 transition-all duration-30o0',
-                  >,
+                {whitepapers.map(paper => (
+                  <div
+                    key={paper.id}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-fuchsia-40o0/30 transition-all duration-30o0'>,
                     <div className='flex items-center justify-between mb-4'>,
                       <span className='px-3 py-1 bg-fuchsia-40o0/20 text-fuchsia-40o0 text-sm rounded-full border border-fuchsia-40o0/30'>,
-                        {paper.category,}
+                        {paper.category}
                       </span>,
                       <span className='text-white/60 text-sm'>,
                         {paper.pages} pages,
@@ -272,15 +262,13 @@ export default function ResourcesPage() {,
                     <p className='text-white/80 text-sm mb-6'>,
                       {paper.description}
                     </p>,
-                    <a,
+                    <a
                       href={paper.downloadUrl}
-                      className='inline-flex items-center gap-2 bg-gradient-to-r from-fuchsia-40o0 to-purple-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-fuchsia-50o0 hover:to-purple-50o0 transition-all duration-30o0',
-                    >,
+                      className='inline-flex items-center gap-2 bg-gradient-to-r from-fuchsia-40o0 to-purple-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-fuchsia-50o0 hover:to-purple-50o0 transition-all duration-30o0'>,
                       Download Whitepaper,
                       <span aria-hidden>↓</span>,
                     </a>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </section>,
             {/* Tools Section */}
@@ -289,16 +277,15 @@ export default function ResourcesPage() {,
                 Interactive Tools,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>,
-                {tools.map(tool => (,
-                  <div,
-                    key={tool.id,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-green-40o0/30 transition-all duration-30o0 text-center',
-                  >,
+                {tools.map(tool => (
+                  <div
+                    key={tool.id}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover: border-green-40o0/30 transition-all duration-30o0 text-center'>,
                     <div className='w-16 h-16 bg-gradient-to-br from-green-40o0 to-blue-50o0 rounded-lg flex items-center justify-center mx-auto mb-4'>,
                       <span className='text-2xl'>🔧</span>,
                     </div>,
                     <h3 className='text-xl font-bold mb-3 text-white'>,
-                      {tool.title,}
+                      {tool.title}
                     </h3>,
                     <p className='text-white/80 text-sm mb-4'>,
                       {tool.description}
@@ -308,18 +295,16 @@ export default function ResourcesPage() {,
                         {tool.type}
                       </span>,
                       <span className='block text-white/60 text-xs'>,
-                        Est. time: {tool.estimatedTime,}
+                        Est. time: {tool.estimatedTime}
                       </span>,
                     </div>,
-                    <Link,
+                    <Link
                       href={`/resources/tools/${tool.id}`}
-                      className='inline-flex items-center gap-2 bg-gradient-to-r from-green-40o0 to-blue-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-50o0 hover:to-blue-50o0 transition-all duration-30o0',
-                    >,
+                      className='inline-flex items-center gap-2 bg-gradient-to-r from-green-40o0 to-blue-40o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-green-50o0 hover:to-blue-50o0 transition-all duration-30o0'>,
                       Launch Tool,
                       <span aria-hidden>→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </section>,
             {/* Additional Resources Section */}
@@ -328,13 +313,12 @@ export default function ResourcesPage() {,
                 Additional Resources,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
-                {additionalResources.map(resource => (,
-                  <div,
-                    key={resource.id,}
-                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover: border-cyan-40o0/30 transition-all duration-30o0 text-center',
-                  >,
-                    <div,
-                      className={`w-16 h-16 bg-gradient-to-br ${resource.color,} rounded-lg flex items-center justify-center mx-auto mb-4`}
+                {additionalResources.map(resource => (
+                  <div
+                    key={resource.id}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover: border-cyan-40o0/30 transition-all duration-30o0 text-center'>,
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-lg flex items-center justify-center mx-auto mb-4`}
                     >,
                       <span className='text-2xl'>{resource.icon}</span>,
                     </div>,
@@ -344,15 +328,13 @@ export default function ResourcesPage() {,
                     <p className='text-white/80 text-sm'>,
                       {resource.description}
                     </p>,
-                    <Link,
+                    <Link
                       href={`/resources/${resource.id}`}
-                      className='inline-flex items-center gap-2 text-cyan-40o0 hover: text-cyan-30o0 transition-colors font-semibold text-sm mt-4',
-                    >,
+                      className='inline-flex items-center gap-2 text-cyan-40o0 hover: text-cyan-30o0 transition-colors font-semibold text-sm mt-4'>,
                       Explore,
                       <span aria-hidden>→</span>,
                     </Link>,
-                  </div>,
-                )),}
+                  </div>))}
               </div>,
             </section>,
             {/* Newsletter Signup */}
@@ -367,7 +349,7 @@ export default function ResourcesPage() {,
                   insights and resources.,
                 </p>,
                 <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>,
-                  <input,
+                  <input
                     type='email',
                     placeholder='Enter your email address',
                     className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-40o0/50 focus:ring-1 focus:ring-cyan-40o0/50 transition-all duration-30o0',
@@ -381,16 +363,15 @@ export default function ResourcesPage() {,
                 </p>,
               </div>,
             </section>,
-            {/* Related Pages */,}
+            {/* Related Pages */}
             <section className='mt-16'>,
               <h2 className='text-2xl font-bold mb-8 text-center text-white'>,
                 Explore More,
               </h2>,
               <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0 text-center group',
-                >,
+                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-40o0/30 transition-all duration-30o0 text-center group'>,
                   <div className='w-16 h-16 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
                     <span className='text-2xl'>🚀</span>,
                   </div>,
@@ -401,10 +382,9 @@ export default function ResourcesPage() {,
                     Discover our comprehensive AI automation solutions,
                   </p>,
                 </Link>,
-                <Link,
+                <Link
                   href='/blog',
-                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-40o0/30 transition-all duration-30o0 text-center group',
-                >,
+                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-fuchsia-40o0/30 transition-all duration-30o0 text-center group'>,
                   <div className='w-16 h-16 bg-gradient-to-br from-fuchsia-40o0 to-purple-50o0 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
                     <span className='text-2xl'>📚</span>,
                   </div>,
@@ -415,10 +395,9 @@ export default function ResourcesPage() {,
                     Read our latest thoughts on AI and automation,
                   </p>,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-40o0/30 transition-all duration-30o0 text-center group',
-                >,
+                  className='bg-white/10 rounded-xl p-6 border border-white/20 hover:border-green-40o0/30 transition-all duration-30o0 text-center group'>,
                   <div className='w-16 h-16 bg-gradient-to-br from-green-40o0 to-teal-50o0 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0'>,
                     <span className='text-2xl'>💬</span>,
                   </div>,
@@ -434,7 +413,6 @@ export default function ResourcesPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,5 +1,5 @@
-export default function Article() {,
-  return (,
+export default function Article() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
         <p className='text-sm font-semibold text-purple-70o0'>New Framework</p>,
@@ -27,7 +27,5 @@ export default function Article() {,
           </ul>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'database-optimization - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'database-optimization - Zion Tech Group';
   description:,
-    'Professional database-optimization solutions for your business needs.',;
-  keywords: 'database-optimization, services, business, technology',;
+    'Professional database-optimization solutions for your business needs.';
+  keywords: 'database-optimization, services, business, technology';
 };
-export default function DatabaseOptimizationPage() {,
-  return (,
+export default function DatabaseOptimizationPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function DatabaseOptimizationPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

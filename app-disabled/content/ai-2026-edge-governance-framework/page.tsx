@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Edge AI Governance Framework | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Edge AI Governance Framework | Zion Tech Group';
   description:,
-    'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.',;
-  keywords: [,
-    'edge AI governance',;
-    'policy-as-code',;
-    'AI guardrails',;
-    'telemetry',;
-    'AI governance 20o26',;
-  ],;
+    'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.';
+  keywords: [
+    'edge AI governance';
+    'policy-as-code';
+    'AI guardrails';
+    'telemetry';
+    'AI governance 20o26';
+  ];
 };
-,
-export default function EdgeAIGovernanceFramework20o26() {,
-  return (,
+export default function EdgeAIGovernanceFramework20o26() {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Edge AI Governance Framework',
         description='A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.',
         keywords='edge AI governance, policy-as-code, AI guardrails, telemetry, AI governance 20o26',
@@ -41,7 +39,7 @@ export default function EdgeAIGovernanceFramework20o26() {,
             Edge AI deployments introduce unique risks: intermittent,
             connectivity, heterogeneous hardware, and physical tampering. This,
             framework provides a practical approach to govern models and agents,
-            running at the edge using verifiable supply chains, policy-as-code,;
+            running at the edge using verifiable supply chains, policy-as-code;
             and real-time telemetry.,
           </p>,
           <h3>Key Pillars</h3>,
@@ -66,16 +64,13 @@ export default function EdgeAIGovernanceFramework20o26() {,
               Use this alongside our Enterprise AI Security Blueprint for,
               layered controls.,
             </p>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-enterprise-ai-security-blueprint',
-              className='text-purple-70o0 font-semibold',
-            >,
+              className='text-purple-70o0 font-semibold'>,
               Read Security Blueprint →,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

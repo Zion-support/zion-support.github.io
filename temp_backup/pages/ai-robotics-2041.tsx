@@ -1,22 +1,21 @@
 import Layout from '../components/layout/Layout',
-import {,
-  Bot,;
-  Sparkles,;
-  Zap,;
-  Target,;
-  Shield,;
-  Clock,;
-  Check,;
-  Cpu,;
-  Database,;
-  Network,;
-  Brain,;
-  Hand,;
-  Eye,;
+import {
+  Bot;
+  Sparkles;
+  Zap;
+  Target;
+  Shield;
+  Clock;
+  Check;
+  Cpu;
+  Database;
+  Network;
+  Brain;
+  Hand;
+  Eye;
 } from 'lucide-react',
-,
-export default function AIRobotics20o41() {,
-  return (,
+export default function AIRobotics20o41() {
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black'>,
         {/* Hero Section */}
@@ -51,7 +50,7 @@ export default function AIRobotics20o41() {,
             </div>,
           </div>,
         </section>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
@@ -65,56 +64,55 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  icon: <Brain className='w-8 h-8' />,;
-                  title: 'Cognitive Robotics',;
+              {[
+                {
+                  icon: <Brain className='w-8 h-8' />;
+                  title: 'Cognitive Robotics';
                   description:,
-                    'AI-powered robots that understand context, learn from experience, and make intelligent decisions.',;
-                  color: 'from-orange-50o0 to-red-50o0',;
-                },;
-                {,
-                  icon: <Eye className='w-8 h-8' />,;
-                  title: 'Advanced Perception',;
+                    'AI-powered robots that understand context, learn from experience, and make intelligent decisions.';
+                  color: 'from-orange-50o0 to-red-50o0';
+                };
+                {
+                  icon: <Eye className='w-8 h-8' />;
+                  title: 'Advanced Perception';
                   description:,
-                    'Multi-modal sensors and AI vision systems that provide human-like environmental understanding.',;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  icon: <Hand className='w-8 h-8' />,;
-                  title: 'Precision Control',;
+                    'Multi-modal sensors and AI vision systems that provide human-like environmental understanding.';
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  icon: <Hand className='w-8 h-8' />;
+                  title: 'Precision Control';
                   description:,
-                    'AI-optimized motor control and manipulation for precise and delicate robotic operations.',;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  icon: <Zap className='w-8 h-8' />,;
-                  title: 'Adaptive Learning',;
+                    'AI-optimized motor control and manipulation for precise and delicate robotic operations.';
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  icon: <Zap className='w-8 h-8' />;
+                  title: 'Adaptive Learning';
                   description:,
-                    'Robots that continuously learn and improve their performance through AI-powered adaptation.',;
-                  color: 'from-yellow-50o0 to-orange-50o0',;
-                },;
-                {,
-                  icon: <Shield className='w-8 h-8' />,;
-                  title: 'Safety Intelligence',;
+                    'Robots that continuously learn and improve their performance through AI-powered adaptation.';
+                  color: 'from-yellow-50o0 to-orange-50o0';
+                };
+                {
+                  icon: <Shield className='w-8 h-8' />;
+                  title: 'Safety Intelligence';
                   description:,
-                    'AI systems that ensure robotic safety through predictive risk assessment and prevention.',;
-                  color: 'from-purple-50o0 to-pink-50o0',;
-                },;
-                {,
-                  icon: <Network className='w-8 h-8' />,;
-                  title: 'Collaborative Robotics',;
+                    'AI systems that ensure robotic safety through predictive risk assessment and prevention.';
+                  color: 'from-purple-50o0 to-pink-50o0';
+                };
+                {
+                  icon: <Network className='w-8 h-8' />;
+                  title: 'Collaborative Robotics';
                   description:,
-                    'Intelligent robots that work safely alongside humans in collaborative environments.',;
-                  color: 'from-indigo-50o0 to-purple-50o0',;
-                },;
-              ].map((feature, index) => (,
-                <div,
+                    'Intelligent robots that work safely alongside humans in collaborative environments.';
+                  color: 'from-indigo-50o0 to-purple-50o0';
+                };
+              ].map((feature, index) => (
+                <div
                   key={index}
-                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-orange-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.color,} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-orange-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     {feature.icon}
                   </div>,
@@ -124,8 +122,7 @@ export default function AIRobotics20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -142,54 +139,52 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {[,
-                {,
-                  name: 'Autonomous Navigation',;
+              {[
+                {
+                  name: 'Autonomous Navigation';
                   description:,
-                    'AI-powered navigation and path planning for robots',;
-                },;
-                {,
-                  name: 'Computer Vision',;
+                    'AI-powered navigation and path planning for robots';
+                };
+                {
+                  name: 'Computer Vision';
                   description:,
-                    'Advanced visual perception and object recognition',;
-                },;
-                {,
-                  name: 'Natural Language',;
-                  description: 'Human-robot communication and interaction',;
-                },;
-                {,
-                  name: 'Manipulation',;
-                  description: 'Precise robotic arm and hand control',;
-                },;
-                {,
-                  name: 'Learning Systems',;
-                  description: 'Continuous learning and skill improvement',;
-                },;
-                {,
-                  name: 'Safety Systems',;
-                  description: 'Intelligent safety monitoring and prevention',;
-                },;
-                {,
-                  name: 'Multi-robot Coordination',;
-                  description: 'Coordinated operation of multiple robots',;
-                },;
-                {,
-                  name: 'Human-Robot Interaction',;
-                  description: 'Safe and intuitive human-robot collaboration',;
-                },;
-              ].map((capability, index) => (,
-                <div,
+                    'Advanced visual perception and object recognition';
+                };
+                {
+                  name: 'Natural Language';
+                  description: 'Human-robot communication and interaction';
+                };
+                {
+                  name: 'Manipulation';
+                  description: 'Precise robotic arm and hand control';
+                };
+                {
+                  name: 'Learning Systems';
+                  description: 'Continuous learning and skill improvement';
+                };
+                {
+                  name: 'Safety Systems';
+                  description: 'Intelligent safety monitoring and prevention';
+                };
+                {
+                  name: 'Multi-robot Coordination';
+                  description: 'Coordinated operation of multiple robots';
+                };
+                {
+                  name: 'Human-Robot Interaction';
+                  description: 'Safe and intuitive human-robot collaboration';
+                };
+              ].map((capability, index) => (
+                <div
                   key={index}
-                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-orange-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-orange-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-lg font-semibold text-white mb-2'>,
-                    {capability.name,}
+                    {capability.name}
                   </h3>,
                   <p className='text-gray-40o0 text-sm'>,
                     {capability.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -206,65 +201,64 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='space-y-8'>,
-              {[,
-                {,
-                  phase: 'Environmental Perception',;
+              {[
+                {
+                  phase: 'Environmental Perception';
                   description:,
-                    "AI systems process sensor data to understand the robot's environment",;
-                  features: [,
-                    'Sensor fusion',;
-                    'Object recognition',;
-                    'Spatial mapping',;
-                  ],;
-                },;
-                {,
-                  phase: 'Task Planning',;
+                    "AI systems process sensor data to understand the robot's environment";
+                  features: [
+                    'Sensor fusion';
+                    'Object recognition';
+                    'Spatial mapping';
+                  ];
+                };
+                {
+                  phase: 'Task Planning';
                   description:,
-                    'Intelligent planning and decision-making for robotic tasks',;
-                  features: [,
-                    'Goal setting',;
-                    'Path planning',;
-                    'Task decomposition',;
-                  ],;
-                },;
-                {,
-                  phase: 'Execution Control',;
+                    'Intelligent planning and decision-making for robotic tasks';
+                  features: [
+                    'Goal setting';
+                    'Path planning';
+                    'Task decomposition';
+                  ];
+                };
+                {
+                  phase: 'Execution Control';
                   description:,
-                    'AI-powered control of robotic movements and actions',;
-                  features: [,
-                    'Motor control',;
-                    'Precision execution',;
-                    'Adaptive control',;
-                  ],;
-                },;
-                {,
-                  phase: 'Learning & Adaptation',;
+                    'AI-powered control of robotic movements and actions';
+                  features: [
+                    'Motor control';
+                    'Precision execution';
+                    'Adaptive control';
+                  ];
+                };
+                {
+                  phase: 'Learning & Adaptation';
                   description:,
-                    'Continuous learning from experience to improve performance',;
-                  features: [,
-                    'Performance analysis',;
-                    'Skill improvement',;
-                    'Adaptive behavior',;
-                  ],;
-                },;
-                {,
-                  phase: 'Safety Monitoring',;
+                    'Continuous learning from experience to improve performance';
+                  features: [
+                    'Performance analysis';
+                    'Skill improvement';
+                    'Adaptive behavior';
+                  ];
+                };
+                {
+                  phase: 'Safety Monitoring';
                   description:,
-                    'Real-time safety monitoring and risk prevention',;
-                  features: [,
-                    'Risk assessment',;
-                    'Safety protocols',;
-                    'Emergency response',;
-                  ],;
-                },;
-              ].map((phase, index) => (,
-                <div,
+                    'Real-time safety monitoring and risk prevention';
+                  features: [
+                    'Risk assessment';
+                    'Safety protocols';
+                    'Emergency response';
+                  ];
+                };
+              ].map((phase, index) => (
+                <div
                   key={index}
-                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl',
-                >,
+                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl'>,
                   <div className='lg:w-1/3 text-center lg:text-left'>,
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-50o0 to-red-50o0 rounded-full text-white text-2xl font-bold mb-4'>,
-                      {index + 1,}
+                      {index + 1}
                     </div>,
                     <h3 className='text-2xl font-semibold text-white mb-3'>,
                       {phase.phase}
@@ -273,21 +267,18 @@ export default function AIRobotics20o41() {,
                   </div>,
                   <div className='lg: w-2/3'>,
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>,
-                      {phase.features.map((feature, featureIndex) => (,
-                        <div,
+                      {phase.features.map((feature, featureIndex) => (
+                        <div
                           key={featureIndex}
-                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg',
-                        >,
+                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg'>,
                           <Check className='w-5 h-5 text-orange-40o0 flex-shrink-0' />,
                           <span className='text-gray-30o0 text-sm'>,
                             {feature}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -304,99 +295,96 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  category: 'Manufacturing',;
+              {[
+                {
+                  category: 'Manufacturing';
                   description:,
-                    'Intelligent robots for automated manufacturing and assembly operations.',;
-                  applications: [,
-                    'Assembly automation',;
-                    'Quality inspection',;
-                    'Material handling',;
-                    'Welding',;
-                    'Painting',;
-                  ],;
-                },;
-                {,
-                  category: 'Healthcare',;
+                    'Intelligent robots for automated manufacturing and assembly operations.';
+                  applications: [
+                    'Assembly automation';
+                    'Quality inspection';
+                    'Material handling';
+                    'Welding';
+                    'Painting';
+                  ];
+                };
+                {
+                  category: 'Healthcare';
                   description:,
-                    'Medical robots for surgery, rehabilitation, and patient care assistance.',;
-                  applications: [,
-                    'Surgical assistance',;
-                    'Rehabilitation',;
-                    'Patient monitoring',;
-                    'Medication delivery',;
-                    'Lab automation',;
-                  ],;
-                },;
-                {,
-                  category: 'Logistics',;
+                    'Medical robots for surgery, rehabilitation, and patient care assistance.';
+                  applications: [
+                    'Surgical assistance';
+                    'Rehabilitation';
+                    'Patient monitoring';
+                    'Medication delivery';
+                    'Lab automation';
+                  ];
+                };
+                {
+                  category: 'Logistics';
                   description:,
-                    'Autonomous robots for warehouse operations and logistics management.',;
-                  applications: [,
-                    'Warehouse automation',;
-                    'Order picking',;
-                    'Inventory management',;
-                    'Sorting',;
-                    'Transportation',;
-                  ],;
-                },;
-                {,
-                  category: 'Agricultural Robots',;
+                    'Autonomous robots for warehouse operations and logistics management.';
+                  applications: [
+                    'Warehouse automation';
+                    'Order picking';
+                    'Inventory management';
+                    'Sorting';
+                    'Transportation';
+                  ];
+                };
+                {
+                  category: 'Agricultural Robots';
                   description:,
-                    'Specialized robots for farming, harvesting, and crop management.',;
-                  applications: [,
-                    'Harvesting robots',;
-                    'Weeding robots',;
-                    'Monitoring robots',;
-                    'Irrigation robots',;
-                  ],;
-                },;
-                {,
-                  category: 'Service Robots',;
+                    'Specialized robots for farming, harvesting, and crop management.';
+                  applications: [
+                    'Harvesting robots';
+                    'Weeding robots';
+                    'Monitoring robots';
+                    'Irrigation robots';
+                  ];
+                };
+                {
+                  category: 'Service Robots';
                   description:,
-                    'Service robots for customer service, cleaning, and assistance.',;
-                  applications: [,
-                    'Customer service',;
-                    'Cleaning',;
-                    'Security',;
-                    'Hospitality',;
-                    'Retail',;
-                  ],;
-                },;
-                {,
-                  category: 'Research',;
+                    'Service robots for customer service, cleaning, and assistance.';
+                  applications: [
+                    'Customer service';
+                    'Cleaning';
+                    'Security';
+                    'Hospitality';
+                    'Retail';
+                  ];
+                };
+                {
+                  category: 'Research';
                   description:,
-                    'Research robots for scientific exploration and discovery.',;
-                  applications: [,
-                    'Space exploration',;
-                    'Underwater research',;
-                    'Disaster response',;
-                    'Environmental monitoring',;
-                    'Scientific research',;
-                  ],;
-                },;
-              ].map((category, index) => (,
-                <div,
+                    'Research robots for scientific exploration and discovery.';
+                  applications: [
+                    'Space exploration';
+                    'Underwater research';
+                    'Disaster response';
+                    'Environmental monitoring';
+                    'Scientific research';
+                  ];
+                };
+              ].map((category, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {category.category,}
+                    {category.category}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {category.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {category.applications.map((app, appIndex) => (,
+                    {category.applications.map((app, appIndex) => (
                       <div key={appIndex} className='flex items-center gap-2'>,
                         <Check className='w-4 h-4 text-orange-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>{app}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -413,93 +401,89 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  industry: 'Manufacturing',;
+              {[
+                {
+                  industry: 'Manufacturing';
                   description:,
-                    'Intelligent robots revolutionize manufacturing with precision, efficiency, and flexibility.',;
-                  benefits: [,
-                    'Increased productivity',;
-                    'Quality improvement',;
-                    'Cost reduction',;
-                  ],;
-                },;
-                {,
-                  industry: 'Healthcare',;
+                    'Intelligent robots revolutionize manufacturing with precision, efficiency, and flexibility.';
+                  benefits: [
+                    'Increased productivity';
+                    'Quality improvement';
+                    'Cost reduction';
+                  ];
+                };
+                {
+                  industry: 'Healthcare';
                   description:,
-                    'Medical robots enhance surgical precision and patient care with AI-powered assistance.',;
-                  benefits: [,
-                    'Better outcomes',;
-                    'Reduced errors',;
-                    'Faster recovery',;
-                  ],;
-                },;
-                {,
-                  industry: 'Logistics',;
+                    'Medical robots enhance surgical precision and patient care with AI-powered assistance.';
+                  benefits: [
+                    'Better outcomes';
+                    'Reduced errors';
+                    'Faster recovery';
+                  ];
+                };
+                {
+                  industry: 'Logistics';
                   description:,
-                    'Autonomous robots optimize warehouse operations and supply chain management.',;
-                  benefits: [,
-                    'Faster operations',;
-                    'Reduced costs',;
-                    '24/7 availability',;
-                  ],;
-                },;
-                {,
-                  industry: 'Agriculture',;
+                    'Autonomous robots optimize warehouse operations and supply chain management.';
+                  benefits: [
+                    'Faster operations';
+                    'Reduced costs';
+                    '24/7 availability';
+                  ];
+                };
+                {
+                  industry: 'Agriculture';
                   description:,
-                    'Agricultural robots enable precision farming and sustainable agriculture practices.',;
-                  benefits: [,
-                    'Higher yields',;
-                    'Resource efficiency',;
-                    'Sustainability',;
-                  ],;
-                },;
-                {,
-                  industry: 'Retail',;
+                    'Agricultural robots enable precision farming and sustainable agriculture practices.';
+                  benefits: [
+                    'Higher yields';
+                    'Resource efficiency';
+                    'Sustainability';
+                  ];
+                };
+                {
+                  industry: 'Retail';
                   description:,
-                    'Service robots enhance customer experience and operational efficiency in retail.',;
-                  benefits: [,
-                    'Better service',;
-                    'Operational efficiency',;
-                    'Cost savings',;
-                  ],;
-                },;
-                {,
-                  industry: 'Construction',;
+                    'Service robots enhance customer experience and operational efficiency in retail.';
+                  benefits: [
+                    'Better service';
+                    'Operational efficiency';
+                    'Cost savings';
+                  ];
+                };
+                {
+                  industry: 'Construction';
                   description:,
-                    'Construction robots improve safety and efficiency in building and infrastructure projects.',;
-                  benefits: [,
-                    'Safety improvement',;
-                    'Faster construction',;
-                    'Quality enhancement',;
-                  ],;
-                },;
-              ].map((industry, index) => (,
-                <div,
+                    'Construction robots improve safety and efficiency in building and infrastructure projects.';
+                  benefits: [
+                    'Safety improvement';
+                    'Faster construction';
+                    'Quality enhancement';
+                  ];
+                };
+              ].map((industry, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {industry.industry,}
+                    {industry.industry}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {industry.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {industry.benefits.map((benefit, benefitIndex) => (,
-                      <div,
+                    {industry.benefits.map((benefit, benefitIndex) => (
+                      <div
                         key={benefitIndex}
-                        className='flex items-center gap-2',
-                      >,
+                        className='flex items-center gap-2'>,
                         <Check className='w-4 h-4 text-orange-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>,
                           {benefit}
                         </span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -516,42 +500,41 @@ export default function AIRobotics20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {[,
-                {,
-                  title: 'Increased Productivity',;
+              {[
+                {
+                  title: 'Increased Productivity';
                   description:,
-                    'AI-powered robots work 24/7 with consistent quality and efficiency.',;
-                  icon: <Zap className='w-8 h-8' />,;
-                  color: 'from-orange-50o0 to-red-50o0',;
-                },;
-                {,
-                  title: 'Enhanced Safety',;
+                    'AI-powered robots work 24/7 with consistent quality and efficiency.';
+                  icon: <Zap className='w-8 h-8' />;
+                  color: 'from-orange-50o0 to-red-50o0';
+                };
+                {
+                  title: 'Enhanced Safety';
                   description:,
-                    'Robots handle dangerous tasks while maintaining human safety standards.',;
-                  icon: <Shield className='w-8 h-8' />,;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  title: 'Cost Reduction',;
+                    'Robots handle dangerous tasks while maintaining human safety standards.';
+                  icon: <Shield className='w-8 h-8' />;
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  title: 'Cost Reduction';
                   description:,
-                    'Automation reduces operational costs and improves resource utilization.',;
-                  icon: <Target className='w-8 h-8' />,;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  title: 'Quality Improvement',;
+                    'Automation reduces operational costs and improves resource utilization.';
+                  icon: <Target className='w-8 h-8' />;
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  title: 'Quality Improvement';
                   description:,
-                    'AI-powered precision ensures consistent, high-quality outputs.',;
-                  icon: <Bot className='w-8 h-8' />,;
-                  color: 'from-purple-50o0 to-pink-50o0',;
-                },;
-              ].map((benefit, index) => (,
-                <div,
+                    'AI-powered precision ensures consistent, high-quality outputs.';
+                  icon: <Bot className='w-8 h-8' />;
+                  color: 'from-purple-50o0 to-pink-50o0';
+                };
+              ].map((benefit, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color,} rounded-2xl flex items-center justify-center mb-6`}
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-orange-50o0/30 transition-all duration-30o0'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}
                   >,
                     {benefit.icon}
                   </div>,
@@ -561,8 +544,7 @@ export default function AIRobotics20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {benefit.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -587,7 +569,6 @@ export default function AIRobotics20o41() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

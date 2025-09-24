@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-healthcare-assistant - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-healthcare-assistant - Zion Tech Group';
   description:,
-    'Professional ai-healthcare-assistant solutions for your business needs.',;
-  keywords: 'ai-healthcare-assistant, services, business, technology',;
+    'Professional ai-healthcare-assistant solutions for your business needs.';
+  keywords: 'ai-healthcare-assistant, services, business, technology';
 };
-export default function AiHealthcareAssistantPage() {,
-  return (,
+export default function AiHealthcareAssistantPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiHealthcareAssistantPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

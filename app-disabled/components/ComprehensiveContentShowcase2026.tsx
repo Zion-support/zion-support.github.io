@@ -1,4 +1,3 @@
-export default function ComprehensiveContentShowcase20o26() {,
-  return null,
-}
+export default function ComprehensiveContentShowcase20o26() {
+  return null}
 ,

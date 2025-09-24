@@ -4,8 +4,7 @@ export type FilterSectionName =,
   | 'experience',
   | 'skills',
   | 'availability',
-,
-export interface FilterSidebarProps {,
+export interface FilterSidebarProps {
   searchTerm: string,
   setSearchTerm: (term: string) => void,
   selectedSkills: string[],
@@ -18,58 +17,56 @@ export interface FilterSidebarProps {,
   setPriceRange: (range: [number, number]) => void,
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
-  expandedSections: {,
+  expandedSections: {
     skills: boolean,
     availability: boolean,
     region: boolean,
     experience: boolean,
     price: boolean,
-  ,};
+  };
   toggleSection: (sectionName: FilterSectionName) => void,
   sortOption: string,
   setSortOption: (option: string) => void,
   clearFilters: () => void,
   isMobileFilterOpen?: boolean,
-,}
+}
 ,
-export interface FilterComponentProps {,
+export interface FilterComponentProps {
   expanded: boolean,
   toggleSection: () => void,
   isMobileFilterOpen?: boolean,
-,}
+}
 ,
-export interface SkillsFilterProps extends FilterComponentProps {,
+export interface SkillsFilterProps extends FilterComponentProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
-,}
+}
 ,
-export interface AvailabilityFilterProps extends FilterComponentProps {,
+export interface AvailabilityFilterProps extends FilterComponentProps {
   selectedAvailability: string[],
   toggleAvailability: (availability: string) => void,
-,}
+}
 ,
-export interface RegionFilterProps extends FilterComponentProps {,
+export interface RegionFilterProps extends FilterComponentProps {
   selectedRegions: string[],
   toggleRegion: (region: string) => void,
-,}
+}
 ,
-export interface ExperienceFilterProps extends FilterComponentProps {,
+export interface ExperienceFilterProps extends FilterComponentProps {
   experienceRange: [number, number],
-  setExperienceRange: (range: [number, number]) => void,
-}
+  setExperienceRange: (range: [number, number]) => void}
 ,
-export interface PriceFilterProps extends FilterComponentProps {,
+export interface PriceFilterProps extends FilterComponentProps {
   priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
-}
+  setPriceRange: (range: [number, number]) => void}
 ,
-export interface SearchFilterProps {,
+export interface SearchFilterProps {
   searchTerm: string,
   setSearchTerm: (term: string) => void,
-,}
+}
 ,
-export interface SortFilterProps {,
+export interface SortFilterProps {
   sortOption: string,
   setSortOption: (option: string) => void,
-,}
+}
 ,

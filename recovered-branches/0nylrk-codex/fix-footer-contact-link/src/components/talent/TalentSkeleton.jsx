@@ -1,12 +1,11 @@
 import { Skeleton } from '@/components/ui/skeleton',
-export function TalentSkeleton() {,
-  return (,
+export function TalentSkeleton() {
+  return (
     <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
-      {Array.from({ length: 6 ,}).map((_, i) => (,
-        <div,
+      {Array.from({ length: 6 }).map((_, i) => (
+        <div
           key={i}
-          className='p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg',
-        >,
+          className='p-6 space-y-4 border border-zion-blue-light bg-zion-blue-dark rounded-lg'>,
           <div className='flex items-center space-x-4'>,
             <Skeleton className='w-16 h-16 rounded-full bg-zion-blue-light/20' />,
             <div className='flex-1 space-y-2'>,
@@ -15,9 +14,6 @@ export function TalentSkeleton() {,
             </div>,
           </div>,
           <Skeleton className='h-24 w-full bg-zion-blue-light/20' />,
-        </div>,
-      ))}
-    </div>,
-  ),
-}
+        </div>))}
+    </div>)}
 ,

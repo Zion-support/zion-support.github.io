@@ -4,98 +4,95 @@ import { innovativeITAIServices20o25 } from '../../data/20o25-innovative-it-ai-s
 import { expandedInnovativeServices20o25 } from '../../data/20o25-expanded-innovative-services',
 import { emergingTechInnovationServices20o25 } from '../../data/20o25-emerging-tech-innovations',
 import { enterpriseITInnovationServices20o25 } from '../../data/20o25-enterprise-it-innovations',
-const ComprehensiveServicesShowcase = () => {,
+const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all'),
     const [selectedService, setSelectedService] = useState(null),
-    const allServices = [,
-        ...comprehensiveMicroSaasServices20o25,;
-        ...innovativeITAIServices20o25,;
-        ...expandedInnovativeServices20o25,;
-        ...emergingTechInnovationServices20o25,;
-        ...enterpriseITInnovationServices20o25,
-    ],
-    const categories = [,
-        { id: 'all', name: 'All Services', count: allServices.length ,},;
-        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length ,},;
-        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length ,},;
-        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length ,},;
-        { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length ,},;
-        { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length ,},;
-        { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length ,},;
-        { id: 'ai-hr-recruitment', name: 'AI HR & Recruitment', count: allServices.filter(s => s.category.includes('HR') || s.category.includes('Recruitment')).length ,},;
-        { id: 'ai-finance-accounting', name: 'AI Finance & Accounting', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Accounting')).length ,},;
-        { id: 'quantum-computing-ai', name: 'Quantum Computing & AI', count: allServices.filter(s => s.category.includes('Quantum')).length ,},;
-        { id: 'autonomous-ai-ml', name: 'Autonomous AI & ML', count: allServices.filter(s => s.category.includes('Autonomous')).length ,},;
-        { id: 'edge-computing-ai', name: 'Edge Computing & AI', count: allServices.filter(s => s.category.includes('Edge')).length ,},;
-        { id: 'ai-cybersecurity', name: 'AI Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length ,},;
-        { id: 'blockchain-ai', name: 'Blockchain & AI', count: allServices.filter(s => s.category.includes('Blockchain')).length ,},;
-        { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length ,},;
-        { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length ,},;
-        { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length ,},;
-        { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length ,},;
-        { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length ,},;
-        { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length ,},;
-        { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length ,},;
-        { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length ,},;
-        { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length ,},;
-        { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length ,},;
-        { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length ,},;
-        { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length ,},;
-        { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length ,},;
-        { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length ,},;
-        { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length ,},;
-        { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length ,},;
-        { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length ,},;
-        { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length ,},;
-        { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length ,},;
-        { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length ,},;
-        { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length ,},;
-        { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length ,},;
-        { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length ,},;
-        { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length ,},;
-        { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length ,},;
-        { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length ,},;
-        { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length ,}
+    const allServices = [
+        ...comprehensiveMicroSaasServices20o25;
+        ...innovativeITAIServices20o25;
+        ...expandedInnovativeServices20o25;
+        ...emergingTechInnovationServices20o25;
+        ...enterpriseITInnovationServices20o25],
+    const categories = [
+        { id: 'all', name: 'All Services', count: allServices.length };
+        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length };
+        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length };
+        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length };
+        { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length };
+        { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length };
+        { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length };
+        { id: 'ai-hr-recruitment', name: 'AI HR & Recruitment', count: allServices.filter(s => s.category.includes('HR') || s.category.includes('Recruitment')).length };
+        { id: 'ai-finance-accounting', name: 'AI Finance & Accounting', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Accounting')).length };
+        { id: 'quantum-computing-ai', name: 'Quantum Computing & AI', count: allServices.filter(s => s.category.includes('Quantum')).length };
+        { id: 'autonomous-ai-ml', name: 'Autonomous AI & ML', count: allServices.filter(s => s.category.includes('Autonomous')).length };
+        { id: 'edge-computing-ai', name: 'Edge Computing & AI', count: allServices.filter(s => s.category.includes('Edge')).length };
+        { id: 'ai-cybersecurity', name: 'AI Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length };
+        { id: 'blockchain-ai', name: 'Blockchain & AI', count: allServices.filter(s => s.category.includes('Blockchain')).length };
+        { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length };
+        { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length };
+        { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length };
+        { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length };
+        { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length };
+        { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length };
+        { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length };
+        { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length };
+        { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length };
+        { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length };
+        { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length };
+        { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length };
+        { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length };
+        { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length };
+        { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length };
+        { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length };
+        { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length };
+        { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length };
+        { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length };
+        { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length };
+        { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length };
+        { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length };
+        { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length };
+        { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length };
+        { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length };
+        { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length };
+        { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
     ],
     const filteredServices = selectedCategory === 'all',
         ? allServices,
-        : allServices.filter(service => {,
+        : allServices.filter(service => {
             const category = categories.find(c => c.id === selectedCategory),
             if (!category),
                 return true,
             // Handle special category mappings,
-            const categoryMappings ={,
-                'ai-legal-compliance': ['Legal', 'Compliance'],;
-                'quantum-security-communication': ['Quantum', 'Security', 'Communication'],;
-                'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'],;
-                'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'],;
-                'blockchain-digital-identity': ['Blockchain', 'Digital Identity'],;
-                'ai-finance-trading': ['Finance', 'Trading'],;
-                'space-technology-innovation': ['Space', 'Innovation'],;
-                'metaverse-virtual-reality': ['Metaverse', 'Virtual Reality'],;
-                'sustainable-energy-green-tech': ['Energy', 'Green Tech'],;
-                'advanced-robotics-automation': ['Robotics', 'Automation'],;
-                'quantum-internet-networking': ['Quantum', 'Internet', 'Networking'],;
-                'climate-tech-sustainability': ['Climate', 'Sustainability'],;
-                'autonomous-vehicles-transportation': ['Vehicle', 'Transportation'],;
-                'brain-computer-interface-neuroscience': ['Brain-Computer', 'Neuroscience'],;
-                'synthetic-biology-biotechnology': ['Biology', 'Biotechnology'],;
-                'enterprise-data-analytics': ['Enterprise', 'Data', 'Analytics'],;
-                'multi-cloud-infrastructure': ['Multi-Cloud', 'Infrastructure'],;
-                'enterprise-api-integration': ['Enterprise', 'API', 'Integration'],;
-                'enterprise-itsm': ['Enterprise', 'IT Service Management'],;
-                'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'],;
-                'enterprise-governance': ['Enterprise', 'Data Governance'],;
-                'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'],;
-                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT'],
-            };
+            const categoryMappings ={
+                'ai-legal-compliance': ['Legal', 'Compliance'];
+                'quantum-security-communication': ['Quantum', 'Security', 'Communication'];
+                'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'];
+                'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'];
+                'blockchain-digital-identity': ['Blockchain', 'Digital Identity'];
+                'ai-finance-trading': ['Finance', 'Trading'];
+                'space-technology-innovation': ['Space', 'Innovation'];
+                'metaverse-virtual-reality': ['Metaverse', 'Virtual Reality'];
+                'sustainable-energy-green-tech': ['Energy', 'Green Tech'];
+                'advanced-robotics-automation': ['Robotics', 'Automation'];
+                'quantum-internet-networking': ['Quantum', 'Internet', 'Networking'];
+                'climate-tech-sustainability': ['Climate', 'Sustainability'];
+                'autonomous-vehicles-transportation': ['Vehicle', 'Transportation'];
+                'brain-computer-interface-neuroscience': ['Brain-Computer', 'Neuroscience'];
+                'synthetic-biology-biotechnology': ['Biology', 'Biotechnology'];
+                'enterprise-data-analytics': ['Enterprise', 'Data', 'Analytics'];
+                'multi-cloud-infrastructure': ['Multi-Cloud', 'Infrastructure'];
+                'enterprise-api-integration': ['Enterprise', 'API', 'Integration'];
+                'enterprise-itsm': ['Enterprise', 'IT Service Management'];
+                'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'];
+                'enterprise-governance': ['Enterprise', 'Data Governance'];
+                'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'];
+                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']};
             const targetKeywords = categoryMappings[selectedCategory] || [category.name],
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', ''))),
-        }),
-    const fadeInUp ={,
-        initial: { opacity: 0, y: 60 ,},;
-        animate: { opacity: 1, y: 0 ,},;
-        transition: { duration: 0.6 ,}
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')))}),
+    const fadeInUp ={
+        initial: { opacity: 0, y: 60 };
+        animate: { opacity: 1, y: 0 };
+        transition: { duration: 0.6 }
     };
     const filteredServices = selectedCategory === 'all',
         ? COMPREHENSIVE_SERVICES,
@@ -103,7 +100,7 @@ const ComprehensiveServicesShowcase = () => {,
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white pt-20">,
       {/* Hero Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
-        <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacity: 0, y: 30 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8 ,}}>,
+        <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>,
           <h1 className="text-5xl md: text-7xl font-bold mb-8">,
             Comprehensive,
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-cyan-40o0 block">,
@@ -113,7 +110,7 @@ const ComprehensiveServicesShowcase = () => {,
             <span className="text-white">Comprehensive Tech Solutions</span>,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-12">,
-            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions,;
+            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions;
             emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary,
             technology platforms designed to transform your business operations across all industries.,
           </p>,
@@ -121,7 +118,7 @@ const ComprehensiveServicesShowcase = () => {,
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-xl hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl shadow-lg">,
               Get Started Today,
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 7l5 5m0 0l-5 5m5-5H6" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />,
               </svg>,
             </a>,
             <a href="tel: +130o24640950" className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-30o0 transform hover:scale-10o5">,
@@ -130,215 +127,208 @@ const ComprehensiveServicesShowcase = () => {,
           </div>,
         </motion.div>,
       </section>,
-      {/* Category Filter */,}
+      {/* Category Filter */}
       <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="flex flex-wrap justify-center gap-3">,
-            {categories.map((category) => (<button key={category.id,} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${selectedCategory === category.id,
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-30o0 ${selectedCategory === category.id,
                 ? 'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white shadow-lg',
-                : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white',}`}>,
+                : 'bg-white/10 text-gray-30o0 hover: bg-white/20 hover:text-white'}`}>,
                 {category.icon} {category.name}
               </TabsTrigger>))}
           </TabsList>,
-import {Brain,;
-            Shield,;
-            Cloud,;
-            Database,;
-            Users,;
-            Globe,;
-            Zap,;
-            Target,;
-            TrendingUp,;
-            Atom,;
-            Link,;
-            Leaf,;
-            Rocket,;
-            Package,;
-            ArrowRight,;
-            CheckCircle,;
-            Star,;
+import {Brain;
+            Shield;
+            Cloud;
+            Database;
+            Users;
+            Globe;
+            Zap;
+            Target;
+            TrendingUp;
+            Atom;
+            Link;
+            Leaf;
+            Rocket;
+            Package;
+            ArrowRight;
+            CheckCircle;
+            Star;
             Award} from 'lucide-react',
-,
-export const ComprehensiveServicesShowcase: React.FC = () => {,}
+export const ComprehensiveServicesShowcase: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('all'),
-,
-  const serviceCategories = [,
-    {id}: 'all', name: 'All Services', icon: Star ,},;
-    {id}: 'ai', name: 'AI & ML', icon: Brain ,},;
-    {id}: 'quantum', name: 'Quantum Computing', icon: Atom ,},;
-    {id}: 'security', name: 'Cybersecurity', icon: Shield ,},;
-    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud ,},;
-    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon ,},;
-    {id}: 'enterprise', name: 'Enterprise IT', icon: Users ,},;
-    {id}: 'green', name: 'Green IT', icon: Leaf ,},;
-    {id}: 'space', name: 'Space Tech', icon: Rocket ,},;
-    {id}: 'saas', name: 'MicroSAAS', icon: Package ,}
+  const serviceCategories = [
+    {id}: 'all', name: 'All Services', icon: Star };
+    {id}: 'ai', name: 'AI & ML', icon: Brain };
+    {id}: 'quantum', name: 'Quantum Computing', icon: Atom };
+    {id}: 'security', name: 'Cybersecurity', icon: Shield };
+    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud };
+    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon };
+    {id}: 'enterprise', name: 'Enterprise IT', icon: Users };
+    {id}: 'green', name: 'Green IT', icon: Leaf };
+    {id}: 'space', name: 'Space Tech', icon: Rocket };
+    {id}: 'saas', name: 'MicroSAAS', icon: Package }
   ],
-,
-  const services = [,
-    {id}: 'ai-solutions',;
-      title: 'AI Solutions',;
-      category: 'ai',;
-      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.',;
-      icon: Brain,;
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'],;
-      benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'],;
-      color: 'from-purple-50o0 to-pink-50o0',;
+  const services = [
+    {id}: 'ai-solutions';
+      title: 'AI Solutions';
+      category: 'ai';
+      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.';
+      icon: Brain;
+      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'];
+      benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'];
+      color: 'from-purple-50o0 to-pink-50o0';
       href: '/services/ai-solutions',
-    ,},;
-    {id}: 'quantum-computing',;
-      title: 'Quantum Computing',;
-      category: 'quantum',;
-      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',;
-      icon: Atom,;
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],;
-      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],;
-      color: 'from-indigo-50o0 to-purple-50o0',;
+    };
+    {id}: 'quantum-computing';
+      title: 'Quantum Computing';
+      category: 'quantum';
+      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.';
+      icon: Atom;
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'];
+      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'];
+      color: 'from-indigo-50o0 to-purple-50o0';
       href: '/services/quantum-computing',
-    ,},;
-    {id}: 'cybersecurity',;
-      title: 'Cybersecurity',;
-      category: 'security',;
-      description: 'Advanced security solutions with AI-powered threat detection and prevention.',;
-      icon: Shield,;
-      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'],;
-      benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'],;
-      color: 'from-red-50o0 to-orange-50o0',;
+    };
+    {id}: 'cybersecurity';
+      title: 'Cybersecurity';
+      category: 'security';
+      description: 'Advanced security solutions with AI-powered threat detection and prevention.';
+      icon: Shield;
+      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'];
+      benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'];
+      color: 'from-red-50o0 to-orange-50o0';
       href: '/services/cybersecurity',
-    ,},;
-    {id}: 'cloud-devops',;
-      title: 'Cloud & DevOps',;
-      category: 'cloud',;
-      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.',;
-      icon: Cloud,;
-      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],;
-      benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'],;
-      color: 'from-blue-50o0 to-cyan-50o0',;
+    };
+    {id}: 'cloud-devops';
+      title: 'Cloud & DevOps';
+      category: 'cloud';
+      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.';
+      icon: Cloud;
+      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'];
+      benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'];
+      color: 'from-blue-50o0 to-cyan-50o0';
       href: '/services/cloud-devops',
-    ,},;
-    {id}: 'blockchain-web3',;
-      title: 'Blockchain & Web3',;
-      category: 'blockchain',;
-      description: 'Decentralized technology solutions for the next generation of digital applications.',;
-      icon: LinkIcon,;
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'],;
-      benefits: ['Transparency', 'Security', 'Innovation'],;
-      color: 'from-green-50o0 to-emerald-50o0',;
+    };
+    {id}: 'blockchain-web3';
+      title: 'Blockchain & Web3';
+      category: 'blockchain';
+      description: 'Decentralized technology solutions for the next generation of digital applications.';
+      icon: LinkIcon;
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'];
+      benefits: ['Transparency', 'Security', 'Innovation'];
+      color: 'from-green-50o0 to-emerald-50o0';
       href: '/services/blockchain-web3',
-    ,},;
-    {id}: 'enterprise-it',;
-      title: 'Enterprise IT',;
-      category: 'enterprise',;
-      description: 'Comprehensive IT solutions for large organizations and enterprises.',;
-      icon: Users,;
-      features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'],;
-      benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'],;
-      color: 'from-slate-50o0 to-gray-50o0',;
+    };
+    {id}: 'enterprise-it';
+      title: 'Enterprise IT';
+      category: 'enterprise';
+      description: 'Comprehensive IT solutions for large organizations and enterprises.';
+      icon: Users;
+      features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'];
+      benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'];
+      color: 'from-slate-50o0 to-gray-50o0';
       href: '/services/enterprise-it',
-    ,},;
-    {id}: 'green-it',;
-      title: 'Green IT',;
-      category: 'green',;
-      description: 'Sustainable technology solutions for environmentally conscious businesses.',;
-      icon: Leaf,;
-      features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'],;
-      benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'],;
-      color: 'from-green-50o0 to-teal-50o0',;
+    };
+    {id}: 'green-it';
+      title: 'Green IT';
+      category: 'green';
+      description: 'Sustainable technology solutions for environmentally conscious businesses.';
+      icon: Leaf;
+      features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'];
+      benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'];
+      color: 'from-green-50o0 to-teal-50o0';
       href: '/services/green-it',
-    ,},;
-    {id}: 'space-tech',;
-      title: 'Space Technology',;
-      category: 'space',;
-      description: 'Advanced space technology solutions for satellite systems and space exploration.',;
-      icon: Rocket,;
-      features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'],;
-      benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'],;
-      color: 'from-violet-50o0 to-purple-50o0',;
+    };
+    {id}: 'space-tech';
+      title: 'Space Technology';
+      category: 'space';
+      description: 'Advanced space technology solutions for satellite systems and space exploration.';
+      icon: Rocket;
+      features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'];
+      benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'];
+      color: 'from-violet-50o0 to-purple-50o0';
       href: '/services/space-tech',
-    ,},;
-    {id}: 'microsaas',;
-      title: 'MicroSAAS Development',;
-      category: 'saas',;
-      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.',;
-      icon: Package,;
-      features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'],;
-      benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'],;
-      color: 'from-orange-50o0 to-red-50o0',;
+    };
+    {id}: 'microsaas';
+      title: 'MicroSAAS Development';
+      category: 'saas';
+      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.';
+      icon: Package;
+      features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'];
+      benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'];
+      color: 'from-orange-50o0 to-red-50o0';
       href: '/services/microsaas',
-    ,}
+    }
   ],
-,
-  const solutions = [,
-    {id}: 'ai-autonomous-business',;
-      title: 'AI Autonomous Business',;
-      description: 'AI-powered autonomous systems for business operations and decision making.',;
-      icon: Brain,;
-      category: 'ai',;
+  const solutions = [
+    {id}: 'ai-autonomous-business';
+      title: 'AI Autonomous Business';
+      description: 'AI-powered autonomous systems for business operations and decision making.';
+      icon: Brain;
+      category: 'ai';
       href: '/solutions/ai-autonomous-business',
-    ,},;
-    {id}: 'ai-autonomous-research',;
-      title: 'AI Autonomous Research',;
-      description: 'AI systems for accelerating scientific research and discovery processes.',;
-      icon: Brain,;
-      category: 'ai',;
+    };
+    {id}: 'ai-autonomous-research';
+      title: 'AI Autonomous Research';
+      description: 'AI systems for accelerating scientific research and discovery processes.';
+      icon: Brain;
+      category: 'ai';
       href: '/solutions/ai-autonomous-research',
-    ,},;
-    {id}: 'ai-autonomous-ecosystem',;
-      title: 'AI Autonomous Ecosystem',;
-      description: 'Integrated AI ecosystem for unified business intelligence and automation.',;
-      icon: Brain,;
-      category: 'ai',;
+    };
+    {id}: 'ai-autonomous-ecosystem';
+      title: 'AI Autonomous Ecosystem';
+      description: 'Integrated AI ecosystem for unified business intelligence and automation.';
+      icon: Brain;
+      category: 'ai';
       href: '/solutions/ai-autonomous-ecosystem',
-    ,},;
-    {id}: 'quantum-neural-networks',;
-      title: 'Quantum Neural Networks',;
-      description: 'Quantum-enhanced neural networks for advanced AI applications.',;
-      icon: Atom,;
-      category: 'quantum',;
+    };
+    {id}: 'quantum-neural-networks';
+      title: 'Quantum Neural Networks';
+      description: 'Quantum-enhanced neural networks for advanced AI applications.';
+      icon: Atom;
+      category: 'quantum';
       href: '/solutions/quantum-neural-networks',
-    ,},;
-    {id}: 'quantum-edge-computing',;
-      title: 'Quantum Edge Computing',;
-      description: 'Quantum computing power at the edge for real-time applications.',;
-      icon: Atom,;
-      category: 'quantum',;
+    };
+    {id}: 'quantum-edge-computing';
+      title: 'Quantum Edge Computing';
+      description: 'Quantum computing power at the edge for real-time applications.';
+      icon: Atom;
+      category: 'quantum';
       href: '/solutions/quantum-edge-computing',
-    ,},;
-    {id}: 'ai-powered-security',;
-      title: 'AI Powered Security',;
-      description: 'Intelligent security systems with AI-driven threat detection.',;
-      icon: Shield,;
-      category: 'security',;
+    };
+    {id}: 'ai-powered-security';
+      title: 'AI Powered Security';
+      description: 'Intelligent security systems with AI-driven threat detection.';
+      icon: Shield;
+      category: 'security';
       href: '/solutions/ai-powered-security',
-    ,},;
-    {id}: 'ai-content-generation',;
-      title: 'AI Content Generation',;
-      description: 'AI-powered content creation and management solutions.',;
-      icon: Brain,;
-      category: 'ai',;
+    };
+    {id}: 'ai-content-generation';
+      title: 'AI Content Generation';
+      description: 'AI-powered content creation and management solutions.';
+      icon: Brain;
+      category: 'ai';
       href: '/solutions/ai-content-generation',
-    ,},;
-    {id}: 'ai-business-intelligence',;
-      title: 'AI Business Intelligence',;
-      description: 'Advanced analytics and insights powered by artificial intelligence.',;
-      icon: Brain,;
-      category: 'ai',;
+    };
+    {id}: 'ai-business-intelligence';
+      title: 'AI Business Intelligence';
+      description: 'Advanced analytics and insights powered by artificial intelligence.';
+      icon: Brain;
+      category: 'ai';
       href: '/solutions/ai-business-intelligence',
-    ,}
+    }
   ],
-,
   const filteredServices = activeCategory === 'all',
     ? services,
     : services.filter(service => service.category === activeCategory),
-,
   const filteredSolutions = activeCategory === 'all',
     ? solutions,
     : solutions.filter(solution => solution.category === activeCategory),
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center px-4 py-2 bg-blue-50o0/10 text-blue-40o0 rounded-full text-sm font-medium mb-6">,
             <Award className="w-4 h-4 mr-2" />,
@@ -352,11 +342,11 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
             designed to transform your business and drive innovation.,
           </p>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">,
           {serviceCategories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-30o0 ${activeCategory === category.id,
                 ? 'border-blue-50o0 bg-blue-50o0/20 text-blue-40o0',
-                : 'border-white/20 text-gray-40o0 hover: border-blue-50o0/50 hover:text-blue-40o0',}`}>,
+                : 'border-white/20 text-gray-40o0 hover: border-blue-50o0/50 hover:text-blue-40o0'}`}>,
               <category.icon className="w-4 h-4 mr-2" />,
               {category.name}
             </button>))}
@@ -367,8 +357,8 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
             Core Services,
           </h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {filteredServices.map((service) => (<div key={service.id,} className="bg-slate-80o0/50 border border-white/10 rounded-xl p-6 hover: border-blue-50o0/50 transition-all duration-30o0 group">,
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color,} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`,}>,
+            {filteredServices.map((service) => (<div key={service.id} className="bg-slate-80o0/50 border border-white/10 rounded-xl p-6 hover: border-blue-50o0/50 transition-all duration-30o0 group">,
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-30o0`}>,
                   <service.icon className="w-8 h-8 text-white" />,
                 </div>,
                 <h4 className="text-xl font-semibold text-white mb-3 text-center">,
@@ -389,9 +379,9 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 ,}} whileInView={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.6, delay: index * 0.1 ,}} viewport={{ once: true ,}} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-30o0 hover: scale-10o5 cursor-pointer ${service.popular,
+            {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-30o0 hover: scale-10o5 cursor-pointer ${service.popular,
                     ? 'border-blue-40o0/50 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20',
-                    : 'border-white/20 hover:border-white/40',}`} onClick={() => setSelectedService(service)}>,
+                    : 'border-white/20 hover:border-white/40'}`} onClick={() => setSelectedService(service)}>,
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">,
                     <span className="bg-gradient-to-r from-blue-50o0 to-cyan-50o0 text-white px-3 py-1 rounded-full text-xs font-semibold">,
                       Popular,
@@ -425,7 +415,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
                 </div>,
                 <div className="text-center">,
                   <span className="text-xs text-gray-40o0">,
-                    {service.trialDays} days free trial • Setup: {service.setupTime,}
+                    {service.trialDays} days free trial • Setup: {service.setupTime}
                   </span>,
                 </div>,
               </motion.div>))}
@@ -434,7 +424,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
       </section>,
       {/* Service Details Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">,
-          <motion.div initial={{ opacity: 0, scale: 0.9 ,}} animate={{ opacity: 1, scale: 1 ,}} exit={{ opacity: 0, scale: 0.9 ,}} className="bg-slate-80o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">,
+          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-80o0 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">,
             <div className="p-8">,
               <div className="flex justify-between items-start mb-6">,
                 <div className="flex items-center gap-4">,
@@ -448,14 +438,14 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
                 </div>,
                 <button onClick={() => setSelectedService(null)} className="text-gray-40o0 hover: text-white transition-colors">,
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12" />,
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />,
                   </svg>,
                 </button>,
               </div>,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                 <div>,
                   <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>,
-                  <p className="text-gray-30o0 mb-6 leading-relaxed">{selectedService.description,}</p>,
+                  <p className="text-gray-30o0 mb-6 leading-relaxed">{selectedService.description}</p>,
                   <div className="mb-6">,
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>,
                     <div className="grid grid-cols-1 sm: grid-cols-2 gap-2">,
@@ -480,23 +470,23 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
                     <div className="space-y-3">,
                       <div className="flex justify-between">,
                         <span className="text-gray-30o0">Price: </span>,
-                        <span className="text-white font-semibold">{selectedService.price,}{selectedService.period}</span>,
+                        <span className="text-white font-semibold">{selectedService.price}{selectedService.period}</span>,
                       </div>,
                       <div className="flex justify-between">,
                         <span className="text-gray-30o0">Trial: </span>,
-                        <span className="text-white">{selectedService.trialDays,} days free</span>,
+                        <span className="text-white">{selectedService.trialDays} days free</span>,
                       </div>,
                       <div className="flex justify-between">,
                         <span className="text-gray-30o0">Setup: </span>,
-                        <span className="text-white">{selectedService.setupTime,}</span>,
+                        <span className="text-white">{selectedService.setupTime}</span>,
                       </div>,
                       <div className="flex justify-between">,
                         <span className="text-gray-30o0">Customers: </span>,
-                        <span className="text-white">{selectedService.customers,}+</span>,
+                        <span className="text-white">{selectedService.customers}+</span>,
                       </div>,
                       <div className="flex justify-between">,
                         <span className="text-gray-30o0">Rating: </span>,
-                        <span className="text-white">⭐ {selectedService.rating,}/5 ({selectedService.reviews} reviews)</span>,
+                        <span className="text-white">⭐ {selectedService.rating}/5 ({selectedService.reviews} reviews)</span>,
                       </div>,
                     </div>,
                   </div>,
@@ -513,14 +503,14 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
                     <div className="space-y-3 text-sm">,
                       <div className="flex items-center text-white">,
                         <span className="mr-2">📱</span>,
-                        <a href={`tel: ${selectedService.contactInfo.mobile,}`} className="hover: underline">,
-                          {selectedService.contactInfo.mobile,}
+                        <a href={`tel: ${selectedService.contactInfo.mobile}`} className="hover: underline">,
+                          {selectedService.contactInfo.mobile}
                         </a>,
                       </div>,
                       <div className="flex items-center text-white">,
                         <span className="mr-2">✉️</span>,
-                        <a href={`mailto: ${selectedService.contactInfo.email,}`} className="hover: underline">,
-                          {selectedService.contactInfo.email,}
+                        <a href={`mailto: ${selectedService.contactInfo.email}`} className="hover: underline">,
+                          {selectedService.contactInfo.email}
                         </a>,
                       </div>,
                       <div className="flex items-center text-white">,
@@ -535,7 +525,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
               </div>,
             </div>,
           </motion.div>,
-        </div>),}
+        </div>)}
 ,
       {/* Contact CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-90o0/50 to-cyan-90o0/50">,
@@ -544,14 +534,14 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
             Ready to Transform Your Business?,
           </h2>,
           <p className="text-xl text-gray-30o0 mb-10 leading-relaxed">,
-            Contact us today to discuss how our innovative micro SAAS services can drive growth,;
+            Contact us today to discuss how our innovative micro SAAS services can drive growth;
             efficiency, and competitive advantage for your organization.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-6 justify-center">,
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white font-semibold rounded-xl hover:from-blue-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hover:scale-10o5 hover:shadow-2xl shadow-lg">,
               Start Your Project,
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 7l5 5m0 0l-5 5m5-5H6" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />,
               </svg>,
             </a>,
             <a href="tel: +130o24640950" className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-30o0 transform hover:scale-10o5">,
@@ -564,23 +554,23 @@ export const ComprehensiveServicesShowcase: React.FC = () => {,}
           </div>,
         </div>,
       </></div>,
-    </div>)),};
+    </div>))};
 }
 ,
 interface ServiceCardProps {service}: any,
   getCategoryIcon: (category: string) => React.ReactNode,
-,}
+}
 ,
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
-  return (,
+  return (
     <Card className="group hover: scale-10o5 transition-all duration-30o0 bg-slate-80o0/50 backdrop-blur-sm border border-slate-70o0 hover:border-cyan-50o0/50">,
       <div className="relative overflow-hidden rounded-t-lg">,
-        <img src={service.images[0],} alt={service.title} className="w-full h-48 object-cover group-hover: scale-110 transition-transform duration-30o0" />,
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hover: scale-110 transition-transform duration-30o0" />,
         {service.featured && (<div className="absolute top-2 right-2">,
             <Badge className="bg-gradient-to-r from-yellow-50o0 to-orange-50o0 text-white">,
               Featured,
             </Badge>,
-          </div>),}
+          </div>)}
         <div className="absolute bottom-2 left-2 flex items-center gap-2">,
           <div className="flex items-center bg-black/70 rounded-full px-2 py-1">,
             <Star className="w-3 h-3 text-yellow-40o0 fill-current" />,
@@ -630,7 +620,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
         <div className="flex items-center justify-between">,
           <div className="flex items-center gap-2">,
             <div className="w-8 h-8 rounded-full overflow-hidden">,
-              <img src={service.author.avatarUrl || 'https: //images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0',} alt={service.author.name} className="w-full h-full object-cover" />,
+              <img src={service.author.avatarUrl || 'https: //images.unsplash.com/photo-1560o250097-0b93528c311a?auto=format&fit=crop&w=10o0&h=10o0'} alt={service.author.name} className="w-full h-full object-cover" />,
             </div>,
             <div>,
               <div className="text-white text-sm font-medium">{service.author.name}</div>,
@@ -643,9 +633,8 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
           </Button>,
         </div>,
       </CardContent>,
-    </Card>,
-  ),
-,}
+    </Card>),
+}
                 </div>,
                 <div className="mb-4">,
                   <h5 className="text-sm font-semibold text-green-40o0 mb-2">Benefits: </h5>,
@@ -662,106 +651,95 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                 </a>,
 import React, {useState, useMemo, useCallback, useEffect} from 'react',
 import {motion, AnimatePresence} from 'framer-motion',
-import {Search,;
-            Filter,;
-            Star,;
-            TrendingUp,;
-            Zap,;
-            Shield,;
-            Brain,;
-            Globe,;
-            ArrowRight,;
-            CheckCircle,;
-            DollarSign,;
-            Clock,;
-            Users,;
-            Target,;
-            Sparkles,;
-            Eye,;
-            Heart,;
-            Share2,;
-            Download,;
-            Play,;
-            BookOpen,;
-            Code,;
-            Database,;
-            Cloud,;
-            Lock,;
-            Rocket,;
-            Lightbulb,;
-            Cpu,;
-            Network,;
-            Smartphone,;
-            Monitor,;
+import {Search;
+            Filter;
+            Star;
+            TrendingUp;
+            Zap;
+            Shield;
+            Brain;
+            Globe;
+            ArrowRight;
+            CheckCircle;
+            DollarSign;
+            Clock;
+            Users;
+            Target;
+            Sparkles;
+            Eye;
+            Heart;
+            Share2;
+            Download;
+            Play;
+            BookOpen;
+            Code;
+            Database;
+            Cloud;
+            Lock;
+            Rocket;
+            Lightbulb;
+            Cpu;
+            Network;
+            Smartphone;
+            Monitor;
             Server} from 'lucide-react',
 import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices',
-,
 interface ServiceCardProps {service}: InnovativeMicroSaasService,
   index: number,
   viewMode: 'grid' | 'list',
   onServiceClick: (service: InnovativeMicroSaasService) => void,
-,}
+}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => {}
   const [isHovered, setIsHovered] = useState(false),
   const [isLiked, setIsLiked] = useState(false),
-,
-  const getCategoryIcon = useCallback((category: string) => {,}
-    const iconMap: {[key],}: string]: React.ReactNode } ={'AI & Business Intelligence'}: <Brain className="w-5 h-5" />,;
-      'Cybersecurity': <Shield className="w-5 h-5" />,;
-      'DevOps & Cloud': <Cloud className="w-5 h-5" />,;
-      'Blockchain & Web3': <Globe className="w-5 h-5" />,;
-      'IoT & Edge Computing': <Target className="w-5 h-5" />,;
-      'Digital Marketing': <TrendingUp className="w-5 h-5" />,;
-      'Virtual Reality': <Sparkles className="w-5 h-5" />,;
-      'Infrastructure': <Server className="w-5 h-5" />,;
-      'Quantum Computing': <Cpu className="w-5 h-5" />,;
-      'Machine Learning': <Network className="w-5 h-5" />,;
-      'Mobile Development': <Smartphone className="w-5 h-5" />,;
-      'Web Development': <Monitor className="w-5 h-5" />,
-    };
-    return iconMap[category] || <Star className="w-5 h-5" />,
-  }, []),
-,
-  const getCategoryColor = useCallback((category: string) => {,}
-    const colorMap: {[key],}: string]: string } ={'AI & Business Intelligence'}: 'from-purple-50o0 to-pink-50o0',;
-      'Cybersecurity': 'from-red-50o0 to-orange-50o0',;
-      'DevOps & Cloud': 'from-blue-50o0 to-cyan-50o0',;
-      'Blockchain & Web3': 'from-green-50o0 to-emerald-50o0',;
-      'IoT & Edge Computing': 'from-yellow-50o0 to-orange-50o0',;
-      'Digital Marketing': 'from-indigo-50o0 to-purple-50o0',;
-      'Virtual Reality': 'from-pink-50o0 to-rose-50o0',;
-      'Infrastructure': 'from-gray-50o0 to-slate-50o0',;
-      'Quantum Computing': 'from-violet-50o0 to-purple-50o0',;
-      'Machine Learning': 'from-blue-50o0 to-indigo-50o0',;
-      'Mobile Development': 'from-green-50o0 to-blue-50o0',;
-      'Web Development': 'from-orange-50o0 to-red-50o0',
-    };
-    return colorMap[category] || 'from-blue-50o0 to-purple-50o0',
-  }, []),
-,
-  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation(),};
-    setIsLiked(!isLiked),
-  }, [isLiked]),
-,
-  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation(),};
-    if (navigator.share) {navigator.share({,
-            title: service.title,;
-            text: service.description,;
+  const getCategoryIcon = useCallback((category: string) => {}
+    const iconMap: {[key]}: string]: React.ReactNode } ={'AI & Business Intelligence'}: <Brain className="w-5 h-5" />;
+      'Cybersecurity': <Shield className="w-5 h-5" />;
+      'DevOps & Cloud': <Cloud className="w-5 h-5" />;
+      'Blockchain & Web3': <Globe className="w-5 h-5" />;
+      'IoT & Edge Computing': <Target className="w-5 h-5" />;
+      'Digital Marketing': <TrendingUp className="w-5 h-5" />;
+      'Virtual Reality': <Sparkles className="w-5 h-5" />;
+      'Infrastructure': <Server className="w-5 h-5" />;
+      'Quantum Computing': <Cpu className="w-5 h-5" />;
+      'Machine Learning': <Network className="w-5 h-5" />;
+      'Mobile Development': <Smartphone className="w-5 h-5" />;
+      'Web Development': <Monitor className="w-5 h-5" />};
+    return iconMap[category] || <Star className="w-5 h-5" />}, []),
+  const getCategoryColor = useCallback((category: string) => {}
+    const colorMap: {[key]}: string]: string } ={'AI & Business Intelligence'}: 'from-purple-50o0 to-pink-50o0';
+      'Cybersecurity': 'from-red-50o0 to-orange-50o0';
+      'DevOps & Cloud': 'from-blue-50o0 to-cyan-50o0';
+      'Blockchain & Web3': 'from-green-50o0 to-emerald-50o0';
+      'IoT & Edge Computing': 'from-yellow-50o0 to-orange-50o0';
+      'Digital Marketing': 'from-indigo-50o0 to-purple-50o0';
+      'Virtual Reality': 'from-pink-50o0 to-rose-50o0';
+      'Infrastructure': 'from-gray-50o0 to-slate-50o0';
+      'Quantum Computing': 'from-violet-50o0 to-purple-50o0';
+      'Machine Learning': 'from-blue-50o0 to-indigo-50o0';
+      'Mobile Development': 'from-green-50o0 to-blue-50o0';
+      'Web Development': 'from-orange-50o0 to-red-50o0'};
+    return colorMap[category] || 'from-blue-50o0 to-purple-50o0'}, []),
+  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+    setIsLiked(!isLiked)}, [isLiked]),
+  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+    if (navigator.share) {navigator.share({
+            title: service.title;
+            text: service.description;
             url: service.websiteUrl,
-        ,})};
+        })};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
     }
   }, [service]),
-,
   if (viewMode === 'grid') {}
-    return (,
-      <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.6, delay: index * 0.1 ,}} whileHover={{ y: -5, scale: 1.0o2 ,}} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0 relative overflow-hidden">,
-        {/* Background Pattern */,}
+    return (
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ y: -5, scale: 1.0o2 }} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0 relative overflow-hidden">,
+        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-0 group-hover: opacity-10 transition-opacity duration-30o0">,
           <div className="absolute inset-0 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 transform rotate-12 scale-150"></div>,
         </div>,
-        {/* Service Header */,}
+        {/* Service Header */}
         <div className="relative z-10 flex items-start justify-between mb-4">,
           <div className="flex items-center gap-3">,
             <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)} shadow-lg`}>,
@@ -769,7 +747,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             </div>,
             <div>,
               <h3 className="text-lg font-bold text-white group-hover: text-blue-40o0 transition-colors">,
-                {service.title,}
+                {service.title}
               </h3>,
               <p className="text-sm text-gray-40o0">{service.category}</p>,
             </div>,
@@ -778,7 +756,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             {service.featured && (<span className="px-2 py-1 bg-yellow-60o0/20 text-yellow-40o0 text-xs rounded-full border border-yellow-50o0/30">,
                 Featured,
               </span>)}
-            <button onClick={handleLike} className={`p-2 rounded-lg transition-colors ${isLiked ? 'text-red-50o0 bg-red-50o0/20' : 'text-gray-40o0 hover: text-red-50o0 hover:bg-red-50o0/20',}`} aria-label={isLiked ? 'Unlike service' : 'Like service'}>,
+            <button onClick={handleLike} className={`p-2 rounded-lg transition-colors ${isLiked ? 'text-red-50o0 bg-red-50o0/20' : 'text-gray-40o0 hover: text-red-50o0 hover:bg-red-50o0/20'}`} aria-label={isLiked ? 'Unlike service' : 'Like service'}>,
               <Heart className={`w-4 h-4 ${isLiked ? 'fill-current' : ''}`} />,
             </button>,
           </div>,
@@ -818,7 +796,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
         </div>,
         {/* Action Buttons */}
         <div className="relative z-10 flex gap-2">,
-          <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 rounded-lg font-medium transition-all duration-30o0 transform hover:scale-10o5" aria-label={`Learn more about ${service.title,}`}>,
+          <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 rounded-lg font-medium transition-all duration-30o0 transform hover:scale-10o5" aria-label={`Learn more about ${service.title}`}>,
             Learn More,
             <ArrowRight className="w-4 h-4" />,
           </button>,
@@ -826,19 +804,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             <Share2 className="w-4 h-4 text-gray-40o0" />,
           </button>,
         </div>,
-        {/* Hover Overlay */,}
+        {/* Hover Overlay */}
         <AnimatePresence>,
-          {isHovered && (<motion.div initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} exit={{ opacity: 0 ,}} className="absolute inset-0 bg-gradient-to-br from-blue-60o0/10 to-purple-60o0/10 rounded-2xl" />)}
+          {isHovered && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-gradient-to-br from-blue-60o0/10 to-purple-60o0/10 rounded-2xl" />)}
         </AnimatePresence>,
-      </motion.div>,
-    ),
-  }
+      </motion.div>)}
 ,
   // List View,
-  return (,
-    <motion.div initial={{ opacity: 0, x: -20 ,}} animate={{ opacity: 1, x: 0 ,}} transition={{ duration: 0.6, delay: index * 0.1 ,}} whileHover={{ x: 5 ,}} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0">,
+  return (
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-70o0/50 hover: border-blue-50o0/50 transition-all duration-30o0">,
       <div className="flex flex-col lg:flex-row gap-6">,
-        {/* Service Info */,}
+        {/* Service Info */}
         <div className="flex-1">,
           <div className="flex items-start justify-between mb-4">,
             <div className="flex items-center gap-4">,
@@ -847,7 +823,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
               </div>,
               <div>,
                 <h3 className="text-xl font-bold text-white mb-2 group-hover: text-blue-40o0 transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </h3>,
                 <p className="text-gray-40o0">{service.category} • {service.subcategory}</p>,
               </div>,
@@ -864,7 +840,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           {/* Stats Row */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-4">,
             <div className="text-center">,
-              <div className="text-lg font-bold text-white">{service.rating || 'N/A',}</div>,
+              <div className="text-lg font-bold text-white">{service.rating || 'N/A'}</div>,
               <div className="text-xs text-gray-40o0">Rating</div>,
             </div>,
             <div className="text-center">,
@@ -896,7 +872,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           <div className="space-y-3 mb-4">,
             <div className="text-center">,
               <div className="text-sm text-gray-40o0 mb-1">Market Price</div>,
-              <div className="text-lg font-bold text-white">{service.marketPrice,}</div>,
+              <div className="text-lg font-bold text-white">{service.marketPrice}</div>,
             </div>,
             <div className="text-center">,
               <div className="text-sm text-gray-40o0 mb-1">ROI</div>,
@@ -908,7 +884,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             </div>,
           </div>,
           <div className="flex gap-2">,
-            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 rounded-lg font-medium transition-all duration-30o0 transform hover:scale-10o5" aria-label={`Get started with ${service.title,}`}>,
+            <button className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-60o0 to-purple-60o0 hover: from-blue-70o0 hover:to-purple-70o0 rounded-lg font-medium transition-all duration-30o0 transform hover:scale-10o5" aria-label={`Get started with ${service.title}`}>,
               Get Started,
               <ArrowRight className="w-4 h-4" />,
             </button>,
@@ -918,21 +894,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           </div>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-,};
-,
-const ComprehensiveServicesShowcase: React.FC = () => {,}
+    </motion.div>),
+};
+const ComprehensiveServicesShowcase: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState< />'rating' | 'price' | 'aiScore' | 'name'>('rating'),
   const [viewMode, setViewMode] = useState< />'grid' | 'list'>('grid'),
   const [selectedService, setSelectedService] = useState<InnovativeMicroSaasService  /> | null>(null),
   const [showFilters, setShowFilters] = useState(false),
-,
   // Memoized filtered services for better performance,
   const filteredServices = useMemo(() => {let} filtered = INNOVATIVE_MICRO_SAAS_SERVICES,
-,
     // Filter by search term,
     if (searchTerm) {}
       const searchLower = searchTerm.toLowerCase(),
@@ -940,9 +912,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
         service.title.toLowerCase().includes(searchLower) ||,
         service.description.toLowerCase().includes(searchLower) ||,
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||,
-        service.category.toLowerCase().includes(searchLower),
-      ),
-    }
+        service.category.toLowerCase().includes(searchLower))}
 ,
     // Filter by category,
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
@@ -961,38 +931,28 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
           return a.title.localeCompare(b.title),
         default: ,
           return 0,
-      ,}
+      }
     }),
-,
-    return filtered,
-  }, [searchTerm, selectedCategory, sortBy]),
-,
-  const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service),};
+    return filtered}, [searchTerm, selectedCategory, sortBy]),
+  const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here,
-    console.log('Service clicked:', service),
-  }, []),
-,
+    // console.log('Service clicked:', service)}, []),
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all'),
-    setSortBy('rating'),
-  }, []),
-,
+    setSortBy('rating')}, []),
   // Keyboard navigation support,
   useEffect(() => {}
-    const handleKeyDown = (e: KeyboardEvent) => {,}
+    const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Escape') {setSelectedService(null)};
       }
     };
-,
     document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
-  }, []),
-,
-  return (,
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []),
+  return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-blue-90o0 text-white py-20">,
       <div className="container mx-auto px-4">,
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8 ,}} className="text-center mb-16">,
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">,
           <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-blue-40o0 bg-clip-text text-transparent">,
             Comprehensive Services,
           </h1>,
@@ -1016,17 +976,17 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
           </div>,
         </motion.div>,
         {/* Search and Filter Section */}
-        <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8, delay: 0.2 ,}} className="bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-70o0/50">,
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-70o0/50">,
           <div className="grid grid-cols-1 md: grid-cols-4 gap-4">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-40o0 w-5 h-5" />,
               <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-80o0/50 border border-gray-60o0/50 rounded-lg text-white placeholder-gray-40o0 focus: outline-none focus:border-blue-50o0 focus:ring-1 focus:ring-blue-50o0 transition-colors" aria-label="Search services"/>,
             </div>,
-            {/* Category Filter */,}
+            {/* Category Filter */}
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0/50 rounded-lg text-white focus: outline-none focus:border-blue-50o0 focus:ring-1 focus:ring-blue-50o0 transition-colors" aria-label="Filter by category">,
               <option value="all">All Categories</option>,
-              {INNOVATIVE_SERVICE_CATEGORIES.map(category => (<option key={category,} value={category}>{category}</option>))}
+              {INNOVATIVE_SERVICE_CATEGORIES.map(category => (<option key={category} value={category}>{category}</option>))}
             </select>,
             {/* Sort By */}
             <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-80o0/50 border border-gray-60o0/50 rounded-lg text-white focus: outline-none focus:border-blue-50o0 focus:ring-1 focus:ring-blue-50o0 transition-colors" aria-label="Sort services by">,
@@ -1035,16 +995,16 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
               <option value="aiScore">Sort by AI Score</option>,
               <option value="name">Sort by Name</option>,
             </select>,
-            {/* View Mode */,}
+            {/* View Mode */}
             <div className="flex gap-2">,
               <button onClick={() => setViewMode('grid')} className={`px-4 py-3 rounded-lg transition-all duration-30o0 ${viewMode === 'grid',
             ? 'bg-blue-60o0 text-white',
-            : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50',}`} aria-label="Grid view" aria-pressed={viewMode === 'grid'}>,
+            : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50'}`} aria-label="Grid view" aria-pressed={viewMode === 'grid'}>,
                 Grid,
               </button>,
               <button onClick={() => setViewMode('list')} className={`px-4 py-3 rounded-lg transition-all duration-30o0 ${viewMode === 'list',
             ? 'bg-blue-60o0 text-white',
-            : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50',}`} aria-label="List view" aria-pressed={viewMode === 'list'}>,
+            : 'bg-gray-80o0/50 text-gray-40o0 hover: bg-gray-70o0/50'}`} aria-label="List view" aria-pressed={viewMode === 'list'}>,
                 List,
               </button>,
             </div>,
@@ -1057,25 +1017,25 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
               <button onClick={clearFilters} className="text-sm text-blue-40o0 hover: text-blue-30o0 transition-colors">,
                 Clear all filters,
               </button>,
-            </div>),}
+            </div>)}
         </motion.div>,
         {/* Services Grid/List */}
-        <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8, delay: 0.4 ,}}>,
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>,
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
                 {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick} />))}
               </div>) : (<div className="space-y-6">,
                 {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick} />))}
-              </div>)) : (<motion.div initial={{ opacity: 0 ,}} animate={{ opacity: 1 ,}} className="text-center py-20">,
+              </div>)) : (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">,
               <div className="text-6xl mb-4">🔍</div>,
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
               <p className="text-gray-40o0 mb-4">Try adjusting your search criteria or filters.</p>,
               <button onClick={clearFilters} className="px-6 py-3 bg-blue-60o0 hover: bg-blue-70o0 rounded-lg font-medium transition-colors">,
                 Clear Filters,
               </button>,
-            </motion.div>),}
+            </motion.div>)}
         </motion.div>,
         {/* CTA Section */}
-        <motion.div initial={{ opacity: 0, y: 20 ,}} animate={{ opacity: 1, y: 0 ,}} transition={{ duration: 0.8, delay: 0.8 ,}} className="text-center mt-20">,
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-center mt-20">,
           <div className="bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 rounded-3xl p-12 border border-blue-50o0/30">,
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-50o0 bg-clip-text text-transparent">,
               Ready to Transform Your Business?,
@@ -1095,11 +1055,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {,}
           </div>,
         </motion.div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default ComprehensiveServicesShowcase,
-    </></></></></></></></>),
+    </div>),
 };
-,)
+export default ComprehensiveServicesShowcase;
+    </></></></></></></></>)};
+)

@@ -6,8 +6,7 @@ export default function Page() {};
       // Consider if a case where userType is none of these should fetch all or none,
       const { data, "error": fetchError } = await query,
       if(fetchError) throw fetchError,
-,
-      const transformedData = data && data.map(("project": unknown) => ({}} : undefined,;
+      const transformedData = data && data.map(("project": unknown) => ({}} : undefined;
         // client_profile is already in the correct shape from select})),
       setProjects(transformedData as Project[]),
       setError(null)} catch("err": unknown) {}} finally {}}
@@ -16,9 +15,9 @@ export default function Page() {};
       const { data, error } = await supabase,
         .from("projects"),
         .select(",
-          *,;
-          "job": jobs(title, description),;
-          "talent_profile": profiles!talent_id(display_name:display_name, "professional_title": bio, "profile_picture_url": avatar_url),;
+          *;
+          "job": jobs(title, description);
+          "talent_profile": profiles!talent_id(display_name:display_name, "professional_title": bio, "profile_picture_url": avatar_url);
           "client_profile": profiles!client_id(display_name, avatar_url),
         "),
         .eq("id", projectId),
@@ -27,23 +26,19 @@ export default function Page() {};
       const transformedProject ={}} : undefined};
       return transformedProject as Project} catch("err": unknown) {}}
   };
-  const updateProjectStatus = async("projectId": string, "status": ProjectStatus): Promise<boolean> => {,
-    try {,
+  const updateProjectStatus = async("projectId": string, "status": ProjectStatus): Promise<boolean> => {
+    try {
       const { error } = await supabase,
         .from("projects"),
         .update({ status }),
         .eq("id", projectId),
       if(error) throw error,
       setProjects(prev => ,
-,
-        prev && prev.map(project => project && project.id === projectId ? { ...project, status } : project),
-      ),
+        prev && prev.map(project => project && project.id === projectId ? { ...project, status } : project)),
       toast && toast.success(`Project status updated to ${status}`),
-,
       return true} catch("err": unknown) {}}
   };
-  useEffect(() => {,
+  useEffect(() => {
   // "TODO": Add dependencies if needed}, []),
     if(user) {}} else {}}
   }, [user, fetchProjects]), // Added fetchProjects,
-,

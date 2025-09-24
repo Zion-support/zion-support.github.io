@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o25UltimateBreakthroughBanner() {,
-  return (,
+export default function AI20o25UltimateBreakthroughBanner() {
+  return (
     <section className='bg-gradient-to-r from-emerald-60o0 via-teal-60o0 to-cyan-60o0 text-white py-20 relative overflow-hidden'>,
       {/* Animated Background */}
       <div className='absolute inset-0'>,
@@ -32,7 +31,7 @@ export default function AI20o25UltimateBreakthroughBanner() {,
             results that were once thought impossible.,
           </p>,
         </div>,
-        {/* Breakthrough Features */,}
+        {/* Breakthrough Features */}
         <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-30o0 transform hover:scale-10o5'>,
             <div className='text-5xl mb-6'>🤖</div>,
@@ -62,7 +61,7 @@ export default function AI20o25UltimateBreakthroughBanner() {,
             <div className='text-5xl mb-6'>🎯</div>,
             <h3 className='text-2xl font-bold mb-4'>Predictive Mastery</h3>,
             <p className='text-gray-20o0 mb-6 leading-relaxed'>,
-              Advanced predictive capabilities that anticipate market changes,;
+              Advanced predictive capabilities that anticipate market changes;
               customer needs, and operational challenges before they occur.,
             </p>,
             <div className='text-3xl font-bold text-blue-40o0'>95%</div>,
@@ -113,7 +112,7 @@ export default function AI20o25UltimateBreakthroughBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Industry Impact */,}
+        {/* Industry Impact */}
         <div className='mb-16'>,
           <h3 className='text-3xl font-bold text-center mb-12'>,
             Transforming Industries Worldwide,
@@ -141,7 +140,7 @@ export default function AI20o25UltimateBreakthroughBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='mb-8'>,
             <p className='text-xl text-gray-20o0 mb-4'>,
@@ -153,20 +152,18 @@ export default function AI20o25UltimateBreakthroughBanner() {,
             </p>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-teal-60o0 px-12 py-5 rounded-xl font-bold hover:bg-gray-10o0 transition-colors text-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1',
-            >,
+              className='bg-white text-teal-60o0 px-12 py-5 rounded-xl font-bold hover:bg-gray-10o0 transition-colors text-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1'>,
               Start Your AI Revolution,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white px-12 py-5 rounded-xl font-bold hover:bg-white hover:text-teal-60o0 transition-colors text-xl',
-            >,
+              className='border-2 border-white text-white px-12 py-5 rounded-xl font-bold hover:bg-white hover:text-teal-60o0 transition-colors text-xl'>,
               See Real Results,
             </Link>,
           </div>,
-          {/* Trust Badge */,}
+          {/* Trust Badge */}
           <div className='mt-12 pt-8 border-t border-white border-opacity-20'>,
             <p className='text-gray-30o0 mb-4'>Trusted by industry leaders</p>,
             <div className='flex flex-wrap justify-center items-center gap-8 opacity-70'>,
@@ -178,7 +175,5 @@ export default function AI20o25UltimateBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}
 ,

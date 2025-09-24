@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function Page() {,
-  return (,
+import React from 'react';
+export default function Page() {
+  return (
     <div className='min-h-screen bg-black'>,
       <article className='max-w-3xl mx-auto px-6 py-24'>,
         <header>,
@@ -9,14 +8,14 @@ export default function Page() {,
             Launch: Autonomous Customer Support Copilot (v1.0),
           </h1>,
           <p className='mt-2 text-gray-30o0'>,
-            Omnichannel support copilot with retrieval grounding, escalations,;
+            Omnichannel support copilot with retrieval grounding, escalations;
             and real-time quality evals.,
           </p>,
         </header>,
         <section className='prose prose-lg prose-invert mt-8'>,
           <p>,
             Our Support Copilot brings retrieval-grounded assistance to every,
-            channel: chat, email, and voice. It integrates with your CRM,;
+            channel: chat, email, and voice. It integrates with your CRM;
             ticketing, and knowledge bases to deliver accurate, compliant,
             responses with continuous quality monitoring.,
           </p>,
@@ -36,7 +35,5 @@ export default function Page() {,
           </p>,
         </section>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

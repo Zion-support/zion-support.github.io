@@ -1,6 +1,5 @@
 // Hook for useIsMounted,
-export const useUseIsMounted: unknown = () => {,
+export const useUseIsMounted: unknown = () => {
   // TODO: Implement hook logic,
-  return {,};
+  return {};
 };
-,

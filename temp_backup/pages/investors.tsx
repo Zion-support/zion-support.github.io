@@ -1,7 +1,7 @@
-import React from 'react',;
-import Head from 'next/head',;
-export default function InvestorsPage() {,
-	return (,
+import React from 'react';;
+import Head from 'next/head';
+export default function InvestorsPage() {
+	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,
 			<Head>,
 				<title>Investors | Zion Tech Group</title>,
@@ -18,7 +18,6 @@ export default function InvestorsPage() {,
 				</div>,
 				<div className="pt-4 text-slate-30o0">Contact IR: <a className="text-cyan-40o0" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>,
 			</div>,
-		</div>,
-	),
-,}
+		</div>),
+}
 ,

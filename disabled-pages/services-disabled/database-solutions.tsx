@@ -3,97 +3,93 @@ import Navigation from '../../components/Navigation',
 import Footer from '../../components/Footer',
 import SEOHead from '../../components/SEOHead',
 import ErrorBoundary from '../../components/ErrorBoundary',
-import {,
-  Database,;
-  Server,;
-  Shield,;
-  Zap,;
-  Users,;
-  BarChart3,;
-  Cloud,;
-  CheckCircle,;
-  ArrowRight,;
-  Globe,;
-  Lock,;
-  TrendingUp,;
-  Cpu,;
-  HardDrive,;
-  Network,
-} from 'lucide-react',
-,
-export default function DatabaseSolutions() {,
-  const features = [,
-    {,
-      icon: Database,;
-      title: 'Database Design & Architecture',;
+import {
+  Database;
+  Server;
+  Shield;
+  Zap;
+  Users;
+  BarChart3;
+  Cloud;
+  CheckCircle;
+  ArrowRight;
+  Globe;
+  Lock;
+  TrendingUp;
+  Cpu;
+  HardDrive;
+  Network} from 'lucide-react',
+export default function DatabaseSolutions() {
+  const features = [
+    {
+      icon: Database;
+      title: 'Database Design & Architecture';
       description: 'Custom database solutions designed for optimal performance and scalability',
-,},;
-    {,
-      icon: Server,;
-      title: 'Database Administration',;
-      description: '24/7 monitoring, maintenance, and optimization of your database systems',
-},;
-    {,
-      icon: Shield,;
-      title: 'Data Security & Backup',;
+};
+    {
+      icon: Server;
+      title: 'Database Administration';
+      description: '24/7 monitoring, maintenance, and optimization of your database systems'};
+    {
+      icon: Shield;
+      title: 'Data Security & Backup';
       description: 'Enterprise-grade security with automated backup and disaster recovery',
-,},;
-    {,
-      icon: Zap,;
-      title: 'Performance Optimization',;
+};
+    {
+      icon: Zap;
+      title: 'Performance Optimization';
       description: 'Advanced tuning and optimization for maximum database performance',
-,},;
-    {,
-      icon: Cloud,;
-      title: 'Cloud Database Migration',;
+};
+    {
+      icon: Cloud;
+      title: 'Cloud Database Migration';
       description: 'Seamless migration to cloud-based database solutions',
-,},;
-    {,
-      icon: BarChart3,;
-      title: 'Data Analytics & Reporting',;
+};
+    {
+      icon: BarChart3;
+      title: 'Data Analytics & Reporting';
       description: 'Transform your data into actionable insights with advanced analytics',
-,}
+}
   ],
-  const databaseTypes = [,
-    {,
-      name: 'SQL Databases',;
-      description: 'MySQL, PostgreSQL, SQL Server, Oracle',;
+  const databaseTypes = [
+    {
+      name: 'SQL Databases';
+      description: 'MySQL, PostgreSQL, SQL Server, Oracle';
       icon: Database,
-,},;
-    {,
-      name: 'NoSQL Databases',;
-      description: 'MongoDB, Cassandra, Redis, DynamoDB',;
+};
+    {
+      name: 'NoSQL Databases';
+      description: 'MongoDB, Cassandra, Redis, DynamoDB';
       icon: HardDrive,
-,},;
-    {,
-      name: 'Cloud Databases',;
-      description: 'AWS RDS, Azure SQL, Google Cloud SQL',;
+};
+    {
+      name: 'Cloud Databases';
+      description: 'AWS RDS, Azure SQL, Google Cloud SQL';
       icon: Cloud,
-,},;
-    {,
-      name: 'In-Memory Databases',;
-      description: 'Redis, Memcached, Hazelcast',;
+};
+    {
+      name: 'In-Memory Databases';
+      description: 'Redis, Memcached, Hazelcast';
       icon: Cpu,
-,}
+}
   ],
-  const benefits = [,
-    'Improved data performance and query optimization',;
-    'Enhanced data security and compliance',;
-    'Reduced operational costs and maintenance',;
-    'Scalable architecture for business growth',;
-    '24/7 monitoring and support',;
-    'Automated backup and disaster recovery',
-  ],
-  return (,
+  const benefits = [
+    'Improved data performance and query optimization';
+    'Enhanced data security and compliance';
+    'Reduced operational costs and maintenance';
+    'Scalable architecture for business growth';
+    '24/7 monitoring and support';
+    'Automated backup and disaster recovery'],
+  return (
     <ErrorBoundary>,
-      <SEOHead,
+      <SEOHead
         title="Database Solutions - Zion Tech Group",
         description="Expert database design, administration, and optimization services. We provide comprehensive database solutions for businesses of all sizes.",
         keywords="database solutions, database administration, data management, SQL, NoSQL, cloud databases, data optimization",
         canonicalUrl="https: //ziontechgroup.com/services/database-solutions",
        />,
       <Navigation  />,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center">,
@@ -110,24 +106,22 @@ export default function DatabaseSolutions() {,
               We help businesses manage their data efficiently and securely.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center",
-              >,
+                className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/case-studies",
-                className="px-8 py-4 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-gray-90o0 transition-all duration-30o0 flex items-center justify-center",
-              >,
+                className="px-8 py-4 border border-cyan-40o0 text-cyan-40o0 font-semibold rounded-lg hover:bg-cyan-40o0 hover:text-gray-90o0 transition-all duration-30o0 flex items-center justify-center">,
                 View Case Studies,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section className="py-20 bg-gray-50">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -140,19 +134,18 @@ export default function DatabaseSolutions() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-            {features.map((feature, index) => (,
+            {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover: shadow-xl transition-shadow duration-30o0">,
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center mb-6">,
                   <feature.icon className="w-6 h-6 text-white"  />,
                 </div>,
                 <h3 className="text-xl font-semibold text-gray-90o0 mb-4">,
-                  {feature.title,}
+                  {feature.title}
                 </h3>,
                 <p className="text-gray-60o0">,
                   {feature.description}
                 </p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -168,19 +161,18 @@ export default function DatabaseSolutions() {,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-            {databaseTypes.map((type, index) => (,
+            {databaseTypes.map((type, index) => (
               <div key={index} className="text-center p-6 rounded-xl border border-gray-20o0 hover: border-cyan-40o0 transition-colors duration-30o0">,
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-blue-60o0/20 rounded-2xl flex items-center justify-center mx-auto mb-4">,
                   <type.icon className="w-8 h-8 text-cyan-60o0"  />,
                 </div>,
                 <h3 className="text-lg font-semibold text-gray-90o0 mb-2">,
-                  {type.name,}
+                  {type.name}
                 </h3>,
                 <p className="text-gray-60o0 text-sm">,
                   {type.description}
                 </p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -193,16 +185,15 @@ export default function DatabaseSolutions() {,
                 Why Choose Our Database Solutions?,
               </h2>,
               <p className="text-xl text-gray-30o0 mb-8">,
-                Our expert team delivers database solutions that improve performance,;
+                Our expert team delivers database solutions that improve performance;
                 enhance security, and reduce operational costs.,
               </p>,
               <div className="space-y-4">,
-                {benefits.map((benefit, index) => (,
+                {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">,
                     <CheckCircle className="w-6 h-6 text-cyan-40o0 flex-shrink-0"  />,
                     <span className="text-gray-30o0">{benefit}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="grid grid-cols-2 gap-6">,
@@ -241,23 +232,20 @@ export default function DatabaseSolutions() {,
             the perfect database solution for your business.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center",
-            >,
+              className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white font-semibold rounded-lg hover:from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-cyan-50o0/25 flex items-center justify-center">,
               Get Free Consultation,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/pricing",
-              className="px-8 py-4 border border-gray-30o0 text-gray-70o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 flex items-center justify-center",
-            >,
+              className="px-8 py-4 border border-gray-30o0 text-gray-70o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-all duration-30o0 flex items-center justify-center">,
               View Pricing,
             </Link>,
           </div>,
         </div>,
       </section>,
       <Footer  />,
-    </ErrorBoundary>,
-  ),
-,}
+    </ErrorBoundary>),
+}

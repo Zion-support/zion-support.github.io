@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const UltimateBreakthroughBanner20o26: React.FC = () => {,
-  return (,
+const UltimateBreakthroughBanner20o26: React.FC = () => {
+  return (
     <div className='relative overflow-hidden bg-gradient-to-r from-red-60o0 via-purple-60o0 to-indigo-60o0 text-white py-16'>,
       <div className='absolute inset-0 bg-gradient-to-r from-red-90o0/50 to-purple-90o0/50'></div>,
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
@@ -43,46 +42,39 @@ const UltimateBreakthroughBanner20o26: React.FC = () => {,
             </div>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/ai-20o26-ultimate-breakthrough',
-              className='inline-flex items-center px-10 py-5 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black font-bold text-xl rounded-full hover:from-yellow-30o0 hover:to-orange-30o0 transition-all duration-30o0 hover:scale-10o5 shadow-xl',
-            >,
+              className='inline-flex items-center px-10 py-5 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 text-black font-bold text-xl rounded-full hover:from-yellow-30o0 hover:to-orange-30o0 transition-all duration-30o0 hover:scale-10o5 shadow-xl'>,
               <span className='mr-2'>🚀</span>,
               Explore Breakthroughs,
-              <svg,
+              <svg
                 className='ml-2 w-6 h-6',
                 fill='none',
                 stroke='currentColor',
-                viewBox='0 0 24 24',
-              >,
-                <path,
+                viewBox='0 0 24 24'>,
+                <path
                   strokeLinecap='round',
                   strokeLinejoin='round',
-                  strokeWidth={2,}
+                  strokeWidth={2}
                   d='M13 7l5 5m0 0l-5 5m5-5H6',
                 />,
               </svg>,
             </Link>,
-            <Link,
+            <Link
               href='/quantum-neural-fusion-20o26',
-              className='inline-flex items-center px-10 py-5 border-2 border-white text-white font-bold text-xl rounded-full hover: bg-white hover:text-purple-60o0 transition-all duration-30o0',
-            >,
+              className='inline-flex items-center px-10 py-5 border-2 border-white text-white font-bold text-xl rounded-full hover: bg-white hover:text-purple-60o0 transition-all duration-30o0'>,
               <span className='mr-2'>🌀</span>,
               Quantum Fusion,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Animated background elements */,}
+      {/* Animated background elements */}
       <div className='absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none'>,
         <div className='absolute top-20 left-10 w-32 h-32 bg-white/5 rounded-full animate-pulse'></div>,
         <div className='absolute top-40 right-20 w-24 h-24 bg-white/5 rounded-full animate-pulse delay-10o00'></div>,
         <div className='absolute bottom-20 left-1/3 w-20 h-20 bg-white/5 rounded-full animate-pulse delay-20o00'></div>,
         <div className='absolute bottom-40 right-1/3 w-28 h-28 bg-white/5 rounded-full animate-pulse delay-30o00'></div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default UltimateBreakthroughBanner20o26,
-,
+    </div>)};
+export default UltimateBreakthroughBanner20o26;

@@ -1,14 +1,13 @@
-import React from 'react',
+import React from 'react';
 
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 import { cn } from "@/lib/utils",
-,
 export interface NewsletterSectionProps extends React.HTMLAttributes<HTMLElement> {}
 ,
-export function NewsletterSection({ className, style, ...props }: NewsletterSectionProps) {,
-  return (,
-    <section,
+export function NewsletterSection({ className, style, ...props }: NewsletterSectionProps) {
+  return (
+    <section
       className={cn("py-20 bg-zion-blue-dark", className)}
       id="newsletter",
       style={style}
@@ -20,18 +19,16 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
           <p className="mt-4 text-zion-slate-light text-xl mb-8">,
             Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.,
           </p>,
-          <button,
+          <button
             onClick={() => setIsSubscribed(false)}
-            className="px-6 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover: bg-gray-10o0 transition-colors duration-30o0",
-          >,
+            className="px-6 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover: bg-gray-10o0 transition-colors duration-30o0">,
             Subscribe Another Email,
           </button>,
         </div>,
-      </section>,
-    ),
-  ,}
+      </section>),
+  }
 ,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
         <h2 className="text-3xl md:text-4xl font-bold mb-4">,
@@ -42,18 +39,17 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
         </p>,
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">,
           <div className="flex flex-col sm: flex-row gap-4">,
-            <input,
+            <input
               type="email",
-              value={email,}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address",
               required,
               className="flex-1 px-4 py-3 rounded-lg text-gray-90o0 placeholder-gray-50o0 focus: outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50",
             />,
-            <button,
+            <button
               type="submit",
-              className="px-8 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors duration-30o0 whitespace-nowrap",
-            >,
+              className="px-8 py-3 bg-white text-blue-60o0 font-semibold rounded-lg hover:bg-gray-10o0 transition-colors duration-30o0 whitespace-nowrap">,
               Subscribe,
             </button>,
           </div>,
@@ -65,7 +61,7 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
           <div>,
             <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">,
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M13 10V3L4 14h7v7l9-11h-7z"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"  />,
               </svg>,
             </div>,
             <h3 className="font-semibold mb-2">Weekly Updates</h3>,
@@ -91,6 +87,4 @@ export function NewsletterSection({ className, style, ...props }: NewsletterSect
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-}
+    </section>)}

@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-,
-const NewContentPromotionalBanner = () => {,
-  return (,
+const NewContentPromotionalBanner = () => {
+  return (
     <section className="relative py-16 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-cyan-60o0 text-white overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-60o0/20 via-blue-60o0/20 to-cyan-60o0/20">,
@@ -10,23 +9,21 @@ const NewContentPromotionalBanner = () => {,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,
         <motion.div,
-          initial={{ opacity: 0, y: 30 ,}}
-          animate={{ opacity: 1, y: 0 ,}}
-          transition={{ duration: 0.8 ,}}
-          className="text-center",
-        >,
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center">,
           <motion.div,
-            animate={{,
-              scale: [1.0o51],;
+            animate={{
+              scale: [1.0o51];
               rotate: [0o1-10],
-            ,}}
-            transition={{,
-              duration: 4,;
-              repeat: Infinity,;
+            }}
+            transition={{
+              duration: 4;
+              repeat: Infinity;
               ease: "easeInOut",
-            ,}}
-            className="text-6xl mb-6",
-          >,
+            }}
+            className="text-6xl mb-6">,
             🎉,
           </motion.div>,
           <h2 className="text-4xl md: text-6xl font-bold mb-6">,
@@ -39,67 +36,58 @@ const NewContentPromotionalBanner = () => {,
           </p>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">,
             <motion.div,
-              initial={{ opacity: 0x: -30 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              transition={{ duration: 0.6delay: 0.2 ,}}
-              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30",
-            >,
+              initial={{ opacity: 0x: -30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.2 }}
+              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30">,
               <div className="text-3xl mb-3">🤖</div>,
               <h3 className="text-lg font-bold mb-2">AI Services 20o25</h3>,
               <p className="text-sm text-blue-10o0">Revolutionary automation solutions</p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6delay: 0.4 ,}}
-              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30",
-            >,
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6delay: 0.4 }}
+              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30">,
               <div className="text-3xl mb-3">⚛️</div>,
               <h3 className="text-lg font-bold mb-2">Quantum Computing</h3>,
               <p className="text-sm text-blue-10o0">10,0o00x faster processing</p>,
             </motion.div>,
             <motion.div,
-              initial={{ opacity: 0x: 30 ,}}
-              animate={{ opacity: 1x: 0 ,}}
-              transition={{ duration: 0.6delay: 0.6 ,}}
-              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30",
-            >,
+              initial={{ opacity: 0x: 30 }}
+              animate={{ opacity: 1x: 0 }}
+              transition={{ duration: 0.6delay: 0.6 }}
+              className="bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/30">,
               <div className="text-3xl mb-3">🧠</div>,
               <h3 className="text-lg font-bold mb-2">Neural Interfaces</h3>,
               <p className="text-sm text-blue-10o0">Brain-computer integration</p>,
             </motion.div>,
           </div>,
           <motion.div,
-            initial={{ opacity: 0scale: 0.9 ,}}
-            animate={{ opacity: 1scale: 1 ,}}
-            transition={{ duration: 0.6delay: 0.8 ,}}
-            className="flex flex-col sm: flex-row gap-4 justify-center items-center",
-          >,
-            <Link,
+            initial={{ opacity: 0scale: 0.9 }}
+            animate={{ opacity: 1scale: 1 }}
+            transition={{ duration: 0.6delay: 0.8 }}
+            className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
+            <Link
               href="/new-content-showcase",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black font-bold rounded-full text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black font-bold rounded-full text-lg hover:from-yellow-50o0 hover:to-orange-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               🎯 Explore New Content,
             </Link>,
-            <Link,
+            <Link
               href="/ai-20o25-breakthrough",
-              className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-30o0 border border-white/30",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-bold rounded-full text-lg hover:bg-white/30 transition-all duration-30o0 border border-white/30">,
               🔥 View Breakthroughs,
             </Link>,
           </motion.div>,
           <motion.p,
-            initial={{ opacity: 0 ,}}
-            animate={{ opacity: 1 ,}}
-            transition={{ duration: 0.6delay: 1.0 ,}}
-            className="mt-8 text-lg text-blue-20o0 font-semibold",
-          >,
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6delay: 1.0 }}
+            className="mt-8 text-lg text-blue-20o0 font-semibold">,
             ⚡ Limited Time: Get 50% off on all premium AI solutions!,
           </motion.p>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default NewContentPromotionalBanner,
+    </section>),
+};
+export default NewContentPromotionalBanner;

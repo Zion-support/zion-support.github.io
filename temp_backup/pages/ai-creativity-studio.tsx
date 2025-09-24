@@ -1,16 +1,15 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function AICreativityStudioPage() {,
-  return (,
+export default function AICreativityStudioPage() {
+  return (
     <>,
       <Head>,
         <title>AI Creativity Studio | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Generate on-brand creative assets at scale using AI.',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/ai-creativity-studio',
         />,
@@ -23,7 +22,6 @@ export default function AICreativityStudioPage() {,
           Creative content generation and orchestration for marketing teams.,
         </p>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const AI20o26QuantumBreakthroughBanner = () => {,
-  return (,
+const AI20o26QuantumBreakthroughBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 relative overflow-hidden'>,
       {/* Background Effects */}
       <div className='absolute inset-0 bg-black opacity-20'></div>,
@@ -25,7 +24,7 @@ const AI20o26QuantumBreakthroughBanner = () => {,
             Experience the quantum computing breakthrough that's revolutionizing,
             enterprise with,
             <span className='font-bold text-yellow-30o0'>,
-              {' ',}
+              {' '}
               10,0o00x faster processing,
             </span>{' '}
             and,
@@ -87,16 +86,14 @@ const AI20o26QuantumBreakthroughBanner = () => {,
         </div>,
         <div className='text-center'>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>,
-            <Link,
+            <Link
               href='/blog/ai-20o26-quantum-computing-breakthrough',
-              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg',
-            >,
+              className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg'>,
               Read Full Article →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-all duration-30o0 transform hover:scale-10o5'>,
               Get Quantum Assessment,
             </Link>,
           </div>,
@@ -105,9 +102,6 @@ const AI20o26QuantumBreakthroughBanner = () => {,
           </p>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AI20o26QuantumBreakthroughBanner,
-,
+    </section>),
+};
+export default AI20o26QuantumBreakthroughBanner;

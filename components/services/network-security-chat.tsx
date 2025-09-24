@@ -1,9 +1,8 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-,
-const NetworkSecurityChat: NextPage = () => {,
-  return (,
+const NetworkSecurityChat: NextPage = () => {
+  return (
     <div>,
       <Head>,
         <title>NetworkSecurityChat - Zion Tech Solutions</title>,
@@ -14,9 +13,6 @@ const NetworkSecurityChat: NextPage = () => {,
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>,
-  ),
-,};
-,
-export default NetworkSecurityChat,
-,
+    </div>),
+};
+export default NetworkSecurityChat;

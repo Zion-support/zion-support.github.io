@@ -1,14 +1,14 @@
 import Link from 'next/link',
 ArrowRightTrendingUpUsersDollarSignAwardCheckCircleStar,
-export default function AISuccessStories20o25Banner() {,
-  return (,
+export default function AISuccessStories20o25Banner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 rounded-2xl mx-4 my-8 border border-purple-50o0/20">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/20o00/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M30 30c0-16.569-13.431-30-30-30v30h30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="relative z-10 p-8 md:p-12">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid lg:grid-cols-2 gap-12 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div>,
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white text-sm font-medium mb-6">,
                 <Award className="w-4 h-4 mr-2"  />,
@@ -55,22 +55,20 @@ export default function AISuccessStories20o25Banner() {,
                 </div>,
               </div>,
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
+                <Link
                   href="/ai-success-stories-20o25",
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-                >,
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white font-semibold rounded-lg hover:from-purple-70o0 hover:to-pink-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
                   View Success Stories,
                   <ArrowRight className="ml-2 w-5 h-5"  />,
                 </Link>,
-                <Link,
+                <Link
                   href="/contact",
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0",
-                >,
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-90o0 transition-all duration-30o0">,
                   Start Your Story,
                 </Link>,
               </div>,
             </div>,
-            {/* Right Content - Success Story Highlights */,}
+            {/* Right Content - Success Story Highlights */}
             <div className="relative">,
               <div className="space-y-6">,
                 {/* Featured Success Story */}
@@ -155,6 +153,4 @@ export default function AISuccessStories20o25Banner() {,
       </div>,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-blue-50o0"></div>,
-    </div>,
-  ),
-}
+    </div>)}

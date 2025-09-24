@@ -1,24 +1,22 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Enterprise Agent Observability Guide',;
+export const metadata = {
+  title: 'AI 20o26: Enterprise Agent Observability Guide';
   description:,
-    'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.',;
-  keywords: [,
-    'agent observability',;
-    'telemetry',;
-    'tracing',;
-    'evaluations',;
-    'governance',;
-  ],;
+    'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.';
+  keywords: [
+    'agent observability';
+    'telemetry';
+    'tracing';
+    'evaluations';
+    'governance';
+  ];
 };
-,
-const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {,
-  return (,
+const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI 20o26: Enterprise Agent Observability Guide',
         description='Traces, evals, and safety telemetry to operate autonomous agents in production.',
         keywords='agent observability, telemetry, tracing, evaluations, governance',
@@ -34,7 +32,7 @@ const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {,
               Enterprise Agent Observability Guide,
             </h1>,
             <p className='text-lg md:text-xl opacity-90 mt-4 max-w-3xl'>,
-              Telemetry, tracing, and evaluation pipelines for reliable,;
+              Telemetry, tracing, and evaluation pipelines for reliable;
               auditable autonomous workflows.,
             </p>,
           </div>,
@@ -79,25 +77,20 @@ const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {,
               </ul>,
             </div>,
             <div className='mt-10 flex flex-wrap gap-4'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-              >,
+                className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                 ← Back to Blog,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0',
-              >,
+                className='text-white bg-purple-60o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-70o0'>,
                 Implement Observability,
               </Link>,
             </div>,
           </div>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default EnterpriseAgentObservabilityGuide20o26,
-,
+    </div>),
+};
+export default EnterpriseAgentObservabilityGuide20o26;

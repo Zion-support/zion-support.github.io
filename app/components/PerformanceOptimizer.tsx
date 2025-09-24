@@ -1,11 +1,9 @@
 'use client',
-,
 import { useEffect } from 'react',
-,
-export default function PerformanceOptimizer() {,
-  useEffect(() => {,
+export default function PerformanceOptimizer() {
+  useEffect(() => {
     // Preload critical resources,
-    const preloadCriticalResources = () => {,
+    const preloadCriticalResources = () => {
       // Preload fonts,
       const fontLink = document.createElement('link'),
       fontLink.rel = 'preload',
@@ -14,59 +12,43 @@ export default function PerformanceOptimizer() {,
       fontLink.type = 'font/woff2',
       fontLink.crossOrigin = 'anonymous',
       document.head.appendChild(fontLink),
-,
       // Preload critical images,
       const imageLink = document.createElement('link'),
       imageLink.rel = 'preload',
       imageLink.href = '/images/hero-bg.webp',
       imageLink.as = 'image',
-      document.head.appendChild(imageLink),
-    };
-,
+      document.head.appendChild(imageLink)};
     // Optimize images,
-    const optimizeImages = () => {,
+    const optimizeImages = () => {
       const images = document.querySelectorAll('img'),
-      images.forEach((img) => {,
-        if (!img.loading) {,
-          img.loading = 'lazy',
-        }
-        if (!img.decoding) {,
-          img.decoding = 'async',
-        }
-      }),
-    };
-,
+      images.forEach((img) => {
+        if (!img.loading) {
+          img.loading = 'lazy'}
+        if (!img.decoding) {
+          img.decoding = 'async'}
+      })};
     // Add intersection observer for lazy loading,
-    const setupLazyLoading = () => {,
-      if ('IntersectionObserver' in window) {,
-        const imageObserver = new IntersectionObserver((entries) => {,
-          entries.forEach((entry) => {,
-            if (entry.isIntersecting) {,
+    const setupLazyLoading = () => {
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
               const img = entry.target as HTMLImageElement,
-              if (img.dataset.src) {,
+              if (img.dataset.src) {
                 img.src = img.dataset.src,
                 img.removeAttribute('data-src'),
-                imageObserver.unobserve(img),
-              }
+                imageObserver.unobserve(img)}
             }
-          }),
-        }),
-,
+          })}),
         const lazyImages = document.querySelectorAll('img[data-src]'),
-        lazyImages.forEach((img) => imageObserver.observe(img)),
-      }
+        lazyImages.forEach((img) => imageObserver.observe(img))}
     };
-,
     // Initialize performance optimizations,
     preloadCriticalResources(),
     optimizeImages(),
     setupLazyLoading(),
-,
     // Cleanup,
-    return () => {,
-      // Remove any event listeners or observers if needed,
-    };
+    return () => {
+      // Remove any event listeners or observers if needed};
   }, []),
-,
-  return null,
-}
+  return null}

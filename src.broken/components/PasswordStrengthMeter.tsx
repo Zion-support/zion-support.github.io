@@ -1,9 +1,7 @@
-export function PasswordStrengthMeter() {,
-  return (,
+export function PasswordStrengthMeter() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

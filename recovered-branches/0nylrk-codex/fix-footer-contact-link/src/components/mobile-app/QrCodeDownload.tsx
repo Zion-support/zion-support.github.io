@@ -1,13 +1,12 @@
-import React from 'react',
+import React from 'react';
 
 import { QrCode } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
-,
-export const QrCodeDownload: React.FC = () => {,
+export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production,
   const appStoreUrl = "#", // Replace with actual App Store URL,
   const googlePlayUrl = "#", // Replace with actual Google Play URL,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">,
       <div className="container mx-auto px-4">,
         <div className="max-w-5xl mx-auto">,
@@ -20,9 +19,9 @@ export const QrCodeDownload: React.FC = () => {,
               <p className="text-lg text-gray-300 mb-8">,
                 Scan the QR code with your phone camera to download the app instantlyor use the buttons below to get it from your app store of choice.,
               </p>,
-              <AppStoreButtons,
+              <AppStoreButtons
                 className="mb-8",
-                appStoreUrl={appStoreUrl,}
+                appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />,
               <div className="flex gap-2 items-center text-sm text-gray-400">,
@@ -44,7 +43,4 @@ export const QrCodeDownload: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
+    </section>)};

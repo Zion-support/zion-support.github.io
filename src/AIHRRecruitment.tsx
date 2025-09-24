@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function AIHRRecruitment() {,
-  return (,
+import React from 'react';
+export default function AIHRRecruitment() {
+  return (
     <div className='min-h-screen flex items-center justify-center bg-gray-50'>,
       <div className='text-center p-8'>,
         <h1 className='text-3xl font-bold mb-4'>AI HR Recruitment</h1>,
@@ -9,7 +8,5 @@ export default function AIHRRecruitment() {,
           Page under maintenance. Check back soon.,
         </p>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

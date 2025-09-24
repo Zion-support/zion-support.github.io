@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'seo-analyzer - Zion Tech Group',;
-  description: 'Professional seo-analyzer solutions for your business needs.',;
-  keywords: 'seo-analyzer, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'seo-analyzer - Zion Tech Group';
+  description: 'Professional seo-analyzer solutions for your business needs.';
+  keywords: 'seo-analyzer, services, business, technology';
 };
-export default function SeoAnalyzerPage() {,
-  return (,
+export default function SeoAnalyzerPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function SeoAnalyzerPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

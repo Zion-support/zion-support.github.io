@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function ComprehensiveRedundancy() {,
-  return (,
+export default function ComprehensiveRedundancy() {
+  return (
     <>,
       <Head>,
         <title>Comprehensive Redundancy — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='End‑to‑end automation and redundancy practices across the stack.',
         />,
@@ -33,7 +32,6 @@ export default function ComprehensiveRedundancy() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

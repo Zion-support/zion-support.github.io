@@ -1,70 +1,68 @@
 import Image from 'next/image',
-,
-const ClientTestimonials = () => {,
-  const testimonials = [,
-    {,
-      name: 'Sarah Johnson',;
-      position: 'CEO',;
-      company: 'TechFlow Solutions',;
-      image: '/images/testimonials/sarah-johnson.jpg',;
-      rating: 5,;
+const ClientTestimonials = () => {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson';
+      position: 'CEO';
+      company: 'TechFlow Solutions';
+      image: '/images/testimonials/sarah-johnson.jpg';
+      rating: 5;
       testimonial:,
-        'Zion Tech Group transformed our entire operation. Their AI automation solutions increased our productivity by 40o0% while reducing costs by 60%. The ROI was evident within the first month.',;
-      results: '40o0% productivity increase60% cost reduction',;
-    },;
-    {,
-      name: 'Michael Chen',;
-      position: 'CTO',;
-      company: 'InnovateCorp',;
-      image: '/images/testimonials/michael-chen.jpg',;
-      rating: 5,;
+        'Zion Tech Group transformed our entire operation. Their AI automation solutions increased our productivity by 40o0% while reducing costs by 60%. The ROI was evident within the first month.';
+      results: '40o0% productivity increase60% cost reduction';
+    };
+    {
+      name: 'Michael Chen';
+      position: 'CTO';
+      company: 'InnovateCorp';
+      image: '/images/testimonials/michael-chen.jpg';
+      rating: 5;
       testimonial:,
-        "The quantum-neural computing implementation was revolutionary. 'We', 're now solving complex problems in minutes that previously took days. This is the future of business intelligence.",;
-      results: '10o00% faster problem solving',;
-    },;
-    {,
-      name: 'Emily Rodriguez',;
-      position: 'Operations Director',;
-      company: 'Global Manufacturing Ltd',;
-      image: '/images/testimonials/emily-rodriguez.jpg',;
-      rating: 5,;
+        "The quantum-neural computing implementation was revolutionary. 'We', 're now solving complex problems in minutes that previously took days. This is the future of business intelligence.";
+      results: '10o00% faster problem solving';
+    };
+    {
+      name: 'Emily Rodriguez';
+      position: 'Operations Director';
+      company: 'Global Manufacturing Ltd';
+      image: '/images/testimonials/emily-rodriguez.jpg';
+      rating: 5;
       testimonial:,
-        "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'It', 's like having a team of AI experts working 24/7.",;
-      results: '95% downtime reduction',;
-    },;
-    {,
-      name: 'David Kim',;
-      position: 'VP of Technology',;
-      company: 'FutureTech Industries',;
-      image: '/images/testimonials/david-kim.jpg',;
-      rating: 5,;
+        "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'It', 's like having a team of AI experts working 24/7.";
+      results: '95% downtime reduction';
+    };
+    {
+      name: 'David Kim';
+      position: 'VP of Technology';
+      company: 'FutureTech Industries';
+      image: '/images/testimonials/david-kim.jpg';
+      rating: 5;
       testimonial:,
-        "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 50o0%. 'We', 're now developing solutions that were previously impossible.",;
-      results: '50o0% innovation acceleration',;
-    },;
-    {,
-      name: 'Lisa Thompson',;
-      position: 'Chief Innovation Officer',;
-      company: 'NextGen Systems',;
-      image: '/images/testimonials/lisa-thompson.jpg',;
-      rating: 5,;
+        "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 50o0%. 'We', 're now developing solutions that were previously impossible.";
+      results: '50o0% innovation acceleration';
+    };
+    {
+      name: 'Lisa Thompson';
+      position: 'Chief Innovation Officer';
+      company: 'NextGen Systems';
+      image: '/images/testimonials/lisa-thompson.jpg';
+      rating: 5;
       testimonial:,
-        "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'team', 's cognitive capabilities beyond what we thought possible.",;
-      results: '30o0% cognitive enhancement',;
-    },;
-    {,
-      name: 'Robert Williams',;
-      position: 'Founder & CEO',;
-      company: 'OmniData Corp',;
-      image: '/images/testimonials/robert-williams.jpg',;
-      rating: 5,;
+        "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'team', 's cognitive capabilities beyond what we thought possible.";
+      results: '30o0% cognitive enhancement';
+    };
+    {
+      name: 'Robert Williams';
+      position: 'Founder & CEO';
+      company: 'OmniData Corp';
+      image: '/images/testimonials/robert-williams.jpg';
+      rating: 5;
       testimonial:,
-        'The omniversal data networks they built for us provide insights from dimensions we never knew existed. Our competitive advantage is now insurmountable.',;
-      results: 'Unprecedented market advantage',;
-    },;
+        'The omniversal data networks they built for us provide insights from dimensions we never knew existed. Our competitive advantage is now insurmountable.';
+      results: 'Unprecedented market advantage';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -82,11 +80,10 @@ const ClientTestimonials = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {testimonials.map(testimonialindex => (,
-            <div,
-              key={index,}
-              className='bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-shadow duration-30o0',
-            >,
+          {testimonials.map(testimonialindex => (
+            <div
+              key={index}
+              className='bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-shadow duration-30o0'>,
               <div className='flex items-center mb-6'>,
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-xl'>,
                   {testimonial.name,
@@ -105,27 +102,24 @@ const ClientTestimonials = () => {,
                 </div>,
               </div>,
               <div className='flex mb-4'>,
-                {[...Array(testimonial.rating)].map(_i => (,
-                  <svg,
+                {[...Array(testimonial.rating)].map(_i => (
+                  <svg
                     key={i}
                     className='w-5 h-5 text-yellow-40o0',
                     fill='currentColor',
-                    viewBox='0 0 20 20',
-                  >,
+                    viewBox='0 0 20 20'>,
                     <path d='M9.0o49 2.927c.3-.921 1.60o3-.921 1.90o2 0l1.0o7 3.292a1 1 0 0o0.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.0o34a1 1 0 0o0-.364 1.118l1.0o7 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.0o34a1 1 0 0o0-1.175 0l-2.8 2.0o34c-.784.57-1.838-.197-1.539-1.118l1.0o7-3.292a1 1 0 0o0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0o0.951-.69l1.0o7-3.292z' />,
-                  </svg>,
-                ))}
+                  </svg>))}
               </div>,
               <blockquote className='text-gray-70o0 mb-6 italic leading-relaxed'>,
                 "{testimonial.testimonial}",
               </blockquote>,
               <div className='bg-green-50 border-l-4 border-green-40o0 p-4 rounded'>,
                 <p className='text-green-80o0 font-semibold text-sm'>,
-                  📈 Key Results: {testimonial.results,}
+                  📈 Key Results: {testimonial.results}
                 </p>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
@@ -173,9 +167,6 @@ const ClientTestimonials = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default ClientTestimonials,
-,
+    </section>),
+};
+export default ClientTestimonials;

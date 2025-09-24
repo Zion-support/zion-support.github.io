@@ -1,20 +1,19 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function AutomationHealthPage() {,
-  return (,
+export default function AutomationHealthPage() {
+  return (
     <>,
       <Head>,
         <title>Automation Health Dashboard | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Real-time monitoring dashboard for Zion Tech Group's automation systems and workflows.",
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Automation Health Dashboard | Zion Tech Group',
         />,
-        <meta,
+        <meta
           property='og:description',
           content="Real-time monitoring dashboard for Zion Tech Group's automation systems and workflows.",
         />,
@@ -22,10 +21,9 @@ export default function AutomationHealthPage() {,
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>,
         <main className='container mx-auto px-6 py-12'>,
           <div className='max-w-6xl mx-auto'>,
-            <Link,
+            <Link
               href='/',
-              className='inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 mb-8',
-            >,
+              className='inline-flex items-center text-cyan-40o0 hover:text-cyan-30o0 mb-8'>,
               ← Back to Home,
             </Link>,
             <article className='prose prose-invert prose-lg max-w-none'>,
@@ -250,9 +248,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>1.2s</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '85%' ,}}
+                            style={{ width: '85%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -264,9 +262,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>0.8s</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '92%' ,}}
+                            style={{ width: '92%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -276,9 +274,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>2.1s</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '78%' ,}}
+                            style={{ width: '78%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -295,9 +293,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>23%</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '23%' ,}}
+                            style={{ width: '23%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -307,9 +305,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>67%</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '67%' ,}}
+                            style={{ width: '67%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -319,9 +317,9 @@ export default function AutomationHealthPage() {,
                           <span className='text-green-40o0'>45%</span>,
                         </div>,
                         <div className='w-full bg-white/20 rounded-full h-2'>,
-                          <div,
+                          <div
                             className='bg-green-40o0 h-2 rounded-full',
-                            style={{ width: '45%' ,}}
+                            style={{ width: '45%' }}
                           ></div>,
                         </div>,
                       </div>,
@@ -376,7 +374,7 @@ export default function AutomationHealthPage() {,
               </section>,
               <footer className='border-t border-white/20 pt-8 text-center'>,
                 <p className='text-white/60'>,
-                  Last updated: {new Date().toLocaleString(),} | All systems,
+                  Last updated: {new Date().toLocaleString()} | All systems,
                   operational,
                 </p>,
               </footer>,
@@ -384,7 +382,5 @@ export default function AutomationHealthPage() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

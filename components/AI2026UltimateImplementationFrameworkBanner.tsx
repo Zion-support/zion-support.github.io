@@ -1,8 +1,7 @@
 import Link from 'next/link',
 import { ArrowRight, Brain, TrendingUp, Zap, Shield, Users } from 'lucide-react',
-,
-export default function AI20o26UltimateImplementationFrameworkBanner() {,
-  return (,
+export default function AI20o26UltimateImplementationFrameworkBanner() {
+  return (
     <section className="relative bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-20 overflow-hidden">,
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-black/20">,
@@ -11,7 +10,7 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="text-center mb-16">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full px-6 py-2 mb-6">,
             <Brain className="w-5 h-5 mr-2"  />,
             <span className="text-sm font-semibold">NEW 20o26 FRAMEWORK</span>,
@@ -23,12 +22,12 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {,
               Framework Guide,
             </span>,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className="text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
             The most comprehensive AI implementation framework for achieving 50o0%+ ROI.,
             Complete roadmap from strategy to execution with proven methodologies.,
           </p>,
-          {/* Key Benefits */,}
+          {/* Key Benefits */}
           <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">,
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">,
               <TrendingUp className="w-8 h-8 text-green-40o0 mx-auto mb-3"  />,
@@ -46,26 +45,24 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {,
               <p className="text-gray-30o0 text-sm">Built for long-term success</p>,
             </div>,
           </div>,
-          {/* CTA Buttons */,}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/content/resources/ai-20o26-ultimate-implementation-framework-complete-guide",
-              className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-60o0 hover:to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg",
-            >,
+              className="inline-flex items-center bg-gradient-to-r from-purple-50o0 to-blue-50o0 hover:from-purple-60o0 hover:to-blue-60o0 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5 shadow-lg">,
               Access Complete Guide,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <Link,
+            <Link
               href="/services/ai-implementation",
-              className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-4 rounded-lg font-semibold transition-all duration-30o0",
-            >,
+              className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-4 rounded-lg font-semibold transition-all duration-30o0">,
               Get Implementation Support,
             </Link>,
           </div>,
         </div>,
-        {/* Framework Overview */,}
+        {/* Framework Overview */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Column - Framework Phases */,}
+          {/* Left Column - Framework Phases */}
           <div className="space-y-8">,
             <h2 className="text-3xl font-bold mb-6">Implementation Phases</h2>,
             <div className="space-y-6">,
@@ -107,7 +104,7 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {,
               </div>,
             </div>,
           </div>,
-          {/* Right Column - Success Metrics */,}
+          {/* Right Column - Success Metrics */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">,
             <h2 className="text-3xl font-bold mb-6">Expected Results</h2>,
             <div className="space-y-6">,
@@ -153,15 +150,13 @@ export default function AI20o26UltimateImplementationFrameworkBanner() {,
           <p className="text-gray-30o0 mb-6">,
             Join 50o0+ companies already implementing AI with our proven framework,
           </p>,
-          <Link,
+          <Link
             href="/contact",
-            className="inline-flex items-center bg-white text-purple-90o0 hover: bg-gray-10o0 px-8 py-3 rounded-lg font-semibold transition-colors",
-          >,
+            className="inline-flex items-center bg-white text-purple-90o0 hover: bg-gray-10o0 px-8 py-3 rounded-lg font-semibold transition-colors">,
             Start Your AI Transformation,
             <ArrowRight className="ml-2 w-5 h-5"  />,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}

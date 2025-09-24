@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Evaluation Playbooks | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Evaluation Playbooks | Zion Tech Group';
   description:,
-    'Operational playbooks to evaluate autonomous agents: scenarios, metrics, red teaming, and CI/CD gates.',;
+    'Operational playbooks to evaluate autonomous agents: scenarios, metrics, red teaming, and CI/CD gates.';
 };
-,
-export default function EvaluationPlaybooks20o26() {,
-  return (,
+export default function EvaluationPlaybooks20o26() {
+  return (
     <main className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Evaluation Playbooks',
         description='Scenarios, metrics, red-team suites, and CI/CD integration to ship reliable agents.',
         keywords='agent evaluation, playbooks, red teaming, CI gates, reliability',
@@ -53,23 +51,20 @@ export default function EvaluationPlaybooks20o26() {,
           <div className='mt-8 p-6 bg-purple-50 border border-purple-20o0 rounded-xl'>,
             <p className='mb-2 font-semibold text-purple-80o0'>Next steps</p>,
             <div className='flex gap-4 flex-wrap'>,
-              <Link,
+              <Link
                 href='/blog/ai-20o26-agent-reliability-engineering',
-                className='text-purple-70o0 font-semibold hover: text-purple-90o0',
-              >,
+                className='text-purple-70o0 font-semibold hover: text-purple-90o0'>,
                 Read Agent Reliability →,
               </Link>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-evaluation-harness-blueprint',
-                className='text-purple-70o0 font-semibold hover:text-purple-90o0',
-              >,
+                className='text-purple-70o0 font-semibold hover:text-purple-90o0'>,
                 Build the Harness →,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

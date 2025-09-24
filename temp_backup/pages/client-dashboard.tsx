@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ClientDashboardPage() {,
-  return (,
+export default function ClientDashboardPage() {
+  return (
     <>,
       <Head>,
         <title>Client Dashboard - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ClientDashboardPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

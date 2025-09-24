@@ -11,12 +11,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs'
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'lucide-react',
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom',
 import { toast  } from 'sonner',
-export default function ProjectRoom() {,
-  const { projectId } = useParams() as { projectId: string ,},;
-,
+export default function ProjectRoom() {
+  const { projectId } = useParams() as { projectId: string };
   const [activeTab, setActiveTab] = useState('chat'),
   const [isInCall, setIsInCall] = useState(false),
-  const [callParticipants, setCallParticipants] = useState<Array<{,
+  const [callParticipants, setCallParticipants] = useState<Array<{
     id: string,
     name: string,
     avatar?: string,
@@ -24,149 +23,131 @@ export default function ProjectRoom() {,
     isVideoEnabled?: boolean,
     isScreenSharing?: boolean,
     isHost?: boolean,
-  ,}>>([,
-    {,
+  }>>([
+    {
       id: 'user-1',
       name: 'You',
       isHost: true,
       isVideoEnabled: true,
       isMuted: false,
-    ,}
+    }
   ]),
-,
-import React, { useState } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',;
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
-import { toast } from 'sonner',;
-export default function ProjectRoom() {,
-  const { projectId } = useParams() as { projectId: string ,},;
-  const [activeTab, setActiveTab] = useState('chat'),;
-  const [isInCall, setIsInCall] = useState(false),;
-  const [callParticipants, setCallParticipants] = useState<Array<{,
-    id: string,;
-    name: string,;
-    avatar?: string,;
-    isMuted?: boolean,;
-    isVideoEnabled?: boolean,;
-    isScreenSharing?: boolean,;
-    isHost?: boolean,
-  }>>([,
-    {,
-      id: 'user-1',;
-      name: 'You',;
-      isHost: true,;
-      isVideoEnabled: true,;
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { toast } from 'sonner';
+export default function ProjectRoom() {
+  const { projectId } = useParams() as { projectId: string };
+  const [activeTab, setActiveTab] = useState('chat');
+  const [isInCall, setIsInCall] = useState(false);
+  const [callParticipants, setCallParticipants] = useState<Array<{
+    id: string;
+    name: string;
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean}>>([
+    {
+      id: 'user-1';
+      name: 'You';
+      isHost: true;
+      isVideoEnabled: true;
       isMuted: false,
-    ,}
-  ]),;
-  const startVideoCall = () => {,
-    setIsInCall(true),;
-    toast.success("Video call started", {,
-      description: "Others can join with the project room link",
-    ,}),;
-    // Switch to video tab if not already there,
-    if (activeTab !== 'video') {,
-      setActiveTab('video'),
     }
-,
-  }
-  },;
-  const endVideoCall = () => {,
+  ]);
+  const startVideoCall = () => {
+    setIsInCall(true);
+    toast.success("Video call started", {
+      description: "Others can join with the project room link",
+    });
+    // Switch to video tab if not already there,
+    if (activeTab !== 'video') {
+      setActiveTab('video')}
+}
+  };
+  const endVideoCall = () => {
     setIsInCall(false),
-    toast.info("Video call ended", {,
+    toast.info("Video call ended", {
       description: "Call duration and participants will be logged",
-    ,}),
-  }
-  const simulateUserJoining = () => {,
+    })}
+  const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
-    const mockUsers = [,
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false ,}
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true ,}
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true ,}
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ],
-,
     const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)],
-,
-    if (!callParticipants && callParticipants.find(p => p && p.id === randomUser && randomUser.id)) {,
+    if (!callParticipants && callParticipants.find(p => p && p.id === randomUser && randomUser.id)) {
 ,
       setCallParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser && randomUser.name} joined the call`),
-    }
-,
-  };
-,
-  },;
-  const simulateUserJoining = () => {,
+      toast(`${randomUser && randomUser.name} joined the call`)}
+};
+};
+  const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
-    const mockUsers = [,
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false ,},;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true ,},;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true ,}
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true };
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ],
-,
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],
-,
-    if (!callParticipants.find(p => p.id === randomUser.id)) {,
+    if (!callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
-    }
+      toast(`${randomUser.name} joined the call`)}
   };
-  ]),;
-  const startVideoCall = () => {,
-    setIsInCall(true),;
-    toast.success("Video call started", {,
+  ]);
+  const startVideoCall = () => {
+    setIsInCall(true);
+    toast.success("Video call started", {
       description: "Others can join with the project room link",
-    ,}),;
+    });
     // Switch to video tab if not already there,
-    if (activeTab !== 'video') {,
-      setActiveTab('video'),
-    }
-  },;
-  const endVideoCall = () => {,
-    setIsInCall(false),;
-    toast.info("Video call ended", {,
+    if (activeTab !== 'video') {
+      setActiveTab('video')}
+  };
+  const endVideoCall = () => {
+    setIsInCall(false);
+    toast.info("Video call ended", {
       description: "Call duration and participants will be logged",
-    ,}),
-  },;
-  const simulateUserJoining = () => {,
+    })};
+  const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
-    const mockUsers = [,
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false ,},;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true ,},;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true ,}
-    ],;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    if (!callParticipants.find(p => p.id === randomUser.id)) {,
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true };
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    if (!callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]),
-      toast(`${randomUser.name} joined the call`),
-    }
-  },;
-  return (,
+      toast(`${randomUser.name} joined the call`)}
+  };
+  return (
     <>,
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />,
       <Header />,
       <main className="container mx-auto py-8">,
         <div className="flex justify-between items-center mb-6">,
-          <h1 className="text-3xl font-bold">Project Room: {projectId,}</h1>,
+          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>,
           <div className="flex gap-2">,
-            {isInCall && (,
+            {isInCall && (
               <Button variant="destructive" className="flex items-center gap-2">,
                 <X className="h-4 w-4" />,
                 End Call,
-              </Button>,
-            )}
+              </Button>)}
 ,
             <Button variant="outline">Invite Team Member</Button>,
           </div>,
         </div>,
-,
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">,
           <TabsList className="grid grid-cols-6 md: w-fit">,
             <TabsTrigger value="chat" className="flex items-center gap-2">,
@@ -180,12 +161,11 @@ export default function ProjectRoom() {,
             <TabsTrigger value="video" className="flex items-center gap-2">,
               <Video className="h-4 w-4" />,
               <span className="hidden sm:inline">Video</span>,
-              {isInCall && (,
+              {isInCall && (
                 <span className="relative flex h-2 w-2">,
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>,
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>,
-                </span>,
-              ),}
+                </span>)}
             </TabsTrigger>,
             <TabsTrigger value="calendar" className="flex items-center gap-2">,
               <Calendar className="h-4 w-4" />,
@@ -233,24 +213,22 @@ export default function ProjectRoom() {,
                 <CardDescription>Schedule and join video calls</CardDescription>,
               </CardHeader>,
               <CardContent className="min-h-[400px] p-4">,
-                {isInCall ? (,
+                {isInCall ? (
                   <div className="space-y-4">,
-                    <VideoCallRoom,
-                    <VideoCallRoom,
-                      roomId={`project-${projectId,}`}
+                    <VideoCallRoom
+                    <VideoCallRoom
+                      roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
 ,
                     />,
-,
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">,
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">,
                         Simulate user joining (demo only),
                       </Button>,
                     </div>,
-                  </div>,
-                ) : (,
+                  </div>) : (
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">,
                     <p className="text-muted-foreground">Start a video call with your team</p>,
                     <div className="flex gap-2">,
@@ -263,8 +241,7 @@ export default function ProjectRoom() {,
                       <p>Recent calls:</p>,
                       <p>No recent calls for this project</p>,
                     </div>,
-                  </div>,
-                ),}
+                  </div>)}
               </CardContent>,
             </Card>,
           </TabsContent>,
@@ -310,38 +287,30 @@ export default function ProjectRoom() {,
         </Tabs>,
       </main>,
       <Footer />,
-    </>,
-  ),
-}
+    </>)}
 ,
-      setActiveTab ('video'),
-    }
+      setActiveTab ('video')}
   }
 ,
-  const endVideoCall = () =>: any {,
+  const endVideoCall = () =>: any {
     setIsInCall (false),
-    toast.info ("Video call ended", {,
+    toast.info ("Video call ended", {
       description: "Call duration and participants will be logged",
-    ,}),
-  }
+    })}
 ,
-  const simulateUserJoining = () =>: any {,
+  const simulateUserJoining = () =>: any {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
-    const mock_users = [,
-      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false ,},;
-      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true ,},;
-      { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true ,}
+    const mock_users = [
+      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false };
+      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true };
+      { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true }
     ],
-,
     const random_user = mock_users[Math.floor (Math.random () * mock_users.length)],
-,
-    if () {) {,
+    if () {) {
   $2,
       setCallParticipants (prev => [...prev, random_user]),
-      toast (`${random_user.name} joined the call`),
-    }
+      toast (`${random_user.name} joined the call`)}
   }
-,
 ,
 ,
           <TabsContent value="video" className="space - y-4">,
@@ -351,9 +320,9 @@ export default function ProjectRoom() {,
                 <CardDescription > Schedule and join video calls</CardDescription>,
               </CardHeader>,
               <CardContent className="min - h-[400px] p - 4">,
-                {isInCall ? (,
+                {isInCall ? (
                   <div className="space - y-4">,
-                    <VideoCallRoom,
+                    <VideoCallRoom
                       room_id={`project-${project_id}`}
                       participants={call_participants}
                       on_leave={endVideoCall}
@@ -364,7 +333,7 @@ export default function ProjectRoom() {,
                         Simulate user joining (demo only),
                       </Button>,
                     </div>,
-                  </div>) : (,
+                  </div>) : (
                   <div className="flex flex - col items - center justify - center h-[400px] space - y-4">,
                     <p className="text - muted - foreground">Start a video call with your team</p>,
                     <div className="flex gap - 2">,
@@ -377,7 +346,7 @@ export default function ProjectRoom() {,
                       <p > Recent calls:</p>,
                       <p > No recent calls for this project</p>,
                     </div>,
-                  </div>),}
+                  </div>)}
               </CardContent>,
             </Card>,
           </TabsContent>,
@@ -416,7 +385,6 @@ export default function ProjectRoom() {,
               <CardContent className="h-[400px]">,
                 <div className="flex items - center justify - center h - full">,
                   <p className="text - muted - foreground">Settings will be implemented soon</p>,
-,
                 </div>,
               </CardContent>,
             </Card>,
@@ -424,10 +392,6 @@ export default function ProjectRoom() {,
         </Tabs>,
       </main>,
       <Footer />,
-,
-    </>),
-}
-,
-,
+    </>)}
 ,
 ,

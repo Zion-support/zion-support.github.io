@@ -1,2 +1,1 @@
 self.__DYNAMIC_CSS_MANIFEST = '[]',
-,

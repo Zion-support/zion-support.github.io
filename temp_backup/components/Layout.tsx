@@ -1,15 +1,14 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import Link from 'next/link',
-,
-interface LayoutProps {,
+interface LayoutProps {
   children: React.ReactNode,
   title?: string,
   description?: string,
-,}
+}
 ,
-export default function Layout({ childrentitle = 'Zion Tech Group'description = 'Autonomouscloud-native app with self-running automations' }: LayoutProps) {,
-  return (,
+export default function Layout({ childrentitle = 'Zion Tech Group'description = 'Autonomouscloud-native app with self-running automations' }: LayoutProps) {
+  return (
     <>,
       <Head>,
         <title>{title}</title>,
@@ -44,7 +43,7 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
         </nav>,
       </header>,
       <main className="min-h-screen">,
-        {children,}
+        {children}
       </main>,
       <footer className="bg-slate-90o0/50 backdrop-blur-xl border-t border-white/10">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -77,10 +76,9 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
               <p className="text-white/70 mb-4">,
                 Stay updated with our latest innovations and automations.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-20o0",
-              >,
+                className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 text-white rounded-lg hover:from-cyan-60o0 hover:to-purple-60o0 transition-all duration-20o0">,
                 Get Started,
               </Link>,
             </div>,
@@ -92,6 +90,5 @@ export default function Layout({ childrentitle = 'Zion Tech Group'description = 
           </div>,
         </div>,
       </footer>,
-    </>,
-  ),
-,}
+    </>),
+}

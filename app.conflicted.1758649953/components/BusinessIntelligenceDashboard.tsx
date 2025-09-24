@@ -1,6 +1,4 @@
 'use client',
-,
-export default function BusinessIntelligenceDashboard() {,
-  return null,
-}
+export default function BusinessIntelligenceDashboard() {
+  return null}
 ,

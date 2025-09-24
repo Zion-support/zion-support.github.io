@@ -1,58 +1,56 @@
 import Link from 'next/link',
-,
-const AnalyticsContentShowcase20o25 = () => {,
-  const analyticsContent = [,
-    {,
-      title: 'Advanced Data Visualization',;
+const AnalyticsContentShowcase20o25 = () => {
+  const analyticsContent = [
+    {
+      title: 'Advanced Data Visualization';
       description:,
-        'Interactive dashboards with 3D visualizations and real-time updates',;
-      image: '📈',;
-      link: '/analytics/visualization',;
-      category: 'Visualization',;
-    },;
-    {,
-      title: 'Machine Learning Pipelines',;
+        'Interactive dashboards with 3D visualizations and real-time updates';
+      image: '📈';
+      link: '/analytics/visualization';
+      category: 'Visualization';
+    };
+    {
+      title: 'Machine Learning Pipelines';
       description:,
-        'End-to-end ML pipelines for automated model training and deployment',;
-      image: '🤖',;
-      link: '/analytics/ml-pipelines',;
-      category: 'Machine Learning',;
-    },;
-    {,
-      title: 'Business Intelligence Suite',;
+        'End-to-end ML pipelines for automated model training and deployment';
+      image: '🤖';
+      link: '/analytics/ml-pipelines';
+      category: 'Machine Learning';
+    };
+    {
+      title: 'Business Intelligence Suite';
       description:,
-        'Comprehensive BI tools with natural language querying capabilities',;
-      image: '💼',;
-      link: '/analytics/business-intelligence',;
-      category: 'Business Intelligence',;
-    },;
-    {,
-      title: 'Data Governance Framework',;
+        'Comprehensive BI tools with natural language querying capabilities';
+      image: '💼';
+      link: '/analytics/business-intelligence';
+      category: 'Business Intelligence';
+    };
+    {
+      title: 'Data Governance Framework';
       description:,
-        'Enterprise-grade data governance with compliance and security controls',;
-      image: '🛡️',;
-      link: '/analytics/data-governance',;
-      category: 'Governance',;
-    },;
-    {,
-      title: 'Real-Time Streaming Analytics',;
+        'Enterprise-grade data governance with compliance and security controls';
+      image: '🛡️';
+      link: '/analytics/data-governance';
+      category: 'Governance';
+    };
+    {
+      title: 'Real-Time Streaming Analytics';
       description:,
-        'Process and analyze streaming data with Apache Kafka and Spark',;
-      image: '🌊',;
-      link: '/analytics/streaming',;
-      category: 'Streaming',;
-    },;
-    {,
-      title: 'AI-Powered Data Quality',;
+        'Process and analyze streaming data with Apache Kafka and Spark';
+      image: '🌊';
+      link: '/analytics/streaming';
+      category: 'Streaming';
+    };
+    {
+      title: 'AI-Powered Data Quality';
       description:,
-        'Automated data quality assessment and cleansing using AI algorithms',;
-      image: '✨',;
-      link: '/analytics/data-quality',;
-      category: 'Data Quality',;
-    },;
+        'Automated data quality assessment and cleansing using AI algorithms';
+      image: '✨';
+      link: '/analytics/data-quality';
+      category: 'Data Quality';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -65,13 +63,12 @@ const AnalyticsContentShowcase20o25 = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-          {analyticsContent.map(contentindex => (,
-            <div,
-              key={index,}
-              className='bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0 overflow-hidden',
-            >,
+          {analyticsContent.map(contentindex => (
+            <div
+              key={index}
+              className='bg-white rounded-xl shadow-lg hover: shadow-xl transition-shadow duration-30o0 overflow-hidden'>,
               <div className='p-6'>,
-                <div className='text-4xl mb-4'>{content.image,}</div>,
+                <div className='text-4xl mb-4'>{content.image}</div>,
                 <div className='inline-block bg-indigo-10o0 text-indigo-80o0 text-sm font-medium px-3 py-1 rounded-full mb-3'>,
                   {content.category}
                 </div>,
@@ -79,28 +76,22 @@ const AnalyticsContentShowcase20o25 = () => {,
                   {content.title}
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>{content.description}</p>,
-                <Link,
+                <Link
                   href={content.link}
-                  className='text-indigo-60o0 font-semibold hover: text-indigo-80o0 transition-colors',
-                >,
+                  className='text-indigo-60o0 font-semibold hover: text-indigo-80o0 transition-colors'>,
                   Learn More →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         <div className='text-center mt-12'>,
-          <Link,
+          <Link
             href='/analytics',
-            className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-70o0 transition-colors',
-          >,
+            className='bg-indigo-60o0 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-70o0 transition-colors'>,
             View All Analytics Content,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default AnalyticsContentShowcase20o25,
-,
+    </section>),
+};
+export default AnalyticsContentShowcase20o25;

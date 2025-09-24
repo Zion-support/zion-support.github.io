@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function SafeToolUseBlueprintPage() {,
-  return (,
+import React from 'react';
+export default function SafeToolUseBlueprintPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <header className='mb-12'>,
@@ -12,14 +11,14 @@ export default function SafeToolUseBlueprintPage() {,
             AI 20o26: Safe Tool Use Blueprint,
           </h1>,
           <p className='mt-4 text-gray-30o0'>,
-            Permissioned tool use with risk tiers, sandboxes, policy-as-code,;
+            Permissioned tool use with risk tiers, sandboxes, policy-as-code;
             and runtime checks.,
           </p>,
         </header>,
         <article className='prose prose-lg prose-invert max-w-none'>,
           <h2>Why safe tool use matters</h2>,
           <p>,
-            As autonomous agents gain access to external tools and systems,;
+            As autonomous agents gain access to external tools and systems;
             robust controls are essential to prevent misuse and minimize impact,
             radius. This blueprint outlines a production-ready approach to,
             permissioned tool use with layered safeguards.,
@@ -54,7 +53,5 @@ export default function SafeToolUseBlueprintPage() {,
           </ol>,
         </article>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

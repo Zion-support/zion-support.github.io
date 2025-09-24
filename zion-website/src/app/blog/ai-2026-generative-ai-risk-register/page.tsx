@@ -1,7 +1,6 @@
-import React from 'react',
-,
-export default function GenerativeAIRiskRegisterPage() {,
-  return (,
+import React from 'react';
+export default function GenerativeAIRiskRegisterPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       <article className='max-w-3xl mx-auto px-6 py-16'>,
         <header>,
@@ -17,7 +16,7 @@ export default function GenerativeAIRiskRegisterPage() {,
         <div className='prose mt-8'>,
           <h2>Why a Risk Register</h2>,
           <p>,
-            As AI systems scale, a structured register aligns product, security,;
+            As AI systems scale, a structured register aligns product, security;
             compliance, and operations on the highest-impact risks and,
             mitigations. It enables audit-ready traceability across incidents,
             and changes.,
@@ -31,13 +30,11 @@ export default function GenerativeAIRiskRegisterPage() {,
           </ul>,
           <h2>Getting Started</h2>,
           <p>,
-            Start with a minimal set of categories (safety, privacy, security,;
+            Start with a minimal set of categories (safety, privacy, security;
             reliability), define pass criteria, and wire CI/CD checks to block,
-            changes that regress controls or eval performance.,
+            changes that regress controls or eval window.performance.,
           </p>,
         </div>,
       </article>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

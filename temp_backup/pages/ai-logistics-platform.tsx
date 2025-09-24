@@ -1,50 +1,46 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
-import {,
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,;
-  FileText, Image, Video, Music, Palette, Type,;
-  User, Search, Eye, Heart, ShoppingCart, Truck,;
-  Package, Route, Globe, Shield, Cpu, Users2, Award,;
-  CheckCircle, Target, BarChart3, TrendingUp, Clock,
-} from 'lucide-react',
-,
-export const metadata: Metadata ={,
-  title: 'AI Logistics Platform | Zion Tech Group',;
-  description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',;
-  keywords: 'AI logistics, supply chain optimization, delivery management, logistics AI, transportation AI, warehouse management',;
-  openGraph: {,
-    title: 'AI Logistics Platform | Zion Tech Group',;
-    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',;
-    url: 'https://ziontechgroup.com/ai-logistics-platform',;
-    siteName: 'Zion Tech Group',;
-    images: [,
-      {,
-        url: 'https://ziontechgroup.com/og-image-ai-logistics-platform.jpg',;
-        width: 120o0,;
-        height: 630,;
-        alt: 'AI Logistics Platform',},;
-    ],;
-    locale: 'en_US',;
-    type: 'website',},;
-  twitter: {,
-    card: 'summary_large_image',;
-    title: 'AI Logistics Platform | Zion Tech Group',;
-    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',;
-    images: ['https://ziontechgroup.com/og-image-ai-logistics-platform.jpg'],},;
-  alternates: {,
-    canonical: 'https://ziontechgroup.com/ai-logistics-platform',}};
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp;
+  MessageSquare, Mail, Phone, MapPin, ArrowRight;
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  FileText, Image, Video, Music, Palette, Type;
+  User, Search, Eye, Heart, ShoppingCart, Truck;
+  Package, Route, Globe, Shield, Cpu, Users2, Award;
+  CheckCircle, Target, BarChart3, TrendingUp, Clock} from 'lucide-react',
+export const metadata: Metadata ={
+  title: 'AI Logistics Platform | Zion Tech Group';
+  description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
+  keywords: 'AI logistics, supply chain optimization, delivery management, logistics AI, transportation AI, warehouse management';
+  openGraph: {
+    title: 'AI Logistics Platform | Zion Tech Group';
+    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
+    url: 'https://ziontechgroup.com/ai-logistics-platform';
+    siteName: 'Zion Tech Group';
+    images: [
+      {
+        url: 'https://ziontechgroup.com/og-image-ai-logistics-platform.jpg';
+        width: 120o0;
+        height: 630;
+        alt: 'AI Logistics Platform'};
+    ];
+    locale: 'en_US';
+    type: 'website'};
+  twitter: {
+    card: 'summary_large_image';
+    title: 'AI Logistics Platform | Zion Tech Group';
+    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
+    images: ['https://ziontechgroup.com/og-image-ai-logistics-platform.jpg']};
+  alternates: {
+    canonical: 'https://ziontechgroup.com/ai-logistics-platform'}};
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
-export default function AILogisticsPlatform() {,
-  return (,
+};
+export default function AILogisticsPlatform() {
+  return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
       <section className="relative py-20 lg: py-32 overflow-hidden">,
@@ -59,28 +55,26 @@ export default function AILogisticsPlatform() {,
               AI Logistics Platform,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most advanced AI logistics platform that optimizes supply chain operations,;
+              The world's most advanced AI logistics platform that optimizes supply chain operations;
               delivery management, and warehouse efficiency with intelligent automation.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-              >,
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
                 Get Started,
                 <ArrowRight className="ml-2 w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="#features",
-                className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover:bg-orange-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover:bg-orange-50o0/10 transition-all duration-30o0">,
                 Learn More,
               </Link>,
             </div>,
           </div>,
         </div>,
       </section>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <section id="features" className="py-20 bg-gradient-to-b from-black to-gray-90o0">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -88,7 +82,7 @@ export default function AILogisticsPlatform() {,
               Revolutionary AI Logistics Platform,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of logistics from route optimization to warehouse management,;
+              Our AI platform handles every aspect of logistics from route optimization to warehouse management;
               continuously learning and improving operational efficiency.,
             </p>,
           </div>,
@@ -144,7 +138,7 @@ export default function AILogisticsPlatform() {,
               </div>,
               <h3 className="text-xl font-semibold mb-3">Real-time Tracking</h3>,
               <p className="text-gray-40o0">,
-                Live visibility into shipments, inventory, and operational performance.,
+                Live visibility into shipments, inventory, and operational window.performance.,
               </p>,
             </div>,
           </div>,
@@ -243,7 +237,7 @@ export default function AILogisticsPlatform() {,
           </div>,
         </div>,
       </section>,
-      {/* How It Works Section */,}
+      {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-b from-gray-90o0 to-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-16">,
@@ -304,24 +298,22 @@ export default function AILogisticsPlatform() {,
             Join the future of logistics where AI provides intelligent optimization while you focus on business growth.,
           </p>,
           <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-            <Link,
+            <Link
               href="/contact",
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover:from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0 transform hover:scale-10o5">,
               Start Your Free Trial,
               <ArrowRight className="ml-2 w-5 h-5"  />,
             </Link>,
-            <a,
-              href={`tel:${contactInfo.mobile,}`}
-              className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover: bg-orange-50o0/10 transition-all duration-30o0",
-            >,
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className="inline-flex items-center px-8 py-4 border border-orange-50o0/30 rounded-xl font-semibold text-orange-30o0 hover: bg-orange-50o0/10 transition-all duration-30o0">,
               <Phone className="mr-2 w-5 h-5"  />,
               Call Now,
             </a>,
           </div>,
         </div>,
       </section>,
-      {/* Contact Section */,}
+      {/* Contact Section */}
       <section className="py-20 bg-black">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">,
@@ -333,14 +325,14 @@ export default function AILogisticsPlatform() {,
               <div className="space-y-4">,
                 <div className="flex items-center space-x-3">,
                   <Phone className="w-5 h-5 text-orange-40o0"  />,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.mobile}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
                   <Mail className="w-5 h-5 text-orange-40o0"  />,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-gray-30o0 hover: text-white transition-colors">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-gray-30o0 hover: text-white transition-colors">,
+                    {contactInfo.email}
                   </a>,
                 </div>,
                 <div className="flex items-center space-x-3">,
@@ -354,10 +346,9 @@ export default function AILogisticsPlatform() {,
               <p className="text-gray-40o0 mb-6">,
                 See our AI Logistics Platform in action. Schedule a personalized demo today.,
               </p>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover: from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-60o0 to-yellow-60o0 rounded-xl font-semibold text-white hover: from-orange-70o0 hover:to-yellow-70o0 transition-all duration-30o0">,
                 Schedule Demo,
                 <ArrowRight className="ml-2 w-4 h-4"  />,
               </Link>,
@@ -365,6 +356,5 @@ export default function AILogisticsPlatform() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}

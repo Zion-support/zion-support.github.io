@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function LoginPage() {,
-  return (,
+export default function LoginPage() {
+  return (
     <>,
       <Head>,
         <title>Login - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function LoginPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

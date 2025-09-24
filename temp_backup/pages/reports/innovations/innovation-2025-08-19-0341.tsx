@@ -1,19 +1,18 @@
 import Head from 'next/head',
-,
-export default function InnovationPage() {,
-  return (,
+export default function InnovationPage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Implementation Guide — Cloud FinOps</title>,
-        <meta,
+        <meta
           name='description',
           content='Autonomously generated innovations content.',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Implementation Guide — Cloud FinOps',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Innovative, useful guidance to improve retrieval quality.',
         />,
@@ -38,18 +37,16 @@ export default function InnovationPage() {,
         </ul>,
         <p className='mt-6'>,
           Learn more at{' '}
-          <a,
+          <a
             className='text-cyan-30o0 underline',
             href='https: //ziontechgroup.com',
             target='_blank',
-            rel='noopener',
-          >,
+            rel='noopener'>,
             https://ziontechgroup.com,
           </a>,
           .,
         </p>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

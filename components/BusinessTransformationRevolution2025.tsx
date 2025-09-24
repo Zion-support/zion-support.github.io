@@ -1,132 +1,114 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Target,
   TrendingUp,
   Users,
   Briefcase,
-  Lightbulb,;
-  ArrowRight,;
-  CheckCircle2,;
-  Sparkles,;
-  BarChart3,;
-  Clock,
-} from 'lucide-react',
-,
-const BusinessTransformationRevolution20o25 = () => {,
+  Lightbulb;
+  ArrowRight;
+  CheckCircle2;
+  Sparkles;
+  BarChart3;
+  Clock} from 'lucide-react',
+const BusinessTransformationRevolution20o25 = () => {
   const [activeTabsetActiveTab] = useState(0),
-  const [countersetCounters] = useState({,
-    businesses: 0,;
-    revenue: 0,;
-    efficiency: 0,;
+  const [countersetCounters] = useState({
+    businesses: 0;
+    revenue: 0;
+    efficiency: 0;
     satisfaction: 0,
-  ,}),
-,
-  const tabs = [,
-    {,
-      id: 0,;
-      title: "Digital Revolution",;
-      icon: <Sparkles className="w-6 h-6"  />,;
-      content: {,
-        title: "Complete Digital Transformation",;
-        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.",;
-        benefits: [,
-          "50o0% increase in operational efficiency",;
-          "Real-time data-driven decision making",;
-          "Automated workflow optimization",;
-          "Predictive analytics and forecasting",
-        ],;
+  }),
+  const tabs = [
+    {
+      id: 0;
+      title: "Digital Revolution";
+      icon: <Sparkles className="w-6 h-6"  />;
+      content: {
+        title: "Complete Digital Transformation";
+        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.";
+        benefits: [
+          "50o0% increase in operational efficiency";
+          "Real-time data-driven decision making";
+          "Automated workflow optimization";
+          "Predictive analytics and forecasting"];
         image: "🚀",
-      ,}
-    },;
-    {,
-      id: 1,;
-      title: "AI Integration",;
-      icon: <Target className="w-6 h-6"  />,;
-      content: {,
-        title: "Intelligent AI Integration",;
-        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.",;
-        benefits: [,
-          "Custom AI models for your industry",;
-          "24/7 automated customer support",;
-          "Intelligent resource allocation",;
-          "Advanced pattern recognition",
-        ],;
+      }
+    };
+    {
+      id: 1;
+      title: "AI Integration";
+      icon: <Target className="w-6 h-6"  />;
+      content: {
+        title: "Intelligent AI Integration";
+        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.";
+        benefits: [
+          "Custom AI models for your industry";
+          "24/7 automated customer support";
+          "Intelligent resource allocation";
+          "Advanced pattern recognition"];
         image: "🧠",
-      ,}
-    },;
-    {,
-      id: 2,;
-      title: "Growth Strategy",;
-      icon: <TrendingUp className="w-6 h-6"  />,;
-      content: {,
-        title: "Exponential Growth Strategy",;
-        description: "Unlock explosive business growth with our proven transformation methodologies.",;
-        benefits: [,
-          "Market expansion strategies",;
-          "Revenue optimization systems",;
-          "Competitive advantage frameworks",;
-          "Scalable business models",
-        ],;
+      }
+    };
+    {
+      id: 2;
+      title: "Growth Strategy";
+      icon: <TrendingUp className="w-6 h-6"  />;
+      content: {
+        title: "Exponential Growth Strategy";
+        description: "Unlock explosive business growth with our proven transformation methodologies.";
+        benefits: [
+          "Market expansion strategies";
+          "Revenue optimization systems";
+          "Competitive advantage frameworks";
+          "Scalable business models"];
         image: "📈",
-      ,}
+      }
     }
   ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     // Animate counters,
-    const animateCounters = () => {,
-      const targets ={,
-        businesses: 50o000,;
-        revenue: 250o0,;
-        efficiency: 40o0,;
+    const animateCounters = () => {
+      const targets ={
+        businesses: 50o000;
+        revenue: 250o0;
+        efficiency: 40o0;
         satisfaction: 98,
-      ,};
-,
-      Object.keys(targets).forEach(key => {,
+      };
+      Object.keys(targets).forEach(key => {
         let start = 0,
         const target = targets[key as keyof typeof targets],
         const increment = target / 10o0,
-        const timer = setInterval(() => {,
+        const timer = setInterval(() => {
           start += increment,
-          if (start >= target) {,
+          if (start >= target) {
             start = target,
-            clearInterval(timer),
-          }
-          setCounters(prev => ({ ...prev[key]: Math.floor(start) })),
-        }20),
-      }),
-    };
-,
+            clearInterval(timer)}
+          setCounters(prev => ({ ...prev[key]: Math.floor(start) }))}20)})};
     const timer = setTimeout(animateCounters50o0),
-    return () => clearTimeout(timer),
-  }[]),
-,
-  const containerVariants ={,
-    hidden: { opacity: 0, y: 50 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: {,
-        duration: 0.8,;
+    return () => clearTimeout(timer)}[]),
+  const containerVariants ={
+    hidden: { opacity: 0, y: 50 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: {
+        duration: 0.8;
         staggerChildren: 0.2,
-      ,}
+      }
     }
   };
-,
-  const itemVariants ={,
-    hidden: { opacity: 0, y: 20 ,},;
-    visible: {,
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.6 ,}
+  const itemVariants ={
+    hidden: { opacity: 0, y: 20 };
+    visible: {
+      opacity: 1;
+      y: 0;
+      transition: { duration: 0.6 }
     }
   };
-,
-  return (,
+  return (
     <section className="py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 relative overflow-hidden">,
       {/* Animated Background Elements */}
       <div className="absolute inset-0">,
@@ -140,15 +122,14 @@ const BusinessTransformationRevolution20o25 = () => {,
           variants={containerVariants}
           initial="hidden",
           animate="visible",
-          className="text-center mb-16",
-        >,
+          className="text-center mb-16">,
           <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">,
             <Briefcase className="w-12 h-12 text-yellow-40o0 mr-4"  />,
             <h2 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-white via-blue-20o0 to-purple-20o0 bg-clip-text text-transparent">,
               Business Revolution 20o25,
             </h2>,
           </motion.div>,
-          <motion.p variants={itemVariants,} className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8">,
+          <motion.p variants={itemVariants} className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8">,
             Revolutionary business transformation solutions that deliver unprecedented results.,
             Join thousands of companies already experiencing exponential growth.,
           </motion.p>,
@@ -157,31 +138,28 @@ const BusinessTransformationRevolution20o25 = () => {,
             Limited Time: 50% Off Implementation,
           </motion.div>,
         </motion.div>,
-        {/* Stats Section */,}
+        {/* Stats Section */}
         <motion.div,
           variants={containerVariants}
           initial="hidden",
           animate="visible",
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
-        >,
-          {[,
-            { icon: <Users className="w-8 h-8"  />value: counters.businesses.toLocaleString()label: "Businesses Transformed"suffix: "+" ,},;
-            { icon: <TrendingUp className="w-8 h-8"  />value: counters.revenuelabel: "Average Revenue Increase"suffix: "%" ,},;
-            { icon: <BarChart3 className="w-8 h-8"  />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" ,},;
-            { icon: <Target className="w-8 h-8"  />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" ,}
-          ].map((statindex) => (,
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
+          {[
+            { icon: <Users className="w-8 h-8"  />value: counters.businesses.toLocaleString()label: "Businesses Transformed"suffix: "+" };
+            { icon: <TrendingUp className="w-8 h-8"  />value: counters.revenuelabel: "Average Revenue Increase"suffix: "%" };
+            { icon: <BarChart3 className="w-8 h-8"  />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" };
+            { icon: <Target className="w-8 h-8"  />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" }
+          ].map((statindex) => (
             <motion.div,
               key={index}
               variants={itemVariants}
-              className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5",
-            >,
-              <div className="text-blue-40o0 mb-4 flex justify-center">{stat.icon,}</div>,
+              className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-all duration-30o0 transform hover:scale-10o5">,
+              <div className="text-blue-40o0 mb-4 flex justify-center">{stat.icon}</div>,
               <div className="text-4xl font-bold text-white mb-2">,
                 {stat.value}{stat.suffix}
               </div>,
               <div className="text-gray-30o0 text-sm">{stat.label}</div>,
-            </motion.div>,
-          ))}
+            </motion.div>))}
         </motion.div>,
         {/* Tabs Section */}
         <div className="mb-16">,
@@ -190,37 +168,34 @@ const BusinessTransformationRevolution20o25 = () => {,
             variants={itemVariants}
             initial="hidden",
             animate="visible",
-            className="flex justify-center mb-8",
-          >,
+            className="flex justify-center mb-8">,
             <div className="flex bg-white/10 backdrop-blur-lg rounded-full p-2">,
-              {tabs.map((tabindex) => (,
+              {tabs.map((tabindex) => (
                 <motion.button,
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 flex items-center ${,
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-30o0 flex items-center ${
                     activeTab === index,
                       ? 'bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white shadow-lg',
                       : 'text-gray-30o0 hover: text-white hover:bg-white/10',
-                  ,}`}
-                  whileHover={{ scale: 1.0o5 ,}}
-                  whileTap={{ scale: 0.95 ,}}
+                  }`}
+                  whileHover={{ scale: 1.0o5 }}
+                  whileTap={{ scale: 0.95 }}
                 >,
                   {tab.icon}
                   <span className="ml-2">{tab.title}</span>,
-                </motion.button>,
-              ))}
+                </motion.button>))}
             </div>,
           </motion.div>,
           {/* Tab Content */}
           <motion.div,
             key={activeTab}
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.5 ,}}
-            className="grid lg: grid-cols-2 gap-12 items-center",
-          >,
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="grid lg: grid-cols-2 gap-12 items-center">,
             <div className="space-y-6">,
-              <div className="text-8xl mb-6">{tabs[activeTab].content.image,}</div>,
+              <div className="text-8xl mb-6">{tabs[activeTab].content.image}</div>,
               <h3 className="text-4xl font-bold text-white mb-4">,
                 {tabs[activeTab].content.title}
               </h3>,
@@ -228,18 +203,16 @@ const BusinessTransformationRevolution20o25 = () => {,
                 {tabs[activeTab].content.description}
               </p>,
               <div className="space-y-4">,
-                {tabs[activeTab].content.benefits.map((benefitindex) => (,
+                {tabs[activeTab].content.benefits.map((benefitindex) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0x: -20 ,}}
-                    animate={{ opacity: 1x: 0 ,}}
-                    transition={{ delay: index * 0.1 ,}}
-                    className="flex items-center text-white",
-                  >,
+                    initial={{ opacity: 0x: -20 }}
+                    animate={{ opacity: 1x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center text-white">,
                     <CheckCircle2 className="w-6 h-6 mr-4 text-green-40o0"  />,
                     <span className="text-lg">{benefit}</span>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
             </div>,
             <div className="space-y-6">,
@@ -260,10 +233,9 @@ const BusinessTransformationRevolution20o25 = () => {,
                   </div>,
                 </div>,
                 <motion.button,
-                  whileHover={{ scale: 1.0o5y: -2 ,}}
-                  whileTap={{ scale: 0.95 ,}}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 hover: from-yellow-60o0 hover:to-orange-60o0 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-30o0 flex items-center justify-center",
-                >,
+                  whileHover={{ scale: 1.0o5y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full px-8 py-4 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 hover: from-yellow-60o0 hover:to-orange-60o0 text-black font-bold text-lg rounded-full shadow-2xl transition-all duration-30o0 flex items-center justify-center">,
                   Start Your Transformation,
                   <ArrowRight className="w-5 h-5 ml-2"  />,
                 </motion.button>,
@@ -283,13 +255,12 @@ const BusinessTransformationRevolution20o25 = () => {,
             </div>,
           </motion.div>,
         </div>,
-        {/* Final CTA */,}
+        {/* Final CTA */}
         <motion.div,
           variants={itemVariants}
           initial="hidden",
           animate="visible",
-          className="text-center",
-        >,
+          className="text-center">,
           <div className="inline-block p-8 bg-gradient-to-r from-blue-60o0/20 to-purple-60o0/20 backdrop-blur-lg rounded-2xl border border-white/20">,
             <h3 className="text-3xl font-bold text-white mb-4">,
               Join the Revolution Today,
@@ -299,17 +270,14 @@ const BusinessTransformationRevolution20o25 = () => {,
               and join thousands of successful companies already experiencing exponential growth.,
             </p>,
             <motion.button,
-              whileHover={{ scale: 1.0o5 ,}}
-              whileTap={{ scale: 0.95 ,}}
-              className="px-12 py-4 bg-gradient-to-r from-green-50o0 to-blue-50o0 hover: from-green-60o0 hover:to-blue-60o0 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-30o0",
-            >,
+              whileHover={{ scale: 1.0o5 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-12 py-4 bg-gradient-to-r from-green-50o0 to-blue-50o0 hover: from-green-60o0 hover:to-blue-60o0 text-white font-bold text-xl rounded-full shadow-2xl transition-all duration-30o0">,
               Get Started Now - 50% Off,
             </motion.button>,
           </div>,
         </motion.div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default BusinessTransformationRevolution20o25,
+    </section>),
+};
+export default BusinessTransformationRevolution20o25;

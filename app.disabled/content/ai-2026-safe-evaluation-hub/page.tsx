@@ -1,14 +1,12 @@
 import Link from 'next/link',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy',;
+    'AI 20o26: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy';
   description:,
-    'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.',;
+    'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.';
 };
-,
-export default function Page() {,
-  return (,
+export default function Page() {
+  return (
     <main className='min-h-screen bg-white'>,
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
         <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -26,7 +24,7 @@ export default function Page() {,
           <h2>Why an Evaluation Hub?</h2>,
           <p>,
             Enterprise agent platforms require reliable, repeatable evaluation.,
-            A centralized hub enables standardized scenarios, metrics,;
+            A centralized hub enables standardized scenarios, metrics;
             baselines, and policy-as-code guardrails applied across the,
             lifecycle.,
           </p>,
@@ -50,25 +48,21 @@ export default function Page() {,
             evaluation-approved variants.,
           </p>,
           <p>,
-            Continue with the{' ',}
-            <Link,
+            Continue with the{' '}
+            <Link
               href='/blog/ai-20o26-eval-gated-autonomy',
-              className='text-purple-70o0 underline',
-            >,
+              className='text-purple-70o0 underline'>,
               Eval‑Gated Autonomy overview,
             </Link>{' '}
             and the{' '}
-            <Link,
+            <Link
               href='/content/ai-20o26-evaluation-runbook-starter-kit',
-              className='text-purple-70o0 underline',
-            >,
+              className='text-purple-70o0 underline'>,
               Evaluation Runbook Starter Kit,
             </Link>,
             .,
           </p>,
         </div>,
       </section>,
-    </main>,
-  ),
-}
+    </main>)}
 ,

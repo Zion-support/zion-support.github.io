@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
+export const metadata = {
   title:,
-    'AI 20o26: Policy-as-Code Templates for Agent Governance | Zion Tech Group',;
+    'AI 20o26: Policy-as-Code Templates for Agent Governance | Zion Tech Group';
   description:,
-    'Ready-to-use policy-as-code templates to enforce guardrails, approvals, and eval gates for autonomous agents.',;
+    'Ready-to-use policy-as-code templates to enforce guardrails, approvals, and eval gates for autonomous agents.';
 };
-,
-const PolicyAsCodeTemplates20o26 = () => {,
-  return (,
+const PolicyAsCodeTemplates20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Policy-as-Code Templates for Agent Governance',
         description='Ready-to-use policy-as-code templates to enforce guardrails, approvals, and eval gates for autonomous agents.',
         keywords='policy-as-code, agent governance, OPA, Rego, approvals, eval gates',
@@ -46,23 +44,18 @@ const PolicyAsCodeTemplates20o26 = () => {,
           </ol>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/content',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Content,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Request Templates,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default PolicyAsCodeTemplates20o26,
-,
+    </div>),
+};
+export default PolicyAsCodeTemplates20o26;

@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const RevolutionaryContent20o25UltimateBanner = () => {,
-  return (,
+const RevolutionaryContent20o25UltimateBanner = () => {
+  return (
     <section className='bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -26,7 +25,7 @@ const RevolutionaryContent20o25UltimateBanner = () => {,
               <h3 className='text-2xl font-bold'>Latest Breakthroughs</h3>,
             </div>,
             <p className='text-gray-20o0 mb-6'>,
-              Stay ahead with cutting-edge content on synthetic intelligence,;
+              Stay ahead with cutting-edge content on synthetic intelligence;
               quantum computing, and autonomous business ecosystems that are,
               reshaping industries.,
             </p>,
@@ -82,16 +81,14 @@ const RevolutionaryContent20o25UltimateBanner = () => {,
               content, case studies, and implementation guides.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/blog',
-                className='bg-black text-yellow-40o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-80o0 transition-colors',
-              >,
+                className='bg-black text-yellow-40o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-80o0 transition-colors'>,
                 Explore All Content,
               </Link>,
-              <Link,
+              <Link
                 href='/case-studies',
-                className='border-2 border-black text-black px-8 py-3 rounded-lg font-semibold hover:bg-black hover:text-yellow-40o0 transition-colors',
-              >,
+                className='border-2 border-black text-black px-8 py-3 rounded-lg font-semibold hover:bg-black hover:text-yellow-40o0 transition-colors'>,
                 View Case Studies,
               </Link>,
             </div>,
@@ -110,9 +107,6 @@ const RevolutionaryContent20o25UltimateBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default RevolutionaryContent20o25UltimateBanner,
-,
+    </section>),
+};
+export default RevolutionaryContent20o25UltimateBanner;

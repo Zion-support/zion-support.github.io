@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26QuantumNeuralBreakthroughBanner() {,
-  return (,
+export default function AI20o26QuantumNeuralBreakthroughBanner() {
+  return (
     <div className='bg-gradient-to-r from-purple-60o0 via-indigo-60o0 to-cyan-60o0 text-white py-6 relative overflow-hidden'>,
       {/* Animated quantum particles */}
       <div className='absolute inset-0 bg-black opacity-10'></div>,
@@ -23,7 +22,7 @@ export default function AI20o26QuantumNeuralBreakthroughBanner() {,
               AI 20o26 Quantum-Neural Breakthrough,
             </h2>,
             <p className='text-lg md:text-xl opacity-90 mb-4'>,
-              First successful fusion of quantum computing and neural networks -{' ',}
+              First successful fusion of quantum computing and neural networks -{' '}
               <strong>20,0o00% ROI</strong> and{' '}
               <strong>transcendent intelligence</strong>,
             </p>,
@@ -43,42 +42,37 @@ export default function AI20o26QuantumNeuralBreakthroughBanner() {,
             </div>,
           </div>,
           <div className='flex flex-col sm: flex-row gap-3'>,
-            <Link,
+            <Link
               href='/ai-20o26-quantum-neural-breakthrough',
-              className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 text-center',
-            >,
+              className='bg-white text-purple-60o0 px-6 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5 text-center'>,
               Explore Quantum AI,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies/ai-20o26-quantum-neural-fusion-success',
-              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 text-center',
-            >,
+              className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-all duration-30o0 text-center'>,
               View Quantum Success,
             </Link>,
           </div>,
         </div>,
       </div>,
-      {/* Close button */,}
-      <button,
+      {/* Close button */}
+      <button
         className='absolute top-4 right-4 text-white hover: text-gray-20o0 transition-colors z-20',
-        onClick={() => {,
+        onClick={() => {
           // Add close functionality here,
-          const banner = document.querySelector(,
-            '.ai-20o26-quantum-neural-banner',
-          ),
-          if (banner) {,
+          const banner = document.querySelector(
+            '.ai-20o26-quantum-neural-banner'),
+          if (banner) {
             banner.style.display = 'none',
-          ,}
+          }
         }}
-        aria-label='Close banner',
-      >,
-        <svg,
+        aria-label='Close banner'>,
+        <svg
           className='w-6 h-6',
           fill='none',
           stroke='currentColor',
-          viewBox='0 0 24 24',
-        >,
-          <path,
+          viewBox='0 0 24 24'>,
+          <path
             strokeLinecap='round',
             strokeLinejoin='round',
             strokeWidth={2}
@@ -86,7 +80,5 @@ export default function AI20o26QuantumNeuralBreakthroughBanner() {,
           />,
         </svg>,
       </button>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

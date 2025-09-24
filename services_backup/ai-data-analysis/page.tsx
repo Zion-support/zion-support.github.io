@@ -1,55 +1,54 @@
-export const metadata = {,
-  title: 'AI Data Analysis Platform | Zion Tech Group',;
+export const metadata = {
+  title: 'AI Data Analysis Platform | Zion Tech Group';
   description:,
-    'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',;
+    'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.';
 };
-,
-export default function AIDataAnalysisPage() {,
-  return (,
+export default function AIDataAnalysisPage() {
+  return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
       <section className='mb-12'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>,
           AI Data Analysis Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build AI-powered data analysis platforms with automated insights,;
+          Build AI-powered data analysis platforms with automated insights;
           predictive analytics, and intelligent business intelligence tools.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
-          <Item,
+          <Item
             title='Automated Insights',
-            details={[,
-              'Pattern recognition',;
-              'Anomaly detection',;
-              'Trend analysis',;
-              'Correlation discovery',;
-              'Automated reporting',;
-              'Natural language queries',;
-              'Insight recommendations',;
+            details={[
+              'Pattern recognition';
+              'Anomaly detection';
+              'Trend analysis';
+              'Correlation discovery';
+              'Automated reporting';
+              'Natural language queries';
+              'Insight recommendations';
             ]}
           />,
-          <Item,
+          <Item
             title='Predictive Analytics',
-            details={[,
-              'Forecasting models',;
-              'Risk assessment',;
-              'Customer behavior prediction',;
-              'Demand forecasting',;
-              'Churn prediction',;
-              'Revenue optimization',;
-              'Scenario planning',;
+            details={[
+              'Forecasting models';
+              'Risk assessment';
+              'Customer behavior prediction';
+              'Demand forecasting';
+              'Churn prediction';
+              'Revenue optimization';
+              'Scenario planning';
             ]}
           />,
-          <Item,
+          <Item
             title='Data Processing',
-            details={[,
-              'Real-time data ingestion',;
-              'Data cleaning automation',;
-              'Feature engineering',;
-              'Model training',;
-              'Data validation',;
-              'ETL pipelines',;
-              'Data quality monitoring',;
+            details={[
+              'Real-time data ingestion';
+              'Data cleaning automation';
+              'Feature engineering';
+              'Model training';
+              'Data validation';
+              'ETL pipelines';
+              'Data quality monitoring';
             ]}
           />,
         </div>,
@@ -98,73 +97,68 @@ export default function AIDataAnalysisPage() {,
         </div>,
       </section>,
       <Pricing />,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Item({ title, details }: { title: string, details: string[] ,}) {,
-  return (,
+function Item({ title, details }: { title: string, details: string[] }) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>{title}</h3>,
       <ul className='space-y-2'>,
-        {details.map((detail, index) => (,
+        {details.map((detail, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-green-50o0 mr-2 mt-1'>•</span>,
             <span className='text-gray-60o0'>{detail}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
-function Pricing() {,
-  return (,
+function Pricing() {
+  return (
     <section>,
       <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
         AI Data Analysis Pricing,
       </h2>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-        <Plan,
+        <Plan
           name='Data Insights',
           price='$18k–$35k',
           duration='8–12 weeks',
-          features={[,
-            'Basic data analysis',;
-            'Automated insights',;
-            'Simple dashboards',;
-            'Data visualization',;
-            'Basic ML models',;
-            'API access',;
-            'Standard support',;
+          features={[
+            'Basic data analysis';
+            'Automated insights';
+            'Simple dashboards';
+            'Data visualization';
+            'Basic ML models';
+            'API access';
+            'Standard support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Predictive Analytics',
           price='$35k–$70k',
           duration='12–20 weeks',
-          features={[,
-            'Everything in Insights',;
-            'Advanced ML models',;
-            'Predictive forecasting',;
-            'Real-time processing',;
-            'Custom algorithms',;
-            'Advanced visualizations',;
-            'Priority support',;
+          features={[
+            'Everything in Insights';
+            'Advanced ML models';
+            'Predictive forecasting';
+            'Real-time processing';
+            'Custom algorithms';
+            'Advanced visualizations';
+            'Priority support';
           ]}
         />,
-        <Plan,
+        <Plan
           name='Enterprise AI',
           price='$70k+',
           duration='16–28 weeks',
-          features={[,
-            'Everything in Predictive',;
-            'Custom AI development',;
-            'Advanced security',;
-            'Multi-tenant architecture',;
-            'Dedicated support',;
-            'SLA guarantees',;
-            'On-premise deployment',;
+          features={[
+            'Everything in Predictive';
+            'Custom AI development';
+            'Advanced security';
+            'Multi-tenant architecture';
+            'Dedicated support';
+            'SLA guarantees';
+            'On-premise deployment';
           ]}
         />,
       </div>,
@@ -177,55 +171,49 @@ function Pricing() {,
           data into actionable business insights.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <a,
+          <a
             href='tel:+130o24640950',
-            className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors',
-          >,
+            className='bg-green-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'>,
             Call +1 30o2 464 0950,
           </a>,
-          <a,
+          <a
             href='mailto:kleber@ziontechgroup.com',
-            className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors',
-          >,
+            className='border-2 border-green-60o0 text-green-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-green-60o0 hover:text-white transition-colors'>,
             Email Us,
           </a>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,
-function Plan({,
-  name,;
-  price,;
-  duration,;
-  features,;
-}: {,
+function Plan({
+  name;
+  price;
+  duration;
+  features;
+}: {
   name: string,
   price: string,
   duration: string,
   features: string[],
-,}) {,
-  return (,
+}) {
+  return (
     <div className='border border-gray-20o0 rounded-xl p-6 bg-white hover: shadow-lg transition-shadow'>,
-      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name,}</h4>,
+      <h4 className='text-xl font-bold text-gray-90o0 mb-2'>{name}</h4>,
       <div className='text-3xl font-bold text-green-60o0 mb-1'>{price}</div>,
       <div className='text-gray-50o0 mb-6'>{duration}</div>,
       <ul className='space-y-3'>,
-        {features.map((feature, index) => (,
+        {features.map((feature, index) => (
           <li key={index} className='flex items-start'>,
             <span className='text-green-50o0 mr-2 mt-1'>✓</span>,
             <span className='text-gray-60o0'>{feature}</span>,
-          </li>,
-        ))}
+          </li>))}
       </ul>,
-      <a,
+      <a
         href='mailto: kleber@ziontechgroup.com?subject=AI Data Analysis Platform Inquiry',
-        className='block w-full mt-6 bg-green-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors',
-      >,
+        className='block w-full mt-6 bg-green-60o0 text-white text-center py-3 rounded-lg font-semibold hover:bg-green-70o0 transition-colors'>,
         Get Started,
       </a>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

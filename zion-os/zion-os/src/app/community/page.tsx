@@ -1,9 +1,7 @@
-export default function CommunityPage() {,
-  return (,
+export default function CommunityPage() {
+  return (
     <div className='py-16 px-4'>,
       <h1 className='text-2xl font-bold'>Community</h1>,
       <p className='opacity-70'>Temporary placeholder.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,12 +1,12 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'qa-testing - Zion Tech Group',;
-  description: 'Professional qa-testing solutions for your business needs.',;
-  keywords: 'qa-testing, services, business, technology',;
+export const metadata: Metadata = {
+  title: 'qa-testing - Zion Tech Group';
+  description: 'Professional qa-testing solutions for your business needs.';
+  keywords: 'qa-testing, services, business, technology';
 };
-export default function QaTestingPage() {,
-  return (,
+export default function QaTestingPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -31,7 +31,5 @@ export default function QaTestingPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,8 +1,7 @@
 'use client',
-import React from 'react',
-,
-export default function EvalReadyAIPipelinesPage() {,
-  return (,
+import React from 'react';
+export default function EvalReadyAIPipelinesPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
         <div className='mb-8'>,
@@ -18,7 +17,7 @@ export default function EvalReadyAIPipelinesPage() {,
         <div className='prose prose-invert prose-headings: text-white prose-a:text-blue-30o0'>,
           <p>,
             This guide outlines a practical approach to integrate offline suites,
-            with live canaries and deployment gates. Measure quality, latency,;
+            with live canaries and deployment gates. Measure quality, latency;
             and cost with consistent rubrics and observability.,
           </p>,
           <h2>Key steps</h2>,
@@ -35,7 +34,6 @@ export default function EvalReadyAIPipelinesPage() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

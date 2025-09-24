@@ -1,56 +1,54 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const SuccessStoriesShowcase: React.FC = () => {,
-  const stories = [,
-    {,
-      company: 'Fortune 50o0 Tech Company',;
-      industry: 'Technology',;
-      challenge: 'Manual data processing causing 40% efficiency loss',;
-      solution: 'AI-powered automation system',;
-      results: {,
-        efficiency: '+340%',;
-        cost: '-60%',;
-        time: '-75%',;
-      },;
+const SuccessStoriesShowcase: React.FC = () => {
+  const stories = [
+    {
+      company: 'Fortune 50o0 Tech Company';
+      industry: 'Technology';
+      challenge: 'Manual data processing causing 40% efficiency loss';
+      solution: 'AI-powered automation system';
+      results: {
+        efficiency: '+340%';
+        cost: '-60%';
+        time: '-75%';
+      };
       testimonial:,
-        'Zion Tech Group transformed our operations. The AI automation system increased our efficiency by 340% and reduced costs by 60%.',;
-      author: 'Sarah Chen, CTO',;
-      logo: '🏢',;
-    },;
-    {,
-      company: 'Global Manufacturing Corp',;
-      industry: 'Manufacturing',;
-      challenge: 'Predictive maintenance failures costing $2M annually',;
-      solution: 'Quantum-neural predictive analytics',;
-      results: {,
-        efficiency: '+280%',;
-        cost: '-45%',;
-        time: '-80%',;
-      },;
+        'Zion Tech Group transformed our operations. The AI automation system increased our efficiency by 340% and reduced costs by 60%.';
+      author: 'Sarah Chen, CTO';
+      logo: '🏢';
+    };
+    {
+      company: 'Global Manufacturing Corp';
+      industry: 'Manufacturing';
+      challenge: 'Predictive maintenance failures costing $2M annually';
+      solution: 'Quantum-neural predictive analytics';
+      results: {
+        efficiency: '+280%';
+        cost: '-45%';
+        time: '-80%';
+      };
       testimonial:,
-        'The predictive analytics system prevented equipment failures before they happened, saving us millions annually.',;
-      author: 'Michael Rodriguez, VP Operations',;
-      logo: '🏭',;
-    },;
-    {,
-      company: 'Financial Services Inc',;
-      industry: 'Finance',;
-      challenge: 'Fraud detection accuracy at only 78%',;
-      solution: 'Advanced AI security monitoring',;
-      results: {,
-        efficiency: '+420%',;
-        cost: '-55%',;
-        time: '-90%',;
-      },;
+        'The predictive analytics system prevented equipment failures before they happened, saving us millions annually.';
+      author: 'Michael Rodriguez, VP Operations';
+      logo: '🏭';
+    };
+    {
+      company: 'Financial Services Inc';
+      industry: 'Finance';
+      challenge: 'Fraud detection accuracy at only 78%';
+      solution: 'Advanced AI security monitoring';
+      results: {
+        efficiency: '+420%';
+        cost: '-55%';
+        time: '-90%';
+      };
       testimonial:,
-        "Our fraud detection accuracy improved to 99.8% with Zion's AI security system. Game-changing technology.",;
-      author: 'Jennifer Park, Chief Risk Officer',;
-      logo: '🏦',;
-    },;
+        "Our fraud detection accuracy improved to 99.8% with Zion's AI security system. Game-changing technology.";
+      author: 'Jennifer Park, Chief Risk Officer';
+      logo: '🏦';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -66,11 +64,11 @@ const SuccessStoriesShowcase: React.FC = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>,
-          {stories.map((story, index) => (,
+          {stories.map((story, index) => (
             <div key={index} className='group'>,
               <div className='bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 border border-gray-10o0'>,
                 <div className='flex items-center mb-6'>,
-                  <div className='text-3xl mr-4'>{story.logo,}</div>,
+                  <div className='text-3xl mr-4'>{story.logo}</div>,
                   <div>,
                     <h3 className='text-xl font-bold text-gray-90o0'>,
                       {story.company}
@@ -85,12 +83,12 @@ const SuccessStoriesShowcase: React.FC = () => {,
                     Challenge: ,
                   </h4>,
                   <p className='text-gray-60o0 text-sm mb-4'>,
-                    {story.challenge,}
+                    {story.challenge}
                   </p>,
                   <h4 className='font-semibold text-gray-90o0 mb-2'>,
                     Solution: ,
                   </h4>,
-                  <p className='text-gray-60o0 text-sm'>{story.solution,}</p>,
+                  <p className='text-gray-60o0 text-sm'>{story.solution}</p>,
                 </div>,
                 <div className='grid grid-cols-3 gap-4 mb-6'>,
                   <div className='text-center'>,
@@ -120,41 +118,33 @@ const SuccessStoriesShowcase: React.FC = () => {,
                     - {story.author}
                   </cite>,
                 </blockquote>,
-                <Link,
+                <Link
                   href='/case-studies',
-                  className='inline-flex items-center text-purple-60o0 font-semibold hover: text-purple-80o0 transition-colors group-hover:translate-x-1 transform duration-30o0',
-                >,
+                  className='inline-flex items-center text-purple-60o0 font-semibold hover: text-purple-80o0 transition-colors group-hover:translate-x-1 transform duration-30o0'>,
                   Read Full Case Study →,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         <div className='text-center mt-12'>,
-          <Link,
+          <Link
             href='/case-studies',
-            className='inline-flex items-center bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-xl font-semibold hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl',
-          >,
+            className='inline-flex items-center bg-gradient-to-r from-green-60o0 to-blue-60o0 text-white px-8 py-4 rounded-xl font-semibold hover: from-green-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-xl'>,
             View All Success Stories,
-            <svg,
+            <svg
               className='ml-2 w-5 h-5',
               fill='none',
               stroke='currentColor',
-              viewBox='0 0 24 24',
-            >,
-              <path,
+              viewBox='0 0 24 24'>,
+              <path
                 strokeLinecap='round',
                 strokeLinejoin='round',
-                strokeWidth={2,}
+                strokeWidth={2}
                 d='M13 7l5 5m0 0l-5 5m5-5H6',
               />,
             </svg>,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default SuccessStoriesShowcase,
-,
+    </section>)};
+export default SuccessStoriesShowcase;

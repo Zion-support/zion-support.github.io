@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function AISEOAuditor(...args: any[]): any {,
-  return (,
+export default function AISEOAuditor(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>AI SEO Auditor — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Automate on-site SEO audits and fixes with autonomous agents.',
         />,
@@ -43,7 +42,6 @@ export default function AISEOAuditor(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

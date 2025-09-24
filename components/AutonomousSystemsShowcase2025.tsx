@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AutonomousSystemsShowcase20o25() {,
-  return (,
+export default function AutonomousSystemsShowcase20o25() {
+  return (
     <section className='py-16 bg-white'>,
       <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-12'>,
@@ -14,7 +13,7 @@ export default function AutonomousSystemsShowcase20o25() {,
             processes.,
           </p>,
         </div>,
-        {/* Autonomous Capabilities Grid */,}
+        {/* Autonomous Capabilities Grid */}
         <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
           <div className='bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl border border-purple-10o0'>,
             <div className='text-4xl mb-4'>🤖</div>,
@@ -66,7 +65,7 @@ export default function AutonomousSystemsShowcase20o25() {,
             </ul>,
           </div>,
         </div>,
-        {/* Industry Applications */,}
+        {/* Industry Applications */}
         <div className='bg-gray-50 rounded-2xl p-8 mb-12'>,
           <h3 className='text-2xl font-bold text-gray-90o0 mb-6 text-center'>,
             Industry Applications,
@@ -113,7 +112,7 @@ export default function AutonomousSystemsShowcase20o25() {,
             </div>,
           </div>,
         </div>,
-        {/* Benefits Section */,}
+        {/* Benefits Section */}
         <div className='grid grid-cols-1 md: grid-cols-2 gap-8 mb-12'>,
           <div className='bg-white border border-gray-20o0 rounded-xl p-8'>,
             <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
@@ -194,7 +193,7 @@ export default function AutonomousSystemsShowcase20o25() {,
             </ul>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className='text-center'>,
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white'>,
             <h3 className='text-2xl font-bold mb-4'>,
@@ -205,23 +204,20 @@ export default function AutonomousSystemsShowcase20o25() {,
               work around the clock to optimize performance and drive growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Autonomous Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Explore Our Solutions,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,

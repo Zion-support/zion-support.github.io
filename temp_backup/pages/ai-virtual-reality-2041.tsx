@@ -1,21 +1,20 @@
 import Layout from '../components/layout/Layout',
-import {,
-  Glasses,;
-  Sparkles,;
-  Zap,;
-  Target,;
-  Shield,;
-  Clock,;
-  CheckCircle,;
-  Cpu,;
-  Database,;
-  Network,;
-  Brain,;
-  Eye,;
+import {
+  Glasses;
+  Sparkles;
+  Zap;
+  Target;
+  Shield;
+  Clock;
+  CheckCircle;
+  Cpu;
+  Database;
+  Network;
+  Brain;
+  Eye;
 } from 'lucide-react',
-,
-export default function AIVirtualReality20o41() {,
-  return (,
+export default function AIVirtualReality20o41() {
+  return (
     <Layout>,
       <div className='min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black'>,
         {/* Hero Section */}
@@ -50,7 +49,7 @@ export default function AIVirtualReality20o41() {,
             </div>,
           </div>,
         </section>,
-        {/* Features Grid */,}
+        {/* Features Grid */}
         <section className='py-20 px-4'>,
           <div className='max-w-7xl mx-auto'>,
             <div className='text-center mb-16'>,
@@ -63,56 +62,55 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  icon: <Brain className='w-8 h-8' />,;
-                  title: 'AI-Generated Worlds',;
+              {[
+                {
+                  icon: <Brain className='w-8 h-8' />;
+                  title: 'AI-Generated Worlds';
                   description:,
-                    'AI systems that create infinite, dynamic virtual worlds with realistic physics and interactions.',;
-                  color: 'from-pink-50o0 to-rose-50o0',;
-                },;
-                {,
-                  icon: <Eye className='w-8 h-8' />,;
-                  title: 'Advanced Rendering',;
+                    'AI systems that create infinite, dynamic virtual worlds with realistic physics and interactions.';
+                  color: 'from-pink-50o0 to-rose-50o0';
+                };
+                {
+                  icon: <Eye className='w-8 h-8' />;
+                  title: 'Advanced Rendering';
                   description:,
-                    'AI-powered rendering that delivers photorealistic graphics in real-time.',;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  icon: <Glasses className='w-8 h-8' />,;
-                  title: 'Immersive Audio',;
+                    'AI-powered rendering that delivers photorealistic graphics in real-time.';
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  icon: <Glasses className='w-8 h-8' />;
+                  title: 'Immersive Audio';
                   description:,
-                    '3D spatial audio with AI-enhanced sound processing for complete immersion.',;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  icon: <Zap className='w-8 h-8' />,;
-                  title: 'Real-time Adaptation',;
+                    '3D spatial audio with AI-enhanced sound processing for complete immersion.';
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  icon: <Zap className='w-8 h-8' />;
+                  title: 'Real-time Adaptation';
                   description:,
-                    'VR environments that adapt and respond to user behavior and preferences.',;
-                  color: 'from-yellow-50o0 to-orange-50o0',;
-                },;
-                {,
-                  icon: <Target className='w-8 h-8' />,;
-                  title: 'Haptic Feedback',;
+                    'VR environments that adapt and respond to user behavior and preferences.';
+                  color: 'from-yellow-50o0 to-orange-50o0';
+                };
+                {
+                  icon: <Target className='w-8 h-8' />;
+                  title: 'Haptic Feedback';
                   description:,
-                    'Advanced haptic systems with AI-optimized tactile sensations.',;
-                  color: 'from-purple-50o0 to-indigo-50o0',;
-                },;
-                {,
-                  icon: <Network className='w-8 h-8' />,;
-                  title: 'Social VR',;
+                    'Advanced haptic systems with AI-optimized tactile sensations.';
+                  color: 'from-purple-50o0 to-indigo-50o0';
+                };
+                {
+                  icon: <Network className='w-8 h-8' />;
+                  title: 'Social VR';
                   description:,
-                    'Intelligent social interactions and collaborative experiences in virtual spaces.',;
-                  color: 'from-red-50o0 to-pink-50o0',;
-                },;
-              ].map((feature, index) => (,
-                <div,
+                    'Intelligent social interactions and collaborative experiences in virtual spaces.';
+                  color: 'from-red-50o0 to-pink-50o0';
+                };
+              ].map((feature, index) => (
+                <div
                   key={index}
-                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-pink-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.color,} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`,}
+                  className='group p-8 bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl hover: border-pink-50o0/50 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-30o0`}
                   >,
                     {feature.icon}
                   </div>,
@@ -122,8 +120,7 @@ export default function AIVirtualReality20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {feature.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -140,55 +137,53 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
-              {[,
-                {,
-                  name: 'World Generation',;
+              {[
+                {
+                  name: 'World Generation';
                   description:,
-                    'AI-powered creation of infinite virtual environments',;
-                },;
-                {,
-                  name: 'Character AI',;
+                    'AI-powered creation of infinite virtual environments';
+                };
+                {
+                  name: 'Character AI';
                   description:,
-                    'Intelligent NPCs with realistic behavior and interactions',;
-                },;
-                {,
-                  name: 'Physics Simulation',;
+                    'Intelligent NPCs with realistic behavior and interactions';
+                };
+                {
+                  name: 'Physics Simulation';
                   description:,
-                    'Realistic physics and environmental interactions',;
-                },;
-                {,
-                  name: 'Audio Processing',;
-                  description: '3D spatial audio with AI enhancement',;
-                },;
-                {,
-                  name: 'Gesture Recognition',;
-                  description: 'Natural hand and body gesture tracking',;
-                },;
-                {,
-                  name: 'Eye Tracking',;
-                  description: 'Advanced eye movement and focus tracking',;
-                },;
-                {,
-                  name: 'Haptic Systems',;
-                  description: 'Intelligent tactile feedback and sensations',;
-                },;
-                {,
-                  name: 'Social Features',;
-                  description: 'Multi-user experiences and collaboration',;
-                },;
-              ].map((capability, index) => (,
-                <div,
+                    'Realistic physics and environmental interactions';
+                };
+                {
+                  name: 'Audio Processing';
+                  description: '3D spatial audio with AI enhancement';
+                };
+                {
+                  name: 'Gesture Recognition';
+                  description: 'Natural hand and body gesture tracking';
+                };
+                {
+                  name: 'Eye Tracking';
+                  description: 'Advanced eye movement and focus tracking';
+                };
+                {
+                  name: 'Haptic Systems';
+                  description: 'Intelligent tactile feedback and sensations';
+                };
+                {
+                  name: 'Social Features';
+                  description: 'Multi-user experiences and collaboration';
+                };
+              ].map((capability, index) => (
+                <div
                   key={index}
-                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-pink-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-6 bg-white/5 border border-white/10 rounded-xl hover: border-pink-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-lg font-semibold text-white mb-2'>,
-                    {capability.name,}
+                    {capability.name}
                   </h3>,
                   <p className='text-gray-40o0 text-sm'>,
                     {capability.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -205,65 +200,64 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='space-y-8'>,
-              {[,
-                {,
-                  phase: 'Content Generation',;
+              {[
+                {
+                  phase: 'Content Generation';
                   description:,
-                    'AI creates virtual worlds, characters, and environments based on user preferences',;
-                  features: [,
-                    'World building',;
-                    'Character creation',;
-                    'Environment design',;
-                  ],;
-                },;
-                {,
-                  phase: 'Real-time Rendering',;
+                    'AI creates virtual worlds, characters, and environments based on user preferences';
+                  features: [
+                    'World building';
+                    'Character creation';
+                    'Environment design';
+                  ];
+                };
+                {
+                  phase: 'Real-time Rendering';
                   description:,
-                    'AI-optimized rendering delivers high-quality graphics with minimal latency',;
-                  features: [,
-                    'Graphics optimization',;
-                    'Performance tuning',;
-                    'Quality enhancement',;
-                  ],;
-                },;
-                {,
-                  phase: 'User Interaction',;
+                    'AI-optimized rendering delivers high-quality graphics with minimal latency';
+                  features: [
+                    'Graphics optimization';
+                    'Performance tuning';
+                    'Quality enhancement';
+                  ];
+                };
+                {
+                  phase: 'User Interaction';
                   description:,
-                    'Intelligent systems that respond to user actions and preferences',;
-                  features: [,
-                    'Behavior tracking',;
-                    'Preference learning',;
-                    'Adaptive responses',;
-                  ],;
-                },;
-                {,
-                  phase: 'Audio Processing',;
+                    'Intelligent systems that respond to user actions and preferences';
+                  features: [
+                    'Behavior tracking';
+                    'Preference learning';
+                    'Adaptive responses';
+                  ];
+                };
+                {
+                  phase: 'Audio Processing';
                   description:,
-                    'AI-enhanced 3D spatial audio for complete immersive experience',;
-                  features: [,
-                    'Spatial audio',;
-                    'Sound optimization',;
-                    'Environmental audio',;
-                  ],;
-                },;
-                {,
-                  phase: 'Continuous Learning',;
+                    'AI-enhanced 3D spatial audio for complete immersive experience';
+                  features: [
+                    'Spatial audio';
+                    'Sound optimization';
+                    'Environmental audio';
+                  ];
+                };
+                {
+                  phase: 'Continuous Learning';
                   description:,
-                    'VR systems that learn and improve based on user interactions',;
-                  features: [,
-                    'User feedback',;
-                    'Performance analysis',;
-                    'Experience optimization',;
-                  ],;
-                },;
-              ].map((phase, index) => (,
-                <div,
+                    'VR systems that learn and improve based on user interactions';
+                  features: [
+                    'User feedback';
+                    'Performance analysis';
+                    'Experience optimization';
+                  ];
+                };
+              ].map((phase, index) => (
+                <div
                   key={index}
-                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl',
-                >,
+                  className='flex flex-col lg: flex-row items-center gap-8 p-8 bg-gradient-to-r from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl'>,
                   <div className='lg:w-1/3 text-center lg:text-left'>,
                     <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-50o0 to-rose-50o0 rounded-full text-white text-2xl font-bold mb-4'>,
-                      {index + 1,}
+                      {index + 1}
                     </div>,
                     <h3 className='text-2xl font-semibold text-white mb-3'>,
                       {phase.phase}
@@ -272,21 +266,18 @@ export default function AIVirtualReality20o41() {,
                   </div>,
                   <div className='lg: w-2/3'>,
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>,
-                      {phase.features.map((feature, featureIndex) => (,
-                        <div,
+                      {phase.features.map((feature, featureIndex) => (
+                        <div
                           key={featureIndex}
-                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg',
-                        >,
+                          className='flex items-center gap-3 p-4 bg-white/5 border border-white/10 rounded-lg'>,
                           <CheckCircle className='w-5 h-5 text-pink-40o0 flex-shrink-0' />,
                           <span className='text-gray-30o0 text-sm'>,
                             {feature}
                           </span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -303,100 +294,97 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  category: 'Gaming & Entertainment',;
+              {[
+                {
+                  category: 'Gaming & Entertainment';
                   description:,
-                    'Immersive gaming experiences with AI-powered worlds and characters.',;
-                  applications: [,
-                    'Virtual worlds',;
-                    'Interactive stories',;
-                    'Social gaming',;
-                    'Esports',;
-                    'Creative tools',;
-                  ],;
-                },;
-                {,
-                  category: 'Education & Training',;
+                    'Immersive gaming experiences with AI-powered worlds and characters.';
+                  applications: [
+                    'Virtual worlds';
+                    'Interactive stories';
+                    'Social gaming';
+                    'Esports';
+                    'Creative tools';
+                  ];
+                };
+                {
+                  category: 'Education & Training';
                   description:,
-                    'Virtual learning environments with AI-enhanced educational experiences.',;
-                  applications: [,
-                    'Virtual classrooms',;
-                    'Skill training',;
-                    'Simulations',;
-                    'Interactive learning',;
-                    'Remote education',;
-                  ],;
-                },;
-                {,
-                  category: 'Healthcare',;
+                    'Virtual learning environments with AI-enhanced educational experiences.';
+                  applications: [
+                    'Virtual classrooms';
+                    'Skill training';
+                    'Simulations';
+                    'Interactive learning';
+                    'Remote education';
+                  ];
+                };
+                {
+                  category: 'Healthcare';
                   description:,
-                    'Medical training, therapy, and patient care in virtual environments.',;
-                  applications: [,
-                    'Surgical training',;
-                    'Patient therapy',;
-                    'Medical simulation',;
-                    'Rehabilitation',;
-                    'Mental health',;
-                  ],;
-                },;
-                {,
-                  category: 'Business & Collaboration',;
+                    'Medical training, therapy, and patient care in virtual environments.';
+                  applications: [
+                    'Surgical training';
+                    'Patient therapy';
+                    'Medical simulation';
+                    'Rehabilitation';
+                    'Mental health';
+                  ];
+                };
+                {
+                  category: 'Business & Collaboration';
                   description:,
-                    'Virtual workspaces and collaborative environments for remote teams.',;
-                  applications: [,
-                    'Virtual meetings',;
-                    'Collaborative design',;
-                    'Training programs',;
-                    'Product demos',;
-                    'Remote work',;
-                  ],;
-                },;
-                {,
-                  category: 'Architecture & Design',;
+                    'Virtual workspaces and collaborative environments for remote teams.';
+                  applications: [
+                    'Virtual meetings';
+                    'Collaborative design';
+                    'Training programs';
+                    'Product demos';
+                    'Remote work';
+                  ];
+                };
+                {
+                  category: 'Architecture & Design';
                   description:,
-                    'Virtual design and visualization for architectural and engineering projects.',;
-                  applications: [,
-                    '3D modeling',;
-                    'Virtual walkthroughs',;
-                    'Design collaboration',;
-                    'Client presentations',;
-                    'Project planning',;
-                  ],;
-                },;
-                {,
-                  category: 'Tourism & Travel',;
+                    'Virtual design and visualization for architectural and engineering projects.';
+                  applications: [
+                    '3D modeling';
+                    'Virtual walkthroughs';
+                    'Design collaboration';
+                    'Client presentations';
+                    'Project planning';
+                  ];
+                };
+                {
+                  category: 'Tourism & Travel';
                   description:,
-                    'Virtual travel experiences and destination exploration.',;
-                  applications: [,
-                    'Virtual tours',;
-                    'Destination previews',;
-                    'Cultural experiences',;
-                    'Travel planning',;
-                    'Accessibility',;
-                  ],;
-                },;
-              ].map((category, index) => (,
-                <div,
+                    'Virtual travel experiences and destination exploration.';
+                  applications: [
+                    'Virtual tours';
+                    'Destination previews';
+                    'Cultural experiences';
+                    'Travel planning';
+                    'Accessibility';
+                  ];
+                };
+              ].map((category, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {category.category,}
+                    {category.category}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {category.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {category.applications.map((app, appIndex) => (,
+                    {category.applications.map((app, appIndex) => (
                       <div key={appIndex} className='flex items-center gap-2'>,
                         <CheckCircle className='w-4 h-4 text-pink-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>{app}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -413,93 +401,89 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {[,
-                {,
-                  industry: 'Gaming',;
+              {[
+                {
+                  industry: 'Gaming';
                   description:,
-                    'AI-powered VR gaming creates infinite, dynamic worlds with intelligent NPCs and adaptive gameplay.',;
-                  benefits: [,
-                    'Infinite content',;
-                    'Intelligent NPCs',;
-                    'Adaptive experiences',;
-                  ],;
-                },;
-                {,
-                  industry: 'Education',;
+                    'AI-powered VR gaming creates infinite, dynamic worlds with intelligent NPCs and adaptive gameplay.';
+                  benefits: [
+                    'Infinite content';
+                    'Intelligent NPCs';
+                    'Adaptive experiences';
+                  ];
+                };
+                {
+                  industry: 'Education';
                   description:,
-                    'Virtual learning environments provide immersive, interactive educational experiences.',;
-                  benefits: [,
-                    'Better engagement',;
-                    'Practical learning',;
-                    'Accessibility',;
-                  ],;
-                },;
-                {,
-                  industry: 'Healthcare',;
+                    'Virtual learning environments provide immersive, interactive educational experiences.';
+                  benefits: [
+                    'Better engagement';
+                    'Practical learning';
+                    'Accessibility';
+                  ];
+                };
+                {
+                  industry: 'Healthcare';
                   description:,
-                    'VR enables safe, realistic medical training and therapeutic interventions.',;
-                  benefits: [,
-                    'Safe training',;
-                    'Better outcomes',;
-                    'Cost reduction',;
-                  ],;
-                },;
-                {,
-                  industry: 'Business',;
+                    'VR enables safe, realistic medical training and therapeutic interventions.';
+                  benefits: [
+                    'Safe training';
+                    'Better outcomes';
+                    'Cost reduction';
+                  ];
+                };
+                {
+                  industry: 'Business';
                   description:,
-                    'Virtual workspaces enable seamless remote collaboration and training.',;
-                  benefits: [,
-                    'Remote collaboration',;
-                    'Cost savings',;
-                    'Global access',;
-                  ],;
-                },;
-                {,
-                  industry: 'Architecture',;
+                    'Virtual workspaces enable seamless remote collaboration and training.';
+                  benefits: [
+                    'Remote collaboration';
+                    'Cost savings';
+                    'Global access';
+                  ];
+                };
+                {
+                  industry: 'Architecture';
                   description:,
-                    'VR visualization transforms design review and client presentation processes.',;
-                  benefits: [,
-                    'Better visualization',;
-                    'Client engagement',;
-                    'Design efficiency',;
-                  ],;
-                },;
-                {,
-                  industry: 'Tourism',;
+                    'VR visualization transforms design review and client presentation processes.';
+                  benefits: [
+                    'Better visualization';
+                    'Client engagement';
+                    'Design efficiency';
+                  ];
+                };
+                {
+                  industry: 'Tourism';
                   description:,
-                    'Virtual travel experiences make destinations accessible to everyone.',;
-                  benefits: [,
-                    'Global access',;
-                    'Cost reduction',;
-                    'Cultural preservation',;
-                  ],;
-                },;
-              ].map((industry, index) => (,
-                <div,
+                    'Virtual travel experiences make destinations accessible to everyone.';
+                  benefits: [
+                    'Global access';
+                    'Cost reduction';
+                    'Cultural preservation';
+                  ];
+                };
+              ].map((industry, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0',
-                >,
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0'>,
                   <h3 className='text-xl font-semibold text-white mb-4'>,
-                    {industry.industry,}
+                    {industry.industry}
                   </h3>,
                   <p className='text-gray-40o0 mb-6 leading-relaxed'>,
                     {industry.description}
                   </p>,
                   <div className='space-y-2'>,
-                    {industry.benefits.map((benefit, benefitIndex) => (,
-                      <div,
+                    {industry.benefits.map((benefit, benefitIndex) => (
+                      <div
                         key={benefitIndex}
-                        className='flex items-center gap-2',
-                      >,
+                        className='flex items-center gap-2'>,
                         <CheckCircle className='w-4 h-4 text-pink-40o0 flex-shrink-0' />,
                         <span className='text-gray-30o0 text-sm'>,
                           {benefit}
                         </span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -516,42 +500,41 @@ export default function AIVirtualReality20o41() {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {[,
-                {,
-                  title: 'Immersive Experiences',;
+              {[
+                {
+                  title: 'Immersive Experiences';
                   description:,
-                    'Create deeply engaging and memorable experiences that captivate users and customers.',;
-                  icon: <Glasses className='w-8 h-8' />,;
-                  color: 'from-pink-50o0 to-rose-50o0',;
-                },;
-                {,
-                  title: 'Cost Reduction',;
+                    'Create deeply engaging and memorable experiences that captivate users and customers.';
+                  icon: <Glasses className='w-8 h-8' />;
+                  color: 'from-pink-50o0 to-rose-50o0';
+                };
+                {
+                  title: 'Cost Reduction';
                   description:,
-                    'Reduce travel, training, and operational costs through virtual experiences.',;
-                  icon: <Target className='w-8 h-8' />,;
-                  color: 'from-green-50o0 to-emerald-50o0',;
-                },;
-                {,
-                  title: 'Global Access',;
+                    'Reduce travel, training, and operational costs through virtual experiences.';
+                  icon: <Target className='w-8 h-8' />;
+                  color: 'from-green-50o0 to-emerald-50o0';
+                };
+                {
+                  title: 'Global Access';
                   description:,
-                    'Make experiences accessible to people worldwide without physical limitations.',;
-                  icon: <Network className='w-8 h-8' />,;
-                  color: 'from-blue-50o0 to-cyan-50o0',;
-                },;
-                {,
-                  title: 'Innovation Leadership',;
+                    'Make experiences accessible to people worldwide without physical limitations.';
+                  icon: <Network className='w-8 h-8' />;
+                  color: 'from-blue-50o0 to-cyan-50o0';
+                };
+                {
+                  title: 'Innovation Leadership';
                   description:,
-                    'Position your business as a technology leader with cutting-edge VR solutions.',;
-                  icon: <Brain className='w-8 h-8' />,;
-                  color: 'from-purple-50o0 to-indigo-50o0',;
-                },;
-              ].map((benefit, index) => (,
-                <div,
+                    'Position your business as a technology leader with cutting-edge VR solutions.';
+                  icon: <Brain className='w-8 h-8' />;
+                  color: 'from-purple-50o0 to-indigo-50o0';
+                };
+              ].map((benefit, index) => (
+                <div
                   key={index}
-                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0',
-                >,
-                  <div,
-                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color,} rounded-2xl flex items-center justify-center mb-6`}
+                  className='p-8 bg-white/5 border border-white/10 rounded-2xl hover: border-pink-50o0/30 transition-all duration-30o0'>,
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mb-6`}
                   >,
                     {benefit.icon}
                   </div>,
@@ -561,8 +544,7 @@ export default function AIVirtualReality20o41() {,
                   <p className='text-gray-40o0 leading-relaxed'>,
                     {benefit.description}
                   </p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -588,7 +570,6 @@ export default function AIVirtualReality20o41() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),
-,}
+    </Layout>),
+}
 ,

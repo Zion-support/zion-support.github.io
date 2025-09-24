@@ -26,8 +26,7 @@ class ErrorBoundary extends React.Component<
 		return {
 			hasError: true,
 			error,
-			errorInfo: undefined,
-		};
+			errorInfo: undefined};
 	}
 
 	componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
@@ -37,8 +36,7 @@ class ErrorBoundary extends React.Component<
 			componentStack: errorInfo.componentStack,
 			timestamp: new Date().toISOString(),
 			userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : 'unknown',
-			url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-		};
+			url: typeof window !== 'undefined' ? window.location.href : 'unknown'};
 
 		// Log error for debugging in development
 		if (process.env.NODE_ENV === 'development') {
@@ -54,21 +52,19 @@ class ErrorBoundary extends React.Component<
 			console.groupEnd();
 		}
 
-		if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag === 'function') {
-			((window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag)('event', 'exception', {
+		if (typeof window !== 'undefined' && typeof (window as unknown as { gtag?: (command: string, action: string, parameters: Record<string unknown>) => void }).gtag === 'function') {
+			((window as unknown as { gtag: (command: string, action: string, parameters: Record<string unknown>) => void }).gtag)('event', 'exception', {
 				description: error.message,
-				fatal: true,
-			});
+				fatal: true});
 		}
 
 		if (typeof window !== 'undefined') {
 			// eslint-disable-next-line no-console
-			console.log('Error would be sent to error tracking service:', errorDetails);
+			// console.log('Error would be sent to error tracking service:', errorDetails);
 		}
 		this.setState({
 			error,
-			errorInfo,
-		});
+			errorInfo});
 	}
 
 	resetError = () => {

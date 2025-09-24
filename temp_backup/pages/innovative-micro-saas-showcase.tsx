@@ -1,12 +1,11 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function InnovativeMicroSaasShowcasePage() {,
-  return (,
+export default function InnovativeMicroSaasShowcasePage() {
+  return (
     <>,
       <Head>,
         <title>Innovative Micro Saas Showcase - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='innovative micro saas showcase page',
         />,
@@ -22,7 +21,6 @@ export default function InnovativeMicroSaasShowcasePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,21 +1,17 @@
 import Head from 'next/head',
 PhoneMailMapPinCheckArrowRightRefreshCcwStar,
 import Layout from '../components/layout/Layout',
-,
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
-,
-export default function WebhookRelayReplayPage() {,
+export default function WebhookRelayReplayPage() {
   const service = enhancedRealMicroSaasServices.find(s =>,
-    s.link.endsWith('/webhook-relay-replay'),
-  ),
+    s.link.endsWith('/webhook-relay-replay')),
   if (!service) return null,
-,
-  return (,
+  return (
     <Layout>,
       <Head>,
         <title>{service.name} - Zion Tech Group</title>,
         <meta name='description' content={service.description} />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/webhook-relay-replay',
         />,
@@ -25,7 +21,7 @@ export default function WebhookRelayReplayPage() {,
           <div className='text-center mb-10'>,
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-40o0 via-blue-40o0 to-purple-40o0 bg-clip-text text-transparent flex items-center justify-center gap-3 w-10 h-10'>,
               <RefreshCcw />,
-              {service.name,}
+              {service.name}
             </h1>,
             <p className='mt-4 text-xl text-slate-30o0 max-w-3xl mx-auto'>,
               {service.tagline}
@@ -34,17 +30,15 @@ export default function WebhookRelayReplayPage() {,
           <div className='grid grid-cols-1 lg: grid-cols-3 gap-6 mb-12'>,
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-indigo-50o0/30 p-6'>,
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>,
-              <p className='text-slate-30o0 mb-6'>{service.description,}</p>,
+              <p className='text-slate-30o0 mb-6'>{service.description}</p>,
               <ul className='grid grid-cols-1 md: grid-cols-2 gap-3'>,
-                {service.features.slice(0o12).map(feati => (,
-                  <li,
-                    key={i,}
-                    className='flex items-start space-x-3 text-slate-20o0 w-5 h-5 text-indigo-40o0 mt-0.5',
-                  >,
+                {service.features.slice(0o12).map(feati => (
+                  <li
+                    key={i}
+                    className='flex items-start space-x-3 text-slate-20o0 w-5 h-5 text-indigo-40o0 mt-0.5'>,
                     <Check />,
                     <span>{feat}</span>,
-                  </li>,
-                ))}
+                  </li>))}
               </ul>,
             </div>,
             <div className='bg-black/30 rounded-2xl border border-indigo-50o0/30 p-6 h-fit'>,
@@ -55,7 +49,7 @@ export default function WebhookRelayReplayPage() {,
                     <span>{service.period}</span>,
                   </div>,
                   <div className='text-slate-40o0'>,
-                    {service.trialDays}-day free trial • Setup: {' ',}
+                    {service.trialDays}-day free trial • Setup: {' '}
                     {service.setupTime}
                   </div>,
                 </div>,
@@ -64,17 +58,16 @@ export default function WebhookRelayReplayPage() {,
                   {service.rating.toFixed(1)}
                 </div>,
               </div>,
-              <a,
+              <a
                 href='/contact',
-                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-70o0 hover: from-cyan-70o0 hover:to-blue-80o0 text-white font-semibold rounded-lg transition-all duration-20o0 w-5 h-5 ml-2',
-              >,
+                className='w-full px-6 py-3 bg-gradient-to-r from-cyan-60o0 to-blue-70o0 hover: from-cyan-70o0 hover:to-blue-80o0 text-white font-semibold rounded-lg transition-all duration-20o0 w-5 h-5 ml-2'>,
                 Start Now,
                 <ArrowRight />,
               </a>,
               <div className='mt-6 space-y-3 text-sm text-slate-30o0'>,
                 <div className='flex items-center space-x-2 w-4 h-4 text-cyan-40o0'>,
                   <Phone />,
-                  <span>{service.contactInfo.mobile,}</span>,
+                  <span>{service.contactInfo.mobile}</span>,
                 </div>,
                 <div className='flex items-center space-x-2 w-4 h-4 text-purple-40o0'>,
                   <Mail />,
@@ -89,7 +82,5 @@ export default function WebhookRelayReplayPage() {,
           </div>,
         </div>,
       </div>,
-    </Layout>,
-  ),
-}
+    </Layout>)}
 ,

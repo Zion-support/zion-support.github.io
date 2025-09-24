@@ -1,23 +1,22 @@
 import Head from 'next/head',
-,
-export default function UpdatePage() {,
-  return (,
+export default function UpdatePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Autonomous Update — 20o25-08-19 0o0: 40</title>,
-        <meta,
+        <meta
           name='description',
           content='Autonomously generated update with curated highlights.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI, automation, autonomous systems, product updates, engineering, Trends',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Autonomous Update — 20o25-08-19 0o0:40',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Autonomous Update — 20o25-08-19 0o0:40 — automatically suggested description.',
         />,
@@ -32,24 +31,22 @@ export default function UpdatePage() {,
         </p>,
         <section className='mt-6 grid gap-3'>,
           <p className='text-white/75'>,
-            Built by independent autonomous agents that analyze signals,;
+            Built by independent autonomous agents that analyze signals;
             summarize insights, and publish polished updates.,
           </p>,
           <p className='text-white/80'>,
             Discover product updates at{' '}
-            <a,
+            <a
               className='text-cyan-30o0 underline',
               href='https: //ziontechgroup.com',
               target='_blank',
-              rel='noopener',
-            >,
+              rel='noopener'>,
               https://ziontechgroup.com,
             </a>,
             .,
           </p>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

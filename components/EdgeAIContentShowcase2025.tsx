@@ -1,130 +1,126 @@
-import React from 'react',
+import React from 'react';
 "use client",
 import Link from 'next/link',
-,
-const EdgeAIContentShowcase20o25 = () => {,
-  const edgeAIContent = [,
-    {,
-      id: 'edge-computing-revolution',;
-      title: 'AI 20o25: The Edge Computing Revolution',;
-      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.',;
-      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',;
-      type: 'Blog Post',;
-      category: 'Technology',;
-      metrics: {,
-        roi: '450%',;
-        savings: '$180M',;
-        uptime: '99.7%',;
+const EdgeAIContentShowcase20o25 = () => {
+  const edgeAIContent = [
+    {
+      id: 'edge-computing-revolution';
+      title: 'AI 20o25: The Edge Computing Revolution';
+      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.';
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough';
+      type: 'Blog Post';
+      category: 'Technology';
+      metrics: {
+        roi: '450%';
+        savings: '$180M';
+        uptime: '99.7%';
         speed: '94% faster',
-      ,},;
-      image: '🚀',;
-      gradient: 'from-blue-60o0 to-purple-60o0',;
-      readingTime: '14 min read',;
+      };
+      image: '🚀';
+      gradient: 'from-blue-60o0 to-purple-60o0';
+      readingTime: '14 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'fortune-50o0-edge-ai',;
-      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI',;
-      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.',;
-      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi',;
-      type: 'Case Study',;
-      category: 'Success Story',;
-      metrics: {,
-        roi: '450%',;
-        savings: '$2.1B',;
-        efficiency: '78%',;
+    };
+    {
+      id: 'fortune-50o0-edge-ai';
+      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI';
+      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.';
+      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi';
+      type: 'Case Study';
+      category: 'Success Story';
+      metrics: {
+        roi: '450%';
+        savings: '$2.1B';
+        efficiency: '78%';
         quality: '92%',
-      ,},;
-      image: '🏭',;
-      gradient: 'from-green-60o0 to-blue-60o0',;
-      readingTime: '12 min read',;
+      };
+      image: '🏭';
+      gradient: 'from-green-60o0 to-blue-60o0';
+      readingTime: '12 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'edge-ai-implementation-guide',;
-      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI',;
-      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.',;
-      url: '/resources/ai-20o25-edge-computing-implementation-guide',;
-      type: 'Implementation Guide',;
-      category: 'Strategy',;
-      metrics: {,
-        roi: '450%',;
-        timeline: '24 months',;
-        success: '98%',;
+    };
+    {
+      id: 'edge-ai-implementation-guide';
+      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI';
+      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.';
+      url: '/resources/ai-20o25-edge-computing-implementation-guide';
+      type: 'Implementation Guide';
+      category: 'Strategy';
+      metrics: {
+        roi: '450%';
+        timeline: '24 months';
+        success: '98%';
         savings: '$180M',
-      ,},;
-      image: '📋',;
-      gradient: 'from-purple-60o0 to-pink-60o0',;
-      readingTime: '25 min read',;
+      };
+      image: '📋';
+      gradient: 'from-purple-60o0 to-pink-60o0';
+      readingTime: '25 min read';
       featured: true,
-    ,},;
-    {,
-      id: 'edge-ai-roi-calculator',;
-      title: 'Edge AI ROI Calculator: Calculate Your 450%+ ROI Potential',;
-      description: 'Interactive tool to calculate your potential ROI and savings with edge AI implementation.',;
-      url: '/tools/edge-ai-roi-calculator',;
-      type: 'Tool',;
-      category: 'Calculator',;
-      metrics: {,
-        accuracy: '95%',;
-        users: '10,0o00+',;
-        satisfaction: '98%',;
+    };
+    {
+      id: 'edge-ai-roi-calculator';
+      title: 'Edge AI ROI Calculator: Calculate Your 450%+ ROI Potential';
+      description: 'Interactive tool to calculate your potential ROI and savings with edge AI implementation.';
+      url: '/tools/edge-ai-roi-calculator';
+      type: 'Tool';
+      category: 'Calculator';
+      metrics: {
+        accuracy: '95%';
+        users: '10,0o00+';
+        satisfaction: '98%';
         completion: '15 min',
-      ,},;
-      image: '🧮',;
-      gradient: 'from-orange-60o0 to-red-60o0',;
-      readingTime: 'Interactive Tool',;
+      };
+      image: '🧮';
+      gradient: 'from-orange-60o0 to-red-60o0';
+      readingTime: 'Interactive Tool';
       featured: false,
-    ,},;
-    {,
-      id: 'edge-ai-security-guide',;
-      title: 'Edge AI Security: Complete Protection Guide',;
-      description: 'Comprehensive security framework for edge AI deployments with 95% threat reduction.',;
-      url: '/resources/edge-ai-security-complete-guide',;
-      type: 'Security Guide',;
-      category: 'Security',;
-      metrics: {,
-        threat_reduction: '95%',;
-        compliance: '10o0%',;
-        incidents: '<1/year',;
+    };
+    {
+      id: 'edge-ai-security-guide';
+      title: 'Edge AI Security: Complete Protection Guide';
+      description: 'Comprehensive security framework for edge AI deployments with 95% threat reduction.';
+      url: '/resources/edge-ai-security-complete-guide';
+      type: 'Security Guide';
+      category: 'Security';
+      metrics: {
+        threat_reduction: '95%';
+        compliance: '10o0%';
+        incidents: '<1/year';
         protection: '99.9%',
-      ,},;
-      image: '🛡️',;
-      gradient: 'from-red-60o0 to-pink-60o0',;
-      readingTime: '18 min read',;
+      };
+      image: '🛡️';
+      gradient: 'from-red-60o0 to-pink-60o0';
+      readingTime: '18 min read';
       featured: false,
-    ,},;
-    {,
-      id: 'edge-ai-industry-applications',;
-      title: 'Edge AI Industry Applications: 15 Use Cases with ROI',;
-      description: 'Real-world applications across manufacturinghealthcaretailand financial services.',;
-      url: '/resources/edge-ai-industry-applications-guide',;
-      type: 'Industry Guide',;
-      category: 'Applications',;
-      metrics: {,
-        industries: '15+',;
-        use_cases: '50+',;
-        avg_roi: '340%',;
+    };
+    {
+      id: 'edge-ai-industry-applications';
+      title: 'Edge AI Industry Applications: 15 Use Cases with ROI';
+      description: 'Real-world applications across manufacturinghealthcaretailand financial services.';
+      url: '/resources/edge-ai-industry-applications-guide';
+      type: 'Industry Guide';
+      category: 'Applications';
+      metrics: {
+        industries: '15+';
+        use_cases: '50+';
+        avg_roi: '340%';
         success_rate: '94%',
-      ,},;
-      image: '🏢',;
-      gradient: 'from-indigo-60o0 to-purple-60o0',;
-      readingTime: '22 min read',;
+      };
+      image: '🏢';
+      gradient: 'from-indigo-60o0 to-purple-60o0';
+      readingTime: '22 min read';
       featured: false,
-    ,}
+    }
   ],
-,
   const categories = [', 'All', 'Technology'Success 'Story', 'Strategy', 'Calculator', 'Security'Applications'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
-,
   const filteredContent = selectedCategory === 'All',
     ? edgeAIContent,
     : edgeAIContent.filter(content => content.category === selectedCategory),
-,
-  return (,
+  return (
     <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-blue-10o0 text-blue-80o0 rounded-full px-6 py-2 mb-4">,
             <span className="text-sm font-medium">🚀 NEW: Edge AI Revolution 20o25</span>,
@@ -133,35 +129,34 @@ const EdgeAIContentShowcase20o25 = () => {,
             Edge AI Content Collection,
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Discover comprehensive resources for implementing edge AI solutions with{' ',}
+            Discover comprehensive resources for implementing edge AI solutions with{' '}
             <span className="font-bold text-blue-60o0">450% ROI</span> and{' '}
             <span className="font-bold text-green-60o0">$180M+ annual savings</span>,
           </p>,
         </div>,
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">,
-          {categories.map((category) => (,
-            <button,
+          {categories.map((category) => (
+            <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${,
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-30o0 ${
                 selectedCategory === category,
                   ? 'bg-blue-60o0 text-white shadow-lg transform scale-10o5',
                   : 'bg-white text-gray-60o0 hover: bg-blue-50 hover:text-blue-60o0 border border-gray-20o0',
-              ,}`}
+              }`}
             >,
               {category}
-            </button>,
-          ))}
+            </button>))}
         </div>,
         {/* Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {filteredContent.map((content) => (,
-            <div,
-              key={content.id,}
-              className={`bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5 ${,
+          {filteredContent.map((content) => (
+            <div
+              key={content.id}
+              className={`bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-10o5 ${
                 content.featured ? 'ring-2 ring-blue-50o0 ring-opacity-50' : '',
-              ,}`}
+              }`}
             >,
               {/* Content Header */}
               <div className={`h-32 bg-gradient-to-r ${content.gradient} rounded-t-2xl relative overflow-hidden`}>,
@@ -174,11 +169,10 @@ const EdgeAIContentShowcase20o25 = () => {,
                     <span className="inline-block bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">,
                       {content.type}
                     </span>,
-                    {content.featured && (,
+                    {content.featured && (
                       <span className="block mt-2 bg-yellow-40o0 text-yellow-90o0 px-2 py-1 rounded-full text-xs font-bold">,
                         FEATURED,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                 </div>,
               </div>,
@@ -217,15 +211,14 @@ const EdgeAIContentShowcase20o25 = () => {,
                   </span>,
                 </div>,
                 {/* Action Button */}
-                <Link,
+                <Link
                   href={content.url}
-                  className={`w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg font-semibold text-center block hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5`,}
+                  className={`w-full bg-gradient-to-r ${content.gradient} text-white py-3 rounded-lg font-semibold text-center block hover: shadow-lg transition-all duration-30o0 transform hover:scale-10o5`}
                 >,
                   {content.type === 'Tool' ? 'Use Tool' : 'Read More'} →,
                 </Link>,
               </div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Statistics Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">,
@@ -251,7 +244,7 @@ const EdgeAIContentShowcase20o25 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white">,
             <h3 className="text-3xl font-bold mb-4">,
@@ -261,24 +254,20 @@ const EdgeAIContentShowcase20o25 = () => {,
               Join hundreds of companies achieving 450% ROI with our proven edge AI implementation strategies.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors",
-              >,
+                className="bg-white text-blue-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors">,
                 Get Free Consultation,
               </Link>,
-              <Link,
+              <Link
                 href="/resources",
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors",
-              >,
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-60o0 transition-colors">,
                 Explore All Resources,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default EdgeAIContentShowcase20o25,
+    </section>),
+};
+export default EdgeAIContentShowcase20o25;

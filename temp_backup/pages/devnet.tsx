@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DevnetPage() {,
-  return (,
+export default function DevnetPage() {
+  return (
     <>,
       <Head>,
         <title>Devnet - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function DevnetPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

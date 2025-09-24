@@ -1,8 +1,7 @@
 'use client',
 import { siteUpdates } from '../../data/updates',
-,
-export default function UpdatesPage() {,
-  return (,
+export default function UpdatesPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-7xl px-6 pt-24 lg: px-8'>,
         <div className='mx-auto max-w-2xl lg:text-center'>,
@@ -22,49 +21,40 @@ export default function UpdatesPage() {,
             {siteUpdates,
               .slice(),
               .sort((a, b) =>,
-                a.date && b.date ? (a.date < b.date ? 1 : -1) : 0,
-              ),
-              .map(item => (,
-                <article,
+                a.date && b.date ? (a.date < b.date ? 1 : -1) : 0),
+              .map(item => (
+                <article
                   key={item.href}
-                  className='flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover: bg-white/10 transition-all duration-30o0',
-                >,
+                  className='flex flex-col items-start bg-white/5 p-6 rounded-2xl backdrop-blur-sm hover: bg-white/10 transition-all duration-30o0'>,
                   <div className='flex items-center gap-3 text-xs text-gray-40o0'>,
-                    {item.tag && (,
+                    {item.tag && (
                       <span className='rounded-full bg-blue-50o0/10 px-2 py-0.5 text-blue-30o0'>,
-                        {item.tag,}
-                      </span>,
-                    )}
-                    {item.date && (,
+                        {item.tag}
+                      </span>)}
+                    {item.date && (
                       <time dateTime={item.date}>,
                         {new Date(item.date).toLocaleDateString()}
-                      </time>,
-                    )}
+                      </time>)}
                   </div>,
                   <h2 className='mt-3 text-lg font-semibold leading-6 text-white'>,
-                    <a,
+                    <a
                       href={item.href}
-                      className='hover: text-blue-40o0 transition-colors duration-20o0',
-                    >,
+                      className='hover: text-blue-40o0 transition-colors duration-20o0'>,
                       <span className='absolute inset-0' />,
-                      {item.title,}
+                      {item.title}
                     </a>,
                   </h2>,
                   <p className='mt-3 text-sm leading-6 text-gray-30o0'>,
                     {item.summary}
                   </p>,
-                  <a,
+                  <a
                     href={item.href}
-                    className='mt-6 text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0',
-                  >,
+                    className='mt-6 text-sm font-semibold leading-6 text-blue-40o0 hover: text-blue-30o0'>,
                     Read more <span aria-hidden='true'>→</span>,
                   </a>,
-                </article>,
-              )),}
+                </article>))}
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

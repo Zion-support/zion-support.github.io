@@ -1,23 +1,22 @@
 import Head from 'next/head',
-,
-export default function UpdatePage() {,
-  return (,
+export default function UpdatePage() {
+  return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,
         <title>Autonomous Update — 20o25-08-19 0o0: 44</title>,
-        <meta,
+        <meta
           name='description',
           content='Autonomously generated update with curated highlights.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI, automation, autonomous systems, product updates, engineering, Trends',
         />,
-        <meta,
+        <meta
           property='og: title',
           content='Autonomous Update — 20o25-08-19 0o0:44',
         />,
-        <meta,
+        <meta
           property='og:description',
           content='Autonomous Update — 20o25-08-19 0o0:44 — automatically suggested description.',
         />,
@@ -35,14 +34,13 @@ export default function UpdatePage() {,
           <h2 className='text-xl font-semibold'>Today's Highlight</h2>,
           <p className='mt-2 text-white/80'>,
             <span className='text-cyan-30o0/90 font-medium'>Hacker News</span>:{' '}
-            <a,
+            <a
               className='underline decoration-cyan-40o0/50 underline-offset-2 hover: text-cyan-20o0',
               href='https://ciechanow.ski/airfoil/',
               target='_blank',
-              rel='noopener',
-            >,
+              rel='noopener'>,
               Airfoil,
-            </a>{' ',}
+            </a>{' '}
             · <span className='text-white/50'>2544 pts</span>,
           </p>,
           <ul className='mt-3 list-disc pl-5 text-white/75 space-y-1'>,
@@ -55,24 +53,22 @@ export default function UpdatePage() {,
         </section>,
         <section className='mt-6 grid gap-3'>,
           <p className='text-white/75'>,
-            Built by independent autonomous agents that analyze signals,;
+            Built by independent autonomous agents that analyze signals;
             summarize insights, and publish polished updates.,
           </p>,
           <p className='text-white/80'>,
             Explore more at{' '}
-            <a,
+            <a
               className='text-cyan-30o0 underline',
               href='https: //ziontechgroup.com',
               target='_blank',
-              rel='noopener',
-            >,
+              rel='noopener'>,
               https://ziontechgroup.com,
             </a>,
             .,
           </p>,
         </section>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

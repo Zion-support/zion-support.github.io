@@ -1,7 +1,6 @@
 'use client',
-,
-export default function AILabResearchDatasetsPortalPage() {,
-  return (,
+export default function AILabResearchDatasetsPortalPage() {
+  return (
     <div className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-4xl px-6 py-24 sm: py-32 lg:px-8'>,
         <header className='mb-10'>,
@@ -33,8 +32,6 @@ export default function AILabResearchDatasetsPortalPage() {,
           </p>,
         </article>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,
 // duplicate default export removed,

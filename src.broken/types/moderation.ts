@@ -1,5 +1,4 @@
 // Type definitions for moderation,
-interface moderation {,
+interface moderation {
   // TODO: Add proper type definitions,
-,};
-,
+};

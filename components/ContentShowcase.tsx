@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 ArrowRightClockTagStar,
-interface ContentItem {,
+interface ContentItem {
   title: string,
   description: string,
   href: string,
@@ -12,9 +12,9 @@ interface ContentItem {,
   category?: string,
   featured?: boolean,
   isTrending?: boolean,
-,}
+}
 ,
-interface ContentShowcaseProps {,
+interface ContentShowcaseProps {
   title: string,
   subtitle: string,
   items: ContentItem[],
@@ -23,22 +23,20 @@ interface ContentShowcaseProps {,
   maxItems?: number,
   className?: string,
   variant?: 'default' | 'featured' | 'compact',
-,}
+}
 ,
-const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
-  title,;
-  subtitle,;
-  items,;
-  showViewAll = false,;
-  viewAllHref = '/blog',;
-  maxItems = 6,;
-  className = ', ',;
-  variant = 'default',
-}) => {,
+const ContentShowcase: React.FC<ContentShowcaseProps> = ({
+  title;
+  subtitle;
+  items;
+  showViewAll = false;
+  viewAllHref = '/blog';
+  maxItems = 6;
+  className = ', ';
+  variant = 'default'}) => {
   const displayItems = items.slice(0maxItems),
-,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'bg-blue-10o0 text-blue-80o0',
       case 'resource':,
@@ -47,21 +45,19 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0',
-  showViewAll = true,;
-  viewAllHref = '/blog',;
-  variant = 'default',
-}) => {,
-  const getTypeColor = (type: string) => {,
-    switch (type) {,
+  showViewAll = true;
+  viewAllHref = '/blog';
+  variant = 'default'}) => {
+  const getTypeColor = (type: string) => {
+    switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'resource': return 'bg-green-10o0 text-green-80o0',
       case 'case-study': return 'bg-purple-10o0 text-purple-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0',
-    ,}
+    }
   };
-,
-  const getTypeLabel = (type: string) => {,
-    switch (type) {,
+  const getTypeLabel = (type: string) => {
+    switch (type) {
       case 'blog':,
         return 'Article',
       case 'resource':,
@@ -70,16 +66,15 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
         return 'Case Study',
       default:,
         return 'Content',
-    ,}
+    }
   };
-,
-  return (,
+  return (
     <section className={`py-16 ${className}`}>,
       <div className="container mx-auto px-4">,
         {/* Header */}
         <div className="text-center mb-12">,
           <h2 className="text-4xl md: text-5xl font-bold text-gray-90o0 mb-4">,
-            {title,}
+            {title}
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
             {subtitle}
@@ -87,30 +82,27 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
         </div>,
         {/* Content Grid */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {displayItems.map((itemindex) => (,
-            <Link,
-              key={index,}
+          {displayItems.map((itemindex) => (
+            <Link
+              key={index}
               href={item.href}
-              className="group bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden border border-gray-10o0 hover:border-blue-20o0",
-            >,
-              {/* Featured Badge */,}
-              {item.featured && (,
+              className="group bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-30o0 overflow-hidden border border-gray-10o0 hover:border-blue-20o0">,
+              {/* Featured Badge */}
+              {item.featured && (
                 <div className="absolute top-4 left-4 z-10">,
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-white text-sm font-semibold rounded-full">,
                     <Star className="w-3 h-3"  />,
                     Featured,
                   </span>,
-                </div>,
-              )}
+                </div>)}
 ,
               {/* New Badge */}
-              {item.isNew && (,
+              {item.isNew && (
                 <div className="absolute top-4 right-4 z-10">,
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-gradient-to-r from-green-40o0 to-emerald-50o0 text-white text-sm font-semibold rounded-full">,
                     New,
                   </span>,
-                </div>,
-              )}
+                </div>)}
 ,
               <div className="p-6">,
                 {/* Type and Category */}
@@ -118,23 +110,21 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
                   <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>,
                     {getTypeLabel(item.type)}
                   </span>,
-                  {item.category && (,
+                  {item.category && (
                     <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-10o0 text-gray-60o0 rounded-full text-xs">,
                       <Tag className="w-3 h-3"  />,
                       {item.category}
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 {/* Icon */}
-                {item.icon && (,
+                {item.icon && (
                   <div className="text-3xl mb-4">,
                     {item.icon}
-                  </div>,
-                )}
+                  </div>)}
 ,
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover: text-blue-60o0 transition-colors">,
-                  {item.title,}
+                  {item.title}
                 </h3>,
                 {/* Description */}
                 <p className="text-gray-60o0 mb-4 line-clamp-3">,
@@ -142,12 +132,11 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
                 </p>,
                 {/* Meta Information */}
                 <div className="flex items-center justify-between text-sm text-gray-50o0">,
-                  {item.readTime && (,
+                  {item.readTime && (
                     <div className="flex items-center gap-1">,
                       <Clock className="w-4 h-4"  />,
                       <span>{item.readTime}</span>,
-                    </div>,
-                  )}
+                    </div>)}
                   <div className="flex items-center gap-1 text-blue-60o0 group-hover: text-blue-80o0">,
                     <span>Read more</span>,
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />,
@@ -155,61 +144,53 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
       case 'resource': return 'Resource',
       case 'case-study': return 'Case Study',
       default: return 'Content',
-    ,}
+    }
   };
-,
-  if (variant === 'compact') {,
-    return (,
+  if (variant === 'compact') {
+    return (
       <div className="bg-white rounded-xl border border-gray-20o0 p-6">,
         <div className="flex items-center justify-between mb-4">,
           <h3 className="text-lg font-semibold text-gray-90o0">{title}</h3>,
-          {showViewAll && (,
-            <Link,
+          {showViewAll && (
+            <Link
               href={viewAllHref}
-              className="text-blue-60o0 hover: text-blue-70o0 text-sm font-medium",
-            >,
+              className="text-blue-60o0 hover: text-blue-70o0 text-sm font-medium">,
               View All →,
-            </Link>,
-          ),}
+            </Link>)}
         </div>,
         <div className="space-y-3">,
-          {items.slice(0o3).map((itemindex) => (,
+          {items.slice(0o3).map((itemindex) => (
             <Link key={index} href={item.href} className="group block">,
               <div className="flex items-start gap-3 p-3 rounded-lg hover: bg-gray-50 transition-colors">,
-                <div className="text-2xl">{item.icon,}</div>,
+                <div className="text-2xl">{item.icon}</div>,
                 <div className="flex-1 min-w-0">,
                   <div className="flex items-center gap-2 mb-1">,
                     <span className={`text-xs font-medium px-2 py-1 rounded-full ${getTypeColor(item.type)}`}>,
                       {getTypeLabel(item.type)}
                     </span>,
-                    {item.isNew && (,
+                    {item.isNew && (
                       <span className="text-xs font-medium text-green-60o0 bg-green-10o0 px-2 py-1 rounded-full">,
                         New,
-                      </span>,
-                    )}
-                    {item.isTrending && (,
+                      </span>)}
+                    {item.isTrending && (
                       <span className="text-xs font-medium text-orange-60o0 bg-orange-10o0 px-2 py-1 rounded-full">,
                         Trending,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <h4 className="font-medium text-gray-90o0 group-hover: text-blue-60o0 transition-colors text-sm">,
-                    {item.title,}
+                    {item.title}
                   </h4>,
                   <p className="text-gray-60o0 text-xs mt-1 line-clamp-2">,
                     {item.description}
                   </p>,
                 </div>,
               </div>,
-            </Link>,
-          ))}
+            </Link>))}
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  if (variant === 'featured') {,
-    return (,
+  if (variant === 'featured') {
+    return (
       <div className="bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white relative overflow-hidden rounded-2xl">,
         <div className="absolute inset-0 bg-black opacity-10"></div>,
         <div className="relative p-8">,
@@ -217,30 +198,28 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
             <div className="inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-2 mb-6">,
               <span className="text-sm font-medium">✨ FEATURED CONTENT</span>,
             </div>,
-            <h2 className="text-3xl md: text-4xl font-bold mb-4">{title,}</h2>,
+            <h2 className="text-3xl md: text-4xl font-bold mb-4">{title}</h2>,
             <p className="text-xl opacity-90 max-w-3xl mx-auto">{subtitle}</p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {items.slice(0o6).map((itemindex) => (,
-              <Link key={index,} href={item.href} className="group">,
+            {items.slice(0o6).map((itemindex) => (
+              <Link key={index} href={item.href} className="group">,
                 <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover: bg-opacity-20 transition-all duration-30o0 border border-white border-opacity-20">,
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon,}</div>,
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>,
                   <div className="flex items-center gap-2 mb-2">,
                     <span className="text-xs font-medium bg-white bg-opacity-20 px-2 py-1 rounded-full">,
                       {getTypeLabel(item.type)}
                     </span>,
-                    {item.isNew && (,
+                    {item.isNew && (
                       <span className="text-xs font-medium bg-green-50o0 bg-opacity-20 px-2 py-1 rounded-full">,
                         New,
-                      </span>,
-                    )}
-                    {item.isTrending && (,
+                      </span>)}
+                    {item.isTrending && (
                       <span className="text-xs font-medium bg-orange-50o0 bg-opacity-20 px-2 py-1 rounded-full">,
                         Trending,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
-                  <h3 className="text-lg font-semibold mb-2 group-hover: underline">{item.title,}</h3>,
+                  <h3 className="text-lg font-semibold mb-2 group-hover: underline">{item.title}</h3>,
                   <p className="text-sm opacity-90 mb-3 line-clamp-2">{item.description}</p>,
                   <div className="flex items-center text-xs opacity-75">,
                     {item.readTime && <span>{item.readTime}</span>}
@@ -248,65 +227,57 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
                     <span>{item.category}</span>,
                   </div>,
                 </div>,
-              </Link>,
-            ))}
+              </Link>))}
           </div>,
-          {showViewAll && (,
+          {showViewAll && (
             <div className="text-center mt-8">,
-              <Link,
+              <Link
                 href={viewAllHref}
-                className="bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block",
-              >,
+                className="bg-white text-indigo-60o0 px-8 py-3 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors inline-block">,
                 View All Content,
               </Link>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
-      </div>,
-    ),
-  }
+      </div>)}
 ,
-  return (,
+  return (
     <div className="py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center mb-12">,
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">{title,}</h2>,
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-90o0 mb-4">{title}</h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">{subtitle}</p>,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          {items.map((itemindex) => (,
-            <Link key={index,} href={item.href} className="group">,
+          {items.map((itemindex) => (
+            <Link key={index} href={item.href} className="group">,
               <div className="bg-white rounded-xl shadow-lg overflow-hidden hover: shadow-xl transition-all duration-30o0 border border-gray-10o0">,
                 <div className="aspect-video bg-gradient-to-br from-blue-10o0 to-indigo-10o0 flex items-center justify-center relative">,
-                  <div className="text-6xl">{item.icon,}</div>,
+                  <div className="text-6xl">{item.icon}</div>,
                   <div className="absolute top-4 left-4 flex gap-2">,
                     <span className={`text-xs font-medium px-3 py-1 rounded-full ${getTypeColor(item.type)}`}>,
                       {getTypeLabel(item.type)}
                     </span>,
-                    {item.isNew && (,
+                    {item.isNew && (
                       <span className="text-xs font-medium text-white bg-green-60o0 px-3 py-1 rounded-full">,
                         NEW,
-                      </span>,
-                    )}
-                    {item.isTrending && (,
+                      </span>)}
+                    {item.isTrending && (
                       <span className="text-xs font-medium text-white bg-orange-60o0 px-3 py-1 rounded-full">,
                         TRENDING,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                 </div>,
                 <div className="p-6">,
                   <div className="flex items-center gap-3 mb-4">,
                     <span className="text-sm text-gray-50o0">{item.category}</span>,
-                    {item.readTime && (,
+                    {item.readTime && (
                       <>,
                         <span className="text-gray-30o0">•</span>,
                         <span className="text-sm text-gray-50o0">{item.readTime}</span>,
-                      </>,
-                    )}
+                      </>)}
                   </div>,
                   <h3 className="text-xl font-bold text-gray-90o0 mb-3 group-hover: text-blue-60o0 transition-colors">,
-                    {item.title,}
+                    {item.title}
                   </h3>,
                   <p className="text-gray-60o0 mb-4 line-clamp-3">{item.description}</p>,
                   <div className="flex items-center justify-between">,
@@ -316,7 +287,5 @@ const ContentShowcase: React.FC<ContentShowcaseProps> = ({,
                   </div>,
                 </div>,
               </div>,
-            </Link>,
-          )),}
-        </div>,
-}})))
+            </Link>))}
+        </div>}})))

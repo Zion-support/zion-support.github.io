@@ -1,15 +1,12 @@
 import { Helmet } from 'react-helmet-async',
-,
-interface StructuredDataProps {,
+interface StructuredDataProps {
   data: Record<stringunknown>,
-,}
+}
 ,
-export function StructuredData({ data }: StructuredDataProps) {,
+export function StructuredData({ data }: StructuredDataProps) {
   const json = JSON.stringify(data),
-  return (,
+  return (
     <Helmet>,
       <script type='application/ld+json'>{json}</script>,
-    </Helmet>,
-  ),
-}
+    </Helmet>)}
 ,

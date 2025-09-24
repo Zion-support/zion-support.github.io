@@ -7,26 +7,22 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2StarBarChart2Lightbulb } from "lucide-react",
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
-,
-interface ApplicationScoreCardProps {,
+interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void,
-,}
+}
 ,
-export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationScoreCardProps) {,
+export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationScoreCardProps) {
   const [isScoringsetIsScoring] = useState(false),
-,
   // Determine if application has been scored,
   const hasScore = typeof application.match_score === 'number',
-,
   // Format the date when the application was scored,
   const scoredDate = application.scored_at,
     ? new Date(application.scored_at).toLocaleDateString(),
     : null,
-,
   // Get suggestion color,
-  const getSuggestionColor = (suggestion: string | undefined) => {,
-    switch (suggestion) {,
+  const getSuggestionColor = (suggestion: string | undefined) => {
+    switch (suggestion) {
       case "Strongly Recommended":,
         return "bg-green-100 text-green-800",
       case "Recommended for Review":,
@@ -35,67 +31,51 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
         return "bg-orange-100 text-orange-800",
       default:,
         return "bg-gray-100 text-gray-800",
-    ,}
+    }
   };
-,
   // Trigger the scoring process,
-  const handleScore = async () => {,
-    try {,
+  const handleScore = async () => {
+    try {
       setIsScoring(true),
-,
       // Call the trigger_resume_scoring function,
-      const { error } = await supabase.rpc(,
-        'trigger_resume_scoring',;
-        { application_id: application.id ,}
+      const { error } = await supabase.rpc(
+        'trigger_resume_scoring';
+        { application_id: application.id }
       ),
-,
       if (error) throw error,
-,
       toast.success("Resume scoring has been initiated"),
-,
       // Poll for results every 3 seconds for up to 30 seconds,
       let attempts = 0,
       const maxAttempts = 10,
-,
-      const checkScore = async () => {,
+      const checkScore = async () => {
         attempts++,
-,
         const { dataerror } = await supabase,
           .from("job_applications"),
           .select("*"),
           .eq("id"application.id),
           .single(),
-,
-        if (error) {,
+        if (error) {
           setIsScoring(false),
-          return toast.error("Failed to check scoring status"),
-        }
+          return toast.error("Failed to check scoring status")}
 ,
-        if (data.scored_at) {,
+        if (data.scored_at) {
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-          return,
-        }
+          return}
 ,
-        if (attempts < maxAttempts) {,
-          setTimeout(checkScore3000),
-        } else {,
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore3000)} else {
           setIsScoring(false),
-          toast.info("Scoring is taking longer than expected. Check back later."),
-        }
+          toast.info("Scoring is taking longer than expected. Check back later.")}
       };
-,
       setTimeout(checkScore3000),
-,
-    } catch (error: any) {,
+} catch (error: any) {
       setIsScoring(false),
-      toast.error(`Failed to score resume: ${error.message,}`),
-    }
+      toast.error(`Failed to score resume: ${error.message}`)}
   };
-,
   // Render the score result or button to score,
-  return (,
+  return (
     <Card className="overflow-hidden">,
       <CardHeader className="pb-3">,
         <CardTitle className="text-lg font-medium flex items-center justify-between">,
@@ -106,7 +86,7 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
         </CardTitle>,
       </CardHeader>,
       <CardContent>,
-        {hasScore ? (,
+        {hasScore ? (
           <div>,
             {/* Score */}
             <div className="flex items-center mb-4">,
@@ -138,74 +118,60 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
                 <Badge className={getSuggestionColor(application.match_suggestion)}>,
                   {application.match_suggestion}
                 </Badge>,
-                {scoredDate && (,
+                {scoredDate && (
                   <div className="text-xs text-muted-foreground mt-1">,
                     Scored on {scoredDate}
-                  </div>,
-                )}
+                  </div>)}
               </div>,
             </div>,
             {/* Breakdown (Collapsible) */}
-            {application.match_breakdown && (,
+            {application.match_breakdown && (
               <div className="mt-4 pt-4 border-t">,
                 <details className="text-sm">,
                   <summary className="font-medium cursor-pointer">,
                     View detailed breakdown,
                   </summary>,
                   <div className="mt-2 space-y-2 text-muted-foreground">,
-                    {application.match_breakdown.skills_match && (,
+                    {application.match_breakdown.skills_match && (
                       <div>,
-                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score,}/100</p>,
-                        {application.match_breakdown.skills_match.matching && (,
-                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join("),}</p>,
-                        )}
-                        {application.match_breakdown.skills_match.missing && (,
-                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join("),}</p>,
-                        )}
-                      </div>,
-                    )}
+                        <p className="font-medium">Skills Match: {application.match_breakdown.skills_match.score}/100</p>,
+                        {application.match_breakdown.skills_match.matching && (
+                          <p>Matching skills: {application.match_breakdown.skills_match.matching.join(")}</p>)}
+                        {application.match_breakdown.skills_match.missing && (
+                          <p>Missing skills: {application.match_breakdown.skills_match.missing.join(")}</p>)}
+                      </div>)}
 ,
-                    {application.match_breakdown.experience_match && (,
+                    {application.match_breakdown.experience_match && (
                       <div>,
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score,}/100</p>,
+                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>,
                         <p>{application.match_breakdown.experience_match.analysis}</p>,
-                      </div>,
-                    )}
+                      </div>)}
 ,
-                    {application.match_breakdown.education_match && (,
+                    {application.match_breakdown.education_match && (
                       <div>,
-                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score,}/100</p>,
+                        <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>,
                         <p>{application.match_breakdown.education_match.analysis}</p>,
-                      </div>,
-                    )}
+                      </div>)}
                   </div>,
                 </details>,
-              </div>,
-            )}
-          </div>,
-        ) : (,
+              </div>)}
+          </div>) : (
           <div className="text-center py-4">,
             <p className="text-muted-foreground mb-4">,
               Analyze how well this resume matches your job requirements.,
             </p>,
-            <Button,
+            <Button
               onClick={handleScore} ,
               disabled={isScoring}
-              className="w-full",
-            >,
-              {isScoring ? (,
+              className="w-full">,
+              {isScoring ? (
                 <>,
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />,
                   Scoring Resume...,
-                </>,
-              ) : (,
-                "Score Resume",
-              )}
+                </>) : (
+                "Score Resume")}
             </Button>,
-          </div>,
-        )}
+          </div>)}
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

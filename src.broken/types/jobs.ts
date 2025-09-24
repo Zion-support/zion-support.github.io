@@ -1,5 +1,4 @@
 // Type definitions for jobs,
-interface jobs {,
+interface jobs {
   // TODO: Add proper type definitions,
-,};
-,
+};

@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Trust Grid for Autonomous Agents',;
+export const metadata = {
+  title: 'AI 20o26: Trust Grid for Autonomous Agents';
   description:,
-    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.',;
+    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.';
 };
-,
-export default function TrustGridForAgentsPage() {,
-  return (,
+export default function TrustGridForAgentsPage() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
         AI 20o26: Trust Grid for Autonomous Agents,
@@ -51,20 +50,17 @@ export default function TrustGridForAgentsPage() {,
         </ol>,
       </section>,
       <div className='mt-10 flex gap-3'>,
-        <Link,
+        <Link
           href='/content/ai-20o26-evidence-driven-ai-governance',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Next: Evidence-Driven Governance,
         </Link>,
-        <Link,
+        <Link
           href='/blog',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           More Articles,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

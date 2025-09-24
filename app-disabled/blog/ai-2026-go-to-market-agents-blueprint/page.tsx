@@ -1,25 +1,23 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Go-To-Market Agents Blueprint — Blog Overview',;
+export const metadata = {
+  title: 'AI 20o26: Go-To-Market Agents Blueprint — Blog Overview';
   description:,
-    'How to design GTM agents for pipeline generation, deal acceleration, and expansion with eval-gated safety and policy-as-code.',;
-  keywords: [,
-    'GTM agents',;
-    'go to market',;
-    'sales automation',;
-    'marketing automation',;
-    'evals',;
-    'policy as code',;
-  ],;
+    'How to design GTM agents for pipeline generation, deal acceleration, and expansion with eval-gated safety and policy-as-code.';
+  keywords: [
+    'GTM agents';
+    'go to market';
+    'sales automation';
+    'marketing automation';
+    'evals';
+    'policy as code';
+  ];
 };
-,
-const GTMAgentsBlueprintBlog: React.FC = () => {,
-  return (,
+const GTMAgentsBlueprintBlog: React.FC = () => {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI 20o26: Go-To-Market Agents Blueprint — Blog Overview',
         description='Design GTM agents with eval-gated delivery, brand-safe tone, and closed-loop learning.',
         keywords='GTM agents, go-to-market, sales automation, marketing automation, evals, policy as code',
@@ -71,25 +69,20 @@ const GTMAgentsBlueprintBlog: React.FC = () => {,
               </p>,
             </div>,
             <div className='mt-10 flex flex-wrap gap-4'>,
-              <Link,
+              <Link
                 href='/content/ai-20o26-go-to-market-agents-blueprint',
-                className='text-purple-60o0 font-semibold',
-              >,
+                className='text-purple-60o0 font-semibold'>,
                 Read Full Blueprint →,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-              >,
+                className='text-white bg-purple-60o0 px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
                 Talk to Experts,
               </Link>,
             </div>,
           </div>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default GTMAgentsBlueprintBlog,
-,
+    </div>),
+};
+export default GTMAgentsBlueprintBlog;

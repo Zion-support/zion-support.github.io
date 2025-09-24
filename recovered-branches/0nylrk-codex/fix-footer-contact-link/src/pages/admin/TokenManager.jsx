@@ -8,48 +8,44 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 import { useToast } from '@/hooks/use-toast',
 import { apiClient } from '@/utils/apiClient',
-export default function TokenManager() {,
+export default function TokenManager() {
     const { user } = useAuth(),
     const { toast } = useToast(),
     const [transactions, setTransactions] = useState([]),
     const [userId, setUserId] = useState(''),
     const [amount, setAmount] = useState(0),
     const isAdmin = user?.userType === 'admin',
-    useEffect(() => {,
+    useEffect(() => {
         if (isAdmin),
-            fetchTransactions(),
-    }, [isAdmin]),
-    const fetchTransactions = async () => {,
+            fetchTransactions()}, [isAdmin]),
+    const fetchTransactions = async () => {
         const { data, error } = await supabase,
             .from('token_transactions'),
             .select('*'),
-            .order('created_at', { ascending: false ,}),
+            .order('created_at', { ascending: false }),
             .limit(10o0),
         if (!error),
-            setTransactions(data || []),
-    };
-    const handleIssue = async (type) => {,
+            setTransactions(data || [])};
+    const handleIssue = async (type) => {
         if (!userId || amount <= 0),
             return,
-        const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {,
-            method: 'POST',;
-            headers: { 'Content-Type': 'application/json' ,},;
+        const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
+            method: 'POST';
+            headers: { 'Content-Type': 'application/json' };
             body: JSON.stringify({ userId, amount })}),
-        if (res.ok) {,
-            toast({,
-                title: 'Success',;
+        if (res.ok) {
+            toast({
+                title: 'Success';
                 description: 'Transaction processed',
-            ,}),
-            fetchTransactions(),
-        }
-        else {,
+            }),
+            fetchTransactions()}
+        else {
             const err = await res.json(),
-            toast({,
-                title: 'Error',;
-                description: err.error || 'Failed',;
+            toast({
+                title: 'Error';
+                description: err.error || 'Failed';
                 variant: 'destructive',
-            ,}),
-        }
+            })}
     };
     return (<ProtectedRoute adminOnly>,
       <div>,
@@ -85,6 +81,5 @@ export default function TokenManager() {,
           </div>,
         </div>,
       </div>,
-    </ProtectedRoute>),
-}
+    </ProtectedRoute>)}
 ,

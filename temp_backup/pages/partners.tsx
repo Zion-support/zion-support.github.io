@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function PartnersPage() {,
-  return (,
+export default function PartnersPage() {
+  return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8'>,
       <Head>,
         <title>Partners | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Technology and go-to-market partners powering our customer outcomes.',
         />,
@@ -16,7 +15,7 @@ export default function PartnersPage() {,
           Partners,
         </h1>,
         <p className='text-slate-300'>,
-          We work with best‑in‑class platforms across AI, cloud, data, security,;
+          We work with best‑in‑class platforms across AI, cloud, data, security;
           and DevOps.,
         </p>,
         <ul className='list-disc list-inside text-slate-300 space-y-1'>,
@@ -26,13 +25,12 @@ export default function PartnersPage() {,
           <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>,
         </ul>,
         <div className='pt-4 text-slate-300'>,
-          Partner with us: {' ',}
+          Partner with us: {' '}
           <a className='text-cyan-400' href='mailto: kleber@ziontechgroup.com'>,
             kleber@ziontechgroup.com,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

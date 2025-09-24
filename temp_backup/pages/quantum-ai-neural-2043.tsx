@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function QuantumAiNeural20o43Page() {,
-  return (,
+export default function QuantumAiNeural20o43Page() {
+  return (
     <>,
       <Head>,
         <title>Quantum Ai Neural 20o43 - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function QuantumAiNeural20o43Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

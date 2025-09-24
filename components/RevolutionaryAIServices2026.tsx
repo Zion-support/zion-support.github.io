@@ -1,67 +1,65 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const RevolutionaryAIServices20o26: React.FC = () => {,
-  const services = [,
-    {,
-      title: 'Quantum Neural Architecture',;
+const RevolutionaryAIServices20o26: React.FC = () => {
+  const services = [
+    {
+      title: 'Quantum Neural Architecture';
       description:,
-        'Revolutionary AI systems that combine quantum computing with advanced neural networks for unprecedented processing capabilities.',;
-      features: [,
-        '10o00x faster computation',;
-        'Real-time learning',;
-        'Quantum encryption',;
-        'Autonomous optimization',;
-      ],;
-      price: 'From $50,0o00',;
-      icon: '⚛️',;
-      gradient: 'from-purple-60o0 to-indigo-60o0',;
-    },;
-    {,
-      title: 'Autonomous Business Intelligence',;
+        'Revolutionary AI systems that combine quantum computing with advanced neural networks for unprecedented processing capabilities.';
+      features: [
+        '10o00x faster computation';
+        'Real-time learning';
+        'Quantum encryption';
+        'Autonomous optimization';
+      ];
+      price: 'From $50,0o00';
+      icon: '⚛️';
+      gradient: 'from-purple-60o0 to-indigo-60o0';
+    };
+    {
+      title: 'Autonomous Business Intelligence';
       description:,
-        'Self-managing AI systems that handle complex business operations, decision-making, and optimization with minimal human intervention.',;
-      features: [,
-        '24/7 autonomous operation',;
-        'Predictive analytics',;
-        'Self-healing systems',;
-        'Continuous optimization',;
-      ],;
-      price: 'From $75,0o00',;
-      icon: '🤖',;
-      gradient: 'from-blue-60o0 to-cyan-60o0',;
-    },;
-    {,
-      title: 'Synthetic Intelligence Platform',;
+        'Self-managing AI systems that handle complex business operations, decision-making, and optimization with minimal human intervention.';
+      features: [
+        '24/7 autonomous operation';
+        'Predictive analytics';
+        'Self-healing systems';
+        'Continuous optimization';
+      ];
+      price: 'From $75,0o00';
+      icon: '🤖';
+      gradient: 'from-blue-60o0 to-cyan-60o0';
+    };
+    {
+      title: 'Synthetic Intelligence Platform';
       description:,
-        'Advanced AI systems that can create, evolve, and manage other AI systems, leading to exponential technological advancement.',;
-      features: [,
-        'AI breeding capabilities',;
-        'Evolutionary algorithms',;
-        'Self-improving systems',;
-        'Exponential innovation',;
-      ],;
-      price: 'From $10o0,0o00',;
-      icon: '🔬',;
-      gradient: 'from-green-60o0 to-emerald-60o0',;
-    },;
-    {,
-      title: 'Neural Interface Integration',;
+        'Advanced AI systems that can create, evolve, and manage other AI systems, leading to exponential technological advancement.';
+      features: [
+        'AI breeding capabilities';
+        'Evolutionary algorithms';
+        'Self-improving systems';
+        'Exponential innovation';
+      ];
+      price: 'From $10o0,0o00';
+      icon: '🔬';
+      gradient: 'from-green-60o0 to-emerald-60o0';
+    };
+    {
+      title: 'Neural Interface Integration';
       description:,
-        'Direct brain-computer interfaces that revolutionize human-AI collaboration and unlock new levels of productivity.',;
-      features: [,
-        'Direct neural control',;
-        'Thought-to-action',;
-        'Enhanced cognition',;
-        'Seamless integration',;
-      ],;
-      price: 'From $125,0o00',;
-      icon: '🧠',;
-      gradient: 'from-orange-60o0 to-red-60o0',;
-    },;
+        'Direct brain-computer interfaces that revolutionize human-AI collaboration and unlock new levels of productivity.';
+      features: [
+        'Direct neural control';
+        'Thought-to-action';
+        'Enhanced cognition';
+        'Seamless integration';
+      ];
+      price: 'From $125,0o00';
+      icon: '🧠';
+      gradient: 'from-orange-60o0 to-red-60o0';
+    };
   ],
-,
-  return (,
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-indigo-90o0'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -78,14 +76,13 @@ const RevolutionaryAIServices20o26: React.FC = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-16'>,
-          {services.map((service, index) => (,
-            <div,
+          {services.map((service, index) => (
+            <div
               key={index}
-              className='bg-gradient-to-br from-white bg-opacity-10 to-white bg-opacity-5 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover: border-opacity-40 transition-all duration-30o0 hover:transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-br from-white bg-opacity-10 to-white bg-opacity-5 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20 hover: border-opacity-40 transition-all duration-30o0 hover:transform hover:scale-10o5'>,
               <div className='flex items-center mb-6'>,
-                <div,
-                  className={`w-16 h-16 bg-gradient-to-r ${service.gradient,} rounded-xl flex items-center justify-center text-3xl mr-4`}
+                <div
+                  className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center text-3xl mr-4`}
                 >,
                   {service.icon}
                 </div>,
@@ -102,32 +99,28 @@ const RevolutionaryAIServices20o26: React.FC = () => {,
                 {service.description}
               </p>,
               <div className='grid grid-cols-2 gap-3 mb-6'>,
-                {service.features.map((feature, featureIndex) => (,
-                  <div,
+                {service.features.map((feature, featureIndex) => (
+                  <div
                     key={featureIndex}
-                    className='flex items-center text-sm text-gray-30o0',
-                  >,
+                    className='flex items-center text-sm text-gray-30o0'>,
                     <span className='text-green-40o0 mr-2'>✓</span>,
                     {feature}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <div className='flex space-x-4'>,
-                <Link,
+                <Link
                   href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`flex-1 bg-gradient-to-r ${service.gradient} text-white px-6 py-3 rounded-lg font-semibold text-center hover: opacity-90 transition-all duration-30o0`,}
+                  className={`flex-1 bg-gradient-to-r ${service.gradient} text-white px-6 py-3 rounded-lg font-semibold text-center hover: opacity-90 transition-all duration-30o0`}
                 >,
                   Learn More,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='flex-1 border-2 border-white border-opacity-30 text-white px-6 py-3 rounded-lg font-semibold text-center hover: bg-white hover:bg-opacity-10 transition-all duration-30o0',
-                >,
+                  className='flex-1 border-2 border-white border-opacity-30 text-white px-6 py-3 rounded-lg font-semibold text-center hover: bg-white hover:bg-opacity-10 transition-all duration-30o0'>,
                   Get Quote,
                 </Link>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Call to Action */}
         <div className='text-center'>,
@@ -140,16 +133,14 @@ const RevolutionaryAIServices20o26: React.FC = () => {,
               the next decade.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5',
-              >,
+                className='bg-white text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-10o0 transition-all duration-30o0 transform hover:scale-10o5'>,
                 Schedule Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/demo',
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-30o0',
-              >,
+                className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:bg-opacity-10 transition-all duration-30o0'>,
                 Request Demo,
               </Link>,
             </div>,
@@ -160,9 +151,5 @@ const RevolutionaryAIServices20o26: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default RevolutionaryAIServices20o26,
-,
+    </section>)};
+export default RevolutionaryAIServices20o26;

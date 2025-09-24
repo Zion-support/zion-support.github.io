@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from 'lucide-react',
-interface LeaderboardEntry {,
+interface LeaderboardEntry {
   id: string,
   rank: number,
   name: string,
@@ -11,61 +11,59 @@ interface LeaderboardEntry {,
   referrals: number,
   earnings: number,
   badges: string[],
-,}
+}
 ,
-export function PartnerLeaderboard() {,
+export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation,
-  const leaderboard: LeaderboardEntry[] = [,
-    {,
-      id: "1",;
-      rank: 1,;
-      name: "AI Tech Guru",;
+  const leaderboard: LeaderboardEntry[] = [
+    {
+      id: "1";
+      rank: 1;
+      name: "AI Tech Guru";
       avatar: "", // URL would be here,
-      referrals: 178,;
-      earnings: 450o0,;
-      badges: ["gold", "trending"],
-    },;
-    {,
-      id: "2",;
-      rank: 2,;
-      name: "Machine Learning Hub",;
-      avatar: "",;
-      referrals: 145,;
-      earnings: 3625,;
+      referrals: 178;
+      earnings: 450o0;
+      badges: ["gold", "trending"]};
+    {
+      id: "2";
+      rank: 2;
+      name: "Machine Learning Hub";
+      avatar: "";
+      referrals: 145;
+      earnings: 3625;
       badges: ["silver"],
-    ,},;
-    {,
-      id: "3",;
-      rank: 3,;
-      name: "Neural Networks Pro",;
-      avatar: "",;
-      referrals: 124,;
-      earnings: 310o0,;
+    };
+    {
+      id: "3";
+      rank: 3;
+      name: "Neural Networks Pro";
+      avatar: "";
+      referrals: 124;
+      earnings: 310o0;
       badges: ["bronze"],
-    ,},;
-    {,
-      id: "4",;
-      rank: 4,;
-      name: "AI Career Insights",;
-      avatar: "",;
-      referrals: 98,;
-      earnings: 2450,;
+    };
+    {
+      id: "4";
+      rank: 4;
+      name: "AI Career Insights";
+      avatar: "";
+      referrals: 98;
+      earnings: 2450;
       badges: [],
-    ,},;
-    {,
-      id: "5",;
-      rank: 5,;
-      name: "Deep Learning Daily",;
-      avatar: "",;
-      referrals: 87,;
-      earnings: 2175,;
+    };
+    {
+      id: "5";
+      rank: 5;
+      name: "Deep Learning Daily";
+      avatar: "";
+      referrals: 87;
+      earnings: 2175;
       badges: ["newcomer"],
-    ,}
+    }
   ],
-,
   // Function to render rank badge,
-  const renderRankBadge = (rank: number) => {,
-    switch(rank) {,
+  const renderRankBadge = (rank: number) => {
+    switch(rank) {
       case 1:,
         return <Trophy className="h-5 w-5 text-yellow-50o0"  />,
       case 2:,
@@ -73,11 +71,9 @@ export function PartnerLeaderboard() {,
       case 3:,
         return <Medal className="h-5 w-5 text-amber-70o0"  />,
       default:,
-        return <span className="text-sm font-semibold">{rank,}</span>,
-    }
+        return <span className="text-sm font-semibold">{rank}</span>}
   };
-,
-  return (,
+  return (
     <div className="space-y-6">,
       <Card className="bg-zion-blue-dark border-zion-blue-light">,
         <CardHeader>,
@@ -89,14 +85,13 @@ export function PartnerLeaderboard() {,
         </CardHeader>,
         <CardContent>,
           <div className="space-y-4">,
-            {leaderboard.length > 0 ? (,
-              leaderboard.map(entry => (,
-                <div,
+            {leaderboard.length > 0 ? (
+              leaderboard.map(entry => (
+                <div
                   key={entry.id} ,
-                  className={`flex items-center justify-between p-3 rounded-md ${,
+                  className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-50o0/10 border border-yellow-50o0/30' :,
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10',
-                  }`}
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'}`}
                 >,
                   <div className="flex items-center gap-3">,
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">,
@@ -119,29 +114,24 @@ export function PartnerLeaderboard() {,
                       <div className="text-xs text-zion-slate-light">earned</div>,
                     </div>,
                     <div className="flex gap-1">,
-                      {entry.badges.includes("gold") && (,
+                      {entry.badges.includes("gold") && (
                         <Badge variant="outline" className="bg-yellow-50o0/20 border-yellow-50o0 text-yellow-40o0">,
                           Elite,
-                        </Badge>,
-                      )}
-                      {entry.badges.includes("trending") && (,
+                        </Badge>)}
+                      {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-50o0/20 border-blue-50o0 text-blue-40o0">,
                           Trending,
-                        </Badge>,
-                      )}
+                        </Badge>)}
                     </div>,
                   </div>,
-                </div>,
-              )),
-            ) : (,
+                </div>))) : (
               <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">,
                 <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4"  />,
                 <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>,
                 <p className="text-xs text-zion-slate-light">,
                   Start referring to earn your spot on the leaderboard,
                 </p>,
-              </div>,
-            )}
+              </div>)}
           </div>,
         </CardContent>,
       </Card>,
@@ -196,7 +186,5 @@ export function PartnerLeaderboard() {,
           </div>,
         </CardContent>,
       </Card>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

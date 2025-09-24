@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function FounderBotPage() {,
-  return (,
+export default function FounderBotPage() {
+  return (
     <>,
       <Head>,
         <title>Founder Bot - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function FounderBotPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

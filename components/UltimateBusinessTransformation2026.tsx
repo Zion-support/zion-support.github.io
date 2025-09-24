@@ -2,97 +2,86 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 ArrowRightTrendingUpZapTargetUsersBarChart3CheckCircleStar,
-const UltimateBusinessTransformation20o26 = () => {,
+const UltimateBusinessTransformation20o26 = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [activeTransformationsetActiveTransformation] = useState(0),
-,
-  const transformations = [,
-    {,
-      title: 'AI-Powered Automation',;
-      description: 'Complete business process automation with 99.9% accuracy',;
-      icon: Zap,;
-      color: 'from-blue-50o0 to-cyan-50o0',;
-      metrics: {,
-        efficiency: '95%',;
-        costReduction: '80%',;
+  const transformations = [
+    {
+      title: 'AI-Powered Automation';
+      description: 'Complete business process automation with 99.9% accuracy';
+      icon: Zap;
+      color: 'from-blue-50o0 to-cyan-50o0';
+      metrics: {
+        efficiency: '95%';
+        costReduction: '80%';
         timeSaved: '40 hours/week',
-      ,},;
-      benefits: ['Automated 'Workflows', 'Smart Decision 'Making', 'Predictive Analytics'],
-    },;
-    {,
-      title: 'Digital Transformation',;
-      description: 'Complete digital overhaul of business operations',;
-      icon: Target,;
-      color: 'from-purple-50o0 to-pink-50o0',;
-      metrics: {,
-        efficiency: '90%',;
-        costReduction: '70%',;
+      };
+      benefits: ['Automated 'Workflows', 'Smart Decision 'Making', 'Predictive Analytics']};
+    {
+      title: 'Digital Transformation';
+      description: 'Complete digital overhaul of business operations';
+      icon: Target;
+      color: 'from-purple-50o0 to-pink-50o0';
+      metrics: {
+        efficiency: '90%';
+        costReduction: '70%';
         timeSaved: '35 hours/week',
-      ,},;
-      benefits: ['Cloud 'Migration', 'API 'Integration', 'Data Analytics'],
-    },;
-    {,
-      title: 'Customer Experience Revolution',;
-      description: '360-degree customer experience transformation',;
-      icon: Users,;
-      color: 'from-green-50o0 to-emerald-50o0',;
-      metrics: {,
-        efficiency: '85%',;
-        costReduction: '60%',;
+      };
+      benefits: ['Cloud 'Migration', 'API 'Integration', 'Data Analytics']};
+    {
+      title: 'Customer Experience Revolution';
+      description: '360-degree customer experience transformation';
+      icon: Users;
+      color: 'from-green-50o0 to-emerald-50o0';
+      metrics: {
+        efficiency: '85%';
+        costReduction: '60%';
         timeSaved: '30 hours/week',
-      ,},;
-      benefits: [', 'Personalization', 'Omnichannel'Real-time Support'],
-    },;
-    {,
-      title: 'Data-Driven Intelligence',;
-      description: 'Advanced analytics and business intelligence systems',;
-      icon: BarChart3,;
-      color: 'from-orange-50o0 to-red-50o0',;
-      metrics: {,
-        efficiency: '88%',;
-        costReduction: '75%',;
+      };
+      benefits: [', 'Personalization', 'Omnichannel'Real-time Support']};
+    {
+      title: 'Data-Driven Intelligence';
+      description: 'Advanced analytics and business intelligence systems';
+      icon: BarChart3;
+      color: 'from-orange-50o0 to-red-50o0';
+      metrics: {
+        efficiency: '88%';
+        costReduction: '75%';
         timeSaved: '25 hours/week',
-      ,},;
-      benefits: ['Predictive 'Modeling', 'Real-time 'Insights', 'Automated Reporting'],
+      };
+      benefits: ['Predictive 'Modeling', 'Real-time 'Insights', 'Automated Reporting']}
+  ],
+  const successStories = [
+    {
+      company: 'TechCorp Solutions';
+      industry: 'Technology';
+      transformation: 'AI-Powered Automation';
+      results: '30o0% ROI in 6 months';
+      testimonial: 'The transformation was incredible. We automated 90% of our processes and saw immediate results.',
+    };
+    {
+      company: 'Global Manufacturing Inc';
+      industry: 'Manufacturing';
+      transformation: 'Digital Transformation';
+      results: '50o0% efficiency increase';
+      testimonial: 'Our production capacity doubled while reducing costs by 60%.',
+    };
+    {
+      company: 'RetailMax';
+      industry: 'Retail';
+      transformation: 'Customer Experience Revolution';
+      results: '40o0% customer satisfaction';
+      testimonial: 'Customer retention increased by 20o0% and sales grew by 150%.',
     }
   ],
-,
-  const successStories = [,
-    {,
-      company: 'TechCorp Solutions',;
-      industry: 'Technology',;
-      transformation: 'AI-Powered Automation',;
-      results: '30o0% ROI in 6 months',;
-      testimonial: 'The transformation was incredible. We automated 90% of our processes and saw immediate results.',
-    ,},;
-    {,
-      company: 'Global Manufacturing Inc',;
-      industry: 'Manufacturing',;
-      transformation: 'Digital Transformation',;
-      results: '50o0% efficiency increase',;
-      testimonial: 'Our production capacity doubled while reducing costs by 60%.',
-    ,},;
-    {,
-      company: 'RetailMax',;
-      industry: 'Retail',;
-      transformation: 'Customer Experience Revolution',;
-      results: '40o0% customer satisfaction',;
-      testimonial: 'Customer retention increased by 20o0% and sales grew by 150%.',
-    ,}
-  ],
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setActiveTransformation((prev) => (prev + 1) % transformations.length),
-    }40o00),
-    return () => clearInterval(interval),
-  }[]),
-,
+    const interval = setInterval(() => {
+      setActiveTransformation((prev) => (prev + 1) % transformations.length)}40o00),
+    return () => clearInterval(interval)}[]),
   const currentTransformation = transformations[activeTransformation],
   const IconComponent = currentTransformation.icon,
-,
-  return (,
+  return (
     <div className={`relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-green-90o0 to-slate-90o0 border border-green-50o0/30 rounded-3xl transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-4'}`}>,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-green-60o0/20 via-blue-60o0/20 to-green-60o0/20 animate-pulse"  />,
@@ -100,22 +89,20 @@ const UltimateBusinessTransformation20o26 = () => {,
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.3),transparent_50%)]"  />,
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">,
-        {[...Array(20)].map((_i) => (,
-          <div,
+        {[...Array(20)].map((_i) => (
+          <div
             key={i}
             className="absolute w-2 h-2 bg-green-40o0/40 rounded-full animate-pulse",
-            style={{,
-              left: `${Math.random() * 10o0,}%`,;
-              top: `${Math.random() * 10o0,}%`,;
-              animationDelay: `${Math.random() * 4,}s`,;
-              animationDuration: `${3 + Math.random() * 2,}s`,
-            }}
-           />,
-        ))}
+            style={{
+              left: `${Math.random() * 10o0}%`;
+              top: `${Math.random() * 10o0}%`;
+              animationDelay: `${Math.random() * 4}s`;
+              animationDuration: `${3 + Math.random() * 2}s`}}
+           />))}
       </div>,
       <div className="relative z-10 p-8 md: p-12">,
         <div className="max-w-7xl mx-auto">,
-          {/* Header */,}
+          {/* Header */}
           <div className="text-center mb-12">,
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50o0/20 border border-green-40o0/30 rounded-full text-green-20o0 text-lg font-medium mb-6">,
               <TrendingUp className="w-5 h-5 text-green-40o0"  />,
@@ -124,7 +111,7 @@ const UltimateBusinessTransformation20o26 = () => {,
             <h2 className="text-5xl md: text-7xl font-bold text-white mb-6">,
               Transform Your,
               <span className="bg-gradient-to-r from-green-40o0 to-blue-40o0 bg-clip-text text-transparent">,
-                {' ',}Business,
+                {' '}Business,
               </span>,
             </h2>,
             <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
@@ -133,10 +120,10 @@ const UltimateBusinessTransformation20o26 = () => {,
           </div>,
           {/* Main Transformation Showcase */}
           <div className="grid lg: grid-cols-2 gap-12 items-center mb-16">,
-            {/* Current Transformation Display */,}
+            {/* Current Transformation Display */}
             <div className="relative">,
               <div className="bg-gradient-to-br from-slate-80o0/60 to-slate-90o0/60 backdrop-blur-sm border border-green-50o0/30 rounded-3xl p-10 h-96 flex flex-col justify-center items-center text-center">,
-                <div className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentTransformation.color} flex items-center justify-center mb-8 transform transition-all duration-50o0 hover: scale-110 shadow-2xl`,}>,
+                <div className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentTransformation.color} flex items-center justify-center mb-8 transform transition-all duration-50o0 hover: scale-110 shadow-2xl`}>,
                   <IconComponent className="w-12 h-12 text-white"  />,
                 </div>,
                 <h3 className="text-3xl font-bold text-white mb-4">,
@@ -160,32 +147,30 @@ const UltimateBusinessTransformation20o26 = () => {,
                   </div>,
                 </div>,
                 <div className="flex flex-wrap gap-2 justify-center">,
-                  {currentTransformation.benefits.map((benefitindex) => (,
-                    <span,
+                  {currentTransformation.benefits.map((benefitindex) => (
+                    <span
                       key={index}
-                      className="px-3 py-1 bg-green-50o0/20 border border-green-40o0/30 rounded-full text-green-20o0 text-sm",
-                    >,
+                      className="px-3 py-1 bg-green-50o0/20 border border-green-40o0/30 rounded-full text-green-20o0 text-sm">,
                       {benefit}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
               </div>,
             </div>,
             {/* Transformation Navigation */}
             <div className="space-y-4">,
-              {transformations.map((transformationindex) => {,
+              {transformations.map((transformationindex) => {
                 const IconComponent = transformation.icon,
-                return (,
-                  <div,
+                return (
+                  <div
                     key={index}
-                    className={`flex items-center gap-6 p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer group ${,
+                    className={`flex items-center gap-6 p-6 rounded-2xl border transition-all duration-30o0 cursor-pointer group ${
                       index === activeTransformation,
                         ? 'bg-green-50o0/20 border-green-40o0/50 shadow-lg shadow-green-50o0/20',
                         : 'bg-slate-80o0/30 border-slate-70o0/50 hover: bg-slate-70o0/30',
-                    ,}`}
+                    }`}
                     onClick={() => setActiveTransformation(index)}
                   >,
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${transformation.color} flex items-center justify-center group-hover: scale-10o5 transition-transform duration-30o0`,}>,
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${transformation.color} flex items-center justify-center group-hover: scale-10o5 transition-transform duration-30o0`}>,
                       <IconComponent className="w-8 h-8 text-white"  />,
                     </div>,
                     <div className="flex-1">,
@@ -196,12 +181,9 @@ const UltimateBusinessTransformation20o26 = () => {,
                         {transformation.description}
                       </p>,
                     </div>,
-                    {index === activeTransformation && (,
-                      <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"  />,
-                    )}
-                  </div>,
-                ),
-              })}
+                    {index === activeTransformation && (
+                      <div className="w-3 h-3 bg-green-40o0 rounded-full animate-pulse"  />)}
+                  </div>)})}
             </div>,
           </div>,
           {/* Success Stories */}
@@ -210,8 +192,8 @@ const UltimateBusinessTransformation20o26 = () => {,
               Success Stories,
             </h3>,
             <div className="grid md: grid-cols-3 gap-8">,
-              {successStories.map((storyindex) => (,
-                <div key={index,} className="bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-sm border border-green-50o0/30 rounded-2xl p-6">,
+              {successStories.map((storyindex) => (
+                <div key={index} className="bg-gradient-to-br from-slate-80o0/50 to-slate-90o0/50 backdrop-blur-sm border border-green-50o0/30 rounded-2xl p-6">,
                   <div className="flex items-center gap-3 mb-4">,
                     <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-blue-50o0 rounded-full flex items-center justify-center">,
                       <Star className="w-6 h-6 text-white"  />,
@@ -225,8 +207,7 @@ const UltimateBusinessTransformation20o26 = () => {,
                   <div className="bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 border border-green-40o0/30 rounded-xl px-4 py-2 text-center">,
                     <span className="text-green-20o0 font-bold">{story.results}</span>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* ROI Calculator Preview */}
@@ -249,7 +230,7 @@ const UltimateBusinessTransformation20o26 = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className="text-center">,
             <div className="mb-8">,
               <h3 className="text-3xl font-bold text-white mb-4">,
@@ -260,25 +241,21 @@ const UltimateBusinessTransformation20o26 = () => {,
               </p>,
             </div>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/ultimate-business-transformation-20o26",
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white font-semibold rounded-xl hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-green-50o0/25",
-              >,
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-50o0 to-blue-50o0 text-white font-semibold rounded-xl hover:from-green-60o0 hover:to-blue-60o0 transition-all duration-30o0 transform hover:scale-10o5 shadow-lg hover:shadow-green-50o0/25">,
                 Start Transformation,
                 <ArrowRight className="w-5 h-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/contact",
-                className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-green-40o0 text-green-20o0 font-semibold rounded-xl hover:bg-green-50o0/10 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-green-40o0 text-green-20o0 font-semibold rounded-xl hover:bg-green-50o0/10 transition-all duration-30o0">,
                 Get Free Consultation,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default UltimateBusinessTransformation20o26,
+    </div>),
+};
+export default UltimateBusinessTransformation20o26;

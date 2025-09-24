@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ecommerce-platform - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ecommerce-platform - Zion Tech Group';
   description:,
-    'Professional ecommerce-platform solutions for your business needs.',;
-  keywords: 'ecommerce-platform, services, business, technology',;
+    'Professional ecommerce-platform solutions for your business needs.';
+  keywords: 'ecommerce-platform, services, business, technology';
 };
-export default function EcommercePlatformPage() {,
-  return (,
+export default function EcommercePlatformPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function EcommercePlatformPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

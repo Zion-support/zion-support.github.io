@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function SpaceMiningAutomation20o45Page() {,
-  return (,
+export default function SpaceMiningAutomation20o45Page() {
+  return (
     <>,
       <Head>,
         <title>Space Mining Automation 20o45 - Zion Tech Group</title>,
@@ -18,7 +17,6 @@ export default function SpaceMiningAutomation20o45Page() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

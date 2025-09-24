@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function DocsPage() {,
-  return (,
+export default function DocsPage() {
+  return (
     <>,
       <Head>,
         <title>Docs - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function DocsPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'e-commerce-solutions - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'e-commerce-solutions - Zion Tech Group';
   description:,
-    'Professional e-commerce-solutions solutions for your business needs.',;
-  keywords: 'e-commerce-solutions, services, business, technology',;
+    'Professional e-commerce-solutions solutions for your business needs.';
+  keywords: 'e-commerce-solutions, services, business, technology';
 };
-export default function ECommerceSolutionsPage() {,
-  return (,
+export default function ECommerceSolutionsPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function ECommerceSolutionsPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,5 +1,5 @@
-export default function ArticleAutonomousOps() {,
-  return (,
+export default function ArticleAutonomousOps() {
+  return (
     <article className='bg-black min-h-screen'>,
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24 lg: px-8'>,
         <h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl'>,
@@ -25,7 +25,5 @@ export default function ArticleAutonomousOps() {,
           </p>,
         </div>,
       </div>,
-    </article>,
-  ),
-}
+    </article>)}
 ,

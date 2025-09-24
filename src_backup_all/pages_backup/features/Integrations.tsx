@@ -1,15 +1,15 @@
-return (,
+return (
     <>,
-      <SEO,
+      <SEO
         title='API & Integrations',
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.',
         keywords='Zion API, Slack integration, embed widget',
         canonical='https: //app && app.ziontechgroup.com/features/integrations',
        />,
-      {/* Use a normal script tag so JSON-LD is correctly parsed */,}
-      <script,
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script
         type='application/ld+json',
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) ,}}></script>,
+        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>,
       <Header  />,
       <main className='bg-background text-white py-12'>,
         <div className='container mx-auto px-4 md: px-6'>,
@@ -21,7 +21,7 @@ return (,
             already use.,
           </p>,
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>,
-            <img,
+            <img
               src='https://placehold.co/80o0x40o0',
               alt='Screenshot showing integrations',
               className='object-cover',
@@ -73,30 +73,29 @@ import { useAdvancedOnboardingStatus  } from '@/hooks / useAdvancedOnboardingSta
 export default /**,
  * IntegrationsFeature - Function description,
  */,
-function IntegrationsFeature() {,
-  const schema ={,
-    '@context': 'https://schema.org',;
-    '@type': 'WebPage',;
-    name: 'API & Integrations',;
+function IntegrationsFeature() {
+  const schema ={
+    '@context': 'https://schema.org';
+    '@type': 'WebPage';
+    name: 'API & Integrations';
     description:,
-      'Connect Zion with Slack, your website and other tools via our API and widgets.',;
-    url: 'https://app.ziontechgroup.com / features / integrations',}
+      'Connect Zion with Slack, your website and other tools via our API and widgets.';
+    url: 'https://app.ziontechgroup.com / features / integrations'}
   const { markSlackConnected } = useAdvancedOnboardingStatus (),
-  useEffect (() => {,
-    markSlackConnected (),
-  }, [markSlackConnected]),
-  return (,
+  useEffect (() => {
+    markSlackConnected ()}, [markSlackConnected]),
+  return (
     <>,
-      <SEO,
+      <SEO
         title="API & Integrations",
         description="Extend Zion by embedding widgets or using our REST API for custom workflows.",
         keywords="Zion API, Slack integration, embed widget",
         canonical="https: //app.ziontechgroup.com/features/integrations",
        />,
-      {/* Use a normal script tag so JSON-LD is correctly parsed */,}
-      <script,
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script
         type="application/ld+json",
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) ,}}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>,
       <Header  />,
       <main className="bg-background text-white py-12">,
@@ -106,7 +105,7 @@ function IntegrationsFeature() {,
             Automate your workflows by connecting Zion with the tools you already use.,
           </p>,
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">,
-            <img,
+            <img
               src="https://placehold.co/80o0x40o0",
               alt="Screenshot showing integrations",
               className="object-cover",
@@ -116,7 +115,6 @@ function IntegrationsFeature() {,
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>,
             <li > Trigger Slack notifications for new orders or messages.</li>,
             <li > Embed talent search or job listings directly on your site.</li>,
-,
             <li>,
               Build custom analytics by pulling data from our REST endpoints.,
             </li>,
@@ -142,11 +140,9 @@ function IntegrationsFeature() {,
               </p>,
             </div>,
           </div>,
-,
               <Link href="/developers">Learn More</Link>,
             </Button>,
           </div>,
         </div>,
       </main>,
-,
 }))

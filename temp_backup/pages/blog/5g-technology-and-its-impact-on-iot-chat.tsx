@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function 5gTechnologyAndItsImpactOnIotChatPage() {,
-  return (,
+export default function 5gTechnologyAndItsImpactOnIotChatPage() {
+  return (
     <>,
       <Head>,
         <title>5g Technology And Its Impact On Iot Chat - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function 5gTechnologyAndItsImpactOnIotChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

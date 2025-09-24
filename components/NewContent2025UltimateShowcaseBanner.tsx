@@ -1,57 +1,46 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-const NewContent20o25UltimateShowcaseBanner = () => {,
+const NewContent20o25UltimateShowcaseBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     setIsVisible(true),
-    const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % slides.length),
-    }, 40o00),
-    return () => clearInterval(interval),
-  }, []),
-,
-  const slides = [,
-    {,
-      title: "Neural Superintelligence Breakthrough",;
-      subtitle: "Revolutionary AI achieving human-level consciousness",;
-      roi: "2,40o0%",;
-      icon: "🧠",;
-      color: "from-purple-60o0 to-indigo-60o0",;
-      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"],
-    },;
-    {,
-      title: "Quantum-Neural Fusion Revolution",;
-      subtitle: "Merging quantum computing with neural networks",;
-      roi: "5,0o00%",;
-      icon: "⚛️",;
-      color: "from-blue-60o0 to-cyan-60o0",;
-      features: ["Quantum AI", "Neural Processing", "Advanced Computing"],
-    },;
-    {,
-      title: "Autonomous Business Ecosystems",;
-      subtitle: "Self-managing business systems with minimal human intervention",;
-      roi: "8,0o00%",;
-      icon: "🤖",;
-      color: "from-green-60o0 to-emerald-60o0",;
-      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"],
-    },;
-    {,
-      title: "Synthetic Intelligence Revolution",;
-      subtitle: "AI systems that create, modify, and improve themselves",;
-      roi: "10,0o00%",;
-      icon: "🔬",;
-      color: "from-orange-60o0 to-red-60o0",;
-      features: ["Self-Improving AI", "Synthetic Intelligence", "Evolutionary Computing"],
-    }
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)}, 40o00),
+    return () => clearInterval(interval)}, []),
+  const slides = [
+    {
+      title: "Neural Superintelligence Breakthrough";
+      subtitle: "Revolutionary AI achieving human-level consciousness";
+      roi: "2,40o0%";
+      icon: "🧠";
+      color: "from-purple-60o0 to-indigo-60o0";
+      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]};
+    {
+      title: "Quantum-Neural Fusion Revolution";
+      subtitle: "Merging quantum computing with neural networks";
+      roi: "5,0o00%";
+      icon: "⚛️";
+      color: "from-blue-60o0 to-cyan-60o0";
+      features: ["Quantum AI", "Neural Processing", "Advanced Computing"]};
+    {
+      title: "Autonomous Business Ecosystems";
+      subtitle: "Self-managing business systems with minimal human intervention";
+      roi: "8,0o00%";
+      icon: "🤖";
+      color: "from-green-60o0 to-emerald-60o0";
+      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]};
+    {
+      title: "Synthetic Intelligence Revolution";
+      subtitle: "AI systems that create, modify, and improve themselves";
+      roi: "10,0o00%";
+      icon: "🔬";
+      color: "from-orange-60o0 to-red-60o0";
+      features: ["Self-Improving AI", "Synthetic Intelligence", "Evolutionary Computing"]}
   ],
-,
   const currentSlideData = slides[currentSlide],
-,
-  return (,
+  return (
     <div className="relative overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0">,
@@ -71,7 +60,7 @@ const NewContent20o25UltimateShowcaseBanner = () => {,
       <div className="relative z-10 py-20">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-            {/* Left Side - Content */,}
+            {/* Left Side - Content */}
             <div className={`transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 -translate-x-10'}`}>,
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white rounded-full px-6 py-2 mb-6">,
                 <span className="text-sm font-medium">🚀 NEW CONTENT 20o25</span>,
@@ -104,25 +93,23 @@ const NewContent20o25UltimateShowcaseBanner = () => {,
               </div>,
               {/* Action Buttons */}
               <div className="flex flex-col sm: flex-row gap-4">,
-                <Link,
+                <Link
                   href="/content-showcase",
-                  className="bg-white text-purple-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors text-center",
-                >,
+                  className="bg-white text-purple-60o0 px-8 py-4 rounded-xl font-semibold hover:bg-gray-10o0 transition-colors text-center">,
                   Explore Content,
                 </Link>,
-                <Link,
+                <Link
                   href="/newsletter",
-                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center",
-                >,
+                  className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center">,
                   Get Updates,
                 </Link>,
               </div>,
             </div>,
-            {/* Right Side - Interactive Showcase */,}
+            {/* Right Side - Interactive Showcase */}
             <div className={`transition-all duration-10o00 delay-30o0 ${isVisible ? 'opacity-10o0 translate-x-0' : 'opacity-0 translate-x-10'}`}>,
               <div className="relative">,
                 {/* Main Showcase Card */}
-                <div className={`bg-gradient-to-br ${currentSlideData.color} text-white rounded-3xl p-8 shadow-2xl transform transition-all duration-50o0 hover: scale-10o5`,}>,
+                <div className={`bg-gradient-to-br ${currentSlideData.color} text-white rounded-3xl p-8 shadow-2xl transform transition-all duration-50o0 hover: scale-10o5`}>,
                   <div className="text-center mb-6">,
                     <div className="text-6xl mb-4">{currentSlideData.icon}</div>,
                     <h3 className="text-2xl font-bold mb-2">{currentSlideData.title}</h3>,
@@ -136,33 +123,29 @@ const NewContent20o25UltimateShowcaseBanner = () => {,
                   </div>,
                   <div className="space-y-3">,
                     <h4 className="text-lg font-semibold mb-3">Key Features: </h4>,
-                    {currentSlideData.features.map((feature, index) => (,
+                    {currentSlideData.features.map((feature, index) => (
                       <div key={index} className="flex items-center space-x-3">,
                         <div className="w-2 h-2 bg-white rounded-full"></div>,
                         <span className="text-white/90">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   <div className="mt-6">,
-                    <Link,
+                    <Link
                       href={`/content/${currentSlide.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="block w-full bg-white text-gray-90o0 text-center py-3 rounded-xl font-semibold hover: bg-gray-10o0 transition-colors",
-                    >,
+                      className="block w-full bg-white text-gray-90o0 text-center py-3 rounded-xl font-semibold hover: bg-gray-10o0 transition-colors">,
                       Learn More,
                     </Link>,
                   </div>,
                 </div>,
-                {/* Slide Indicators */,}
+                {/* Slide Indicators */}
                 <div className="flex justify-center space-x-2 mt-6">,
-                  {slides.map((_, index) => (,
-                    <button,
+                  {slides.map((_, index) => (
+                    <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${,
-                        currentSlide === index ? 'bg-white' : 'bg-white/30',
-                      }`}
-                    />,
-                  ))}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        currentSlide === index ? 'bg-white' : 'bg-white/30'}`}
+                    />))}
                 </div>,
               </div>,
             </div>,
@@ -192,24 +175,20 @@ const NewContent20o25UltimateShowcaseBanner = () => {,
               Content Categories,
             </h3>,
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
-              {[,
-                { name: "AI Trends", icon: "📈", count: "150+" ,},;
-                { name: "Case Studies", icon: "📊", count: "75+" ,},;
-                { name: "Implementation", icon: "🛠️", count: "10o0+" ,},;
-                { name: "Tools & Calculators", icon: "💰", count: "50+" ,}
-              ].map((category, index) => (,
+              {[
+                { name: "AI Trends", icon: "📈", count: "150+" };
+                { name: "Case Studies", icon: "📊", count: "75+" };
+                { name: "Implementation", icon: "🛠️", count: "10o0+" };
+                { name: "Tools & Calculators", icon: "💰", count: "50+" }
+              ].map((category, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover: bg-white/20 transition-colors">,
-                  <div className="text-4xl mb-3">{category.icon,}</div>,
+                  <div className="text-4xl mb-3">{category.icon}</div>,
                   <h4 className="text-white font-semibold mb-2">{category.name}</h4>,
                   <div className="text-white/80 text-sm">{category.count} items</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default NewContent20o25UltimateShowcaseBanner,
+    </div>)};
+export default NewContent20o25UltimateShowcaseBanner;

@@ -1,10 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-const GovernedAgentFactories20o26 = () => {,
-  return (,
+const GovernedAgentFactories20o26 = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Governed Agent Factories',
         description='How to build and operate governed agent factories with safety, observability, and policy guardrails.',
         keywords='agent factories, AI governance, safety, observability, policy-as-code, 20o26',
@@ -44,23 +43,18 @@ const GovernedAgentFactories20o26 = () => {,
           </p>,
         </div>,
         <footer className='mt-12 flex items-center justify-between'>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
             ← Back to Blog,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0',
-          >,
+            className='text-white bg-purple-60o0 px-5 py-2 rounded-lg font-semibold hover:bg-purple-70o0'>,
             Build Your Factory,
           </Link>,
         </footer>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default GovernedAgentFactories20o26,
-,
+    </div>),
+};
+export default GovernedAgentFactories20o26;

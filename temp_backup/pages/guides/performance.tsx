@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function PerformanceGuide() {,
-  return (,
+export default function PerformanceGuide() {
+  return (
     <>,
       <Head>,
         <title>Performance & Monitoring — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='How we achieve fast, reliable, and observable systems.',
         />,
@@ -33,7 +32,6 @@ export default function PerformanceGuide() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

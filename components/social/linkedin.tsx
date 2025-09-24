@@ -1,15 +1,13 @@
 "use client",
 import React{ useEffect } from 'react',
 import Head from 'next/head',
-,
-export default function LinkedInRedirect() {,
-	useEffect(() => {,
-		if (typeof window !== 'undefined') {,
+export default function LinkedInRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
 			window.location.replace('https: //www.linkedin.com/company/zion-tech-group'),
-		,}
+		}
 	}[]),
-,
-	return (,
+	return (
 		<>,
 			<Head>,
 				<title>LinkedIn | Zion Tech Group</title>,
@@ -22,6 +20,5 @@ export default function LinkedInRedirect() {,
 					Continue to LinkedIn,
 				</a>,
 			</div>,
-		</>,
-	),
-,}
+		</>),
+}

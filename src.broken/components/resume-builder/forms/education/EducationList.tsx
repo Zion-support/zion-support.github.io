@@ -1,9 +1,7 @@
-export function EducationList() {,
-  return (,
+export function EducationList() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

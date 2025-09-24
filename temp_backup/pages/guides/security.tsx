@@ -1,12 +1,11 @@
 import Head from 'next/head',
 import Link from 'next/link',
-,
-export default function SecurityGuide() {,
-  return (,
+export default function SecurityGuide() {
+  return (
     <>,
       <Head>,
         <title>Security & Compliance — Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Our approach to security, compliance, and automated protection.',
         />,
@@ -33,7 +32,6 @@ export default function SecurityGuide() {,
           </div>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

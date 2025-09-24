@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PortalPage() {,
-  return (,
+export default function PortalPage() {
+  return (
     <>,
       <Head>,
         <title>Portal - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function PortalPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

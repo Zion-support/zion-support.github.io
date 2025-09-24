@@ -4,7 +4,7 @@ import SEO from '../components/SEO',
 import LoadingSpinner from '../components/LoadingSpinner',
 import PerformanceMonitor from '../components/PerformanceMonitor',
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer',
-import ContentShowcase, {,
+import ContentShowcase, {
 import EnhancedContentShowcase from '../components/EnhancedContentShowcase',
 import NewContentBanner from '../components/NewContentBanner',
 import NewContentShowcase from '../components/NewContentShowcase',
@@ -48,7 +48,7 @@ import EnhancedNewsletter from '../components/EnhancedNewsletter',
 import EnhancedNewsletterSignup from '../components/EnhancedNewsletterSignup',
 import RevolutionaryBreakthroughPromotionBanner from '../components/RevolutionaryBreakthroughPromotionBanner',
 import InteractiveContentDiscovery from '../components/InteractiveContentDiscovery',
-import SuccessMetrics, {,
+import SuccessMetrics, {
 import AI20o25UltimateBreakthroughPromotionBanner from '../components/AI20o25UltimateBreakthroughPromotionBanner',
 import NewContentDiscoveryWidget20o25 from '../components/NewContentDiscoveryWidget20o25',
 import Card from '../components/ui/Card',
@@ -180,116 +180,75 @@ import AI20o26BreakthroughRevolutionBanner from '../components/AI20o26Breakthrou
 import QuantumComputing20o26UltimateBanner from '../components/QuantumComputing20o26UltimateBanner',
 import NeuralInterfaceRevolution20o26Banner from '../components/NeuralInterfaceRevolution20o26Banner',
 // import ErrorBoundary from '../components/ErrorBoundary',
-  featuredContent,;
-  trendingContent,;
-  latestContent,;
+  featuredContent;
+  trendingContent;
+  latestContent;
 } from '../components/ContentShowcase',
-  defaultMetrics,;
-  contentMetrics,;
+  defaultMetrics;
+  contentMetrics;
 } from '../components/SuccessMetrics',
 // Import new Advanced Neural Architectures 20o26 components,
-,
 // Import new AI 20o25 Advanced Automation Revolution components,
-,
 // Import new promotional banners,
-,
 // Import new Ultimate Content 20o25 Revolution components,
-,
 // Import new 20o25 Innovation Showcase components,
-,
 // Import new AI 20o25-20o26 Ultimate Business Intelligence components,
-,
 // Import new Ultimate AI 20o25 Transformation components,
-,
 // Import new AI 20o25-20o26 Ultimate Breakthrough components,
-,
 // Import new Ultimate Content 20o25 components,
-,
 // Import new Ultimate Business Transformation 20o25 components,
-,
 // Import new Ultimate Autonomous Enterprise 20o25 components,
-,
 // Import new advanced AI components,
-,
 // Lazy load heavy components,
 const ROICalculator = lazy(() => import('../components/ROICalculator')),
 const StructuredData = lazy(() => import('../components/StructuredData')),
-const PerformanceMetrics = lazy(,
-  () => import('../components/PerformanceMetrics'),
-),
+const PerformanceMetrics = lazy(
+  () => import('../components/PerformanceMetrics')),
 const TechnologyStack = lazy(() => import('../components/TechnologyStack')),
-,
 // Import key promotional components,
 // Import new 20o26 promotional components,
-,
 // Import new 20o25 ultimate content components,
-,
 // Import additional promotional components,
-,
 // Import new AI 20o26 promotional components,
-,
 // Import new AI 20o26 promotional components,
-,
 // Import new 20o26 content promotional banners,
-,
 // Import new quantum AI promotional components,
-,
 // Import new ultimate breakthrough content components,
-,
 // Import new 20o26 content promotional components,
-,
 // Import new autonomous enterprise components,
-,
 // Import new 20o26 breakthrough content banners,
-,
 // Import new 20o26 promotional components,
-,
 // Import new 20o25-20o26 ultimate breakthrough components,
-,
 // Import new content revolution promotional components,
-,
 // Import new breakthrough promotional components,
-,
 // Import new 20o25-20o26 synthetic intelligence components,
-,
 // Import new 20o25 promotional banners,
-,
 // Import new 20o25 advanced analytics promotional components,
-,
 // Import new AI automation promotional components,
-,
 // Import new 20o26 synthetic intelligence components,
-,
 // Import new AI Innovation Showcase components,
-,
 // Import new ultimate business transformation components,
-,
 // Import new AI 20o25-20o26 Ultimate Business Transformation components,
-,
 // Import new AI 20o28 future vision components,
-,
 // Import new AI 20o30 future tech components,
-,
 // Import new Ultimate Content 20o26 components,
-,
-export const metadata = {,
-  title: 'Zion Tech Group - AI & Technology Solutions',;
+export const metadata = {
+  title: 'Zion Tech Group - AI & Technology Solutions';
   description:,
-    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',;
-  keywords: [,
-    'AI automation',;
-    'cloud computing',;
-    'micro SaaS',;
-    'technology consulting',;
-    'enterprise solutions',;
-    'digital transformation',;
-  ],;
+    'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.';
+  keywords: [
+    'AI automation';
+    'cloud computing';
+    'micro SaaS';
+    'technology consulting';
+    'enterprise solutions';
+    'digital transformation';
+  ];
 };
-,
-export default function HomePage() {,
-  return (,
+export default function HomePage() {
+  return (
     <>,
-      <SEO,
+      <SEO
         title='Zion Tech Group - AI & Technology Solutions',
         description='Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
         keywords='AI automation, cloud computing, micro SaaS, technology consulting, enterprise solutions, digital transformation',
@@ -483,23 +442,21 @@ export default function HomePage() {,
                 success.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/services',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Explore Services,
                 </Link>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Get Started,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* AI 20o25 Advanced Automation Showcase - NEW FEATURED */,}
+        {/* AI 20o25 Advanced Automation Showcase - NEW FEATURED */}
         <AI20o25AdvancedAutomationShowcase />,
         {/* Key Statistics */}
         <section className='py-16 bg-gray-50'>,
@@ -532,7 +489,7 @@ export default function HomePage() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Section */,}
+        {/* Services Section */}
         <section className='py-16'>,
           <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-8 text-center'>,
@@ -548,10 +505,9 @@ export default function HomePage() {,
                   Intelligent automation solutions that streamline operations,
                   and boost productivity across your organization.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/ai-automation',
-                  className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
@@ -564,10 +520,9 @@ export default function HomePage() {,
                   Scalable, secure cloud solutions designed to support your,
                   business growth and digital transformation.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/cloud-infrastructure',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
@@ -580,17 +535,16 @@ export default function HomePage() {,
                   Custom micro SaaS applications that solve specific business,
                   challenges with modern, scalable solutions.,
                 </p>,
-                <Link,
+                <Link
                   href='/services/micro-saas',
-                  className='text-purple-60o0 font-semibold hover: text-purple-80o0',
-                >,
+                  className='text-purple-60o0 font-semibold hover: text-purple-80o0'>,
                   Learn More →,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Content Revolution Showcase 20o25 - NEW FEATURED */,}
+        {/* Content Revolution Showcase 20o25 - NEW FEATURED */}
         <ContentRevolutionShowcase20o25 />,
         {/* Content Promotion Banners */}
         <RevolutionaryContent20o26Banner />,
@@ -622,35 +576,33 @@ export default function HomePage() {,
         <InteractiveContentDiscoveryWidget20o26 />,
         {/* Structured Data */}
         <Suspense fallback={<LoadingSpinner size='lg' text='Loading...' />}>,
-          <StructuredData,
+          <StructuredData
             type='Organization',
-            data={{,
-              name: 'Zion Tech Group',;
+            data={{
+              name: 'Zion Tech Group';
               description:,
-                'Transforming businesses through cutting-edge technology solutions',;
-              url: 'https://zion.app',;
-              logo: 'https://zion.app/images/zion-tech-group-logo.png',;
-              sameAs: [,
-                'https://twitter.com/ZionTechGroup',;
-                'https://linkedin.com/company/zion-tech-group',;
-              ],;
+                'Transforming businesses through cutting-edge technology solutions';
+              url: 'https://zion.app';
+              logo: 'https://zion.app/images/zion-tech-group-logo.png';
+              sameAs: [
+                'https://twitter.com/ZionTechGroup';
+                'https://linkedin.com/company/zion-tech-group';
+              ];
             }}
           />,
-          <StructuredData,
+          <StructuredData
             type='WebSite',
-            data={{,
-              name: 'Zion Tech Group',;
-              url: 'https://zion.app',;
-              potentialAction: {,
-                '@type': 'SearchAction',;
-                target: 'https://zion.app/search?q={search_term_string,}',;
-                'query-input': 'required name=search_term_string',;
-              },;
+            data={{
+              name: 'Zion Tech Group';
+              url: 'https://zion.app';
+              potentialAction: {
+                '@type': 'SearchAction';
+                target: 'https://zion.app/search?q={search_term_string}';
+                'query-input': 'required name=search_term_string';
+              };
             }}
           />,
         </Suspense>,
       </div>,
-    </>,
-  ),
-}
+    </>)}
 ,

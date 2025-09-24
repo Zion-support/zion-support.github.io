@@ -1,17 +1,17 @@
 import { BadgeDollarSign } from 'lucide-react',
 import { useWallet } from '@/hooks/useWallet',
-import {,
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
+import {
+  Card;
+  CardContent;
+  CardDescription;
+  CardHeader;
+  CardTitle;
 } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import Skeleton from '@/components/ui/skeleton',
-export function TokenDisplay() {,
+export function TokenDisplay() {
   const { wallet, loading } = useWallet(),
-  return (,
+  return (
     <Card>,
       <CardHeader className='flex flex-row items-center justify-between pb-2'>,
         <div>,
@@ -21,9 +21,8 @@ export function TokenDisplay() {,
         <BadgeDollarSign aria-hidden='true' className='h-6 w-6 text-primary' />,
       </CardHeader>,
       <CardContent>,
-        {loading ? (,
-          <Skeleton className='h-12 w-28' />,
-        ) : (,
+        {loading ? (
+          <Skeleton className='h-12 w-28' />) : (
           <div className='flex flex-col gap-2'>,
             <div className='flex items-end'>,
               <span className='text-3xl font-bold'>{wallet?.balance || 0}</span>,
@@ -38,10 +37,7 @@ export function TokenDisplay() {,
                 View Wallet,
               </Button>,
             </div>,
-          </div>,
-        )}
+          </div>)}
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

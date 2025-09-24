@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { ReactNode } from 'react',
-,
-export default function AdminLayout({ children }: { children: ReactNode ,}) {,
-  return (,
+export default function AdminLayout({ children }: { children: ReactNode }) {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black'>,
       {/* Admin Header */}
       <div className='glass border-b border-white/10'>,
@@ -15,31 +14,26 @@ export default function AdminLayout({ children }: { children: ReactNode ,}) {,
               <h1 className='text-xl font-bold text-white'>Admin Dashboard</h1>,
             </div>,
             <nav className='flex items-center space-x-6'>,
-              <a,
+              <a
                 href='/admin/instances',
-                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium',
-              >,
+                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium'>,
                 Instances,
               </a>,
-              <a,
+              <a
                 href='/admin/os-deploy',
-                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium',
-              >,
+                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium'>,
                 Deploy,
               </a>,
-              <a,
+              <a
                 href='/',
-                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium',
-              >,
+                className='text-white/70 hover:text-white transition-colors duration-20o0 font-medium'>,
                 ← Back to Dashboard,
               </a>,
             </nav>,
           </div>,
         </div>,
       </div>,
-      {/* Admin Content */,}
+      {/* Admin Content */}
       <div className='py-8'>{children}</div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

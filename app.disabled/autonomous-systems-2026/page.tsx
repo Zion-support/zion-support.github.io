@@ -1,23 +1,21 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Autonomous Systems 20o26 - Revolutionary Self-Managing Business Operations',;
+    'Autonomous Systems 20o26 - Revolutionary Self-Managing Business Operations';
   description:,
-    'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 20o26.',;
-  keywords: [,
-    'autonomous systems',;
-    'business automation',;
-    'self-managing operations',;
-    'zero-touch processes',;
-    'intelligent automation',;
-    'enterprise operations',;
-  ],;
+    'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 20o26.';
+  keywords: [
+    'autonomous systems';
+    'business automation';
+    'self-managing operations';
+    'zero-touch processes';
+    'intelligent automation';
+    'enterprise operations';
+  ];
 };
-,
-export default function AutonomousSystems20o26Page() {,
-  return (,
+export default function AutonomousSystems20o26Page() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
       {/* Hero Section */}
       <section className='py-20 px-4 sm: px-6 lg:px-8'>,
@@ -59,22 +57,20 @@ export default function AutonomousSystems20o26Page() {,
             </div>,
           </div>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5'>,
               Deploy Autonomous Systems,
             </Link>,
-            <Link,
+            <Link
               href='/services',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
               Explore Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Autonomous Technologies Section */,}
+      {/* Autonomous Technologies Section */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-green-20o0 bg-clip-text text-transparent'>,
@@ -165,7 +161,7 @@ export default function AutonomousSystems20o26Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Phases */,}
+      {/* Implementation Phases */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white/5'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-20o0 bg-clip-text text-transparent'>,
@@ -235,7 +231,7 @@ export default function AutonomousSystems20o26Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Business Applications */,}
+      {/* Business Applications */}
       <section className='py-16 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-7xl mx-auto'>,
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-green-20o0 bg-clip-text text-transparent'>,
@@ -323,7 +319,7 @@ export default function AutonomousSystems20o26Page() {,
           </div>,
         </div>,
       </section>,
-      {/* ROI Calculator */,}
+      {/* ROI Calculator */}
       <section className='py-16 px-4 sm: px-6 lg:px-8 bg-white/5'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-green-20o0 bg-clip-text text-transparent'>,
@@ -335,7 +331,7 @@ export default function AutonomousSystems20o26Page() {,
                 <label className='block text-sm font-medium mb-2'>,
                   Current Operational Costs (Monthly),
                 </label>,
-                <input,
+                <input
                   type='number',
                   className='w-full bg-white/20 border border-white/30 rounded-lg px-4 py-2 text-white placeholder-white/50',
                   placeholder='$10o0,0o00',
@@ -345,7 +341,7 @@ export default function AutonomousSystems20o26Page() {,
                 <label className='block text-sm font-medium mb-2'>,
                   Number of Employees,
                 </label>,
-                <input,
+                <input
                   type='number',
                   className='w-full bg-white/20 border border-white/30 rounded-lg px-4 py-2 text-white placeholder-white/50',
                   placeholder='50',
@@ -394,16 +390,15 @@ export default function AutonomousSystems20o26Page() {,
                 <p className='text-sm opacity-80'>Operation Time</p>,
               </div>,
             </div>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5 inline-block'>,
               Get Detailed Analysis,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className='py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-green-60o0/20 to-blue-60o0/20'>,
         <div className='max-w-4xl mx-auto text-center'>,
           <h2 className='text-4xl md:text-5xl font-bold mb-8'>,
@@ -412,25 +407,22 @@ export default function AutonomousSystems20o26Page() {,
           <p className='text-xl opacity-90 mb-12'>,
             Transform your business with fully autonomous systems that work,
             around the clock, adapt to changing conditions, and continuously,
-            optimize performance. The future of business is autonomous.,
+            optimize window.performance. The future of business is autonomous.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-gradient-to-r from-green-50o0 to-blue-50o0 px-8 py-4 rounded-lg font-semibold hover:from-green-60o0 hover:to-blue-60o0 transition-all transform hover:scale-10o5'>,
               Start Your Autonomous Journey,
             </Link>,
-            <Link,
+            <Link
               href='/ai-20o26-ultimate-business-transformation',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-90o0 transition-colors'>,
               Explore More Content,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

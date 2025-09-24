@@ -1,13 +1,12 @@
 import Head from 'next/head',
-,
-export default function Innovative20o40FuturisticServicesShowcasePage() {,
-  return (,
+export default function Innovative20o40FuturisticServicesShowcasePage() {
+  return (
     <>,
       <Head>,
         <title>,
           Innovative 20o40 Futuristic Services Showcase - Zion Tech Group,
         </title>,
-        <meta,
+        <meta
           name='description',
           content='innovative 20o40 futuristic services showcase page',
         />,
@@ -23,7 +22,6 @@ export default function Innovative20o40FuturisticServicesShowcasePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

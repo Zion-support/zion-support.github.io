@@ -1,172 +1,158 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
-import {,
-  Menu,;
-  X,;
-  ChevronDown,;
-  Rocket,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Brain,;
-  Cpu,;
-  Shield,;
-  Zap,;
-  Star,;
-  Users,;
-  TrendingUp,;
-  Globe,;
-  Database,;
-  Cloud,;
-  Lock,;
-  Palette,;
-  Target,;
-  Layers,;
-  Sparkles,;
-  Atom,;
-  Microscope,;
-  Satellite,;
-  Search,;
-  Bell,;
-  User,;
-  Settings,;
-  LogOut,;
-  SparklesIcon,;
-  Home,;
-  Briefcase,;
-  BookOpen,;
-  Users as Team,;
-  MessageCircle,;
-  DollarSign,;
-  Grid,;
-  List,;
-  ArrowRight,;
+import {
+  Menu;
+  X;
+  ChevronDown;
+  Rocket;
+  Phone;
+  Mail;
+  MapPin;
+  Brain;
+  Cpu;
+  Shield;
+  Zap;
+  Star;
+  Users;
+  TrendingUp;
+  Globe;
+  Database;
+  Cloud;
+  Lock;
+  Palette;
+  Target;
+  Layers;
+  Sparkles;
+  Atom;
+  Microscope;
+  Satellite;
+  Search;
+  Bell;
+  User;
+  Settings;
+  LogOut;
+  SparklesIcon;
+  Home;
+  Briefcase;
+  BookOpen;
+  Users as Team;
+  MessageCircle;
+  DollarSign;
+  Grid;
+  List;
+  ArrowRight;
 } from 'lucide-react',
-,
 // Import all the new service data,
 import { revolutionary20o26AIAutomationServices } from '../../data/revolutionary-20o26-ai-automation-services',
 import { revolutionary20o26EmergingTechServices } from '../../data/revolutionary-20o26-emerging-tech-services',
 import { revolutionary20o26HealthcareBiotechServices } from '../../data/revolutionary-20o26-healthcare-biotech-services',
 import { revolutionary20o26FintechBlockchainServices } from '../../data/revolutionary-20o26-fintech-blockchain-services',
-,
-const contactInfo = {,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com',;
+const contactInfo = {
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
 };
-,
-const serviceCategories = [,
-  {,
-    title: 'AI & Consciousness 20o26',;
-    icon: Brain,;
-    color: 'from-purple-60o0 to-pink-60o0',;
-    description: 'Next-generation AI consciousness solutions',;
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness 20o26';
+    icon: Brain;
+    color: 'from-purple-60o0 to-pink-60o0';
+    description: 'Next-generation AI consciousness solutions';
     services: revolutionary20o26AIAutomationServices,
       .slice(0, 4),
-      .map(service => ({,
-        name: service.name,;
-        href: service.link,;
-        description: service.tagline,;
-        price: service.price + service.period,;
-        icon: service.icon,;
-        color: service.color,;
-      })),;
-  },;
-  {,
-    title: 'Emerging Technologies 20o26',;
-    icon: Rocket,;
-    color: 'from-green-60o0 to-emerald-60o0',;
-    description: 'Cutting-edge emerging tech solutions',;
+      .map(service => ({
+        name: service.name;
+        href: service.link;
+        description: service.tagline;
+        price: service.price + service.period;
+        icon: service.icon;
+        color: service.color;
+      }));
+  };
+  {
+    title: 'Emerging Technologies 20o26';
+    icon: Rocket;
+    color: 'from-green-60o0 to-emerald-60o0';
+    description: 'Cutting-edge emerging tech solutions';
     services: revolutionary20o26EmergingTechServices,
       .slice(0, 4),
-      .map(service => ({,
-        name: service.name,;
-        href: service.link,;
-        description: service.tagline,;
-        price: service.price + service.period,;
-        icon: service.icon,;
-        color: service.color,;
-      })),;
-  },;
-  {,
-    title: 'Healthcare & Biotech 20o26',;
-    icon: Shield,;
-    color: 'from-teal-60o0 to-cyan-60o0',;
-    description: 'Revolutionary healthcare innovations',;
+      .map(service => ({
+        name: service.name;
+        href: service.link;
+        description: service.tagline;
+        price: service.price + service.period;
+        icon: service.icon;
+        color: service.color;
+      }));
+  };
+  {
+    title: 'Healthcare & Biotech 20o26';
+    icon: Shield;
+    color: 'from-teal-60o0 to-cyan-60o0';
+    description: 'Revolutionary healthcare innovations';
     services: revolutionary20o26HealthcareBiotechServices,
       .slice(0, 4),
-      .map(service => ({,
-        name: service.name,;
-        href: service.link,;
-        description: service.tagline,;
-        price: service.price + service.period,;
-        icon: service.icon,;
-        color: service.color,;
-      })),;
-  },;
-  {,
-    title: 'Fintech & Blockchain 20o26',;
-    icon: DollarSign,;
-    color: 'from-yellow-60o0 to-orange-60o0',;
-    description: 'Next-generation financial technology',;
+      .map(service => ({
+        name: service.name;
+        href: service.link;
+        description: service.tagline;
+        price: service.price + service.period;
+        icon: service.icon;
+        color: service.color;
+      }));
+  };
+  {
+    title: 'Fintech & Blockchain 20o26';
+    icon: DollarSign;
+    color: 'from-yellow-60o0 to-orange-60o0';
+    description: 'Next-generation financial technology';
     services: revolutionary20o26FintechBlockchainServices,
       .slice(0, 4),
-      .map(service => ({,
-        name: service.name,;
-        href: service.link,;
-        description: service.tagline,;
-        price: service.price + service.period,;
-        icon: service.icon,;
-        color: service.color,;
-      })),;
-  },;
+      .map(service => ({
+        name: service.name;
+        href: service.link;
+        description: service.tagline;
+        price: service.price + service.period;
+        icon: service.icon;
+        color: service.color;
+      }));
+  };
 ],
-,
-const companyLinks = [,
-  { name: 'Home', href: '/', icon: Home ,},;
-  { name: 'About Us', href: '/about', icon: Users ,},;
-  {,
-    name: '20o26 Services',;
-    href: '/revolutionary-20o26-services',;
-    icon: Rocket,;
-  },;
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase ,},;
-  { name: 'Resources', href: '/resources', icon: BookOpen ,},;
-  { name: 'Contact', href: '/contact', icon: MessageCircle ,},;
+const companyLinks = [
+  { name: 'Home', href: '/', icon: Home };
+  { name: 'About Us', href: '/about', icon: Users };
+  {
+    name: '20o26 Services';
+    href: '/revolutionary-20o26-services';
+    icon: Rocket;
+  };
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase };
+  { name: 'Resources', href: '/resources', icon: BookOpen };
+  { name: 'Contact', href: '/contact', icon: MessageCircle };
 ],
-,
-const Revolutionary20o26UltimateNavigation = () => {,
+const Revolutionary20o26UltimateNavigation = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
-,
-  useEffect(() => {,
-    const handleScroll = () => {,
-      setIsScrolled(window.scrollY > 20),
-    };
-,
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)};
     window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
-,
-  const toggleDropdown = (category: string) => {,
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
+  const toggleDropdown = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category),
-  ,};
-,
-  const closeAllDropdowns = () => {,
-    setActiveDropdown(null),
-    setIsOpen(false),
   };
-,
-  return (,
-    <nav,
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${,
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null),
+    setIsOpen(false)};
+  return (
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
         isScrolled,
           ? 'bg-gray-90o0/95 backdrop-blur-xl border-b border-purple-50o0/20',
-          : 'bg-transparent',
-      }`}
+          : 'bg-transparent'}`}
     >,
       {/* Top Contact Bar */}
       <div className='bg-gradient-to-r from-purple-90o0 to-cyan-90o0 border-b border-purple-50o0/20'>,
@@ -175,7 +161,7 @@ const Revolutionary20o26UltimateNavigation = () => {,
             <div className='flex items-center gap-6 text-gray-30o0'>,
               <div className='flex items-center gap-2'>,
                 <Phone className='w-4 h-4 text-purple-40o0' />,
-                <span>{contactInfo.mobile,}</span>,
+                <span>{contactInfo.mobile}</span>,
               </div>,
               <div className='flex items-center gap-2'>,
                 <Mail className='w-4 h-4 text-purple-40o0' />,
@@ -183,26 +169,24 @@ const Revolutionary20o26UltimateNavigation = () => {,
               </div>,
             </div>,
             <div className='flex items-center gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='text-purple-40o0 hover: text-white transition-colors',
-              >,
+                className='text-purple-40o0 hover: text-white transition-colors'>,
                 Get Started,
               </Link>,
-              <Link,
+              <Link
                 href='/pricing',
-                className='text-purple-40o0 hover:text-white transition-colors',
-              >,
+                className='text-purple-40o0 hover:text-white transition-colors'>,
                 View Pricing,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-      {/* Main Navigation */,}
+      {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex items-center justify-between h-20'>,
-          {/* Logo */,}
+          {/* Logo */}
           <Link href='/' className='flex items-center gap-3 group'>,
             <div className='w-10 h-10 bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform'>,
               <SparklesIcon className='w-6 h-6 text-white' />,
@@ -216,35 +200,33 @@ const Revolutionary20o26UltimateNavigation = () => {,
               </div>,
             </div>,
           </Link>,
-          {/* Desktop Navigation */,}
+          {/* Desktop Navigation */}
           <div className='hidden lg: flex items-center gap-8'>,
-            {/* Services Dropdown */,}
+            {/* Services Dropdown */}
             <div className='relative'>,
-              <button,
+              <button
                 onClick={() => toggleDropdown('services')}
-                className='flex items-center gap-2 text-gray-30o0 hover: text-white transition-colors py-2',
-              >,
+                className='flex items-center gap-2 text-gray-30o0 hover: text-white transition-colors py-2'>,
                 <Rocket className='w-5 h-5' />,
                 <span>Revolutionary Services</span>,
-                <ChevronDown,
-                  className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : '',}`}
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`}
                 />,
               </button>,
               <AnimatePresence>,
-                {activeDropdown === 'services' && (,
+                {activeDropdown === 'services' && (
                   <motion.div,
-                    initial={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                    animate={{ opacity: 1, y: 0, scale: 1 ,}}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 ,}}
-                    transition={{ duration: 0.2 ,}}
-                    className='absolute top-full left-0 mt-2 w-[80o0px] bg-gray-90o0/95 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl shadow-2xl shadow-purple-50o0/10',
-                  >,
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className='absolute top-full left-0 mt-2 w-[80o0px] bg-gray-90o0/95 backdrop-blur-xl border border-purple-50o0/20 rounded-2xl shadow-2xl shadow-purple-50o0/10'>,
                     <div className='p-6'>,
                       <div className='grid grid-cols-2 gap-6'>,
-                        {serviceCategories.map(category => (,
+                        {serviceCategories.map(category => (
                           <div key={category.title} className='space-y-4'>,
                             <div className='flex items-center gap-3'>,
-                              <div,
+                              <div
                                 className={`w-10 h-10 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center`}
                               >,
                                 <category.icon className='w-5 h-5 text-white' />,
@@ -259,21 +241,20 @@ const Revolutionary20o26UltimateNavigation = () => {,
                               </div>,
                             </div>,
                             <div className='space-y-2'>,
-                              {category.services.map(service => (,
-                                <Link,
+                              {category.services.map(service => (
+                                <Link
                                   key={service.name}
                                   href={service.href}
                                   onClick={closeAllDropdowns}
-                                  className='flex items-center gap-3 p-3 rounded-lg hover: bg-purple-50o0/10 transition-colors group',
-                                >,
-                                  <div,
-                                    className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color,} flex items-center justify-center text-sm`}
+                                  className='flex items-center gap-3 p-3 rounded-lg hover: bg-purple-50o0/10 transition-colors group'>,
+                                  <div
+                                    className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center text-sm`}
                                   >,
                                     {service.icon}
                                   </div>,
                                   <div className='flex-1'>,
                                     <div className='font-medium text-white group-hover: text-purple-40o0 transition-colors'>,
-                                      {service.name,}
+                                      {service.name}
                                     </div>,
                                     <div className='text-sm text-gray-40o0'>,
                                       {service.description}
@@ -282,38 +263,32 @@ const Revolutionary20o26UltimateNavigation = () => {,
                                   <div className='text-sm text-purple-40o0 font-semibold'>,
                                     {service.price}
                                   </div>,
-                                </Link>,
-                              ))}
+                                </Link>))}
                             </div>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                       <div className='mt-6 pt-6 border-t border-purple-50o0/20'>,
-                        <Link,
+                        <Link
                           href='/revolutionary-20o26-services',
                           onClick={closeAllDropdowns}
-                          className='flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5',
-                        >,
+                          className='flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-purple-60o0 to-pink-60o0 hover: from-purple-70o0 hover:to-pink-70o0 text-white font-semibold rounded-xl transition-all duration-30o0 transform hover:scale-10o5'>,
                           View All Revolutionary Services,
                           <ArrowRight className='w-4 h-4' />,
                         </Link>,
                       </div>,
                     </div>,
-                  </motion.div>,
-                ),}
+                  </motion.div>)}
               </AnimatePresence>,
             </div>,
             {/* Company Links */}
-            {companyLinks.map(link => (,
-              <Link,
+            {companyLinks.map(link => (
+              <Link
                 key={link.name}
                 href={link.href}
-                className='flex items-center gap-2 text-gray-30o0 hover: text-white transition-colors py-2',
-              >,
+                className='flex items-center gap-2 text-gray-30o0 hover: text-white transition-colors py-2'>,
                 <link.icon className='w-5 h-5' />,
-                <span>{link.name,}</span>,
-              </Link>,
-            ))}
+                <span>{link.name}</span>,
+              </Link>))}
           </div>,
           {/* Right Side Actions */}
           <div className='hidden lg: flex items-center gap-4'>,
@@ -329,67 +304,60 @@ const Revolutionary20o26UltimateNavigation = () => {,
               </button>,
             </Link>,
           </div>,
-          {/* Mobile Menu Button */,}
-          <button,
+          {/* Mobile Menu Button */}
+          <button
             onClick={() => setIsOpen(!isOpen)}
-            className='lg: hidden p-2 text-gray-40o0 hover:text-white transition-colors',
-          >,
-            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />,}
+            className='lg: hidden p-2 text-gray-40o0 hover:text-white transition-colors'>,
+            {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>,
         </div>,
       </div>,
       {/* Mobile Navigation */}
       <AnimatePresence>,
-        {isOpen && (,
+        {isOpen && (
           <motion.div,
-            initial={{ opacity: 0, height: 0 ,}}
-            animate={{ opacity: 1, height: 'auto' ,}}
-            exit={{ opacity: 0, height: 0 ,}}
-            transition={{ duration: 0.3 ,}}
-            className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/20',
-          >,
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className='lg: hidden bg-gray-90o0/95 backdrop-blur-xl border-t border-purple-50o0/20'>,
             <div className='px-4 py-6 space-y-6'>,
-              {/* Mobile Services */,}
+              {/* Mobile Services */}
               <div>,
                 <h3 className='text-lg font-semibold text-white mb-4'>,
                   Revolutionary Services,
                 </h3>,
                 <div className='space-y-3'>,
-                  {serviceCategories.map(category => (,
+                  {serviceCategories.map(category => (
                     <div key={category.title} className='space-y-2'>,
                       <div className='flex items-center gap-3 text-purple-40o0'>,
                         <category.icon className='w-5 h-5' />,
                         <span className='font-medium'>{category.title}</span>,
                       </div>,
                       <div className='ml-8 space-y-2'>,
-                        {category.services.slice(0, 2).map(service => (,
-                          <Link,
+                        {category.services.slice(0, 2).map(service => (
+                          <Link
                             key={service.name}
                             href={service.href}
                             onClick={closeAllDropdowns}
-                            className='block text-gray-30o0 hover: text-white transition-colors py-1',
-                          >,
-                            {service.name,}
-                          </Link>,
-                        ))}
+                            className='block text-gray-30o0 hover: text-white transition-colors py-1'>,
+                            {service.name}
+                          </Link>))}
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Mobile Company Links */}
               <div className='space-y-3'>,
-                {companyLinks.map(link => (,
-                  <Link,
+                {companyLinks.map(link => (
+                  <Link
                     key={link.name}
                     href={link.href}
                     onClick={closeAllDropdowns}
-                    className='flex items-center gap-3 text-gray-30o0 hover: text-white transition-colors py-2',
-                  >,
+                    className='flex items-center gap-3 text-gray-30o0 hover: text-white transition-colors py-2'>,
                     <link.icon className='w-5 h-5' />,
-                    <span>{link.name,}</span>,
-                  </Link>,
-                ))}
+                    <span>{link.name}</span>,
+                  </Link>))}
               </div>,
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-purple-50o0/20'>,
@@ -409,12 +377,7 @@ const Revolutionary20o26UltimateNavigation = () => {,
                 </div>,
               </div>,
             </div>,
-          </motion.div>,
-        )}
+          </motion.div>)}
       </AnimatePresence>,
-    </nav>,
-  ),
-};
-,
-export default Revolutionary20o26UltimateNavigation,
-,
+    </nav>)};
+export default Revolutionary20o26UltimateNavigation;

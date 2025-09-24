@@ -1,54 +1,45 @@
 "use client",
 'use client',
-,
 import React, { useState, useEffect } from 'react',
 import { motion } from 'framer-motion',
-import {,
+import {
   Brain,
   ArrowRight,
   Star,
   Zap,
   Rocket,
-  Shield,;
-  TrendingUp,;
-  Users,;
-  Award,;
-  ChevronRight,;
-  CheckCircle,;
-  BarChart3,;
-  Globe,;
-  Cpu,
-} from 'lucide-react',
-,
-const ComprehensiveAISolutions20o26PromotionBanner = () => {,
+  Shield;
+  TrendingUp;
+  Users;
+  Award;
+  ChevronRight;
+  CheckCircle;
+  BarChart3;
+  Globe;
+  Cpu} from 'lucide-react',
+const ComprehensiveAISolutions20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }[]),
-,
-  const solutions = [,
-    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-50o0 to-purple-50o0' ,},;
-    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-50o0 to-pink-50o0' ,},;
-    { icon: Zaptitle: ''Automation', 'color: 'from-green-50o0 to-blue-50o0' ,},;
-    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-50o0 to-orange-50o0' ,}
+  useEffect(() => {
+    setIsVisible(true)}[]),
+  const solutions = [
+    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-50o0 to-purple-50o0' };
+    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-50o0 to-pink-50o0' };
+    { icon: Zaptitle: ''Automation', 'color: 'from-green-50o0 to-blue-50o0' };
+    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-50o0 to-orange-50o0' }
   ],
-,
-  const benefits = [,
-    { icon: TrendingUptext: '99.9% Uptime' ,},;
-    { icon: Userstext: '10o00+ Enterprises' ,},;
-    { icon: Awardtext: 'Industry Leading' ,},;
-    { icon: BarChart3text: '60% Cost Reduction' ,}
+  const benefits = [
+    { icon: TrendingUptext: '99.9% Uptime' };
+    { icon: Userstext: '10o00+ Enterprises' };
+    { icon: Awardtext: 'Industry Leading' };
+    { icon: BarChart3text: '60% Cost Reduction' }
   ],
-,
-  const stats = [,
-    { value: '10,0o00+'label: 'AI Models' ,},;
-    { value: '50o0+'label: 'Solutions' ,},;
-    { value: '1,0o00+'label: 'Enterprises' ,},;
-    { value: '99.9%'label: 'Uptime' ,}
+  const stats = [
+    { value: '10,0o00+'label: 'AI Models' };
+    { value: '50o0+'label: 'Solutions' };
+    { value: '1,0o00+'label: 'Enterprises' };
+    { value: '99.9%'label: 'Uptime' }
   ],
-,
-  return (,
+  return (
     <div className="relative bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-indigo-90o0 overflow-hidden">,
       {/* Animated Background */}
       <div className="absolute inset-0">,
@@ -58,84 +49,75 @@ const ComprehensiveAISolutions20o26PromotionBanner = () => {,
       <div className="relative z-10 py-16 px-4">,
         <div className="container mx-auto">,
           <div className="grid lg:grid-cols-2 gap-12 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <motion.div,
-              initial={{ opacity: 0x: -50 ,}}
-              animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-              transition={{ duration: 0.8 ,}}
-              className="space-y-8",
-            >,
+              initial={{ opacity: 0x: -50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="space-y-8">,
               {/* Badge */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.2 ,}}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.2 }}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-6 py-3 rounded-full text-sm font-semibold">,
                 <Brain className="w-4 h-4"  />,
                 NEW: COMPREHENSIVE AI SOLUTIONS 20o26,
               </motion.div>,
-              {/* Main Heading */,}
+              {/* Main Heading */}
               <motion.h2,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.3 ,}}
-                className="text-4xl md: text-6xl font-bold text-white leading-tight",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.3 }}
+                className="text-4xl md: text-6xl font-bold text-white leading-tight">,
                 Complete AI,
                 <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">,
-                  {' ',}Ecosystem,
+                  {' '}Ecosystem,
                 </span>,
                 <br  />,
                 for Modern Business,
               </motion.h2>,
               {/* Description */}
               <motion.p,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.4 ,}}
-                className="text-xl text-gray-30o0 leading-relaxed",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.4 }}
+                className="text-xl text-gray-30o0 leading-relaxed">,
                 Transform your business with our comprehensive suite of AI solutions,
                 from enterprise platforms to quantum computing integration.,
               </motion.p>,
               {/* Solutions Grid */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.5 ,}}
-                className="grid grid-cols-2 gap-4",
-              >,
-                {solutions.map((solutionindex) => (,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.5 }}
+                className="grid grid-cols-2 gap-4">,
+                {solutions.map((solutionindex) => (
                   <div key={index} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">,
                     <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center`}>,
                       <solution.icon className="w-5 h-5 text-white"  />,
                     </div>,
                     <span className="text-white font-semibold">{solution.title}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </motion.div>,
               {/* Benefits */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.6 ,}}
-                className="space-y-3",
-              >,
-                {benefits.map((benefitindex) => (,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.6 }}
+                className="space-y-3">,
+                {benefits.map((benefitindex) => (
                   <div key={index} className="flex items-center gap-3">,
                     <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />,
                     <span className="text-gray-30o0">{benefit.text}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </motion.div>,
               {/* CTA Buttons */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={isVisible ? { opacity: 1, y: 0 ,} : {}}
-                transition={{ duration: 0.6delay: 0.7 ,}}
-                className="flex flex-col sm: flex-row gap-4",
-              >,
+                initial={{ opacity: 0, y: 20 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6delay: 0.7 }}
+                className="flex flex-col sm: flex-row gap-4">,
                 <button className="group bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-2xl hover:shadow-blue-50o0/25 transition-all duration-30o0 flex items-center gap-2">,
                   <Star className="w-5 h-5"  />,
                   Explore Solutions,
@@ -148,35 +130,31 @@ const ComprehensiveAISolutions20o26PromotionBanner = () => {,
                 </button>,
               </motion.div>,
             </motion.div>,
-            {/* Right Content - Stats & Visual */,}
+            {/* Right Content - Stats & Visual */}
             <motion.div,
-              initial={{ opacity: 0x: 50 ,}}
-              animate={isVisible ? { opacity: 1x: 0 ,} : {}}
-              transition={{ duration: 0.8delay: 0.4 ,}}
-              className="space-y-8",
-            >,
+              initial={{ opacity: 0x: 50 }}
+              animate={isVisible ? { opacity: 1x: 0 } : {}}
+              transition={{ duration: 0.8delay: 0.4 }}
+              className="space-y-8">,
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-6">,
-                {stats.map((statindex) => (,
+                {stats.map((statindex) => (
                   <motion.div,
                     key={index}
-                    initial={{ opacity: 0scale: 0.8 ,}}
-                    animate={isVisible ? { opacity: 1scale: 1 ,} : {}}
-                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 ,}}
-                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover: border-blue-40o0/50 transition-all duration-30o0",
-                  >,
-                    <div className="text-3xl font-bold text-white mb-2">{stat.value,}</div>,
+                    initial={{ opacity: 0scale: 0.8 }}
+                    animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                    transition={{ duration: 0.5delay: 0.5 + index * 0.1 }}
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover: border-blue-40o0/50 transition-all duration-30o0">,
+                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
                     <div className="text-gray-30o0 text-sm">{stat.label}</div>,
-                  </motion.div>,
-                ))}
+                  </motion.div>))}
               </div>,
               {/* Visual Element */}
               <motion.div,
-                initial={{ opacity: 0scale: 0.8 ,}}
-                animate={isVisible ? { opacity: 1scale: 1 ,} : {}}
-                transition={{ duration: 0.8delay: 0.7 ,}}
-                className="relative",
-              >,
+                initial={{ opacity: 0scale: 0.8 }}
+                animate={isVisible ? { opacity: 1scale: 1 } : {}}
+                transition={{ duration: 0.8delay: 0.7 }}
+                className="relative">,
                 <div className="bg-gradient-to-br from-blue-60o0/20 to-purple-60o0/20 rounded-3xl p-8 border border-blue-40o0/30">,
                   <div className="text-center space-y-4">,
                     <div className="w-20 h-20 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full flex items-center justify-center mx-auto">,
@@ -207,8 +185,5 @@ const ComprehensiveAISolutions20o26PromotionBanner = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-};
-,
-export default ComprehensiveAISolutions20o26PromotionBanner,
+    </div>)};
+export default ComprehensiveAISolutions20o26PromotionBanner;

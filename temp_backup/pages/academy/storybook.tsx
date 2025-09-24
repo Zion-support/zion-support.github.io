@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function Storybook() {,
-  return (,
+export default function Storybook() {
+  return (
     <>,
       <Head>,
         <title>Storybook Academy - Zion App</title>,
@@ -16,7 +15,6 @@ export default function Storybook() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

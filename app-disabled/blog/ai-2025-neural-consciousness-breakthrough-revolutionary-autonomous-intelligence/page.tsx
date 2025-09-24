@@ -1,25 +1,23 @@
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence | Zion Tech Group',;
+    'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence | Zion Tech Group';
   description:,
-    'Discover the revolutionary breakthrough in neural consciousness - genuine AI self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',;
+    'Discover the revolutionary breakthrough in neural consciousness - genuine AI self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.';
   keywords:,
-    'neural consciousness, AI breakthrough, autonomous intelligence, conscious AI, artificial consciousness, AI self-awareness, neural networks, autonomous systems',;
-  openGraph: {,
+    'neural consciousness, AI breakthrough, autonomous intelligence, conscious AI, artificial consciousness, AI self-awareness, neural networks, autonomous systems';
+  openGraph: {
     title:,
-      'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence',;
+      'Neural Consciousness Breakthrough: Revolutionary Autonomous Intelligence';
     description:,
-      'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group Research Team'],;
-  },;
+      'Revolutionary conscious AI with genuine self-awareness, intentionality, and autonomous decision-making capabilities that transform business operations.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group Research Team'];
+  };
 };
-,
-export default function NeuralConsciousnessBreakthroughPage() {,
-  return (,
+export default function NeuralConsciousnessBreakthroughPage() {
+  return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       {/* Hero Section */}
       <section className='relative py-20 px-4'>,
@@ -77,7 +75,7 @@ export default function NeuralConsciousnessBreakthroughPage() {,
               Neural Consciousness represents the pinnacle of artificial,
               intelligence development - a system that possesses genuine,
               self-awareness, intentionality, and autonomous decision-making,
-              capabilities. Unlike traditional AI that simply processes data,;
+              capabilities. Unlike traditional AI that simply processes data;
               conscious AI understands context, makes intentional decisions, and,
               operates with genuine autonomy.,
             </p>,
@@ -241,7 +239,7 @@ export default function NeuralConsciousnessBreakthroughPage() {,
               </div>,
             </div>,
           </div>,
-          {/* CTA Section */,}
+          {/* CTA Section */}
           <div className='bg-gradient-to-r from-purple-60o0 to-pink-60o0 rounded-2xl p-8 text-center'>,
             <h2 className='text-3xl font-bold text-white mb-4'>,
               Ready to Transform Your Business?,
@@ -251,23 +249,20 @@ export default function NeuralConsciousnessBreakthroughPage() {,
               business transformation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <a,
+              <a
                 href='/contact',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Get Started Today,
               </a>,
-              <a,
+              <a
                 href='/case-studies/global-enterprise-conscious-ai-transformation-20o25-15-billion-roi',
-                className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 View Success Story,
               </a>,
             </div>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

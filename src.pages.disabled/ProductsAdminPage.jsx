@@ -1,13 +1,10 @@
-interface ProductsAdminPageProps {,
-  // Add props here as needed,
-}
+interface ProductsAdminPageProps {
+  // Add props here as needed}
 ,
-export default function ProductsAdminPage({ }: ProductsAdminPageProps) {,
-  return (,
+export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
+  return (
     <div>,
       <h1>ProductsAdminPage</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

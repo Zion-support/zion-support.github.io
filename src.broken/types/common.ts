@@ -1,5 +1,4 @@
 // Type definitions for common,
-interface common {,
+interface common {
   // TODO: Add proper type definitions,
-,};
-,
+};

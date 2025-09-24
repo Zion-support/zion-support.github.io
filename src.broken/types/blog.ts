@@ -1,5 +1,4 @@
 // Type definitions for blog,
-interface blog {,
+interface blog {
   // TODO: Add proper type definitions,
-,};
-,
+};

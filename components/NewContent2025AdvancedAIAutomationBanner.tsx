@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-const NewContent20o25AdvancedAIAutomationBanner = () => {,
-  return (,
+const NewContent20o25AdvancedAIAutomationBanner = () => {
+  return (
     <div className='bg-gradient-to-r from-rose-90o0 via-pink-90o0 to-purple-90o0 text-white py-16 px-4'>,
       <div className='max-w-7xl mx-auto text-center'>,
         <div className='mb-8'>,
@@ -41,23 +40,18 @@ const NewContent20o25AdvancedAIAutomationBanner = () => {,
           </div>,
         </div>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-          <Link,
+          <Link
             href='/ai-20o25-20o26-ultimate-breakthrough',
-            className='bg-gradient-to-r from-rose-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-rose-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5',
-          >,
+            className='bg-gradient-to-r from-rose-50o0 to-pink-50o0 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-rose-40o0 hover:to-pink-40o0 transition-all duration-30o0 transform hover:scale-10o5'>,
             Explore Automation,
           </Link>,
-          <Link,
+          <Link
             href='/contact',
-            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-rose-90o0 transition-all duration-30o0',
-          >,
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-rose-90o0 transition-all duration-30o0'>,
             Get Started,
           </Link>,
         </div>,
       </div>,
-    </div>,
-  ),
-,};
-,
-export default NewContent20o25AdvancedAIAutomationBanner,
-,
+    </div>),
+};
+export default NewContent20o25AdvancedAIAutomationBanner;

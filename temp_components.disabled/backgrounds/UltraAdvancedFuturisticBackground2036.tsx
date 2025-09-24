@@ -1,91 +1,74 @@
 import React, { useEffect, useRef, useState } from 'react',
 import { motion } from 'framer-motion',
-,
-interface UltraAdvancedFuturisticBackground20o36Props {,
+interface UltraAdvancedFuturisticBackground20o36Props {
   intensity?: 'low' | 'medium' | 'high',
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space',
   interactive?: boolean,
-  children?: React.ReactNode,
-}
+  children?: React.ReactNode}
 ,
-export default function UltraAdvancedFuturisticBackground20o36({,
-  intensity = 'medium',;
-  theme = 'quantum',;
-  interactive = true,;
-  children,
-}: UltraAdvancedFuturisticBackground20o36Props) {,
+export default function UltraAdvancedFuturisticBackground20o36({
+  intensity = 'medium';
+  theme = 'quantum';
+  interactive = true;
+  children}: UltraAdvancedFuturisticBackground20o36Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 ,}),
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
   const [isHovered, setIsHovered] = useState(false),
-,
-  useEffect(() => {,
+  useEffect(() => {
     const canvas = canvasRef.current,
     if (!canvas) return,
-,
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2,
-,
     const ctx = canvas.getContext('2d'),
     if (!ctx) return,
-,
-    const resizeCanvas = () => {,
+    const resizeCanvas = () => {
       const rect = containerRef.current?.getBoundingClientRect(),
-      if (rect) {,
+      if (rect) {
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
-        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1),
-      }
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}
     };
-,
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
-,
     // Enhanced theme-based color schemes,
-    const getThemeColors = () => {,
-      switch (theme) {,
+    const getThemeColors = () => {
+      switch (theme) {
         case 'neon':,
-          return {,
-            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],;
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],;
-            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'],;
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3'],
-          };
+          return {
+            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
+            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'];
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
         case 'holographic':,
-          return {,
-            primary: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'],;
-            secondary: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff9f43', '#10ac84'],;
-            accent: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff6b6b', '#4ecdc4'],;
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3'],
-          };
+          return {
+            primary: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
+            secondary: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff9f43', '#10ac84'];
+            accent: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff6b6b', '#4ecdc4'];
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
         case 'cyberpunk':,
-          return {,
-            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'],;
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'],;
-            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'],;
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3'],
-          };
+          return {
+            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
+            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
+            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'];
+            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
         case 'space':,
-          return {,
-            primary: ['#1e3a8a', '#7c3aed', '#0o59669', '#dc2626', '#ea580c'],;
-            secondary: ['#3b82f6', '#a855f7', '#10b981', '#ef4444', '#f97316'],;
-            accent: ['#60a5fa', '#c084fc', '#34d399', '#f87171', '#fb923c'],;
-            glow: ['#93c5fd', '#d8b4fe', '#6ee7b7', '#fca5a5', '#fdba74'],
-          };
+          return {
+            primary: ['#1e3a8a', '#7c3aed', '#0o59669', '#dc2626', '#ea580c'];
+            secondary: ['#3b82f6', '#a855f7', '#10b981', '#ef4444', '#f97316'];
+            accent: ['#60a5fa', '#c084fc', '#34d399', '#f87171', '#fb923c'];
+            glow: ['#93c5fd', '#d8b4fe', '#6ee7b7', '#fca5a5', '#fdba74']};
         default: // quantum,
-          return {,
-            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'],;
-            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'],;
-            accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'],;
-            glow: ['#a78bfa', '#22d3ee', '#f472b6', '#34d399', '#fbbf24'],
-          };
+          return {
+            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'];
+            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'];
+            accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
+            glow: ['#a78bfa', '#22d3ee', '#f472b6', '#34d399', '#fbbf24']};
       }
     };
-,
     const colors = getThemeColors(),
-,
     // Enhanced particle system with multiple types,
-    let particles: Array<{,
+    let particles: Array<{
       x: number,
       y: number,
       vx: number,
@@ -101,135 +84,112 @@ export default function UltraAdvancedFuturisticBackground20o36({,
       pulse: number,
       pulseSpeed: number,
       connectionTargets: number[],
-    ,}> = [],
-,
+    }> = [],
     // Initialize particles,
-    const initParticles = () => {,
+    const initParticles = () => {
       particles = [],
       const isSmallScreen = window.innerWidth < 768,
       const baseCount = prefersReducedMotion ? 30 : (isSmallScreen ? 120 : 30o0),
       const particleCount = Math.floor(baseCount * intensityMultiplier),
-,
-      for (let i = 0, i < particleCount, i++) {,
+      for (let i = 0, i < particleCount, i++) {
         const particleType = Math.random() < 0.2 ? 'quantum' :,
                            Math.random() < 0.3 ? 'wave' :,
                            Math.random() < 0.4 ? 'neon' :,
                            Math.random() < 0.5 ? 'hologram' :,
                            Math.random() < 0.6 ? 'energy' :,
                            Math.random() < 0.7 ? 'data' : 'particle',
-,
-        particles.push({,
-          x: Math.random() * canvas.width,;
-          y: Math.random() * canvas.height,;
-          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,;
-          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,;
-          size: Math.random() * 4 + 1,;
-          opacity: Math.random() * 0.8 + 0.2,;
-          color: colors.primary[Math.floor(Math.random() * colors.primary.length)],;
-          type: particleType,;
-          life: Math.random() * 10o0,;
-          maxLife: 10o0 + Math.random() * 20o0,;
-          rotation: Math.random() * Math.PI * 2,;
-          rotationSpeed: (Math.random() - 0.5) * 0.1,;
-          pulse: Math.random() * Math.PI * 2,;
-          pulseSpeed: Math.random() * 0.0o5 + 0.0o2,;
+        particles.push({
+          x: Math.random() * canvas.width;
+          y: Math.random() * canvas.height;
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
+          size: Math.random() * 4 + 1;
+          opacity: Math.random() * 0.8 + 0.2;
+          color: colors.primary[Math.floor(Math.random() * colors.primary.length)];
+          type: particleType;
+          life: Math.random() * 10o0;
+          maxLife: 10o0 + Math.random() * 20o0;
+          rotation: Math.random() * Math.PI * 2;
+          rotationSpeed: (Math.random() - 0.5) * 0.1;
+          pulse: Math.random() * Math.PI * 2;
+          pulseSpeed: Math.random() * 0.0o5 + 0.0o2;
           connectionTargets: [],
-        ,}),
-      }
+        })}
     };
-,
     // Initialize connections between particles,
-    const initConnections = () => {,
-      particles.forEach((particle, i) => {,
+    const initConnections = () => {
+      particles.forEach((particle, i) => {
         const connectionCount = Math.floor(Math.random() * 3) + 1,
-        for (let j = 0, j < connectionCount, j++) {,
+        for (let j = 0, j < connectionCount, j++) {
           const targetIndex = Math.floor(Math.random() * particles.length),
-          if (targetIndex !== i && !particle.connectionTargets.includes(targetIndex)) {,
-            particle.connectionTargets.push(targetIndex),
-          }
+          if (targetIndex !== i && !particle.connectionTargets.includes(targetIndex)) {
+            particle.connectionTargets.push(targetIndex)}
         }
-      }),
-    };
-,
+      })};
     // Update particles,
-    const updateParticles = () => {,
-      particles.forEach((particle) => {,
+    const updateParticles = () => {
+      particles.forEach((particle) => {
         // Update position,
         particle.x += particle.vx,
         particle.y += particle.vy,
-,
         // Bounce off edges,
         if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1,
         if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1,
-,
         // Update rotation and pulse,
         particle.rotation += particle.rotationSpeed,
         particle.pulse += particle.pulseSpeed,
-,
         // Update life,
         particle.life++,
-        if (particle.life > particle.maxLife) {,
+        if (particle.life > particle.maxLife) {
           particle.life = 0,
           particle.x = Math.random() * canvas.width,
-          particle.y = Math.random() * canvas.height,
-        }
+          particle.y = Math.random() * canvas.height}
 ,
         // Mouse interaction,
-        if (interactive && isHovered) {,
+        if (interactive && isHovered) {
           const dx = mousePosition.x - particle.x,
           const dy = mousePosition.y - particle.y,
           const distance = Math.sqrt(dx * dx + dy * dy),
-          if (distance < 10o0) {,
+          if (distance < 10o0) {
             const force = (10o0 - distance) / 10o0,
             particle.vx += (dx / distance) * force * 0.1,
-            particle.vy += (dy / distance) * force * 0.1,
-          }
+            particle.vy += (dy / distance) * force * 0.1}
         }
-      }),
-    };
-,
+      })};
     // Draw particles,
-    const drawParticles = () => {,
+    const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
-,
       // Draw connections first,
-      particles.forEach((particle) => {,
-        particle.connectionTargets.forEach((targetIndex) => {,
+      particles.forEach((particle) => {
+        particle.connectionTargets.forEach((targetIndex) => {
           const target = particles[targetIndex],
-          if (target) {,
-            const distance = Math.sqrt(,
-              Math.pow(particle.x - target.x, 2) + Math.pow(particle.y - target.y, 2),
-            ),
-            if (distance < 150) {,
+          if (target) {
+            const distance = Math.sqrt(
+              Math.pow(particle.x - target.x, 2) + Math.pow(particle.y - target.y, 2)),
+            if (distance < 150) {
               const opacity = Math.max(0, (150 - distance) / 150) * 0.3,
               ctx.strokeStyle = `${particle.color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`,
               ctx.lineWidth = 1,
               ctx.beginPath(),
               ctx.moveTo(particle.x, particle.y),
               ctx.lineTo(target.x, target.y),
-              ctx.stroke(),
-            }
+              ctx.stroke()}
           }
-        }),
-      }),
-,
+        })}),
       // Draw particles,
-      particles.forEach((particle) => {,
+      particles.forEach((particle) => {
         ctx.save(),
         ctx.translate(particle.x, particle.y),
         ctx.rotate(particle.rotation),
-,
         const pulseOpacity = Math.sin(particle.pulse) * 0.3 + 0.7,
         const finalOpacity = particle.opacity * pulseOpacity,
-,
-        switch (particle.type) {,
+        switch (particle.type) {
           case 'quantum':,
             // Draw quantum particle,
             ctx.fillStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
             ctx.beginPath(),
             ctx.arc(0, 0, particle.size, 0, Math.PI * 2),
             ctx.fill(),
-,
             // Quantum glow effect,
             ctx.shadowColor = particle.color,
             ctx.shadowBlur = particle.size * 3,
@@ -237,21 +197,18 @@ export default function UltraAdvancedFuturisticBackground20o36({,
             ctx.arc(0, 0, particle.size * 0.5, 0, Math.PI * 2),
             ctx.fill(),
             break,
-,
           case 'wave':,
             // Draw wave particle,
             ctx.strokeStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
             ctx.lineWidth = 2,
             ctx.beginPath(),
-            for (let i = 0, i < 10, i++) {,
+            for (let i = 0, i < 10, i++) {
               const x = (i - 5) * particle.size * 0.5,
               const y = Math.sin(i * 0.5 + particle.pulse) * particle.size,
               if (i === 0) ctx.moveTo(x, y),
-              else ctx.lineTo(x, y),
-            }
+              else ctx.lineTo(x, y)}
             ctx.stroke(),
             break,
-,
           case 'hologram':,
             // Draw hologram particle,
             ctx.strokeStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
@@ -262,7 +219,6 @@ export default function UltraAdvancedFuturisticBackground20o36({,
             ctx.stroke(),
             ctx.setLineDash([]),
             break,
-,
           case 'energy':,
             // Draw energy particle,
             ctx.fillStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
@@ -273,75 +229,60 @@ export default function UltraAdvancedFuturisticBackground20o36({,
             ctx.closePath(),
             ctx.fill(),
             break,
-,
           case 'data':,
             // Draw data particle,
             ctx.fillStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
             ctx.fillRect(-particle.size * 0.5, -particle.size * 0.5, particle.size, particle.size),
             break,
-,
           default: ,
             // Draw regular particle,
-            ctx.fillStyle = `${particle.color,}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
+            ctx.fillStyle = `${particle.color}${Math.floor(finalOpacity * 255).toString(16).padStart(2, '0')}`,
             ctx.beginPath(),
             ctx.arc(0, 0, particle.size, 0, Math.PI * 2),
-            ctx.fill(),
-        }
+            ctx.fill()}
 ,
-        ctx.restore(),
-      }),
-    };
-,
+        ctx.restore()})};
     // Animation loop,
     let animationId: number,
-    const animate = () => {,
+    const animate = () => {
       updateParticles(),
       drawParticles(),
       animationId = requestAnimationFrame(animate),
-    ,};
-,
+    };
     initParticles(),
     initConnections(),
     animate(),
-,
     // Mouse event handlers,
-    if (interactive) {,
-      const handleMouseMove = (e: MouseEvent) => {,
+    if (interactive) {
+      const handleMouseMove = (e: MouseEvent) => {
         const rect = canvas.getBoundingClientRect(),
-        setMousePosition({,
-          x: e.clientX - rect.left,;
+        setMousePosition({
+          x: e.clientX - rect.left;
           y: e.clientY - rect.top,
-        ,}),
-      };
-,
+        })};
       const handleMouseEnter = () => setIsHovered(true),
       const handleMouseLeave = () => setIsHovered(false),
-,
       canvas.addEventListener('mousemove', handleMouseMove),
       canvas.addEventListener('mouseenter', handleMouseEnter),
       canvas.addEventListener('mouseleave', handleMouseLeave),
-,
-      return () => {,
+      return () => {
         cancelAnimationFrame(animationId),
         window.removeEventListener('resize', resizeCanvas),
         canvas.removeEventListener('mousemove', handleMouseMove),
         canvas.removeEventListener('mouseenter', handleMouseEnter),
-        canvas.removeEventListener('mouseleave', handleMouseLeave),
-      };
+        canvas.removeEventListener('mouseleave', handleMouseLeave)};
     }
 ,
-    return () => {,
+    return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize', resizeCanvas),
-    };
+      window.removeEventListener('resize', resizeCanvas)};
   }, [intensity, theme, interactive, mousePosition.x, mousePosition.y, isHovered]),
-,
-  return (,
+  return (
     <div ref={containerRef} className="fixed inset-0 overflow-hidden pointer-events-none">,
-      <canvas,
+      <canvas
         ref={canvasRef}
         className="w-full h-full",
-        style={{ filter: 'blur(0.5px)' ,}}
+        style={{ filter: 'blur(0.5px)' }}
        />,
       {/* Additional visual effects */}
       <div className="absolute inset-0">,
@@ -353,31 +294,29 @@ export default function UltraAdvancedFuturisticBackground20o36({,
           <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(59,130,246,0.3)_10o0%)] bg-[length: 50px_50px]"  />,
           <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(147,51,234,0.3)_10o0%)] bg-[length: 50px_50px]"  />,
         </div>,
-        {/* Floating orbs */,}
+        {/* Floating orbs */}
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-full blur-xl",
-          animate={{,
-            scale: [1, 1.2, 1],;
+          animate={{
+            scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]}}
-          transition={{,
-            duration: 4,;
-            repeat: Infinity,;
+          transition={{
+            duration: 4;
+            repeat: Infinity;
             ease: "easeInOut",
-          ,}}
+          }}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl",
-          animate={{,
-            scale: [1.2, 1, 1.2],;
+          animate={{
+            scale: [1.2, 1, 1.2];
             opacity: [0.6, 0.3, 0.6]}}
-          transition={{,
-            duration: 3,;
-            repeat: Infinity,;
+          transition={{
+            duration: 3;
+            repeat: Infinity;
             ease: "easeInOut",
-          ,}}
+          }}
          />,
       </div>,
       {children}
-    </div>,
-  ),
-}
+    </div>)}

@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge',
 import { SERVICE_CATEGORIES } from '@/data/microSaasServices',
 import { Sparkles, Zap, TrendingUp, ArrowRight, Star, CheckCircle, Globe, MessageCircle } from 'lucide-react',
-export function NewServicesShowcase() {,
+export function NewServicesShowcase() {
     // Get featured services from each category,
     const featuredServices = SERVICE_CATEGORIES.map(category => category.services[0]).filter(Boolean),
     return (<section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">,
@@ -32,12 +32,12 @@ export function NewServicesShowcase() {,
         </div>,
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover: from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl hover:shadow-zion-purple/20" style={{ animationDelay: `${index * 20o0,}ms` }}>,
+          {featuredServices.map((service, index) => (<Card key={service.id} className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover: from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-50o0 hover:scale-10o5 hover:shadow-2xl hover:shadow-zion-purple/20" style={{ animationDelay: `${index * 20o0}ms` }}>,
               <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0"></div>,
               <CardHeader className="relative z-10">,
                 <div className="flex items-center justify-between mb-4">,
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">,
-                    {service.category,}
+                    {service.category}
                   </Badge>,
                   <div className="flex items-center gap-1 text-yellow-50o0">,
                     <Star className="w-4 h-4 fill-current" />,
@@ -45,7 +45,7 @@ export function NewServicesShowcase() {,
                   </div>,
                 </div>,
                 <CardTitle className="text-xl font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors">,
-                  {service.title,}
+                  {service.title}
                 </CardTitle>,
                 <CardDescription className="text-zion-slate-light text-sm leading-relaxed">,
                   {service.description}
@@ -62,7 +62,7 @@ export function NewServicesShowcase() {,
                       </span>,
                     </div>,
                     <div className="text-sm text-zion-slate-light">,
-                      Market: ${service.averageMarketPrice,}
+                      Market: ${service.averageMarketPrice}
                     </div>,
                   </div>,
                   <div className="text-right">,
@@ -86,7 +86,7 @@ export function NewServicesShowcase() {,
                   <div className="flex items-center gap-2">,
                     <Zap className="w-4 h-4 text-zion-cyan" />,
                     <span className="text-zion-slate-light">AI Score: </span>,
-                    <span className="text-zion-cyan font-semibold">{service.aiScore,}</span>,
+                    <span className="text-zion-cyan font-semibold">{service.aiScore}</span>,
                   </div>,
                   <div className="flex items-center gap-2">,
                     <TrendingUp className="w-4 h-4 text-zion-cyan" />,
@@ -95,17 +95,17 @@ export function NewServicesShowcase() {,
                 </div>,
                 {/* CTA Button */}
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-10o5 transition-transform duration-30o0" asChild>,
-                  <Link to={service.contactLink,}>,
+                  <Link to={service.contactLink}>,
                     Get Started,
                     <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform duration-30o0" />,
                   </Link>,
                 </Button>,
               </CardContent>,
-            </Card>)),}
+            </Card>))}
         </div>,
         {/* Category Overview */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">,
-          {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover: border-zion-cyan/30 transition-all duration-30o0 hover:scale-10o5" style={{ animationDelay: `${index * 30o0,}ms` }}>,
+          {SERVICE_CATEGORIES.map((category, index) => (<div key={category.name} className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover: border-zion-cyan/30 transition-all duration-30o0 hover:scale-10o5" style={{ animationDelay: `${index * 30o0}ms` }}>,
               <div className="text-4xl mb-4">{category.icon}</div>,
               <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>,
               <p className="text-zion-slate-light mb-4">{category.description}</p>,
@@ -114,7 +114,7 @@ export function NewServicesShowcase() {,
               </div>,
               <Button variant="outline" className="border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10" asChild>,
                 <Link to="/micro-saas-services">,
-                  Explore {category.name,}
+                  Explore {category.name}
                   <ArrowRight className="w-4 h-4 ml-2" />,
                 </Link>,
               </Button>,
@@ -161,5 +161,5 @@ export function NewServicesShowcase() {,
         </div>,
       </div>,
     </section>),
-,}
+}
 ,

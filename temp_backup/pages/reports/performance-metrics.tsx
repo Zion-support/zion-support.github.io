@@ -1,16 +1,15 @@
 import Head from 'next/head',
-,
-export default function PerformanceMetrics() {,
-  return (,
+export default function PerformanceMetrics() {
+  return (
     <>,
       <Head>,
         <title>Performance Metrics | Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content="Real-time performance metrics, uptime statistics, and system health indicators from Zion Tech Group's autonomous systems.",
         />,
         <meta property='og: title' content='Performance Metrics' />,
-        <meta,
+        <meta
           property='og:description',
           content='Real-time performance metrics and system health indicators.',
         />,
@@ -26,7 +25,7 @@ export default function PerformanceMetrics() {,
               Real-time performance data and system health indicators,
             </p>,
             <div className='mt-4 text-sm text-white/60'>,
-              Last updated: {new Date().toLocaleString('en-US'),}
+              Last updated: {new Date().toLocaleString('en-US')}
             </div>,
           </section>,
           {/* Key Performance Indicators */}
@@ -131,7 +130,7 @@ export default function PerformanceMetrics() {,
               </div>,
             </div>,
           </section>,
-          {/* Performance Trends */,}
+          {/* Performance Trends */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-green-40o0'>,
@@ -179,7 +178,7 @@ export default function PerformanceMetrics() {,
               </div>,
             </div>,
           </section>,
-          {/* Automation Performance */,}
+          {/* Automation Performance */}
           <section className='mx-auto max-w-6xl mb-12'>,
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>,
               <h2 className='text-3xl font-bold mb-6 text-purple-40o0'>,
@@ -271,32 +270,28 @@ export default function PerformanceMetrics() {,
               </div>,
             </div>,
           </section>,
-          {/* Navigation */,}
+          {/* Navigation */}
           <section className='mx-auto max-w-4xl text-center'>,
             <div className='flex flex-wrap justify-center gap-4'>,
-              <a,
+              <a
                 href='/reports',
-                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover: bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-cyan-40o0/50'>,
                 ← Back to Reports,
               </a>,
-              <a,
+              <a
                 href='/reports/automation-overview-20o25',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-fuchsia-40o0/50'>,
                 Automation Overview,
               </a>,
-              <a,
+              <a
                 href='/',
-                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50',
-              >,
+                className='px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-20o0 hover:border-green-40o0/50'>,
                 Home,
               </a>,
             </div>,
           </section>,
         </main>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

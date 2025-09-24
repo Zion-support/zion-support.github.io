@@ -4,16 +4,15 @@ export type ForumCategory =,
   | 'ai-tools',
   | 'feedback',
   | 'announcements',
-,
-export interface ForumCategoryInfo {,
+export interface ForumCategoryInfo {
   id: ForumCategory,
   name: string,
   description: string,
   adminOnly: boolean,
   icon: string,
-,}
+}
 ,
-export interface ForumPost {,
+export interface ForumPost {
   id: string,
   title: string,
   content: string,
@@ -32,9 +31,9 @@ export interface ForumPost {,
   isPinned?: boolean,
   isLocked?: boolean,
   isFeatured?: boolean,
-,}
+}
 ,
-export interface ForumReply {,
+export interface ForumReply {
   id: string,
   postId: string,
   parentReplyId?: string,
@@ -48,23 +47,23 @@ export interface ForumReply {,
   upvotes: number,
   downvotes: number,
   isAnswer?: boolean,
-,}
+}
 ,
-export interface Badge {,
+export interface Badge {
   id: string,
   name: string,
   description: string,
   icon: string,
   color: string,
-,}
+}
 ,
-export interface UserBadge {,
+export interface UserBadge {
   userId: string,
   badgeId: string,
   awardedAt: string,
-,}
+}
 ,
-export interface CommunityUser {,
+export interface CommunityUser {
   id: string,
   name: string,
   avatar?: string,
@@ -75,5 +74,5 @@ export interface CommunityUser {,
   badges: Badge[],
   isVerified: boolean,
   isModerator: boolean,
-,}
+}
 ,

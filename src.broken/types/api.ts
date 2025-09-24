@@ -1,5 +1,4 @@
 // Type definitions for api,
-interface api {,
+interface api {
   // TODO: Add proper type definitions,
-,};
-,
+};

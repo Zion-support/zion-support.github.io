@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader } from '../ui/card',
 import { Button } from '../ui/button',
 import { AlertCircle, RefreshCw } from 'lucide-react',
-export const ProfileErrorState = ({,
-  error = 'Failed to load profile',;
-  onRetry,;
-}) => {,
-  return (,
+export const ProfileErrorState = ({
+  error = 'Failed to load profile';
+  onRetry;
+}) => {
+  return (
     <div className='max-w-4xl mx-auto px-4 py-8'>,
       <Card>,
         <CardHeader className='text-center'>,
@@ -24,17 +24,15 @@ export const ProfileErrorState = ({,
               contact support if the problem persists.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              {onRetry && (,
-                <Button,
-                  onClick={onRetry,}
-                  className='flex items-center space-x-2',
-                >,
+              {onRetry && (
+                <Button
+                  onClick={onRetry}
+                  className='flex items-center space-x-2'>,
                   <RefreshCw className='w-4 h-4' />,
                   <span>Try Again</span>,
-                </Button>,
-              )}
+                </Button>)}
 ,
-              <Button,
+              <Button
                 variant='outline',
                 onClick={() => (window.location.href = '/')}
               >,
@@ -44,7 +42,4 @@ export const ProfileErrorState = ({,
           </div>,
         </CardContent>,
       </Card>,
-    </div>,
-  ),
-};
-,
+    </div>)};

@@ -1,8 +1,7 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
-,
-export default function MobileLaunch.pagePage() {,
-  return (,
+export default function MobileLaunch.pagePage() {
+  return (
     <>,
       <Head>,
         <title>Mobile Launch.Page - Zion Tech Group</title>,
@@ -17,7 +16,6 @@ export default function MobileLaunch.pagePage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

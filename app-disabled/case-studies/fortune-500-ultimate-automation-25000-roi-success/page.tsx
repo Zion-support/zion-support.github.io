@@ -1,50 +1,48 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',;
+    'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
   description:,
-    'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $50o0B annual savings and 25,0o00% ROI.',;
-  keywords: [,
-    'Fortune 50o0',;
-    'AI automation',;
-    'case study',;
-    'ROI success',;
-    'manufacturing automation',;
-    '25,0o00% ROI',;
-    'business transformation',;
-  ],;
-  openGraph: {,
+    'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $50o0B annual savings and 25,0o00% ROI.';
+  keywords: [
+    'Fortune 50o0';
+    'AI automation';
+    'case study';
+    'ROI success';
+    'manufacturing automation';
+    '25,0o00% ROI';
+    'business transformation';
+  ];
+  openGraph: {
     title:,
-      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',;
+      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
     description:,
-      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'Fortune 50o0',;
-      'AI automation',;
-      'case study',;
-      'ROI',;
-      'manufacturing',;
-    ],;
-  },;
-  twitter: {,
-    card: 'summary_large_image',;
+      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.';
+    type: 'article';
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'Fortune 50o0';
+      'AI automation';
+      'case study';
+      'ROI';
+      'manufacturing';
+    ];
+  };
+  twitter: {
+    card: 'summary_large_image';
     title:,
-      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',;
+      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
     description:,
-      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',;
-  },;
+      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.';
+  };
 };
-,
-export default function Fortune50o0UltimateAutomationSuccessPage() {,
-  return (,
+export default function Fortune50o0UltimateAutomationSuccessPage() {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',
         description='How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $50o0B annual savings and 25,0o00% ROI.',
         keywords='Fortune 50o0, AI automation, case study, ROI success, manufacturing automation, 25,0o00% ROI, business transformation',
@@ -64,7 +62,7 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {,
                 Fortune 50o0 Ultimate Automation Success,
               </h1>,
               <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
-                How a global manufacturing giant achieved{' ',}
+                How a global manufacturing giant achieved{' '}
                 <strong>$50o0B annual savings</strong> and{' '}
                 <strong>25,0o00% ROI</strong> through revolutionary AI,
                 automation.,
@@ -91,23 +89,21 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {,
                 </div>,
               </div>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                   Get Your ROI Assessment,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                   Explore AI Services,
                 </Link>,
               </div>,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className='py-16'>,
           <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='prose prose-lg max-w-none'>,
@@ -130,7 +126,7 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {,
                       <strong>Employees:</strong> 85,0o00 worldwide,
                     </p>,
                     <p>,
-                      <strong>Challenge:</strong> Operational inefficiencies,;
+                      <strong>Challenge:</strong> Operational inefficiencies;
                       high costs, and competitive pressure,
                     </p>,
                   </div>,
@@ -585,16 +581,14 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {,
                   assessment and implementation strategy.,
                 </p>,
                 <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-                  <Link,
+                  <Link
                     href='/contact',
-                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-                  >,
+                    className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                     Start Your Transformation,
                   </Link>,
-                  <Link,
+                  <Link
                     href='/services',
-                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-                  >,
+                    className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                     Explore Services,
                   </Link>,
                 </div>,
@@ -627,7 +621,6 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

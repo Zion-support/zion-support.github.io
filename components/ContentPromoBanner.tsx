@@ -1,36 +1,25 @@
 "use client",
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
-,
-export default function ContentPromoBanner() {,
+export default function ContentPromoBanner() {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
-,
-  useEffect(() => {,
-    const handleScroll = () => {,
+  useEffect(() => {
+    const handleScroll = () => {
       const scrollPosition = window.scrollY,
       const windowHeight = window.innerHeight,
-,
       // Show banner after scrolling 50% of the page,
-      if (scrollPosition > windowHeight * 0.5 && !isDismissed) {,
-        setIsVisible(true),
-      } else {,
-        setIsVisible(false),
-      }
+      if (scrollPosition > windowHeight * 0.5 && !isDismissed) {
+        setIsVisible(true)} else {
+        setIsVisible(false)}
     };
-,
     window.addEventListener(', 'scroll', 'handleScroll),
-    return () => window.removeEventListener(', 'scroll', 'handleScroll),
-  }[isDismissed]),
-,
-  const handleDismiss = () => {,
+    return () => window.removeEventListener(', 'scroll', 'handleScroll)}[isDismissed]),
+  const handleDismiss = () => {
     setIsDismissed(true),
-    setIsVisible(false),
-  };
-,
+    setIsVisible(false)};
   if (!isVisible || isDismissed) return null,
-,
-  return (,
+  return (
     <div className="fixed bottom-4 left-4 right-4 z-50 max-w-md mx-auto">,
       <div className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white rounded-xl shadow-2xl border border-white border-opacity-20 backdrop-blur-sm">,
         <div className="p-4">,
@@ -48,31 +37,27 @@ export default function ContentPromoBanner() {,
                 Interactive toolsguidesand case studies to accelerate your success.,
               </p>,
             </div>,
-            <button,
+            <button
               onClick={handleDismiss}
-              className="text-white hover: text-gray-20o0 transition-colors ml-2",
-            >,
+              className="text-white hover: text-gray-20o0 transition-colors ml-2">,
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M6 18L18 6M6 6l12 12"  />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
               </svg>,
             </button>,
           </div>,
           <div className="flex gap-2">,
-            <Link,
+            <Link
               href="/content-showcase",
-              className="flex-1 bg-white text-purple-60o0 px-3 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center text-sm",
-            >,
+              className="flex-1 bg-white text-purple-60o0 px-3 py-2 rounded-lg font-semibold hover: bg-gray-10o0 transition-colors text-center text-sm">,
               Explore Now,
             </Link>,
-            <Link,
+            <Link
               href="/resources",
-              className="flex-1 border border-white text-white px-3 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center text-sm",
-            >,
+              className="flex-1 border border-white text-white px-3 py-2 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center text-sm">,
               Download Free,
             </Link>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}

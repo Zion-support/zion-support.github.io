@@ -1,12 +1,11 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'AI 20o26: Autonomous Finance Operating System | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Autonomous Finance Operating System | Zion Tech Group';
   description:,
-    'Real-time cash visibility, autonomous close, and policy-as-code guardrails for finance.',;
+    'Real-time cash visibility, autonomous close, and policy-as-code guardrails for finance.';
 };
-,
-export default function AutonomousFinanceOS20o26Page() {,
-  return (,
+export default function AutonomousFinanceOS20o26Page() {
+  return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <div className='mb-6 text-sm text-purple-70o0 font-semibold'>Finance</div>,
       <h1 className='text-4xl font-bold text-gray-90o0 mb-4'>,
@@ -35,20 +34,17 @@ export default function AutonomousFinanceOS20o26Page() {,
         </p>,
       </div>,
       <div className='mt-10 flex gap-4'>,
-        <Link,
+        <Link
           href='/contact',
-          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-        >,
+          className='inline-block bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
           Request a Demo,
         </Link>,
-        <Link,
+        <Link
           href='/services/ai-automation',
-          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50',
-        >,
+          className='inline-block border border-purple-60o0 text-purple-70o0 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50'>,
           Explore AI Automation,
         </Link>,
       </div>,
-    </main>,
-  ),
-,}
+    </main>),
+}
 ,

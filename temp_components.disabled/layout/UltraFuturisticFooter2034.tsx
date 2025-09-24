@@ -1,145 +1,132 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-import {,
-  Zap, Mail, Phone, MapPin, Globe,;
-  Twitter, Linkedin, Facebook, Instagram,;
-  Youtube, Github, ArrowRight, Star,;
-  Shield, Rocket, Brain, Atom, DollarSign,;
-  Users, FileText, HelpCircle, Settings,;
-  TrendingUp, Award, CheckCircle, Clock,;
-  Globe as GlobeIcon, Cpu, Database, Lock,;
-  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale,
-} from 'lucide-react',
-,
-const contactInfo ={,
-  mobile: '+1 30o2 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 10o08 Middletown DE 19709',;
+import {
+  Zap, Mail, Phone, MapPin, Globe;
+  Twitter, Linkedin, Facebook, Instagram;
+  Youtube, Github, ArrowRight, Star;
+  Shield, Rocket, Brain, Atom, DollarSign;
+  Users, FileText, HelpCircle, Settings;
+  TrendingUp, Award, CheckCircle, Clock;
+  Globe as GlobeIcon, Cpu, Database, Lock;
+  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale} from 'lucide-react',
+const contactInfo ={
+  mobile: '+1 30o2 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 10o08 Middletown DE 19709';
   website: 'https://ziontechgroup.com',
-,};
-,
-const footerSections = [,
-  {,
-    title: 'AI & Consciousness',;
-    links: [,
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25' ,},;
-      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' ,},;
-      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' ,},;
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' ,},;
-      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' ,},;
-      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' ,},;
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' ,},;
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' ,}
-    ],
-  },;
-  {,
-    title: 'Quantum & Emerging Tech',;
-    links: [,
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' ,},;
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' ,},;
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' ,},;
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' ,},;
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' ,},;
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' ,},;
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' ,},;
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' ,},;
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' ,},;
-      { name: 'Quantum Robotics', href: '/quantum-robotics' ,},;
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' ,},;
-      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' ,},;
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' ,}
-    ],
-  },;
-  {,
-    title: 'Enterprise IT',;
-    links: [,
-      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' ,},;
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' ,},;
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform' ,},;
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' ,},;
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' ,},;
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' ,},;
-      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' ,},;
-      { name: 'Quantum Networking', href: '/quantum-networking' ,}
-    ],
-  },;
-  {,
-    title: 'Micro SAAS',;
-    icon: <Rocket className="w-5 h-5 text-purple-40o0"  />,;
-    services: [,
-      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory' ,},;
-      { name: 'Quantum CRM Intelligence Suite', href: '/quantum-crm-intelligence-suite' ,},;
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' ,},;
-      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro' ,},;
-      { name: 'AI Education Platform Pro', href: '/ai-education-platform-pro' ,},;
-      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro' ,},;
-      { name: 'AI Financial Intelligence Pro', href: '/ai-financial-intelligence-pro' ,},;
-      { name: 'AI Sustainability Platform Pro', href: '/ai-sustainability-platform-pro' ,},;
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform' ,},;
-      { name: 'AI Legal Contract Analyzer Pro', href: '/ai-legal-contract-analyzer-pro' ,}
-    ],
-  }
+};
+const footerSections = [
+  {
+    title: 'AI & Consciousness';
+    links: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o25' };
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' };
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' };
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' };
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' };
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' };
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' };
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' }
+    ]};
+  {
+    title: 'Quantum & Emerging Tech';
+    links: [
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' };
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' };
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' };
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' };
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' };
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' };
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' };
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' };
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' };
+      { name: 'Quantum Robotics', href: '/quantum-robotics' };
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' };
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' };
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }
+    ]};
+  {
+    title: 'Enterprise IT';
+    links: [
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' };
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' };
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform' };
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' };
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' };
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' };
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' };
+      { name: 'Quantum Networking', href: '/quantum-networking' }
+    ]};
+  {
+    title: 'Micro SAAS';
+    icon: <Rocket className="w-5 h-5 text-purple-40o0"  />;
+    services: [
+      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory' };
+      { name: 'Quantum CRM Intelligence Suite', href: '/quantum-crm-intelligence-suite' };
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' };
+      { name: 'AI Creativity Studio Pro', href: '/ai-creativity-studio-pro' };
+      { name: 'AI Education Platform Pro', href: '/ai-education-platform-pro' };
+      { name: 'AI Healthcare Diagnostics Pro', href: '/ai-healthcare-diagnostics-pro' };
+      { name: 'AI Financial Intelligence Pro', href: '/ai-financial-intelligence-pro' };
+      { name: 'AI Sustainability Platform Pro', href: '/ai-sustainability-platform-pro' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform' };
+      { name: 'AI Legal Contract Analyzer Pro', href: '/ai-legal-contract-analyzer-pro' }
+    ]}
 ],
-,
-const companyLinks = [,
-  { name: 'About Us', href: '/about' ,},;
-  { name: 'Leadership Team', href: '/leadership' ,},;
-  { name: 'Careers', href: '/careers' ,},;
-  { name: 'News & Press', href: '/news' ,},;
-  { name: 'Partners', href: '/partners' ,},;
-  { name: 'Investors', href: '/investors' ,},;
-  { name: 'Contact Us', href: '/contact' ,},;
-  { name: 'Locations', href: '/locations' ,},;
-  { name: 'Sustainability', href: '/sustainability' ,},;
-  { name: 'Diversity & Inclusion', href: '/diversity-inclusion' ,}
+const companyLinks = [
+  { name: 'About Us', href: '/about' };
+  { name: 'Leadership Team', href: '/leadership' };
+  { name: 'Careers', href: '/careers' };
+  { name: 'News & Press', href: '/news' };
+  { name: 'Partners', href: '/partners' };
+  { name: 'Investors', href: '/investors' };
+  { name: 'Contact Us', href: '/contact' };
+  { name: 'Locations', href: '/locations' };
+  { name: 'Sustainability', href: '/sustainability' };
+  { name: 'Diversity & Inclusion', href: '/diversity-inclusion' }
 ],
-,
-const resourceLinks = [,
-  { name: 'Documentation', href: '/docs' ,},;
-  { name: 'API Reference', href: '/api-documentation' ,},;
-  { name: 'Case Studies', href: '/case-studies' ,},;
-  { name: 'Blog & News', href: '/blog' ,},;
-  { name: 'Support Center', href: '/support' ,},;
-  { name: 'Training & Certification', href: '/training' ,},;
-  { name: 'Community Forum', href: '/community' ,},;
-  { name: 'Developer Resources', href: '/developer-resources' ,},;
-  { name: 'Research & Development', href: '/research-development' ,},;
-  { name: 'White Papers', href: '/white-papers' ,}
+const resourceLinks = [
+  { name: 'Documentation', href: '/docs' };
+  { name: 'API Reference', href: '/api-documentation' };
+  { name: 'Case Studies', href: '/case-studies' };
+  { name: 'Blog & News', href: '/blog' };
+  { name: 'Support Center', href: '/support' };
+  { name: 'Training & Certification', href: '/training' };
+  { name: 'Community Forum', href: '/community' };
+  { name: 'Developer Resources', href: '/developer-resources' };
+  { name: 'Research & Development', href: '/research-development' };
+  { name: 'White Papers', href: '/white-papers' }
 ],
-,
-const solutionLinks = [,
-  { name: 'Healthcare Solutions', href: '/healthcare-solutions' ,},;
-  { name: 'Financial Services', href: '/financial-solutions' ,},;
-  { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' ,},;
-  { name: 'Retail Technology', href: '/retail-technology-solutions' ,},;
-  { name: 'Education Technology', href: '/education-technology-solutions' ,},;
-  { name: 'Government Solutions', href: '/government-technology-solutions' ,},;
-  { name: 'Energy & Utilities', href: '/energy-utilities-solutions' ,},;
-  { name: 'Transportation & Logistics', href: '/transportation-logistics-solutions' ,},;
-  { name: 'Real Estate Technology', href: '/real-estate-technology-solutions' ,},;
-  { name: 'Entertainment & Media', href: '/entertainment-media-solutions' ,}
+const solutionLinks = [
+  { name: 'Healthcare Solutions', href: '/healthcare-solutions' };
+  { name: 'Financial Services', href: '/financial-solutions' };
+  { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' };
+  { name: 'Retail Technology', href: '/retail-technology-solutions' };
+  { name: 'Education Technology', href: '/education-technology-solutions' };
+  { name: 'Government Solutions', href: '/government-technology-solutions' };
+  { name: 'Energy & Utilities', href: '/energy-utilities-solutions' };
+  { name: 'Transportation & Logistics', href: '/transportation-logistics-solutions' };
+  { name: 'Real Estate Technology', href: '/real-estate-technology-solutions' };
+  { name: 'Entertainment & Media', href: '/entertainment-media-solutions' }
 ],
-,
-const socialLinks = [,
-  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-40o0' ,},;
-  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-60o0' ,},;
-  { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-50o0' ,},;
-  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-50o0' ,},;
-  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-50o0' ,},;
-  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-40o0' ,}
+const socialLinks = [
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-40o0' };
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-60o0' };
+  { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-50o0' };
+  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-50o0' };
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-50o0' };
+  { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-40o0' }
 ],
-,
-const quickLinks = [,
-  { name: 'All Services', href: '/comprehensive-services-showcase-20o25' ,},;
-  { name: 'Pricing', href: '/pricing' ,},;
-  { name: 'Contact', href: '/contact' ,},;
-  { name: 'Support', href: '/support' ,},;
-  { name: 'Documentation', href: '/docs' ,},;
-  { name: 'API Reference', href: '/api-docs' ,}
+const quickLinks = [
+  { name: 'All Services', href: '/comprehensive-services-showcase-20o25' };
+  { name: 'Pricing', href: '/pricing' };
+  { name: 'Contact', href: '/contact' };
+  { name: 'Support', href: '/support' };
+  { name: 'Documentation', href: '/docs' };
+  { name: 'API Reference', href: '/api-docs' }
 ],
-,
-export default function UltraFuturisticFooter20o34() {,
-  return (,
+export default function UltraFuturisticFooter20o34() {
+  return (
     <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-50o0/20 overflow-hidden">,
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0">,
@@ -150,9 +137,9 @@ export default function UltraFuturisticFooter20o34() {,
         <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-purple-50o0/30 to-transparent"  />,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Main Footer Content */,}
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,
-          {/* Company Information */,}
+          {/* Company Information */}
           <div className="space-y-6">,
             <div className="flex items-center space-x-3">,
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 rounded-lg flex items-center justify-center">,
@@ -180,7 +167,7 @@ export default function UltraFuturisticFooter20o34() {,
               </a>,
             </div>,
           </div>,
-          {/* AI & Technology Services */,}
+          {/* AI & Technology Services */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Brain className="w-5 h-5 text-cyan-40o0"  />,
@@ -197,7 +184,7 @@ export default function UltraFuturisticFooter20o34() {,
               <li><a href="/ai-creativity-studio" className="text-gray-30o0 hover:text-cyan-40o0 transition-colors text-sm">AI Creativity Studio</a></li>,
             </ul>,
           </div>,
-          {/* Quantum & Emerging Tech */,}
+          {/* Quantum & Emerging Tech */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Atom className="w-5 h-5 text-purple-40o0"  />,
@@ -214,7 +201,7 @@ export default function UltraFuturisticFooter20o34() {,
               <li><a href="/quantum-networking" className="text-gray-30o0 hover:text-purple-40o0 transition-colors text-sm">Quantum Networking</a></li>,
             </ul>,
           </div>,
-          {/* Enterprise IT & Infrastructure */,}
+          {/* Enterprise IT & Infrastructure */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Shield className="w-5 h-5 text-blue-40o0"  />,
@@ -232,9 +219,9 @@ export default function UltraFuturisticFooter20o34() {,
             </ul>,
           </div>,
         </div>,
-        {/* Additional Service Categories */,}
+        {/* Additional Service Categories */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {/* Micro SAAS Solutions */,}
+          {/* Micro SAAS Solutions */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Rocket className="w-5 h-5 text-green-40o0"  />,
@@ -251,7 +238,7 @@ export default function UltraFuturisticFooter20o34() {,
               <li><a href="/smart-crm-intelligence-suite" className="text-gray-30o0 hover:text-green-40o0 transition-colors text-sm">Smart CRM Suite</a></li>,
             </ul>,
           </div>,
-          {/* Business Solutions */,}
+          {/* Business Solutions */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Target className="w-5 h-5 text-orange-40o0"  />,
@@ -268,7 +255,7 @@ export default function UltraFuturisticFooter20o34() {,
               <li><a href="/innovative-business-solutions" className="text-gray-30o0 hover:text-orange-40o0 transition-colors text-sm">All Business Solutions</a></li>,
             </ul>,
           </div>,
-          {/* Resources & Support */,}
+          {/* Resources & Support */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <BookOpen className="w-5 h-5 text-pink-40o0"  />,
@@ -286,9 +273,9 @@ export default function UltraFuturisticFooter20o34() {,
             </ul>,
           </div>,
         </div>,
-        {/* Contact Information & Quick Links */,}
+        {/* Contact Information & Quick Links */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-12">,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Phone className="w-5 h-5 text-cyan-40o0"  />,
@@ -313,7 +300,7 @@ export default function UltraFuturisticFooter20o34() {,
               </div>,
             </div>,
           </div>,
-          {/* Quick Links */,}
+          {/* Quick Links */}
           <div className="space-y-6">,
             <h3 className="text-lg font-semibold text-white flex items-center space-x-2">,
               <Zap className="w-5 h-5 text-cyan-40o0"  />,
@@ -332,7 +319,7 @@ export default function UltraFuturisticFooter20o34() {,
           </div>,
         </div>,
       </div>,
-        {/* Bottom Section */,}
+        {/* Bottom Section */}
         <div className="pt-8 border-t border-cyan-50o0/20">,
           <div className="flex flex-col md: flex-row justify-between items-center space-y-4 md:space-y-0">,
             <div className="text-gray-40o0 text-sm">,
@@ -347,14 +334,12 @@ export default function UltraFuturisticFooter20o34() {,
           </div>,
         </div>,
       </div>,
-      {/* Floating Tech Elements */,}
+      {/* Floating Tech Elements */}
       <div className="absolute inset-0 pointer-events-none">,
         <div className="absolute top-1/4 left-1/6 w-2 h-32 bg-gradient-to-b from-cyan-50o0/20 to-transparent"  />,
         <div className="absolute top-1/3 right-1/6 w-2 h-24 bg-gradient-to-b from-blue-50o0/20 to-transparent"  />,
         <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-purple-40o0/20 rounded-full animate-pulse"  />,
         <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-pink-40o0/20 rounded-full animate-pulse delay-10o00"  />,
       </div>,
-    </footer>,
-  ),
-}
+    </footer>)}
 ,

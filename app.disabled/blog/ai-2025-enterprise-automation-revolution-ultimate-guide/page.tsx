@@ -1,24 +1,22 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
-  title: 'AI 20o25 Enterprise Automation Revolution: Ultimate Guide',;
+export const metadata: Metadata = {
+  title: 'AI 20o25 Enterprise Automation Revolution: Ultimate Guide';
   description:,
-    'Discover the revolutionary AI automation solutions transforming enterprises in 20o25. Complete guide to implementation, benefits, and future trends.',;
-  keywords: [,
-    'AI automation',;
-    'enterprise AI',;
-    'business automation',;
-    'AI 20o25',;
-    'digital transformation',;
-  ],;
+    'Discover the revolutionary AI automation solutions transforming enterprises in 20o25. Complete guide to implementation, benefits, and future trends.';
+  keywords: [
+    'AI automation';
+    'enterprise AI';
+    'business automation';
+    'AI 20o25';
+    'digital transformation';
+  ];
 };
-,
-export default function AI20o25EnterpriseAutomationRevolution() {,
-  return (,
+export default function AI20o25EnterpriseAutomationRevolution() {
+  return (
     <div className='min-h-screen bg-white'>,
       <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
-        {/* Header */,}
+        {/* Header */}
         <div className='mb-12'>,
           <div className='inline-flex items-center bg-gradient-to-r from-purple-10o0 to-blue-10o0 rounded-full px-6 py-2 mb-6'>,
             <span className='text-sm font-medium text-purple-80o0'>,
@@ -47,64 +45,57 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
           </h2>,
           <ul className='space-y-2'>,
             <li>,
-              <a,
+              <a
                 href='#introduction',
-                className='text-blue-60o0 hover: text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover: text-blue-80o0'>,
                 1. Introduction to AI 20o25 Revolution,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#automation-types',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 2. Types of Enterprise AI Automation,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#implementation',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 3. Implementation Strategies,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#case-studies',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 4. Real-World Case Studies,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#benefits',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 5. Measurable Benefits & ROI,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#future-trends',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 6. Future Trends & Predictions,
               </a>,
             </li>,
             <li>,
-              <a,
+              <a
                 href='#getting-started',
-                className='text-blue-60o0 hover:text-blue-80o0',
-              >,
+                className='text-blue-60o0 hover:text-blue-80o0'>,
                 7. Getting Started with AI Automation,
               </a>,
             </li>,
           </ul>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <article className='prose prose-lg max-w-none'>,
           <section id='introduction'>,
             <h2 className='text-3xl font-bold text-gray-90o0 mb-6'>,
@@ -113,7 +104,7 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
             <p className='text-lg text-gray-70o0 mb-6'>,
               The year 20o25 marks a pivotal moment in enterprise automation.,
               Artificial Intelligence has evolved from experimental technology,
-              to a core business driver, transforming how organizations operate,;
+              to a core business driver, transforming how organizations operate;
               compete, and deliver value to customers.,
             </p>,
             <p className='text-lg text-gray-70o0 mb-6'>,
@@ -209,7 +200,7 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
                   Self-Healing Systems,
                 </h3>,
                 <p className='text-gray-70o0 mb-4'>,
-                  AI-powered systems that can automatically detect, diagnose,;
+                  AI-powered systems that can automatically detect, diagnose;
                   and resolve issues without human intervention.,
                 </p>,
                 <ul className='text-sm text-gray-60o0 space-y-1'>,
@@ -467,32 +458,29 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
                 efficiency.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4'>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center',
-                >,
+                  className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors text-center'>,
                   Get Started Today,
                 </Link>,
-                <Link,
+                <Link
                   href='/services',
-                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center',
-                >,
+                  className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors text-center'>,
                   Explore Our Services,
                 </Link>,
               </div>,
             </div>,
           </section>,
         </article>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className='mt-16 border-t border-gray-20o0 pt-12'>,
           <h2 className='text-2xl font-bold text-gray-90o0 mb-8'>,
             Related Content,
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-quantum-computing-revolution',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow'>,
                 <div className='text-3xl mb-4'>⚛️</div>,
                 <h3 className='text-lg font-bold text-gray-90o0 group-hover:text-purple-60o0 mb-2'>,
@@ -504,10 +492,9 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
                 </p>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-cybersecurity-revolution',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow'>,
                 <div className='text-3xl mb-4'>🛡️</div>,
                 <h3 className='text-lg font-bold text-gray-90o0 group-hover:text-purple-60o0 mb-2'>,
@@ -519,10 +506,9 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
                 </p>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/blog/ai-20o25-generative-ai-enterprise-revolution',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow'>,
                 <div className='text-3xl mb-4'>🎨</div>,
                 <h3 className='text-lg font-bold text-gray-90o0 group-hover:text-purple-60o0 mb-2'>,
@@ -537,7 +523,6 @@ export default function AI20o25EnterpriseAutomationRevolution() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

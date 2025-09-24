@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-content-generator - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-content-generator - Zion Tech Group';
   description:,
-    'Professional ai-content-generator solutions for your business needs.',;
-  keywords: 'ai-content-generator, services, business, technology',;
+    'Professional ai-content-generator solutions for your business needs.';
+  keywords: 'ai-content-generator, services, business, technology';
 };
-export default function AiContentGeneratorPage() {,
-  return (,
+export default function AiContentGeneratorPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiContentGeneratorPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

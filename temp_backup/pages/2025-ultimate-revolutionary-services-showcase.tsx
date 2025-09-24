@@ -1,93 +1,86 @@
 import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
-import {,
-  Brain, Atom, Shield, Target, Rocket,;
-  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,;
-  Building, Cpu, Zap, Star, Globe, Lock, Cloud, Database,
-} from 'lucide-react',
-,
+import {
+  Brain, Atom, Shield, Target, Rocket;
+  ArrowRight, Check, Palette, Heart, Truck, GraduationCap;
+  Building, Cpu, Zap, Star, Globe, Lock, Cloud, Database} from 'lucide-react',
 // Import all our revolutionary services,
 import { advancedAIAutonomousEcosystemServices20o25 } from '../data/20o25-advanced-ai-autonomous-ecosystem-services',
 import { cuttingEdgeITInfrastructureInnovations20o25 } from '../data/20o25-cutting-edge-it-infrastructure-innovations',
 import { revolutionaryMicroSaasInnovations20o25 } from '../data/20o25-revolutionary-micro-saas-innovations',
 import { emergingTechnologyBreakthroughs20o25 } from '../data/20o25-emerging-technology-breakthroughs',
 import { specializedEnterpriseSolutions20o25 } from '../data/20o25-specialized-enterprise-solutions',
-,
 // Combine all services,
-const allRevolutionaryServices = [,
-  ...advancedAIAutonomousEcosystemServices20o25,;
-  ...cuttingEdgeITInfrastructureInnovations20o25,;
-  ...revolutionaryMicroSaasInnovations20o25,;
-  ...emergingTechnologyBreakthroughs20o25,;
-  ...specializedEnterpriseSolutions20o25,
-],
-,
-const serviceCategories = [,
-  {,
-    id: 'ai-autonomous-ecosystem',;
-    name: 'AI Autonomous Ecosystem',;
-    icon: <Brain className="w-8 h-8"  />,;
-    color: 'from-cyan-50o0 to-blue-50o0',;
-    description: 'Revolutionary AI autonomous systems and consciousness',;
+const allRevolutionaryServices = [
+  ...advancedAIAutonomousEcosystemServices20o25;
+  ...cuttingEdgeITInfrastructureInnovations20o25;
+  ...revolutionaryMicroSaasInnovations20o25;
+  ...emergingTechnologyBreakthroughs20o25;
+  ...specializedEnterpriseSolutions20o25],
+const serviceCategories = [
+  {
+    id: 'ai-autonomous-ecosystem';
+    name: 'AI Autonomous Ecosystem';
+    icon: <Brain className="w-8 h-8"  />;
+    color: 'from-cyan-50o0 to-blue-50o0';
+    description: 'Revolutionary AI autonomous systems and consciousness';
     services: advancedAIAutonomousEcosystemServices20o25,
-  ,},;
-  {,
-    id: 'it-infrastructure-innovations',;
-    name: 'IT Infrastructure Innovations',;
-    icon: <Building className="w-8 h-8"  />,;
-    color: 'from-indigo-50o0 to-purple-50o0',;
-    description: 'Cutting-edge IT infrastructure and quantum-safe solutions',;
+  };
+  {
+    id: 'it-infrastructure-innovations';
+    name: 'IT Infrastructure Innovations';
+    icon: <Building className="w-8 h-8"  />;
+    color: 'from-indigo-50o0 to-purple-50o0';
+    description: 'Cutting-edge IT infrastructure and quantum-safe solutions';
     services: cuttingEdgeITInfrastructureInnovations20o25,
-  ,},;
-  {,
-    id: 'revolutionary-micro-saas',;
-    name: 'Revolutionary Micro SAAS',;
-    icon: <Target className="w-8 h-8"  />,;
-    color: 'from-green-50o0 to-emerald-50o0',;
-    description: 'Breakthrough micro SAAS solutions and innovations',;
+  };
+  {
+    id: 'revolutionary-micro-saas';
+    name: 'Revolutionary Micro SAAS';
+    icon: <Target className="w-8 h-8"  />;
+    color: 'from-green-50o0 to-emerald-50o0';
+    description: 'Breakthrough micro SAAS solutions and innovations';
     services: revolutionaryMicroSaasInnovations20o25,
-  ,},;
-  {,
-    id: 'emerging-technology',;
-    name: 'Emerging Technology',;
-    icon: <Rocket className="w-8 h-8"  />,;
-    color: 'from-pink-50o0 to-rose-50o0',;
-    description: 'Space technology, metaverse, and bio-computing',;
+  };
+  {
+    id: 'emerging-technology';
+    name: 'Emerging Technology';
+    icon: <Rocket className="w-8 h-8"  />;
+    color: 'from-pink-50o0 to-rose-50o0';
+    description: 'Space technology, metaverse, and bio-computing';
     services: emergingTechnologyBreakthroughs20o25,
-  ,},;
-  {,
-    id: 'specialized-enterprise',;
-    name: 'Specialized Enterprise',;
-    icon: <Shield className="w-8 h-8"  />,;
-    color: 'from-red-50o0 to-orange-50o0',;
-    description: 'Industry-specific enterprise solutions and platforms',;
+  };
+  {
+    id: 'specialized-enterprise';
+    name: 'Specialized Enterprise';
+    icon: <Shield className="w-8 h-8"  />;
+    color: 'from-red-50o0 to-orange-50o0';
+    description: 'Industry-specific enterprise solutions and platforms';
     services: specializedEnterpriseSolutions20o25,
-  ,}
+  }
 ],
-,
-const ServiceShowcaseCard = ({ service, category }: { service: any, category: any ,}) => {,
+const ServiceShowcaseCard = ({ service, category }: { service: any, category: any }) => {
   const [isHovered, setIsHovered] = useState(false),
-,
-  return (,
+  return (
     <motion.div,
       className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-50o0 overflow-hidden",
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      whileHover={{,
-        scale: 1.0o2,;
-        y: -8,;
-        transition: { duration: 0.3 ,}
+      whileHover={{
+        scale: 1.0o2;
+        y: -8;
+        transition: { duration: 0.3 }
       }}
-      initial={{ opacity: 0, y: 20 ,}}
-      animate={{ opacity: 1, y: 0 ,}}
-      transition={{ duration: 0.5 ,}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >,
       {/* Hover Effect Overlay */}
       <motion.div,
         className="absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-purple-50o0/5 rounded-2xl opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 pointer-events-none",
-        initial={false,}
-        animate={{ opacity: isHovered ? 1 : 0 ,}}
+        initial={false}
+        animate={{ opacity: isHovered ? 1 : 0 }}
        />,
       {/* Service Header */}
       <div className="relative z-10">,
@@ -101,7 +94,7 @@ const ServiceShowcaseCard = ({ service, category }: { service: any, category: an
           </div>,
         </div>,
         <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-40o0 transition-colors">,
-          {service.name,}
+          {service.name}
         </h3>,
         <p className="text-gray-30o0 text-sm mb-4 leading-relaxed">,
           {service.tagline}
@@ -117,24 +110,22 @@ const ServiceShowcaseCard = ({ service, category }: { service: any, category: an
         <div className="mb-4">,
           <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>,
           <ul className="space-y-1">,
-            {service.features.slice(0, 4).map((feature: string, index: number) => (,
-              <li key={index,} className="flex items-center text-xs text-gray-30o0">,
+            {service.features.slice(0, 4).map((feature: string, index: number) => (
+              <li key={index} className="flex items-center text-xs text-gray-30o0">,
                 <Check className="w-3 h-3 text-cyan-40o0 mr-2 flex-shrink-0"  />,
                 {feature}
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
         {/* Benefits */}
         <div className="mb-4">,
           <h4 className="text-sm font-semibold text-white mb-2">Key Benefits: </h4>,
           <ul className="space-y-1">,
-            {service.benefits.slice(0, 3).map((benefit: string, index: number) => (,
-              <li key={index,} className="flex items-center text-xs text-gray-30o0">,
+            {service.benefits.slice(0, 3).map((benefit: string, index: number) => (
+              <li key={index} className="flex items-center text-xs text-gray-30o0">,
                 <Zap className="w-3 h-3 text-yellow-40o0 mr-2 flex-shrink-0"  />,
                 {benefit}
-              </li>,
-            ))}
+              </li>))}
           </ul>,
         </div>,
         {/* Market Info */}
@@ -143,33 +134,28 @@ const ServiceShowcaseCard = ({ service, category }: { service: any, category: an
           <div className="text-sm font-semibold text-green-40o0">{service.marketSize}</div>,
         </div>,
         {/* CTA Button */}
-        <button,
+        <button
           onClick={() => window.location.href = service.slug}
-          className="w-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover: from-cyan-60o0 hover:to-purple-60o0 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center group",
-        >,
+          className="w-full bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover: from-cyan-60o0 hover:to-purple-60o0 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-30o0 transform hover:scale-10o5 flex items-center justify-center group">,
           Learn More,
           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />,
         </button>,
-        {/* Contact Info */,}
+        {/* Contact Info */}
         <div className="mt-4 text-center">,
           <div className="text-xs text-gray-40o0 mb-1">Contact Us</div>,
           <div className="text-xs text-cyan-40o0">{service.contact}</div>,
           <div className="text-xs text-cyan-40o0">{service.mobile}</div>,
         </div>,
       </div>,
-    </motion.div>,
-  ),
-};
-,
-const CategorySection = ({ category }: { category: any ,}) => {,
+    </motion.div>)};
+const CategorySection = ({ category }: { category: any }) => {
   const [isExpanded, setIsExpanded] = useState(false),
-,
-  return (,
+  return (
     <motion.div,
       className="mb-12",
-      initial={{ opacity: 0, y: 20 ,}}
-      animate={{ opacity: 1, y: 0 ,}}
-      transition={{ duration: 0.6 ,}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
     >,
       <div className="text-center mb-8">,
         <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-2xl mb-4`}>,
@@ -179,34 +165,25 @@ const CategorySection = ({ category }: { category: any ,}) => {,
         <p className="text-gray-30o0 text-lg max-w-2xl mx-auto">{category.description}</p>,
       </div>,
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-        {category.services.map((service: any, index: number) => (,
-          <ServiceShowcaseCard key={service.id,} service={service} category={category}  />,
-        ))}
+        {category.services.map((service: any, index: number) => (
+          <ServiceShowcaseCard key={service.id} service={service} category={category}  />))}
       </div>,
-      {category.services.length > 6 && (,
+      {category.services.length > 6 && (
         <div className="text-center mt-8">,
-          <button,
+          <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover: from-cyan-60o0 hover:to-purple-60o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-30o0",
-          >,
-            {isExpanded ? 'Show Less' : `Show All ${category.services.length,} Services`}
+            className="bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover: from-cyan-60o0 hover:to-purple-60o0 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-30o0">,
+            {isExpanded ? 'Show Less' : `Show All ${category.services.length} Services`}
           </button>,
-        </div>,
-      )}
-    </motion.div>,
-  ),
-};
-,
-export default function UltimateRevolutionaryServicesShowcase() {,
+        </div>)}
+    </motion.div>)};
+export default function UltimateRevolutionaryServicesShowcase() {
   const [isVisible, setIsVisible] = useState(false),
-,
-  useEffect(() => {,
-    setIsVisible(true),
-  }, []),
-,
-  return (,
+  useEffect(() => {
+    setIsVisible(true)}, []),
+  return (
     <>,
-      <SEO,
+      <SEO
         title="20o25 Ultimate Revolutionary Services Showcase | Zion Tech Group",
         description="Discover our revolutionary micro SAAS services, AI autonomous ecosystem, quantum computing solutions, and cutting-edge IT infrastructure innovations. Transform your business with next-generation technology.",
         keywords={["revolutionary services", "AI autonomous ecosystem", "quantum computing", "micro SAAS", "IT infrastructure", "emerging technology", "Zion Tech Group"]}
@@ -217,9 +194,9 @@ export default function UltimateRevolutionaryServicesShowcase() {,
         <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,
           <div className="max-w-7xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8 }}
             >,
               <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
                 <span className="bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">,
@@ -229,7 +206,7 @@ export default function UltimateRevolutionaryServicesShowcase() {,
                 <span className="text-white">Revolutionary Services</span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Experience the future of technology with our revolutionary micro SAAS services,;
+                Experience the future of technology with our revolutionary micro SAAS services;
                 AI autonomous ecosystem, quantum computing solutions, and cutting-edge IT infrastructure innovations.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
@@ -241,12 +218,12 @@ export default function UltimateRevolutionaryServicesShowcase() {,
                 </button>,
               </div>,
             </motion.div>,
-            {/* Stats */,}
+            {/* Stats */}
             <motion.div,
               className="grid grid-cols-2 md: grid-cols-4 gap-8 mt-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >,
               <div className="text-center">,
                 <div className="text-3xl md: text-4xl font-bold text-cyan-40o0 mb-2">20+</div>,
@@ -267,14 +244,14 @@ export default function UltimateRevolutionaryServicesShowcase() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Services Showcase */,}
+        {/* Services Showcase */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8, delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Revolutionary Service Categories,
@@ -283,19 +260,18 @@ export default function UltimateRevolutionaryServicesShowcase() {,
                 Explore our comprehensive portfolio of cutting-edge services across five revolutionary categories,
               </p>,
             </motion.div>,
-            {/* Category Sections */,}
-            {serviceCategories.map((category, index) => (,
-              <CategorySection key={category.id} category={category}  />,
-            ))}
+            {/* Category Sections */}
+            {serviceCategories.map((category, index) => (
+              <CategorySection key={category.id} category={category}  />))}
           </div>,
         </section>,
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}}
-              transition={{ duration: 0.8, delay: 0.6 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
@@ -321,6 +297,5 @@ export default function UltimateRevolutionaryServicesShowcase() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}

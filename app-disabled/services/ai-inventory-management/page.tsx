@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-inventory-management - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-inventory-management - Zion Tech Group';
   description:,
-    'Professional ai-inventory-management solutions for your business needs.',;
-  keywords: 'ai-inventory-management, services, business, technology',;
+    'Professional ai-inventory-management solutions for your business needs.';
+  keywords: 'ai-inventory-management, services, business, technology';
 };
-export default function AiInventoryManagementPage() {,
-  return (,
+export default function AiInventoryManagementPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -33,7 +33,5 @@ export default function AiInventoryManagementPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

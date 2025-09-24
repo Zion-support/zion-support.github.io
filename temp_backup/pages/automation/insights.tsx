@@ -1,53 +1,42 @@
 "use client",
 import { useEffectuseState } from 'react',
 import Head from 'next/head',
-,
-export default function AutomationInsightsPage() {,
+export default function AutomationInsightsPage() {
   const [intelsetIntel] = useState<any>(null),
   const [talentMdsetTalentMd] = useState<string>(''),
-,
-  useEffect(() => {,
+  useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),
-    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {}),
-  }[]),
-,
-  return (,
+    fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})}[]),
+  return (
     <div>,
       <Head><title>Automation Insights — Zion</title></Head>,
       <h1 className="text-2xl font-semibold mb-4">Automation Insights</h1>,
       <section className="mb-8">,
         <h2 className="font-medium">Market Intelligence</h2>,
-        {!intel ? (,
-          <div className="text-sm text-gray-50o0">Loading…</div>,
-        ) : (,
+        {!intel ? (
+          <div className="text-sm text-gray-50o0">Loading…</div>) : (
           <div className="mt-3 text-sm">,
             <div className="text-xs text-gray-50o0">Generated at {intel.generatedAt}</div>,
             <div className="mt-3">,
               <h3 className="font-medium">Top Keywords</h3>,
               <ul className="list-disc list-inside">,
-                {Object.entries(intel.insights.keywordCounts).map(([kv]: any) => (,
-                  <li key={k}>{k}: {v as any}</li>,
-                ))}
+                {Object.entries(intel.insights.keywordCounts).map(([kv]: any) => (
+                  <li key={k}>{k}: {v as any}</li>))}
               </ul>,
             </div>,
             <div className="mt-4">,
               <h3 className="font-medium">Top Languages</h3>,
               <ul className="list-disc list-inside">,
-                {intel.insights.topLanguages.map((l: any) => (,
-                  <li key={l.lang,}>{l.lang}: {l.count}</li>,
-                ))}
+                {intel.insights.topLanguages.map((l: any) => (
+                  <li key={l.lang}>{l.lang}: {l.count}</li>))}
               </ul>,
             </div>,
-          </div>,
-        )}
+          </div>)}
       </section>,
       <section id="talent" className="mb-8">,
         <h2 className="font-medium">Talent Highlights</h2>,
-        {!talentMd ? (,
-          <div className="text-sm text-gray-50o0">Loading…</div>,
-        ) : (,
-          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-90o0 p-3 rounded border border-gray-20o0 dark:border-gray-80o0">{talentMd,}</pre>,
-        )}
+        {!talentMd ? (
+          <div className="text-sm text-gray-50o0">Loading…</div>) : (
+          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark: bg-gray-90o0 p-3 rounded border border-gray-20o0 dark:border-gray-80o0">{talentMd}</pre>)}
       </section>,
-    </div>,
-  )}
+    </div>)}

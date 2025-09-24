@@ -1,9 +1,7 @@
-export function PostForm() {,
-  return (,
+export function PostForm() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

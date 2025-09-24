@@ -18,14 +18,13 @@ import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSte
 import {MyApplications} from "@/components/jobs/MyApplications",
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner",
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard",
-function TalentDashboardContent() {,
+function TalentDashboardContent() {
 ,
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
-,
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Talent Dashboard | Zion AI Marketplace",
         description="Your personalized talent dashboard with job matches and professional opportunities.",
       />,
@@ -50,7 +49,7 @@ function TalentDashboardContent() {,
             </Button>,
           </div>,
         </div>,
-        {/* Project Offer Banner - Show pending offers */,}
+        {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />,
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
           <div>,
@@ -59,13 +58,11 @@ function TalentDashboardContent() {,
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <Avatar className="h-12 w-12 border">,
-                      {user?.avatarUrl ? (,
-                        <img src={user.avatarUrl,} alt={user.displayName |"User"} />,
-                      ) : (,
+                      {user?.avatarUrl ? (
+                        <img src={user.avatarUrl} alt={user.displayName |"User"} />) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">,
                           {user?.displayName?.charAt(0) |"U"}
-                        </div>,
-                      )}
+                        </div>)}
                     </Avatar>,
                     <div>,
                       <CardTitle>{user?.displayName |"User"}</CardTitle>,
@@ -99,30 +96,30 @@ function TalentDashboardContent() {,
                 </div>,
               </CardContent>,
             </Card>,
-import { useState, useEffect } from "react",;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Link } from "react-router-dom",;
-import { SEO } from "@/components/SEO",;
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { SuggestedJobs } from "@/components/jobs/SuggestedJobs",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",;
-import { MyApplications } from "@/components/jobs/MyApplications",;
-import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",;
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",;
-function TalentDashboardContent() {,
-  const { user } = useAuth(),;
+import { useState, useEffect } from "react";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, FileText, Inbox, Video } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps";
+import { MyApplications } from "@/components/jobs/MyApplications";
+import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
+function TalentDashboardContent() {
+  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches"),
-  return (,
+  return (
     <>,
-      <SEO,
+      <SEO
         title="Talent Dashboard | Zion AI Marketplace",
         description="Your personalized talent dashboard with job matches and professional opportunities.",
       />,
@@ -147,7 +144,7 @@ function TalentDashboardContent() {,
             </Button>,
           </div>,
         </div>,
-        {/* Project Offer Banner - Show pending offers */,}
+        {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />,
         <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
           <div>,
@@ -156,13 +153,11 @@ function TalentDashboardContent() {,
                 <div className="flex items-center justify-between">,
                   <div className="flex items-center gap-3">,
                     <Avatar className="h-12 w-12 border">,
-                      {user?.avatarUrl ? (,
-                        <img src={user.avatarUrl,} alt={user.displayName || "User"} />,
-                      ) : (,
+                      {user?.avatarUrl ? (
+                        <img src={user.avatarUrl} alt={user.displayName || "User"} />) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">,
                           {user?.displayName?.charAt(0) || "U"}
-                        </div>,
-                      )}
+                        </div>)}
                     </Avatar>,
                     <div>,
                       <CardTitle>{user?.displayName || "User"}</CardTitle>,
@@ -195,14 +190,9 @@ function TalentDashboardContent() {,
                   </Button>,
                 </div>,
               </CardContent>,
-            </Card>,
-,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/feature/merge-conflicts-and-improvements,
+            </Card>>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
             {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+            <TalentOnboardingSteps />>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
             {/* Upcoming Interviews Card */}
             <div className="mt-8">,
               <UpcomingInterviewsCard />,
@@ -234,7 +224,7 @@ function TalentDashboardContent() {,
             </Card>,
           </div>,
           <div className="lg: col-span-2">,
-            <Tabs defaultValue="job-matches" onValueChange={setActiveTab,}>,
+            <Tabs defaultValue="job-matches" onValueChange={setActiveTab}>,
               <TabsList className="mb-6">,
                 <TabsTrigger value="job-matches" className="flex items-center">,
                   <BriefcaseIcon className="h-4 w-4 mr-2" />,
@@ -273,31 +263,19 @@ function TalentDashboardContent() {,
         </div>,
       </main>,
       <Footer />,
-    </>,
-  ),
-}
+    </>)}
 ,
-export default function TalentDashboard() {,
-  return (,
+export default function TalentDashboard() {
+  return (
     <ProtectedRoute>,
       <TalentDashboardContent />,
-    </ProtectedRoute>,
-  ),
-}
+    </ProtectedRoute>)}
 ,
 ,
-,
-export default function TalentDashboard() {,
-  return (,
+export default function TalentDashboard() {
+  return (
     <ProtectedRoute>,
       <TalentDashboardContent />,
-    </ProtectedRoute>,
-  ),
-}
+    </ProtectedRoute>)}
 ,
-,
-,
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
->>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
->>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),
-})
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))})

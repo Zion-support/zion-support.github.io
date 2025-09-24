@@ -1,7 +1,7 @@
 import Link from 'next/link',
 ArrowRightStarZapTrendingUpUsersShield,
-export default function NewContent20o25UltimateTransformationBanner() {,
-  return (,
+export default function NewContent20o25UltimateTransformationBanner() {
+  return (
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-90o0 via-purple-90o0 to-slate-90o0 py-16">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-60o0/10 to-purple-60o0/10"></div>,
@@ -15,7 +15,7 @@ export default function NewContent20o25UltimateTransformationBanner() {,
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">,
             Discover the Future of,
             <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">,
-              {' ',}AI Business Transformation,
+              {' '}AI Business Transformation,
             </span>,
           </h2>,
           <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">,
@@ -25,70 +25,66 @@ export default function NewContent20o25UltimateTransformationBanner() {,
         </div>,
         {/* Content Cards */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {[,
-            {,
-              title: "AI 20o25: Ultimate Business Transformation",;
-              description: "Revolutionize your business with cutting-edge AI solutions that deliver unprecedented results and proven ROI.",;
-              link: "/ai-20o25-ultimate-business-transformation",;
-              icon: <TrendingUp className="h-8 w-8 text-blue-40o0"  />,;
+          {[
+            {
+              title: "AI 20o25: Ultimate Business Transformation";
+              description: "Revolutionize your business with cutting-edge AI solutions that deliver unprecedented results and proven ROI.";
+              link: "/ai-20o25-ultimate-business-transformation";
+              icon: <TrendingUp className="h-8 w-8 text-blue-40o0"  />;
               features: ["30o0% Average ROI"99.7% Accuracy"Lightning Fast Processing"],
-            ,},;
-            {,
-              title: "AI 20o25: Enterprise Automation Mastery",;
-              description: "Transform enterprise operations with comprehensive AI automation platform built for scale and security.",;
-              link: "/ai-20o25-enterprise-automation-mastery",;
-              icon: <Zap className="h-8 w-8 text-cyan-40o0"  />,;
+            };
+            {
+              title: "AI 20o25: Enterprise Automation Mastery";
+              description: "Transform enterprise operations with comprehensive AI automation platform built for scale and security.";
+              link: "/ai-20o25-enterprise-automation-mastery";
+              icon: <Zap className="h-8 w-8 text-cyan-40o0"  />;
               features: ["50o0+ Enterprise Clients"99.9% Uptime"24/7 Support"],
-            ,},;
-            {,
-              title: "AI 20o25: Ultimate Breakthrough Solutions",;
-              description: "Explore revolutionary AI technologies and breakthrough innovations that are changing the world.",;
-              link: "/ai-20o25-ultimate-breakthrough",;
-              icon: <Star className="h-8 w-8 text-purple-40o0"  />,;
+            };
+            {
+              title: "AI 20o25: Ultimate Breakthrough Solutions";
+              description: "Explore revolutionary AI technologies and breakthrough innovations that are changing the world.";
+              link: "/ai-20o25-ultimate-breakthrough";
+              icon: <Star className="h-8 w-8 text-purple-40o0"  />;
               features: ["Revolutionary Tech"Future Predictions"Industry Insights"],
-            ,}
-          ].map((contentindex) => (,
+            }
+          ].map((contentindex) => (
             <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 hover: bg-white/20 transition-all duration-30o0 border border-white/10">,
               <div className="flex items-center mb-4">,
                 <div className="p-3 bg-white/10 rounded-lg mr-4 group-hover:bg-white/20 transition-colors">,
-                  {content.icon,}
+                  {content.icon}
                 </div>,
                 <h3 className="text-xl font-semibold text-white group-hover: text-blue-30o0 transition-colors">,
-                  {content.title,}
+                  {content.title}
                 </h3>,
               </div>,
               <p className="text-gray-30o0 mb-4">{content.description}</p>,
               <div className="space-y-2 mb-6">,
-                {content.features.map((featureIndex) => (,
+                {content.features.map((featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm text-gray-30o0">,
                     <div className="w-2 h-2 bg-blue-40o0 rounded-full mr-3"></div>,
                     {feature}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
-              <Link,
+              <Link
                 href={content.link}
-                className="inline-flex items-center text-blue-40o0 hover: text-blue-30o0 font-semibold group-hover:translate-x-1 transition-all duration-30o0",
-              >,
+                className="inline-flex items-center text-blue-40o0 hover: text-blue-30o0 font-semibold group-hover:translate-x-1 transition-all duration-30o0">,
                 Explore Content,
                 <ArrowRight className="ml-2 h-4 w-4"  />,
               </Link>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         {/* Additional Features */}
         <div className="grid md: grid-cols-4 gap-6 mb-12">,
-          {[,
-            { icon: <Users className="h-6 w-6 text-green-40o0"  />text: "Expert Team" ,},;
-            { icon: <Shield className="h-6 w-6 text-yellow-40o0"  />text: "Enterprise Security" ,},;
-            { icon: <TrendingUp className="h-6 w-6 text-red-40o0"  />text: "Proven Results" ,},;
-            { icon: <Star className="h-6 w-6 text-purple-40o0"  />text: "Industry Leading" ,}
-          ].map((featureindex) => (,
+          {[
+            { icon: <Users className="h-6 w-6 text-green-40o0"  />text: "Expert Team" };
+            { icon: <Shield className="h-6 w-6 text-yellow-40o0"  />text: "Enterprise Security" };
+            { icon: <TrendingUp className="h-6 w-6 text-red-40o0"  />text: "Proven Results" };
+            { icon: <Star className="h-6 w-6 text-purple-40o0"  />text: "Industry Leading" }
+          ].map((featureindex) => (
             <div key={index} className="flex items-center justify-center space-x-2 text-gray-30o0">,
               {feature.icon}
               <span className="font-medium">{feature.text}</span>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* CTA Section */}
         <div className="text-center">,
@@ -100,23 +96,20 @@ export default function NewContent20o25UltimateTransformationBanner() {,
               Join thousands of companies already using our AI solutions to achieve unprecedented growth and efficiency.,
             </p>,
             <div className="flex flex-col sm:flex-row gap-4 justify-center">,
-              <Link,
+              <Link
                 href="/contact",
-                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center",
-              >,
+                className="bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-70o0 hover:to-purple-70o0 transition-all duration-30o0 flex items-center justify-center">,
                 Get Started Today,
                 <ArrowRight className="ml-2 h-5 w-5"  />,
               </Link>,
-              <Link,
+              <Link
                 href="/ai-20o25-ultimate-breakthrough",
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0",
-              >,
+                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-30o0">,
                 View All Content,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}

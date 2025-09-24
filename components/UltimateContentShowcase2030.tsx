@@ -1,41 +1,39 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
-,
-const UltimateContentShowcase20o30: React.FC = () => {,
-  const featuredContent = [,
-    {,
-      title: 'AI 20o30: Next-Generation Autonomous Enterprise Revolution',;
+const UltimateContentShowcase20o30: React.FC = () => {
+  const featuredContent = [
+    {
+      title: 'AI 20o30: Next-Generation Autonomous Enterprise Revolution';
       description:,
-        'Explore revolutionary AI technologies that will transform enterprises by 20o30featuring autonomous decision-making systems and self-healing infrastructure.',;
-      category: 'AI Innovation',;
-      readTime: '8 min read',;
-      link: '/blog/ai-20o30-next-generation-autonomous-enterprise-revolution',;
-      featured: true,;
-      stats: '95% cost reduction50o0% faster decisions',;
-    },;
-    {,
-      title: 'Quantum AI 20o30: Business Transformation Ultimate Guide',;
+        'Explore revolutionary AI technologies that will transform enterprises by 20o30featuring autonomous decision-making systems and self-healing infrastructure.';
+      category: 'AI Innovation';
+      readTime: '8 min read';
+      link: '/blog/ai-20o30-next-generation-autonomous-enterprise-revolution';
+      featured: true;
+      stats: '95% cost reduction50o0% faster decisions';
+    };
+    {
+      title: 'Quantum AI 20o30: Business Transformation Ultimate Guide';
       description:,
-        'Discover how Quantum AI will revolutionize business operations with quantum-enhanced machine learning and neural networks.',;
-      category: 'Quantum Computing',;
-      readTime: '12 min read',;
-      link: '/blog/quantum-ai-20o30-business-transformation-ultimate-guide',;
-      featured: true,;
-      stats: '10o00x computational speedup50o00% ROI',;
-    },;
-    {,
-      title: 'AI 20o30 Autonomous Enterprise: 10,0o00% ROI Success Story',;
+        'Discover how Quantum AI will revolutionize business operations with quantum-enhanced machine learning and neural networks.';
+      category: 'Quantum Computing';
+      readTime: '12 min read';
+      link: '/blog/quantum-ai-20o30-business-transformation-ultimate-guide';
+      featured: true;
+      stats: '10o00x computational speedup50o00% ROI';
+    };
+    {
+      title: 'AI 20o30 Autonomous Enterprise: 10,0o00% ROI Success Story';
       description:,
-        'Fortune 50o0 manufacturing company achieves unprecedented ROI through AI 20o30 Autonomous Enterprise Platform implementation.',;
-      category: 'Case Study',;
-      readTime: '10 min read',;
-      link: '/case-studies/ai-20o30-autonomous-enterprise-transformation-10o000-roi-success-story',;
-      featured: true,;
-      stats: '10,0o00% ROI$2.3B savings',;
-    },;
+        'Fortune 50o0 manufacturing company achieves unprecedented ROI through AI 20o30 Autonomous Enterprise Platform implementation.';
+      category: 'Case Study';
+      readTime: '10 min read';
+      link: '/case-studies/ai-20o30-autonomous-enterprise-transformation-10o000-roi-success-story';
+      featured: true;
+      stats: '10,0o00% ROI$2.3B savings';
+    };
   ],
-,
-  return (,
+  return (
     <section className='bg-gradient-to-br from-gray-50 to-blue-50 py-20'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -54,23 +52,22 @@ const UltimateContentShowcase20o30: React.FC = () => {,
           </p>,
         </div>,
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>,
-          {featuredContent.map(contentindex => (,
-            <div,
-              key={index,}
-              className={`bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${,
+          {featuredContent.map(contentindex => (
+            <div
+              key={index}
+              className={`bg-white rounded-2xl shadow-xl hover: shadow-2xl transition-all duration-30o0 transform hover:-translate-y-2 ${
                 content.featured ? 'ring-4 ring-purple-20o0' : '',
-              ,}`}
+              }`}
             >,
               <div className='p-8'>,
                 <div className='flex items-center justify-between mb-4'>,
                   <span className='bg-purple-10o0 text-purple-80o0 text-xs font-semibold px-3 py-1 rounded-full'>,
                     {content.category}
                   </span>,
-                  {content.featured && (,
+                  {content.featured && (
                     <span className='bg-yellow-10o0 text-yellow-80o0 text-xs font-semibold px-3 py-1 rounded-full'>,
                       ⭐ Featured,
-                    </span>,
-                  )}
+                    </span>)}
                 </div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4 leading-tight'>,
                   {content.title}
@@ -83,23 +80,21 @@ const UltimateContentShowcase20o30: React.FC = () => {,
                     Expected Impact: ,
                   </div>,
                   <div className='text-sm text-purple-70o0'>,
-                    {content.stats,}
+                    {content.stats}
                   </div>,
                 </div>,
                 <div className='flex items-center justify-between'>,
                   <span className='text-sm text-gray-50o0'>,
                     {content.readTime}
                   </span>,
-                  <Link,
+                  <Link
                     href={content.link}
-                    className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-colors',
-                  >,
+                    className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-2 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-colors'>,
                     Read More,
                   </Link>,
                 </div>,
               </div>,
-            </div>,
-          )),}
+            </div>))}
         </div>,
         <div className='bg-white rounded-2xl shadow-xl p-8 mb-12'>,
           <div className='text-center mb-8'>,
@@ -155,25 +150,20 @@ const UltimateContentShowcase20o30: React.FC = () => {,
               journey today with our expert guidance and proven methodologies.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/services',
-                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors',
-              >,
+                className='bg-white text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-gray-10o0 transition-colors'>,
                 Explore Services,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors',
-              >,
+                className='border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors'>,
                 Get Started,
               </Link>,
             </div>,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,};
-,
-export default UltimateContentShowcase20o30,
-,
+    </section>),
+};
+export default UltimateContentShowcase20o30;

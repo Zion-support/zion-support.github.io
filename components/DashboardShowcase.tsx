@@ -1,11 +1,10 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor',
 import AdvancedSecurityDashboard from './AdvancedSecurityDashboard',
 import InteractiveAnalyticsWidget from './InteractiveAnalyticsWidget',
-,
-const DashboardShowcase: React.FC = () => {,
-  return (,
+const DashboardShowcase: React.FC = () => {
+  return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-slate-90o0 to-black text-white'>,
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>,
         <div className='text-center mb-16'>,
@@ -16,21 +15,19 @@ const DashboardShowcase: React.FC = () => {,
             Real-time monitoringanalyticsand security insights for optimal,
             system performance,
           </p>,
-          <Link,
+          <Link
             href='/dashboard',
-            className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-40o0 hover:to-purple-40o0 text-white font-bold text-lg rounded-full transition-all duration-30o0 hover:scale-10o5 shadow-lg hover:shadow-xl',
-          >,
+            className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-purple-50o0 hover:from-cyan-40o0 hover:to-purple-40o0 text-white font-bold text-lg rounded-full transition-all duration-30o0 hover:scale-10o5 shadow-lg hover:shadow-xl'>,
             Explore Dashboard,
-            <svg,
+            <svg
               className='ml-2 w-5 h-5',
               fill='none',
               stroke='currentColor',
-              viewBox='0 0 24 24',
-            >,
-              <path,
+              viewBox='0 0 24 24'>,
+              <path
                 strokeLinecap='round',
                 strokeLinejoin='round',
-                strokeWidth={2,}
+                strokeWidth={2}
                 d='M13 7l5 5m0 0l-5 5m5-5H6',
               />,
             </svg>,
@@ -58,39 +55,35 @@ const DashboardShowcase: React.FC = () => {,
               monitoring dashboard.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-              <Link,
+              <Link
                 href='/dashboard',
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-40o0 hover:to-purple-40o0 text-white font-bold text-lg rounded-full transition-all duration-30o0 hover:scale-10o5',
-              >,
-                <svg,
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-50o0 to-purple-50o0 hover:from-blue-40o0 hover:to-purple-40o0 text-white font-bold text-lg rounded-full transition-all duration-30o0 hover:scale-10o5'>,
+                <svg
                   className='mr-2 w-5 h-5',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M9 19v-6a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v6a2 2 0 0o02 2h2a2 2 0 0o02-2zm0 0V9a2 2 0 0o12-2h2a2 2 0 0o12 2v10m-6 0a2 2 0 0o02 2h2a2 2 0 0o02-2m0 0V5a2 2 0 0o12-2h2a2 2 0 0o12 2v14a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2z',
                   />,
                 </svg>,
                 View Full Dashboard,
               </Link>,
-              <Link,
+              <Link
                 href='/contact',
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-40o0 text-blue-30o0 hover: bg-blue-40o0 hover:text-white font-bold text-lg rounded-full transition-all duration-30o0',
-              >,
-                <svg,
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-40o0 text-blue-30o0 hover: bg-blue-40o0 hover:text-white font-bold text-lg rounded-full transition-all duration-30o0'>,
+                <svg
                   className='mr-2 w-5 h-5',
                   fill='none',
                   stroke='currentColor',
-                  viewBox='0 0 24 24',
-                >,
-                  <path,
+                  viewBox='0 0 24 24'>,
+                  <path
                     strokeLinecap='round',
                     strokeLinejoin='round',
-                    strokeWidth={2,}
+                    strokeWidth={2}
                     d='M8 12h.0o1M12 12h.0o1M16 12h.0o1M21 12c0 4.418-4.0o3 8-9 8a9.863 9.863 0 0o1-4.255-.949L3 20l1.395-3.72C3.512 15.0o42 3 13.574 3 12c0-4.418 4.0o3-8 9-8s9 3.582 9 8z',
                   />,
                 </svg>,
@@ -100,9 +93,5 @@ const DashboardShowcase: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-};
-,
-export default DashboardShowcase,
-,
+    </section>)};
+export default DashboardShowcase;

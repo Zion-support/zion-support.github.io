@@ -1,233 +1,227 @@
 import Link from 'next/link',
-,
-export const metadata = {,
-  title: 'Quantum Computing Solutions - Zion Tech Group',;
+export const metadata = {
+  title: 'Quantum Computing Solutions - Zion Tech Group';
   description:,
-    'Cutting-edge quantum computing solutions for complex problem-solving, optimization, and advanced computational capabilities from Zion Tech Group.',;
+    'Cutting-edge quantum computing solutions for complex problem-solving, optimization, and advanced computational capabilities from Zion Tech Group.';
 };
-,
-export default function QuantumComputingPage() {,
-  const quantumSolutions = [,
-    {,
-      name: 'Quantum Neural Network Platform',;
+export default function QuantumComputingPage() {
+  const quantumSolutions = [
+    {
+      name: 'Quantum Neural Network Platform';
       description:,
-        'Advanced platform combining quantum computing with neural networks for breakthrough performance in machine learning and AI applications.',;
-      icon: '🧠',;
-      features: [,
-        'Quantum-Classical Hybrid Algorithms',;
-        'Neural Network Optimization',;
-        'Quantum Feature Mapping',;
-        'Scalable Architecture',;
-      ],;
-      applications: [,
-        'Machine Learning',;
-        'Pattern Recognition',;
-        'Optimization Problems',;
-        'AI Training',;
-      ],;
-    },;
-    {,
-      name: 'Quantum Cloud Infrastructure',;
+        'Advanced platform combining quantum computing with neural networks for breakthrough performance in machine learning and AI applications.';
+      icon: '🧠';
+      features: [
+        'Quantum-Classical Hybrid Algorithms';
+        'Neural Network Optimization';
+        'Quantum Feature Mapping';
+        'Scalable Architecture';
+      ];
+      applications: [
+        'Machine Learning';
+        'Pattern Recognition';
+        'Optimization Problems';
+        'AI Training';
+      ];
+    };
+    {
+      name: 'Quantum Cloud Infrastructure';
       description:,
-        'Cloud-based quantum computing infrastructure accessible to businesses of all sizes, with API access and performance monitoring.',;
-      icon: '☁️',;
-      features: [,
-        'Quantum Processing Units (QPUs)',;
-        'Cloud Integration & API Access',;
-        'Performance Monitoring',;
-        'Scalable Resources',;
-      ],;
-      applications: [,
-        'Research & Development',;
-        'Algorithm Testing',;
-        'Educational Purposes',;
-        'Proof of Concepts',;
-      ],;
-    },;
-    {,
-      name: 'Quantum Financial Trading',;
+        'Cloud-based quantum computing infrastructure accessible to businesses of all sizes, with API access and performance monitoring.';
+      icon: '☁️';
+      features: [
+        'Quantum Processing Units (QPUs)';
+        'Cloud Integration & API Access';
+        'Performance Monitoring';
+        'Scalable Resources';
+      ];
+      applications: [
+        'Research & Development';
+        'Algorithm Testing';
+        'Educational Purposes';
+        'Proof of Concepts';
+      ];
+    };
+    {
+      name: 'Quantum Financial Trading';
       description:,
-        'Quantum-powered trading algorithms for financial markets, offering superior risk assessment and portfolio optimization.',;
-      icon: '💹',;
-      features: [,
-        'Quantum Risk Assessment',;
-        'Portfolio Optimization',;
-        'Real-time Market Analysis',;
-        'Advanced Trading Strategies',;
-      ],;
-      applications: [,
-        'Risk Management',;
-        'Portfolio Optimization',;
-        'Algorithmic Trading',;
-        'Market Analysis',;
-      ],;
-    },;
-    {,
-      name: 'Quantum Optimization Engine',;
+        'Quantum-powered trading algorithms for financial markets, offering superior risk assessment and portfolio optimization.';
+      icon: '💹';
+      features: [
+        'Quantum Risk Assessment';
+        'Portfolio Optimization';
+        'Real-time Market Analysis';
+        'Advanced Trading Strategies';
+      ];
+      applications: [
+        'Risk Management';
+        'Portfolio Optimization';
+        'Algorithmic Trading';
+        'Market Analysis';
+      ];
+    };
+    {
+      name: 'Quantum Optimization Engine';
       description:,
-        'Specialized quantum computing solution for solving complex optimization problems across various industries.',;
-      icon: '⚡',;
-      features: [,
-        'Combinatorial Optimization',;
-        'Quantum Annealing',;
-        'Multi-objective Optimization',;
-        'Real-time Solutions',;
-      ],;
-      applications: [,
-        'Supply Chain Optimization',;
-        'Logistics Planning',;
-        'Resource Allocation',;
-        'Scheduling',;
-      ],;
-    },;
+        'Specialized quantum computing solution for solving complex optimization problems across various industries.';
+      icon: '⚡';
+      features: [
+        'Combinatorial Optimization';
+        'Quantum Annealing';
+        'Multi-objective Optimization';
+        'Real-time Solutions';
+      ];
+      applications: [
+        'Supply Chain Optimization';
+        'Logistics Planning';
+        'Resource Allocation';
+        'Scheduling';
+      ];
+    };
   ],
-,
-  const quantumTechnologies = [,
-    {,
-      name: 'Quantum Gates',;
+  const quantumTechnologies = [
+    {
+      name: 'Quantum Gates';
       description:,
-        'Fundamental building blocks of quantum circuits that manipulate qubits to perform quantum operations.',;
-      icon: '🔧',;
-    },;
-    {,
-      name: 'Quantum Circuits',;
+        'Fundamental building blocks of quantum circuits that manipulate qubits to perform quantum operations.';
+      icon: '🔧';
+    };
+    {
+      name: 'Quantum Circuits';
       description:,
-        'Sequences of quantum gates that implement quantum algorithms and computational processes.',;
-      icon: '⚡',;
-    },;
-    {,
-      name: 'Quantum Algorithms',;
+        'Sequences of quantum gates that implement quantum algorithms and computational processes.';
+      icon: '⚡';
+    };
+    {
+      name: 'Quantum Algorithms';
       description:,
-        'Specialized algorithms designed to leverage quantum mechanical properties for computational advantage.',;
-      icon: '📊',;
-    },;
-    {,
-      name: 'Quantum Error Correction',;
+        'Specialized algorithms designed to leverage quantum mechanical properties for computational advantage.';
+      icon: '📊';
+    };
+    {
+      name: 'Quantum Error Correction';
       description:,
-        'Techniques to protect quantum information from decoherence and other quantum noise sources.',;
-      icon: '🛡️',;
-    },;
-    {,
-      name: 'Quantum Entanglement',;
+        'Techniques to protect quantum information from decoherence and other quantum noise sources.';
+      icon: '🛡️';
+    };
+    {
+      name: 'Quantum Entanglement';
       description:,
-        'Quantum mechanical phenomenon where particles become correlated in ways not possible classically.',;
-      icon: '🔗',;
-    },;
-    {,
-      name: 'Quantum Superposition',;
+        'Quantum mechanical phenomenon where particles become correlated in ways not possible classically.';
+      icon: '🔗';
+    };
+    {
+      name: 'Quantum Superposition';
       description:,
-        'Ability of quantum systems to exist in multiple states simultaneously until measured.',;
-      icon: '🌀',;
-    },;
+        'Ability of quantum systems to exist in multiple states simultaneously until measured.';
+      icon: '🌀';
+    };
   ],
-,
-  const useCases = [,
-    {,
-      industry: 'Finance & Banking',;
-      applications: [,
-        'Portfolio Optimization',;
-        'Risk Assessment',;
-        'Fraud Detection',;
-        'Algorithmic Trading',;
-        'Credit Scoring',;
-      ],;
-      benefits: [,
-        'Faster Risk Calculations',;
-        'Improved Portfolio Performance',;
-        'Enhanced Security',;
-        'Real-time Analysis',;
-      ],;
-    },;
-    {,
-      industry: 'Healthcare & Pharmaceuticals',;
-      applications: [,
-        'Drug Discovery',;
-        'Protein Folding',;
-        'Genomic Analysis',;
-        'Medical Imaging',;
-        'Treatment Optimization',;
-      ],;
-      benefits: [,
-        'Accelerated Research',;
-        'Better Drug Design',;
-        'Personalized Medicine',;
-        'Improved Diagnostics',;
-      ],;
-    },;
-    {,
-      industry: 'Manufacturing & Logistics',;
-      applications: [,
-        'Supply Chain Optimization',;
-        'Production Scheduling',;
-        'Quality Control',;
-        'Inventory Management',;
-        'Route Optimization',;
-      ],;
-      benefits: [,
-        'Cost Reduction',;
-        'Improved Efficiency',;
-        'Better Resource Utilization',;
-        'Faster Decision Making',;
-      ],;
-    },;
-    {,
-      industry: 'Energy & Utilities',;
-      applications: [,
-        'Grid Optimization',;
-        'Energy Trading',;
-        'Load Balancing',;
-        'Renewable Integration',;
-        'Infrastructure Planning',;
-      ],;
-      benefits: [,
-        'Grid Stability',;
-        'Cost Optimization',;
-        'Renewable Integration',;
-        'Efficient Distribution',;
-      ],;
-    },;
+  const useCases = [
+    {
+      industry: 'Finance & Banking';
+      applications: [
+        'Portfolio Optimization';
+        'Risk Assessment';
+        'Fraud Detection';
+        'Algorithmic Trading';
+        'Credit Scoring';
+      ];
+      benefits: [
+        'Faster Risk Calculations';
+        'Improved Portfolio Performance';
+        'Enhanced Security';
+        'Real-time Analysis';
+      ];
+    };
+    {
+      industry: 'Healthcare & Pharmaceuticals';
+      applications: [
+        'Drug Discovery';
+        'Protein Folding';
+        'Genomic Analysis';
+        'Medical Imaging';
+        'Treatment Optimization';
+      ];
+      benefits: [
+        'Accelerated Research';
+        'Better Drug Design';
+        'Personalized Medicine';
+        'Improved Diagnostics';
+      ];
+    };
+    {
+      industry: 'Manufacturing & Logistics';
+      applications: [
+        'Supply Chain Optimization';
+        'Production Scheduling';
+        'Quality Control';
+        'Inventory Management';
+        'Route Optimization';
+      ];
+      benefits: [
+        'Cost Reduction';
+        'Improved Efficiency';
+        'Better Resource Utilization';
+        'Faster Decision Making';
+      ];
+    };
+    {
+      industry: 'Energy & Utilities';
+      applications: [
+        'Grid Optimization';
+        'Energy Trading';
+        'Load Balancing';
+        'Renewable Integration';
+        'Infrastructure Planning';
+      ];
+      benefits: [
+        'Grid Stability';
+        'Cost Optimization';
+        'Renewable Integration';
+        'Efficient Distribution';
+      ];
+    };
   ],
-,
-  const advantages = [,
-    {,
-      title: 'Exponential Speedup',;
+  const advantages = [
+    {
+      title: 'Exponential Speedup';
       description:,
-        'Quantum computers can solve certain problems exponentially faster than classical computers.',;
-      icon: '🚀',;
-    },;
-    {,
-      title: 'Parallel Processing',;
+        'Quantum computers can solve certain problems exponentially faster than classical computers.';
+      icon: '🚀';
+    };
+    {
+      title: 'Parallel Processing';
       description:,
-        'Quantum systems can process multiple possibilities simultaneously through superposition.',;
-      icon: '⚡',;
-    },;
-    {,
-      title: 'Complex Optimization',;
+        'Quantum systems can process multiple possibilities simultaneously through superposition.';
+      icon: '⚡';
+    };
+    {
+      title: 'Complex Optimization';
       description:,
-        'Efficiently solve complex optimization problems that are intractable for classical computers.',;
-      icon: '🎯',;
-    },;
-    {,
-      title: 'Cryptography',;
+        'Efficiently solve complex optimization problems that are intractable for classical computers.';
+      icon: '🎯';
+    };
+    {
+      title: 'Cryptography';
       description:,
-        'Advanced cryptographic capabilities and quantum-resistant security solutions.',;
-      icon: '🔐',;
-    },;
-    {,
-      title: 'Machine Learning',;
+        'Advanced cryptographic capabilities and quantum-resistant security solutions.';
+      icon: '🔐';
+    };
+    {
+      title: 'Machine Learning';
       description:,
-        'Enhanced machine learning algorithms with quantum advantage for pattern recognition.',;
-      icon: '🤖',;
-    },;
-    {,
-      title: 'Scientific Discovery',;
+        'Enhanced machine learning algorithms with quantum advantage for pattern recognition.';
+      icon: '🤖';
+    };
+    {
+      title: 'Scientific Discovery';
       description:,
-        'Accelerate scientific research in physics, chemistry, and materials science.',;
-      icon: '🔬',;
-    },;
+        'Accelerate scientific research in physics, chemistry, and materials science.';
+      icon: '🔬';
+    };
   ],
-,
-  return (,
+  return (
     <div className='min-h-screen'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-purple-90o0 via-indigo-90o0 to-blue-90o0 text-white py-20'>,
@@ -240,16 +234,15 @@ export default function QuantumComputingPage() {,
             unlock computational capabilities beyond classical computing.,
           </p>,
           <div className='mt-8'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-purple-60o0 hover:bg-purple-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0',
-            >,
+              className='bg-purple-60o0 hover:bg-purple-70o0 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0'>,
               Explore Quantum Solutions,
             </Link>,
           </div>,
         </div>,
       </section>,
-      {/* Overview Section */,}
+      {/* Overview Section */}
       <section className='py-20 bg-white'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>,
@@ -322,12 +315,11 @@ export default function QuantumComputingPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
-            {quantumSolutions.map((solution, index) => (,
-              <div,
+            {quantumSolutions.map((solution, index) => (
+              <div
                 key={index}
-                className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow duration-30o0',
-              >,
-                <div className='text-4xl mb-4'>{solution.icon,}</div>,
+                className='bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow duration-30o0'>,
+                <div className='text-4xl mb-4'>{solution.icon}</div>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
                   {solution.name}
                 </h3>,
@@ -337,15 +329,13 @@ export default function QuantumComputingPage() {,
                     Key Features: ,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {solution.features.map((feature, featureIndex) => (,
-                      <li,
+                    {solution.features.map((feature, featureIndex) => (
+                      <li
                         key={featureIndex}
-                        className='text-sm text-gray-60o0 flex items-center',
-                      >,
+                        className='text-sm text-gray-60o0 flex items-center'>,
                         <span className='text-green-50o0 mr-2'>✓</span>,
                         {feature}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 <div className='mb-6'>,
@@ -353,38 +343,33 @@ export default function QuantumComputingPage() {,
                     Applications: ,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {solution.applications.map((application, appIndex) => (,
-                      <li,
+                    {solution.applications.map((application, appIndex) => (
+                      <li
                         key={appIndex}
-                        className='text-sm text-gray-60o0 flex items-center',
-                      >,
+                        className='text-sm text-gray-60o0 flex items-center'>,
                         <span className='text-purple-50o0 mr-2'>•</span>,
                         {application}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
-                <Link,
+                <Link
                   href='/contact',
-                  className='inline-flex items-center text-purple-60o0 hover: text-purple-70o0 font-semibold',
-                >,
+                  className='inline-flex items-center text-purple-60o0 hover: text-purple-70o0 font-semibold'>,
                   Learn More,
-                  <svg,
+                  <svg
                     className='w-4 h-4 ml-2',
                     fill='none',
                     stroke='currentColor',
-                    viewBox='0 0 24 24',
-                  >,
-                    <path,
+                    viewBox='0 0 24 24'>,
+                    <path
                       strokeLinecap='round',
                       strokeLinejoin='round',
-                      strokeWidth={2,}
+                      strokeWidth={2}
                       d='M9 5l7 7-7 7',
                     />,
                   </svg>,
                 </Link>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -401,18 +386,16 @@ export default function QuantumComputingPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {quantumTechnologies.map((tech, index) => (,
-              <div,
+            {quantumTechnologies.map((tech, index) => (
+              <div
                 key={index}
-                className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow duration-30o0',
-              >,
-                <div className='text-4xl mb-4'>{tech.icon,}</div>,
+                className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow duration-30o0'>,
+                <div className='text-4xl mb-4'>{tech.icon}</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
                   {tech.name}
                 </h3>,
                 <p className='text-gray-60o0'>{tech.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -429,7 +412,7 @@ export default function QuantumComputingPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
-            {useCases.map((useCase, index) => (,
+            {useCases.map((useCase, index) => (
               <div key={index} className='bg-white rounded-xl shadow-lg p-8'>,
                 <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,
                   {useCase.industry}
@@ -439,15 +422,13 @@ export default function QuantumComputingPage() {,
                     Applications: ,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {useCase.applications.map((application, appIndex) => (,
-                      <li,
+                    {useCase.applications.map((application, appIndex) => (
+                      <li
                         key={appIndex}
-                        className='text-sm text-gray-60o0 flex items-start',
-                      >,
+                        className='text-sm text-gray-60o0 flex items-start'>,
                         <span className='text-purple-50o0 mr-2 mt-1'>•</span>,
                         {application}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
                 <div>,
@@ -455,19 +436,16 @@ export default function QuantumComputingPage() {,
                     Benefits: ,
                   </h4>,
                   <ul className='space-y-2'>,
-                    {useCase.benefits.map((benefit, benefitIndex) => (,
-                      <li,
+                    {useCase.benefits.map((benefit, benefitIndex) => (
+                      <li
                         key={benefitIndex}
-                        className='text-sm text-gray-60o0 flex items-center',
-                      >,
+                        className='text-sm text-gray-60o0 flex items-center'>,
                         <span className='text-green-50o0 mr-2'>✓</span>,
                         {benefit}
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -483,18 +461,16 @@ export default function QuantumComputingPage() {,
             </p>,
           </div>,
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-            {advantages.map((advantage, index) => (,
-              <div,
+            {advantages.map((advantage, index) => (
+              <div
                 key={index}
-                className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow duration-30o0',
-              >,
-                <div className='text-4xl mb-4'>{advantage.icon,}</div>,
+                className='bg-gray-50 rounded-xl p-8 text-center hover: shadow-lg transition-shadow duration-30o0'>,
+                <div className='text-4xl mb-4'>{advantage.icon}</div>,
                 <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,
                   {advantage.title}
                 </h3>,
                 <p className='text-gray-60o0'>{advantage.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -561,7 +537,7 @@ export default function QuantumComputingPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className='py-20 bg-purple-90o0 text-white'>,
         <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           <h2 className='text-4xl font-bold mb-6'>,
@@ -573,22 +549,19 @@ export default function QuantumComputingPage() {,
             computing needs.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>,
-            <Link,
+            <Link
               href='/contact',
-              className='bg-white text-purple-90o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0',
-            >,
+              className='bg-white text-purple-90o0 hover:bg-gray-10o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0'>,
               Schedule a Consultation,
             </Link>,
-            <Link,
+            <Link
               href='/case-studies',
-              className='border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0',
-            >,
+              className='border-2 border-white text-white hover:bg-white hover:text-purple-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-20o0'>,
               View Case Studies,
             </Link>,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

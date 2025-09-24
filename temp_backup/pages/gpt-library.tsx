@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function GptLibraryPage() {,
-  return (,
+export default function GptLibraryPage() {
+  return (
     <>,
       <Head>,
         <title>Gpt Library - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function GptLibraryPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

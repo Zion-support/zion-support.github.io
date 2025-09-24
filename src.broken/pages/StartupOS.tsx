@@ -1,9 +1,7 @@
-export function StartupOS() {,
-  return (,
+export function StartupOS() {
+  return (
     <div>,
       <h1>Component</h1>,
       <p>Component placeholder</p>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

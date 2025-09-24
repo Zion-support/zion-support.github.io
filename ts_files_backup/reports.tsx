@@ -1,115 +1,112 @@
-import React from 'react',
+import React from 'react';
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {,
+import {
   FileText,
   Download,
   Calendar,
   User,
   Tag,
   ArrowRight,
-  TrendingUp,;
-  BarChart3,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Shield,;
-  Zap,;
-  Eye,;
-  Clock,;
-  Award,
-} from 'lucide-react',
+  TrendingUp;
+  BarChart3;
+  Brain;
+  Atom;
+  Globe;
+  Shield;
+  Zap;
+  Eye;
+  Clock;
+  Award} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-,
-const ReportsPage: React.FC = () => {,
-  const reports = [,
-    {,
-      title: 'The Future of Quantum Computing in Enterprise: 2024-2030',;
-      excerpt: 'Comprehensive analysis of quantum computing adoption trendsmarket opportunitiesand strategic implications for businesses across industries.',;
-      date: '2024-01-15',;
-      author: 'Dr. Sarah Chen & Quantum Research Team',;
-      category: 'Technology Trends',;
-      tags: ['Quantum 'Computing', 'Enterprise'Market 'Analysis', 'Future Tech'],;
-      pages: 45,;
-      downloads: 1247,;
-      views: 5678,;
-      featured: true,;
-      icon: <Atom className="w-8 h-8" />,;
+const ReportsPage: React.FC = () => {
+  const reports = [
+    {
+      title: 'The Future of Quantum Computing in Enterprise: 2024-2030';
+      excerpt: 'Comprehensive analysis of quantum computing adoption trendsmarket opportunitiesand strategic implications for businesses across industries.';
+      date: '2024-01-15';
+      author: 'Dr. Sarah Chen & Quantum Research Team';
+      category: 'Technology Trends';
+      tags: ['Quantum 'Computing', 'Enterprise'Market 'Analysis', 'Future Tech'];
+      pages: 45;
+      downloads: 1247;
+      views: 5678;
+      featured: true;
+      icon: <Atom className="w-8 h-8" />;
       color: 'from-purple-500 to-pink-500',
-    ,},;
-    {,
-      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',;
-      excerpt: 'In-depth study of artificial intelligence implementation success storiesreturn on investment metricsand strategic recommendations.',;
-      date: '2024-01-10',;
-      author: 'AI Research Division',;
-      category: 'Business Intelligence',;
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'],;
-      pages: 38,;
-      downloads: 892,;
-      views: 3456,;
-      featured: false,;
-      icon: <Brain className="w-8 h-8" />,;
+    };
+    {
+      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices';
+      excerpt: 'In-depth study of artificial intelligence implementation success storiesreturn on investment metricsand strategic recommendations.';
+      date: '2024-01-10';
+      author: 'AI Research Division';
+      category: 'Business Intelligence';
+      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'];
+      pages: 38;
+      downloads: 892;
+      views: 3456;
+      featured: false;
+      icon: <Brain className="w-8 h-8" />;
       color: 'from-blue-500 to-cyan-500',
-    ,},;
-    {,
-      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',;
-      excerpt: 'Analysis of emerging cybersecurity challengesAI-powered threatsand defense strategies for modern organizations.',;
-      date: '2024-01-08',;
-      author: 'Cybersecurity Research Team',;
-      category: 'Security',;
-      tags: [', 'Cybersecurity', 'AI 'Threats', 'Threat 'Landscape', 'Defense'],;
-      pages: 52,;
-      downloads: 1567,;
-      views: 6789,;
-      featured: false,;
-      icon: <Shield className="w-8 h-8" />,;
+    };
+    {
+      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape';
+      excerpt: 'Analysis of emerging cybersecurity challengesAI-powered threatsand defense strategies for modern organizations.';
+      date: '2024-01-08';
+      author: 'Cybersecurity Research Team';
+      category: 'Security';
+      tags: [', 'Cybersecurity', 'AI 'Threats', 'Threat 'Landscape', 'Defense'];
+      pages: 52;
+      downloads: 1567;
+      views: 6789;
+      featured: false;
+      icon: <Shield className="w-8 h-8" />;
       color: 'from-red-500 to-orange-500',
-    ,},;
-    {,
-      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',;
-      excerpt: 'Comprehensive overview of technology investment patternsemerging sectorsand funding opportunities worldwide.',;
-      date: '2024-01-05',;
-      author: 'Market Research Team',;
-      category: 'Market Analysis',;
-      tags: ['Venture 'Capital', 'Investment', 'Innovation', 'Global Markets'],;
-      pages: 41,;
-      downloads: 734,;
-      views: 2890,;
-      featured: false,;
-      icon: <TrendingUp className="w-8 h-8" />,;
+    };
+    {
+      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding';
+      excerpt: 'Comprehensive overview of technology investment patternsemerging sectorsand funding opportunities worldwide.';
+      date: '2024-01-05';
+      author: 'Market Research Team';
+      category: 'Market Analysis';
+      tags: ['Venture 'Capital', 'Investment', 'Innovation', 'Global Markets'];
+      pages: 41;
+      downloads: 734;
+      views: 2890;
+      featured: false;
+      icon: <TrendingUp className="w-8 h-8" />;
       color: 'from-green-500 to-emerald-500',
-    ,},;
-    {,
-      title: 'Edge Computing & IoT: Transforming Industries in Real-Time',;
-      excerpt: 'Research on edge computing adoptionInternet of Things integrationand industry transformation opportunities.',;
-      date: '2024-01-03',;
-      author: 'IoT Research Division',;
-      category: 'Emerging Tech',;
-      tags: ['Edge 'Computing', 'IoT'Industry 4.0'Real-time'],;
-      pages: 36,;
-      downloads: 623,;
-      views: 2345,;
-      featured: false,;
-      icon: <Zap className="w-8 h-8" />,;
+    };
+    {
+      title: 'Edge Computing & IoT: Transforming Industries in Real-Time';
+      excerpt: 'Research on edge computing adoptionInternet of Things integrationand industry transformation opportunities.';
+      date: '2024-01-03';
+      author: 'IoT Research Division';
+      category: 'Emerging Tech';
+      tags: ['Edge 'Computing', 'IoT'Industry 4.0'Real-time'];
+      pages: 36;
+      downloads: 623;
+      views: 2345;
+      featured: false;
+      icon: <Zap className="w-8 h-8" />;
       color: 'from-yellow-500 to-orange-500',
-    ,},;
-    {,
-      title: 'Sustainable Technology: Green Computing & Environmental Impact',;
-      excerpt: 'Analysis of sustainable technology practicesenvironmental impact assessmentand green computing solutions.',;
-      date: '2024-01-01',;
-      author: 'Sustainability Research Team',;
-      category: 'Sustainability',;
-      tags: ['Green 'Computing', 'Sustainability'Environmental 'Impact', 'Clean Tech'],;
-      pages: 43,;
-      downloads: 445,;
-      views: 1789,;
-      featured: false,;
-      icon: <Globe className="w-8 h-8" />,;
+    };
+    {
+      title: 'Sustainable Technology: Green Computing & Environmental Impact';
+      excerpt: 'Analysis of sustainable technology practicesenvironmental impact assessmentand green computing solutions.';
+      date: '2024-01-01';
+      author: 'Sustainability Research Team';
+      category: 'Sustainability';
+      tags: ['Green 'Computing', 'Sustainability'Environmental 'Impact', 'Clean Tech'];
+      pages: 43;
+      downloads: 445;
+      views: 1789;
+      featured: false;
+      icon: <Globe className="w-8 h-8" />;
       color: 'from-teal-500 to-green-500',
-    ,}
+    }
   ],
-,
-  return (,
+  return (
     <UltraAdvancedFuturisticBackground>,
       <div className="min-h-screen">,
         <Head>,
@@ -118,27 +115,26 @@ const ReportsPage: React.FC = () => {,
         </Head>,
         <QuickNavigation />,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-          {categories.map((category) => (,
-            <Link,
-              key={category.name,}
+          {categories.map((category) => (
+            <Link
+              key={category.name}
               href={category.href}
-              className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover: border-cyan-400/50 transition-all hover:scale-105",
-            >,
+              className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover: border-cyan-400/50 transition-all hover:scale-105">,
               Research Reports,
             </motion.h1>,
             <motion.p,
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12",
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
             >,
               Access our comprehensive researchindustry analysisand technology insights that drive innovation and strategic decision-making.,
             </motion.p>,
             <motion.div,
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400",
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.4 }}
             >,
               <span className="flex items-center space-x-2">,
                 <FileText className="w-5 h-5" />,
@@ -160,26 +156,26 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Featured Report,
               </h2>,
             </motion.div>,
-            {reports.filter(report => report.featured).map((reportindex) => (,
+            {reports.filter(report => report.featured).map((reportindex) => (
               <motion.div,
-                key={index,}
+                key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover: border-cyan-400/40 transition-all duration-300",
-                initial={{ opacity: 0, y: 30 ,}}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8 ,}}
-                viewport={{ once: true ,}}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >,
                 <div className="flex flex-col lg: flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">,
-                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color,} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>,
+                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>,
                     {report.icon}
                   </div>,
                   <div className="flex-1">,
@@ -213,11 +209,10 @@ const ReportsPage: React.FC = () => {,
                       </span>,
                     </div>,
                     <div className="flex flex-wrap gap-2 mb-6">,
-                      {report.tags.map((tagIndex) => (,
+                      {report.tags.map((tagIndex) => (
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -231,8 +226,7 @@ const ReportsPage: React.FC = () => {,
                     <span>Preview Report</span>,
                   </button>,
                 </div>,
-              </motion.div>,
-            )),}
+              </motion.div>))}
           </div>,
         </section>,
         {/* Categories Filter */}
@@ -240,10 +234,10 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 All Reports,
@@ -252,37 +246,36 @@ const ReportsPage: React.FC = () => {,
                 Explore our comprehensive research across different technology domains,
               </p>,
             </motion.div>,
-            {/* Category Pills */,}
+            {/* Category Pills */}
             <motion.div,
               className="flex flex-wrap justify-center gap-4 mb-12",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8delay: 0.2 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8delay: 0.2 }}
+              viewport={{ once: true }}
             >,
-              {categories.map((categoryindex) => (,
-                <button,
+              {categories.map((categoryindex) => (
+                <button
                   key={index}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${,
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
                     category.active,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
                       : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',
-                  ,}`}
+                  }`}
                 >,
                   {category.name} ({category.count}),
-                </button>,
-              ))}
+                </button>))}
 ,
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {reports.filter(report => !report.featured).map((reportindex) => (,
+              {reports.filter(report => !report.featured).map((reportindex) => (
                 <motion.article,
-                  key={index,}
+                  key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover: border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+                  viewport={{ once: true }}
                 >,
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>,
                     {report.icon}
@@ -318,8 +311,7 @@ const ReportsPage: React.FC = () => {,
                       <Download className="w-4 h-4" />,
                     </button>,
                   </div>,
-                </motion.article>,
-              )),}
+                </motion.article>))}
             </div>,
           </div>,
         </section>,
@@ -328,10 +320,10 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-4xl mx-auto text-center">,
             <motion.div,
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Need Custom Research?,
@@ -340,17 +332,15 @@ const ReportsPage: React.FC = () => {,
                 Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <a,
+                <a
                   href="/contact",
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2",
-                >,
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">,
                   <span>Request Custom Research</span>,
                   <ArrowRight className="w-5 h-5" />,
                 </a>,
-                <a,
+                <a
                   href="/services",
-                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200",
-                >,
+                  className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200">,
                   View Research Services,
                 </a>,
               </div>,
@@ -358,10 +348,7 @@ const ReportsPage: React.FC = () => {,
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>,
-  ),
-,};
-,
-export default ReportsPage,
-,
+    </UltraAdvancedFuturisticBackground>),
+};
+export default ReportsPage;
 }))

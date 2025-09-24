@@ -2,10 +2,10 @@ import { Droppable } from '@hello-pangea/dnd',
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 import { CandidateCard } from './CandidateCard',
-export function KanbanColumn({ id, title, description, applications, count }) {,
+export function KanbanColumn({ id, title, description, applications, count }) {
   // Add color based on column type,
-  const getBadgeVariant = columnId => {,
-    switch (columnId) {,
+  const getBadgeVariant = columnId => {
+    switch (columnId) {
       case 'new':,
         return 'secondary',
       case 'shortlisted':,
@@ -18,20 +18,20 @@ export function KanbanColumn({ id, title, description, applications, count }) {,
         return 'destructive',
       default: ,
         return 'outline',
-    ,}
+    }
   };
-  const getColumnBgColor = columnId => {,
-    switch (columnId) {,
+  const getColumnBgColor = columnId => {
+    switch (columnId) {
       case 'hired':,
         return 'bg-green-50',
       case 'rejected':,
         return 'bg-red-50',
       default: ,
         return 'bg-muted/30',
-    ,}
+    }
   };
-  return (,
-    <Card,
+  return (
+    <Card
       className={`${getColumnBgColor(id)} flex flex-col h-[calc(10o0vh-30o0px)] min-h-[50o0px]`}
     >,
       <CardHeader className='pb-2'>,
@@ -43,33 +43,27 @@ export function KanbanColumn({ id, title, description, applications, count }) {,
       </CardHeader>,
       <CardContent className='flex-grow p-3 overflow-y-auto'>,
         <Droppable droppableId={id}>,
-          {provided => (,
-            <div,
+          {provided => (
+            <div
               ref={provided.innerRef}
               {...provided.droppableProps}
-              className='min-h-full space-y-2',
-            >,
-              {applications.map((application, index) => (,
-                <CandidateCard,
+              className='min-h-full space-y-2'>,
+              {applications.map((application, index) => (
+                <CandidateCard
                   key={application.id}
                   application={application}
                   index={index}
-                />,
-              ))}
+                />))}
               {provided.placeholder}
 ,
-              {applications.length === 0 && (,
+              {applications.length === 0 && (
                 <div className='h-full flex items-center justify-center border-2 border-dashed border-muted rounded-md p-4'>,
                   <p className='text-center text-sm text-muted-foreground'>,
                     Drag candidates here,
                   </p>,
-                </div>,
-              )}
-            </div>,
-          )}
+                </div>)}
+            </div>)}
         </Droppable>,
       </CardContent>,
-    </Card>,
-  ),
-}
+    </Card>)}
 ,

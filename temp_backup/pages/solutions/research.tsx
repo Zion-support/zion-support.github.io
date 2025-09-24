@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function ResearchPage() {,
-  return (,
+export default function ResearchPage() {
+  return (
     <>,
       <Head>,
         <title>Research - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function ResearchPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

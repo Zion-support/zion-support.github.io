@@ -1,14 +1,13 @@
 import Link from 'next/link',
-export const metadata = {,
-  title: 'ZionGPT 2.0 launches with adaptive reasoning and on-device inference',;
+export const metadata = {
+  title: 'ZionGPT 2.0 launches with adaptive reasoning and on-device inference';
   description:,
-    'Introducing ZionGPT 2.0 with adaptive reasoning loops, tool-use orchestration, and private on-device inference for latency-sensitive workloads.',;
+    'Introducing ZionGPT 2.0 with adaptive reasoning loops, tool-use orchestration, and private on-device inference for latency-sensitive workloads.';
   keywords:,
-    'ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI',;
+    'ZionGPT 2.0, adaptive reasoning, on-device inference, tool use, private AI';
 };
-,
-export default function ArticlePage() {,
-  return (,
+export default function ArticlePage() {
+  return (
     <div className='min-h-screen'>,
       <section className='relative py-20 px-4 sm: px-6 lg:px-8'>,
         <div className='max-w-3xl mx-auto'>,
@@ -51,7 +50,5 @@ export default function ArticlePage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

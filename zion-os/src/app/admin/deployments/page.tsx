@@ -1,15 +1,13 @@
 'use client',
-,
 import { useState } from 'react',
-import {,
-  Rocket,;
-  Clock,;
-  CheckCircle,;
-  AlertCircle,;
-  Activity,;
+import {
+  Rocket;
+  Clock;
+  CheckCircle;
+  AlertCircle;
+  Activity;
 } from 'lucide-react',
-,
-interface Deployment {,
+interface Deployment {
   id: string,
   instanceName: string,
   status: 'pending' | 'deploying' | 'completed' | 'failed' | 'paused',
@@ -18,38 +16,35 @@ interface Deployment {,
   progress: number,
   features: string[],
   vertical: string,
-,}
+}
 ,
-const mockDeployments: Deployment[] = [,
-  {,
-    id: 'deploy-0001',;
-    instanceName: 'Zion Health Network',;
-    status: 'completed',;
-    createdAt: '2024-01-15T10:30:00Z',;
-    updatedAt: '2024-01-15T11:45:00Z',;
-    progress: 100,;
-    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'],;
-    vertical: 'HEALTH',;
-  },;
-  {,
-    id: 'deploy-0002',;
-    instanceName: 'EduDAO Academy',;
-    status: 'deploying',;
-    createdAt: '2024-01-15T14:20:00Z',;
-    updatedAt: '2024-01-15T15:10:00Z',;
-    progress: 65,;
-    features: ['academy', 'zion_gpt', 'incubator_grants'],;
-    vertical: 'EDUCATION',;
-  },;
+const mockDeployments: Deployment[] = [
+  {
+    id: 'deploy-0001';
+    instanceName: 'Zion Health Network';
+    status: 'completed';
+    createdAt: '2024-01-15T10:30:00Z';
+    updatedAt: '2024-01-15T11:45:00Z';
+    progress: 100;
+    features: ['marketplace', 'zion_gpt', 'kyc_aml', 'dao_voting'];
+    vertical: 'HEALTH';
+  };
+  {
+    id: 'deploy-0002';
+    instanceName: 'EduDAO Academy';
+    status: 'deploying';
+    createdAt: '2024-01-15T14:20:00Z';
+    updatedAt: '2024-01-15T15:10:00Z';
+    progress: 65;
+    features: ['academy', 'zion_gpt', 'incubator_grants'];
+    vertical: 'EDUCATION';
+  };
 ],
-,
-export default function DeploymentsPage() {,
+export default function DeploymentsPage() {
   const [deployments] = useState<Deployment[]>(mockDeployments),
-,
   const getStatusCount = (status: Deployment['status']) =>,
     deployments.filter(d => d.status === status).length,
-,
-  return (,
+  return (
     <div className='space-y-8'>,
       <div className='border-b border-white/10 pb-6'>,
         <h1 className='text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent'>,
@@ -66,7 +61,7 @@ export default function DeploymentsPage() {,
               <Rocket className='w-5 h-5 text-blue-400' />,
             </div>,
             <div>,
-              <p className='text-2xl font-bold'>{deployments.length,}</p>,
+              <p className='text-2xl font-bold'>{deployments.length}</p>,
               <p className='text-sm text-white/60'>Total</p>,
             </div>,
           </div>,
@@ -120,7 +115,5 @@ export default function DeploymentsPage() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),
-}
+    </div>)}
 ,

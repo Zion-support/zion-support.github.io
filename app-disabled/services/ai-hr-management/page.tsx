@@ -1,13 +1,13 @@
-import React from 'react',
+import React from 'react';
 import { Metadata } from 'next',
-export const metadata: Metadata = {,
-  title: 'ai-hr-management - Zion Tech Group',;
+export const metadata: Metadata = {
+  title: 'ai-hr-management - Zion Tech Group';
   description:,
-    'Professional ai-hr-management solutions for your business needs.',;
-  keywords: 'ai-hr-management, services, business, technology',;
+    'Professional ai-hr-management solutions for your business needs.';
+  keywords: 'ai-hr-management, services, business, technology';
 };
-export default function AiHrManagementPage() {,
-  return (,
+export default function AiHrManagementPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {' '}
       <div className='container mx-auto px-4 py-16'>,
@@ -32,7 +32,5 @@ export default function AiHrManagementPage() {,
           </p>{' '}
         </div>{' '}
       </div>{' '}
-    </div>,
-  ),
-}
+    </div>)}
 ,

@@ -1,134 +1,128 @@
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-import {,
-  ArrowRight,;
-  CheckCircle,;
-  Users,;
-  Brain,;
-  Target,;
-  BarChart3,;
-  Zap,;
-  Phone,;
-  Mail,;
-  Calendar,;
-  Star,;
-  TrendingUp,;
+import {
+  ArrowRight;
+  CheckCircle;
+  Users;
+  Brain;
+  Target;
+  BarChart3;
+  Zap;
+  Phone;
+  Mail;
+  Calendar;
+  Star;
+  TrendingUp;
 } from 'lucide-react',
-,
-const AIPoweredCRMPage: NextPage = () => {,
-  const features = [,
-    'AI-powered lead scoring and qualification',;
-    'Automated follow-up sequences and reminders',;
-    'Intelligent contact and opportunity management',;
-    'Predictive analytics for sales forecasting',;
-    'Email integration with smart response suggestions',;
-    'Customizable sales pipelines and workflows',;
-    'Team collaboration and activity tracking',;
-    'Mobile app for on-the-go access',;
+const AIPoweredCRMPage: NextPage = () => {
+  const features = [
+    'AI-powered lead scoring and qualification';
+    'Automated follow-up sequences and reminders';
+    'Intelligent contact and opportunity management';
+    'Predictive analytics for sales forecasting';
+    'Email integration with smart response suggestions';
+    'Customizable sales pipelines and workflows';
+    'Team collaboration and activity tracking';
+    'Mobile app for on-the-go access';
   ],
-,
-  const benefits = [,
-    'Increase sales conversion rates by 35%',;
-    'Reduce manual data entry by 80%',;
-    'Improve lead response time by 60%',;
-    'Boost team productivity and collaboration',;
-    'Gain actionable insights from customer data',;
+  const benefits = [
+    'Increase sales conversion rates by 35%';
+    'Reduce manual data entry by 80%';
+    'Improve lead response time by 60%';
+    'Boost team productivity and collaboration';
+    'Gain actionable insights from customer data';
   ],
-,
-  const useCases = [,
-    'Sales team management',;
-    'Lead generation and nurturing',;
-    'Customer relationship management',;
-    'Sales pipeline optimization',;
-    'Team performance tracking',;
+  const useCases = [
+    'Sales team management';
+    'Lead generation and nurturing';
+    'Customer relationship management';
+    'Sales pipeline optimization';
+    'Team performance tracking';
   ],
-,
-  const pricingPlans = [,
-    {,
-      name: 'Starter',;
-      price: 79,;
-      period: 'month',;
-      description: 'Perfect for small sales teams',;
-      features: [,
-        'Up to 5 users',;
-        '1,0o00 contacts',;
-        'Basic AI features',;
-        'Email integration',;
-        'Mobile app',;
-        'Email support',;
-      ],;
-    },;
-    {,
-      name: 'Professional',;
-      price: 199,;
-      period: 'month',;
-      description: 'Ideal for growing businesses',;
-      features: [,
-        'Up to 15 users',;
-        '10,0o00 contacts',;
-        'Advanced AI features',;
-        'Custom workflows',;
-        'Advanced analytics',;
-        'Priority support',;
-        'API access',;
-      ],;
-    },;
-    {,
-      name: 'Enterprise',;
-      price: 499,;
-      period: 'month',;
-      description: 'For large organizations',;
-      features: [,
-        'Unlimited users',;
-        'Unlimited contacts',;
-        'Custom AI models',;
-        'White-label options',;
-        'Dedicated account manager',;
-        'Custom integrations',;
-        'Advanced reporting',;
-      ],;
-    },;
+  const pricingPlans = [
+    {
+      name: 'Starter';
+      price: 79;
+      period: 'month';
+      description: 'Perfect for small sales teams';
+      features: [
+        'Up to 5 users';
+        '1,0o00 contacts';
+        'Basic AI features';
+        'Email integration';
+        'Mobile app';
+        'Email support';
+      ];
+    };
+    {
+      name: 'Professional';
+      price: 199;
+      period: 'month';
+      description: 'Ideal for growing businesses';
+      features: [
+        'Up to 15 users';
+        '10,0o00 contacts';
+        'Advanced AI features';
+        'Custom workflows';
+        'Advanced analytics';
+        'Priority support';
+        'API access';
+      ];
+    };
+    {
+      name: 'Enterprise';
+      price: 499;
+      period: 'month';
+      description: 'For large organizations';
+      features: [
+        'Unlimited users';
+        'Unlimited contacts';
+        'Custom AI models';
+        'White-label options';
+        'Dedicated account manager';
+        'Custom integrations';
+        'Advanced reporting';
+      ];
+    };
   ],
-,
-  const testimonials = [,
-    {,
-      name: 'Robert Kim',;
-      company: 'SalesForce Pro',;
-      role: 'Sales Director',;
+  const testimonials = [
+    {
+      name: 'Robert Kim';
+      company: 'SalesForce Pro';
+      role: 'Sales Director';
       content:,
-        "Our sales team's productivity increased by 40% within the first month. The AI lead scoring is incredibly accurate.",;
-      rating: 5,;
-    },;
-    {,
-      name: 'Lisa Martinez',;
-      company: 'Growth Solutions',;
-      role: 'VP of Sales',;
+        "Our sales team's productivity increased by 40% within the first month. The AI lead scoring is incredibly accurate.";
+      rating: 5;
+    };
+    {
+      name: 'Lisa Martinez';
+      company: 'Growth Solutions';
+      role: 'VP of Sales';
       content:,
-        'The automated follow-up sequences have transformed our lead nurturing process. Highly recommend for any sales team.',;
-      rating: 5,;
-    },;
+        'The automated follow-up sequences have transformed our lead nurturing process. Highly recommend for any sales team.';
+      rating: 5;
+    };
   ],
-,
-  return (,
+  return (
     <>,
       <Head>,
         <title>AI-Powered CRM - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='Intelligent CRM with AI-powered lead scoring, automated follow-ups, and predictive analytics. Increase sales conversion rates by 35%.',
         />,
-        <meta,
+        <meta
           name='keywords',
           content='AI CRM, customer relationship management, sales automation, lead scoring, sales pipeline, CRM software',
         />,
-        <link,
+        <link
           rel='canonical',
           href='https: //ziontechgroup.com/services/ai-powered-crm',
         />,
       </Head>,
       <div className='min-h-screen bg-gray-50'>,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className='bg-gradient-to-br from-indigo-90o0 via-blue-90o0 to-purple-90o0 text-white py-20'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center'>,
@@ -162,7 +156,7 @@ const AIPoweredCRMPage: NextPage = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className='py-20 bg-white'>,
           <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
             <div className='text-center mb-16'>,
@@ -175,14 +169,13 @@ const AIPoweredCRMPage: NextPage = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {features.map((feature, index) => (,
+              {features.map((feature, index) => (
                 <div key={index} className='bg-gray-50 p-6 rounded-lg'>,
                   <CheckCircle className='w-8 h-8 text-green-50o0 mb-4' />,
                   <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>,
                     {feature}
                   </h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -199,7 +192,7 @@ const AIPoweredCRMPage: NextPage = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {benefits.map((benefit, index) => (,
+              {benefits.map((benefit, index) => (
                 <div key={index} className='text-center'>,
                   <div className='bg-indigo-10o0 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>,
                     <TrendingUp className='w-8 h-8 text-indigo-60o0' />,
@@ -207,8 +200,7 @@ const AIPoweredCRMPage: NextPage = () => {,
                   <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>,
                     {benefit}
                   </h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -225,17 +217,15 @@ const AIPoweredCRMPage: NextPage = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
-              {useCases.map((useCase, index) => (,
-                <div,
+              {useCases.map((useCase, index) => (
+                <div
                   key={index}
-                  className='bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg border border-indigo-10o0',
-                >,
+                  className='bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-lg border border-indigo-10o0'>,
                   <Target className='w-8 h-8 text-indigo-60o0 mb-4' />,
                   <h3 className='text-lg font-semibold text-gray-90o0 mb-2'>,
                     {useCase}
                   </h3>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -251,16 +241,15 @@ const AIPoweredCRMPage: NextPage = () => {,
               </p>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-              {pricingPlans.map((plan, index) => (,
-                <div,
+              {pricingPlans.map((plan, index) => (
+                <div
                   key={index}
                   className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-indigo-50o0 transform scale-10o5' : ''}`}
                 >,
-                  {index === 1 && (,
+                  {index === 1 && (
                     <div className='bg-indigo-50o0 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4'>,
                       Most Popular,
-                    </div>,
-                  )}
+                    </div>)}
                   <h3 className='text-2xl font-bold text-gray-90o0 mb-2'>,
                     {plan.name}
                   </h3>,
@@ -272,26 +261,24 @@ const AIPoweredCRMPage: NextPage = () => {,
                     <span className='text-gray-60o0'>/{plan.period}</span>,
                   </div>,
                   <ul className='space-y-3 mb-8'>,
-                    {plan.features.map((feature, featureIndex) => (,
+                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className='flex items-center'>,
                         <CheckCircle className='w-5 h-5 text-green-50o0 mr-3' />,
                         <span className='text-gray-70o0'>{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
                   <Link href='/contact'>,
-                    <span,
-                      className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${,
+                    <span
+                      className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                         index === 1,
                           ? 'bg-indigo-60o0 hover: bg-indigo-70o0 text-white',
                           : 'bg-gray-20o0 hover:bg-gray-30o0 text-gray-90o0',
-                      ,}`}
+                      }`}
                     >,
                       Get Started,
                     </span>,
                   </Link>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -304,15 +291,14 @@ const AIPoweredCRMPage: NextPage = () => {,
               </h2>,
             </div>,
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
-              {testimonials.map((testimonial, index) => (,
+              {testimonials.map((testimonial, index) => (
                 <div key={index} className='bg-gray-50 p-6 rounded-lg'>,
                   <div className='flex items-center mb-4'>,
-                    {[...Array(testimonial.rating)].map((_, i) => (,
-                      <Star,
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
                         key={i}
                         className='w-5 h-5 text-yellow-40o0 fill-current',
-                      />,
-                    ))}
+                      />))}
                   </div>,
                   <p className='text-gray-70o0 mb-4'>"{testimonial.content}"</p>,
                   <div>,
@@ -323,8 +309,7 @@ const AIPoweredCRMPage: NextPage = () => {,
                       {testimonial.role}, {testimonial.company}
                     </p>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -345,20 +330,18 @@ const AIPoweredCRMPage: NextPage = () => {,
                   <ArrowRight className='ml-2 w-5 h-5' />,
                 </span>,
               </Link>,
-              <a,
+              <a
                 href='tel:+130o24640950',
-                className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors',
-              >,
+                className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-90o0 px-8 py-4 rounded-lg font-semibold text-lg transition-colors'>,
                 Call +1 30o2 464 0950,
               </a>,
             </div>,
             <div className='mt-8 text-sm text-gray-30o0'>,
               <p>,
-                Email:{' ',}
-                <a,
+                Email:{' '}
+                <a
                   href='mailto: kleber@ziontechgroup.com',
-                  className='text-white hover:text-indigo-30o0',
-                >,
+                  className='text-white hover:text-indigo-30o0'>,
                   kleber@ziontechgroup.com,
                 </a>,
               </p>,
@@ -367,9 +350,5 @@ const AIPoweredCRMPage: NextPage = () => {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),
-};
-,
-export default AIPoweredCRMPage,
-,
+    </>)};
+export default AIPoweredCRMPage;

@@ -1,15 +1,13 @@
 import SEO from '../../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Agent Risk Mitigation Playbook',;
+export const metadata = {
+  title: 'AI 20o26: Agent Risk Mitigation Playbook';
   description:,
-    'Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.',;
+    'Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.';
 };
-,
-const AgentRiskMitigationPlaybook20o26 = () => {,
-  return (,
+const AgentRiskMitigationPlaybook20o26 = () => {
+  return (
     <div>,
-      <SEO,
+      <SEO
         title='AI 20o26: Agent Risk Mitigation Playbook',
         description='Tactics, safeguards, and monitoring practices to mitigate operational and safety risks in enterprise AI agent deployments.',
         keywords='agent risk, AI safety, guardrails, evaluations, governance, policy-as-code',
@@ -45,9 +43,5 @@ const AgentRiskMitigationPlaybook20o26 = () => {,
           </ul>,
         </section>,
       </main>,
-    </div>,
-  ),
-};
-,
-export default AgentRiskMitigationPlaybook20o26,
-,
+    </div>)};
+export default AgentRiskMitigationPlaybook20o26;

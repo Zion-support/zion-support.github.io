@@ -1,11 +1,10 @@
 import Head from 'next/head',
-,
-export default function DataPipelineEngineeringChatPage() {,
-  return (,
+export default function DataPipelineEngineeringChatPage() {
+  return (
     <>,
       <Head>,
         <title>Data Pipeline Engineering Chat - Zion Tech Group</title>,
-        <meta,
+        <meta
           name='description',
           content='data pipeline engineering chat page',
         />,
@@ -21,7 +20,6 @@ export default function DataPipelineEngineeringChatPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

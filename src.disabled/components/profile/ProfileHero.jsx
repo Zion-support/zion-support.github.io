@@ -1,44 +1,36 @@
-import React from 'react',
+import React from 'react';
 
-class ErrorBoundary extends React.Component {,
-  constructor(props) {,
+class ErrorBoundary extends React.Component {
+  constructor(props) {
     super(props),
-    this.state ={ hasError: false ,};
+    this.state ={ hasError: false };
   }
 ,
-  static getDerivedStateFromError(error) {,
-    return { hasError: true ,};
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 ,
-  componentDidCatch(error, errorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo)}
 ,
-  render() {,
-    if (this.state.hasError) {,
-      return <div>Something went wrong.</div>,
-    }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
 ,
-    return this.props.children,
-  }
+    return this.props.children}
 }
-interface ProfileHeroProps {,
-  // Add props here as needed,
-}
+interface ProfileHeroProps {
+  // Add props here as needed}
 ,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-export default function ProfileHero({ }: ProfileHeroProps) {,
-  return (,
+export default function ProfileHero({ }: ProfileHeroProps) {
+  return (
     <div>,
       <h1>ProfileHero</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  ),
-,
-:src.disabled/components/profile/ProfileHero.jsx,
-}
+    </div>),
+:src.disabled/components/profile/ProfileHero.jsx}
 }
 ursor/add-new-services-and-deploy-updates-0o462,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5,
-}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5}
 :temp_exclude/src.disabled/components/profile/ProfileHero.jsx,

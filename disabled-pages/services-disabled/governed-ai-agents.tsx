@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async.ts',
 import { Link } from 'react-router-dom.ts',
-,
-export default function GovernedAIAgents(...args: any[]): any {,
-  return (,
+export default function GovernedAIAgents(...args: any[]): any {
+  return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>,
       <Head>,
         <title>Governed AI Agents — Services — Zion</title>,
-        <meta,
+        <meta
           name='description',
           content='Deploy multi-agent systems with approvals, sandboxing, and audit logs to safely automate business processes.',
         />,
@@ -22,7 +21,7 @@ export default function GovernedAIAgents(...args: any[]): any {,
           Governed AI Agents,
         </h1>,
         <p className='mt-4 text-white/80'>,
-          Autonomous workflows for marketing ops, finance close, HR onboarding,;
+          Autonomous workflows for marketing ops, finance close, HR onboarding;
           and IT runbooks with human-in-the-loop controls.,
         </p>,
         <ul className='mt-6 space-y-2 text-white/80 list-disc pl-5'>,
@@ -48,7 +47,6 @@ export default function GovernedAIAgents(...args: any[]): any {,
           </Link>,
         </div>,
       </main>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

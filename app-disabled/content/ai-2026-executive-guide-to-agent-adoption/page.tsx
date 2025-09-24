@@ -1,24 +1,22 @@
-import React from 'react',
+import React from 'react';
 import Link from 'next/link',
 import SEO from '../../components/SEO',
-,
-export const metadata = {,
-  title: 'AI 20o26: Executive Guide to Agent Adoption | Zion Tech Group',;
+export const metadata = {
+  title: 'AI 20o26: Executive Guide to Agent Adoption | Zion Tech Group';
   description:,
-    'Leadership playbook to adopt autonomous agents with governance, controls, and measurable ROI.',;
-  keywords: [,
-    'executive guide',;
-    'agent adoption',;
-    'ai governance',;
-    'roi',;
-    'controls',;
-  ],;
+    'Leadership playbook to adopt autonomous agents with governance, controls, and measurable ROI.';
+  keywords: [
+    'executive guide';
+    'agent adoption';
+    'ai governance';
+    'roi';
+    'controls';
+  ];
 };
-,
-const ExecutiveGuideAgentAdoption: React.FC = () => {,
-  return (,
+const ExecutiveGuideAgentAdoption: React.FC = () => {
+  return (
     <div className='min-h-screen bg-white'>,
-      <SEO,
+      <SEO
         title='AI 20o26: Executive Guide to Agent Adoption',
         description='Leadership playbook to adopt autonomous agents with governance, controls, and measurable ROI.',
         keywords='executive guide, agent adoption, ai governance, roi, controls',
@@ -54,23 +52,18 @@ const ExecutiveGuideAgentAdoption: React.FC = () => {,
           </ul>,
         </div>,
         <div className='mt-8 flex flex-wrap gap-4'>,
-          <Link,
+          <Link
             href='/blog/ai-20o26-production-guardrails-for-autonomous-agents',
-            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0',
-          >,
+            className='bg-purple-60o0 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-70o0'>,
             Production Guardrails,
           </Link>,
-          <Link,
+          <Link
             href='/blog',
-            className='text-purple-60o0 font-semibold hover:text-purple-80o0',
-          >,
+            className='text-purple-60o0 font-semibold hover:text-purple-80o0'>,
             ← Back,
           </Link>,
         </div>,
       </article>,
-    </div>,
-  ),
-,};
-,
-export default ExecutiveGuideAgentAdoption,
-,
+    </div>),
+};
+export default ExecutiveGuideAgentAdoption;

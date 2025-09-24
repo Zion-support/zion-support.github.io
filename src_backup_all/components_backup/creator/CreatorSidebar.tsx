@@ -1,24 +1,22 @@
-import {,
-  Bell,;
-  FileText,;
-  Home,;
-  Mail,;
-  Search,;
-  Settings,;
-  Users,;
+import {
+  Bell;
+  FileText;
+  Home;
+  Mail;
+  Search;
+  Settings;
+  Users;
 } from 'lucide-react',
-  Sidebar,;
-  SidebarContent,;
-  SidebarGroup,;
-  SidebarMenuItem,;
+  Sidebar;
+  SidebarContent;
+  SidebarGroup;
+  SidebarMenuItem;
   // SidebarMenu, // Removed,
   // SidebarMenuButton, // Removed,
   // SidebarGroupLabel, // Not needed,
-  // SidebarGroupContent, // Not needed,
-} from '@/components/ui/sidebar',
-,
-export function AppSidebar() {,
-  return (,
+  // SidebarGroupContent, // Not needed} from '@/components/ui/sidebar',
+export function AppSidebar() {
+  return (
     <Sidebar>,
       <SidebarContent>,
         <SidebarGroup title='Dashboard'>,
@@ -49,7 +47,5 @@ export function AppSidebar() {,
           </SidebarMenuItem>,
         </SidebarGroup>,
       </SidebarContent>,
-    </Sidebar>,
-  ),
-}
+    </Sidebar>)}
 ,

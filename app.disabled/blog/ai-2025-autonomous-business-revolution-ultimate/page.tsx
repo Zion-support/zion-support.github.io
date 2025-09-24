@@ -1,38 +1,36 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
-,
-export const metadata: Metadata = {,
+export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Ultimate Autonomous Business Revolution | Zion Tech Group',;
+    'AI 20o25: The Ultimate Autonomous Business Revolution | Zion Tech Group';
   description:,
-    'Discover how AI is revolutionizing business operations in 20o25 with autonomous systems that deliver unprecedented efficiency and ROI.',;
-  keywords: [,
-    'AI',;
-    'Autonomous Systems',;
-    'Business Automation',;
-    '20o25',;
-    'Revolution',;
-    'ROI',;
-  ],;
-  openGraph: {,
-    title: 'AI 20o25: The Ultimate Autonomous Business Revolution',;
+    'Discover how AI is revolutionizing business operations in 20o25 with autonomous systems that deliver unprecedented efficiency and ROI.';
+  keywords: [
+    'AI';
+    'Autonomous Systems';
+    'Business Automation';
+    '20o25';
+    'Revolution';
+    'ROI';
+  ];
+  openGraph: {
+    title: 'AI 20o25: The Ultimate Autonomous Business Revolution';
     description:,
-      'Discover how AI is revolutionizing business operations in 20o25 with autonomous systems that deliver unprecedented efficiency and ROI.',;
-    type: 'article',;
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',;
-    authors: ['Zion Tech Group'],;
-    tags: [,
-      'AI',;
-      'Autonomous Systems',;
-      'Business Automation',;
-      '20o25',;
-      'Revolution',;
-    ],;
-  },;
+      'Discover how AI is revolutionizing business operations in 20o25 with autonomous systems that deliver unprecedented efficiency and ROI.';
+    type: 'article';
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
+    authors: ['Zion Tech Group'];
+    tags: [
+      'AI';
+      'Autonomous Systems';
+      'Business Automation';
+      '20o25';
+      'Revolution';
+    ];
+  };
 };
-,
-export default function AI20o25AutonomousBusinessRevolutionPage() {,
-  return (,
+export default function AI20o25AutonomousBusinessRevolutionPage() {
+  return (
     <div className='min-h-screen bg-white'>,
       {/* Hero Section */}
       <section className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-20'>,
@@ -68,9 +66,9 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
         <div className='prose prose-lg max-w-none'>,
           <div className='mb-8'>,
             <p className='text-xl text-gray-60o0 leading-relaxed mb-6'>,
-              The year 20o25 marks a pivotal moment in business transformation,;
+              The year 20o25 marks a pivotal moment in business transformation;
               where artificial intelligence transcends traditional automation to,
-              create truly autonomous business operations. At Zion Tech Group,;
+              create truly autonomous business operations. At Zion Tech Group;
               we're witnessing firsthand how this revolution is reshaping entire,
               industries.,
             </p>,
@@ -167,7 +165,7 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
                 Retail Revolution,
               </h3>,
               <p className='text-gray-60o0 mb-4'>,
-                A major retail chain deployed autonomous inventory management,;
+                A major retail chain deployed autonomous inventory management;
                 resulting in: ,
               </p>,
               <ul className='list-disc list-inside text-gray-60o0 space-y-1'>,
@@ -254,7 +252,7 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
               identify automation opportunities,
             </li>,
             <li>,
-              <strong>Pilot Implementation:</strong> Start with high-impact,;
+              <strong>Pilot Implementation:</strong> Start with high-impact;
               low-risk areas,
             </li>,
             <li>,
@@ -302,16 +300,14 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
               operations.,
             </p>,
             <div className='flex flex-col sm:flex-row gap-4'>,
-              <Link,
+              <Link
                 href='/contact',
-                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center',
-              >,
+                className='bg-purple-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-70o0 transition-colors text-center'>,
                 Schedule a Consultation,
               </Link>,
-              <Link,
+              <Link
                 href='/services/ai-automation',
-                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center',
-              >,
+                className='border-2 border-purple-60o0 text-purple-60o0 px-8 py-3 rounded-lg font-semibold hover:bg-purple-60o0 hover:text-white transition-colors text-center'>,
                 View Our AI Solutions,
               </Link>,
             </div>,
@@ -333,10 +329,9 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
             Related Content,
           </h2>,
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
-            <Link,
+            <Link
               href='/case-studies/enterprise-ai-transformation-20o25-ultimate-success-story',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow'>,
                 <div className='text-3xl mb-4'>📈</div>,
                 <h3 className='text-xl font-semibold text-gray-90o0 mb-2 group-hover:text-purple-60o0'>,
@@ -348,10 +343,9 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
                 </p>,
               </div>,
             </Link>,
-            <Link,
+            <Link
               href='/resources/ai-20o25-autonomous-systems-implementation-guide',
-              className='group',
-            >,
+              className='group'>,
               <div className='bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow'>,
                 <div className='text-3xl mb-4'>📚</div>,
                 <h3 className='text-xl font-semibold text-gray-90o0 mb-2 group-hover:text-purple-60o0'>,
@@ -378,7 +372,6 @@ export default function AI20o25AutonomousBusinessRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

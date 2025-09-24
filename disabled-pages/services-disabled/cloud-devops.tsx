@@ -3,97 +3,88 @@ import Link from 'next/link',
 import Navigation from '../../components/Navigation',
 import Footer from '../../components/Footer',
 import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Users, Globe, Database, Network, Phone, Mail, Settings, Monitor } from 'lucide-react',
-,
-const CloudDevOps = () => {,
-  const services = [,
-    {,
-      title: 'Cloud Migration',;
-      description: 'Seamlessly migrate your infrastructure to the cloud',;
-      icon: Cloud,;
-      features: [,
-        'AWS, Azure, GCP migration',;
-        'Application modernization',;
-        'Data migration strategies',;
-        'Cost optimization',;
-        'Performance tuning',
-      ],
-},;
-    {,
-      title: 'DevOps Implementation',;
-      description: 'Implement modern DevOps practices and tools',;
-      icon: GitBranch,;
-      features: [,
-        'CI/CD pipeline setup',;
-        'Infrastructure as Code',;
-        'Container orchestration',;
-        'Monitoring & logging',;
-        'Automated testing',
-      ],
-},;
-    {,
-      title: 'Infrastructure Management',;
-      description: 'Manage and optimize your cloud infrastructure',;
-      icon: Server,;
-      features: [,
-        'Auto-scaling configuration',;
-        'Load balancing',;
-        'Resource optimization',;
-        'Backup & disaster recovery',;
-        'Security hardening',
-      ],
-},;
-    {,
-      title: 'Monitoring & Analytics',;
-      description: 'Comprehensive monitoring and performance analytics',;
-      icon: Monitor,;
-      features: [,
-        'Real-time monitoring',;
-        'Performance metrics',;
-        'Alert management',;
-        'Log aggregation',;
-        'Cost tracking',
-      ],
+const CloudDevOps = () => {
+  const services = [
+    {
+      title: 'Cloud Migration';
+      description: 'Seamlessly migrate your infrastructure to the cloud';
+      icon: Cloud;
+      features: [
+        'AWS, Azure, GCP migration';
+        'Application modernization';
+        'Data migration strategies';
+        'Cost optimization';
+        'Performance tuning']};
+    {
+      title: 'DevOps Implementation';
+      description: 'Implement modern DevOps practices and tools';
+      icon: GitBranch;
+      features: [
+        'CI/CD pipeline setup';
+        'Infrastructure as Code';
+        'Container orchestration';
+        'Monitoring & logging';
+        'Automated testing']};
+    {
+      title: 'Infrastructure Management';
+      description: 'Manage and optimize your cloud infrastructure';
+      icon: Server;
+      features: [
+        'Auto-scaling configuration';
+        'Load balancing';
+        'Resource optimization';
+        'Backup & disaster recovery';
+        'Security hardening']};
+    {
+      title: 'Monitoring & Analytics';
+      description: 'Comprehensive monitoring and performance analytics';
+      icon: Monitor;
+      features: [
+        'Real-time monitoring';
+        'Performance metrics';
+        'Alert management';
+        'Log aggregation';
+        'Cost tracking']}
+  ],
+  const technologies = [
+    {
+      name: 'AWS';
+      description: 'Amazon Web Services cloud platform';
+      icon: Cloud,
+};
+    {
+      name: 'Azure';
+      description: 'Microsoft Azure cloud services';
+      icon: Cloud,
+};
+    {
+      name: 'Docker';
+      description: 'Containerization platform';
+      icon: Server,
+};
+    {
+      name: 'Kubernetes';
+      description: 'Container orchestration';
+      icon: Settings,
+};
+    {
+      name: 'Terraform';
+      description: 'Infrastructure as Code';
+      icon: GitBranch,
+};
+    {
+      name: 'Jenkins';
+      description: 'CI/CD automation';
+      icon: Zap,
 }
   ],
-  const technologies = [,
-    {,
-      name: 'AWS',;
-      description: 'Amazon Web Services cloud platform',;
-      icon: Cloud,
-,},;
-    {,
-      name: 'Azure',;
-      description: 'Microsoft Azure cloud services',;
-      icon: Cloud,
-,},;
-    {,
-      name: 'Docker',;
-      description: 'Containerization platform',;
-      icon: Server,
-,},;
-    {,
-      name: 'Kubernetes',;
-      description: 'Container orchestration',;
-      icon: Settings,
-,},;
-    {,
-      name: 'Terraform',;
-      description: 'Infrastructure as Code',;
-      icon: GitBranch,
-,},;
-    {,
-      name: 'Jenkins',;
-      description: 'CI/CD automation',;
-      icon: Zap,
-,}
+  const stats = [
+    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' };
+    { number: '50%', label: 'Cost Reduction', description: 'Average savings' };
+    { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' };
+    { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' }
   ],
-  const stats = [,
-    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' ,},;
-    { number: '50%', label: 'Cost Reduction', description: 'Average savings' ,},;
-    { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' ,},;
-    { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' ,}
-  ],
-  return (,
+  return (
     <>,
       <Head>,
         <title>Cloud & DevOps Services - Zion Tech Group</title>,
@@ -103,7 +94,7 @@ const CloudDevOps = () => {,
       </Head>,
       <Navigation  />,
       <main className="min-h-screen bg-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-50 to-cyan-10o0 py-20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center">,
@@ -130,17 +121,16 @@ const CloudDevOps = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Stats Section */,}
+        {/* Stats Section */}
         <section className="py-20 bg-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
-              {stats.map((stat, index) => (,
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">,
                   <div className="text-4xl font-bold text-blue-60o0 mb-2">{stat.number}</div>,
                   <div className="text-lg font-semibold text-gray-90o0 mb-1">{stat.label}</div>,
                   <div className="text-gray-60o0">{stat.description}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -154,27 +144,25 @@ const CloudDevOps = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
-              {services.map((service, index) => (,
+              {services.map((service, index) => (
                 <div key={index} className="bg-white rounded-lg p-8 shadow-sm hover: shadow-md transition-shadow">,
                   <div className="flex items-center mb-6">,
                     <div className="p-3 bg-blue-10o0 rounded-lg mr-4">,
                       <service.icon className="w-8 h-8 text-blue-60o0"  />,
                     </div>,
                     <div>,
-                      <h3 className="text-2xl font-bold text-gray-90o0">{service.title,}</h3>,
+                      <h3 className="text-2xl font-bold text-gray-90o0">{service.title}</h3>,
                       <p className="text-gray-60o0">{service.description}</p>,
                     </div>,
                   </div>,
                   <ul className="space-y-3">,
-                    {service.features.map((feature, featureIndex) => (,
+                    {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">,
                         <CheckCircle className="w-5 h-5 text-green-50o0 mr-3 flex-shrink-0"  />,
                         <span className="text-gray-70o0">{feature}</span>,
-                      </li>,
-                    ))}
+                      </li>))}
                   </ul>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -188,15 +176,14 @@ const CloudDevOps = () => {,
               </p>,
             </div>,
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">,
-              {technologies.map((tech, index) => (,
+              {technologies.map((tech, index) => (
                 <div key={index} className="text-center">,
                   <div className="bg-blue-10o0 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">,
                     <tech.icon className="w-8 h-8 text-blue-60o0"  />,
                   </div>,
                   <h3 className="text-lg font-semibold text-gray-90o0 mb-2">{tech.name}</h3>,
                   <p className="text-sm text-gray-60o0">{tech.description}</p>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </section>,
@@ -233,7 +220,7 @@ const CloudDevOps = () => {,
             </div>,
           </div>,
         </section>,
-        {/* Benefits Section */,}
+        {/* Benefits Section */}
         <section className="py-20 bg-white">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -267,7 +254,7 @@ const CloudDevOps = () => {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-60o0 to-cyan-60o0">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold text-white mb-6">,
@@ -288,8 +275,6 @@ const CloudDevOps = () => {,
         </section>,
       </main>,
       <Footer  />,
-    </>,
-  ),
-,};
-,
-export default CloudDevOps,
+    </>),
+};
+export default CloudDevOps;

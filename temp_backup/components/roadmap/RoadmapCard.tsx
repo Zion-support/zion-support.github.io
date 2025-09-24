@@ -1,44 +1,38 @@
 import Link from 'next/link',
 import { Feature } from '../../types/roadmap',
-,
-type Props = {,
+type Props = {
   feature: Feature,
   onUpvote: (feature: Feature) => void,
   onFollow: (feature: Feature) => void,
-,};
-,
-export default function RoadmapCard({ feature, onUpvote, onFollow }: Props) {,
-  return (,
+};
+export default function RoadmapCard({ feature, onUpvote, onFollow }: Props) {
+  return (
     <div className='rounded-xl border border-zinc-80o0 bg-zinc-90o0/40 backdrop-blur p-4 shadow-sm hover: shadow-md transition-shadow'>,
       <div className='flex items-start justify-between'>,
         <div>,
           <h3 className='text-lg font-semibold text-white'>,
-            <Link href={`/roadmap/${feature.slug,}`}>,
-              <a className='hover: underline'>{feature.title,}</a>,
+            <Link href={`/roadmap/${feature.slug}`}>,
+              <a className='hover: underline'>{feature.title}</a>,
             </Link>,
           </h3>,
-          {feature.etaQuarter && (,
+          {feature.etaQuarter && (
             <p className='text-xs text-zinc-40o0 mt-1'>,
-              ETA: {feature.etaQuarter,}
-            </p>,
-          )}
+              ETA: {feature.etaQuarter}
+            </p>)}
         </div>,
         <span className='text-xs px-2 py-1 rounded-full bg-zinc-80o0 text-zinc-30o0'>,
           {feature.status}
         </span>,
       </div>,
-      {feature.tags?.length ? (,
+      {feature.tags?.length ? (
         <div className='mt-3 flex flex-wrap gap-2'>,
-          {feature.tags.map(t => (,
-            <span,
+          {feature.tags.map(t => (
+            <span
               key={t}
-              className='text-[10px] uppercase tracking-wide px-2 py-0.5 rounded bg-zinc-80o0 text-zinc-30o0',
-            >,
+              className='text-[10px] uppercase tracking-wide px-2 py-0.5 rounded bg-zinc-80o0 text-zinc-30o0'>,
               {t}
-            </span>,
-          ))}
-        </div>,
-      ) : null}
+            </span>))}
+        </div>) : null}
       <div className='mt-4 flex items-center justify-between text-zinc-30o0'>,
         <div className='flex items-center gap-4 text-sm'>,
           <span className='inline-flex items-center gap-1'>,
@@ -53,36 +47,31 @@ export default function RoadmapCard({ feature, onUpvote, onFollow }: Props) {,
             </svg>,
             {feature.followerCount}
           </span>,
-          {typeof feature.commentsCount === 'number' && (,
+          {typeof feature.commentsCount === 'number' && (
             <span className='inline-flex items-center gap-1'>,
-              <svg,
+              <svg
                 width='14',
                 height='14',
                 viewBox='0 0 24 24',
-                fill='currentColor',
-              >,
+                fill='currentColor'>,
                 <path d='M21 6h-2v9H7v2c0 .55.45 1 1 1h9l4 4V7c0-.55-.45-1-1-1zM17 2H3c-.55 0-1 .45-1 1v14l4-4h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1z' />,
               </svg>,
               {feature.commentsCount}
-            </span>,
-          )}
+            </span>)}
         </div>,
         <div className='flex items-center gap-2'>,
-          <button,
+          <button
             onClick={() => onFollow(feature)}
-            className='px-3 py-1.5 text-xs rounded bg-zinc-80o0 hover: bg-zinc-70o0 text-white',
-          >,
+            className='px-3 py-1.5 text-xs rounded bg-zinc-80o0 hover: bg-zinc-70o0 text-white'>,
             Follow,
           </button>,
-          <button,
-            onClick={() => onUpvote(feature),}
-            className='px-3 py-1.5 text-xs rounded bg-indigo-60o0 hover: bg-indigo-50o0 text-white',
-          >,
+          <button
+            onClick={() => onUpvote(feature)}
+            className='px-3 py-1.5 text-xs rounded bg-indigo-60o0 hover: bg-indigo-50o0 text-white'>,
             Upvote,
           </button>,
         </div>,
       </div>,
-    </div>,
-  ),
-,}
+    </div>),
+}
 ,

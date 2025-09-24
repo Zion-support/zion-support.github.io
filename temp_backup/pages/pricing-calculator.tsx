@@ -1,7 +1,6 @@
 import Head from 'next/head',
-,
-export default function PricingCalculatorPage() {,
-  return (,
+export default function PricingCalculatorPage() {
+  return (
     <>,
       <Head>,
         <title>Pricing Calculator - Zion Tech Group</title>,
@@ -16,7 +15,6 @@ export default function PricingCalculatorPage() {,
           </a>,
         </div>,
       </div>,
-    </>,
-  ),
-,}
+    </>),
+}
 ,

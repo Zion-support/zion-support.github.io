@@ -1,7 +1,6 @@
 import Link from 'next/link',
-,
-export default function AI20o26FuturePredictionsBanner() {,
-  return (,
+export default function AI20o26FuturePredictionsBanner() {
+  return (
     <section className='bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='text-center'>,
@@ -17,20 +16,18 @@ export default function AI20o26FuturePredictionsBanner() {,
             ecosystems that will reshape our world.,
           </p>,
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>,
-            <Link,
+            <Link
               href='/ai-20o26-future-predictions-revolutionary',
-              className='bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5',
-            >,
+              className='bg-white text-indigo-60o0 px-8 py-4 rounded-lg font-semibold hover:bg-gray-10o0 transition-all transform hover:scale-10o5'>,
               View Predictions →,
             </Link>,
-            <Link,
+            <Link
               href='/contact',
-              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all',
-            >,
+              className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-60o0 transition-all'>,
               Prepare Now,
             </Link>,
           </div>,
-          {/* Key Predictions */,}
+          {/* Key Predictions */}
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mt-12'>,
             <div className='bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6'>,
               <div className='text-3xl mb-3'>🧬</div>,
@@ -69,7 +66,6 @@ export default function AI20o26FuturePredictionsBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),
-,}
+    </section>),
+}
 ,
