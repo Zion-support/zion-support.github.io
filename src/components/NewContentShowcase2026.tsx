@@ -3,71 +3,94 @@ import { Link } from 'react-router-dom';
 
 const NewContentShowcase2026: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-semibold text-white mb-6">
-            <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
-            NEW CONTENT AVAILABLE
+    <div className="py-16 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-block bg-gradient-to-r from-green-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+            NEW CONTENT • JANUARY 2026
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Revolutionary Tech Content
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Showcase 2026
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Latest AI Insights & Breakthroughs
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the latest breakthroughs in AI, quantum computing, and revolutionary technology solutions
+            Discover the newest content covering AI ethics, quantum computing, edge AI, and advanced services
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl font-bold mb-4">🚀 AI Innovation Hub</h3>
-            <p className="text-gray-200 mb-4">
-              Explore cutting-edge AI solutions and revolutionary technology breakthroughs.
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span className="text-green-400 text-sm font-semibold">NEW</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              AI Ethics in 2026: A Comprehensive Guide
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Explore the latest developments in AI ethics, responsible AI development, and regulatory frameworks.
             </p>
             <Link 
-              to="/ai-innovation-hub-2026" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold"
+              to="/ai-ethics-guide-2026" 
+              className="inline-flex items-center text-green-400 hover:text-green-300 font-semibold"
             >
-              Learn More →
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
-          
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl font-bold mb-4">⚡ Quantum Computing</h3>
-            <p className="text-gray-200 mb-4">
-              Discover the future of quantum computing and its revolutionary applications.
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span className="text-blue-400 text-sm font-semibold">FEATURED</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Quantum Computing Breakthroughs
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Latest advances in quantum computing and their implications for AI and machine learning.
             </p>
             <Link 
-              to="/quantum-computing-guide-2026" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold"
+              to="/quantum-computing-2026" 
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold"
             >
-              Learn More →
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
-          
-          <div className="bg-gradient-to-br from-indigo-600 to-blue-600 rounded-lg p-6 hover:shadow-lg transition-shadow">
-            <h3 className="text-2xl font-bold mb-4">🔮 Advanced Tech Solutions</h3>
-            <p className="text-gray-200 mb-4">
-              Revolutionary technology solutions for the next generation of innovation.
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+              <span className="text-purple-400 text-sm font-semibold">TRENDING</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Edge AI Implementation Guide
+            </h3>
+            <p className="text-gray-300 text-sm mb-4">
+              Complete guide to implementing AI at the edge for real-time processing and reduced latency.
             </p>
             <Link 
-              to="/advanced-tech-solutions-2026" 
-              className="text-cyan-400 hover:text-cyan-300 font-semibold"
+              to="/edge-ai-guide-2026" 
+              className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold"
             >
-              Learn More →
+              Read More
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <Link 
-            to="/services" 
-            className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+            to="/blog" 
+            className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
           >
-            Explore All Services →
+            View All Content
           </Link>
         </div>
       </div>
