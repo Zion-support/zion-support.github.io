@@ -1,6 +1,0 @@
-=======
-=======
-const Layout = dynamic(() => import("./Layout"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Layout' ,'
-</p>'
-=======
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

@@ -1,8 +1,0 @@
-import { useRouter } from 'next/router';
-export default function TalentDetail(){
-  const { query } = useRouter();
-  return <div className="max-w-3xl mx-auto p-6">Talent: {String(query.slug || '')}</div>;
-}
-=======
-export default function TalentSlugPage() { return null }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

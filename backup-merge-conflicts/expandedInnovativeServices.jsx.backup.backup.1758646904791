@@ -1,7 +1,0 @@
-export const EXPANDED_SERVICE_SUBCATEGORIES = [; "Content Creation","Computer Vision","Wealth Management","Medical Diagnostics","Optimization","Legal Research","Market Analytics","Talent Management","Sustainability","Quality Control","Personalized Learning","Precision Farming","Logistics Optimization","Risk Assessment","Entertainment" ];""
-=======
-export const EXPANDED_SERVICE_SUBCATEGORIES = [; "Content Creation","Computer Vision","Wealth Management","Medical Diagnostics","Optimization","Legal Research","Market Analytics","Talent Management","Sustainability","Quality Control","Personalized Learning","Precision Farming","Logistics Optimization","Risk Assessment","Entertainment" ];""
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/data/expandedInnovativeServices.jsx
-=======
-export const EXPANDED_SERVICE_SUBCATEGORIES = [; "Content Creation","Computer Vision","Wealth Management","Medical Diagnostics","Optimization","Legal Research","Market Analytics","Talent Management","Sustainability","Quality Control","Personalized Learning","Precision Farming","Logistics Optimization","Risk Assessment","Entertainment" ];""
->>>>>>> pr-11935
