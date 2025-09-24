@@ -1,48 +1,55 @@
 export type SiteUpdate = {
-  title: string: summary: string: href: string: date?: string: tag?: string};
-export const siteUpdates: SiteUpdate[] = [{;
-    title: 'Launch: Agent Evals & Observability Suite v1.0';
-    summary:;,
-      'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.';
-    href: '/updates/agent-evals-observability-suite-1-0';
-    date: '2025-09-15';
-    tag: 'Launch';,
-  };
-  {;
-    title: 'Launch: Trustworthy Model Routing (2026 Preview)';
-    summary:;,
-      'Policy-aware routing with eval signals and budgets for safer, cheaper, faster generations.';
-    href: '/updates/trustworthy-model-routing-2026';
-    date: '2025-09-15';
-    tag: 'Launch';,
-  };
-  {;
-    title: 'Guide: Enterprise Agent SLO Dashboards';
-    summary:;,
-      'Define and track SLOs for quality, latency, and safety across agent fleets with live telemetry.';
-    href: '/updates/enterprise-agent-slo-dashboards';
-    date: '2025-09-15';
-    tag: 'Guide';,
-  };
-  {;
-    title: 'Report: AI Lab Open Benchmarks Portal';
-    summary:;,
-      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.';
-    href: '/updates/ai-lab-open-benchmarks-portal';
-    date: '2025-09-15';
-    tag: 'Report';,
-  };
-  // Fresh content added 2025-09-15;
+  title: string;
+  summary: string;
+  href: string;
+  date?: string;
+  tag?: string;
+};
+
+export const siteUpdates: SiteUpdate[] = [
+  {
+    title: 'Launch: Agent Evals & Observability Suite v1.0',
+    summary:
+      'Unified live evals, guardrail events, tracing, and budget dashboards to operate agents safely.',
+    href: '/updates/agent-evals-observability-suite-1-0',
+    date: '2025-09-15',
+    tag: 'Launch',
+  },
+  {
+    title: 'Launch: Trustworthy Model Routing (2026 Preview)',
+    summary:
+      'Policy-aware routing with eval signals and budgets for safer, cheaper, faster generations.',
+    href: '/updates/trustworthy-model-routing-2026',
+    date: '2025-09-15',
+    tag: 'Launch',
+  },
+  {
+    title: 'Guide: Enterprise Agent SLO Dashboards',
+    summary:
+      'Define and track SLOs for quality, latency, and safety across agent fleets with live telemetry.',
+    href: '/updates/enterprise-agent-slo-dashboards',
+    date: '2025-09-15',
+    tag: 'Guide',
+  },
+  {
+    title: 'Report: AI Lab Open Benchmarks Portal',
+    summary:
+      'Transparent tasks, datasets, and harnesses for reproducible, enterprise-ready AI benchmarking.',
+    href: '/updates/ai-lab-open-benchmarks-portal',
+    date: '2025-09-15',
+    tag: 'Report',
+  },
+  // Fresh content added 2025-09-15
   // New content added 2025-09-15 (afternoon batch)
-  {;
-    title: 'Launch: AI Content Studio 2.2';
-    summary:;,
-      'Faster renders, new brand kits, calendar scheduling, and bulk publish with guardrails.';
-    href: '/updates/ai-content-studio-2-2';
-    date: '2025-09-15';
-    tag: 'Product';,
-  };
-  {;
+  {
+    title: 'Launch: AI Content Studio 2.2',
+    summary:
+      'Faster renders, new brand kits, calendar scheduling, and bulk publish with guardrails.',
+    href: '/updates/ai-content-studio-2-2',
+    date: '2025-09-15',
+    tag: 'Product',
+  },
+  {
     title: 'Guide: Evaluation-Driven Release Management';
     summary:;,
       'Ship safer with canary evals, rollback rules, and quality budgets wired into CI/CD.';
