@@ -21,7 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "src-clean/src/*"
       ]
     },
     "noUnusedLocals": false,
@@ -33,7 +33,6 @@
     "noImplicitThis": false,
     "noImplicitOverride": false,
     "types": [
-      "vite/client",
       "node",
       "react",
       "react-dom"
@@ -47,9 +46,11 @@
     "strictNullChecks": true
   },
   "include": [
-    "src-clean/src",
-    "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
+    "src-clean/src/**/*",
+    "src-clean/src/types/offline-shims.d.ts",
+    "*.d.ts",
+    "tailwind.config.js",
+    "postcss.config.js",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -57,35 +58,19 @@
     "dist",
     "build",
     "coverage",
-    "src/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "ts_files_backup",
-    "zion-os.disabled",
-    "zion-os",
+    "coverage",
     "zion-website",
+    "zion-os",
     "zion-ai-assistant",
-    "types.disabled",
-    "**/*.config.ts",
-    "vite.config.ts",
-    "vitest.config.ts",
-    // Temporarily exclude corrupted or legacy areas until cleaned
-    "src/routes",
-    "src/utils/errorBoundary.tsx",
-    "src/utils/imageOptimizer.tsx",
-    "src/utils/cartUtils.ts",
-    "src/pages/solutions",
-    "src/pages/services",
-    "src/pages",
-    "src/pages-disabled",
-    "src/components",
-    "src/context",
-    "src/legal",
-    "src/i18n.js",
-    "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
-    "src/utils/cartUtils.js"
+    "utils",
+    "pages",
+    "pages.*",
+    "services",
+    "tests",
+    "__tests__"
   ]
 }
