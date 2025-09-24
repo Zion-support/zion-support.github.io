@@ -35,6 +35,8 @@ export default function TestimonialsSection() {
     setCurrentIndex(index);
   };
 
+  const activeTestimonial = (testimonials[currentIndex] ?? testimonials[0])!;
+
   return (
     <div className='bg-gray-50 dark:bg-gray-900 py-16'>
       <div className='max-w-6xl mx-auto px-6'>
@@ -50,7 +52,7 @@ export default function TestimonialsSection() {
 
         <div className='relative'>
           <TestimonialCard
-            testimonial={testimonials[currentIndex]}
+            testimonial={activeTestimonial}
             isActive={true}
           />
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactElement } from 'react';
 
 interface Testimonial {
   id: number;
@@ -56,23 +56,28 @@ export default function TestimonialCard({
   useEffect(() => {
     if (isActive) {
       setIsVisible(true);
+      return undefined;
     } else {
       const timer = setTimeout(() => setIsVisible(false), 300);
       return () => clearTimeout(timer);
     }
   }, [isActive]);
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span
-        key={i}
-        className={`text-lg ${
-          i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
-        }`}
-      >
-        ★
+  const renderStars = (rating: number): ReactElement => {
+    return (
+      <span>
+        {Array.from({ length: 5 }, (_, i) => (
+          <span
+            key={i}
+            className={`text-lg ${
+              i < rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
+            }`}
+          >
+            ★
+          </span>
+        ))}
       </span>
-    ));
+    );
   };
 
   return (

@@ -61,8 +61,8 @@ export default function StatsSection() {
               <div className='text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2'>
                 <AnimatedCounter
                   end={stat.value}
-                  prefix={stat.prefix}
-                  suffix={stat.suffix}
+                  prefix={stat.prefix ?? ''}
+                  suffix={stat.suffix ?? ''}
                 />
               </div>
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-1'>

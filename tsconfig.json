@@ -41,13 +41,33 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "scripts/**/*.ts",
+    "scripts/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
-    "dist"
+    "dist",
+    "**/*.backup.*",
+    "**/*.cleanup-backup.*",
+    "**/*.conflict-backup.*",
+    "**/*.disabled/**",
+    "src_backup/**",
+    "src_backup_all/**",
+    "src.broken/**",
+    "src-corrupted/**",
+    "src.pages.disabled/**",
+    "services_backup/**",
+    "types.disabled/**",
+    "utils.disabled/**",
+    "tests.disabled/**",
+    "zion-os.disabled/**"
   ]
 }
