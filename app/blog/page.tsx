@@ -1,49 +1,241 @@
-import React from 'react';
 import Link from 'next/link';
 
 const posts = [
-  { href: '/blog/ai-2026-quantum-neural-fusion-breakthrough', title: 'AI 2026: Quantum Neural Fusion Breakthrough', tag: 'Revolutionary' },
-  { href: '/blog/ai-2026-neural-interface-business-transformation', title: 'AI 2026: Neural Interface Business Transformation', tag: 'Breakthrough' },
-  { href: '/blog/ai-2025-enterprise-autonomous-systems-revolution', title: 'AI 2025: Enterprise Autonomous Systems Revolution', tag: 'Featured' },
-  { href: '/blog/ai-2026-evidence-hub-architecture', title: 'Production Evidence Hub Architecture (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-policy-as-code-blueprint', title: 'Policy‑as‑Code Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-policy-as-code-starter-kit', title: 'Policy‑as‑Code Starter Kit (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-agentic-observability-overview', title: 'Agentic Observability — Executive Overview (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-agent-posture-management', title: 'Agent Posture Management — Executive Guide (2026)', tag: 'Featured' },
-  { href: '/blog/ai-2026-executive-ai-security-playbook', title: 'Executive AI Security Playbook (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-trusted-rag-guardrailed-retrieval', title: 'Trusted RAG — Guardrailed Retrieval (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-operational-reliability-blueprint', title: 'Operational Reliability Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-real-world-eval-gates-case-studies', title: 'Real‑World Eval Gates — Case Studies (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-eval-gated-ci-cd-blueprint', title: 'Eval‑Gated CI/CD Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-reliable-autonomy-operations', title: 'Reliable Autonomy Operations (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-enterprise-ai-security-blueprint', title: 'Enterprise AI Security Blueprint (2026)', tag: 'New' },
-  { href: '/blog/ai-2026-production-safety-checklist', title: 'Production Safety Checklist (2026)', tag: 'Guide' },
-  { href: '/blog/ai-2025-enterprise-agents-vs-autonomous-copilots', title: 'Agents vs. Copilots (2025)', tag: 'Trending' },
-  { href: '/blog/ai-2026-production-evidence-hub-blueprint', title: 'Production Evidence Hub — Blueprint (2026)', tag: 'Guide' },
-  { href: '/blog/ai-2026-trustworthy-autonomous-agents-blueprint', title: 'Trustworthy Autonomous Agents Blueprint (2026)', tag: 'Featured' },
+  {
+    id: 'ai-automation-2025-comprehensive-guide',
+    title: 'AI Automation 2025: Complete Implementation Guide',
+    description: 'Master AI automation with our comprehensive guide covering strategy, implementation, ROI measurement, and real-world case studies.',
+    href: '/blog/ai-automation-2025-comprehensive-guide',
+    date: '2025-01-28',
+    tags: ['AI', 'Automation', 'Strategy'],
+    category: 'AI & Automation',
+    readTime: '15 min read',
+    excerpt: 'Transform your business operations with intelligent automation. This comprehensive guide covers everything from strategy to implementation.',
+    featured: true,
+  },
+  {
+    id: 'ai-cost-optimization-advanced-2025',
+    title: 'Advanced AI Cost Optimization 2025',
+    description: 'Discover advanced strategies to reduce AI infrastructure costs by 40-60% while maintaining performance. Real-world techniques and tools.',
+    href: '/blog/ai-cost-optimization-advanced-2025',
+    date: '2025-01-28',
+    tags: ['AI', 'Cost Optimization', 'Engineering'],
+    category: 'AI Engineering',
+    readTime: '12 min read',
+    excerpt: 'Master AI cost optimization with advanced strategies, tools, and techniques. Reduce AI infrastructure costs by 40-60% while maintaining performance.',
+    featured: true,
+  },
+  {
+    id: 'ai-copilots-for-engineering',
+    title: 'AI Copilots for Engineering Teams',
+    description: 'How to deploy secure, repo-aware copilots that speed reviews and cut toil.',
+    href: '/blog/ai-copilots-for-engineering',
+    date: '2025-09-11',
+    tags: ['AI', 'DevEx', 'Productivity'],
+    category: 'AI & Development',
+    readTime: '9 min read',
+    excerpt: 'Deploy secure, repo-aware copilots that speed reviews and cut toil for engineering teams.',
+    featured: false,
+  },
+  {
+    id: 'ai-agents-for-smbs',
+    title: 'Practical AI Agents for Small Businesses',
+    description: 'How SMBs can deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely.',
+    href: '/blog/ai-agents-for-smbs',
+    date: '2025-09-11',
+    tags: ['AI', 'Automation', 'Agents'],
+    category: 'AI & Automation',
+    readTime: '11 min read',
+    excerpt: 'Deploy lightweight AI agents to automate support, sales outreach, and back-office tasks safely for small businesses.',
+    featured: false,
+  },
+  {
+    id: 'cloud-cost-optimization-2025',
+    title: 'Cloud Cost Optimization in 2025: Proven Playbook',
+    description: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    href: '/blog/cloud-cost-optimization-2025',
+    date: '2025-09-11',
+    tags: ['Cloud', 'FinOps', 'DevOps'],
+    category: 'Cloud & DevOps',
+    readTime: '13 min read',
+    excerpt: 'A tactical guide to cut 20–40% of cloud spend without sacrificing performance or velocity.',
+    featured: false,
+  },
+  {
+    id: 'ai-customer-support-playbooks',
+    title: 'AI-Powered Customer Support Playbooks',
+    description: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    href: '/blog/ai-customer-support-playbooks',
+    date: '2025-09-11',
+    tags: ['AI', 'CX', 'Automation'],
+    category: 'AI & Customer Experience',
+    readTime: '10 min read',
+    excerpt: 'Production-ready patterns for self-serve assistants, case triage, agent copilots, and QA.',
+    featured: false,
+  },
 ];
 
-export default function BlogIndexPage() {
-  return (
-    <div className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <h1 className="text-4xl md:text-5xl font-bold">Blog</h1>
-          <p className="mt-3 text-purple-100/90">Practical guides, playbooks, and blueprints for AI in the enterprise.</p>
-        </div>
-      </header>
-      <main className="max-w-6xl mx-auto px-6 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {posts.map((p) => (
-            <Link key={p.href} href={p.href} className="block bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-sm font-semibold text-purple-700">{p.tag}</div>
-              <div className="text-lg font-bold text-gray-900 mt-1">{p.title}</div>
-              <div className="mt-2 text-purple-700 font-semibold">Read →</div>
-            </Link>
-          ))}
-        </div>
-      </main>
-    </div>
-  );
+	const featuredPosts = posts.filter(post => post.featured);
+	const regularPosts = posts.filter(post => !post.featured);
+
+	return (
+		<div className='min-h-screen bg-white'>
+			{/* Hero Section */}
+			<section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-100'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center'>
+						<h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
+							Insights & Innovation
+						</h1>
+						<p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
+							Stay ahead with the latest trends in AI, technology, and business
+							strategy. Expert insights from the Zion Tech Group team.
+						</p>
+						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
+							<a
+								href='#newsletter'
+								className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg'
+							>
+								Subscribe to Updates
+							</a>
+							<Link
+								href='/contact'
+								className='border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-lg'
+							>
+								Work With Us
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Featured Posts */}
+			<section className='py-16'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center mb-12'>
+						<h2 className='text-3xl font-bold text-gray-900 mb-4'>
+							Featured Articles
+						</h2>
+						<p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+							Our most popular and impactful content
+						</p>
+					</div>
+					<div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+						{featuredPosts.map(post => (
+							<FeaturedPostCard key={post.id} post={post} />
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* All Posts */}
+			<section className='py-16 bg-gray-50'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center mb-12'>
+						<h2 className='text-3xl font-bold text-gray-900 mb-4'>
+							All Articles
+						</h2>
+						<p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+							Explore our complete library of insights and guides
+						</p>
+					</div>
+					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+						{regularPosts.map(post => (
+							<PostCard key={post.id} post={post} />
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Newsletter Signup */}
+			<section id='newsletter' className='py-16'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center'>
+						<h2 className='text-3xl font-bold text-gray-900 mb-4'>
+							Stay Updated with Our Latest Insights
+						</h2>
+						<p className='text-gray-600 mb-6 max-w-2xl mx-auto'>
+							Get weekly updates on AI trends, technology insights, and business
+							strategies. Join 10,000+ professionals who trust our content.
+						</p>
+						<div className='max-w-md mx-auto flex gap-4'>
+							<input
+								type='email'
+								placeholder='Enter your email'
+								className='flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+							/>
+							<button className='bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
+								Subscribe
+							</button>
+						</div>
+						<p className='text-sm text-gray-500 mt-4'>
+							No spam. Unsubscribe anytime. We respect your privacy.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 }
 
+import type { FC } from 'react';
+
+const FeaturedPostCard: FC<{ post: any }> = ({ post }) => {
+	return (
+		<Link href={`/blog/${post.id}`} className='group'>
+			<article className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+				<div className='aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center'>
+					<div className='text-6xl'>📊</div>
+				</div>
+				<div className='p-6'>
+					<div className='flex items-center gap-2 mb-3'>
+						<span className='bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full'>
+							{post.category}
+						</span>
+						<span className='text-gray-500 text-sm'>{post.readTime}</span>
+					</div>
+					<h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors'>
+						{post.title}
+					</h3>
+					<p className='text-gray-600 mb-4'>{post.excerpt}</p>
+					<div className='flex items-center justify-between'>
+						<span className='text-sm text-gray-500'>{post.date}</span>
+						<span className='text-blue-600 font-medium group-hover:underline'>
+							Read More →
+						</span>
+					</div>
+				</div>
+			</article>
+		</Link>
+	);
+};
+
+const PostCard: FC<{ post: any }> = ({ post }) => {
+	return (
+		<Link href={`/blog/${post.id}`} className='group'>
+			<article className='bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow'>
+				<div className='aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center'>
+					<div className='text-4xl'>💡</div>
+				</div>
+				<div className='p-6'>
+					<div className='flex items-center gap-2 mb-3'>
+						<span className='bg-gray-100 text-gray-800 text-xs font-medium px-2 py-1 rounded-full'>
+							{post.category}
+						</span>
+						<span className='text-gray-500 text-xs'>{post.readTime}</span>
+					</div>
+					<h3 className='text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors'>
+						{post.title}
+					</h3>
+					<p className='text-gray-600 text-sm mb-3'>{post.excerpt}</p>
+					<div className='flex items-center justify-between'>
+						<span className='text-xs text-gray-500'>{post.date}</span>
+						<span className='text-blue-600 text-sm font-medium group-hover:underline'>
+							Read →
+						</span>
+					</div>
+				</div>
+			</article>
+		</Link>
+	);
+}
