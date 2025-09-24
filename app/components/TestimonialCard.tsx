@@ -1,20 +1,20 @@
-'use client';
+'use client'
 
-import { useState, useEffect, ReactElement } from 'react';
+import { useState, useEffect, ReactElement } from 'react'
 
 interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  avatar?: string;
-  rating: number;
+  id: number
+  name: string
+  role: string
+  company: string
+  content: string
+  avatar?: string
+  rating: number
 }
 
 interface TestimonialCardProps {
-  testimonial: Testimonial;
-  isActive: boolean;
+  testimonial: Testimonial
+  isActive: boolean
 }
 
 const testimonials: Testimonial[] = [
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     company: 'TechFlow Inc.',
     content:
       'Zion Tech Group transformed our AI infrastructure. The results exceeded our expectations with 60% improvement in processing speed and 40% cost reduction.',
-    rating: 5,
+    rating: 5
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     company: 'CloudScale Solutions',
     content:
       'Their quantum computing expertise helped us solve complex optimization problems that were previously impossible. Game-changing technology implementation.',
-    rating: 5,
+    rating: 5
   },
   {
     id: 3,
@@ -43,25 +43,25 @@ const testimonials: Testimonial[] = [
     company: 'DataDriven Corp',
     content:
       'The cybersecurity framework they implemented has given us complete peace of mind. Zero breaches since deployment and full compliance achieved.',
-    rating: 5,
+    rating: 5
   },
-];
+]
 
 export default function TestimonialCard({
   testimonial,
-  isActive,
+  isActive
 }: TestimonialCardProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     if (isActive) {
-      setIsVisible(true);
-      return undefined;
+      setIsVisible(true)
+      return
     } else {
-      const timer = setTimeout(() => setIsVisible(false), 300);
-      return () => clearTimeout(timer);
+      const timer = setTimeout(() => setIsVisible(false), 300)
+      return () => clearTimeout(timer)
     }
-  }, [isActive]);
+  }, [isActive])
 
   const renderStars = (rating: number): ReactElement => {
     return (
@@ -77,8 +77,8 @@ export default function TestimonialCard({
           </span>
         ))}
       </span>
-    );
-  };
+    )
+  }
 
   return (
     <div
@@ -110,7 +110,7 @@ export default function TestimonialCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export { testimonials };
+export { testimonials }
