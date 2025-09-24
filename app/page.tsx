@@ -1330,6 +1330,7 @@ export default function HomePage() {
               </article>
             </Link>
           </div>
+          </div>
 
           {/* Trending Articles */}
           <div className='mb-12'>
