@@ -1,138 +1,112 @@
 #!/bin/bash
 
-# Efficient batch merge script for all cursor branches
+# Efficient Batch Merge Script
 set -e
 
-echo "Starting efficient batch merge process..."
+echo "🚀 Starting Efficient Batch Merge Process..."
+echo "📅 $(date)"
 
-# Configuration
-BATCH_SIZE=50
-MAX_RETRIES=3
-LOG_FILE="/workspace/merge_log.txt"
-
-# Initialize log file
-echo "Merge process started at $(date)" > "$LOG_FILE"
-
-# Function to log messages
-log_message() {
-    echo "$(date): $1" | tee -a "$LOG_FILE"
-}
-
-# Function to merge a single branch with conflict resolution
-merge_branch() {
-    local branch=$1
-    local attempt=1
+# Function to merge branches in batches
+merge_batch() {
+    local branch_pattern="$1"
+    local max_branches="$2"
+    local batch_name="$3"
     
-    log_message "Attempting to merge branch: $branch"
+    echo "🔄 Processing $batch_name batch..."
     
-    while [ $attempt -le $MAX_RETRIES ]; do
-        log_message "Merge attempt $attempt for branch: $branch"
+    # Get branches matching pattern
+    local branches=$(git for-each-ref --format='%(refname:short)' refs/remotes/origin | \
+        grep "$branch_pattern" | \
+        head -$max_branches)
+    
+    if [ -z "$branches" ]; then
+        echo "⚠️  No branches found for pattern: $branch_pattern"
+        return 0
+    fi
+    
+    local count=$(echo "$branches" | wc -w)
+    echo "📊 Found $count branches in $batch_name batch"
+    
+    local successful=0
+    local failed=0
+    
+    for branch in $branches; do
+        local branch_name="${branch#origin/}"
         
-        # Try different merge strategies
-        if [ $attempt -eq 1 ]; then
-            # First attempt: try normal merge
-            if git merge "origin/$branch" --no-commit 2>/dev/null; then
-                git commit -m "Merge $branch into main"
-                log_message "Successfully merged $branch (normal merge)"
-                return 0
-            fi
-        elif [ $attempt -eq 2 ]; then
-            # Second attempt: prefer main branch changes
-            if git merge "origin/$branch" --no-commit --strategy=recursive -X ours 2>/dev/null; then
-                git commit -m "Merge $branch into main, auto-resolve by preferring main"
-                log_message "Successfully merged $branch (preferring main)"
-                return 0
-            fi
+        # Check if already merged
+        if git merge-base --is-ancestor "$branch" main 2>/dev/null; then
+            echo "✅ $branch_name already merged, skipping..."
+            continue
+        fi
+        
+        echo "🔄 Merging: $branch_name"
+        
+        # Try direct merge
+        if git merge "$branch" --no-ff -m "Merge $branch_name - batch processing $(date +%Y%m%d-%H%M%S)" 2>/dev/null; then
+            ((successful++))
+            echo "✅ Merged: $branch_name"
         else
-            # Third attempt: prefer branch changes
-            if git merge "origin/$branch" --no-commit --strategy=recursive -X theirs 2>/dev/null; then
-                git commit -m "Merge $branch into main, auto-resolve by preferring branch"
-                log_message "Successfully merged $branch (preferring branch)"
-                return 0
+            # Auto-resolve conflicts
+            git merge --abort 2>/dev/null || true
+            if git merge "$branch" --no-commit --no-ff 2>/dev/null; then
+                git commit -m "Merge $branch_name - auto-resolved - $(date +%Y%m%d-%H%M%S)"
+                ((successful++))
+                echo "✅ Merged with auto-resolution: $branch_name"
+            else
+                # Try conflict resolution
+                conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+                if [ -n "$conflicted_files" ]; then
+                    for file in $conflicted_files; do
+                        if [ -f "$file" ]; then
+                            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+                            git add "$file"
+                        fi
+                    done
+                    if git commit -m "Merge $branch_name - resolved conflicts - $(date +%Y%m%d-%H%M%S)"; then
+                        ((successful++))
+                        echo "✅ Merged with conflict resolution: $branch_name"
+                    else
+                        git merge --abort 2>/dev/null || true
+                        ((failed++))
+                        echo "❌ Failed: $branch_name"
+                    fi
+                else
+                    git merge --abort 2>/dev/null || true
+                    ((failed++))
+                    echo "❌ Failed: $branch_name"
+                fi
             fi
         fi
         
-        # Clean up failed merge
-        git merge --abort 2>/dev/null || git reset --hard HEAD
-        
-        attempt=$((attempt + 1))
+        # Small delay
+        sleep 0.05
     done
     
-    log_message "Failed to merge $branch after $MAX_RETRIES attempts"
-    return 1
+    echo "📊 $batch_name Results: ✅ $successful, ❌ $failed"
+    return 0
 }
 
-# Get all branches that need to be merged
-ALL_BRANCHES=$(git branch -r | grep "cursor/check-fix-push-and-merge-to-main" | sed 's/origin\///' | sort)
-BUILD_BRANCHES=$(git branch -r | grep "cursor/build-nextjs-app-with-dependency-install" | sed 's/origin\///')
+# Merge different types of branches in batches
+echo ""
+echo "🔄 Phase 1: Merging recent cursor/check-fix branches..."
+merge_batch "cursor/check-fix-push-and-merge-to-main" 20 "Cursor Check-Fix"
 
-ALL_BRANCHES="$ALL_BRANCHES $BUILD_BRANCHES"
-TOTAL_BRANCHES=$(echo "$ALL_BRANCHES" | wc -w)
+echo ""
+echo "🔄 Phase 2: Merging other cursor branches..."
+merge_batch "cursor/" 15 "Cursor General"
 
-log_message "Total branches to merge: $TOTAL_BRANCHES"
+echo ""
+echo "🔄 Phase 3: Merging maintenance branches..."
+merge_batch "maintenance/" 10 "Maintenance"
 
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-FAILED_BRANCHES=()
+echo ""
+echo "🔄 Phase 4: Merging codex branches..."
+merge_batch "codex" 10 "Codex"
 
-# Process branches in batches
-current_batch=0
-processed_count=0
+echo ""
+echo "🚀 Pushing all changes to remote..."
+git push origin main
 
-for branch in $ALL_BRANCHES; do
-    if [ -z "$branch" ]; then
-        continue
-    fi
-    
-    processed_count=$((processed_count + 1))
-    
-    # Check if we need to start a new batch
-    if [ $((processed_count % BATCH_SIZE)) -eq 1 ]; then
-        current_batch=$((current_batch + 1))
-        log_message "Starting batch $current_batch (branches $processed_count-$((processed_count + BATCH_SIZE - 1)))"
-    fi
-    
-    # Verify branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        log_message "Branch $branch does not exist, skipping..."
-        continue
-    fi
-    
-    # Check if branch is already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD 2>/dev/null; then
-        log_message "Branch $branch is already merged, skipping..."
-        continue
-    fi
-    
-    # Attempt to merge the branch
-    if merge_branch "$branch"; then
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-    else
-        FAILED_COUNT=$((FAILED_COUNT + 1))
-        FAILED_BRANCHES+=("$branch")
-    fi
-    
-    # Progress update every 10 branches
-    if [ $((processed_count % 10)) -eq 0 ]; then
-        log_message "Progress: $processed_count/$TOTAL_BRANCHES branches processed. Success: $SUCCESS_COUNT, Failed: $FAILED_COUNT"
-    fi
-done
-
-# Final summary
-log_message "=========================================="
-log_message "Batch merge completed!"
-log_message "Successful merges: $SUCCESS_COUNT"
-log_message "Failed merges: $FAILED_COUNT"
-log_message "=========================================="
-
-if [ $FAILED_COUNT -gt 0 ]; then
-    log_message "Failed branches:"
-    for failed_branch in "${FAILED_BRANCHES[@]}"; do
-        log_message "  - $failed_branch"
-    done
-fi
-
-log_message "Final git status:"
-git status --short >> "$LOG_FILE"
-
-echo "Merge process completed. Check $LOG_FILE for details."
+echo ""
+echo "🎉 Efficient batch merge completed!"
+echo "📅 Finished at: $(date)"
