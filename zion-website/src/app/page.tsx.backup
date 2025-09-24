@@ -1,8 +1,15 @@
 import React from 'react'
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 import React from 'react'
 import { getLatestUpdates } from '@/data/updates'
+>>>>>>> cursor/create-and-deploy-new-content-376e
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e
 import {
@@ -168,8 +175,11 @@ const whatsNew = [
 
 export default function HomePage() {
   return (
+<<<<<<< HEAD
+=======
 =======
     <div className="bg-black">
+>>>>>>> cursor/create-and-deploy-new-content-a12c
 >>>>>>> cursor/create-and-deploy-new-content-502e
       {/* Promo banner */}
       <div className="relative isolate px-6 pt-24 lg:px-8">

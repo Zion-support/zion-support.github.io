@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 
 const NeuralInterfaceFuture: React.FC = () => {
   return (
@@ -225,9 +227,11 @@ const NeuralInterfaceFuture: React.FC = () => {
             </a>
           </div>
         </div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
       </div>
     </div>
   );
 };
+
 
 export default NeuralInterfaceFuture;

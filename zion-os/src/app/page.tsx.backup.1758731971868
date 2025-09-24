@@ -123,7 +123,18 @@ export default function HomePage() {
 =======
 >>>>>>> cursor/create-and-deploy-new-content-dc9e
 >>>>>>> cursor/create-and-deploy-new-content-2def
+<<<<<<< HEAD
+      {/* Promo Banner - New Articles */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
+        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
+          <a
+            href="/blog/agent-safety-red-teaming-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
+          >
 =======
+=======
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
 =======
 >>>>>>> cursor/create-and-deploy-new-content-634d
 =======
@@ -450,7 +461,10 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>

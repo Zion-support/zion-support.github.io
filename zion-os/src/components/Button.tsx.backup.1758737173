@@ -70,6 +70,12 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(,
         aria-label={typeof children === 'string' ? children  : undefined}
       >
         {content}
+<<<<<<< HEAD
+      </button>)}
+)
+Button.displayName = 'Button',
+export default Button,`,
+=======
       </Link>
     );
   }
@@ -79,3 +85,4 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(,
     </button>
   );
 }
+>>>>>>> origin/aggressive-merge-backup-20250923-155532

@@ -16,6 +16,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
     // Check for existing authentication
     const checkAuth = async () => {
       try {
@@ -39,6 +41,7 @@ export const AuthProvider = ({ children }) => {
       console.error('Login failed:', error);
       return false;
     }
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   const logout = () => {
@@ -51,7 +54,10 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated,
     loading,
     login,
+<<<<<<< HEAD
+=======
     logout,
+>>>>>>> cursor/create-and-deploy-new-content-c963
   };
 
   return (

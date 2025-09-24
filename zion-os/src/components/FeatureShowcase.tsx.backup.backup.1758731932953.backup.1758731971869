@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // @ts-nocheck
@@ -26,6 +28,7 @@
                 key={feature.id}className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
     icon: (<svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+>>>>>>> origin/merge-pr-12271
 "use client";
 
 import { useEffect, useState } from "react";
@@ -110,7 +113,13 @@ const features: Feature[] = [
       "Staking and rewards",
       "Liquidity pools",
       "Token burning mechanisms",
+<<<<<<< HEAD
+      "Cross-chain bridges",
+    ],
+  },
 =======
+=======
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 "use client";
 
@@ -183,6 +192,9 @@ const features: Feature[] = [
 	}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/feature/add-news-and-promo
+=======
 >>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 ];
@@ -195,6 +207,8 @@ export function FeatureShowcase() {
 		setIsVisible(true);
 	}, []);
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   const getColorClasses = (color: Feature["color"]) => {
@@ -224,6 +238,7 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
       <div className="max - w-7xl mx-auto">;
         <div className="text - center mb-16">;
           <h2 className="text - 3xl md:text - 4xl font - bold mb-4">;  return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
+>>>>>>> origin/merge-pr-12271
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
       <div className="max-w-7xl mx-auto">
@@ -247,6 +262,39 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+<<<<<<< HEAD
+              >
+                <div className="flex items-start space-x-4">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(feature.color)} rounded-lg flex items-center justify-center text-white flex-shrink-0`}>
+                    {feature.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+                    <p className="text-gray-400 mb-3">{feature.description}</p>
+                    {activeFeature === feature.id && (
+                      <div className="space-y-2 animate-fade-in">
+                        {feature.details.map((detail, idx) => (
+                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
+                            <div className={`w-1.5 h-1.5 bg-${feature.color}-500 rounded-full`}></div>
+                            <span>{detail}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <div className={`transform transition-transform duration-300 ${
+                    activeFeature === feature.id ? 'rotate-180' : 'rotate-0'
+                  }`}>
+                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+=======
                 className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${activeFeature === feature.id;
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
@@ -299,6 +347,7 @@ function FeatureShowcase() {const [active_feature, setActiveFeature] = useState 
                 </div>;
               </div>))}
           </div>;
+>>>>>>> origin/merge-pr-12271
           {/* Interactive Demo Area */}
           <div className="relative">
             <div className="card bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-blue-500/30 p-8">
@@ -515,6 +564,9 @@ export default FeatureShowcase;
 	);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/feature/add-news-and-promo
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7

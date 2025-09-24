@@ -135,6 +135,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
       {/* What's New dynamic section */}
       <WhatsNew highlightOnly limit={8} />
       
@@ -375,6 +377,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+>>>>>>> origin/feature/new-slos-content-and-promo
       
       <div className='min-h-screen bg-white'>
         {/* New Multimodal Agents 2025 Banner - NEW */}

@@ -115,6 +115,8 @@ const ComprehensiveTechInsights2026: React.FC = () => {
                 <li>• Quantum-secure networks</li>
                 <li>• Neural web interfaces</li>
               </ul>
+<<<<<<< HEAD
+=======
         <div className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20"></div>
           <div className="container mx-auto relative z-10">
@@ -202,6 +204,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
                   <div className="mt-2 text-2xl font-bold text-green-400">+200% Capacity</div>
                 </div>
               </div>
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c963
             </div>
@@ -298,6 +301,8 @@ const ComprehensiveTechInsights2026: React.FC = () => {
                 Get Insights Report
               </button>
               <button className="border-2 border-white text-white px-12 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg">
+<<<<<<< HEAD
+=======
           {/* Expert Predictions */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30">
@@ -545,6 +550,7 @@ const ComprehensiveTechInsights2026: React.FC = () => {
                 Explore Insights
               </button>
               <button className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 font-semibold">
+>>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 =======
 >>>>>>> cursor/create-and-deploy-new-content-c963
                 Subscribe to Updates

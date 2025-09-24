@@ -17,8 +17,15 @@ export async function POST(request: NextRequest) {,
         },
       },
       { status: 200 }
+<<<<<<< HEAD
+    )} catch (_error) {,
+    return NextResponse.json({ error: 'Invalid request' }, { status: 400 })}
+}
+,
+=======
     );
   } catch (_error) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 }
+>>>>>>> origin/aggressive-merge-backup-20250923-155532

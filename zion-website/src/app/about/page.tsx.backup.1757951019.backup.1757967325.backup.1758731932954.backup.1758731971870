@@ -1,13 +1,23 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
 <<<<<<< HEAD
 =======
+>>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
 =======
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
 <<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-e453
 =======
@@ -25,6 +35,11 @@ export default function AboutPage() {
   return (
     <div className="bg-black min-h-screen">
       <div className="mx-auto max-w-7xl px-6 pt-24">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
@@ -89,6 +104,7 @@ const team = [
 ]
 =======
 import React from 'react'
+>>>>>>> origin/backup-main-20250915-074228
 
 export default function AboutPage() {
   return (
@@ -100,12 +116,28 @@ export default function AboutPage() {
               About <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
+<<<<<<< HEAD
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+              dedicated to transforming industries and advancing human potential through technology.
+=======
               We build advanced AI and technology solutions that help organizations innovate faster and scale with confidence.
+>>>>>>> origin/backup-main-20250915-074228
             </p>
           </div>
         </div>
       </div>
 <<<<<<< HEAD
+
+      {/* Mission & Vision */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+>>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
+=======
+>>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
+<<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-e453
 =======
@@ -138,6 +170,14 @@ export default function AboutPage() {
           </dl>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>
+  )
+}
+=======
+>>>>>>> cursor/create-and-deploy-new-content-e453
 <<<<<<< HEAD
     </div>
   )
@@ -217,12 +257,18 @@ export default function AboutPage() {
               <p className="mt-2 text-gray-300">We prioritize {v.toLowerCase()} in everything we deliver.</p>
             </div>
           ))}
+>>>>>>> origin/backup-main-20250915-074228
         </div>
       </div>
 >>>>>>> 401f3529ced7 (Refactor: Clean up navigation and page components)
     </div>
   )
+<<<<<<< HEAD
 }
+<<<<<<< HEAD:zion-website/src/app/about/page.tsx.backup.1757951019
+=======
+}
+>>>>>>> origin/backup-main-20250915-074228
 =======
 >>>>>>> 627246f4d0776175de27a395be76886274bd0c6a:zion-website/src/app/about/page.tsx
 =======
@@ -231,6 +277,10 @@ export default function AboutPage() {
 }
 >>>>>>> f0d44d274289a35b3b82ca624be681a13ba7eaab:zion-website/src/app/about/page.tsx
 <<<<<<< HEAD
+>>>>>>> 7ef5dc338d47c97be3767ff413cd3dbb4ee379e3
+=======
+<<<<<<< HEAD
+>>>>>>> 5221e64b58f51e3cf4362a5292b9f5f53a656d76
 >>>>>>> cursor/create-and-deploy-new-content-b0b6
 >>>>>>> cursor/create-and-deploy-new-content-e453
 =======

@@ -7,6 +7,9 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
+    files: ['App.tsx', 'src/**/*.{ts,tsx,js,jsx}'],
+=======
            ignores: [
              'node_modules/**',
              '.next/**',
@@ -54,6 +57,7 @@ export default [
       'pages/**/*.{js,jsx,ts,tsx}',
       'src/**/*.{js,jsx,ts,tsx}'
     ],
+>>>>>>> cursor/check-fix-push-and-merge-to-main-a83b
 >>>>>>> origin/backup-main-20250923-195549
     languageOptions: {
       ecmaVersion: 2022,

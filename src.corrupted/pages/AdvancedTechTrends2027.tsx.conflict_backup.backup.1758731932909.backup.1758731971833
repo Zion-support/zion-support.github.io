@@ -46,7 +46,10 @@ const AdvancedTechTrends2027: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="flex items-center space-x-3 mb-6">
               <span className="text-4xl">🧬</span>
+<<<<<<< HEAD
+=======
               <h2 className="text-3xl font-bold text-white">Synthetic Biology</h2>
+>>>>>>> cursor/create-and-deploy-new-content-c963
             </div>
             <p className="text-gray-300 mb-6 text-lg">
               Programmable biology is enabling the creation of living machines, 
@@ -55,11 +58,14 @@ const AdvancedTechTrends2027: React.FC = () => {
             <div className="space-y-4">
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 p-4 rounded-lg">
                 <h3 className="text-white font-semibold mb-2">Living Factories</h3>
+<<<<<<< HEAD
+=======
                 <p className="text-gray-300 text-sm">Biological systems that manufacture complex materials and pharmaceuticals</p>
               </div>
               <div className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 p-4 rounded-lg">
                 <h3 className="text-white font-semibold mb-2">DNA Computing</h3>
                 <p className="text-gray-300 text-sm">Biological processors that solve problems impossible for traditional computers</p>
+>>>>>>> cursor/create-and-deploy-new-content-c963
               </div>
             </div>
           </div>
@@ -67,6 +73,8 @@ const AdvancedTechTrends2027: React.FC = () => {
 
         {/* Emerging Technologies Section */}
         <div className="mb-16">
+<<<<<<< HEAD
+=======
           <h2 className="text-4xl font-bold text-white text-center mb-12">
             🌟 Emerging Technologies 2027
           </h2>
@@ -90,10 +98,13 @@ const AdvancedTechTrends2027: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-3">Energy Harvesting</h3>
               <p className="text-gray-300 mb-4">Wireless energy transmission and ambient energy collection systems</p>
               <div className="text-cyan-400 text-sm font-semibold">Pilot Phase</div>
+>>>>>>> cursor/create-and-deploy-new-content-c963
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
         {/* Future Applications */}
         <div className="bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -117,11 +128,14 @@ const AdvancedTechTrends2027: React.FC = () => {
                 <li>• Quantum-enhanced climate modeling</li>
                 <li>• Living cities that adapt and evolve</li>
               </ul>
+>>>>>>> cursor/create-and-deploy-new-content-c963
             </div>
           </div>
         </div>
 
         {/* Call to Action */}
+<<<<<<< HEAD
+=======
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -131,11 +145,15 @@ const AdvancedTechTrends2027: React.FC = () => {
               Join us in exploring and implementing these revolutionary technologies
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> cursor/create-and-deploy-new-content-c963
               <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
                 Explore Solutions
               </button>
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+<<<<<<< HEAD
+=======
                 Get Started
+>>>>>>> cursor/create-and-deploy-new-content-c963
               </button>
             </div>
           </div>
@@ -144,5 +162,6 @@ const AdvancedTechTrends2027: React.FC = () => {
     </div>
   );
 };
+
 
 export default AdvancedTechTrends2027;

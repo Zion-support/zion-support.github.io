@@ -1,4 +1,6 @@
 // Console error toast handler
+<<<<<<< HEAD
+=======
 const originalConsoleError = console.error;
 
 console.error = function(...args) {
@@ -13,3 +15,4 @@ console.error = function(...args) {
 };
 
 export default {};
+>>>>>>> cursor/create-and-deploy-new-content-c963

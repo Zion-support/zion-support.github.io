@@ -39,6 +39,10 @@ import QuantumNeuralFusion2026 from './src/pages/QuantumNeuralFusion2026';
 import AdvancedQuantumComputing2026 from './src/pages/AdvancedQuantumComputing2026';
 import NeuralInterfaceRevolution2026 from './src/pages/NeuralInterfaceRevolution2026';
 import AdvancedAISolutions2026 from './src/pages/AdvancedAISolutions2026';
+<<<<<<< HEAD
+// import AdvancedNeuralInterface2026 from './src/pages/AdvancedNeuralInterface2026';
+=======
+>>>>>>> origin/resolved-merge-conflicts-20250924-164212
 import RevolutionaryTechBlog2026 from './src/pages/RevolutionaryTechBlog2026';
 import ComprehensiveCaseStudies2026 from './src/pages/ComprehensiveCaseStudies2026';
 // import InnovationShowcase2026 from './src/pages/InnovationShowcase2026';
@@ -795,6 +799,10 @@ export default function App(): JSX.Element {
           <Route path="/pages/AdvancedQuantumComputing2026" element={<AdvancedQuantumComputing2026 />} />
           <Route path="/pages/NeuralInterfaceRevolution2026" element={<NeuralInterfaceRevolution2026 />} />
           <Route path="/pages/AdvancedAISolutions2026" element={<AdvancedAISolutions2026 />} />
+<<<<<<< HEAD
+          {/* Route temporarily disabled: AdvancedNeuralInterface2026 page missing */}
+=======
+>>>>>>> origin/resolved-merge-conflicts-20250924-164212
           <Route path="/pages/RevolutionaryTechBlog2026" element={<RevolutionaryTechBlog2026 />} />
           <Route path="/pages/ComprehensiveCaseStudies2026" element={<ComprehensiveCaseStudies2026 />} />
           {/* Route temporarily disabled: InnovationShowcase2026 page missing */}

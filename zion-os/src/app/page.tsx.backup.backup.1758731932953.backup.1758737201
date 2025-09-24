@@ -1,7 +1,11 @@
+<<<<<<< HEAD:zion-os/src/app/page.tsx.backup.backup.1758731932953
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import Link from 'next/link';
 =======
 import React from 'react';
+>>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-5863
 import FeatureCard from './components/FeatureCard';
 =======
@@ -680,13 +684,49 @@ export default function HomePage() {
     }
   ];
 
+<<<<<<< HEAD:zion-os/src/app/page.tsx.backup.backup.1758731932953
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="hero-gradient absolute inset-0 -z-10"></div>
+          
+          <div className="animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Launch Sovereign</span>
+              <br />
+              <span className="text-white">AI-Powered Digital Economies</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
+              Built for the future of decentralized business.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
+              <a href="/multiverse/launch" className="btn-primary hover-lift">
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift">
+>>>>>>> cursor/create-and-deploy-new-content-5863
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
+<<<<<<< HEAD
+              </a>
+              <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
+                📰 New: AI Governance Framework 2025
+              </a>
+              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
+                ✅ New: Agent Safety Red Teaming 2025
+              </a>
+              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
+                🔬 New: Foundation Models 2025
+              </a>
+=======
 <<<<<<< HEAD
               </Link>
 =======
@@ -697,6 +737,7 @@ export default function HomePage() {
 =======
               <a href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
+>>>>>>> origin/feat/news-content
               </a>
               <a href="/news" className="btn-secondary hover-lift">
                 📰 See what's new in 2025
@@ -708,6 +749,8 @@ export default function HomePage() {
         </div>
       </section>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       {/* Promo Banner - New Articles */}
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
@@ -718,6 +761,10 @@ export default function HomePage() {
           >
 =======
 =======
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-634d
 =======
 >>>>>>> 17fc7cb9c7c9c1144afdca822c756f504221b8d0
 =======
@@ -931,6 +978,9 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
@@ -962,6 +1012,7 @@ export default function HomePage() {
 =======
               <a href="/blog/edge-ai-compliance-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Edge AI Compliance 2025
+>>>>>>> origin/feature/content-sept15-2025
 =======
               <a href="/blog/ai-agent-safety-playbook-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: AI Agent Safety Playbook 2025
@@ -1053,6 +1104,8 @@ export default function HomePage() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 
     }
   ]
@@ -1149,6 +1202,7 @@ export default function HomePage() {
         &quot;Blog + Roadmap Setup&quot;
       ]
       gradient: &quot;bg-gradient-to-r from-indigo-600 to-blue-600&quot;
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/page.tsx.backup.1758637231231
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
@@ -1340,7 +1394,10 @@ export default function HomePage() {
                 📊 Explore Examples
               </a>
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f4f03d913802721228f65aaef3835c32d10a39b3
               <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
                 📰 New: Foundation Models 2025
               </a>
@@ -1410,6 +1467,8 @@ export default function HomePage() {
 }
 
 =======
+<<<<<<< HEAD
+=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">;
@@ -1435,5 +1494,6 @@ export default function HomePage() {
     </div>;
   )}}
 =======
+>>>>>>> origin/feat/news-content
 >>>>>>> cursor/create-and-deploy-new-content-376e
 >>>>>>> cursor/create-and-deploy-new-content-5863

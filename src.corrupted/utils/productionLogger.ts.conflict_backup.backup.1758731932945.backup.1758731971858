@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
 // Production-safe logging utility
 // Production logger utility for handling logging in production environment
 
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -16,9 +20,13 @@ const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
     }
   }
 }
+
 
   error(message: string, data?: any): void {
     if (!this.shouldLog('ERROR')) return;
@@ -73,6 +81,7 @@ const LOG_LEVELS: LogLevel = {
 
     if (!this.isDevelopment) {
       this.sendToRemote('DEBUG', message, data);
+>>>>>>> cursor/create-and-deploy-new-content-c963
 
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
@@ -161,6 +170,8 @@ class ProductionLogger {
     }
   }
 
+<<<<<<< HEAD
+=======
   debug(message: string, data?: any): void {
     this.log('debug', message, data);
   }
@@ -186,6 +197,7 @@ class ProductionLogger {
   debug(message: string, ...args: any[]): void {
     if (this.shouldLog(LOG_LEVELS.DEBUG)) {
       console.debug(`[DEBUG] ${message}`, ...args);
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
   info(message: string, context?: Record<string, any>): void {
     const entry = this.createLogEntry('info', message, context);
@@ -212,6 +224,8 @@ class ProductionLogger {
   }
 }
 
+<<<<<<< HEAD
+=======
 // Create default logger instance
 const productionLogger = new ProductionLogger();
 
@@ -225,12 +239,16 @@ export const logErrorToProduction = (message: string, data?: any) => productionL
 export default productionLogger;
 export { ProductionLogger, LOG_LEVELS };
 export type { LoggerOptions };
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 // Create singleton instance
 const productionLogger = new ProductionLogger();
 
+<<<<<<< HEAD
+=======
 export default productionLogger;
 export { ProductionLogger, type LogLevel, type LogEntry };
+>>>>>>> cursor/create-and-deploy-new-content-c963
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 }

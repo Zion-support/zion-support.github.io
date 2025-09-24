@@ -33,6 +33,20 @@ export default function SignInPage() {,
                 <p className='text-red-4000 text-sm'>{error}</p>
               </div>)}
             <div>
+<<<<<<< HEAD
+              <label
+                htmlFor='email',
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
+                Email Address,
+              </label>
+              <input
+                id='email',
+                type='email',
+                required: value={email}
+                onChange={e => setEmail(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent',
+                placeholder='Enter your email',
+=======
               <label htmlFor="email-address" className="sr-only">
                 Email address
               </label>
@@ -46,9 +60,24 @@ export default function SignInPage() {,
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+>>>>>>> origin/aggressive-merge-backup-20250923-155532
               />
             </div>
             <div>
+<<<<<<< HEAD
+              <label
+                htmlFor='password',
+                className='block text-sm font-medium text-zinc-3000 mb-2'>
+                Password,
+              </label>
+              <input
+                id='password',
+                type='password',
+                required: value={password}
+                onChange={e => setPassword(e.target.value)}
+                className='w-full px-4 py-3 bg-zinc-7000/50 border border-zinc-6000/50 rounded-lg text-white placeholder-zinc-4000 focus: outline-none focus: ring-2 focus: ring-blue-5000 focus: border-transparent',
+                placeholder='Enter your password',
+=======
               <label htmlFor="password" className="sr-only">
                 Password
               </label>
@@ -62,14 +91,20 @@ export default function SignInPage() {,
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+>>>>>>> origin/aggressive-merge-backup-20250923-155532
               />
             </div>
             <button
               type='submit',
               disabled={isLoading}
+<<<<<<< HEAD
+              className='w-full bg-blue-6000 hover: bg-blue-7000 disabled: bg-blue-6000/50 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-2000'>,
+              {isLoading ? 'Signing In...'  : 'Sign In'}
+=======
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
             >
               {isLoading ? "Signing in..." : "Sign in"}
+>>>>>>> origin/aggressive-merge-backup-20250923-155532
             </button>
           </form>
           <div className='mt-6 text-center'>
@@ -97,7 +132,13 @@ export default function SignInPage() {,
             </Link>
           </p>
         </div>
+<<<<<<< HEAD
+      </div>,
+    </div>)}
+,
+=======
       </div>
     </div>
   );
 }
+>>>>>>> origin/aggressive-merge-backup-20250923-155532

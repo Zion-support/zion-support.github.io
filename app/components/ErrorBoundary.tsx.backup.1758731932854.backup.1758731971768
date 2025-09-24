@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+'use client'
+=======
 export { default } from '@/components/ErrorBoundary';
 export * from '@/components/ErrorBoundary';
 'use client',
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 
 import React from 'react'
 

@@ -14,9 +14,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
+      "@/*": ["src/*"]
+=======
       "@/*": [
         "src/*"
       ]
+>>>>>>> origin/aggressive-merge-backup-20250923-155532
     },
     "plugins": [
       {

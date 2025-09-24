@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+scripts/**
+automation/**
+server/**
+apps/**
+netlify/**
+=======
 # Exclude non-app directories and archived content from linting
 node_modules/
 .next/
@@ -57,6 +64,7 @@ out/
 coverage/
 
 # Large or archived areas with known invalid code/tests
+>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-16d5
 __tests__/**
 tests/**
 backups/**

@@ -28,6 +28,12 @@ type Params = { params: { id: string } };
     title: 'AI Governance Framework 2025: Building Trust in Autonomous Systems',
 =======
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-5863
   'agentic-safety-patterns-2025': {
     id: 'agentic-safety-patterns-2025',
     title: 'Agentic Safety Patterns 2025: Guardrails for Autonomous Systems',
@@ -419,4 +425,8 @@ export default function BlogPostPage({ params }: Params) {
       </div>
     </article>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/create-and-deploy-new-content-5863

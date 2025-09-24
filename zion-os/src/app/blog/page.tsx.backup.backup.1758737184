@@ -21,6 +21,16 @@ type PostListItem = {
 };
 
 export default function BlogPage() {
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+      id: 'ai-agent-safety-playbook-2025',
+      title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Engineering-first guardrails, audits, and human-in-the-loop patterns for safe autonomy.',
+      category: 'AI Safety',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '9 min read',
+      image: '/blog/ai-agent-safety.jpg',
+=======
   const featuredPosts = [
     {
       id: 'enterprise-agent-safety-2025',
@@ -31,6 +41,7 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/enterprise-agent-safety.jpg',
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
       featured: true
     },
     {
@@ -42,6 +53,8 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '8 min read',
       image: '/blog/ai-governance.jpg',
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+=======
       id: 'agent-safety-guardrails-2025',
       title: 'Agent Safety Guardrails: Designing Trustworthy Autonomous Systems in 2025',
       excerpt: 'Blueprints for policy engines, interventions, and auditable controls that keep AI agents safe and aligned.',
@@ -58,6 +71,7 @@ export default function BlogPage() {
       date: '2025-09-15',
       readTime: '9 min read',
       image: '/blog/foundation-models-2025.jpg',
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
       featured: true
     },
     {
@@ -202,6 +216,8 @@ export default function BlogPage() {
 
   const recentPosts = [
     {
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+=======
       id: 'ai-agent-safety-playbook-2025',
       title: 'AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems',
       excerpt: 'Engineering-first guardrails, audits, and human-in-the-loop patterns for safe autonomy.',
@@ -213,6 +229,7 @@ export default function BlogPage() {
     },
     {
 =======
+>>>>>>> origin/feat/content-promo
 =======
       id: 'genai-productivity-benchmarks-2025',
       title: 'GenAI Productivity Benchmarks 2025: Measuring Real Business Impact',
@@ -253,6 +270,20 @@ export default function BlogPage() {
       image: '/blog/edge-ai-compliance.jpg'
     },
     {
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+      id: 'ai-accessibility-2025',
+      title: 'AI Accessibility 2025: Designing Inclusive Autonomous Experiences',
+      excerpt: 'Patterns for multimodal access, adjustable autonomy, and explainable interactions.',
+      category: 'Accessibility',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-12',
+      readTime: '7 min read',
+      image: '/blog/ai-accessibility-2025.jpg'
+      id: 'ai-governance-2025',
+      title: 'AI Governance 2025: Practical Guardrails for Autonomous Systems',
+      excerpt: 'Field guide to programmable guardrails with real-time oversight.',
+      category: 'AI Solutions',
+=======
       id: 'multi-agent-supply-chains',
       title: 'Multi‑Agent Supply Chains: Real‑Time Coordination and Resilience',
       excerpt: 'Agent-based orchestration to reduce latency and increase resilience across supply networks.',
@@ -273,9 +304,24 @@ export default function BlogPage() {
       title: 'Enterprise Agent Guardrails: Safety, Identity, and Policy Enforcement',
       excerpt: 'A practical framework for shipping helpful, harmless, and honest AI agents with enterprise-grade controls.',
       category: 'Cybersecurity',
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
       author: 'Dr. Emily Watson',
       date: '2025-09-15',
       readTime: '8 min read',
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+      image: '/blog/ai-governance.jpg'
+    },
+    {
+      id: 'ai-governance-blueprint-2025',
+      title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
+      excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
+      category: 'AI Governance',
+      author: 'Dr. Emily Watson',
+      date: '2025-09-15',
+      readTime: '8 min read',
+      image: '/blog/ai-governance.jpg'
+=======
+>>>>>>> origin/feat/content-promo
 =======
 >>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
@@ -403,9 +449,12 @@ export default function BlogPage() {
     { name: 'All Posts', count: 14, active: true },
     { name: 'Research & Development', count: 3, active: false },
     { name: 'AI Solutions', count: 3, active: false },
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+=======
     { name: 'AI Solutions', count: 3, active: false },
 =======
     { name: 'AI Solutions', count: 3, active: false },
+>>>>>>> cursor/create-and-deploy-new-content-b9ff
 >>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
 >>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
@@ -463,6 +512,9 @@ export default function BlogPage() {
       <section className="py-6 bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <a
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+            href="/blog/ai-governance-blueprint-2025"
+=======
             href="/blog/ai-agent-safety-playbook-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Agent Safety Playbook 2025: Practical Guardrails for Autonomous Systems"
@@ -470,13 +522,17 @@ export default function BlogPage() {
             href="/blog/enterprise-agent-safety-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: Enterprise Agent Safety 2025: Guardrails for Autonomy at Scale"
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 AS
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+=======
             href="/blog/ai-safety-governance-blueprint-2025"
 =======
             href="/blog/sovereign-ai-commerce-2025"
+>>>>>>> cursor/create-and-deploy-new-content-d9c7
 =======
             href="/blog/ai-foundation-models-2025"
 >>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
@@ -485,6 +541,15 @@ export default function BlogPage() {
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+            href="/blog/ai-governance-2025"
+            className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
+            aria-label="Read: AI Governance 2025: Practical Guardrails for Autonomous Systems"
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
+                AG
+=======
             href="/blog/ai-safety-audit-2025"
             className="block w-full bg-white rounded-xl border border-blue-200 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow"
             aria-label="Read: AI Safety Audit 2025: Practical Frameworks for Production Systems"
@@ -492,6 +557,7 @@ export default function BlogPage() {
             <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center text-xl font-bold">
                 AS
+>>>>>>> origin/feat/blog-content-and-promo
 =======
                 FM
 >>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413
@@ -502,10 +568,17 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">New</span>
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900">
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+                  AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy
+                </h3>
+                <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
+                  A pragmatic framework for blending automated policy engines with human oversight for AI at scale.
+=======
                   AI Safety & Governance Blueprint 2025: Practical Controls for Enterprises
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base line-clamp-2 md:line-clamp-1">
                   How to implement policy, evals, guardrails, and monitoring without slowing delivery.
+>>>>>>> origin/feature/blog-content-2025
 =======
                   AI Governance 2025: Practical Guardrails for Autonomous Systems
                 </h3>
@@ -702,3 +775,7 @@ export default function BlogPage() {
     </div>
   );
 }
+<<<<<<< HEAD:zion-os/src/app/blog/page.tsx.backup
+
+=======
+>>>>>>> origin/aggressive-merge-backup-20250924-085711:zion-os/src/app/blog/page.tsx.backup.1757922316.auto-resolve-backup.1758637413

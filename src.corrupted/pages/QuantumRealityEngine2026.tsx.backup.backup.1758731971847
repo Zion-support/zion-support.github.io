@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 import React from 'react';
@@ -192,10 +195,14 @@ const QuantumRealityEngine2026: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> main
 >>>>>>> cursor/create-and-deploy-new-content-4cdf
 >>>>>>> cursor/create-and-deploy-new-content-39c9
 export default QuantumRealityEngine2026;
@@ -400,6 +407,9 @@ export default QuantumRealityEngine2026;
 export default QuantumRealityEngine2026;
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/create-and-deploy-new-content-04f4
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-502e

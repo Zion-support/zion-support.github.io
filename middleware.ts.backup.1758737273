@@ -2,6 +2,10 @@ import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
 <<<<<<< HEAD
+export function middleware(_req: NextRequest) {
+  return NextResponse.next()
+=======
+<<<<<<< HEAD
 const publicRoutes = [
   "/",
   "/about",
@@ -95,6 +99,7 @@ export function middleware(request: NextRequest) {
   // For all other routes, continue normally
 =======
 export function middleware(_request: NextRequest) {
+>>>>>>> 2f91f519a862b7cb51772274fd4f684c7acb589a
   return NextResponse.next();
 >>>>>>> origin/bulk-merge-backup-20250923-140330
 }

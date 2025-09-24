@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
 // Cart utility functions for managing shopping cart state
 // Cart utilities for handling shopping cart operations
 
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 /**
  * Cart utility functions for managing shopping cart operations
@@ -28,6 +32,9 @@ export interface Cart {
   itemCount: number;
 }
 
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
 export const cartUtils = {
   // Create a new empty cart
   createEmptyCart: (): Cart => ({
@@ -41,6 +48,7 @@ export const cartUtils = {
 
   // Add item to cart
   addItem: (cart: Cart, item: Omit<CartItem, 'quantity'>): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -55,20 +63,30 @@ export const cartUtils = {
       const newItem: CartItem = { ...item, quantity: 1 };
       const newItems = [...cart.items, newItem];
       return cartUtils.calculateTotals({ ...cart, items: newItems });
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
     items: [],
     total: 0,
     itemCount: 0,
   }),
 
+<<<<<<< HEAD
+=======
   // Add item to cart
   addItem: (cart: Cart, newItem: Omit<CartItem, 'quantity'>): Cart => {
     const existingItemIndex = cart.items.findIndex(item => item.id === newItem.id);
+>>>>>>> cursor/create-and-deploy-new-content-c963
     }
     return item;
   });
 
+<<<<<<< HEAD
+=======
   // Remove item from cart
   removeItem: (cart: Cart, itemId: string): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -76,6 +94,10 @@ export const cartUtils = {
   },
 
   // Remove item from cart
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
     const newItems = cart.items.filter(item => item.id !== itemId);
@@ -83,7 +105,11 @@ export const cartUtils = {
   },
 
   // Update item quantity
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
   updateItemQuantity: (cart: Cart, itemId: string, quantity: number): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
     if (quantity <= 0) {
       return cartUtils.removeItem(cart, itemId);
     }
@@ -110,8 +136,11 @@ export function calculateCartTotals(cart: Cart): Cart {
   // Calculate total
   const total = subtotal + shipping + tax - cart.discount;
 
+<<<<<<< HEAD
+=======
   // Calculate totals
   calculateTotals: (cart: Cart): Cart => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
@@ -127,6 +156,10 @@ export function calculateCartTotals(cart: Cart): Cart {
   },
 
   // Calculate totals
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-8735
     const total = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -135,7 +168,11 @@ export function calculateCartTotals(cart: Cart): Cart {
     return {
       ...cart,
       total: Math.round(total * 100) / 100, // Round to 2 decimal places
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
       itemCount
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
   return {
     ...cart,
@@ -160,6 +197,8 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
     };
   }
 
+<<<<<<< HEAD
+=======
 =======
   // Clear cart
   clearCart: (): Cart => cartUtils.createEmptyCart(),
@@ -173,12 +212,17 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   hasItem: (cart: Cart, itemId: string): boolean => {
 =======
 =======
+>>>>>>> cursor/create-and-deploy-new-content-f977
 >>>>>>> 75eb4d630573de2c91ceda573e859cd83b99c68c
 >>>>>>> cursor/create-and-deploy-new-content-c963
     };
   },
 
   // Clear cart
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
     };
   },
@@ -189,6 +233,9 @@ export function applyDiscount(cart: Cart, discount: Discount): { cart: Cart; isV
   },
 
   // Get cart summary
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
 export default cartUtils;
   getSummary: (cart: Cart) => ({
     itemCount: cart.itemCount,
@@ -258,6 +305,7 @@ export default cartUtils;
 export const getCartKey = cartUtils.getCartKey;
 export const mergeCartItems = cartUtils.mergeCartItems;
 
+>>>>>>> cursor/create-and-deploy-new-content-c963
     return {
       cart,
       isValid: false,
@@ -455,6 +503,8 @@ export function importCart(cartData: string): { cart: Cart; isValid: boolean; er
     };
   },
 
+<<<<<<< HEAD
+=======
   // Persist cart to localStorage
   persistCart: (cart: Cart): boolean => {
     try {
@@ -504,6 +554,7 @@ export function importCart(cartData: string): { cart: Cart; isValid: boolean; er
 };
 
 export default cartUtils;
+>>>>>>> cursor/create-and-deploy-new-content-c963
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
 =======
 export default cartUtils;

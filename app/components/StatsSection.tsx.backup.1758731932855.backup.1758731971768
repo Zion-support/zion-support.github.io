@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+'use client'
+
+import AnimatedCounter from './AnimatedCounter'
+
+interface StatItem {
+  label: string
+  value: number
+  prefix?: string
+  suffix?: string
+  description?: string
+=======
 'use client';
 
 import AnimatedCounter from './AnimatedCounter';
@@ -8,6 +20,7 @@ interface StatItem {
   prefix?: string;
   suffix?: string;
   description?: string;
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 }
 
 const stats: StatItem[] = [
@@ -21,21 +34,35 @@ const stats: StatItem[] = [
     label: 'Client Satisfaction',
     value: 98,
     suffix: '%',
+<<<<<<< HEAD
+    description: 'Average client rating'
+=======
     description: 'Average client rating',
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
   },
   {
     label: 'Cost Reduction',
     value: 45,
     suffix: '%',
+<<<<<<< HEAD
+    description: 'Average operational savings'
+=======
     description: 'Average operational savings',
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
   },
   {
     label: 'Response Time',
     value: 99.9,
     suffix: '%',
+<<<<<<< HEAD
+    description: 'System uptime guarantee'
+  }
+]
+=======
     description: 'System uptime guarantee',
   },
 ];
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 
 export default function StatsSection() {
   return (
@@ -78,5 +105,9 @@ export default function StatsSection() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+=======
   );
+>>>>>>> 564351a1efb60f0138dfdeea53748eccb3c9bb47
 }

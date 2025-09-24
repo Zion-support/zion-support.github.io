@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
 // Fetch utility with retry logic and error handling
 // Fetch with retry utility for handling network requests with automatic retries
 
@@ -15,6 +18,7 @@ const defaultOptions: Required<FetchWithRetryOptions> = {
   timeout: 10000
 };
 
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -23,6 +27,9 @@ export const fetchWithRetry = async (
   url: string,
   options: RequestInit & FetchWithRetryOptions = {}
 ): Promise<Response> => {
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+=======
   const { retries, delay, backoff, timeout, ...fetchOptions } = {
     ...defaultOptions,
     ...options
@@ -48,6 +55,8 @@ export const fetchWithRetry = async (
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
 
+>>>>>>> cursor/create-and-deploy-new-content-c963
+
 interface FetchWithRetryOptions {
   retries?: number;
   retryDelay?: number;
@@ -70,7 +79,10 @@ export const fetchWithRetry = async (
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
+<<<<<<< HEAD
+=======
   const attemptFetch = async (attempt: number): Promise<Response> => {
+>>>>>>> cursor/create-and-deploy-new-content-c963
   let lastError: Error;
   let attempt = 0;
 
@@ -92,9 +104,12 @@ export const fetchWithRetry = async (
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+=======
 
       return response;
       
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 >>>>>>> cursor/create-and-deploy-new-content-d3a3
 =======
@@ -103,6 +118,12 @@ export const fetchWithRetry = async (
     } catch (error) {
       lastError = error as Error;
       
+<<<<<<< HEAD
+>>>>>>> 1d7fd6d1fb30cd51e67b6fec67ae4df7b2f1c915
+    } catch (error) {
+      clearTimeout(timeoutId);
+
+=======
       // Don't retry on the last attempt
       if (attempt === retries) {
         break;
@@ -126,6 +147,7 @@ export const fetchWithRetry = async (
         console.warn(`Fetch attempt ${attempt + 1} failed, retrying in ${retryDelay}ms:`, error);
         await new Promise(resolve => setTimeout(resolve, retryDelay * attempt));
         return attemptFetch(attempt + 1);
+>>>>>>> cursor/create-and-deploy-new-content-c963
         throw lastError;
 >>>>>>> cursor/create-and-deploy-new-content-cc9d
       }
@@ -134,7 +156,10 @@ export const fetchWithRetry = async (
     }
   };
 
+<<<<<<< HEAD
+=======
   return attemptFetch(0);
+>>>>>>> cursor/create-and-deploy-new-content-c963
 =======
 }
 
