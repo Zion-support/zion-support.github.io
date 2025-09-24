@@ -1,0 +1,17 @@
+# Exclude problematic directories and files
+pages_backup/
+pages.broken/
+pages.corrupted*/
+pages.disabled/
+pages.old/
+*.backup.*
+*.cleanup-backup.*
+*.disabled.*
+*.corrupted*
+node_modules/
+.next/
+out/
+dist/
+build/
+*.min.js
+*.min.css
