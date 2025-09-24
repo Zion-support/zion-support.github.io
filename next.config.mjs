@@ -3,7 +3,6 @@
 const nextConfig = {
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
   },
   
@@ -19,9 +18,10 @@ const nextConfig = {
   
   // Bundle analyzer (only in development)
   ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
+    webpack: async (config) => {
+      const { BundleAnalyzerPlugin } = await import('@next/bundle-analyzer');
       config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
+        new BundleAnalyzerPlugin({
           enabled: true,
         })
       );
@@ -58,4 +58,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
