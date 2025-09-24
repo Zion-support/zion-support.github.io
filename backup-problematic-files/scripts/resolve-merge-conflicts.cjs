@@ -4,63 +4,18 @@ conflictType = 'incoming';
       }
 
 
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
-<<<<<<< HEAD
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file has merge conflicts
-// Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {
-  try {
-  // TODO: Implement
-}
-
-    // Check if file has merge conflicts;
-    if (!content.includes(
-      return false;
-    })
-
-        conflictType = 'incoming';
-        continue;
-      }
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         inConflict = false;
         conflictType = '';
         continue;
       }
 
-<<<<<<< HEAD
-      if (!inConflict) {
-    // Split by merge conflict markers;
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = ;
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.includes()) {
-        inConflict = true;
-        conflictType = 'head';
-conflictType = 'incoming';
-        continue;
-
-=======
 
       if (!inConflict) {
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
         resolvedLines.push(line);
       } else if (conflictType === 'head') {
         // Keep HEAD version (first part)
@@ -168,15 +123,6 @@ function findConflictedFiles(dir) {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
-<<<<<<< HEAD
-
-} catch (error) {
-  console.error('❌ Error during merge conflict resolution:', error.message);
-  process.exit(1);
-}
-}
-      const stat = fs.statSync(fullPath);"
-=======
 
           const content = fs.readFileSync(fullPath, 'utf8');
 
@@ -184,20 +130,6 @@ function findConflictedFiles(dir) {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-<<<<<<< HEAD
-// Main execution;
-  // TODO: Implement
-
-  let resolvedCount = 0;
-  for (const file of conflictedFiles) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-  console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-  // Try to build after resolving conflicts;
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

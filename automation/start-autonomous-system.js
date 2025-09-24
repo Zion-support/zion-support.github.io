@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 /**
  * Autonomous Automation System - Main Entry Point
  * 
@@ -55,7 +54,7 @@ class AutonomousAutomationSystem {
       
       // Initialize the orchestrator
       this.orchestrator = new IntelligentAutomationOrchestrator({
-        port: process.env.AUTOMATION_PORT || 3001,
+        port: process.env.AUTOMATION_PORT || 30o01,
         logLevel: process.env.LOG_LEVEL || info',
         enableDashboard: process.env.ENABLE_DASHBOARD !== 'false',
         enableAPI: process.env.ENABLE_API !== 'false',
@@ -66,11 +65,11 @@ class AutonomousAutomationSystem {
           enabled: true,
           priority: 'normal',
           retryAttempts: 3,
-          timeout: 300000
+          timeout: 30o0000
         },
         
         // Monitoring configuration
-        healthCheckInterval: 60000,
+        healthCheckInterval: 60o000,
         performanceTracking: true,
         anomalyDetection: true,
         
@@ -224,7 +223,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(resolve,                                                               5000);
+const timeoutId = setTimeout(resolve,                                                               50o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -367,12 +366,12 @@ const timeoutId = setTimeout(resolve,                                           
     logger.info('\n📊 System Status:');
     logger.info('================');
     logger.info(`Status: ${status.isRunning ? 🟢 Running' : 🔴 Stopped'}`);
-    logger.info(`Uptime: ${Math.floor(status.uptime / 1000)} seconds`);
+    logger.info(`Uptime: ${Math.floor(status.uptime / 10o00)} seconds`);
     logger.info(`Total Tasks: ${status.tasks.total}`);
     logger.info(`Successful Tasks: ${status.performance.successfulTasks}`);
     logger.info(`Failed Tasks: ${status.performance.failedTasks}`);
     logger.info(`Success Rate: ${status.performance.totalTasks > 0 
-      ? (status.performance.successfulTasks / status.performance.totalTasks * 100).toFixed(2) + %
+      ? (status.performance.successfulTasks / status.performance.totalTasks * 10o0).toFixed(2) + %
       : 0%'}`);
     logger.info(`Average Response Time: ${status.performance.averageResponseTime.toFixed(2)}ms`);
     logger.info(`System Health: ${status.health.status}`);

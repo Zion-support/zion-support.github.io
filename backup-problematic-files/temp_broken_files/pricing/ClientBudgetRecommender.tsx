@@ -1,10 +1,7 @@
 
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { ;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
@@ -13,10 +10,6 @@ import { ;
 } from "@/services/pricingSuggestionService",;
 import { PricingSuggestionBox } from "./PricingSuggestionBox",;
 import { useAuth } from "@/hooks/useAuth",;
-<<<<<<< HEAD
-import { Sparkles } from "lucide-react",;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Sparkles } from 'lucide-react';
 ;
 interface ClientBudgetRecommenderProps {;
@@ -46,7 +39,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
 ;
     setIsLoading(true),;
     try {;
-      const params:ClientBudgetParams = {;
+      const params:ClientBudgetParams ={;
         jobTitle,;
         category},;
 ;
@@ -57,11 +50,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
       const result = await getClientBudgetSuggestion(params),;
       setSuggestion(result),;
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Error generating budget suggestion:", error),;
-=======
       logErrorToProduction('Error generating budget suggestion:', { data:error }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     } finally {;
       setIsLoading(false),;
     }
@@ -95,7 +84,7 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             disabled={!jobTitle || !category}
             className="w-full";
           >;
-            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation;
+            <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation;
           </Button>;
         ) :(;
           <PricingSuggestionBox;
@@ -103,19 +92,11 @@ export const ClientBudgetRecommender:React.FC<ClientBudgetRecommenderProps> = ({
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
             rateType="hourly";
-          />;
+           />;
         )}
       </div>;
     </div>;
   ),;
-<<<<<<< HEAD
-},; import {
-  getClientBudgetSuggestion;
-PricingSuggestion;
-ClientBudgetParams;
-trackPricingSuggestion interface ClientBudgetRecommenderProps {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 },; import {;
   {;
   {;
@@ -130,57 +111,13 @@ category: string;
 timeline?: string;
 scope?: string;
 experienceLevel?: string;
-<<<<<<< HEAD
-onSuggestionApplied: (minValue: number, maxValue: number) => void 
-}export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
-=======
 onSuggestionApplied: (minValue: number, maxValue: number) => void ;
 }export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
   jobTitle;
 category;
 timeline;
 scope;
 experienceLevel;
-<<<<<<< HEAD
-onSuggestionApplied 
-}) => {
-  const [isLoading, setIsLoading] = useState (false);
-const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null);
-const {
-  user 
-}= useAuth ();
-const generateSuggestion = async () => {
-  if (!jobTitle || !category) {
-  return 
-}setIsLoading (true);
-try {
-  const params: ClientBudgetParams = {
-  jobTitle;
-category 
-};
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
-}finally {
-  setIsLoading (false) 
-}
-};
-const handleApplySuggestion = () => {
-  if (suggestion) {
-  onSuggestionApplied (suggestion.minRate, suggestion.maxRate);
-trackPricingSuggestion ({
-
-}
-}
-};
-return (<div className="space-y-4" > <div> {
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
-  generateSuggestion 
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) 
-}</div> </div>) 
-};
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 onSuggestionApplied ;
 }) => {;
   const [isLoading,  setIsLoading] = useState (false);
@@ -193,7 +130,7 @@ const generateSuggestion = async () => {;
   return ;
 }setIsLoading (true);
 try {;
-  const params: ClientBudgetParams = {;
+  const params: ClientBudgetParams ={;
   jobTitle;
 category ;
 };
@@ -205,15 +142,6 @@ if (experienceLevel) params.experienceLevel = experienceLevel;
 }
 }
 };
-return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
+return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2"  /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox  />) ;
 }</div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/pricing/ClientBudgetRecommender.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/ClientBudgetRecommender.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

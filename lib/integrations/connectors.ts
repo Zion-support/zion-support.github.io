@@ -1,12 +1,17 @@
 // Integration connectors
 import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from './types';
 
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from './types';
 
 async function mockProviderCall<T>(
+=======
+export async function simulateAction<T = unknown>(
+>>>>>>> origin/main
   connection: ProviderConnection,
   action: string,
-  details: Record<string, any>
+  details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
@@ -16,63 +21,43 @@ async function mockProviderCall<T>(
     action,
     details,
   };
-  
-  // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T };
+  return { log, result: { ok: true } as T };
 }
 
 // CRM actions
 export const crm = {
   async syncContact(
     connection: ProviderConnection,
-    contact: Record<string, any>
+    contact: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
-  },
-  async addEmailTouchpoint(
-    connection: ProviderConnection,
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
+    return simulateAction(connection, 'crm.syncContact', { contact });
   },
   async addProjectNote(
     connection: ProviderConnection,
-    note: Record<string, any>
+    note: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, unknown>
+  ) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  },
 };
 
 // ATS actions
 export const ats = {
-  async pushApplicant(
-    connection: ProviderConnection,
-    applicant: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "push_applicant", { applicant });
-  },
-  async uploadResume(
-    connection: ProviderConnection,
-    resume: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "upload_resume", {
-      resumeMeta: { name: resume?.name }
-    });
-  },
   async updateStatus(
     connection: ProviderConnection,
-    status: Record<string, any>
+    status: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "update_status", { status });
-  }
-};
-
-// Email actions
-export const email = {
-  async sendNotification(
+    return simulateAction(connection, 'ats.updateStatus', { status });
+  },
+  async createCandidate(
     connection: ProviderConnection,
-    notification: Record<string, any>
+    candidate: Record<string, unknown>
   ) {
-    return mockProviderCall(connection, "send_notification", { notification });
-  }
+    return simulateAction(connection, 'ats.createCandidate', { candidate });
+  },
 };

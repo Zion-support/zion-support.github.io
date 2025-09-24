@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-module.exports = {
-  "apps": [    // Main Error Detection and Fixing Service
-    {
-      nam: e: 'error-detection-service',
-      "script": 'scripts/pm2/error-detection-service.js',
-    // Main application
-    {
-      "name": 'zion-app';
-      "script": 'npm';
-      "args": 'start';
-      "cwd": './';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '1G';
-      "env": {
-        NODE_ENV: 'development',
-        "PM2_PROCESS_NAME": 'error-detection-service',
-        "SCAN_INTERVAL": '300000', // 5 minutes
-        "AUTO_FIX": 'true';
-        "LOG_LEVEL": 'info';
-        "MAX_RETRIES": '3';
-        "BACKUP_BEFORE_FIX": 'true'
-      };
-      "cron_restart": '0 */2 * * *', // Restart every 2 hours
-      "log_file": 'logs/pm2/error-detection-service.log';
-      "error_file": 'logs/pm2/error-detection-service-error.log';
-      "out_file": 'logs/pm2/error-detection-service-out.log'};
-    // Syntax Error Fixer
-    {
-      "name": 'syntax-error-fixer',
-      "script": 'scripts/pm2/syntax-error-fixer.js',
-        "NODE_ENV": 'production',
-        "PORT": 3000
-      };
-      "env_production": {
-        NODE_EN: V: 'production',
-        "PORT": 3000
-      }
-    };
-    // Error Detection and Monitoring System
-    {
-      "name": 'error-detection-monitor';
-      "script": './scripts/automation/error-detection-monitor.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '512M';
-      "env": {
-        NODE_EN: V: 'production',
-        "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
-        "ERROR_THRESHOLD": '10'
-      },
-
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-=======
 
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
@@ -65,7 +7,6 @@ module.exports = {
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
@@ -127,34 +68,11 @@ module.exports = {
         "ERROR_DETECTION_INTERVAL": '300000', // 5 minutes
         "ERROR_THRESHOLD": '10'
       };
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "cron_restart": '0 */10 * * *', // Restart every 10 minutes
       "log_file": './automation/logs/error-detection-monitor.log',
       "error_file": './automation/logs/error-detection-monitor-error.log',
       "out_file": './automation/logs/error-detection-monitor-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-    },
-    // TypeScript Error Auto-Fixer
-    {
-      "name": 'typescript-error-auto-fixer';
-      "script": './scripts/automation/typescript-error-auto-fixer.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '1G';
-      "env": {
-        NODE_EN: V: 'production',
-        "TYPESCRIPT_FIX_INTERVAL": '600000', // 10 minutes
-        "AUTO_FIX_ENABLED": 'true'
-      },
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // TypeScript Error Auto-Fixer
@@ -175,25 +93,6 @@ module.exports = {
       "error_file": './automation/logs/typescript-error-auto-fixer-error.log',
       "out_file": './automation/logs/typescript-error-auto-fixer-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-    },
-    // ESLint Error Auto-Fixer
-    {
-      "name": 'eslint-error-auto-fixer';
-      "script": './scripts/automation/eslint-error-auto-fixer.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '512M';
-      "env": {
-        NODE_EN: V: 'production',
-        "ESLINT_FIX_INTERVAL": '300000', // 5 minutes
-        "AUTO_FIX_ENABLED": 'true'
-      },
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // ESLint Error Auto-Fixer
@@ -214,25 +113,6 @@ module.exports = {
       "error_file": './automation/logs/eslint-error-auto-fixer-error.log',
       "out_file": './automation/logs/eslint-error-auto-fixer-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-    },
-    // Dependency Error Resolver
-    {
-      "name": 'dependency-error-resolver';
-      "script": './scripts/automation/dependency-error-resolver.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '512M';
-      "env": {
-        NODE_EN: V: 'production',
-        "DEPENDENCY_CHECK_INTERVAL": '1800000', // 30 minutes
-        "AUTO_UPDATE_ENABLED": 'true'
-      },
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // Dependency Error Resolver
@@ -253,12 +133,7 @@ module.exports = {
       "error_file": './automation/logs/dependency-error-resolver-error.log',
       "out_file": './automation/logs/dependency-error-resolver-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-=======
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Build Error Auto-Fixer
     {
@@ -301,12 +176,7 @@ module.exports = {
       "error_file": './automation/logs/build-error-auto-fixer-error.log',
       "out_file": './automation/logs/build-error-auto-fixer-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-=======
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Code Quality Auto-Enhancer
     {
@@ -346,25 +216,6 @@ module.exports = {
       "error_file": './automation/logs/code-quality-auto-enhancer-error.log',
       "out_file": './automation/logs/code-quality-auto-enhancer-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-    },
-    // Error Prevention Monitor
-    {
-      "name": 'error-prevention-monitor';
-      "script": './scripts/automation/error-prevention-monitor.cjs';
-      "instances": 1;
-      "autorestart": true;
-      "watch": false;
-      "max_memory_restart": '512M';
-      "env": {
-        NODE_EN: V: 'production',
-        "PREVENTION_CHECK_INTERVAL": '600000', // 10 minutes
-        "PREVENTIVE_ACTIONS_ENABLED": 'true'
-      },
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     },
     // Error Prevention Monitor
@@ -385,12 +236,7 @@ module.exports = {
       "error_file": './automation/logs/error-prevention-monitor-error.log',
       "out_file": './automation/logs/error-prevention-monitor-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-=======
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Error Analytics Dashboard
     {
@@ -433,12 +279,7 @@ module.exports = {
       "error_file": './automation/logs/error-analytics-dashboard-error.log',
       "out_file": './automation/logs/error-analytics-dashboard-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-=======
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     },
     // Intelligent Error Orchestrator
     {
@@ -583,19 +424,6 @@ module.exports = {
       "error_file": './automation/logs/intelligent-error-orchestrator-error.log',
       "out_file": './automation/logs/intelligent-error-orchestrator-out.log',
       "merge_logs": true,
-<<<<<<< HEAD
-:backup-problematic-files/ecosystem.error-automation.config.cjs
-      "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
-    }
-  ];
-  "deploy": {
-    productio: n: {
-      use: r: 'ubuntu',
-      "host": 'localhost',
-      "ref": 'origin/main',
-      "repo": 'git@github.com:your-username/zion-tech-group.git',
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       "log_date_format": 'YYYY-MM-DD: HH:m: m:ss Z'
     }
   ];
@@ -614,11 +442,6 @@ module.exports = {
 
 };
 
-<<<<<<< HEAD
-  "apps": [    // Main Error Detection and Fixing Service;"
-    {"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 

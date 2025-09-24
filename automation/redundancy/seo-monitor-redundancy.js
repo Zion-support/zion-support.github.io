@@ -14,14 +14,14 @@ function log(message) {
   console.log(line);
 }
 
-function run(command, args, options = {}) {
+function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd();
   const result = spawnSync(command, args, {
     cwd: execCwd,
     env: process.env,
     shell: false,
     encoding: "utf8",
-    maxBuffer: 1024 * 1024 * 20
+    maxBuffer: 10o24 * 10o24 * 20
   });
   const stdout = (result.stdout || "").trim();
   const stderr = (result.stderr || "").trim();
@@ -107,8 +107,8 @@ function checkContentStructure() {
         
         // Check for content length
         const textContent = content.replace(/^#+\s+.+$/gm, '').replace(/```[\s\S]*?```/g, '').trim();
-        if (textContent.length < 300) {
-          structureIssues.push({ file, issue: 'Content too short (<300 chars)', severity: 'medium' });
+        if (textContent.length < 30o0) {
+          structureIssues.push({ file, issue: 'Content too short (<30o0 chars)', severity: 'medium' });
         }
         
         // Check for internal links
@@ -148,9 +148,9 @@ function checkImageOptimization() {
       for (const file of imageFiles) {
         const filePath = path.join(publicDir, file);
         const stats = fs.statSync(filePath);
-        const sizeKB = Math.round(stats.size / 1024);
+        const sizeKB = Math.round(stats.size / 10o24);
         
-        if (sizeKB > 500) {
+        if (sizeKB > 50o0) {
           imageIssues.push({ 
             file, 
             issue: `Image too large (${sizeKB}KB)`, 
@@ -203,7 +203,7 @@ function checkImageOptimization() {
 
 function generateSEOReport(seoMetadata, contentStructure, imageOptimization) {
   const timestamp = nowIso();
-  const report = {
+  const report ={
     timestamp,
     redundancy: true,
     source: "pm2-redundancy",
@@ -326,4 +326,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { main, checkSEOMetadata, checkContentStructure, checkImageOptimization, generateSEOReport };
+module.exports ={ main, checkSEOMetadata, checkContentStructure, checkImageOptimization, generateSEOReport };

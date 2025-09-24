@@ -16,17 +16,13 @@ export function SupportWidget() {;
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
-<<<<<<< HEAD
-<Button;
-=======
         <Button;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
           aria-label="Open support";
         >;
-          <MessageSquare className="h-6 w-6" />;
+          <MessageSquare className="h-6 w-6"  />;
         </Button>;
       )}
       ;
@@ -37,14 +33,14 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",;
             theme === "dark" ;
               ? "bg-zion-blue-dark border border-zion-blue-light" ;
-              :"bg-white border border-gray-200";
+              :"bg-white border border-gray-20o0";
           )}
-          style={{ height:"600px", maxHeight:"80vh" }}
+          style={{ height:"60o0px", maxHeight:"80vh" }}
         >;
           <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">;
             <div className="flex items-center">;
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />;
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-800")}>;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2"  />;
+              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" :"text-gray-80o0")}>;
                 Zion Support;
               </h3>;
             </div>;
@@ -56,7 +52,7 @@ export function SupportWidget() {;
                 onClick={() => router.push('/help')}
                 aria-label="Help center";
               >;
-                <Info className="h-5 w-5" />;
+                <Info className="h-5 w-5"  />;
               </Button>;
               <Button;
                 variant="ghost";
@@ -65,16 +61,12 @@ export function SupportWidget() {;
                 onClick={() => setIsOpen(false)}
                 aria-label="Close support";
               >;
-                <X className="h-5 w-5" />;
+                <X className="h-5 w-5"  />;
               </Button>;
             </div>;
-<<<<<<< HEAD
-</div>;
-=======
           </div>;
           ;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-          <ChatBotPanel />;
+          <ChatBotPanel  />;
         </div>;
       )}
     </>;
@@ -89,19 +81,13 @@ const router = useRouter ();
 }{;
   !isOpen && (<Button onClick={;
   () => setIsOpen (true) ;
-}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) ;
+}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6"  /> </Button>) ;
 }{;
   /* Support panel */ ;
 
-
 }{;
-  isOpen && (<div className= {";
-  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) ;
+  isOpen && (<div className={";
+  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5"  /> </Button> <Button > <X className="h-5 w-5"  /> </Button> </div> </div> <ChatBotPanel  /> </div>) ;
 }</>) ;
 }"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/SupportWidget.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

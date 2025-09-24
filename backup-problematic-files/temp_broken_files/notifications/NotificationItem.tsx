@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
 import { formatDistanceToNow } from 'date-fns',;
@@ -19,29 +16,25 @@ import { Notification, NotificationType } from '@/context/notifications',;
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
-      return <span className="text-blue-500"></span>,;
+      return <span className="text-blue-50o0"></span>,;
     case 'quote_request':;
-      return <span className="text-purple-500"></span>,;
+      return <span className="text-purple-50o0"></span>,;
     case 'booking_confirmation':;
-      return <span className="text-green-500"></span>,;
+      return <span className="text-green-50o0"></span>,;
     case 'hire_request':;
       return <span className="text-zion-purple"></span>,;
     case 'onboarding':;
-<<<<<<< HEAD
-      return <span className="text-zion-cyan">🚀</span>,;
-=======
       return <span className="text-zion-cyan"></span>,;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
     case 'system':;
-      return <span className="text-yellow-500"></span>,;
+      return <span className="text-yellow-50o0"></span>,;
     case 'project_update':;
-      return <span className="text-indigo-400"></span>,;
+      return <span className="text-indigo-40o0"></span>,;
     case 'milestone_complete':;
-      return <span className="text-green-500"></span>,;
+      return <span className="text-green-50o0"></span>,;
     case 'order_status':;
-      return <span className="text-orange-500"></span>,;
+      return <span className="text-orange-50o0"></span>,;
     default:;
-      return <span className="text-gray-500"></span>;
+      return <span className="text-gray-50o0"></span>;
   }
 },;
 ;
@@ -101,14 +94,14 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 className="text-zion-cyan p-0 h-auto";                onClick={handleClick}
               >;
                 {notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />;
+                <ChevronRight className="h-3 w-3 ml-1"  />;
               </Button>;            )}
           </div>;
         </div>;
       </div>;
 ;
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">;
+      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-10o0 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
@@ -122,7 +115,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 }}
                 aria-label="Mark as read";
               >;
-                <Check className="h-3.5 w-3.5 text-green-400" />;
+                <Check className="h-3.5 w-3.5 text-green-40o0"  />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -144,7 +137,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 }}
                 aria-label="Dismiss notification";
               >;
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
+                <Trash2 className="h-3.5 w-3.5 text-red-40o0"  />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
@@ -155,8 +148,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
       </div>;
     </div>;
   ),;
-},;import React from 'react';
-//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {;
+},;//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {';
   case 'message': ;
 }
@@ -176,15 +168,9 @@ onDismiss ;
 }</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
 
-
   handleClick ;
 }> </Button>) ";
-}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+}</div> </div> </div> h-3.5 w-3.5 text-green-40o0"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-40o0"  /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

@@ -1,38 +1,5 @@
-import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
-}
-class ErrorBoundary extends React.Component {
-  // TODO: Implement
-}
-pr-12325
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    console.error('Error caught by boundary:', error, errorInfo);'
-pr-12325
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-
-    return this.props.children;
-  }
-}
-import React from 'react';
-interface SOC2ComplianceAutomationProps {
-  // Add props here as needed
-
 }
 
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
@@ -42,38 +9,4 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-:src.pages.disabled/SOC2ComplianceAutomation.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-}
-
-:src.pages.disabled/SOC2ComplianceAutomation.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
-}
-
-:src.pages.disabled/SOC2ComplianceAutomation.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
-:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx
-    <div>
-</div>
-      <h1>SOC2ComplianceAutomation</h1>
-      <p>This component is currently under development.</p>
-    </div>'
-pr-12325

@@ -16,40 +16,21 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
       ;
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">;
         {projects.map((project) => (;
-          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-30o0">;
             {project.imageUrl ? (;
               <AspectRatio ratio={16/9}>;
-<<<<<<< HEAD
-                <img ;
-                  src={project.imageUrl} ;
-                  alt={project.title} ;
-=======
                 <img;
                   src={project.imageUrl}
                   alt={project.title}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                   className="w-full h-full object-cover";
                   loading="lazy";
-                />;
+                 />;
               </AspectRatio>;
             ) :(;
-<<<<<<< HEAD
-                <img;
-                  src={project.imageUrl}
-                  alt={project.title}"
-                  className="w-full h-full object-cover";""
-                  loading="lazy";"
-                />;
-</AspectRatio>;
-            ) :(;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">;
-                <FileText className="text-zion-purple h-12 w-12 opacity-50" />;
+                <FileText className="text-zion-purple h-12 w-12 opacity-50"  />;
               </div>;
             )}
-<<<<<<< HEAD
-=======
             ;
             <CardContent className="p-4">;
               <h4 className="text-white font-medium mb-2">{project.title}</h4>;
@@ -66,7 +47,6 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
               ;
               <div className="text-xs text-zion-slate-light mt-2">;
                 {project.date}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               </div>;
             </CardContent>;
           </Card>;
@@ -83,17 +63,8 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
 }export function ProfileProjects ({;
   projects ;
 }: ProfileProjectsProps) {;
-  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Projects</h3> grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> {";"  projects.map ( (project) => (/> </AspectRatio>) : (<div className=" h-40 w-full flex items-center justify-center bg-zion-blue"> <FileText className=" text-zion-purple h-12 w-12 opacity-50" /> </div>) ;
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Projects</h3> grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> {";"  projects.map ( (project) => (/> </AspectRatio>) : (<div className=" h-40 w-full flex items-center justify-center bg-zion-blue"> <FileText className=" text-zion-purple h-12 w-12 opacity-50"  /> </div>) ;
 }</Badge>) ) ;
 }</div>) ;
 }</div> </CardContent> </Card>) ) ;
-<<<<<<< HEAD
-:temp_broken_files/profile/ProfileProjects.tsx
-}</div> </div>) ;"}'"
-}</div> </div>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

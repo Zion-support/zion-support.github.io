@@ -46,7 +46,7 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                 <div className="flex items-center gap-3">;
                   {type === "talents" ? (;
                     <Avatar className="h-12 w-12">;
-                      <AvatarImage src={item.image} alt={item.title} />;
+                      <AvatarImage src={item.image} alt={item.title}  />;
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>;
                     </Avatar>;
                   ) :(;
@@ -65,9 +65,9 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                   onClick={() => toggleSaved(item.id)}
                 >;
                   {savedItems.includes(item.id) ? (;
-                    <BookmarkCheck className="h-5 w-5 text-primary" />;
+                    <BookmarkCheck className="h-5 w-5 text-primary"  />;
                   ) :(;
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
+                    <Bookmark className="h-5 w-5 text-muted-foreground"  />;
                   )}
                 </button>;
               </div>;
@@ -89,21 +89,21 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;
                 {item.location && (;
                   <div className="flex items-center gap-1">;
-                    <MapPin className="h-3 w-3" />;
+                    <MapPin className="h-3 w-3"  />;
                     <span>{item.location}</span>;
                   </div>;
                 )}
                 ;
                 {item.price && (;
                   <div className="flex items-center gap-1">;
-                    <DollarSign className="h-3 w-3" />;
+                    <DollarSign className="h-3 w-3"  />;
                     <span>{item.price}</span>;
                   </div>;
                 )}
                 ;
                 {item.timePosted && (;
                   <div className="flex items-center gap-1">;
-                    <Clock className="h-3 w-3" />;
+                    <Clock className="h-3 w-3"  />;
                     <span>{item.timePosted}</span>;
                   </div>;
                 )}
@@ -122,7 +122,7 @@ export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1";
               >;
-                View Details <ChevronRight className="h-4 w-4" />;
+                View Details <ChevronRight className="h-4 w-4"  />;
               </Button>;
             </div>;
           </CardContent>;
@@ -147,8 +147,8 @@ timePosted?: string ;
   items,  type, onViewDetails ;
 }: BrowseCardsProps) {;
   const [savedItems, setSavedItems] = useState<string[]> ([]);
-setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) </Avatar>) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center" > <span className="text-primary font-semibold" >JOB</span> </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="h-5 w-5 text-muted-foreground" />) ;
-}</button> </div> <Badge key= {;"  index ";"}variant="outline" className="text-xs font-normal" >{;
+setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) </Avatar>) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center" > <span className="text-primary font-semibold" >JOB</span> </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="h-5 w-5 text-muted-foreground"  />) ;
+}</button> </div> <Badge key={;"  index ";"}variant="outline" className="text-xs font-normal" >{;
   badge ;
 }</Badge>) ) ;
 }</div> <span >{;
@@ -162,11 +162,9 @@ setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id
 }</span> </div>) ;
 }{;
 
-
   item.match ;
 }% match </div>) ";
-}</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) ;
+}</div> </div> <div className="border-t border-border p-3 flex justify-end" > <Button > View Details <ChevronRight className="h-4 w-4"  /> </Button> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }"
-
 

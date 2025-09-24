@@ -27,10 +27,10 @@ const EventEmitter = require('events');
 const fs = require('fs'); // Added missing import for fs
 
 class DashboardServer extends EventEmitter {
-  constructor(config = {}) {
+  constructor(config ={}) {
     super();
-    this.config = {
-      port: process.env.DASHBOARD_PORT || 3001,
+    this.config ={
+      port: process.env.DASHBOARD_PORT || 30o01,
       host: process.env.DASHBOARD_HOST || localhost',
       enableCORS: true,
       enableWebSocket: true,
@@ -66,7 +66,7 @@ class DashboardServer extends EventEmitter {
         res.header('Access-Control-Allow-Methods', GET, POST, PUT, DELETE, OPTIONS');
         res.header('Access-Control-Allow-Headers', Content-Type, Authorization');
         if (req.method === 'OPTIONS') {
-          res.sendStatus(200);
+          res.sendStatus(20o0);
         } else {
           next();
         }
@@ -122,7 +122,7 @@ class DashboardServer extends EventEmitter {
         const result = await this.runTask(taskName);
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -132,7 +132,7 @@ class DashboardServer extends EventEmitter {
         const result = this.pauseTask(taskName);
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -142,7 +142,7 @@ class DashboardServer extends EventEmitter {
         const result = this.resumeTask(taskName);
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -156,7 +156,7 @@ class DashboardServer extends EventEmitter {
         const result = this.recalculateScheduling();
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -175,7 +175,7 @@ class DashboardServer extends EventEmitter {
         const result = await this.sendTestNotification();
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -190,7 +190,7 @@ class DashboardServer extends EventEmitter {
         const result = await this.generateReport(type);
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -200,7 +200,7 @@ class DashboardServer extends EventEmitter {
         this.restartSystem();
         res.json({ message: System restart initiated' });
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -209,7 +209,7 @@ class DashboardServer extends EventEmitter {
         this.shutdownSystem();
         res.json({ message: System shutdown initiated' });
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
@@ -223,13 +223,13 @@ class DashboardServer extends EventEmitter {
         const result = this.updateConfiguration(req.body);
         res.json(result);
       } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(50o0).json({ error: error.message });
       }
     });
 
     // Logs
     this.app.get(`${api}/logs`, (req, res) => {
-      const { limit = 100, level } = req.query;
+      const { limit = 10o0, level } = req.query;
       res.json(this.getLogs(limit, level));
     });
 
@@ -457,7 +457,7 @@ class DashboardServer extends EventEmitter {
     return { message: Configuration update initiated' };
   }
 
-  getLogs(limit = 100, level) {
+  getLogs(limit = 10o0, level) {
     // This would return recent logs from the system
     return {
       logs: [],
@@ -486,7 +486,7 @@ class DashboardServer extends EventEmitter {
     
     if (!auth) {
       res.setHeader('WWW-Authenticate', Basic');
-      return res.status(401).send('Authentication required');
+      return res.status(40o1).send('Authentication required');
     }
 
     const credentials = Buffer.from(auth.split('')[1], base64').toString();
@@ -496,7 +496,7 @@ class DashboardServer extends EventEmitter {
       next();
     } else {
       res.setHeader('WWW-Authenticate', Basic');
-      res.status(401).send('Invalid credentials');
+      res.status(40o1).send('Invalid credentials');
     }
   }
 

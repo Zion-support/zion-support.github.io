@@ -13,8 +13,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/performance.log' }),
-  ],
-});
+  ]});
 
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -23,9 +22,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 class PerformanceMonitor {
-  constructor(config = {}) {
-    this.config = {
-      checkInterval: 300000, // 5 minutes
+  constructor(config ={}) {
+    this.config ={
+      checkInterval: 30o0000, // 5 minutes
       metricsFile: path.join(__dirname, 'performance-metrics.json'),
       ...config
     };
@@ -57,14 +56,14 @@ class PerformanceMonitor {
         await this.sleep(this.config.checkInterval);
       } catch (error) {
         logger.error('Error in monitoring loop:', error);
-        await this.sleep(5000); // Wait 5 seconds before retrying
+        await this.sleep(50o00); // Wait 5 seconds before retrying
       }
     }
   }
 
   async collectMetrics() {
     try {
-      const metrics = {
+      const metrics ={
         timestamp: new Date().toISOString(),
         memory: await this.getMemoryUsage(),
         cpu: await this.getCpuUsage(),
@@ -74,9 +73,9 @@ class PerformanceMonitor {
 
       this.metrics.push(metrics);
       
-      // Keep only last 100 metrics
-      if (this.metrics.length > 100) {
-        this.metrics = this.metrics.slice(-100);
+      // Keep only last 10o0 metrics
+      if (this.metrics.length > 10o0) {
+        this.metrics = this.metrics.slice(-10o0);
       }
 
       // Save metrics
@@ -116,7 +115,6 @@ class PerformanceMonitor {
     }
   }
 
-  
   async getBundleMetrics() {
     try {
       // Add proper error handling for bundle analysis

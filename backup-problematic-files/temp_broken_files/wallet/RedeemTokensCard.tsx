@@ -12,7 +12,7 @@ import {;
   DialogTitle,;
   DialogTrigger} from "@/components/ui/dialog",;
 ;
-type RewardOption = {;
+type RewardOption ={;
   id:string,;
   title:string,;
   description:string,;
@@ -25,7 +25,7 @@ const REWARD_OPTIONS:RewardOption[] = [;
     id:'premium-week',;
     title:'Premium Week',;
     description:'7 days of premium features including top placement in search results',;
-    cost:100,;
+    cost:10o0,;
     type:'feature';
   },;
   {;
@@ -39,7 +39,7 @@ const REWARD_OPTIONS:RewardOption[] = [;
     id:'platform-credit',;
     title:'$5 Platform Credit',;
     description:'Get $5 credit to use on any paid service',;
-    cost:100,;
+    cost:10o0,;
     type:'credit';
   }
 ],;
@@ -59,7 +59,7 @@ export function RedeemTokensCard() {;
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
-          <Gift className="h-5 w-5" /> Redeem Rewards;
+          <Gift className="h-5 w-5"  /> Redeem Rewards;
         </CardTitle>;
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>;
       </CardHeader>;
@@ -76,8 +76,6 @@ export function RedeemTokensCard() {;
               </DialogDescription>;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
-<<<<<<< HEAD
-=======
               {REWARD_OPTIONS.map((option) => (;
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">;
                   <div>;
@@ -90,10 +88,9 @@ export function RedeemTokensCard() {;
                       size="sm" ;
                       variant={wallet && wallet.balance >= option.cost ? "default" :"outline"}
                       disabled={!wallet || wallet.balance < option.cost}
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                       onClick={() => handleRedeem(option)}
                     >;
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3"  />;
                     </Button>;
                   </div>;
                 </div>;
@@ -102,7 +99,7 @@ export function RedeemTokensCard() {;
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+                Learn More <ExternalLink className="ml-1 h-3 w-3"  />;
               </Button>;
             </div>;
           </DialogContent>;
@@ -121,7 +118,7 @@ DialogContent;
 DialogDescription;
 DialogHeader;
 DialogTitle;
-type RewardOption = {;
+type RewardOption ={;
   id: string;
 title: string;
 description: string;
@@ -132,7 +129,7 @@ const REWARD OPTIONS: RewardOption[] = [ {';
   id: 'premium-week';';
 title: 'Premium Week';';
 description: '7 days of premium features including top placement in search results';
-cost: 100;';
+cost: 10o0;';
 type: 'feature' ;
 };
 {';
@@ -146,32 +143,7 @@ type: 'feature' ;
   id: 'platform-credit';';
 title: '$5 Platform Credit';';
 description: 'Get $5 credit to use on any paid service';
-<<<<<<< HEAD
-  description: string;
-cost: number;';
-type: 'credit' | 'feature' | 'course' ;
-};
-const REWARD OPTIONS: RewardOption[] = [ {';
-  id: 'premium-week';';
-title: 'Premium Week';',
-  description: '7 days of premium features including top placement in search results';
-cost: 100;';
-type: 'feature' ;
-};
-{';
-  id: 'resume-review';';
-title: 'AI Resume Review';',
-  description: 'Get your resume analyzed and optimized by our AI';
-cost: 50;';
-type: 'feature' ;
-};
-{';
-  id: 'platform-credit';';
-title: '$5 Platform Credit';',
-  description: 'Get $5 credit to use on any paid service';
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
-cost: 100;';
+cost: 10o0;';
 type: 'credit' ;
 }];
 export function RedeemTokensCard () {;
@@ -185,20 +157,14 @@ await spendTokens (option.cost, `Redeemed: $ {;
   option.title ;
 }`);
 setOpen (false) ;
-};"flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
+};"flex items-center gap-2"> <Gift className=" h-5 w-5" /> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open={;
   open ;
 
-
-}onOpenChange= {;
+}onOpenChange={;
   setOpen ";
 }> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;
   wallet?.balance || 0 ";
-}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
+}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3"  /> </Button> </div> </div>) ) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;
 }'"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/wallet/RedeemTokensCard.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

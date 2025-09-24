@@ -3,17 +3,6 @@ name: Auto-Fix GitHub Actions Workflows
 
 on:
   workflow_dispatch: {}
-<<<<<<< HEAD
-  schedule:
-    - cron: '0 3 * * *' # Daily at 3 AM UTC
-  workflow_run:
-    workflows: ["Comprehensive Test Suite"]
-    types: [completed]
-    branches: [main, develop]
-
-permissions:
-  contents: read
-=======
   # schedule:
   #   - cron: '0 3 * * *' # DISABLED to prevent conflicts with manual fixes
   # workflow_run:  # DISABLED to prevent automatic triggering
@@ -24,7 +13,6 @@ permissions:
 permissions:
   contents: write
   pull-requests: write
->>>>>>> origin/auto/autonomy-17186719616
   actions: read
 
 concurrency:
@@ -50,13 +38,6 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-<<<<<<< HEAD
-      - name: Run comprehensive workflow fixer
-        run: |
-          chmod +x fix-github-actions-comprehensive.sh
-          ./fix-github-actions-comprehensive.sh
-      - name: Validate fixes
-=======
       - name: Check workflow health before fixing
         id: pre-check
         run: |
@@ -75,7 +56,6 @@ jobs:
           ./fix-github-actions-comprehensive.sh
       - name: Validate fixes (only if fixes were applied)
         if: steps.pre-check.outputs.needs-fixing == 'true'
->>>>>>> origin/auto/autonomy-17186719616
         run: |
           chmod +x validate-workflows-comprehensive.sh
           ./validate-workflows-comprehensive.sh
@@ -90,11 +70,7 @@ jobs:
             echo "has-changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
           fi
-<<<<<<< HEAD
-      - name: Commit and push fixes
-=======
       - name: Commit and push fixes (only if changes exist)
->>>>>>> origin/auto/autonomy-17186719616
         if: steps.check-changes.outputs.has-changes == 'true'
         run: |
           git config --local user.email "action@github.com"
@@ -106,13 +82,6 @@ jobs:
         run: |
           echo "## Workflow Auto-Fix Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-<<<<<<< HEAD
-          echo "**Status:** ${{ steps.check-changes.outputs.has-changes == 'true' && 'Fixed issues and committed changes' || 'No issues found' }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** ${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
-=======
           if [ "${{ steps.pre-check.outputs.needs-fixing }}" == "false" ]; then
             echo "**Status:** ✅ All workflows are already healthy - no fixes applied" >> $GITHUB_STEP_SUMMARY
           elif [ "${{ steps.check-changes.outputs.has-changes }}" == "true" ]; then
@@ -124,4 +93,3 @@ jobs:
           echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Branch:** ${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
->>>>>>> origin/auto/autonomy-17186719616

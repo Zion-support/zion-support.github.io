@@ -21,7 +21,6 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-
 const { spawn } = require('child_process');
 const express = require('express');
 const socketIo = require('socket.io');
@@ -30,7 +29,7 @@ const fs = require('fs');
 
 class ImprovedAutomationOrchestrator {
   constructor() {
-    this.port = 3008;
+    this.port = 30o08;
     this.automationSystems = new Map();
     this.portManager = new PortManager();
     this.app = express();
@@ -38,7 +37,7 @@ class ImprovedAutomationOrchestrator {
     this.io = null;
     this.isRunning = false;
     
-    this.systemConfigs = {
+    this.systemConfigs ={
       continuous-improvement': {
         script: 'continuous-improvement/index.js',
         name: Continuous Improvement System',
@@ -169,7 +168,7 @@ class ImprovedAutomationOrchestrator {
     for (const [systemName, config] of Object.entries(this.systemConfigs)) {
       if (systemName === 'intelligent-orchestrator') continue; // Skip self
       
-      const system = {
+      const system ={
         name: systemName,
         config: config,
         process: null,
@@ -220,14 +219,14 @@ class ImprovedAutomationOrchestrator {
       child.stdout.on('data', (data) => {
         const log = data.toString().trim();
         system.logs.push({ timestamp: new Date(), type: 'stdout', message: log });
-        if (system.logs.length > 100) system.logs.shift();
+        if (system.logs.length > 10o0) system.logs.shift();
         logger.info(`[${systemName}] ${log}`);
       });
 
       child.stderr.on('data', (data) => {
         const log = data.toString().trim();
         system.logs.push({ timestamp: new Date(), type: 'stderr', message: log });
-        if (system.logs.length > 100) system.logs.shift();
+        if (system.logs.length > 10o0) system.logs.shift();
         logger.error(`[${systemName}] ERROR: ${log}`);
       });
 
@@ -274,7 +273,7 @@ class ImprovedAutomationOrchestrator {
     }
   }
 
-  async waitForSystemStart(systemName, timeout = 30000) {
+  async waitForSystemStart(systemName, timeout = 30o000) {
     const system = this.automationSystems.get(systemName);
     const startTime = Date.now();
     
@@ -332,7 +331,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(checkStatus,                                                1000);
+const timeoutId = setTimeout(checkStatus,                                                10o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -498,7 +497,7 @@ const timeoutId =
 const timeoutId = 
 const timeoutId = 
 const timeoutId = 
-const timeoutId = setTimeout(() => this.startSystem(systemName),                                                2000);
+const timeoutId = setTimeout(() => this.startSystem(systemName),                                                20o00);
 // Store timeoutId for cleanup if needed
 ;
 // Store timeoutId for cleanup if needed
@@ -596,9 +595,9 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
   }
 
   getSystemStatus() {
-    const status = {};
+    const status ={};
     for (const [name, system] of this.automationSystems) {
-      status[name] = {
+      status[name] ={
         name: system.config.name,
         description: system.config.description,
         status: system.status,
@@ -630,7 +629,7 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
     logger.info('🚀 Starting all automation systems...');
     for (const systemName of this.automationSystems.keys()) {
       await this.startSystem(systemName);
-      await this.sleep(2000); // Wait between starts
+      await this.sleep(20o00); // Wait between starts
     }
 
     logger.info('✅ All automation systems started');
@@ -789,10 +788,10 @@ class PortManager {
     this.usedPorts = new Set();
   }
 
-  async findAvailablePort(startPort = 3000) {
+  async findAvailablePort(startPort = 30o00) {
     const net = require('net');
     
-    for (let port = startPort; port < startPort + 100; port++) {
+    for (let port = startPort; port < startPort + 10o0; port++) {
       if (this.usedPorts.has(port)) continue;
       
       try {

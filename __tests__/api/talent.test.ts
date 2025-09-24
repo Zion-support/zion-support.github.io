@@ -11,7 +11,7 @@ describe('Talent API functions', () => {'  afterEach(() => {
     jest.clearAllMocks();
   });
 
-  describe('getAllTalent', () => {'    it('should fetch all talent profiles', async () => {'      const mockResponse = { data: { profiles: TALENT_PROFILES } };
+  describe('getAllTalent', () => {'    it('should fetch all talent profiles', async () => {'      const mockResponse ={ data: { profiles: TALENT_PROFILES } };
       mockedAxios.get.mockResolvedValueOnce(mockResponse);
 
       const profiles = await getAllTalent();
@@ -28,7 +28,7 @@ describe('Talent API functions', () => {'  afterEach(() => {
   describe('getTalentBySlug', () => {'    const mockProfile = TALENT_PROFILES[0];
     const slug = mockProfile.id;
 
-    it('should fetch a talent profile by slug', async () => {'      const mockResponse = { data: { profile: mockProfile } };
+    it('should fetch a talent profile by slug', async () => {'      const mockResponse ={ data: { profile: mockProfile } };
       mockedAxios.get.mockResolvedValueOnce(mockResponse);
 
       const profile = await getTalentBySlug(slug);
@@ -37,9 +37,9 @@ describe('Talent API functions', () => {'  afterEach(() => {
       expect(profile).toEqual(mockProfile);
     });
 
-    it('should return null if the profile is not found (404), async () => {'      const axiosError = {
+    it('should return null if the profile is not found (40o4), async () => {'      const axiosError ={
         isAxiosError: true,
-        response: { status: 404 }
+        response: { status: 40o4 }
       };
       mockedAxios.get.mockRejectedValueOnce(axiosError);
 
@@ -47,9 +47,9 @@ describe('Talent API functions', () => {'  afterEach(() => {
       expect(mockedAxios.get).toHaveBeenCalledWith('/api/talent/non-existent-slug');      expect(profile).toBeNull();
     });
 
-    it('should throw an error if the API call fails for other reasons', async () => {'      const errorMessage = Server Error';      const axiosError = {
+    it('should throw an error if the API call fails for other reasons', async () => {'      const errorMessage = Server Error';      const axiosError ={
         isAxiosError: true,
-        response: { status: 500 },
+        response: { status: 50o0 },
         message: errorMessage
       };
       mockedAxios.get.mockRejectedValueOnce(axiosError);

@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-=======
 import { format } from 'date-fns',;
 import { Edit, Trash2 } from 'lucide-react';
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Education } from '@/types/resume',;
@@ -40,19 +37,15 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
               onClick={() => onEdit(education)}
               aria-label="Edit education";
             >;
-              <Edit className="h-4 w-4" />;
+              <Edit className="h-4 w-4"  />;
             </Button>;
             <Button;
               variant="ghost";
               size="icon";
               onClick={() => onDelete(education.id!)}
-<<<<<<< HEAD
-aria-label="Delete education";
-=======
               aria-label="Delete education";
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
             >;
-              <Trash2 className="h-4 w-4" />;
+              <Trash2 className="h-4 w-4"  />;
             </Button>;
           </div>;
         </div>;
@@ -66,14 +59,5 @@ aria-label="Delete education";
 }- {';
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') ;
 }</p>) ;
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) ;
-<<<<<<< HEAD
-:temp_broken_files/resume-builder/forms/education/EducationItem.tsx
-}</CardContent> </Card>) ;"}'"
-}</CardContent> </Card>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationItem.tsx
-=======
+}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4"  /> </Button> <Button > <Trash2 className="h-4 w-4"  /> </Button> </div> </div>) ;
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

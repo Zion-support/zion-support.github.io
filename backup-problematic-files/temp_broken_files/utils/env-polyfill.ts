@@ -6,7 +6,7 @@
  */;
 ;
 // Define safe defaults for environment variables;
-const defaultEnv = {;
+const defaultEnv ={;
   NODE_ENV:'production', // Default to production for safety;
   NEXT_PUBLIC_APP_URL:'',;
   NEXT_PUBLIC_SUPABASE_URL:'',;
@@ -26,7 +26,7 @@ if (typeof globalThis !== 'undefined') {;
   if (typeof (globalThis as any).process === 'undefined') {;
     (globalThis as any).process = createProcessObject(),;
   } else if (typeof (globalThis as any).process.env === 'undefined') {;
-    (globalThis as any).process.env = { ...defaultEnv },;
+    (globalThis as any).process.env ={ ...defaultEnv },;
   }
 }
 ;
@@ -35,7 +35,7 @@ if (typeof window !== 'undefined') {;
   if (typeof (window as any).process === 'undefined') {;
     (window as any).process = createProcessObject(),;
   } else if (typeof (window as any).process.env === 'undefined') {;
-    (window as any).process.env = { ...defaultEnv },;
+    (window as any).process.env ={ ...defaultEnv },;
   }
 }
 ;
@@ -45,7 +45,7 @@ if (typeof (globalThis as any).process === 'undefined') {;
 }
 ;
 // Export a safe environment accessor;
-export const safeEnv = {;
+export const safeEnv ={;
   NODE_ENV:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NODE_ENV) || 'production',;
   NEXT_PUBLIC_APP_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '',;
   NEXT_PUBLIC_SUPABASE_URL:(typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '',;
@@ -84,17 +84,6 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 };
 versions: {;
   ;
-<<<<<<< HEAD
-;
-// // // console.log('✅ Environment polyfill loaded successfully');
-;export default safeEnv,
-/** * Environment Polyfill for Browser * * This polyfill ensures that process.env is always available in the browser environment. * It prevents the "Cannot read properties of undefined (reading 'env') " error. */ //Define safe defaults for environment variables //Create a safe process object const createProcessObject = () => ({;
-  env: {;
-  ...defaultEnv ;
-};
-versions: {
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 };';
 platform: 'browser';';
 arch: 'x64';';
@@ -104,13 +93,4 @@ browser: true ;
 //Ensure process is available on globalThis ;
 }
 }//Ensure process is available on window ;
-<<<<<<< HEAD
-:temp_broken_files/utils/env-polyfill.ts
-}"}// Ensure process is available globally '"
-}
-}// Ensure process is available globally '"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/utils/env-polyfill.ts
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

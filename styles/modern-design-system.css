@@ -258,7 +258,7 @@
 }
 
 .cyber-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +293,7 @@
 .matrix-rain {
   position: absolute;
   color: var(--neon-green);
-  font-family: "Courier New", monospace;
+  font-family: 'Courier New', monospace;
   font-size: 12px;
   animation: matrix-rain 3s linear infinite;
 }
@@ -679,7 +679,7 @@
 }
 
 .loading::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -908,7 +908,7 @@
 
 .futuristic-bg::before,
 .futuristic-bg::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: -20% -20%;
   background:
@@ -971,7 +971,7 @@
   border: 1px solid rgba(99, 102, 241, 0.4);
 }
 .futuristic-button::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(

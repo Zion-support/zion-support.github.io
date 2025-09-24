@@ -52,11 +52,7 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
       ;
       toast.success(`Exported ${format.toUpperCase()} file successfully`),;
     } catch (error) {;
-<<<<<<< HEAD
-      console.error("Export failed:", error),;
-=======
       logErrorToProduction('Export failed:', { data:error }),;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       toast.error(`Failed to export ${format.toUpperCase()} file`),;
     }
   },;
@@ -68,13 +64,6 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
   ;
   return (;
     <Card className="bg-zion-blue border-zion-purple/30">;
-<<<<<<< HEAD
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata }) => {;
-
-    <Card className="bg-zion-blue border-zion-purple/30">;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <CardHeader>;
         <CardTitle className="text-lg">Export & Analytics</CardTitle>;
       </CardHeader>;
@@ -82,18 +71,16 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata })
         <div className="space-y-4">;
           <div>;
             <h4 className="font-medium mb-2">Export Metadata</h4>;
-            <p className="text-sm text-gray-400 mb-3">;
+            <p className="text-sm text-gray-40o0 mb-3">;
               Export your app metadata for submission to app stores;
             </p>;
             <div className="flex flex-col sm:flex-row gap-2">;
               <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">;
-                <Download className="mr-2 h-4 w-4" />;
+                <Download className="mr-2 h-4 w-4"  />;
                 JSON;
               </Button>;
               <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
-                <Download className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD
-=======
+                <Download className="mr-2 h-4 w-4"  />;
                 CSV;
               </Button>;
             </div>;
@@ -101,11 +88,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform;, metadata })
           ;
           <div className="border-t border-zion-purple/20 pt-4">;
             <h4 className="font-medium mb-2">Installation Analytics</h4>;
-            <p className="text-sm text-gray-400 mb-3">;
+            <p className="text-sm text-gray-40o0 mb-3">;
               Track how many users click "Install" from web;
             </p>;
             <Button onClick={trackAnalytics} className="w-full">;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
               Enable Analytics;
             </Button>;
           </div>;
@@ -126,14 +112,5 @@ if (format === 'json') {;
   ;
 }
 };
-return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/admin/ExportPanel.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ExportPanel.tsx
-=======
+return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-40o0 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-40o0 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) ;
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

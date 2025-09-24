@@ -40,7 +40,7 @@
 /* Animated gradient blobs */
 .fut-bg-blobs::before,
 .fut-bg-blobs::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: -20% -10% auto -10%;
   height: 60vh;
@@ -76,7 +76,7 @@
 
 /* Subtle grid overlay */
 .fut-grid::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background-image:
@@ -185,7 +185,7 @@
   box-shadow: 0 0 24px rgba(0, 255, 240, 0.15);
 }
 .fut-btn--primary::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;

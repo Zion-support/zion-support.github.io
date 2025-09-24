@@ -37,33 +37,21 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
     ),;
   },;
   ;
-  const maxDescriptionLength = platform === "ios" ? 4000 :4000,;
+  const maxDescriptionLength = platform === "ios" ? 40o00 :40o00,;
   const longDescription = watch("longDescription"),;
 ;
   return (;
     <Card className="bg-zion-blue border-zion-purple/30">;
-<<<<<<< HEAD
-
-    <Card className="bg-zion-blue border-zion-purple/30">;"
-
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-<<<<<<< HEAD
-<div className="space-y-4">;
-
-              render={({ field }) => (;
-=======
           <div className="space-y-4">;
             <FormField;
               control={control}
               name="appTitle";
               render={({ field } { field:any }) => (;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                 <FormItem>;
                   <FormLabel>App Title</FormLabel>;
                   <FormControl>;
@@ -71,17 +59,9 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       placeholder="Enter app title";
                       maxLength={platform === "ios" ? 30 :50}
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Short Description</FormLabel>;
-                  <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     Max {platform === "ios" ? "30" :"50"} characters;
                   </FormDescription>;
                 </FormItem>;              )}
@@ -98,17 +78,9 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       placeholder="Brief description of your app";
                       maxLength={platform === "ios" ? 170 :80}
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Long Description</FormLabel>;
-                  <FormControl>;
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     Max {platform === "ios" ? "170" :"80"} characters;
                   </FormDescription>;
                 </FormItem>;              )}
@@ -126,18 +98,9 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                       className="min-h-32";
                       maxLength={maxDescriptionLength}
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
                   <FormDescription>;
-<<<<<<< HEAD
-
-                    {keyword}
-                    <button ;
-                      type="button";
-                      onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover:text-red-300";
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
                     {longDescription.length}/{maxDescriptionLength} characters;
                   </FormDescription>;
                 </FormItem>;
@@ -151,7 +114,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 placeholder="Add keywords (press Enter or comma to add)";
                 onKeyDown={addKeyword}
                 className="mb-2";
-              />;
+               />;
               ;
               <div className="flex flex-wrap gap-2 mt-2">;
                 {keywords.map((keyword, index) => (;
@@ -160,16 +123,16 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     <button;
                       type="button";
                       onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
+                      className="ml-1 hover:text-red-30o0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
                       aria-label="Remove keyword";
                     >;
-                      <X className="h-3 w-3" />;
+                      <X className="h-3 w-3"  />;
                     </button>;
                   </Badge>;
                 ))}
               </div>;
               <FormDescription className="mt-2">;
-                Add keywords to improve discoverability (max 100 characters total);
+                Add keywords to improve discoverability (max 10o0 characters total);
               </FormDescription>;
             </div>;
             ;
@@ -183,7 +146,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input ;
                       placeholder="e.g., 1.0.0";
                       {...field}
-                    />;
+                     />;
                   </FormControl>;
                 </FormItem>;
               )}
@@ -209,20 +172,11 @@ if (value && !keywords.includes (value) ) {;
 }
 };
 }/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) ;
-}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {;
+}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea  /> </FormControl> <FormDescription> {;
   longDescription.length ;
 }/ {;
   maxDescriptionLength ;
 }characters </FormDescription> </FormItem>) ;
-}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";"}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>) ;
+}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2"  /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3"  /> </button> </Badge>) ) ";"}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 10o0 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input  /> </FormControl> </FormItem>) ;
 }/> </div> </Form> </CardContent> </Card>) ;
-<<<<<<< HEAD
-:temp_broken_files/mobile-app/admin/MetadataForm.tsx
-};"'"
-};
-'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/MetadataForm.tsx
-=======
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b

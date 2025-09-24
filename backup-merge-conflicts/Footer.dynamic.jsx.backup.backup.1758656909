@@ -1,0 +1,12 @@
+<<<<<<< HEAD:components.disabled_full/Footer.dynamic.jsx
+const Footer = dynamic(() => import(\"./Footer\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default Footer\' ,
+=======
+=======
+const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default Footer' ,'
+</p>'
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+</p>'
+=======
+>>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b

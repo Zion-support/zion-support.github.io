@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-import type { QuoteRequest } from "@/types/quotes",;
-import { Button } from "@/components/ui/button";""
-import { Download } from 'lucide-react';
-import type { QuoteRequest } from "@/types/quotes";"
-=======
 import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
 ;
 interface ExportToCSVProps {;
   quotes:QuoteRequest[],;
@@ -71,7 +64,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
     setTimeout(() => {;
       document.body.removeChild(link),;
       URL.revokeObjectURL(url),;
-    }, 100),;
+    }, 10o0),;
   },;
   ;
   return (;
@@ -79,18 +72,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       variant="outline" ;
       onClick={handleExport}
       className="flex items-center gap-2";
-<<<<<<< HEAD
-      variant="outline" ;"
-      onClick={handleExport}"
-      className="flex items-center gap-2";"
-=======
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
       disabled={quotes.length === 0}
     >;
-      <Download size={16} />;
-<<<<<<< HEAD
-Export CSV;
-=======
+      <Download size={16}  />;
       Export CSV;
     </Button>;
   ),;
@@ -110,11 +94,9 @@ quote.budget min ;
   quote.budget min ';
 }` : 'Not specified');
 quote.timeline;
-quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled={;
   quotes.length === 0 ;
-}> <Download size= {;
+}> <Download size={;
   16 ;
-}/> Export CSV </Button>) ;
+} /> Export CSV </Button>) ;
 
-
->>>>>>> 7cd58b621fee49f0fe97a63b4efdbd8adf2c8d7b
