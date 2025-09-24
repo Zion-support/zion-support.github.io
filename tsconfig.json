@@ -1,91 +1,48 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "es2017",
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "dom",
+      "dom.iterable",
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021"
     ],
     "allowJs": true,
     "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": false,
-    "noImplicitReturns": false,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "noImplicitOverride": false,
-    "types": [
-      "vite/client",
-      "node",
-      "react",
-      "react-dom"
-    ],
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "strictNullChecks": true
   },
   "include": [
-    "src-clean/src",
-    "src/types/offline-shims.d.ts",
-    "vite-env.d.ts",
+    "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "build",
-    "coverage",
-    "src/**",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "ts_files_backup",
-    "zion-os.disabled",
-    "zion-os",
-    "zion-website",
-    "zion-ai-assistant",
-    "types.disabled",
-    "**/*.config.ts",
-    "vite.config.ts",
-    "vitest.config.ts",
-    // Temporarily exclude corrupted or legacy areas until cleaned
-    "src/routes",
-    "src/utils/errorBoundary.tsx",
-    "src/utils/imageOptimizer.tsx",
-    "src/utils/cartUtils.ts",
-    "src/pages/solutions",
-    "src/pages/services",
-    "src/pages",
-    "src/pages-disabled",
-    "src/components",
-    "src/context",
-    "src/legal",
-    "src/i18n.js",
-    "src/utils/sitemapGenerator.ts",
-    "src/vite-env.d.ts",
-    "src/utils/cartUtils.js"
+    "**/*"
   ]
 }
