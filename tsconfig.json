@@ -38,11 +38,30 @@
     "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts"
+    "*.ts",
+    "*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "env.d.ts",
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*"
+    "dist",
+    "build",
+    ".next",
+    "coverage",
+    "zion-website",
+    "zion_academy",
+    "generated-services",
+    "apps",
+    "server",
+    "backend",
+    "tests",
+    "src/utils/**"
   ]
 }
