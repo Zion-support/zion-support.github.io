@@ -1,7 +1,7 @@
-// import { newContent2026 } from './newContent2026';
+import { newContent2026 } from './newContent2026';
 
 export const blogPosts = [
-  // ...newContent2026,
+  ...newContent2026,
   {
     id: 10000,
     title: "2027 AI Breakthrough Innovations: The Future is Here",
@@ -256,66 +256,6 @@ export const blogPosts = [
     featured: true,
     imageUrl: "/images/blog/edge-ai-revolution-2026.jpg",
     slug: "edge-ai-revolution-2026"
-  },
-  {
-    id: 9905,
-    title: "AI-Powered Autonomous Business Operations: The Future is Now",
-    excerpt: "Discover how AI is revolutionizing business operations with autonomous decision-making, predictive analytics, and self-healing systems.",
-    content: "The future of business operations is here, and it's powered by artificial intelligence. Our latest breakthrough in autonomous business operations combines advanced AI algorithms with real-time data processing to create self-managing systems that can make decisions, predict outcomes, and adapt to changing conditions without human intervention. This comprehensive guide explores the cutting-edge technologies that are transforming how businesses operate, from intelligent process automation to predictive maintenance and autonomous customer service. Learn how leading enterprises are achieving 300% efficiency gains and 90% cost reduction through AI-powered autonomous operations.",
-    author: "Dr. Michael Rodriguez",
-    authorRole: "Chief Technology Officer",
-    publishDate: "2025-01-16",
-    readTime: "12 min read",
-    category: "AI Innovation",
-    tags: ["Autonomous Operations", "AI", "Business Intelligence", "Automation"],
-    featured: true,
-    imageUrl: "/images/blog/ai-autonomous-business-ops-2025.jpg",
-    slug: "ai-powered-autonomous-business-operations-2025"
-  },
-  {
-    id: 9904,
-    title: "Quantum Computing Revolution: Breaking Through Classical Limitations",
-    excerpt: "Explore the quantum computing breakthroughs that are solving previously impossible problems and unlocking new possibilities.",
-    content: "Quantum computing represents the next frontier in computational power, offering exponential speedups for specific problem classes that are intractable for classical computers. This in-depth analysis covers the latest quantum algorithms, error correction techniques, and real-world applications that are already delivering results. From quantum machine learning to optimization problems and cryptography, discover how quantum computing is reshaping entire industries. We examine the current state of quantum hardware, software development tools, and the roadmap to practical quantum advantage.",
-    author: "Dr. Elena Vasquez",
-    authorRole: "Quantum Computing Research Director",
-    publishDate: "2025-01-16",
-    readTime: "15 min read",
-    category: "Quantum Computing",
-    tags: ["Quantum Computing", "Algorithms", "Hardware", "Applications"],
-    featured: true,
-    imageUrl: "/images/blog/quantum-computing-revolution-2025.jpg",
-    slug: "quantum-computing-revolution-2025"
-  },
-  {
-    id: 9903,
-    title: "Neural Interface Technology: Bridging the Gap Between Mind and Machine",
-    excerpt: "Revolutionary neural interface technology is enabling direct brain-computer communication, opening new possibilities for human enhancement.",
-    content: "Neural interface technology represents a paradigm shift in human-computer interaction, enabling direct communication between the brain and digital systems. This comprehensive overview explores the latest developments in brain-computer interfaces, from non-invasive EEG-based systems to advanced implantable devices. We examine the technical challenges, ethical considerations, and potential applications in healthcare, education, and entertainment. The article also covers the regulatory landscape and future prospects for this transformative technology.",
-    author: "Dr. James Chen",
-    authorRole: "Neural Interface Research Lead",
-    publishDate: "2025-01-16",
-    readTime: "10 min read",
-    category: "Neural Interfaces",
-    tags: ["Neural Interfaces", "BCI", "Human Enhancement", "Technology"],
-    featured: true,
-    imageUrl: "/images/blog/neural-interface-technology-2025.jpg",
-    slug: "neural-interface-technology-2025"
-  },
-  {
-    id: 9902,
-    title: "Synthetic Intelligence: The Next Evolution of AI",
-    excerpt: "Synthetic intelligence represents a new paradigm in artificial intelligence, combining biological inspiration with digital innovation.",
-    content: "Synthetic intelligence is emerging as the next major evolution in AI, combining the best aspects of biological intelligence with digital processing power. This revolutionary approach creates AI systems that can learn, adapt, and evolve in ways that mimic natural intelligence while surpassing human capabilities in specific domains. Our comprehensive analysis covers the theoretical foundations, practical implementations, and real-world applications of synthetic intelligence. From self-modifying algorithms to emergent behavior patterns, discover how synthetic intelligence is pushing the boundaries of what's possible with artificial systems.",
-    author: "Dr. Sarah Kim",
-    authorRole: "Synthetic Intelligence Research Director",
-    publishDate: "2025-01-16",
-    readTime: "14 min read",
-    category: "Synthetic Intelligence",
-    tags: ["Synthetic Intelligence", "AI Evolution", "Biological Inspiration", "Emergent Behavior"],
-    featured: true,
-    imageUrl: "/images/blog/synthetic-intelligence-2025.jpg",
-    slug: "synthetic-intelligence-2025"
   },
   {
     id: 9901,
@@ -2753,15 +2693,23 @@ export const getBlogTags = () => {
     count: allTags.filter(t => t === tag).length
   }));
 };
-// Additional content for enhanced engagement
-export const additionalContent2026 = [
+
+// New content added for enhanced engagement
+// Note: newContent2026 is now imported from './newContent2026'
+
+// Fresh promoted content (2025-09-16) - moved to earlier in file
+
+// Additional fresh content (2029 preview)
+export const extraContent2029 = [
   {
-    id: 9501,
-    title: "Exec Guide: Eval Gates You Can Ship Tomorrow",
-    excerpt: "Copy‑paste CI checks, scorecards, and rollback contracts that block risky merges.",
-    content: "A concise executive guide with minimal YAML, JSON scorecard schemas, and a reference GitHub Check that blocks merges on failing evals. Includes rollout ladders, budget dials, and audit‑ready evidence capture.",
-    author: "Avery Scott",
-    authorRole: "Platform Staff Engineer",
+    id: 9901,
+    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
+    excerpt:
+      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
+    content:
+      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
+    author: "Riley Gomez",
+    authorRole: "Head of Platform Engineering",
     publishDate: "2025-09-16",
     readTime: "6 min read",
     category: "Governance",
@@ -3330,58 +3278,64 @@ export const additionalContent2026 = [
   }
 ];
 
-// Additional fresh content (2029 preview)
-export const extraContent2029 = [
+// Additional fresh content (2029 preview) - moved to earlier in file
+
+// Merge new content with existing blog posts
+export const allBlogPosts = [...blogPosts, ...newContent2026, ...extraContent2029, ...latest2025, ...newPromoted2025, ...newBlogPosts];
+// Keep compatibility export; prefer BLOG_POSTS as unified list
+export const BLOG_POSTS_ALL = allBlogPosts;
+// Back-compat named export expected by some routes/components
+export const BLOG_POSTS = allBlogPosts;
+
+// Add new blog posts to the existing array
+const newBlogPosts = [
   {
-    id: 9901,
-    title: "AI 2029: Evidence-Native Engineering — Shipping With Verifiable Proof",
-    excerpt:
-      "Adopt evidence-native workflows where every change carries proofs across quality, safety, and cost.",
-    content:
-      "Move from subjective reviews to evidence-native engineering. Every change should ship with artifacts: eval scores, cost deltas, and incident impact. This post outlines the minimal scorecard schema, how to generate proofs in CI/CD, and how to surface them in dashboards so leaders and auditors can trust what's shipping.",
-    author: "Riley Gomez",
-    authorRole: "Head of Platform Engineering",
-    publishDate: "2025-09-16",
-    readTime: "6 min read",
-    category: "Operations",
-    tags: ["Evidence", "Scorecards", "Policy"],
-    featured: true,
-    imageUrl: "/images/blog/evidence-native-engineering-2029.jpg",
-    slug: "ai-2029-evidence-native-engineering"
-  },
-  {
-    id: 9902,
-    title: "Trusted RAG 2029: Live Freshness Windows and Budget Guardrails",
-    excerpt:
-      "Blueprint for continuously-grounded retrieval with freshness, drift monitors, and spend caps.",
-    content:
-      "Ground answers in sources you can verify. This blueprint shows how to implement freshness windows, detect semantic drift, and enforce budget guardrails for retrieval-heavy systems. Includes copy-paste checks, example policies, and dashboards to track grounding quality over time.",
-    author: "Nina Patel",
-    authorRole: "Applied AI Architect",
-    publishDate: "2025-09-16",
+    id: 20001,
+    title: "AI-Powered Content Marketing Revolution 2026: 500% Engagement Boost",
+    excerpt: "Discover how AI-driven content marketing strategies are delivering unprecedented engagement rates and ROI for businesses worldwide.",
+    content: "The content marketing landscape has been completely transformed by AI in 2026. Our latest research shows that businesses using AI-powered content strategies are seeing 500% increases in engagement, 300% higher conversion rates, and 400% improvement in content ROI. The key lies in AI's ability to understand audience psychology, predict content performance, and create personalized experiences at scale. Our advanced AI content engine analyzes over 10,000 data points per user to create hyper-personalized content that resonates with each individual. This includes dynamic content adaptation, real-time optimization, and predictive content creation that anticipates user needs before they even express them. Companies implementing our AI content marketing platform report 500% increase in engagement rates, 300% higher conversion rates, 400% improvement in content ROI, and 600% faster content production cycles.",
+    author: "Jennifer Martinez",
+    authorRole: "AI Content Marketing Director",
+    publishDate: "2025-01-21",
     readTime: "7 min read",
-    category: "RAG",
-    tags: ["RAG", "Freshness", "FinOps"],
+    category: "AI Marketing",
+    tags: ["AI Marketing", "Content Strategy", "Engagement", "ROI"],
     featured: true,
-    imageUrl: "/images/blog/trusted-rag-guardrails-2029.jpg",
-    slug: "trusted-rag-2029-guardrails"
-  },
-  {
-    id: 9903,
-    title: "Agent SLOs 2029: Minimal Set That Scales Across Teams",
-    excerpt:
-      "A pragmatic SLO set for safety, groundedness, reliability, and budget with ready-to-ship templates.",
-    content:
-      "Cut through noise with four SLOs that matter. We provide targets, templates, and wiring guidance so drift blocks risky changes automatically. Works across agent teams without bespoke dashboards for each.",
-    author: "Avery Scott",
-    authorRole: "Platform Staff Engineer",
-    publishDate: "2025-09-16",
-    readTime: "5 min read",
-    category: "Operations",
-    tags: ["SLOs", "Reliability", "Budgets"],
-    featured: true,
-    imageUrl: "/images/blog/agent-slos-2029.jpg",
-    slug: "agent-slos-2029-minimal-set"
+    imageUrl: "/images/blog/ai-content-marketing-revolution-2026.jpg",
+    slug: "ai-content-marketing-revolution-2026"
+  }
+];
+
+// Helper functions for blog post management
+export const getBlogPostBySlug = (slug) => {
+  return allBlogPosts.find(post => post.slug === slug);
+};
+
+export const getBlogPostsByCategory = (category) => {
+  return allBlogPosts.filter(post => post.category === category);
+};
+
+export const getFeaturedBlogPosts = () => {
+  return allBlogPosts.filter(post => post.featured);
+};
+
+export const getBlogPostsByTag = (tag) => {
+  return allBlogPosts.filter(post => post.tags.includes(tag));
+};
+
+export const getRecentBlogPosts = (limit = 5) => {
+  return allBlogPosts
+    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+    .slice(0, limit);
+};
+
+export const getAllTags = () => {
+  const allTags = allBlogPosts.flatMap(post => post.tags);
+  return [...new Set(allTags)].map(tag => ({
+    name: tag,
+    count: allTags.filter(t => t === tag).length
+  }));
+};
   },
   {
     id: 9904,
@@ -3607,4 +3561,6 @@ const newBlogPosts = [
     slug: "metaverse-business-operations-2026-virtual-reality-enterprise"
   }
 ];
+
 // Helpers for UI components
+// (kept earlier helper versions; remove duplicates below)
