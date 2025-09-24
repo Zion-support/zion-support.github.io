@@ -2,6 +2,27 @@
 import React, { Suspense, lazy } from 'react';
 import Link from 'next/link';
 import SEO from '../components/SEO';
+const Card = ({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) => (
+  <Link href={href} className='block p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow bg-white'>
+    <div className='text-3xl mb-3'>{icon}</div>
+    <h3 className='text-lg font-semibold text-gray-900 mb-1'>{title}</h3>
+    <p className='text-sm text-gray-600'>{description}</p>
+  </Link>
+);
+const FeatureCard = ({ title, description, icon }: { title: string; description: string; icon: string }) => (
+  <div className='p-6 rounded-xl border border-gray-200 bg-white'>
+    <div className='text-3xl mb-3'>{icon}</div>
+    <h3 className='text-lg font-semibold text-gray-900 mb-1'>{title}</h3>
+    <p className='text-sm text-gray-600'>{description}</p>
+  </div>
+);
+const TestimonialCard = ({ quote, author, role }: { quote: string; author: string; role: string }) => (
+  <div className='p-6 rounded-xl border border-gray-200 bg-white'>
+    <p className='text-gray-700 italic mb-3'>“{quote}”</p>
+    <div className='text-sm text-gray-900 font-semibold'>{author}</div>
+    <div className='text-xs text-gray-500'>{role}</div>
+  </div>
+);
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
